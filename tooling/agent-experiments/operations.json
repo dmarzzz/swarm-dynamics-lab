@@ -46,11 +46,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/optimal-swarm-size",
       "setup_path": "researchers/vishesh/notes/optimal-swarm-size/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md",
+      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:14:35.097932+00:00",
-      "checked_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863",
-      "next_action": "Richer incident-investigation offline prototype implemented:9 authored cases,18/18 reference executions,12 tests; independent/serial/mixed query-round contrasts validated. See incident-investigation/README.md and results/validation.json. Native model qualification and forty-agent comparison remain unrun; prepare a bounded actor/tool contract and qualification before scaling. Original ledger and O2 closeout unchanged.",
+      "checked_at": "2026-10-04T20:47:34.259196+00:00",
+      "checked_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "next_action": "Incident Q1 reviewed:9 completed,39 calls,5/9 joint correct; qualification failed. Read incident-q1-post.md and scientific/case assessments. Repair public tool/diagnosis contract and rejected-handle coverage offline; preserve original failed outcomes. No forty-agent escalation or successor launched. Original cumulative exposureUSD3.800256/20; stopped/released; artifacts and traces verified.",
       "next_run_approval": "owner"
     },
     {

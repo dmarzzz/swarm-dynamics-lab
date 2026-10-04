@@ -1,0 +1,13 @@
+{
+  "type": "retrospective_offline_contract_probe",
+  "new_model_calls": 0,
+  "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+  "sequence": "Valid scripted investigation, one rejected unknown handle, then otherwise valid patch.",
+  "observed": {
+    "failure": "response_or_tool_contract",
+    "repair_operations": 0
+  },
+  "cause": "Native guard compares count of all queried handles, including rejected ones, with issued-handle count. A rejected query can permanently prevent otherwise valid repair.",
+  "native_scope": "No native patch followed the serial rejected queries; this latent guard defect was not the directly observed native exception.",
+  "recommended_check": "Compare issued-handle set with queried issued handles, and verify rejected handles neither satisfy nor poison coverage."
+}

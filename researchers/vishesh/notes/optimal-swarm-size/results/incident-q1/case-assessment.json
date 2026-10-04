@@ -1,0 +1,145 @@
+{
+  "scope": "authored native-interface diagnostic",
+  "cases": 9,
+  "templates": 3,
+  "native_calls": 39,
+  "source": "same-author synthetic developer corpus",
+  "case_ready_for_clean_joint_capability_claim": false,
+  "native_qualified": false,
+  "run_admitted_before_dispatch": true,
+  "checks": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "finding": "Gate decides whether native interface is ready; failed gate prevents scaling.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "answerability",
+      "status": "limited",
+      "finding": "Executable public reference exists; exact diagnosis entity/citation convention and complete-scope semantics need clarification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "fail",
+      "finding": "Gold and physical recovery internally consistent, but mixed diagnosis convention not fully exposed; retain original joint score.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "finding": "Effective payload reconstruction; labels/gold/seed/operator context absent. Shared IDs and exposed templates prevent any holdout claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "limited",
+      "finding": "Three query dependency structures validated offline; no native capacity or agent-count manipulation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "limited",
+      "finding": "All9 control cells completed; fault0/3joint indicates no scaling readiness, not evidence of rich realism.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "pass",
+      "finding": "Deterministic public-tool reference9/9; same-author and template-aware development fitting disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "finding": "Synthetic typed facts, deterministic repairs and static snapshots; no real log corpus or production latency.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "finding": "Three templates with dependent variants; descriptive feasibility only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "limited",
+      "finding": "Development material exposed before run; seed31 is renaming, not held-out incidents.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "robustness_failure_handling",
+      "status": "fail",
+      "finding": "Offline probe proves rejected-query coverage poisoning; native traces retained without retry or exclusion.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "pass",
+      "finding": "All39 payloads/decisions replayed,36 artifact hashes verified, original ledger reconciled.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    }
+  ],
+  "next_action": "Prospectively repair the disclosed interface and measurement contract; preserve Q1, no larger roster."
+}

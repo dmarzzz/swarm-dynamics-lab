@@ -175,7 +175,8 @@
         "researchers/vishesh/notes/optimal-swarm-size/README.md"
       ],
       "experiment_ids": [
-        "optimal-swarm-size-q1"
+        "optimal-swarm-size-q1",
+        "optimal-swarm-size-incident-q1"
       ],
       "registration_paths": [],
       "evidence_confidence": {
@@ -183,7 +184,7 @@
         "claim": "Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints.",
         "rationale": "Native qualification and stage diagnostics now exist, but no conditional launch rule has been fit or tested. Failures and engineering readiness do not establish optimal-size efficacy."
       },
-      "sample_size_summary": "Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled.",
+      "sample_size_summary": "Observed: Q-A4 16, Q-A5 8, Q-A6 8, Q-A7 8 development episodes; O1 12 authored outage episodes; O2 10 episodes from one endpoint template. Conditional optimal-size policy remains untested; cohorts must not be pooled. Incident Q1:9 authored development variants across3 templates,39 native calls,5/9 correct; no independent held-out incident population.",
       "sources": [
         "researchers/vishesh/notes/optimal-swarm-size/README.md",
         "researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md",
@@ -191,12 +192,13 @@
         "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a5-post.md",
         "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a6-post.md",
         "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
-        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md"
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o2-post.md",
+        "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md"
       ],
       "status_at_assessment": "qualification_observed_conditional_policy_untested",
       "assessor": "vishesh/codex-idea-scores",
       "assessed_at": "2026-10-04",
-      "source_commit": "cc91c560af8c12eac6b6caaa38f1406306aee863"
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e"
     },
     {
       "id": "heterogeneous-swarms",

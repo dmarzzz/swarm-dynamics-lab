@@ -1,0 +1,140 @@
+{
+  "schema_version": 1,
+  "study_id": "optimal-swarm-size",
+  "attempt": "incident-q1",
+  "assessor": "vishesh/codex-idea-scores (owning agent)",
+  "assessed_at": "2026-10-04T20:47:34.257857+00:00",
+  "parent_handoff_sha256": "ebc760da58575e94109ead0b9430f3b57505ea15e5f54415ff069b9f64a93848",
+  "evidence_revision": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+  "verdict": "repair",
+  "outcome_interpretation": "Operationally complete, qualification failed5/9 with native repair omissions and a measurement-contract gap; no swarm-size inference or successor launch.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Explicit9/9 interface qualification; no agent-count estimand or automatic escalation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/incident-investigation/NATIVE-Q1-PLAN.md",
+          "sha256": "8d6dcf5dfd2e6f10b03283d2a09d459211bea795ac10f839b5c1ae5d0344b0bc"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Three exposed structured development templates; useful acquisition structures but limited realism and no independent holdout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ],
+      "next_action": "Repair and validate the public contract offline before a separately scoped qualification; do not scale the roster.",
+      "acceptance_check": "Consistent tool names and ID semantics, explicit diagnosis equivalence, rejected-query recovery, all necessary reference and negative cases pass. Preserve Q1 outcomes; require native clean/repair competence before broader study."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "All fault/clean/missing controls completed; same public-tool deterministic development reference9/9; no collective contrast claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/analysis.json",
+          "sha256": "94dd30c6ca71345e7e5e9de34efcffbc1154e5deffbdab8d2f5d7cabd15d8c1e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Native joint5/9, fault recovery1/3, clean2/3, missing3/3. Required clean and repair capability not established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/analysis.json",
+          "sha256": "94dd30c6ca71345e7e5e9de34efcffbc1154e5deffbdab8d2f5d7cabd15d8c1e"
+        }
+      ],
+      "next_action": "Repair and validate the public contract offline before a separately scoped qualification; do not scale the roster.",
+      "acceptance_check": "Consistent tool names and ID semantics, explicit diagnosis equivalence, rejected-query recovery, all necessary reference and negative cases pass. Preserve Q1 outcomes; require native clean/repair competence before broader study."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Exact shared-pool diagnosis representation is incompletely disclosed; safe repair failed joint score. Guard rejects valid repair after unknown query.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ],
+      "next_action": "Repair and validate the public contract offline before a separately scoped qualification; do not scale the roster.",
+      "acceptance_check": "Consistent tool names and ID semantics, explicit diagnosis equivalence, rejected-query recovery, all necessary reference and negative cases pass. Preserve Q1 outcomes; require native clean/repair competence before broader study."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Finite feasibility scope:3 authored templates and9 dependent condition episodes, one native sample each; no independent precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All39 effective requests reconstructed exactly, full bounded history, isolated cases, no gold or operator context; no truncation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/analysis.json",
+          "sha256": "94dd30c6ca71345e7e5e9de34efcffbc1154e5deffbdab8d2f5d7cabd15d8c1e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "9/9 cases and36/36 hub files reconcile;39 valid started receipts,51 unused opportunities, no missing evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/verification.json",
+          "sha256": "fff87a6ff5e22a6dfb31847d61bdee298ed1c218693309271cb5f9b32d96239a"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "39 calls,USD0.072457 exposure; original20 cap/holds preserved. Worker/relay stopped and claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/accounting.json",
+          "sha256": "d99ded8bccaeb187678e2ca793887480abe23e527b9679b20ef1c50ab454aa17"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/assignments,39 request hashes and complete visible decisions replay; no promise of deterministic hosted resampling.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/incident-q1/analysis.json",
+          "sha256": "94dd30c6ca71345e7e5e9de34efcffbc1154e5deffbdab8d2f5d7cabd15d8c1e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All9 static evidence replays and outcome tables derive from saved evidence; simulated query rounds distinguished from wall time.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/incident-q1-post.md",
+          "sha256": "c078cd38e8b8cced00caae1ebd33e17763b406762451f3d2b01cb9d82a480945"
+        }
+      ]
+    }
+  ]
+}

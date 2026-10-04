@@ -1,0 +1,46 @@
+# Incident Q1: execution complete, qualification failed
+
+**Decision: repair the investigation contract before further native qualification; no swarm-size escalation.** All nine planned cases completed, with39 native calls and no transport, schema, accounting or publication failure. The prespecified endpoint passed5/9, below the9/9 promotion gate. No unsafe action was attempted or committed. This is the owning agent's assessment, not independent review.
+
+[Prospective plan](../incident-investigation/NATIVE-Q1-PLAN.md) and executed source `0108574a087021b26720ba65defc2bfec1c7ba7e` were published and verified before calls. One isolated Haiku4.5 context per case, three query slots, maximum ten turns. Three authored development templates crossed with fault, clean and unavailable-evidence variants; seed31 only changes opaque labels. Nine episodes and39 calls are not independent incident roots, held-out evaluation or evidence about optimal agent count. Evidence confidence remains exploratory.
+
+| Structure | Fault | Clean | Missing evidence | Calls across conditions |
+|---|---|---|---|---:|
+| Independent | Failed: escalated without repair | Passed | Passed |12|
+| Serial | Failed: correct diagnosis, no repair | Failed: unjustified escalation | Passed |17|
+| Mixed | Failed exact diagnosis; safe repair succeeded | Passed | Passed |10|
+
+The same public-tool deterministic reference passes9/9. It is a template-aware development reference written by the same author, not an independently fitted baseline. Native fault recovery was1/3; clean resolution2/3; justified missing-evidence escalation3/3. Correct escalation deliberately leaves faults unrepaired: raw `diagnosis_correct=false` and `recovered=false` in those controls must not be interpreted as task failure. Likewise, zero unsafe actions does not establish useful repair competence when only one repair was attempted.
+
+## What the retained traces show
+
+[All-case trace review](../results/incident-q1/trace-review.json) covers every visible sequence, all four misses and matched controls. [Offline analysis](../results/incident-q1/analysis.json) reconstructs all39 exact serialized requests, validates request hashes, and replays every parsed decision, transition, terminal state and grade with no mismatch. The model had the supplied evidence; no context truncation, missing reply or output-token cutoff occurred. Internal reasoning is not available.
+
+- **Independent fault, case0:** all nine records were inspected in three batches. Revision, protocol and capacity mismatches were present. The next response escalated with no diagnosis or mutation, despite no unavailable record. The matched clean case uses the same query order and resolves correctly; the missing case escalates after real unavailability. Over-abstention is observed; its internal cause is unknown.
+- **Serial clean, case1:** the model followed all three trace handles, then used service identifiers as query handles. Those were rejected. It repeated the valid chain and escalated without unavailable evidence. Service/handle confusion is directly observed. The public contract does not explicitly explain that these local checks exhaust the synthetic world's relevant fault scope, so apparent coverage uncertainty cannot be ruled out.
+- **Serial fault, case7:** the same service-ID detour occurred. The final diagnosis correctly identifies and cites the protocol mismatch, but no patch was attempted; the fault remains. This is a clear distinction between diagnosis and executed repair. Six turns were used, leaving four; it was not forced to stop by the limit.
+- **Mixed fault, case5:** all four records were inspected and an atomic3/3/3 rebalance restored every service within the shared capacity. The model then reported two affected-service allocation diagnoses, citing each service's metrics plus the pool record. The scorer requires one `shared-pool/allocation` diagnosis with all three metrics and the pool citation. That precise entity/citation convention is absent from the actor contract. This is a measurement-contract gap, not evidence that the repair failed. Preserve the original failed joint endpoint; do not retroactively promote qualification by accepting a preferred answer.
+
+An additional [offline contract probe](../results/incident-q1/contract-probe.json), with zero model calls, found a latent guard defect: a rejected unknown handle increases the count used to decide whether investigation is complete. A subsequent otherwise valid scripted patch is then blocked. Coverage must compare issued-handle sets, excluding rejected handles. No native patch followed the serial detours, so this defect is **not** a verified cause of those observed omissions.
+
+The start packet also advertises `patch_service` while the outer native schema calls that action `patch`; the adapter translates between them. That inconsistency should be removed. Whether it caused a native omission is unverified. A scripted solution passing the interface did not establish that its naming and diagnosis contract were unambiguous for an uninformed model.
+
+## Case readiness and next change
+
+The cases are useful for an interface diagnostic, but the exact joint diagnosis score is not yet a clean capability measurement. The [case assessment](../results/incident-q1/case-assessment.json) records the contract defect, limited realism, template dependence and exposed development status. Offline ground truth and reference solutions are internally consistent; that does not establish full actor-side answerability.
+
+Accept O2's recommendation to examine parallel evidence acquisition rather than merely adding agents. This run implements three acquisition structures, but does not compare capacity or agent count. Revise the earlier assumption that reference execution plus schema tests established a ready native interface.
+
+The next prospective repair should unify tool names; distinguish service IDs from query handles; state evidence-coverage semantics; expose explicit operation-completion receipts; correct the rejected-handle coverage guard; and either specify the shared-pool diagnosis convention or prospectively define and test semantically equivalent service-level answers. Report decision, citation, diagnosis, repair and safety separately. Include negative tests for fabricated citations, unjustified escalation, skipped repair and rejected-query recovery. Do not silently rescore Q1 or add hidden hints specific to its faults.
+
+Only after offline contract checks should a separately planned, bounded native qualification test the unchanged necessary competencies, retaining these development cases and disclosing reuse. New independent incidents, realistic logs and stronger matched cost/capacity comparisons are still required before a main scaling study. No40-agent run or successor was dispatched; remaining funds do not justify one.
+
+## Integrity, costs and closeout
+
+[Verification](../results/incident-q1/verification.json) authenticated and hash-checked36/36 uploaded artifacts. [Receipt audit](../results/incident-q1/receipt-audit.json) verifies all39 started calls, with51 unused optional turns and zero missing/mismatched receipts. All9 episodes started and terminated; unused turns are not missing cases. HTTP/IPC calls have no experimental subprocess stdout/stderr, so those categories are explicitly not applicable. Grade receipts repeat the episode endpoint per call and are not39 independent grades. Source receipt hashes the Git revision string; configuration hashes the frozen assignment JSON. The local content-addressed receipt manifest remains private; the aggregate audit and synthetic traces are published.
+
+Pre-run checks passed19 incident/native/receipt tests,28 outage regressions,70 existing study tests and14 common receipt tests. The worker reran the19 incident tests against the frozen published source. Public plan and per-case TLDR readback passed. Current approved-account identity, exclusive claimPR425, original single-writer ledger and matching source/runtime were verified. No provisioning or credential installation occurred; the bounded provider relay kept the key local. Researcher review was not required, and is not represented as passed.
+
+[Accounting](../results/incident-q1/accounting.json):39 calls,54,671 input tokens and2,236 output tokens; settledUSD0.065851 plusUSD0.006606 retained fee uncertainty gives **USD0.072457 exposure**. Cumulative study exposure **USD3.800256 /20**, settledUSD3.418709, remainingUSD16.199744. Historical unknownUSD0.220480 and cumulative fee uncertaintyUSD0.161067 remain held. No new infrastructure purchase; pre-existing shared host cost is not measured API spend. Episode loop timings include model/tools, not artifact upload or a production latency estimate.
+
+Worker count verified zero; relay stopped, forensic ledger backup verified, claim releasePR432 merged. Offline finalization wrote an operational post-mortem and handoff `ebc760da58575e94109ead0b9430f3b57505ea15e5f54415ff069b9f64a93848`. Its generic review-required scaffold is supplemented by this authored review and the [eleven-dimension scientific assessment](../results/incident-q1/scientific-assessment.json). Execution completion, failed qualification, measurement limitations, reporting verification and cost status remain separate.

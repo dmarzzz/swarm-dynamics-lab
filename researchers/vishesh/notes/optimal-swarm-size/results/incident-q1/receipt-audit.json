@@ -1,0 +1,110 @@
+{
+  "assignment_count": 90,
+  "counts": {
+    "failed": 0,
+    "interrupted": 0,
+    "started": 0,
+    "unstarted": 51,
+    "valid": 39
+  },
+  "coverage": {
+    "context": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "grade": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "input": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "parsed": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "phases": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "response": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "stderr": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 39,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 0
+    },
+    "stdout": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 39,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 0
+    },
+    "transition": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    },
+    "usage": {
+      "legacy_missing": 0,
+      "mismatch": 0,
+      "missing": 0,
+      "not_applicable": 0,
+      "not_collected": 0,
+      "not_reached": 0,
+      "verified": 39
+    }
+  },
+  "distinct_unit_labels": 9,
+  "manifest_sha256": "7c106f3687b3c0f827f086e3ffdb87948fd782a970d1c62a3075210e3d42f04b",
+  "mismatched_artifacts": 0,
+  "missing_artifacts": 0,
+  "scope": "declared_local_bytes_only_not_provider_delivery_or_scientific_validation",
+  "started_count": 39,
+  "status": "verified_declared_coverage",
+  "unresolved_started": 0
+}

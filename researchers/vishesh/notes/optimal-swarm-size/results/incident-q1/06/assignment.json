@@ -1,0 +1,11 @@
+{
+  "id": "incident-q1/6",
+  "index": 6,
+  "structure": "independent",
+  "condition": "insufficient",
+  "seed": 31,
+  "n": 1,
+  "slots": 3,
+  "width": 10,
+  "stage": "qualification"
+}

@@ -1,0 +1,11 @@
+{
+  "id": "incident-q1/5",
+  "index": 5,
+  "structure": "mixed",
+  "condition": "fault",
+  "seed": 31,
+  "n": 1,
+  "slots": 3,
+  "width": 10,
+  "stage": "qualification"
+}

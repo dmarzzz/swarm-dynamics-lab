@@ -1,0 +1,9 @@
+{
+  "experiment": "optimal-swarm-size-incident-q1",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/0108574a087021b26720ba65defc2bfec1c7ba7e/researchers/vishesh/notes/optimal-swarm-size/incident-investigation/NATIVE-Q1-PLAN.md",
+  "commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+  "plan_sha256": "8d6dcf5dfd2e6f10b03283d2a09d459211bea795ac10f839b5c1ae5d0344b0bc",
+  "registered_tldr": "TLDR: Qualify one model context on nine independent, serial and mixed incident cases with fault, clean and missing evidence controls. Cited diagnosis, safe repair or observed-missing-evidence escalation; authored development templates, no swarm-size inference.",
+  "run_tldr": "Incident Q1 single-context native qualification across independent/serial/mixed authored cases; cited diagnosis, safe repairs or observed-missing-evidence escalation, no swarm-size inference.",
+  "checked_utc": "2026-10-04T20:42:49.741615+00:00"
+}

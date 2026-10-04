@@ -1,0 +1,1235 @@
+{
+  "attempt_id": "incident-q1",
+  "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+  "planned": 9,
+  "started": 9,
+  "unstarted": 0,
+  "stop_reason": null,
+  "records": [
+    {
+      "assignment": {
+        "id": "incident-q1/0",
+        "index": 0,
+        "structure": "independent",
+        "condition": "fault",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "7c9441e39591cde01195303ed3bd12adb101c65d8d69abfcb845ab1a3e45b30a",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": false,
+        "diagnosis_correct": false,
+        "citations_valid": true,
+        "recovered": false,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 3,
+        "queries": 9,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": false,
+        "quality": 0.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 4,
+      "elapsed_s": 10.4086493569921,
+      "evidence": [
+        {
+          "handle": "trace-40382",
+          "evidence": {
+            "kind": "release",
+            "service": "service-215",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-24738",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-580",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-112",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28178",
+          "evidence": {
+            "kind": "release",
+            "service": "service-580",
+            "deployed": "r1",
+            "approved": "r2"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-80151",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "release",
+            "service": "service-112",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-28296",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 1,
+            "accepted": 2
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 1,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 3
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 1
+        },
+        "service-580": {
+          "revision": "r1",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/0",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": false,
+      "exposure_microdollars": 7654
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/1",
+        "index": 1,
+        "structure": "serial",
+        "condition": "clean",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "c20ae56d857847a8a9f3a6f023a9d61750945eaa055c70951a687dffe6057854",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": false,
+        "diagnosis_correct": true,
+        "citations_valid": true,
+        "recovered": true,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 5,
+        "queries": 9,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": false,
+        "quality": 0.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 6,
+      "elapsed_s": 13.887325800009421,
+      "evidence": [
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "span",
+            "service": "service-112",
+            "local_check": "pass",
+            "next": "trace-28462",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "span",
+            "service": "service-580",
+            "local_check": "pass",
+            "next": "trace-99635",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 3
+        },
+        {
+          "handle": "service-112",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-215",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-580",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "span",
+            "service": "service-112",
+            "local_check": "pass",
+            "next": "trace-28462",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 5
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "span",
+            "service": "service-580",
+            "local_check": "pass",
+            "next": "trace-99635",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 5
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 5
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/1",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": false,
+      "exposure_microdollars": 11210
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/2",
+        "index": 2,
+        "structure": "mixed",
+        "condition": "insufficient",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "a154b191cba0b4566c0425a940f5e1cb0a4b28c5da6839a34833d885573013e0",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": true,
+        "diagnosis_correct": false,
+        "citations_valid": true,
+        "recovered": false,
+        "safe": true,
+        "expected_decision": "escalate",
+        "query_rounds": 2,
+        "queries": 4,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": true,
+        "quality": 1.0,
+        "observed_missing_evidence": true
+      },
+      "failure": null,
+      "model_calls": 3,
+      "elapsed_s": 8.576887542003533,
+      "evidence": [
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 2,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 2,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 5,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "unavailable",
+            "reason": "retention_gap"
+          },
+          "round": 2
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 5
+        }
+      },
+      "id": "incident-q1/2",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": true,
+      "exposure_microdollars": 5267
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/3",
+        "index": 3,
+        "structure": "independent",
+        "condition": "clean",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "dbac263a26bc40615e590235e449d4ad63339adfdab72d8742809c4dc5363633",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": true,
+        "diagnosis_correct": true,
+        "citations_valid": true,
+        "recovered": true,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 3,
+        "queries": 9,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": true,
+        "quality": 1.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 4,
+      "elapsed_s": 6.545942855998874,
+      "evidence": [
+        {
+          "handle": "trace-40382",
+          "evidence": {
+            "kind": "release",
+            "service": "service-215",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-24738",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-580",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-112",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28178",
+          "evidence": {
+            "kind": "release",
+            "service": "service-580",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-80151",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "release",
+            "service": "service-112",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-28296",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 3
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/3",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": true,
+      "exposure_microdollars": 7649
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/4",
+        "index": 4,
+        "structure": "serial",
+        "condition": "insufficient",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "9f9ee2781e282101e816baa570c8cce021ab919b0901892ca546e2fd18ca0d33",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": true,
+        "diagnosis_correct": false,
+        "citations_valid": true,
+        "recovered": false,
+        "safe": true,
+        "expected_decision": "escalate",
+        "query_rounds": 4,
+        "queries": 6,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": true,
+        "quality": 1.0,
+        "observed_missing_evidence": true
+      },
+      "failure": null,
+      "model_calls": 5,
+      "elapsed_s": 11.267565052999998,
+      "evidence": [
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "span",
+            "service": "service-112",
+            "local_check": "pass",
+            "next": "trace-28462",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "span",
+            "service": "service-580",
+            "local_check": "pass",
+            "next": "trace-99635",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "unavailable",
+            "reason": "retention_gap"
+          },
+          "round": 3
+        },
+        {
+          "handle": "service-112",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-215",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-580",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/4",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": true,
+      "exposure_microdollars": 8709
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/5",
+        "index": 5,
+        "structure": "mixed",
+        "condition": "fault",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "120e498ac7b3664d5a73e9cb49dd17feaae05a91b9db4e0e5a11cce07f4cd764",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": [
+          {
+            "service": "service-112",
+            "cause": "allocation",
+            "evidence": [
+              "trace-61489",
+              "trace-15671"
+            ]
+          },
+          {
+            "service": "service-580",
+            "cause": "allocation",
+            "evidence": [
+              "trace-28462",
+              "trace-15671"
+            ]
+          }
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "diagnosis_correct": false,
+        "citations_valid": false,
+        "recovered": true,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 2,
+        "queries": 4,
+        "repair_operations": 1,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": false,
+        "quality": 0.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 4,
+      "elapsed_s": 6.877821646994562,
+      "evidence": [
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 2,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 2,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 5,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "pool",
+            "service": "shared-pool",
+            "capacity": 9,
+            "allocations": {
+              "service-112": 2,
+              "service-580": 2,
+              "service-215": 5
+            }
+          },
+          "round": 2
+        }
+      ],
+      "actions": [
+        {
+          "action": {
+            "op": "rebalance",
+            "allocations": {
+              "service-112": 3,
+              "service-580": 3,
+              "service-215": 3
+            }
+          },
+          "status": "applied"
+        }
+      ],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/5",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": false,
+      "exposure_microdollars": 7903
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/6",
+        "index": 6,
+        "structure": "independent",
+        "condition": "insufficient",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "c19067970211b6e5611a4ae4728f85df16610f5a9b6660d18156e71b12c34534",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": true,
+        "diagnosis_correct": false,
+        "citations_valid": true,
+        "recovered": false,
+        "safe": true,
+        "expected_decision": "escalate",
+        "query_rounds": 3,
+        "queries": 9,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": true,
+        "quality": 1.0,
+        "observed_missing_evidence": true
+      },
+      "failure": null,
+      "model_calls": 4,
+      "elapsed_s": 6.512845705001382,
+      "evidence": [
+        {
+          "handle": "trace-40382",
+          "evidence": {
+            "kind": "release",
+            "service": "service-215",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-24738",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-580",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-112",
+            "client": 2,
+            "accepted": 2
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28178",
+          "evidence": {
+            "kind": "release",
+            "service": "service-580",
+            "deployed": "r1",
+            "approved": "r2"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-80151",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 3,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "release",
+            "service": "service-112",
+            "deployed": "r2",
+            "approved": "r2"
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-28296",
+          "evidence": {
+            "kind": "unavailable",
+            "reason": "retention_gap"
+          },
+          "round": 3
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 1,
+            "warning": "CPU burst also seen during healthy traffic"
+          },
+          "round": 3
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 1
+        },
+        "service-580": {
+          "revision": "r1",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/6",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": true,
+      "exposure_microdollars": 7641
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/7",
+        "index": 7,
+        "structure": "serial",
+        "condition": "fault",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "c769b349e39cc2ebf353a0efbdb52816561ec515c8b30e40ae017a640bfbff5c",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": [
+          {
+            "service": "service-215",
+            "cause": "protocol",
+            "evidence": [
+              "trace-99635"
+            ]
+          }
+        ]
+      },
+      "evaluation": {
+        "correct": false,
+        "diagnosis_correct": true,
+        "citations_valid": true,
+        "recovered": false,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 5,
+        "queries": 7,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": false,
+        "quality": 0.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 6,
+      "elapsed_s": 13.729845866997493,
+      "evidence": [
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "span",
+            "service": "service-112",
+            "local_check": "pass",
+            "next": "trace-28462",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "span",
+            "service": "service-580",
+            "local_check": "pass",
+            "next": "trace-99635",
+            "warning": "Upstream timeout does not identify the root cause"
+          },
+          "round": 2
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 1,
+            "accepted": 2
+          },
+          "round": 3
+        },
+        {
+          "handle": "service-112",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-215",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "service-580",
+          "evidence": {
+            "kind": "rejected",
+            "reason": "unissued_handle"
+          },
+          "round": 4
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "handshake",
+            "service": "service-215",
+            "client": 1,
+            "accepted": 2
+          },
+          "round": 5
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/7",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": false,
+      "exposure_microdollars": 11127
+    },
+    {
+      "assignment": {
+        "id": "incident-q1/8",
+        "index": 8,
+        "structure": "mixed",
+        "condition": "clean",
+        "seed": 31,
+        "n": 1,
+        "slots": 3,
+        "width": 10,
+        "stage": "qualification"
+      },
+      "case_sha256": "e40407de7860133c9c6e9297d071e565b9db95a1df93869a8476cb843339c8c5",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": []
+      },
+      "evaluation": {
+        "correct": true,
+        "diagnosis_correct": true,
+        "citations_valid": true,
+        "recovered": true,
+        "safe": true,
+        "expected_decision": "resolve",
+        "query_rounds": 2,
+        "queries": 4,
+        "repair_operations": 0,
+        "unsafe_attempts": 0,
+        "unsafe_commits": 0,
+        "success": true,
+        "quality": 1.0,
+        "observed_missing_evidence": false
+      },
+      "failure": null,
+      "model_calls": 3,
+      "elapsed_s": 5.595244661002653,
+      "evidence": [
+        {
+          "handle": "trace-28462",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-580",
+            "demand": 3,
+            "allocated": 3,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-61489",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-112",
+            "demand": 3,
+            "allocated": 3,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-99635",
+          "evidence": {
+            "kind": "metrics",
+            "service": "service-215",
+            "demand": 3,
+            "allocated": 3,
+            "next": "trace-15671",
+            "warning": "Recent deployment timestamp is not proof of regression"
+          },
+          "round": 1
+        },
+        {
+          "handle": "trace-15671",
+          "evidence": {
+            "kind": "pool",
+            "service": "shared-pool",
+            "capacity": 9,
+            "allocations": {
+              "service-112": 3,
+              "service-580": 3,
+              "service-215": 3
+            }
+          },
+          "round": 2
+        }
+      ],
+      "actions": [],
+      "final_state": {
+        "service-112": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-580": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-215": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "id": "incident-q1/8",
+      "stage": "qualification",
+      "source_commit": "0108574a087021b26720ba65defc2bfec1c7ba7e",
+      "operational_success": true,
+      "exposure_microdollars": 5297
+    }
+  ],
+  "exposure_microdollars": 72457
+}

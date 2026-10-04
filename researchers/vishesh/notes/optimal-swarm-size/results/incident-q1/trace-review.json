@@ -1,0 +1,296 @@
+{
+  "coverage": "All39 requests reconstructed and all39 visible decisions/transitions replayed; owning-agent inspection of all9 sequences, all4 misses plus controls. No hidden reasoning available.",
+  "cases": [
+    {
+      "case": 0,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "At final turn after all nine records, unjustified escalation and zero repairs.",
+      "interpretation": "Observed failure; internal reason unknown. No unavailable record, unknown handle or guard rejection occurred.",
+      "matched_comparison": "Case3 clean uses same query order and resolves; case6 missing escalates after observed gap.",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-40382",
+          "trace-24738",
+          "trace-99635"
+        ],
+        [
+          "trace-15671",
+          "trace-28178",
+          "trace-80151"
+        ],
+        [
+          "trace-28462",
+          "trace-28296",
+          "trace-61489"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 0
+    },
+    {
+      "case": 1,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "After valid three-hop chain, queries service IDs as handles; rejected, re-queries chain, then escalates without unavailable evidence.",
+      "interpretation": "Handle namespace confusion directly observed. Treating local_check pass as incomplete global coverage remains a plausible contract ambiguity, not verified internal reasoning.",
+      "matched_comparison": "Case4 follows same invalid-handle detour but correctly escalates after actual unavailable evidence.",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-61489"
+        ],
+        [
+          "trace-28462"
+        ],
+        [
+          "trace-99635"
+        ],
+        [
+          "service-112",
+          "service-215",
+          "service-580"
+        ],
+        [
+          "trace-61489",
+          "trace-28462",
+          "trace-99635"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 3
+    },
+    {
+      "case": 2,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "No endpoint miss; inspect control-specific limitations below.",
+      "interpretation": "Correct missing-evidence escalation without mutation; diagnosis_correct/recovered are intentionally false and not task failures.",
+      "matched_comparison": "Included in all-case audit; no selection based on success.",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-28462",
+          "trace-61489",
+          "trace-99635"
+        ],
+        [
+          "trace-15671"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 0
+    },
+    {
+      "case": 3,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "No endpoint miss; inspect control-specific limitations below.",
+      "interpretation": "All reachable records inspected; correct clean resolution without mutation.",
+      "matched_comparison": "Included in all-case audit; no selection based on success.",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-40382",
+          "trace-24738",
+          "trace-99635"
+        ],
+        [
+          "trace-15671",
+          "trace-28178",
+          "trace-80151"
+        ],
+        [
+          "trace-28462",
+          "trace-28296",
+          "trace-61489"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 0
+    },
+    {
+      "case": 4,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "No endpoint miss; inspect control-specific limitations below.",
+      "interpretation": "Correct missing-evidence escalation without mutation; diagnosis_correct/recovered are intentionally false and not task failures.",
+      "matched_comparison": "Included in all-case audit; no selection based on success.",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-61489"
+        ],
+        [
+          "trace-28462"
+        ],
+        [
+          "trace-99635"
+        ],
+        [
+          "service-112",
+          "service-215",
+          "service-580"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 3
+    },
+    {
+      "case": 5,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "Safe atomic3/3/3 rebalance, then two affected-service allocation diagnoses instead of one shared-pool diagnosis citing all four records.",
+      "interpretation": "Scorer representation requirement incompletely specified in public contract; repair succeeded. Retain original score; no post-hoc qualification promotion.",
+      "matched_comparison": "Case8 sees healthy mixed allocations and resolves without mutation.",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": [
+          {
+            "service": "service-112",
+            "cause": "allocation",
+            "evidence": [
+              "trace-61489",
+              "trace-15671"
+            ]
+          },
+          {
+            "service": "service-580",
+            "cause": "allocation",
+            "evidence": [
+              "trace-28462",
+              "trace-15671"
+            ]
+          }
+        ]
+      },
+      "queries": [
+        [
+          "trace-28462",
+          "trace-61489",
+          "trace-99635"
+        ],
+        [
+          "trace-15671"
+        ]
+      ],
+      "actions": [
+        {
+          "action": {
+            "op": "rebalance",
+            "allocations": {
+              "service-112": 3,
+              "service-580": 3,
+              "service-215": 3
+            }
+          },
+          "status": "applied"
+        }
+      ],
+      "rejected_queries": 0
+    },
+    {
+      "case": 6,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "No endpoint miss; inspect control-specific limitations below.",
+      "interpretation": "Correct missing-evidence escalation without mutation; diagnosis_correct/recovered are intentionally false and not task failures.",
+      "matched_comparison": "Included in all-case audit; no selection based on success.",
+      "answer": {
+        "decision": "escalate",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-40382",
+          "trace-24738",
+          "trace-99635"
+        ],
+        [
+          "trace-15671",
+          "trace-28178",
+          "trace-80151"
+        ],
+        [
+          "trace-28462",
+          "trace-28296",
+          "trace-61489"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 0
+    },
+    {
+      "case": 7,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "After complete chain, queries service IDs, then repeats fault record and finishes with correct protocol diagnosis but never patches.",
+      "interpretation": "Diagnosis-action separation failure directly observed. Cannot attribute omission to the latent guard: no patch was attempted.",
+      "matched_comparison": "Case1 clean and case4 missing share service-ID detour; neither requires patch.",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": [
+          {
+            "service": "service-215",
+            "cause": "protocol",
+            "evidence": [
+              "trace-99635"
+            ]
+          }
+        ]
+      },
+      "queries": [
+        [
+          "trace-61489"
+        ],
+        [
+          "trace-28462"
+        ],
+        [
+          "trace-99635"
+        ],
+        [
+          "service-112",
+          "service-215",
+          "service-580"
+        ],
+        [
+          "trace-99635"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 3
+    },
+    {
+      "case": 8,
+      "complete_visible_sequence_reviewed": true,
+      "first_observable_divergence": "No endpoint miss; inspect control-specific limitations below.",
+      "interpretation": "All reachable records inspected; correct clean resolution without mutation.",
+      "matched_comparison": "Included in all-case audit; no selection based on success.",
+      "answer": {
+        "decision": "resolve",
+        "diagnoses": []
+      },
+      "queries": [
+        [
+          "trace-28462",
+          "trace-61489",
+          "trace-99635"
+        ],
+        [
+          "trace-15671"
+        ]
+      ],
+      "actions": [],
+      "rejected_queries": 0
+    }
+  ]
+}
