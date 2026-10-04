@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: idle
 task: openrouter-route-switch-2026-10-04
-doing: Recording owner approved OpenRouter migration and coordinating affected native tasks.
-updated: 2026-10-04T18:43Z
+doing: OpenRouter migration directive published and dispatched to four active owning tasks; native changes underway.
+updated: 2026-10-04T18:44Z
 ---
 
 ## Notes
