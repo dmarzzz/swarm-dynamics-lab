@@ -3,14 +3,16 @@ id: antsy-receipt-v6
 type: task
 title: Build and evaluate real receipt-total checking with fresh data
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T04:09Z
+updated: 2026-10-04T04:09Z
 ---
 
 ## Goal
