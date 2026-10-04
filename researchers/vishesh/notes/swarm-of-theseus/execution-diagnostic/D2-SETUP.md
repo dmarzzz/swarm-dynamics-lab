@@ -1,6 +1,6 @@
 # D2 setup record
 
-Status: plan-only. Owner requested analysis and a next-run plan; no D2 execution or infrastructure was started.
+Status: D2 implementation and offline validation complete; deployment and live admission pending. Owner authorized the reviewed changes and execution.
 
 Runbook: [experiment setup](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Previous postmortem: [D1 results](RESULTS-D1.md). New saved-evidence interpretation: [INTERPRETATION-D1.md](INTERPRETATION-D1.md). Prospective protocol: [D2-PLAN.md](D2-PLAN.md).
 
@@ -16,3 +16,5 @@ Implementation acceptance work:
 - Render fixture views for correct, wrong, invalid and unstarted cases; keep them labeled as software fixtures.
 
 No host is held. No new model calls were made for this analysis. The next concrete action is to build and offline-validate D2 against the frozen plan, then prepare current launch admission.
+
+PI review: [D2-PI-REVIEW.md](D2-PI-REVIEW.md). Pre-assessment: [D2-PRE.md](D2-PRE.md). G2 evidence: [D2-VALIDATION.json](D2-VALIDATION.json), eleven offline checks passed. Current next action: acquire the dedicated approved-account machine, deploy pinned source, register and visually verify public plan, bind budget and launch receipts.

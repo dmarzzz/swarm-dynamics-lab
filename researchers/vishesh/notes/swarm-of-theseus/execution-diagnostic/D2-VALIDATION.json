@@ -1,0 +1,24 @@
+{
+  "calls": 432,
+  "decisions": 768,
+  "hard_conflict_positive_cases": {
+    "probe": 1,
+    "ledger": 3,
+    "canary": 3
+  },
+  "wrong_source_mutant_disagreements": {
+    "probe": 14,
+    "ledger": 10,
+    "canary": 12
+  },
+  "ignore_freshness_disagreements": 12,
+  "always_hold_misses": 12,
+  "max_request_bytes": {
+    "D": 3558,
+    "E": 1674
+  },
+  "assignments_sha256": "c68d4e551bc1e115441bf731db990333a43ecb769fd71b4aca1f4423fef7d2e8",
+  "offline_tests": 11,
+  "model_calls": 0,
+  "fixture_type": "SCRIPTED \u2014 NOT MODEL EVIDENCE"
+}
