@@ -15,7 +15,7 @@ def validate_admission(a,stage,now):
  if any(a.get(k) is not True for k in required):raise ValueError('admission_missing')
  if a.get('stage')!=stage or not 0<=now-a.get('checked_epoch',0)<=300 or a.get('expires_epoch',0)<now+1200:raise ValueError('admission_stale')
  if a.get('plan_sha256')!=hashlib.sha256((HERE/'PLAN.md').read_bytes()).hexdigest():raise ValueError('plan_changed')
- if stage!='D0' and (a.get('cumulative_cap_usd')!=50. or a.get('c6_cap_usd')!=2. or a.get('budget_increase_approved') is not True or a.get('original_ledger_verified') is not True):raise ValueError('budget_authority_missing')
+ if stage!='D0' and (a.get('cumulative_cap_usd')!=50. or a.get('c6_cap_usd')!=3. or a.get('budget_increase_approved') is not True or a.get('original_ledger_verified') is not True):raise ValueError('budget_authority_missing')
  if stage=='S1' and (a.get('qualification_review_complete') is not True or a.get('qualification_source')!=a.get('source_commit')):raise ValueError('qualification_review_required')
  return True
 
@@ -25,7 +25,7 @@ def haiku_validate(raw):
  if len(choices)!=1 or choices[0]['finish_reason']!='stop':raise ValueError('invalid_completion')
  label=parse_label(choices[0]['message']['content']);u=raw['usage'];cost=u['cost']
  if isinstance(cost,bool) or not isinstance(cost,(int,float)) or not math.isfinite(cost) or cost<0:raise ValueError('invalid_cost')
- if not isinstance(u['prompt_tokens'],int) or not 0<u['prompt_tokens']<=4096 or not 0<=u['completion_tokens']<=32:raise ValueError('invalid_tokens')
+ if not isinstance(u['prompt_tokens'],int) or not 0<u['prompt_tokens']<=4096 or not 0<=u['completion_tokens']<=64:raise ValueError('invalid_tokens')
  # Provider cache metadata is retained via usage; never infer a zero cost from absence.
  return {'label':label,'cost_usd':cost,'input_tokens':u['prompt_tokens'],'output_tokens':u['completion_tokens'],'served_model':raw['model'],'provider':raw['provider']}
 def reserve(db,h,amount,stage):
@@ -35,7 +35,7 @@ def reserve(db,h,amount,stage):
   n,total=db.execute('SELECT count(*),coalesce(sum(CASE WHEN status="completed" THEN cost ELSE reserved/1000000000.0 END),0) FROM calls').fetchone()
   own,count=db.execute('SELECT coalesce(sum(CASE WHEN c.status="completed" THEN c.cost ELSE c.reserved/1000000000.0 END),0),count(*) FROM calls c JOIN c6_hashes h ON h.hash=c.hash').fetchone()
   sn=db.execute('SELECT count(*) FROM c6_hashes WHERE stage=?',(stage,)).fetchone()[0]
-  if n<2731 or n>=4208 or count>=1477 or sn>=(180 if stage.endswith('S0') else 1296) or total+amount>50. or own+amount>2.:raise ValueError('budget_exhausted')
+  if n<2731 or n>=4254 or count>=1523 or sn>=(180 if stage.endswith('S0') else 1296) or total+amount>50. or own+amount>3.:raise ValueError('budget_exhausted')
   db.execute('INSERT INTO calls(hash,reserved,status) VALUES(?,?,?)',(h,math.ceil(amount*1e9),'started'));db.execute('INSERT INTO c6_hashes VALUES(?,?)',(h,stage));db.commit()
  except BaseException:db.rollback();raise
 class NoRedirect(urllib.request.HTTPRedirectHandler):
@@ -43,7 +43,7 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
 def run(stage,out,admission,ledger=None,parent=None):
  a=json.loads(admission.read_text());validate_admission(a,stage,time.time())
  approval=json.loads((HERE/'owner-approval.json').read_text())
- if approval.get('status')!='approved' or approval.get('plan_sha256')!=a['plan_sha256'] or approval.get('cumulative_cap_usd')!=50 or approval.get('attempt_cap_usd')!=2:raise ValueError('owner_receipt_mismatch')
+ if approval.get('status')!='approved' or approval.get('plan_sha256')!=a['plan_sha256'] or approval.get('cumulative_cap_usd')!=50 or approval.get('attempt_cap_usd')!=3:raise ValueError('owner_receipt_mismatch')
  if out.exists():raise ValueError('duplicate_attempt')
  import subprocess
  root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],cwd=HERE,text=True).strip())
@@ -53,7 +53,7 @@ def run(stage,out,admission,ledger=None,parent=None):
   if saved!=path.read_bytes():raise ValueError('source_mismatch')
   hashes[rel]=hashlib.sha256(saved).hexdigest()
  sys.path.insert(0,str(BASE.parent/'experiment-documentation'));from public_plan import check
- receipt=check('healing-helping-hands',f'TLDR: C6-{stage} bounded label-collapse diagnosis or Jev–Haiku agreement comparison; class accuracy, wrong agreement and actual cost on authored synthetic fixtures.')
+ receipt=check('healing-helping-hands',f'TLDR: {COHORT}-{stage} bounded label-collapse diagnosis or Jev–Haiku agreement comparison; class accuracy, wrong agreement and actual cost on authored synthetic fixtures.')
  if receipt['plan_sha256']!=a['plan_sha256'] or receipt['commit']!=a['source_commit'] or not receipt['url'].endswith('/c6/PLAN.md'):raise ValueError('registration_mismatch')
  db=None;lock=None;key=None
  if stage=='D0':
@@ -67,6 +67,7 @@ def run(stage,out,admission,ledger=None,parent=None):
   for model,provider,inp,outprice in [('anthropic/claude-haiku-4.5','Anthropic',1e-6,5e-6),('typesafe/jev-1.13','TypeSafe',.000000042,0)]:
    with urllib.request.urlopen('https://openrouter.ai/api/v1/models/'+model+'/endpoints',timeout=20) as response:routes=json.load(response)['data']['endpoints']
    matched=[x for x in routes if x['provider_name']==provider and x['status']==0]
+   if provider=='Anthropic' and (len(matched)!=1 or 'structured_outputs' not in matched[0].get('supported_parameters',[])):raise ValueError('structured_output_unavailable')
    if len(matched)!=1 or (HSNAPSHOT if provider=='Anthropic' else 'typesafe/jev-1.13-20260917') not in matched[0]['name'] or float(matched[0]['pricing']['prompt'])>inp or float(matched[0]['pricing']['completion'])>outprice:raise ValueError('route_price_changed')
   if ledger is None or not ledger.is_file():raise ValueError('original_ledger_required')
   lock=ledger.with_suffix('.writer.lock').open('a');fcntl.flock(lock,fcntl.LOCK_EX|fcntl.LOCK_NB)
@@ -76,9 +77,9 @@ def run(stage,out,admission,ledger=None,parent=None):
  out.mkdir(parents=True,exist_ok=False);rows=cases(stage);write(out/'observations.json',rows)
  sys.path.insert(0,str(BASE/'practical'));from reporting import Reporter
  import swarm_report as sdk
- reporter=Reporter(sdk,'healing-helping-hands','healing-helping-hands/C6-'+stage,out/'reporting.jsonl')
- reporter.emit('start',url=receipt['url'],params={'attempt_id':'C6','stage':stage,'arm':'haiku+jev'},message=f'TLDR: C6-{stage} uses Haiku4.5 and Jev; '+('60 balanced competence cases before automatic evaluation.' if stage=='S0' else '432 synthetic cases: agreement referral versus single Haiku, always-Jev and same-count random, measuring absolute error and actual total cost.'))
- m={'attempt':'C6R1-'+stage,'stage':stage,'status':'running','calls':0,'source_commit':a['source_commit'],'source_hashes':hashes,'plan':receipt,'host':a['host'],'claim':a['claim_id'],'started_epoch':time.time()};write(out/'manifest.json',m)
+ reporter=Reporter(sdk,'healing-helping-hands','healing-helping-hands/'+COHORT+'-'+stage,out/'reporting.jsonl')
+ reporter.emit('start',url=receipt['url'],params={'attempt_id':COHORT,'stage':stage,'arm':'haiku+jev'},message=f'TLDR: {COHORT}-{stage} uses Haiku4.5 and Jev; '+('60 balanced competence cases before automatic evaluation.' if stage=='S0' else '432 synthetic cases: agreement referral versus single Haiku, always-Jev and same-count random, measuring absolute error and actual total cost.'))
+ m={'attempt':'C6R2-'+stage,'stage':stage,'status':'running','calls':0,'source_commit':a['source_commit'],'source_hashes':hashes,'plan':receipt,'host':a['host'],'claim':a['claim_id'],'started_epoch':time.time()};write(out/'manifest.json',m)
  opener=urllib.request.build_opener(NoRedirect());deadline=time.monotonic()+(900 if stage=='D0' else 3600)
  try:
   for i,r in enumerate(rows):
@@ -88,11 +89,11 @@ def run(stage,out,admission,ledger=None,parent=None):
    for x,y in conditions:
     if time.monotonic()>deadline or time.time()>a['expires_epoch']-120:raise ValueError('deadline')
     model='qwen' if stage=='D0' else x;variant=x+'/'+y if stage=='D0' else ('jev' if x=='jev' else ('a' if y==0 else 'b'))
-    payload=qwen(r,x,y) if stage=='D0' else (haiku(r,y) if x=='haiku' else jev_request(r,i,'C6R1-'+stage))
-    h=sha({'attempt':'C6R1-'+stage,'row':r['id'],'variant':variant,'payload':payload});start=time.time();m['calls']+=1
+    payload=qwen(r,x,y) if stage=='D0' else (haiku(r,y) if x=='haiku' else jev_request(r,i,'C6R2-'+stage))
+    h=sha({'attempt':'C6R2-'+stage,'row':r['id'],'variant':variant,'payload':payload});start=time.time();m['calls']+=1
     append(out/'calls.jsonl',{'type':'start','id':h,'row_id':r['id'],'model':model,'variant':variant,'payload':payload,'epoch':start})
     amount=0 if model=='qwen' else (conservative_haiku_cost(payload) if model=='haiku' else RESERVE)
-    if db:reserve(db,h,amount,'C6R1-'+stage)
+    if db:reserve(db,h,amount,'C6R2-'+stage)
     url='http://127.0.0.1:11434/api/chat' if model=='qwen' else 'https://openrouter.ai/'+('api/v1/chat/completions' if model=='haiku' else 'api/alpha/decisions')
     headers={'Content-Type':'application/json'}
     if key:headers['Authorization']='Bearer '+key

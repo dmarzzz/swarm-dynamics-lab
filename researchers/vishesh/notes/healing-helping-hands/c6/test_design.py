@@ -29,6 +29,8 @@ class DesignTests(unittest.TestCase):
   self.assertTrue(qualification(rows)['qualified'])
   for r in rows:r['labels']['a']='REFUTE'
   self.assertFalse(qualification(rows)['qualified'])
+ def test_strict_schema_and_cohort(self):
+  p=haiku(cases('S0')[0],0);self.assertTrue(p['response_format']['json_schema']['strict']);self.assertEqual(p['max_tokens'],64);self.assertEqual(COHORT,'C6R2')
  def test_complete_fence_normalization(self):
   self.assertEqual(parse_label('```json\n{"label":"SUPPORT"}\n```'),'SUPPORT')
  def test_parse_fail_closed(self):
@@ -36,7 +38,7 @@ class DesignTests(unittest.TestCase):
    with self.assertRaises(ValueError):parse_label(text)
  def test_haiku_only_option_order_changes(self):
   a=haiku(cases('S0')[0],0);b=haiku(cases('S0')[0],1)
-  x=a.pop('messages')[0]['content'];y=b.pop('messages')[0]['content'];self.assertEqual(a,b)
+  x=a.pop('messages')[0]['content'];y=b.pop('messages')[0]['content'];sa=a.pop('response_format');sb=b.pop('response_format');self.assertEqual(set(sa['json_schema']['schema']['properties']['label']['enum']),set(sb['json_schema']['schema']['properties']['label']['enum']));self.assertEqual(a,b)
   self.assertEqual(x.replace('SUPPORT, REFUTE, UNCERTAIN','LABELS'),y.replace('REFUTE, UNCERTAIN, SUPPORT','LABELS'))
  def test_same_wrong_agreement_is_not_rescued(self):
   rows=cases('S1')

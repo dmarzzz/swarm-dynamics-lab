@@ -2,8 +2,8 @@
   "status": "approved",
   "date": "2026-10-04",
   "authority": "Owner direction in owning task: use stronger Jev/Haiku agents and cumulative USD50 ceiling. No exact owner prompt published.",
-  "scope": "C6R1 necessary interface repair then S0/conditional S1 under owner-directed stronger-agent test; prior failed call retained",
-  "plan_sha256": "44d13ede03c45ffe3274e1528a3ad84b90cf2d2467b8bb39e0e1dbb69c639162",
+  "scope": "C6R2 necessary strict-output repair then qualification/conditional evaluation within owner-directed USD50 ceiling; all prior attempts retained",
+  "plan_sha256": "1fadf965f6e8928f88a9e0ba78c9a073f12aa54ae1cab9b24938f87d6b96ed54",
   "cumulative_cap_usd": 50,
-  "attempt_cap_usd": 2
+  "attempt_cap_usd": 3
 }

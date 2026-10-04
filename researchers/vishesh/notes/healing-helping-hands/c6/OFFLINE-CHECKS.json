@@ -1,33 +1,20 @@
 {
-  "unit_tests_passed": 16,
-  "case_and_cost_checks": {
+  "unit_tests_passed": 17,
+  "C6R2": {
     "S0": {
       "cases": 60,
-      "haiku_calls": 120,
-      "jev_calls": 60,
-      "haiku_reserved_bound": 0.13211,
-      "jev_reserved_bound": 0.08064,
-      "total_reserved_bound": 0.21275,
-      "case_sha256": "06ff75edd3ee0962577dbea1684c42736eacc8f0542672701feec83f046241ea",
-      "parser_correct": 60
+      "calls": 180,
+      "case_sha256": "4b237531eb7e8a9716b8baa4fbce06fb702ef0215d28d287adeeea11508a336d",
+      "conservative_reservation_usd": 0.29147
     },
     "S1": {
       "cases": 432,
-      "haiku_calls": 864,
-      "jev_calls": 432,
-      "haiku_reserved_bound": 1.021488,
-      "jev_reserved_bound": 0.580608,
-      "total_reserved_bound": 1.602096,
-      "case_sha256": "cbe4c33aad3208ab183fba95e547251655fec9871517d1461dbb02840d2a2f71",
-      "parser_correct": 432
+      "calls": 1296,
+      "case_sha256": "5d289f1eaec8b8be4e2d3332cc8c44bfa8f6a0560236740f0076bc0460188a5b",
+      "conservative_reservation_usd": 2.16888
     },
-    "all_new_maximum_usd": 1.814846,
-    "historical_exposure_usd": 0.053342898,
-    "cumulative_bound_usd": 1.868188898,
-    "approved_cumulative_cap": 50,
-    "self_imposed_attempt_cap": 2
+    "previous_C6_cost_usd": 0.007352206,
+    "total_attempt_bound_usd": 2.467702206
   },
-  "model_calls": 0,
-  "prior_failed_call_usd": 0.000216,
-  "total_C6_conservative_exposure_usd": 1.815062
+  "native_calls_from_offline_checks": 0
 }

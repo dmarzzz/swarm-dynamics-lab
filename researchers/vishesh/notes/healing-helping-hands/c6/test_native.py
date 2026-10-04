@@ -14,7 +14,7 @@ class NativeTests(unittest.TestCase):
   a=self.receipt();a['stage']='S0'
   with self.assertRaises(ValueError):validate_admission(a,'S0',1100)
  def test_main_needs_actual_review(self):
-  a=self.receipt();a.update(stage='S1',cumulative_cap_usd=50.,c6_cap_usd=2.,budget_increase_approved=True,original_ledger_verified=True)
+  a=self.receipt();a.update(stage='S1',cumulative_cap_usd=50.,c6_cap_usd=3.,budget_increase_approved=True,original_ledger_verified=True)
   with self.assertRaises(ValueError):validate_admission(a,'S1',1100)
  def valid(self):return {'model':HMODEL,'provider':'Anthropic','choices':[{'finish_reason':'stop','message':{'content':'{"label":"SUPPORT"}'}}],'usage':{'cost':.0002,'prompt_tokens':150,'completion_tokens':7}}
  def test_model_provider_and_truncation(self):
@@ -30,7 +30,7 @@ class NativeTests(unittest.TestCase):
  def test_original_ledger_duplicate_and_cap(self):
   db=self.db();reserve(db,'new',.001,'S0')
   with self.assertRaises(sqlite3.IntegrityError):reserve(db,'new',.001,'S0')
-  with self.assertRaises(ValueError):reserve(db,'excess',2.01,'S0')
+  with self.assertRaises(ValueError):reserve(db,'excess',3.01,'S0')
   self.assertEqual(db.execute('SELECT count(*) FROM calls').fetchone()[0],2732)
  def test_absent_history_blocks(self):
   db=self.db();db.execute('DELETE FROM calls');db.commit()
