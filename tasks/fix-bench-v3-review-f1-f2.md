@@ -3,16 +3,17 @@ id: fix-bench-v3-review-f1-f2
 type: task
 title: Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/private-control
+owner: null
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/private-control
 depends_on: []
 topics: []
-claimed_at: 2026-10-04T03:51Z
-updated: 2026-10-04T03:51Z
+updated: 2026-10-04T03:59Z
+history:
+- '2026-10-04T03:59Z released by dmarz/private-control: F1/F2 fixed in 6563e28 with tests (57/57). Remaining for discussion-bench-v3: re-score v3-q0-a1 (it had 0 invalid outputs, so expect no change) and pin 6563e28+ in the next launch manifest.'
 ---
 
 ## Goal
