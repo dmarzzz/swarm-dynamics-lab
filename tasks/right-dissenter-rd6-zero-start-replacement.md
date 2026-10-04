@@ -3,7 +3,7 @@ id: right-dissenter-rd6-zero-start-replacement
 type: task
 title: Execute the approved RD6 zero dispatch replacement
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,12 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T19:49Z
-updated: 2026-10-04T19:49Z
+updated: 2026-10-04T20:07Z
+outputs:
+- researchers/vishesh/notes/dissent/reopening/REPORT.md
+- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-POST.md
+- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A2-QUALITY.json
+- researchers/vishesh/notes/dissent/reopening/results/q0-a2
 ---
 
 ## Goal
