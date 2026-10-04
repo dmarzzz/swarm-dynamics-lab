@@ -3,7 +3,7 @@ id: heterogeneous-agent-research
 type: task
 title: Jev, Haiku and Qwen heterogeneous swarm research and prioritization
 kind: question
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-heterogeneous
 for: vishesh
@@ -15,7 +15,13 @@ topics:
 - agent-budgets
 - collective-decision
 claimed_at: 2026-10-04T02:12Z
-updated: 2026-10-04T02:12Z
+updated: 2026-10-04T02:41Z
+outputs:
+- researchers/vishesh/notes/heterogeneous-swarms/README.md
+- researchers/vishesh/notes/heterogeneous-swarms/questions.json
+- researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md
+- dashboard/contribution-banks.json
+- dashboard/idea-scores/vishesh.json
 ---
 
 ## Goal

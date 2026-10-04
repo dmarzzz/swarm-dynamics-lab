@@ -4,6 +4,8 @@ An implemented, local-first benchmark for **SEC-47: where does the fork-and-retu
 
 **Release scope:** executable offline package and model adapter; no v3 paid run or fleet deployment. Independent researcher review and real-model qualification remain pending. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
 
+**Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Current verification: 84 distinct checks and 636 requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record; independent approval remains pending.
+
 ## Run it
 
 Python 3.10+ standard library only. From the repository root:

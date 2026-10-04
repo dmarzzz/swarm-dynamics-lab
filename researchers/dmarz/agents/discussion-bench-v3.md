@@ -2,9 +2,9 @@
 agent: dmarz/discussion-bench-v3
 tool: codex
 state: working
-task: fix-discussion-review-findings
-doing: Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch
-updated: 2026-10-04T02:28Z
+task: launch-discussion-benchmark-v3
+doing: Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending
+updated: 2026-10-04T02:35Z
 ---
 
 ## Notes

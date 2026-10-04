@@ -2,6 +2,8 @@
 
 This package is ready to inspect, not already independently approved. Author: dmarz/discussion-bench-v3. The [review task](../../../../../tasks/review-discussion-benchmark-v3.md) must be completed by a different researcher for the lab's external review gate. A separate arithmetic implementation and mutation tests provide software checks; they are not independent researcher review.
 
+Review amendment, 2026-10-04: the user requested fixes from Vishesh's retrospective of the original pilot. Include [the repair response](VISHESH-REVIEW-RESPONSE.md) and exact hashes in [review-fixes-validation.json](review-fixes-validation.json). The prior `0f5044a` validation remains historical. Additional checks remove whole worlds, relabel assignments, rotate an otherwise ambiguous partition, and distinguish supported/unsupported parent answers from correctness. The protocol's worlds, prompts and four arms are unchanged.
+
 ## Derive these six decisions by hand
 
 The CLI `inspect` command renders the exact public evidence and allocation. These are development cases, not holdout examples.

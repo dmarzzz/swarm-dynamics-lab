@@ -1,0 +1,7 @@
+# Native Q1-01 post-mortem
+
+Nine terminal slots retained; two valid and acceptable, seven invalid. Sixteen API calls; reported USD 0.04256; no missing usage/reporting errors. Citation-array repair worked. The next failure was an API/validator mismatch: generic schema generation allowed numeric fields to be null, including confidence, while study validation required finite numeric confidence. A security analyst returned DEFER with null confidence, terminating the shared team prefix. Null is not a valid estimate under the frozen contract; these downstream invalid slots are not model purchasing mistakes.
+
+Repair only the schema: require numeric confidence for initial/final reports; cost remains nullable when unknown. Add a regression test matching enum citations and confidence type to validation. Retain all failed records. Use fresh buyer profile 6 for the next qualification, not the failed values. Budget remains the same unreplenished USD 1.40 subquota; no scientific escalation yet.
+
+Full failure inventory: three invalid slots came from null confidence, two from a 253-character claim exceeding an arbitrary 240-character bound, and two from four legitimate citation IDs exceeding a three-ID cap. These latter records were meaningful but the contract was unnecessarily brittle. Q2 keeps short-output guidance, exact identity validation, a hard provider token limit and larger finite field bounds; it does not reject supported evidence for crossing a stylistic length target. The original seven invalid labels are preserved.

@@ -9,6 +9,33 @@ from study import reference_decision,run,validate
 from run import Scripted
 
 class ScenarioTests(unittest.TestCase):
+    def test_worksheet_uses_visible_sources_without_recommendation(self):
+        from study import cost_worksheet
+        c=build('usage_cliff',5)
+        obs={'brief':c['brief'],'candidates':c['candidates'],'documents':c['documents']}
+        rows=cost_worksheet(obs)
+        self.assertEqual(len(rows),3)
+        for r in rows:
+            self.assertFalse(set(r)&{'choice','eligible','acceptable','target'})
+            self.assertEqual(r['total_usd'],costs(c['brief'],c['evaluator']['products'][r['candidate']])['total'])
+        obs['documents']=c['allocations'][0];self.assertEqual(cost_worksheet(obs),[])
+    def test_native_schema_matches_confidence_and_citation_contract(self):
+        from native import ScenarioPolicy
+        from study import scripted
+        policy=ScenarioPolicy.__new__(ScenarioPolicy)
+        c=build('usage_cliff',6)
+        for phase in ('initial','chair'):
+            obs={'phase':phase,'brief':c['brief'],'candidates':c['candidates'],'documents':c['documents']}
+            s=policy.schema({'observation':obs},scripted)['properties']
+            self.assertEqual(s['confidence']['type'],'number')
+            self.assertEqual(s['choice']['enum'],c['candidates']+['DEFER'])
+            ids=s['findings']['items']['properties']['citations']['items']['enum'] if phase=='initial' else s['citations']['items']['enum']
+            self.assertEqual(ids,[d['id'] for d in c['documents']])
+    def test_meaningful_multisource_findings_are_not_style_failures(self):
+        from study import scripted
+        c=build('usage_cliff',6);o={'phase':'initial','brief':c['brief'],'candidates':c['candidates'],'documents':c['documents']}
+        a=scripted(o);a['findings'][0]['claim']='x'*253;a['findings'][0]['citations']=[d['id'] for d in c['documents'][:4]]
+        validate(a,o)
     def test_sensitivity_is_visible(self):
         from sensitivity import audit
         a=audit();self.assertEqual(a['cases'],24);self.assertGreater(a['sensitivity_dependent'],0)

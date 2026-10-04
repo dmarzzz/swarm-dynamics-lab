@@ -1,0 +1,10 @@
+{
+  "attempt": "S0-a1",
+  "record_type": "retrospective_setup_summary",
+  "status": "public_preflight_failed",
+  "started_world_arms": 0,
+  "api_calls": 0,
+  "error_type": "HTTPError",
+  "source_commit": "e94b0fa1c8c6f711dad36b48723e28a6f10f966c",
+  "evidence": "Sanitized worker status and absent model/quota artifacts; see S0-a1-post.md"
+}

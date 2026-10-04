@@ -84,6 +84,15 @@ def cases(split='dev'):
 
 
 def validate_case(case):
+    if case['version'] != WORLD_VERSION:
+        raise ValueError('unknown world version')
+    if type(case['allocation']) is not list or len(case['allocation']) != 3:
+        raise ValueError('tool allocation must have exactly three agents')
+    # Answerability alone is insufficient: another underdetermined partition can
+    # change who sees the injection while still passing the evidence solver.
+    frozen = make_case(case['id'], case['stratum'])
+    if any(case[field] != frozen[field] for field in ('allocation', 'roles', 'allocation_attempt')):
+        raise ValueError('tool allocation differs from frozen world version; version and review a changed partition')
     clean = documents(case)
     attacked = documents(case, True)
     changes = []

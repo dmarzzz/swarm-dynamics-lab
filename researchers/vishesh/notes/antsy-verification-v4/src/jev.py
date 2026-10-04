@@ -1,5 +1,5 @@
 """Pinned Jev adapter and finite probe/actor payload allowlist. No credential handling here."""
-import hashlib,itertools,json,math,time,urllib.request
+import copy,hashlib,itertools,json,math,os,time,urllib.request
 from pathlib import Path
 from policies import MODES,ROLES,calibrate,initial,purchase,actor_input
 MODEL='typesafe/jev-1.13';SNAPSHOT='typesafe/jev-1.13-20260917';PROVIDER='TypeSafe';RATE=.000000042;RESERVE=32000*RATE
@@ -18,7 +18,11 @@ def validate_response(data,criteria):
     u=data['usage'];cost=u['cost'];nt=u['input_tokens']
     if not isinstance(nt,int) or not 0<nt<=32000 or not math.isfinite(cost) or not 0<=cost<=RESERVE+1e-10:raise ValueError('usage_invalid')
     ans=data['answers']['decision'];p=ans['probabilities'];c=ans['choice']
-    if set(p)!=set(criteria) or c not in criteria or any(not math.isfinite(v) or not 0<=v<=1 for v in p.values()) or abs(sum(p.values())-1)>.001 or p[c]<max(p.values())-1e-5:raise ValueError('choice_invalid')
+    if set(p)!=set(criteria) or c not in criteria or any(not isinstance(v,(int,float)) or isinstance(v,bool) or not math.isfinite(v) or not 0<=v<=1 for v in p.values()):raise ValueError('choice_invalid')
+    # Preserve the returned numbers. Two-decimal serialization can sum to 0.99/1.01.
+    on_grid=all(abs(v*100-round(v*100))<1e-8 for v in p.values())
+    tolerance=.005*len(p)+1e-9 if on_grid else .001
+    if abs(sum(p.values())-1)>tolerance or p[c]<max(p.values())-1e-5:raise ValueError('choice_invalid')
     return {'model':data['model'],'provider':data['provider'],'usage':{k:u[k] for k in ('cost','input_tokens','output_tokens')},'answers':{'decision':{'choice':c,'probabilities':p}}}
 
 def safe_diagnostic(data,criteria):
@@ -28,11 +32,25 @@ def safe_diagnostic(data,criteria):
     return {'model_matches':data.get('model')==SNAPSHOT,'provider_matches':data.get('provider')==PROVIDER,'selected':c if c in criteria else 'unexpected','labels_match':set(p)==set(criteria),'probabilities':vals,'probability_sum':sum(vals.values()) if all(v is not None for v in vals.values()) else None,'usage':{k:number(u.get(k)) for k in ['cost','input_tokens','output_tokens']}}
 
 class Runtime:
-    def __init__(self,relay,attempt=1):
+    def __init__(self,relay,attempt=1,previous=(),journal=None):
         assert relay.startswith('http://127.0.0.1:')
-        self.relay=relay;self.attempt=attempt;self.receipts=[];self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
+        self.relay=relay;self.attempt=attempt;self.receipts=[];self.journal=journal;self.cache={}
+        for path in previous:
+            data=json.loads(Path(path).read_text());rows=data if isinstance(data,list) else [data['response']]
+            for old in rows:
+                r=copy.deepcopy(old)
+                diag=r.get('diagnostic')
+                if not r['valid'] and r.get('reason')=='choice_invalid' and diag and diag['model_matches'] and diag['provider_matches'] and diag['labels_match']:
+                    data={'model':SNAPSHOT,'provider':PROVIDER,'usage':diag['usage'],'answers':{'decision':{'choice':diag['selected'],'probabilities':diag['probabilities']}}}
+                    checked=validate_response(data,r['question']['criteria'])
+                    r.update(valid=True,choice=diag['selected'],probabilities=diag['probabilities'],usage=diag['usage'],encoded_tokens=diag['usage']['input_tokens'],served_model=SNAPSHOT,provider=PROVIDER,schema_recovered='two-decimal probability sum; original action unchanged')
+                if r['valid']:self.cache.setdefault(json.dumps([r['context'],r['input_hash']],sort_keys=True),(r,Path(path).parent.name))
+        self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'probability_sum_rule':'half a 0.01 rounding unit per component when all values lie on that grid; otherwise 0.001; no normalization','input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
     def choose(self,state,instructions,criteria,context):
         q={'type':'choice','instructions':instructions,'criteria':criteria};h=digest(state,q);rid=hashlib.sha256(json.dumps([context,h,self.attempt],sort_keys=True).encode()).hexdigest()
+        key=json.dumps([context,h],sort_keys=True)
+        if key in self.cache:
+            old,source=self.cache[key];receipt=copy.deepcopy(old);receipt['reused_from']=source;self.receipts.append(receipt);self.persist(receipt);return receipt['choice']
         receipt={'context':context,'state':state,'question':q,'input_hash':h,'valid':False,'encoded_tokens':0};self.receipts.append(receipt);start=time.monotonic()
         try:
             payload=json.dumps({'id':rid,'state':state,'question':q}).encode()
@@ -44,7 +62,11 @@ class Runtime:
             receipt.update(valid=True,choice=answer['choice'],probabilities=answer['probabilities'],usage=data['usage'],encoded_tokens=data['usage']['input_tokens'],served_model=data['model'],provider=data['provider'])
             return answer['choice']
         except Exception as exc:receipt['error']=type(exc).__name__;raise
-        finally:receipt['wall_s']=time.monotonic()-start
+        finally:
+            receipt['wall_s']=time.monotonic()-start;self.persist(receipt)
+    def persist(self,receipt):
+        if self.journal:
+            with Path(self.journal).open('a') as f:f.write(json.dumps(receipt)+'\n');f.flush();os.fsync(f.fileno())
 
 def allowlist(records):
     allowed={digest(p['state'],p['question']) for p in probes()};cal=calibrate(records[:20])

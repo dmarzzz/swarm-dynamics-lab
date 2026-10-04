@@ -1,0 +1,18 @@
+{
+  "stage": "Q0",
+  "planned": 9,
+  "terminal": 9,
+  "valid": 0,
+  "invalid": 9,
+  "acceptable": 0,
+  "qualified": false,
+  "calls": 6,
+  "input_tokens": 11414,
+  "output_tokens": 1969,
+  "actual_usd": 0.021259,
+  "usage_missing": 0,
+  "seconds": 31.04,
+  "source_signature": "8968cdb93fe0ae32004673126b82a577db3bbd7f1eb3d005505d7e206e11fc89",
+  "report_errors": [],
+  "outcomes_hash": "ea0afbd39456ca44a2e231ec1a07558eaaa7443ac79eded36482ce5d6787dbd5"
+}

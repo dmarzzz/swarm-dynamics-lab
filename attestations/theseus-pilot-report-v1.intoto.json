@@ -1,0 +1,79 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "vishesh/codex-theseus",
+    "prompt": "Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive replacement of every member? Run three scenarios and repeat if necessary."
+   },
+   "internalParameters": {
+    "commit": "2c81f6acc2e051ee9b33aec61f8efdd1f1580663-dirty",
+    "session": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+    },
+    {
+     "digest": {
+      "sha256": "2a6e8ee9cd29e0c237aeba01f7878db62fd84f6a6a7dd2f9661209dd32b0c95a"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a2/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "aec58b7f1a2b15e7ea38a9c9ec5f1e944013a9090ab723f9745b47d0939dbba5"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a3/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "dad078d3f41d0352949f9f5e0ba66e30449de7edcfd6a6599e2212d4009ed7f0"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a4/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "2e4902eeab7c490c0b0d42e161c15c514a601f5675748044e391c9d1d2197a23"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/audit.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "2c81f6acc2e051ee9b33aec61f8efdd1f1580663"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-theseus"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T02:38:09Z",
+    "invocationId": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T02:38:09Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc"
+   },
+   "name": "artifacts/theseus-pilot-report/theseus-pilot-report-v1.md"
+  }
+ ]
+}

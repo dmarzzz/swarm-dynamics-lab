@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: idle
-task: influence-quality-review
-doing: Scenario redesign and failure audit published; paid qualification pending case review and fresh dedicated allocation
+state: working
+task: influence-native-rerun
+doing: Native procurement qualification and paired rerun on exclusive sim-dmarz-3 within shared quota
 updated: 2026-10-04T00:54Z
 ---
 

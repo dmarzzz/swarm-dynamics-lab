@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: run-market-split-api
-doing: Model qualification passed; launching the frozen 36-episode discovery pilot.
-updated: 2026-10-04T02:27Z
+doing: Monitoring the deployed 36-episode discovery pilot and auditing saved decisions.
+updated: 2026-10-04T02:32Z
 ---
 
 ## Notes

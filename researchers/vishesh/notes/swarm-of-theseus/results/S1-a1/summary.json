@@ -1,0 +1,161 @@
+{
+  "assigned": 36,
+  "completed": 36,
+  "failed": 0,
+  "by_scenario": {
+    "seed-bank": {
+      "neither": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.5,
+        "convention": 0.0
+      },
+      "notes": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.75
+      },
+      "mentor": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.6666666666666666
+      },
+      "both": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.8333333333333333
+      },
+      "founders": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.5
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 1.0
+      }
+    },
+    "observatory": {
+      "neither": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.5,
+        "convention": 0.0
+      },
+      "notes": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.0
+      },
+      "mentor": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.75,
+        "convention": 0.0
+      },
+      "both": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.0
+      },
+      "founders": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.0
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 1.0
+      }
+    },
+    "repair-dock": {
+      "neither": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.5625,
+        "convention": 0.0
+      },
+      "notes": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 1.0
+      },
+      "mentor": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.0
+      },
+      "both": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 0.8333333333333333
+      },
+      "founders": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.6875,
+        "convention": 0.5833333333333334
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 1.0,
+        "convention": 1.0
+      }
+    }
+  },
+  "primary": {
+    "contrast": "both-minus-neither",
+    "difference": 0.4791666666666667,
+    "ci95": [
+      0.22916666666666666,
+      0.7291666666666666
+    ],
+    "worlds": 6,
+    "paired_differences": {
+      "seed-bank": [
+        0.75,
+        0.25
+      ],
+      "observatory": [
+        1.0,
+        0.0
+      ],
+      "repair-dock": [
+        0.625,
+        0.25
+      ]
+    },
+    "note": "Exploratory; two worlds per scenario give weak precision. Failures scored zero."
+  },
+  "complete_case": {
+    "difference": 0.4791666666666667,
+    "worlds": 6,
+    "scenarios": 3,
+    "note": "Equal weight over available scenarios; compare denominator to conservative primary."
+  },
+  "qualification_passed": true,
+  "cost": {
+    "calls": 864,
+    "actual_usd": 1.896231,
+    "input_tokens": 705496,
+    "output_tokens": 238147,
+    "usage_missing": 0
+  },
+  "stage": "S1",
+  "source_commit": "a773ff5410442fcf351cfc817550b3fc92a88994"
+}

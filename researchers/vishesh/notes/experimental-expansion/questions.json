@@ -1161,7 +1161,8 @@
           "commons": "2026-10-04T02:18:11Z",
           "collective-sensing": "2026-10-04T02:18:11Z"
         }
-      }
+      },
+      "design_note": "researchers/vishesh/notes/optimal-swarm-size/README.md"
     }
   ]
 }

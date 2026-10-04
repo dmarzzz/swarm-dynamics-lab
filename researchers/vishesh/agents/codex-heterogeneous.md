@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: null
-doing: Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions
-updated: 2026-10-04T02:11Z
+doing: Published 30 heterogeneous swarm questions, source ledger, rubric scores and five exploratory designs
+updated: 2026-10-04T02:41Z
 ---
 
-## Notes
+## Handoff
 
-Anything the next agent picking up this lane should know.
+Research bundle: `researchers/vishesh/notes/heterogeneous-swarms/README.md`. Parent task is done. Follow-up `heterogeneous-methods-review` tracks full-methods reading, citation coverage and independent review before formal promotion. No experiments launched.

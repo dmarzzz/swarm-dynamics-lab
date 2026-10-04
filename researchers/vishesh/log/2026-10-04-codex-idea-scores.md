@@ -7,3 +7,5 @@ Validation: 29 exporter tests, score contract tests, 11 review tests, navigation
 Public scoring UI verified. Five Patchwork additions arrived during deployment; scored SEC-54 through SEC-56 and MKT-13/MKT-14, bringing coverage to 297 (219 atlas + 78 contributed). All optional peer ratings remain NA.
 
 Added user-requested EX-25 after checking all atlas and contribution records for overlapping size questions. It targets operational size selection conditional on problem and solution design, deadline, total cost, memory and hardware. Includes N=1, matched-resource comparisons, held-out selection, a Pareto frontier and explicit finite-grid limits. Initial score 92 (95/100/85/80); peer scores NA. No experiments launched.
+
+Expanded EX-25 into a requested exploratory design. Defined coordinator-inclusive N, budget-matched comparisons, launch-time-only selection, root-paired analysis, API versus physical-memory limits, an 80-episode qualification proposal, gated larger sweeps and measured-event visual mappings. Checked plan arithmetic and links; no experiment implementation, model calls or launch.
