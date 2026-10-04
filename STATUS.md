@@ -248,6 +248,7 @@
 |---|---|---|---|---|
 | dmarz/scale-xl | blocked |  | 2026-10-04T07:45Z | sybil-scale-xl: fleet S0 passed 216/216 (33d602fe); paid stages moving to Opus per dmarz, waiting on dmarz budget decision |
 | dmarz/d1-opus | working |  | 2026-10-04T07:40Z | D1-Opus (discussion-v3-d1-opus) prepared; zero-model rehearsal on sim-dmarz-9, then stop before any paid call for dmarz go-ahead |
+| dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
 | dmarz/v3-d2-opus | working |  | 2026-10-04T07:35Z | Building discussion benchmark v3 D2 (canonical decisions plus single-option feasibility checks) with an added Opus arm; no model call until the pre-run review is on main and the reviewer says go |
@@ -257,7 +258,6 @@
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
-| dmarz/orbital-orchestrator | working |  | 2026-10-04T05:54Z | Building and launching sybil-specialists-sonnet (Sonnet 4.6 replication of sybil-specialists-api) on sim-dmarz-4 |
 | vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/budget-sonnet | working |  | 2026-10-04T05:30Z | Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run |
