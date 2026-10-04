@@ -108,3 +108,15 @@ A ready assessment does not override a failed runtime check. A fresh current adm
 - Frozen artifact inventory; durable upload/readback verification: [links]
 - Experiment workers stopped; claim released after uploads; authorized teardown handoff: [status]
 - Next action, acceptance criteria and required authority: [fill]
+
+
+## Completion and successor handoff
+
+- Latest native attempt and terminal evidence:
+- Automatic operational post-mortem and handoff (or manual-hook limitation):
+- Completed scientific post-mortem against [the run-quality rubric](../RUN-QUALITY.md):
+- Valid result / remaining defects / unresolved evidence:
+- [Concrete next-run plan](next-run-plan.md), or reason to finish:
+- Owner decision reference and approved proposal/contract hashes (no raw prompt):
+- Allocation needed or still-valid same-experiment allocation; cumulative remaining budget:
+- Exact next-session action and acceptance check:

@@ -1,52 +1,64 @@
-# Run assessment and repair cycle
+# Run assessment and the next experiment
 
-Every experiment uses this cycle, including local pilots, scripted qualification, interrupted attempts and successful runs:
+Every attempt ends with a post-mortem, including setup failures, interrupted attempts, diagnostics and successful executions. The next session begins by reading that post-mortem and assessing its suggestions against [what a good run establishes](RUN-QUALITY.md). It does not blindly rerun the experiment.
 
-**Plan and assess → freeze → execute → reconcile and review → repair → qualify again → advance.**
+The cycle is **record the outcome → complete the scientific assessment → choose repairs → write the next-run plan → obtain applicable owner approval → admit and execute the named stage**. A valid null or adverse result can end the cycle. Existing public-plan, qualification, spending, credential and approved-account requirements remain binding.
 
-This is the operator/agent workflow. It does not add automatic launch enforcement to existing workers. Existing survey, hypothesis, spending, data-access and server-claim requirements still apply.
+For Vishesh-owned studies, researcher review is **not required by owner direction**. The owning agent still completes the assessment and resolves relevant defects. Do not add independent design, dossier or researcher sign-off, or record the waiver as a passed review. The owner's approval of a material next-run update is a separate decision. Other researchers' review policies remain unchanged.
 
-## Before each run
+## At attempt termination
 
-Copy [pre-run.md](templates/pre-run.md) into the experiment's `reviews/<attempt>-pre.md`. Read the preceding post-mortem first. For exploratory work, keep reviews under the owned notes directory. Record:
+The supported [operations command](OPERATIONS.md) writes an operational `POST-MORTEM.md` and `handoff.json` from the saved outcome. The handoff starts with `scientific_review=unresolved`. This automatic summary records facts and missing evidence; it does not evaluate scenario realism, causal validity or scientific meaning. It must not invent counts, actual spend, causes or a successful scientific verdict from an exit code.
 
-- The question, intended decision value, strongest baseline and what would make the study uninformative.
-- The precise change since the previous attempt, unresolved issues and their acceptance checks.
-- Design quality: independent units, task/label coverage, evidence and resource matching, evaluator validity, leakage, timing semantics, and positive/negative controls.
-- Frozen protocol/config/model/prompt/evaluator versions, assignments, seeds, stage and untouched holdout.
-- A completed [visualization mapping](RUN-VISUALIZATION.md): run-specific signals, encodings, time/event semantics, live frames, retained history, animation/replay, fallback and validation.
-- Maximum calls, time, spend and worker count; retry policy, safe stopping, credentials by alias only, server claim and artifact destination.
-- Evidence that regression checks and required competence screens passed, or why the run is specifically a bounded diagnostic to repair a failed screen.
+If completion was interrupted, or a legacy launcher needs a closeout bridge, use the saved-evidence operation:
 
-Commit the completed assessment and protocol changes before model execution. Use `ready`, `diagnostic-only`, or `blocked` with a reason. A failed qualification blocks a broader scientific sweep, **not** continued diagnostic/repair work within the authorized budget. Do not use a pre-run form to bypass formal research gates.
+```sh
+python3 scripts/experiment.py finalize STUDY --attempt ATTEMPT \
+    --results SAVED_RESULT_DIRECTORY --outcome completed
+```
 
-## After each attempt
+Select the supported `completed`, `failed`, `blocked` or `ambiguous` execution outcome from actual records; `--results` and `--outcome` are optional where the command can recover them. `finalize` does not dispatch models, resume workers or mark the scientific review complete. Inspect the resulting handoff. This integration covers supported entry points; other launchers must invoke the bridge or explicitly complete the same closeout before the session finishes.
 
-Copy [post-mortem.md](templates/post-mortem.md) to `reviews/<attempt>-post.md`. Setup failures and interrupted runs need a short post-mortem too. Reconcile every assigned episode against started, terminal, graded and analyzed records. Report failures, duplicate attempts, missing data and actual resource use. An exit code of zero or green hub status does not establish experiment quality.
+For an interrupted worker, stop and verify that exact worker before using `--worker-stopped` when required by recovery. The flag records the operator's check; it neither stops a worker nor independently verifies remote state. An empty local journal is not proof of a first run: inspect the registered preceding post-mortem and import/finalize historical evidence before preparing a successor.
 
-Review the visual artifacts against the mapping and saved traces: initial/event/final states, numerical agreement, missing/failure display, playback, coverage and limitations. A latest-frame upload alone does not preserve run history.
+The **owning session must then finish the analytical post-mortem**, using [the template](templates/post-mortem.md). Preserve the automatic facts and link any corrections to evidence. Reconcile assigned → started → terminal → graded → analyzed, retaining duplicate, partial, failed and unstarted units. Report actual usage separately from reservations and unresolved exposure. Review the full eleven-dimension rubric, observed results, controls, uncertainty, visuals and deviations.
 
-Digest both results and experiment quality: did the manipulation occur, did controls discriminate, could the model do the clean task, did the evaluator measure the intended outcome, and do the data support the proposed interpretation? Compare against the pre-run assessment. Separate observed facts, suspected causes and verified causes. Include next-run changes, predicted consequences and tests that could falsify the diagnosis.
+Do not report the run's overall work as done while scientific review is unresolved. Execution can be complete while closeout is pending. If evidence or access prevents the assessment, retain `unknown`, the exact blocker and a named next action. A finished post-mortem may document open defects and a `repair` or `blocked` verdict; it does not relabel the attempt as successful.
 
-Classify each issue before deciding what to rerun:
+## Start the next session with evidence
 
-| Kind | Examples | Required response |
-|---|---|---|
-| Execution or reporting defect | crash, malformed output, lost artifacts, duplicate dispatch, secret exposure | Preserve evidence, contain the fault, diagnose and fix; regression check then a new bounded attempt. Never reproduce a secret in the review. |
-| Design or measurement defect | missing labels, ineffective manipulation, unfair baseline, truth leakage, incorrect denominator | Amend/version the design and evaluator, audit past conclusions, then validate on appropriate development fixtures. |
-| Capability or qualification failure | model cannot follow clean constraints or interpret tool output | Diagnose with atomic probes; repair the adapter/prompt/architecture or qualify a different permitted model. Use fresh disjoint qualification tasks for an honest readiness check. |
-| Valid scientific outcome | null effect, worse intervention, expected injected faults correctly measured | Report and interpret it. Do not change the study or rerun until a desired result appears. A modeled fault is an outcome, unless its injection or measurement was itself broken. |
+Read the latest handoff, full post-mortem, quality assessment, preceding plan and any later amendments before proposing another execution. Use `inspect STUDY` to locate the latest supported handoff; check for native attempts outside that entry point. For each earlier suggestion, record: accepted, revised or rejected; supporting evidence; alternative explanation; and a test that can disprove the diagnosis.
 
-## Continue until the defects are resolved
+Classify the issue before acting:
 
-A failed attempt is not the end of the task. Within existing authorization and budget, the owning agent must continue the repair cycle without asking for approval for each reversible fix or diagnostic. Keep an issue ledger: ID, evidence, cause confidence, owner, repair, regression test, next attempt and status. An issue closes only when its declared acceptance check passes with linked evidence; rerunning unchanged until a lucky pass does not close it.
+| Finding | Appropriate response |
+|---|---|
+| Execution or reporting defect | Preserve evidence; repair offline and replay saved artifacts where possible. A delivery repair does not require recollecting decisions. |
+| Design or measurement defect | Version the correction, audit affected conclusions, and validate the revised instrument on development fixtures. |
+| Capability failure | Diagnose the task/interface failure; qualify changed behavior on fresh reserved inputs before broader comparisons. |
+| Valid null, adverse or inconclusive outcome | Report it. A further experiment needs a justified new question or useful precision, not a preferred result. |
+| Missing authority, resource or data | Record the blocker and resume condition; continue independent offline work and release idle claims. |
 
-Preserve the original attempt and its assigned denominator. Give every new attempt a new ID/output directory, `parent_attempt`, reason and version hashes. Transport retries follow the frozen policy; an amended diagnostic run is not an invisible replacement for a failed scientific observation. Never overwrite a failed result, relabel it as success, quietly drop it, or claim that its errors were fixed without a verified rerun. Previously evaluated qualification tasks may reproduce a bug but cannot serve as fresh evidence of generalization after tuning.
+Maintain an issue ledger with evidence, cause confidence, owner, change and acceptance check. A proposed fix does not close an issue. Preserve earlier attempts and their denominators; a retry or amended diagnostic is not an independent replacement observation. Never relabel failed qualification, tune on a held-out result and call it fresh, or lower a threshold to turn a failed screen into a pass.
 
-Do not advance to the next scientific stage while material execution, design or competence issues remain. Do not stop merely because an initial pilot failed. If progress requires unavailable credentials, additional authorized spending/compute, missing data or a human research decision, record the exact blocker, preserve resumable state, continue independent repairs and request only the missing input. Exhausted budgets and access restrictions are not permission to bypass them. A model may remain unsuitable; report that limit rather than disguising it as a successful repair.
+## Prepare a concrete next-run proposal
 
-A valid negative result can finish a scientifically sound run. A defect-bearing run remains `repair`, `diagnostic-only` or `blocked`, even if its artifacts were successfully published. Final reporting distinguishes **execution complete**, **qualification passed**, **scientific conclusion**, and **repair work remaining**.
+Use [next-run-plan.md](templates/next-run-plan.md). Choose one design rather than listing unresolved alternatives for the owner to assemble. State the intervention, strongest relevant comparator, independent unit, scenario strata, holdouts, sample allocation and its rationale. Name a useful effect or precision target; use pilot variability where available, or declare feasibility-only scope and uncertain power. There is no universal minimum n, and more agents or calls do not create independent tasks.
 
-## End-of-cycle handoff
+Specify collected data, context/memory receipts, scoring, missingness, uncertainty, stopping, implementation changes and acceptance tests. Include a bounded call/time/cost envelope across qualification and comparison, cumulative spend and pending reservations, and the minimum machine requirements. Link evidence rather than copying private records. Choose `advance`, `repair` or `diagnostic` for a proposed successor; `complete_valid_result` and `blocked` do not authorize another run.
 
-The post-mortem names the next action: `advance`, `repair-and-rerun`, `diagnostic`, `blocked`, or `complete-valid-result`, plus its acceptance criteria. Before any next launch, turn that action into the next pre-run assessment. Archive nothing needed to reproduce failures. Release unused server claims and stop bounded workers while blocked.
+## Owner approval before a material update runs
+
+For Vishesh-owned experiments, obtain the owner's approval of the concrete **material next-run update before allocating its required machines or launching it**. This supersedes earlier blanket permission in this runbook to execute every diagnostic repair autonomously. A material update changes the question, treatment, scenarios, sample/holdout allocation, agent behavior, measurement, collection/analysis/stopping rules or execution/resource scope. Treat changed prompts, models or evaluators as material unless that exact change was explicitly covered by existing approval.
+
+Continue reversible offline fixes, validation, analysis and proposal preparation while awaiting that decision. Reuse an existing approval only for its unchanged, explicitly covered scope; link its evidence and explain the match. A generated approval template or the agent's own assessment is not owner approval. Material drift needs renewed approval. Owner approval does not establish scientific qualification or waive runtime gates.
+
+Do not ask again for already approved spending. Use the applicable experiment-specific cap, or the owner's standing default when it applies, with actual spend and uncertain reservations carried forward. A successor, renamed stage or new host creates no new allowance. Request a budget increase only when the selected plan exceeds existing authority. Approval of a design update alone does not silently replenish funds.
+
+## Admit, execute and hand off
+
+After update approval, resolve the required exclusive allocation through the established approved-account workflow. For new machines under Vishesh's directive, verify Dmarz's approved account/team identity, authoritative state/project and exact resource plan before create/apply. Keep identifiers and credentials private; no personal/default-account fallback. Check current workload, claim lifetime, deployment/source/runtime, output storage and cumulative quota. Do not hold an idle claim while approval or another prerequisite is missing.
+
+Complete [the pre-run assessment](templates/pre-run.md), publish the exact immutable plan and condition-specific TLDRs, verify the actual public page, and pass the real dispatch gates. The operations workflow binds `prepare --next-plan` and `run --update-approval` to the saved closeout, completed review, proposed plan and execution contract. See [operations](OPERATIONS.md) for the implemented scope; the command has no `approve` operation and does not manufacture authorization.
+
+Execute only the named admitted stage. Refresh admission before each stage/attempt and requalify relevant instrument changes. Save one terminal execution outcome per assignment, then repeat the mandatory post-mortem cycle. Update the study's `SETUP.md`, evidence metadata and next action. Stop only its workers, verify durable artifacts and release claims through the owner workflow; preserve everything needed to reproduce failures.

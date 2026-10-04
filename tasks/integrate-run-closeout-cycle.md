@@ -21,7 +21,7 @@ Implement the owner-requested completion loop: automatic evidence-based post-mor
 
 ## Done when
 
-- [ ] Add recoverable automatic completion records to supported shared run paths.
-- [ ] Define run-quality assessment and next-run sample/scenario/data planning with owner approval.
-- [ ] Expose next-session handoff and bind successor approval to the reviewed proposal.
-- [ ] Test terminal, interruption, recovery, stale approval and privacy boundaries; publish accurate adapter limits.
+- [x] Add recoverable automatic completion records to supported shared run paths.
+- [x] Define run-quality assessment and next-run sample/scenario/data planning with owner approval.
+- [x] Expose next-session handoff and bind successor approval to the reviewed proposal.
+- [x] Test terminal, interruption, recovery, stale approval and privacy boundaries; publish accurate adapter limits.

@@ -11,7 +11,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read SETUP.md and the preceding native post-mortem; resolve applicable research gates and freeze the prospective S1 instrument before seeking current admission."
+      "next_action": "Read SETUP.md and the preceding native post-mortem; resolve applicable research gates and freeze the prospective S1 instrument before seeking current admission.",
+      "next_run_approval": "owner"
     },
     {
       "id": "phantom-coast",
@@ -23,7 +24,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the completed pilot post-mortem; any follow-up needs its own question, prospective plan and current admission."
+      "next_action": "Read the completed pilot post-mortem; any follow-up needs its own question, prospective plan and current admission.",
+      "next_run_approval": "owner"
     },
     {
       "id": "right-dissenter",
@@ -35,7 +37,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the account-boundary correction and setup post-mortem; resolve the approved allocation path before considering a fresh qualification attempt."
+      "next_action": "Read the account-boundary correction and setup post-mortem; resolve the approved allocation path before considering a fresh qualification attempt.",
+      "next_run_approval": "owner"
     },
     {
       "id": "optimal-swarm-size",
@@ -47,7 +50,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current SETUP.md, reconcile later records with the setup post-mortem, then verify current research, provider and allocation evidence."
+      "next_action": "Create or link the current SETUP.md, reconcile later records with the setup post-mortem, then verify current research, provider and allocation evidence.",
+      "next_run_approval": "owner"
     },
     {
       "id": "heterogeneous-swarms",
@@ -59,7 +63,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Select one explicit question from the research shortlist and write its prospective setup record before experimental implementation."
+      "next_action": "Select one explicit question from the research shortlist and write its prospective setup record before experimental implementation.",
+      "next_run_approval": "owner"
     },
     {
       "id": "swarm-of-theseus-v2",
@@ -71,7 +76,8 @@
       "adapter": "theseus-v2",
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the failed qualification and closeout; a new diagnostic needs a prospective amendment and current admission. Adapter availability does not authorize another S0 or S1."
+      "next_action": "Read the failed qualification and closeout; a new diagnostic needs a prospective amendment and current admission. Adapter availability does not authorize another S0 or S1.",
+      "next_run_approval": "owner"
     },
     {
       "id": "immune-response-v3",
@@ -83,7 +89,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Finish verified dedicated-host provisioning, register the pinned A3 public plan, then queue bounded dispatch with the preserved cumulative ledger."
+      "next_action": "Finish verified dedicated-host provisioning, register the pinned A3 public plan, then queue bounded dispatch with the preserved cumulative ledger.",
+      "next_run_approval": "owner"
     },
     {
       "id": "influence-swarms",
@@ -95,7 +102,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T06:30:00Z",
       "checked_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
-      "next_action": "D5 prepared, not launched: 59 tests and 24/24 scripted decisions pass. Read RUN-D5.md; obtain fresh dedicated-host, preserved-budget and secure-dispatch admission when launch is requested. Researcher review optional. D3 remains latest native result; D4/S1 unrun."
+      "next_action": "D5 prepared, not launched: 59 tests and 24/24 scripted decisions pass. Read RUN-D5.md; obtain fresh dedicated-host, preserved-budget and secure-dispatch admission when launch is requested. Researcher review optional. D3 remains latest native result; D4/S1 unrun.",
+      "next_run_approval": "owner"
     },
     {
       "id": "healing-helping-hands",
@@ -107,7 +115,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the composite setup record and preceding practical post-mortem; reconcile any later attempt and obtain current stage admission before collection."
+      "next_action": "Read the composite setup record and preceding practical post-mortem; reconcile any later attempt and obtain current stage admission before collection.",
+      "next_run_approval": "owner"
     },
     {
       "id": "antsy-receipt-v6",
@@ -119,7 +128,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample."
+      "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample.",
+      "next_run_approval": "owner"
     },
     {
       "id": "antsy-diversity-v7",
@@ -131,7 +141,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T06:27:00.898397+00:00",
       "checked_commit": "5114250e7340013a5da852ed0918b47227413570",
-      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun."
+      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun.",
+      "next_run_approval": "owner"
     },
     {
       "id": "antsy-targeted-v8",
@@ -143,7 +154,8 @@
       "adapter": null,
       "checked_at": "2026-10-04T07:02:35.547829+00:00",
       "checked_commit": "f76f024837fab7f6fd9dc8f86f531ed861b1b80f",
-      "next_action": "Pin and stage EasyOCR runtime/model assets, obtain current bounded development admission, then freeze the instrument before fresh Q0. Offline replay does not qualify the checker."
+      "next_action": "Pin and stage EasyOCR runtime/model assets, obtain current bounded development admission, then freeze the instrument before fresh Q0. Offline replay does not qualify the checker.",
+      "next_run_approval": "owner"
     }
   ]
 }
