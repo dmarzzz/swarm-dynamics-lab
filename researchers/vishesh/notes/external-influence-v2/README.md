@@ -44,3 +44,7 @@ Hold the underlying task and external evidence exposure fixed across policies. C
 ## Metrics
 
 Report harmful target selection, correct legitimate choice, utility regret, invalid outcomes and actual cost. Keep procurement primary and transfer results separate; count tasks rather than agents as independent units.
+
+## Running a version with local agents
+
+A prospective local-model variant replaces historical Haiku calls with shared local Qwen3 0.6B weights while retaining the same nine-agent teams and task protocol. It starts with six clean/superior competence screens across all three domains; a passing model can repeat the original 50 assignments (450 episode-local identities). Qwen3 1.7B is a declared fallback if 0.6B fails qualification. Four simultaneous calls bound the desktop load. See the [local experimental plan](local-agents/PLAN.md) for qualification gates, historical comparators, metrics, diagnostics and limitations. No result is claimed yet; registration and competence gates precede inference.
