@@ -1,0 +1,21 @@
+{
+  "assessed_at": "2026-10-04T15:23:17.181060+00:00",
+  "operator": "vishesh/codex-methods",
+  "attempt": "Q0-attempt-1",
+  "status": "not_started_dispatch_pending",
+  "planned_receipts": 20,
+  "planned_ocr_calls": 40,
+  "started_ocr_calls": 0,
+  "valid_ocr_calls": 0,
+  "hub_v8_run_count": 0,
+  "queue_acknowledged": false,
+  "active_v8_allocation": false,
+  "candidate_host": "sim-vishesh",
+  "candidate_observation": "Previously trusted SSH accepted without new-key enrollment; zero load and no Python/Node/Tesseract workers at read-only check. Eligibility must be rechecked immediately before any claim.",
+  "incremental_api_cost_usd": 0,
+  "incremental_infrastructure_cost_usd": 0,
+  "historical_antsy_lifetime_cost": "not reconstructed; retain existing ledgers and unresolved exposure, no reset",
+  "frozen_source": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
+  "blocking_condition": "Required orbital-one dispatcher has not acknowledged or started the existing request. No direct-dispatch exception supplied by portfolio continuation.",
+  "next_action": "Authorized dispatcher claims a currently eligible verified host, stages pinned runtime, registers/verifies immutable public plan, issues admission and starts only Q0. No automatic S1."
+}

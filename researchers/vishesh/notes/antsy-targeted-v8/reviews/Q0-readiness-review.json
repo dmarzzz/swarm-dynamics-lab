@@ -1,0 +1,145 @@
+{
+  "assessor": "vishesh/codex-methods",
+  "assessed_at": "2026-10-04T15:23:17.181060+00:00",
+  "attempt": "Q0-attempt-1",
+  "scope": "Pre-dispatch quality review, not a native post-mortem",
+  "decision": "blocked",
+  "scientific_outcome": "inconclusive because no fresh observations exist",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Q0 asks whether each reader meets a competence floor; it does not test a collective efficacy effect. Fresh checker competence is absent from existing saved OCR.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/NATIVE-Q0.md",
+          "sha256": "1c5a30f4210ae253077bc70e7350192c87a81fb5c6b3986d289ac4e0a976b44a"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Real CORD receipts avoid scripted answers, but a consecutive small slice has unverified vendor/layout diversity. It is qualification only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/NATIVE-Q0.md",
+          "sha256": "1c5a30f4210ae253077bc70e7350192c87a81fb5c6b3986d289ac4e0a976b44a"
+        }
+      ],
+      "next_action": "Retain the declared split; document clustering limits and field failure patterns at closeout.",
+      "acceptance_check": "No representative deployment or independent-vendor claim from Q0."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Strong primary and candidate checker see the same original pixels; five policies are descriptive replays. Fallback cannot catch confidently wrong primaries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/PLAN.md",
+          "sha256": "2d6c5e20e274ba9778c19de7487b8a529146454db336f253998f91d83a8c0701"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "31 offline tests do not establish either native reader meets the fresh threshold.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/reviews/Q0-pre.md",
+          "sha256": "2b3d8e0a416d2018c1b9db2a38041cf0cd7e6060210cdc6e7fbab73551b50325"
+        }
+      ],
+      "next_action": "Run only admitted frozen Q0.",
+      "acceptance_check": "Each reader >=50% correct and <=1 wrong acceptance, >=16 scorable;40 valid calls."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Added a separate saved-record numeric tally, journal identity reconciliation, conditional denominators and Wilson intervals. Six tests catch corrupted summaries and duplicated/orphan calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/analysis/audit_q0.py",
+          "sha256": "89b97bccda4035233d6bfe23b70b0af4c9497cc199f7488d370c97dc68e8a57b"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "20 paired receipts are a feasibility screen, not40 independent samples. With0 errors in20 accepts, Wilson95 upper bound is16.1%; rare-error safety remains unsupported.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/analysis/test_audit_q0.py",
+          "sha256": "49b9fd6c873456f0e1ece9f802023d97eef31d7a9db26e3fd86ba02b3a5ff492"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "Pixel-only worker and fresh subprocess reset specified; effective host runtime has not been staged or inspected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/src/native_worker.py",
+          "sha256": "9d2041f6dfb4415137ecd9eebcde6880793f8b8931b72fa9fe77980d25fdc819"
+        }
+      ],
+      "next_action": "Freeze resolved package/model hashes before inference.",
+      "acceptance_check": "Both inspect receipts match pinned requirements/models; no annotations or peer answers delivered."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "unknown",
+      "finding": "Reconciled0 hub runs and0 native calls, not a completed cohort. Partial assignment records remain a future run obligation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/dispatch-reconciliation.json",
+          "sha256": "c4aca5fddfe1010ea8a45ea97c3d3ee5f87472572eabe41ca9b2b2cd0d54c408"
+        }
+      ],
+      "next_action": "Apply offline audit and terminal reconciliation after actual run.",
+      "acceptance_check": "All40 call identities are terminal or explicitly unstarted/unresolved; no dropped records."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Zero incremental API/infrastructure charges; no current allocation or admitted worker. Historical lifetime exposure is not reinterpreted as zero.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/results/dispatch-reconciliation.json",
+          "sha256": "c4aca5fddfe1010ea8a45ea97c3d3ee5f87472572eabe41ca9b2b2cd0d54c408"
+        }
+      ],
+      "next_action": "Authorized dispatcher verifies a fresh exclusive existing host and unchanged zero-incremental-charge envelope.",
+      "acceptance_check": "Merged unexpired claim and budget receipt before any native model initialization."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "unknown",
+      "finding": "Frozen source and immutable public docs verified previously; exact transitive dependencies and model SHA256 still require host-side preparation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/DISPATCH.md",
+          "sha256": "e9c4809f2eb4bb077b02aec0dff4189f3727dd8214c66ed152ea5408ea27be38"
+        }
+      ],
+      "next_action": "Stage only pinned packages/official weights; capture and recheck complete runtime.",
+      "acceptance_check": "Runtime receipt matches dispatch; all result source/input hashes retained."
+    },
+    {
+      "dimension": "visualization",
+      "status": "unknown",
+      "finding": "Offline PNG/GIF checks pass; no native observations exist to visualize or read back.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/antsy-targeted-v8/src/test_native.py",
+          "sha256": "0bcef0244bd29f999c56a9a07c5cc42e63eb143f20b7bc17d0fea9213208b41c"
+        }
+      ],
+      "next_action": "Render only recorded trajectories; read back final images and numeric files.",
+      "acceptance_check": "Final counts match saved records; failures/unstarted visible; no synthetic trace labeled native."
+    }
+  ]
+}

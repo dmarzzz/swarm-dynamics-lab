@@ -1,0 +1,11 @@
+{
+  "status": "approved",
+  "recorded_at": "2026-10-04T15:23:10.461187+00:00",
+  "authority": "Owner direction relayed by portfolio coordinator in this existing task, 2026-10-04; exact owner prompt kept private",
+  "scope": "One C4 cycle: 60 S0 and if qualified 432 S1, at most 984 Qwen/492 Jev calls, no automatic successor",
+  "plan_sha256": "fb20b2c67f88e41d8c645986074c28e4fbee4cea848e99c392a2890ef4e4e09f",
+  "cumulative_usd_cap": 0.1,
+  "incremental_usd_cap": 0.03,
+  "cumulative_call_cap": 2671,
+  "researcher_review": "waived, not passed"
+}

@@ -1,6 +1,6 @@
 # Healing Helping Hands C4: selective helping
 
-Status: prospective draft, owner approval of this material update pending. Parent: [C3 assessment](../composite/C3-S1-POST.md). No machine claim, model calls or experimental sweeps are authorized by this document alone.
+Status: approved bounded iteration, 2026-10-04 owner direction relayed by portfolio coordinator. Parent: [C3 assessment](../composite/C3-S1-POST.md). The owner explicitly covered the 60+432 scope, +492 Jev slots, original USD0.10 cap and USD0.03 incremental ceiling; current runtime admission remains required.
 
 ## TLDR
 
@@ -16,7 +16,7 @@ Both Qwen passes will receive the exact claim AND report. C3's Qwen adapter omit
 
 Primary contrast: selective-referral assigned error minus budget-matched random-referral assigned error. Negative favors informative routing. Safety contrast: selective error minus always-Jev error. Resource endpoint: fraction of reports that avoid Jev; report the extra Qwen pass and measured token/time overhead. A useful descriptive result needs at least 25% fewer Jev consultations, no more than 2 percentage points additional error versus Jev, and lower error than the matched referral control. Report all three criteria, not a single success badge. Qualification may fail; correlated Qwen errors may make routing uninformative; savings may disappear after including Qwen cost. All are useful outcomes.
 
-## Scenarios, samples and holdouts
+## Setup
 
 S0: 60 fresh balanced engineering fixtures, four qualification-only surface families, 20 per class. Jev must score at least 51/60 overall and 14/20 each class, with no invalid/missing responses. Qwen competence and agreement errors are reported but do not gate admission. Require complete valid outputs from both Qwen variants. S0 is qualification, not threshold tuning.
 
@@ -32,7 +32,7 @@ Arms: Qwen A; always-Jev; agreement cascade (A if A=B, otherwise Jev); matched r
 
 All reports have prewritten assignment IDs and a terminal status. A systemic transport/schema failure stops the stage, retains ambiguous reservations and marks remaining assignments not-run. No repeated POST after uncertain dispatch. No substitution, threshold selection, case exclusion or extra repair cycle. Missing outputs score incorrect in assigned denominators; show completed-only values separately and bound unresolved paired effects. Any missing family prevents a complete S1 verdict.
 
-## Metrics and visualization
+## Metrics
 
 Report confusion/per-class accuracy, Qwen disagreement, accepted-but-wrong count/rate, error-detection recall, Jev referral fraction, paired safety delta, matched-control delta and their per-family values. Actual request bytes/hashes, raw sanitized responses, time, tokens and costs are retained. Jev charges include all experimental controls. Counterfactual cascade calls are explicitly derived from this response tape.
 
@@ -44,10 +44,10 @@ One S0 then, only after its post-mortem and fresh admission, one S1. At most 984
 
 Minimum one exclusive 4-CPU/8-GiB existing Dmarz-account fleet machine; pinned Ollama/Qwen runtime, concurrency one. S0 wall limit 15 minutes, S1 60 minutes, claim at most three hours including archive. Prefer existing idle capacity. A new paid VM requires verified remaining original infrastructure authority; do not assume the old ceiling replenished. Worker-local relay, detached supervision, atomic cache/usage commit and read-only recovery remain mandatory. Do not transfer credentials or claim a machine while plan approval is pending.
 
-## Protocol and acceptance
+## Protocol
 
 1. Complete PI review, scenario definitions, routing/reference tests, missingness tests and fail-closed C4 admission. Preserve C3 source/results.
-2. Owner approves this concrete plan, including the +492 request envelope; no increase to dollar cap requested. Bind approval to the plan digest. This is distinct from the waived independent-researcher review.
+2. Record the actual 2026-10-04 owner direction covering this concrete +492 request envelope; bind that receipt to the plan digest. No increase to dollar cap; independent-researcher review remains waived.
 3. Finish and validate C4-native collection/relay allowlist, figures and supervisor integration before allocation; do not reuse the C3 launcher with fabricated C4 receipts.
 4. Register immutable condition-specific plan and TLDR; verify public readback. Refresh actual account, inventory, workload, exclusive claim, source, model, ledger and expiry checks.
 5. Run fresh S0; reconcile calls/cost, post-mortem and qualify. Admit unchanged S1 only when its projected spend and runtime fit remaining caps.
@@ -57,3 +57,9 @@ Minimum one exclusive 4-CPU/8-GiB existing Dmarz-account fleet machine; pinned O
 ## Design transfer — 2026-10-04
 
 [Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
+
+## Integration amendment before implementation
+
+Accept DESIGN-TRANSFER: retain absolute harm, correlated agreement errors, Jev-only and equal-count random controls, and all actual collection cost. No early efficacy/futility stopping or threshold search: run the fixed S1 if S0 qualifies and current budget projection passes. A failed S0 closes this single cycle; no repair inference is authorized here. Project S1 at twice observed S0 mean Jev cost plus one worst-case reservation, and require it below both remaining ceilings. This is an admission forecast, not an allowance to exceed either hard cap.
+
+Both Qwen variants are full-prompt identical except enum order, fixed seed9400; call order counterbalanced. Jev's original criteria and snapshot remain unchanged; evaluator limitations for challenging families must remain visible. Native collector stores start records before dispatch, hashes actual payloads, and validates a matching PID-bound relay before every model call. All qualification/evaluation assignments are generated only after prospective plan admission. Missingness contrast bounds are explicitly micro-averaged; macro paired results with missing outcomes are not identified. No actor role sees operator history.
