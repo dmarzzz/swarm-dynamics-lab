@@ -1,0 +1,209 @@
+{
+  "kind": "offline_scripted_rehearsal_not_native_qualification",
+  "model_calls": 0,
+  "cases": 6,
+  "dependent_decisions": 24,
+  "nominal_requests": 48,
+  "maximum_retries": 0,
+  "reservation_usd": 2.33472,
+  "rows": [
+    {
+      "case_id": "regional-no-approval",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 19706,
+      "fixture_chair_wire_bytes": 18411,
+      "chair_schema_sha256": "523bc7951b2c937ec64cc0dacef96b56abfcc5a1b5273898eaf194d20c385adb",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "regional-no-approval",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 21220,
+      "fixture_chair_wire_bytes": 28906,
+      "chair_schema_sha256": "523bc7951b2c937ec64cc0dacef96b56abfcc5a1b5273898eaf194d20c385adb",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "regional-no-approval",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13086,
+      "fixture_chair_wire_bytes": 11789,
+      "chair_schema_sha256": "523bc7951b2c937ec64cc0dacef96b56abfcc5a1b5273898eaf194d20c385adb",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "regional-no-approval",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14600,
+      "fixture_chair_wire_bytes": 22284,
+      "chair_schema_sha256": "523bc7951b2c937ec64cc0dacef96b56abfcc5a1b5273898eaf194d20c385adb",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 20153,
+      "fixture_chair_wire_bytes": 18858,
+      "chair_schema_sha256": "14bb06c293a7622c49e9e233f8b37dcd6cdc324915670749a299eabbfd00cd93",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 21667,
+      "fixture_chair_wire_bytes": 29356,
+      "chair_schema_sha256": "14bb06c293a7622c49e9e233f8b37dcd6cdc324915670749a299eabbfd00cd93",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13093,
+      "fixture_chair_wire_bytes": 11796,
+      "chair_schema_sha256": "14bb06c293a7622c49e9e233f8b37dcd6cdc324915670749a299eabbfd00cd93",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14607,
+      "fixture_chair_wire_bytes": 22294,
+      "chair_schema_sha256": "14bb06c293a7622c49e9e233f8b37dcd6cdc324915670749a299eabbfd00cd93",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 19460,
+      "fixture_chair_wire_bytes": 18174,
+      "chair_schema_sha256": "05e5986ffb85505d04c57d88bd0fc6f310c4e216c0bca5ea8a09e89c7b028f63",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 20974,
+      "fixture_chair_wire_bytes": 28629,
+      "chair_schema_sha256": "05e5986ffb85505d04c57d88bd0fc6f310c4e216c0bca5ea8a09e89c7b028f63",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13066,
+      "fixture_chair_wire_bytes": 11778,
+      "chair_schema_sha256": "05e5986ffb85505d04c57d88bd0fc6f310c4e216c0bca5ea8a09e89c7b028f63",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14580,
+      "fixture_chair_wire_bytes": 22233,
+      "chair_schema_sha256": "05e5986ffb85505d04c57d88bd0fc6f310c4e216c0bca5ea8a09e89c7b028f63",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "export-approved-option",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 19780,
+      "fixture_chair_wire_bytes": 18476,
+      "chair_schema_sha256": "936ae91db4f1c2e6ae9fa63249d056f10ccdc26ddfc1c7d8cd8e650d49f64ba7",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "export-approved-option",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 21294,
+      "fixture_chair_wire_bytes": 28931,
+      "chair_schema_sha256": "936ae91db4f1c2e6ae9fa63249d056f10ccdc26ddfc1c7d8cd8e650d49f64ba7",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "export-approved-option",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13065,
+      "fixture_chair_wire_bytes": 11759,
+      "chair_schema_sha256": "936ae91db4f1c2e6ae9fa63249d056f10ccdc26ddfc1c7d8cd8e650d49f64ba7",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "export-approved-option",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14579,
+      "fixture_chair_wire_bytes": 22214,
+      "chair_schema_sha256": "936ae91db4f1c2e6ae9fa63249d056f10ccdc26ddfc1c7d8cd8e650d49f64ba7",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 19593,
+      "fixture_chair_wire_bytes": 18295,
+      "chair_schema_sha256": "d626711f82002918aecdc421686d7ee22930c2c005221e191d81c19acb9833e4",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 21107,
+      "fixture_chair_wire_bytes": 28716,
+      "chair_schema_sha256": "d626711f82002918aecdc421686d7ee22930c2c005221e191d81c19acb9833e4",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13073,
+      "fixture_chair_wire_bytes": 11773,
+      "chair_schema_sha256": "d626711f82002918aecdc421686d7ee22930c2c005221e191d81c19acb9833e4",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14587,
+      "fixture_chair_wire_bytes": 22194,
+      "chair_schema_sha256": "d626711f82002918aecdc421686d7ee22930c2c005221e191d81c19acb9833e4",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "arm": "matrix_inherited",
+      "reviewer_wire_bytes": 20027,
+      "fixture_chair_wire_bytes": 18738,
+      "chair_schema_sha256": "a8c5e907bd6ba086385799031a428e3517cde4487a91825cd57e116ca9f802b5",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "arm": "typed_inherited",
+      "reviewer_wire_bytes": 21541,
+      "fixture_chair_wire_bytes": 29189,
+      "chair_schema_sha256": "a8c5e907bd6ba086385799031a428e3517cde4487a91825cd57e116ca9f802b5",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "arm": "matrix_records_only",
+      "reviewer_wire_bytes": 13064,
+      "fixture_chair_wire_bytes": 11773,
+      "chair_schema_sha256": "a8c5e907bd6ba086385799031a428e3517cde4487a91825cd57e116ca9f802b5",
+      "fixture_valid": true
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "arm": "typed_records_only",
+      "reviewer_wire_bytes": 14578,
+      "fixture_chair_wire_bytes": 22224,
+      "chair_schema_sha256": "a8c5e907bd6ba086385799031a428e3517cde4487a91825cd57e116ca9f802b5",
+      "fixture_valid": true
+    }
+  ],
+  "limitations": [
+    "Fixture answers are not model evidence.",
+    "Actual chair inputs depend on native reviewer outputs; enforce wire bound before every call.",
+    "Historical D5 native launcher still uses direct Anthropic/retries: do not launch it as the migrated comparator.",
+    "A migrated dynamic chair runner and current approval/admission are required."
+  ]
+}

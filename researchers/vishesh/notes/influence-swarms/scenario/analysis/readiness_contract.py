@@ -18,7 +18,7 @@ def compile_item(parent):
     item=original_compile(parent)
     variant=item.get('wire_variant','original')
     if variant=='original':return item
-    if variant!='shared_groups_v1' or not item['arm'].startswith('typed'):raise ValueError('wire variant')
+    if variant not in ('shared_groups_v1','shared_groups_bounded_v2') or not item['arm'].startswith('typed'):raise ValueError('wire variant')
     schema=item['wire_body']['response_format']['json_schema']['schema'];original=copy.deepcopy(schema)
     candidates=schema['properties']['candidate_facts']['properties'];defs={}
     for candidate in candidates.values():
@@ -28,6 +28,8 @@ def compile_item(parent):
             candidate['properties'][group]={'$ref':'#/$defs/'+group}
     schema['$defs']=defs
     assert expand(schema)==original
+    if variant=='shared_groups_bounded_v2':
+        schema['properties']['limitations']['pattern']=r'^[\s\S]{0,200}$'
     raw=json.dumps(item['wire_body']).encode();assert len(raw)<=MAX_BYTES
     item.update(wire_bytes=len(raw),wire_sha256=hashlib.sha256(raw).hexdigest())
     return item

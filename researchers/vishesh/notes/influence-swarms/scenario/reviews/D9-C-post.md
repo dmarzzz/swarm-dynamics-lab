@@ -1,0 +1,7 @@
+# D9-C post-mortem: quotation bottleneck and an unenforced length bound
+
+Run `influence-swarms/1004-193614-560959`, sourced5c64708. Five assigned/started, four contract-valid, one contract-failed, zero retries or HTTPerrors, all usage known:USD0.059399. Last response completed normally but its limitations note contained583characters against the existing300-character contract. Do not classify it as transport failure or truncate it into success. Ledger5.403872of8reserved,257calls. Workers stopped, relay exited; campaign allocation retained.
+
+Combined with explicitly reusedD9-B:5/6first-attempt contracts valid. The five valid cases yielded180/180correct raw fact values,98/180aligned facts and41/75correct policy checks,0wrong accepted facts. This is strong development evidence that exact-quote reproduction is the current bottleneck; it is not evidence of general extraction accuracy or influence resistance. Individual fields are dependent, all cases are inspected, and no chair or purchase ran.
+
+D9-D tests enforcing the existing300-character limitation bound through a provider-supported regex. It changes provider constraints without weakening local validation or actor information. One acquisition-only rerun of the failing case; keep the original5/6screen unchanged. A success is not a sixth first-attempt success. No behavioral-error rerolls. In parallel, investigate citation-bound source verification offline on saved data; any changed provenance contract remains a prospective scientific decision, not retroactive validation.

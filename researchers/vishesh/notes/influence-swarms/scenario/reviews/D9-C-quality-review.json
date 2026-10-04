@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d9-c-01",
+  "native_attempt_id": "native-D9-C-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:38:56.860693+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "Five of six first-attempt contracts valid; quote fidelity, not raw fact extraction, dominates falseUNKNOWN checks. One length-bound contract failure.",
+  "parent_handoff_sha256": "700158c84f7488373d5f4302e0f0f7a1da88160502675e0cebc0aa0826c79397",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Remaining cases reveal a systematic provenance bottleneck and one contract length failure.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "Five remaining inspected procurement cases, with first acquisition case reused separately.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same shared-schema representation, model and context, each case once; zero retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "Screen5/6contracts valid;180/180raw facts correct but98aligned and41/75checks correct on valid cases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ],
+      "next_action": "Single length-bound repair diagnostic, separate from unchanged first-attempt screen; offline provenance alternative.",
+      "acceptance_check": "Existing local limit enforced and no concealed retry; changed provenance requires a new scientific decision."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All response bodies and usage retained; failure identified as583-character limitations against300bound.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six development case clusters; dependent fields not independent samples; invalid case not dropped.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen original D5 actor inputs, no new evaluator or operator context.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Five assigned/started,4valid/1failed,0unstarted; original screen remains5/6.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Five calls,.243200reservation,.059399actual; cumulative5.403872/8and257calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published exact packet,106offline/deployed tests; responses and separate first-attempt audit retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Case-level audit separates values, alignment and checks and explicitly retains invalid case.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-C-post.md",
+          "sha256": "37b39f6b9cfa1f7c4fdaffd9c3f95bb161b6f641320598e92ae6cb582334712b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+          "sha256": "9b5831c79663e5a34dec38470d3ce51f3b32f184daccaba11eba732691718fd0"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-C-01/summary.json",
+          "sha256": "be390e26e921ca866f2ea5ccc2b26ef98813a9107b996ee749fe288d5e72aa90"
+        }
+      ]
+    }
+  ]
+}

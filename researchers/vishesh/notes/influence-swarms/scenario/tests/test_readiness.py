@@ -46,3 +46,10 @@ class ReadinessTests(unittest.TestCase):
   error=urllib.error.HTTPError('x',400,'private',{},io.BytesIO(b'{}'));t=Mock(side_effect=error)
   out=run.collect(p,self.root/'five',self.db,t)
   self.assertEqual((out['planned'],out['failed'],out['unstarted'],out['calls']),(5,1,4,1));self.assertEqual(t.call_count,1)
+ def test_existing_length_bound_regex(self):
+  import re
+  p=run.verify_packet(json.loads((BASE/'reviews/D9-D-packet.json').read_text()))
+  pattern=p['requests'][0]['wire_body']['response_format']['json_schema']['schema']['properties']['limitations']['pattern']
+  for value in ('','x'*200,'x'*201,'é'*200,'\n'*200,'\n'*201):
+   self.assertEqual(re.fullmatch(pattern,value) is not None,len(value)<=200)
+  for value in ('x'*300,'x'*300+'\n','\n'*301):self.assertIsNone(re.search(pattern,value))

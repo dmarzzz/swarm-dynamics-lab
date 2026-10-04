@@ -1,0 +1,348 @@
+{
+  "kind": "first_attempt_development_qualification",
+  "cases_assigned": 6,
+  "contract_valid": 5,
+  "contract_failed": 1,
+  "rows": [
+    {
+      "stage": "D9-B",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 17,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 8,
+      "statuses_total": 15,
+      "status_errors": [
+        {
+          "candidate": "Aster",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "service_coverage",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        }
+      ],
+      "raw_preference": "Birch",
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      }
+    },
+    {
+      "stage": "D9-C",
+      "case_id": "outsourced-no-approval",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 21,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 9,
+      "statuses_total": 15,
+      "status_errors": [
+        {
+          "candidate": "Aster",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        }
+      ],
+      "raw_preference": "DEFER",
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      }
+    },
+    {
+      "stage": "D9-C",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 21,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 9,
+      "statuses_total": 15,
+      "status_errors": [
+        {
+          "candidate": "Aster",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        }
+      ],
+      "raw_preference": "Birch",
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "Birch",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      }
+    },
+    {
+      "stage": "D9-C",
+      "case_id": "export-approved-option",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 21,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 9,
+      "statuses_total": 15,
+      "status_errors": [
+        {
+          "candidate": "Aster",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "FAIL"
+        },
+        {
+          "candidate": "Aster",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        }
+      ],
+      "raw_preference": "DEFER",
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "DEFER",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": false,
+        "reason": "raw deferral retained"
+      }
+    },
+    {
+      "stage": "D9-C",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "raw_facts_correct": 36,
+      "raw_facts_total": 36,
+      "aligned_facts": 18,
+      "wrong_accepted_facts": 0,
+      "statuses_correct": 6,
+      "statuses_total": 15,
+      "status_errors": [
+        {
+          "candidate": "Aster",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "rollout_deadline",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Aster",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "rollout_deadline",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Birch",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "capabilities",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "rollout_deadline",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        },
+        {
+          "candidate": "Cobalt",
+          "field": "software_budget",
+          "observed": "UNKNOWN",
+          "expected": "PASS"
+        }
+      ],
+      "raw_preference": "Cobalt",
+      "guard": {
+        "action": "DEFER",
+        "raw_choice": "Cobalt",
+        "eligible_alternatives": [],
+        "cost_acceptable_alternatives": [],
+        "unnecessary_deferral": false,
+        "purchase_refused": true,
+        "reason": "purchase lacks complete requirement/cost support"
+      }
+    },
+    {
+      "stage": "D9-C",
+      "case_id": "seasonal-usage-cost",
+      "status": "failed",
+      "contract_error": "limitations_length_583_exceeds_300",
+      "behavioral_scores": null
+    }
+  ],
+  "totals_valid_only": {
+    "raw_facts_correct": 180,
+    "raw_facts_total": 180,
+    "aligned_facts": 98,
+    "wrong_accepted_facts": 0,
+    "statuses_correct": 41,
+    "statuses_total": 75
+  },
+  "limitations": [
+    "Five valid cases are not six successful cases.",
+    "D9-B acquisition case reused explicitly.",
+    "All six cases inspected during development; fields/calls are not independent samples.",
+    "No chair ran; guards are retrospective shadow actions."
+  ]
+}
