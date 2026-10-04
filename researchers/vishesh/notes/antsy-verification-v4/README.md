@@ -32,7 +32,7 @@ Calibration IDs 0–19 determine the best fixed configuration and one additive c
 
 Each receipt receives all seven arms under identical measured OCR and reference data. The five-role fixed and adaptive policies share exactly the same potential ballots until adaptive stopping; later unused ballots do not count as adaptive calls. Two checks maximum, deterministic tie-breaking, seed 71 for random checks. No outcome-based retries or evaluation-set tuning. The independent analysis unit is the receipt, not a vote, check or policy row.
 
-Read [SPEC.md](SPEC.md) for exact estimators, prompts, thresholds and controls; [RUN.md](RUN.md) for reproduction; [SOURCES.md](SOURCES.md) for sources and read-depth boundaries. Machine and attempt records identify frozen commits. The [pre-run assessment](reviews/S0-S1-pre.md) includes acceptance criteria and the visual mapping.
+See [the mapping to the original project briefs](CONNECTIONS.md). Read [SPEC.md](SPEC.md) for exact estimators, prompts, thresholds and controls; [RUN.md](RUN.md) for reproduction; [SOURCES.md](SOURCES.md) for sources and read-depth boundaries. Machine and attempt records identify frozen commits. The [pre-run assessment](reviews/S0-S1-pre.md) includes acceptance criteria and the visual mapping.
 
 ## Metrics
 
