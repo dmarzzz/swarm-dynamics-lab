@@ -1,0 +1,110 @@
+# Frozen design of sybil-rules-180. Covered by study.source_hash(): any change needs a new attempt.
+version: 1
+experiment: sybil-rules-180
+status: exploratory
+attempt: '001'
+program: ../overnight-program-2026-10-04/program.json
+model: qwen/qwen3.7-flash
+canonical_model: qwen/qwen3.7-flash-20260727
+provider: alibaba
+request_template:
+  model: qwen/qwen3.7-flash
+  provider:
+    only:
+    - alibaba
+    allow_fallbacks: false
+    require_parameters: true
+  reasoning:
+    enabled: false
+  max_tokens: 1000
+  response_format:
+    type: json_object
+cfg:
+  start_cash: 2500
+  max_firms: 4
+  registration_fee: 20
+  overhead: 3
+  fine_rate: 0.35
+  threshold: 0.38
+  history_rounds: 3
+  text_limit: 240
+economy:
+  seed: sybil-rules-180-economy-001
+  markets: 60
+  first_market_id: 318000
+  hosts: 3
+  warmup_rounds: 2
+  branch_rounds: 10
+  branches:
+    A:
+      regime: firm
+      prohibition: false
+    B:
+      regime: firm
+      prohibition: true
+    C:
+      regime: owner
+      prohibition: true
+  branch_order_seed: sybil-rules-180-branch-order-001
+  branch_order:
+  - C
+  - B
+  - A
+  streak: 3
+material:
+  round_void_limit: 18
+  warmup_void_limit: 11
+  branch_void_limit: 54
+fixtures:
+  development_markets: [318500, 318501, 318502, 318503, 318504, 318505]
+  probe_first_market_id: 318400
+  ordinary_markets: [318200, 318201, 318202, 318203, 318204, 318205]
+  ordinary_rounds: 8
+  smoke_markets: [318100, 318101, 318102, 318103, 318104, 318105]
+  smoke_rounds: 4
+  context_first_market_id: 318700
+  diagnostic_markets: [318300, 318301, 318302, 318303, 318304, 318305, 318306, 318307, 318308, 318309, 318310, 318311]
+  diagnostic_rounds: 8
+  reserved_for_one_repair_configuration: [318600, 318699]
+qualification:
+  probes_exact: 18
+  ordinary_min_profit_ratio: 0.75
+  ordinary_positive_profit_all: true
+  valid_responses_required: all
+  context_max_failed_calls: 2
+  planning_marker_calls_per_second: 1.0
+  projection_overhead_factor: 1.25
+stages:
+  S0: {backend: scripted, batch: s0-001, calls: 0}
+  P0: {backend: openrouter, batch: p0-001, calls: 1}
+  Q0: {backend: openrouter, batch: q0-001, calls: 185}
+  X0: {backend: openrouter, batch: x0-001, calls: 180}
+  S1: {backend: openrouter, batch: s1-001, calls: 5760}
+  D1: {backend: openrouter, batch: d1-001, calls: 192}
+budget:
+  authorization: 'dmarz to dmarz/fleet-monitor 2026-10-04: ship the big agent swarm run; OpenRouter key limit USD 50; this study hard cap USD 5'
+  aggregate_usd: 5
+  max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 5760, D1: 192}
+  max_attempted_calls: 6318
+  max_transport_attempts: 7200
+  max_output_tokens: 1000
+  max_input_tokens: 8000
+  max_input_bytes: 32000
+  max_visible_chars: 4000
+  input_usd_per_million: 0.03
+  output_usd_per_million: 0.13
+  request_timeout_seconds: 120
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+  in_flight_per_host: 2
+  in_flight_per_host_max: 3
+  task_timeout_seconds: 2700
+  worker_attach_seconds: 1800
+  stage_timeout_seconds: {S0: 1800, P0: 600, Q0: 3600, X0: 1800, S1: 14400, D1: 3600}
+  chain_timeout_seconds: 28800
