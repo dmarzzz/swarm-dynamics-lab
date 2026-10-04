@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "study": "poietic-agents",
+  "scope": "saved-data audit and offline continuation readiness; no new native attempt",
+  "checked_utc": "2026-10-04T15:23:11.550199+00:00",
+  "decision": "blocked_original_deadline_expired",
+  "conditional_next_plan_authorization": "current one-cycle owner direction covers unchanged S0-02 scope; no repeated generic approval",
+  "deadline_renewal_approved": false,
+  "checks": {
+    "assignments_reconcile": true,
+    "starts_match_ledger": true,
+    "request_hashes_match": true,
+    "started_logical_ids_match": true,
+    "authority_matches_original": true,
+    "caps_unchanged": true,
+    "deadline_expired": true,
+    "all_calls_uncertain": true,
+    "no_successor_charges": true,
+    "saved_artifacts_match_prior_durable_readback": true
+  },
+  "historical": {
+    "attempt": "S0-01",
+    "assigned": 144,
+    "started": 36,
+    "retained_http_failures": 35,
+    "interrupted_inflight": 1,
+    "not_started": 108,
+    "valid_retained": 0,
+    "independent_case_roots_started": 9,
+    "unresolved_calls": 36,
+    "api_exposure_upper_usd": 0.479232
+  },
+  "successor": {
+    "attempt": "S0-02",
+    "planned_case_roots": 12,
+    "planned_logical_assignments": 144,
+    "maximum_new_physical_calls": 144,
+    "assignment_manifest_sha256": "66c90c3ec5443ecd8ed0ef3e9836c0960e6a590442ea8ad114d2b17321f6ffd1",
+    "started": 0,
+    "model_calls": 0,
+    "native_result": null,
+    "offline_checks_passed": 79,
+    "maximum_new_api_reserve_usd": 0.723861504,
+    "original_total_cap_usd": 2,
+    "original_api_cap_usd": 1.5,
+    "original_infrastructure_cap_usd": 0.5
+  }
+}

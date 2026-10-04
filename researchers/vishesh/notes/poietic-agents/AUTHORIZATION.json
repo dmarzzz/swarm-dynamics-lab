@@ -13,7 +13,7 @@
   "S0_physical_call_limit": 288,
   "S0_maximum_requests_usd_at_pinned_tariffs": 1.447723008,
   "larger_budget_request": "No increase beyond USD 2 is approved. Preserve cumulative charges and uncertain reservations across stages and attempts.",
-  "status": "original-cumulative-budget-approved; S0-02-update-approval-pending",
+  "status": "S0-02-conditionally-approved-with-original-cap; execution-window-expired",
   "proposed_total_usd": 2,
   "proposed_api_usd": 1.5,
   "proposed_infrastructure_usd": 0.5,
@@ -21,6 +21,8 @@
   "known_settled_api_usd": 0,
   "actual_api_spend_status": "unknown for S0-01; preserve full USD0.479232 exposure",
   "direct_dispatch_exception_approved": true,
-  "successor_update_approval": false,
-  "cumulative_cost_upper_usd": 0.5564557666666666
+  "successor_update_approval": true,
+  "cumulative_cost_upper_usd": 0.5564557666666666,
+  "successor_update_approval_scope": "Current owner one-cycle direction covers ready S0-02 within existing boundaries; no generic reapproval needed.",
+  "deadline_renewal_approved": false
 }

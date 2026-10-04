@@ -1,24 +1,24 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T09:00:38.612603+00:00",
+  "checked_utc": "2026-10-04T15:32:08.546026+00:00",
   "assessor": "vishesh/codex-heterogeneous",
-  "scope": "same-author offline S0-02 repair checks; not native qualification",
-  "tests_passed": 63,
+  "scope": "S0-02 offline cycle reassessment; original execution deadline expired",
+  "tests_passed": 79,
   "tests_failed": 0,
   "python": "3.13.13",
   "pillow": "11.3.0",
   "command": "python3 -m unittest discover -s researchers/vishesh/notes/poietic-agents/tests -v",
   "file_hashes": {
-    "AMENDMENTS.md": "981f5d91244a32107339fffc1ebddc20bab9c3198fef2faf02688d503fbeb939",
+    "AMENDMENTS.md": "44529c61de5a6b5368ce304f6f664ad66372bcbd503a06e56a5dbf4fdeb0e7a8",
     "PROTOCOL.md": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e",
-    "README.md": "76275469e324a58d44a7a3bc0307b6cd34ab28f6566806b5fe6f5e558913edfc",
+    "README.md": "71cd0edc26847f5b9a8e8211c76652373491d7e71c2c30e51858a8da244a778a",
     "SCENARIOS.md": "6bdbf9bc45a68357808ef9313288794e495de3e4fb3ce3c1f282e3abcdc44bd5",
     "VISUALIZATION.md": "dd5f522bcf6d049e93073c9c082b1be8f97500372809f77f030055fd1491a8fe",
     "contracts.json": "b6abab79240b4df31a4944998f20f6212256be9441255f28c88dba47f6633f63",
     "design.yaml": "7c215680536728f0bb973be7b1de63a16475444dd0493069c4f98a37358887d7",
     "models.json": "0b3068d418b7bbf04281a7d10b66061ecc277cf8df5c95d857d2442eee1bab4b",
     "requirements.txt": "15f202acecff97bf2bd3cb126d800638771db9c20484c5d7a441e4098a82832c",
-    "src/admission.py": "60ced354c672e46d91c04ea9b66a6487e081d60a65dce68f8b7315ea5687e437",
+    "src/admission.py": "7fc3816e952f5e76bf7d226851f089123e6372d2eecaf31f4ec1642b743e0290",
     "src/budget.py": "bde3cfd6270cfbd8392383316c48a8eb84431d345518502ddcb5fb8d7d1d339b",
     "src/common.py": "e3f39d17d06f89c93b78edcb1c0ca12c1ab6be5601d49f312d1a4e7cb6a71027",
     "src/engine.py": "bbaa579cfa275fdd6ebbc2da0461cc89ab96ec38dc353431ed8d0aeba18167f4",
@@ -27,13 +27,15 @@
     "src/lineage.py": "a2500040ed30ee029b5e4e10aa1aac99b28dd80ac3adc4a9178af4ba919963c9",
     "src/native.py": "161f34595efa43674f236403def9609962d9364819f919bf843e363f4af34352",
     "src/operators.py": "e728ceb4820564ae8eac1335237b03bd641628e0b50ab8391dbc1ed38a136fe5",
-    "src/prepare.py": "36a9c5c861c4faf1caf13df60745813931d30199ca1c3adfcfeb504d71fafc12",
+    "src/prepare.py": "c7b4668cf1bdcc00f36cc2b7aaa15fd83e8f5f3c272543d9b0dc07e740f7d425",
     "src/qualification.py": "999f5b174b39eb93a348aaff3c1a0eb46420759484b1ab41a166dca1c285929a",
     "src/relay.py": "6c5e96cf25bf88843ea97a094fad58f2e630a15447820fef5db0551d82f63f45",
     "src/render.py": "c420fbe18ba8b029797974bfceff8cc5db849060f68b901ec7803f3954cef8cb",
+    "src/renewal.py": "1612f81eefdce1679bc1a2e5a0b125adcd6a900734db0d5c787641ae477a7929",
     "src/world.py": "f8be5acb5260f5edb0bda93a354facde9d89a3fa340ec75f1bb217c90c26e1bb",
-    "tests/test_instrument.py": "0f3d931cfd96bcdf624754e0d420273a9948bed0b11bb836c654cffc923e02a3",
-    "tests/test_relay_boundary.py": "66a8dac91fa3547f8b8aa27f3f6d093083b16a37f8444217f98e671b3e3fe674"
+    "tests/test_instrument.py": "aa61c35b03971e1a8b38b7f376edd1df824ed564d050163bfe82712957a5012a",
+    "tests/test_relay_boundary.py": "66a8dac91fa3547f8b8aa27f3f6d093083b16a37f8444217f98e671b3e3fe674",
+    "tests/test_renewal.py": "70b42588aa7af1ac3712883eb1c4ddaf45e66d30798a7a91e0e12e8c9784c3af"
   },
   "assignment_count": 144,
   "assignment_sha256": "66c90c3ec5443ecd8ed0ef3e9836c0960e6a590442ea8ad114d2b17321f6ffd1",
@@ -53,14 +55,21 @@
     "fixture_label": "SCRIPTED - NOT MODEL EVIDENCE"
   },
   "known_limits": [
-    "S0-02 has zero native responses; previous S0-01 had36 calls and failed observability, with full unresolved exposure retained separately.",
-    "63 instrument tests are author-run offline software checks;11 metadata tests separately passed.",
-    "S1 requires development-selected static baseline and stage admission; CLI admits only S0-02.",
-    "Global metadata coverage check has a preexisting unrelated missing registration for sybil-specialists-opus; owned metadata rendered without modifying its documents."
+    "No S0-02 native responses; S0-01 retained36 uncertain calls and no usable provider receipts.",
+    "Scope conditionally authorized, but original execution window expired. No renewal, allocation or successor dispatch.",
+    "79 offline tests are author-run software checks, not model qualification.",
+    "S1 efficacy remains closed; PI conserved-resource lessons are prospective only.",
+    "passed"
   ],
   "authorized_total_cumulative_usd": 2,
   "launch_smoke": "Candidate rejects missing concrete owner update decision, budget, source, public plan and allocation; no native calls.",
   "credential_boundary": "local-only relay; worker contains no provider key or Authorization header",
   "relay_health": "Expected36 prior calls/USD0.479232 exposure bound; no new unused-ledger authority.",
-  "validation_note": "S0-02 roots 300\u2013347 unopened; prior S0-01 native failure retained separately."
+  "validation_note": "Fresh qualification worlds remain unopened. Original ledger unchanged. Prior infrastructure exposure is now required in cumulative allocation admission.",
+  "renewal_helper": {
+    "tests": 12,
+    "scope": "synthetic ledgers only",
+    "real_ledger_unchanged": true,
+    "real_receipt_private": true
+  }
 }

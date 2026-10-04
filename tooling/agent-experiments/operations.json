@@ -166,9 +166,9 @@
       "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T14:31:29.036371+00:00",
-      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Prepare S0-02 owner decision; park efficacy expansion. Read researchers/vishesh/notes/poietic-agents/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority."
+      "checked_at": "2026-10-04T15:24:29.581094+00:00",
+      "checked_commit": "ad201b0303bdd3e27a727957128bab754922a6fb",
+      "next_action": "S0-02 scope conditionally authorized; original window expired. Resolve explicit time renewal privately before fresh G3 admission; preserve original authority/exposure. No successor queued. Read current reassessment and SETUP."
     }
   ]
 }

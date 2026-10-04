@@ -25,3 +25,11 @@ S0-01 started 36 native calls and was interrupted after systemic relay HTTP 502 
 ### 2026-10-04: successor approval binding
 
 The current owner runbook requires approval of the concrete next-run proposal after failure. S0-02 remains pending; its admission binds the actual decision to the attempt, assignment and instrument hashes separately from the original unchanged budget authority. Two offline guards verify that budget approval alone and a mismatched instrument cannot admit the successor. No new native data has been collected.
+
+### 2026-10-04: bounded continuation readiness, no new native data
+
+The current owner direction conditionally authorizes the prepared S0-02 scope. The original deadline independently verifies as expired; no renewal, allocation or dispatch is inferred. The prospective S0-02 reassessment was written before adding synthetic expiry regressions and a cumulative infrastructure admission correction. Admission now includes the already published prior allocation cost in the original cumulative infrastructure cap. Two expiry and two allocation-history checks bring the offline suite to 67. Models, prompts, scenario semantics, case count, thresholds and first-interface-error stop remain unchanged. A window renewal needs a distinct explicit decision while retaining the existing allowance; exact operational mechanics remain private.
+
+### 2026-10-04: offline authority-renewal helper preparation
+
+After the prospective renewal design was specified, the owner requested reversible helper implementation before deciding on the renewal itself. The generic helper and twelve synthetic-ledger tests cover explicit receipt gating, full prior-state comparison, transaction rollback, unchanged resource caps/host/charges, concurrency and duplicate receipt rejection. No real authority or charge record changed.79 offline checks pass. No scientific scope or native response was changed.
