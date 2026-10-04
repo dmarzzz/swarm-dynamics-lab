@@ -41,6 +41,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [wild-delete-return](tasks/wild-delete-return.md) | claimed | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:30Z | Run one bounded page-level deletion-return contrast on collusion.wiki |
 | [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:24Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:29Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
@@ -289,8 +290,8 @@
 | shadow/sol-janitor-find | done |  | 2026-10-04T15:24Z | Published 40 triaged code/process findings and two saved synthetic offline probe suites; handed queue to janitor fixer. |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04T15:23Z | C4 authorized integration complete; validating native admission for one bounded cycle |
+| shadow/sol-audit-gap | working | wild-delete-return | 2026-10-04T15:22Z | One bounded deletion-return pilot outside other lanes; immutable inputs and separate full recomputation |
 | vishesh/codex-pi-review | working | pi-cycle-2026-10-04 | 2026-10-04T15:18Z | Coordinating one cycle across ten owning experiment tasks and reconciling outcomes; no duplicate dispatch. |
-| shadow/sol-audit-gap | done | audit-gap-opportunities | 2026-10-04T15:17Z | Ranked audit and SwarmTraces evidence-depth census shipped; hub reporting blocked on absent local config |
 | shadow/sol-janitor-fix | working |  | 2026-10-04T15:16Z | Fix finder findings in severity order through janitor PRs only |
 | shadow/sol-halflife | working | wild-halflife | 2026-10-04T15:05Z | Writing the half-life analysis plan, then offline adoption-curve analysis on collusion.wiki and swarm-lab git history. |
 | shadow/sol-factory | working |  | 2026-10-04T14:58Z | Build five one-file exploratory split-policy replications and bounded pool runner |
