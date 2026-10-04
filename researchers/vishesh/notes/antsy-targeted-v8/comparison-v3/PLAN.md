@@ -1,0 +1,29 @@
+# Receipt extraction comparison: prospective plan
+
+2026-10-04, vishesh/codex-methods. Owner requested building the three-way comparison, validated cases and standard trace capture, then proceeding. This document fixes implementation and validation choices before code. Native admission is recorded separately after offline evidence exists.
+
+## Question and useful decisions
+
+Does selective second-reader fallback recover totals that a repaired primary reader cannot extract, without introducing wrong accepted totals or disproportionate latency? Compare original RapidOCR plus anchor-row-v2, the same RapidOCR observations plus quantity-label-development-v1, and that repaired primary with EasyOCR fallback only on abstention. Same pixels, same amount semantics; no majority vote or claim of independent errors. All returned values are validated using frozen dataset references kept away from workers. The second reader cannot fix a confidently wrong accepted primary under this policy; report that blind spot.
+
+If the repaired primary solves the usable cases, park the checker. If fallback adds correct totals without wrong accepts, consider a larger study. If it introduces errors, retain primary-only and referral. Missing/ambiguous truth or insufficient cases yields inconclusive findings. This is an extraction study with two OCR engines, not a demonstration of LLM collaboration or biological quorum behavior.
+
+## Cases and partitions
+
+Use pinned CORD-v2 revision7f0115a4b758a71d6473b8d085751692da2fef98, first train shard. Development: rows80–91, twelve receipts, retained with independent dataset total labels and manually reviewed target crops where available. Qualifying and evaluation records are selected by fixed index, never engine performance: Q rows100–105 (six); E rows120–137 (eighteen). Preserve unavailable/ambiguous labels, never replace sampled failures. Automated packaging may inspect labels for validity and hashing but must not print fresh qualification/evaluation contents to the operator. Gold lives in an evaluator-only directory, actor files contain only images and neutral IDs. Commit only manifests/aggregate QA, no raw customer records. Freeze split hashes and instrument before native collection. Twelve inspected development receipts cannot become fresh holdouts.
+
+Add deterministic constructed observation fixtures for ordinary totals, explicit quantity labels, subtotal/tax/payment distractors, missing/damaged totals, contradictory amounts and spurious OCR tokens. Vary amounts and layout/word order. Fixture truth is authored independently of the parsers. These are unit/robustness controls, not realistic OCR outcomes or independent receipt samples. Document the case-quality rubric and unsupported populations. Real receipts supply realism; dataset text labels do not simulate perception quality.
+
+## Collection and analysis
+
+Native proposed Q0-comparison: six new receipt pairs, at most12 cold OCR calls. If qualified, E0-comparison: eighteen new pairs, at most36 additional calls. Call both readers for the paired diagnostic; calculate three policies from the same retained observations without counting policy replays as extra samples. Report actual diagnostic compute separately from counterfactual selective-policy call count and summed service time. No throughput claims from these serial cold calls.
+
+Use unchanged pinned CPU RapidOCR/EasyOCR engine settings, original image dimensions, one thread and no downloads during dispatch. Keep90s censoring distinct from45s per-call service eligibility. Timeouts and incomplete responses are execution failures, never valid abstentions. Stop the stage at the first failed call or incomplete trace, preserve unstarted assignments. Valid slow calls are measured adverse outcomes, not automatically retried. Q gate: six scorable records, both readers with six valid fully traced outputs, repaired primary at least4/6 correct and zero wrong accepts; fallback zero wrong accepts; report45s eligibility separately. No further tuning on Q; a failed gate closes E.
+
+Outcomes by policy: correct accept, wrong accept, abstain, unscorable, failed/missing; paired rescue/harm tables; latency and checker calls. Report selective risk as wrong/accepted alongside correct/assigned coverage. Never score an abstention as a correct total. Show separate per-reader wrong-answer overlap; six/eighteen receipts cannot establish error independence. E is a feasibility cohort, not powered efficacy: even zero errors on18 independent records permits roughly15% one-sided95% upper error bound; layout/store dependence weakens generalization. Do not select a winning threshold from E.
+
+## Trace contract, resources and readiness
+
+Reuse shared TRACE-RECEIPTS rather than a parallel format. Retain exact image bytes, effective worker config, visible output, parsed values, timing/grade, phases and streams, with explicit N/A for environment transitions and API usage. Full assigned roster, unique physical IDs, source/config hashes, durable start/terminal records, private raw data and public sanitized coverage are mandatory. Every future attempt closes out with mechanical trace audit plus scientific review. No operator history or secrets enter workers/artifacts.
+
+Offline stages make zero model calls or charges. Native maximum48 OCR calls, two named stages, no retries,60minute total ceiling, zero incremental charge on a freshly verified exclusive existing approved-team allocation. Preserve all historical spending/reservations; no new budget. No warm-service change, new machine, hosted model or automatic successor. Publish/register immutable condition-specific plan, validate source/runtime/input/ledger, and record scope approval before allocating or dispatching. If those gates are unavailable, finish all offline preparation and report the exact remaining decision.
