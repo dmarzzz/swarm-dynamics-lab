@@ -19,7 +19,7 @@ python3 -m http.server 8080 --directory researchers/shadow/notes/narrative
 
 Open `http://localhost:8080`. To reproduce the committed git source and activity window, pass `--ref <narrative.json source_commit> --as-of <narrative.json as_of> --offline`. The public hub is a separately timed observation; offline builds explicitly mark it unavailable. `--hub-receipt <path>` writes only an allowlisted projection of hub counts, not hosts, events or arbitrary run payloads. Sources are pinned to a single git commit; each consumed file, the configuration and builder have SHA256 receipts in `narrative.json`.
 
-Deploy **only** `index.html`, `style.css`, `app.js` and `narrative.json` to a static host. No build step or frontend dependencies. Hosting credentials never enter the public directory. Refresh target is approximately every 45 minutes until 23:00 UTC, 4 October 2026; the page labels old snapshots and the end of the refresh window.
+Deploy **only** `index.html`, `style.css`, `app.js` and `narrative.json` to a static host. Source links point at `github.com/dmarzzz/swarm-dynamics-lab` (the repository was renamed from `swarm-lab`; old links redirect). The live research dashboard is https://swarm-research.pages.dev. No build step or frontend dependencies. Hosting credentials never enter the public directory. Refresh target is approximately every 45 minutes until 23:00 UTC, 4 October 2026; the page labels old snapshots and the end of the refresh window.
 
 ## Design context
 
@@ -32,6 +32,7 @@ Audience: the three researchers assembling one submission, and judges inspecting
 - `experiments/evidence-metadata.json`: each cohort's claim, independent-unit sample description, assessor status, evidence confidence and sources. Evidence source documents and result notes are read and hashed. Missing registry records for explicitly named new archive findings are discoverable from `FINDING.md`, labeled registry-pending.
 - Researchers' note READMEs are indexed, with surveys, synthesis, the draft submission, Dmarz's overnight program/latest-results review and Vishesh's PI guide/review included as hashed context. The guide and results review are frozen assessments, not current worker telemetry.
 - The public hub `/api/state` is fetched with a timeout and reduced to run-status counts. Hub `done` never promotes evidence quality. Active runs older than ten minutes are separately marked stale.
+- `editorial.json` `landed`: explicitly named late closeouts (post refresh window). Claim, sample and limits text is quoted from each `FINDING.md`; they appear as nodes and in a dedicated section but are not added to any headline's scored evidence set.
 - The hackathon brief: understanding tools, tracing information spread, forensics, reusable questions and meta-science. Fit weights are **our editorial interpretation**, not an organizer-published judging rubric.
 
 ## Classification and limits
