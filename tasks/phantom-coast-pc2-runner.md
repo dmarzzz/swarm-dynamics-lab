@@ -3,7 +3,7 @@ id: phantom-coast-pc2-runner
 type: task
 title: Build the Phantom Coast PC-2 launch instrument
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-phantom-coast
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T04:56Z
-updated: 2026-10-04T04:56Z
+updated: 2026-10-04T05:04Z
+outputs:
+- researchers/vishesh/notes/phantom-coast/pc2/RUNBOOK.md
+- researchers/vishesh/notes/phantom-coast/pc2/RUNNER-VALIDATION.json
+- researchers/vishesh/notes/phantom-coast/pc2/src/run.py
 ---
 
 ## Goal
