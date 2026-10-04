@@ -50,3 +50,7 @@ Current gates: G0 scoped exploratory; G1 prospectively published; G2 passed 88 o
 The sole original ledger has 506 calls and USD 0.023434447 committed API, retaining historical uncertainty. Combined committed API and infrastructure allocation estimate is USD 0.778524856 within the original split cap; estimates are not invoices. Worker and relay stopped and the exclusive claim was released. No D0 calls, retry, new allowance or automatic successor occurred.
 
 The actual latest operational handoff is `a5493a765b57b14270a6e3a4ea893162fe5809e5cbcf6f12bc79fbf4c90316a9`; its owning scientific assessment is separate. This file remains the single authoritative setup. Registry entries are navigation, not live admission. Preserve the valid negative qualification and do not rerun this consumed attempt or substitute an older handoff.
+
+## RD7 freshness diagnostic approved
+
+The owner approved the eligibility-baseline improvements, updated dissent question and 48-request diagnostic. Read [the prospective plan](../freshness/PLAN.md). Preserve RD6's failed qualification and original ledger. G1 plan written before implementation; G2 offline preparation in progress; G3 current allocation/public/source/runtime admission still required. Native F0-A1 is unstarted. This is one bounded diagnostic, not a restart of D0 or automatic launch of the broader dissent study.

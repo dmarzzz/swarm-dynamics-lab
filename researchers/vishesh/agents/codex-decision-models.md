@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: idle
+state: working
 task: null
-doing: "RD6 Q0-A2 reviewed and published: 15/18 qualification, D0 unrun; no worker or allocation held."
-updated: 2026-10-04T20:07:47.728732+00:00
+doing: "Implementing the approved 48-request freshness diagnostic and strong eligibility baseline."
+updated: 2026-10-04T20:14:11.995791+00:00
 ---
 
 ## Notes
