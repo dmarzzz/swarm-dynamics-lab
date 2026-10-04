@@ -1,8 +1,8 @@
 {
   "status": "blocked_global_registration_coverage",
-  "detail": "uncovered experiment registrations: researchers/dmarz/notes/sybil-newcomer-opus/experiment.yaml, researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
+  "detail": "uncovered experiment registrations: researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
   "owned_row_schema_and_paths_validated": true,
   "renderer": "shared experiment_evidence.block/update_document/index_text",
   "other_researcher_documents_modified": false,
-  "utc": "2026-10-04T08:21:25.081307+00:00"
+  "utc": "2026-10-04T08:22:27.681450+00:00"
 }

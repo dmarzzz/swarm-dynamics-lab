@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: done
 task: phantom-coast-pc3-live
-doing: PC-3 guard implemented; 48 checks pass; preparing fresh qualification on claimed sim-dmarz-10
-updated: 2026-10-04T08:04:36.436374+00:00
+doing: PC-3 complete; coverage guard misses practical loss target; USD 0.574334208 exposure; artifacts verified and claim released
+updated: 2026-10-04T08:22:49.507378+00:00
 ---
 
 ## Notes

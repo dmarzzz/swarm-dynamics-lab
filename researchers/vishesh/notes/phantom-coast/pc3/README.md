@@ -1,5 +1,14 @@
 # Phantom Coast PC-3: coverage guard results
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `84d632b0` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — In eight fresh synthetic roots, the explicit coverage guard changed misleading-team decision loss by -2.26 percentage points under the declared abstention cost. Basis: All assigned outcomes retained and operator-audited; enforced coverage is mechanical. Eight roots, two structural families, one model, unequal compute and utility assumptions limit generalization; no independent replication.
+- **sample_size_summary:** Observed S1: 8 roots, 2 structural families, 96 dependent episodes; 1,784/1,792 valid calls, 8 nonvalid retained. Separate Q0: 4 roots, 24/24 valid, 432/432 map labels. PC-1 and PC-2 remain separate.
+<!-- experiment-evidence:end -->
+
 
 **1,784/1,792 valid pilot calls; 96/96 complete episodes across eight fresh roots.** The primary guarded-minus-unrestricted team loss difference under misleading reports is **-2.26 percentage points**. The prospective 5.56-point reduction threshold was not met.
 

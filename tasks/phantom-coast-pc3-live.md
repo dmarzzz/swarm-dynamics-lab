@@ -21,6 +21,6 @@ Analyze PC-2, publish prospective PC-3, build and qualify the coverage guard, ru
 
 ## Done when
 
-- Publish plan before implementation and current admission before every native stage.
-- Preserve all outcomes, evaluate intervention against uniform and original policies.
-- Verify artifacts and cumulative budget, remove credentials and release allocation.
+- [x] Publish plan before implementation and current admission before every native stage.
+- [x] Preserve all outcomes, evaluate intervention against uniform and original policies.
+- [x] Verify artifacts and cumulative budget, remove credentials and release allocation.
