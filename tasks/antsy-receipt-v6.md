@@ -21,7 +21,11 @@ Replace ideal QA and regional recall with real OCR checker outputs, exact total 
 
 ## Done when
 
-- [ ] Plan, sources and evaluator contract frozen before implementation/run.
-- [ ] Regression and mutation tests pass.
-- [ ] Development measurement and post-mortem complete.
-- [ ] Fresh exploratory application evaluation audited and published, or precise blocking evidence recorded.
+- [x] Plan, sources and evaluator contract frozen before implementation/run.
+- [x] Regression and mutation tests pass.
+- [x] Development measurement and post-mortem complete.
+- [x] Fresh exploratory application evaluation audited and published, or precise blocking evidence recorded.
+
+## Results
+
+[Completed assessment](../researchers/vishesh/notes/antsy-receipt-v6/RESULTS.md): final50 assigned receipts,47 scorable,250 valid OCR calls,0 execution errors.46 tests and six mutation checks pass. Preserved three instrument defects and targeted repairs. Selective9 correct/1 wrong/37 refer;80 checks versus100 always. Zero model calls. Host released through agentops PR140; no active workers.
