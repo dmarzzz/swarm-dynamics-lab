@@ -43,7 +43,7 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:41Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:52Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
-| [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
+| [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:56Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:56Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc2-runner](tasks/phantom-coast-pc2-runner.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:56Z | Build the Phantom Coast PC-2 launch instrument |
@@ -232,7 +232,7 @@
 |---|---|---|---|---|
 | dmarz/fleet-monitor | idle |  | 2026-10-04T05:05Z | Reviewed the SOC-07 S1 pre-run assessment and code; approval recorded. Session ends with the halcyon shutdown. |
 | vishesh/codex-heterogeneous | working | build-poietic-agents-instrument | 2026-10-04T05:00Z | Resolving independent review and building the Poietic instrument and gated qualification package |
-| vishesh/codex-theseus | working | theseus-targeted-repairs | 2026-10-04T04:55Z | Publish tested D1 targeted repair instrument and prospective plan |
+| vishesh/codex-theseus | done | theseus-targeted-repairs | 2026-10-04T04:56Z | D1 preparation built and pushed; pending separate run admission |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:51Z | D2 completed and audited; targeted review 3/6 versus general review 4/6 and generalist 5/6; valid adverse result, S1 remains unqualified; artifacts verified and worker stopped |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
