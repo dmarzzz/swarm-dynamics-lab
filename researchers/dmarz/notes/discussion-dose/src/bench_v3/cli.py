@@ -15,6 +15,7 @@ from .policies import Scripted, anthropic
 from .analysis import summarize
 from .contracts import SYSTEM, strict_json
 from .replay_view import render
+from .portable_audit import summary_equal
 
 
 def source_hashes():
@@ -77,7 +78,7 @@ def audit(directory):
     playback.finish()
     if regenerated != saved: raise ValueError('saved-response outcome replay mismatch')
     summary = summarize(frozen, regenerated, events)
-    if strict_json((directory / 'summary.json').read_text()) != summary: raise ValueError('summary mismatch')
+    if not summary_equal(strict_json((directory / 'summary.json').read_text()), summary): raise ValueError('summary mismatch')
     rec = summary['reconciliation']
     if rec['missing'] or rec['unresolved_calls'] or rec['started_calls'] != frozen['planned_calls']:
         raise ValueError('assignment or call accounting mismatch')

@@ -12,13 +12,9 @@ def digest(value):
     return hashlib.sha256(json.dumps(value, sort_keys=True, separators=(',', ':')).encode()).hexdigest()
 
 
-def main():
-    p = argparse.ArgumentParser(description=__doc__)
-    p.add_argument('run', type=Path)
-    p.add_argument('output', type=Path)
-    a = p.parse_args()
-    manifest = json.loads((a.run / 'manifest.json').read_text())
-    events = [json.loads(s) for s in (a.run / 'events.jsonl').read_text().splitlines()]
+def build_receipt(run):
+    manifest = json.loads((run / 'manifest.json').read_text())
+    events = [json.loads(s) for s in (run / 'events.jsonl').read_text().splitlines()]
     responses = {e['call_id']: e for e in events if e['kind'] == 'call_response'}
     selected = []
     totals = Counter()
@@ -53,13 +49,22 @@ def main():
     cost = (totals['input_tokens'] + 5 * totals['output_tokens']) / 1e6
     receipt = {'status': 'planning_only_not_a_launch_manifest', 'model_calls_dispatched': 0,
                'parent_attempt': 'v3-q0-a1', 'proposed_attempt': 'v3-d1-a1',
-               'q0_manifest_sha256': hashlib.sha256((a.run / 'manifest.json').read_bytes()).hexdigest(),
+               'q0_manifest_sha256': hashlib.sha256((run / 'manifest.json').read_bytes()).hexdigest(),
                'q0_system_hash': manifest['system_hash'], 'selected': selected, 'counts': dict(totals),
                'planned_new_calls': 120, 'models': models, 'proposed_schedule': schedule,
                'q0_subset_observed_cost_usd': round(cost, 6),
                'both_models_cost_if_same_tokens_usd': round(4 * cost, 6),
                'fresh_qualification_reserved_ids': list(range(50001, 50007)),
                'fresh_qualification_generated': False, 'holdout_opened': False}
+    return receipt
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__)
+    p.add_argument('run', type=Path)
+    p.add_argument('output', type=Path)
+    a = p.parse_args()
+    receipt = build_receipt(a.run)
     a.output.write_text(json.dumps(receipt, sort_keys=True, indent=2) + '\n')
     print(json.dumps({k: receipt[k] for k in ('status', 'model_calls_dispatched', 'planned_new_calls',
                                              'counts', 'both_models_cost_if_same_tokens_usd')}))
