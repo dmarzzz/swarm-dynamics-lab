@@ -1,0 +1,127 @@
+{
+  "physical_valid": 77,
+  "main_valid": 74,
+  "writers": 50,
+  "readers": 24,
+  "root_count": 1,
+  "independent_replications": 1,
+  "cells": [
+    {
+      "hop": 1,
+      "arm": "P",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 1,
+      "arm": "R",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 10,
+      "arm": "P",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 10,
+      "arm": "R",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 25,
+      "arm": "P",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 25,
+      "arm": "R",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 50,
+      "arm": "P",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    },
+    {
+      "hop": 50,
+      "arm": "R",
+      "correct": 3,
+      "observed": 3,
+      "assigned": 3,
+      "answers": {
+        "Cedar": "RELEASE",
+        "Bay": "HOLD",
+        "Delta": "INSUFFICIENT"
+      }
+    }
+  ],
+  "api_cost_nano": 242646000,
+  "false_authorizations": 0,
+  "native_calls_by_analysis": 0,
+  "semantic_review_complete": true,
+  "writer_target_cells": {
+    "retained": 500,
+    "ambiguous": 50,
+    "lost": 50,
+    "total": 600
+  },
+  "handoff_only_correct": 12,
+  "source_restored_correct": 12,
+  "withheld_legitimate_releases": 0,
+  "explicit_denial_to_unknown": 0,
+  "paired_difference_percentage_points": 0,
+  "main_wall_seconds": 203.492924451828,
+  "qualification_cost_nano": 6030000,
+  "main_cost_nano": 236616000,
+  "attempt_total_nano": 249332642,
+  "cumulative_nano": 922529311,
+  "decision": "FINISH / CLOSED; no automatic iteration"
+}

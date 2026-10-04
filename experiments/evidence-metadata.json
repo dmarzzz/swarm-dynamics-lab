@@ -4386,6 +4386,34 @@
       "assessor": "vishesh/codex-theseus",
       "assessed_at": "2026-10-04",
       "source_commit": "bdc613e91b94eb252b4213011d775ab87675caad"
+    },
+    {
+      "id": "telephone-sol50r1",
+      "title": "Telephone Sol50R1: decisions after fifty handoffs",
+      "documents": [
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "telephone"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "One fifty-writer trajectory preserved all twelve checkpoint decisions without source restoration; restored readers also12/12correct.",
+        "rationale": "Complete77-call evidence and all50handoff/24reader audit; one synthetic root, nested checkpoints and no stochastic replication limit generalization. This is a null restoration contrast, not agent superiority."
+      },
+      "sample_size_summary": "One authored root;50fresh serial writers,24fresh checkpoint readers,3qualifiers. Three questions at4depths; P12/12,R12/12.77calls are not77independentcases.",
+      "sources": [
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/RESULTS.json",
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/RUN-QUALITY.json",
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/EVIDENCE.json",
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/SEMANTIC-AUDIT.json",
+        "researchers/vishesh/notes/telephone/native/sol50r1/results/COST.json"
+      ],
+      "status_at_assessment": "reviewed_closed_no_automatic_iteration",
+      "assessor": "vishesh/codex-village-fit",
+      "assessed_at": "2026-10-04",
+      "source_commit": "f0b5ab98d06e21a291d6448482b7728810ee3d7a"
     }
   ],
   "source_sha256": {

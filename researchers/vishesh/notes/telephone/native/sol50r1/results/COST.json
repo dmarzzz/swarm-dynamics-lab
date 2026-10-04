@@ -1,0 +1,12 @@
+{
+  "claim_released": true,
+  "worker_stopped": true,
+  "credential_relay_stopped": true,
+  "Sol50R1_infrastructure_nano": 6686642,
+  "basis": "exclusive claim lifetime at verified hourly rate; allocation-cost estimate, not invoice",
+  "cumulative_nano": 922529311,
+  "model_nano": 822190000,
+  "Sol50R1_model_nano": 242646000,
+  "unknown_charges": 0,
+  "outstanding_reservations": 0
+}

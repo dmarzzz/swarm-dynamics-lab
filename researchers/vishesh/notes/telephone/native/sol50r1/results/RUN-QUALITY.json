@@ -1,0 +1,63 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "decision": "FINISH / CLOSED",
+  "evidence_confidence": "2/4 limited for stable decision usability on this selected trajectory; no population or comparative-benefit claim",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "assessment": "Useful preservation of deployment decisions through50serialhandoffs, rather than copied answers."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "limited",
+      "assessment": "One richer inspected synthetic root/three coupled questions; correct explicit source labels. No field realism or holdout claim."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "assessment": "Exact controller and11mutations pass; source-restored12/12native. Copy fits; information asymmetry disclosed."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "assessment": "All3nativequalifiers correct with source-supported rationales; allsource-restored checkpoints3/3."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "assessment": "All77rawrequests/responses replayed;50handoffs/24readers audited,12pairedparenthashes. Composite-target ambiguity preserved."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "limited",
+      "assessment": "One chain/root, no repeated stochastic replication or population interval; allcheckpoints/questions nested."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "assessment": "50freshwritercontexts, no carried decision fields or questions,24freshreadercontexts, no feedback/operatorcontext/tools."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "assessment": "77distinctgenerationIDs and77relay-worker matches;zero missing/retry/fallback."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "assessment": "Original ledger retained and settled; no unknown/reservations. Existing approved-account exclusive host released."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "limited",
+      "assessment": "Frozen public code/cases and private raw evidence retained; saved-data replay passes. Model alias is not immutable snapshot."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "assessment": "Checkpoint table and observed50hopderived audit show flat decision/fidelity summaries, no fabricated decline."
+    }
+  ]
+}
