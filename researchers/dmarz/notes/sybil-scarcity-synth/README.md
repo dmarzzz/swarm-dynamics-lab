@@ -54,7 +54,22 @@ No directional prediction is made for reasoning effort; it is measured.
   - Prompt `base`: the sybil-scale-api system prompt, byte-identical; the earlier study's prompt and the within-study baseline. (The design brief calls it P0; it is renamed here so it is not confused with the probe stage P0.)
   - Prompt `rule`: `base`, a newline, and the evidence rule below. (P1 in the design brief.)
 - **Fresh roots.** S1 7600 to 7623 (24), Q0 7700 to 7707 (8), engineering 7590 and 7591. No root of the earlier study is reused, so no configuration is chosen on outcomes already seen. A repository scan on 2026-10-04 found these numbers unused ([SETUP.md](SETUP.md)).
-- **Model.** `claude-opus-5-5`; `output_config.effort` is an arm factor with values `low` and `high`; `max_tokens` 16,000 in every configuration (high effort thinks longer and thinking counts against the limit); no temperature, top_p, top_k, thinking, tool_choice, prefill or fallbacks; the six-field JSON schema of sybil-scale-api; no memory across calls. `READY.yaml` has one `effort` field and says `low`; the launcher only checks that it is an allowed word.
+- **Model.** `claude-opus-5-5` by default (see the model ladder below); `output_config.effort` is an arm factor with values `low` and `high`; `max_tokens` 16,000 in every configuration (high effort thinks longer and thinking counts against the limit); no temperature, top_p, top_k, thinking, tool_choice, prefill or fallbacks; the six-field JSON schema of sybil-scale-api; no memory across calls. `READY.yaml` has one `effort` field and says `low`; the launcher only checks that it is an allowed word.
+
+### Model ladder (added 2026-10-04, required by dmarz/fleet-monitor, before the code was pinned)
+
+As relayed by dmarz/pipeline: dmarz reported that his Opus 5.5 allowance may run out and said to switch to another model such as Opus 5 if it does. The frozen design therefore carries the ladder `[claude-opus-5-5, claude-opus-5]`.
+
+- One model per attempt, taken from the environment variable `STUDY_MODEL` (the launcher's `--model`); it must be in the ladder and defaults to the first entry. The model is in the hub parameters of every run and in every row.
+- Each model has its own prices in the hashed design (USD 4 / 20 and USD 5 / 25 per million input / output tokens), its own batch names (`p0-001`, `q0-001`, `s1-001` for the first model; `p0-001-opus-5`, `q0-001-opus-5`, `s1-001-opus-5` for the second), its own P0 and Q0, its own ledger file and its own results directory. S0 is scripted and model-free, so one passed S0 serves both. A qualification on one model never qualifies the other.
+- The second model is used only after a stage of the first was refused on a limit or credit error that did not clear in 20 minutes (a `provider_credit_balance_low` stop, or repeated HTTP 429 past the retry rule), as a dated amendment noted on the run request.
+- Models are never pooled. Every table and figure is for one model, named in its title; the analysis refuses rows of two models. If both ever run, a comparison is a separate labelled section.
+- The request body is the same five keys for both models. What was checked in the official documentation on 2026-10-04 (no model call was made):
+  - [Effort](https://platform.claude.com/docs/en/build-with-claude/effort): effort is set at `output_config.effort` with no beta header; "Claude Opus 5 supports all five effort levels" with default `high`; Claude Opus 5.5 supports all five with default `medium`. So `low` and `high` are valid on both models.
+  - [Troubleshooting thinking](https://platform.claude.com/docs/en/build-with-claude/thinking-troubleshooting), per-model table: Claude Opus 5.5 is adaptive only, always on, and rejects `enabled` and `disabled`; Claude Opus 5 is adaptive only, on by default, rejects `enabled`, and accepts `disabled` only at effort `high` or below. The request carries no `thinking` field on either model, so both think adaptively and the adapter drops their thinking blocks.
+  - [Claude Opus 5](https://platform.claude.com/docs/en/models/opus-5/overview) and [Pricing](https://platform.claude.com/docs/en/about-claude/pricing): model id `claude-opus-5`, USD 5 / 25 per million tokens, 1M context, 128K output; Claude Opus 5.5 is USD 4 / 20.
+  - [Structured outputs](https://platform.claude.com/docs/en/build-with-claude/structured-outputs), read through a summarizing fetch: both models are listed for `output_config.format`, no beta header; nullable type arrays and `additionalProperties: false` are supported.
+  - Not confirmed from the pages read: that Claude Opus 5 rejects sampling parameters and can return an HTTP 200 refusal (the request sends no sampling parameter, and a refusal is handled as its own failure category on either model); and an example with `effort` and `format` together in one `output_config`. That exact body ran 1,489 times on Claude Opus 5.5 in the earlier study; on Claude Opus 5 the one-call probe P0 is its first check.
 
 ### The evidence rule (frozen 2026-10-04, before any root of this study was generated)
 
@@ -86,11 +101,11 @@ Four stages run as one chain. Each stage is one hub run and is queued only behin
 
 Transport retry rule as in the contract: at most 2 retries, HTTP 429 and 529 only, 2 s then 6 s, `retry-after` honoured up to 20 s, inside the request timeout. Answers are never retried.
 
-Limits in the hashed design: calls P0 1, Q0 48, S1 960, total 1,009; 2 requests in flight; 600 s per request; 28,800 s per stage; 32,400 s for the chain; 1,300 transport attempts; USD 190 of settled cost plus open reservations. Arithmetic in [preregistration.md](preregistration.md).
+Limits in the hashed design, per model attempt: calls P0 1, Q0 48, S1 960, total 1,009; 2 requests in flight; 600 s per request; 28,800 s per stage; 32,400 s for the chain; 1,300 transport attempts; USD 240 of settled cost plus open reservations, sized for a full chain on the more expensive model. Expected spend about USD 101 to 136 on Claude Opus 5.5 and USD 126 to 170 on Claude Opus 5. Arithmetic in [preregistration.md](preregistration.md).
 
 Analysis: the unit is the world root; all 24 roots stay in every contrast; 10,000-draw bootstrap over whole roots, seed 20261004. A failed or not-started call stays in its cell's denominator with outcome bounds 0 and 1; contrasts with missing endpoints are reported as bounds over all 24 roots plus the complete-case estimate with its denominator. Nothing is dropped, imputed or re-run. No confirmatory claim.
 
-Operator steps will be in RUN.md, the pre-run review in reviews/chain-001-pre.md, gate status in [SETUP.md](SETUP.md).
+Operator steps are in [RUN.md](RUN.md), the pre-run review in [reviews/chain-001-pre.md](reviews/chain-001-pre.md), gate status in [SETUP.md](SETUP.md), the frame mapping in [VISUALIZATION.md](VISUALIZATION.md).
 
 ## Metrics
 
@@ -109,7 +124,7 @@ Operator steps will be in RUN.md, the pre-run review in reviews/chain-001-pre.md
 
 ## Limits
 
-One synthetic task, one graph family, one attacker strategy (one repeated fabrication), simulated checks, one model. The rule was written after the earlier result. It can only use the verification badges, and attackers pass checks 10% of the time, so its best case is bounded as shown above. Effort changes thinking, output tokens and latency together. Intervals are descriptive.
+One synthetic task, one graph family, one attacker strategy (one repeated fabrication), simulated checks, one model per attempt. The rule was written after the earlier result. It can only use the verification badges, and attackers pass checks 10% of the time, so its best case is bounded as shown above. Effort changes thinking, output tokens and latency together. Intervals are descriptive.
 
 ## Results
 

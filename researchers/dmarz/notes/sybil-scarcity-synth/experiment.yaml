@@ -23,6 +23,9 @@ params:
   code:
     type: str
     role: fixed
+  model:
+    type: str
+    role: condition
   continues:
     type: str
     role: fixed
@@ -30,6 +33,7 @@ metrics:
 - episodes
 - invalid
 - failed
+- not_started
 - model_calls
 - input_tokens
 - output_tokens
@@ -39,6 +43,7 @@ metrics:
 - billing_pauses
 - billing_pause_seconds
 - billing_affected_calls
+- billing_stop
 - qualification_passed
 - rare_fabricated
 - rare_accuracy
