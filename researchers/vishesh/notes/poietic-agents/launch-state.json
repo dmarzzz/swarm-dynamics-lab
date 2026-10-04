@@ -1,6 +1,6 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T08:55:00.061980+00:00",
+  "updated_utc": "2026-10-04T09:07:30.530261+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
@@ -9,16 +9,16 @@
   "scientific_conclusion": "none",
   "process_compliance": "S0-01 admitted; instrument failed; post-hoc outcome reconciliation retained",
   "publication": {
-    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/76ab99163f7e9e83e4016d23f7015dbd2e3aee06/researchers/vishesh/notes/poietic-agents/README.md",
+    "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/f8ac5016ad03ac5cdbd7904c6b87bf059ac15e8e/researchers/vishesh/notes/poietic-agents/README.md",
     "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
-    "public_registration": "pending S0-02 proposal update",
+    "public_registration": "verified S0-02 proposal; no run queued",
     "public_registration_receipt": "registration-receipt.json",
-    "documentation_preflight": "passed-run-request-design-only",
-    "documentation_preflight_receipt": "public-plan-verification-run-request.json",
-    "rendered_page": "pending current revision verification",
-    "native_launch_preflight": "must-repeat-after-runtime-freeze",
-    "source_commit": "76ab99163f7e9e83e4016d23f7015dbd2e3aee06",
-    "expected_plan_sha256": "61170312bcfa9ea85c11b694bfd890a9c732f0ba764d508834c3081918a4e978"
+    "documentation_preflight": "passed for prospective repair proposal",
+    "documentation_preflight_receipt": "public-plan-verification-S0-02.json",
+    "rendered_page": "Verified exact f8ac5016 immutable URL, S0-01 failed status and unapproved S0-02 proposal on 2026-10-04 UTC",
+    "native_launch_preflight": "repeat after owner decision and runtime freeze",
+    "source_commit": "f8ac5016ad03ac5cdbd7904c6b87bf059ac15e8e",
+    "expected_plan_sha256": "76275469e324a58d44a7a3bc0307b6cd34ab28f6566806b5fe6f5e558913edfc"
   },
   "gates": {
     "independent_design_review": "historical review received; P1-P3 resolved",

@@ -2,7 +2,7 @@
 agent: vishesh/codex-heterogeneous
 tool: codex
 state: blocked
-task: qualify-poietic-agents-s0
+task: null
 doing: S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision
 updated: 2026-10-04T08:59Z
 ---
