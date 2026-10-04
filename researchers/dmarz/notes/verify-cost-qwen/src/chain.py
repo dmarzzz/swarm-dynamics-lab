@@ -137,7 +137,7 @@ def execute_run(run, entry, status, deadline, opener, **kwargs):
                      valid=s['graded'], invalid=s['invalid'], failed=s['failed'], not_started=s['not_started'],
                      qualification_passed=s['qualification_passed'], errors=s['errors'], billing_pauses=s['billing_pauses'],
                      billing_pause_seconds=s['billing_pause_seconds'], billing_affected_calls=s['billing_affected_calls'],
-                     resumable=s['resumable'], unanswered_reservations=s['unanswered_reservations'],
+                     resumable=s['resumable'], voided_reservations=s['voided_reservations'],
                      table_minus_prose_regret=s['table_minus_prose_regret'], reason=s['reason'])
     status['ledger'] = ledger_totals(); write_status(status)
     return outcome, code, reason
@@ -315,8 +315,8 @@ def verify_stage(sr, stage, entry, reference, prior_rows=None, original=True, pr
     checks['hub_metrics_match'] = all(k in metrics and close(float(metrics[k]), float(t[k])) for k in
                                       ('episodes', 'invalid', 'failed', 'model_calls', 'input_tokens', 'output_tokens', 'cost_usd'))
     checks['source_hash_current'] = summary['params']['source_hash'] == study.source_hash()
-    checks['call_cap_respected'] = t['answered_calls'] <= budget['max_calls'][stage] and \
-        t['model_calls'] <= budget['max_calls'][stage] + worker.unanswered_reservations(prior_rows or [])
+    earlier = worker.totals(study.combine(list(prior_rows or [])), 0)['model_calls'] if prior_rows else 0
+    checks['call_cap_respected'] = earlier + t['model_calls'] <= budget['max_calls'][stage]     # standing reservations of the stage so far
     return {'run': entry['run'], 'status': entry['status'], 'ok': all(checks.values()), 'checks': checks, 'units': len(assigned),
             'completed': sum(r['status'] == 'completed' for r in rows), 'failed': t['failed'], 'model_calls': t['model_calls'],
             'cost_usd': t['cost_usd']}, rows
@@ -328,9 +328,11 @@ def units(rows, reference):
     final = study.combine(rows); count = lambda s: sum(r['status'] == s for r in final)
     a = analyze.analyze(final); p = a['primary']
     answered = sum(bool((r.get('accounting') or {}).get('usage_reported')) for r in rows)
+    standing = worker.totals(rows, 0)['model_calls']
     return {'assigned': len(final), 'completed': count('completed'), 'failed': count('failed'), 'not_started': count('not_started'),
             'every_unit_exactly_once': sorted(r['id'] for r in final) == sorted(x.split(':')[0] for x in reference['stages']['S1']['ids']),
-            'answered_calls': answered, 'answered_calls_within_cap': answered <= study.design()['budget']['max_calls']['S1'],
+            'answered_calls': answered, 'standing_reservations': standing,
+            'answered_calls_within_cap': answered <= standing <= study.design()['budget']['max_calls']['S1'],
             'no_unit_answered_twice': max([sum(bool((r.get('accounting') or {}).get('usage_reported')) for r in rows if r['id'] == i)
                                            for i in {r['id'] for r in rows}] or [0]) <= 1,
             'primary_estimate': p['estimate'], 'primary_layouts': p['layouts'], 'primary_assigned_layouts': p['assigned_layouts'],

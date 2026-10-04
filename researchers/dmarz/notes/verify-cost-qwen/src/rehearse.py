@@ -164,7 +164,7 @@ def chain_once(label, stub, hub_dir, base, sr, resume_with=None, verify=False):
     def snapshot():
         status = chain.read_status(); runs = sr.runs(study.EXPERIMENT, limit=5000); s1 = status['stages'].get('S1') or {}
         keys = ('status', 'calls', 'answered_calls', 'planned', 'valid', 'invalid', 'failed', 'not_started', 'cost_usd', 'qualification_passed',
-                'billing_pauses', 'billing_pause_seconds', 'billing_affected_calls', 'resumable', 'unanswered_reservations', 'reason',
+                'billing_pauses', 'billing_pause_seconds', 'billing_affected_calls', 'resumable', 'voided_reservations', 'reason',
                 'table_minus_prose_regret')
         out = dict(state=status['state'], stopped_stage=status.get('stopped_stage'), reason=status.get('reason'),
                    stages={s: {k: e.get(k) for k in keys} for s, e in status['stages'].items()},
@@ -223,13 +223,14 @@ def main():
     done4 = [(study.batch(s), 'done') for s in sorted(study.STAGES)]
     c, d, e = one.get('stages', {}), many.get('stages', {}), bill.get('stages', {})
     first = bill.get('first_stop', {}); cont = (bill.get('continuations') or [{}])[0]
-    fu = first.get('s1_units') or {}; orphans = (first.get('stages', {}).get('S1') or {}).get('unanswered_reservations')
+    fu = first.get('s1_units') or {}; voided = (first.get('stages', {}).get('S1') or {}).get('voided_reservations')
     checks = {
         'a_exit_0': full.get('exit') == 0, 'a_state_completed': full.get('state') == 'completed',
         'a_four_done_runs': full.get('hub_runs') == done4,
         'a_calls_equal_caps': {s: (e_.get('calls'), e_.get('valid')) for s, e_ in calls.items()} ==
                               {'S0': (0, 144), 'P0': (1, 1), 'Q0': (budget['max_calls']['Q0'], budget['max_calls']['Q0']), 'S1': (n_s1, n_s1)},
-        'a_ledger_calls': (full.get('ledger') or {}).get('attempted_calls') == made == total and full.get('stub_messages') == made,
+        'a_ledger_calls': (full.get('ledger') or {}).get('attempted_calls') == made == sum(budget['max_calls'].values()) <= total
+                          and full.get('stub_messages') == made,
         'a_reference_policy_has_zero_regret': calls.get('S1', {}).get('table_minus_prose_regret') == 0
                                               and (full.get('s1_units') or {}).get('regret_prose') == 0 and (full.get('s1_units') or {}).get('regret_table') == 0,
         'a_projection_gates_evaluated': (full.get('projection') or {}).get('within_cap') is True and (full.get('projection') or {}).get('input_ceiling_ok') is True,
@@ -263,16 +264,20 @@ def main():
         'e_first_stop_is_a_billing_stop': first.get('exit') == 3 and first.get('reason') == provider.BILLING_STOP and first.get('stopped_stage') == 'S1'
                                           and first.get('stages', {}).get('S1', {}).get('failed') == 0 and first.get('stages', {}).get('S1', {}).get('resumable') is True
                                           and fu.get('failed') == 0 and fu.get('not_started', 0) > 0 and fu.get('completed') == 40,
-        'e_unanswered_reservations_counted': isinstance(orphans, int) and 1 <= orphans <= budget['workers'],
+        'e_reservations_of_unanswered_calls_voided': isinstance(voided, int) and 1 <= voided <= budget['workers']
+                                                     and (first.get('stages', {}).get('S1') or {}).get('calls') == 40,
         'e_resume_completes': bill.get('resume_exit') == 0 and bill.get('state') == 'completed' and e.get('S1', {}).get('status') == 'done'
                               and cont.get('batch') == 's1-001-r1' and cont.get('status') == 'done' and cont.get('failed') == 0,
         'e_every_unit_exactly_once': (bill.get('s1_units') or {}).get('every_unit_exactly_once') is True and (bill.get('s1_units') or {}).get('completed') == n_s1
                                      and (bill.get('s1_units') or {}).get('assigned') == n_s1 and cont.get('units') == fu.get('not_started')
                                      and (bill.get('s1_units') or {}).get('answered_calls') == n_s1 and (bill.get('s1_units') or {}).get('no_unit_answered_twice') is True,
         'e_hub_runs': bill.get('hub_runs') == sorted(done4[:3] + [('s1-001', 'failed'), ('s1-001-r1', 'done')]),
-        'e_ledger_holds_only_the_reissued_reservations_beyond_the_cap': isinstance(orphans, int)
-            and ((bill.get('ledger') or {}).get('calls_by_stage') or {}).get('S1') == n_s1 + orphans
-            and (bill.get('ledger') or {}).get('usage_reported_calls') == total
+        'e_ledger_stays_inside_the_exact_s1_cap': isinstance(voided, int)
+            and ((bill.get('ledger') or {}).get('calls_by_stage') or {}).get('S1') == n_s1
+            and ((bill.get('ledger') or {}).get('calls_by_batch') or {}).get('s1-001') == n_s1
+            and (bill.get('ledger') or {}).get('voided_calls') == voided
+            and (bill.get('ledger') or {}).get('usage_reported_calls') == (bill.get('ledger') or {}).get('attempted_calls') == sum(budget['max_calls'].values())
+            and (bill.get('s1_units') or {}).get('standing_reservations') == n_s1
             and (bill.get('ledger') or {}).get('transport_attempts', 10 ** 9) <= budget['max_transport_attempts'],
         'e_verify_exit_0': bill.get('verify_exit') == 0,
         'no_real_wait': time.monotonic() - started < 600 and len(clock.waits) > 0,

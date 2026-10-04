@@ -15,7 +15,6 @@ This is the role PC5's engine.py played (reserve before any wire effect, one dur
 per assignment, grade from the saved records), rebuilt on the reference adapter and ledger.
 """
 import argparse
-import copy
 import gzip
 import json
 import math
@@ -57,11 +56,12 @@ def upload(run, path):
 
 
 def totals(rows, planned):
-    """Stage totals. `episodes` counts units planned; `model_calls` counts calls reserved in the ledger."""
+    """Stage totals. `episodes` counts units planned; `model_calls` counts calls whose reservation stands in the
+    ledger (a call left unanswered by a billing stop has its reservation voided and is not counted)."""
     acct = [r.get('accounting') or {} for r in rows]
     return {'episodes': planned, 'invalid': planned - sum(r['status'] == 'completed' for r in rows),
             'failed': sum(r['status'] == 'failed' for r in rows),
-            'model_calls': sum(bool(a.get('attempted')) for a in acct),
+            'model_calls': sum(bool(a.get('attempted')) and not a.get('voided') for a in acct),
             'answered_calls': sum(bool(a.get('usage_reported')) for a in acct),
             'transport_attempts': sum(a.get('attempts', 0) for a in acct),
             'input_tokens': sum(a.get('input_tokens', 0) for a in acct),
@@ -69,19 +69,9 @@ def totals(rows, planned):
             'cost_usd': math.fsum(a.get('actual_usd', 0) for a in acct)}
 
 
-def unanswered_reservations(rows):
-    """Units left not started by a billing stop whose call already holds a ledger reservation (no model ran)."""
-    return sum(r['status'] == 'not_started' and bool((r.get('accounting') or {}).get('attempted')) for r in rows)
-
-
-def ledger_budget(budget, stage, reissued):
-    """The frozen budget; for a continuation after a billing stop the stage cap and the study cap are raised by
-    the number of unanswered reservations being re-sent, and by nothing else."""
-    if not reissued: return budget
-    assert budget['billing_outage']['resume_reissues_unanswered_reservations'] is True
-    b = copy.deepcopy(budget)
-    b['max_calls'][stage] += reissued; b['max_attempted_calls'] += reissued
-    return b
+def voided_reservations(rows):
+    """Units left not started by a billing stop whose call had reserved; the adapter voided those reservations."""
+    return sum(r['status'] == 'not_started' and bool((r.get('accounting') or {}).get('voided')) for r in rows)
 
 
 def row_base(a, p, run_name):
@@ -119,9 +109,8 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     ledger = None
     if not scripted:
         path = os.environ.get(provider.LEDGER_ENV); assert path, 'persistent_budget_required'
-        reissued = unanswered_reservations(prior_rows or [])     # every earlier row left not started that holds a reservation
         assert total + (0 if units is None else sum(r['status'] != 'not_started' for r in prior)) <= budget['max_calls'][stage], 'units_exceed_stage_call_cap'
-        ledger = provider.Ledger(path, ledger_budget(budget, stage, reissued))
+        ledger = provider.Ledger(path, budget)
         backend = backend or provider.OpenRouter(ledger, study.provider_config(), opener, CLOCK, SLEEP)
     billing = lambda: dict(getattr(backend, 'billing', None) or NO_BILLING)
     initial = ledger.transact() if ledger else {}
@@ -248,7 +237,7 @@ def summarize(p, rows, total, violations, control, prior, probe_rows, continuati
                'not_started': count(rows, 'not_started'), 'errors': sorted({r['failure'] for r in rows if r.get('failure')}), **t,
                'max_failed': None if strict else budget['max_failed'], 'failed_in_stage': control['failed'], 'stop_reason': control['reason'],
                'resumable': bool(not strict and control['reason'] == provider.BILLING_STOP and not violations),
-               'unanswered_reservations': unanswered_reservations(rows),
+               'voided_reservations': voided_reservations(rows),
                'qualification': study.scripted_qualification(rows) if stage == 'S0' else study.qualification(both) if both else None,
                'probe': study.probe_gate(rows) if stage == 'P0' else None, 'calibration': calibration,
                'invariant_violations': violations,
