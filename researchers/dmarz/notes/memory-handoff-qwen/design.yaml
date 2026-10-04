@@ -1,0 +1,130 @@
+# Frozen design of memory-handoff-qwen. Covered by study.source_hash(): any change needs a new attempt.
+version: 1
+experiment: memory-handoff-qwen
+status: exploratory
+program: researchers/dmarz/notes/overnight-program-2026-10-04 (research program v5, line M)
+attempt: '001'
+
+# Model route (selected-model.json of the program). The request body is request_template plus messages.
+provider: openrouter
+model: qwen/qwen3.7-flash
+canonical_model: qwen/qwen3.7-flash-20260727
+pinned_provider: alibaba
+request_template:
+  model: qwen/qwen3.7-flash
+  provider:
+    only: [alibaba]
+    allow_fallbacks: false
+    require_parameters: true
+  reasoning:
+    enabled: false
+  max_tokens: 1000
+  response_format:
+    type: json_object
+
+# Instrument: copied from discussion-dose bench_v3 (memory fixtures, resolver, parent schema and scorer,
+# journal). Hashes of the files the copies were taken from, at swarm-lab commit ce2c87fe.
+parent:
+  study: discussion-dose (bench_v3)
+  commit: ce2c87fe3e6e665ecae72515d967cc03dc52ad94
+  evidence_sha256: f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc
+  scoring_sha256: 6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4
+  contracts_sha256: d139a19642a9a8187dad81be9e2f6a8527252b5d9a3d3a447f87b8a4edef28f7
+  journal_sha256: 133569662d073f4d461843fea4c8492d863843366e18d6ac8987e65568a89518
+  worlds_sha256: 9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0
+  adapter: researchers/dmarz/notes/pipeline/reference/openrouter_provider.py
+  adapter_sha256: 86d0739e9bf83fcb12c382b5d1844ed7011b56a2bb77baebdcf7ad275b58d789
+
+instrument:
+  world_version: memory-handoff-worlds-v1
+  families: [capacity, total_cost, dependency]      # family = root mod 3, as in bench_v3
+  target_field: {capacity: power, total_cost: freight, dependency: transfer}
+  states: [clean, misquote, stale, copies, contradiction, false_original]
+  policies: [raw, metadata, content, reset]
+  distractor_notes: 3            # clean notes about other fact keys of the same world, identical in every state
+  copies: 3                      # records of one origin cited as three reports in the copies state
+  min_origins: {default: 1, copies: 2}
+  truth_range: [32, 87]
+  false_offset: [5, 12]          # the false value is truth plus or minus an offset in this range
+  delta_range: [1, 4]
+  distractor_range: [20, 99]
+  # What the reference actor returns, written by hand from the construction (T truth, F false value, N null).
+  # S0 checks the resolver-based reference against this table row by row.
+  expected:
+    clean:          {raw: T, metadata: T, content: T, reset: N}
+    misquote:       {raw: F, metadata: F, content: T, reset: N}
+    stale:          {raw: F, metadata: N, content: T, reset: N}
+    copies:         {raw: F, metadata: N, content: N, reset: N}
+    contradiction:  {raw: N, metadata: N, content: N, reset: N}
+    false_original: {raw: F, metadata: F, content: F, reset: N}
+
+roots: [5401, 5402, 5403, 5404, 5405, 5406, 5407, 5408, 5409, 5410, 5411, 5412,
+        5413, 5414, 5415, 5416, 5417, 5418, 5419, 5420, 5421, 5422, 5423, 5424]
+engineering_roots: [5301, 5302, 5303, 5304, 5305, 5306]
+dispatch_seed: memory-handoff-dispatch-v1
+
+qualification:
+  set: a                         # attempt 001 uses set a; the one permitted repair (attempt 002) uses set b
+  roots_a: [5501, 5502, 5503, 5504, 5505, 5506]
+  roots_b: [5601, 5602, 5603, 5604, 5605, 5606]
+  # One root per memory state (index = position in the root list), four policies each: 24 fixtures.
+  states_a: [clean, misquote, stale, copies, contradiction, false_original]
+  states_b: [copies, contradiction, false_original, clean, misquote, stale]
+  fixtures: 24
+  probe_fixture: 0               # P0 is the first fixture; Q0 is the other 23; the gate reads all 24
+  required_valid: 24
+  required_supported: 24         # value equals the reference and the citations are valid, on all 24
+
+stages:
+  S0: {backend: scripted, assignments: 192}     # 6 engineering roots x 24 cells + 24 + 24 qualification fixtures
+  P0: {backend: openrouter, assignments: 1}
+  Q0: {backend: openrouter, assignments: 23}
+  S1: {backend: openrouter, assignments: 576}
+  S2: {enabled: false}
+
+budget:
+  max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
+  max_attempted_calls: 600
+  max_failed: 6                  # S1 only: larger of 3 and 1% of 576, rounded up
+  aggregate_usd: 2
+  max_output_tokens: 1000
+  max_input_tokens: 8000
+  max_input_bytes: 16000         # 6,400 tokens at the assumed worst case of 2.5 characters per token
+  assumed_min_chars_per_token: 2.5
+  max_visible_chars: 1000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 6000
+  chain_timeout_seconds: 7800
+  workers: 4
+  retries: 0                     # an answer is never retried
+  retry:
+    transport_retries: 2
+    retryable_http_status: [429, 502, 503, 529]
+    backoff_seconds: [2, 6]
+    retry_after_cap_seconds: 20
+  billing_outage:
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
+  max_transport_attempts: 800
+  input_usd_per_million: 0.03
+  output_usd_per_million: 0.13
+
+primary_contrast:
+  metric: inherited_error
+  definition: the successor's value equals the false inherited value plus delta
+  contrast: content minus metadata, mean of the misquote and stale states within each root
+  unit: root
+  roots: 24
+  expected_direction: decrease
+  reference_actor_value: -0.5
+  status: exploratory
+
+utility_guard:
+  metric: clean_correct
+  definition: in the clean state the successor's value equals truth plus delta
+  policies: [raw, metadata, content]
+
+analysis:
+  bootstrap_draws: 10000
+  bootstrap_seed: 20261004
+  missing_outcome_bounds: [0, 1]
