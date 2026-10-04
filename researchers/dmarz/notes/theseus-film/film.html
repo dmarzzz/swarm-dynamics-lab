@@ -1,0 +1,280 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  film: swarm of theseus, narrated run. vishesh's pilot swarm-of-theseus/S1-a1
+  source: researchers/vishesh/notes/swarm-of-theseus/results/S1-a1 and artifacts/theseus-pilot-evidence, reduced by theseus-film/film_data.py; narration in theseus-film/script.json
+  generated_by: researchers/dmarz/notes/theseus-film/make_film.py
+  visual_claim: "Across a wall of 36 crews whose members are swapped one at a time, the wrong answers pile up in the row where newcomers are handed nothing, right after the last founder leaves; inside one crew, the handover itself can be read."
+  form: data-driven
+  omitted on purpose: the qualification attempts S0-a1 to S0-a4, token and cost accounting, the bootstrap interval, the v2 and diagnostic runs beyond one closing line
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>swarm of theseus</title>
+<style>
+/*__TOKENS__*/
+/*__FONTS__*/
+:root { --void: var(--color-void); --ink: var(--color-ink); --dim: var(--color-dim); --amber: var(--color-amber);
+  --zip: var(--color-zip); --bone: var(--color-bone); --no: var(--color-state-no); --mono: var(--text-mono-family); --display: var(--text-display-family); }
+html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden; }
+#film { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; transform-origin: 0 0;
+  background: var(--void); color: var(--ink); font-family: var(--mono); font-size: 18px; }
+#film * { box-sizing: border-box; }
+.abs, #film > div, #film svg { position: absolute; }
+.fill { left: 0; top: 0; width: 1920px; height: 1080px; }
+#zip { left: 46px; top: 0; bottom: 0; width: 2px; opacity: .55;
+  background: linear-gradient(180deg, transparent, var(--zip) 18%, var(--zip) 82%, transparent);
+  box-shadow: 0 0 8px var(--zip), 0 0 24px rgba(60,255,230,.35); }
+#title { left: 100px; top: 44px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 54px;
+  line-height: 1; letter-spacing: -0.01em; white-space: nowrap; }
+.inst { font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+#inst { left: 100px; top: 112px; }
+#clock { left: 1420px; top: 112px; width: 400px; text-align: right; color: var(--amber); }
+#cap { left: 100px; top: 936px; width: 1590px; height: 100px; }
+#cap p { position: absolute; left: 0; bottom: 0; margin: 0; font-size: 28px; line-height: 1.42; opacity: 0; white-space: nowrap; }
+.g, .g > div { position: absolute; }
+.g { left: 0; top: 0; }
+/* the wall is clipped to the band between the header and the subtitles, so the zoom never runs under either */
+#wallclip { left: 0; top: 160px; width: 1920px; height: 765px; overflow: hidden; }
+#wall { top: -160px; width: 1920px; height: 1080px; transform-origin: 0 0; }
+.rname { white-space: nowrap; font-size: 18px; line-height: 1; }
+.small { white-space: nowrap; font-size: 12px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); }
+.t-ink { color: var(--ink); } .t-zip { color: var(--zip); } .t-no { color: var(--no); } .t-dim { color: var(--dim); }
+/* a crew slot is a plank: white while a founder holds it, teal once it has been replaced */
+.tile { border: 1px solid rgba(127,136,150,.3); background: rgba(3,5,10,.35); }
+.col, .col > i { position: absolute; display: block; }
+.f { background: var(--ink); opacity: .85; } .n { background: var(--zip); opacity: .8; }
+.ok { background: rgba(127,136,150,.5); } .bad { background: var(--no); }
+.rc { background: var(--bone); }
+.bulletin { width: 1px; background: var(--ink); opacity: .5; }
+.plank { font-size: 13px; letter-spacing: .12em; text-transform: uppercase; color: var(--void); padding: 8px 12px; white-space: nowrap; }
+.plank.f { opacity: .92; } .plank.n { opacity: .9; }
+.sq { width: 18px; height: 18px; }
+.count { font-size: 15px; white-space: nowrap; }
+.card { line-height: 22px; }
+.card .small { margin: 0 0 6px; }
+.card .blk { margin: 0 0 14px; font-size: 15px; white-space: pre-wrap; }
+.card .big { font-size: 20px; line-height: 30px; }
+.card i { font-style: normal; color: var(--dim); }
+/* end card */
+#end .by { left: 100px; top: 392px; }
+#end .who { left: 96px; top: 424px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 132px; line-height: 1; }
+#end .how { left: 100px; top: 632px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
+#end .qr { left: 1290px; top: 330px; width: 330px; height: 330px; background: var(--bone); padding: 18px; }
+#end .qr svg { position: static; width: 100%; height: 100%; display: block; }
+#end .url { left: 1290px; top: 676px; width: 330px; text-align: center; font-size: 16px; color: var(--dim); white-space: nowrap; }
+#mark { position: absolute; left: 1700px; top: 910px; width: 134px; height: 134px; }
+#mark2 { position: absolute; left: 530px; top: 376px; width: 220px; height: 220px; opacity: 0; }
+body.record #mark, body.record #mark2, body.record #bar { display: none; }
+#bar { position: fixed; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(127,136,150,.25); cursor: pointer; }
+#bar div { height: 100%; width: 0; background: var(--dim); }
+</style>
+</head>
+<body>
+<div id="film" role="img" aria-label="Narrated film of the Swarm of Theseus pilot. The subtitles carry the full narration.">
+  <div id="field" class="fill"></div>
+  <div id="zip"></div>
+  <div id="title">swarm of theseus</div>
+  <div id="inst" class="inst"></div>
+  <div id="clock" class="inst"></div>
+  <div id="wallclip"><div id="wall" class="g"></div></div>
+  <div id="stage" class="g"></div>
+  <div id="end" class="g"></div>
+  <div id="cap"></div>
+  <img id="mark" alt="" src="__MARK__">
+  <img id="mark2" alt="" src="__MARK__">
+</div>
+<div id="bar"><div></div></div>
+<script>
+const D = /*__DATA__*/null;
+const QR = `/*__QR__*/`;
+const film = document.getElementById('film');
+const clamp = (x, a = 0, b = 1) => Math.min(b, Math.max(a, x));
+const ease = x => 1 - Math.pow(1 - clamp(x), 3);              // entrances ease out
+const io = x => { x = clamp(x); return x * x * (3 - 2 * x); };
+const lerp = (a, b, u) => a + (b - a) * u;
+const vis = (t, a, b = 1e9, din = .733, dout = .467) => ease((t - a) / din) * (1 - ease((t - b) / dout));
+const bump = (age, k = .12) => 1 + (age > 0 && age < .45 ? Math.sin(Math.PI * age / .45) * k : 0);   // "the state changed"
+const anims = []; const on = fn => anims.push(fn);
+const el = (cls, parent, html, css) => { const n = document.createElement('div'); n.className = cls; if (html != null) n.innerHTML = html;
+  if (css) n.style.cssText = css; parent.appendChild(n); return n; };
+const at = (n, x, y) => { n.style.left = x + 'px'; n.style.top = y + 'px'; return n; };
+const box = (n, x, y, w, h) => { n.style.left = x + 'px'; n.style.top = y + 'px'; n.style.width = Math.max(0, w) + 'px'; n.style.height = h + 'px'; return n; };
+const show = (n, o, dy = 0) => { n.style.opacity = o; if (dy) n.style.transform = `translateY(${(1 - Math.min(1, o)) * dy}px)`; };
+const text = (n, s) => { if (n._s !== s) { n.textContent = s; n._s = s; } };
+const esc = s => s.replace(/&/g, '&amp;').replace(/</g, '&lt;');
+const pct = x => Math.round(x * 100) + '%';
+const words = s => s.replace(/-/g, ' ');
+
+/* ------------------------------------------------------------------ timeline: one segment per narration clip, timed by make_film.py */
+const T = {}, DUR = {};
+for (const s of D.timeline) { T[s.key] = s.start; DUR[s.key] = s.dur; }
+const DURATION = Math.max(...D.timeline.map(s => s.start + s.dur));
+const LINE_MAX = 90;                                 // Space Mono at 28 px: a longer line reaches the mark
+const wrap = s => { if (s.length <= LINE_MAX) return [s];                   // two balanced lines, broken at the space nearest the middle
+  let cut = -1; for (let i = 0; i < s.length; i++) if (s[i] === ' ' && Math.abs(i - s.length / 2) < Math.abs(cut - s.length / 2)) cut = i;
+  return [s.slice(0, cut), s.slice(cut + 1)]; };
+const SUBS = D.timeline.filter(s => s.text).map(s => ({ ...s, lines: wrap(s.text) }));
+for (const s of SUBS) for (const l of s.lines) if (l.length > LINE_MAX) throw new Error(`subtitle ${s.key} has a ${l.length}-character line`);
+const capBox = document.getElementById('cap');
+SUBS.forEach(s => { const p = document.createElement('p'); p.innerHTML = s.lines.map(esc).join('<br>'); capBox.appendChild(p);
+  on(t => show(p, vis(t, s.start + .05, s.start + s.dur - .2, .35, .25), 6)); });
+
+/* when each step arrives on screen, per view */
+const NS = 6;
+const WHEN = {
+  wall: [T.W1 + 1.2, T.W3 + 1.0, T.W3 + 2.6, T.W3 + 4.2, T.W4 + 1.0, T.W4 + 2.6],
+  both: [T.Z1 + 1.8, T.P3 + 1.0, T.S1 + .8, T.S1 + 2.6, T.S2 + .5, T.S2 + 1.8],
+  neither: [T.N1 + .8, T.N2 + .6, T.N2 + 3.0, T.N3 + DUR.N3 * .45, T.N3 + DUR.N3 * .45 + 1.0, T.N3 + DUR.N3 * .45 + 2.0],
+};
+const stepAt = (when, t) => { let s = -1; for (let i = 0; i < NS; i++) if (t >= when[i]) s = i; return s; };
+/* the camera: 0 = the wall of runs, 1 = inside the worked run */
+const zoomU = t => io((t - (T.Z1 + .5)) / 1.6) - io((t - T.R1) / 1.5);
+
+/* ------------------------------------------------------------------ field (the painted ground) */
+const field = document.getElementById('field');
+const fUp = el('abs', field, '', 'left:-6%;right:-6%;top:-8%;background:radial-gradient(70% 90% at 30% 40%, var(--color-field-upper), rgba(40,60,190,.34) 55%, transparent 100%);filter:blur(70px)');
+const fLo = el('abs', field, '', 'left:-6%;right:-6%;bottom:-10%;background:radial-gradient(75% 95% at 68% 62%, var(--color-field-lower), rgba(120,40,200,.32) 55%, transparent 100%);filter:blur(80px)');
+const fSeam = el('abs', field, '', 'left:8%;right:8%;height:6%;background:linear-gradient(90deg, transparent, var(--color-field-seam), rgba(120,190,255,.22), transparent);filter:blur(38px)');
+el('abs', field, '', 'left:-4%;bottom:-12%;width:34%;height:38%;background:radial-gradient(closest-side, var(--color-field-warm), transparent);filter:blur(60px)');
+// held darker than the kit's card field: this film puts small type across the whole frame
+el('abs fill', field, '', 'background:radial-gradient(78% 74% at 50% 50%, rgba(3,5,10,.9), rgba(3,5,10,.72) 70%, rgba(3,5,10,.4) 100%)');
+const fGrid = el('abs fill', field, '', 'background-image:repeating-linear-gradient(0deg, rgba(170,200,255,.05) 0 1px, transparent 1px 48px), repeating-linear-gradient(90deg, rgba(170,200,255,.05) 0 1px, transparent 1px 48px);-webkit-mask-image:radial-gradient(80% 75% at 50% 50%, rgba(0,0,0,.85), transparent 100%);mask-image:radial-gradient(80% 75% at 50% 50%, rgba(0,0,0,.85), transparent 100%)');
+on(t => { const f = t * 30, a = Math.sin(f / 150), b = Math.cos(f / 190), seam = 50 + 2.2 * Math.sin(f / 120);
+  fUp.style.height = (seam + 4) + '%'; fUp.style.transform = `translate(${a * 26}px, ${b * 14}px)`;
+  fLo.style.height = (100 - seam + 8) + '%'; fLo.style.transform = `translate(${-a * 30}px, ${-b * 12}px)`;
+  fSeam.style.top = (seam - 3) + '%'; fSeam.style.opacity = .8 + .2 * a;
+  fGrid.style.backgroundPosition = `${(f * .16) % 48}px 0px`; });
+
+/* ------------------------------------------------------------------ title, instrument line, step clock */
+const title = document.getElementById('title'), inst = document.getElementById('inst'), clock = document.getElementById('clock');
+inst.textContent = `swarm lab // a study by vishesh // ${D.run.runs} runs // claude haiku 4.5 // pilot ${D.run.attempt} // 2026-10-04`;
+on(t => { show(title, vis(t, .8, T.E - .2), 14); show(inst, vis(t, 1.3, T.E - .2), 10);
+  const onWall = t < T.Z1 + 1, s = stepAt(onWall ? WHEN.wall : WHEN.both, t);
+  text(clock, s < 0 ? '' : `${onWall ? '' : words(D.worked.scenario) + ' // '}step ${s} of ${NS - 1}`);
+  show(clock, onWall ? vis(t, WHEN.wall[0], T.Z1 + .3) : vis(t, WHEN.both[0], T.S3 - .3)); });
+
+/* ------------------------------------------------------------------ the wall: every run of the pilot, playing at once */
+const wall = document.getElementById('wall');
+const ARM = { neither: ['nothing', 'newcomers start empty'], notes: ['notes', `the team's notebooks`], mentor: ['one question', 'to the member leaving'],
+  both: ['notes + question', 'both channels'], founders: ['never replaced', 'control: the same crew'], verbatim: ['rule re-issued', 'control: at every step'] };
+const GX0 = 318, TW = 238, CGAP = 13, TILE_H = 98, CW = 34;
+const WORLDS = D.scenarios.flatMap(sc => D.seeds.map(seed => [sc, seed]));
+const rowY = i => 204 + i * (TILE_H + 10) + (i >= 4 ? 16 : 0), colX = j => GX0 + j * (TW + CGAP);
+const colHeads = WORLDS.map(([sc, seed], j) => at(el('small', wall, `${words(sc)} // ${seed}`), colX(j), 180));
+const rowLabels = D.arms.map((arm, i) => { const y = rowY(i);
+  return { arm, i, nm: at(el('rname', wall, ARM[arm][0]), 100, y + 8), sub: at(el('small', wall, ARM[arm][1]), 100, y + 36), res: at(el('small t-ink', wall, ''), 100, y + 60) }; });
+const tiles = D.wall.map(run => { const i = D.arms.indexOf(run.arm), j = WORLDS.findIndex(([sc, seed]) => sc === run.scenario && seed === run.seed), x = colX(j), y = rowY(i);
+  const frame = box(el('tile', wall), x, y, TW, TILE_H);
+  const cols = run.steps.map((st, s) => { const c = el('col', wall), cx = x + 17 + s * CW; let h = '';
+    st.founder.forEach((f, k) => h += `<i class="${f ? 'f' : 'n'}" style="left:${cx}px;top:${y + 9 + k * 11}px;width:30px;height:8px"></i>`);
+    st.right.forEach((r, k) => h += `<i class="${r ? 'ok' : 'bad'}" style="left:${cx}px;top:${y + 48 + k * 9}px;width:30px;height:6px"></i>`);
+    h += `<i class="rc" style="left:${cx}px;top:${y + 87}px;width:30px;height:5px;opacity:${Math.max(.07, st.receipt * .9)}"></i>`;
+    if (st.changed && !run.steps[s - 1].changed) h += `<i class="bulletin" style="left:${cx - 2.5}px;top:${y + 6}px;height:${TILE_H - 12}px"></i>`;   // the repair dock's rule changes here
+    c.innerHTML = h; return c; });
+  return { run, i, j, frame, cols }; });
+const target = tiles.find(tl => tl.run.arm === 'both' && tl.run.scenario === D.worked.scenario && tl.run.seed === D.worked.seed);
+const legend = at(el('small', wall, 'each tile: one run, steps 0 to 5 // top: three crew slots, white = founder, teal = replacement // middle: four cases, red = wrong // bottom: receipt phrase kept'), GX0, 874);
+const verdict = at(el('small t-ink', wall, `the study rates its own evidence ${D.evidence_confidence} // exploratory pilot // audited by the study's own author`), GX0, 874);
+const RES_T = { notes: T.R2 + 1.0, both: T.R2 + 1.6, mentor: T.R2 + DUR.R2 * .5, neither: T.R2 + DUR.R2 * .68, founders: T.R3 + .8, verbatim: T.R3 + 1.2 };
+on(t => { const u = zoomU(t), o = clamp(1 - (u - .45) / .4) * (1 - io((t - (T.E - .3)) / .4));
+  wall.style.opacity = o; wall.style.visibility = o > 0 ? 'visible' : 'hidden'; if (o <= 0) return;
+  // the camera moves toward the worked run's tile
+  const Z = 2.27, cx = colX(target.j) + TW / 2, cy = rowY(target.i) + TILE_H / 2;
+  wall.style.transform = `translate(${lerp(0, 960 - Z * cx, u)}px, ${lerp(0, 440 - Z * cy, u)}px) scale(${lerp(1, Z, u)})`;
+  const test = vis(t, T.R1 + 1.4, 1e9, .6), obs = vis(t, T.R4 + DUR.R4 * .35, T.C1 - .2, .5, .4);     // the last two steps are the test; then the observatory columns
+  for (const tl of tiles) { const tin = vis(t, 1.2 + tl.i * .1 + tl.j * .05, 1e9, .5) * (1 - .68 * obs * (tl.run.scenario === 'observatory' ? 0 : 1));
+    tl.frame.style.opacity = tin; tl.frame.style.borderColor = tl === target && vis(t, T.Z1 + .1, T.Z1 + 2.2, .3, .3) > .5 ? 'var(--ink)' : '';
+    tl.cols.forEach((c, s) => c.style.opacity = tin * vis(t, WHEN.wall[s] + tl.j * .03, 1e9, .4) * (s < 4 ? 1 - .62 * test * (1 - obs) : 1)); }
+  colHeads.forEach((n, j) => { show(n, vis(t, 1.4 + j * .05)); n.style.color = obs > .5 && WORLDS[j][0] === 'observatory' ? 'var(--ink)' : ''; });
+  rowLabels.forEach(rl => { const tIn = rl.i < 4 ? T.W5 + .4 + rl.i * (DUR.W5 - 2) / 4 : T.W6 + .4 + (rl.i - 4) * DUR.W6 * .4;
+    show(rl.nm, vis(t, tIn)); show(rl.sub, vis(t, tIn + .2));
+    text(rl.res, `${pct(D.after[rl.arm])} right, steps 4-5`); rl.res.style.color = D.after[rl.arm] < .75 ? 'var(--no)' : 'var(--ink)'; show(rl.res, vis(t, RES_T[rl.arm])); });
+  show(legend, vis(t, T.W1 + 2.0, T.C1 - .2)); show(verdict, vis(t, T.C1 + .5)); });
+
+/* ------------------------------------------------------------------ inside one run: the crew as three planks, step by step */
+const stage = document.getElementById('stage'), SX0 = 300, SCW = 250;
+const PHRASE = D.inside.both[0].members[0].convention;                  // the receipt phrase the founders were given
+function strip(key, y0, label, tIn, tOut) {
+  const run = D.inside[key], when = WHEN[key], g = el('g', stage);
+  at(el('small t-ink', g, label), 100, y0 - 18);
+  at(el('rname', g, 'the crew'), 100, y0 + 34); at(el('small', g, 'four cases'), 100, y0 + 162); at(el('small', g, 'receipt phrase'), 100, y0 + 192);
+  const cols = run.map((st, s) => { const c = el('g', g), x = SX0 + s * SCW, joined = st.members.find(m => !m.id.startsWith('founder') && (s === 0 || !run[s - 1].members.some(p => p.id === m.id)));
+    at(el('small', c, `step ${s}${joined ? ` // ${joined.id} joins` : ''}`), x, y0 + 4);
+    const planks = st.members.map((m, k) => box(el('plank ' + (m.id.startsWith('founder') ? 'f' : 'n'), c, m.id), x, y0 + 26 + k * 40, SCW - 12, 34));
+    st.expected.forEach((want, k) => at(el('sq ' + (st.collective[k] === want ? 'ok' : 'bad'), c), x + k * 24, y0 + 158));
+    const right = st.expected.filter((want, k) => st.collective[k] === want).length;
+    const cnt = at(el('count', c, `${right} of ${st.expected.length} right`), x + 106, y0 + 157); if (right < st.expected.length) cnt.style.color = 'var(--no)';
+    const kept = st.members.filter(m => m.convention === PHRASE).length;
+    at(el('small' + (kept === st.members.length ? ' t-ink' : ''), c, `${kept} of ${st.members.length} sign “${PHRASE}”`), x, y0 + 192);
+    return { c, planks, joined: joined ? st.members.indexOf(joined) : -1 }; });
+  on(t => { const o = vis(t, tIn, tOut); g.style.opacity = o; g.style.visibility = o > 0 ? 'visible' : 'hidden'; if (o <= 0) return;
+    cols.forEach((col, s) => { show(col.c, vis(t, when[s], 1e9, .5), 8);
+      if (col.joined >= 0) { col.planks[col.joined].style.transform = `scale(${bump(t - when[s] - .25, .06)})`; } }); });
+}
+strip('both', 190, `${words(D.worked.scenario)} // world ${D.worked.seed} // notes + question`, T.Z1 + 1.4, T.R1 + .2);
+strip('neither', 446, `the same ${words(D.worked.scenario)} // nothing handed down`, T.N1 + .3, T.R1 + .2);
+
+/* cards: what a member was handed and what it returned, copied from the saved requests and responses */
+function card(x, y, w, head, blocks, tIn, tOut) {
+  const c = at(el('card', stage, ''), x, y); c.style.width = w + 'px';
+  const h = el('small', c, head), parts = blocks.map(([label, body, delay, cls]) => { const b = el('blk ' + (cls || ''), c, (label ? `<i>${esc(label)}</i>\n` : '') + esc(body)); b._d = delay || 0; return b; });
+  on(t => { const o = vis(t, tIn, tOut); c.style.visibility = o > 0 ? 'visible' : 'hidden'; show(h, o); parts.forEach(b => show(b, o * vis(t, tIn + b._d, 1e9, .5), 6)); });
+}
+const B = D.inside.both, cut = (s, n) => s.length > n ? s.slice(0, s.lastIndexOf(' ', n)) + ' …' : s;
+const caseLines = m => m.case_ids.map((id, k) => { const cs = m.cases.find(c => c.id === id); return `lot ${cs.lot} // bits ${cs.assay.join(' ')} // ${cs.assay[0] === cs.assay[1] ? 'match ' : 'differ'} -> ${m.labels[k]}`; }).join('\n');
+const split = ob => { const i = ob.indexOf('Departing mentor:\n'); return [ob.slice(ob.indexOf('\n') + 1, i).trim(), ob.slice(i + 'Departing mentor:\n'.length).trim()]; };
+const f0 = B[0].members[0], n1 = B[1].members.find(m => m.id === 'new-1'), [arch1, ans1] = split(n1.onboarding);
+const PY = 428, LXP = 100, RXP = 1000, PW = 820;
+card(LXP, PY, PW, `the founders' notebook // written by the experimenters`, [['', `“${f0.notebook_in.trim()}”`, .3, 'big']], T.P1 + .1, T.P3 - .2);
+card(RXP, PY, PW, `step 0 // four lots, sorted by founder-0`, [['', caseLines(f0), .2], ['receipt', f0.convention, T.P2 - T.P1 - 2.0]], T.P1 + 2.2, T.P3 - .2);
+card(LXP, PY, PW, `what new-1 is handed // step 1`, [
+  ['its notebook', '(empty)', .4],
+  ['its one question', `“${cut(B[1].handover.question.message, 215)}”`, T.P4 - T.P3 + .4],
+  [`the departing founder's answer, as delivered`, ans1, T.P5 - T.P3 + .3]], T.P3 + .4, T.S3 - .2);
+card(RXP, PY, PW, `also handed to new-1 // step 1`, [[`the team's notebooks`, arch1, .2]], T.P5 + DUR.P5 * .45, T.P6 + .1);
+card(RXP, PY, PW, `what new-1 returns // step 1`, [['', caseLines(n1), .3], ['receipt', n1.convention, 1.6], ['its new notebook', `“${n1.notebook_out}”`, DUR.P6 * .6]], T.P6 + .3, T.S3 - .2);
+const h3 = B[3].handover, n3 = B[3].members.find(m => m.id === 'new-3'), [arch3, ans3] = split(n3.onboarding);
+card(LXP, PY, PW, `step 3 // the last founder hands over`, [
+  [`founder-2's notebook by then`, `“${h3.answer_notebook}”`, .4],
+  ['its answer to new-3, as delivered', ans3, DUR.S3 * .45]], T.S3 + .2, T.N1 - .2);
+card(RXP, PY, PW, `what new-3 was also handed, and returned`, [[`the team's notebooks`, arch3, .3], ['receipt', n3.convention, DUR.S4 * .55]], T.S4 + .1, T.N1 - .2);
+// the neighbour: what each newcomer wrote down with nothing handed to it
+const NB = D.inside.neither;
+[1, 2, 3].forEach((s, k) => { const m = NB[s].members.find(mm => mm.id === 'new-' + s);
+  card(100 + k * 590, 684, 540, `${m.id} // step ${s} // handed nothing`, [['the rule it wrote down', `“${m.notebook_out}”`, .3], ['receipt', m.convention, .6]], T.N2 + .4 + k * (DUR.N2 - 1.5) / 3, T.R1 + .2); });
+on(t => { const o = clamp((zoomU(t) - .55) / .4); stage.style.opacity = o; stage.style.visibility = o > 0 ? 'visible' : 'hidden'; });
+
+/* ------------------------------------------------------------------ end card */
+const end = document.getElementById('end');
+const eBy = el('by inst', end, 'made by'), eName = el('who', end, 'dmarz');
+const eHow = el('how', end, `the study, Swarm of Theseus, is by vishesh<br>film built by an AI agent from the study's saved records: ${D.run.calls} model calls, ${D.run.runs} runs<br>the narration is a synthetic voice // exploratory pilot; no independent review`);
+const eQr = el('qr', end, QR), eUrl = el('url', end, 'github.com/dmarzzz/swarm-lab');
+const mark = document.getElementById('mark'), mark2 = document.getElementById('mark2');
+on(t => { [eBy, eName, eHow, eQr, eUrl].forEach((n, i) => show(n, vis(t, T.E + .4 + i * .12), 10));
+  mark.style.opacity = vis(t, 1.6, T.E - .2); mark2.style.opacity = vis(t, T.E + .5); });
+
+/* ------------------------------------------------------------------ playback */
+function seek(t) { t = clamp(t, 0, DURATION); for (const f of anims) f(t); window.__t = t; }
+window.__seek = seek;
+window.__meta = { caps: SUBS.flatMap(s => s.lines.map(l => l.length)), duration: DURATION, fps: 30, end: T.E, times: T,
+  mark: { x: 1700, y: 910, size: 134 }, mark2: { x: 530, y: 376, size: 220 } };
+const params = new URLSearchParams(location.search), bar = document.getElementById('bar');
+if (params.has('record')) { document.body.classList.add('record'); seek(0); }
+else {
+  const fit = () => { const s = Math.min(innerWidth / 1920, innerHeight / 1080); film.style.transform = `scale(${s})`;
+    film.style.left = (innerWidth - 1920 * s) / 2 + 'px'; film.style.top = (innerHeight - 1080 * s) / 2 + 'px'; };
+  addEventListener('resize', fit); fit();
+  const still = matchMedia('(prefers-reduced-motion: reduce)').matches, rest = T.R3 + DUR.R3 - .5;   // the static fallback: the wall with its results
+  let playing = !still && !params.has('t'), t0 = performance.now() - 1000 * (parseFloat(params.get('t')) || (still ? rest : 0));
+  const tick = now => { if (playing) { let t = (now - t0) / 1000; if (t >= DURATION) { t = DURATION; playing = false; } seek(t); bar.firstChild.style.width = (100 * t / DURATION) + '%'; } requestAnimationFrame(tick); };
+  seek(parseFloat(params.get('t')) || (still ? rest : 0)); requestAnimationFrame(tick);
+  const jump = t => { t0 = performance.now() - 1000 * t; seek(t); bar.firstChild.style.width = (100 * t / DURATION) + '%'; };
+  addEventListener('keydown', e => { if (e.code === 'Space') { playing = !playing; t0 = performance.now() - 1000 * window.__t; }
+    if (e.code === 'ArrowRight') jump(Math.min(DURATION, window.__t + 2)); if (e.code === 'ArrowLeft') jump(Math.max(0, window.__t - 2)); });
+  bar.addEventListener('click', e => jump(DURATION * e.clientX / innerWidth));
+}
+</script>
+</body>
+</html>
