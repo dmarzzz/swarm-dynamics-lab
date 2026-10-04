@@ -31,7 +31,9 @@ Configurations that have run tonight with zero invalid responses:
 |---|---|---|---|---|
 | compositional-safety q0-007 | high | 4,096 | 178 | USD 0.0095, 4.25 s |
 | discussion-v3-d1-opus d1o-a1 (in progress) | high | 16,000 | 53 so far | USD 0.019, 6 s |
-| sybil-scale-xl q0-a1 | low | 8,000 | 24 | USD 0.41 (very large packets) |
+| sybil-scale-xl q0-a1 and q0-a2 | low | 8,000 | 24 each | USD 0.41 (about 100,000 input tokens per call); every answer 38 output tokens, no thinking tokens; 2.5 to 4.7 s per call |
+| soc07 S1-Q.2 and S1-R | medium | phase cap + 4,096 | 684 | USD 0.0078, 0 failures |
+| market-split-opus I0, Q0, S1 | medium | 8,192 | 570 so far | USD 0.01 to 0.02, 0 invalid |
 
 - A one-call probe before any paid stage costs about USD 0.01 to 0.02 and would have saved q0-006 (24 rejected calls and a full plan, review and post-mortem cycle).
 - Small visible-output caps (SOC-07's 64 and 128, compositional-safety's 350) must be raised or given a separate thinking allowance. SOC-07 m3 adds 4,096 on top of each phase cap.
