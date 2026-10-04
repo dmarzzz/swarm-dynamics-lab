@@ -28,7 +28,7 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
+| [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
@@ -44,6 +44,7 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
+| [review-dmarz-completed-xcheck](tasks/review-dmarz-completed-xcheck.md) | claimed | p1 | review | shadow/sol-xcheck | shadow | 2026-10-04T13:51Z | Independently recompute completed dmarz findings from saved records |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -267,6 +268,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-xcheck | working |  | 2026-10-04T13:48Z | Independent offline arithmetic and trace review of completed dmarz studies |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
 | dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T13:05Z | sybil-scarcity-xmodel: Qwen chain ready (code 2753b03d, source hash 06cbd97e, review reviews/chain-001-pre.md); next: gpt-6-sol path (reference OpenAI adapter, price row, tests, own review); no launch, no model call. |
