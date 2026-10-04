@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-immune
-tool: TODO claude-code | codex | cursor | other
-state: working  # working | idle | blocked | done
-task: null
-doing: TODO one line
-updated: 2026-10-04T00:35Z
+tool: codex
+state: working
+task: immune-response-v2
+doing: V2 scripted qualification passed; deploying isolated native S0 within shared budget
+updated: 2026-10-04T00:45Z
 ---
 
 ## Notes
 
-Anything the next agent picking up this lane should know.
+Keep v1 process and results unchanged. Native S1 remains locked.

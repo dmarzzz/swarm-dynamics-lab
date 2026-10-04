@@ -1,7 +1,7 @@
 {
   "id": "immune-response",
   "title": "Swarm immune response: private and shared state repair",
-  "description": "Exploratory instrument; scripted engineering deployment, not a live LLM finding or accepted hypothesis. Protocol and limitations in linked source.",
+  "description": "Exploratory oracle repair instrument: v2 separates shared restoration from stale-record blocking; scripted qualification passed. Model runs are feasibility tests, not accepted hypotheses.",
   "owner": "vishesh",
   "params": {
     "stage": {
