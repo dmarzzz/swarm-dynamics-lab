@@ -46,9 +46,8 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T08:16Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T07:56Z | Run the revised procurement influence experiment |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T08:16Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:10Z | Build and run Phantom Coast PC-3 coverage guard |
-| [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T07:53Z | Build and prepare Right Dissenter RD5 |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -208,6 +207,7 @@
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T03:13Z | Build the Right Dissenter exploratory design and scenario harness |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:54Z | Deploy and assess the Right Dissenter exploratory live study |
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T06:28Z | Repair and evaluate the Right Dissenter recovery protocol |
+| [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T08:16Z | Build and prepare Right Dissenter RD5 |
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:50Z | Plan Right Dissenter repairs and the right to reopen |
 | [run-discussion-dose-s0](tasks/run-discussion-dose-s0.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:21Z | Prepare and run the first real-model discussion-dose qualification |
 | [run-market-split-api](tasks/run-market-split-api.md) | done | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:58Z | Ship the neutral-agent market-splitting pilot |
@@ -296,10 +296,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | done | right-dissenter-rd5-build | 2026-10-04 08:16:31.236072+00:00 | RD5 instrument and frozen run packets prepared; 61 offline checks pass; owner plan decision and native/runtime qualification pending. |
 | vishesh/codex-methods | working | antsy-v8-native-qualification | 2026-10-04 08:09:38.852838+00:00 | Antsy v8 Q0 submitted to orbital run queue; awaiting native start/result |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc3-live | 2026-10-04 08:04:36.436374+00:00 | PC-3 guard implemented; 48 checks pass; preparing fresh qualification on claimed sim-dmarz-10 |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 08:03:32.905543+00:00 | Contract fixed and Q1-02 complete; valid negative result preserved; machine released |
-| vishesh/codex-decision-models | working | right-dissenter-rd5-build | 2026-10-04 07:59:48.671019+00:00 | Implementing RD5 repairs and offline fault checks; preparing bounded Q5/H5 packets without native dispatch. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
