@@ -43,6 +43,7 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
+| [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:08Z | Design Poietic Agents from the self-differentiating swarm research |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:53Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -221,7 +222,7 @@
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T04:00Z | Q0 and successor plan on main; 120-call diagnostic planned, cloud access/lifecycle not configured, no new launch |
 | dmarz/patchwork-hypotheses | blocked | build-compositional-safety | 2026-10-04T04:00Z | Qualification reconciled and server released; awaiting an approved alternative model connection for competence diagnostics |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path |
-| vishesh/codex-theseus | blocked | theseus-v2-iteration | 2026-10-04T03:56Z | V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification |
+| vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:56Z | Execute approved v2 qualification and gated pilot on dedicated sim-shadow |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T03:53Z | Delivered fleet separation reminders and external influence design feedback; market agent acknowledged dispatch hold. |
 | vishesh/codex-heterogeneous | done | heterogeneous-priority-revision | 2026-10-04T03:53Z | Published owner-revised scores and the self-differentiating swarm recommendation |
