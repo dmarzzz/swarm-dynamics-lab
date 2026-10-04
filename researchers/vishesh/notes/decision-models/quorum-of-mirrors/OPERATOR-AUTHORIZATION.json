@@ -1,0 +1,16 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "owner": "vishesh",
+  "recorded_utc": "2026-10-04T06:06:47.764137+00:00",
+  "researcher_review": "not_required_by_owner",
+  "scope": "exploratory_Q1_only",
+  "allowed_attempts": [
+    "QM-Q1-01",
+    "QM-Q1-02"
+  ],
+  "max_calls_per_attempt": 16,
+  "formal_hypothesis_status": "not_accepted",
+  "instruction": "We have already said we do not need the researcher reviews; handle registration and fresh machine allocation.",
+  "standing_policy": "tooling/agent-experiments/OPERATIONS.md#researcher-review-is-optional-for-vishesh-owned-experiments",
+  "budget_authority": "AUTHORIZATION.json"
+}

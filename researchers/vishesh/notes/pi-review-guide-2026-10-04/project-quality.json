@@ -1,0 +1,82 @@
+[
+  {
+    "area": "Audited arithmetic",
+    "status": "green",
+    "assessment": "Audited retained scores and trace reconstructions agree.",
+    "next_step": "Preserve these artifacts; distinguish accurate arithmetic from generalizable evidence.",
+    "finding_ids": [
+      "GUIDE-002",
+      "GUIDE-004",
+      "ADD-T-01"
+    ]
+  },
+  {
+    "area": "Launch and resource gates",
+    "status": "red",
+    "assessment": "Some entry points bypass registration or exceed declared resource bounds.",
+    "next_step": "Bind current plans to assignments; reserve calls before dispatch and enforce stop rules.",
+    "finding_ids": [
+      "GUIDE-001",
+      "AV-01",
+      "EP-05",
+      "REG-01",
+      "REG-02",
+      "REG-03"
+    ]
+  },
+  {
+    "area": "Agent identity and context",
+    "status": "red",
+    "assessment": "Loaded model and memory behavior can diverge from declared agents.",
+    "next_step": "Bind resolved configuration, initialization receipts and validated state updates to qualified hashes.",
+    "finding_ids": [
+      "EP-01",
+      "EP-02",
+      "GUIDE-006",
+      "AV-07",
+      "REG-07"
+    ]
+  },
+  {
+    "area": "Causal design",
+    "status": "yellow",
+    "assessment": "Tiny independent samples and bundled treatments limit causal claims.",
+    "next_step": "Choose one mechanism; pair independent worlds with matched-information, matched-resource controls.",
+    "finding_ids": [
+      "AV-04",
+      "EP-07",
+      "EP-08",
+      "REG-10",
+      "ROOT-03",
+      "ROOT-05"
+    ]
+  },
+  {
+    "area": "Artifact reliability",
+    "status": "red",
+    "assessment": "Reporting and packaging defects can hide or overwrite valid outcomes.",
+    "next_step": "Write terminal numeric outcomes first; repair publication from immutable evidence with unique IDs.",
+    "finding_ids": [
+      "EP-03",
+      "AV-02",
+      "REG-04",
+      "ADD-H-01",
+      "ADD-H-02",
+      "GUIDE-003"
+    ]
+  },
+  {
+    "area": "Coverage and writing",
+    "status": "yellow",
+    "assessment": "Coverage is documented; evidence classes and headline claims need clearer separation.",
+    "next_step": "Link frozen source bundles, show independent sample counts, and label hypothetical, scripted and measured work.",
+    "finding_ids": [
+      "EP-06",
+      "ROOT-01",
+      "ROOT-02",
+      "ROOT-09",
+      "REG-11",
+      "EP-12"
+    ]
+  }
+]

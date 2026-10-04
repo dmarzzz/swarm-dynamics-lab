@@ -1,7 +1,7 @@
 {
-  "checked_utc": "2026-10-04T05:03:19.094908+00:00",
+  "checked_utc": "2026-10-04T05:51:41.824663+00:00",
   "status": "offline pass; native admission blocked",
-  "tests": 42,
+  "tests": 44,
   "command": "python3 -m unittest discover -s researchers/vishesh/notes/phantom-coast/pc2/tests -q",
   "development_roots": [
     300,
@@ -14,7 +14,7 @@
   "new_spend_usd": 0,
   "historical_spend_usd": 0.162723246,
   "instrument": {
-    "src/admission.py": "76b8df44268af8cad2e31725739d3f08e54d53ba40b7611d72b28b9b84e60ca8",
+    "src/admission.py": "b9ee2a6124a9a03a4060e8b7188d07f4e47e5c8d470dcc6059bf2ad1d0dc4890",
     "src/contract.py": "d96d5c86f75b8d3c9c9f207fdcd6524d2ec899a8f1afe20b5623af2123def219",
     "src/design.py": "28125e2ac4bd84c6d93ccb9d0884e9534894b290d24e3f5904191e426c427349",
     "src/engine.py": "923e3d66104fd8a18bc4237c65b57508ad640b57f8050f31a35f5ade24e6e031",
@@ -23,7 +23,8 @@
     "src/run.py": "9a9d1c02c647d749d3ad47acd6b44bbdb73c192a589c78d8f34d4c38a8d9434f",
     "src/wire.py": "d76392addb66092691ca59fee8ef599d0292dd512f89abdedce37c63eb9b157c",
     "PLAN.md": "503085960b8813b7f34156a4ac51ff2288213c69de53352d31384c80e138e20a",
-    "reviews/RUNNER-PRE.md": "4fa59451aa97247621f34b5413c65b78f76e04d4e0e68076036beb8f5ef50281"
+    "reviews/RUNNER-PRE.md": "4fa59451aa97247621f34b5413c65b78f76e04d4e0e68076036beb8f5ef50281",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "d3a494f1fccdc0c4047f7eeefcca2184dc0dd54d266d319ecd4ab3d81d55772d"
   },
   "assignment_counts": {
     "Q0": 24,
@@ -44,9 +45,11 @@
     "label": "SCRIPTED FIXTURE - NOT MODEL EVIDENCE"
   },
   "limitations": [
-    "Self-validation is not different-researcher review.",
+    "Self-validation is not independent review; review is optional by owner direction.",
     "No actual 36-way target request has been qualified.",
     "No current fleet, public registration or native runtime admission exists.",
-    "Private admission references are operator attestations bound by hash, not independent auditing by the launcher."
-  ]
+    "Private operational references are operator attestations bound by hash."
+  ],
+  "review_policy": "not required by owner directive, 2026-10-04",
+  "previous_validation_url": "https://github.com/dmarzzz/swarm-lab/blob/16aa291b47fd45b426831aa402697be2efbcc813/researchers/vishesh/notes/phantom-coast/pc2/RUNNER-VALIDATION.json"
 }

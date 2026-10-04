@@ -2,8 +2,8 @@
   "id": "right-dissenter-rd4",
   "title": "The Right Dissenter and the right to resume",
   "owner": "vishesh",
-  "description": "TLDR: Can repaired evidence memory preserve a correct stop and reopen when facts improve? Compare original and symmetric Jev admission on identical repaired mechanics with always-check, majority, pooled evidence and an exact rule. Measure all 576 assigned decisions, recovery, false reversals, duplicate-check waste and calls/checks. Scripted votes and 24 fixed template roots limit inference; exploratory RD-4 successor.",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/88feac7ea6218c2712914fb5462ab5d66814a50a/researchers/vishesh/notes/dissent/rd4/PLAN.md",
+  "description": "TLDR: Finish only the 40 unstarted RD4 policy trajectories after a transport interruption, retaining all 416 terminal prefix decisions and five failed connections. Same original/symmetric/always-check contrasts, model and 576-decision assignment; no prior request retried. Report separate and combined outcomes, costs and missingness. Finite authored templates and scripted votes limit inference.",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/471d4dd069564c3d534a6b1cf5ecfb5a2b0c6a57/researchers/vishesh/notes/dissent/rd4/C1-PLAN.md",
   "params": {
     "stage": {
       "type": "str",

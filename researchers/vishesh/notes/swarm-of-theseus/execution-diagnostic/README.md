@@ -13,7 +13,7 @@ The native runner, balanced case generator, five controlled request interfaces, 
 | R5 coverage and shortcut defects | Each class/source contains all four signal/freshness pairs; independent opaque IDs/order | Mandatory coverage assertions before assignment; no post-hoc gate repair |
 | R6 reliable evaluation | Strict invalid-response accounting, independent truth/command comparison, raw records and all planned denominators | Fault checks and complete post-run analysis |
 
-The proposed screen is 144 calls / 480 assigned decisions / 3 independent worlds, maximum USD 5 and 2 hours, serial dispatch, no retries. Atomic and batched arms match cases, not compute. Each condition must be reported even if worse. No automatic culture-pilot launch or performance claim follows from unit tests. Review, public registration, fresh exclusive host and non-overlapping budget admission remain pending under [PRE-RUN.md](PRE-RUN.md).
+The proposed screen is 144 calls / 480 assigned decisions / 3 independent worlds, maximum USD 5 and 2 hours, serial dispatch, no retries. Atomic and batched arms match cases, not compute. Each condition must be reported even if worse. No automatic culture-pilot launch or performance claim follows from unit tests. Researcher review is not required by owner direction. Public registration, a new dedicated host, operator assessment and non-overlapping budget admission remain pending; [PRE-RUN.md](PRE-RUN.md) preserves the historical build-only assessment.
 
 ## Local checks
 

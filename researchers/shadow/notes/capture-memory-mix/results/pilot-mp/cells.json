@@ -1,10 +1,12 @@
 [
-  {"world": "W1_INSIDE", "dose": 0.5625, "memory": "1", "tasks": "0-5", "seeds": [1],
+  {"world": "W1_INSIDE", "dose": 0.5, "memory": "1", "tasks": "0-5", "seeds": [1],
    "cfg_overrides": {"n_agents": 16, "entrench_rounds": 5, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30}},
-  {"world": "W1_INSIDE", "dose": 0.5625, "memory": "full", "tasks": "0-5", "seeds": [1],
+  {"world": "W1_INSIDE", "dose": 0.5, "memory": "full", "tasks": "0-5", "seeds": [1],
    "cfg_overrides": {"n_agents": 16, "entrench_rounds": 5, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30}},
-  {"world": "W1_INSIDE", "dose": 0.5625, "memory": "mix:1/full@0.5", "tasks": "0-5", "seeds": [1],
+  {"world": "W1_INSIDE", "dose": 0.5, "memory": "mix:1/full@0.5", "tasks": "0-5", "seeds": [1],
    "cfg_overrides": {"n_agents": 16, "entrench_rounds": 5, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30}},
-  {"world": "W1_INSIDE", "dose": 0.5625, "memory": "mix:1/full@0.75", "tasks": "0-5", "seeds": [1],
+  {"world": "W1_INSIDE", "dose": 0.5, "memory": "mix:1/full@0.75", "tasks": "0-5", "seeds": [1],
+   "cfg_overrides": {"n_agents": 16, "entrench_rounds": 5, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30}},
+  {"world": "W1_INSIDE", "dose": 0.5, "memory": "mix:1/full@0.875", "tasks": "0-5", "seeds": [1],
    "cfg_overrides": {"n_agents": 16, "entrench_rounds": 5, "takeover_max_rounds": 60, "recovery_rounds": 40, "eval_round": 30}}
 ]

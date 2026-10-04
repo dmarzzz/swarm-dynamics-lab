@@ -18,5 +18,16 @@
     "label": "SCRIPTED \u2014 NOT MODEL EVIDENCE",
     "inspection": "missing/error/correct states and event markers checked; confusion footer spacing and contrast corrected"
   },
-  "runtime_checks": "pending allocation"
+  "runtime_checks": "pending allocation",
+  "C2_repair": {
+    "composite_checks": 18,
+    "change": "fresh namespace and timeout margin; safe reason classes; uncertain budget preserved",
+    "model_calls": 0
+  },
+  "post_C2_health_guard": {
+    "composite_checks": 19,
+    "practical_checks": 22,
+    "native_qualification": "not performed",
+    "model_calls": 0
+  }
 }

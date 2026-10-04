@@ -440,6 +440,70 @@
    "sha256": "d736430209f2ebabecb5e8d31ff3f91f34cd6a5df928957c0316bc54119831e4",
    "size_bytes": 104316
   },
+  "influence-candidate-checks-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791093178,
+     "sha256": "4540a590c85d9267185dc02b1887170da9484aa417310a5f3b3cf7f52f57cfd7",
+     "size": 9001,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py"
+    },
+    {
+     "mtime": 1791093102,
+     "sha256": "a9189bb76c611cc29e42254a8909a3f3f1eda066fb227ad93c9094adcff97fd4",
+     "size": 18614,
+     "uri": "data/influence-native/native-D3-01/audit.json"
+    },
+    {
+     "mtime": 1791093107,
+     "sha256": "ccd407f8223dfc11e381dfd2f58d147e1853b080f8cc41d55da8ba3f86914fec",
+     "size": 55953,
+     "uri": "data/influence-native/native-D3-01/outcomes.json"
+    },
+    {
+     "mtime": 1791093103,
+     "sha256": "61300acb5c3864cac9d5737015f217735b876778f814b97624717436dc4fa9c1",
+     "size": 977,
+     "uri": "data/influence-native/native-D3-01/summary.json"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791093180,
+   "path": "artifacts/influence-candidate-checks-replay/influence-candidate-checks-replay-v1.html",
+   "prompt_sha256": "7b2db023d9df10b4438bd0608c4b9d60eeb5bf738fcaa9a6824371b75c3fc339",
+   "sha256": "a49c74a740b8e70e06baf2ee383969295616f06bf3c05b781f26713aeea1a489",
+   "size_bytes": 1441982
+  },
+  "influence-candidate-checks-results@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791093178,
+     "sha256": "4540a590c85d9267185dc02b1887170da9484aa417310a5f3b3cf7f52f57cfd7",
+     "size": 9001,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/render_checks.py"
+    },
+    {
+     "mtime": 1791093107,
+     "sha256": "ccd407f8223dfc11e381dfd2f58d147e1853b080f8cc41d55da8ba3f86914fec",
+     "size": 55953,
+     "uri": "data/influence-native/native-D3-01/outcomes.json"
+    },
+    {
+     "mtime": 1791093103,
+     "sha256": "61300acb5c3864cac9d5737015f217735b876778f814b97624717436dc4fa9c1",
+     "size": 977,
+     "uri": "data/influence-native/native-D3-01/summary.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791093178,
+   "path": "artifacts/influence-candidate-checks-results/influence-candidate-checks-results-v1.png",
+   "prompt_sha256": "dfb1460c3b61736680b5e11454993182d6069f493c7213cb219b14b1b8dc696f",
+   "sha256": "62b9b871d2161ce62562fc5d5e1a87bc61af3fcd36f726291089f206b78d4337",
+   "size_bytes": 85404
+  },
   "influence-native-d1-replay@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

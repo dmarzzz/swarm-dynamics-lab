@@ -7,7 +7,7 @@
   "planned_decisions": 480,
   "independent_worlds": 3,
   "planned_assignments_sha256": "c31e2d76f23856dcd4e6894b8693a0b39be5245541c8a4f84fc6f96e1a9050e9",
-  "instrument_sha256": "ea05db5eaeffb014a40e8f611e5a938e89723ca6b53e1afb6eb921aaad93274e",
+  "instrument_sha256": "70c96643f485516c26d373f245432407fb4b85cc5254e7ea25909ddec4caa26c",
   "all_call_conservative_reservations_usd": 1.229731,
   "max_request_bytes": 3626,
   "viewer_checks": [
@@ -17,12 +17,12 @@
     "missing output visible"
   ],
   "native_provider_live_validation": "not run",
-  "review_status": "same-author; independent admission pending",
+  "review_status": "not required by explicit owner direction; no independent validation claimed",
   "shared_artifact_validation": {
     "errors": 1,
     "warnings": 0,
     "preexisting_missing_artifact": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
     "theseus_artifact_errors": 0
   },
-  "authorization_update": "Owner confirmed USD5/144 calls and ordered run after independent review and fresh allocation; scientific design unchanged."
+  "authorization_update": "Owner confirmed USD5/144 calls, explicitly waived researcher review and authorized a new dedicated machine if occupied. Iteration uses change/run/postmortem/plan revision within cumulative authority."
 }

@@ -67,3 +67,5 @@ Assessor for the status table: vishesh/codex-quorum-mirrors, 2026-10-04. The dif
 ## Next-stage preparation update
 
 [NEXT-RUN-READINESS.md](NEXT-RUN-READINESS.md) is the current operator handoff. Q1 code, manifests and failure-path checks are prepared, browser fixture verified, original ledger audited without mutation, current endpoint metadata checked. No new native outcomes. G0 and G3 remain blocked, G4 awaits admitted qualification.
+
+Public preparation: immutable Q1 plan and condition contracts are published; Q1-PUBLICATION.json records verified manifest content. Experiment registration still points to S0 and must be updated by the authorized operator before any Q1 admission.

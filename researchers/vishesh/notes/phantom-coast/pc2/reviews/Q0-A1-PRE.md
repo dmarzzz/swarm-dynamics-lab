@@ -1,0 +1,9 @@
+# PC-2 Q0-A1 pre-run assessment
+
+2026-10-04 UTC. Owner explicitly directed proceeding. Read REVIEW-POLICY-POST.md and the parent S0-A1 post-mortem. Researcher review is not required; this is the operator assessment. Status: ready for operational preflight; dispatch remains blocked until a current private admission receipt verifies source, runtime, public page, exclusive fleet claim and cumulative ledger lineage.
+
+The instrument has 44 passing offline tests. Q0-A1 assigns four previously unopened roots 400–403, alternating block/scattered families, three full-evidence maps and three unique-unmeasured-cell target checks each: 24 native requests, no retries. All 24 must be valid; map upper error <=10% overall and <=20% per terrain stratum, with >=11/12 correct targets. No avoidance effect is required. A failure blocks S1 and remains recorded. S1 has eight roots 500–507, 1,792 requests, and needs a separate current admission plus recomputed passing Q0 evidence.
+
+Pin TypeSafe Jev snapshot typesafe/jev-1.13-20260917 with fallback disabled. Verify published route/context/pricing without a paid probe. Maximum 60 minutes per stage, five consecutive native failures, and per-call worst-case reservation against the single successor ledger. Preserve PC-1's closed 540-call ledger and USD 0.162723246 prior cost. PC-2 gets at most 1,816 calls inside the remaining USD 3.837276754 API envelope; unknown costs retain reservations. Do not reset, top up or create competing ledgers.
+
+Qualification reports competence and validity separately from process and artifact delivery. Save every assignment and started call before dispatch; reconcile unstarted rows if stopped. Qualification has JSON evidence; the pilot additionally renders saved acquisition events as PC-V3 PNG/GIF. No model data has been observed while preparing this assessment.

@@ -2,9 +2,9 @@
 agent: vishesh/codex-phantom-coast
 tool: codex
 state: done
-task: phantom-coast-pc2-runner
-doing: Published native PC-2 runner; 42 offline checks pass; researcher review and current admission pending
-updated: 2026-10-04T05:04:00.440841+00:00
+task: phantom-coast-review-process
+doing: Researcher review made optional; PC-2 gate updated; 44 tests pass; operational admission next
+updated: 2026-10-04T05:51:41.825522+00:00
 ---
 
 ## Notes

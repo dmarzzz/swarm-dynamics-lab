@@ -1,0 +1,32 @@
+# Optimal swarm size: setup and attempt index
+
+Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md). This index is retrospective for earlier attempts and prospective for Q-A2; it does not replace current runtime admission.
+
+Owner/operator: Vishesh / vishesh/codex-idea-scores. Independent design review: Dmarz, 2f5281f. Exploratory synthetic instrument qualification; formal hypothesis/core and transfer remain closed. [Protocol](PROTOCOL.md), [task contracts](TASK-CONTRACTS.md), [prior art](PRIOR-ART-REVIEW.md), [status/history](BUILD-STATUS.md).
+
+## Gate evidence
+
+| Gate | Status | Evidence / next action |
+|---|---|---|
+| G0 question/research scope | pass for qualification only | Existing Dmarz design review; no formal hypothesis acceptance claimed |
+| G1 plan before implementation | pass Q-A2 | [Q-A2 prospective plan](reviews/q-a2-plan.md), published in 0448afd9 before code edits |
+| G2 offline instrument | pass | 34 tests; validation.json source hashes; strict parser remains unchanged |
+| G3 current admission | pending | Freeze source, verify exact registered plan URL/revision, current claim, canonical ledger, runtime; private receipts required |
+| G4 model qualification | fail Q-A1; pending Q-A2 | Original 16/16 malformed outputs; Q-A2 is requalification, not scientific escalation |
+| G5 reconciliation | pass Q-A1; pending Q-A2 | Original 16 assigned/terminal and acknowledged; Q-A2 keeps full 16 denominator even on early stop |
+
+## Current attempt admission
+
+Manual supported entry point: src/run_qualification.py with frozen private runtime config, fresh output, and existing canonical Q1 ledger. Shared experiment-operations adapter does not dispatch this study. Resume is unsupported; preserve failed attempts and require separately authorized identity.
+
+Attempt q-a2; parent Q-A1 per-task IDs; [pre-assessment and plan](reviews/q-a2-plan.md). Revised prompt only, safe parse diagnostics and early stopping; model, fixtures, actor isolation, scheduler and evaluator unchanged. Source snapshot plus validation.json pin the effective instrument. Same 16 repeated fixtures (two families, two structures, four roots) at N=1; not 16 independent replications across earlier/later attempts. No optimal-N inference.
+
+Original SPENDING-AUTHORIZATION.json is historical authority. Owner's latest request authorizes this additional attempt from its remaining funds, not another $20. Canonical ledger retains $0.322112 exposure before Q-A2. $2/episode, 600 seconds/episode, 60 reserved for integration, four service slots, 4096 output tokens and full-context reservations; two consecutive malformed episodes stop the batch. No transport retries or fallback.
+
+Existing claim vishesh-swarm-size-anthropic-q1 on research-01 must be current and exclusive before dispatch. No provisioning. Source/runtime/public receipt and prior-process completion checked before transfer. Exact credential selector swarm-lab-anthropic/account vishesh; [standing credential policy](../../../../tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md), verified SSH stdin, exact single-key payload, separately verified routing metadata, no persistent key or general-key fallback. Private deployment/config/receipt record contains no key.
+
+## Attempt history and closeout
+
+Three transport diagnostics and Q-A1 are retained; [status](BUILD-STATUS.md) distinguishes execution, strict validity, cost, publication and the a3 registration process failure. Q-A1: 16 assigned/started/terminal, zero valid task outcomes, 32 calls, $0.101476 settled; all public artifacts acknowledged. Failures arose before item work; rejected response contents were not retained, so fenced responses are a plausible cause, not an established fact for all Q-A1 cases. Q-A2 adds fixed response-format diagnostics.
+
+Next action: verify current immutable public plan and deployed revision, launch Q-A2 under same budget, then record full-denominator outcomes and release this study's allocation after closeout. No new reviewer gate for this routine repair; offline checks are not an independent code audit.

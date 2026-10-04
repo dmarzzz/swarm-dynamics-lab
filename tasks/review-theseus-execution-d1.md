@@ -21,3 +21,7 @@ Review researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic for bound
 
 - Record pass/revise/blocked with reviewed source/hash, reproduction commands, limitations and required fixes.
 - State whether diagnostic-only admission is supported; no formal hypothesis or culture claim is requested.
+
+## Superseded request
+
+The owner explicitly waived researcher/inbox review on 2026-10-04. This request is no longer a launch dependency; any feedback is optional. No review verdict was received or represented as passed. Current execution follows the owner assessment, public plan and runtime gates.

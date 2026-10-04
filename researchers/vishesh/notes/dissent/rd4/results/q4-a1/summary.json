@@ -1,0 +1,35 @@
+{
+  "stage": "Q4",
+  "assigned": 24,
+  "terminal": 24,
+  "missing": 0,
+  "unique_requests": 24,
+  "valid_requests": 24,
+  "errors": {},
+  "logical_calls": 24,
+  "cost_usd": 0.00062916,
+  "input_tokens": 14980,
+  "elapsed_seconds": 19.99700875900089,
+  "served_model": "typesafe/jev-1.13-20260917",
+  "instrument_sha256": "bc0a79cd2f90fb13262a2b625a2e029fc0c01e7b7e51d7870c7550e0fb3dea72",
+  "by_scenario": {
+    "bridge": {
+      "assigned": 6,
+      "correct": 6,
+      "valid": 6
+    },
+    "build": {
+      "assigned": 6,
+      "correct": 6,
+      "valid": 6
+    },
+    "alarm": {
+      "assigned": 6,
+      "correct": 6,
+      "valid": 6
+    }
+  },
+  "uncertainty_correct": 6,
+  "correct": 24,
+  "qualification_passed": true
+}

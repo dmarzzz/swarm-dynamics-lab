@@ -1,0 +1,1016 @@
+{
+  "stage": "S4",
+  "assignments": [
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "6dd6c5892f8d",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "4892801b0297",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9214fcf347c7",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "072431506db0",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "776cb76c14de",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "80ae29e86df9",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "83e49d85098a",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "e0a4ad15fe22",
+      "scenario": "bridge",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a1424d89c5a1",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "9405845afd15",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "632121021fb3",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "3ce4ec9ff16d",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "5e352b465da3",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "fcd2c3d13e42",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "56bed93618ad",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "a83e2eb35cd1",
+      "scenario": "build",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "294ed0f1b3dc",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "terminal"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "13e56b8640a7",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "c27911254212",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "74a19dd28f70",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6d90424ab632",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "6dd7a1db979b",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "73af98a4cad6",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "majority",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "original-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "symmetric-gate",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "always-check",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "pooled",
+      "opportunities": 4,
+      "status": "planned"
+    },
+    {
+      "case_id": "fabae569b1a1",
+      "scenario": "alarm",
+      "arm": "exact-reference",
+      "opportunities": 4,
+      "status": "planned"
+    }
+  ],
+  "total_opportunities": 576,
+  "scripted_votes": true,
+  "origin": "native-jev"
+}

@@ -1,5 +1,5 @@
 {
-  "version": "C1",
+  "version": "C2",
   "population": 200,
   "arms": [
     "qwen",

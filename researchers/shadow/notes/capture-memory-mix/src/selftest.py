@@ -121,7 +121,7 @@ except model.ModelFailure:
 os.environ["SWARM_MODEL_CONFIG"] = json.dumps({"model": "x/y", "max_cost_usd": 50, "ledger": "/tmp/cmm-selftest-ledger.json"})
 try:
     pol, _ = model.build("http")
-    check(pol.cap == model.HARD_CAP_USD, f"cap clamps at HARD_CAP_USD = {model.HARD_CAP_USD}")
+    check(pol.cap == model.HARD_CAP_USD and model.HARD_CAP_USD <= 20, f"cap clamps at HARD_CAP_USD = {model.HARD_CAP_USD}")
 except model.ModelFailure as e:
     check(False, f"adapter builds with a cap ({e})")
 words = {sim.ORIG: "zuli", sim.ATK: "mako"}

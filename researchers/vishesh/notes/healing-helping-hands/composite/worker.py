@@ -1,7 +1,7 @@
 """Explicitly admitted, bounded C1 stages. No inference during import."""
 import argparse,collections,hashlib,json,os,platform,subprocess,sys,time,urllib.request
 from pathlib import Path
-from definition import HERE,ARMS,SEEDS,LABELS,cases,request,wire,digest,assess
+from definition import HERE,ARMS,SEEDS,LABELS,ATTEMPT,REQUEST_TIMEOUT,cases,request,wire,digest,assess
 from qwen_trace import Qwen
 from jev import validate
 sys.path.insert(0,str(HERE.parent/'practical'))
@@ -36,9 +36,15 @@ def admission(a,stage,now=None):
     if not a.get('host') or not a.get('claim_id'):raise ValueError('allocation_missing')
     return True
 
+def check_transport(stage):
+    with urllib.request.urlopen('http://127.0.0.1:18443/health',timeout=5) as response:health=json.load(response)
+    if health.get('ready') is not True or health.get('attempt')!=ATTEMPT or health.get('stage')!=stage or health.get('seconds_remaining',0)<60:
+        raise ValueError('relay_not_ready_for_attempt')
+    return health
+
 def run(out,stage,admit_path,parent=None):
     a=json.loads(admit_path.read_text());admission(a,stage)
-    tldr=f'TLDR: C1 {stage}, Qwen 0.6B + Jev versus paired Qwen-only/Jev-only; measure correct labels, correction and anchoring before 200-curator repair. Synthetic feasibility, no independent-agent replication claim.'
+    tldr=f'TLDR: {ATTEMPT} {stage}, Qwen 0.6B + Jev versus paired Qwen-only/Jev-only; measure correct labels, correction and anchoring before 200-curator repair. Synthetic feasibility, no independent-agent replication claim.'
     receipt=check('healing-helping-hands',tldr)
     if receipt['url']!=a['plan_url'] or receipt['plan_sha256']!=a['plan_sha256']:raise ValueError('wrong_registered_plan')
     if not receipt['url'].endswith('/composite/PLAN.md') or receipt['commit']!=a['source_commit']:raise ValueError('wrong_plan_source')
@@ -47,18 +53,19 @@ def run(out,stage,admit_path,parent=None):
         if parent is None:raise ValueError('qualification_required')
         q=json.loads((parent/'summary.json').read_text());pm=json.loads((parent/'manifest.json').read_text())
         if not q['admit_s1'] or pm['source_hashes']!=hashes:raise ValueError('unqualified_instrument')
-    out.mkdir(parents=True,exist_ok=False);write(out/'admission.json',a);write(out/'plan-receipt.json',receipt)
+    transport=check_transport(stage)
+    out.mkdir(parents=True,exist_ok=False);write(out/'admission.json',a);write(out/'plan-receipt.json',receipt);write(out/'transport-receipt.json',transport)
     import swarm_report as sdk
-    reporter=Reporter(sdk,'healing-helping-hands',f'healing-helping-hands/C1-{stage}',out/'reporting.jsonl')
-    reporter.emit('start',url=receipt['url'],params={'attempt_id':'C1','stage':stage,'arm':'qwen+jev'},message=tldr)
+    reporter=Reporter(sdk,'healing-helping-hands',f'healing-helping-hands/{ATTEMPT}-{stage}',out/'reporting.jsonl')
+    reporter.emit('start',url=receipt['url'],params={'attempt_id':ATTEMPT,'stage':stage,'arm':'qwen+jev'},message=tldr)
     started=time.monotonic();deadline=started+(900 if stage=='S0' else 3600);counts={'qwen':0,'jev':0};limits={'qwen':60 if stage=='S0' else 600,'jev':120 if stage=='S0' else 1200}
-    rows=[];worlds=[];manifest={'stage':stage,'attempt':'C1-'+stage,'plan':receipt,'source_hashes':hashes,'host':a['host'],'claim':a['claim_id'],'python':platform.python_version(),'status':'running','calls':counts}
+    rows=[];worlds=[];manifest={'stage':stage,'attempt':ATTEMPT+'-'+stage,'plan':receipt,'source_hashes':hashes,'host':a['host'],'claim':a['claim_id'],'python':platform.python_version(),'status':'running','calls':counts}
     observations=[]
-    if stage=='S0':observations=[{**c,'scope':'C1-S0','index':i} for i,c in enumerate(cases())]
+    if stage=='S0':observations=[{**c,'scope':ATTEMPT+'-S0','index':i} for i,c in enumerate(cases())]
     else:
         for seed in SEEDS:
             c=corpus(seed);write(out/f'corpus-{seed}.json',c)
-            observations.extend({'id':f'{seed}-{i}','seed':seed,'index':i,'scope':f'C1-S1-{seed}','claim':c['claims'][d['claim']],'report':d['text'],'expected':d['label']} for i,d in enumerate(c['docs']))
+            observations.extend({'id':f'{seed}-{i}','seed':seed,'index':i,'scope':f'{ATTEMPT}-S1-{seed}','claim':c['claims'][d['claim']],'report':d['text'],'expected':d['label']} for i,d in enumerate(c['docs']))
         worlds=[{'id':f'{s}-{m}-{policy}-{scenario}','seed':s,'model':m,'arm':policy,'scenario':scenario,'layout':s+10000,'status':'planned'} for s in SEEDS for m in ARMS for policy in POLICIES for scenario in SCENARIOS]
     rows=[{**o,'labels':{},'status':'planned'} for o in observations];write(out/'observations.json',rows);write(out/'world-assignments.json',worlds);write(out/'manifest.json',manifest)
     def call(model,payload,fn):
@@ -66,7 +73,7 @@ def run(out,stage,admit_path,parent=None):
         counts[model]+=1;cid=f'{model}-{counts[model]}';t=time.monotonic()
         append(out/'calls.jsonl',{'type':'start','id':cid,'model':model,'payload':payload,'payload_hash':digest(payload)})
         try:
-            value=fn(min(30,deadline-time.monotonic()));append(out/'calls.jsonl',{'type':'completed','id':cid,'model':model,'result':value,'seconds':time.monotonic()-t});return value
+            value=fn(min(REQUEST_TIMEOUT,deadline-time.monotonic()));append(out/'calls.jsonl',{'type':'completed','id':cid,'model':model,'result':value,'seconds':time.monotonic()-t});return value
         except Exception as e:
             append(out/'calls.jsonl',{'type':'failed','id':cid,'model':model,'error_type':type(e).__name__,'seconds':time.monotonic()-t});raise
     try:
@@ -103,7 +110,7 @@ def run(out,stage,admit_path,parent=None):
             elif r['status']=='planned':r['status']='not_run'
         write(out/'observations.json',rows);write(out/'world-assignments.json',worlds);write(out/'summary.json',assess(rows))
         manifest.update(seconds=time.monotonic()-started,observation_counts=dict(collections.Counter(r['status'] for r in rows)),world_counts=dict(collections.Counter(w['status'] for w in worlds)));write(out/'manifest.json',manifest)
-    reporter.emit('metric' if manifest['status']=='completed' else 'fail',metrics={'completed_cases':manifest['observation_counts'].get('completed',0)},message='C1 computation terminal; qualification and publication assessment follows.')
+    reporter.emit('metric' if manifest['status']=='completed' else 'fail',metrics={'completed_cases':manifest['observation_counts'].get('completed',0)},message=ATTEMPT+' computation terminal; qualification and publication assessment follows.')
     print(json.dumps({'status':manifest['status'],'cases':manifest['observation_counts'],'worlds':manifest['world_counts'],'calls':counts}))
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('--out',type=Path,required=True);p.add_argument('--stage',choices=['S0','S1'],required=True);p.add_argument('--admission',type=Path,required=True);p.add_argument('--parent',type=Path);a=p.parse_args()

@@ -23,7 +23,9 @@ from __future__ import annotations
 
 import fcntl
 import json
+import math
 import os
+import threading
 import time
 import urllib.error
 import urllib.request
@@ -32,7 +34,7 @@ from pathlib import Path
 
 import sim
 
-HARD_CAP_USD = 5.0                                     # the goal's cap; the config cannot raise it
+HARD_CAP_USD = 10.0                                    # raised from 5 at 05:45Z (dmarz OK, up to 20); the config cannot raise it
 ROOT = Path(__file__).resolve().parent.parent
 SYSTEM = ("You are one of several agents playing a coordination game. In each round you are paired with another agent and "
           "you both say a name; you score a point when you say the same name as your partner. You will be shown the names "
@@ -74,7 +76,8 @@ class HTTPPolicy:
     def __init__(self, model: str, max_cost_usd: float, max_calls: int = 2_000_000, timeout: int = 60,
                  concurrency: int = 24, min_mass: float = 0.5, input_usd_per_million: float = 0.5,
                  output_usd_per_million: float = 1.0, base_url: str = "https://openrouter.ai/api/v1",
-                 provider_order=None, ledger: str | None = None, retries: int = 3):
+                 provider_order=None, ledger: str | None = None, retries: int = 3, call_log: str | None = None,
+                 logit_temperature: float = 1.0, mode: str = "logprobs"):
         if not max_cost_usd > 0:
             raise ModelFailure("positive dollar cap required")
         if not base_url.startswith("https://"):
@@ -90,9 +93,23 @@ class HTTPPolicy:
         self.min_mass, self.retries = min_mass, retries
         self.in_rate, self.out_rate = input_usd_per_million, output_usd_per_million
         self.provider_order = provider_order
+        # Decoding temperature applied to the two-word first-token logits (providers report logprobs at T = 1).
+        # Restricted to the two allowed words this is exactly sampling at temperature T; de-nobili-2026-microscopic
+        # uses decoding temperature as the control parameter of an LLM naming game. Recorded in every episode.
+        self.T = float(logit_temperature)
+        # mode "logprobs": P(original) from first-token mass (default). mode "sample": no logprobs requested, the
+        # sampled completion IS the agent's word (P = 1 or 0), for models whose providers return no logprobs. In sample
+        # mode the recovery-phase randomness comes from the provider, so arms are paired only through the shared prefix.
+        if mode not in ("logprobs", "sample"):
+            raise ModelFailure("mode must be logprobs or sample")
+        self.mode = mode
         self.ledger = Ledger(Path(ledger) if ledger else ROOT / "results" / "spend-ledger.json")
         self.reserved = 0.0
         self.spent_session = 0.0
+        self._lock = threading.Lock()
+        self.call_log = Path(call_log) if call_log else None   # per-call (memory counts -> P) for policy extraction
+        if self.call_log:
+            self.call_log.parent.mkdir(parents=True, exist_ok=True)
 
     # ---- prompt
     def prompt(self, ag, words: dict, flip: bool = False) -> str:
@@ -107,9 +124,12 @@ class HTTPPolicy:
 
     # ---- one request
     def _request(self, user: str) -> dict:
-        body = {"model": self.model, "temperature": 1.0, "max_tokens": 4, "logprobs": True, "top_logprobs": 20,
-                "usage": {"include": True}, "provider": {"require_parameters": True},
+        body = {"model": self.model, "temperature": self.T if self.mode == "sample" else 1.0, "max_tokens": 6,
+                "usage": {"include": True}, "provider": {},
                 "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
+        if self.mode == "logprobs":
+            body.update({"logprobs": True, "top_logprobs": 20})
+            body["provider"]["require_parameters"] = True
         if self.provider_order:
             body["provider"]["order"] = self.provider_order
         raw = json.dumps(body).encode()
@@ -147,6 +167,7 @@ class HTTPPolicy:
         self.reserved -= est
         self.spent_session += cost
         self.ledger.add(self.model, cost, 1)
+        resp["_cost"] = cost
         return resp
 
     @staticmethod
@@ -169,10 +190,37 @@ class HTTPPolicy:
 
     def one(self, ag, words: dict, ctx: dict, flip: bool = False) -> float:
         resp = self._request(self.prompt(ag, words, flip))
+        with self._lock:
+            ctx["cost_usd"] = ctx.get("cost_usd", 0.0) + resp["_cost"]     # per-episode cost, not session total
         mass, content = self._mass(resp, words)
         tot = mass[sim.ORIG] + mass[sim.ATK]
-        if tot >= self.min_mass:
-            return mass[sim.ORIG] / tot
+        p = None
+        if self.mode == "sample":
+            c = content.strip('*` ').lower()
+            for code, w in words.items():
+                if c.startswith(w):
+                    p = 1.0 if code == sim.ORIG else 0.0
+            if p is None:
+                ctx["low_mass"] = ctx.get("low_mass", 0) + 1
+                raise ModelFailure(f"unparseable reply {content!r}")
+            tot = 1.0
+        elif tot >= self.min_mass:
+            if self.T == 1.0:
+                p = mass[sim.ORIG] / tot
+            else:
+                lo, la = math.log(max(mass[sim.ORIG], 1e-12)), math.log(max(mass[sim.ATK], 1e-12))
+                p = 1.0 / (1.0 + math.exp((la - lo) / self.T))
+        if self.call_log:
+            n_o = sum(1 for w in ag.mem if w == sim.ORIG)
+            last = [w for w in ag.mem[-5:]]
+            with self.call_log.open("a") as f:
+                f.write(json.dumps({"task": ctx["task"]["task_id"], "round": ctx.get("round"), "arm": ctx.get("arm"),
+                                    "kind": getattr(ag, "kind", None), "L": ag.L, "n": len(ag.mem), "n_orig": n_o,
+                                    "last5_orig": sum(1 for w in last if w == sim.ORIG), "flip": flip,
+                                    "p_orig": None if p is None else round(p, 4), "mass": round(tot, 4),
+                                    "provider": resp.get("provider")}) + "\n")
+        if p is not None:
+            return p
         ctx["low_mass"] = ctx.get("low_mass", 0) + 1
         for code, w in words.items():
             if content == w:
@@ -187,7 +235,6 @@ class HTTPPolicy:
         futs = [self.pool.submit(self.one, ag, words, ctx, (rnd + i) % 2 == 1) for i, ag in enumerate(batch)]
         out = [f.result() for f in futs]           # raises the first ModelFailure: the episode is recorded invalid
         ctx["calls"] = ctx.get("calls", 0) + len(batch)
-        ctx["cost_usd"] = self.spent_session
         return out
 
 
@@ -198,9 +245,11 @@ def build(backend: str):
         raise ModelFailure(f"unknown backend {backend}")
     cfg = json.loads(os.environ.get("SWARM_MODEL_CONFIG", "{}"))
     allowed = {"model", "max_cost_usd", "max_calls", "timeout", "concurrency", "min_mass",
-               "input_usd_per_million", "output_usd_per_million", "base_url", "provider_order", "ledger", "retries"}
+               "input_usd_per_million", "output_usd_per_million", "base_url", "provider_order", "ledger", "retries", "call_log",
+               "logit_temperature", "mode"}
     if set(cfg) - allowed:
         raise ModelFailure("unknown model config fields")
     if "model" not in cfg or "max_cost_usd" not in cfg:
         raise ModelFailure("model and max_cost_usd required")
-    return HTTPPolicy(**cfg), "http:" + cfg["model"]
+    return HTTPPolicy(**cfg), ("http:" + cfg["model"] + (f"@T{cfg['logit_temperature']}" if cfg.get("logit_temperature", 1.0) != 1.0 else "")
+                               + (":sample" if cfg.get("mode") == "sample" else ""))

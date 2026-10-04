@@ -1,0 +1,21 @@
+{
+  "coverage": {
+    "projects": 10,
+    "study_versions": 21,
+    "scenarios": 110,
+    "proposals": 16,
+    "research_areas": 8,
+    "project_findings": 57
+  },
+  "project_quality_rows": 6,
+  "preserved_record_anchors": 94,
+  "duplicate_ids": 0,
+  "broken_internal_links": 0,
+  "external_runtime_resources": 0,
+  "original_publication_files_unchanged": 107,
+  "builder_check": "passed",
+  "javascript_syntax": "passed",
+  "editorial_review": "independent frozen-source check; corrections incorporated",
+  "browser_visual_and_interaction_qa": "not performed: local file preview blocked by browser security policy; no workaround attempted",
+  "no_model_calls": true
+}

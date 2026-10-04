@@ -2,18 +2,24 @@
 import argparse,sqlite3,time,json,urllib.request,urllib.error
 from http.server import HTTPServer,BaseHTTPRequestHandler
 from pathlib import Path
-from definition import cases,request,wire,digest,SEEDS,LABELS
+from definition import cases,request,wire,digest,SEEDS,LABELS,ATTEMPT,UPSTREAM_TIMEOUT,LEDGER_CALL_CAP
 from jev import validate,RATE
 from jev_relay import reserve,NoRedirect
 from reference import corpus
 
+def safe_error(e):
+    data={'error_type':type(e).__name__}
+    if isinstance(e,urllib.error.HTTPError):data['http_status']=e.code
+    if isinstance(e,urllib.error.URLError):data['cause_type']=type(e.reason).__name__
+    return data
+
 def payloads(stage):
     observations=[]
-    if stage=='S0':observations=[(c,i,'C1-S0') for i,c in enumerate(cases())]
+    if stage=='S0':observations=[(c,i,ATTEMPT+'-S0') for i,c in enumerate(cases())]
     elif stage=='S1':
         for s in SEEDS:
             c=corpus(s)
-            observations.extend(({'claim':c['claims'][d['claim']],'report':d['text']},i,f'C1-S1-{s}') for i,d in enumerate(c['docs']))
+            observations.extend(({'claim':c['claims'][d['claim']],'report':d['text']},i,f'{ATTEMPT}-S1-{s}') for i,d in enumerate(c['docs']))
     else:raise ValueError('unknown_stage')
     return {digest(request(o,i,scope,p)):request(o,i,scope,p) for o,i,scope in observations for p in (None,*LABELS)}
 
@@ -30,6 +36,10 @@ def serve(key_path,ledger,stage):
     allowed=payloads(stage);limit=120 if stage=='S0' else 1200;deadline=time.monotonic()+(900 if stage=='S0' else 3600);opener=urllib.request.build_opener(NoRedirect());calls=0
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
+        def do_GET(self):
+            if self.path!='/health':self.send_error(404);return
+            b=wire({'ready':time.monotonic()<deadline,'attempt':ATTEMPT,'stage':stage,'seconds_remaining':max(0,deadline-time.monotonic())})
+            self.send_response(200);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b)
         def do_POST(self):
             nonlocal calls
             h=None;status=502
@@ -42,16 +52,19 @@ def serve(key_path,ledger,stage):
                 slot=p['session_id']+('-composite' if 'qwen_proposal' in p['state'] else '-jev')
                 # Slot is committed first: uncertainty fails closed, never alternate-proposal retries.
                 db.execute('INSERT INTO composite_slots VALUES(?,?)',(slot,h));db.commit()
-                reserve(db,h,2160,settle=True);calls+=1
+                reserve(db,h,LEDGER_CALL_CAP,settle=True);calls+=1
                 # session_id is request namespace only, not model-visible state.
-                with opener.open(urllib.request.Request('https://openrouter.ai/api/alpha/decisions',wire(p),{'Authorization':'Bearer '+key,'Content-Type':'application/json'}),timeout=25) as r:data=json.loads(r.read(200000))
+                with opener.open(urllib.request.Request('https://openrouter.ai/api/alpha/decisions',wire(p),{'Authorization':'Bearer '+key,'Content-Type':'application/json'}),timeout=UPSTREAM_TIMEOUT) as r:data=json.loads(r.read(200000))
                 checked=validate(data);db.execute('UPDATE calls SET status=?,cost=? WHERE hash=?',('completed',checked['cost_usd'],h));db.commit();status=200
             except Exception as e:
-                data={'error_type':type(e).__name__}
-                if isinstance(e,urllib.error.HTTPError):data['http_status']=e.code
+                data=safe_error(e)
                 if h:db.execute("UPDATE calls SET status='failed' WHERE hash=? AND status='started'",(h,));db.commit()
                 print(json.dumps({'relay_error':data}),flush=True)
-            b=wire(data);self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b)
+            b=wire(data)
+            try:
+                self.send_response(status);self.send_header('Content-Type','application/json');self.send_header('Content-Length',str(len(b)));self.end_headers();self.wfile.write(b)
+            except (BrokenPipeError,ConnectionResetError):
+                print(json.dumps({'relay_client_disconnected':True,'request_reserved':h is not None}),flush=True)
     server=HTTPServer(('127.0.0.1',18443),Handler);server.timeout=1
     print(json.dumps({'ready':True,'stage':stage,'historical_calls':n,'historical_cost':cost,'stage_call_cap':limit,'cumulative_cap_usd':.1}),flush=True)
     try:

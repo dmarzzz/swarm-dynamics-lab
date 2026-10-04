@@ -1,4 +1,4 @@
-# Healing Helping Hands: Qwen + Jev, revision C1
+# Healing Helping Hands: Qwen + Jev, C1 with C2 repair history
 
 **evidence_confidence: 1/4 (qualification only; no demonstrated Qwen contribution).** Claim assessed: adding a Qwen proposal improves Jev evidence decisions. S0 composite and Jev-only both scored 60/60; Qwen-only scored 36/60. This finite-template screen qualifies the complete agent but does not support incremental benefit. See [S0 post-mortem](S0-POST.md) and [S1 pre-assessment](S1-PRE.md). Assessor vishesh/codex-regrowth-docs, 2026-10-04; [admission status](S0-PRE.md), [offline checks](offline-validation.json).
 
@@ -8,6 +8,9 @@
 2026-10-04 UTC. Owner/operator/self-assessor: vishesh/codex-regrowth-docs. User explicitly authorized replacing Laya with Jev and running this revision. Exploratory instrument qualification and descriptive comparison, not confirmation or independent review. Historical plans and failures remain unchanged.
 
 ## TLDR
+
+**Current status: bounded cycle closed.** C1 qualification passed; C1-S1 and C2-S0 stopped on transport failures. No completed composite architecture comparison exists. See [results and failure accounting](RESULTS.md). The prospective protocol below is retained as history; it does not authorize another run.
+
 
 Can a small Qwen 0.6B agent with a Jev decision head reliably curate evidence as 200 local helpers repair a shared evidence atlas? Qwen proposes a report label; Jev sees the original report and that proposal and makes the final decision. Compare the complete composite with Qwen-only and Jev-only on identical evidence. First qualify the composite on fresh balanced cases, then measure extraction accuracy, correction versus anchoring, and downstream query error during updates, withdrawals, false notices, missing lineage and outages. Compare local repair with both append-only and verified central indexes. This is a small synthetic feasibility study; it cannot establish real-world usefulness or that adding Qwen improves Jev.
 
@@ -49,3 +52,13 @@ S0 shows measured progress and a final 3-arm confusion/correction figure; no spa
 ## Previous evidence and scope
 
 Read ../practical/POST-02.md: central-verified outperformed gossip in every scenario; extra packet capacity improved retention at greater traffic. Prior Qwen failures motivate qualifying the complete composite, not suppressing it. Jev-only previous ceiling does not qualify this new proposal-conditioned interface. The omitted intended composite is a process error now corrected prospectively; no historical qwen+laya records are relabeled. Prior-art/formal review gates remain unresolved for a novel confirmatory claim; this is user-directed bounded exploratory instrument work.
+
+## C2 transport-repair amendment — prospective
+
+C1-S1 stopped on its first transport failure: 9/600 cases completed, one partially observed case failed, 590 not run, all 270 architecture worlds not run. The worker timed out at 30.033 seconds; the relay recorded URLError for that reserved request. No response was recovered. Preserve it as ambiguous and retain USD 0.001344 worst-case exposure; do not resend its slot. This is infrastructure failure, not evidence of model incompetence or a zero treatment effect.
+
+One bounded repair cycle C2 is authorized within the original user request to fix failures and run reliably. Before collecting data, increase the upstream socket timeout from 25 to 60 seconds and the worker request timeout from 30 to 90 seconds; retain one concurrent request and stop-on-error, with no automatic retry. Add safe error-cause classes and handle disconnected clients without terminating the relay. These changes do not alter model-visible input rules or evaluation. Run a fresh balanced 60-case C2 screen first (same finite template families, new procedure IDs/numbers/order), then a separately admitted fresh S1 on seeds 8811–8813. Do not pool C1's partial cases into C2 or overwrite its artifacts.
+
+C2 limits: 60 Qwen/120 Jev for S0, then 600 Qwen/1200 Jev for S1; same 900/3600-second stage bounds, no additional repair cycle. Across C1+C2: maximum 730 Qwen and 1459 Jev calls (2179 ledger entries including the 720 historical calls). This explicit prospective amendment adds only the 10 Qwen/19 Jev calls already consumed by the failed S1 to the earlier revision envelope; USD 0.10 cumulative inference cap is unchanged, including ambiguous reservations. Verified spent USD 0.015678054 plus USD 0.001344 uncertain exposure leaves USD 0.082977946 before C2. The dedicated VM/three-hour allocation and infrastructure ceiling are unchanged. If C2 fails, preserve and close this cycle; no automatic third attempt.
+
+The C1 screen establishes previous competence, but C2 must pass fresh qualification after transport changes. Original C1 immutable plans, results and failed run remain available. Source fingerprints and current operational receipts govern each new stage.
