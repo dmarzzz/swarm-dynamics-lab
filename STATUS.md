@@ -41,7 +41,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [wild-askswarm](tasks/wild-askswarm.md) | claimed | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T15:24Z | AskSwarm: reusable descriptive questions across three observed swarms |
 | [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:24Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T15:19Z | Prepare and qualify C4 selective helping |
@@ -135,6 +134,7 @@
 | [scan-papers-swarm-robotics-recent](tasks/scan-papers-swarm-robotics-recent.md) | done | p0 | scan | dmarz/swarm-robotics-recent |  | 2026-10-03T18:20Z | Catalogue swarm robotics papers from 2024 onward |
 | [scan-threads-agents](tasks/scan-threads-agents.md) | done | p0 | scan | shadow/sol-1 |  | 2026-10-03T17:57Z | Catalogue X threads on agent swarms and multi-agent AI |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | done | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T14:29Z | Draw the cross-topic landscape map |
+| [wild-askswarm](tasks/wild-askswarm.md) | done | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T15:25Z | AskSwarm: reusable descriptive questions across three observed swarms |
 | [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:40Z | Expand adaptive quorum into evidence-based API selection |
 | [adaptive-quorum-pilot](tasks/adaptive-quorum-pilot.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:28Z | Build and launch adaptive-quorum exploratory qualification |
 | [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:20Z | Add evidence confidence and sample-size metadata to every study |
