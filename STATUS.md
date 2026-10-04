@@ -313,8 +313,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | working | theseus-t1-q0 | 2026-10-04T19:41Z | approved Q0 native admission; six-member collective comparison prepared |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
-| vishesh/codex-theseus | idle |  | 2026-10-04T19:28Z | institutional-transmission prototype published; concrete T1-Q0 decision pending |
 | vishesh/codex-pi-review | done | launch-ready-studies-2026-10-04 | 2026-10-04T19:26Z | Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
