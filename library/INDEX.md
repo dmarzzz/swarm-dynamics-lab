@@ -2,9 +2,9 @@
 
 # Library index
 
-3275 entries.
+3277 entries.
 
-## Papers (2057)
+## Papers (2059)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -111,6 +111,7 @@
 | [fayolle-2026-internet](papers/fayolle-2026-internet.md) | On the Internet, Nobody Knows You're an LLM Bot: Unmasking Web Agents with Multi-Layer Fingerprinting | 2026 | 5 | full | swarm-detection, llm-agent-swarms, sybil-resistance | dmarz/sd-honeypots |
 | [fily-2012-athermal](papers/fily-2012-athermal.md) | Athermal Phase Separation of Self-Propelled Particles with No Alignment | 2012 | 5 | full | active-matter, collective-motion | dmarz/active-matter |
 | [flint-2026-group](papers/flint-2026-group.md) | Group size effects and collective misalignment in LLM multi-agent systems | 2026 | 5 | full | llm-agent-swarms, sync-consensus, criticality-measurement | dmarz/llm-agent-swarms-recent |
+| [fudenberg-2019-learning](papers/fudenberg-2019-learning.md) | Learning Theory and Heterogeneous Play in a Signaling-Game Experiment | 2019 | 5 | abstract | decision-models, collective-decision | vishesh/codex-decision-models |
 | [gadgil-2026-bad](papers/gadgil-2026-bad.md) | Bad Memory: Evaluating Prompt Injection Risks from Memory in Agentic Systems | 2026 | 5 | skim | fork-merge-security | dmarz/fm-memory-injection |
 | [gal-2022-emergence](papers/gal-2022-emergence.md) | The emergence of a collective sensory response threshold in ant colonies | 2022 | 5 | full | collective-decision, criticality-measurement | dmarz/collective-decision |
 | [gallwitz-2022-investigating](papers/gallwitz-2022-investigating.md) | Investigating the Validity of Botometer-based Social Bot Studies | 2022 | 5 | full | swarm-detection | dmarz/sd-bots |
@@ -130,6 +131,7 @@
 | [guo-2017-calibration](papers/guo-2017-calibration.md) | On Calibration of Modern Neural Networks | 2017 | 5 | abstract | decision-models, llm-agent-swarms | vishesh/codex-decision-models |
 | [gupta-2021-bankrupting](papers/gupta-2021-bankrupting.md) | Bankrupting Sybil Despite Churn | 2021 | 5 | skim | sybil-resistance, sync-consensus | dmarz/sybil-foundations |
 | [hairi-2024-hardness](papers/hairi-2024-hardness.md) | On the Hardness of Decentralized Multi-Agent Policy Evaluation under Byzantine Attacks | 2024 | 5 | skim | fork-merge-security, marl-emergence, sync-consensus | dmarz/fm |
+| [hamdi-2013-removal](papers/hamdi-2013-removal.md) | Removal of Data Incest in Multi-agent Social Learning in Social Networks | 2013 | 5 | abstract | decision-models, collective-decision | vishesh/codex-decision-models |
 | [hang-2026-self](papers/hang-2026-self.md) | Self-reorganization and information transfer in large-scale models of fish schools | 2026 | 5 | full | collective-motion, criticality-measurement, active-matter | dmarz/collective-motion-recent |
 | [hao-2025-do](papers/hao-2025-do.md) | Do Spammers Dream of Electric Sheep? Characterizing the Prevalence of LLM-Generated Malicious Emails | 2025 | 5 | full | swarm-detection | dmarz/sd-ai-content |
 | [hays-2023-simplistic](papers/hays-2023-simplistic.md) | Simplistic Collection and Labeling Practices Limit the Utility of Benchmark Datasets for Twitter Bot Detection | 2023 | 5 | full | swarm-detection | dmarz/sd-bots |

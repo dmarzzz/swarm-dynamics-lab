@@ -7,7 +7,7 @@
 | topic | papers | code | blogs | threads | datasets | talks | total |
 |---|---|---|---|---|---|---|---|
 | collective-motion | 317 | 17 | 3 | 15 | 3 | 40 | 395 |
-| collective-decision | 311 | 22 | 24 | 19 | 0 | 35 | 411 |
+| collective-decision | 313 | 22 | 24 | 19 | 0 | 35 | 413 |
 | swarm-robotics | 291 | 29 | 2 | 7 | 1 | 24 | 354 |
 | swarm-intelligence | 113 | 2 | 2 | 4 | 2 | 3 | 126 |
 | active-matter | 184 | 3 | 1 | 6 | 0 | 23 | 217 |
@@ -21,7 +21,7 @@
 | fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
 | agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
-| decision-models | 6 | 3 | 4 | 2 | 0 | 0 | 15 |
+| decision-models | 8 | 3 | 4 | 2 | 0 | 0 | 17 |
 
 ## Tasks
 
@@ -184,11 +184,12 @@
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
 | vishesh/codex-theseus | working | theseus-critical-redesign | 2026-10-04T03:00Z | Critically review SOC-24 and design a stronger causal test |
+| vishesh/codex-experiments | blocked |  | 2026-10-04T02:52Z | Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget |
+| vishesh/codex-decision-models | done | decision-model-reimagination | 2026-10-04T02:51Z | Completed second-pass variants, prior-art checks and revised editorial priorities |
 | vishesh/codex-idea-scores | done | refine-swarm-size-protocol | 2026-10-04T02:50Z | Completed EX-25 protocol refinement; no implementation or runs |
 | vishesh/codex-independent-reviews | working | review-discussion-benchmark-v3 | 2026-10-04T02:50Z | Full independent review of patched v3; user-directed takeover, offline only. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:49Z | Identity scaling deployed; scripted264/264; API qualification64calls returned; verifying before2400comparison calls |
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
-| vishesh/codex-decision-models | done | decision-model-research | 2026-10-04T02:38Z | Completed initial scan, fifteen scored hunches and five design sketches; formal survey remains in progress |
 | vishesh/codex-immune | working | immune-response-v3-native-repair | 2026-10-04T02:38Z | Approved USD 8 grant reserved; scenario-native-a1 running on dedicated sim-immune-response |
 | dmarz/discussion-bench-v3 | working | launch-discussion-benchmark-v3 | 2026-10-04T02:35Z | Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
@@ -196,7 +197,6 @@
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:14Z | Building Antsy from real receipt OCR and budgeted verification |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
-| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T00:54Z | Native procurement qualification and paired rerun on exclusive sim-dmarz-3 within shared quota |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
@@ -288,7 +288,7 @@
 | [llm-agent-swarms](surveys/llm-agent-swarms.md) | shadow | complete | 156 | 0 |
 | [sim-environments](surveys/sim-environments.md) | dmarz | in-progress | 152 | 0 |
 | [sybil-resistance](surveys/sybil-resistance.md) | dmarz | in-progress | 230 | 5 |
-| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 20 | 9 |
+| [vishesh-decision-models](surveys/vishesh-decision-models.md) | vishesh | in-progress | 22 | 9 |
 
 ## Hypotheses
 
