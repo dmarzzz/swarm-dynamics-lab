@@ -1,18 +1,8 @@
 ---
-id: build-trust-credit-qwen
-type: task
-title: Prepare program v5 line T (trust credit: when verification amplifies capture) to launch-ready
-kind: build
-status: open
-priority: p0
-owner: null
-for: dmarz
-created: 2026-10-04
-created_by: dmarz/pipeline
-depends_on: []
-topics:
-- sybil-resistance
-- llm-agent-swarms
+status: claimed
+owner: dmarz/pipeline-split
+claimed_at: 2026-10-04T10:30Z
+updated: 2026-10-04T10:30Z
 ---
 
 ## Goal
