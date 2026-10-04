@@ -255,6 +255,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split-film | done |  | 2026-10-04T08:45Z | filed the explainer film for the finished Sonnet market-split pilot s1-002 (reads the filed records only; no model calls, no edits to market-split-api or market-split-opus) |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T08:40Z | sybil-split-opus: prospective plan and frozen design pushed; implementing code, offline tests, scripted stage and rehearsal; no launch, no model call |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
