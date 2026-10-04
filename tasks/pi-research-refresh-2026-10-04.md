@@ -1,0 +1,25 @@
+---
+id: pi-research-refresh-2026-10-04
+type: task
+title: Refresh active-study research and actionable next decisions
+kind: review
+status: open
+priority: p1
+owner: null
+for: vishesh
+created: 2026-10-04
+created_by: vishesh/codex-pi-review
+depends_on: []
+topics: []
+---
+
+## Goal
+
+Review current ten-study evidence and dispatch blockers; perform focused primary-literature and social-source research; incorporate justified planning changes without altering queued scopes.
+
+## Done when
+
+- [ ] Reconcile ten current study decisions and exact next actions.
+- [ ] Record opened sources, reading depth, evidence limits and accepted/deferred transfers.
+- [ ] Update each owned design note, validate and publish.
+- [ ] Dispatch only if the exact scope has current admission; otherwise name the unresolved gate.
