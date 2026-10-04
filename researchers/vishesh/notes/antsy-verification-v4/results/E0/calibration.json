@@ -1,0 +1,17 @@
+{
+  "calibration_n": 20,
+  "mode_mean_recall": {
+    "A": 0.32089710174258523,
+    "B": 0.6022784610726692,
+    "C": 0.5235180550919967
+  },
+  "best_fixed": "B",
+  "oracle_gain_over_best_fixed": 0.06603345484924428,
+  "winner_counts": {
+    "A": 2,
+    "B": 13,
+    "C": 5
+  },
+  "routing_relevance_gate": true,
+  "invalid": 0
+}
