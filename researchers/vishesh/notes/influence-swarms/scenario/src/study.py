@@ -62,25 +62,25 @@ def validate(a,obs):
         if c not in ids:raise ValueError('citation not supplied')
     if obs['phase']=='check':
         if set(a)!= {'claim','citation','limitation'}:raise ValueError('check schema')
-        string(a['claim'],350);string(a['limitation'],240);citation(a['citation']);return a
+        string(a['claim'],1024);string(a['limitation'],1024);citation(a['citation']);return a
     if a.get('choice') not in obs['candidates']+['DEFER']:raise ValueError('choice')
     if type(a.get('confidence')) not in (int,float) or not math.isfinite(a['confidence']) or not 0<=a['confidence']<=1:raise ValueError('confidence')
     if obs['phase']=='initial':
         if set(a)!= {'choice','confidence','findings','request'}:raise ValueError('initial schema')
-        if not isinstance(a['findings'],list) or not 1<=len(a['findings'])<=3:raise ValueError('findings')
+        if not isinstance(a['findings'],list) or not 1<=len(a['findings'])<=12:raise ValueError('findings')
         for f in a['findings']:
             if set(f)!= {'claim','citations'}:raise ValueError('finding schema')
-            string(f['claim'],240)
-            if not isinstance(f['citations'],list) or not 1<=len(f['citations'])<=3:raise ValueError('finding citations')
+            string(f['claim'],1024)
+            if not isinstance(f['citations'],list) or not 1<=len(f['citations'])<=len(ids):raise ValueError('finding citations')
             for c in f['citations']:citation(c)
         if set(a['request'])!={'candidate','kind'} or a['request']['candidate'] not in obs['candidates'] or a['request']['kind'] not in ('contract','scope','pilot','rollout'):raise ValueError('request')
     else:
         if set(a)!= {'choice','confidence','annual_total_usd','citations','rationale','unresolved'}:raise ValueError('chair schema')
         v=a['annual_total_usd']
         if v is not None and (type(v) not in (int,float) or not math.isfinite(v) or v<0):raise ValueError('cost')
-        if not isinstance(a['citations'],list) or not 1<=len(a['citations'])<=6:raise ValueError('citations')
+        if not isinstance(a['citations'],list) or not 1<=len(a['citations'])<=len(ids):raise ValueError('citations')
         for c in a['citations']:citation(c)
-        string(a['rationale'],600);string(a['unresolved'],300)
+        string(a['rationale'],2048);string(a['unresolved'],1024)
     return a
 
 def run(case,policy,emit=lambda e:None):

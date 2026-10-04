@@ -19,10 +19,14 @@ class ScenarioPolicy(AnthropicPolicy):
             props['choice']={'type':'string','enum':obs['candidates']+['DEFER']}
             props['confidence']={'type':'number'}
             if obs['phase']=='initial':
+                props['findings']['minItems']=1
+                props['findings']['items']['properties']['citations']['minItems']=1
                 props['findings']['items']['properties']['citations']['items']=citation
                 props['request']['properties']['candidate']={'type':'string','enum':obs['candidates']}
                 props['request']['properties']['kind']={'type':'string','enum':['contract','scope','pilot','rollout']}
-            else:props['citations']['items']=citation
+            else:
+                props['citations']['items']=citation
+                props['citations']['minItems']=1
         return schema
 
 from allocation import require
