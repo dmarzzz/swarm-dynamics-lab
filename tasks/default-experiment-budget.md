@@ -3,14 +3,16 @@ id: default-experiment-budget
 type: task
 title: Record standing default experiment budget
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T05:52Z
+updated: 2026-10-04T05:52Z
 ---
 
 ## Goal
