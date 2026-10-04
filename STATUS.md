@@ -43,7 +43,8 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T18:23Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-pc9-instrument](tasks/phantom-coast-pc9-instrument.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:33Z | Build Phantom population exploration instrument |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T18:42Z | Run the revised procurement influence experiment |
+| [openrouter-route-switch-2026-10-04](tasks/openrouter-route-switch-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T18:43Z | Apply the owner directed OpenRouter migration to affected studies |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T18:35Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -68,7 +69,6 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
-| [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T18:39Z | Run the revised procurement influence experiment |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T16:59Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [repair-verify-cost-qwen-status](tasks/repair-verify-cost-qwen-status.md) | open | p1 | admin |  | dmarz |  | Reconcile verify-cost-qwen evidence metadata with completed qualifications |
@@ -211,6 +211,7 @@
 | [phantom-coast-pc6-screen](tasks/phantom-coast-pc6-screen.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T15:29Z | Qualify Phantom Coast action-consequence interface |
 | [phantom-coast-pc7-traces](tasks/phantom-coast-pc7-traces.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T16:44Z | Audit Phantom native traces and revise finite-history scenario |
 | [phantom-coast-pc8-live](tasks/phantom-coast-pc8-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:13Z | Run PC8 report interpretation qualification and conditional pilot |
+| [phantom-coast-pc9-instrument](tasks/phantom-coast-pc9-instrument.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:42Z | Build Phantom population exploration instrument |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:37Z | Coordinate one evidence-led iteration across ten active studies |
 | [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T17:18Z | Apply direct-launch authorization and review native traces |
@@ -371,7 +372,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-phantom-coast | working | phantom-coast-pc9-instrument | 2026-10-04 18:37:54.608724+00:00 | Building and validating PC9 population exploration instrument; no native dispatch |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc9-instrument | 2026-10-04 18:42:42.878610+00:00 | PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
 | vishesh/codex-decision-models | done | right-dissenter-reopening-design | 2026-10-04 18:24:17.580511+00:00 | Reopening design draft published; 23 offline tests pass, 162 prospective requests, zero native calls. RD5 remains complete. Changed scope/call-ceiling decision and native integration remain before launch. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:21:59.245134+00:00 | Packet-study v2 case-ready for controlled scope; no native qualification or admission |
