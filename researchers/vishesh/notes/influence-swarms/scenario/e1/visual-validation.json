@@ -1,0 +1,12 @@
+{
+  "source_run": "influence-swarms/1004-230027-930fec",
+  "frames": 2208,
+  "assigned_cells": 288,
+  "raw_prose_exported": false,
+  "time": "logical stages only",
+  "desktop_initial_final_missing_verified": true,
+  "mobile_readability": "Verified by coordinating UI task at actual390px: no page overflow, readable650px graph, keyboard horizontal pan and final badges.",
+  "reduced_motion": "CSS disables signal animation; playback handler steps manually when media query matches",
+  "public_native_renderer": "PR471 pending platform deployment",
+  "source_to_decider_raw_evidence_preserved": true
+}
