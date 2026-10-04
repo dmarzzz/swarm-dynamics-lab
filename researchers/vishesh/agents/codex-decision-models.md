@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
-task: right-dissenter-rd6-zero-start-replacement
-doing: "Publishing reviewed RD6 Q0-A2 negative qualification: 15/18; D0 unrun; worker and allocation released."
-updated: 2026-10-04T20:05:14.729857+00:00
+state: idle
+task: null
+doing: "RD6 Q0-A2 reviewed and published: 15/18 qualification, D0 unrun; no worker or allocation held."
+updated: 2026-10-04T20:07:47.728732+00:00
 ---
 
 ## Notes
