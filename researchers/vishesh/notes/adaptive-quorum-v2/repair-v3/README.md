@@ -2,6 +2,10 @@
 
 Antsy tests when a team should stop gathering evidence and choose an API under a deadline. Its visual story is a race between agreement, corroboration and newly arriving misinformation. This is a **synthetic engineering experiment**, not an accepted lab hypothesis or a production procurement benchmark.
 
+## Current result
+
+[Full assessment and post-mortem](reviews/S1-attempt-2-post.md): Q2 passed 22/22; the 384-block/2688-outcome sweep completed with zero actor/schema failures after a preserved rendering failure and exact-prefix recovery. Adaptive helped with late corrections and hurt with late misinformation. Every policy choice matched the symbolic baseline. The result supports this synthetic mechanism demonstration, not an AI advantage. [Counts](results/S1/summary.json) · [Integrity](results/S1/integrity.json) · [All outcomes](results/S1/outcomes.csv).
+
 ## Question
 
 Does reducing a requirement from three supporting source roots to two at the final tick reduce costly abstention? When does it instead admit a bad choice? Is that policy better than simply using a constant two-root rule? These comparisons distinguish a useful stopping mechanism from an attractive animation.
@@ -20,7 +24,7 @@ Agents use pinned local Laya for three yes/no fact predicates per provider. Host
 
 The historical v2 pilot failed clean-task competence. D0 isolated a small-fact versus combined-decision gap. Q1 passed ordinary tasks but failed a one-day-retention boundary. Q2 tests the explicit safety guard on disjoint tasks. The stress sweep is blocked unless Q2 passes all 22 cases without invalid encodings. Preserve every failed attempt. This version does not pool results with v1/v2 or claim independent cross-researcher acceptance.
 
-The planned S1 engineering matrix contains 12 task clusters, two populations, two deadlines, four evidence worlds and two arrival schedules: 384 paired blocks, 2,688 policy outcomes. Seven policies consume matched ballot histories: majority, fixed-two, fixed-three, adaptive, deadline vote, central deadline and symbolic deadline. The two centralized controls receive the union of evidence delivered by cutoff, an explicit aggregation advantage. S2 remains disabled.
+The completed S1 engineering matrix contains 12 task clusters, two populations, two deadlines, four evidence worlds and two arrival schedules: 384 paired blocks, 2,688 policy outcomes. Seven policies consume matched ballot histories: majority, fixed-two, fixed-three, adaptive, deadline vote, central deadline and symbolic deadline. The two centralized controls receive the union of evidence delivered by cutoff, an explicit aggregation advantage. S2 remains disabled.
 
 ## Metrics
 

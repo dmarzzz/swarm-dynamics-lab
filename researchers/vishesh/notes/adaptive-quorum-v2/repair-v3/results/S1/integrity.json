@@ -1,0 +1,11 @@
+{
+  "assigned_blocks": 384,
+  "unique_blocks": 384,
+  "policy_outcomes": 2688,
+  "preserved_prefix_blocks": 25,
+  "prefix_exact": true,
+  "balanced_targets_per_arm": 96,
+  "summary_reconciled": true,
+  "all_receipts_valid_untruncated": true,
+  "events_sha256": "933df817a2fc7e88753e4030e7a5853e5b5e70425c1918aac0591f61e88aa809"
+}
