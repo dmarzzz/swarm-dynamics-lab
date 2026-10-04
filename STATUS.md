@@ -14,13 +14,13 @@
 | sync-consensus | 255 | 25 | 11 | 17 | 1 | 28 | 337 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 160 | 60 | 1 | 33 | 2 | 13 | 269 |
-| llm-agent-swarms | 583 | 128 | 115 | 199 | 47 | 14 | 1086 |
+| llm-agent-swarms | 587 | 128 | 115 | 199 | 47 | 14 | 1090 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
 | fork-merge-security | 357 | 47 | 62 | 69 | 8 | 13 | 556 |
 | swarm-detection | 390 | 46 | 80 | 193 | 35 | 11 | 755 |
-| agent-budgets | 53 | 2 | 7 | 0 | 0 | 0 | 62 |
+| agent-budgets | 57 | 2 | 7 | 0 | 0 | 0 | 66 |
 | decision-models | 9 | 3 | 4 | 2 | 0 | 0 | 18 |
 | dissent | 3 | 0 | 0 | 0 | 0 | 0 | 3 |
 
@@ -70,6 +70,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | open | p1 | review |  | dmarz |  | Independently review the Poietic Agents prospective design |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -222,9 +223,11 @@
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:21Z | Interface diagnostic partly improved D1 but failed approval tasks; testing same fixed cases with previously valid Haiku configuration |
+| vishesh/codex-heterogeneous | working | poietic-agents-design | 2026-10-04T04:21Z | Writing and publishing Poietic Agents prospective design and review gates |
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T04:21Z | C1 composite built and registered; waiting for exclusive fleet release or explicit Mac exception |
 | dmarz/discussion-bench-v3 | working | deploy-discussion-v3-d1 | 2026-10-04T04:20Z | Dedicated D1 worker provisioned; coordinating cloud harness and single owner-controlled 120-call dispatch; no paid calls yet |
 | vishesh/codex-pi-review | done | add-experiment-evidence-metadata | 2026-10-04T04:20Z | Published 45 evidence assessments in 41 documents, templates and CI metadata checks. |
+| vishesh/codex-methods | working | antsy-receipt-v6 | 2026-10-04T04:19Z | Measuring fresh receipt totals with real fallible checkers and stronger evaluator tests |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:18Z | Published four scoped reviews, author feedback, and unchanged v3 vote rescore. |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
@@ -236,8 +239,6 @@
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:56Z | Execute approved v2 qualification and gated pilot on dedicated sim-shadow |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
-| vishesh/codex-heterogeneous | done | heterogeneous-priority-revision | 2026-10-04T03:53Z | Published owner-revised scores and the self-differentiating swarm recommendation |
-| vishesh/codex-methods | done | antsy-verification-v5 | 2026-10-04T03:51Z | Completed Antsy v5 numerical repair and cost-aware diagnostics; practical successor gated |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |

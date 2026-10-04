@@ -2,9 +2,9 @@
 
 # Library index
 
-3289 entries.
+3293 entries.
 
-## Papers (2069)
+## Papers (2073)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -63,6 +63,7 @@
 | [chen-2023-reconcile](papers/chen-2023-reconcile.md) | ReConcile: Round-Table Conference Improves Reasoning via Consensus among Diverse LLMs | 2023 | 5 | abstract | llm-agent-swarms | vishesh/codex-heterogeneous |
 | [chen-2024-agentpoison](papers/chen-2024-agentpoison.md) | AgentPoison: Red-teaming LLM Agents via Poisoning Memory or Knowledge Bases | 2024 | 5 | abstract | fork-merge-security, llm-agent-swarms | dmarz/fm-memory-injection |
 | [chen-2025-why](papers/chen-2025-why.md) | Why collective behaviours self-organize to criticality: a primer on information-theoretic and thermodynamic utility measures | 2025 | 5 | full | criticality-measurement, collective-motion, marl-emergence | dmarz/criticality-measurement |
+| [chen-2026-agentslimming](papers/chen-2026-agentslimming.md) | AgentSlimming: Towards Efficient and Cost-Aware Multi-Agent Systems | 2026 | 5 | skim | llm-agent-swarms, agent-budgets | vishesh/codex-heterogeneous |
 | [chen-2026-trust](papers/chen-2026-trust.md) | Trust Between AI Agents: Measuring Formation, Breakage, and Recovery, with Implications for Governing Multi-Agent Systems | 2026 | 5 | full | llm-agent-swarms, swarm-detection | dmarz/honeypot-vigilance |
 | [cheng-2005-sybilproof](papers/cheng-2005-sybilproof.md) | Sybilproof reputation mechanisms | 2005 | 5 | abstract | sybil-resistance | dmarz/sybil-mechanisms |
 | [chocron-2026-who](papers/chocron-2026-who.md) | Who Owns This Agent? Tracing AI Agents Back to Their Owners | 2026 | 5 | abstract | swarm-detection, sybil-resistance | dmarz/sd-attribution |
@@ -151,6 +152,7 @@
 | [hu-2026-when](papers/hu-2026-when.md) | When Local Monitors Miss Compositional Harm: Diagnosing Distributed Backdoors in Multi-Agent Systems | 2026 | 5 | skim | fork-merge-security, llm-agent-swarms | dmarz/fm-identity-hijack |
 | [huang-2023-global](papers/huang-2023-global.md) | On the global convergence of particle swarm optimization methods | 2023 | 5 | full | swarm-intelligence, sync-consensus | dmarz/swarm-intelligence |
 | [huang-2024-collision](papers/huang-2024-collision.md) | Collision Avoidance and Navigation for a Quadrotor Swarm Using End-to-end Deep Reinforcement Learning | 2024 | 5 | full | swarm-robotics, marl-emergence | dmarz/swarm-robotics-recent |
+| [huang-2026-manta](papers/huang-2026-manta.md) | MANTA: Multi-Agent Network Topology Adaptation for Self-Evolving Multi-Agent Systems | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-heterogeneous |
 | [huttenrauch-2019-deep](papers/huttenrauch-2019-deep.md) | Deep Reinforcement Learning for Swarm Systems | 2019 | 5 | full | marl-emergence, swarm-robotics | dmarz/marl-emergence |
 | [jadbabaie-2003-coordination](papers/jadbabaie-2003-coordination.md) | Coordination of groups of mobile autonomous agents using nearest neighbor rules | 2003 | 5 | full | sync-consensus, collective-motion, swarm-robotics | dmarz/sync-consensus |
 | [jansen-2021-once](papers/jansen-2021-once.md) | Once is Never Enough: Foundations for Sound Statistical Inference in Tor Network Experimentation | 2021 | 5 | full | meta, sybil-resistance | dmarz/sim-envs |
@@ -272,6 +274,7 @@
 | [rubenstein-2014-programmable](papers/rubenstein-2014-programmable.md) | Programmable self-assembly in a thousand-robot swarm | 2014 | 5 | abstract | swarm-robotics | dmarz/swarm-robotics |
 | [sadasivan-2023-can](papers/sadasivan-2023-can.md) | Can AI-Generated Text be Reliably Detected? | 2023 | 5 | abstract | swarm-detection | dmarz/sd-ai-content |
 | [salahshour-2025-allocentric](papers/salahshour-2025-allocentric.md) | Allocentric flocking | 2025 | 5 | full | collective-motion, collective-decision | dmarz/collective-motion-recent |
+| [sampath-2026-adaptive](papers/sampath-2026-adaptive.md) | Adaptive Orchestration: Scalable Self-Evolving Multi-Agent Systems | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-heterogeneous |
 | [sar-2026-interplay](papers/sar-2026-interplay.md) | Interplay of sync and swarm: Theory and application of swarmalators | 2026 | 5 | skim | sync-consensus, active-matter, swarm-robotics, collective-motion | dmarz/sync-consensus |
 | [sarfati-2021-self](papers/sarfati-2021-self.md) | Self-organization in natural swarms of Photinus carolinus synchronous fireflies | 2021 | 5 | skim | sync-consensus, collective-decision, criticality-measurement | dmarz/sync-consensus-audit |
 | [sas-2026-improved](papers/sas-2026-improved.md) | Improved estimators of causal emergence for large systems | 2026 | 5 | abstract | criticality-measurement, collective-motion | dmarz/criticality-measurement |
@@ -357,6 +360,7 @@
 | [zhang-2026-agentworm](papers/zhang-2026-agentworm.md) | AgentWorm: Self-Propagating Attacks Across LLM Agent Ecosystems | 2026 | 5 | full | fork-merge-security, llm-agent-swarms | dmarz/fm |
 | [zhang-2026-asymmetric](papers/zhang-2026-asymmetric.md) | Asymmetric physics enables efficient learning in quadrupedal robot swarms | 2026 | 5 | full | swarm-robotics, marl-emergence, crowds-and-traffic | dmarz/swarm-robotics-recent |
 | [zhang-2026-botevo](papers/zhang-2026-botevo.md) | BotEvo: LLM-Driven social bot detection via behavioral evolution modeling and cross-modal fusion | 2026 | 5 | skim | swarm-detection, sybil-resistance | shadow/sol-w7 |
+| [zhang-2026-safesieve](papers/zhang-2026-safesieve.md) | SafeSieve: From Heuristics to Experience in Progressive Pruning for LLM-based Multi-Agent Communication | 2026 | 5 | abstract | llm-agent-swarms, agent-budgets | vishesh/codex-heterogeneous |
 | [zhang-2026-silo](papers/zhang-2026-silo.md) | Silo-Bench: A Scalable Environment for Evaluating Distributed Coordination in Multi-Agent LLM Systems | 2026 | 5 | full | llm-agent-swarms | vishesh/senku-1 |
 | [zhao-2026-self](papers/zhao-2026-self.md) | Self-organized criticality in aquatic robot swarm | 2026 | 5 | skim | swarm-robotics, criticality-measurement, active-matter | dmarz/swarm-robotics-recent |
 | [zheng-2024-body](papers/zheng-2024-body.md) | Body orientation change of neighbors leads to scale-free correlation in collective motion | 2024 | 5 | full | collective-motion, swarm-robotics, criticality-measurement | dmarz/collective-motion-recent |
