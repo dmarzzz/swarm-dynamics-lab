@@ -17,7 +17,7 @@ An implemented, local-first benchmark for **SEC-47: where does the fork-and-retu
 
 ## Next diagnostic and cloud operation
 
-[NEXT-RUN.md](NEXT-RUN.md) plans a 120-call matched Haiku/Sonnet diagnostic, followed conditionally by 60 fresh clean qualification calls. It also separates cloud supervision from the DigitalOcean worker and lists the owner-state/access requirements for operating with the laptop closed. This is planned, not launched. [Planning evidence](next-run-planning-evidence.json) hashes the 60 selected Q0 requests; it is not an executable authorization manifest. Both independent reviews and their differing failure-path verdicts are accounted for.
+The [completed D1 comparison](RESULTS-D1.md) used 120 calls for $0.754780 with no invalid responses or missing usage. Sonnet improved clean full-evidence/report-quorum scores to 3/6 and 3/6 from Haiku’s 2/6 and 1/6, but both failed the 5/6 gates. Memory conflict handling improved; supported false inheritance remained 6/6 for both. See the [post-mortem](../reviews/v3-d1-a1-post.md) and proposed [48-call D2 diagnostic](D2-PLAN.md). D2 is a plan only and must not start. Fresh qualification and confirmation remain closed. The [original prospective design](NEXT-RUN.md) and [input planning receipt](next-run-planning-evidence.json) remain available; the [D1 plan](D1-PLAN.md) documents the verified worker lifecycle and local cleanup limitation.
 
 ## Run it
 

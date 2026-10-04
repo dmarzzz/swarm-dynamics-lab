@@ -2,6 +2,8 @@
 
 Planning revision: 2026-10-04 UTC, dmarz/discussion-bench-v3. Parent: `v3-q0-a1`. **Plan committed, not launched.** No executable launch manifest or cloud access readiness is claimed. [Q0 results](RESULTS-Q0.md) and their sanitized tables are already on remote `main` (report commit `7fddf3d4`, table commit `eaa7f587`). Implementation follows [diagnose-discussion-v3-q0](../../../../../tasks/diagnose-discussion-v3-q0.md).
 
+> Status update, 2026-10-04: D1 is now [completed and audited](RESULTS-D1.md). Neither model passed its gates. The next proposal is [D2](D2-PLAN.md), which must remain unstarted. The prospective planning text below is retained as history.
+
 ## Decision this run should enable
 
 Determine whether a stronger model can apply the existing task constraints and use the same report packets more reliably, before spending calls on another discussion comparison. This supports the [SEC-47 fork/return question](../QUESTION-LINKS.md); it does not directly estimate a public-discussion effect or accept a formal hypothesis.

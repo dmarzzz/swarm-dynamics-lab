@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/market-split; source `5d2042aa` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **1/4** — Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence. Basis: Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects.
-- **sample_size_summary:** V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.
+- **evidence_confidence:** **1/4** — Haiku V3 passed short mechanics/profit screens but failed full-length reliability on a strict capacity violation; no V3 discovery cohort started. Basis: Exact replay identified upward decimal rounding in one of four attempted episodes. Four more assigned episodes were never started. All calls and failures are retained, but two related development markets and no complete paired regulatory contrast support no discovery-rate or model-comparison estimate.
+- **sample_size_summary:** V3 R0: 2 related markets; 8 assigned episodes, 3 valid complete, 1 invalid partial, 4 unstarted; 94 priced calls. V3 Q0: 2 markets/4 qualified episodes. V2 failures retained separately. V3 discovery: 0 observed; next diagnostic planned, not started.
 <!-- experiment-evidence:end -->
 
 This exploratory comparison asks whether a neutral agent discovers that registering several firms can reduce measured firm concentration while the same owner keeps control. It follows the [shared comparison plan](../market-split-api/parallel-plan.md) and experiment-worker workflow. No accepted formal hypothesis exists; S2 and holdout markets remain closed.
