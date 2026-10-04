@@ -260,6 +260,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:25Z | sybil-split-opus: code pushed (53 selftests, offline S0 1853/1853); running the local rehearsal, then runbook, READY.yaml and pre-run review; no launch, no model call |
+| dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
 | vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
 | vishesh/codex-heterogeneous | blocked | qualify-poietic-agents-s0 | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
@@ -271,7 +272,6 @@
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
-| dmarz/newcomer-opus | idle |  | 2026-10-04T08:15Z | sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it) |
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
