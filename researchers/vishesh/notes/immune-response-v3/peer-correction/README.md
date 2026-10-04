@@ -6,7 +6,7 @@ The experiment compares private reconsideration, ordinary discussion and structu
 
 ## Offline evidence
 
-Twelve tests pass, with zero model calls:
+Eighteen tests pass, with zero model calls:
 
 - Public-information comparator feasibility across 20 varied seeds/four worlds (80 scripted cases), plus full collection paths for one and two repeats.
 - Actual shared initial-response hashes across all three arms; exact184/368 main-call schedules and48-call solo qualification.
@@ -26,14 +26,18 @@ The fixture truth differences are observable and consequential, but these remain
 
 Substantive design review was completed, including source-truth crossover, identical initial forks, all-assignment denominators, immediate/terminal separation and fresh-evidence qualification. This is design review, not independent validation of all code or arithmetic.
 
-`peer_qualification.py` and `peer_collection.py` accept an injected policy and record requests, responses, actions, failures and denominators. **They are collection cores, not launchers.** A native adapter must add persistent original-ledger reservations, immutable source/packet verification, route/usage checks, exclusive approved-account allocation, actual public registration/readback, stop/time limits, safe transport and offline finalize. `prepare.verify_qualification` checks scientific binding only; it does not grant money or machine authority. Qualification requires authored action/reason review; an automated comparator pass cannot issue native admission.
+`peer_qualification.py` and `peer_collection.py` accept an injected policy and record requests, responses, actions, failures and denominators. **They are collection cores.** The prepared `peer_native.py`, `peer_admission.py` and `peer_run.py` add persistent original-ledger reservations, source/packet checks, inherited route/usage validation, exclusive approved-account receipt checks, actual public registration/readback, per-request deadlines and credential-free loopback transport. Native dispatch is hard-disabled. Live allocation/account evidence, verified relay, a finite grant and an operator closeout using offline finalize remain prerequisites; unit receipts are never live admission. `prepare.verify_qualification` checks scientific binding only; it does not grant money or machine authority. Qualification requires authored action/reason review; an automated comparator pass cannot issue native admission.
 
-Next: finite funding/admission decision, then complete the bounded native adapter and refresh runtime evidence. No paid allocation, key transfer, model request or new machine occurred. No automatic main-stage launch or stronger-model sweep is authorized by offline success.
+Next: finite funding/admission decision, then enable only the funded stage, freeze its final runtime/packet, verify the bounded relay and refresh live admission evidence. No paid allocation, key transfer, model request or new machine occurred. No automatic main-stage launch or stronger-model sweep is authorized by offline success.
 
 **evidence_confidence:**0/4 for benefit of peer correction; assessed2026-10-04 by vishesh/codex-immune. No new native evidence exists.
 
 **sample_size_summary:**80 varied scripted feasibility cases; full scripted12- and24-branch collection schedules;0native calls. Proposed first stage:four qualification worlds plus12matched comparison branches,24 immediate member observations nested in12branches,6assigned fault branches. This is a two-root development screen.
 
-Run `python -m unittest -v test_instrument` here using the study's pinned dependency environment. `prepare.py NEW_PACKET_PATH` writes a new disabled proposal; preserve the published packet and its hashes when asking for admission. Raw native outputs, when collected, remain private unless separately approved for publication.
+Run `python -m unittest -v test_instrument test_native` here using the study's pinned dependency environment. `prepare.py NEW_PACKET_PATH` writes a new disabled proposal; preserve the published packet and its hashes when asking for admission. Raw native outputs, when collected, remain private unless separately approved for publication.
 
 Measurement review also separated diagnosis error from unsupported proposal at initial, immediate and terminal timepoints. The combined contract-failure field is supplemental; it is not the proposal-rate primary. Outcome and verification endpoints retain missed repairs, so safe inaction cannot pass the study.
+
+Adapter revision2 preserves the earlier published packet in commit216fe8d9; no run used that proposal. Persistent tests cover48+184calls without resetting709historical calls or$15.524695 exposure, zero-call duplicate claims, oversize requests, deadline expiry, missing grants/account checks and disabled network dispatch. The18tests include synthetic ledger operations only, not charges or reservations in the real ledger.
+
+The [native runbook](RUNBOOK.md) includes a saved-data `peer_closeout.py` hook for the shared operations finalizer. It requires a verified worker-stop attestation and canonical ignored data directory; scientific assessment remains separate. No finalize or run was fabricated during adapter preparation.

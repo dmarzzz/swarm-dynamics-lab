@@ -20,6 +20,7 @@ def contract():
            if getattr(m,'__file__',None) and str(Path(m.__file__).resolve()).startswith(str(STUDY)) and str(m.__file__).endswith('.py')}
     paths.update(ROOT.glob('*.py'))
     sources={str(p.relative_to(STUDY)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(paths)}
+    sources['../experiment-documentation/public_plan.py']=hashlib.sha256((STUDY.parent/'experiment-documentation/public_plan.py').read_bytes()).hexdigest()
     return {'model':'anthropic/claude-opus-4.6','provider':'anthropic','fallbacks':False,
             'worlds_sha256':digest(i.roots()),'source_sha256':sources,
             'plan_sha256':hashlib.sha256((ROOT/'PLAN.md').read_bytes()).hexdigest(),
@@ -28,7 +29,7 @@ def contract():
 
 def packet():
     c=contract()
-    return {'stage':'peer-correction-Q-and-first-repeat','native_dispatch_enabled':False,
+    return {'packet_revision':2,'stage':'peer-correction-Q-and-first-repeat','native_dispatch_enabled':False,
             'contract':c,'contract_sha256':digest(c),'worlds':i.roots(),
             'Q':{'worlds':4,'calls':48,'model_max_usd':2.657280,'external_source':False},
             'first_repeat':{'worlds':4,'arms':3,'shared_initial_calls':16,'branch_calls':168,'calls':184,'model_max_usd':10.186240},
