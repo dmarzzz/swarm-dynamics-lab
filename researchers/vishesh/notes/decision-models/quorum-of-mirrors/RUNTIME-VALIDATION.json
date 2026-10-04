@@ -1,0 +1,15 @@
+{
+  "tests": 26,
+  "passed": 26,
+  "model_calls": 0,
+  "source_sha256": {
+    "reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "qualification.py": "e5bfff79e4f506a42c4e10ba78b3d1c34fa762722fa283fab0d352195af7905c",
+    "relay.py": "f600c8400243919d7fa55a35f790c3fb0e874eb15c0597da01d406071c8c41ed",
+    "worker.py": "31e3d9f30198558546e9bd1e4fc3523ef8d95d6cc081357d928de1287d897e63",
+    "public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166",
+    "test_reference.py": "74e0778fa596656faa09167cf506d754c3e5e4f107a96ee40e4602423623f0e0",
+    "test_qualification.py": "23e758693d30281669ae3259384a79f5a78f1c5cb0547dfa8117cc2c4db67e1f",
+    "test_runtime.py": "2bdaad3cf6300fff701ee07470e9744fbd8329f5cd1999a102a74a02487a4705"
+  }
+}

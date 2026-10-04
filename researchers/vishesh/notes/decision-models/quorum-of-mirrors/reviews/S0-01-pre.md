@@ -51,3 +51,11 @@ Pin plan URL to the public implementation commit, register experiment ID `quorum
 ## Public metadata check, 2026-10-04
 
 Freshly opened official [endpoint metadata](https://openrouter.ai/api/v1/models/typesafe/jev-1.13/endpoints) and [Decisions API reference](https://openrouter.ai/docs/api/api-reference/alphadecisions/submit-a-decisions-request). Metadata reports TypeSafe, the specified snapshot, active status, 32,000 context and the planned $0.042/million prompt rate with zero output rate. This is availability metadata, not authenticated qualification; repeat the check immediately before paid dispatch.
+
+## Launch preparation update
+
+Owner approved the proposed $2 ceiling explicitly: $1 API and $1 infrastructure, at most six hours. AUTHORIZATION.json records the grant. Exclusive allocation `vishesh-quorum-mirrors-s0` on `sim-shadow` merged in agentops PR 82. The host was verified idle before claiming; no VM was created and no incremental provisioning charge was incurred. The reused host is exclusively assigned to this experiment, not shared with another workload. Its initial claim lasts two hours.
+
+The native worker, local credential relay and renderer now exist. Twenty-six offline tests pass. SQLite reserves before each call, never refunds failures, and rejects duplicate invocation IDs; there are at most 32 calls. The relay permits only the frozen request hashes and does not copy credentials to the worker. The worker checks exact source hashes, public registration/content, deadline and claim expiry before dispatch. Final allocation exclusivity is rechecked immediately before launch by the operator. S0 stops on the first invalid response, leaving the remaining matrix unstarted; a complete qualifying attempt therefore needs all 32 valid even though the earlier count floor was 31. This is the already specified stop rule, not a relaxed screen.
+
+Exact command on the dedicated host: `python3 worker.py --relay http://127.0.0.1:43871 --launch launch.json --out results/QM-S0-01`. Deployment/source hashes, public verification and safe outcomes will be retained. The loopback port is reserved by an SSH reverse tunnel from the local approved credential consumer. No model call has occurred at this update.
