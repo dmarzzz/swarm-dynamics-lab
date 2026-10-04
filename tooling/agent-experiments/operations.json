@@ -20,11 +20,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
       "setup_path": "researchers/vishesh/notes/phantom-coast/pc9/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc8/reviews/Q0-A1-POST.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:28:39.911851+00:00",
-      "checked_commit": "4dc45cfc2056ff247f693a8efcdbcca9a5507009",
-      "next_action": "PC9 Q0 adapter and expanded scenarios prepared;47 tests pass. DECISION NEEDED on NATIVE-PLAN Q0:8 calls/38 questions, .05376 API ceiling inside original cap; then current public registration, runtime/route and approved exclusive allocation. No native PC9 calls; cumulative exposure .858328842 unchanged. Read pc9/SETUP.md and RUNBOOK-Q0.md.",
+      "checked_at": "2026-10-04T19:38:27.157070+00:00",
+      "checked_commit": "3bcc9b8ba17e4cb683657dfc010a7e2f4a943216",
+      "next_action": "PC9 Q0 completed8valid calls;32/32 map labels,4/6 actions, qualification FAILED. HOLD pilot. Clarify individual versus collective acquisition objective and comparator offline; no retry. Worker stopped, claim released,10 hub readbacks verified; cumulative exposure .858821754 under original cap. Read pc9/SETUP.md.",
       "next_run_approval": "owner"
     },
     {

@@ -3673,27 +3673,29 @@
       "registration_paths": [],
       "evidence_confidence": {
         "score": 0,
-        "claim": "Population misinformation spread and acquisition feedback remain untested on native models; only the offline instrument is validated.",
-        "rationale": "47 offline software tests pass. Original four-arm fixture plus three added four-arm scenarios audit successfully. Eight reachable development snapshots and metered Q0 adapter are prepared; none is native evidence."
+        "claim": "Population misinformation spread and acquisition feedback remain untested; Q0 clean-task qualification failed.",
+        "rationale": "Eight valid native calls yielded32/32 correct map labels but4/6 exact optimal inspection proposals. Both private-report cases verified the report rather than an unknown site; actor-versus-team objective ambiguity limits diagnosis. No population effect tested."
       },
-      "sample_size_summary": "Native:0 worlds,0 requests. Four scripted fixture families \u00d74 arms \u00d75 actors \u00d73 times; all dependent software fixtures. Eight inspected development qualification snapshots; reserved native Q0 and pilot remain unmaterialized/unrun.",
+      "sample_size_summary": "Native Q0:8 reachable qualification snapshots,8 valid calls,32 dependent map labels,6 inspection proposals;32/32 labels correct and4/6 optimal actions. No native population episode or S1 pilot. Released Q0 is development evidence.",
       "sources": [
-        "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md",
         "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md",
-        "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json",
-        "researchers/vishesh/notes/phantom-coast/pc9/reviews/NATIVE-PREP-POST.md",
-        "researchers/vishesh/notes/phantom-coast/pc9/reviews/NATIVE-CASE-QUALITY.json"
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json",
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json",
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/CLOSEOUT.json",
+        "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-QUALITY.json"
       ],
-      "status_at_assessment": "native_Q0_prepared_not_qualified_or_admitted",
+      "status_at_assessment": "native_Q0_completed_qualification_failed_pilot_held",
       "assessor": "vishesh/codex-phantom-coast",
       "assessed_at": "2026-10-04",
-      "source_commit": "4dc45cfc2056ff247f693a8efcdbcca9a5507009",
+      "source_commit": "3bcc9b8ba17e4cb683657dfc010a7e2f4a943216",
       "source_sha256": {
-        "researchers/vishesh/notes/phantom-coast/pc9/PLAN.md": "8ffe916b7f08413eb45725e01c7384ce6e92c29163cd4e1b8d46f583a316f08e",
         "researchers/vishesh/notes/phantom-coast/pc9/NATIVE-PLAN.md": "fb865d2b6fd8f67510d6bb05fe663bf924165ed4c013488a775b3eff6b2793eb",
-        "researchers/vishesh/notes/phantom-coast/pc9/results/native-preparation/validation.json": "8e15a186f0e8a9ab51045356c9bf70b156d67737a5368908bb6d83864773aedd",
-        "researchers/vishesh/notes/phantom-coast/pc9/reviews/NATIVE-PREP-POST.md": "6028077bea3a36618b4d4a26dc03fdb1208f8c26b0a7d3be2d7be8f111f7083e",
-        "researchers/vishesh/notes/phantom-coast/pc9/reviews/NATIVE-CASE-QUALITY.json": "f1d2f22a4668d1ad65dc813237dc11532e03210652dd9ca0a26f751e6da16fab"
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/summary.json": "eac110cc85f483d3a3e9d65c3159983380cd7513728d24df82a055792af37d84",
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/audit.json": "f5b76cf0a2aecb6f8a8959ddede8dcec604f113b8a1b2e1831da6559677bc299",
+        "researchers/vishesh/notes/phantom-coast/pc9/results/Q0-A1/CLOSEOUT.json": "dd0f1cfeb65a610cbc487d83cbf353b4c7cc69d5d1e066effe8744c8f6a78c43",
+        "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-POST.md": "817ed46cf5210c8ed662ba8e1be1d3b6f5bf497c45e68be03055e2715a830519",
+        "researchers/vishesh/notes/phantom-coast/pc9/reviews/Q0-A1-QUALITY.json": "bb9412d18e5dbe948900216bd60a9ea179cde34dcd98422fe42bdf8b65b30574"
       }
     }
   ],

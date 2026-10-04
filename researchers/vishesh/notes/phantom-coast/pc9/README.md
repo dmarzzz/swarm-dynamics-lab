@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `4dc45cfc` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `3bcc9b8b` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested on native models; only the offline instrument is validated. Basis: 47 offline software tests pass. Original four-arm fixture plus three added four-arm scenarios audit successfully. Eight reachable development snapshots and metered Q0 adapter are prepared; none is native evidence.
-- **sample_size_summary:** Native:0 worlds,0 requests. Four scripted fixture families ×4 arms ×5 actors ×3 times; all dependent software fixtures. Eight inspected development qualification snapshots; reserved native Q0 and pilot remain unmaterialized/unrun.
+- **evidence_confidence:** **0/4** — Population misinformation spread and acquisition feedback remain untested; Q0 clean-task qualification failed. Basis: Eight valid native calls yielded32/32 correct map labels but4/6 exact optimal inspection proposals. Both private-report cases verified the report rather than an unknown site; actor-versus-team objective ambiguity limits diagnosis. No population effect tested.
+- **sample_size_summary:** Native Q0:8 reachable qualification snapshots,8 valid calls,32 dependent map labels,6 inspection proposals;32/32 labels correct and4/6 optimal actions. No native population episode or S1 pilot. Released Q0 is development evidence.
 <!-- experiment-evidence:end -->
 
 **Native Q0 completed; qualification failed.** Eight valid calls,32/32 correct map labels,4/6 optimal inspections. No pilot. [Scientific post-mortem](reviews/Q0-A1-POST.md), [quality assessment](reviews/Q0-A1-QUALITY.json) and [saved native records](results/Q0-A1/summary.json). The population fixtures below remain scripted. Five separate actor contexts map four locations, share optional prior-round interpretations and choose two collective inspections. The four paired conditions cross honest/false initial evidence with peer communication on/off. No location is made inaccessible because of a belief. [Prospective implementation contract](PLAN.md).
