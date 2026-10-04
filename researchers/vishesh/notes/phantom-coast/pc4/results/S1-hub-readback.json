@@ -1,0 +1,74 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T08:52:15.455678+00:00",
+  "hub_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "70ed98875cdea8c6c4ab5733b190077fc37c6c831734c423642c669c7482a05a",
+      "bytes": 15461,
+      "hash_matches": true
+    },
+    {
+      "name": "replay.gif",
+      "sha256": "b8acb161cd4e3a4b7e8a4cc8be09c25d4ee119a536ed0ca2a06687fed9f827c4",
+      "bytes": 85624,
+      "hash_matches": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "0f29b4f517e762efcda9e628f111d1611edede8ad851ae0954063e41a5329e69",
+      "bytes": 19280,
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "60b79de29996728c43de6e89fe188a043bd2bf36383700eb33ada69b9beb107c",
+      "bytes": 220960,
+      "hash_matches": true
+    },
+    {
+      "name": "episodes.json",
+      "sha256": "bad87a6405150e525e1c4243cbb56585e53f0a745ea14861b69ab181e365b6ef",
+      "bytes": 2797761,
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan.json",
+      "sha256": "2e91772a50695a2846520977fed249814b0019a061eaa6a29680495521ca0c1d",
+      "bytes": 1245,
+      "hash_matches": true
+    },
+    {
+      "name": "worlds.json",
+      "sha256": "66de76079d4371a2d84854df11b7b6b6cddaa775cf51be796d2ce03dab4d0ccb",
+      "bytes": 29890,
+      "hash_matches": true
+    },
+    {
+      "name": "events.jsonl",
+      "sha256": "ae5f4971d7190bd397dcc92f90cc254f3f156f62c46f776c83fad7d8d16adf7f",
+      "bytes": 37759083,
+      "hash_matches": true
+    },
+    {
+      "name": "route.json",
+      "sha256": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1",
+      "bytes": 117,
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "91e75329fa2769a758c11d66a52971bf1f9c46ba1ab92752bf4616b35579acd9",
+      "bytes": 30823235,
+      "hash_matches": true
+    },
+    {
+      "name": "measured-replay.html",
+      "sha256": "54d32a8a03e9bc431b32a5b3288a44621b2088fb9051ea4f50758218aea2b2b3",
+      "bytes": 1661743,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

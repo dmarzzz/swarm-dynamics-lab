@@ -1,0 +1,26 @@
+{
+  "stage": "S1",
+  "run_status": "done",
+  "checked_utc": "2026-10-04T08:52:22.504850+00:00",
+  "public_artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "70ed98875cdea8c6c4ab5733b190077fc37c6c831734c423642c669c7482a05a",
+      "bytes": 15461,
+      "hash_matches": true
+    },
+    {
+      "name": "replay.gif",
+      "sha256": "b8acb161cd4e3a4b7e8a4cc8be09c25d4ee119a536ed0ca2a06687fed9f827c4",
+      "bytes": 85624,
+      "hash_matches": true
+    },
+    {
+      "name": "results-frame.png",
+      "sha256": "8dfc707ef46bbf0d57101d27a2af0488a2331d94a0ebd5656c691d5347d192a7",
+      "bytes": 146493,
+      "hash_matches": true
+    }
+  ],
+  "all_match": true
+}

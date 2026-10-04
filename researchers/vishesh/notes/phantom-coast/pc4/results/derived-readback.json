@@ -1,0 +1,25 @@
+{
+  "derived_artifacts": [
+    {
+      "name": "results-frame.png",
+      "matches": true,
+      "sha256": "8dfc707ef46bbf0d57101d27a2af0488a2331d94a0ebd5656c691d5347d192a7"
+    },
+    {
+      "name": "measured-replay.html",
+      "matches": true,
+      "sha256": "54d32a8a03e9bc431b32a5b3288a44621b2088fb9051ea4f50758218aea2b2b3"
+    },
+    {
+      "name": "S1-A1-analysis.json",
+      "matches": true,
+      "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+    },
+    {
+      "name": "S1-A1-audit.json",
+      "matches": true,
+      "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+    }
+  ],
+  "all_match": true
+}

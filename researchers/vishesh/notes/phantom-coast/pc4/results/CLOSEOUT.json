@@ -1,0 +1,27 @@
+{
+  "utc": "2026-10-04T08:51:39.032219+00:00",
+  "worker_stopped": true,
+  "credential_removed": true,
+  "calls": 1176,
+  "known_api_usd": 0.82705329,
+  "api_exposure_usd": 0.83914929,
+  "new_unresolved_calls": 0,
+  "historical_unresolved_calls": 9,
+  "unresolved_calls": 9,
+  "incremental_infrastructure_usd": 0,
+  "new_machine_created": false,
+  "api_cap_usd": 4,
+  "total_cap_usd": 5,
+  "budget_backup_sha256": "ccd11dbf3d6eb3bf309e5349819a1ee5ccee68e5639d6f1a0f1dd1fb3f073566",
+  "attempts": [
+    [
+      "Q0",
+      "q0-a1"
+    ],
+    [
+      "S1",
+      "s1-a1"
+    ]
+  ],
+  "allocation_release": "pending artifact readback"
+}

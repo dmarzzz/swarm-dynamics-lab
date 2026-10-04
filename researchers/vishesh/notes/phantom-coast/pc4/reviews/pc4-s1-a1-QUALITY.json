@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "pc4-s1-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T08:54:36.410694+00:00",
+  "parent_handoff_sha256": "0de6f0541910bed326262ff750ad7b3f15e68e5a84287d12b009e6a51c816cc3",
+  "verdict": "diagnostic",
+  "outcome_interpretation": "Valid quota tradeoff; practical target missed. A separate objective-disclosure diagnostic addresses remaining interpretation, not a rescue of this result.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed primary quota contrast and useful threshold retained despite failure to reach it.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Balanced terrain, benign/partial/full corruption and paired geometries exercise allocation opportunity cost; synthetic noiseless scope disclosed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact quotas, twelve distinct sensors and common acquisition paths reconstructed; equal endpoint field contract and native call counts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Q0 all24maps/864labels pass; all directly observed S1 labels correct. This does not qualify learned sensing.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Full request/endpoint audit and sensitivity show utility-dependent benefit; identification bounds not confused with sampling interval.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "32 independent paired roots;384 dependent episodes. Achieved primary interval halfwidth0.894points, narrower than design motivation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model/source, fresh actors, no action-only endpoint fields or hidden truth in requests.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "1152/1152assigned/started/terminal/valid; all384episodes retained. Same-author audit, not independent replication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Closed envelope1176totalcalls; original cumulative cap retained with nine historical reservations, no new uncertainty or VM.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/CLOSEOUT.json",
+          "sha256": "72c4f16dd74e28147dabb71f95b3295a200dde2c56ca32d125d9195e22425207"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable source, ledgers, manifests, requests and hashes support complete saved-data replay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-analysis.json",
+          "sha256": "b9535628a55fad007a0c656b651bc4907316b5ab3764d037ae2639654e5253a4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-A1-audit.json",
+          "sha256": "39e23a3965c15ffcfad9a46d55ad677a7052ba2dbf288dc8686a5d4e42228fc4"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Paired-effect plot, wrong/unknown decomposition and all-episode replay checked against records and public hashes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/VISUAL-QA.json",
+          "sha256": "2f89a47cbe6efda2cbd0e699f5208992cda2cee726af6073bf11485879d1b7af"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/S1-public-readback.json",
+          "sha256": "2242344c82c338ebbbfa03a26f528baddcac802f2bf57260dae1faaaa256591c"
+        }
+      ]
+    }
+  ],
+  "independent_review": false
+}
