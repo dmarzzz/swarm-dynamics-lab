@@ -3,7 +3,7 @@ id: wild-askswarm
 type: task
 title: 'AskSwarm: reusable descriptive questions across three observed swarms'
 kind: build
-status: claimed
+status: done
 priority: p0
 owner: shadow/sol-askswarm
 for: shadow
@@ -15,7 +15,11 @@ topics:
 - llm-agent-swarms
 - meta
 claimed_at: 2026-10-04T14:56Z
-updated: 2026-10-04T15:24Z
+updated: 2026-10-04T15:25Z
+outputs:
+- researchers/shadow/notes/wild-askswarm/README.md
+- researchers/shadow/notes/wild-askswarm/FINDING.md
+- researchers/shadow/notes/wild-askswarm/results/comparison.html
 ---
 
 ## Goal
