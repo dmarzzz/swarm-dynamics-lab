@@ -1,0 +1,616 @@
+{
+  "old_source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+  "new_source_sha256": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
+  "changed_ranked_items": [
+    "quorum-of-mirrors-04",
+    "quorum-of-mirrors-05",
+    "quorum-of-mirrors-10",
+    "quorum-of-mirrors-16",
+    "quorum-of-mirrors-17",
+    "phantom-coast-05",
+    "phantom-coast-10",
+    "optimal-swarm-size-06",
+    "external-influence-v2-10",
+    "antsy-v1-v5-05"
+  ],
+  "unchanged_ranked_items": 219,
+  "extracted_changed_or_added_blocks": 85,
+  "method": "Whitespace-normalized HTML text blocks compared to the retained original extraction; includes repeated scoreboard/synthesis statements and six source-verification footer blocks. Counts are editorial changes, not new empirical findings. Source footer attribution is retained as the source author\u2019s claim, not our independent audit.",
+  "blocks": [
+    {
+      "index": 0,
+      "study": "portfolio",
+      "heading": "Swarm-Lab Study Review",
+      "old_nearest_block_sha256": "f61a3a8eef1a194bf2e167536328c48cc7492ce7dde73d64b41b2129b9fea7a8",
+      "new_block_sha256": "f484188d50568e79906b7080f9cbbe4257b5e500e89af3882b5aac3ccc3615a0"
+    },
+    {
+      "index": 1,
+      "study": "portfolio",
+      "heading": "Swarm-Lab Study Review",
+      "old_nearest_block_sha256": "9aa16fc61c8c564321cbd86553c64378eea3c36d4f23897f7382209b5996a796",
+      "new_block_sha256": "d8a10f7cb57f1b3780ee72dd21265e6157826aba081f24a65951027cf6499cf8"
+    },
+    {
+      "index": 2,
+      "study": "portfolio",
+      "heading": "Swarm-Lab Study Review",
+      "old_nearest_block_sha256": "3bf8e2555f3ba90998bad133af6dfbbd457e5fa7c93af0e0d6fd67e76e6f92a2",
+      "new_block_sha256": "5adee92a2c624d9ea8ec0ff288402c9c85d741a00b1cebfb3f5c443c780dd31f"
+    },
+    {
+      "index": 3,
+      "study": "portfolio",
+      "heading": "Swarm-Lab Study Review",
+      "old_nearest_block_sha256": "b406d778e2ad75633fc3c209f95bd1acb52e9c0e4769d9d638dce422e1895a54",
+      "new_block_sha256": "a21fb59c56616e822ac3ab4e452b72168ec69e046302a7a92e59392b0ad3bce7"
+    },
+    {
+      "index": 4,
+      "study": "portfolio",
+      "heading": "Swarm-Lab Study Review",
+      "old_nearest_block_sha256": "b5d9fcbc3afaeac32a99e4615ce52b04d672c884e891753880a719719e7b029b",
+      "new_block_sha256": "b8a6f5cc178e955666714d5597ca98424781d12afde97ed7bd7b668682327325"
+    },
+    {
+      "index": 5,
+      "study": "portfolio",
+      "heading": "Portfolio in one paragraph",
+      "old_nearest_block_sha256": "1220f140b2a3cfdea58b6f15c4f784231b86f529a4e4ab7803ef7f7eb60cc363",
+      "new_block_sha256": "c2b7030f75a0c5a2aebc3285c7f4208bc148426684235cd9884967e7d86d98d5"
+    },
+    {
+      "index": 6,
+      "study": "portfolio",
+      "heading": "1. Ceiling and floor: the outcome cell carries no information about the treatment \u2014 13/13",
+      "old_nearest_block_sha256": "9591a3dfbcbb435a1fe6a0f17b099c7ad89cad4977efda6b1f5cb61a699d5cbe",
+      "new_block_sha256": "01c61029c985c17faf16de32d8171e1448e1446c1fd4250421a5071a9969f72c"
+    },
+    {
+      "index": 7,
+      "study": "portfolio",
+      "heading": "2. The declared contrast has a provable zero \u2014 the manipulation cannot move the endpoint \u2014 12/13",
+      "old_nearest_block_sha256": "8312b198470373efd767dcad23327eac4a62353bb34de3accc3e203ad308535a",
+      "new_block_sha256": "1d69511b22119ec1d8409842021b95e158e0d45a5e6c59960dbe2ea63fe51a7a"
+    },
+    {
+      "index": 8,
+      "study": "portfolio",
+      "heading": "3. n built from dependent units; headline denominators inflate apparent sample size \u2014 13/13",
+      "old_nearest_block_sha256": "2e1050bb3cc1cc4191eaa8e08c7840acfaf741cf1d381265add634a8d47462ec",
+      "new_block_sha256": "66daddd029ce8374525fcaadb532fa6c9f805c7607cc7e698447a4bd4c443f16"
+    },
+    {
+      "index": 9,
+      "study": "portfolio",
+      "heading": "5. The strongest comparator is free, deterministic, and either wins or was never run \u2014 13/13",
+      "old_nearest_block_sha256": "530f8d1c5e0bca16c4204e814d42a478e2bcb86cd36a325e864174627e9bf6ae",
+      "new_block_sha256": "37aa788790081592c024ae6afb325d2571c98fc330099604facf21da30d70cc3"
+    },
+    {
+      "index": 10,
+      "study": "portfolio",
+      "heading": "5. The strongest comparator is free, deterministic, and either wins or was never run \u2014 13/13",
+      "old_nearest_block_sha256": "44deeba3c004681e8bb14531e66a61a8240f329ff9f7b10cec304795f7be2d8d",
+      "new_block_sha256": "5d055417cebdfe261856c2d2474f1d95bd5d0a3a9217ef67e13c768409739877"
+    },
+    {
+      "index": 11,
+      "study": "portfolio",
+      "heading": "6. The swarm is scripted; the native layer is one typed call \u2014 13/13",
+      "old_nearest_block_sha256": "7fa98e54fda7f241918a332a86e19c6941d6ed40b86ae628f0dc4a36706b7520",
+      "new_block_sha256": "059bf119164632c26a347c0b918e41c83a9c4d25aff8082caca8c7f7df01e008"
+    },
+    {
+      "index": 12,
+      "study": "portfolio",
+      "heading": "HEADING",
+      "old_nearest_block_sha256": "32e5a98ac0894e38a73a41c1139f1bb01d83c65b7946a48c5fa47b6001336712",
+      "new_block_sha256": "fc838c5ad243293cc544e7b0b7c96076f3614f064b8d351409108c08a2d1da8b"
+    },
+    {
+      "index": 13,
+      "study": "portfolio",
+      "heading": "7. Single snapshot, no repeats \u2014 and the exceptions are where the signal is \u2014 7/13 strictly single-model, 13/13 unreplicated",
+      "old_nearest_block_sha256": "ec0b0e59d9b3cbdc1bdf3e7002f5b375844430956f730df54ee90cc76f63c7dc",
+      "new_block_sha256": "263a5d25f85d4a990196b3e86f203f41dd9d341355b5d912fe4b28d0af7882ea"
+    },
+    {
+      "index": 14,
+      "study": "portfolio",
+      "heading": "8. Visuals: honest to a fault, no uncertainty on any mark, and the headline cohort often has no committed figure \u2014 13/13",
+      "old_nearest_block_sha256": "1a5e2321fa502b91811ad6d6551fc6d85ddff37e7c2e431603cb9af8d067b6a5",
+      "new_block_sha256": "54658e7f8a4c55a9be36f0966597d0955db77dbd2159d776b89cd4e500df4661"
+    },
+    {
+      "index": 15,
+      "study": "portfolio",
+      "heading": "9. Prior-art gate open; the closest prior work is in the lab's own library, uncited \u2014 13/13",
+      "old_nearest_block_sha256": "e7458e56c2c40f0e4080c4632a7452184bb1f5858469927f9af49de38b3066a0",
+      "new_block_sha256": "bb4f65908f412c4ff8ace841990ba383e5fb6f9f9af89182b7ea0f8d6e82128c"
+    },
+    {
+      "index": 16,
+      "study": "portfolio",
+      "heading": "HEADING",
+      "old_nearest_block_sha256": "c8162608ff0a79eac9fa6c4da897e924ab42b0b7026830a2b086f9a66ffeb24a",
+      "new_block_sha256": "54c58ca8c9be236d9571e74f0e5520387cd03de948e84e2d30b109fde544b0b6"
+    },
+    {
+      "index": 17,
+      "study": "portfolio",
+      "heading": "10. Zero contact with the hackathon's own theme, while seven studies carry an unexecuted plan for it \u2014 13/13",
+      "old_nearest_block_sha256": "bb65886c083b95b68603efeca2e17f42ec52a2a513c77f3131c8cf3a3a3218b1",
+      "new_block_sha256": "88b13932f4027d1ad1e2b769b57eb1cf86aa3c22d4e974e421b77b6f56f37753"
+    },
+    {
+      "index": 18,
+      "study": "portfolio",
+      "heading": "11. Reservation arithmetic, not money, is the binding constraint \u2014 7/13",
+      "old_nearest_block_sha256": "99097cd9a3c5928cd3e73fd96f6c0bdefa0fa2fecc4b6dee7428e2c3fcbad20e",
+      "new_block_sha256": "d30d2af62aaac42e8f0f9c0a30f8bf87ea3abb8e09800c162d3b8d5c72ce1e3b"
+    },
+    {
+      "index": 19,
+      "study": "portfolio",
+      "heading": "12. Operational and transport failures consumed a large share of the paid attempts \u2014 8/13",
+      "old_nearest_block_sha256": "f4d19ea73b5a4e9f9c505f3847d786160c66de7c4d8c16cda1b0833418d5d645",
+      "new_block_sha256": "49ea30fb6108597940448f4ffdddf1f1b8ee9b20782689a08bfb2c008da95c3f"
+    },
+    {
+      "index": 20,
+      "study": "portfolio",
+      "heading": "13. The most interesting observation in each study is buried, mis-headlined, or contradicts the headline \u2014 13/13",
+      "old_nearest_block_sha256": "79eb952648bedee86cf848a2eec76860a7de2d805651a85643fe9029defd67e6",
+      "new_block_sha256": "c0626f3069960abc11b0c46d86b463df92c4381086b036461660637a1355b6a8"
+    },
+    {
+      "index": 21,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "26c5613a06f0806fc8adb758ea12fa2c323e5effedf77ffdbb9f3bd0b50427f0",
+      "new_block_sha256": "f610f65e50b52014a79fbd3e306ca79f31a16ed27346393ead320537a572fb67"
+    },
+    {
+      "index": 22,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "c2b07c247be0e38fd8288081fc5f94fddaf0275240c84c558d3d060c6437441a",
+      "new_block_sha256": "f97a1dba3ea1c7cbc3d5584f74df63758c1fee4829647dc41c4abdc89abdc9c8"
+    },
+    {
+      "index": 23,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "35d562796c2234c170ee1758ed02420f7c0cb5a040d5676d9933e79ce236a9ac",
+      "new_block_sha256": "ca3e198efc59e3b1f7d0eadcf503207fc20c7ca197c2055878198efa0b3b0dd8"
+    },
+    {
+      "index": 24,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "75cc20450f972be07e7d2f19555fdf3bc5dd74bc625571664ba6cf7a82db448e",
+      "new_block_sha256": "282703862e86343adf044d5e49ba4c746208d6fe83ee3c494bddf889ea457402"
+    },
+    {
+      "index": 25,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "9f504e7a2580e563cf6c231b6f4d5b894738d90216fd5bea2d3cb9d240fb6420",
+      "new_block_sha256": "286f0529643b20fac62cd6c8c3693a6b205d4a2fe69611b2d651de50018b0b91"
+    },
+    {
+      "index": 26,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "ddeee4d07b3461bc5f7a92efe4d9474cb857c9473a0035b7a027cd752ebf6f17",
+      "new_block_sha256": "a7975d4fbc7f0d1523c46cff7bb3330d3f0fb194e2424454b774fcef9b3f6684"
+    },
+    {
+      "index": 27,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "f7bb417a3935a264b602eace20324943732121ee68eae87f6852791de79a7ba8",
+      "new_block_sha256": "75f2b95f9d9109e142d5f6dc282053f969fff4e39cd550dc86e5eb5ea5b74e48"
+    },
+    {
+      "index": 28,
+      "study": "portfolio",
+      "heading": "Comparison with the strongest work in the same repo",
+      "old_nearest_block_sha256": "dd0d4d0fcc07802f6b9cd210100acabdc4254cc536be230ab1e46fa68c2adfc7",
+      "new_block_sha256": "c0b6a389ec15a00e087daf09a7c27ad0b3162f671503579e3ad5471e50e83b1d"
+    },
+    {
+      "index": 29,
+      "study": "portfolio",
+      "heading": "Portfolio-level fixes",
+      "old_nearest_block_sha256": "bbfd5c6fed006bdebb4ec10ba5e6a3aa210502f07d0e413b48bb706d75da7fab",
+      "new_block_sha256": "f779e71c92d8c741ee53449647d76dad2c2b70746dee3cdb1313d19f6ee11f9b"
+    },
+    {
+      "index": 30,
+      "study": "portfolio",
+      "heading": "Portfolio-level fixes",
+      "old_nearest_block_sha256": "5aaff7892b29d56c2a3942baf238a9fc6d83bee7ea5c5632d9b2cf6bd99d72ff",
+      "new_block_sha256": "d6bb62eb10f4ccb7f2bee10bd5999525c30545851a675c378c7556f680e950e5"
+    },
+    {
+      "index": 31,
+      "study": "portfolio",
+      "heading": "Portfolio-level fixes",
+      "old_nearest_block_sha256": "6fb8b2927a528641b0cad1e0c82b6754d8fe5f7cba0754ad19df3ab9fd6fb7b6",
+      "new_block_sha256": "7edc513cc55079329580ad7d347f28005781d927789bd169b0cf7ce73863965f"
+    },
+    {
+      "index": 32,
+      "study": "portfolio",
+      "heading": "Portfolio-level fixes",
+      "old_nearest_block_sha256": "ea4a301c132425b935e24fd7564ccebd4ecb3d9cb0592b34dab03825ab66e01d",
+      "new_block_sha256": "afeb59c6dffb0ae187727220c49b3dad115c9710cd830ec21538dd12aa295c1b"
+    },
+    {
+      "index": 33,
+      "study": "portfolio",
+      "heading": "Portfolio-level fixes",
+      "old_nearest_block_sha256": "88d2693b70e4abe3c267380d19196d24e6c3c5524b769f887a56058f2ca672ff",
+      "new_block_sha256": "d5aa5637b10d9871b0fcf85e94110d7023bd1c6b017767720b1d8f9867bcc542"
+    },
+    {
+      "index": 34,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "f3ac1437d7c301d62cbe1cf8a3657d3cd24a09a676e37ceaead98c9543a4e0e7",
+      "new_block_sha256": "7caeb196009abbf21f00e497ea056dcc709067e3640b28a0ce0e64c349a1d330"
+    },
+    {
+      "index": 35,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "7fb62926a943a4a69355da25a0f43911bab2d62ae831247327f2887cdcab7466",
+      "new_block_sha256": "84085081aaf4d697738f6f6f3d1cdcf32c18191d977e11d397e66751622cfa85"
+    },
+    {
+      "index": 36,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "4234c61eeddefeb577b29e3a777a802dcb47dfb0fe7d10415eccd19a30782927",
+      "new_block_sha256": "86607aa35262e0e1f7ba84b6decdeb6d0bdcd1de12e3cbbaaef248e9ed60e3b0"
+    },
+    {
+      "index": 37,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "4412aac2b847aa60be7829f66285a7566f8796ad59ba60ae554f073443f9398f",
+      "new_block_sha256": "91b5f9f7863ff69fbaa08ff36be7e3a224e4fa0eb447c8b3d0db2c394ac88bbd"
+    },
+    {
+      "index": 38,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "87318d21f3ff31b1cf502b545141e612d005b6b4f7f1624cb8dc92f16876d9a9",
+      "new_block_sha256": "11428736e1041604a166a7e4743b964ef446247c0793b0883f157bbb3fa59da9"
+    },
+    {
+      "index": 39,
+      "study": "portfolio",
+      "heading": "Which studies to lead with",
+      "old_nearest_block_sha256": "0c31e2507dea581db6f094ae6a911011963745767e6bfc8da033db26c2c2419f",
+      "new_block_sha256": "bb3326bb42aab07fdf72797a6482e447346910914d46955cc87a08e7c9cfb174"
+    },
+    {
+      "index": 40,
+      "study": "quorum-of-mirrors",
+      "heading": "Quorum of Mirrors",
+      "old_nearest_block_sha256": "ac6aa6ab525aff2ce999985ceb0495b31e2a79c64c52a981ed7da5bd21495780",
+      "new_block_sha256": "3988da930e08686149dc2a05860a308f7c199ce0a011f9a145df91f7c5f8be69"
+    },
+    {
+      "index": 41,
+      "study": "quorum-of-mirrors",
+      "heading": "2 How it is looking",
+      "old_nearest_block_sha256": "65480693bc80c22209cea8c40892a1a51ceb1e23e6b0394014d8459b5578e475",
+      "new_block_sha256": "3466302a792d8bf8a26c835e2c566cb24f724dfcceb7c4c220e69897802c4219"
+    },
+    {
+      "index": 42,
+      "study": "quorum-of-mirrors",
+      "heading": "4 What has been learned",
+      "old_nearest_block_sha256": "4d290372b916a212b5d412d1e36b790dd1c678e75d973fc809af94887c7c92e7",
+      "new_block_sha256": "42cac5d869f179a4d302934cf02a8f072cf3162d8a96e4878c28195bb3539927"
+    },
+    {
+      "index": 43,
+      "study": "quorum-of-mirrors",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "6d4a9b45257f7c2ebff6d3963674ae27832a8d21aa32a41f8f7faa1d219fb80d",
+      "new_block_sha256": "ba9f9fe8717ea6b7a4fd6983be0571f6666ec61e4a46ae0eac0934becfd4308c"
+    },
+    {
+      "index": 44,
+      "study": "quorum-of-mirrors",
+      "heading": "3 How it is run",
+      "old_nearest_block_sha256": "87245e2dc17382b7edf1cd2e7367be994bee7b5c31e03eff49b2dd7b24d88f7a",
+      "new_block_sha256": "fb192ff98323adb18047d1b535d98e9ba55b5a5733bc58d02b2c74850a456b14"
+    },
+    {
+      "index": 45,
+      "study": "quorum-of-mirrors",
+      "heading": "14 Where I agree / disagree with the existing PI review",
+      "old_nearest_block_sha256": "04cfc4c199bb96cf22c1df3b318345bea5f9d885d2694e51e8cddcdb01967b56",
+      "new_block_sha256": "90a5ff68d442f45d56b1b84f39faddeb2f779e376e468860422d906324675fc7"
+    },
+    {
+      "index": 46,
+      "study": "quorum-of-mirrors",
+      "heading": "Must fix before any claim",
+      "old_nearest_block_sha256": "9593a36a33c6935f04790d15411ef24c4c9d7fe936d8428201143691c0fb9972",
+      "new_block_sha256": "118d678bbcdb9d4507d461463a6f26b19e64caca298d8972f9c965e47a806b1a"
+    },
+    {
+      "index": 47,
+      "study": "quorum-of-mirrors",
+      "heading": "Must fix before any claim",
+      "old_nearest_block_sha256": "eb836b632ae34cb0b5e9d60b2b887ab0ff9dd07721e331409b035d906b865d0d",
+      "new_block_sha256": "beebb60f242f698e9ed6a86f9d3a4988bb4eed2996be9c979b33b5e8200b9228"
+    },
+    {
+      "index": 48,
+      "study": "quorum-of-mirrors",
+      "heading": "Would make it compelling",
+      "old_nearest_block_sha256": "fb18220bda9c71ba84b192959387a5915071fa545be1bd00cf16fba1057bc3cf",
+      "new_block_sha256": "09ae837999624bd048f7242a623a0e28fbb02824d541abb4f083fc69f15366f9"
+    },
+    {
+      "index": 49,
+      "study": "quorum-of-mirrors",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "7b307904c37309b625998ce46e39e3d8dd7deabd4103d4448852e21df49d3707",
+      "new_block_sha256": "d63281c218ec67e945c4d13944ea84c83a0cd76b6eb95b4af4a3ee490c63197b"
+    },
+    {
+      "index": 50,
+      "study": "quorum-of-mirrors",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "65f1f7082bca6334102caf24b28da07d554ac654e691041dfa63a818dd4982bc",
+      "new_block_sha256": "bdb9b9a2f9496634245d930bab25997e16d54946d4d18f99570bc50012bbef00"
+    },
+    {
+      "index": 51,
+      "study": "phantom-coast",
+      "heading": "4 What has been learned",
+      "old_nearest_block_sha256": "c4c4e7e6bc5d42d2c2a3781e1d4228e2d5ec82545edfa50e1b242b6ccbcea9ae",
+      "new_block_sha256": "a3a66a1b74be3fb64e0842af9bc2cfd8771590a625970af7d70a445c9ad87443"
+    },
+    {
+      "index": 52,
+      "study": "phantom-coast",
+      "heading": "3 How it is run",
+      "old_nearest_block_sha256": "7176a64d535dd9ec6202fbb4b24966739b4b0f03e016a49eefcd9d46407a5348",
+      "new_block_sha256": "c41850d619e5e7ff54a345976afca3d95261de8fb39508326a6f97aa51e026d0"
+    },
+    {
+      "index": 53,
+      "study": "phantom-coast",
+      "heading": "Must fix before any claim",
+      "old_nearest_block_sha256": "5dbc94602c916431cfe17dbf5eecb32ca8cc16324289bf5f6c9a3621652fdb18",
+      "new_block_sha256": "2a2fb844533323467415f39b8bf3ab3359b354ae52372741eae3d669f8d31a06"
+    },
+    {
+      "index": 54,
+      "study": "phantom-coast",
+      "heading": "Would make it compelling",
+      "old_nearest_block_sha256": "a5c1ff22eb7bf674501050b79a248a3911bc26a5e6d4fb006d5aaec27d04e735",
+      "new_block_sha256": "99c4da0c3398f2b13bafafdeb2be216a3d29f1739b7c0ee4d43576f1b67594b1"
+    },
+    {
+      "index": 55,
+      "study": "right-dissenter",
+      "heading": "The Right Dissenter",
+      "old_nearest_block_sha256": "4d52e050fb0a714dd73688117a13d8cb9ed17982ff45f24d010b43b2595f5aad",
+      "new_block_sha256": "efc245ba556cd0bf6a47e9c0d3dcf9ec78f213b59cf73c3ffb3c94bc5f3ea5ab"
+    },
+    {
+      "index": 56,
+      "study": "right-dissenter",
+      "heading": "2 How it is looking",
+      "old_nearest_block_sha256": "b2356093a7e68ca306e868839017c67501b2a94a3748323d7f2181c602ca3d77",
+      "new_block_sha256": "0bfdabbc73a969b478b5bdf9da3d19817905e55d96ade7a49e06d88e54266af0"
+    },
+    {
+      "index": 57,
+      "study": "right-dissenter",
+      "heading": "4 What has been learned",
+      "old_nearest_block_sha256": "193a3fc45de6acd48b2f8c30a3efb3b7bb9d5ba9af6d3179b93b52112a4e948a",
+      "new_block_sha256": "80ab55e1550ca2181156753926734e01c31ead76de9c013750fa38fc10b57083"
+    },
+    {
+      "index": 58,
+      "study": "optimal-swarm-size",
+      "heading": "Must fix before any claim",
+      "old_nearest_block_sha256": "2c05982d23a2a3763a4f20832b1f43b0a7df35dd5f4127ea30388315e09b4a64",
+      "new_block_sha256": "6d684bee28850b1283175402a18f86cd863e1d8fe37cbdc08502dafb20777566"
+    },
+    {
+      "index": 59,
+      "study": "swarm-of-theseus",
+      "heading": "Swarm of Theseus",
+      "old_nearest_block_sha256": "a8189c8e59850b2c20af0f29d3568d4291dffc148db4817e3ceb44075cdb712c",
+      "new_block_sha256": "02a0e62a26005a7c6091922c6875235471ba43d2c6bb54fbbfb5443786e73c50"
+    },
+    {
+      "index": 60,
+      "study": "immune-response",
+      "heading": "Immune Response",
+      "old_nearest_block_sha256": "a3a88c65f88e25116f9561b422a251658d4cfe31c02a806629a916d28f7c5090",
+      "new_block_sha256": "45fd6cdd19e97bd080556e9ff8d410c95ed7489d0b1078706bf0e5c354fbd7fb"
+    },
+    {
+      "index": 61,
+      "study": "immune-response",
+      "heading": "2 How it is looking",
+      "old_nearest_block_sha256": "3a91718081fcb5da1dc87ca70f2201c463c0d251e8e0eeb29faa4801308c1991",
+      "new_block_sha256": "d5489647206cdeaebe085abb6b7c4aa8f9d8973d954fe101223befd772f11b2d"
+    },
+    {
+      "index": 62,
+      "study": "influence-scenario",
+      "heading": "Influence Scenario (influence-swarms, SEO poisoning)",
+      "old_nearest_block_sha256": "cd1d4dba821b8b73f7313577158882e2a69a0d01de8b8c30a69bc10a949369f3",
+      "new_block_sha256": "ffb6e101f901262b3c5766945351e54fc4338d1b3a9cc3eeca3e4d2ff8cfe707"
+    },
+    {
+      "index": 63,
+      "study": "influence-scenario",
+      "heading": "4 What has been learned",
+      "old_nearest_block_sha256": "9805dc2e6e46a35bfac5b2eff5e5ab60b387306c5eacfd63c22f69a4402f9738",
+      "new_block_sha256": "9769eb6af122113e881808ea2f1bb53f8957cd8ae9f0a7c73e453e7b02331cc2"
+    },
+    {
+      "index": 64,
+      "study": "influence-scenario",
+      "heading": "11 Is it interesting",
+      "old_nearest_block_sha256": "3ca8b0857685d32557aa50184b8f1e7c595f0c6be4ecefdf9c7019a443fbcb6d",
+      "new_block_sha256": "d413d2f7bd5c91130b3667f5702fc02c7bda6950e55a2ce60655085dec8e5b52"
+    },
+    {
+      "index": 65,
+      "study": "external-influence-v2",
+      "heading": "External Influence v2",
+      "old_nearest_block_sha256": "f0aa255c990c0963108ffb950fdaeb9891c2eb21b53b5fedb7af90b6e6841575",
+      "new_block_sha256": "c53d5888dc8bf6ac64acf3e101fce9b0c0fcbb60a7a5c667d24243a28c1f8913"
+    },
+    {
+      "index": 66,
+      "study": "external-influence-v2",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "477a8aa9718f0d8e565108a3efc6d12a4408ec6b90de3c237c1532e882cfa567",
+      "new_block_sha256": "0bad8db2a8b98bb786a232881024cdd463769dc54f3a76f4f46f8b5937fe6502"
+    },
+    {
+      "index": 67,
+      "study": "external-influence-v2",
+      "heading": "13 Are the test cases useful",
+      "old_nearest_block_sha256": "ae8f2e469dd90d37188ea694c2a0a37bf113a158a1fc7d432954e678b2a0f329",
+      "new_block_sha256": "319f918b4bbfeefd915bf8f50b82acb004acc0a1d99c69aceccf919867c7b420"
+    },
+    {
+      "index": 68,
+      "study": "external-influence-v2",
+      "heading": "1 Definition",
+      "old_nearest_block_sha256": "f0d61798191601da4f6c0a1e422e6aba12e1eb0410341e0f1acfcb05ab260ac0",
+      "new_block_sha256": "1137008318c80a022a67f13b429488b78ff61380c7dd9e8fd900331c2c5681d5"
+    },
+    {
+      "index": 69,
+      "study": "external-influence-v2",
+      "heading": "Would make it compelling",
+      "old_nearest_block_sha256": "0638145ff38fe615438e6c247dd51d73908a2eae23003f69b00c1e4e3c3ae9b2",
+      "new_block_sha256": "b8ae07ba1d506a352d18fc23e231bc450678686f27a811dcf680bf771eb5009c"
+    },
+    {
+      "index": 70,
+      "study": "healing-helping-hands",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "47f9039950a515412325643ed411d46e98aa846a2d9d24ba86958548687ed262",
+      "new_block_sha256": "f5da38e1604a7a57f445874d9daac5b379f91252a43569cfb059fa929a28612f"
+    },
+    {
+      "index": 71,
+      "study": "healing-helping-hands",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "ee36ed9d193fe0c9204fe697dd173c39ca416b870d987ef33db1d11fb06c7fb9",
+      "new_block_sha256": "f3f28b561b8492446761ef27659b26d7489cbab821b01b1289982430af36e056"
+    },
+    {
+      "index": 72,
+      "study": "healing-helping-hands",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "3544d33fb618c949d8d993eeceeda0273ca79f88dd145525b859543ee4674e2e",
+      "new_block_sha256": "d1f30547b880adbf8e8c366f26f0e5e49db8c9caef84475cdd8bb004a8f4e04d"
+    },
+    {
+      "index": 73,
+      "study": "healing-helping-hands",
+      "heading": "14 Where I agree / disagree with the existing PI review",
+      "old_nearest_block_sha256": "b6cb8e41c3a09c9704d7dc013be24506ab2e34deba65f8683120587a0c4c7322",
+      "new_block_sha256": "557d00afd22ddf43530b520338b31e7befe2c6e140d4d7778c7d7ac2a2fcedc3"
+    },
+    {
+      "index": 74,
+      "study": "antsy-v1-v5",
+      "heading": "2 How it is looking",
+      "old_nearest_block_sha256": "c46a6129e647ae3bba14a91fb0652c73de9f94e2463087747684f0f9fa344c0e",
+      "new_block_sha256": "29b33bbea9ea7edc83e2d79eebd3edee05cb52f7236aab421e0bb87a70187290"
+    },
+    {
+      "index": 75,
+      "study": "antsy-v1-v5",
+      "heading": "9 Visuals",
+      "old_nearest_block_sha256": "82e8483833fb9d329a7c1960673dbcec9aacf107d14a9b6c776a1376662cb2e3",
+      "new_block_sha256": "2970cb10868266a6c4a9c6dbb1afe65ce20cf759bfecd4e60cddd8bcc5e62f8a"
+    },
+    {
+      "index": 76,
+      "study": "antsy-v1-v5",
+      "heading": "Must fix before any claim",
+      "old_nearest_block_sha256": "e487fed663422da3aa7fc452d4758ad96d7193bc4fe160b57099ddc2fed48206",
+      "new_block_sha256": "a27137ca4f10ebb905ca036da404946462509292665ea9536e03545c59ef90fa"
+    },
+    {
+      "index": 77,
+      "study": "antsy-v6-v8",
+      "heading": "6 Gaps",
+      "old_nearest_block_sha256": "950330b8e1f75c17ca69f263717a0776195a72e1f051743960ad3f4f6a9a73e6",
+      "new_block_sha256": "0b48132c04f31f6135fd6d0ff8af052c56c31045497f96a2c88135568b233be7"
+    },
+    {
+      "index": 78,
+      "study": "poietic-agents",
+      "heading": "3 How it is run",
+      "old_nearest_block_sha256": "07f6aa3afc4d597be9b830af3462ba3ecd8513dc29cc8adb62cdea1e8e2b77b7",
+      "new_block_sha256": "49646f6601c6edb35adba26c5239a6dab006bad480b14301334c6987f8f05be2"
+    },
+    {
+      "index": 79,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "96ba882076f8423701028ce274482807143643ee65e5882c0201ddcab21c22b7",
+      "new_block_sha256": "356e7ef990aa58737e5bd60fa56f40a82dffd6d8f12ca8b9ef5b5c4431dd3fca"
+    },
+    {
+      "index": 80,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "fcfb58519415d072bd32e626f3f26e5ebe8f09c2824612559741aa702350e177",
+      "new_block_sha256": "ad16f0f6adc10d056a485cc0a4d1335058f7cacc098085bb0252d14c090fcd6c"
+    },
+    {
+      "index": 81,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "6c7dfb46b1c76013e179e7be9117630d4166148082fb4333682be2b58eaecb94",
+      "new_block_sha256": "fc16a0be18fc6a91ed96962b7e004dea0bec2472310e02d4e95300fd444cf7e3"
+    },
+    {
+      "index": 82,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "6c7dfb46b1c76013e179e7be9117630d4166148082fb4333682be2b58eaecb94",
+      "new_block_sha256": "659d7c2028ba7f5fff3e7dbebcf44a026c4761775056cc9ec5bb8abb40716a9f"
+    },
+    {
+      "index": 83,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "960ad9865d7f8199550ba5272afcdbcf18d9be61d8a63f6d0c56d803d9f7add7",
+      "new_block_sha256": "5d605d3bd2081e73ac39825c3723f86b270666f706ddce60f3c623f40e378df3"
+    },
+    {
+      "index": 84,
+      "study": "small-set",
+      "heading": "Nice to have",
+      "old_nearest_block_sha256": "82c73fd1bf2b1004ec549f96d7820bdf97065f67dcaf5329b94bcaf30e615952",
+      "new_block_sha256": "92e8a0c3d4ea2d83b08ab1a0f0dddf6a88491d5f892e0d2b78fd19f6af579756"
+    }
+  ]
+}

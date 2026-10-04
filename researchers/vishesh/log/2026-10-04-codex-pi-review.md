@@ -169,3 +169,7 @@ Validation: checked local links and prior229-item coverage; lab.py check has0err
 ## Budget tiers
 
 Owner raised the generic cumulative experiment default fromUSD2 toUSD10 and authorizedUSD50 for promising studies. Updated sharedAGENTS/setup/operations/template and five local policy copies. The owning evidence-linked assessment selects the promising tier without new researcher review or redundant budget approval. Existing explicit study budgets remain baselines; qualifying studies may use the newUSD50 authorization. Preserve original spend/unknown reservations and smaller frozen stage caps. Policy update changes no live ledger or running attempt; next operators reconcile and version their budget contracts before dispatch. No runs launched.
+
+## Revised full-review incorporation
+
+The supplied HTML changed from2a059924 to530258ee: same229ranked items,10edited paragraphs,85changed/new extracted prose blocks including duplicate synthesis and source fact-check footer. Preserved stable IDs/previous hashes, updated all15study proposals, and added shared count/contract/baseline-fitting checks. Saved-data audit reproduces Quorum8peer fixtures, ExternalInfluence50-row denominators, Phantom call/cost ratios and D2standalone counts. Confirmed Poietic declared/generated S0range mismatch; successor contract needs reconciliation, frozen history unchanged. Incorporated completedD0-02readiness failure. No model calls or launch.

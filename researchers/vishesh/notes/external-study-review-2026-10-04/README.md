@@ -1,5 +1,7 @@
 # Experiment review: decisions and proposed fixes
 
+**Updated source incorporated:** [Revision 2](REVISION-2.md) reconciles the revised HTML: 229 stable recommendation IDs, 10 edited source paragraphs, corrected denominators and a confirmed Poietic spec/code mismatch. The original snapshot below is retained; the linked latest additions govern interpretation of newer evidence.
+
 **229 ranked recommendations reconciled into 15 study proposal files.** The source has 13 lanes; its final lane contains three distinct studies. Every numbered §15 item has a disposition, proposed change and acceptance evidence in the [machine-readable register](recommendations.json). The per-study notes also address §6 gaps; the portfolio recommendations are below.
 
 This is a proposal package, not a claim that 229 fixes are implemented. The useful order is: correct interpretation from saved evidence; repair the smallest demonstrated defect; then run only a diagnostic or broader study that can change a decision. Valid adverse results remain valid results.
@@ -89,7 +91,7 @@ A broader main experiment, new research question, increased budget or unauthoriz
 
 ## Provenance and limits
 
-Source: owner-supplied `swarm-lab-experiment-review-2026-10-04.html`, built 2026-10-04, reviewing repository `ef269aa9`. SHA-256: `2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5`.
+Original source: owner-supplied `swarm-lab-experiment-review-2026-10-04.html`, built 2026-10-04, reviewing repository `ef269aa9`. SHA-256: `2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5`.
 
 Reconciliation baseline: `089802a3`; each study links the newer native or design evidence used. This is a timestamped assessment, not a live run monitor. The 13 source sections map to 15 study files; both Antsy eras and both influence lineages remain distinct. The source’s ambiguous owner naming is not adopted; these are Vishesh-owned studies.
 

@@ -1,6 +1,6 @@
 # Optimal Swarm Size: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -58,3 +58,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [O2 plan](outage-prototype/O2-PLAN.md) · [O1 post-mortem](reviews/outage-o1-post.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+The corrected reservation comparison distinguishes dollar exposure from context-token multipliers. Keep expected cost, reserved maximum and settled/unknown charges separate; enforce request/output limits before reducing reservations. Episode/cycle labels do not substitute for root counts. O2 already supplies a competent-ownership comparison and equal tool capacity; the old recommendation to expand a tiny arithmetic pilot does not replace that plan.
+
+Evidence / current record: [outage-prototype/O2-PLAN.md](outage-prototype/O2-PLAN.md). No new native result or launch authority is implied by this addition.

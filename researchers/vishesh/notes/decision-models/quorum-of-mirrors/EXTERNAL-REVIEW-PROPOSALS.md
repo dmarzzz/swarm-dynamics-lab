@@ -1,6 +1,6 @@
 # Quorum of Mirrors: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
@@ -25,7 +25,7 @@ These are proposed changes, not implementation receipts, preregistration or laun
 | 7. Resolve prompt contradiction and deviations | Accept | Add a dated S0/Q1 deviation audit; compare planned ordering/root IDs to manifests. Freeze one self-review evidence contract before any successor. |
 | 8. Run an actual committee | Defer | First demonstrate a useful single-reader task and paired controls; then specify barriered judge states, public message ancestry and pooled/single controls. PQ-04 is not committee qualification. |
 | 9. Dependence and noise placebo | Adapt | Measure paired errors across genuinely repeated judges and a length-matched irrelevant-context arm; report raw joint errors. Kish effective-N is conditional on its correlation assumptions, not a universal statistic. |
-| 10. Report historical conformity cases | Accept | Recompute the four scripted-peer cases from saved inputs/outputs and show own-prior, report-majority and peer-majority jointly. Label confounded, exploratory and n=4. |
+| 10. Report historical conformity cases | Accept | Retrospective count check confirms all eight peer fixtures follow the supplied wrong peer majority; four are graded full-lineage cases. The correct focal prior was authored, not an earlier native decision. Report the observation without claiming causally identified conformity; copying and prior context remain confounded. |
 | 11. Draw provenance and round evolution | Accept | Render report-to-root collapse from actual inputs; add judge round trajectories only when native committee events exist. Show DEFER and unavailable separately. |
 | 12. Ground a forensic example | Adapt | Use an authenticated historical report or permitted real trace; label illustrative reconstruction separately from sampled native evidence and avoid extrapolating a single case. |
 | 13. Test fallible lineage labels | Accept | Cross receipt-verifiable ancestry with misleading labels and unequal reliability; demonstrate a label-trusting baseline fails while same-information verified aggregation succeeds. |
@@ -61,3 +61,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [R1 plan](packet-study/robustness-v1/PLAN.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../../external-study-review-2026-10-04/REVISION-2.md).
+
+The revised source expands its peer observation from 4/4 to 8/8. The saved-data check confirms eight native choices matching the supplied wrong peer majority, including four graded full-lineage cases. **The focal prior is an authored fixture, not an observed earlier model judgment.** Partial-lineage cases remain ungraded. Use the two denominators and preserve the copying/prior-context confound; R1 remains the current prospective packet design. Source reservation arithmetic is corrected, but a measured average still cannot replace an enforced maximum.
+
+Evidence / current record: [analysis/pi-cycle/RESULTS.md](analysis/pi-cycle/RESULTS.md). No new native result or launch authority is implied by this addition.

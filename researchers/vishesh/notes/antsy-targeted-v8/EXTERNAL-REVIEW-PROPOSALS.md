@@ -1,6 +1,6 @@
 # Antsy v6–v8: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -57,3 +57,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [40-reader panel plan](haiku-panel-v1/PLAN.md) · [v8 results](RESULTS.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+The source clarifies that v8’s11/19→13/19 parser improvement is a retrospective zero-new-call replay on already-inspected development receipts. It is not a new held-out replication or measured zero total resource cost. V7 failed the per-family qualification floor; unequal competent readers do not isolate diversity. Preserve coverage-only versus wrong-primary repair capabilities explicitly. The approved 40-reader panel remains a different prospective instrument.
+
+Evidence / current record: [haiku-panel-v1/PLAN.md](haiku-panel-v1/PLAN.md). No new native result or launch authority is implied by this addition.

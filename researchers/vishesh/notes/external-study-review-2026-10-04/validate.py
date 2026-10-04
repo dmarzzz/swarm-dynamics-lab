@@ -7,7 +7,12 @@ HERE = Path(__file__).resolve().parent
 ROOT = HERE.parents[3]
 manifest = json.loads((HERE / 'recommendations.json').read_text())
 coverage = json.loads((HERE / 'coverage.json').read_text())
+revision = json.loads((HERE / 'source-revision-2.json').read_text())
+assert manifest['source_sha256'] == coverage['source_sha256'] == revision['new_source_sha256']
+assert len(revision['changed_ranked_items']) == coverage['changed_ranked_recommendations'] == 10
+assert len(revision['blocks']) == revision['extracted_changed_or_added_blocks'] == 85
 rows = manifest['recommendations']
+assert {r['id'] for r in rows if 'previous_source_paragraph_sha256' in r} == set(revision['changed_ranked_items'])
 assert len(rows) == coverage['ranked_recommendations'] == 229
 assert len(manifest['studies']) == coverage['study_documents'] == 15
 assert len({r['id'] for r in rows}) == len(rows)
@@ -24,7 +29,7 @@ for s in manifest['studies']:
     for r in items:
         assert re.fullmatch('[0-9a-f]{64}', r['source_paragraph_sha256'])
         assert r['recommendation'] in text and r['disposition'] in text
-for p in [HERE/'README.md', *[ROOT/s['path'] for s in manifest['studies']]]:
+for p in [HERE/'README.md', HERE/'REVISION-2.md', *[ROOT/s['path'] for s in manifest['studies']]]:
     for dest in re.findall(r'\]\(([^)]+)\)', p.read_text()):
         if '://' in dest or dest.startswith('#'):
             continue

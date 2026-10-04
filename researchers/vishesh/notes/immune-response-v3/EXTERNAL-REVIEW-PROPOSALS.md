@@ -1,6 +1,6 @@
 # Immune Response: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -56,3 +56,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [A8 post-mortem](freshness-study/reviews/a8-post.md) · [A8 native replay](freshness-study/reviews/a8-replay.gif).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+The historical four-episode/24-call comparator is the prespecified **solo retain-memory control**, not another A1 team cohort. Separate that comparison from later response-contract repairs, A8 capability and the current grounding/advisor-isolation study. A rendered replay can contain inline data even when other replay files are templates: assess each artifact rather than label the whole lineage empty. A source assertion about mathematical information equivalence does not rule out a bounded model’s presentation effect.
+
+Evidence / current record: [freshness-study/GROUNDING-PLAN.md](freshness-study/GROUNDING-PLAN.md). No new native result or launch authority is implied by this addition.

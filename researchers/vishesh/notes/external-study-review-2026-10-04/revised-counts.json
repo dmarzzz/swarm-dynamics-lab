@@ -1,0 +1,133 @@
+{
+  "method": "Owning saved-data arithmetic check; not independent replication or review of private traces.",
+  "inputs": [
+    {
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/spec/QM-Q1-02.json",
+      "sha256": "8a409a41d02b68ece25a81eccf7abe119f70d5ccfc0726af2072d82b25c5888b"
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/receipts.jsonl",
+      "sha256": "0220dabf39949dc92695dc135dfcfeab64d7fc3ec42a856472bb04908d0c0975"
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/local-agents/evidence/S1/comparison.json",
+      "sha256": "5c1cb508b377bfe194fdeb4fcbcb46d9bf652d1dae6d467cde32a1515bfe94ad"
+    },
+    {
+      "path": "researchers/vishesh/notes/phantom-coast/pc2/results/S1-A1-summary.json",
+      "sha256": "7ed2ed26d6b822432b9eb8ba7024f08ff9998016faa8db030c05ab13b450be05"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D2.md",
+      "sha256": "84e5649ee4b415d26194f1a0b76af6498ae6ba5989a4ee12cff4e6b0cb1eba21"
+    }
+  ],
+  "quorum_peer_rows": [
+    {
+      "id": "QM-Q1-02-008",
+      "lineage": "partial",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-011",
+      "lineage": "partial",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-003",
+      "lineage": "full",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-002",
+      "lineage": "full",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-010",
+      "lineage": "partial",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-009",
+      "lineage": "partial",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-000",
+      "lineage": "full",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    },
+    {
+      "id": "QM-Q1-02-001",
+      "lineage": "full",
+      "focal_matches_generator": true,
+      "three_others_oppose": true,
+      "native_opposes_supplied_focal": true,
+      "native_matches_peer_choice": true
+    }
+  ],
+  "quorum_limit": "Prior choices were authored fixtures, not a measured earlier native turn. Partial-lineage cases remain ungraded; report copying and peer majority are confounded.",
+  "external_influence_v2": {
+    "clean_correct": 13,
+    "clean_assigned": 15,
+    "clean_plus_instruction_correct": 18,
+    "clean_plus_instruction_assigned": 20,
+    "procurement_support_exactly_075": 15,
+    "procurement_assigned": 20,
+    "unchanged_target_vote_vectors": 50,
+    "assigned": 50
+  },
+  "phantom_pc2": {
+    "team": {
+      "calls": 1280,
+      "valid": 1279,
+      "known_cost_usd": 0.127660638,
+      "input_tokens": 3039539
+    },
+    "uniform": {
+      "calls": 96,
+      "valid": 96,
+      "known_cost_usd": 0.02161152,
+      "input_tokens": 514560
+    },
+    "call_ratio": 13.333333333333334,
+    "known_cost_ratio": 5.907064287935324,
+    "limit": "One team call invalid with unresolved charge; cost ratio uses known spend, not settled total cost."
+  },
+  "influence_d2_standalone": {
+    "Team with ballots": {
+      "acceptable": 2,
+      "cases": 6,
+      "standalone_calls": 54,
+      "standalone_cost_usd": 0.139794
+    },
+    "Generalist": {
+      "acceptable": 5,
+      "cases": 6,
+      "standalone_calls": 24,
+      "standalone_cost_usd": 0.064474
+    }
+  }
+}

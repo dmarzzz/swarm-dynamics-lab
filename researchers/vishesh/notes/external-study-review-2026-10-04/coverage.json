@@ -1,5 +1,5 @@
 {
-  "source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+  "source_sha256": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
   "ranked_recommendations": 229,
   "study_documents": 15,
   "source_study_sections": 13,
@@ -30,5 +30,7 @@
     "heterogeneous": 11,
     "regrowth": 12,
     "village": 12
-  }
+  },
+  "previous_source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+  "changed_ranked_recommendations": 10
 }

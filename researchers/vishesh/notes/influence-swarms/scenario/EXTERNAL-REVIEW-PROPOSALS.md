@@ -1,6 +1,6 @@
 # Influence Scenario: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../../external-study-review-2026-10-04/README.md).
 
@@ -56,3 +56,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [D10 plan](NEXT-RUN-D10.md) · [staged 10/50 plan](scale-up/PLAN.md) · [D9 evidence](RESULTS-D9.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../../external-study-review-2026-10-04/REVISION-2.md).
+
+Verified D2’s generalist uses 24 standalone calls over 6 cases (4/case), versus team-with-ballots 54 (9/case); acceptable decisions 5/6 versus2/6. Costs are 0.064474 versus0.139794 USD. Both are reconstructed standalone alternatives with shared prefixes; actual collection is 108 calls, so their standalone totals must not be summed as spend. Use per-case and per-cohort units adjacent to every efficiency headline. Preserve the current D10/scale-up plan rather than reopening old diagnoses.
+
+Evidence / current record: [RESULTS-D2.md](RESULTS-D2.md). No new native result or launch authority is implied by this addition.

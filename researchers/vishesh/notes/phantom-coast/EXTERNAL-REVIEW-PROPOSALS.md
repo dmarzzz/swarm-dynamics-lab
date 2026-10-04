@@ -1,6 +1,6 @@
 # Phantom Coast: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -25,7 +25,7 @@ These are proposed changes, not implementation receipts, preregistration or laun
 | 7. Give messages explicit content | Defer | Retain message text, source and evidence basis in a content-bearing channel with a matched no-peer control; report provenance and exposure without claiming hidden beliefs. |
 | 8. Add noise or environmental change | Defer | Only add noise/change if it answers a practical sensing question; compare Bayesian/exact same-information controls rather than weakening the baseline to manufacture model headroom. |
 | 9. Replicate PC5 on another model | Defer | Keep the frozen fixtures and scoring; verify task-specific budget and served version. This estimates configuration transfer, not general reliability. |
-| 10. Publish cross-cohort negative findings | Accept | Create a cohort-separated cost/outcome table with cheapest matched comparator; no pooled effect across different interfaces and endpoints. |
+| 10. Publish cross-cohort negative findings | Accept | Report each cohort and its actual comparators separately. PC-2 uses 1,280 team versus 96 uniform calls (13.33x); known spend is USD0.127660638 versus0.02161152 (5.91x), with one unresolved team charge. Do not call this13x dollar cost or infer a comparator result for cohorts without that comparator. |
 | 11. Make audit add information | Accept | Propose a source audit or randomized still-unobserved cell; state allocation timing and inspect redundancy from traces before testing its benefit. |
 | 12. Justify abstention loss | Adapt | Keep historical sensitivity tables; tie a successor's primary loss to a stated use case. No retrospective choice of a favorable penalty. |
 | 13. Keep durable visuals | Accept | Archive render inputs and an offline figure with unit counts and uncertainty or explicit descriptive-only scope; validate metrics against source data. |
@@ -57,3 +57,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [PC10 assessment](pc10/QUALITY.json) · [PC9 assessment](pc9/reviews/Q0-A1-QUALITY.json).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+The revised cost comparison is now correctly separated: PC-2 team 1,280 calls versus uniform 96 is 13.33 x; known spend 0.127660638/0.02161152 USD is 5.91 x. One team charge remains unresolved, so this is not a settled all-cost ratio. Compare only cohorts that actually ran the relevant baseline. Source claims that two geometry families imply an exact effective n of 2 remain qualitative scope judgments, not an estimated design effect.
+
+Evidence / current record: [pc2/results/S1-A1-summary.json](pc2/results/S1-A1-summary.json). No new native result or launch authority is implied by this addition.

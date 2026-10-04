@@ -1,5 +1,7 @@
 # Heterogeneous Swarms question bank: external-review proposals
 
+**Latest addition:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks).
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** This is a research/design bank, not an empirical result. Poietic is a descendant with its own current plan; the appeal ranking does not provide evidence for its mechanism.
@@ -33,3 +35,11 @@ Before a diversity study, distinguish model family, competence, evidence allocat
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+Correct portfolio categories rather than infer significance from them: Poietic and Regrowth are multi-model by construction, while unchanged model snapshots and unreplicated task families remain separate limitations. Mixed-model presence, endpoint advantage and behavioral diversity are different claims. A questionable decimal ranking should be replaced by a useful-question/feasible-test decision, without silently reprioritizing an approved descendant.
+
+Evidence / current record: [README.md](README.md). No new native result or launch authority is implied by this addition.

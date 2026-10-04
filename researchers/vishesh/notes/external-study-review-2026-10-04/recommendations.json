@@ -1,6 +1,6 @@
 {
   "source_file": "swarm-lab-experiment-review-2026-10-04.html",
-  "source_sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+  "source_sha256": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
   "source_repo_cutoff": "ef269aa9",
   "reviewed_repo_baseline": "089802a3",
   "method": "Reconcile every numbered section-15 recommendation, section-6 gaps and portfolio proposals with current owned-study records. Source assessments are allegations/recommendations, not independent reproductions performed by this incorporation. Preserve scope of current native results. Source file is owner-supplied and retained locally; no raw corpus, owner prompt or private access context published.",
@@ -48,7 +48,7 @@
       "title": "Optimal Swarm Size",
       "path": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md",
       "current": "Q-A7 and outage O1 are complete. Q-A7 input binding improved arithmetic but failed joint provenance reliability; no larger-N promotion is supported. O1 also exposed duplicate ownership and contraction in its stable control.",
-      "sample": "Q-A7: two roots × two structures × two input conditions = eight episodes/144 calls. O1 is a separate one-template qualification/demo.",
+      "sample": "Q-A7: two roots \u00d7 two structures \u00d7 two input conditions = eight episodes/144 calls. O1 is a separate one-template qualification/demo.",
       "evidence": [
         "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-post.md",
         "researchers/vishesh/notes/optimal-swarm-size/reviews/outage-o1-post.md"
@@ -109,7 +109,7 @@
       "title": "Healing Helping Hands",
       "path": "researchers/vishesh/notes/healing-helping-hands/EXTERNAL-REVIEW-PROPOSALS.md",
       "current": "C5 finished after the review cutoff. Main agreement routing scored 198/432 versus Jev 432/432 and matched random 193/432. It accepted 234 wrong agreements and referred only 23 cases; the safety criterion failed. FINISH / PARK the current rule.",
-      "sample": "C5 S1: 12 authored semantic families × 36 nested instances, 432 cases/1,296 calls. S0: 60 cases/180 calls, separate qualification. These are not 432 independent language populations.",
+      "sample": "C5 S1: 12 authored semantic families \u00d7 36 nested instances, 432 cases/1,296 calls. S0: 60 cases/180 calls, separate qualification. These are not 432 independent language populations.",
       "evidence": [
         "researchers/vishesh/notes/healing-helping-hands/c5/S1-POST.md",
         "researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md"
@@ -118,19 +118,19 @@
     },
     {
       "id": "antsy-v1-v5",
-      "title": "Antsy v1–v5",
+      "title": "Antsy v1\u2013v5",
       "path": "researchers/vishesh/notes/antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "V5 D0 is a fixed-history estimator reanalysis; Laya’s corrected 57.78% exceeds the no-check 56.78% on that saved tape. It is not a fresh committee evaluation. V5 D1’s planner also changes the check menu.",
-      "sample": "V4/V5 use 70 previously evaluated receipts, nested policy histories and unknown vendor/layout dependence. V5’s 1,400 condition rows are not independent observations.",
+      "current": "V5 D0 is a fixed-history estimator reanalysis; Laya\u2019s corrected 57.78% exceeds the no-check 56.78% on that saved tape. It is not a fresh committee evaluation. V5 D1\u2019s planner also changes the check menu.",
+      "sample": "V4/V5 use 70 previously evaluated receipts, nested policy histories and unknown vendor/layout dependence. V5\u2019s 1,400 condition rows are not independent observations.",
       "evidence": [
         "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
         "researchers/vishesh/notes/antsy-verification-v5/RESULTS.md"
       ],
-      "next": "Add a dated estimator-conditional interpretation to v4 and a concise lineage closeout. Preserve v5’s stronger planner as a comparator, without reopening a broad model committee sweep."
+      "next": "Add a dated estimator-conditional interpretation to v4 and a concise lineage closeout. Preserve v5\u2019s stronger planner as a comparator, without reopening a broad model committee sweep."
     },
     {
       "id": "antsy-v6-v8",
-      "title": "Antsy v6–v8",
+      "title": "Antsy v6\u2013v8",
       "path": "researchers/vishesh/notes/antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md",
       "current": "Trace-repair-v2 reproduced eight saved outputs across three receipts and repaired one primary quantity-label exclusion; the checker still abstained on the same difficult receipt. This supports parser diagnosis, not another reader deployment.",
       "sample": "V6: 50 receipts, 47 scorable. V7: 20 qualification receipts, 19 scorable. V8 Q0/D1 are interrupted tool attempts; repeated outputs are not new receipt samples.",
@@ -146,7 +146,7 @@
       "title": "Poietic Agents",
       "path": "researchers/vishesh/notes/poietic-agents/EXTERNAL-REVIEW-PROPOSALS.md",
       "current": "D0-02 is an approved 36-call interface diagnostic after the fence repair, with infrastructure admission handled by the owning task. It is not a full differentiation efficacy study.",
-      "sample": "D0-02 proposes three roots × three interfaces × four dependent actions; the mixed Jev/chat interfaces cannot support a fair model ranking. Historical 40 calls and original cumulative cap remain.",
+      "sample": "D0-02 proposes three roots \u00d7 three interfaces \u00d7 four dependent actions; the mixed Jev/chat interfaces cannot support a fair model ranking. Historical 40 calls and original cumulative cap remain.",
       "evidence": [
         "researchers/vishesh/notes/poietic-agents/D0-02-PLAN.md",
         "researchers/vishesh/notes/poietic-agents/AMENDMENTS.md"
@@ -170,7 +170,7 @@
       "title": "Regrowth 200",
       "path": "researchers/vishesh/notes/regrowth-200/EXTERNAL-REVIEW-PROPOSALS.md",
       "current": "The historical pilot uses one fixed map and bundled door/memory damage. The review reports a mismatch between stored-certificate validity and current next-hop reachability; preserve its retrospective-registration failure.",
-      "sample": "One map × three architectures × damage/control gives six condition trajectories, 200 state identities and 199 deciding cells; no replicated map estimate.",
+      "sample": "One map \u00d7 three architectures \u00d7 damage/control gives six condition trajectories, 200 state identities and 199 deciding cells; no replicated map estimate.",
       "evidence": [
         "researchers/vishesh/notes/regrowth-200/README.md",
         "researchers/vishesh/notes/regrowth-200/DESIGN-TRANSFER.md"
@@ -181,7 +181,7 @@
       "id": "village",
       "title": "AI Village replay and Telephone transfer",
       "path": "researchers/vishesh/notes/ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md",
-      "current": "Telephone A0 and real-data V0 now have separate plans. V0 has eight inspected goal-window statements and 25 meaning targets from complete pinned tables; this supersedes the review’s prefix-only acquisition status but is not a historical visibility audit.",
+      "current": "Telephone A0 and real-data V0 now have separate plans. V0 has eight inspected goal-window statements and 25 meaning targets from complete pinned tables; this supersedes the review\u2019s prefix-only acquisition status but is not a historical visibility audit.",
       "sample": "V0: eight inspected development windows, not a sealed 24-cluster evaluation. No native V0 result is asserted here; authored A0 and real-source V0 remain separate cohorts.",
       "evidence": [
         "researchers/vishesh/notes/ai-village-replay-2026-10-04/README.md",
@@ -189,7 +189,7 @@
         "researchers/vishesh/notes/telephone/native/v0/PLAN.md",
         "researchers/vishesh/notes/telephone/native/v0/PRE-RUN.md"
       ],
-      "next": "Keep the approved A0/V0 scopes distinct and use the current V0 yield/transfer assessment. Propose a zero-model closure casefile as an additional analysis, not a silent replacement of the owner’s handoff study."
+      "next": "Keep the approved A0/V0 scopes distinct and use the current V0 yield/transfer assessment. Propose a zero-model closure casefile as an additional analysis, not a silent replacement of the owner\u2019s handoff study."
     }
   ],
   "recommendations": [
@@ -231,22 +231,24 @@
       "source_section": "quorum-of-mirrors",
       "source_substudy": null,
       "source_item": 4,
-      "source_paragraph_sha256": "9593a36a33c6935f04790d15411ef24c4c9d7fe936d8428201143691c0fb9972",
+      "source_paragraph_sha256": "118d678bbcdb9d4507d461463a6f26b19e64caca298d8972f9c965e47a806b1a",
       "disposition": "Adapt",
       "recommendation": "Repair reservation derivation",
       "proposal_and_acceptance": "Use a enforceable input/output/token envelope and current tariffs; measured mean plus margin alone cannot replace a hard upper bound or release unknown historical charges.",
-      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "9593a36a33c6935f04790d15411ef24c4c9d7fe936d8428201143691c0fb9972"
     },
     {
       "id": "quorum-of-mirrors-05",
       "source_section": "quorum-of-mirrors",
       "source_substudy": null,
       "source_item": 5,
-      "source_paragraph_sha256": "eb836b632ae34cb0b5e9d60b2b887ab0ff9dd07721e331409b035d906b865d0d",
+      "source_paragraph_sha256": "beebb60f242f698e9ed6a86f9d3a4988bb4eed2996be9c979b33b5e8200b9228",
       "disposition": "Superseded in part",
       "recommendation": "Second-model comparison",
       "proposal_and_acceptance": "Later Sonnet packet studies exist, but changed fixtures are not matched replication of Jev Q1. A frozen two-model panel needs its own plan and reconciled cost.",
-      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "eb836b632ae34cb0b5e9d60b2b887ab0ff9dd07721e331409b035d906b865d0d"
     },
     {
       "id": "quorum-of-mirrors-06",
@@ -297,11 +299,12 @@
       "source_section": "quorum-of-mirrors",
       "source_substudy": null,
       "source_item": 10,
-      "source_paragraph_sha256": "fb18220bda9c71ba84b192959387a5915071fa545be1bd00cf16fba1057bc3cf",
+      "source_paragraph_sha256": "09ae837999624bd048f7242a623a0e28fbb02824d541abb4f083fc69f15366f9",
       "disposition": "Accept",
       "recommendation": "Report historical conformity cases",
-      "proposal_and_acceptance": "Recompute the four scripted-peer cases from saved inputs/outputs and show own-prior, report-majority and peer-majority jointly. Label confounded, exploratory and n=4.",
-      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md"
+      "proposal_and_acceptance": "Retrospective count check confirms all eight peer fixtures follow the supplied wrong peer majority; four are graded full-lineage cases. The correct focal prior was authored, not an earlier native decision. Report the observation without claiming causally identified conformity; copying and prior context remain confounded.",
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "fb18220bda9c71ba84b192959387a5915071fa545be1bd00cf16fba1057bc3cf"
     },
     {
       "id": "quorum-of-mirrors-11",
@@ -363,22 +366,24 @@
       "source_section": "quorum-of-mirrors",
       "source_substudy": null,
       "source_item": 16,
-      "source_paragraph_sha256": "7b307904c37309b625998ce46e39e3d8dd7deabd4103d4448852e21df49d3707",
+      "source_paragraph_sha256": "d63281c218ec67e945c4d13944ea84c83a0cd76b6eb95b4af4a3ee490c63197b",
       "disposition": "Accept",
       "recommendation": "Consolidate current navigation",
       "proposal_and_acceptance": "One current status/claim/next-action block should link archived cohorts; do not discard original attempt records or overwrite the owning task's active status.",
-      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "7b307904c37309b625998ce46e39e3d8dd7deabd4103d4448852e21df49d3707"
     },
     {
       "id": "quorum-of-mirrors-17",
       "source_section": "quorum-of-mirrors",
       "source_substudy": null,
       "source_item": 17,
-      "source_paragraph_sha256": "65f1f7082bca6334102caf24b28da07d554ac654e691041dfa63a818dd4982bc",
+      "source_paragraph_sha256": "bdb9b9a2f9496634245d930bab25997e16d54946d4d18f99570bc50012bbef00",
       "disposition": "Accept",
       "recommendation": "Link adjacent surveys",
       "proposal_and_acceptance": "Add provenance, sybil and effective-sample-size survey links with a one-sentence relevance and explicit unread methods where applicable.",
-      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "65f1f7082bca6334102caf24b28da07d554ac654e691041dfa63a818dd4982bc"
     },
     {
       "id": "quorum-of-mirrors-18",
@@ -462,11 +467,12 @@
       "source_section": "phantom-coast",
       "source_substudy": null,
       "source_item": 5,
-      "source_paragraph_sha256": "5dbc94602c916431cfe17dbf5eecb32ca8cc16324289bf5f6c9a3621652fdb18",
+      "source_paragraph_sha256": "2a2fb844533323467415f39b8bf3ab3359b354ae52372741eae3d669f8d31a06",
       "disposition": "Adapt",
       "recommendation": "Separate sampling from structural breadth",
       "proposal_and_acceptance": "Report roots nested within the two geometry families. Independent random placements remain conditional replicates; do not mechanically relabel all roots as n=2.",
-      "document": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "5dbc94602c916431cfe17dbf5eecb32ca8cc16324289bf5f6c9a3621652fdb18"
     },
     {
       "id": "phantom-coast-06",
@@ -517,11 +523,12 @@
       "source_section": "phantom-coast",
       "source_substudy": null,
       "source_item": 10,
-      "source_paragraph_sha256": "a5c1ff22eb7bf674501050b79a248a3911bc26a5e6d4fb006d5aaec27d04e735",
+      "source_paragraph_sha256": "99c4da0c3398f2b13bafafdeb2be216a3d29f1739b7c0ee4d43576f1b67594b1",
       "disposition": "Accept",
       "recommendation": "Publish cross-cohort negative findings",
-      "proposal_and_acceptance": "Create a cohort-separated cost/outcome table with cheapest matched comparator; no pooled effect across different interfaces and endpoints.",
-      "document": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md"
+      "proposal_and_acceptance": "Report each cohort and its actual comparators separately. PC-2 uses 1,280 team versus 96 uniform calls (13.33x); known spend is USD0.127660638 versus0.02161152 (5.91x), with one unresolved team charge. Do not call this13x dollar cost or infer a comparator result for cohorts without that comparator.",
+      "document": "researchers/vishesh/notes/phantom-coast/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "a5c1ff22eb7bf674501050b79a248a3911bc26a5e6d4fb006d5aaec27d04e735"
     },
     {
       "id": "phantom-coast-11",
@@ -608,7 +615,7 @@
       "source_paragraph_sha256": "783d15a833c9aef53cb7421c164db3b76fca3428eb4a1af7e6207f3e709dc46e",
       "disposition": "Accept",
       "recommendation": "Add lexical alternative explanation",
-      "proposal_and_acceptance": "Reproduce phrasing × direction × target × response cross-tab; mark these factors confounded and refrain from attributing the four misses to clock alone.",
+      "proposal_and_acceptance": "Reproduce phrasing \u00d7 direction \u00d7 target \u00d7 response cross-tab; mark these factors confounded and refrain from attributing the four misses to clock alone.",
       "document": "researchers/vishesh/notes/dissent/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -795,7 +802,7 @@
       "source_paragraph_sha256": "7cc43778e33d1ccf36945f8a620739322a7a097389442d0aa5fb42b8445da57c",
       "disposition": "Adapt",
       "recommendation": "Calibrate before freezing evaluation",
-      "proposal_and_acceptance": "Use a development-only measurability screen tied to the chosen endpoint; preserve easy/hard controls and historical results. A universal 30–80% band is not a scientific law.",
+      "proposal_and_acceptance": "Use a development-only measurability screen tied to the chosen endpoint; preserve easy/hard controls and historical results. A universal 30\u201380% band is not a scientific law.",
       "document": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -814,11 +821,12 @@
       "source_section": "optimal-swarm-size",
       "source_substudy": null,
       "source_item": 6,
-      "source_paragraph_sha256": "2c05982d23a2a3763a4f20832b1f43b0a7df35dd5f4127ea30388315e09b4a64",
+      "source_paragraph_sha256": "6d684bee28850b1283175402a18f86cd863e1d8fe37cbdc08502dafb20777566",
       "disposition": "Adapt",
       "recommendation": "Bound costs from actual request construction",
       "proposal_and_acceptance": "Enforce context/output caps, framing overhead and current prices; a measured p99 cannot guarantee the hard cumulative spending cap.",
-      "document": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/optimal-swarm-size/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "2c05982d23a2a3763a4f20832b1f43b0a7df35dd5f4127ea30388315e09b4a64"
     },
     {
       "id": "optimal-swarm-size-07",
@@ -1015,7 +1023,7 @@
       "source_paragraph_sha256": "0436ad20bc080f139b995603c076d00bea12184e39d47f13afc609ebc182bc62",
       "disposition": "Adapt",
       "recommendation": "Carry interface limits into v1 interpretation",
-      "proposal_and_acceptance": "Cite D2 batching sensitivity as a plausible confound; its 8-case effect is not a calibrated noise band for v1’s 4-case batches and cannot be subtracted from v1.",
+      "proposal_and_acceptance": "Cite D2 batching sensitivity as a plausible confound; its 8-case effect is not a calibrated noise band for v1\u2019s 4-case batches and cannot be subtracted from v1.",
       "document": "researchers/vishesh/notes/swarm-of-theseus/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1026,7 +1034,7 @@
       "source_paragraph_sha256": "8a2a0d17b259846fad24c77a16f30ba9904e3eb1c1eb0f4be1c8ae90a97b95f5",
       "disposition": "Defer",
       "recommendation": "Test turnover-by-change interaction",
-      "proposal_and_acceptance": "A future design crosses founders/partial/full replacement with stable/changed rule; recalculate cells correctly: three turnover levels × two change levels, not the review’s four-arm estimate.",
+      "proposal_and_acceptance": "A future design crosses founders/partial/full replacement with stable/changed rule; recalculate cells correctly: three turnover levels \u00d7 two change levels, not the review\u2019s four-arm estimate.",
       "document": "researchers/vishesh/notes/swarm-of-theseus/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1136,7 +1144,7 @@
       "source_paragraph_sha256": "e1d4556f6a13eb8b4813a2e8523026c5de6930b5b8c2207502f43111e94be2de",
       "disposition": "Accept",
       "recommendation": "Surface batching evidence",
-      "proposal_and_acceptance": "Publish a scoped engineering summary from D2’s actual paired records with format/semantic outcomes and uncertainty; do not pool it with acquisition or turnover.",
+      "proposal_and_acceptance": "Publish a scoped engineering summary from D2\u2019s actual paired records with format/semantic outcomes and uncertainty; do not pool it with acquisition or turnover.",
       "document": "researchers/vishesh/notes/swarm-of-theseus/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1257,7 +1265,7 @@
       "source_paragraph_sha256": "8b1acb6e720e7ed8cdbe81949a84bfc0825c055fd140bba9ebec5761ca84a369",
       "disposition": "Adapt",
       "recommendation": "Scope tiny screens honestly",
-      "proposal_and_acceptance": "Report each paired difference and endpoint range at n=1 per case; more roots require a precision plan, not the review’s unsupported universal five-root rule.",
+      "proposal_and_acceptance": "Report each paired difference and endpoint range at n=1 per case; more roots require a precision plan, not the review\u2019s unsupported universal five-root rule.",
       "document": "researchers/vishesh/notes/immune-response-v3/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1573,11 +1581,12 @@
       "source_section": "external-influence-v2",
       "source_substudy": null,
       "source_item": 10,
-      "source_paragraph_sha256": "0638145ff38fe615438e6c247dd51d73908a2eae23003f69b00c1e4e3c3ae9b2",
+      "source_paragraph_sha256": "b8ae07ba1d506a352d18fc23e231bc450678686f27a811dcf680bf771eb5009c",
       "disposition": "Accept",
       "recommendation": "Improve document realism",
-      "proposal_and_acceptance": "Add independently authored dated records, hedging, irrelevant text and realistic price precision; preserve an arithmetic-only control to separate trust from numeric errors.",
-      "document": "researchers/vishesh/notes/external-influence-v2/EXTERNAL-REVIEW-PROPOSALS.md"
+      "proposal_and_acceptance": "Construct document-shaped evidence with independently calculated field references and matched substance/length; retain structured controls. Saved-row checks find citation_support=.75 in15/20 hosted procurement outcomes, not14/15; clean13/15 and clean-plus-instruction18/20 are separate denominators.",
+      "document": "researchers/vishesh/notes/external-influence-v2/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "0638145ff38fe615438e6c247dd51d73908a2eae23003f69b00c1e4e3c3ae9b2"
     },
     {
       "id": "external-influence-v2-11",
@@ -1664,7 +1673,7 @@
       "source_paragraph_sha256": "45c59967b540461b2eb04bb4ab37f1af80d8fb0965e412cba941766a22faf7b7",
       "disposition": "Accept",
       "recommendation": "Add a same-input parser reference",
-      "proposal_and_acceptance": "Reproduce the reviewer’s claimed exact parser without gold leakage, score every family and disclose grammar scope; keep it outside frozen C5 arm definitions as retrospective analysis.",
+      "proposal_and_acceptance": "Reproduce same-input baselines without gold leakage. Label the review\u2019s claimed432/432 regex as generator-fitted; its untuned keyword baseline is reported336/432. Those are source-reported scores, not reproduced here. Freeze parser selection on development and test held-out semantic families; neither establishes general language competence.",
       "document": "researchers/vishesh/notes/healing-helping-hands/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1708,7 +1717,7 @@
       "source_paragraph_sha256": "fcae846836d30f0a68fd1f2e94488620e165bb72099e45f67c94a3d063375eaf",
       "disposition": "Adapt",
       "recommendation": "Use representative challenge, not a desired score",
-      "proposal_and_acceptance": "Create controlled semantic mistakes and natural-text labels with held-out families; do not tune evaluation cases until Jev hits a preferred 80–92% band.",
+      "proposal_and_acceptance": "Create controlled semantic mistakes and natural-text labels with held-out families; do not tune evaluation cases until Jev hits a preferred 80\u201392% band.",
       "document": "researchers/vishesh/notes/healing-helping-hands/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -1859,11 +1868,12 @@
       "source_section": "antsy-v1-v5",
       "source_substudy": null,
       "source_item": 5,
-      "source_paragraph_sha256": "e487fed663422da3aa7fc452d4758ad96d7193bc4fe160b57099ddc2fed48206",
+      "source_paragraph_sha256": "a27137ca4f10ebb905ca036da404946462509292665ea9536e03545c59ef90fa",
       "disposition": "Accept",
       "recommendation": "Archive measured figures",
       "proposal_and_acceptance": "Render existing saved data through the provenance workflow with units, interval scope and offline availability; do not overwrite historical artifacts.",
-      "document": "researchers/vishesh/notes/antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md"
+      "document": "researchers/vishesh/notes/antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md",
+      "previous_source_paragraph_sha256": "e487fed663422da3aa7fc452d4758ad96d7193bc4fe160b57099ddc2fed48206"
     },
     {
       "id": "antsy-v1-v5-06",
@@ -1873,7 +1883,7 @@
       "source_paragraph_sha256": "c5cef3b30b779bb67874ff2f35c19d074bc1e29aa441729ab25ec72f4cdf691b",
       "disposition": "Defer",
       "recommendation": "Compare planner and committee fairly",
-      "proposal_and_acceptance": "A fresh cohort uses the same repaired estimator/menu, matched check/call budget and scoped practical endpoint; 150–250 receipts is a proposal, not an established power calculation.",
+      "proposal_and_acceptance": "A fresh cohort uses the same repaired estimator/menu, matched check/call budget and scoped practical endpoint; 150\u2013250 receipts is a proposal, not an established power calculation.",
       "document": "researchers/vishesh/notes/antsy-verification-v5/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -2159,7 +2169,7 @@
       "source_paragraph_sha256": "647b37ee9cb32b8b9a0f94c96e244527457fb3944147096f0a60738a837f2bf6",
       "disposition": "Accept",
       "recommendation": "Write one lineage account",
-      "proposal_and_acceptance": "Summarize each version’s measured failures and limits without saying a small failed screen rules out an entire engine family; connect the current parser repair to the original quorum question.",
+      "proposal_and_acceptance": "Summarize each version\u2019s measured failures and limits without saying a small failed screen rules out an entire engine family; connect the current parser repair to the original quorum question.",
       "document": "researchers/vishesh/notes/antsy-targeted-v8/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -2236,7 +2246,7 @@
       "source_paragraph_sha256": "f6d18e194de7cf3fab1248ceffae64a946acd68a71e90e122d06106dd6b8ad1e",
       "disposition": "Accept",
       "recommendation": "Test actual structural decisions",
-      "proposal_and_acceptance": "Separate transcription, tool use and reasoning gates; align action correctness with executed effects and require choices on unseen observed conditions rather than dictated payloads.",
+      "proposal_and_acceptance": "Separate transcription, tool transactions and reasoning. In a successor, expose complete nested action/value schemas and prospectively distinguish literal equality from executable equivalence. Reconcile design.yaml S0 probes100\u2013147 versus qualification.py300\u2013347; assert declared/generated IDs and split disjointness before reuse. Preserve historical scores and manifests.",
       "document": "researchers/vishesh/notes/poietic-agents/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -2390,7 +2400,7 @@
       "source_paragraph_sha256": "7244b726da8359102106488757fa9580cd5ccdad0a4ec0adb5ce5937c53d7c05",
       "disposition": "Accept",
       "recommendation": "Share a minimal fixture where appropriate",
-      "proposal_and_acceptance": "Define dependency tasks, false-claim ancestry, disturbances and a verification queue; test each study’s mechanism separately instead of building a general platform first.",
+      "proposal_and_acceptance": "Define dependency tasks, false-claim ancestry, disturbances and a verification queue; test each study\u2019s mechanism separately instead of building a general platform first.",
       "document": "researchers/vishesh/notes/heterogeneous-swarms/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -2543,8 +2553,8 @@
       "source_item": 9,
       "source_paragraph_sha256": "71fc569bbdf53ed96fc37c141e2c217ff39b88ffd86578ca409e87a1d27cb245",
       "disposition": "Defer",
-      "recommendation": "Isolate a second model’s contribution",
-      "proposal_and_acceptance": "Randomize head placement, blind Qwen’s proposal and add an equal-compute extra-Qwen control if a substantive model-dependent task remains.",
+      "recommendation": "Isolate a second model\u2019s contribution",
+      "proposal_and_acceptance": "Randomize head placement, blind Qwen\u2019s proposal and add an equal-compute extra-Qwen control if a substantive model-dependent task remains.",
       "document": "researchers/vishesh/notes/regrowth-200/EXTERNAL-REVIEW-PROPOSALS.md"
     },
     {
@@ -2713,5 +2723,31 @@
       "document": "researchers/vishesh/notes/ai-village-replay-2026-10-04/EXTERNAL-REVIEW-PROPOSALS.md"
     }
   ],
-  "standing_policy": "Necessary bounded post-mortem diagnostics use current owner standing authority; broader main studies and new spending/access still require the corresponding authority. This package proposes changes and launches nothing."
+  "standing_policy": "Necessary bounded post-mortem diagnostics use current owner standing authority; broader main studies and new spending/access still require the corresponding authority. This package proposes changes and launches nothing.",
+  "source_revisions": [
+    {
+      "sha256": "2a059924d3368ee88bea5bc4b132643c39922078a8ce38efe85e5f3525593ce5",
+      "incorporation_commit": "59931b5e",
+      "ranked_items": 229
+    },
+    {
+      "sha256": "530258eeb80d5119c13ec808e46f7a83977bb2ffb1b14bd3bc2b5df2cdccde7f",
+      "ranked_items": 229,
+      "changed_ranked_items": [
+        "quorum-of-mirrors-04",
+        "quorum-of-mirrors-05",
+        "quorum-of-mirrors-10",
+        "quorum-of-mirrors-16",
+        "quorum-of-mirrors-17",
+        "phantom-coast-05",
+        "phantom-coast-10",
+        "optimal-swarm-size-06",
+        "external-influence-v2-10",
+        "antsy-v1-v5-05"
+      ],
+      "assessment": "REVISION-2.md",
+      "count_checks": "revised-counts.json",
+      "reconciled_repo_cutoff": "2c79e74b"
+    }
+  ]
 }

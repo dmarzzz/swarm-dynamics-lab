@@ -34,3 +34,13 @@ If a critical case check fails, improve or replace cases within the iteration an
 ## Compact case-evaluation record
 
 Keep this within the owned setup/design record or link one machine-readable assessment: intended claim/decision; case and root counts; source/rights and authoring; coverage; label evidence; baseline results; mutation/fault checks; split and contamination history; each dimension's status/evidence; case readiness; native qualification/admission; exact next action. Automated checks support, but do not replace, the owning task's scientific judgment.
+
+## Three checks exposed by the revised study review
+
+Use these within the existing dimensions, without adding another approval stage:
+
+- **Count at the same level.** Show per-case versus cohort calls, native actors versus scripted prior choices, opportunities versus roots, and observed versus planned outcomes. Compare dollars with dollars; shared-prefix standalone alternatives cannot be summed as actual collection spend.
+- **Validate the delivered contract.** Compare declared split/seed ranges with generated assignments and inspect effective requests after adapters. An upstream log containing a field does not prove the model received it. Include nested action/value schemas; define literal equality versus acceptable operational equivalence before grading.
+- **Disclose baseline fitting.** A parser fitted after inspecting test templates is a development result. Retain that useful ceiling reference, freeze selection before fresh evaluation, and test on appropriate held-out families before generalizing. Zero new model calls does not mean zero total resource cost.
+
+[Revision evidence and study applications](../../researchers/vishesh/notes/external-study-review-2026-10-04/REVISION-2.md) distinguish saved-data checks from source-reported claims.

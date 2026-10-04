@@ -1,6 +1,6 @@
 # Right Dissenter: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -56,3 +56,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [RD6 post-mortem](reopening/reviews/Q0-A2-POST.md) · [RD6 figure/report](reopening/REPORT.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+Use root, terminal opportunity, policy decision and stage as distinct units: original S1’s420 decisions are 60 opportunities drawn from 52 roots across 7 policies. Do not multiply 52 by7 and call it 420. The revised original ordering is gate 24/60, random 28/60, always-check 30/60, exact reference 32/60; the review’s earlier always-check/random order was wrong. Sensitivity rankings are loss-specific, not uniformly worst/second-worst. These are historical S1 facts; current RD6’s15/18 qualification and its separate freshness successor must not be pooled into them.
+
+Evidence / current record: [reopening/reviews/Q0-A2-POST.md](reopening/reviews/Q0-A2-POST.md). No new native result or launch authority is implied by this addition.

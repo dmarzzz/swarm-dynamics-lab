@@ -1,6 +1,6 @@
 # Healing Helping Hands: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -17,7 +17,7 @@ These are proposed changes, not implementation receipts, preregistration or laun
 | Review §15 item | Disposition | Proposed change / acceptance evidence |
 |---|---|---|
 | 1. Do not claim enum-order mathematical impossibility | Disagree in part | C5 observed 23/432 disagreements, contradicting guaranteed zero. Preserve actual data; any prompt/order/decoding diagnostic needs matched controls and cannot rewrite this cohort. |
-| 2. Add a same-input parser reference | Accept | Reproduce the reviewer’s claimed exact parser without gold leakage, score every family and disclose grammar scope; keep it outside frozen C5 arm definitions as retrospective analysis. |
+| 2. Add a same-input parser reference | Accept | Reproduce same-input baselines without gold leakage. Label the review’s claimed432/432 regex as generator-fitted; its untuned keyword baseline is reported336/432. Those are source-reported scores, not reproduced here. Freeze parser selection on development and test held-out semantic families; neither establishes general language competence. |
 | 3. Use value-of-information before future stages | Adapt | Do not add a disagreement threshold after S0/S1. A future staged plan can prespecify a minimum informative-error denominator; valid low-disagreement adverse results remain reportable. |
 | 4. Label implementation invariants | Accept | Separate signature/root matching and missing-lineage no-ops from empirical security performance; test plausible forged identities before a detection claim. |
 | 5. Match transport and inspect reachability | Accept | Calculate actual source-to-target distances and bandwidth/window constraints; compare equal ingress/egress budgets. Grid diameter alone does not make every peer outcome predetermined. |
@@ -56,3 +56,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [C5 main post-mortem](c5/S1-POST.md) · [C3 limits](composite/C3-S1-POST.md) · [C5 reporting](c5/reporting/README.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+The perfect 432/432 regex in the review was fitted to generator templates; the review now reports 336/432 for an untuned keyword rule. Keep that selection history and avoid treating a fitted ceiling as independently demonstrated general-language performance. Source inspection confirms C3’s Qwen prompt builder omitted the claim even though an upstream journal object could contain it. Check the **effective model request**, not only the logged pre-adapter object. These limitations do not erase C5’s independently recorded adverse routing outcome.
+
+Evidence / current record: [src/providers.py](src/providers.py). No new native result or launch authority is implied by this addition.

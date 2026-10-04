@@ -1,5 +1,7 @@
 # AI Village replay and Telephone transfer: external-review proposals
 
+**Latest addition:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks).
+
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
 **Current evidence:** Telephone A0 and real-data V0 now have separate plans. V0 has eight inspected goal-window statements and 25 meaning targets from complete pinned tables; this supersedes the review’s prefix-only acquisition status but is not a historical visibility audit.
@@ -34,3 +36,11 @@ Constructed-information replay can test memory transformations on real text but 
 ## Next-run construction
 
 Before implementing a material successor, the owning task writes the prospective plan with independent sampling units, development/qualification/evaluation separation, a smallest useful effect or precision rationale, the exact crossed factors, baseline access and budget matching, all-assigned missingness, per-agent initial context and memory/update rules, scored outputs and safe trace retention. Root count must follow the estimand; neither 24 roots nor a baseline success band is a universal rule. If the available budget only buys a diagnostic, label it a diagnostic. Specify forecast and enforceable maximum costs separately, carrying the original ledger. Necessary bounded post-mortem diagnostics use the current standing owner authority after a concrete prospective plan and ordinary admission checks; do not request a redundant per-diagnostic approval. A broader main study, new question, increased budget or unauthorized access still needs the corresponding decision. No new reviewer gate is added.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+SwarmTraces row volume does not establish usable actor/time fields or coherent episodes. The revised source explicitly requires a schema/join-yield check before selecting it for the common incident fixture. Record source rights, visibility, annotation and exclusions; a failed join is not a provider outage. Telephone’s existing A0/V0 scope remains distinct from an optional incident-closure casefile, and real source text is not automatically a historical propagation chain.
+
+Evidence / current record: [README.md](README.md). No new native result or launch authority is implied by this addition.

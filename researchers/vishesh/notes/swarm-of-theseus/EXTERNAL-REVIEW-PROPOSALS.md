@@ -1,6 +1,6 @@
 # Swarm of Theseus: external-review proposals
 
-**Latest planning addendum:** [Scale and evaluation](#top-10-review-scale-and-evaluation) reconciles newer plans/results; the earlier review snapshot below is retained for provenance.
+**Latest additions:** [Revised full-review corrections](#revised-full-review-corrections-and-next-use-checks) · [Scale and evaluation](#top-10-review-scale-and-evaluation). Earlier snapshots below retain their original evidence cutoffs.
 
 2026-10-04 · Owning assessment: vishesh/codex-pi-review. [Portfolio decisions and source provenance](../external-study-review-2026-10-04/README.md).
 
@@ -59,3 +59,11 @@ Before implementing a material successor, the owning task writes the prospective
 Evidence / current plans: [T1 authority/contract](execution-diagnostic/transmission/Q0-AUTHORIZED.md) · [collective plan](execution-diagnostic/transmission/COLLECTIVE-STUDY.md) · [A2 result](execution-diagnostic/RESULTS-A2.md).
 
 These additions guide the next assessment; they do not amend frozen packets, establish new results or raise evidence confidence. Current owning-task plans and applicable admission/authority govern dispatch.
+
+## Revised full review: corrections and next-use checks
+
+2026-10-04 · [Source revision and dispositions](../external-study-review-2026-10-04/REVISION-2.md).
+
+Use864 calls for v1 S1, not the entire historical v1 ledger; the source reports 1,697 across v1. D2’s344/384 and 373/384 are decisions, not 384 independent samples. A complete-rule saved-data reference is an offline comparison; resource-matched native singleton/archive-transplant arms require genuinely new calls and their own prospective scope. T1’s acquisition/teaching qualification is not a repeated turnover result.
+
+Evidence / current record: [execution-diagnostic/transmission/Q0-AUTHORIZED.md](execution-diagnostic/transmission/Q0-AUTHORIZED.md). No new native result or launch authority is implied by this addition.
