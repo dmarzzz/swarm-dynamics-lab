@@ -73,6 +73,13 @@ class StudyTests(unittest.TestCase):
         with self.assertRaises(ValueError):validate_solve({'answers':['x']},[])
         events=[];run_world(world('seed-bank',22),'both',ExactPolicy(),events.append)
         self.assertEqual(sum(e['kind']=='request' for e in events),24)
+    def test_case_ids_prevent_order_misalignment(self):
+        cases=world('seed-bank',22)['cases'][0]
+        raw={'work':[{'case_id':c['id'],'label':str(i)} for i,c in enumerate(cases)],'convention':'x','notebook':'x'}
+        raw['work'].reverse()
+        self.assertEqual(validate_solve(raw,cases)['answers'],['0','1','2','3'])
+        raw['work'][0]['case_id']=raw['work'][1]['case_id']
+        with self.assertRaises(ValueError):validate_solve(raw,cases)
     def test_preflight_fails_closed(self):
         with self.assertRaises(ValueError):validate({'id':'swarm-of-theseus','url':'https://example.com'},'','x'*80)
     def test_failure_denominator(self):

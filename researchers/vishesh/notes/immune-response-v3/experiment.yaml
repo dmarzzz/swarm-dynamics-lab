@@ -1,6 +1,6 @@
 {
   "id": "immune-response-v3",
-  "title": "Immune response: durable repair and collateral memory loss",
+  "title": "Immune Response",
   "description": "TLDR: Separate shared restoration, stale-record blocking and selective repair. Five scenario controls expose relapse, missing lineage and loss of legitimate learning. Scripted qualification passed; fresh model repair qualification waits for a dedicated machine.",
   "owner": "vishesh",
   "params": {

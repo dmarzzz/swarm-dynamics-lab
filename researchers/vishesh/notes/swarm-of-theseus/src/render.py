@@ -17,7 +17,7 @@ def image(row,path):
             x=425+f['step']*190;value=f[metric];d.rectangle((x,y0+150-value*130,x+95,y0+150),fill=color)
             d.text((x,y0+160),str(f['step']),fill='white',font=small)
             d.text((x,y0+120-value*130),str(round(value*100))+'%',fill=color,font=small)
-    d.text((60,850),'Steps 1-3: replace founders. Step 4: repair rule changes. '+row.get('status','running'),fill='white',font=small)
+    d.text((60,850),'Steps 1-3: replace founders. Step 4: repair-dock only changes rule. '+row.get('status','running'),fill='white',font=small)
     im.save(path)
 
 def replay(rows,path):
