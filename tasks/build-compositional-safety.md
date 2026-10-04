@@ -3,14 +3,19 @@ id: build-compositional-safety
 type: task
 title: Ship the compositional safety benchmark and qualification
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/patchwork-hypotheses
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/patchwork-hypotheses
 depends_on: []
-topics: [fork-merge-security, llm-agent-swarms, swarm-detection]
+topics:
+- fork-merge-security
+- llm-agent-swarms
+- swarm-detection
+claimed_at: 2026-10-04T02:30Z
+updated: 2026-10-04T02:30Z
 ---
 
 ## Goal
