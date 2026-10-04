@@ -1,0 +1,18 @@
+{
+  "attempt": "q-a7",
+  "status": "held_before_dispatch",
+  "planned": 8,
+  "assigned": 0,
+  "started": 0,
+  "terminal": 0,
+  "model_calls": 0,
+  "new_spend_microdollars": 0,
+  "original_ledger_calls": 631,
+  "settled_microdollars": 1810840,
+  "unresolved_hold_microdollars": 220480,
+  "exposure_microdollars": 2031320,
+  "cap_microdollars": 20000000,
+  "claim_held": false,
+  "ledger_migrated": false,
+  "resume_condition": "Direct-route provider recovery or relevant configuration resolution; refresh normal unchanged-scope admission. No generic paid probe or new approval gate."
+}

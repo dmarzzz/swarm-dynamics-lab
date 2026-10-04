@@ -25,6 +25,18 @@ class InputBinding(unittest.TestCase):
         self.assertEqual(admission_errors(a,'rev',1000),[])
         for key,value in [('attempt_id','q-a8'),('queue_issue',295),('central_queue_fenced',False),('queue_state','OPEN'),('owner_decision_reference','')]:
             self.assertTrue(admission_errors(a|{key:value},'rev',1000))
+    def test_first_work_http_failure_stops_remaining_schedule(self):
+        from failures import SafeFailure
+        task=generate('evidence','parallel',6,width=3);calls=[]
+        def fail_work(messages,deadline,actor,phase,item):
+            calls.append((phase,item))
+            if phase=='plan':return json.dumps({'dependencies':task.public['dependencies']})
+            raise SafeFailure('http_429')
+        result=execute(task.public,1,1,60,10,fail_work,strict_contract=True,enforce_dependencies=True)
+        self.assertEqual([p for p,i in calls],['plan','work'])
+        self.assertEqual(result['failure'],'http_429')
+        self.assertIsNone(result['artifact'])
+        for status in (429,500,502,503,504):self.assertTrue(SafeFailure('http_'+str(status)).fatal)
     def config(self):return json.loads((Path(__file__).parent.parent/'input-binding-config.json').read_text())
     def test_public_only_binding_and_wrong_upstream_retained(self):
         t=generate('evidence','chain',6,width=3);b=binding(t.public,'item_00',{})

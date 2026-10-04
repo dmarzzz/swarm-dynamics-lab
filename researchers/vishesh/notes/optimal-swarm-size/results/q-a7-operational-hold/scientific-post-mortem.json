@@ -1,0 +1,155 @@
+{
+  "schema_version": 1,
+  "study_id": "optimal-swarm-size",
+  "attempt": "q-a7-operational-hold",
+  "parent_handoff_sha256": "5376dcefbd203a0616dc52368c18749c8f368b1f63a5075f90843e69ad97abb3",
+  "verdict": "blocked",
+  "assessor": "vishesh/codex-idea-scores",
+  "assessed_at": "2026-10-04",
+  "outcome_interpretation": "Completed operational self-assessment of a zero-dispatch hold; not a native experiment or independent scientific validation. Q-A6 remains latest scientific result.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Input-binding question remains prospective; operational transport evidence does not answer it.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Two constructed development roots remain planned; no new scenarios were observed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Fixed N1 matched full/bound contrast unchanged; no outcomes to compare.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Native Q-A7 competence untested; 65 offline tests establish software behavior only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "First-work HTTP429 regression now verifies no later scheduling or integration; no paid fault injection.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Eight planned, zero assigned/started/terminal; no confidence interval or treatment estimate is justified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact experimental request/visible answer retention prepared; no operator history enters agent inputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Original Q-A6 evidence preserved; cross-study transport reports explicitly attributed, not independently audited here.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Zero Q-A7 spend/reservation/allocation; original631calls,1810840settled+220480hold preserved; no migration.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Code/tests and prospective amendment versioned; live source/public registration/claim checks still required before any dispatch.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "No native Q-A7 playback exists; do not render planned assignments as observed agent activity.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q-a7-route-assessment.md",
+          "sha256": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8"
+        }
+      ],
+      "next_action": "Resume only under documented route disposition and refreshed unchanged-scope admission.",
+      "acceptance_check": "Native outcomes and verified readback required before a treatment conclusion."
+    }
+  ]
+}

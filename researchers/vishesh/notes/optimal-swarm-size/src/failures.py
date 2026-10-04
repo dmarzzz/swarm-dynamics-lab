@@ -8,7 +8,7 @@ class SafeFailure(RuntimeError):
         super().__init__(self.code)
     @property
     def fatal(self):
-        return self.code in FATAL or self.code in ('http_400','http_401','http_402','http_403','http_404','http_422')
+        return self.code in FATAL or self.code.startswith('http_')
 
 
 def safe_code(exc):
