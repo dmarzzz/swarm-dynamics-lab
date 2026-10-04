@@ -47,3 +47,5 @@ API contract and price references, checked 2026-10-04: [Anthropic structured out
 ## Results
 
 Q0-001 stopped after four paid calls ($0.004958): both attempted episodes had overlong decision notes. No discovery finding. See reviews/q0-001-post.md. Version2 clarifies the existing price/profit formula and requests shorter notes; economic physics, model and acceptance floor are unchanged. New S0 and Q0 use fresh tasks22/23; the initial version used20/21. All attempts remain retained.
+
+Q0-002 passed all four fresh episodes at81.7–86.0% of baseline profit,32 valid calls and$0.045908. Including Q0-001, spent36calls/$0.050866 before S1. This qualifies the interface; no-regulation qualification does not answer the discovery question. The reviewed S1 pilot is ready for18 matched bundles/36episodes.

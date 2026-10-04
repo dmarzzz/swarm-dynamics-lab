@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: run-market-split-api
-doing: Implementing neutral-model discovery pilot under the standing shared API budget.
-updated: 2026-10-04T02:20Z
+doing: Model qualification passed; launching the frozen 36-episode discovery pilot.
+updated: 2026-10-04T02:27Z
 ---
 
 ## Notes
