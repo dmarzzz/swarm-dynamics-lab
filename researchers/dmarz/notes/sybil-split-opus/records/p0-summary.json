@@ -1,0 +1,70 @@
+{
+  "analyzed": 1,
+  "cost_usd": 0.01858,
+  "elapsed_seconds": 4.201390620999518,
+  "episodes": 1,
+  "errors": [],
+  "experiment": "sybil-split-opus",
+  "failed": 0,
+  "graded": 1,
+  "initial_study_accounting": {
+    "actual_usd": 0.0,
+    "attempted_calls": 0,
+    "calls_by_stage": {},
+    "committed_usd": 0.0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "reserved_usd": 0.0,
+    "transport_attempts": 0,
+    "usage_reported_calls": 0
+  },
+  "input_tokens": 4455,
+  "invalid": 0,
+  "invariant_violations": [],
+  "model_calls": 1,
+  "not_started": 0,
+  "output_tokens": 38,
+  "params": {
+    "backend": "anthropic",
+    "batch": "p0-001",
+    "code": "75d516952ab847aa90fe14cc30569a83f6b9d5e7",
+    "source_hash": "95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089",
+    "stage": "P0"
+  },
+  "passed": true,
+  "planned": 1,
+  "primary_contrast": null,
+  "probe": {
+    "count": 1,
+    "input_tokens": 4455,
+    "output_tokens": 38,
+    "passed": true
+  },
+  "qualification": null,
+  "qualification_passed": 1,
+  "rare_accuracy": null,
+  "rare_wrong": null,
+  "reason": null,
+  "reporting_errors": [],
+  "request_bytes_mean": 7843.0,
+  "started": 1,
+  "study_accounting": {
+    "actual_usd": 0.01858,
+    "attempted_calls": 1,
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "committed_usd": 0.01858,
+    "input_tokens": 4455,
+    "output_tokens": 38,
+    "reserved_usd": 0.178432,
+    "transport_attempts": 1,
+    "usage_reported_calls": 1
+  },
+  "terminal": 1,
+  "transport_attempts": 1,
+  "visualization": {
+    "frames": 2,
+    "mapping": "v1"
+  }
+}

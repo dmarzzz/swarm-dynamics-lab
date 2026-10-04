@@ -1,0 +1,92 @@
+{
+ "chain_active": false,
+ "exit": 0,
+ "ok": true,
+ "source_hash": null,
+ "stages": {
+  "P0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifact_checksums": true,
+    "call_cap_respected": true,
+    "every_assignment_has_one_row": true,
+    "gate_recomputed": true,
+    "grades_recomputed": true,
+    "hub_has_every_artifact": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "manifest_matches": true,
+    "packet_hashes": true,
+    "source_hash_current": true,
+    "totals_recomputed": true
+   },
+   "cost_usd": 0.01858,
+   "model_calls": 1,
+   "ok": true,
+   "run": "sybil-split-opus/db5ea321"
+  },
+  "Q0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifact_checksums": true,
+    "call_cap_respected": true,
+    "every_assignment_has_one_row": true,
+    "gate_recomputed": true,
+    "grades_recomputed": true,
+    "hub_has_every_artifact": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "manifest_matches": true,
+    "packet_hashes": true,
+    "source_hash_current": true,
+    "totals_recomputed": true
+   },
+   "cost_usd": 1.056736,
+   "model_calls": 60,
+   "ok": true,
+   "run": "sybil-split-opus/afc87621"
+  },
+  "S0": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifact_checksums": true,
+    "call_cap_respected": true,
+    "every_assignment_has_one_row": true,
+    "gate_recomputed": true,
+    "grades_recomputed": true,
+    "hub_has_every_artifact": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "manifest_matches": true,
+    "packet_hashes": true,
+    "source_hash_current": true,
+    "totals_recomputed": true
+   },
+   "cost_usd": 0,
+   "model_calls": 0,
+   "ok": true,
+   "run": "sybil-split-opus/17d6225d"
+  },
+  "S1": {
+   "checks": {
+    "analysis_recomputed": true,
+    "artifact_checksums": true,
+    "call_cap_respected": true,
+    "every_assignment_has_one_row": true,
+    "gate_recomputed": true,
+    "grades_recomputed": true,
+    "hub_has_every_artifact": true,
+    "hub_metrics_match": true,
+    "hub_status_matches": true,
+    "manifest_matches": true,
+    "packet_hashes": true,
+    "source_hash_current": true,
+    "totals_recomputed": true
+   },
+   "cost_usd": 44.310604,
+   "model_calls": 2688,
+   "ok": true,
+   "run": "sybil-split-opus/3ed4a6e8"
+  }
+ }
+}
