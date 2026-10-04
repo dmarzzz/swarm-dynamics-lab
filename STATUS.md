@@ -43,8 +43,6 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
-| [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | claimed | p1 | build | dmarz/scale-xl | dmarz | 2026-10-04T10:48Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
-| [build-quota-splitting](tasks/build-quota-splitting.md) | claimed | p1 | build | dmarz/orbital-orchestrator | dmarz | 2026-10-04T10:48Z | Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready |
 | [build-sybil-scarcity-synth](tasks/build-sybil-scarcity-synth.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T10:13Z | Prepare the scarcity synthesizer follow-up (sybil-scarcity-synth) on Opus 5.5 to launch-ready |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -65,6 +63,8 @@
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | open | p1 | build |  | dmarz | 2026-10-04T04:58Z | Ship the compositional safety benchmark and qualification |
+| [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | open | p1 | build |  | dmarz | 2026-10-04T11:18Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
+| [build-quota-splitting](tasks/build-quota-splitting.md) | open | p1 | build |  | dmarz | 2026-10-04T11:18Z | Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | open | p1 | build |  | dmarz | 2026-10-04T04:41Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
