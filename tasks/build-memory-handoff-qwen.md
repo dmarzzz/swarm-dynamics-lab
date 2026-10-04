@@ -3,7 +3,7 @@ id: build-memory-handoff-qwen
 type: task
 title: Prepare program v5 line M (can successors repair inherited false memory) to launch-ready
 kind: build
-status: claimed
+status: done
 priority: p0
 owner: dmarz/pipeline-memory
 for: dmarz
@@ -13,7 +13,9 @@ depends_on: []
 topics:
 - llm-agent-swarms
 claimed_at: 2026-10-04T10:30Z
-updated: 2026-10-04T10:30Z
+updated: 2026-10-04T11:38Z
+outputs:
+- researchers/dmarz/notes/memory-handoff-qwen/reviews/chain-001-pre.md
 ---
 
 ## Goal
