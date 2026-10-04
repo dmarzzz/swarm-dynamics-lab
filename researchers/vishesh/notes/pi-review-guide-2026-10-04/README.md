@@ -11,7 +11,7 @@ Open [the dark visual guide](index.html) in a browser. It puts all ten projects 
 
 Read the four columns separately: **idea**, **evidence**, **scenarios**, **controls**. Green is not launch approval. A valid null or adverse finding is not a red result.
 
-This is a presentation update of [the original dated PI review](../pi-review-2026-10-04/README.md), not a reassessment of later runs. Its source cutoffs remain October 4, 2026, 02:30–03:40 UTC as specified in the original package. Recommendations are editorial, not completed experiments. For later work, see [the Dmarz response](../pi-review-response-dmarz-2026-10-04/README.md) and [dated confidence/sample-size records](../../../../experiments/EVIDENCE.md).
+This is a presentation update of [the original dated PI review](../pi-review-2026-10-04/README.md), not a reassessment of later runs. Its source cutoffs remain October 4, 2026, 02:30–03:40 UTC as specified in the original package. Recommendations are editorial, not completed experiments. For the current iteration, see [the direct-launch and native-trace cycle](../pi-direct-launch-trace-cycle-2026-10-04/README.md). For earlier follow-up work, see [the Dmarz response](../pi-review-response-dmarz-2026-10-04/README.md) and [dated confidence/sample-size records](../../../../experiments/EVIDENCE.md).
 
 ## Update the guide
 

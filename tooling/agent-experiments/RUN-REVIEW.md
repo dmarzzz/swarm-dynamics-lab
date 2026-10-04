@@ -19,6 +19,8 @@ python3 scripts/experiment.py finalize STUDY --attempt ATTEMPT \
 
 Select the supported `completed`, `failed`, `blocked` or `ambiguous` execution outcome from actual records; `--results` and `--outcome` are optional where the command can recover them. `finalize` does not dispatch models, resume workers or mark the scientific review complete. Inspect the resulting handoff. This integration covers supported entry points; other launchers must invoke the bridge or explicitly complete the same closeout before the session finishes.
 
+The command's returned `model_calls: 0` counts **new calls made by the offline closeout operation**, not calls in the native attempt. For manual studies without a reporting adapter, native analysis remains explicitly unresolved; it is not a zero-call result. Obtain the experiment's actual request count from its native journal and authored reconciliation.
+
 For an interrupted worker, stop and verify that exact worker before using `--worker-stopped` when required by recovery. The flag records the operator's check; it neither stops a worker nor independently verifies remote state. An empty local journal is not proof of a first run: inspect the registered preceding post-mortem and import/finalize historical evidence before preparing a successor.
 
 The **owning session must then finish the analytical post-mortem**, using [the template](templates/post-mortem.md). Preserve the automatic facts and link any corrections to evidence. Reconcile assigned → started → terminal → graded → analyzed, retaining duplicate, partial, failed and unstarted units. Report actual usage separately from reservations and unresolved exposure. Review the full eleven-dimension rubric, observed results, controls, uncertainty, visuals and deviations.

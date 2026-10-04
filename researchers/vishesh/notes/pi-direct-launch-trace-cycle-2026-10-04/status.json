@@ -1,115 +1,115 @@
 {
-  "assessed_at": "2026-10-04T16:55:20.164425+00:00",
+  "assessed_at": "2026-10-04T17:13:09.809322+00:00",
   "status_kind": "in-progress snapshot; not a terminal cycle verdict",
-  "sources": "Owning-task observed reports plus pinned public scientific records; source revisions are not live admission receipts.",
+  "sources": "Published scientific records plus owning-task operational reports. Related revisions may identify an execution, review or repair; exact native execution sources remain in each study record. None is a live admission receipt.",
   "studies": [
     {
       "study": "Quorum",
       "status": "revised_offline_no_native",
       "scientific_evidence": "decision-models/quorum-of-mirrors/trace-review/RESULTS.md",
-      "reported_source_commit": "27e05565f5b36985f1ee56a9d9ca568d751a6aa8",
       "evidence_sha256_at_snapshot": "43e26176aeb32726c3f06b5bf1f50f4b3d963418dc44bf76f74c530857510b77",
       "observed_or_last_reported": "96 assigned historical slots;49starts;48valid retained;1discarded response;47unstarted. All11graded misses inspected.",
       "next_action": "24 synthetic bundles/four baselines; strongest hybrid resolves15/15 and abstains on9. Corpus/headroom gap remains;9tests independently rerun.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "27e05565f5b36985f1ee56a9d9ca568d751a6aa8"
     },
     {
       "study": "Phantom",
       "status": "revised_offline_no_native",
       "scientific_evidence": "phantom-coast/pc7/reviews/TRACE-REVIEW.md",
-      "reported_source_commit": "31f4d543",
       "evidence_sha256_at_snapshot": "d665ad4a6d5aed94a1b7c212a1488acd660ae595e836174a513143e3f151f8ea",
       "observed_or_last_reported": "140 historical request/checked-output pairs reconciled;128scientific outcomes include50suboptimal. Manual close reading covers6deterministic S1 excerpts, not all50misses.",
       "next_action": "Finite calibration/shift and two-step acquisition implemented offline; exact Bayes verified by policy enumeration. No useful native model role yet;8tests and140pairreadback rerun.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "31f4d543"
     },
     {
       "study": "Antsy",
       "status": "reviewed_failed_timeout",
       "scientific_evidence": "antsy-targeted-v8/reviews/Q0-attempt-1-post.md",
-      "reported_source_commit": "023fe193",
       "evidence_sha256_at_snapshot": "274c4173a5ce9822cf0a6341f4e71e85c809c7581d57ab426812a2ac3f4d5597",
-      "observed_or_last_reported": "6 OCR calls started: 5 valid, 1 timeout; 34 unstarted. Two complete receipt pairs. All saved outputs replayed; scientific review complete.",
-      "next_action": "Implement phase events and timeout-stream retention offline; prepare a bounded latency diagnostic. No automatic retry or S1.",
-      "observation_provenance": "Published native closeout and scientific review inspected by coordinator.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "observed_or_last_reported": "6 OCR calls started: 5 valid, 1 timeout, 34 unstarted; 2 complete pairs. Full scientific closeout and allocation release completed.",
+      "next_action": "Offline phase/timeout retention repair implemented; 13 tests independently rerun. D1 proposes at most6 cold calls on3 reused receipts, not fresh qualification. Changed diagnostic awaits owner decision and native admission.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "eb32b932"
     },
     {
       "study": "Theseus",
-      "status": "native_failed_closeout_underway",
-      "scientific_evidence": "swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
-      "reported_source_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
-      "evidence_sha256_at_snapshot": "330eefe9899a196e4d81f00410e9daf3ad686fcf07e5d8cf3ea161064f45a1e7",
-      "observed_or_last_reported": "204 assigned; 1 terminal HTTP429; 0 valid; 203 unstarted; 0 executor decisions. No retry. Twelve artifact hashes verified; allocation released.",
-      "next_action": "Complete scientific closeout. Retain USD0.010452 unresolved reservation; diagnose transport without inferring quota or billing cause.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "status": "reviewed_failed_transport",
+      "scientific_evidence": "swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+      "evidence_sha256_at_snapshot": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151",
+      "observed_or_last_reported": "204 assigned; 1 HTTP429, 0 responses, 203 unstarted. Scientific review, twelve artifact readbacks and allocation release completed.",
+      "next_action": "Safe provider metadata and resource cleanup repaired offline; 23 checks independently rerun with warnings treated as errors. USD0.010452 remains uncertain; no second A1.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "3cd17dd9"
     },
     {
       "study": "Influence",
-      "status": "native_failed_closeout_underway",
-      "scientific_evidence": "influence-swarms/scenario/RUN-HANDOFF.md",
-      "reported_source_commit": "528c4f70260f6c3fcda55633a06458cd1e9027b1",
-      "evidence_sha256_at_snapshot": "723703a14e8ef2f467f601d2198c0dbde4c3611586c00f9484690d0e1bbfbca4",
-      "observed_or_last_reported": "24 logical requests failed across 48 transport attempts; no responses or usage receipts. Exact HTTP codes were discarded. Worker stopped.",
-      "next_action": "Complete trace review and release. Prepare allowlisted error telemetry and circuit-breaker repair offline. Cumulative reservation USD4.868832 of USD8; no automatic D6.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "status": "reviewed_failed_transport",
+      "scientific_evidence": "influence-swarms/scenario/reviews/D5-post.md",
+      "evidence_sha256_at_snapshot": "b88f859a59d25aefe80a5b62033c23d9c5aa81c28dd75cad9af659e15e5ad8d3",
+      "observed_or_last_reported": "24 logical requests failed across48 transport attempts; no answers or usage receipts. Full post-mortem completed, allocation released.",
+      "next_action": "D6 two-contract diagnostic proposed, maximum USD0.097280 within original remainder. Ten acquisition fault tests independently rerun; rejected bodies now retained before parsing. No D6 dispatch.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "09f3d25b"
     },
     {
       "study": "Poietic",
-      "status": "native_failed_closeout_underway",
+      "status": "native_failed_repair_underway",
       "scientific_evidence": "poietic-agents/reviews/S0-02-launch-loop.md",
-      "reported_source_commit": "f3621c649311f4e7a6c110c1b56f97b818927f9e",
       "evidence_sha256_at_snapshot": "28daedb361c0841a6e1a9095603a2beacea05503d89d32b4100ada2b0bece3e9",
-      "observed_or_last_reported": "1 HTTP200 response through OpenRouter Haiku; fenced nested action failed strict JSON parsing. 143 unstarted; 0 qualified. Twelve artifact hashes verified; allocation released.",
-      "next_action": "Review prompt/schema versus returned action and implement an offline contract repair. New known charge USD0.00077; preserve 36 historical uncertain calls. No successor dispatched.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "observed_or_last_reported": "One returned HTTP200 answer failed strict JSON/action parsing;143 unstarted. Twelve artifact hashes verified; original ledger reconciled and allocation released.",
+      "next_action": "Concrete36-decision/3-fresh-root diagnostic, strict contract prompt and billing-before-parsing repair implemented;106 offline tests reported. Sanitized public publication underway, raw evidence retained privately. No successor dispatched.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "f3621c649311f4e7a6c110c1b56f97b818927f9e"
     },
     {
       "study": "Right Dissenter",
-      "status": "preparing_direct_allocation",
-      "scientific_evidence": "dissent/rd5/RUN-STATUS.md",
-      "reported_source_commit": "15c018083951d07c6eb3a0c478a59a2c4e59e016",
-      "evidence_sha256_at_snapshot": "d706f80d56378c72b1c3b22347efb01e02ead6114cb7293d18a2f7757a376252",
-      "observed_or_last_reported": "Central request fenced and closed by coordinating owner session. No RD5 calls; 428 historical calls retained. Direct-route helper repair and fault tests in progress.",
-      "next_action": "Use the next eligible released allocation; verify original 24-request Q5 and conditional H5 gates. OpenRouter Jev route is distinct from direct Anthropic failures.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "status": "q5_passed_h5_admission_pending",
+      "scientific_evidence": "dissent/rd5/DIRECT-ACTIVATION.md",
+      "evidence_sha256_at_snapshot": "f967b76e1f3478915c3905bc0fcf424aaecb2b06c9cce6fa3ceec62f9086cb26",
+      "observed_or_last_reported": "Q5-A2:24 assigned/started/terminal/valid/graded; raw and card12/12 correct, including6 uncertainty cards. All24 requests/outputs audited; artifact readback matched. Worker and relay stopped. H5 not started yet.",
+      "next_action": "Complete Q5 scientific closeout and fresh conditional H5 admission on the still-valid exclusive allocation. Q5 is qualification at a ceiling, not evidence of card benefit. New USD0.000726138 measured; original452-call ledger and USD0.021378589 exposure retained.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "94fcd006"
     },
     {
       "study": "Optimal Size",
-      "status": "waiting_capacity_with_provider_risk",
-      "scientific_evidence": "optimal-swarm-size/reviews/q-a7-preparation-post.md",
-      "reported_source_commit": "85ebf2f5",
-      "evidence_sha256_at_snapshot": "8fd45c33532d40010361464e11846926c74e11858a6dfdcd98a2e1d4b0b13650",
-      "observed_or_last_reported": "No Q-A7 calls, claim or ledger mutation. Original 631 calls and USD2.031320 exposure retained. Offline single-writer migration rehearsal passed.",
-      "next_action": "Wait for eligible capacity and assess existing admitted direct-Anthropic outcomes. No extra health probe, model switch or invented certification requirement.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "status": "reviewed_operational_hold",
+      "scientific_evidence": "optimal-swarm-size/reviews/q-a7-route-assessment.md",
+      "evidence_sha256_at_snapshot": "d11dea5b537d8c4549b59d388822c3dc804efc492e374a59c285fd2669b2e1e8",
+      "observed_or_last_reported": "Q-A7 planned8, assigned0, started0, new calls0. Original631 historical calls and USD2.031320 exposure retained; no claim or migration.",
+      "next_action": "First-HTTP-failure stop repaired offline;65 tests reported. Resume unchanged authorized scope only after relevant direct-route recovery/configuration evidence and normal fresh admission; no extra probe.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "729f8458"
     },
     {
       "study": "Healing",
-      "status": "claimed_preparing_native_dispatch",
+      "status": "native_completed_instrument_invalid",
       "scientific_evidence": "healing-helping-hands/c4/ADMISSION-POST.md",
-      "reported_source_commit": "1adeb586",
       "evidence_sha256_at_snapshot": "a5f7570ab6bf37e11fa58fe157c9f6c1c341091aa9ad571e90d9ae351524024e",
-      "observed_or_last_reported": "Exclusive allocation obtained after predecessor release. Public source1adeb586; 22 native and 4 dispatch checks passed. No new calls yet.",
-      "next_action": "Publish/verify plan, deploy pinned runtime and migrate original ledger before 60-case qualification; evaluation is conditional on qualification and post-mortem.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "observed_or_last_reported": "60 reports and180 model calls completed without transport/schema failure. Jev60/60 and each Qwen40/60; trace audit found expected-label/family leakage in method names.",
+      "next_action": "S1 stopped despite numerical gate; allocation released after archive readback and ledger reconciliation. Complete scientific post-mortem and metadata-blind repair/validation. Original2179 entries unchanged;2239 total, USD0.042017472 paid plus0.001344 held. New qualification requires a changed-plan decision.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "1adeb586"
     },
     {
       "study": "Immune",
-      "status": "claimed_preparing_native_dispatch",
-      "scientific_evidence": "immune-response-v3/freshness-study/README.md",
-      "reported_source_commit": "396cc93c",
-      "evidence_sha256_at_snapshot": "7ceaaf92629b847edd7f254fcc2d5f3509503248598d629d0e032f43abbb9428",
-      "observed_or_last_reported": "Exclusive permitted allocation obtained after Poietic release. Source396cc93c; original 387 calls/USD3.179489 reservation retained. No new calls yet.",
-      "next_action": "Deploy frozen A4 and verify source, ledger and public plan. At most60 calls; first transport failure stops the attempt. No additional probe or retry.",
-      "observation_provenance": "Owning task report; terminal scientific status remains pending unless explicitly reviewed.",
-      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report."
+      "status": "reviewed_failed_transport",
+      "scientific_evidence": "immune-response-v3/freshness-study/reviews/a4-post.md",
+      "evidence_sha256_at_snapshot": "c02b5c79b04e858cb876f46b148b0ca665b59b3890becfab0d173fffdbe06475",
+      "observed_or_last_reported": "One direct Anthropic HTTP429; no returned response or completed controller episode out of12 assigned. Scientific closeout and release completed.",
+      "next_action": "Offline allowlisted HTTP diagnostics repaired;13 tests reported. Cumulative388 calls/USD3.185495 reservation preserved, including new USD0.006006 unknown charge. No A5.",
+      "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
+      "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
+      "reported_related_revision": "6d0a2ebb"
     }
   ]
 }
