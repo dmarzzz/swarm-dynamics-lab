@@ -1,0 +1,31 @@
+{
+  "prefix": "v3o-a2",
+  "probe": {
+    "cost_usd": 0.005208,
+    "ok": true,
+    "status": "valid"
+  },
+  "stages": {
+    "q0": {
+      "accounting": {
+        "attempts": 636,
+        "calls": 636,
+        "cost_usd": 22.677284,
+        "input_tokens": 4057211,
+        "max_attempts": 699,
+        "model_mismatches": 0,
+        "output_tokens": 322422,
+        "refusals": 0,
+        "reserved_usd": 236.695296,
+        "transport_retries": 0,
+        "usage_missing_calls": 0
+      },
+      "batch": "v3o-a2-q0",
+      "clean_full_evidence_correct": 6,
+      "clean_reports_correct": 6,
+      "execution_complete": true,
+      "model_qualified": true
+    }
+  },
+  "started_utc": "2026-10-04T08:34:42.537280+00:00"
+}

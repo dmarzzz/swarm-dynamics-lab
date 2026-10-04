@@ -1,0 +1,13 @@
+{
+  "attempts": 636,
+  "calls": 636,
+  "cost_usd": 22.677284,
+  "input_tokens": 4057211,
+  "max_attempts": 699,
+  "model_mismatches": 0,
+  "output_tokens": 322422,
+  "refusals": 0,
+  "reserved_usd": 236.695296,
+  "transport_retries": 0,
+  "usage_missing_calls": 0
+}

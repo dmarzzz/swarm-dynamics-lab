@@ -43,7 +43,8 @@ class Tests(unittest.TestCase):
         q0 = bo.stage_cases('q0'); s1 = bo.stage_cases('s1')
         ids = [c['id'] for c in q0 + s1]
         self.assertEqual(len(ids), len(set(ids)))
-        for bad in (range(20001, 20007), range(30000, 30024), range(40001, 40013), range(50001, 50007), range(52001, 52013), range(10002, 10008)):
+        for bad in (range(20001, 20007), range(30000, 30024), range(40001, 40013), range(50001, 50007), range(52001, 52013), range(10002, 10008),
+                    range(54101, 54125)):  # v3o-a2 S1 worlds, retired after the stopped attempt
             self.assertFalse(set(ids) & set(bad))
         self.assertEqual(bo.planned_calls('q0'), 636)
         self.assertEqual(bo.planned_calls('s1'), 2436)
@@ -194,6 +195,38 @@ class Tests(unittest.TestCase):
             self.assertEqual(state['stages']['q0']['accounting']['refusals'], 66)
             self.assertEqual(calls['n'], 67)
             self.assertTrue(any(e[0] == 'done' and 'stopped early' in e[2]['message'] for e in hub.events))
+
+    def test_credit_failure_halts_next_dispatch(self):
+        request, _ = bo.probe_request()
+        p = bo.Opus(5, 10.0)
+        err = urllib.error.HTTPError('u', 400, 'bad', {}, io.BytesIO(b'{"error":{"message":"Your credit balance is too low to access the API."}}'))
+        with mock.patch('urllib.request.urlopen', side_effect=err) as m:
+            with self.assertRaises(ProviderFailure) as ctx: p.complete(request)
+            self.assertEqual(ctx.exception.public_reason, 'provider_credit_balance_low')
+            self.assertEqual(m.call_count, 1)  # never retried
+            with self.assertRaises(bo.CreditHalt): p.complete(request)
+            self.assertEqual(m.call_count, 1)  # halt happens before any further dispatch
+        self.assertEqual(p.accounting()['credit_failures'], 1)
+        # The runner's per-call handler must not absorb the halt.
+        self.assertFalse(issubclass(bo.CreditHalt, Exception))
+
+    def test_s1_only_requires_passed_q0_record(self):
+        import hashlib
+        with tempfile.TemporaryDirectory() as d:
+            folder = Path(d); launch = self.launch(folder)
+            with self.assertRaises(ValueError): bo.chain(FakeHub(), launch, folder / 'o1', 't', scripted=True, s1_only=True)
+            for qualified, ok in ((True, True), (False, False)):
+                summary = folder / f'q0-{qualified}.json'
+                summary.write_text(json.dumps({'qualification': {'model_qualified': qualified, 'execution_complete': True}}))
+                record = json.loads(launch.read_text())
+                record['q0_gate'] = {'batch': 'x-q0', 'run': 'discussion-v3-opus/x-q0', 'summary_path': summary.name,
+                                     'summary_sha256': hashlib.sha256(summary.read_bytes()).hexdigest()}
+                path = folder / f'launch-{qualified}.json'; path.write_text(json.dumps(record))
+                if ok: self.assertIn('q0_gate', bo.load_launch(path))
+                else:
+                    with self.assertRaises(ValueError): bo.load_launch(path)
+            record['q0_gate']['summary_sha256'] = '0' * 64; path.write_text(json.dumps(record))
+            with self.assertRaises(ValueError): bo.load_launch(path)
 
     def probe_answer(self):
         request, expected = bo.probe_request()
