@@ -171,6 +171,8 @@ def step(state, fx, t, world, policy, clean, emit, label):
 def run_episode(task_id, seed, world, dose, arms, cfg, policy, emit=lambda x:None):
     if cfg.get('n_agents',8) != 8 or cfg.get('rounds',24) != 24:
         raise ValueError('v3 instrument requires 8 agents and 24 rounds')
+    if len(set(arms))!=len(arms) or not set(arms)<=set(ARMS) or 'CLEAN' not in arms:
+        raise ValueError('unique supported arms and CLEAN required')
     if world not in WORLDS or dose != 1:
         raise ValueError('unsupported scenario or dose')
     fx=fixture(task_id);fx['benign_learning']=world=='benign_learning'

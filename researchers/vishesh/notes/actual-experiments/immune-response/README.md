@@ -25,3 +25,7 @@ Fork paired conditions around an incident. Cross shared restoration with stale-r
 ## Metrics
 
 Measure useful correct completion, persistent failure, time to recovery, relapse and unnecessary intervention. Report backend, invalid outcomes and compute; scripted qualification does not establish an LLM repair benefit.
+
+## Assessment and follow-up
+
+The v2 native run `4deeb0f2` completed with eight outcomes and one response-contract failure in Q10F. [Full assessment](../../immune-response-v3/REVIEW.md) preserves the failure and explains why the single native task does not establish population robustness. [V3](../../immune-response-v3/README.md) adds strict agent contracts, no-replay/missing-lineage/benign-learning controls, selective repair, and recorded-data visualizations. Its 720-outcome engineering qualification passed; fresh native repair qualification awaits a dedicated machine.

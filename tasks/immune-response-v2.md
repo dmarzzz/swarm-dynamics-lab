@@ -22,8 +22,8 @@ Separate shared restoration from replay blocking, correct task scoring and run a
 ## Done when
 
 - [x] Publish the amended protocol and verified instrument.
-- [ ] Execute and report all assigned qualification outcomes, including failures.
+- [x] Execute and report all assigned qualification outcomes, including failures.
 
 ## Execution status
 
-288 scripted outcomes completed without invalid records. Native S0 run 4deeb0f2 is active; results and all-assigned analysis upload automatically. Native S1 remains locked.
+288 scripted outcomes completed without invalid records. Native S0 run 4deeb0f2 completed: eight outcomes, one contract-invalid primary control, no provider failures. Full review and historical trace visualization are in researchers/vishesh/notes/immune-response-v3/REVIEW.md. Native S1 remains locked; v3 native repair qualification requires a dedicated allocation.

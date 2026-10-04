@@ -1,0 +1,26 @@
+{
+  "id": "immune-response-v3",
+  "title": "Immune response: durable repair and collateral memory loss",
+  "description": "TLDR: Separate shared restoration, stale-record blocking and selective repair. Five scenario controls expose relapse, missing lineage and loss of legitimate learning. Scripted qualification passed; fresh model repair qualification waits for a dedicated machine.",
+  "owner": "vishesh",
+  "params": {
+    "stage": {
+      "type": "str"
+    },
+    "backend": {
+      "type": "str"
+    },
+    "design_hash": {
+      "type": "str"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid",
+    "execution_qualified",
+    "clean_qualified",
+    "model_backed"
+  ],
+  "primary_metric": "execution_qualified",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/e3c40b027313ccc6985f36fa63bab6ff221cc1c1/researchers/vishesh/notes/immune-response-v3/README.md"
+}

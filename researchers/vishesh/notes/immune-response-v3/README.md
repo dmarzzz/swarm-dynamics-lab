@@ -32,3 +32,15 @@ python3 researchers/vishesh/notes/immune-response-v3/src/visualize.py /tmp/immun
 ```
 
 Use a fresh output path; the runner refuses overwrite. Paid execution requires the dedicated-machine and budget gates. See [historical v2](../actual-experiments/immune-response/README.md); no earlier run is overwritten or relabeled by v3.
+
+## Results and current status
+
+[Engineering results](ENGINEERING-RESULTS.json): 720/720 outcomes recorded, zero invalid, all clean controls passed. [Post-mortem](reviews/engineering-a1-post.md) separates mechanism findings from model evidence. Broad rollback loses newly learned legitimate information in the stress fixture; selective repair preserves it. Missing lineage defeats the known-lineage filter. These are scripted findings.
+
+The fresh native schema-repair qualification is blocked on a dedicated available fleet machine. Earlier native v2 remains one invalid primary-control outcome out of eight; see REVIEW.md. Do not describe the offline schema fix as already verified against the model.
+
+Public evidence: [engineering run and embedded animation](https://swarm-live.pages.dev/#/r/immune-response-v3%2Fengineering-a1-5409a091), [historical native v2 run](https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2). The engineering run is an import of the original local execution, not a second execution on its upload host. Full replay and raw traces are stored as indexed gzip parts; `artifact-index.json` records hashes and part order.
+
+## Native execution and reporting
+
+`src/hub_worker.py` connects the frozen native plan to per-round progress images, final PNG/GIF/replay publication and explicit qualification status. It requires a non-secret allocation receipt binding this host, exclusive claim, expiry and a previously reserved USD 8 budget grant. The receipt records a real fleet/budget operation; creating the file is not a substitute for that operation. A missing/expired receipt or failed immutable-public-plan preflight stops before model calls. Configure the existing secure credential environment and isolated quota ledger, then invoke `hub_worker.py --out <new-output-path> --allocation-receipt <verified-receipt-path>`. Do not run this until the dedicated host and budget grant exist.
