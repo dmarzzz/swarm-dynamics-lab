@@ -49,7 +49,6 @@
 | [integrate-run-closeout-cycle](tasks/integrate-run-closeout-cycle.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T07:50Z | Integrate automatic run closeout and approved next-run planning |
 | [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:00Z | Build and run Phantom Coast PC-3 coverage guard |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T07:49Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
-| [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T07:49Z | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T07:53Z | Build and prepare Right Dissenter RD5 |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -188,6 +187,7 @@
 | [publish-pi-review-2026-10-04](tasks/publish-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:50Z | Publish the PI project review and agent lifecycle guidance |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:45Z | Refine Quorum of Mirrors design and offline contracts |
 | [quorum-mirrors-iteration-3](tasks/quorum-mirrors-iteration-3.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:28Z | Clarify Quorum utility and prepare a controlled successor |
+| [quorum-mirrors-q1-interface-repair](tasks/quorum-mirrors-q1-interface-repair.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T08:03Z | Preserve rejected-response usage and reconcile Q1 output-token contract |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:02Z | Prepare and qualify Quorum of Mirrors S0 |
 | [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:05Z | Incorporate and respond to Dmarz PI recommendations |
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
@@ -257,6 +257,7 @@
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
 | dmarz/d1-opus | blocked |  | 2026-10-04T08:00Z | D1-Opus ready on sim-dmarz-9: rehearsal 72/72 audited, probe d1o-p1 passed ($0.022); 72-call run waits for dmarz go-ahead + G0 decision |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
+| vishesh/codex-pi-review | working | integrate-run-closeout-cycle | 2026-10-04T07:52Z | Implementing automatic post-mortem handoff, run-quality assessment and approved next-run planning. |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T07:51Z | Preparing sybil-scarcity-opus (the sybil-scarcity-plan on Opus 5.5) to launch-ready: code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T07:51Z | Preparing sybil-split-opus (identity splitting with fixed attacker resources, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
@@ -270,7 +271,6 @@
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T06:30Z | owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet |
-| vishesh/codex-pi-review | done | clarify-pi-review-visual-guide | 2026-10-04T05:53Z | Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/budget-sonnet | working |  | 2026-10-04T05:30Z | Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run |
 | dmarz/discussion-bench-v3 | done | deploy-discussion-v3-d1 | 2026-10-04T05:18Z | D1 complete and analyzed; results and post-mortem published; server retired; D2 plan only, unstarted |

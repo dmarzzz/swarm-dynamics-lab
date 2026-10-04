@@ -27,6 +27,10 @@ class OperationError(Exception):
     """Only fixed, public-safe messages belong in this exception."""
 
 
+def now():
+    return datetime.now(timezone.utc).isoformat()
+
+
 def canonical(value):
     return json.dumps(value, sort_keys=True, separators=(",", ":"), allow_nan=False).encode()
 
@@ -134,7 +138,12 @@ def adapter_for(entry):
 
 def entry_identity(entry):
     # Navigation prose and checked timestamps are not instrument dependencies.
-    return {key: entry.get(key) for key in ("id", "study_path", "adapter")}
+    return {key: entry.get(key) for key in ("id", "study_path", "adapter", "owner", "next_run_approval")}
+
+
+def needs_updated_plan(root, entry):
+    return (entry.get("owner") == "vishesh" or entry.get("next_run_approval") == "owner") and (
+        entry.get("postmortem_path") is not None or bool(journal_status(root, entry["id"])))
 
 
 def adapter_error_code(error):
@@ -144,11 +153,15 @@ def adapter_error_code(error):
 
 
 def inspect_study(root, entry):
+    from . import closeout
     result = dict(entry)
     result["operational_state"] = "unverified; registry is historical navigation, not launch admission"
     result["capabilities"] = {name: "manual" for name in ("validate", "prepare", "run", "report")}
     result["capabilities"]["resume"] = "unsupported"
     result["local_attempts"] = journal_status(root, entry["id"])
+    result["latest_completion"] = closeout.latest_handoff(root, entry["id"])
+    result["history_warning"] = "check native history; an empty local journal does not prove a first run"
+    result["capabilities"]["finalize"] = "implemented; offline operational record, scientific review still required"
     if entry.get("adapter"):
         result["adapter_description"] = adapter_for(entry).describe(root, entry)
         result["capabilities"].update({name: "implemented; native gates apply" for name in ("validate", "prepare", "run", "report")})
@@ -161,9 +174,13 @@ def journal_status(root, study_id):
         return []
     connection = sqlite3.connect(path.as_uri() + "?mode=ro", uri=True)
     try:
-        rows = connection.execute("SELECT attempt,status,output FROM attempts WHERE study=? ORDER BY attempt", (study_id,)).fetchall()
-        return [{"attempt": attempt, "status": status, "output": output,
-                 "automatic_redispatch": False} for attempt, status, output in rows]
+        columns = {row[1] for row in connection.execute("PRAGMA table_info(attempts)")}
+        optional = ("started_at", "completed_at", "closeout_status", "closeout_path")
+        expressions = [name if name in columns else "NULL AS " + name for name in optional]
+        order = "COALESCE(completed_at,started_at,''),rowid" if "completed_at" in columns else "rowid"
+        rows = connection.execute("SELECT attempt,status,output," + ",".join(expressions) + " FROM attempts WHERE study=? ORDER BY " + order, (study_id,)).fetchall()
+        return [{"attempt": row[0], "status": row[1], "output": row[2],
+                 **dict(zip(optional, row[3:])), "automatic_redispatch": False} for row in rows]
     finally:
         connection.close()
 
@@ -281,7 +298,7 @@ def check_inputs(root, inputs):
             raise OperationError("prepared input changed; prepare and admit a fresh attempt")
 
 
-def prepare(root, entry, stage, attempt, config_path, qualification_path, output_path):
+def prepare(root, entry, stage, attempt, config_path, qualification_path, output_path, next_plan_path=None):
     if not SLUG.fullmatch(attempt):
         raise OperationError("attempt must be a lowercase slug")
     if output_path.exists():
@@ -289,12 +306,16 @@ def prepare(root, entry, stage, attempt, config_path, qualification_path, output
     if config_path is not None and not config_path.is_file():
         raise OperationError("configuration must be a JSON file")
     prepared = adapter_for(entry).prepare(root, entry, stage, config_path, qualification_path)
+    next_run = None
+    if next_plan_path is not None or needs_updated_plan(root, entry):
+        from . import iteration
+        next_run = iteration.freeze_next_plan(root, entry, prepared, next_plan_path)
     inputs = dict(prepared.get("input_files", {}))
     if qualification_path is not None and qualification_path.is_dir():
         prefix = qualification_path.relative_to(root).as_posix() + "/"
         if not any(name.startswith(prefix) for name in inputs):
             raise OperationError("adapter did not freeze qualification directory evidence")
-    for name in ("scripts/experiment.py", "scripts/experiment_ops/__init__.py", "scripts/experiment_ops/core.py", "scripts/experiment_ops/theseus.py"):
+    for name in ("scripts/experiment.py", "scripts/experiment_ops/__init__.py", "scripts/experiment_ops/core.py", "scripts/experiment_ops/theseus.py", "scripts/experiment_ops/closeout.py", "scripts/experiment_ops/iteration.py"):
         path = safe_path(root, name, exists=True)
         inputs[name] = file_hash(path)
     for path in (config_path, qualification_path):
@@ -306,6 +327,8 @@ def prepare(root, entry, stage, attempt, config_path, qualification_path, output
               "created_at": datetime.now(timezone.utc).isoformat(),
               "prepared": prepared, "input_files": inputs,
               "authority": "none; native current admission remains required"}
+    if next_run is not None:
+        packet["next_run"] = next_run
     packet["packet_sha256"] = digest(packet)
     write_new_json(output_path, packet)
     return {"status": "prepared_not_admitted", "attempt": attempt, "packet_sha256": packet["packet_sha256"],
@@ -339,11 +362,23 @@ def open_journal(root):
     connection = sqlite3.connect(path, timeout=30)
     connection.execute("PRAGMA synchronous=FULL")
     connection.execute("CREATE TABLE IF NOT EXISTS attempts (study TEXT NOT NULL, attempt TEXT NOT NULL, packet TEXT NOT NULL UNIQUE, admission TEXT NOT NULL UNIQUE, status TEXT NOT NULL, output TEXT NOT NULL, PRIMARY KEY(study, attempt))")
+    columns = {row[1] for row in connection.execute("PRAGMA table_info(attempts)")}
+    for name in ("started_at", "completed_at", "context_json", "outcome_source", "closeout_status", "closeout_path"):
+        if name not in columns:
+            try:
+                connection.execute("ALTER TABLE attempts ADD COLUMN " + name + " TEXT")
+            except sqlite3.OperationalError:
+                if name not in {row[1] for row in connection.execute("PRAGMA table_info(attempts)")}:
+                    raise
     return connection
 
 
-def dispatch(root, entry, packet, receipt_path, output_path):
+def dispatch(root, entry, packet, receipt_path, output_path, update_approval_path=None):
+    from . import closeout
     verify_packet(root, entry, packet)
+    if packet.get("next_run") is not None or needs_updated_plan(root, entry):
+        from . import iteration
+        iteration.validate_update_approval(root, entry, packet, update_approval_path)
     if output_path.exists():
         raise OperationError("run output already exists; recovery is not automatic redispatch")
     admission = digest({"study": entry["id"], "stage": packet["stage"], "receipt": file_hash(receipt_path)})
@@ -351,28 +386,38 @@ def dispatch(root, entry, packet, receipt_path, output_path):
     try:
         try:
             with connection:
-                connection.execute("INSERT INTO attempts VALUES (?, ?, ?, ?, 'dispatching', ?)",
+                connection.execute("INSERT INTO attempts(study,attempt,packet,admission,status,output,started_at,context_json,outcome_source,closeout_status) VALUES (?, ?, ?, ?, 'dispatching', ?, ?, ?, 'native_journal', 'pending')",
                                    (entry["id"], packet["attempt"], packet["packet_sha256"], admission,
-                                    output_path.relative_to(root).as_posix()))
+                                    output_path.relative_to(root).as_posix(), now(), json.dumps(closeout.prepared_context(packet), sort_keys=True)))
         except sqlite3.IntegrityError:
             raise OperationError("attempt, packet or admission already claimed; reconcile saved evidence without redispatch") from None
         try:
             verify_packet(root, entry, packet)
             result = adapter_for(entry).run(root, entry, packet["prepared"], receipt_path, output_path)
             if not isinstance(result, dict) or result.get("status") not in {"completed", "failed", "blocked", "ambiguous"}:
-                result = {"status": "ambiguous", "reason": "native result did not establish a terminal state"}
+                result = {"status": "ambiguous", "reason": "native_terminal_result_missing"}
         except BaseException as error:
             code = adapter_error_code(error)
             if code:
                 # AdapterError is reserved for pre-native admission failures.
                 result = {"status": "blocked", "reason": code}
             else:
-                with connection:
-                    connection.execute("UPDATE attempts SET status='ambiguous' WHERE study=? AND attempt=?", (entry["id"], packet["attempt"]))
-                raise OperationError("dispatch interrupted or failed unexpectedly; attempt retained for reconciliation") from None
+                result = {"status": "ambiguous", "reason": "dispatch_interrupted_or_failed; reconcile retained attempt"}
+        retained = closeout.safe_result(result)
+        context = closeout.prepared_context(packet)
+        context["native_result"] = retained
         with connection:
-            connection.execute("UPDATE attempts SET status=? WHERE study=? AND attempt=?", (result["status"], entry["id"], packet["attempt"]))
-        return {"attempt": packet["attempt"], **result}
+            connection.execute("UPDATE attempts SET status=?,completed_at=?,context_json=? WHERE study=? AND attempt=?", (result["status"], now(), json.dumps(context, sort_keys=True), entry["id"], packet["attempt"]))
+        try:
+            postmortem = closeout.finalize(root, entry, packet["attempt"])
+        except BaseException:
+            with connection:
+                connection.execute("UPDATE attempts SET closeout_status='failed' WHERE study=? AND attempt=?", (entry["id"], packet["attempt"]))
+            postmortem = {"closeout_status": "failed", "reason": "closeout_not_completed; retained native outcome is unchanged"}
+        public_result = dict(retained)
+        if isinstance(result.get("reason"), str) and re.fullmatch(r"[a-z0-9_]{1,100}", result["reason"]):
+            public_result["reason"] = result["reason"]
+        return {"attempt": packet["attempt"], **public_result, "closeout_status": postmortem["closeout_status"], "closeout": postmortem}
     finally:
         connection.close()
 
@@ -401,16 +446,28 @@ def parser():
     command.add_argument("--attempt", required=True)
     command.add_argument("--config")
     command.add_argument("--qualification")
+    command.add_argument("--next-plan")
     command.add_argument("--output", required=True)
     command = sub.add_parser("run")
     command.add_argument("study")
     command.add_argument("--packet", required=True)
     command.add_argument("--receipt", required=True)
+    command.add_argument("--update-approval")
     command.add_argument("--output", required=True)
     command = sub.add_parser("report")
     command.add_argument("study")
     command.add_argument("--results", required=True)
     command.add_argument("--output", required=True)
+    command = sub.add_parser("finalize", help="offline post-mortem and next-session handoff; never redispatch")
+    command.add_argument("study")
+    command.add_argument("--attempt", required=True)
+    command.add_argument("--results")
+    command.add_argument("--outcome", choices=("completed", "failed", "blocked", "ambiguous"))
+    command.add_argument("--worker-stopped", action="store_true", help="attest that an interrupted attempt's worker was stopped and checked; not independent verification")
+    command = sub.add_parser("check-update", help="check an owner approval record without provisioning or launching")
+    command.add_argument("study")
+    command.add_argument("--packet", required=True)
+    command.add_argument("--update-approval", required=True)
     return cli
 
 
@@ -441,17 +498,30 @@ def main(argv=None, *, root):
                 result = prepare(root, entry, args.stage, args.attempt,
                                  safe_path(root, args.config, exists=True) if args.config else None,
                                  safe_path(root, args.qualification, exists=True) if args.qualification else None,
-                                 artifact_path(root, args.output))
+                                 artifact_path(root, args.output),
+                                 safe_path(root, args.next_plan, exists=True) if args.next_plan else None)
             elif args.operation == "run":
                 result = dispatch(root, entry, read_json(safe_path(root, args.packet, exists=True)),
-                                  safe_path(root, args.receipt, exists=True), artifact_path(root, args.output))
+                                  safe_path(root, args.receipt, exists=True), artifact_path(root, args.output),
+                                  safe_path(root, args.update_approval, exists=True) if args.update_approval else None)
             elif args.operation == "report":
                 output = artifact_path(root, args.output)
                 if output.exists():
                     raise OperationError("report output already exists")
                 result = adapter_for(entry).report(root, entry, safe_path(root, args.results, exists=True), output)
+            elif args.operation == "finalize":
+                from . import closeout
+                result = {"status": "finalized", **closeout.finalize(root, entry, args.attempt,
+                    safe_path(root, args.results) if args.results else None, args.outcome, args.worker_stopped)}
+            elif args.operation == "check-update":
+                from . import iteration
+                packet = read_json(safe_path(root, args.packet, exists=True))
+                verify_packet(root, entry, packet)
+                metadata = iteration.validate_update_approval(root, entry, packet, safe_path(root, args.update_approval, exists=True))
+                result = {"status": "approval_record_matches_proposal", "model_calls": 0,
+                          "approval_is_operator_attestation": True, "approval_binding": metadata}
         print(json.dumps(result, indent=2, sort_keys=True, allow_nan=False))
-        return 0 if result.get("status") not in {"failed", "blocked", "ambiguous"} else 2
+        return 0 if result.get("status") not in {"failed", "blocked", "ambiguous"} and result.get("closeout_status") != "failed" else 2
     except OperationError as error:
         print(json.dumps({"status": "blocked", "reason": str(error)}))
         return 2

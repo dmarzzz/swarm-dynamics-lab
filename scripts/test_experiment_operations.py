@@ -57,7 +57,7 @@ class OperationsTests(unittest.TestCase):
             self.put("tooling/agent-experiments/templates/" + name, '{}')
         self.put("instrument.py", "# frozen instrument\n")
         self.put("receipt.json", '{"admission":"fixture-only"}')
-        for relative in ("scripts/experiment.py", "scripts/experiment_ops/__init__.py", "scripts/experiment_ops/core.py", "scripts/experiment_ops/theseus.py"):
+        for relative in ("scripts/experiment.py", "scripts/experiment_ops/__init__.py", "scripts/experiment_ops/core.py", "scripts/experiment_ops/theseus.py", "scripts/experiment_ops/closeout.py", "scripts/experiment_ops/iteration.py"):
             self.put(relative, "# fixture launcher\n")
         self.adapter = FakeAdapter()
 
@@ -200,7 +200,8 @@ class OperationsTests(unittest.TestCase):
         self.assertEqual(process.exitcode, 19)
         with contextlib.closing(core.open_journal(self.root)) as connection:
             self.assertEqual(connection.execute("SELECT status FROM attempts").fetchone()[0], "dispatching")
-        self.assertEqual(core.journal_status(self.root, self.entry["id"]), [{"attempt": "attempt-one", "status": "dispatching", "output": core.STATE + "/crashed", "automatic_redispatch": False}])
+        row = core.journal_status(self.root, self.entry["id"])[0]
+        self.assertEqual({key: row[key] for key in ("attempt", "status", "output", "automatic_redispatch")}, {"attempt": "attempt-one", "status": "dispatching", "output": core.STATE + "/crashed", "automatic_redispatch": False})
         with patch.object(core, "adapter_for", return_value=self.adapter), self.assertRaisesRegex(core.OperationError, "already claimed"):
             self.dispatch(packet)
 
@@ -239,7 +240,8 @@ class OperationsTests(unittest.TestCase):
         from experiment_ops.theseus import AdapterError
         packet = self.packet()
         with patch.object(core, "adapter_for", return_value=self.adapter), patch.object(self.adapter, "run", side_effect=AdapterError("native_budget_history_missing")):
-            self.assertEqual(self.dispatch(packet), {"attempt": "attempt-one", "status": "blocked", "reason": "native_budget_history_missing"})
+            result = self.dispatch(packet)
+            self.assertEqual({key: result[key] for key in ("attempt", "status", "reason")}, {"attempt": "attempt-one", "status": "blocked", "reason": "native_budget_history_missing"})
         with contextlib.closing(core.open_journal(self.root)) as connection:
             self.assertEqual(connection.execute("SELECT status FROM attempts").fetchone()[0], "blocked")
         self.assertIsNone(core.adapter_error_code(AdapterError("must not print arbitrary error!")))

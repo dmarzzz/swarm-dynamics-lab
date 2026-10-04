@@ -4,7 +4,8 @@ Quoted protocol instructions are verbatim from the plan (README section 3).
 """
 
 RULE = ("Decision rule: choose the lowest-cost option among those that meet the delivery deadline, "
-        "using the latest authorized record for each value.\n"
+        "using the latest authorized record for each value. "
+        "An option meets the deadline if its delivery is at or before the deadline.\n"
         "Every record shown to you is authorized. Each record has an id, a day number and one value; "
         "for the same option and value, the record with the later day is the latest one.")
 

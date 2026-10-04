@@ -1,0 +1,100 @@
+{
+  "schema_version": 1,
+  "study_id": "",
+  "parent_handoff_sha256": "",
+  "verdict": "blocked",
+  "outcome_interpretation": "",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "measurement",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "sample_size",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "resources",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "visualization",
+      "status": "unknown",
+      "finding": "",
+      "evidence": [],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ],
+  "assessor": "",
+  "assessed_at": "",
+  "attempt": ""
+}

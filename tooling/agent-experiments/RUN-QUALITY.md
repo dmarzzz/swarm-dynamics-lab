@@ -1,0 +1,44 @@
+# What a good experimental run establishes
+
+Use this rubric in every [post-mortem](templates/post-mortem.md) and before proposing the next run. A good run answers a defined question with interpretable evidence, complete accounting and reproducible records. It can return a null, adverse or inconclusive result. A favorable effect does not compensate for a broken instrument.
+
+Assess the declared scope: a diagnostic need not support population inference, and a scripted mechanism test need not demonstrate model competence. State that limit rather than silently awarding a broader pass. Assessment is the owning agent's scientific work; automatically generated counts cannot perform it.
+
+## Record evidence rather than a score
+
+Each dimension records `dimension`, `status`, `finding` and `evidence` references. In the structured review, an evidence reference contains a path and its SHA-256. Use one of:
+
+| Status | Meaning |
+|---|---|
+| `pass` | Relevant acceptance evidence supports the stated requirement within this run's scope. At least one evidence reference is required. |
+| `gap` | Evidence demonstrates a missing requirement or a defect. Name the affected inference or next stage. |
+| `unknown` | Available records do not resolve the requirement. Missing evidence is not a pass or a numerical zero. |
+| `not_applicable` | The requirement does not apply to this scoped question; explain why in `finding`. |
+
+Every `gap` or `unknown` needs a `next_action` and an `acceptance_check`. Distinguish directly observed facts, plausible causes and verified causes. Record the assessor, date, attempt and evidence revision. A count of green cells is not an experiment-quality score or launch authorization. Keep the existing [evidence confidence and independent sample-size metadata](../../experiments/EVIDENCE-METADATA.md) current after analysis; these dimension checks complement those fields rather than replacing them.
+
+## Eleven checks
+
+| Dimension | What a pass must establish | Typical gap or unknown |
+|---|---|---|
+| `question` | A primary question, intended decision, contrast, claim boundary and falsifying/null outcome are explicit. | Several mechanisms bundled into one headline; an observed result replaces the original prediction. |
+| `scenarios` | Tasks exercise the proposed mechanism with meaningful challenge, useful baselines, relevant strata and disclosed realism limits. | Ceiling/floor tasks, copied semantic templates, artificial costs presented as real, or difficulty created only by unusable instructions. |
+| `controls` | Manipulation occurred; clean and adverse controls discriminate; comparator information and resources support the declared estimand. | More evidence/compute changes with treatment, impossible baseline, ineffective intervention, or hidden oracle assistance. |
+| `capability` | Required agents, tools and interfaces meet the prespecified clean-task and response-contract criteria on appropriate qualification inputs. | Schema validity mistaken for competence; healthy restraint without repair ability; diagnostic success used as broad qualification. |
+| `measurement` | Endpoint, denominator, scorer and uncertainty match the question; saved decisions support recomputation and relevant sensitivity checks. | Wrong truth/version, label leakage, invalid-versus-wrong confusion, selective exclusions or an interval interpreted beyond its sample. |
+| `sample_size` | Independent units, pairing/clustering, allocation and missingness are explicit; sample size fits a precision/effect objective or a candid feasibility scope. | Agent/call/branch counts treated as independent n; arbitrary enlargement; rare failures absent from a tiny pilot. |
+| `agent_context` | Effective model/prompt/tool/context and memory initialization match the specification; changes, resets and lineage are recorded. | Environment-selected model drift, undeclared fallback, cross-arm memory, uncontrolled truncation or context leakage. |
+| `data_integrity` | Every assignment reconciles through started, terminal, graded and analyzed; failed/partial attempts, raw decisions and call receipts remain recoverable. | Missing cells disappear, duplicate attempts enter the denominator, uncertain calls are retried invisibly, or reporting changes outcomes. |
+| `resources` | Actual and reserved cost, calls, tokens, runtime, concurrency and allocations remain within cumulative authority; uncertain exposure is retained. | New ledger treated as new funds, supporting-agent costs omitted, claimed caps unenforced, or account identity unverified. |
+| `reproducibility` | Source/configuration/input/runtime provenance and exact commands reconstruct the instrument; retained evidence replays within its stated boundary. | Unresolvable hashes, overwritten outputs, unpinned effective dependencies, or identical seeds claimed to guarantee hosted answers. |
+| `visualization` | Tables/plots/replays agree with recorded evidence, expose uncertainty and missingness, and separate scripted from native outcomes. | Selected frames imply complete history, missing values appear as zero, denominators vanish, or decoration suggests an unmeasured mechanism. |
+
+Use small reference calculations, semantic fault tests and artifact replay to resolve instrument questions before further collection. No new service or universal test count is required. Independent authorship or replication can strengthen evidence, but do not claim it for same-agent checks.
+
+## Translate the review into a decision
+
+Choose `advance`, `repair`, `diagnostic`, `complete_valid_result` or `blocked`. Explain which observations justify that decision and which claims remain unsupported. `advance` still requires the next stage's admission. Only `advance`, `repair` and `diagnostic` propose a successor through the operations workflow; a completed result or unresolved external blocker does not queue another run.
+
+A valid null or worse intervention may earn passes on every relevant design dimension and finish as `complete_valid_result`. A wide interval can leave the scientific question unresolved without implying an instrument defect; propose additional sampling only if its expected precision and decision value justify the cost. Never increase n or repair scenarios merely to obtain a preferred effect.
+
+The next session must assess earlier suggestions against this rubric, accepting, revising or rejecting them with reasons. A suggested fix is not a verified cause, and copying the preceding recommendation is not a new assessment. Turn selected work into the [next-run plan](templates/next-run-plan.md), with a specific design, sample allocation, scenarios, telemetry, analysis, resource envelope and acceptance checks. Follow the [owner approval and closeout workflow](RUN-REVIEW.md).

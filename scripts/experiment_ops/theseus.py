@@ -29,8 +29,12 @@ NATIVE_RECEIPT_KEYS = {'experiment', 'source_commit', 'exclusive_claim_verified'
                 'verified_epoch', 'claim_until_epoch', 'reserved_usd', 'max_calls',
                 'authority_allocation_id', 'owner_authorization_ref'}
 
-RECEIPT_KEYS = NATIVE_RECEIPT_KEYS | {'approved_account_verified', 'researcher_review_passed',
-    'researcher_review_ref', 'native_budget_ledger', 'minimum_prior_reserved_calls', 'minimum_prior_reserved_usd'}
+RECEIPT_KEYS = NATIVE_RECEIPT_KEYS | {'approved_account_verified',
+    'native_budget_ledger', 'minimum_prior_reserved_calls', 'minimum_prior_reserved_usd'}
+# Owner waived researcher review for this Vishesh-owned study. Retain truthful
+# historical fields when supplied; neither absence nor a failed historical review
+# creates a researcher approval gate. Owner approval of an updated run is separate.
+OPTIONAL_RECEIPT_KEYS = {'researcher_review_passed', 'researcher_review_ref'}
 
 NATIVE_SAFE_CODES = frozenset({
     'clean_source_required', 'allocation_experiment_mismatch', 'allocation_source_mismatch',
@@ -173,7 +177,15 @@ def describe(root, entry):
             'initialization_contract': _contract('S0'),
             'budget': {'native_ledger_env': 'THESEUS_V2_LEDGER', 'existing_ledger_required': True,
                        'cap_usd': 15, 'max_calls': 660, 'unknown_usage': 'full reservation retained'},
-            'trust_boundary': 'Account and single researcher review are external private attestations; native checks verify live plan/review and receipt freshness. The adapter does not inspect the provisioner.'}
+            'researcher_review': 'not required by owner direction; historical reviews are not relabeled as passed',
+            'trust_boundary': 'Account evidence is an external private attestation; native checks retain the owning agent pre-run assessment, public plan, source and receipt freshness. Owner approval of an updated run is checked separately by the operations layer. The adapter does not inspect the provisioner.'}
+
+
+def analysis_fingerprint(root, entry):
+    """Hash the analysis instrument without constructing future stage assignments."""
+    _study(root, entry)
+    _files(root, entry)
+    return {"instrument_sha256": _instrument(root, entry)}
 
 
 def validate(root, entry):
@@ -345,10 +357,10 @@ def run(root, entry, packet, receipt_path, output_path):
     root = Path(root).resolve()
     config = _verify_prepared(root, entry, packet)
     receipt = _json(_path(root, receipt_path))
-    if not isinstance(receipt, dict) or set(receipt) != RECEIPT_KEYS:
+    if not isinstance(receipt, dict) or not RECEIPT_KEYS.issubset(receipt) or set(receipt) - (RECEIPT_KEYS | OPTIONAL_RECEIPT_KEYS):
         _fail('receipt_fields_not_allowlisted')
-    if receipt.get('approved_account_verified') is not True or receipt.get('researcher_review_passed') is not True or not isinstance(receipt.get('researcher_review_ref'), str) or not receipt['researcher_review_ref'].strip():
-        _fail('external_account_or_research_review_attestation_missing')
+    if receipt.get('approved_account_verified') is not True:
+        _fail('external_account_attestation_missing')
     for name in ('authority_allocation_id', 'owner_authorization_ref'):
         if not isinstance(receipt.get(name), str) or not receipt[name].strip():
             _fail('allocation_authority_reference_missing')
