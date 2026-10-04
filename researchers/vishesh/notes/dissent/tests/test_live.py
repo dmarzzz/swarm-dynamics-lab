@@ -25,6 +25,11 @@ class LiveTests(unittest.TestCase):
         for c in development():
             for task in [c['task']]+[f['task'] for f in c['frames']]:self.assertIn('exactly one requirement',task['instructions'])
 
+    def test_worker_rejects_unverified_allocation_before_dispatch(self):
+        import live_worker
+        with self.assertRaisesRegex(ValueError,'allocation_identity_mismatch'):
+            live_worker.verify_config({'stage':'Q1','budget_approved':True,'host':'sim-shadow'},'Q1')
+
     def test_assignment_denominators(self):
         self.assertEqual(len(qualification()),18)
         self.assertEqual(len(development()),52)

@@ -9,3 +9,7 @@ One worker, no retries, frozen request whitelist, cumulative ledger and existing
 ## Admission withdrawn before native dispatch
 
 2026-10-04: 51 software checks and public preflight passed, but account verification established the allocation was outside Dmarz’s account. The host was deleted. This assessment is **blocked** until a fresh verified allocation is bound; Q1 has zero native calls. Read Q1-SETUP-POST.md before resuming. Budget remains approved.
+
+## Replacement admitted prospectively
+
+Existing Dmarz fleet host sim-shadow verified idle and exclusively claimed as vishesh-right-dissenter-replacement through 2026-10-04T05:30:08Z (private fleet PR129 merged). Q1-ALLOCATION.md and revised immutable Q1 plan published before the hostname/allocation guard change. Same42requests, no design changes and no native Q1 history. Fresh on-host tests, public preflight and current claim check still required immediately before dispatch.
