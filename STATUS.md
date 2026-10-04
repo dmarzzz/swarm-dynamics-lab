@@ -371,11 +371,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc9-instrument | 2026-10-04 18:37:54.608724+00:00 | Building and validating PC9 population exploration instrument; no native dispatch |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
 | vishesh/codex-decision-models | done | right-dissenter-reopening-design | 2026-10-04 18:24:17.580511+00:00 | Reopening design draft published; 23 offline tests pass, 162 prospective requests, zero native calls. RD5 remains complete. Changed scope/call-ceiling decision and native integration remain before launch. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:21:59.245134+00:00 | Packet-study v2 case-ready for controlled scope; no native qualification or admission |
 | vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc8-live | 2026-10-04 18:12:29.707680+00:00 | PC8 Q0 closed and reviewed; failed qualification, S1 unrun; parser defect repaired retrospectively; allocation released; FINISH / PARK |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
