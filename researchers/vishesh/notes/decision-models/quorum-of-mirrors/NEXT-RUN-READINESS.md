@@ -1,5 +1,11 @@
 # Q1 instrument readiness and operator handoff
 
+## Latest execution — QM-Q1-01
+
+2026-10-04: the operator directly allocated and ran the authorized screen. **One response failed the frozen zero-output-token contract; 15 assignments remain unstarted.** The run stopped automatically. No reasoning accuracy or swarm benefit can be inferred. All artifacts were read back and verified; the worker exited, the memory-only credential closed, and the exclusive host allocation was released. Cumulative budget retains 33 calls, $0.044352 reserved, and one unresolved actual charge. No further owner authorization or researcher review is required. The technical follow-up is receipt/accounting repair and verification of the output-token contract before a separately registered repair screen. See [post-mortem](reviews/Q1-01-post.md) and [results](results/QM-Q1-01/summary.json).
+
+Earlier preparation notes below are historical and do not override this execution record.
+
 2026-10-04 · **instrument prepared; operator completing launch**. Owner requested the design improvements and necessary preparation for the next experiment. The [prospective Q1 plan](NEXT-RUN-PLAN.md) was published in commit `7d50d4b2` before the new code. [Current roadmap](RUN-ROADMAP.md) retains the later M1/C1 stages and budget. No new native call, scientific-world generation, fleet claim or spend occurred.
 
 ## Implemented and checked
