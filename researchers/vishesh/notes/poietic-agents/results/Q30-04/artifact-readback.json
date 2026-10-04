@@ -1,0 +1,28 @@
+{
+  "verified": true,
+  "worker_stopped": true,
+  "checks": [
+    {
+      "role": "cheap_generative",
+      "name": "summary.json",
+      "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4",
+      "hash_matches": true,
+      "bytes": 7323
+    },
+    {
+      "role": "cheap_generative",
+      "name": "artifact-manifest.json",
+      "sha256": "3caa04c98f4bd004b04db72f24b48698fbf22661ebcdc4ed3f6cb7beda3c53ec",
+      "hash_matches": true,
+      "bytes": 890
+    },
+    {
+      "role": "cheap_generative",
+      "name": "final_frame.png",
+      "sha256": "4e8c0061b4c3360f5608ab5c5530188caec3982154ed2e5f3bb7c2ea795ed764",
+      "hash_matches": true,
+      "bytes": 37034
+    }
+  ],
+  "checked_utc": "2026-10-04T21:17:39.514064+00:00"
+}

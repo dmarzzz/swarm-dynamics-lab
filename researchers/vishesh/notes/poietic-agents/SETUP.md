@@ -74,3 +74,7 @@ Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](rev
 ## Q30-04 final baseline diagnostic — prospective
 
 [Plan](Q30-04-PLAN.md) and [owning assessment](reviews/Q30-04-pre.md). Delegated PI allocation PI-FUND-20261004-01 covers only 48 fresh GPT-OSS 20B actions with at least five seconds between physical request starts, no retry/fallback and park on another refusal. USD0.055 maximum additional all-in; original ledger and 120B qualification preserved. 163 offline checks pass. Source/runtime, public registration, current exclusive approved-account allocation and one source-bound execution window remain admission checks. The 30-member main is not funded or launched.
+
+## Q30-04 closed — paced provider refusal, baseline still GAP
+
+[Post-mortem](reviews/Q30-04-post.md), [scientific review](reviews/Q30-04-scientific.json) and [cost](results/Q30-04/cost-closeout.json):4 starts,3 valid/correct, one DeepInfra429,44 unstarted. All physical intervals at least5.000042 seconds; full trace replay and three artifact hashes verified. Original148 calls,40 uncertain, conservative totalUSD0.630273610. Worker/relay stopped; claim438released439. The cheap route is parked without another paid repair. Native collective n=0; no efficacy or fresh-run reproducibility. [P30-B](NEXT-P30-PLAN.md) is a prospective, unimplemented and unfunded design with stronger fixed-capability controls and independent worlds plus distinct execution repeats.

@@ -1,0 +1,9 @@
+{
+  "experiment": "poietic-agents",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/f751ca8e8b6d1253c54fb03e61969ec8ef15a12f/researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+  "commit": "f751ca8e8b6d1253c54fb03e61969ec8ef15a12f",
+  "plan_sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280",
+  "registered_tldr": "TLDR: Q30-04 tests whether GPT-OSS 20B can complete 48 fresh lifecycle actions with five-second minimum request spacing. Compare executed actions to protected references; require 48 valid, at least 44 correct and zero protected access. No retries or fallback; park on another refusal. Qualification only, not a 30-agent swarm result.",
+  "run_tldr": "TLDR: Q30-04 tests whether GPT-OSS 20B can complete 48 fresh lifecycle actions with five-second minimum request spacing. Compare executed actions to protected references; require 48 valid, at least 44 correct and zero protected access. No retries or fallback; park on another refusal. Qualification only, not a 30-agent swarm result.",
+  "checked_utc": "2026-10-04T21:10:46.288603+00:00"
+}

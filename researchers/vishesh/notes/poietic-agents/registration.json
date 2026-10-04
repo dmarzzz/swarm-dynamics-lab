@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Q30-03 completed. Task-specific instructions and explicit proposal wrappers qualified GPT-OSS 120B with 48/48 valid and 47/48 correct actions. GPT-OSS 20B returned six valid, correct actions before DeepInfra HTTP 429 stopped collection: 55 starts, 96 terminal assignments, 41 unstarted. Protected exact references, unchanged gates, no retries. The 30-member swarm comparison has not started. All traces and charges reviewed; conservative cumulative exposure USD0.621829245. A final, separately admitted paced 20B screen is prospectively allocated.",
+  "description": "TLDR: Q30-04 completed: GPT-OSS 20B returned three valid, correct actions before DeepInfra HTTP 429 refused the fourth despite at least five seconds between starts. 4 starts, 48 terminal assignments, 44 unstarted; no retry or fallback. The cheap route remains unqualified; prior 120B qualification is retained. No 30-agent comparison or fresh collective replication has run. Scientific baseline remains incomplete. All traces and costs reviewed; conservative cumulative exposure USD0.630273610. Failed route parked; stronger comparison remains prospective.",
   "params": {
     "stage": {
       "type": "str",
@@ -43,5 +43,5 @@
     "terminal_jobs"
   ],
   "primary_metric": "verified_success_rate",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/8a74c4ec3073268b6e1fed51c160f67b343fe4d5/researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/f751ca8e8b6d1253c54fb03e61969ec8ef15a12f/researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md"
 }

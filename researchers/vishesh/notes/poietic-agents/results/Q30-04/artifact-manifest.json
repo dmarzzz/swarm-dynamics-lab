@@ -1,0 +1,30 @@
+{
+  "attempt": "Q30-04",
+  "raw_payloads_public": false,
+  "files": {
+    "assignments.json": {
+      "sha256": "2ab6813a40acbb28d947d1ca2b0a89e9c6c8f035faa1dd4fb87c8dbbe150767c",
+      "bytes": 6211
+    },
+    "call-starts.jsonl": {
+      "sha256": "9007875b3408f8ef28ade81a2d59ed90e5080a421aa1c036e42c5a4ed492ad69",
+      "bytes": 799
+    },
+    "responses.jsonl": {
+      "sha256": "54ad0db5a4ac0c07de85ab9559094d04647b474875c2f10aa04cff681ae978e4",
+      "bytes": 31818
+    },
+    "records.json": {
+      "sha256": "926a0f9075ecf655692f48fe58faa427be1d00480048785ca69c608f320859f2",
+      "bytes": 46990
+    },
+    "summary.json": {
+      "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4",
+      "bytes": 7323
+    },
+    "final_frame.png": {
+      "sha256": "4e8c0061b4c3360f5608ab5c5530188caec3982154ed2e5f3bb7c2ea795ed764",
+      "bytes": 37034
+    }
+  }
+}

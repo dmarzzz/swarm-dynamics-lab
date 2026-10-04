@@ -1,0 +1,40 @@
+{
+  "attempt": "Q30-04",
+  "assigned": 48,
+  "started": 4,
+  "terminal": 48,
+  "unstarted": 44,
+  "reviewed_started": 4,
+  "complete_saved_trace_replay": true,
+  "summary_recomputed": true,
+  "checks": [
+    {
+      "id": "Q30-04:cheap_generative:0:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-04:cheap_generative:0:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-04:cheap_generative:0:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-04:cheap_generative:0:3",
+      "request_context_expected_match": true,
+      "action_replayed": false,
+      "provider_failure_retained": true
+    }
+  ],
+  "provider_starts_verified": 4,
+  "minimum_interval_s": 5.000041999999667,
+  "all_intervals_at_least_five_seconds": true,
+  "review_scope": "Every returned visible action and every provider refusal with effective contexts; no hidden reasoning claim; same-author audit."
+}

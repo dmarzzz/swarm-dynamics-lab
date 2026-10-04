@@ -1,0 +1,316 @@
+{
+  "attempt": "Q30-04",
+  "assessor": "vishesh/codex-heterogeneous",
+  "date": "2026-10-04",
+  "evidence_revision": "f751ca8e8b6d1253c54fb03e61969ec8ef15a12f",
+  "decision": "blocked",
+  "disposition": "finish diagnostic cycle; park failed route; prospective offline redesign only",
+  "overall_attempt_reviewed": true,
+  "execution": "reconciled; repeated provider refusal",
+  "qualification": "cheap role incomplete; earlier120B pass preserved",
+  "scientific_result": false,
+  "baseline_status": "GAP",
+  "native_collective_independent_n": 0,
+  "fresh_collective_replications": 0,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "One bounded same-contract route-readiness question and finite stopping decision; no causal pacing or swarm claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Twelve fresh lifecycle worlds assigned; only one began. Finite template coverage is explicit and insufficient for collective realism.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Recorded provider-start spacing meets five seconds; reference actions and unchanged contract separate transport refusal from returned-action correctness. No unpaced causal control.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Three correct returned actions do not qualify the cheap role; repeat provider429 leaves 44 unstarted and the first structural action unobserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ],
+      "next_action": "Park this failed route; no automatic retry or substitution. Improve cases/comparators offline and seek a named future allocation only for a useful new packet.",
+      "acceptance_check": "A later admitted contract must complete its unchanged qualification and a scoped native comparison/replication before baseline or efficacy claims."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "48 assigned,4 started,3 returned/valid/correct,44 unstarted; all denominator and grade calculations replay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Only one of 12 assigned worlds began; four dependent steps are not four independent units. Collective n=0 and no fresh collective replication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact Q30-03 prompt/engine methods and pinned provider/model reused; all 4 effective inputs reconstruct, with no evaluator-answer leakage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All 4 requests,3 visible actions/effects/bills and one429 receipt retained; 48 terminal outcomes and source bindings reconcile.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "148 original-ledger rows;40 uncertain charges preserved; new all-in0.008444365 within0.055; cumulative0.630273610; no worker, claim or unsettled dispatch remains.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source and 163 deployed checks; complete saved-data replay and immutable provenance. This does not establish fresh-execution stability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final frame inspected;48 denominator and44 unstarted visible;three published artifacts hash-match.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-04-PLAN.md",
+          "sha256": "1534696816ea1db60ee815ad37cfd72af7bf4c5d4ce2c4b3f97157f006b48280"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/summary.json",
+          "sha256": "78179f065ba9159c20b23f8b954413f8a6f5fa5116e72e3e9e558f2513095fa4"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/trace-review.json",
+          "sha256": "f5c60c8bf6970df1429825cc370f2d1010664eda7244d077d93c2018dc446597"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/cost-closeout.json",
+          "sha256": "390818c72551ec8c6a4f05302b37c1029fa50b5edeb2846192fa8e81b7c57571"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-04/artifact-readback.json",
+          "sha256": "91257ce01a03eccfa45f09b02bf09c638a2dd7b67edd3e03e6e507cadc487145"
+        }
+      ]
+    }
+  ]
+}
