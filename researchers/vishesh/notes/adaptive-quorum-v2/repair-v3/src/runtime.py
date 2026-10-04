@@ -20,15 +20,16 @@ class Runtime:
                        'device':'cpu','threads':2,'versions':{p:importlib.metadata.version(p) for p in ('torch','transformers','safetensors')}}
 
     def choose(self,state,instructions,criteria,context):
-        from laya.common import build_sequence
+        from laya.common import build_sequence, build_head
         q={'type':'choice','instructions':instructions,'criteria':criteria}
         internal=self.agent._to_internal(q)
         ids,markers,options,truncation=build_sequence(self.agent.tok,state,internal,max_len=1024,head_max_len=256,return_stats=True,return_truncation_stats=True)
-        receipt={'context':context,'state':state,'question':q,'input_hash':hashlib.sha256(json.dumps([state,q],sort_keys=True).encode()).hexdigest(),
+        head_loss=build_head(self.agent.tok,internal,head_max_len=256)[0]!=build_head(self.agent.tok,internal,head_max_len=8192)[0]
+        receipt={'head_truncated':head_loss,'context':context,'state':state,'question':q,'input_hash':hashlib.sha256(json.dumps([state,q],sort_keys=True).encode()).hexdigest(),
                  'encoded_tokens':len(ids),'encoding':truncation,'options':options,'valid':False}
         start=time.monotonic();self.receipts.append(receipt)
         try:
-            if truncation['truncated'] or options['options_distinct']!=len(criteria) or len(markers)!=len(criteria):raise ValueError('encoding_loss')
+            if head_loss or truncation['truncated'] or options['options_distinct']!=len(criteria) or len(markers)!=len(criteria):raise ValueError('encoding_loss')
             answer=self.agent.predict(state,{'decision':q},max_len=1024,head_max_len=256)['answers']['decision']
             p=answer['probabilities'];choice=answer['choice']
             if set(p)!=set(criteria) or choice not in criteria or any(not math.isfinite(v) or not 0<=v<=1 for v in p.values()):raise ValueError('schema')
