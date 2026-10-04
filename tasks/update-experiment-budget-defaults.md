@@ -3,14 +3,16 @@ id: update-experiment-budget-defaults
 type: task
 title: Update default and promising-study budget tiers
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T20:15Z
+updated: 2026-10-04T20:15Z
 ---
 
 ## Goal
