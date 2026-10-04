@@ -23,6 +23,6 @@ Owner's follow-up directs one bounded pilot outside factory provenance invarianc
 
 ## Done when
 
-- Prospective bounded PLAN committed and publicly readable before analysis.
-- Frozen local input fingerprints, one page-level contrast, full separate-implementation recomputation, checks and limitations saved.
-- FINDING and post-mortem published; no scaling, causal efficacy or peer-review claim.
+- [x] Prospective bounded PLAN committed and publicly readable before analysis.
+- [x] Frozen local input fingerprints, one page-level contrast, full separate-implementation recomputation, checks and limitations saved.
+- [x] FINDING and post-mortem published; no scaling, causal efficacy or peer-review claim.

@@ -1,0 +1,352 @@
+{
+  "accounting": {
+    "event_rows": 19913,
+    "event_kinds": {
+      "delete": 5217,
+      "probe": 101,
+      "revert": 4,
+      "save": 14591
+    },
+    "revision_rows": 14591,
+    "quality_counts": {
+      "admissible_revision_rows": 14585,
+      "primary_pages_with_any_admissible_revision": 2158,
+      "revision_ineligible_time_grade": 6,
+      "successful_delete_events": 5217
+    },
+    "selected_pages": 5144,
+    "eligible_primary_pages": 2728,
+    "exclusion_counts": {
+      "primary_release_edge": 2416
+    },
+    "admissible_revision_time_range": [
+      "2026-05-24T06:02:19Z",
+      "2026-07-02T17:51:22Z"
+    ]
+  },
+  "window_results": {
+    "300": {
+      "pages": 2728,
+      "before": 20,
+      "after": 13,
+      "mean_after_minus_before": -0.002565982404692082,
+      "after_before_ratio": 0.65,
+      "pages_with_return": 9,
+      "return_fraction": 0.0032991202346041057,
+      "pages_increased": 5,
+      "pages_unchanged": 2712,
+      "pages_decreased": 11,
+      "median_return_latency_given_return": 133.0,
+      "deletion_day_clusters": 14,
+      "daily": {
+        "2026-06-04": {
+          "pages": 2,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-18": {
+          "pages": 19,
+          "before": 11,
+          "after": 12,
+          "any_return": 8
+        },
+        "2026-06-19": {
+          "pages": 308,
+          "before": 7,
+          "after": 1,
+          "any_return": 1
+        },
+        "2026-06-20": {
+          "pages": 68,
+          "before": 2,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-21": {
+          "pages": 8,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-22": {
+          "pages": 10,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-23": {
+          "pages": 596,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-24": {
+          "pages": 234,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-25": {
+          "pages": 179,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-26": {
+          "pages": 382,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-28": {
+          "pages": 146,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-29": {
+          "pages": 88,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-30": {
+          "pages": 440,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-07-01": {
+          "pages": 248,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        }
+      }
+    },
+    "1800": {
+      "pages": 2728,
+      "before": 83,
+      "after": 83,
+      "mean_after_minus_before": 0.0,
+      "after_before_ratio": 1.0,
+      "pages_with_return": 19,
+      "return_fraction": 0.006964809384164223,
+      "pages_increased": 13,
+      "pages_unchanged": 2689,
+      "pages_decreased": 26,
+      "median_return_latency_given_return": 349.0,
+      "deletion_day_clusters": 14,
+      "daily": {
+        "2026-06-04": {
+          "pages": 2,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-18": {
+          "pages": 19,
+          "before": 46,
+          "after": 59,
+          "any_return": 11
+        },
+        "2026-06-19": {
+          "pages": 308,
+          "before": 30,
+          "after": 10,
+          "any_return": 5
+        },
+        "2026-06-20": {
+          "pages": 68,
+          "before": 7,
+          "after": 14,
+          "any_return": 3
+        },
+        "2026-06-21": {
+          "pages": 8,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-22": {
+          "pages": 10,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-23": {
+          "pages": 596,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-24": {
+          "pages": 234,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-25": {
+          "pages": 179,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-26": {
+          "pages": 382,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-28": {
+          "pages": 146,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-29": {
+          "pages": 88,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-30": {
+          "pages": 440,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-07-01": {
+          "pages": 248,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        }
+      },
+      "status": "descriptive_pilot",
+      "day_cluster_bootstrap_95_interval": [
+        -0.01823723609627865,
+        0.022515136533269923
+      ],
+      "bootstrap": {
+        "seed": 20261004,
+        "draws": 5000,
+        "unit": "observed deletion UTC day",
+        "interpretation": "Resampling variation among observed days, not a causal or population interval"
+      }
+    },
+    "3600": {
+      "pages": 2728,
+      "before": 151,
+      "after": 143,
+      "mean_after_minus_before": -0.002932551319648094,
+      "after_before_ratio": 0.9470198675496688,
+      "pages_with_return": 23,
+      "return_fraction": 0.00843108504398827,
+      "pages_increased": 13,
+      "pages_unchanged": 2676,
+      "pages_decreased": 39,
+      "median_return_latency_given_return": 430.0,
+      "deletion_day_clusters": 14,
+      "daily": {
+        "2026-06-04": {
+          "pages": 2,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-18": {
+          "pages": 19,
+          "before": 83,
+          "after": 103,
+          "any_return": 14
+        },
+        "2026-06-19": {
+          "pages": 308,
+          "before": 60,
+          "after": 17,
+          "any_return": 6
+        },
+        "2026-06-20": {
+          "pages": 68,
+          "before": 8,
+          "after": 23,
+          "any_return": 3
+        },
+        "2026-06-21": {
+          "pages": 8,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-22": {
+          "pages": 10,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-23": {
+          "pages": 596,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-24": {
+          "pages": 234,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-25": {
+          "pages": 179,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-26": {
+          "pages": 382,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-28": {
+          "pages": 146,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-29": {
+          "pages": 88,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-06-30": {
+          "pages": 440,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        },
+        "2026-07-01": {
+          "pages": 248,
+          "before": 0,
+          "after": 0,
+          "any_return": 0
+        }
+      }
+    }
+  },
+  "model_calls": 0,
+  "cost_usd": 0,
+  "claim_boundary": "Paired observed write counts, not causal suppression, content restoration or agent identity.",
+  "provenance": {
+    "input_sha256": {
+      "events.jsonl.gz": "989780118de3dc05031ee5920a761c565a97b64d3721688593adc0794fcfb7b8",
+      "revisions.jsonl.gz": "9c2a4ef0ccbfb5b42be8422342a6bd3a389a4a047bc891e3148354dd65b63c96"
+    },
+    "analyzer_sha256": "ceffe6e65d6a03a42728323d9a251951ef2d6471b51a1dd206952c4ea1f8d17a",
+    "raw_input_mode": "read-only",
+    "source": "https://collusion.wiki/explorer/download"
+  }
+}

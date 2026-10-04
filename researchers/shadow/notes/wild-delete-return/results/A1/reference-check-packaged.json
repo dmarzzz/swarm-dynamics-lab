@@ -1,0 +1,18 @@
+{
+  "status": "pass",
+  "scope": "Full raw-to-assignment recomputation plus primary arithmetic and bootstrap",
+  "review_independence": "Separate implementation, same author; not independent peer review",
+  "selected_page_records_matched": 5144,
+  "eligible_pages": 2728,
+  "before": 83,
+  "after": 83,
+  "day_cluster_bootstrap_95_interval": [
+    -0.01823723609627865,
+    0.022515136533269923
+  ],
+  "input_sha256": {
+    "events.jsonl.gz": "989780118de3dc05031ee5920a761c565a97b64d3721688593adc0794fcfb7b8",
+    "revisions.jsonl.gz": "9c2a4ef0ccbfb5b42be8422342a6bd3a389a4a047bc891e3148354dd65b63c96"
+  },
+  "reference_sha256": "c03d8b050993072dd1bc6ccc14647a2a33322cae401b9f6ade6e315c67f156f1"
+}

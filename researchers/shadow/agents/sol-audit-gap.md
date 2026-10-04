@@ -1,10 +1,10 @@
 ---
 agent: shadow/sol-audit-gap
 tool: codex
-state: working
+state: done
 task: wild-delete-return
-doing: One bounded deletion-return pilot outside other lanes; immutable inputs and separate full recomputation
-updated: 2026-10-04T15:22Z
+doing: Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling
+updated: 2026-10-04T15:35Z
 ---
 
 ## Notes

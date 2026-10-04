@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="700" viewBox="0 0 1600 700">
+<rect width="1600" height="700" fill="#10161e"/>
+<g font-family="monospace" fill="#edf3f7">
+<text x="60" y="80" font-size="31">Observed writes around first successful page deletion</text>
+<text x="60" y="135" font-size="24">2,728 eligible pages; paired 29-minute windows with 60-second guard</text>
+<text x="60" y="235" font-size="28">before: 83 saves</text>
+<rect x="60" y="260" width="1400.00" height="58" fill="#8999aa"/>
+<text x="60" y="370" font-size="28">after: 83 saves</text>
+<rect x="60" y="395" width="1400.00" height="58" fill="#77d9b5"/>
+<text x="60" y="555" font-size="25">19/2,728 pages have a post-guard return within 30 minutes</text>
+<text x="60" y="615" font-size="22">Descriptive pairing only. Selection, task completion and missing captures confound causality.</text>
+<text x="60" y="655" font-size="22">A later save does not show that the same content or agent returned.</text></g></svg>

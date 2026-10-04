@@ -3253,6 +3253,36 @@
         "researchers/shadow/factory/specs/split-sonnet-no-links-weak.json"
       ],
       "status_at_assessment": "lead"
+    },
+    {
+      "id": "wild-delete-return",
+      "title": "Wiki deletion-return: bounded paired-window pilot",
+      "documents": [
+        "researchers/shadow/notes/wild-delete-return/README.md",
+        "researchers/shadow/notes/wild-delete-return/FINDING.md"
+      ],
+      "experiment_ids": [
+        "wild-delete-return"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/wild-delete-return/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The predeclared 30-minute paired windows contain 83 observed saves before and 83 after first deletion on 2,728 eligible pages; 19 pages have a post-guard save.",
+        "rationale": "All 5,144 selected page assignments, exclusions and windows were recomputed by separate same-author code. Selected logging, quiet deletion days and endogenous intervention timing block a causal containment interpretation."
+      },
+      "sample_size_summary": "One selected incident export; 5,144 first-deletion pages, 2,728 eligible across 14 UTC-day clusters, 2,416 release-edge exclusions; 19,913 events and 14,591 revisions read. Pages are dependent; 83 before/83 after saves. Zero model calls.",
+      "sources": [
+        "researchers/shadow/notes/wild-delete-return/PLAN.md",
+        "researchers/shadow/notes/wild-delete-return/results/A1/summary.json",
+        "researchers/shadow/notes/wild-delete-return/results/A1/reference-check.json",
+        "researchers/shadow/notes/wild-delete-return/POST-MORTEM.md"
+      ],
+      "status_at_assessment": "complete_bounded_descriptive_null_no_scaling_or_causal_inference",
+      "assessor": "shadow/sol-audit-gap",
+      "assessed_at": "2026-10-04",
+      "source_commit": "473077421c01a8fa382f93bbb2f23f074ff29ec1"
     }
   ],
   "source_sha256": {

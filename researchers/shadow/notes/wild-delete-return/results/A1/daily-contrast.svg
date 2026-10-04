@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1150" viewBox="0 0 1600 1150">
+<rect width="1600" height="1150" fill="#10161e"/><g font-family="monospace" fill="#edf3f7">
+<text x="60" y="70" font-size="30">The aggregate null combines different deletion-day contrasts</text>
+<text x="60" y="120" font-size="20">30-minute horizon, 60-second guard; observed saves, not estimated treatment effects</text>
+<text xml:space="preserve" x="60" y="170" font-size="20">UTC day        pages    before   after   difference</text>
+<text xml:space="preserve" x="60" y="225" font-size="21">2026-06-04       2        0       0        +0</text>
+<rect x="1160" y="205" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="278" font-size="21">2026-06-18      19       46      59       +13</text>
+<rect x="1160" y="258" width="156" height="27" fill="#77d9b5"/>
+<text xml:space="preserve" x="60" y="331" font-size="21">2026-06-19     308       30      10       -20</text>
+<rect x="920" y="311" width="240" height="27" fill="#f0bf70"/>
+<text xml:space="preserve" x="60" y="384" font-size="21">2026-06-20      68        7      14        +7</text>
+<rect x="1160" y="364" width="84" height="27" fill="#77d9b5"/>
+<text xml:space="preserve" x="60" y="437" font-size="21">2026-06-21       8        0       0        +0</text>
+<rect x="1160" y="417" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="490" font-size="21">2026-06-22      10        0       0        +0</text>
+<rect x="1160" y="470" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="543" font-size="21">2026-06-23     596        0       0        +0</text>
+<rect x="1160" y="523" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="596" font-size="21">2026-06-24     234        0       0        +0</text>
+<rect x="1160" y="576" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="649" font-size="21">2026-06-25     179        0       0        +0</text>
+<rect x="1160" y="629" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="702" font-size="21">2026-06-26     382        0       0        +0</text>
+<rect x="1160" y="682" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="755" font-size="21">2026-06-28     146        0       0        +0</text>
+<rect x="1160" y="735" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="808" font-size="21">2026-06-29      88        0       0        +0</text>
+<rect x="1160" y="788" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="861" font-size="21">2026-06-30     440        0       0        +0</text>
+<rect x="1160" y="841" width="2" height="27" fill="#8999aa"/>
+<text xml:space="preserve" x="60" y="914" font-size="21">2026-07-01     248        0       0        +0</text>
+<rect x="1160" y="894" width="2" height="27" fill="#8999aa"/>
+<line x1="1160" x2="1160" y1="195" y2="950" stroke="#526171"/>
+<text x="60" y="1040" font-size="22">Only June 18–20 contribute any saves inside these windows.</text>
+<text x="60" y="1085" font-size="20">Moderation targeting, quiet pages and collection gaps prevent a causal containment claim.</text></g></svg>

@@ -1,0 +1,10 @@
+{
+  "id": "wild-delete-return",
+  "title": "Wiki deletion-return: one bounded saved-data pilot",
+  "description": "Prospective paired-window descriptive contrast on one fixed collusion.wiki export. First successful deletion per page, exact joins, clock-quality and release-edge exclusions, 60-second guard. Zero model calls. No causal containment, identity or content-restoration inference. Full separate-implementation raw-to-assignment recomputation completed; same author, not independent peer review.",
+  "owner": "shadow",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/wild-delete-return",
+  "params": {"stage": {"type": "str", "role": "stage", "description": "A1 only, fixed export"}},
+  "metrics": ["eligible_pages", "before_saves", "after_saves", "mean_paired_change", "returning_pages", "model_calls", "cost_usd"],
+  "primary_metric": "mean_paired_change"
+}

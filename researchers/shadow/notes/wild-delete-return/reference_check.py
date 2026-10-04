@@ -87,7 +87,11 @@ def main():
                        'first_return_latency_seconds':min(after)-t if after else None}
         actual.append(a)
     actual.sort(key=lambda a:a['page_sha256'])
-    expected=json.loads((args.results/'assignments.json').read_text())
+    assignment_path=args.results/'assignments.json'
+    if assignment_path.exists():
+        expected=json.loads(assignment_path.read_text())
+    else:
+        expected=json.loads(gzip.decompress((args.results/'assignments.json.gz').read_bytes()))
     assert actual==expected, 'Full assignment/eligibility/window table mismatch'
     summary=json.loads((args.results/'summary.json').read_text())
     primary=[a for a in actual if a['eligible']]
