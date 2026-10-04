@@ -3,9 +3,9 @@ id: build-sybil-rules-180
 type: task
 title: Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready
 kind: build
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/flagship-market
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/flagship-market
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - sybil-resistance
 - llm-agent-swarms
+claimed_at: 2026-10-04T10:31Z
+updated: 2026-10-04T10:31Z
 ---
 
 ## Goal
