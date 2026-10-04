@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-receipt-comparison](tasks/antsy-receipt-comparison.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T19:43Z | Build and validate receipt extraction comparison with standard traces |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -150,6 +149,7 @@
 | [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:50Z | Audit and publish the completed discussion v3 qualification |
 | [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:29Z | Measure worker diversity and correlated errors in Antsy |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
+| [antsy-receipt-comparison](tasks/antsy-receipt-comparison.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T19:55Z | Build and validate receipt extraction comparison with standard traces |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
 | [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T07:03Z | Repair Antsy extraction and design targeted verification |
 | [antsy-trace-receipts](tasks/antsy-trace-receipts.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T19:33Z | Audit Antsy field rejection and share trace receipt checks |
