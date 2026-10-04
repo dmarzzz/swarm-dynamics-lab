@@ -3,14 +3,18 @@ id: right-dissenter-rd5-run
 type: task
 title: Run approved Right Dissenter RD5 qualification and conditional pilot
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-decision-models
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [decision-models, dissent]
+topics:
+- decision-models
+- dissent
+claimed_at: 2026-10-04T08:39Z
+updated: 2026-10-04T08:39Z
 ---
 
 ## Goal
