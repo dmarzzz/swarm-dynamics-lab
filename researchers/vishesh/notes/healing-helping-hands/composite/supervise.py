@@ -28,7 +28,7 @@ def main(a):
                 if relay.poll() is not None:raise RuntimeError('relay_startup_failed')
                 try:
                     with urllib.request.urlopen('http://127.0.0.1:18443/health',timeout=1) as r:h=json.load(r)
-                    ready=h.get('ready') and h.get('attempt')==ATTEMPT and h.get('stage')==a.stage
+                    ready=h.get('ready') and h.get('pid')==relay.pid and h.get('attempt')==ATTEMPT and h.get('stage')==a.stage
                 except OSError:pass
                 if ready:break
                 time.sleep(.5)
