@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-dashboard-fix | done |  | 2026-10-04T23:03Z | Repaired invalid hypothesis topic metadata blocking dashboard export; retained strict validation and added regressions. |
 | shadow/sol-narrative | idle |  | 2026-10-04T22:55Z | Completed. Final verified narrative snapshot is live at swarm-narrative.pages.dev. |
 | vishesh/senku-1 | idle |  | 2026-10-04T22:50Z | 2026-10-04 pm: influence-swarms/scenario/redesign-v2 — critique + redesign proposal of the procurement influence study (one registered primary estimand, v2 fixtures, exposure/dose, composition + agent template, two-sided gates, 12 new cases) with a zero-model-call sizing simulation, an independent design review and a numbers check; proposal only, no launch |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T22:46Z | Telephone B4R1 completed and reviewed; source-restored18/18 versus handoff-only7/18; no further run authorized. |
