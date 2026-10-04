@@ -1,8 +1,10 @@
 id: sybil-budget-sonnet
 title: How much verification does Sybil resistance need? (Sonnet 4.6 replication)
-description: 972 simulated identities; six verification budgets and five attacker pass rates;
-  random versus topology coverage. Sonnet 4.6 model replication of sybil-budget-api on the
-  same N972 worlds.
+description: 'TLDR: Does a stronger synthesizer change how much identity verification a Sybil-attacked
+  swarm needs? Sonnet 4.6 answers the byte-identical N972 packets (4-108 random or coverage
+  checks, attacker pass 10-90%, 24 worlds) that Haiku 4.5 answered in sybil-budget-api;
+  endpoints are specialist accuracy and the 90%/5% budget frontier; exploratory, one synthetic
+  graph family, simulated checks.'
 owner: dmarz
 params:
   stage:
@@ -30,4 +32,4 @@ metrics:
 - bad_seat_share
 - specialist_retention
 primary_metric: rare_accuracy
-url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-budget-sonnet
+url: https://github.com/dmarzzz/swarm-lab/blob/7fe10743f5ab45372402587d91f80f23ef557219/researchers/dmarz/notes/sybil-budget-sonnet/README.md

@@ -1,4 +1,4 @@
-"""Full parity receipt: every sybil-budget-sonnet Q0/S1 assignment equals the parent's N972 row.
+"""Full parity receipt: every sybil-budget-sonnet Q0/S1 assignment equals the parent's row.
 
 Offline, no model calls. Usage: python3 reporting/parity_check.py reporting/parity-receipt.json
 """
@@ -12,7 +12,7 @@ ps=importlib.util.module_from_spec(spec);spec.loader.exec_module(ps)
 out={'source_hash':study.source_hash()}
 for stage in ('Q0','S1'):
     mine={a['id']:a for a in study.assignments(stage)}
-    theirs={a['id']:a for a in ps.assignments(stage) if a['n']==972}
+    theirs={a['id']:a for a in ps.assignments(stage)}
     assert set(mine)==set(theirs),'assignment_ids_differ'
     for k,a in mine.items():
         for f in ('packet_hash','expected','graph_metrics','verification_events','task','arm','checks','attacker_pass','kind'):
