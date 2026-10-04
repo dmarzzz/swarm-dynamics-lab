@@ -3,14 +3,18 @@ id: right-dissenter-freshness-diagnostic
 type: task
 title: Diagnose expired evidence and implement a strong eligibility baseline
 kind: experiment
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-decision-models
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-decision-models
 depends_on: []
-topics: [dissent, decision-models]
+topics:
+- dissent
+- decision-models
+claimed_at: 2026-10-04T20:14Z
+updated: 2026-10-04T20:14Z
 ---
 
 ## Goal
