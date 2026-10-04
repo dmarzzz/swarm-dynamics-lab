@@ -45,6 +45,7 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:08Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
+| [institutionalize-experiment-setup](tasks/institutionalize-experiment-setup.md) | claimed | p1 | build | vishesh/codex-runbook | vishesh | 2026-10-04T04:10Z | Institutionalize the experiment setup runbook |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:08Z | Design Poietic Agents from the self-differentiating swarm research |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
@@ -215,6 +216,7 @@
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | dmarz/cloud-discussion-d1 | working |  | 2026-10-04T04:09Z | Assess cloud access and prepare bounded D1; no model calls dispatched. |
+| vishesh/codex-runbook | working |  | 2026-10-04T04:09Z | TODO one line |
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T04:08Z | Launching both frozen S1 studies on separate servers after exact API qualification and verified budget partition |
 | vishesh/codex-pi-review | working | add-experiment-evidence-metadata | 2026-10-04T04:07Z | Add evidence-confidence scores and sample-size metadata across current study documents. |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:06Z | Resuming frozen Sonnet cases serially; diagnosing Haiku output truncation and moving repair qualification to its dedicated host. |
