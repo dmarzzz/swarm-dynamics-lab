@@ -1,0 +1,26 @@
+{
+  "created_at": "2026-10-04T03:44:33.791892+00:00",
+  "mode": "offline software validation",
+  "test_count": 29,
+  "test_exit_code": 0,
+  "test_output": "----------------------------------------------------------------------\nRan 29 tests in 0.004s\n\nOK\n",
+  "model_calls": 0,
+  "spend": 0,
+  "qualification_generated": false,
+  "browser_checks": [
+    "initial state",
+    "final state",
+    "missing responses",
+    "playback",
+    "automatic stop"
+  ],
+  "sha256": {
+    "src/build_replay.py": "4f7881b2e1d1c3dd86a160e7b5d38a46846ec5650dac0ab9ff196c59bcc09f69",
+    "src/instrument.py": "413778949afb82e80f89e1a36ed1718067e12bb74a4d4e76f6414715b33132e8",
+    "src/replay-template.html": "581701a146f1f3ae5f16b2c4a30bcc0be33b3a553fa2263c6e052acd28f9e8e4",
+    "tests/test_instrument.py": "f03db953fad73d246be5e9dbda2807e6e404592b9215f5ff1a5ad6fe0b28ff3c",
+    "PLAN.md": "9248fd3b3cb5f62b36f86a2748bb885379b241ab8ea7b000487c1c97ba2abd42",
+    "visualization/fixture.json": "e288c1d1928642d2083e414cdbe7506bb1b1477a881b2a2c4a9574660507dfa6",
+    "visualization/index.html": "b1334b10bf5a4dd0972e5bbb5b1bc82f24b679815bb72c70529ae808922bd8d1"
+  }
+}
