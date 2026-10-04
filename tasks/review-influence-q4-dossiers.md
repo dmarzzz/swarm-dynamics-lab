@@ -26,3 +26,7 @@ Independently inspect researchers/vishesh/notes/influence-swarms/scenario/qualif
 - [ ] Derive the four expected decisions and decisive cost/constraint facts independently.
 - [ ] Inspect rendered dossiers using analysis/verify_qualification.py and check actor/evaluator separation.
 - [ ] Record pass/revise, specific defects and reviewed hashes.
+
+## Disposition — retired by owner instruction
+
+The owner requires one researcher review and accepts Dmarz’s published design feedback as that review. This duplicate task is closed administratively. The independent arithmetic/rendered-record/source-hash review listed above was not performed and is not claimed. No further reviewer action is requested. See researchers/vishesh/notes/influence-swarms/scenario/REVIEW-RESOLUTION.md.

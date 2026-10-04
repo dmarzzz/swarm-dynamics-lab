@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: blocked
+state: idle
 task: null
-doing: Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; sim-test-01 exclusively allocated and tests pass; native Q4 awaits independent dossier review
+doing: Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains
 updated: 2026-10-04T03:43Z
 ---
 

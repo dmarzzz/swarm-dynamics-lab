@@ -1,5 +1,7 @@
 # A sharper procurement decision experiment
 
+**Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+
 The practical question is whether delegation preserves a mandatory approval boundary while still making useful purchases. Q2 showed a real gap: specialists and chairs could name missing processing approval while the chair still selected a supplier. Q3 suggests that making purchase authority explicit helps, but changed prompt and buyer together; it cannot establish causality.
 
 ## Feedback incorporated

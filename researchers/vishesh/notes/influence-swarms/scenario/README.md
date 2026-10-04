@@ -1,5 +1,7 @@
 # How to win agents and influence swarms
 
+**Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+
 ## TLDR
 
 A support team has to choose a helpdesk before its existing contract expires. The cheapest seat price is not necessarily the cheapest operation: automated-resolution charges, difficult tickets still needing people, migration dependencies and deployment-specific hosting commitments can reverse the decision. Six specialists read different parts of the same procurement file. Two checkers retrieve requested records. A chair must decide whether to buy or defer.

@@ -398,3 +398,7 @@ python3 .flightdeck/fd.py check --strict .
 - Edits to another researcher's files, to generated files, or to claim fields by hand.
 - Force pushes, history rewrites, or committing large binaries.
 - Marking `read_depth: full` or `ran` without doing it.
+
+## Single researcher review for Vishesh's experiments
+
+Owner clarification, 2026-10-04 UTC: require one researcher review, not separate design and dossier sign-offs or approval from both Dmarz and Shadow. For How to win agents and influence swarms, Dmarz's published design feedback satisfies the researcher-review requirement by explicit owner direction. Retire the extra Q4 dossier-review gate. Resolve substantive feedback through the owning agent's implementation and validation; do not automatically request a second researcher review for routine repairs. Keep tests, bounded model qualification, public plans, budget and dedicated-account allocation checks. A completed design review must not be misrepresented as an independent code/arithmetic audit or formal hypothesis acceptance. This clarification supersedes duplicate review requirements in this owner's experiment plans.

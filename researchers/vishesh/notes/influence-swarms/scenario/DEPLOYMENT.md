@@ -1,5 +1,7 @@
 # Native deployment record
 
+**Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+
 Dedicated host: sim-dmarz-3. Exclusive claim: vishesh-influence-scenario-native, through 2026-10-04T06:28:45Z; merged agentops PR 54. Actual Python/node script workload was empty before deployment. No other experiment was stopped or moved. No server was created.
 
 One finite worker per attempt, Python virtualenv with Pillow, native Anthropic Haiku 4.5. Model credential consumed from the existing Keychain alias through encrypted SSH stdin and process memory. No credential values or private fleet addresses enter this repository.
