@@ -16,6 +16,7 @@ from replay import render
 from reporting import Reporter
 from tasks import generate,qualification_manifest,evaluate,operational
 from failures import SafeFailure,safe_code
+from response_contract import VERSION,LEGACY
 
 REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdollars',
           'episode_cap_microdollars','spending_authorization','independent_review_commit',
@@ -24,6 +25,7 @@ REQUIRED=('expected_served_model','expected_served_provider','stage_cap_microdol
 
 def launch_errors(config):
     errors=[f'missing:{k}' for k in REQUIRED if not config.get(k)]
+    if config.get('response_contract') not in (VERSION,LEGACY):errors.append('response_contract_unconfigured')
     if config.get('status')!='ready':errors.append('config_not_ready')
     for k in ('stage_cap_microdollars','episode_cap_microdollars'):
         v=config.get(k)
@@ -137,7 +139,7 @@ def run_batch(config,commit,output,ledger,assignments):
                         if pending_progress is None or pending_progress.done():
                             pending_progress=progress_pool.submit(send_progress,completed)
                 task=generate(row['family'],row['structure'],row['root'])
-                runtime=Provider(config,bank,row['id'],journal)
+                runtime=Provider(config,bank,row['id'],journal,task.public)
                 try:
                     record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event)
                 finally:

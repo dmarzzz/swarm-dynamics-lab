@@ -1,32 +1,34 @@
 {
   "kind": "offline software checks; not an experimental run",
-  "test_methods": 34,
+  "test_methods": 41,
   "passed": true,
   "model_calls": 0,
   "files": {
     "src/budget.py": "694deaf93368d875c45af7663f19b9fcae8138c52cfe8a1a8610c251b94456a2",
-    "src/engine.py": "a6c379e46f4d9d28dc7adf51063d4b8a54e536f8474442bdbe9261a4c23df2d0",
-    "src/failures.py": "17efb161f0d14e1d49700288a52e62fd1c9302fa7d178f218d08f2d947ce30dd",
+    "src/engine.py": "78851d29de8d9dabca5900a302f3ff04f0e2b72b38cf50b22e0278d3a2064f0a",
+    "src/failures.py": "7be70e5bc19f47ecd5fe0740667664a910e3d760d23af65c7d3861e4cc58ecc1",
     "src/manifest.py": "f744a392e1cdb9cf4d73fa54d87402900f815028727a85f426bcd094d28bf627",
-    "src/provider.py": "64c92390a59a34a22fdfd7f4237f501d42934584afe02dfedbf03e110d795eb0",
+    "src/provider.py": "874861a2f51cd4c317885e5b2a8194057236dc71a64cf74707033254f30c97b7",
     "src/register.py": "7e740510431ceb06e0ee30d07a7ac85618196805caff19b3d5a3f8592f7bbfa5",
     "src/replay.py": "2cc57e9600a598bde6d184d003300e8761f00d793372c309e3e470ed02ce68f0",
     "src/reporting.py": "33c5ebd115283864f08346508481e3a0cb469f03fb3d501a2f70550d126ce5d4",
     "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
-    "src/run_qualification.py": "5522fc569228b4fae06a74e6f533cd41a76b1e40d6b5a1eaed5dcf440ba4ced8",
+    "src/response_contract.py": "c5002c5849ffd5a860121588e028aa214aa79e50e561003983c2b1eca5396365",
+    "src/run_qualification.py": "e44169760c9161293f930d913fa8f438c310e716668a237f751d94f868bb7695",
     "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
     "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
-    "src/test_engine.py": "ced16f6f055cf4ffa5c5a8047d03c0b6bcb1a4df55005cb173f69969f084dbb9",
+    "src/test_engine.py": "4875b0565b999d6a6ad4394f3f14c1f73031239d785cfc22d4467c35c44fbb0a",
     "src/test_failures.py": "b50b8cb65c1418867b8426fd90082586f80881b6cf8b3b6f41579b4f9586c553",
     "src/test_launch.py": "898514ba39b300e331d131b9082105c42817df0f7badee54c2efc97afc48bbc3",
-    "src/test_provider.py": "d3f5db27be009d496c7eb59c3707eaab1b9cdb50f57fec0c759451a0fd91e06a",
+    "src/test_provider.py": "78052539014c660699a2988dd95777ebf0bc9430c0027b09bb7e9bd8961dc6f7",
     "src/test_replay.py": "f2581e553095420d4a72874406ff5ce4eff3c537c5916adbd78474727f315b37",
     "src/test_reporting.py": "ae31a74d7ec55f894830e2aae263e48ad745823c95f283876fd181df262a395e",
+    "src/test_response_contract.py": "f890accbbae2f2080f60dd898c5507c62a069765d058bc11242182f5e0209433",
     "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49",
     "src/transport_diagnostic.py": "840e0664027fded89132a0b3747773dcbc0371beb148d9e04f09dbbc8cea6f78"
   },
   "unverified": [
-    "Q-A2 live qualification",
-    "Q-A2 exact public registration and deployment before dispatch"
+    "Native Anthropic schema-constrained live qualification",
+    "Fresh allocation and exact public-plan/source admission for next attempt"
   ]
 }
