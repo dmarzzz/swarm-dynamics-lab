@@ -41,10 +41,10 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed (stale) | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
-| [consolidate-pi-next-decisions](tasks/consolidate-pi-next-decisions.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:25Z | Consolidate PI reviews into experiment next-step decisions |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed (stale) | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T09:29Z | Run the revised procurement influence experiment |
+| [review-fork-merge-security](tasks/review-fork-merge-security.md) | claimed | p1 | review | vishesh/fm-security-review | vishesh | 2026-10-04T14:39Z | Review: fork-and-merge security survey |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -69,7 +69,6 @@
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T09:07Z | Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
-| [review-fork-merge-security](tasks/review-fork-merge-security.md) | open | p1 | review |  | vishesh |  | Review: fork-and-merge security survey |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | open | p1 | experiment |  | vishesh | 2026-10-04T09:00Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
@@ -156,6 +155,7 @@
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | done | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:58Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [clarify-pi-review-visual-guide](tasks/clarify-pi-review-visual-guide.md) | done | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T05:53Z | Clarify the PI review visual guide |
 | [conditional-swarm-size](tasks/conditional-swarm-size.md) | done | p1 | question | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:19Z | Add conditional optimal swarm-size research question |
+| [consolidate-pi-next-decisions](tasks/consolidate-pi-next-decisions.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T14:39Z | Consolidate PI reviews into experiment next-step decisions |
 | [contribution-new-badges](tasks/contribution-new-badges.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T23:40Z | Show recent contributions and added project tags |
 | [decision-model-reimagination](tasks/decision-model-reimagination.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:52Z | Reimagine Phantom Coast and Quorum of Mirrors |
 | [decision-model-research](tasks/decision-model-research.md) | done | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:38Z | Jev decision boundaries and collective robustness research |
@@ -272,10 +272,11 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
+| vishesh/fm-security-review | working | review-fork-merge-security | 2026-10-04T14:38Z | Checking five primary sources and three independent searches for the fork-merge security survey. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
+| vishesh/codex-pi-review | done | consolidate-pi-next-decisions | 2026-10-04T14:35Z | Integrated both PI reviews into thirteen study-family decisions, shared guidance and registry; validated offline, no runs. |
 | shadow/sol-budget | working | survey-agent-budgets | 2026-10-04T14:30Z | writing survey-agent-budgets from the 63 agent-budgets library entries |
 | shadow/sol-submit | idle |  | 2026-10-04T14:06Z | Submission draft pushed (d0a9b9a8), admin-hackathon-brief done; refresh planned around 20:00Z |
-| vishesh/codex-pi-review | done | transfer-dmarz-market-methods | 2026-10-04T14:02Z | Completed source-pinned transfer review and eleven study-family planning additions; validated offline, no runs. |
 | shadow/sol-xcheck | done |  | 2026-10-04T14:01Z | Completed offline review; checked headlines agree, scaling cell ranking has numerical tie defect |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T13:20Z | attempt 002 gpt-6-sol configuration ready (code 1299b4be, source hash 17665ae0, review chain-003-pre); Qwen closed after Q0; next: chain-002 post-mortem when the fleet monitor asks |
 | dmarz/openai-route | working |  | 2026-10-04T13:05Z | trust-credit-qwen attempt 002 (gpt-6-luna) ready - code 2c399a6a, source hash 5155d2c6, review chain-002-pre.md |
