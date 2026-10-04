@@ -39,6 +39,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [antsy-targeted-v8](tasks/antsy-targeted-v8.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:54Z | Repair Antsy extraction and design targeted verification |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
@@ -244,10 +245,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T06:54Z | Repairing C3 native transport; 46 offline checks pass, coordinator access unresolved |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T06:47Z | Poietic build complete; awaiting explicit USD 2 cap and approved OpenRouter selector before native qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T06:30Z | D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn |
-| vishesh/codex-methods | idle |  | 2026-10-04T06:29Z | Antsy v7 published; qualification failed honestly, S1 unrun, allocation released |
-| vishesh/codex-regrowth-docs | idle |  | 2026-10-04T06:13Z | C1/C2 cycle closed; failures published, worker retired; full comparison remains incomplete |
+| vishesh/codex-methods | working | antsy-targeted-v8 | 2026-10-04T06:29Z | Antsy v7 published; qualification failed honestly, S1 unrun, allocation released |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
