@@ -64,3 +64,8 @@ G2 is ready for host-side dependency verification. G3 remains pending until orbi
 The [prospective D1 plan](execution-repair-v1/PLAN.md) was published before implementation at17e2c440. A separate [trace-preserving checker and supervisor](execution-repair-v1/README.md) now passes13 offline fake-process/engine tests; source hashes and scope are in [validation](execution-repair-v1/validation.json). Original Q0 source and artifacts are unchanged. No OCR rerun, native model import, new allocation or incremental charge.
 
 G2: offline telemetry, timeout retention and cleanup checks pass; native latency remains unverified. G3: concrete changed D1 contract awaits owner approval; no native launcher/admission is implied. Proposed maximum6cold checker calls on3reused receipts,45s eligibility,90s diagnostic censoring, first slow/error stop, zero new charges; no automatic qualification or S1. This remains the authoritative setup record.
+
+
+## D1 approved launch preparation
+
+Owner approved the published six-call D1 diagnostic, unchanged scope. Follow [D1-PRE](execution-repair-v1/D1-PRE.md);17offline tests pass. G3 is current host/runtime/public-page verification, not another owner decision. Only D1-latency-attempt-1 may run: six cold calls max, first slow/error stop, zero incremental charge, no qualification or S1.

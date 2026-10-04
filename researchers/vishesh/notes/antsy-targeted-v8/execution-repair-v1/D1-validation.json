@@ -1,0 +1,17 @@
+{
+  "assessed_at": "2026-10-04T18:04:28.501517+00:00",
+  "scope": "Offline fault and six-call controller/admission fixtures; no OCR inference",
+  "tests_passed": 17,
+  "source_sha256": {
+    "capture.py": "ca1c311752a3cf57922b054057d7c41bccf3a81ef685fa5d361e5dab2121a2b9",
+    "diagnostic.py": "f73da0c8ce430622b804638536419535119f48dce8c835400a8d48456fa9902c",
+    "fault_child.py": "d5ef9496044acafc871922df8e24e10a634ef310cea06366dab840245d07d95b",
+    "telemetry.py": "30bba7f77fa6eb176810076586964aeaae87375dd3efde72b4b03f703bd6a470",
+    "test_diagnostic.py": "0db74ab2e216821cf2caab6ff1eff7a10e2df695fb12bb18c7ccae57bcaef2c9",
+    "test_repair.py": "93c5fd23f8ca0247e361bff72e612921fa9b7ba5a911c5483d266244106701ba",
+    "worker.py": "242de047cadb674967150f73bc2833770a63319d20680f50c82714c23b8c0262"
+  },
+  "maximum_calls": 6,
+  "new_charge_usd": 0,
+  "native_calls_during_validation": 0
+}

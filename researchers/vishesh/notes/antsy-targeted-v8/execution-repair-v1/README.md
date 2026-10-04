@@ -25,3 +25,8 @@ No warm-up, altered model, resize or additional receipt is hidden in the tests. 
 D1-latency-attempt-1: three reused receipts (two576×864, one960×1706), at most two cold EasyOCR repetitions each, fixed60,61,62,60,61,62 order, maximum6calls.45s remains the eligibility threshold; a proposed90s diagnostic ceiling can identify slow completion without qualifying it. Stop on the first slow completion, failure or trace defect. No warm reader, hosted call, new billable infrastructure or automatic qualification. The owner reviews this changed contract before launch.
 
 Limits: phase fsync adds small unmeasured overhead; native instrumentation overhead and CPU latency have not been measured. Raw streams may contain untrusted engine output and are not public diagnostics. The current supervisor requests process-group cleanup and records direct-child reaping; it does not independently attest the whole host is idle. Before allocation release, the operator must still inspect native workers/children and verify artifact readback. The fixture confirms that a same-group descendant stops writing after timeout; it is not a general sandbox for a deliberately escaping child. OCR and model load remain untested here.
+
+
+## D1 launch integration
+
+The owner approved the bounded D1 diagnostic on2026-10-04. [D1-PRE.md](D1-PRE.md) is its condition-specific pre-run assessment. [diagnostic.py](diagnostic.py) now provides exact six-call admission/reservation, source/runtime/input/public-plan validation, first slow/error stopping and sanitized reporting.17offline tests pass, including controller and admission mutations; [D1-validation.json](D1-validation.json) binds tested source. This supersedes the historical no-launcher status above. No successor is authorized.
