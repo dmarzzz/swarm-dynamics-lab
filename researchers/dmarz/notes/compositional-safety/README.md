@@ -22,7 +22,7 @@ Copied from the lab experiment-worker template, replacing the toy simulator and 
 | S | Four roles with full event history |
 | F | Same roles, capabilities and cyclic schedule, own history plus explicit retrieval/messages |
 | R | F plus authenticated factual receipts at commitment opportunities |
-| P | F plus approximately byte-matched administrative text at the same opportunities |
+| P | F plus a state-independent administrative record in the same 4,096-byte envelope and delivery slot |
 | G | F plus a generic policy reminder at the same opportunities |
 | H | F plus atomic complete-state enforcement of the three invariants |
 
@@ -50,4 +50,4 @@ Every bundle has a live progress PNG, final PNG and GIF replay of measured event
 
 ## Limits before scaling
 
-The task grammar has limited structural diversity, one pinned model, a fixed cyclic schedule and approximately byte-matched placebo text. Receipt context and retrieval actions have different costs. H assumes complete instrumentation and atomic settlement. There are no private incentives, collusion training or economic payoffs. The missing W comparison, tokenizer-matched sensitivity panel, stale receipts, randomized schedules, unseen structural families, model transfer and independent implementation remain necessary before the original scaled claim is credible.
+The task grammar has limited structural diversity, one pinned model, a fixed cyclic schedule and a fixed-byte placebo envelope with unmatched tokenizer/inner-schema details. Receipt context and retrieval actions have different costs. H assumes complete instrumentation and atomic settlement. There are no private incentives, collusion training or economic payoffs. The missing W comparison, tokenizer-matched sensitivity panel, stale receipts, randomized schedules, unseen structural families, model transfer and independent implementation remain necessary before the original scaled claim is credible.

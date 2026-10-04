@@ -30,6 +30,10 @@ Coordination with dmarz/discussion-bench-v3, which owns `src/bench_v3/` and the 
 
 ## Done when
 
-- [ ] Sidecar module and offline tests (equal probe counts, no posts in resample arm, shared checkpoint, v3 selftest still passes) committed.
-- [ ] Design note and pre-run review committed before any paid call.
+- [x] Sidecar module and offline tests (equal probe counts, no posts in resample arm, shared checkpoint, v3 selftest still passes) committed.
+- [x] Design note and pre-run review committed before any paid call.
 - [ ] Run after the v3 review passes; post-mortem committed; claim released.
+
+## Progress
+
+Built b3e1bb2, resynced to v3 fixes 9c4c945, hub wrapper 50d9180, waiver gate a1ddb36. Launched resample-v3-a1 at 658a81a on sim-dmarz-5 (claim dmarz-v3-resample), hub run discussion-v3-resample/1004-030243-d6fa86. Independent review waived by dmarz (launch/resample-v3-review-waiver.md).

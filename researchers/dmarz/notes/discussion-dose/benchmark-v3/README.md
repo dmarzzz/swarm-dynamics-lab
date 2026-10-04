@@ -2,7 +2,7 @@
 
 An implemented, local-first benchmark for **SEC-47: where does the fork-and-return chain fail?** It separates private evidence, report exchange, additional discussion, final voting, majority memory merge and a fresh parent's use of that memory. The [question links](../QUESTION-LINKS.md) state the narrower relationship to SOC-07 and the deferred SEC-52 extension.
 
-**Release scope:** executable benchmark and model adapter, with a [bounded operator-authorized qualification launch](../reviews/v3-q0-a1-pre.md) prepared. Independent researcher review and real-model qualification remain pending. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
+**Release scope:** executable benchmark and model adapter, with the [first bounded operator-authorized qualification running](DEPLOYMENT.md). Independent researcher review and real-model qualification remain pending. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
 
 **Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Current verification: 84 distinct checks and 636 requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record; independent approval remains pending.
 
@@ -88,7 +88,7 @@ The [v2 results](../RESULTS-V2.md) and [private-control post-mortem](../reviews/
 
 The six-world private-control run reported two attacked board target wins versus four private target wins, with one invalid board episode. Private reflection can drift; that is a useful comparator outcome, not a reason to require it to be inert. These small counts do not establish a protective discussion effect. We retain matched private work and use a shared post-report checkpoint to avoid attributing independently sampled starting ballots to subsequent discussion. A resampling-only arm would answer a separate mechanism question and remains deferred.
 
-This dated amendment changes the original [v3 draft](../V3-EVAL-PLAN.md)'s 708 calls to 636 by collecting the identical report checkpoint once. It changes neither the declared metric direction nor the six-world mixture in response to favorable model outcomes. V3 has no model outcomes yet.
+This dated amendment changes the original [v3 draft](../V3-EVAL-PLAN.md)'s 708 calls to 636 by collecting the identical report checkpoint once. It changes neither the declared metric direction nor the six-world mixture in response to favorable model outcomes. The first qualification is now running; no completed v3 analysis or qualification verdict is claimed yet.
 
 ## Model adapter and launch boundary
 

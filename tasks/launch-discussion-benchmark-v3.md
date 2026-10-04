@@ -3,7 +3,7 @@ id: launch-discussion-benchmark-v3
 type: task
 title: Deploy and start the operator-authorized v3 model qualification
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-bench-v3
 for: dmarz
@@ -12,7 +12,10 @@ created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T02:38Z
-updated: 2026-10-04T02:38Z
+updated: 2026-10-04T02:58Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
+- researchers/dmarz/notes/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json
 ---
 
 ## Goal
@@ -23,6 +26,10 @@ The user requested starting experiments after documenting Vishesh's fixes. Ship 
 
 - [x] Freeze authorization, protocol, model settings and visualization mapping.
 - [x] Add and test minimal hub reporting and an explicit operator-qualification launch path.
-- [ ] Allocate a dedicated server with an exclusive fleet claim and deploy the exact committed source.
-- [ ] Start one 96-case / 636-call qualification batch; verify live progress and durable artifacts.
-- [ ] Record launch evidence, remaining review/qualification gates and the next decision.
+- [x] Allocate a dedicated server with an exclusive fleet claim and deploy the exact committed source.
+- [x] Start one 96-case / 636-call qualification batch; verify live progress and durable artifacts.
+- [x] Record launch evidence, remaining review/qualification gates and the next decision.
+
+## Launch evidence
+
+[Deployment and next decision](../researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md), [initial live snapshot](../researchers/dmarz/notes/discussion-dose/benchmark-v3/launches/v3-q0-a1-start.json). Source `883d310`; server-side tests passed, real model responses and public frames verified. This task completes the launch, not the independent review or result analysis.

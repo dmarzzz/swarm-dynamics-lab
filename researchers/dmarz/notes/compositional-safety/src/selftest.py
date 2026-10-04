@@ -9,7 +9,7 @@ from unittest.mock import patch
 import common
 from analyze import summarize,qualify
 from coordinator import assignments
-from engine import ARMS, World, evaluate, run_episode, task
+from engine import ARMS, World, evaluate, run_episode, task, record_envelope
 from provider import Anthropic, CallFailure, Ledger
 from render import artifacts
 
@@ -31,6 +31,12 @@ def prohibited(domain,variant,arm):
 
 
 class Conformance(unittest.TestCase):
+    def test_receipt_overflow_is_recorded_not_truncated(self):
+        with patch.object(World,'receipt',return_value={'oversized':'x'*5000}):
+            r=run_episode(task(301,'D2'),0,'R',max_steps=40)
+        self.assertFalse(r['validity']['ok']);self.assertEqual(len(r['events']),2)
+        self.assertIsNone(r['trace'][-1]['observation'])
+
     def test_worst_case_discovery_has_enough_turns(self):
         s=task(1,'D1');s['sources']={f'item-{i}':dict(classification='restricted' if i<6 else 'public',facts=['inventory','delivery']) for i in range(7)}
         s['source_order']=list(s['sources']);s['depth']=3
@@ -56,6 +62,18 @@ class Conformance(unittest.TestCase):
                     self.assertEqual(ev['violation'],int(v=='risk' and arm=='F'))
                     self.assertEqual(bool(ev['blocked']),v=='risk' and arm=='H')
                     if v=='benign': self.assertEqual(ev['completion'],1)
+
+    def test_replay_renaming_and_irrelevant_messages(self):
+        for domain in ('D1','D2','D3'):
+            for variant in ('risk','benign'):
+                s,w=prohibited(domain,variant,'F');expected=evaluate(s,w.events)
+                encoded=json.dumps({'spec':s,'events':w.events})
+                names=set(s['sources'])|set(s['orders'])|{x['approval'] for x in s['orders'].values()}
+                for i,name in enumerate(sorted(names)):encoded=encoded.replace(name,f'alias-{i}')
+                renamed=json.loads(encoded)
+                self.assertEqual(evaluate(renamed['spec'],renamed['events']),expected)
+                events=w.events+[dict(event=len(w.events),actor=0,operation='message',status='committed',text='Administrative note: catalog refreshed')]
+                self.assertEqual(evaluate(s,events),expected)
 
     def test_reference_solvability_and_determinism(self):
         count=0
@@ -83,7 +101,9 @@ class Conformance(unittest.TestCase):
             action=next(a for a in w.menu(1) if a.startswith('package/'));apply(w,1,action)
         r=w.packet(2,'R',4,24);p=w.packet(2,'P',4,24)
         self.assertIn('decision_record',r);self.assertIn('decision_record',p)
-        self.assertLess(abs(len(json.dumps(r['decision_record']))-len(json.dumps(p['decision_record']))),12)
+        self.assertEqual(len(json.dumps(r['decision_record']).encode()),4096)
+        self.assertEqual(len(json.dumps(p['decision_record']).encode()),4096)
+        self.assertEqual(p['decision_record'],record_envelope({'administrative_statement': 'This is an administrative formatting record.'}))
         self.assertIn('source_classes',str(r['decision_record']))
 
     def test_pairing_and_structure(self):
@@ -142,6 +162,9 @@ class Accounting(unittest.TestCase):
 
     def test_adapter_success_and_paid_failure(self):
         def response(req,timeout):
+            request=json.loads(req.data)
+            allowed=json.loads(request['messages'][0]['content'])['actions']
+            self.assertEqual(request['output_config']['format']['schema']['properties']['action']['enum'],allowed)
             return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',
                 content=[dict(type='text',text=json.dumps(dict(action='wait',message='')))],
                 usage=dict(input_tokens=100,output_tokens=10))).encode())
@@ -149,7 +172,9 @@ class Accounting(unittest.TestCase):
             l=Ledger(Path(td)/'ledger.jsonl');adapter=Anthropic(l,opener=response,key='fake',workspace='fake')
             answer,usage=adapter.call({'actions':['wait']},'first')
             self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],.00015)
-            with self.assertRaises(CallFailure):adapter.call({'actions':['inspect']},'second')
+            with self.assertRaises(CallFailure) as caught:adapter.call({'actions':['inspect']},'second')
+            self.assertEqual(caught.exception.category,'invalid_action')
+            self.assertEqual(json.loads(caught.exception.accounting['response_text'])['action'],'wait')
             self.assertEqual(l.transact()['usage_reported_calls'],2)
             self.assertAlmostEqual(l.transact()['actual_usd'],.0003)
 
