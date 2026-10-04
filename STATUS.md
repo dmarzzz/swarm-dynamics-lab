@@ -142,7 +142,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-experiments | blocked | build-actual-experiment-suite | 2026-10-04T00:10Z | Two studies deployed, 3162 scripted outcomes complete; live qualification blocked on encrypted credential-store access |
+| vishesh/codex-experiments | blocked | build-actual-experiment-suite | 2026-10-04T00:10Z | Two studies deployed, 3162 scripted outcomes complete; moved to exclusive research-01; live qualification needs Anthropic workspace ID |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
