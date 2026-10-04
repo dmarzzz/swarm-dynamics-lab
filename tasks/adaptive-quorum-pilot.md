@@ -3,7 +3,7 @@ id: adaptive-quorum-pilot
 type: task
 title: Build and launch adaptive-quorum exploratory qualification
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T00:17Z
-updated: 2026-10-04T00:17Z
+updated: 2026-10-04T00:28Z
+outputs:
+- researchers/vishesh/notes/adaptive-quorum
 ---
 
 ## Goal
