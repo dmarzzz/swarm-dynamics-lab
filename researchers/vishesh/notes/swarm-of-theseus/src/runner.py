@@ -19,6 +19,12 @@ def run(a):
     if a.stage=='S1':
         q=json.loads(Path(a.qualification).read_text())
         if not q.get('qualification_passed') or q.get('failed') or q.get('assigned')!=12:raise ValueError('qualification_gate')
+        qualroot=Path(a.qualification).parent
+        audit=json.loads((qualroot/'audit.json').read_text())
+        if not audit.get('passed'):raise ValueError('qualification_audit_gate')
+        frozen=json.loads((qualroot/'manifest.json').read_text())['source_hashes']
+        for name in ('src/study.py','src/provider.py','model-config.json'):
+            if hashlib.sha256((ROOT/name).read_bytes()).hexdigest()!=frozen[name]:raise ValueError('qualification_source_mismatch')
     review=ROOT/'reviews'/f'{a.attempt}-pre.md'
     if not review.exists() or 'Status: ready' not in review.read_text():raise ValueError('committed_ready_review_required')
     revision=subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip()
@@ -40,6 +46,7 @@ def run(a):
         receipt=receipts[f'{spec["scenario"]}-{spec["arm"]}'];save(dest/'public-plan-receipt.json',receipt)
         params={**spec,'stage':a.stage,'backend':'anthropic','source_commit':revision,'attempt':a.attempt}
         hub=sr.start('swarm-of-theseus',run=rid,params=params,message=tldr(a.stage,spec['scenario'],spec['arm']))
+        sr.report('log','swarm-of-theseus',rid,url=receipt['url'],message='Immutable pre-run plan for this attempt; later experiment-level plans do not replace it.')
         history=[];policy=None;started=time.time()
         with (dest/'events.jsonl').open('x') as journal:
             def emit(event):

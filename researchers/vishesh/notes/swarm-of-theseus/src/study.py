@@ -75,7 +75,7 @@ def run_world(w,arm,policy,emit):
     members=[{'id':f'founder-{i}','note':rule(w)} for i in range(3)]
     archive='';history=[];access=[]
     def call(kind,payload,example,actor,t):
-        request={'instructions':SYSTEM+' '+{'solve':'Return work with one item per case: case_id, evidence (numeric signals used under your procedure), result (intermediate 0 or 1), then label. Compute the result before choosing its label. Return convention as the receipt phrase only and notebook as a concise reusable rule.',
+        request={'instructions':SYSTEM+' '+{'solve':'Return work with one item per case: case_id, evidence (objects with source_id and signal, preserving the input root identifiers or assay index for each signal used under your procedure), result (intermediate 0 or 1), then label. Compute the result before choosing its label. Return convention as the receipt phrase only and notebook as a concise reusable rule.',
                   'question':'Return a message asking the outgoing colleague for the procedure and local conventions.',
                   'answer':'Return a message answering the newcomer using your private notebook.'}[kind], 'observation':payload}
         emit({'kind':'request','step':t,'actor':actor,'operation':kind,'request':request,'payload_sha256':digest(payload)})
@@ -105,7 +105,7 @@ def run_world(w,arm,policy,emit):
             if w['scenario']=='repair-dock' and t>=4:
                 payload['current_bulletin']='Effective now, reverse the original mapping: XOR 0 goes to '+w['labels'][1]+'; XOR 1 goes to '+w['labels'][0]+'. Other conventions stay unchanged.'
             if arm=='verbatim':payload['reference_procedure']=rule(w,w['scenario']=='repair-dock' and t>=4)
-            o=validate_solve(call('solve',payload,{'work':[{'case_id':'','evidence':[0],'result':0,'label':''}],'convention':'','notebook':''},m['id'],t),w['cases'][t])
+            o=validate_solve(call('solve',payload,{'work':[{'case_id':'','evidence':[{'source_id':'','signal':0}],'result':0,'label':''}],'convention':'','notebook':''},m['id'],t),w['cases'][t])
             m['note']=o['notebook'];outputs.append(o)
         archive='\n'.join(m['id']+': '+m['note'] for m in members)
         score=evaluate(w,t,outputs)
