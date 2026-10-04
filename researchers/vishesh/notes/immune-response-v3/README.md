@@ -1,4 +1,4 @@
-# Immune response v3: durable repair without erasing good knowledge
+# Immune Response
 
 ## TLDR
 

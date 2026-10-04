@@ -1,6 +1,6 @@
 {
   "id": "immune-response",
-  "title": "Swarm immune response: private and shared state repair",
+  "title": "Immune Response",
   "description": "Exploratory oracle repair instrument: v2 separates shared restoration from stale-record blocking; scripted qualification passed. Model runs are feasibility tests, not accepted hypotheses.",
   "owner": "vishesh",
   "params": {

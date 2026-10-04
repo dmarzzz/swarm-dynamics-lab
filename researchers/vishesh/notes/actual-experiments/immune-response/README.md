@@ -1,4 +1,4 @@
-# Immune response: separate restoration from stale-record rejection
+# Immune Response
 
 ## TLDR
 
