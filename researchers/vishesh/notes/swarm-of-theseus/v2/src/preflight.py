@@ -51,3 +51,16 @@ def validate_receipt(receipt, source_commit, now=None):
     if not receipt.get('authority_allocation_id') or not receipt.get('owner_authorization_ref'):
         raise ValueError('owner_budget_authority_required')
     return receipt
+
+
+def check_review(config):
+    url = config['pre_run_review_url']
+    if not re.fullmatch(r'https://github\.com/dmarzzz/swarm-lab/blob/[0-9a-f]{40}/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/.+-pre\.md', url):
+        raise ValueError('immutable_pre_run_review_required')
+    raw = url.replace('https://github.com/', 'https://raw.githubusercontent.com/').replace('/blob/', '/')
+    body = fetch(raw)
+    if hashlib.sha256(body.encode()).hexdigest() != config['pre_run_review_sha256']:
+        raise ValueError('pre_run_review_hash_mismatch')
+    if 'Status: ready' not in body and 'Status: diagnostic-only' not in body:
+        raise ValueError('pre_run_review_blocked')
+    return {'url': url, 'sha256': config['pre_run_review_sha256'], 'checked_epoch': time.time()}

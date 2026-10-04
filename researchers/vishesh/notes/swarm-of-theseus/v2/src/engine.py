@@ -41,7 +41,8 @@ def advance(state, step, arm, policy, split='pilot'):
     calls = []; member_votes = []
     for actor in state['crew']:
         observation = {'step': step, 'role': actor['slot'], 'cases': cases, 'commands': docs,
-                       'private_notebook': actor['notebook'], 'feedback': actor['feedback']}
+                       'private_notebook': actor['notebook'], 'feedback': actor['feedback'],
+                       'feedback_status': 'outcomes delayed during steps 6-9; continue using available evidence' if step >= 6 else 'next-step feedback'}
         if step == 0:
             observation['history'] = history(seed, scenario)
         if actor['onboarding'] is not None:
@@ -58,7 +59,7 @@ def advance(state, step, arm, policy, split='pilot'):
             actor['notebook'] = value['notebook']
         actor['note_hash'] = digest(actor['notebook'])
         actor['feedback'] = [{'observation': c, 'action': votes.get(c['id']),
-                              'accepted_action': oracle(c, scenario, rules(seed, scenario, step))} for c in cases]
+                              'accepted_action': oracle(c, scenario, rules(seed, scenario, step))} for c in cases] if step <= 5 else []
         actor['onboarding'] = None
     state['archive'] = archive(state['crew'], step)
     if step == 1: state['founder_archive'] = copy.deepcopy(state['archive'])

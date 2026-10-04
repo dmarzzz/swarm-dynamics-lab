@@ -17,7 +17,7 @@ from engine import acquire, continuation
 from analyze import recompute, summarize
 from preflight import validate_plan, validate_receipt
 from provider import StopRun, reserve
-from runner import assignments
+from runner import assignments, qualification
 
 
 class OracleFixture:
@@ -71,6 +71,7 @@ class InstrumentTests(unittest.TestCase):
                     self.assertNotIn('history', obs)
                     self.assertNotIn('explicit_current_rule', obs)
                     self.assertNotIn('evaluator', obs)
+                    if e['step'] >= 7: self.assertEqual(obs['feedback'], [])
                     for ticket in obs['cases']:
                         self.assertNotIn('accepted_action', ticket)
                     for feedback in obs['feedback']:
@@ -174,6 +175,21 @@ class InstrumentTests(unittest.TestCase):
             self.assertFalse(any(w['identified_without_missingness'] for w in result['paired_worlds']))
             self.assertIsNone(result['metrics']['release:400']['rolling']['observed_accuracy'])
 
+    def test_qualification_independent_score_and_gates(self):
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td); (root/'events').mkdir()
+            design=assignments('S0')
+            (root/'manifest.json').write_text(json.dumps({'stage':'S0','assignments':design}))
+            for a in design:
+                events=[]; qualification(a,OracleFixture(a['seed'],a['scenario']),events.append)
+                for e in events:
+                    e['run']=a['run']
+                    self.assertEqual(recompute(e),e['scores'])
+                    (root/'events'/f"{e['run']}-{e['step']}.json").write_text(json.dumps(e))
+            self.assertTrue(summarize(root)['qualification_passed'])
+            p=next((root/'events').glob('*.json'));p.unlink()
+            self.assertFalse(summarize(root)['qualification_passed'])
+
     def test_corrupt_score_is_detected(self):
         _,es=trajectory();bad=copy.deepcopy(es[9]);bad['scores'][0]['correct']=not bad['scores'][0]['correct']
         self.assertNotEqual(bad['scores'],recompute(bad))
@@ -184,8 +200,12 @@ class InstrumentTests(unittest.TestCase):
         target=os.environ.get('THESEUS_UNIT_RENDER_DIR')
         with tempfile.TemporaryDirectory() as td:
             root=Path(target or td);root.mkdir(exist_ok=True);(root/'events').mkdir(exist_ok=True)
-            _,es=trajectory(1,'release')
-            for e in es:(root/'events'/f"unit-{e['step']}.json").write_text(json.dumps(e))
+            for scenario in SCENARIOS:
+                for mode in ('current', 'old_commands' if scenario == 'migration' else 'stale'):
+                    _,es=trajectory(1,scenario,mode=mode)
+                    for e in es:
+                        e['arm']='unit-'+mode; e['run']=f'unit-{scenario}-{mode}'
+                        (root/'events'/f"{e['run']}-{e['step']}.json").write_text(json.dumps(e))
             (root/'manifest.json').write_text(json.dumps({'evidence_type':'unit_fixture','stage':'unit'}))
             render(root)
             html=(root/'replay.html').read_text()

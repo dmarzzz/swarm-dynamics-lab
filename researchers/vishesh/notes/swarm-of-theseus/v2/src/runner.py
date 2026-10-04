@@ -6,6 +6,7 @@ import hashlib
 import json
 import os
 from pathlib import Path
+import sqlite3
 import subprocess
 import sys
 import time
@@ -13,7 +14,7 @@ import time
 from analyze import summarize
 from domain import ARMS, SCENARIOS, commands, explicit_rule, history, instructions, oracle, rules, tickets, validate_output
 from engine import acquire, continuation
-from preflight import EXPERIMENT, check_plan, validate_receipt
+from preflight import EXPERIMENT, check_plan, check_review, validate_receipt
 from provider import AnthropicPolicy, StopRun, write_new
 
 
@@ -52,6 +53,12 @@ def qualification(a, policy, emit):
         if isinstance(value, dict) and isinstance(value.get('notebook'), str): notebook = value['notebook'][:700]
 
 
+def instrument_hash():
+    base = Path(__file__).resolve().parents[1]
+    paths = sorted((base / 'src').glob('*.py')) + [base / 'PLAN.md']
+    return hashlib.sha256(b''.join(str(p.relative_to(base)).encode() + p.read_bytes() for p in paths)).hexdigest()
+
+
 def run(config, receipt, stage, output, qualification_root=None):
     root = Path(output)
     source = subprocess.check_output(['git', 'rev-parse', 'HEAD'], text=True).strip()
@@ -62,41 +69,51 @@ def run(config, receipt, stage, output, qualification_root=None):
         q = Path(qualification_root or '')
         summary = summarize(q)
         qm = json.loads((q / 'manifest.json').read_text())
-        if not summary.get('qualification_passed') or qm['source_commit'] != source:
+        if not summary.get('qualification_passed') or qm['instrument_sha256'] != instrument_hash():
             raise StopRun('matching_source_qualification_required')
     if stage == 'S0-repair' and not config.get('prospective_repair_review_url'):
         raise StopRun('prospective_repair_review_required')
     design = assignments(stage)
+    review_receipt = check_review(config)
     receipts = [check_plan(config, a['tldr']) for a in design]
     # All registration checks must pass before any provider exists.
     root.mkdir(); (root / 'events').mkdir(); (root / 'outcomes').mkdir()
     write_new(root / 'manifest.json', {'experiment': EXPERIMENT, 'stage': stage, 'evidence_type': 'measured_model_outputs', 'source_commit': source,
-                                      'assignments': design, 'config': config, 'deployment_receipt': receipt,
+                                      'instrument_sha256': instrument_hash(), 'pre_run_review': review_receipt, 'assignments': design, 'config': config, 'deployment_receipt': receipt,
                                       'public_preflights': receipts, 'created_epoch': time.time()})
     sys.path.insert(0, '/usr/local/lib/swarm')
     import swarm_report as report
     policy = AnthropicPolicy(config, receipt, root / 'calls')
+    with sqlite3.connect(policy.ledger, timeout=30) as db:
+        db.execute('CREATE TABLE IF NOT EXISTS attempts (stage TEXT PRIMARY KEY, output TEXT)')
+        try: db.execute('INSERT INTO attempts VALUES (?,?)', (stage, str(root.resolve())))
+        except sqlite3.IntegrityError: raise StopRun('stage_already_attempted_no_invisible_reruns')
+
+    def report_checked(kind, run_id, **kwargs):
+        if not report.report(kind, EXPERIMENT, run_id, strict=True, **kwargs):
+            raise StopRun('hub_event_not_acknowledged')
 
     def execute(a, work):
         run_id = a['run']
-        report.report('plan', EXPERIMENT, run_id, message=a['tldr'], params=a, strict=True)
-        report.report('start', EXPERIMENT, run_id, message=a['tldr'], strict=True)
+        report_checked('plan', run_id, message=a['tldr'], params=a, url=config['plan_url'])
+        report_checked('start', run_id, message=a['tldr'], url=config['plan_url'])
         def emit(event):
             event['run'] = run_id
+            event['arm'] = a['arm']
             write_new(root / 'events' / f"{run_id}-{event['step']:02d}.json", event)
             # Measured progress is the live fallback; final replay is generated below.
             n = len(event['scores']); correct = sum(r['correct'] for r in event['scores'])
-            report.report('progress', EXPERIMENT, run_id, message=a['tldr'],
-                          metrics={'step': event['step'], 'accuracy': correct / n}, strict=True)
+            report_checked('progress', run_id, message=a['tldr'],
+                           metrics={'step': event['step'], 'accuracy': correct / n})
         try:
             value = work(emit)
             write_new(root / 'outcomes' / (run_id + '.json'), {'status': 'complete', 'tldr': a['tldr']})
-            report.report('done', EXPERIMENT, run_id, message=a['tldr'], strict=True)
+            report_checked('done', run_id, message=a['tldr'])
             return value
         except Exception as exc:
             reason = str(exc) if isinstance(exc, StopRun) else type(exc).__name__
             write_new(root / 'outcomes' / (run_id + '.json'), {'status': 'failed', 'safe_reason': reason, 'tldr': a['tldr']})
-            report.report('fail', EXPERIMENT, run_id, message=a['tldr'] + ' Failure: ' + reason, strict=True)
+            report_checked('fail', run_id, message=a['tldr'] + ' Failure: ' + reason)
             raise
 
     def world(scenario, seed):
