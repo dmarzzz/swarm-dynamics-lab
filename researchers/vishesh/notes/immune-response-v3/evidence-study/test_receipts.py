@@ -1,6 +1,12 @@
 import copy, itertools, unittest
 import study_receipts as s
 class Tests(unittest.TestCase):
+ def test_public_plan_contract(self):
+  import sys
+  sys.path.insert(0,str(s.ROOT.parent.parent/'experiment-documentation'))
+  from public_plan import validate
+  p=validate({'id':'immune-response-v3','description':'TLDR: Paired evidence diagnostic','url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/researchers/vishesh/notes/immune-response-v3/evidence-study/README.md'},(s.ROOT/'README.md').read_text(),'Paired evidence receipts with clean and stale memory and exact shared reviewer outputs')
+  self.assertEqual(p['experiment'],'immune-response-v3')
  def test_receipt_all_boolean_patterns(self):
   for a in itertools.product([False,True],repeat=4):
    obs=dict(zip(s.CHECKS,a))
