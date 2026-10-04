@@ -3,6 +3,8 @@ import copy
 import io
 import json
 import tempfile
+import time
+import hashlib
 import unittest
 from pathlib import Path
 from unittest.mock import patch
@@ -167,6 +169,23 @@ class Conformance(unittest.TestCase):
 
 
 class Accounting(unittest.TestCase):
+    def test_public_admission_binds_current_plan_and_fails_closed(self):
+        from admission import check
+        with tempfile.TemporaryDirectory() as td:
+            root=Path(td);(root/'reviews').mkdir()
+            markdown='\n'.join('## '+s+'\nDeclared evidence.\n' for s in ('TLDR','Question and prediction','Setup','Protocol','Metrics'))
+            (root/'reviews/new-pre.md').write_text(markdown)
+            url='https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/researchers/dmarz/notes/compositional-safety/reviews/new-pre.md'
+            receipt=dict(url=url,source_hashes={'engine':'fixed'},plan_sha256=hashlib.sha256(markdown.encode()).hexdigest(),page_verified_at=time.time(),registered_tldr='TLDR: fixed diagnostic comparison and outcome limitations.')
+            def getter(address):
+                return json.dumps({'experiments':[dict(id=common.EXP,url=url,description=receipt['registered_tldr'])]}) if address.endswith('/api/state') else markdown
+            with patch.object(common,'ROOT',root),patch.object(common,'git',return_value='a'*40),patch.object(common,'hashes',return_value={'engine':'fixed'}):
+                self.assertEqual(check('new',receipt,getter)['url'],url)
+                for wrong in (dict(receipt,url=url.replace('a'*40,'b'*40)),dict(receipt,source_hashes={}),dict(receipt,page_verified_at=0),dict(receipt,plan_sha256='bad')):
+                    with self.assertRaises(ValueError): check('new',wrong,getter)
+                with self.assertRaisesRegex(ValueError,'public_registration_mismatch'):check('new',receipt,lambda u:'{"experiments":[]}' if u.endswith('/api/state') else markdown)
+                with self.assertRaises(OSError):check('new',receipt,lambda u: (_ for _ in ()).throw(OSError('offline')))
+
     def test_duplicate_and_cap(self):
         with tempfile.TemporaryDirectory() as td:
             l=Ledger(Path(td)/'account.jsonl');event=dict(type='reserve',call_id='one',micro_usd=10)

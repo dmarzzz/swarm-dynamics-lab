@@ -1,0 +1,63 @@
+# Experiment setup record: compositional-safety / interface diagnostic v1
+
+Exploratory instrument repair, not the scaled study. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). This record incorporates the workflow added upstream during preparation of i0-003; it does not retrospectively register older attempts.
+
+## Ownership and question
+
+- Owner/operator/author reviewer: dmarz/patchwork-hypotheses. The user's explicit instruction replaces independent review with clearly labeled author research/mechanism critiques; no institutional review is claimed.
+- Diagnostic question: does explicitly stating the existing host execution/history contract improve productive action selection on retained failed states, with model and task unchanged?
+- Main research question and prior work: [SEC-54 plan](../compositional-safety-plan/README.md). Formal survey/hypothesis acceptance and S1/S2 remain closed; this is bounded engineering diagnosis under the user's shipping/repair instruction.
+- Previous evidence: [q0-004 post-mortem](reviews/q0-004-post.md), all previous reviews and immutable result summaries. Twelve stalls and two refusals remain failed outcomes.
+- Current stage: i0-003, sixteen paired atomic diagnostic requests. Next action: finish current-source public registration and launch only after all runtime checks pass.
+
+## Gate evidence
+
+| Gate | Status | Evidence / assessor | Next action |
+|---|---|---|---|
+| G0 Question and applicable research gates | Pass for authorized engineering diagnosis only | Existing plan, explicit review override, internal-design-review.md / author | No formal hypothesis promotion or scaled claim |
+| G1 Prospective design | Pass | i0-003-pre.md and fixed case list committed at 29b52a30 before any diagnostic data / author | Preserve original and clarified outcomes |
+| G2 Instrument and offline checks | Pass for diagnostic preparation | Fourteen offline checks passed locally and on sim-dmarz; eight exact parent packets reconstructed / author | Check additional admission regression before launch |
+| G3 Current attempt admission | Pending until runtime receipt | common.frozen invokes admission.check before dispatch; immutable URL/content/source and live registration must agree | Save registration/i0-003.json after actual page verification; capture it in result artifacts |
+| G4 Qualification before escalation | Failed | q0-004: 10/24 safe, twelve incomplete, two refused | Atomic success cannot replace fresh Q0 |
+| G5 Prior reconciliation and closeout | Pass for prior attempts | q0-004 post-mortem, 53 hashes, thirteen complete hub runs, empty spool, original claim released | New attempt requires its own post-mortem and closeout |
+
+## Design and instrument index
+
+- Plan/amendments: [i0-003 assessment](reviews/i0-003-pre.md), [preregistration amendments](preregistration.md), [design](design.yaml).
+- Eight deliberately selected previously failed states, two conditions per state; not eight independent task structures or sixteen full episodes. No significance or generalization claim.
+- The expected-action sets are evaluator-only; provider bodies contain original policy/menu/history plus the declared static contract in the clarified condition. No hidden state or expected answer is supplied.
+- Definitions: src/engine.py, src/prompt.txt, src/provider.py, src/contract.py. Diagnostic driver: src/diagnose.py through src/probe.py. Source/design hashes cover every Python file and the prompt.
+- Model: pinned claude-sonnet-5; disabled thinking, high effort, default sampling. Python 3.12.3, PyYAML 6.0.2, Pillow 11.3.0. No automatic retries or model fallback.
+- Startup: common.frozen verifies committed protocol plus current public-plan admission; unique result directory; parent artifact hash; fixed shuffled assignments; transactional call IDs and spending reservations.
+- Offline tests cover simulator/evaluator controls, history boundaries, 4,200 reference fixtures, costs/failures, static-contract nonmutation and public-admission fault cases. This remains same-author verification.
+- Visualization: diagnostic-v1 in the pre-run assessment. Eight rows × original/clarified columns; every observed response retained in PNG/GIF and exact request/result JSON.
+
+## Current attempt admission
+
+- Attempt/parent/stage: i0-003 / q0-004 / I0. Command: python src/probe.py i0-003.
+- Immutable plan URL: the deployed full revision's GitHub blob URL for reviews/i0-003-pre.md. The exact URL, expected SHA-256, runtime hashes, registered TLDR and verification timestamp are required in registration/i0-003.json and copied into the run's public-plan-receipt.json before run_start.
+- TLDR: compare original vs explicit execution-contract inputs on eight saved failed decision states with the same model. Measure validity and advancing actions. Selected-state diagnostic only; not qualification.
+- Run: compositional-safety/i0-003-diagnostic, seed i0-003-paired-order, sixteen frozen condition assignments. The run retains its immutable plan link even if the experiment's latest link changes.
+- Existing authority: researchers/dmarz/README.md grants $500 shared API spend and directs continued bounded repair. The existing study ledger has 1,610 calls, $5.340097 reported actual and $28.033098 retained reservations; remaining local ceilings are 7,606 calls and $156.966902 reserved. This diagnostic adds at most sixteen calls/$0.699072 reserved, not a fresh $185 allocation. The local ledger is not an account-wide billing authority; cross-study reports must not be represented as a complete balance.
+- One process; 350 output tokens/16,000 serialized input bytes per request; 90-second request timeout; 1,800-second stage ceiling plus one in-flight request/reporting; no retries. No further stage is automatically launched.
+- Exclusive server: sim-dmarz, claim dmarz-compositional-repair, merged agentops PR 105, expires 2026-10-04 07:09:09 UTC. Original worker exited; clean retained checkout and ledger verified. No provisioning or billing-account change.
+- Credentials: SWARM_MODEL_API_KEY and SWARM_MODEL_WORKSPACE_ID from the existing approved encrypted source; host-provided hub configuration. Values remain in process memory.
+- Runtime receipt and actual public-page verification are launch requirements, not inferred from this document. No model request may precede them.
+
+## Attempt and repair history
+
+| Attempt | Disposition / evidence |
+|---|---|
+| s0-001 | 84/84 scripted completions; implementation evidence only |
+| q0-001 | 21/24 safe; two invalid and one violation |
+| q0-002 | 20/24 safe; four incomplete |
+| q0-003 | 16/24 safe; eight nonterminal outputs |
+| i0-001 / i0-002 | Refusal reproduction / one-call fallback compatibility; not qualification |
+| q0-004 | 10/24 safe; twelve incomplete and two refusals; fully reconciled |
+| i0-003 | Prepared interface diagnostic, not yet launched at record creation |
+
+The interface hypothesis is open until observed diagnostic evidence and a fresh full qualification support it. Provider refusals remain a separate unresolved suitability issue. Earlier valid negative outcomes and thresholds remain unchanged.
+
+## Closeout and handoff
+
+After i0-003, reconcile sixteen assignments, exact request bodies, answers/failures, costs, hashes and every visual cell/frame. Save the post-mortem before choosing the next run. If the clarified condition is clean, apply the same static contract consistently, run offline regression and fresh disjoint Q0. If it fails, diagnose its actual failure before any new amendment. P1 and formal S1/S2 remain blocked until their own gates pass. Keep the claim only through active repair/execution and verified uploads; release it while blocked.

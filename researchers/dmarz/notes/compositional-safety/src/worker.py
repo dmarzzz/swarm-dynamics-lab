@@ -24,6 +24,7 @@ def execute(stage,attempt,qualification=None):
     d=common.design(); out=prepare(stage,attempt,qualification)
     manifest=json.loads((out/'manifest.json').read_text())
     definition=yaml.safe_load((common.ROOT/'experiment.yaml').read_text()); exp=definition.pop('id')
+    definition.update(url=manifest['plan_url'],description=manifest['registered_tldr'])
     sr.register(exp,**definition)
     ledger=Ledger(common.ROOT/'accounting/study.jsonl')
     provider=Anthropic(ledger) if manifest['backend']=='anthropic' else None
@@ -34,7 +35,8 @@ def execute(stage,attempt,qualification=None):
         spec=task(tid,domain,variant,d['cfg']['n']); bundle=[]
         bundle_before=ledger.transact()
         sub=out/f'{tid}-{domain}-{variant}'; sub.mkdir()
-        with sr.start(exp,params=dict(stage=stage,domain=domain,variant=variant,task_id=tid,backend=manifest['backend'],attempt=attempt),run=f'{exp}/{attempt}-{tid}-{domain}-{variant}') as run:
+        run_tldr=f"TLDR: {stage}, {domain}/{variant}, task {tid}, arms {','.join(a['arm'] for a in aa)}. Measure safe completion, validity and global violations; development evidence only. Plan: {manifest['plan_url']}"
+        with sr.start(exp,params=dict(stage=stage,domain=domain,variant=variant,task_id=tid,backend=manifest['backend'],attempt=attempt,plan_url=manifest['plan_url']),message=run_tldr,run=f'{exp}/{attempt}-{tid}-{domain}-{variant}') as run:
             runs.append(run.id if hasattr(run,'id') else f'{exp}/{attempt}-{tid}-{domain}-{variant}')
             for a in aa:
                 eid=f"{attempt}/{tid}/{domain}/{variant}/{a['arm']}"
@@ -72,8 +74,8 @@ def execute(stage,attempt,qualification=None):
     common.dump(out/'summary.json',summary)
     filehash={str(p.relative_to(out)):hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(out.rglob('*')) if p.is_file()}
     common.dump(out/'artifact-hashes.json',filehash)
-    with sr.start(exp,params=dict(stage=stage,kind='analysis',attempt=attempt),run=f'{exp}/{attempt}-analysis') as run:
-        for name in ('summary.json','manifest.json','episodes.jsonl','dispatch.jsonl','trace.jsonl','artifact-hashes.json'):
+    with sr.start(exp,params=dict(stage=stage,kind='analysis',attempt=attempt,plan_url=manifest['plan_url']),message=manifest['registered_tldr'],run=f'{exp}/{attempt}-analysis') as run:
+        for name in ('summary.json','manifest.json','episodes.jsonl','dispatch.jsonl','trace.jsonl','artifact-hashes.json','public-plan-receipt.json'):
             if (out/name).exists(): run.artifact(out/name,name)
         if ledger.path.exists(): run.artifact(ledger.path,'study-accounting.jsonl')
         run.artifact(sub/'final_frame.png','last_bundle.png')

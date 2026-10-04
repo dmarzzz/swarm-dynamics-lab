@@ -21,4 +21,6 @@ def frozen(attempt):
     if not p.exists() or 'Status: ready' not in p.read_text(): raise ValueError('pre_run_not_ready')
     git('ls-files', '--error-unmatch', str(p.relative_to(ROOT)))
     if git('status', '--porcelain', '--', 'src', 'design.yaml', 'preregistration.md', str(p.relative_to(ROOT))): raise ValueError('uncommitted_protocol')
+    from admission import check
+    check(attempt)
     return git('rev-parse', 'HEAD')

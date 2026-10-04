@@ -33,8 +33,11 @@ def prepare(stage, attempt, qualification=None):
         if q['stage']!='Q0' or not q.get('qualification_pass') or qm['hashes']!=common.hashes(): raise ValueError('qualification_not_current')
     out=common.ROOT/'results'/attempt
     out.mkdir(parents=True,exist_ok=False)
+    registration=json.loads((common.ROOT/'registration'/f'{attempt}.json').read_text())
+    common.dump(out/'public-plan-receipt.json',dict(registration,launch_verified_at=time.time()))
     m=dict(attempt=attempt,stage=stage,commit=commit,hashes=common.hashes(),created=time.time(),
            backend=common.design()['stages'][stage]['backend'],assignments=aa,
+           plan_url=registration['url'],registered_tldr=registration['registered_tldr'],
            qualification=str(qualification) if qualification else None)
     common.dump(out/'manifest.json',m)
     return out
