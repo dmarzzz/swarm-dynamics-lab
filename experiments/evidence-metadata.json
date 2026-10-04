@@ -1257,6 +1257,83 @@
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
       "source_commit": "88feac7ea6218c2712914fb5462ab5d66814a50a"
+    },
+    {
+      "id": "discussion-dose-v3-d1-haiku",
+      "title": "Discussion v3 D1 — Haiku",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts.",
+        "rationale": "Observed 2/6 full evidence and 1/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification."
+      },
+      "sample_size_summary": "Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d1-a1-post.md"
+      ],
+      "status_at_assessment": "completed_failed_diagnostic_eligibility",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
+    },
+    {
+      "id": "discussion-dose-v3-d1-sonnet",
+      "title": "Discussion v3 D1 — Sonnet",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts.",
+        "rationale": "Observed 3/6 full evidence and 3/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification."
+      },
+      "sample_size_summary": "Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d1-a1-post.md"
+      ],
+      "status_at_assessment": "completed_failed_diagnostic_eligibility",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
+    },
+    {
+      "id": "discussion-dose-v3-d2",
+      "title": "Discussion v3 D2 — canonical/atomic probe proposal",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/D2-PLAN.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: compact complete facts and a smaller response contract may repair decision errors seen in D1.",
+        "rationale": "Proposal only; no implementation, queue request or model outcome. Bundles evidence packaging and response-contract changes, so cannot isolate response ordering."
+      },
+      "sample_size_summary": "Observed: none. Planned only: 6 reused development world clusters, 2 models, 48 calls (12 canonical decisions + 36 atomic checks); no fresh qualification or holdout.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/D2-PLAN.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-D1.md"
+      ],
+      "status_at_assessment": "proposed_not_started",
+      "assessor": "dmarz/discussion-bench-v3",
+      "assessed_at": "2026-10-04",
+      "source_commit": "93b5feabcde7b5898fb65c3fa4d377f337b0f512"
     }
   ],
   "source_sha256": {

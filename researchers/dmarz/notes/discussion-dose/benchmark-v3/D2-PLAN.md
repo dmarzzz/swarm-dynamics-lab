@@ -1,5 +1,14 @@
 # D2 proposal: isolate the remaining constraint failures
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/discussion-bench-v3; source `93b5feab` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested: compact complete facts and a smaller response contract may repair decision errors seen in D1. Basis: Proposal only; no implementation, queue request or model outcome. Bundles evidence packaging and response-contract changes, so cannot isolate response ordering.
+- **sample_size_summary:** Observed: none. Planned only: 6 reused development world clusters, 2 models, 48 calls (12 canonical decisions + 36 atomic checks); no fresh qualification or holdout.
+<!-- experiment-evidence:end -->
+
 2026-10-04 UTC. Parent `v3-d1-a1`. **Plan only. Do not launch.** The user requested
 the results, analysis and post-mortem in GitHub, followed by a proposed experiment
 plan that remains unstarted. No D2 server, hub job, executable manifest or model

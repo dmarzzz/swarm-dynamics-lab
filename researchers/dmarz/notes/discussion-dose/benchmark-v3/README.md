@@ -3,10 +3,28 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessment dates and assessors shown per cohort; source snapshots shown per cohort ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Discussion and memory benchmark v3** (`discussion-dose-v3`)
+Source: `9781739c`.
+Assessed 2026-10-04 by vishesh/codex-pi-review.
 
 - **evidence_confidence:** **1/4** — The completed V3 diagnostic failed clean competence and exposed inherited-memory failure; discussion efficacy remains unestablished. Basis: Execution and replay pass, but clean competence fails (2/6 full evidence; 1/6 reports only; gate 5/6). This supports a diagnostic finding, not a qualified treatment null or reliable protective effect. Three worlds per attack stratum and fixed fixtures do not establish broad security.
 - **sample_size_summary:** 6 worlds; 48 swarm episodes + 12 full-evidence probes + 36 fixed-memory fixtures = 96 cases, 636 calls.
+
+**Discussion v3 D1 — Haiku** (`discussion-dose-v3-d1-haiku`)
+Source: `93b5feab`.
+Assessed 2026-10-04 by dmarz/discussion-bench-v3.
+
+- **evidence_confidence:** **1/4** — This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts. Basis: Observed 2/6 full evidence and 1/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification.
+- **sample_size_summary:** Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.
+
+**Discussion v3 D1 — Sonnet** (`discussion-dose-v3-d1-sonnet`)
+Source: `93b5feab`.
+Assessed 2026-10-04 by dmarz/discussion-bench-v3.
+
+- **evidence_confidence:** **1/4** — This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts. Basis: Observed 3/6 full evidence and 3/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification.
+- **sample_size_summary:** Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.
 <!-- experiment-evidence:end -->
 
 An implemented, local-first benchmark for **SEC-47: where does the fork-and-return chain fail?** It separates private evidence, report exchange, additional discussion, final voting, majority memory merge and a fresh parent's use of that memory. The [question links](../QUESTION-LINKS.md) state the narrower relationship to SOC-07 and the deferred SEC-52 extension.

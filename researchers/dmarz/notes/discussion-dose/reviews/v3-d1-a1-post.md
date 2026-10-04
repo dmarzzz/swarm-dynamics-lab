@@ -52,7 +52,7 @@ small development comparison.
 | First-boot package lock | One provisioning attempt met active cloud-init updates | Waited for updates; second provisioning passed; no paid call affected |
 | Sparse-checkout preparation | Initial incomplete checkout preserved before correction | Helper corrected before freeze; exact source/input checks passed; no paid call affected |
 | Owner inventory relocation | Concurrent legitimate owner apply moved generated output | Read authoritative state output and verify identity; no stale restore or second writer |
-| Cloud lifecycle limitation | Hosted task wrote source but lacked raw-data/service credentials and authoritative fleet state | Remote worker/watchdog/upload independent of laptop; operator retrieval/cleanup remain local; no autonomous cloud lifecycle claimed |
+| Cloud lifecycle limitation | Hosted task wrote source but lacked raw-data/service credentials and authoritative fleet state | Remote worker/watchdog/upload independent of laptop; operator retrieved records locally and later retired the server through the authoritative always-on executor; no autonomous cloud lifecycle claimed |
 
 ## Verification and delivery
 
@@ -96,7 +96,13 @@ The plan proposes 48 calls on the same open development worlds to separate simpl
 predicate application from multi-option decisions and evidence packaging. It is
 **not authorized to launch**. No holdout or fresh-qualification world was opened.
 
-After reports and records are securely published/verified, release the exclusive
-D1 claim and retire only its dedicated temporary server through the authoritative
-owner workflow. The final [lifecycle receipt](../benchmark-v3/results/v3-d1-a1/lifecycle.json)
-records completion; do not infer completed retirement from this prospective action.
+Closeout completed at 05:17:22 UTC. The exclusive claim is released and the
+temporary server is retired through the authoritative always-on owner workflow.
+A saved, inspected infrastructure plan deleted only D1 resources; the provider
+returned 404 for that server and all 21 other servers retained their identity,
+addresses and size. The initial plan stopped on a stale off-fleet output lookup;
+a narrow output filter repair allowed the targeted plan without changing another
+server. Raw artifact and operator-control archives were hash-verified before
+retirement. The worker had exited and the observer timer was stopped. See the
+final [lifecycle receipt](../benchmark-v3/results/v3-d1-a1/lifecycle.json).
+D2 is neither queued nor started.

@@ -1,5 +1,21 @@
 # D1 results: a stronger model helps, but does not clear the competence gates
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/discussion-bench-v3; source `93b5feab` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Discussion v3 D1 — Haiku** (`discussion-dose-v3-d1-haiku`)
+
+- **evidence_confidence:** **1/4** — This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts. Basis: Observed 2/6 full evidence and 1/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification.
+- **sample_size_summary:** Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.
+
+**Discussion v3 D1 — Sonnet** (`discussion-dose-v3-d1-sonnet`)
+
+- **evidence_confidence:** **1/4** — This model fails the declared clean development decision gates; it also accepts all six locally supported false memory facts. Basis: Observed 3/6 full evidence and 3/6 report quorums against 5/6 on both. Exact-source audits pass, but six reused worlds and a fixed fixture grid do not establish swarm efficacy, population safety or fresh qualification.
+- **sample_size_summary:** Observed: 6 reused development world clusters; 60/60 assigned calls analyzed (6 full, 18 report ballots, 36 memory fixtures); 0 invalid/unstarted. Paired with the other D1 model on identical inputs; not 60 independent samples.
+<!-- experiment-evidence:end -->
+
 Completed 2026-10-04 UTC. Run `discussion-dose-v3/v3-d1-a1`; parent `v3-q0-a1`.
 All **120 assigned calls completed**, with **zero invalid/provider-failed responses,
 zero missing usage and $0.754780 observed model cost**. Sonnet improved some outcomes,
