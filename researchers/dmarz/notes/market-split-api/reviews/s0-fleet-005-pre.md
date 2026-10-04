@@ -1,0 +1,11 @@
+# Pre-run assessment: s0-fleet-005
+
+Experiment market-split-api; owner dmarz/market-split; stageS0; parentq0-004. Status: ready. Read q0-004-post.md: non-reasoning Sonnet obeyed actions but missed one clean-profit floor. This is a capability repair, not response to a null discovery result.
+
+V5 enables Sonnet4.6 manual thinking2048 and total output3072, omits temperature, accepts only preceding thinking/redacted-thinking plus exactly one final text block, discards thinking payloads and counts all usage. Neutral actor prompt, all economic actions, public table, matched resources, evaluator and75% floor unchanged. Fresh development tasks54/55, seed31, three regulators, two arms, eight rounds: six mock bundles,12episodes,zero API calls. Interface probes56–61 follow only after the mock pass; main markets36–41 remain unopened. S2/holdout untouched.
+
+Frozen engine657a77e7c1101c1bd2b6b2ea752f0407b2fc4b690988144711cbe7c727f79b58; design230ef6ac07afc36dd5142155ab826452f21ce836d3f5d0919c69292a676f26e5. Run all network-blocked tests including mixed-content/privacy regression, then coordinator.py stage S0 --attempt s0-fleet-005; worker.py --attempt s0-fleet-005 --max-runs6. Require12valid qualified episodes,zero paid calls,42verified artifacts. One worker,2h bound,no credentials. Existing exclusive sim-dmarz-2 claim dmarz-market-split-api expires06:07:47Z; recheck before dispatch. Public destination market-split-api dashboard.
+
+Persistent ledger506calls/$0.965218 preserved;1600 total attempts, shared$500 authorization, no retries. Worst-case whole-study reserve$189.39 with the larger output budget; no resetting accounting. Any execution, competence, accounting or visualization failure blocks advancement and requires another preserved diagnosis. This rehearsal cannot establish model discovery.
+
+Visualization mapping market-split-api-v1 unchanged: task54/55,seed31,each regulator/both arms; per-round outputs/firm count, profit,fines and firm/ownerHHI. Live PNG,1800×1200 final,1080×720 eight-frame GIF and full traces/calls. Verify dimensions,frames,hashes and numerical endpoints; retain mock labels and sequential-arm timing caveat. Success advances to reviewed I0-003 thenQ0-005, never directly to S1.

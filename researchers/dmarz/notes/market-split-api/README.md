@@ -1,3 +1,5 @@
+> Current launch status (2026-10-04): V4 Sonnet profit qualification failed one episode. V5 enables bounded native reasoning (2048 thinking,3072 total output tokens) on the same model with fresh gates. See q0-004-post.md and s0-fleet-005-pre.md. Main pilot remains gated; no discovery conclusion yet. Earlier configuration descriptions below are historical until final reconciliation.
+
 # Will a neutral agent create firms to evade concentration rules?
 
 Exploratory MKT-03 + MKT-11 model-discovery study. [Live experiment and replays](https://swarm-live.pages.dev/#/x/market-split-api). The owner approved model testing after the [450-episode scripted study](../market-split/README.md). The formal survey/hypothesis gate is incomplete, so this remains development work in notes with S2 disabled.
@@ -51,7 +53,7 @@ The human directive in researchers/dmarz/README.md grants$500 total API spend ac
 
 A locked,fsynced ledger reserves cost before HTTP and retains unknown-billing reservations. Duplicate IDs,corruption and exhausted call capacity fail closed. Actual usage is reported separately from reserved limits and is not an account invoice. Prices checked2026-10-04: Sonnet 4.6$3/M input,$15/M output;earlier Haiku 4.5$1/M input,$5/M output. [Official Sonnet model/prices](https://platform.claude.com/docs/en/models/sonnet-4-6/overview),[structured-output contract](https://platform.claude.com/docs/en/build-with-claude/structured-outputs).
 
-Agentops exclusive claim dmarz-market-split-api on existing idle sim-dmarz-2;isolated /srv/swarm/market-split-api checkout and persistent ledger. Python 3.12.3,PyYAML 6.0.3,numpy 2.0.2,matplotlib 3.9.4,Pillow 11.3.0. Exact bytewise re-execution uses the pinned runtime;Python3.9 summation can differ at1 e-16. Credentials enter worker environments only from approved encrypted aliases,never arguments,tracked files,model packets or reports. Stop workers,verify uploads/recovery and release the existing host after completion;preserve unrelated prior data. See [deployment record](deployment.md).
+Agentops exclusive claim dmarz-market-split-api on existing idle sim-dmarz-2;isolated /srv/swarm/market-split-api checkout and persistent ledger. Python 3.12.3,PyYAML 6.0.3,numpy 2.0.2,matplotlib 3.9.4,Pillow 11.3.0. Exact bytewise re-execution uses the pinned runtime;Python3.9 summation can differ at1e-16. Credentials enter worker environments only from approved encrypted aliases,never arguments,tracked files,model packets or reports. Stop workers,verify uploads/recovery and release the existing host after completion;preserve unrelated prior data. See [deployment record](deployment.md).
 
 ## Attempt history and current status
 
