@@ -1,0 +1,22 @@
+{
+  "experiment": "poietic-agents",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/9d99ec2de694f2404ec086380f5a3dfb2879b616/researchers/vishesh/notes/poietic-agents/README.md",
+  "commit": "9d99ec2de694f2404ec086380f5a3dfb2879b616",
+  "plan_sha256": "71cd0edc26847f5b9a8e8211c76652373491d7e71c2c30e51858a8da244a778a",
+  "registered_tldr": "TLDR: Test whether initially identical agents can develop efficient shared data services and cheaper execution without losing fresh, correct answers. Compare with generalists, coherent caching and static specialists; count correct fresh on-time work and full lifecycle cost. S0-01 failed at the relay boundary after 36 calls; all 144 outcomes are retained and no model or swarm effect is established. Prepared S0-02 keeps models/thresholds with fresh cases, no retries and first-interface-error stopping. Its scope is conditionally authorized, but the original execution window expired; no renewal or new run. 79 offline checks pass. Original USD 2 cumulative cap and exposure remain unchanged; S1/S2 stay closed.",
+  "run_tldr": "TLDR: Poietic S0-02 qualifies Haiku, Qwen and Jev interfaces against expected actions, with 48 requests per contract. Require 44 correct, 48 valid and zero protected access. Fresh repaired interface; no retries; first transport or contract failure stops. This establishes interface readiness, not swarm benefit.",
+  "checked_utc": "2026-10-04T15:38:14.811777+00:00",
+  "condition_tldrs": {
+    "generalist": "TLDR: Poietic S0-02 generalist: qualify the pinned generalist action interface on 12 four-step cases (fetch, answer, stale refresh, restore/service/procedure). Compare to protected expected actions; require 44/48 correct, 48/48 valid and zero protected access. Fresh repair, no retries, first interface error stops. No swarm efficacy conclusion.",
+    "cheap_generative": "TLDR: Poietic S0-02 cheap_generative: qualify the pinned cheap_generative action interface on 12 four-step cases (fetch, answer, stale refresh, restore/service/procedure). Compare to protected expected actions; require 44/48 correct, 48/48 valid and zero protected access. Fresh repair, no retries, first interface error stops. No swarm efficacy conclusion.",
+    "typed_choice": "TLDR: Poietic S0-02 typed_choice: qualify the pinned typed_choice action interface on 12 four-step cases (fetch, answer, stale refresh, restore/service/procedure). Compare to protected expected actions; require 44/48 correct, 48/48 valid and zero protected access. Fresh repair, no retries, first interface error stops. No swarm efficacy conclusion."
+  },
+  "scope": "S0-02 prospective documentation; scientific scope conditionally authorized; expired execution window not renewed; runtime admission pending",
+  "rendered_page_verified": true,
+  "rendered_checks": [
+    "Exact 9d99ec2d immutable URL displayed",
+    "79 offline checks and expired-window status displayed",
+    "S0-01 three failed role runs displayed; no S0-02 run"
+  ],
+  "rendered_page_checked_date": "2026-10-04"
+}

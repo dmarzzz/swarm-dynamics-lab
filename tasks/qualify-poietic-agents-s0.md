@@ -1,7 +1,7 @@
 ---
 id: qualify-poietic-agents-s0
 type: task
-title: Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap
+title: Qualify Poietic Agents S0-02 within retained cumulative authority
 kind: build
 status: claimed
 priority: p1
@@ -24,17 +24,17 @@ claimed_at: 2026-10-04T15:34Z
 
 ## Goal
 
-Finish gate G3 and bounded S0 qualification using researchers/vishesh/notes/poietic-agents/SETUP.md and RUNBOOK.md. The owner authorized all preparation necessary to be able to run Poietic. The subsequent direct user actual-model launch instruction accepts the USD 2 total proposal (USD 1.50 API / USD 0.50 infrastructure). No spending or reviewer waiver is inferred from repository policy text. The historical researcher review and substantive feedback resolution are already recorded.
+Complete the conditionally approved S0-02 interface qualification after the expired execution window is explicitly renewed and current admission evidence is verified. Follow the authoritative study SETUP.md and RUNBOOK.md. Preserve the original cumulative USD 2 cap, all S0-01 charges and failures, and historical review records. Researcher review is not a new approval gate.
 
 ## Done when
 
-- Resolve the pending explicit budget confirmation. Then resolve the pending user question identifying the approved protected OpenRouter credential path/alias only; never ask for its value. Use the bounded local relay and SSH loopback tunnel so no provider key leaves the local credential consumer for the worker.
-- Refresh private fleet/claims and recheck sim-dmarz, which the latest read-only inspection found without active containers or recognized experiment workers. Claim exclusively only once remaining prerequisites are ready. Other eligible idle approved-fleet hosts are permitted; no occupied-host borrowing or wrong-account provisioning.
-- Deploy the exact current source, run the 54 offline checks there, freeze the source/assignment/model/admission receipts, verify the exact public plan and rendered page, and register each condition TLDR before any model call.
-- Execute only S0-01: 144 logical requests maximum, 288 physical maximum, 12 dependent four-step cases per each of Haiku/Qwen/Jev. Retain every assignment, response, failure, resource charge and uncertain reservation.
-- Reconcile the sole local API authority with the remote reporting mirror without double-counting; report allocated infrastructure from charge start through closeout. Publish the post-mortem and durable images/results; release the claim and stop this experiment's relay/worker only.
-- For qualification failures, diagnose on development fixtures, make a prospective amendment and fresh attempt within remaining authority. Do not tune on/reuse the qualification cases or lower thresholds. If qualification passes, prepare S1's actual static baseline and admission within the same remaining total, or report the exact further budget needed before spending beyond USD 2.
+- Apply only an actually approved bounded execution-window renewal to the original authority, using the prepared transactional helper and matching private receipts. The original budget, host binding, call ceiling and charge history must persist.
+- Obtain current exclusive approved-account allocation and central dispatch admission; the historical direct-launch exception does not authorize a successor. Freeze source, assignments, routes, tariffs and runtime evidence.
+- Refresh the immutable public plan and rendered page; register each condition-specific TLDR before any model call. The current 79 checks are offline software validation, not native qualification.
+- Execute at most the approved S0-02 scope: 144 new physical requests, no retries, 12 paired four-step cases per role and first-interface-failure stop. Keep original correctness/validity thresholds and reserved S1/S2 worlds closed.
+- Reconcile every assignment and both ledgers without double-counting; retain uncertain reservations and cumulative infrastructure cost. Publish operational and scientific closeout, verify durable artifacts, stop owned workers/relay and release the allocation.
+- Stop after this one cycle. Failure does not authorize S0-03 or S1. Report the evidence and next decision without changing thresholds or obtaining a favorable result through extra runs.
 
 ## Coverage note
 
-2026-10-04: Credential and original budget resolved; owner-approved direct S0-01 launch actually made36 calls. The relay hid underlying failures; worker stopped and all 144 outcomes reconciled,including108 unstarted. All 9 final artifacts passed hash readback and the allocation is released. S0-02 is repaired offline with 63 checks, unchanged models/thresholds, fresh cases,no retries and first-interface-failure stop. Current owner runbook requires approval of this concrete revised contract before new allocation or launch. Existing budget and original deadline/ledgers persist. See SETUP.md,reviews/S0-01-post.md and reviews/S0-02-pre.md.
+2026-10-04 preparation cycle: S0-01 remains 144 retained outcomes, 36 started calls, zero usable responses and 108 unstarted assignments; nine durable artifacts verified and allocation released. Conservative cumulative exposure remains USD 0.556455767. S0-02 scientific scope is conditionally authorized and has 79 passing offline checks, including 12 synthetic renewal checks. The current immutable plan and rendered public page are verified; three historical failed runs remain visible and no successor run exists. The original authority and charge history are unchanged. The distinct execution-window renewal decision is pending in PI Review; no duplicate generic plan/budget approval is needed. No new allocation, model call or charge occurred. See SETUP.md, reviews/S0-02-reassessment-2026-10-04.md and public-plan-verification-S0-02-cycle.json.

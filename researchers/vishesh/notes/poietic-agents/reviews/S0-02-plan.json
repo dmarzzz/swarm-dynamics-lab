@@ -60,7 +60,7 @@
   },
   "implementation": {
     "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding. Current cycle adds no new agent behavior; tests expiry invariants and enforces prior infrastructure cost in admission. A generic, receipt-gated renewal helper is prepared and tested on synthetic ledgers only; no real transition applied.",
-    "offline_validation": "VALIDATION.json and readiness/S0-02-cycle-2026-10-04.json; 67 author-run offline tests; no successor calls or reserved fixtures."
+    "offline_validation": "VALIDATION.json and readiness/S0-02-cycle-2026-10-04.json; 79 author-run offline tests; no successor calls or reserved fixtures."
   },
   "resources": {
     "maximum_calls": 144,
