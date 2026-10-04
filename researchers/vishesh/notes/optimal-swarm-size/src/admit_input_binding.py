@@ -1,6 +1,6 @@
 """Q-A7 operator admission. No provisioning, credential lookup or secret logging.
 
-Run on the queue-allocated worker under orbital-one orchestration. Receipt fields
+Run on an admitted worker through orbital-one or the scoped Q-A7 owner-direct path. Receipt fields
 are private operator attestations; they are not an independent fleet audit.
 """
 import argparse,json,os,sqlite3,subprocess,time
@@ -13,7 +13,12 @@ def admission_errors(a,revision,now):
         if a.get(key) is not True:errors.append(key)
     if a.get('source_commit')!=revision:errors.append('source_commit')
     if a.get('attempt_id')!='q-a7':errors.append('attempt_id')
-    if a.get('dispatch_origin')!='orbital-one':errors.append('dispatch_origin')
+    if a.get('dispatch_origin')=='owner-direct-q-a7':
+        if a.get('queue_issue')!=294:errors.append('direct_queue_scope')
+        if a.get('central_queue_fenced') is not True:errors.append('central_queue_fenced')
+        if a.get('queue_state')!='CLOSED':errors.append('queue_state')
+        if a.get('owner_decision_reference')!='https://github.com/dmarzzz/swarm-labs-agentops/issues/294#issuecomment-5982187383':errors.append('owner_decision_reference')
+    elif a.get('dispatch_origin')!='orbital-one':errors.append('dispatch_origin')
     if a.get('credential_alias')!='swarm-lab-anthropic/vishesh':errors.append('credential_alias')
     if type(a.get('queue_issue')) is not int or a['queue_issue']<=0:errors.append('queue_issue')
     if not a.get('claim_id'):errors.append('claim_id')

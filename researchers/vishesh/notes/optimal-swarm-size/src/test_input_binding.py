@@ -19,6 +19,12 @@ class InputBinding(unittest.TestCase):
         self.assertEqual(admission_errors(a,'rev',1000),[])
         for key,value in [('source_commit','wrong'),('dispatch_origin','laptop'),('credential_alias','general'),('exclusive_claim_verified',False),('sole_ledger_writer_verified',False),('verified_epoch',0),('claim_expiry_epoch',1500)]:
             self.assertIn(key if key not in ('verified_epoch','claim_expiry_epoch') else ('stale_admission' if key=='verified_epoch' else 'claim_expiry'),admission_errors(a|{key:value},'rev',1000))
+    def test_scoped_direct_admission_requires_real_fence(self):
+        from admit_input_binding import admission_errors
+        a=dict(exclusive_claim_verified=True,approved_account_verified=True,sole_ledger_writer_verified=True,prior_worker_stopped=True,prior_artifacts_verified=True,dedicated_credential_provenance_verified=True,source_commit='rev',attempt_id='q-a7',dispatch_origin='owner-direct-q-a7',credential_alias='swarm-lab-anthropic/vishesh',queue_issue=294,claim_id='claim',verified_epoch=1000,claim_expiry_epoch=9000,central_queue_fenced=True,queue_state='CLOSED',owner_decision_reference='https://github.com/dmarzzz/swarm-labs-agentops/issues/294#issuecomment-5982187383')
+        self.assertEqual(admission_errors(a,'rev',1000),[])
+        for key,value in [('attempt_id','q-a8'),('queue_issue',295),('central_queue_fenced',False),('queue_state','OPEN'),('owner_decision_reference','')]:
+            self.assertTrue(admission_errors(a|{key:value},'rev',1000))
     def config(self):return json.loads((Path(__file__).parent.parent/'input-binding-config.json').read_text())
     def test_public_only_binding_and_wrong_upstream_retained(self):
         t=generate('evidence','chain',6,width=3);b=binding(t.public,'item_00',{})

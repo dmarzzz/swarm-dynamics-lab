@@ -89,7 +89,8 @@ class Provider:
                       'schema_sha256':hashlib.sha256(json.dumps(payload['output_config']['format']['schema'],sort_keys=True).encode()).hexdigest() if 'output_config' in payload else None})
         self.journal({'kind':'request_context','actor':actor,'phase':phase,'item':item,
                       'sha256':hashlib.sha256(json.dumps(payload).encode()).hexdigest(),
-                      'bytes':len(json.dumps(payload).encode())})
+                      'bytes':len(json.dumps(payload).encode()),'call':call_id,
+                      'serialized_request':json.dumps(payload)})
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
@@ -99,6 +100,8 @@ class Provider:
             if not parent.poll(max(0,deadline-time.monotonic())):raise TimeoutError('provider_deadline')
             response=parent.recv()
             if not response['ok']:raise SafeFailure(response['failure'])
+            self.journal({'kind':'model_response','call':call_id,'actor':actor,'phase':phase,'item':item,
+                          'text':response['text'],'finish_reason':response['finish_reason']})
             usage=response['usage']
             charge=usage_charge(usage,cfg)
             self.bank.settle(call_id,charge)

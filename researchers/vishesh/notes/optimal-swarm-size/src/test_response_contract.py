@@ -116,5 +116,10 @@ class Contract(unittest.TestCase):
             self.assertEqual(events[0]['response_contract'],VERSION)
             import hashlib
             context_event=next(e for e in events if e['kind']=='request_context')
+            self.assertEqual(context_event['serialized_request'].encode(),json.dumps(payload).encode())
+            output_event=next(e for e in events if e['kind']=='model_response')
+            self.assertEqual(output_event['text'],'{}')
+            self.assertEqual(output_event['finish_reason'],reason)
+            self.assertNotIn('headers',context_event['serialized_request'])
             self.assertEqual(context_event['sha256'],hashlib.sha256(json.dumps(payload).encode()).hexdigest())
             self.assertEqual(context_event['bytes'],len(json.dumps(payload).encode()))
