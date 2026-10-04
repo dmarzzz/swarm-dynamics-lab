@@ -52,4 +52,21 @@ class Tests(unittest.TestCase):
  def test_invalid_answers(self):
     for vals in ({'0':True},{str(i):True for i in range(6)}):
      with self.assertRaises(ValueError):study.validate({'values':vals})
+ def test_concurrent_failure_denominator(self):
+    import worker,threading
+    from unittest.mock import patch
+    def fake_replay(rows,out,stage,total,initial):return 0
+    base={'id':'a','task':1,'n':36,'arm':'coverage','checks':4,'visibility':'visible','attacker_pass':.1,'kind':'pilot',
+          'packet_hash':'fake','packet':{'skills':list(range(6)),'reports':[]},'answers':[1]*6,'expected':{str(s):None for s in range(6)},'graph_metrics':{}}
+    assignments=[dict(base,id=str(i)) for i in range(20)]
+    class Broken:
+     def call(self,packet,call_id):raise provider.CallFailure('injected_failure')
+    with tempfile.TemporaryDirectory() as td:
+     path=Path(td)/'out'
+     with patch.object(study,'assignments',return_value=assignments),patch.object(render,'replay',fake_replay),patch.dict(os.environ,{'SYBIL_API_BUDGET_LEDGER':str(Path(td)/'ledger')}):
+      with self.assertRaises(RuntimeError):worker.execute(study.params('S1'),path,backend=Broken())
+     summary=json.loads((path/'summary.json').read_text())
+     self.assertEqual(summary['terminal'],20);self.assertEqual(summary['invalid'],20)
+     self.assertLessEqual(summary['started'],4);self.assertGreaterEqual(summary['not_started'],16)
+     self.assertEqual(len({json.loads(line)['id'] for line in (path/'episodes.jsonl').read_text().splitlines()}),20)
 if __name__=='__main__':unittest.main()
