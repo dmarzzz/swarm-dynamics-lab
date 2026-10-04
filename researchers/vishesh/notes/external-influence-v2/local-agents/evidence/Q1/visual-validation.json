@@ -1,0 +1,10 @@
+{
+  "episodes": 6,
+  "event_order": "recorded logical journal order",
+  "failures_explicit": true,
+  "final_states_match": true,
+  "initial_state": "all pending",
+  "mapping": "local-influence-v1",
+  "responses": 66,
+  "terminal_events": 6
+}

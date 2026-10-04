@@ -1,0 +1,10 @@
+{
+  "stage": "D0",
+  "frames": 15,
+  "events": 42,
+  "all_terminals_included": true,
+  "all_responses_included": true,
+  "final_valid": 0,
+  "final_correct": 0,
+  "gif_frames": 15
+}

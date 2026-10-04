@@ -1,0 +1,17 @@
+{
+  "python_version_checked_during_S1": "3.14.5",
+  "system": "Darwin",
+  "architecture": "arm64",
+  "public_scientific_source_commit": "00d74c84f6956f3165b33499bffdbbf7292f47a6",
+  "file_sha256": {
+    "local-agents/run_local.py": "94ef61447f03c86d1a44b27a9aef3690e58330f03d77f61096f30803c1f1e1ea",
+    "local-agents/test_local.py": "7d1b81a6fc163f144256a7f20f0626f8e18942a0dd215eee52f68cb805eb1925",
+    "src/analyze.py": "456dd9372f1fe26eb0e287b72af2a21d4d7c25e6b23de0b013aab792f7e0fe06",
+    "src/common.py": "4e38ddde3974a27e8370366a49decaa87c5054b722596106008b26659443bb41",
+    "src/environment.py": "3632831ce0f424d87173bda7a1e814f95f08f316dd4865629d374e821cae771d",
+    "src/protocol.py": "165f5d08bf14fc82a98fa28bf72f7e61f4af83ed45e80e604eb08a84c596dd92",
+    "src/provider.py": "e6e1f27bbea201c914cc0045ebf3fce1ae8e5d831d452d7b1a76ed00330abaec",
+    "src/runner.py": "e3ca04600efc7c1525d633c0b9085c63d8ef15ac90a22567e16477645b9b245a"
+  },
+  "note": "Q2/S1 share this scientific source. Run manifests retain their original local HEAD even when later documentation rebases change HEAD. Plan URLs remain immutable. Timing is wall time on a shared desktop; separate queue time, peak memory and energy were not measured."
+}

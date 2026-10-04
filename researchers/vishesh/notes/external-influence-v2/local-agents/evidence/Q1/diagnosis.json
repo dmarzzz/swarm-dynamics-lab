@@ -1,0 +1,60 @@
+{
+  "stage": "Q1",
+  "valid_analyst_responses": 54,
+  "failures": [
+    {
+      "assignment": 2,
+      "phase": "revision",
+      "reason": "citation IDs",
+      "candidates_returned": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ],
+      "expected": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ]
+    },
+    {
+      "assignment": 3,
+      "phase": "revision",
+      "reason": "citation IDs",
+      "candidates_returned": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ],
+      "expected": [
+        "cedar-json",
+        "finch-parse",
+        "juniper-codec",
+        "maple-data"
+      ]
+    },
+    {
+      "assignment": 4,
+      "phase": "revision",
+      "reason": "citation IDs",
+      "candidates_returned": [
+        "Cedar itinerary",
+        "Finch itinerary",
+        "Juniper itinerary",
+        "Maple itinerary"
+      ],
+      "expected": [
+        "Cedar itinerary",
+        "Finch itinerary",
+        "Juniper itinerary",
+        "Maple itinerary"
+      ]
+    }
+  ],
+  "failure_counts": {
+    "citation IDs": 3
+  }
+}

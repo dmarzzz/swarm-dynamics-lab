@@ -1,0 +1,4 @@
+{
+  "inspection": "Browser verification of Q1 replay: initial event0 all six pending; final event222 contains three invalid, two correct and one incorrect, matching summary and journals. PNG visually inspected for legible labels. GIF frame count verified; every response and terminal retained for qualification stages.",
+  "mapping": "local-influence-v1"
+}
