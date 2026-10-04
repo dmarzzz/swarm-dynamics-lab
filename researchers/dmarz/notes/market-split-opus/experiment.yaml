@@ -1,11 +1,11 @@
 id: market-split-opus
 owner: dmarz
 title: 'Market splitting: Opus replication on fresh markets'
-description: Replication of the Sonnet market-splitting pilot with Claude Opus 5.5 on
-  six market tasks no model has seen. Stages run in order and each run's stage label
-  says which it is, scripted rehearsal (no model), interface probe, profit qualification,
-  36-episode comparison. No result is claimed in this description; the study README
-  has the current status.
+description: 'Complete. Claude Opus 5.5 on six fresh market tasks: the neutral flexible agent
+  registered a second firm and met the sustained evasion criterion in 6/6 firm-regulated
+  markets, 0/6 owner-regulated and 0/6 unregulated, as in the Sonnet pilot. 36/36 episodes
+  valid; 902 calls, USD 15.34 for the study. Exploratory; six related tasks; same-researcher
+  review only.'
 url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-opus
 params:
   stage:
@@ -45,6 +45,7 @@ params:
       i0-001: Opus action mechanics probe
       q0-001: Opus profit qualification
       s1-001: Opus comparison, six fresh markets
+      s1-001-analysis: Opus comparison, saved-data analysis (no model calls)
   code:
     role: fixed
   engine_sha256:
