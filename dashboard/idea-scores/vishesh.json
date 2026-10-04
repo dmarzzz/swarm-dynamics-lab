@@ -3876,6 +3876,201 @@
       "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
       "assessed_at": "2026-10-04",
       "candidate_sha256": "5b6d5a03a3d709f7fcf9b2717ec231981cbcfc5d9fef01a31baf52e299752006"
+    },
+    "DM-01": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 86,
+        "theory": 88,
+        "novelty": 80
+      },
+      "score": 89,
+      "rationale": "The visible question is geographic corruption; the scientific extension is propagation and reversibility under fixed exposure. Avoids a one-off jailbreak screenshot.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "99e677a0706d007890baad2063ef34639041340c2b8e9a55830ea71a2f4dfa9a"
+    },
+    "DM-02": {
+      "dimensions": {
+        "visual": 91,
+        "practical": 94,
+        "theory": 80,
+        "novelty": 72
+      },
+      "score": 86,
+      "rationale": "Correlated AI errors are established. The narrower contribution is a Jev-specific evidence-versus-prompt intervention with returned distributions and matched resources.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "b01ed199fdc92dd2f7bd10d2f8956d3bdc1e99b7c90c7abd2cff2346e28afc8c"
+    },
+    "DM-03": {
+      "dimensions": {
+        "visual": 92,
+        "practical": 86,
+        "theory": 97,
+        "novelty": 67
+      },
+      "score": 88,
+      "rationale": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "bfffca246d4422dcfd2cf94763e3a5c88ca8b2c8ba22f31902b0e478097b5b5c"
+    },
+    "DM-04": {
+      "dimensions": {
+        "visual": 89,
+        "practical": 97,
+        "theory": 78,
+        "novelty": 81
+      },
+      "score": 87,
+      "rationale": "Confidence-gate pressure is already reported. New scope is temporal feedback, finite service capacity and a matched-capacity defense. The immune/alarm analogy is limited.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "8e04294f7d499448aee8de413cf957700bb1a2b2e6b09fc4c0a6de974b1a88f8"
+    },
+    "DM-05": {
+      "dimensions": {
+        "visual": 91,
+        "practical": 88,
+        "theory": 72,
+        "novelty": 83
+      },
+      "score": 84,
+      "rationale": "Label polarity is existing prior. The opening is dynamic semantic-equivalence classes and their downstream collective consequences.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "893d4e21842130be7375bc3fb23a73cfba5d230f67a3c17cbe46d932b64344bf"
+    },
+    "DM-06": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 72,
+        "theory": 90,
+        "novelty": 64
+      },
+      "score": 81,
+      "rationale": "Biological exploration analogy; needs stronger evidence grounding before priority promotion.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "94c37cca24dd522f2f0966bb98e2e7ebef9422fdaabaf8de8cd1c2a5100f0502"
+    },
+    "DM-07": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 81,
+        "theory": 81,
+        "novelty": 45
+      },
+      "score": 78,
+      "rationale": "Strong overlap with Healing Helping Hands, Immune Response and Swarm of Theseus; keep as an ablation, not a new flagship.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "3355b6cd965b4026e469f451b1105c5edb983c7d5adb3f40b55758eb00e107ec"
+    },
+    "DM-08": {
+      "dimensions": {
+        "visual": 93,
+        "practical": 76,
+        "theory": 50,
+        "novelty": 35
+      },
+      "score": 68,
+      "rationale": "Known demo extended with ground truth; modest novelty.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "9908aed38b19c61fe958fdba2073dc97cbeb555e8d1e792c5b8082c59f677c5b"
+    },
+    "DM-09": {
+      "dimensions": {
+        "visual": 77,
+        "practical": 88,
+        "theory": 55,
+        "novelty": 61
+      },
+      "score": 72,
+      "rationale": "Interface diagnostic; high confounding risk without semantic-equivalence validation.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "e52c93f20e3ee698b8502887fe391884dad37d0d27191981629d9a81e0ffa605"
+    },
+    "DM-10": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 77,
+        "theory": 45,
+        "novelty": 52
+      },
+      "score": 69,
+      "rationale": "Reframes the user example honestly; not direct adversarial vision.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "fd9cea96e5d0b01efa7dab1b0027eb274a6968f9ef64cb6d5cc56e3f3bf5be61"
+    },
+    "DM-11": {
+      "dimensions": {
+        "visual": 66,
+        "practical": 93,
+        "theory": 35,
+        "novelty": 55
+      },
+      "score": 65,
+      "rationale": "Already close to public evaluation; engineering prerequisite.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "f75dd4c641959548676c4256703c5740c9d0d88fc73fd05dc181396fa49b7acc"
+    },
+    "DM-12": {
+      "dimensions": {
+        "visual": 75,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 62
+      },
+      "score": 72,
+      "rationale": "Useful but familiar selective-classification issue.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "50972e499147a51e7a96dc4b3f3e263ea6aed037b62e1a2881cc9d16064ddbbc"
+    },
+    "DM-13": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 82,
+        "theory": 77,
+        "novelty": 42
+      },
+      "score": 77,
+      "rationale": "Strong overlap with influence and heterogeneous-agent research.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "4722b7edd39d9774eea13c9afc7fa42e0243b6b91cd47e6a9e92fd9bfae3a810"
+    },
+    "DM-14": {
+      "dimensions": {
+        "visual": 86,
+        "practical": 83,
+        "theory": 88,
+        "novelty": 50
+      },
+      "score": 80,
+      "rationale": "Good companion treatment; overlaps established dissent questions.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "7e04d92e1d80fdab6be17de6fa79a5d625d4775a17810fd0a46cecf5458abe31"
+    },
+    "DM-15": {
+      "dimensions": {
+        "visual": 88,
+        "practical": 87,
+        "theory": 56,
+        "novelty": 67
+      },
+      "score": 77,
+      "rationale": "Visually clear but indirect biological connection and existing classifier prior.",
+      "assessed_by": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04T02:29:37Z",
+      "candidate_sha256": "87710e3de2f7b2e0adac1874d41e8daa46a8e0416ae76f82c3507f0df78f316d"
     }
   }
 }

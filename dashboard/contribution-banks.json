@@ -16,5 +16,11 @@
     "owner": "vishesh/codex-methods",
     "path": "researchers/vishesh/notes/experimental-expansion/questions.json",
     "collection": "ideas"
+  },
+  {
+    "id": "DM",
+    "owner": "vishesh/codex-decision-models",
+    "path": "researchers/vishesh/notes/decision-models/ideas.json",
+    "collection": "ideas"
   }
 ]
