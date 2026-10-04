@@ -16,7 +16,7 @@ Python 3.12 with pinned [requirements](requirements.txt). Request: `claude-opus-
 
 ## Protocol
 
-As the [original protocol](../sybil-newcomer-api/preregistration.md); frozen copy in [preregistration.md](preregistration.md). S1: 24 worlds × 3 identity counts × 3 policies × 3 strategies × 3 sampled rounds = 1,944 calls. Stages run as one chain: fleet S0 (198 scripted observations) → one-call interface probe on an engineering packet → Q0 (36 clean packets; per shape ≥95% field accuracy, ≥90% exact packets, 100% abstention on absent fields) → S1. Each step starts only if the previous software gate passed; the chain stops itself on the first failure. Any invalid call stops new dispatch; no retries.
+As the [original protocol](../sybil-newcomer-api/preregistration.md); frozen copy in [preregistration.md](preregistration.md). S1: 24 worlds × 3 identity counts × 3 policies × 3 strategies × 3 sampled rounds = 1,944 calls. Stages run one at a time on the dedicated host: fleet S0 (198 scripted observations) → P0, a one-call interface probe on an engineering packet → Q0 (36 clean packets; per shape ≥95% field accuracy, ≥90% exact packets, 100% abstention on absent fields) → S1. Each stage is launched only after the previous software gate passed; the coordinator also refuses Q0 without an exact-runtime S0 and S1 without an exact-runtime Q0. Any invalid call stops new dispatch; no retries.
 
 ## Metrics
 

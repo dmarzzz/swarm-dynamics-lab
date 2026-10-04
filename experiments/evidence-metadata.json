@@ -1821,6 +1821,34 @@
         "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml"
       ],
       "status_at_assessment": "prepared_unrun"
+    },
+    {
+      "id": "sybil-newcomer-opus",
+      "title": "Knowledgeable newcomers versus a trusted Sybil coalition (Opus 5.5 configuration)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-newcomer-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-newcomer-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-newcomer-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Proposed: on identical newcomer-study packets, Opus 5.5 at effort low reproduces the Haiku/Sonnet pattern (all policies lose specialist accuracy under the sleeper attack; renewal minus reputation below +10 pp).",
+        "rationale": "No Opus outcomes exist yet. Plan, adapter and offline checks only (10/10 selftests, local scripted S0 198/198). Configuration differs from earlier cohorts (no temperature, model-default thinking)."
+      },
+      "sample_size_summary": "Observed: none (local scripted S0 198/198 only). Planned: 24 paired world roots, 1,944 S1 calls paired by assignment ID with the Haiku and Sonnet cohorts (never pooled), 36 Q0 calls, one probe call.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-newcomer-opus/README.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/SETUP.md",
+        "researchers/dmarz/notes/sybil-newcomer-opus/reviews/s0-local-001-post.md"
+      ],
+      "status_at_assessment": "planned_launch_ready_no_model_outcomes",
+      "assessor": "dmarz/newcomer-opus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "17b65c09185ad9097be673a30771c937e172d543"
     }
   ],
   "source_sha256": {

@@ -1,9 +1,9 @@
 ---
 agent: dmarz/newcomer-opus
 tool: claude-code
-state: working
+state: idle
 task: null
-doing: Building and launching sybil-newcomer-opus (Opus 5.5 cohort of the newcomer study) as a chained S0, probe, Q0, S1 on sim-dmarz-13
+doing: sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it)
 updated: 2026-10-04T08:15Z
 ---
 
