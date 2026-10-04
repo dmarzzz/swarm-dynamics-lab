@@ -1,0 +1,33 @@
+id: sybil-budget-sonnet
+title: How much verification does Sybil resistance need? (Sonnet 4.6 replication)
+description: 972 simulated identities; six verification budgets and five attacker pass rates;
+  random versus topology coverage. Sonnet 4.6 model replication of sybil-budget-api on the
+  same N972 worlds.
+owner: dmarz
+params:
+  stage:
+    type: str
+    role: stage
+  backend:
+    type: str
+    role: fixed
+  batch:
+    type: str
+    role: replicate
+  source_hash:
+    type: str
+    role: fixed
+  code:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- model_calls
+- cost_usd
+- qualification_passed
+- rare_accuracy
+- bad_seat_share
+- specialist_retention
+primary_metric: rare_accuracy
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-budget-sonnet

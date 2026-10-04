@@ -1,0 +1,11 @@
+{
+  "Q0": {"calls": 8, "exact_reservation_usd": 2.198814, "min_bytes": 57190, "max_bytes": 112851, "mean_bytes": 85021},
+  "S1": {"calls": 1440, "exact_reservation_usd": 275.037465, "min_bytes": 56802, "max_bytes": 57233, "mean_bytes": 57070},
+  "total": {
+    "calls": 1448,
+    "exact_reservation_usd": 277.236279,
+    "study_nonrefundable_reservation_cap_usd": 290,
+    "expected_actual_usd_range": [75, 100],
+    "expected_cost_basis": "Parent sybil-budget-api actual/reservation ratio was 39.67/130.75 = 0.30 at identical prompt, schema and output limit. 0.30 x 277 = ~84 USD, assuming Sonnet 4.6 token counts close to Haiku 4.5's. Estimate, not a bill. The reservation cap counts worst-case per-call reservations (bytes as tokens plus full 500 output tokens) and never decreases; it is not the expected spend. Spend counts against dmarz's $500 shared total."
+  }
+}
