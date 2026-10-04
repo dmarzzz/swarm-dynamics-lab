@@ -355,7 +355,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-methods | working | antsy-v8-native-qualification | 2026-10-04 16:51:24.273890+00:00 | Closing failed Q0 with saved-output audit and scientific postmortem; host released; no retry |
+| vishesh/codex-methods | idle |  | 2026-10-04 16:53:59.316738+00:00 | Antsy Q0 run reviewed and published; timeout qualification incomplete; allocation released; no retry or S1 |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 16:45:28.133996+00:00 | Trace audit complete; conditional semantic proposal stopped at corpus and baseline-headroom gate |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc7-traces | 2026-10-04 16:43:52.083647+00:00 | PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted |
 | vishesh/codex-decision-models | blocked | right-dissenter-rd5-run | 2026-10-04 15:31:00.168263+00:00 | RD5 non-dispatch reconciled and reviewed; old allocation released. Unchanged Q5-A2/conditional H5 prepared with duplicate-dispatch repair; waiting for authorized central acknowledgement before fresh leases. Zero RD5 calls. |
