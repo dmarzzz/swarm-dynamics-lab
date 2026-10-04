@@ -88,7 +88,7 @@ class Tests(unittest.TestCase):
     def test_pool_disabled_and_main_needs_gate(self):
         with patch('urllib.request.build_opener') as op:
             with self.assertRaises(r.AdmissionError):r.dispatch('pool',self.aa[0])
-            with self.assertRaises(FileNotFoundError):r.dispatch('openrouter',self.aa[6])
+            with self.assertRaisesRegex(r.AdmissionError,'predecessor_missing'):r.dispatch('openrouter',self.aa[6])
             op.assert_not_called()
 
     def test_receipts_and_reservations_before_http(self):
@@ -192,5 +192,163 @@ class Tests(unittest.TestCase):
         self.assertAlmostEqual(ledger.liability('historical'),1.851345)
         for v in (True,-1,float('nan')):
             with self.assertRaises(d.BudgetStop):ledger.reserve('new','invalid',v)
+
+    # R1: order/failure/stop policy is enforced inside dispatch itself.
+    def http400(self):
+        return urllib.error.HTTPError('http://offline',400,'bad request',{},io.BytesIO(b'{"error":{"code":400}}'))
+
+    def _reset_cohort(self):
+        import shutil
+        shutil.rmtree(self.base/'openrouter',ignore_errors=True)
+        for p in (self.base/'calls.jsonl',self.base/'paid.jsonl'):p.unlink(missing_ok=True)
+        p=patch.object(r,'PAID',d.PaidLedger(self.base/'paid.jsonl'));p.start();self.addCleanup(p.stop)
+
+    def assert_rejected_unsent(self,a,why,op):
+        before=op.return_value.open.call_count
+        calls=(self.base/'calls.jsonl').read_text() if (self.base/'calls.jsonl').exists() else ''
+        paid=r.PAID.liability()
+        init=self.base/'openrouter/init'/f'{a["id"]}.json'
+        init_before=init.read_bytes() if init.exists() else None
+        with patch.object(r,'key_for') as key:
+            with self.assertRaises(r.AdmissionError) as e:r.dispatch('openrouter',a)
+            key.assert_not_called()
+        self.assertIn(why,str(e.exception))
+        self.assertEqual(op.return_value.open.call_count,before)
+        self.assertEqual((self.base/'calls.jsonl').read_text() if (self.base/'calls.jsonl').exists() else '',calls)
+        self.assertEqual(r.PAID.liability(),paid)
+        self.assertEqual(init.read_bytes() if init.exists() else None,init_before)
+
+    def test_direct_dispatch_out_of_order_rejected(self):
+        with patch('urllib.request.build_opener') as op:
+            self.assert_rejected_unsent(self.aa[5],'out_of_order',op)
+            op.return_value.open.side_effect=lambda *x,**k:self.response(self.aa[0])
+            self.assertEqual(r.dispatch('openrouter',self.aa[0])['status'],'completed')
+            self.assert_rejected_unsent(self.aa[2],'out_of_order',op)
+            self.assert_rejected_unsent(self.aa[0],'out_of_order',op)
+            self.assertEqual(op.return_value.open.call_count,1)
+
+    def test_direct_dispatch_after_qualification_http400_rejected(self):
+        with patch('urllib.request.build_opener') as op:
+            op.return_value.open.side_effect=self.http400()
+            self.assertEqual(r.dispatch('openrouter',self.aa[0])['error'],'http_400')
+            self.assertEqual(d.read(self.base/'openrouter/stopped.json')['assignment'],self.aa[0]['id'])
+            op.return_value.open.side_effect=lambda *x,**k:self.response(self.aa[1])
+            self.assert_rejected_unsent(self.aa[1],'cohort_stopped',op)
+            (self.base/'openrouter/stopped.json').unlink()
+            self.assert_rejected_unsent(self.aa[1],'prior_failure',op)
+            self.assertEqual(op.return_value.open.call_count,1)
+
+    def test_direct_dispatch_after_wrong_qualification_rejected(self):
+        with patch('urllib.request.build_opener') as op:
+            op.return_value.open.side_effect=lambda *x,**k:self.response(self.aa[0],wrong=True)
+            row=r.dispatch('openrouter',self.aa[0])
+            self.assertEqual(row['status'],'completed')
+            self.assertTrue((self.base/'openrouter/stopped.json').exists())
+            self.assert_rejected_unsent(self.aa[1],'cohort_stopped',op)
+            self.assert_rejected_unsent(self.aa[6],'cohort_stopped',op)
+            self.assertEqual(op.return_value.open.call_count,1)
+
+    def test_direct_dispatch_after_invalid_qualification_rejected(self):
+        bad=io.BytesIO(b'{"model":"anthropic/claude-sonnet-4.6","provider":"Anthropic","usage":{"cost":0.001},"choices":[{"finish_reason":"stop","message":{"content":"not json"}}]}')
+        with patch('urllib.request.build_opener') as op:
+            op.return_value.open.return_value=bad
+            row=r.dispatch('openrouter',self.aa[0])
+            self.assertEqual(row['status'],'failed')
+            self.assertTrue((self.base/'openrouter/stopped.json').exists())
+            self.assert_rejected_unsent(self.aa[1],'cohort_stopped',op)
+            self.assertEqual(op.return_value.open.call_count,1)
+
+    def test_direct_dispatch_after_main_failure_rejected(self):
+        seq=iter(self.aa[:6])
+        with patch('urllib.request.build_opener') as op:
+            op.return_value.open.side_effect=lambda *x,**k:self.response(next(seq))
+            for a in self.aa[:6]:self.assertEqual(r.dispatch('openrouter',a)['status'],'completed')
+            op.return_value.open.side_effect=self.http400()
+            self.assertEqual(r.dispatch('openrouter',self.aa[6])['error'],'http_400')
+            op.return_value.open.side_effect=lambda *x,**k:self.response(self.aa[7])
+            self.assert_rejected_unsent(self.aa[7],'cohort_stopped',op)
+            self.assert_rejected_unsent(self.aa[8],'cohort_stopped',op)
+            self.assertEqual(op.return_value.open.call_count,7)
+
+    def test_direct_dispatch_after_ambiguous_predecessor_or_terminal_rejected(self):
+        d.immutable(self.base/'openrouter/init'/f'{self.aa[0]["id"]}.json',{'partial':'fixture'})
+        with patch('urllib.request.build_opener') as op:
+            self.assert_rejected_unsent(self.aa[1],'predecessor_missing',op)
+            r.close_cohort('openrouter','operator')
+            self.assert_rejected_unsent(self.aa[1],'terminal_cohort',op)
+
+    def test_stopped_cohort_then_runner_closes_without_more_requests(self):
+        with patch('urllib.request.build_opener') as op:
+            op.return_value.open.side_effect=self.http400();r.dispatch('openrouter',self.aa[0])
+            terminal=r.execute_cohort('openrouter');self.assertEqual(op.return_value.open.call_count,1)
+        self.assertEqual((terminal['failed'],terminal['not_run']),(1,149))
+
+    # R2: saved-data reporting/checking refuses code that drifted from admission.
+    def real_admission_fixture(self,dispatch_count):
+        import shutil
+        base=self.base/'saved';shutil.rmtree(base,ignore_errors=True);base.mkdir()
+        src=self.base/'src';shutil.rmtree(src,ignore_errors=True);src.mkdir()
+        for name in d.SOURCES:shutil.copy(r.ROOT/name,src/name)
+        hashes={n:d.sha(src/n) for n in d.SOURCES}
+        self._reset_cohort()
+        # Real historical factory ledger (USD1.851345 carried) so recompute's carry check is exercised.
+        shutil.copy(r.ROOT.parents[1]/'results/paid-ledger.jsonl',self.base/'paid.jsonl')
+        seq=iter(self.aa)
+        with patch.object(r,'RESULTS',base),patch.object(r,'source_hashes',return_value=hashes),\
+             patch('urllib.request.build_opener') as op,patch('sys.stdout',new=io.StringIO()):
+            shutil.copy(self.base/'assignments.json',base/'assignments.json')
+            m=d.read(self.base/'admission.json');m['source_sha256']=hashes;d.immutable(base/'admission.json',m)
+            op.return_value.open.side_effect=lambda *x,**k:self.response(next(seq))
+            for a in self.aa[:dispatch_count]:r.dispatch('openrouter',a)
+            r.close_cohort('openrouter','fixture')
+        return base,src
+
+    def reporting_modules(self,src):
+        import analyze,closeout,recompute
+        for mod in (analyze,closeout,recompute):
+            p=patch.object(mod,'SRC',src);p.start();self.addCleanup(p.stop)
+        return analyze,closeout,recompute
+
+    def test_sources_pin_closeout_and_checker_list_matches(self):
+        import recompute
+        self.assertIn('closeout.py',d.SOURCES)
+        self.assertIs(r.SOURCES,d.SOURCES)
+        self.assertEqual(recompute.FROZEN,d.SOURCES)
+
+    def test_reporting_runs_when_code_matches_admission(self):
+        base,src=self.real_admission_fixture(7)
+        analyze,closeout,recompute=self.reporting_modules(src)
+        with patch('sys.stdout',new=io.StringIO()):closeout.main(base,self.base/'paid.jsonl')
+        self.assertTrue((base/'FINDING.md').exists());self.assertTrue((base/'recomputation.json').exists())
+
+    def test_reporting_refuses_drift_after_data_collection(self):
+        for drifted in ('closeout.py','analyze.py','recompute.py','run.py'):
+            with self.subTest(drifted=drifted):
+                base,src=self.real_admission_fixture(7)
+                analyze,closeout,recompute=self.reporting_modules(src)
+                with open(src/drifted,'a') as h:h.write('\n# post-data edit\n')
+                with self.assertRaises(d.SourceDrift):closeout.main(base,self.base/'paid.jsonl')
+                with self.assertRaises(d.SourceDrift):analyze.report(base)
+                with self.assertRaises(ValueError) as e:recompute.check(base,self.base/'paid.jsonl')
+                self.assertIn('running source differs',str(e.exception))
+                for out in ('FINDING.md','summary.json','recomputation.json','numeric-inventory.json','numeric-evidence.zip'):
+                    self.assertFalse((base/out).exists(),out)
+
+    def test_reporting_refuses_admission_missing_closeout_pin(self):
+        base,src=self.real_admission_fixture(1)
+        analyze,closeout,recompute=self.reporting_modules(src)
+        m=d.read(base/'admission.json');del m['source_sha256']['closeout.py']
+        (base/'admission.json').write_text(json.dumps(m))
+        with self.assertRaises(d.SourceDrift):closeout.main(base,self.base/'paid.jsonl')
+        with self.assertRaises(ValueError):recompute.check(base,self.base/'paid.jsonl')
+
+    def test_zero_dispatch_closeout_without_calls_ledger(self):
+        base,src=self.real_admission_fixture(0)
+        self.assertFalse((base/'calls.jsonl').exists())
+        analyze,closeout,recompute=self.reporting_modules(src)
+        with patch('sys.stdout',new=io.StringIO()):closeout.main(base,self.base/'paid.jsonl')
+        self.assertIn('Qualification stopped at 0/6',(base/'FINDING.md').read_text())
+        self.assertNotIn('calls.jsonl',d.read(base/'numeric-inventory.json')['files'])
+
 
 if __name__=='__main__':unittest.main()

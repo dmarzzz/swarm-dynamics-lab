@@ -10,9 +10,13 @@ import random
 import statistics
 
 ROOT=Path(__file__).resolve().parent
+SRC=ROOT  # code whose bytes must match the admitted manifest
+# Literal copy of durable.SOURCES (no runner imports); a test pins equality.
+FROZEN=['SPEC.md','PRE-RUN.md','instrument.py','durable.py','run.py','analyze.py','recompute.py','closeout.py',
+        'test_pilot.py','requirements.txt','HISTORICAL-REVIEW.md']
 
 
-def check(base=None):
+def check(base=None,ledger=None):
     base=Path(base or ROOT/'results');checks=0
     def need(ok,msg):
         nonlocal checks
@@ -21,7 +25,11 @@ def check(base=None):
     def read(p):return json.loads(p.read_text())
     def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
     def dig(x):return hashlib.sha256(json.dumps(x,sort_keys=True,separators=(',', ':'),allow_nan=False).encode()).hexdigest()
-    admission=read(base/'admission.json');assigned=read(base/'assignments.json');summary=read(base/'summary.json')
+    admission=read(base/'admission.json')
+    pinned=admission.get('source_sha256')
+    need(isinstance(pinned,dict) and sorted(pinned)==sorted(FROZEN),'admitted source manifest incomplete')
+    for name in FROZEN:need((Path(SRC)/name).exists() and sha(Path(SRC)/name)==pinned[name],'running source differs from admission: '+name)
+    assigned=read(base/'assignments.json');summary=read(base/'summary.json')
     need(sha(base/'assignments.json')==admission['assignment_file_sha256'],'assignment bytes')
     reservations=[json.loads(l) for l in (base/'calls.jsonl').read_text().splitlines()] if (base/'calls.jsonl').exists() else []
     need(len(reservations)<=149,'request cap');need(len({r['call'] for r in reservations})==len(reservations),'request uniqueness')
@@ -95,7 +103,7 @@ def check(base=None):
                 rng=random.Random(202610041114)
                 boot=sorted(statistics.mean(rng.choices(seen,k=len(seen))) for _ in range(10000))
                 need(rec['exploratory_ci95']==[boot[250],boot[9750]],'bootstrap '+name)
-    ledger=ROOT.parents[1]/'results/paid-ledger.jsonl';rs={};ss={}
+    ledger=Path(ledger or ROOT.parents[1]/'results/paid-ledger.jsonl');rs={};ss={}
     for line in ledger.read_text().splitlines():
         e=json.loads(line);k=(e['spec'],e['call'])
         if e['kind']=='reserve':need(k not in rs,'duplicate paid reservation');rs[k]=e['usd']

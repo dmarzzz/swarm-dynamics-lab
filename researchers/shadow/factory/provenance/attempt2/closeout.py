@@ -7,13 +7,16 @@ import json
 from pathlib import Path
 import zipfile
 import analyze
+import durable as d
 import recompute
 
 ROOT=Path(__file__).resolve().parent
 BASE=ROOT/'results'
+SRC=ROOT  # code whose bytes must match the admitted manifest
 
 
-def figure(rows,source):
+def figure(rows,source,base=None):
+    base=Path(base or BASE)
     main=[r for r in rows if r['stage']=='M' and r['status']=='completed']
     if not main:return None
     out=['<svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1080" viewBox="0 0 1800 1080">',
@@ -49,18 +52,21 @@ def figure(rows,source):
     out += ['<text x="70" y="1000" font-size="19">Y: exact decision-rule accuracy (0 or 1). Each translucent series is one root; identical observations overlap.</text>',
             '<text x="70" y="1032" font-size="19">Gaps are missing observations, not failures. Calls and copies are not independent worlds. Static doses, not time.</text>',
             '</g></svg>']
-    path=BASE/'dose-trajectories.svg';path.write_text('\n'.join(out)+'\n');return path.name
+    path=base/'dose-trajectories.svg';path.write_text('\n'.join(out)+'\n');return path.name
 
 
-def main():
-    summary=analyze.report(BASE);check=recompute.check(BASE)
+def main(base=None,ledger=None):
+    BASE=Path(base or globals()['BASE'])
+    # Refuse before deriving or writing anything if code drifted from admission.
+    d.verify_sources(d.read(BASE/'admission.json'),SRC)
+    summary=analyze.report(BASE);check=recompute.check(BASE,ledger)
     c=summary['cohorts'][0];rows=[json.loads(p.read_text()) for p in sorted((BASE/'openrouter/outcomes').glob('*.json'))]
     valid=[r for r in rows if r['status']=='completed'];mainrows=[r for r in valid if r['stage']=='M']
     calls=sum(r.get('network_attempted') is True for r in rows)
     spent=sum(r.get('paid_usd',0) for r in rows if not r.get('cost_unknown'))
     unknown=sum(r.get('paid_usd',0) for r in rows if r.get('cost_unknown'))
     primary=c['contrasts']['raw-16-minus-1-accuracy'];full=c['complete_roots']
-    fig=figure(rows,summary['source_revision'])
+    fig=figure(rows,summary['source_revision'],BASE)
     if mainrows:
         accuracy=sum(r['metrics']['accuracy'] for r in mainrows)
         sentence=f'In this synthetic fixed-evidence pilot, {accuracy}/{len(mainrows)} main answers followed the unique-acquisition rule; raw16-minus1 accuracy difference was {primary["mean_complete"]} across {primary["complete_roots"]} paired roots.'
@@ -90,7 +96,7 @@ def main():
         '## Costs and validation','',
         f'- New settled/known cost: **USD{spent:.6f}**. New unresolved reservations: **USD{unknown:.6f}**. New liability: **USD{spent+unknown:.6f}**, hard capUSD9.',
         f'- Original factory ledger cumulative liability: **USD{check["factory_paid_liability"]:.6f}**, including priorUSD1.851345. Unknown reservations are carried, not released on refusal.',
-        f'- Stdlib checker: **{check["checks"]} checks pass**, recomputing from saved assignment/outcome data without importing the runner or scorer.16 offline fault tests pass normal/-O.','',
+        f'- Stdlib checker: **{check["checks"]} checks pass**, recomputing from saved assignment/outcome data without importing the runner or scorer.Offline fault tests pass normal/-O.','',
         '## Root-level results','',
         f'Primary raw16-minus1 accuracy: `{json.dumps(primary,sort_keys=True)}`. All12 assigned-root worst-case bounds remain explicit. Bootstrap intervals are exploratory and withheld below10 paired roots.',
         'Full root-by-root accuracy, false-confidence, decision-flip and intervention contrasts are in summary.json. These endpoints are dependent and not multiplicity-adjusted confirmatory tests.','']
@@ -100,7 +106,8 @@ def main():
         'The normative outcome is the sign of five unique signed integer contributions, not a sampled latent real-world truth. Ancestry is trusted harness metadata, raw text has exact-copy cues, and dedup is deterministic preprocessing. This cannot establish semantic source authentication, real-world independence, swarm advantage or general confidence calibration. Twelve numeric roots share one task grammar.',
         'Stop this attempt. A valid null or adverse result is not permission to rerun for a preferred effect. Independent saved-result inspection remains required before any scaling; independently checked completed contrasts/hour remains0 until that happens.']
     (BASE/'FINDING.md').write_text('\n'.join(lines)+'\n')
-    paths=[BASE/'admission.json',BASE/'assignments.json',BASE/'calls.jsonl']+sorted((BASE/'openrouter').rglob('*.json'))
+    # calls.jsonl is absent when nothing was ever dispatched; inventory only what exists.
+    paths=[p for p in (BASE/'admission.json',BASE/'assignments.json',BASE/'calls.jsonl') if p.exists()]+sorted((BASE/'openrouter').rglob('*.json'))
     inventory={'source_revision':summary['source_revision'],'files':{str(p.relative_to(BASE)):hashlib.sha256(p.read_bytes()).hexdigest() for p in paths}}
     ip=BASE/'numeric-inventory.json'
     if not ip.exists():ip.write_text(json.dumps(inventory,indent=2)+'\n')

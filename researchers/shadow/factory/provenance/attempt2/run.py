@@ -23,7 +23,7 @@ RESULTS=ROOT/'results'
 SPEC_ID='shadow-factory-provenance-attempt2'
 DEADLINE=datetime.fromisoformat('2026-10-04T23:00:00+00:00').timestamp()
 PAID=d.PaidLedger(ROOT.parents[1]/'results/paid-ledger.jsonl')
-SOURCES=['SPEC.md','PRE-RUN.md','instrument.py','durable.py','run.py','analyze.py','recompute.py','test_pilot.py','requirements.txt','HISTORICAL-REVIEW.md']
+SOURCES=d.SOURCES
 
 
 class AdmissionError(RuntimeError):pass
@@ -140,12 +140,40 @@ class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):raise AdmissionError('provider_redirect_rejected')
 
 
+def stop_failure(row,a):
+    """A row that ends the cohort under the frozen stop rule, or None."""
+    if row.get('status')!='completed':return row.get('error') or row.get('status') or 'failed'
+    if a['stage']=='Q' and row.get('metrics',{}).get('accuracy')!=1:return 'clean_competence_failure'
+    return None
+
+
+def require_next_in_order(route,a):
+    """Inside the request lock: only the next frozen assignment, only after an
+    unbroken run of successful predecessors, never after a durable stop."""
+    require(route in ('openrouter',),'route')
+    out=RESULTS/route
+    require(not (out/'stopped.json').exists(),'cohort_stopped')
+    require(not (out/'terminal.json').exists(),'terminal_cohort')
+    aa=d.read(RESULTS/'assignments.json')[route]
+    index=next((i for i,x in enumerate(aa) if x==a),None)
+    require(index is not None,'assignment_not_admitted')
+    for p in aa[:index]:
+        op=out/'outcomes'/f'{p["id"]}.json';ip=out/'init'/f'{p["id"]}.json'
+        require(op.exists() and ip.exists(),'out_of_order:predecessor_missing:'+p['id'])
+        row=d.read(op);require(row.get('init_sha256')==d.sha(ip),'predecessor_init_ambiguous:'+p['id'])
+        require(stop_failure(row,p) is None,'prior_failure:'+p['id'])
+    for later in aa[index:]:
+        require(not (out/'init'/f'{later["id"]}.json').exists() and not (out/'outcomes'/f'{later["id"]}.json').exists(),
+                'out_of_order:assignment_already_started:'+later['id'])
+
+
 def dispatch(route,a):
-    """Unavoidable shared boundary. Caller cannot inject body, model, key or cap."""
+    """Unavoidable shared boundary. Caller cannot inject body, model, key or cap.
+    Order, prior-failure and stop policy are enforced here, not only by callers."""
     with d.locked(RESULTS/'request.lock'):
+        require_next_in_order(route,a)  # stop/order/prior-failure first: fail closed before any other read
         m=admitted(route,a)
         out=RESULTS/route;name=a['id'];unique=route+'/'+name
-        require(not (out/'terminal.json').exists(),'terminal_cohort')
         require(not (out/'init'/f'{name}.json').exists(),'duplicate_assignment')
         body=body_for(route,a);ins.validate_wire_schema(ins.SCHEMA);raw=ins.canonical(body)
         require(len(raw)<=16000,'request_byte_budget')
@@ -224,6 +252,11 @@ def dispatch(route,a):
             row['error']=type(e).__name__+(':'+str(e) if isinstance(e,(AdmissionError,d.BudgetStop)) else '')
         row.update(ended=d.now(),elapsed_seconds=round(time.monotonic()-t0,6))
         d.immutable(out/'outcomes'/f'{name}.json',row)
+        why=stop_failure(row,a)
+        if why is not None:
+            # Durable latch: no later dispatch, from any caller, after a failure.
+            d.immutable(out/'stopped.json',{'cohort':route,'assignment':name,'reason':why,'created':d.now(),
+                                            'outcome_sha256':d.sha(out/'outcomes'/f'{name}.json')})
         return row
 
 

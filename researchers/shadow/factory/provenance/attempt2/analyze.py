@@ -10,6 +10,7 @@ import instrument as ins
 import durable as d
 
 ROOT=Path(__file__).resolve().parent
+SRC=ROOT  # code whose bytes must match the admitted manifest
 
 
 def estimate(values,low=-1,high=1):
@@ -64,6 +65,7 @@ def analyze_cohort(route,base):
 
 def report(base=None):
     base=Path(base or ROOT/'results')
+    d.verify_sources(d.read(base/'admission.json'),SRC)
     result={'study':'shadow-factory-provenance-attempt2','source_revision':d.read(base/'admission.json')['source_revision'],
             'cohorts':[analyze_cohort(x,base) for x in ('openrouter',)],
             'independent_review_status':'not_yet_performed','independently_checked_complete_contrasts':0,
@@ -84,7 +86,7 @@ def report(base=None):
           f'- Actual provider input-token range: {c["actual_input_tokens_range"]}. Fixed proxy tokens: 1800; output ceiling128.',
           f'- Primary: `{json.dumps(c["contrasts"]["raw-16-minus-1-accuracy"],sort_keys=True)}`.','']
     lines += ['## Interpretation','',
-      'Do not combine route cohorts or count repeated calls as independent worlds. No treatment inference is possible without clean competence and complete paired outcomes. A transport/schema failure is not a negative scientific effect. Full 12-root missingness bounds remain in summary.json; intervals are withheld below10 complete roots. Conditional fallback assignments are retained as not-run when the fallback is unnecessary, not counted as additional scientific roots.','',
+      'Do not count repeated calls as independent worlds. No treatment inference is possible without clean competence and complete paired outcomes. A transport/schema failure is not a negative scientific effect. Full 12-root missingness bounds remain in summary.json; intervals are withheld below10 complete roots. This attempt has one admitted route (OpenRouter) and no fallback cohort; assignments never dispatched are retained as explicit not-run outcomes, not imputed or counted as observed roots.','',
       'Raw packets deliberately withhold supplied provenance; explicit ancestry changes that information. Deterministic dedup is an upstream engineering intervention. Results cannot establish real-world source independence, semantic authentication, swarm advantage or general confidence calibration.']
     (base/'FINDING.md').write_text('\n'.join(lines)+'\n')
     return result

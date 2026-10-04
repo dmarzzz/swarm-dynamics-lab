@@ -46,6 +46,24 @@ def append_locked(h,row):
 class BudgetStop(RuntimeError): pass
 
 
+# Every runtime, reporting and checker file frozen by admission. Saved-data
+# reporting refuses to emit anything unless these match the admitted manifest.
+SOURCES=['SPEC.md','PRE-RUN.md','instrument.py','durable.py','run.py','analyze.py','recompute.py','closeout.py',
+         'test_pilot.py','requirements.txt','HISTORICAL-REVIEW.md']
+
+
+class SourceDrift(RuntimeError): pass
+
+
+def verify_sources(admission,src_root):
+    """Fail closed unless running code is byte-identical to the admitted manifest."""
+    pinned=admission.get('source_sha256')
+    if not isinstance(pinned,dict) or sorted(pinned)!=sorted(SOURCES):raise SourceDrift('admitted_source_manifest_incomplete')
+    drift=[n for n in SOURCES if not (Path(src_root)/n).exists() or sha(Path(src_root)/n)!=pinned[n]]
+    if drift:raise SourceDrift('running_source_differs_from_admission:'+','.join(drift))
+    return True
+
+
 class PaidLedger:
     """Same file/schema as the pre-existing factory ledger, no new allowance.
 
