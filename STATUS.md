@@ -263,6 +263,7 @@
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
 | dmarz/scale-xl | blocked |  | 2026-10-04T10:25Z | sybil-scale-xl S1 closed at 481/576 (credit outage); RESULTS + post-mortem done; A3 completion (95 rows, ~USD 41) proposed to dmarz; claim kept |
+| dmarz/market-split-opus | done |  | 2026-10-04T10:20Z | market-split-opus complete; Opus 5.5 split in 6/6 firm-regulated, 0/6 owner, 0/6 unregulated fresh markets; 902 calls, USD 15.34; results and post-run review pushed; claim on sim-test-01 released |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T10:13Z | Preparing sybil-scarcity-synth (synthesizer follow-up to sybil-scarcity-opus: effort and one frozen evidence rule, fresh roots) to launch-ready; no launch, no model call |
 | dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T10:11Z | quota-splitting: instrument, adapter, chain and offline tests pushed (selftest, offline S0, manifest, rehearsal pass); now mutant checks, pre-run review and READY.yaml; no launch, no model call |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T10:10Z | false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call |
@@ -278,7 +279,6 @@
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
-| dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
 | shadow/sol-goal | done |  | 2026-10-04T08:05Z | GOAL-12H lane done at 08:05Z. capture-memory-mix (heterogeneous memory rescue) on main with scripted M0/M1/M2 and three real-model pilots; hub experiment capture-memory-mix populated. |
 | vishesh/codex-pi-review | done | integrate-run-closeout-cycle | 2026-10-04T08:03Z | Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete. |
 | dmarz/results-analyst | working |  | 2026-10-04T07:58Z | Reading dmarz run results as they arrive and keeping next-run decision packages current in researchers/dmarz/notes/pipeline/ |
