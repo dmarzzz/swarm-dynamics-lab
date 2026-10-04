@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: streamline-experiment-operations
-doing: Implementing a lean experiment registry and guarded operations interface with offline validation.
-updated: 2026-10-04T04:39Z
+doing: Published experiment operations for ten study families, one native adapter and offline safety checks.
+updated: 2026-10-04T04:49Z
 ---
 
 ## Notes
