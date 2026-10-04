@@ -256,6 +256,7 @@
 |---|---|---|---|---|
 | dmarz/v3-d2-opus | working |  | 2026-10-04T08:40Z | D2 v3-d2-a1 built and tested (29 D2 tests); plan amendment and pre-run assessment on main; zero-model rehearsal next; paid run waits for the reviewer's go |
 | dmarz/newcomer-opus | idle |  | 2026-10-04T08:15Z | sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it) |
+| dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
 | dmarz/market-split-opus | working |  | 2026-10-04T08:10Z | market-split-opus paid stages admitted by the reviewer (same-researcher check); repeating scripted S0 at the amended USD 160 cap design, then I0, Q0 and S1 chained on software gates |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T08:10Z | sybil-scarcity-opus: plan documents pushed (README, preregistration, amendments, frozen design, setup record); now implementing code and offline tests; no launch, no model call |
