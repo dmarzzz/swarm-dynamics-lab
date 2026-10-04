@@ -1,5 +1,14 @@
 # Post-mortem: q0-007
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/compositional-opus; source `875406cc` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The claude-opus-5-5 configuration (adaptive thinking, effort high, 4,096-token cap, execution-v2) meets the unchanged Q0 readiness thresholds on the development structures tested; receipt-treatment efficacy is untested by these runs. Basis: Two qualifications passed 24/24 valid and safely complete with every domain-by-baseline cell 6/6 (q0-007 at design v8, q0-010 at design v9), but each covers only five or six dependent structural fingerprints from a small task grammar, the model, thinking mode and output cap changed together relative to earlier cohorts, and q0-010's root 257 had been run once in the interrupted q0-008. Readiness evidence only; no model comparison or safety generalization.
+- **sample_size_summary:** Observed: q0-007 3 roots / 6 new structures, 24/24 safe, 178 calls; q0-010 3 roots / 5 structures, 24/24 safe, 144 calls. Interrupted q0-008 (8/8 safe on root 257, not pooled), zero-call q0-006 (HTTP 400) and q0-009 (admission) are separate attempts. 48 episodes are not 48 independent tasks. P1 p1-002 running at assessment.
+<!-- experiment-evidence:end -->
+
 - Experiment / owner / stage / date: compositional-safety / dmarz (operated by dmarz/compositional-opus from orbital-one) / Q0 / 2026-10-04 UTC.
 - Pre-run assessment: [q0-007-pre.md](q0-007-pre.md) at source `e8811071f1e43a505bae4c14ecf698f5ccf6341a` (design v8). Parent: [q0-006](q0-006-post.md). Agentops run-queue 196.
 - Records: [records/q0-007](../records/q0-007/) (summary, manifest, dispatch log, compressed episodes and trace, receipt, hashes, final frames).

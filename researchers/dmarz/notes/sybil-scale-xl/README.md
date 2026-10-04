@@ -3,9 +3,9 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/scale-xl ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/scale-xl; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **2/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1). Basis: decisive primary contrast on 18 of 24 complete world pairs (+100 points, bounded +50 to +100), one graph family, one synthetic task, simulated identities; S1 incomplete (481/576) after an unrelated billing outage.
+- **evidence_confidence:** **2/4** — Whether the sybil-scale-api finding (proportional checking preserves specialist accuracy as the swarm grows) holds from 972 to 8,748 simulated identities with Opus 5.5 synthesis (amendment A1). Basis: Decisive primary contrast on 18 of 24 complete world pairs (+100 points, bounded +50 to +100), one graph family, one synthetic task, simulated identities; S1 incomplete (481/576) after an unrelated billing outage.
 - **sample_size_summary:** Observed: S1 481 valid of 576 assigned (24 world clusters × 3 sizes × 8 conditions; 17–24 valid worlds per cell; 94 not started, 1 failed), Q0 24/24 at two runtimes. 972–8,748 simulated identities feeding one Opus 5.5 synthesizer; worlds, not calls or identities, are the independent units.
 <!-- experiment-evidence:end -->
 

@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/pipeline-scarcity; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Reducing the truthful carriers of each rare fact from 81 to 1, at fixed population, graph, audits and admission, lowers the specialist accuracy of an Opus 5.5 synthesizer. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made.
-- **sample_size_summary:** Observed: none. Planned: 24 paired synthetic world roots × 60 conditions = 1,440 S1 calls at 972 simulated identities and one synthesizer; separate Q0 of 48 calls on 8 roots and a one-call probe. Roots are the independent units, not calls or identities.
+- **evidence_confidence:** **2/4** — Reducing the truthful carriers of each rare fact from 81 to 1, at fixed population, graph, audits and admission, lowers the specialist accuracy of an Opus 5.5 synthesizer. Basis: One complete exploratory run: 24 paired synthetic roots, all 1,440 S1 outcomes valid and verified; primary one-minus-81-carrier contrast -95.8 pp (descriptive 95% interval -100.0 to -88.9). Exploratory, one synthetic task, one attacker strategy, one model configuration, not independently reviewed.
+- **sample_size_summary:** Observed: 24 independent world roots x 60 conditions = 1,440 valid S1 outcomes (1,207 distinct packets); Q0 48/48 on 8 roots; P0 1/1. Roots are the independent units; calls, identities and skills are not.
 <!-- experiment-evidence:end -->
 
 **Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-scarcity on 2026-10-04.

@@ -1,5 +1,14 @@
 # Sybil resistance with a model synthesizer: Opus 5.5 replication
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/fleet-monitor; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested: with claude-opus-5-5 as the synthesizer on the Haiku pilot's identical S1 packets, coverage auditing still beats degree auditing on rare-skill accuracy. Basis: Prepared model replication only. The scripted S0 stage ran (216 of 216 valid, zero model calls); no qualification or S1 model call exists. Admission is simulated identically to the Haiku pilot, so only synthesis can differ.
+- **sample_size_summary:** Observed: scripted S0 only, 216 rows, no model outcome. Planned: Q0 on fresh worlds 3100-3105; S1 on the Haiku pilot's 12 worlds (4000-4011), 192 packets; ledger cap 300 calls. Worlds are the independent units.
+<!-- experiment-evidence:end -->
+
 Exploratory model replication of [sybil-specialists-api](../sybil-specialists-api) (Haiku 4.5) with `claude-opus-5-5` as the report synthesizer. dmarz owns it; dmarz/orbital-orchestrator operates it on orbital-one. It replaces the [Sonnet 4.6 version](../sybil-specialists-sonnet), which ran only its scripted S0. dmarz asked on 2026-10-04 to "use opus for everything going forward"; the change is recorded as [Amendment A1](preregistration.md). This is not an accepted formal hypothesis, and S2 stays disabled.
 
 ## Question

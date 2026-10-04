@@ -2329,6 +2329,35 @@
         "researchers/dmarz/notes/sybil-scarcity-synth/experiment.yaml"
       ],
       "status_at_assessment": "planned_unrun"
+    },
+    {
+      "id": "sybil-specialists-opus",
+      "title": "Sybil resistance: Opus 5.5 replication of the specialist synthesis pilot",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested: with claude-opus-5-5 as the synthesizer on the Haiku pilot's identical S1 packets, coverage auditing still beats degree auditing on rare-skill accuracy.",
+        "rationale": "Prepared model replication only. The scripted S0 stage ran (216 of 216 valid, zero model calls); no qualification or S1 model call exists. Admission is simulated identically to the Haiku pilot, so only synthesis can differ."
+      },
+      "sample_size_summary": "Observed: scripted S0 only, 216 rows, no model outcome. Planned: Q0 on fresh worlds 3100-3105; S1 on the Haiku pilot's 12 worlds (4000-4011), 192 packets; ledger cap 300 calls. Worlds are the independent units.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists-opus/README.md",
+        "researchers/dmarz/notes/sybil-specialists-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-specialists-opus/design.yaml",
+        "researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml",
+        "researchers/dmarz/notes/sybil-specialists-opus/reviews/fleet-s0-001-post.md"
+      ],
+      "status_at_assessment": "implemented_no_model_results_in_repository",
+      "assessor": "dmarz/fleet-monitor",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

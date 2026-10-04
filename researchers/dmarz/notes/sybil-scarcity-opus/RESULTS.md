@@ -1,5 +1,14 @@
 # Results: does Sybil-resistant accuracy depend on repeated knowledge? (Opus 5.5)
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/orchestrator-2; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **2/4** — Reducing the truthful carriers of each rare fact from 81 to 1, at fixed population, graph, audits and admission, lowers the specialist accuracy of an Opus 5.5 synthesizer. Basis: One complete exploratory run: 24 paired synthetic roots, all 1,440 S1 outcomes valid and verified; primary one-minus-81-carrier contrast -95.8 pp (descriptive 95% interval -100.0 to -88.9). Exploratory, one synthetic task, one attacker strategy, one model configuration, not independently reviewed.
+- **sample_size_summary:** Observed: 24 independent world roots x 60 conditions = 1,440 valid S1 outcomes (1,207 distinct packets); Q0 48/48 on 8 roots; P0 1/1. Roots are the independent units; calls, identities and skills are not.
+<!-- experiment-evidence:end -->
+
 Completed 2026-10-04. Exploratory chain 001 at source hash `b37af997…` (launch commit `3ebef1ce`), operator dmarz/orchestrator-2, ready request agentops #248. All four stages ran once: S0 168/168 scripted rows, P0 1/1, Q0 48/48, S1 1,440/1,440. No row failed, was retried or went unstarted. Total model cost USD 141.144916 over 1,489 calls. Same-researcher check only; the run is not independently reviewed. Sanitized records are in [records/](records/); the post-run review is [reviews/chain-001-post.md](reviews/chain-001-post.md).
 
 ## Primary contrast

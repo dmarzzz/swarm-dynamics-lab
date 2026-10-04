@@ -1,5 +1,14 @@
 # Knowledgeable newcomer experiment results: Opus 5.5 cohort
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/newcomer-opus; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **2/4** — In this synthetic newcomer task, an Opus 5.5 synthesizer (effort low) on assignments identical to the Haiku 4.5 and Sonnet 4.6 cohorts did not materially change outcomes: the policy ranking (random > renewal > reputation) was unchanged, renewal minus reputation stayed inconclusive (+9.7 pp, interval -1.4 to +20.8 pp), and the difference from Haiku in that contrast was +1.4 pp (interval -4.2 to +6.9 pp). Accuracy never exceeded the share of truth present in admitted packets. Basis: Same-owner assessment: twenty-four paired roots, passed probe and qualification, 1,944/1,944 outcomes paired by assignment with both earlier cohorts and fully recomputed from frozen runtime. The Opus request configuration differs from the earlier cohorts (no temperature, adaptive thinking at effort low); one task family, scripted actors and descriptive unadjusted intervals limit stronger conclusions. Independent review was waived by the owner.
+- **sample_size_summary:** Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing, each paired by assignment ID with the separate Haiku and Sonnet cohorts (not pooled); 24 honest + 1/4/16 controller identities, one synthesizer model. Q0 separately: 36/36 clean calls plus one probe call.
+<!-- experiment-evidence:end -->
+
 Exploratory S1: 1944 assigned, 1944 started, 1944 terminal, 1944 graded/analyzed; 0 invalid and 0 not started. Stage model calls: 1944; recorded stage cost $14.478336. Q0 cost is separate from this stage. 0 attempted calls lack reported usage. Runtime `a21290e41d93c2634dd6824245cf9a8ce0900c9c00f1b9cb0c08640310206322`.
 
 Run `sybil-newcomer-opus/14ea6e6b`, revision `d289769aede95922dd69318087f1e27f7a304d12`, host sim-dmarz-13, 2026-10-04. Model `claude-opus-5-5` at `effort: low`, no temperature field, no thinking field (Opus 5.5 rejects temperature and cannot disable thinking), `max_tokens` 4,000 with the visible answer capped at 2,000 characters. The Haiku 4.5 and Sonnet 4.6 cohorts ran at temperature 0 with thinking off, so this is a new model **and** configuration, not a model-only swap. Assignments, packets and dispatch order are identical across all three cohorts (1,944 ids and packet hashes match). Cohorts are compared, never pooled.
