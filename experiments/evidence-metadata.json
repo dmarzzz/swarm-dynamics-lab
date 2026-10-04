@@ -3736,7 +3736,7 @@
       "status_at_assessment": "native_paired_diagnostic_complete_no_improvement_qualification_failed_parked",
       "assessor": "vishesh/codex-phantom-coast",
       "assessed_at": "2026-10-04",
-      "source_commit": "f012319ccefcc3f2682e6faa6a39132926b26aeb",
+      "source_commit": "89016acef1a33f405f1a551f57a6d5b66f3431be",
       "source_sha256": {
         "researchers/vishesh/notes/phantom-coast/pc10/PLAN.md": "0e0f192c36c84c0a4518f3406cbe9124ec1f6bb9457ef9b5a992251f5830c92f",
         "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md": "30d9d7d1e310b6efd958c63642e30ee4df2ed15e6505359d7bcbaa7743c8b14c",

@@ -23,7 +23,7 @@
       "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc10/Q1-A1-POST.md",
       "adapter": null,
       "checked_at": "2026-10-04T19:52:58.775627+00:00",
-      "checked_commit": "f012319ccefcc3f2682e6faa6a39132926b26aeb",
+      "checked_commit": "89016acef1a33f405f1a551f57a6d5b66f3431be",
       "next_action": "FINISH / PARK current qualification path. PC10 paired16calls:both32/32 maps and4/6 actions, no changes; clarified gate failed. No pilot/retry. Worker stopped,10 readbacks verified, claim released; exposure.859838490 under original cap. Any new population objective needs offline design and concrete owner decision.",
       "next_run_approval": "owner"
     },

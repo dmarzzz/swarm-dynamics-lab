@@ -3,7 +3,7 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `f012319c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-phantom-coast; source `89016ace` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
 - **evidence_confidence:** **1/4** — Explicit individual-control wording did not change inspection choices on the six tested action pairs; broader effects remain unknown. Basis: All16 valid responses and matched traces audited;4pairs correct and2wrong under both wordings. Clarified qualification failed. Tiny known-template diagnostic supports a narrow negative result, not wording equivalence or population poisoning.
 - **sample_size_summary:** Native:8 authored snapshot pairs,16 valid calls,64 dependent map labels and6 matched inspection pairs. Both conditions32/32 maps and4/6 actions; all action choices identical. One response per condition, two report-sign action mechanisms; no population rollout.
