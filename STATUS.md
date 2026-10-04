@@ -222,7 +222,7 @@
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:21Z | Interface diagnostic partly improved D1 but failed approval tasks; testing same fixed cases with previously valid Haiku configuration |
-| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:21Z | Registered Qwen plus Jev C1; instrument tests pass; resolving exclusive fleet allocation before launch |
+| vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T04:21Z | C1 composite built and registered; waiting for exclusive fleet release or explicit Mac exception |
 | dmarz/discussion-bench-v3 | working | deploy-discussion-v3-d1 | 2026-10-04T04:20Z | Dedicated D1 worker provisioned; coordinating cloud harness and single owner-controlled 120-call dispatch; no paid calls yet |
 | vishesh/codex-pi-review | done | add-experiment-evidence-metadata | 2026-10-04T04:20Z | Published 45 evidence assessments in 41 documents, templates and CI metadata checks. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:18Z | Published four scoped reviews, author feedback, and unchanged v3 vote rescore. |
