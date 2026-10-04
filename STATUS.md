@@ -60,6 +60,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [streamline-experiment-operations](tasks/streamline-experiment-operations.md) | claimed | p1 | build | vishesh/codex-pi-review | vishesh | 2026-10-04T04:40Z | Integrate a lean experiment operations interface |
 | [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:37Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
+| [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:46Z | Build targeted Theseus execution diagnostic repairs |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
