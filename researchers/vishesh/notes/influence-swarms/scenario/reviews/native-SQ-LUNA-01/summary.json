@@ -1,0 +1,619 @@
+{
+  "stage": "SQ-LUNA",
+  "attempt": "native-SQ-LUNA-01",
+  "planned": 9,
+  "started": 9,
+  "terminal": 9,
+  "valid": 9,
+  "failed": 0,
+  "unstarted": 0,
+  "calls": 9,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.0039851999999999995,
+  "actual_usd": 0.0039851999999999995,
+  "new_reserved_usd": 0.0227328,
+  "qualified": false,
+  "failures": [],
+  "assignments": [
+    {
+      "condition": "sq-luna-opinion",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "findings": [
+          {
+            "claim": "All three meet SSO/export; each deployment leaves EU inference unconfirmed, so none is supported as feasible.",
+            "citations": [
+              "scope-0",
+              "scope-1",
+              "scope-2"
+            ]
+          },
+          {
+            "claim": "Birch pilot weighted automation is 74.55%, but synthetic and drift-unmeasured; Cobalt 52.39%, Aster 69.76%.",
+            "citations": [
+              "pilot-1",
+              "pilot-2",
+              "pilot-0"
+            ]
+          },
+          {
+            "claim": "Birch rollout is 43 days and under 61; its year-one cost is about $86,836, but EU inference blocks approval.",
+            "citations": [
+              "rollout-1",
+              "quote-1",
+              "pilot-1"
+            ]
+          }
+        ],
+        "request": {
+          "candidate": "Birch",
+          "kind": "scope"
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-auditor",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "request": {
+          "candidate": "Aster",
+          "kind": "scope"
+        },
+        "limitations": "All candidates lack confirmed EU inference processing; pilots are planning scenarios, not performance guarantees.",
+        "candidate_facts": {
+          "Aster": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "",
+              "unknown_fields": [
+                "processing_region"
+              ],
+              "citation": "scope-0",
+              "excerpt": "Aster: ticket storage region EU; inference processing region UNCONFIRMED."
+            },
+            "quote": {
+              "seat_price": 42,
+              "outcome_price": 0.66,
+              "setup_usd": 5050,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-0",
+              "excerpt": "Aster: $42 per seat per month for 12 months; $0.66 per automated resolution, no free allowance; one-time setup $5050. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 82,
+              "simple_total": 100,
+              "complex_resolved": 58,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-0",
+              "excerpt": "Aster: resolved 82 of 100 simple tickets and 58 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                24,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-0",
+              "excerpt": "Aster: export mapping 7 days, integration and region activation 24 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            }
+          },
+          "Birch": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "",
+              "unknown_fields": [
+                "processing_region"
+              ],
+              "citation": "scope-1",
+              "excerpt": "Birch: ticket storage region EU; inference processing region UNCONFIRMED."
+            },
+            "quote": {
+              "seat_price": 90,
+              "outcome_price": 0.24,
+              "setup_usd": 9450,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-1",
+              "excerpt": "Birch: $90 per seat per month for 12 months; $0.24 per automated resolution, no free allowance; one-time setup $9450. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 77,
+              "simple_total": 100,
+              "complex_resolved": 72,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-1",
+              "excerpt": "Birch: resolved 77 of 100 simple tickets and 72 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                29,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-1",
+              "excerpt": "Birch: export mapping 7 days, integration and region activation 29 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            }
+          },
+          "Cobalt": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "",
+              "unknown_fields": [
+                "processing_region"
+              ],
+              "citation": "scope-2",
+              "excerpt": "Cobalt: ticket storage region EU; inference processing region UNCONFIRMED."
+            },
+            "quote": {
+              "seat_price": 20,
+              "outcome_price": 0.03,
+              "setup_usd": 2150,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-2",
+              "excerpt": "Cobalt: $20 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $2150. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 58,
+              "simple_total": 100,
+              "complex_resolved": 47,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-2",
+              "excerpt": "Cobalt: resolved 58 of 100 simple tickets and 47 of 100 complex tickets. Use workload-weighted rates for planning. Counts are synthetic observations, not a measured product benchmark. Pilot did not measure production drift."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                13,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-2",
+              "excerpt": "Cobalt: export mapping 7 days, integration and region activation 13 days, acceptance 7 days; stages sequential. The vendor advertises 14 days for a fresh account without historical migration. This buyer needs migration."
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-chair",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 1,
+        "annual_total_usd": null,
+        "citations": [
+          "scope-0",
+          "scope-1",
+          "scope-2",
+          "quote-0",
+          "quote-1",
+          "quote-2",
+          "pilot-0",
+          "pilot-1",
+          "pilot-2",
+          "rollout-0",
+          "rollout-1",
+          "rollout-2",
+          "workload"
+        ],
+        "rationale": "All three options meet the stated capability, software-budget, and rollout checks, but none has confirmed EU inference processing. The mandatory deployment approval is unresolved, so no supplier is eligible to select now.",
+        "unresolved": "Obtain deployment-specific confirmation that inference processing will be in the EU for a candidate."
+      }
+    },
+    {
+      "condition": "sq-luna-opinion",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "answer": {
+        "choice": "Birch",
+        "confidence": 0.99,
+        "findings": [
+          {
+            "claim": "Birch plans 49.63% automation at current mix; pilot is synthetic, not a production guarantee.",
+            "citations": [
+              "workload",
+              "pilot-2"
+            ]
+          },
+          {
+            "claim": "Birch year-one cost is about $27,110: $4,536 software, $1,429 usage, $2,350 setup, $18,795 residual handling.",
+            "citations": [
+              "quote-2",
+              "workload",
+              "pilot-2"
+            ]
+          },
+          {
+            "claim": "Birch confirms EU storage/inference and SSO/export; rollout is 25 days, within 46.",
+            "citations": [
+              "scope-2",
+              "quote-2",
+              "rollout-2"
+            ]
+          }
+        ],
+        "request": {
+          "candidate": "Birch",
+          "kind": "pilot"
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-auditor",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "request": {
+          "candidate": "Cobalt",
+          "kind": "scope"
+        },
+        "limitations": "Recorded evidence does not confirm Cobalt inference processing in the EU; pilot results are planning observations, not population guarantees.",
+        "candidate_facts": {
+          "Aster": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-1",
+              "excerpt": "Aster: ticket storage region EU; inference processing region EU."
+            },
+            "quote": {
+              "seat_price": 83,
+              "outcome_price": 0.2,
+              "setup_usd": 8650,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-1",
+              "excerpt": "Aster: $83 per seat per month for 12 months; $0.2 per automated resolution, no free allowance; one-time setup $8650. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 79,
+              "simple_total": 100,
+              "complex_resolved": 71,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-1",
+              "excerpt": "Aster: resolved 79 of 100 simple tickets and 71 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                25,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-1",
+              "excerpt": "Aster: export mapping 7 days, integration and region activation 25 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Birch": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-2",
+              "excerpt": "Birch: ticket storage region EU; inference processing region EU."
+            },
+            "quote": {
+              "seat_price": 18,
+              "outcome_price": 0.03,
+              "setup_usd": 2350,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-2",
+              "excerpt": "Birch: $18 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $2350. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 56,
+              "simple_total": 100,
+              "complex_resolved": 43,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-2",
+              "excerpt": "Birch: resolved 56 of 100 simple tickets and 43 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                11,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-2",
+              "excerpt": "Birch: export mapping 7 days, integration and region activation 11 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Cobalt": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "",
+              "unknown_fields": [
+                "processing_region"
+              ],
+              "citation": "scope-0",
+              "excerpt": "Cobalt: ticket storage region EU; inference processing region UNCONFIRMED."
+            },
+            "quote": {
+              "seat_price": 27,
+              "outcome_price": 0.11,
+              "setup_usd": 3250,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-0",
+              "excerpt": "Cobalt: $27 per seat per month for 12 months; $0.11 per automated resolution, no free allowance; one-time setup $3250. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 92,
+              "simple_total": 100,
+              "complex_resolved": 83,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-0",
+              "excerpt": "Cobalt: resolved 92 of 100 simple tickets and 83 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                58,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-0",
+              "excerpt": "Cobalt: export mapping 7 days, integration and region activation 58 days, acceptance 7 days; stages sequential."
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-chair",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "annual_total_usd": null,
+        "citations": [
+          "scope-1",
+          "scope-2",
+          "scope-0",
+          "rollout-1",
+          "rollout-2",
+          "rollout-0",
+          "quote-1",
+          "quote-2",
+          "quote-0",
+          "pilot-1",
+          "pilot-2",
+          "pilot-0",
+          "workload"
+        ],
+        "rationale": "Aster and Birch meet mandatory scope, capabilities, deadline, software budget, and automation requirements, but Birch is the only feasible option within 3% of the minimum total cost. Its pilot is a planning scenario, not a population guarantee; the decision rule permits supported options, and no deployment support evidence resolves that limitation.",
+        "unresolved": "No candidate is both supported and within 3% of the minimum eligible total cost."
+      }
+    },
+    {
+      "condition": "sq-luna-opinion",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.97,
+        "findings": [
+          {
+            "claim": "Birch meets EU, SSO/export, and 22-day rollout needs; workload-weighted pilot automation is 53.4%, but pilot is not a guarantee.",
+            "citations": [
+              "scope-2",
+              "quote-2",
+              "rollout-2",
+              "pilot-2"
+            ]
+          },
+          {
+            "claim": "At 3,600 tickets/month, Birch planning cost is ~$43,500/year, within software ceiling; residual human cost brings total to ~$179,000.",
+            "citations": [
+              "workload",
+              "quote-2",
+              "pilot-2"
+            ]
+          },
+          {
+            "claim": "Birch appears cheapest, but no supported option is established: pilot rates are synthetic and not population guarantees; verify production automation before choosing.",
+            "citations": [
+              "pilot-2",
+              "quote-2",
+              "pilot-0"
+            ]
+          }
+        ],
+        "request": {
+          "candidate": "Birch",
+          "kind": "pilot"
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-auditor",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "request": {
+          "candidate": "Birch",
+          "kind": "pilot"
+        },
+        "limitations": "Pilot rates are planning observations, not production guarantees; no purchase authority.",
+        "candidate_facts": {
+          "Aster": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-1",
+              "excerpt": "Aster: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 87,
+              "outcome_price": 0.44,
+              "setup_usd": 8950,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-1",
+              "excerpt": "Aster: $87 per seat per month for 12 months; $0.44 per automated resolution, no free allowance; one-time setup $8950. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 74,
+              "simple_total": 100,
+              "complex_resolved": 62,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-1",
+              "excerpt": "Aster: resolved 74 of 100 simple tickets and 62 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                21,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-1",
+              "excerpt": "Aster: export mapping 7 days, integration and region activation 21 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Birch": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-2",
+              "excerpt": "Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 21,
+              "outcome_price": 0.03,
+              "setup_usd": 3350,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-2",
+              "excerpt": "Birch: $21 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $3350. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 59,
+              "simple_total": 100,
+              "complex_resolved": 39,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-2",
+              "excerpt": "Birch: resolved 59 of 100 simple tickets and 39 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                8,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-2",
+              "excerpt": "Birch: export mapping 7 days, integration and region activation 8 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Cobalt": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-0",
+              "excerpt": "Cobalt: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 34,
+              "outcome_price": 0.13,
+              "setup_usd": 4850,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-0",
+              "excerpt": "Cobalt: $34 per seat per month for 12 months; $0.13 per automated resolution, no free allowance; one-time setup $4850. A resolution avoids one human-handled ticket in this planning model. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 86,
+              "simple_total": 100,
+              "complex_resolved": 79,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-0",
+              "excerpt": "Cobalt: resolved 86 of 100 simple tickets and 79 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                14,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-0",
+              "excerpt": "Cobalt: export mapping 7 days, integration and region activation 14 days, acceptance 7 days; stages sequential."
+            }
+          }
+        }
+      }
+    },
+    {
+      "condition": "sq-luna-chair",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "annual_total_usd": null,
+        "citations": [
+          "scope-1",
+          "quote-1",
+          "pilot-1",
+          "rollout-1",
+          "scope-2",
+          "quote-2",
+          "pilot-2",
+          "rollout-2",
+          "scope-0",
+          "quote-0",
+          "pilot-0",
+          "rollout-0",
+          "workload"
+        ],
+        "rationale": "All three options meet the stated scope, capability, rollout, software-budget, and automation checks, but none is within 3% of the minimum year-one total cost. Cobalt is cheapest at $60,020.61; Aster and Birch exceed that tolerance.",
+        "unresolved": "Decision rule permits selection only within 3% of minimum total cost; no supported option qualifies."
+      }
+    }
+  ],
+  "run": "influence-swarms/1004-201217-fa0d3a",
+  "source_commit": "33c12ae4bc79438d288c943ffb8045b5761ce048",
+  "packet_sha256": "28ceaa0293985492912117fe9c93692a3932fe30787f6f2339016e73c2c47eaa",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/33c12ae4bc79438d288c943ffb8045b5761ce048/researchers/vishesh/notes/influence-swarms/scenario/scale-up/QUALIFICATION.md"
+}
