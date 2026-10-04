@@ -50,11 +50,17 @@ economy:
   - C
   - B
   - A
+  # Dated addition by dmarz/fleet-monitor, 2026-10-04, not part of program v5: a second run of condition A from
+  # the same checkpoint, collected after the three program branches, to show sampling variation between continuations.
+  noise_floor:
+    A2:
+      repeat_of: A
   streak: 3
 material:
-  round_void_limit: 18
-  warmup_void_limit: 11
-  branch_void_limit: 54
+  # A void is a forced null owner-round. Fixed before any model call; not changed after X0.
+  round_void_limit: 36
+  warmup_void_limit: 36
+  branch_void_limit: 180
 fixtures:
   development_markets: [318500, 318501, 318502, 318503, 318504, 318505]
   probe_first_market_id: 318400
@@ -72,6 +78,7 @@ qualification:
   ordinary_positive_profit_all: true
   valid_responses_required: all
   context_max_failed_calls: 2
+  context_min_valid_actions: 171
   planning_marker_calls_per_second: 1.0
   projection_overhead_factor: 1.25
 stages:
@@ -79,14 +86,14 @@ stages:
   P0: {backend: openrouter, batch: p0-001, calls: 1}
   Q0: {backend: openrouter, batch: q0-001, calls: 185}
   X0: {backend: openrouter, batch: x0-001, calls: 180}
-  S1: {backend: openrouter, batch: s1-001, calls: 5760}
+  S1: {backend: openrouter, batch: s1-001, calls: 7560}
   D1: {backend: openrouter, batch: d1-001, calls: 192}
 budget:
   authorization: 'dmarz to dmarz/fleet-monitor 2026-10-04: ship the big agent swarm run; OpenRouter key limit USD 50; this study hard cap USD 5'
   aggregate_usd: 5
-  max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 5760, D1: 192}
-  max_attempted_calls: 6318
-  max_transport_attempts: 7200
+  max_calls: {S0: 0, P0: 1, Q0: 185, X0: 180, S1: 7560, D1: 192}
+  max_attempted_calls: 8118
+  max_transport_attempts: 9300
   max_output_tokens: 1000
   max_input_tokens: 8000
   max_input_bytes: 32000
@@ -105,6 +112,9 @@ budget:
   in_flight_per_host: 2
   in_flight_per_host_max: 3
   task_timeout_seconds: 2700
+  worker_silent_seconds: 240
+  hub_poll_seconds: 3
+  hub_backoff_max_seconds: 30
   worker_attach_seconds: 1800
-  stage_timeout_seconds: {S0: 1800, P0: 600, Q0: 3600, X0: 1800, S1: 14400, D1: 3600}
-  chain_timeout_seconds: 28800
+  stage_timeout_seconds: {S0: 1800, P0: 600, Q0: 3600, X0: 1800, S1: 21600, D1: 3600}
+  chain_timeout_seconds: 32400

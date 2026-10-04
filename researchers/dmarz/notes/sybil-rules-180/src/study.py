@@ -158,7 +158,8 @@ def main_world():
 def branch_rules(branch):
     if branch == 'warm':
         return {'regime': 'none'}
-    b = design()['economy']['branches'][branch]
+    e = design()['economy']
+    b = e['branches'][e['noise_floor'][branch]['repeat_of'] if branch in e['noise_floor'] else branch]
     return {'regime': b['regime'], 'prohibition': bool(b['prohibition'])}
 
 
@@ -167,7 +168,7 @@ def branch_order():
     order = random.Random(e['branch_order_seed']).sample(sorted(e['branches']), len(e['branches']))
     if order != e['branch_order']:
         raise ValueError('branch_order_not_frozen')
-    return order
+    return order + sorted(e['noise_floor'])      # the repeat continuation always runs after the program's three
 
 
 def stub_policy(oid, o):
