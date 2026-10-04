@@ -1,0 +1,30 @@
+{
+  "assessed_at": "2026-10-04T17:00:30.359483+00:00",
+  "assessor": "vishesh/codex-methods",
+  "plan_commit": "17e2c440",
+  "scope": "Offline local fake-child and injected fake-engine fixtures only; no OCR imports/inference or remote allocation.",
+  "tests_passed": 13,
+  "tests_failed": 0,
+  "native_ocr_calls": 0,
+  "hosted_calls": 0,
+  "new_charge_usd": 0,
+  "frozen_q0_src_unchanged": true,
+  "q0_artifacts_unchanged": true,
+  "source_sha256": {
+    "telemetry.py": "30bba7f77fa6eb176810076586964aeaae87375dd3efde72b4b03f703bd6a470",
+    "worker.py": "242de047cadb674967150f73bc2833770a63319d20680f50c82714c23b8c0262",
+    "capture.py": "ca1c311752a3cf57922b054057d7c41bccf3a81ef685fa5d361e5dab2121a2b9",
+    "fault_child.py": "d5ef9496044acafc871922df8e24e10a634ef310cea06366dab840245d07d95b",
+    "test_repair.py": "93c5fd23f8ca0247e361bff72e612921fa9b7ba5a911c5483d266244106701ba"
+  },
+  "limitations": [
+    "No native latency or telemetry-overhead qualification.",
+    "Combined OCR phase does not split detection and recognition.",
+    "Same-group descendant fixture checks stopped writes; operator host-idle and artifact-readback checks still required.",
+    "No native D1 study launcher, six-call ledger or owner admission is provided by this component."
+  ],
+  "proposed_attempt": "D1-latency-attempt-1",
+  "proposed_calls_max": 6,
+  "proposed_independent_receipts": 3,
+  "owner_approval": "pending_changed_execution_contract"
+}

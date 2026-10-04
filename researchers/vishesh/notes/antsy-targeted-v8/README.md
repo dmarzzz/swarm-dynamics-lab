@@ -36,3 +36,8 @@ The frozen Q0 ran on the existing team fleet after verified admission and runtim
 ## Design transfer — 2026-10-04
 
 [Lessons from Dmarz’s recent studies](DESIGN-TRANSFER.md): specific controls, measurements and next-design options. Prospective only; current run contracts and approval status are unchanged.
+
+
+## Offline repair prepared
+
+[Execution repair v1](execution-repair-v1/README.md) adds durable phases and private timeout streams, with13passing offline fault tests. The [concrete six-call D1 proposal](execution-repair-v1/PLAN.md) awaits owner approval. This is not a native rerun or a claim that the checker is faster.

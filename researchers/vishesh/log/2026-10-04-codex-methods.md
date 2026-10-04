@@ -36,3 +36,8 @@ Reconciled queue and hub: no v8 worker or native call. The previously trusted si
 ## Native v8 Q0 closeout
 
 Executed the frozen Q0 on existing approved team allocation under scoped direct-launch authority after fencing duplicate central dispatch. Six OCR starts: five valid, one45s EasyOCR timeout,34unstarted. Two complete pairs correct; qualification incomplete and no complementary-benefit inference. Saved-output parser replay and separate accounting audit agree. Native traces backed up privately; all8 hub artifacts hash-readback verified; workers stopped and claim released. No retry/S1, hosted calls or new charges. Published full assignment visualization and eleven-dimension scientific post-mortem; next action is owner-reviewed trace-preserving execution diagnosis, not automatic repair.
+
+
+## Offline execution repair
+
+Published D1 latency plan before implementation. Separate versioned worker records durable phases; supervisor retains private streams on timeout/signal, sanitizes public diagnostics and cleans its process group.13fake-process/engine tests pass; original Q0 source/results unchanged. Concrete proposal:3reused receipt units,2cold repetitions max,6calls total,45s eligibility/90s diagnostic ceiling,first slow/error stop,zeroincrementalcharge. No OCR/model call or allocation made. Await owner decision on changed D1 scope before native integration/launch.

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: idle
-task: null
-doing: Antsy Q0 run reviewed and published; timeout qualification incomplete; allocation released; no retry or S1
-updated: 2026-10-04T16:53:59.316738+00:00
+state: working
+task: antsy-v8-execution-repair
+doing: Preparing offline phase and timeout-stream repair; concrete D1 proposal awaits owner decision; no native calls
+updated: 2026-10-04T16:59:24.606522+00:00
 ---
 
 Manual validated sync after each work unit.
