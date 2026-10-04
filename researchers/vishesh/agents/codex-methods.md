@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: working
-task: antsy-receipt-comparison
-doing: Building frozen receipt comparison, validated cases and shared trace capture
-updated: 2026-10-04T19:44:19.110513+00:00
+state: blocked
+task: null
+doing: Comparison prepared and pushed; awaiting concrete Q0/conditional E0 scope decision; no allocation or native calls
+updated: 2026-10-04T19:55:18.488784+00:00
 ---
 
 Manual validated sync after each work unit.
