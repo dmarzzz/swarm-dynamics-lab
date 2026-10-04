@@ -14,3 +14,5 @@ The approved 48-request diagnostic is complete: explicit eligibility 24/24 corre
 [Results and figure](REPORT.md) · [Post-mortem](reviews/F0-A1-POST.md) · [Quality review](reviews/F0-A1-QUALITY.json) · [Current status](RUN-STATUS.md) · [Prospective plan](PLAN.md) · [Authoritative setup](../rd5/SETUP.md).
 
 Current disposition: **FINISH / PARK this diagnostic**. All 48 requests and costs reconcile, worker/relay stopped, allocation released. The deterministic eligibility baseline and 61 offline checks are complete. The separate 54-case qualification reserve remains sealed/unrun; the broader approved dissent direction is not a launched main comparison. Six authored roots and three grammars support a finite repair finding, not a field-rate or collective-benefit claim.
+
+[Prospective 54-assignment qualification plan](QUALIFICATION-PLAN.md): explicit source-only interface, nine coverage strata, strict54/54semantic and interface gate; no reserve opened or new run launched.
