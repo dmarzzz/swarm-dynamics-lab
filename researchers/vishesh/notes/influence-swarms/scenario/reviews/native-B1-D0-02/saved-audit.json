@@ -1,0 +1,14 @@
+{
+  "attempt": "native-B1-D0-02",
+  "native_calls_replayed": 240,
+  "valid_outputs_reproduced": 240,
+  "exact_wires": true,
+  "record_sequence_equal": true,
+  "usage_and_reservations_reconciled": true,
+  "assessment_reproduced": true,
+  "failure_retained": null,
+  "new_model_calls": 0,
+  "run": "influence-swarms/1004-214716-d318a4",
+  "source_commit": "d187d69ac32264dafaebc4b8b112ec8a46721c28",
+  "packet_sha256": "1fb19aa7c8cdcad23dd1acf724acf9febbdf6c7be3e4e075eae78bc79e9799ef"
+}

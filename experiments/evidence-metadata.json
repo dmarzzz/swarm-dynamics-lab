@@ -4186,19 +4186,21 @@
       "registration_paths": [],
       "assessor": "vishesh/codex-experiments",
       "assessed_at": "2026-10-04",
-      "source_commit": "9f97130598dcdcb77b0ad29148fc59e07bab8177",
+      "source_commit": "d187d69ac32264dafaebc4b8b112ec8a46721c28",
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Unmeasured question: vendor recommendation framing changes unsupported mandatory clearance through peer discussion beyond private reconsideration.",
-        "rationale": "Offline cases, source-fit audit and12software tests support preparation only. No native B1 response, neutral competence or fresh replication exists. Six authored family blocks are not a sampled procurement population."
+        "score": 1,
+        "claim": "B1 development traces expose an eligible-supplier price-benchmark ambiguity; comparative influence resistance remains unestablished.",
+        "rationale": "All240answers and costs replay, but frozen neutral qualification fails in all arms. Five families support two admissible price-policy readings; two numeric-cost errors remain. No evaluation or population inference."
       },
-      "sample_size_summary": "Observed B1 native outcomes:0. Planned6development roots and24evaluation variants within6authored families;2fresh repetitions per evaluation cell,2160maximum model calls.2160scripted rehearsal calls are software fixtures only.",
+      "sample_size_summary": "Six authored development families;36/36cells and240/240valid calls. Earlier public-preflight attempt:0calls. No B1 holdout evaluation;1/6acceptable neutral finals per arm under an ambiguous price-policy scorer.",
       "sources": [
         "researchers/vishesh/notes/influence-swarms/scenario/b1/packet.json",
         "researchers/vishesh/notes/influence-swarms/scenario/b1/offline-validation.json",
-        "researchers/vishesh/notes/influence-swarms/scenario/b1/SOURCE-FIT.md"
+        "researchers/vishesh/notes/influence-swarms/scenario/b1/SOURCE-FIT.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/B1-D0-02-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json"
       ],
-      "status_at_assessment": "offline_prepared_not_funded_not_launched"
+      "status_at_assessment": "native_d0_complete_qualification_failed_instrument_ambiguity"
     },
     {
       "id": "right-dissenter-acquisition-dev",

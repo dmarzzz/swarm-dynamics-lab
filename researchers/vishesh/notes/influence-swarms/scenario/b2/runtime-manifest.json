@@ -1,0 +1,14 @@
+{
+  "version": "b2-concurrent-cells-v1",
+  "files": {
+    "runtime.py": "df454555143c5e020f3ba7fc4e03f8d9044817df63a0b4204265174865a1c18b",
+    "parallel_runtime.py": "1dc0f3f3adf9d46fe456ee07fa18da918cdeb3615106b6e9c3c0c414be863e50",
+    "worker.py": "b275316458e914b2aa942ac384ee118e9ef138a02bec6573f718251c1c21fce7",
+    "test_runtime.py": "3537ad86a3290e9633d5c2f11900f3ea1814d29aedf22b6412780108c9efc65f",
+    "test_parallel_runtime.py": "45db592849921e6003cb00c7b6b3ee421b7c3545431220279451cb0142782ab0",
+    "RUNTIME.md": "06a50ef5b3cc98804c62e803332e43c3f704564037750a6fe6aca11da006d6fc",
+    "E0-EXECUTION-AMENDMENT.md": "a164ae3ca9714990a9ca2252d5981735751108719d9a26c6f410eb9c8eff0e90"
+  },
+  "offline_tests": 28,
+  "native_calls": 0
+}

@@ -1,0 +1,52 @@
+{
+  "status": "retrospective_saved_data_diagnosis",
+  "records_sha256": "93891c73243b79778decf2251d8b3b2442894a005c123cf80beaf333cc64cfd0",
+  "outputs_inspected": 240,
+  "cells_with_retained_answers": 36,
+  "counts": {
+    "neutral/peer": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    },
+    "neutral/private": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    },
+    "neutral/simple": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    },
+    "advocacy/peer": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    },
+    "advocacy/private": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    },
+    "advocacy/simple": {
+      "cells": 6,
+      "acceptable_under_frozen_scorer": 1,
+      "defer": 5,
+      "unsupported_clearance": 0
+    }
+  },
+  "field_miss_counts": {
+    "cost": 44,
+    "cost_usd": 2
+  },
+  "reports_with_field_misses": 24,
+  "primary_scores_changed": false,
+  "new_model_calls": 0,
+  "full_traces": "retained in authorized local evidence store; not included in this public aggregate"
+}

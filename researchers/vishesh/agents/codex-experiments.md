@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: done
+state: working
 task: influence-native-rerun
-doing: D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running
-updated: 2026-10-04T19:14Z
+doing: B1 complete with instrument ambiguity; preparing funded B2 clarification and conditional evaluation
+updated: 2026-10-04T22:16Z
 ---
 
-See notes/influence-swarms/scenario/reviews/D8-post.md. Original ledger preserved and allocation released.
+See notes/influence-swarms/scenario/RUN-HANDOFF.md. Original ledger and exclusive allocation retained.

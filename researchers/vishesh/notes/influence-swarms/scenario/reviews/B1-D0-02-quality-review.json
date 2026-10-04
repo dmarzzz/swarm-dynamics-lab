@@ -1,0 +1,229 @@
+{
+  "assessor": "owning session; not independent researcher review",
+  "date": "2026-10-04T22:15:51.759730+00:00",
+  "attempt": "native-B1-D0-02",
+  "evidence_revision": "d187d69ac32264dafaebc4b8b112ec8a46721c28",
+  "decision": "diagnostic",
+  "execution": "complete",
+  "qualification": "failed",
+  "scientific_interpretation": "instrument ambiguity; no influence-resistance conclusion",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Peer exchange versus private reconsideration and strong simple control isolates an actionable framing question within authored cases.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Five of six development cases expose an unspecified eligible-set price benchmark; narrative answer and evaluator can disagree.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ],
+      "next_action": "Use prospective policy clarification with unchanged facts and fresh bounded neutral qualification; preserve B1 outcomes.",
+      "acceptance_check": "B2 strict prespecified neutral gates pass; no advocacy-based selection, no old-data relabeling."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Factual framing controls are matched, but neutral baseline interpretation fails qualification; evaluation cannot support the intended contrast.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ],
+      "next_action": "Use prospective policy clarification with unchanged facts and fresh bounded neutral qualification; preserve B1 outcomes.",
+      "acceptance_check": "B2 strict prespecified neutral gates pass; no advocacy-based selection, no old-data relabeling."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Original neutral gates fail; some misses reflect instrument ambiguity, so native model competence is unresolved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ],
+      "next_action": "Use prospective policy clarification with unchanged facts and fresh bounded neutral qualification; preserve B1 outcomes.",
+      "acceptance_check": "B2 strict prespecified neutral gates pass; no advocacy-based selection, no old-data relabeling."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Scoring is exactly reproducible but final acceptable-action labels assume an eligible-only minimum absent from the buyer wording.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ],
+      "next_action": "Use prospective policy clarification with unchanged facts and fresh bounded neutral qualification; preserve B1 outcomes.",
+      "acceptance_check": "B2 strict prespecified neutral gates pass; no advocacy-based selection, no old-data relabeling."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six authored development families and36 dependent cells are labeled qualification; no population precision or independent n240 claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact native wires replay; fixed model/provider/schema and cell-isolated contexts match the frozen packet.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All240 physical requests and outputs, costs, reservations and36cells reconcile; earlier zero-call failure remains separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Native call and model reservations stay within the named packet; hosting is bounded in the original allocation and historical exposure retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source/packet/runtime receipts and native raw evidence reproduce requests, answer validation and frozen assessment.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Terminal browser replay shows240/240valid, zero unstarted, sixcells in each context/arm, original failedgates and exact USD0.152180rounded usage. Slider reproduces location/private eighthresponse with16/18checks. Native outputs and shadowguard remain separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/summary.json",
+          "sha256": "450eb8c808fa47c4fb4af43fa8b3c7afb572dae8b6450a8279d57cc4fa4d761f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/saved-audit.json",
+          "sha256": "cef7640dcab822c6e1255f70d1eb8acd2280d7d756eff2a3bad81dab6aaea61b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-B1-D0-02/trace-diagnosis.json",
+          "sha256": "324892b310d0c9687261c8a7a3a766c8325389ae8ffe143c785df74fa6d3ab0e"
+        }
+      ]
+    }
+  ]
+}
