@@ -67,3 +67,7 @@ Fresh qualification uses 60 balanced cases (20 per class), procedure names 131â€
 ## Diagnostic 04: report-only outcome extraction
 
 [Diagnostic 03 failed all three development thresholds](reviews/diagnostic-03-post.md). The [next pre-run assessment](reviews/diagnostic-04-pre.md) tests whether outcome classification without the asserted claim repairs confusion between a negative finding and an unmeasured outcome. The mapping is restricted to this corpus's improvement claims; no general verifier capability is implied. Gates and prior failures are preserved.
+
+## Jev candidate-head qualification
+
+The user authorized adding Jev as a separately recorded candidate head. [The prospective Jev qualification](reviews/jev-qualification-01-pre.md) pins `typesafe/jev-1.13`, TypeSafe-only routing and the served dated snapshot. It uses 60 new cases, unchanged competence thresholds, no fallbacks and a $0.10 maximum reservation. A Jev pass does not clear Qwen's gate or retroactively change earlier experiments.
