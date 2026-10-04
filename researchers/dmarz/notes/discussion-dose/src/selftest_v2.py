@@ -107,6 +107,33 @@ class TestsV2(unittest.TestCase):
                 for attack in (False, True):
                     self.assertEqual(len({r['snapshot_hash'] for r in rows if r['task_id'] == t and r['arm']['attack'] == attack}), 1)
 
+    def test_frames_and_replay_match_records(self):
+        # Synthetic trace with normal progress plus one injected provider failure (frames must show it, not hide it).
+        class Flaky(Scripted):
+            n = 0
+            def complete(self, request):
+                Flaky.n += 1
+                if Flaky.n == 30: raise RuntimeError('injected')
+                return super().complete(request)
+        uploads = []
+        with tempfile.TemporaryDirectory() as d:
+            params = {**plan('s0-H4'), 'backend': 'scripted', 'model_config': None, 'tasks': [220]}
+            execute_bundle(params, Path(d) / 'out', Flaky(), upload_frame=lambda p: uploads.append(json.loads(Path(p).read_text())),
+                           upload_replay=lambda p: uploads.append(json.loads(Path(p).read_text())))
+            rows = [json.loads(l) for l in (Path(d) / 'out' / 'episodes.jsonl').read_text().splitlines()]
+            replay = json.loads((Path(d) / 'out' / 'replay.json').read_text())
+        self.assertEqual(replay['kind'], 'deliberation-replay'); self.assertGreater(len(replay['frames']), 20)
+        last = replay['frames'][-1]['tally']
+        self.assertEqual(last['episodes'], len(rows)); self.assertGreaterEqual(last['invalid'], 1)
+        self.assertEqual(last['invalid'], sum(r['evaluation']['invalid'] for r in rows))
+        self.assertEqual(last['attack_wins'], sum(r['evaluation']['target_win'] for r in rows if r['arm']['attack']))
+        self.assertEqual(last['clean_correct'], sum(r['evaluation']['correct'] for r in rows if not r['arm']['attack']))
+        f = replay['frames'][len(replay['frames']) // 2]
+        self.assertEqual(f['kind'], 'deliberation'); self.assertEqual(len(f['agents']), 3)
+        self.assertEqual({a['role'] for a in f['agents']}, {'exposed', 'witness', 'swing'})
+        self.assertTrue(all(a['claim'] in (None, 'true', 'false', 'other') for fr in replay['frames'] for a in fr['agents']))
+        self.assertIn('deliberation-replay', [u.get('kind') for u in uploads])
+
     def test_plans_disjoint_and_budgeted(self):
         sets = [set(v) for v in TASKS.values()]
         self.assertFalse(set.intersection(*sets)); self.assertFalse(sets[0] & set(range(0, 112)))

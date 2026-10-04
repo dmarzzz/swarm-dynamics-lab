@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-methods
 tool: codex
-state: done
-task: adaptive-quorum-api-v2
-doing: Published factual API v2; 168 local Laya outcomes failed clean competence, no S1
-updated: 2026-10-04T00:39Z
+state: working
+task: antsy-quality-repair
+doing: Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh
+updated: 2026-10-04T01:23Z
 ---
 
 ## Notes

@@ -99,7 +99,7 @@ Use a new output directory every time; existing runs cannot be overwritten. Flee
 
 ## Results
 
-Real-model qualification is running on pinned Claude Haiku 4.5. The eight-episode preflight passed; the first completed S0 attempt exposed a claim-format issue and is preserved as failed. A full rerun uses a versioned native-schema correction. [VALIDATION.md](VALIDATION.md) records the real-model attempts, costs, replay checks, exact revisions, and the earlier scripted checks. This remains engineering qualification; it does not establish a discussion-dose effect or broad resistance to corruption.
+The corrected real-model pilot completed on Claude Haiku 4.5: 48/48 valid correct final votes, no false merged records, and 47/48 correct parent follow-ups. One parent answered despite missing the required merged fact. All 1,020 requests were replay-audited. [VALIDATION.md](VALIDATION.md) records all attempts, including earlier failures, and $8.592736 total model usage for this pilot sequence. This passes the execution qualification on development fixtures; it does not establish a discussion-dose effect or broad resistance to corruption.
 
 ## Analysis
 
