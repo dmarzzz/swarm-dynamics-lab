@@ -53,7 +53,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [theseus-d1-launch](tasks/theseus-d1-launch.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T06:47Z | Admit and run Theseus execution diagnostic D1 |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -231,6 +230,7 @@
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
+| [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
 | [theseus-rule-diagnosis](tasks/theseus-rule-diagnosis.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T04:39Z | Diagnose Theseus rule application from saved evidence |
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
 | [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:55Z | Build targeted Theseus execution diagnostic repairs |
