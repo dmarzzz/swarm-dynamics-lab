@@ -1,6 +1,6 @@
-version: compositional-safety-v6
+version: compositional-safety-v7
 status: exploratory-qualification
-model: claude-sonnet-5
+model: claude-opus-5-5
 arms:
 - C
 - S
@@ -37,10 +37,11 @@ stages:
     - H
   Q0:
     backend: anthropic
+    max_calls: 480
     tasks:
-    - 240
-    - 241
-    - 242
+    - 244
+    - 253
+    - 256
     domains:
     - D1
     - D2
@@ -85,8 +86,8 @@ budget:
   max_output_tokens: 350
   request_timeout_seconds: 90
   stage_timeout_seconds: 7200
-  input_usd_per_million: 2
-  output_usd_per_million: 10
+  input_usd_per_million: 4
+  output_usd_per_million: 20
   workers: 1
   retries: 0
 S1_enabled: false
