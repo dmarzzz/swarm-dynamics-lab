@@ -26,4 +26,4 @@ Human-directed synthesis and visualization, not a new experiment. Build a zero-m
 - [x] Rerunnable build_map.py and narrative.json committed with source provenance.
 - [x] Timeline, theme graph, candidate scorecards and cited researcher trajectories live at https://swarm-narrative.pages.dev.
 - [x] Automated data checks and desktop/mobile browser smoke tests pass (1440px and 390px).
-- [ ] Final refreshed snapshot published by 23:00 UTC.
+- [x] Final refreshed snapshot published and HTTP/JSON-verified before 23:00 UTC.
