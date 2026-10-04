@@ -3,14 +3,17 @@ id: quorum-mirrors-q1-launch
 type: task
 title: Launch bounded Quorum context qualification under owner no-review direction
 kind: experiment
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: vishesh/codex-quorum-mirrors
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-quorum-mirrors
 depends_on: []
-topics: [decision-models]
+topics:
+- decision-models
+claimed_at: 2026-10-04T06:07Z
+updated: 2026-10-04T06:07Z
 ---
 
 ## Goal
