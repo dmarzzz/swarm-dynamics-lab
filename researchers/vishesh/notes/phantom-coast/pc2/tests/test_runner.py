@@ -167,7 +167,7 @@ class Visual(unittest.TestCase):
         from design import endpoint
         from replay import frame
         from PIL import Image
-        out=Path('/private/tmp/phantom-pc2-visual-check');out.mkdir(exist_ok=True)
+        out=Path(tempfile.gettempdir())/'phantom-pc2-visual-check';out.mkdir(exist_ok=True)
         es=[]
         for report in ('misleading','benign'):
             e=Episode(development_world(300),report=report,audit=True)
