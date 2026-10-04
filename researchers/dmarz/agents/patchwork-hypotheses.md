@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: add-patchwork-hypotheses
-doing: Add Patchwork-derived unreviewed hypotheses and publish the research-page update
-updated: 2026-10-04T01:59Z
+doing: Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests
+updated: 2026-10-04T02:03Z
 ---
 
 ## Notes

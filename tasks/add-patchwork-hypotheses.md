@@ -28,5 +28,5 @@ User request: "can u add hypotheses relevant to this to the swarm research page 
 
 - [x] Add falsifiable candidates, matched comparisons, metrics, source relationships and prerequisites.
 - [x] Record Patchwork evidence and distinguish live-model pilots from scripted conformance.
-- [ ] Validate the atlas, repository and dashboard contract; push to GitHub.
-- [ ] Confirm the deployed research page includes the new candidates.
+- [x] Validate the atlas, repository and dashboard contract; push to GitHub.
+- [x] Confirm the deployed research page includes the new candidates.
