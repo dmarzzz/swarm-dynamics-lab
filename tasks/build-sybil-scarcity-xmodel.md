@@ -13,8 +13,8 @@ depends_on: []
 topics:
 - sybil-resistance
 - llm-agent-swarms
-claimed_at: 2026-10-04T12:28Z
-updated: 2026-10-04T12:28Z
+claimed_at: 2026-10-04T12:29Z
+updated: 2026-10-04T12:29Z
 ---
 
 ## Goal
