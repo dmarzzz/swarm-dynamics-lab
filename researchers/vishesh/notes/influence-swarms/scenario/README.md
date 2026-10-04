@@ -3,13 +3,15 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence. Basis: Q2 adverse team approvals are valid. Q3 changed both wording and profile, so it cannot establish a wording effect; attempts cannot be pooled. Chair forks are paired; no broad influence comparison has qualified.
-- **sample_size_summary:** Q2:3 dossiers × 3 workflows =9 valid decisions (7 acceptable); Q3:1 fresh diagnostic dossier × 3 workflows =3 acceptable. Main study not run; planned288 decisions nest in6 authored families/24 profiles.
+- **evidence_confidence:** **0/4** — Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence. Basis: Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled.
+- **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
 <!-- experiment-evidence:end -->
 
 **Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+
+Latest measured iteration: [qualification and frozen-input diagnostic](LATEST-RESULTS.md). Qualification completed 12 valid decisions with two substantive team approval errors; removing analyst reports did not fix that error. The larger comparison was not run.
 
 ## TLDR
 

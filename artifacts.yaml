@@ -1133,4 +1133,45 @@ artifacts:
           - researchers/vishesh/notes/dissent/results/q0-a1/summary.json
           - researchers/vishesh/notes/dissent/results/q0-a1/records.json
         commit: ac0e8122d4dfbc52bbc0cc4faaf34a2a735aa2ea-dirty
+  - id: influence-native-q4-results
+    category: content
+    type: figure
+    title: 'Fresh procurement qualification: ten acceptable, two adverse decisions'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-q4-results/influence-native-q4-results-v1.png
+        built_at: '2026-10-04T04:26:08Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Okay then you should have what you need and let’s get going on running the next iteration of the experiment.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py
+          - data/influence-native/native-Q4-01/outcomes.json
+          - data/influence-native/native-Q4-01/summary.json
+        commit: 84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty
+  - id: influence-native-d1-replay
+    category: content
+    type: doc
+    title: 'Frozen-input diagnostic: report removal does not fix the approval error'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-d1-replay/influence-native-d1-replay-v1.html
+        built_at: '2026-10-04T04:26:09Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Okay then you should have what you need and let’s get going on running the next iteration of the experiment.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py
+          - data/influence-native/native-D1-01/manifest.json
+          - data/influence-native/native-D1-01/summary.json
+          - data/influence-native/native-D1-01/case-0.json
+          - data/influence-native/native-D1-01/case-1.json
+          - data/influence-native/native-D1-01/events-0.jsonl
+          - data/influence-native/native-D1-01/events-1.jsonl
+          - data/influence-native/native-D1-01/outcomes.json
+        commit: 84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty
 requires: '1.2'

@@ -29,3 +29,11 @@ Local-session reconciliation found Antsy had released sim-test-01 in Dmarz's est
 A separate /srv/swarm/influence-q4 checkout and /srv/swarm/influence-q4-venv environment are prepared; all 24 scenario regression tests pass on the host. Reporter is available and the allocation was mirrored to the hub. No model credential or budget ledger was copied. No native model calls are running. Before launch, incorporate the independent verdict, pin reviewed source, reverify this claim (renew if expired), and reserve a non-overlapping quota from the approved authority. Dossier review remains open. Release the allocation if the study cannot proceed before expiry.
 
 The new-droplet proposal sim-influence-q4 was not provisioned; the available existing Dmarz fleet allocation fulfills the dedicated-machine requirement. Known local DigitalOcean contexts did not match Dmarz's fleet; they were not used to create resources.
+
+## Q4 and D1 closeout — 2026-10-04 UTC
+
+The owner retired the duplicate dossier review before launch; Dmarz's existing design feedback satisfied the single-review requirement. Q4 used source 189761c2bd907372562220a0dfdfe1c43fa2cfd3; D1 used 84ee032eda80360cc54c5234f8ffc3afe3649cec. Both ran on the exclusive sim-test-01 allocation above. Q4: 56 calls, 12/12 valid decisions, 10 acceptable, USD 0.160220. D1: four calls, four valid decisions, two acceptable, USD 0.021552. No execution failures or missing usage. Q4 failed competence; S1 was not launched. See LATEST-RESULTS.md and both post-mortems.
+
+The approved shared authority is USD 55. An atomic USD 8 lease funded this iteration; its persistent host subledger reserved USD 0.773396 across 60 calls, leaving USD 7.226604 within the lease. Actual reported usage totals USD 0.181772; reservations are not refunded or reset. Preserve the authority and subledger when reallocating machines.
+
+Raw evidence, final frames and measured HTML/GIF replays uploaded and verified: qualification has 16 hub artifacts and diagnostic has 12. Verified zero remaining native workers. Dedicated claim released through merged [agentops PR 125](https://github.com/dmarzzz/swarm-labs-agentops/pull/125). Git is authoritative; automatic release mirror lacked local sops. No cloud resource was created or destroyed.

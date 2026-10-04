@@ -1,0 +1,17 @@
+{
+  "stage": "D1",
+  "planned": 4,
+  "terminal": 4,
+  "valid": 4,
+  "invalid": 0,
+  "acceptable": 2,
+  "qualified": false,
+  "calls": 4,
+  "input_tokens": 16212,
+  "output_tokens": 1068,
+  "actual_usd": 0.021552,
+  "usage_missing": 0,
+  "seconds": 16.30764944999828,
+  "source_signature": "045bac9ddc59f1d48cb86cbaca71007105cbccd1d8a618f56030f51d3a7b3ead",
+  "outcomes_hash": "d3f3aad239a107ed52539533fed23ba7709211271fe8f91d7dba4c76794d7c8e"
+}

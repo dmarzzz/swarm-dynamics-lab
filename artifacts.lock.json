@@ -240,6 +240,65 @@
    "sha256": "f438ec2bc51c6726eba73ab2b2843cc9c873801b11703d4d9646ff46baddaeb3",
    "size_bytes": 263097
   },
+  "influence-native-d1-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087833,
+     "sha256": "b78e407606e4b585b2678e72b174f168db37deaf16409c820446b728f2b53471",
+     "size": 6255,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
+    },
+    {
+     "mtime": 1791087852,
+     "sha256": "89ac5dafe1e8f0204232b562da0384d9272ed5cf575b9c6451cc874e0ea5c571",
+     "size": 857,
+     "uri": "data/influence-native/native-D1-01/manifest.json"
+    },
+    {
+     "mtime": 1791087850,
+     "sha256": "d5dc5512369589872163cbc29ca4919f141aeba80c04e606fcbd2b507f7473ec",
+     "size": 444,
+     "uri": "data/influence-native/native-D1-01/summary.json"
+    },
+    {
+     "mtime": 1791087851,
+     "sha256": "d3962f964a383db94c45a310c77e6bedc5d7424c67c1e9424fc74b70bc02eda9",
+     "size": 20997,
+     "uri": "data/influence-native/native-D1-01/case-0.json"
+    },
+    {
+     "mtime": 1791087851,
+     "sha256": "f73601056caf6db8f2b73e56c899852959fe50315eb154255cd15156545d12c5",
+     "size": 20959,
+     "uri": "data/influence-native/native-D1-01/case-1.json"
+    },
+    {
+     "mtime": 1791087849,
+     "sha256": "97b1fc602ba10c4457f5101812f2302f8f12eedbea274b3953824684841089ca",
+     "size": 33203,
+     "uri": "data/influence-native/native-D1-01/events-0.jsonl"
+    },
+    {
+     "mtime": 1791087850,
+     "sha256": "625bf854450dfbd4ad1c3f27945098db6732822a6f1bbdb33fb5e82eca73eb5e",
+     "size": 32445,
+     "uri": "data/influence-native/native-D1-01/events-1.jsonl"
+    },
+    {
+     "mtime": 1791087852,
+     "sha256": "1c4daec7e87935b80c123a3f8cab71cd9417654d508203c6e7e7a3415748136b",
+     "size": 9255,
+     "uri": "data/influence-native/native-D1-01/outcomes.json"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791087897,
+   "path": "artifacts/influence-native-d1-replay/influence-native-d1-replay-v1.html",
+   "prompt_sha256": "3ddaefa3b3a689a1c952a63ef6989ee82502ee4830c68fb97c23b038ac92a3d4",
+   "sha256": "d0bf959d867b6efb127d33ad6fb7007b6de69cd9a160115fc28580f1ef34bee3",
+   "size_bytes": 73996
+  },
   "influence-native-q2-film@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -360,6 +419,35 @@
    "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
    "sha256": "117e8a2e1a857ad84846034dfb2dae8c9a68b9f1a2b6c1cfe5c5d6b5183f7af4",
    "size_bytes": 96484
+  },
+  "influence-native-q4-results@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791081031,
+     "sha256": "22ca86c45911a82a36e79ba13da7da06170a9e9b617333c1c6af269c1767144a",
+     "size": 1772,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py"
+    },
+    {
+     "mtime": 1791087696,
+     "sha256": "5e00e33ea6cafc364df2a8ef93d328f5787fc4746b8a2e7a5897e9d2dc7e5dcc",
+     "size": 27509,
+     "uri": "data/influence-native/native-Q4-01/outcomes.json"
+    },
+    {
+     "mtime": 1791087692,
+     "sha256": "00a562d3375dc98cc04c2f3352aeff1e5dcced1a6d125065065a5a650069aa93",
+     "size": 504,
+     "uri": "data/influence-native/native-Q4-01/summary.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791087691,
+   "path": "artifacts/influence-native-q4-results/influence-native-q4-results-v1.png",
+   "prompt_sha256": "3ddaefa3b3a689a1c952a63ef6989ee82502ee4830c68fb97c23b038ac92a3d4",
+   "sha256": "417b01791def7fd9d4afc9e74966bdece2cdb7b5db6f0c284e1b14c9c940e89d",
+   "size_bytes": 110578
   },
   "influence-swarms-decision-design@1": {
    "host": "ultrons-macbook-pro",

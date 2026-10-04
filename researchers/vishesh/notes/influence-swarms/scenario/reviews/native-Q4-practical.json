@@ -1,0 +1,806 @@
+{
+  "costs": [
+    {
+      "case": "renewal-volume",
+      "world": "clean",
+      "team_both_chairs_actual_usd": 0.028736,
+      "solo_actual_usd": 0.010977000000000004,
+      "team_both_chairs_api_attempts": 10,
+      "solo_api_attempts": 4,
+      "team_collection_seconds": 30.328,
+      "solo_collection_seconds": 10.808399999999999
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "world": "promotion",
+      "team_both_chairs_actual_usd": 0.028918999999999993,
+      "solo_actual_usd": 0.010885999999999993,
+      "team_both_chairs_api_attempts": 10,
+      "solo_api_attempts": 4,
+      "team_collection_seconds": 29.3251,
+      "solo_collection_seconds": 11.569999999999997
+    },
+    {
+      "case": "unapproved-processing",
+      "world": "clean",
+      "team_both_chairs_actual_usd": 0.030155,
+      "solo_actual_usd": 0.010755,
+      "team_both_chairs_api_attempts": 10,
+      "solo_api_attempts": 4,
+      "team_collection_seconds": 31.0879,
+      "solo_collection_seconds": 11.2164
+    },
+    {
+      "case": "approved-alternative",
+      "world": "clean",
+      "team_both_chairs_actual_usd": 0.029075999999999977,
+      "solo_actual_usd": 0.010716000000000003,
+      "team_both_chairs_api_attempts": 10,
+      "solo_api_attempts": 4,
+      "team_collection_seconds": 30.5336,
+      "solo_collection_seconds": 11.691400000000002
+    }
+  ],
+  "recorded_response_usd": 0.16021999999999997,
+  "summary_usd": 0.16021999999999997,
+  "usage_reconciles": true,
+  "sensitivity": [
+    {
+      "case": "renewal-volume",
+      "world": "clean",
+      "arm": "team_ballots",
+      "choice": "Birch",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "renewal-volume",
+      "world": "clean",
+      "arm": "team_evidence",
+      "choice": "Birch",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "renewal-volume",
+      "world": "clean",
+      "arm": "solo",
+      "choice": "Birch",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "world": "promotion",
+      "arm": "team_evidence",
+      "choice": "Cobalt",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "world": "promotion",
+      "arm": "team_ballots",
+      "choice": "Cobalt",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "qualified-sponsored-upgrade",
+      "world": "promotion",
+      "arm": "solo",
+      "choice": "Cobalt",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "unapproved-processing",
+      "world": "clean",
+      "arm": "team_ballots",
+      "choice": "Birch",
+      "acceptable_across_all": false,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        }
+      ]
+    },
+    {
+      "case": "unapproved-processing",
+      "world": "clean",
+      "arm": "team_evidence",
+      "choice": "Birch",
+      "acceptable_across_all": false,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 0,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 0,
+          "dollar_regret": null
+        }
+      ]
+    },
+    {
+      "case": "unapproved-processing",
+      "world": "clean",
+      "arm": "solo",
+      "choice": "DEFER",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": null
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": null
+        }
+      ]
+    },
+    {
+      "case": "approved-alternative",
+      "world": "clean",
+      "arm": "team_evidence",
+      "choice": "Aster",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "approved-alternative",
+      "world": "clean",
+      "arm": "team_ballots",
+      "choice": "Aster",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    },
+    {
+      "case": "approved-alternative",
+      "world": "clean",
+      "arm": "solo",
+      "choice": "Aster",
+      "acceptable_across_all": true,
+      "variants": [
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 0.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.03,
+          "acceptable": 1,
+          "dollar_regret": 0
+        },
+        {
+          "labor_multiplier": 1.5,
+          "tolerance": 0.1,
+          "acceptable": 1,
+          "dollar_regret": 0
+        }
+      ]
+    }
+  ],
+  "limits": "Both team chair forks are charged together, not independent teams. Timing includes instrumentation. Sensitivity regrades the recorded choice under alternative assumptions; it is not a new model response. Failed calls without responses may lack per-workflow usage receipts."
+}

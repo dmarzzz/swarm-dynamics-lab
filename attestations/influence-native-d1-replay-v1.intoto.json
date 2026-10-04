@@ -1,0 +1,92 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Okay then you should have what you need and let’s get going on running the next iteration of the experiment."
+   },
+   "internalParameters": {
+    "commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty",
+    "session": "codex:01a1041f-9bfc-7891-be03-69925e274e9f"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "b78e407606e4b585b2678e72b174f168db37deaf16409c820446b728f2b53471"
+     },
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
+    },
+    {
+     "digest": {
+      "sha256": "89ac5dafe1e8f0204232b562da0384d9272ed5cf575b9c6451cc874e0ea5c571"
+     },
+     "uri": "data/influence-native/native-D1-01/manifest.json"
+    },
+    {
+     "digest": {
+      "sha256": "d5dc5512369589872163cbc29ca4919f141aeba80c04e606fcbd2b507f7473ec"
+     },
+     "uri": "data/influence-native/native-D1-01/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "d3962f964a383db94c45a310c77e6bedc5d7424c67c1e9424fc74b70bc02eda9"
+     },
+     "uri": "data/influence-native/native-D1-01/case-0.json"
+    },
+    {
+     "digest": {
+      "sha256": "f73601056caf6db8f2b73e56c899852959fe50315eb154255cd15156545d12c5"
+     },
+     "uri": "data/influence-native/native-D1-01/case-1.json"
+    },
+    {
+     "digest": {
+      "sha256": "97b1fc602ba10c4457f5101812f2302f8f12eedbea274b3953824684841089ca"
+     },
+     "uri": "data/influence-native/native-D1-01/events-0.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "625bf854450dfbd4ad1c3f27945098db6732822a6f1bbdb33fb5e82eca73eb5e"
+     },
+     "uri": "data/influence-native/native-D1-01/events-1.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "1c4daec7e87935b80c123a3f8cab71cd9417654d508203c6e7e7a3415748136b"
+     },
+     "uri": "data/influence-native/native-D1-01/outcomes.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:26:09Z",
+    "invocationId": "codex:01a1041f-9bfc-7891-be03-69925e274e9f",
+    "startedOn": "2026-10-04T04:26:09Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "d0bf959d867b6efb127d33ad6fb7007b6de69cd9a160115fc28580f1ef34bee3"
+   },
+   "name": "artifacts/influence-native-d1-replay/influence-native-d1-replay-v1.html"
+  }
+ ]
+}
