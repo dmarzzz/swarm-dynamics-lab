@@ -3,14 +3,17 @@ id: theseus-social-grounding
 type: task
 title: Ground Theseus scenario selection in X discussions and practical failures
 kind: review
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-theseus
 depends_on: []
-topics: [llm-agent-swarms]
+topics:
+- llm-agent-swarms
+claimed_at: 2026-10-04T03:04Z
+updated: 2026-10-04T03:04Z
 ---
 
 ## Goal
