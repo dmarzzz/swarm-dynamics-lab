@@ -3,14 +3,16 @@ id: adaptive-quorum-api-v2
 type: task
 title: Expand adaptive quorum into evidence-based API selection
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-methods
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-methods
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T00:30Z
+updated: 2026-10-04T00:30Z
 ---
 
 ## Goal
