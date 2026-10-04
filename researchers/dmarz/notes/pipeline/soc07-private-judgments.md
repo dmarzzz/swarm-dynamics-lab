@@ -1,6 +1,6 @@
 # soc07-private-judgments: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T09:02Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T09:41Z.
 
 ## 1. Results so far
 
@@ -34,16 +34,15 @@ Three cohorts on this gate: Haiku 7 of 12, Sonnet 9 of 12 (both without reasonin
 
 **S1-R passed at 08:56:43Z** (run 807dfab8): 192 of 192 episodes, 672 calls, 0 failures, valid rate 1.0, USD 5.24, 32 minutes. Team success 1.00 in the private arm and 1.00 in the public arm; private minus public +0.000. S1-L (`s1l-a1`, run 92e1c0d5) started from the chain at about 08:57Z: 425 calls and 25 episodes by 09:01Z, 0 failures, about 110 calls per minute.
 
-- S1-L forecast: 4,080 calls, end about 09:35Z, about USD 32. Execution risk low (0 failures in 1,100 Opus calls in this study).
-- **Ceiling.** With Opus and a reasoning allowance the focal agent was right in every S1-R episode in both arms, against scripted peers that include stubborn and majority-following policies. The study's primary measure is the difference between arms. At 100% in both there is no room for publication of first answers to hurt, so a zero difference from S1-L would be a property of the task difficulty, not evidence about private first judgments. The hub will show `team_success_private`, `team_success_public` and their difference when S1-L closes; if both are at or near 1.0 the result should be reported as "at ceiling, uninformative", not as a null effect.
+**S1-L finished at 09:39:32Z** (run 92e1c0d5): 240 of 240 episodes, 4,080 calls, 0 failures, valid rate 1.0, USD 32.60, 42 minutes. Team success 1.00 private, 1.00 public; private minus public +0.000. All software gates passed.
+
+**The result is at ceiling and carries no information about the question.** Every team was correct in both arms in S1-R and again in S1-L, so the difference could not have been anything but zero. Report it as "at ceiling on Opus 5.5 with reasoning", not as "publication of first answers makes no difference". Study total: 4,788 Opus calls, USD 37.9, plus USD 0.04 on the two failed qualifications.
 
 ## 3. Next run
 
-**S1-L is the last authorized stage** (S2-L and S3 are closed).
+The successor exists: **soc07-private-judgments-v2** (commit 1649757f, 09:31Z, prepared and not launched). It changes the task, not the model: three options, eleven records, two audits (one pattern where the first audit alone points to a wrong option), cost margins 1-2 / 3-5 / 6-9, a deadline-boundary world in every third world, a manipulation check on first-answer disagreement, a one-call probe stage, all stages chained under software gates. Its paid stages are held until sybil-scale-xl's S1 has finished, because of the shared rate limit. See the v2 row in [INDEX.md](INDEX.md).
 
-- **If S1-L is at ceiling in both arms (expected):** the next run is a harder instrument on the same model, not another model. Options, in order of cost: (a) a manipulation check from the records already collected: how often do the five first answers disagree, and how often is the majority's first answer wrong, per regime? If first answers are nearly always correct, publication has nothing to anchor on and the regimes are not doing their job at this competence; (b) worlds where the informed minority is smaller or the superseding record is harder to weigh (more records per option, margins of 1 to 2, more than one override); (c) the same worlds with reasoning effort low. Each is a new manifest and a new qualification, with a qualification gate that has an upper bound as well as a lower one (for example 9 to 11 of 12), so a model that is too strong for the instrument is caught in 40 seconds instead of after 4,700 calls.
-- **If the arms differ by a few points with both above 90%:** report the paired difference with its interval and the number of discordant teams; with success this high the contrast rests on a handful of episodes.
-- **If S1-L fails a software gate (truncation over 5% in a phase, parse-valid under 95%):** the 64-token final caps are the likeliest place; that is a manifest change.
+One gap in v2 as prepared (sent to dmarz/fleet-monitor at 09:42Z): the only new stop, `s1_informative`, is evaluated inside S1-L after its 4,080 calls, and it measures first-answer disagreement, which the minority regimes produce by construction. It does not catch what happened here. A gate at the end of S1-R (if team success is 1.00 in both arms in every regime, S1-L does not start) would have saved 42 minutes and USD 33 in v1 and costs nothing to add before launch.
 
 ## 4. Design notes for later runs
 
