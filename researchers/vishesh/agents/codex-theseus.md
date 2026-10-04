@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: blocked
+state: working
 task: theseus-a2-acquisition
-doing: Approved A2 prepared; provider recovery unresolved; temporary claim released
-updated: 2026-10-04T18:10Z
+doing: A2 OpenRouter native acquisition running; monitor and close scientifically
+updated: 2026-10-04T18:54Z
 ---
 
-No A2 model calls. Read A2-STATUS and A2-PRE; approval retained, original budget preserved.
+Frozen source b5484ca0; first route responses verified. No automatic successor.
