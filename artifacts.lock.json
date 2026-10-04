@@ -117,6 +117,35 @@
    "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210",
    "size_bytes": 531379
   },
+  "influence-swarms-decision-design@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791080536,
+     "sha256": "5b4977f63aabec350cf4b96f34bc03c54858177fdfd960164819fd755583789d",
+     "size": 664,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py"
+    },
+    {
+     "mtime": 1791080537,
+     "sha256": "892004b0068dedc926558846933826e5d6534b0617bad10e4faff0c36c6ce135",
+     "size": 8633,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html"
+    },
+    {
+     "mtime": 1791080475,
+     "sha256": "d7c95945c917a80eede34b94dad632e0783319ccab8795b18f336730e3502f15",
+     "size": 10178,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791080537,
+   "path": "artifacts/influence-swarms-decision-design/influence-swarms-decision-design-v1.html",
+   "prompt_sha256": "08bc5202ebae86ba517fdda748f524c6de895ce7f85b1ddbd4c5824f26e7b3aa",
+   "sha256": "6272adebf96524823f188cd91ff91ba5752527e3b6b44328df827679acbd505c",
+   "size_bytes": 299683
+  },
   "influence-swarms-replay-film@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -201,56 +230,56 @@
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
     {
-     "mtime": 1791079108,
+     "mtime": 1791079348,
      "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
      "size": 11521,
      "uri": "researchers/dmarz/notes/market-split/README.md"
     },
     {
-     "mtime": 1791077826,
+     "mtime": 1791078526,
      "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
      "size": 884,
      "uri": "researchers/dmarz/notes/market-split/design.yaml"
     },
     {
-     "mtime": 1791077477,
+     "mtime": 1791078526,
      "sha256": "1cf1743d53db84fe3d0e063539c10e51c18c232b39cf331c893ed28a4ebcf861",
      "size": 1382,
      "uri": "researchers/dmarz/notes/market-split/src/prompt.txt"
     },
     {
-     "mtime": 1791077826,
+     "mtime": 1791078526,
      "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
      "size": 14042,
      "uri": "researchers/dmarz/notes/market-split/src/sim.py"
     },
     {
-     "mtime": 1791077826,
+     "mtime": 1791078526,
      "sha256": "4eecbfe40359c77a27ca108a381e2fbf3af199f3ab363a8fc18edb67de45373e",
      "size": 3729,
      "uri": "researchers/dmarz/notes/market-split/src/analyze.py"
     },
     {
-     "mtime": 1791079108,
+     "mtime": 1791079348,
      "sha256": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786",
      "size": 28109,
      "uri": "researchers/dmarz/notes/market-split/analysis/s1-summary.json"
     },
     {
-     "mtime": 1791079108,
+     "mtime": 1791079348,
      "sha256": "3a6643417417b833bbcf8fb6b4da995a136403aadf3bf07593f142e9a8528dfc",
      "size": 28532,
      "uri": "researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json"
     },
     {
-     "mtime": 1791079108,
+     "mtime": 1791079348,
      "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
      "size": 4042,
      "uri": "researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
     }
    ],
-   "mime": "application/octet-stream",
-   "mtime": 1791079108,
+   "mime": "text/markdown",
+   "mtime": 1791079348,
    "path": "artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md",
    "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
    "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
@@ -291,7 +320,7 @@
    "size_bytes": 137073
   }
  },
- "generated": "2026-10-03T18:59:04-0700",
+ "generated": "2026-10-03T19:22:17-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }
