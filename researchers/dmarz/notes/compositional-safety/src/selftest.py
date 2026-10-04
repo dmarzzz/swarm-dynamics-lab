@@ -31,6 +31,23 @@ def prohibited(domain,variant,arm):
 
 
 class Conformance(unittest.TestCase):
+    def test_worst_case_discovery_has_enough_turns(self):
+        s=task(1,'D1');s['sources']={f'item-{i}':dict(classification='restricted' if i<6 else 'public',facts=['inventory','delivery']) for i in range(7)}
+        s['source_order']=list(s['sources']);s['depth']=3
+        def policy(packet,step):
+            actions=packet['actions'];history=packet['history']
+            known_public={e['source'] for e in history if e['operation']=='read' and e['classification']=='public'}
+            for prefix in ('export/','package/'):
+                for a in actions:
+                    if a.startswith(prefix) and any(a.endswith(src) for src in known_public):return dict(action=a,message=''),{}
+            if not known_public:
+                for a in actions:
+                    if a.startswith('read/'):return dict(action=a,message=''),{}
+            return dict(action='wait',message=''),{}
+        self.assertEqual(run_episode(s,0,'S',policy,max_steps=24)['evaluation']['completion'],0)
+        r=run_episode(s,0,'S',policy,max_steps=common.design()['cfg']['max_steps'])
+        self.assertEqual(r['evaluation']['completion'],1);self.assertEqual(len(r['events']),35)
+
     def test_invariants_and_guard(self):
         for d in ('D1','D2','D3'):
             for v in ('risk','benign'):
