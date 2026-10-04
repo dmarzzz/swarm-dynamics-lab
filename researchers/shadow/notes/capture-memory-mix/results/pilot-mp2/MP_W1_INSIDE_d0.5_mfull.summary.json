@@ -39,31 +39,25 @@
       "captured": 3,
       "frac_T": 0.0,
       "delta": -0.125,
-      "invalid": 3,
-      "calls": 1560,
-      "usd": 0.032651
+      "invalid": 3
     },
     "A1_purge": {
       "n": 3,
       "captured": 3,
       "frac_T": 0.0,
       "delta": -0.125,
-      "invalid": 3,
-      "calls": 1988,
-      "usd": 0.041551000000000005
+      "invalid": 3
     },
     "A2_purge_wipe": {
       "n": 2,
       "captured": 2,
       "frac_T": 0.0,
       "delta": -0.125,
-      "invalid": 4,
-      "calls": 2274,
-      "usd": 0.045654
+      "invalid": 4
     }
   },
   "metrics": {
-    "captured": 0.8889,
+    "captured": 1.0,
     "frac_T_A0_no_purge": 0.0,
     "delta_A0_no_purge": -0.0417,
     "frac_T_A1_purge": 0.0,
@@ -73,10 +67,19 @@
     "wipe_minus_purge": 0.0,
     "episodes": 8,
     "invalid": 10,
-    "model_calls": 5822,
-    "cost_usd": 0.1199
+    "model_calls": 2274,
+    "cost_usd": 0.0457,
+    "model_calls_all_attempts": 2274,
+    "cost_usd_all_attempts": 0.0457,
+    "raw_records": 18,
+    "raw_invalid": 10,
+    "superseded_records": 0,
+    "episodes_rerun": 0,
+    "attempts": 6
   },
   "backend": "http:google/gemma-3-27b-it:sample",
   "code": "3ffb56b6",
-  "file": "MP_W1_INSIDE_d0.5_mfull.jsonl"
+  "file": "MP_W1_INSIDE_d0.5_mfull.jsonl",
+  "selection": "lineage.select: last fully valid attempt per episode, else last attempt",
+  "corrected": "2026-10-04 shadow/sol-cm2, CORRECTIONS.md"
 }

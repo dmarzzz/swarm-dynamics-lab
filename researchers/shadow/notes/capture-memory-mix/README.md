@@ -17,6 +17,10 @@ Builds on [capture-memory](../capture-memory/README.md) (PR 83, merged) and the 
 agents). The real-model pilot MP is described below; its results section says exactly what ran and what it cost.
 Per `GOAL-12H.md`, a scripted result is a lead, not a finding, until a real model reproduces it.
 
+**Corrections 2026-10-04:** reporting defects found in dmarz's review (attempt lineage, retry accounting, round-30
+captions, a hub capture fraction above 1) are fixed; see [CORRECTIONS.md](CORRECTIONS.md). No headline number moved.
+Verdict accepted: the mixture rescue does not generalize across models (reproduced on gpt-4o-mini only).
+
 ## Question
 
 capture-memory found three post-purge regimes in a population where every honest agent has the SAME memory
@@ -207,8 +211,9 @@ Run 1 (04:51 to 05:02Z, killed by a gateway restart at 3 to 4 tasks per cell) lo
 and 7/8 returned to 0.75 and 0.63 with 3 of 7 episodes fully recovered. Runs 2 and 3 (05:50 to 07:17Z, resumable
 worker, tasks 0 to 23 on the five original cells, 0 to 11 on f = 5/8 and 15/16) show those were the lucky end of a
 BIMODAL distribution. Tables: [results/MP.md](results/MP.md) (432 records); per-episode list:
-`python3 src/mp_episodes.py results/pilot-mp`; counts and exact tests: `src/mp_stats.py` (dedups the 13 episodes
-that were redone after the 05:58Z ledger mishap left them invalid). Settings: N = 16, dose 8/16, entrench 5, takeover
+`python3 src/mp_episodes.py results/pilot-mp`; counts and exact tests: `src/mp_stats.py`. Attempt lineage: 459 raw
+records (13 invalid), 5 episodes re-run after the 05:58Z ledger mishap, 27 records superseded, 432 selected, 0 invalid
+(`src/lineage.py`, [CORRECTIONS.md](CORRECTIONS.md)). Settings: N = 16, dose 8/16, entrench 5, takeover
 cap 60, recovery 40, scored at round 30. Every cell was captured in every task except full memory (21 of 24).
 
 A1_purge, captured episodes, honest fraction on the original at round 30 (`frac_T`):
@@ -268,8 +273,8 @@ by running a second model, and it is why the headline cannot be "mixtures rescue
 ## Third model: qwen3-235b-a22b-2507 reverses the ordering (logprobs, 12 tasks per cell)
 
 Calibration said qwen is a sharp majority rule (beta about 6.4, h about 0) that weights the TAIL of a long list
-(`B30 then A10 -> 0.99`, `A30 then B10 -> 0.05 to 0.68`). The pilot (`results/MP3.md`, 180 records, 12 valid
-tasks per cell after 127 invalid records from upstream HTTP 400s were redone) shows what that does:
+(`B30 then A10 -> 0.99`, `A30 then B10 -> 0.05 to 0.68`). The pilot (`results/MP3.md`: 327 raw records, 127 invalid from upstream HTTP 400s;
+49 of 60 episodes re-run, 147 records superseded, 180 selected (2 invalid), 12 tasks per cell; see CORRECTIONS.md) shows what that does:
 
 | memory | n | frac_T per episode (A1) | mean | >= 0.5 | fully recovered | wipe (A2) mean |
 |---|---|---|---|---|---|---|
