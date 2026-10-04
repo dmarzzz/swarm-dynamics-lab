@@ -89,11 +89,22 @@ recorded as completed, failed or not started. Both endings report `episodes`, `i
 
 `python src/chain.py status` prints that file plus the ledger totals. `python src/chain.py verify` checks
 every uploaded artifact's checksum against the hub, recomputes every saved grade and the analysis from
-the saved rows, and prints one JSON object. Neither needs a credential.
+the saved rows. Each prints exactly one JSON object as the last line of stdout; `verify` exits non-zero
+when a check fails. Neither needs a credential.
+
+`chain.py run` exits 0 when every requested stage is done, 3 when it stopped at a failed stage or gate,
+and with another non-zero code on an internal error. It accepts any ordered contiguous sub-list of the
+stages (`--stages S0` alone, later `--stages P0,Q0,S1`); the coordinator gates still decide whether a
+stage may start. It runs from any working directory.
+
+Run outputs go under the directory named by `STUDY_RESULTS_DIR` (default `<study>/results/`, which is
+git-ignored). On a server the launcher points it outside the checkout so the checkout stays clean.
+`python3 src/selftest.py` prints the standard unittest summary; the launcher's setup step compares the
+number of tests and `study.source_hash()` with `selftests` and `source_hash` in `READY.yaml`.
 
 Environment on the server (set by the launcher; never written to a file, an argument or a log):
 `SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID`, `STUDY_BUDGET_LEDGER` (path of the persistent ledger),
-`SWARM_SOURCE`. The hub address and token come from the server's own configuration.
+`STUDY_RESULTS_DIR`, `SWARM_SOURCE`. The hub address and token come from the server's own configuration.
 
 ## Budget
 
