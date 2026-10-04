@@ -1371,4 +1371,35 @@ artifacts:
           - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
         commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
     source: researchers/dmarz/notes/completion-audit-2026-10-04
+  - id: discussion-memory-v3-film
+    category: content
+    type: film
+    title: 'Discussion and memory v3: what the first qualification run shows'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4
+        built_at: '2026-10-04T03:56:01Z'
+        note: '119 s explainer of run discussion-dose-v3/v3-q0-a1 (Haiku 4.5, 636 calls): the setup, what each outcome of
+          the hunch would mean, world 20001 replayed from the journal, then all six attacked worlds. Every state and number
+          is read from the run''s episodes.json and summary.json; build.py refuses to build if the data stops supporting a
+          caption. Look (tokens, fonts, cube) is read from the brand kit at build time. Exploratory: the model did not pass
+          qualification and the run''s post-mortem is still to come.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:07de6180-8318-4052-83f7-932547a35da5
+        prompt: can u create a video simulation which explains and illustrates Discussion and memory v3 results so far. it
+          should be totally self contained video menaing u should understand the experiment and its implications if the hypothesis
+          is true or not and then show a visual verison of thhe simulatuon playing out and then finally the result
+        ingredients:
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/build.py
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/film.html
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs
+          - researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg
+          - data/discussion-v3/v3-q0-a1/summary.json
+          - data/discussion-v3/v3-q0-a1/episodes.json
+          - data/discussion-v3/v3-q0-a1/events.jsonl
+          - data/discussion-v3/v3-q0-a1/manifest.json
+        commit: 09b4b0cc5e3abd1de430c4055df7ba0cb38ba841-dirty
 requires: '1.2'
