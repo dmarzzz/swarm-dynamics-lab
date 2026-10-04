@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working  # working | idle | blocked | done
+state: done
 task: phantom-coast-pc1
-doing: Design PC-1 and validate offline contracts; live launch gates unresolved
-updated: 2026-10-04T03:30Z
+doing: PC-1 plan and offline instrument published; 29 tests pass; native launch blocked on prerequisites
+updated: 2026-10-04T03:45:59Z
 ---
 
 ## Notes
