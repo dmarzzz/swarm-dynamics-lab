@@ -6,6 +6,7 @@ description: >-
   equal check budgets and a common admission rule. Watch the measured network replay and
   accuracy versus malicious admission. Labels are evaluator-only; scripted outcomes are not
   LLM findings. Coverage is a heuristic, not a claimed SybilShield implementation.
+  Overview scalar metrics describe coverage; the summary chart and replays compare all four arms.
 owner: dmarz
 params:
   stage: {type: str, role: stage}

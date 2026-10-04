@@ -13,3 +13,6 @@ Use Python 3.9+ with requirements.txt. Start from the experiment-worker template
 The deployment wrapper is in the private swarm-labs-agentops repository. Only server names appear here. Hub credentials are resolved on the server through its protected reporting environment; they are never copied into this repository. Scripted operation never needs a model API key.
 
 S2 and model calls remain disabled. To enable a paid exploratory follow-up, first specify and review its model role, frozen prompt, clean qualification, resource cap and credential alias. Do not change this worker to interpret an unreviewed backend parameter as permission to spend.
+# Aggregate analysis
+
+Install analysis-requirements.txt in the analysis environment. After copying the authenticated raw run directories into a fresh results directory, run `python3 src/analyze.py results/REMOTE_DIRECTORY --output results/analysis.json` and `python3 src/plot_results.py results/REMOTE_DIRECTORY results/tradeoff.png`. Both output paths must be new. The plot requires all 18 S1 cells and refuses duplicate condition tuples. It shows descriptive means for all four arms; the main dashboard's scalar metrics describe the coverage arm. Record the analysis source revision and dependency versions separately from the frozen simulation revision.
