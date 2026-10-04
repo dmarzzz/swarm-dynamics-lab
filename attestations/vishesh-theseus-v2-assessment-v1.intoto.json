@@ -5,7 +5,7 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "codex",
-    "prompt": "Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified in previous runs."
+    "prompt": "sha256:3268e17c1fa4f3d9496e14896abcd1e154b5c97cb4ba0809817593b9ac27587d"
    },
    "internalParameters": {
     "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",

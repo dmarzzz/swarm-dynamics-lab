@@ -1,5 +1,7 @@
 # Quorum progression: earn the next run
 
+> Current admission update, 2026-10-04: the owner reaffirmed that researcher review is not required. The pinned [owner direction](OPERATOR-AUTHORIZATION.json) and [Q1 pre-run assessment](reviews/Q1-01-pre.md) supersede earlier researcher/survey-acceptance launch blockers for this bounded exploratory screen. Prior-art limitations and historical verdicts remain unchanged. The operator handles registration, fresh allocation and execution under the existing budget; no user action is requested.
+
 2026-10-04 · conditional research/design draft · no new paid calls, sampled worlds or accepted hypothesis. This roadmap supersedes the six-world call allocation in the earlier S1 draft. The literal next-stage [plan](NEXT-RUN-PLAN.md) was published before offline implementation under the owner's preparation request. Immutable public registration and all research/runtime gates remain mandatory before dispatch under [SETUP.md](SETUP.md).
 
 The practical question is whether to buy more model judgments, track sources better, or use a deterministic rule. S0 only established limited reader competence (29/32 exact-MAP choices); it did not compare native instruction arms or test communication. The next stages separate those questions.

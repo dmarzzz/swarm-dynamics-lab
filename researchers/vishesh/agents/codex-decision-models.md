@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-rd4
-doing: Incorporating fresh RD-R1/R2/R3 review and designing symmetric recovery with persistent evidence closures.
-updated: 2026-10-04T04:59:02.303479+00:00
+doing: RD4 completed and published; 576 decisions, preserved failures, measured replay, no workers, allocation released.
+updated: 2026-10-04T06:27:24.563149+00:00
 ---
 
 ## Notes

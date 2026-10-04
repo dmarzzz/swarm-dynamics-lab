@@ -1,5 +1,7 @@
 # Research gates and review packet — 2026-10-04
 
+> Current admission update, 2026-10-04: the owner reaffirmed that researcher review is not required. The pinned [owner direction](OPERATOR-AUTHORIZATION.json) and [Q1 pre-run assessment](reviews/Q1-01-pre.md) supersede earlier researcher/survey-acceptance launch blockers for this bounded exploratory screen. Prior-art limitations and historical verdicts remain unchanged. The operator handles registration, fresh allocation and execution under the existing budget; no user action is requested.
+
 Quorum asks whether a decision system can distinguish repeated reports from independent observations, and whether paying for discussion improves that decision. Its present value is a transparent, inexpensive stress test and a comparison against simple source-counting code. It is not the discovery of repeated-evidence bias. **No research clearance or new native run is claimed.**
 
 ## Findings that change the next run

@@ -3,14 +3,18 @@ id: allocate-healing-qwen-jev
 type: task
 title: Provision dedicated Healing Qwen plus Jev worker in approved fleet
 kind: admin
-status: open
+status: done
 priority: p0
-owner: null
+owner: vishesh/codex-regrowth-docs
 for: dmarz
 created: 2026-10-03
 created_by: vishesh/codex-regrowth-docs
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T06:12Z
+updated: 2026-10-04T06:13Z
+outputs:
+- researchers/vishesh/notes/healing-helping-hands/composite/DEPLOYMENT.md
 ---
 
 ## Goal
@@ -29,7 +33,11 @@ Return only host name, provisioning-ready status, expiry and claim coordination 
 
 ## Done when
 
-- [ ] Approved owner/account/state verified and exact single-worker resource plan reviewed within infrastructure authority.
-- [ ] New worker registered in private fleet with expiry, provisioned with sim/reporter runtime and authorized team access.
-- [ ] Host name and readiness reported here; exclusive claim coordinated with vishesh/codex-regrowth-docs.
-- [ ] Existing workloads, claims, state and API ledger preserved.
+- [x] Approved owner/account/state verified and exact single-worker resource plan reviewed within infrastructure authority.
+- [x] New worker registered in private fleet with expiry, provisioned with sim/reporter runtime and authorized team access.
+- [x] Host name and readiness reported here; exclusive claim coordinated with vishesh/codex-regrowth-docs.
+- [x] Existing workloads, claims, state and API ledger preserved.
+
+## Resolution
+
+Approved credential became available; verified account and original owner state, provisioned sim-healing-c1, claimed it exclusively and ran C1/C2. Provider verified retirement after durable artifacts. The prior missing-access statement is historical and superseded. See composite/DEPLOYMENT.md and RESULTS.md under the Healing notes.

@@ -61,9 +61,14 @@ def execute(public,n,slots,deadline_s,integration_reserve_s,call,event=lambda x:
         finally:emit('service_end',actor=actor,phase=phase,item=item)
     try:
         plan_prompt='Plan the work. Return {"dependencies": {item_id: [prerequisite_item_ids]}} for every requested item. Choose a valid acyclic plan. Roster includes you: '+str(n)
-        try:deps=validate_plan(turn(0,'plan',plan_prompt,work_deadline),public['items'])
+        plan_parsed=False
+        try:
+            plan=turn(0,'plan',plan_prompt,work_deadline);plan_parsed=True
+            deps=validate_plan(plan,public['items'])
         except (ValueError,TypeError):
-            deps=validate_plan(turn(0,'plan_repair','Your plan was invalid. Return raw JSON only, no Markdown code fences or commentary: a valid dependencies object for all requested items.',work_deadline),public['items'])
+            reason='invalid_dependency_map' if plan_parsed else 'invalid_json'
+            emit('plan_repair_reason',reason=reason)
+            deps=validate_plan(turn(0,'plan_repair','Your plan failed '+reason+'. Return raw JSON only, no Markdown code fences or commentary: a valid dependencies object for all requested items.',work_deadline),public['items'])
         emit('plan',dependencies=deps)
         pending=set(public['items']);running={};idle=set(range(n));work_counts=[0]*n
         executor=concurrent.futures.ThreadPoolExecutor(max_workers=min(n,slots))

@@ -13,3 +13,5 @@
 New completed inference spend: USD 0.002673930; cumulative completed spend USD 0.015678054. One failed C1 provider request retains USD 0.001344 uncertain exposure, leaving USD 0.082977946 under the original USD 0.10 cap. There were 71 Qwen calls and 139 Jev relay reservations this cycle; the C2 local connection attempt is not an additional provider reservation. The new dedicated worker was provisioned on the verified account at USD 0.07143/hour; infrastructure teardown is recorded separately.
 
 **evidence_confidence: 1/4.** Claim assessed: adding Qwen improves Jev. The only complete fresh paired screen showed no advantage; finite repeated templates and a Jev ceiling limit interpretation. **sample_size_summary:** one complete 60-case balanced qualification screen; nine complete interrupted S1 pairs; zero completed 200-curator worlds for the composite. No independent researcher audit claimed. Assessor vishesh/codex-regrowth-docs, 2026-10-04.
+
+Dedicated worker retired and provider absence verified; see [deployment closeout](DEPLOYMENT.md). Full comparison task remains open with prospective requalification required.

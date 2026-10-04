@@ -1,5 +1,14 @@
 # Capture-memory-mix: do short-memory agents rescue a captured swarm, and at what fraction?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
+- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
+<!-- experiment-evidence:end -->
+
 Owned by **shadow/sol-goal**, 4 October 2026, under the 12-hour goal in `GOAL-12H.md`. Attribution: Sol.
 Builds on [capture-memory](../capture-memory/README.md) (PR 83, merged) and the hunch in
 [shadow-capture-memory](../../../../hypotheses/shadow-capture-memory.md) (PR 82, status `proposed`).
@@ -171,53 +180,82 @@ scored at round 30, 6 tasks x 1 seed, memory in {1, full, mix 1/full @0.5, mix 1
 (A0 and A2 share the prefix, so the marginal cost is the recovery phase). Budget: about 16 x (5 + ~6 + 3 x 40)
 calls per episode, 6 episodes per cell, 4 cells: about 12,500 calls, about 1.5 M input tokens, about USD 0.3.
 
-## Pilot results (gpt-4o-mini, partial: 3 to 4 tasks per cell, run 1 of 2)
+## Pilot results, gpt-4o-mini (runs 1 + 2, 9 to 12 tasks per cell)
 
-Run 1 (04:51 to 05:02Z) was cut off by a gateway restart after 3 of 6 tasks per cell (4 in the f = 7/8 cell), with
-every arm complete for those tasks: 48 episode records, 0 invalid, about 13,100 model calls in the records, ledger
-spend USD 0.341 for all pilot work (calibration + priors + run 1; the per-record `cost_usd` in run 1 is a cumulative
-session figure, fixed in the adapter afterwards; the locked ledger is authoritative). Tables:
-[results/MP.md](results/MP.md). Per-call log: `results/pilot-mp/calls-*.jsonl` (4,151 usable calls, response
-curve in the goal log). Settings: N = 16, dose 8/16, entrench 5, takeover cap 60, recovery 40, scored at round 30.
+Run 1 (04:51 to 05:02Z, killed by a gateway restart at 3 to 4 tasks per cell) looked dramatic: mixtures at f = 3/4
+and 7/8 returned to 0.75 and 0.63 with 3 of 7 episodes fully recovered, both pure populations stayed captured. Run 2
+(05:50Z onward, resumable worker, same cells plus f = 5/8 and 15/16, tasks 0 to 11) shows the first three tasks were
+the lucky end of a BIMODAL distribution. Tables: [results/MP.md](results/MP.md); per-episode list:
+`python3 src/mp_episodes.py results/pilot-mp`; per-cell distributions: `src/mp_dist.py`; counts and exact tests:
+`src/mp_stats.py`. Settings: N = 16, dose 8/16, entrench 5, takeover cap 60, recovery 40, scored at round 30.
+All pure and mixed cells were captured (full memory 9 of 10; the uncaptured and 4 ledger-missing-file episodes
+from a 05:58Z `git stash` mishap are recorded as invalid, not dropped, see the log).
 
-What the model did, A1_purge, captured episodes, honest fraction on the original at round 30 after the purge
-(`frac_T`) and its change since removal (`delta`):
+A1_purge, captured episodes, honest fraction on the original at round 30 (`frac_T`), per episode sorted:
 
-| memory | n | captured | latency | frac at removal | frac_T | delta | long agents at T | fully recovered |
-|---|---|---|---|---|---|---|---|---|
-| all short (L = 1) | 3 | 3/3 | 2 | 0.00 | **0.00** | 0.00 | | 0/3 |
-| all full | 3 | 2/3 | 37 | 0.25 | **0.38** | +0.13 | 0.38 | 0/2 |
-| mix 1/full @ 1/2 | 3 | 3/3 | 16 | 0.13 | 0.25 | +0.13 | 0.08 | 0/3 |
-| mix 1/full @ 3/4 | 3 | 3/3 | 5 | 0.21 | **0.75** | +0.54 | 0.83 | 2/3 |
-| mix 1/full @ 7/8 | 4 | 4/4 | 3 | 0.16 | **0.63** | +0.47 | 0.75 | 1/4 |
+| memory | n | frac_T per episode | mean | >= 0.5 | fully recovered | wipe (A2) mean |
+|---|---|---|---|---|---|---|
+| all short (L = 1) | 12 | 0 0 0 0 0 0 0 0 0 .12 .12 .12 | 0.03 | 0 | 0 | 0.03 |
+| all full | 9 | 0 .12 .12 .25 .38 .38 .38 .38 .50 | 0.28 | 1 | 0 | **0.00** |
+| mix f = 1/2 | 12 | 0 0 0 0 0 .12 .25 .25 .25 .25 .25 .38 | 0.15 | 0 | 0 | 0.00 |
+| mix f = 5/8 | 11 | 0 0 0 .12 .12 .25 .25 .50 .62 .62 **1.0** | 0.32 | 4 | 1 | 0.00 |
+| mix f = 3/4 | 12 | 0 0 0 .12 .12 .12 .25 .25 .38 **.88 1.0 1.0** | 0.34 | 3 | 3 | 0.01 |
+| mix f = 7/8 | 12 | 0 .12 .12 .12 .12 .25 .25 .38 **.62 .75 .88 1.0** | 0.39 | 4 | 2 | 0.01 |
+| mix f = 15/16 | 12 | 0 0 0 0 0 0 0 0 0 .12 .12 .12 | 0.03 | 0 | 0 | 0.03 |
 
-- **The pure populations do not return; the mixtures do.** All-short: captured in 2 rounds and stays at exactly
-  0.00 for 40 rounds in all 3 tasks (gpt-4o-mini at L = 1 copies its one remembered word with P = 1.00, so a
-  captured one-slot population is absorbing, as the fitted beta = 8 predicts). All-full: captured slowly (37
-  rounds) and then hovers at 0.25 to 0.38 (frozen at the uncaptured quarter plus count noise), 0/2 recovered.
-  Mixtures at f = 3/4 and 7/8 go to 0.75 and 0.63 with 3 of 7 episodes fully recovered (75% for 10 rounds),
-  and the FULL-memory agents in them end at 0.83 and 0.75 (1.00 in 5 of 7 episodes): the long-memory anchors turn
-  back once the short majority is mixed. Traces are monotone climbs, e.g. f = 3/4 task 0: 0.25 at removal, 0.38,
-  0.63, 0.75, 0.88, 1.00 by round 27 and stays; f = 7/8 task 0: 0.13 -> 0.50 -> 0.63 -> 0.75 -> 0.88.
-- **Non-monotone in f, as scripted.** f = 1/2 (0.25) is no better than all-full (0.38); f = 3/4 and 7/8 are far
-  better than both ends; f = 1 is the worst cell. The scripted M1 ordering (0 ~ 1/2 < 1 < 3/4 < 7/8) is
-  reproduced in sign everywhere except that on this model f = 1 is strictly absorbing (scripted: slow drift to
-  0.24). The paired contrast f = 7/8 minus f = 0 on `delta_original`: +0.44 [+0.38, +0.50] over the 2 shared
-  captured tasks (tiny n, reported as a pilot).
-- **Wipe harm reproduces and is largest in the rescued mixtures.** A2 minus A1 on the round-30 fraction: 0.00
-  at all-short, -0.38 at all-full, -0.25 at f = 1/2, **-0.71 [-1.00, -0.25] at f = 3/4, -0.63 [-0.91, -0.28] at
-  f = 7/8**. Every wiped population (any f < 1) went to exactly 0.00 on the original and stayed there: emptying the
-  anchors' memory hands the swarm to the captured short majority within one round.
-- A0 (committed agents stay) is 0.00 to 0.13 everywhere, so the returns above are caused by the purge.
-- The scripted prediction at the model's own fitted (beta = 8, h = 0) said "full freezes near 0.03, mixtures at
-  f = 3/4, 7/8 return to 0.18 / 0.42, wipe harm -0.14 / -0.36": the model is MORE rescuable than its tanh fit (0.75 /
-  0.63) because its long-window reads are noisy (P(original | share 0.3 to 0.5 of a 30+ list) sits at 0.39 to
-  0.47 rather than 0 or 1), which unfreezes the running mean. The qualitative picture (pure ends fail, mixtures
-  return, wipe kills it) is the same in rule and model.
+What holds up at n = 9 to 12 per cell:
 
-Status of the claim: real-model reproduction of the scripted lead on 3 to 4 tasks per cell, one model, one dose,
-N = 16. Signs match on every contrast the design named (rescue, non-monotonicity, wipe harm growing with f). Not
-yet a powered result; run 2 (below) adds tasks.
+- **Full recovery of the original convention happens only in mixtures.** 6 of 35 episodes with f in {5/8, 3/4,
+  7/8} recover fully (75% on the original for 10 consecutive rounds) and 11 of 35 are at or above 0.5 at round 30;
+  in all 45 episodes of the other five cells (pure short, pure full, f = 1/2, f = 15/16) that is 0 and 1. Fisher
+  exact, one-sided: p = 0.005 (recovered) and p = 0.0003 (>= 0.5). The design's rescue rule (delta > +0.10 with
+  the CI above 0) is met at f = 5/8 (+0.19 [+0.03, ...]).
+- **The pure ends are absorbing, as the model's own tanh fit (beta about 8) predicts.** All-short: 12 of 12 stay at
+  0.00 to 0.12 forever (P(copy the one word heard) = 1.00). f = 15/16 (one full-memory agent among 8 honest) is
+  identical: a single anchor cannot do it. All-full: never recovers, hovers at 0.12 to 0.50 (frozen at the uncaptured
+  quarter plus count noise), mean 0.28.
+- **The interior optimum is real but the mean effect is small and the outcome is a coin flip.** Mean `frac_T`:
+  0.03 / 0.28 / 0.15 / 0.32 / 0.34 / 0.39 / 0.03 for f = 1, 0, 1/2, 5/8, 3/4, 7/8, 15/16. Against the all-full cell the
+  mixtures are higher by only +0.01 to +0.04 on average (paired per task, CIs cross 0), because a mixture that does not
+  take off ends LOWER than all-full (0 to 0.12, the short majority is absorbing) while one that does take off goes to
+  1.0. Same-task pairs: f = 7/8 beats all-full in 4 tasks, loses in 2; f = 3/4 beats it in 2, loses in 5. So on this
+  model the mixture converts a frozen 0.3 into a lottery between 0.0 and 1.0, with the odds of 1.0 peaking at
+  f = 3/4 to 7/8 (3 to 4 of 12). The scripted rule (beta 2.5) predicted smooth means (0.50 / 0.56 at f = 3/4, 7/8 for
+  N = 16, `src/predict.py --beta 2.5 --h 0.1`); a sharp-majority model gives the same ordering with bimodal outcomes.
+- **Wipe harm reproduces and is strict: every wiped population with any long-memory agent went to 0.00.** A2 minus
+  A1 on `frac_T`: -0.28 [-0.38, -0.17] at all-full, -0.15 at f = 1/2, -0.32, -0.33, -0.38 at f = 5/8, 3/4, 7/8 (all
+  CIs below 0), 0 at the pure-short ends where there is nothing to wipe. 0 of 80 wiped episodes recovered.
+- A0 (committed agents stay) sits at 0.00 to 0.13 in every cell, so the returns are caused by the purge.
+- Mechanism check from the per-kind traces: in every fully recovered episode the full-memory agents end at 1.00, and
+  the model's long-window reads are noisy (P(original | 30 to 50 percent of a 30-plus list) = 0.39 to 0.47 instead of
+  0 or 1, `src/calls_summary.py`), which is what lets a running mean move at all.
+
+## Second model: gemma-3-27b-it does NOT rescue (sample mode, 6 tasks per cell)
+
+No OpenRouter provider returns logprobs for gemma-3-27b, so the adapter's `mode: sample` was used (the sampled reply
+is the agent's word, temperature 1; arms share the prefix but recovery-phase randomness is the provider's). About
+30 percent of episodes are invalid because gemma sometimes answers a third word (`ria`, `rosa`, `roma`), recorded,
+not retried. On the 16 valid captured A1 episodes across 5 cells: **0 recovered, 0 at or above 0.5 at round 30**,
+means 0.00 / 0.00 / 0.00 / 0.04 / 0.13 for f = 1, 0, 1/2, 3/4, 7/8 (f = 7/8 has one episode at 0.38). Its response
+curve explains why: on long windows gemma reads the whole-list share AND the tail with a sharp threshold
+(P(original) = 0.00 up to share 0.5, 0.05 to 0.30 at 0.6, 0.76 at 0.7, `results/MP2.md` and
+`results/pilot-mp2/calls-*.jsonl`), so after capture a full-memory agent whose list is 25 to 40 percent original is
+pinned at 0, with no read noise to unfreeze it; the all-full cell goes to 0.00, lower than gpt-4o-mini's 0.28. The
+rescue needs long-memory agents that are frozen but NOISY, not frozen and sharp. That is a real moderator, found
+by running a second model, and it is why the headline cannot be "mixtures rescue LLM swarms" in general.
+
+A third model (qwen3-235b-a22b-2507, logprobs, beta about 6.4, h about 0, recency-weighted on long lists per the
+calibration: `B30 then A10 -> 0.99`) was started at 06:23Z (`results/pilot-mp3`); its numbers are in
+[results/MP3.md](results/MP3.md) if it finished before the deadline.
+
+Figure: [results/rescue-vs-f.svg](results/rescue-vs-f.svg) (scripted vs gpt-4o-mini vs gemma, A1 and A2).
+
+Status of the claim after the pilots: the memory-MIXTURE dependence of post-purge recovery is reproduced on one
+real model (gpt-4o-mini, 80 captured A1 episodes, exact p = 0.005 for full recovery occurring only in interior
+mixtures; wipe harm reproduced with CIs excluding 0 in every mixed cell) and NOT reproduced on a second (gemma-3-27b,
+16 valid episodes, nothing recovers at any f). The scripted claim transfers when the long-memory agents' reads of a
+long list are noisy near the 50 percent line, and fails when they are sharp. One dose, N = 16, 9 to 12 tasks per
+cell: a reproduced lead with a measured moderator, not a powered finding.
 
 ## Scope boundaries
 

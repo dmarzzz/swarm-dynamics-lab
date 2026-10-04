@@ -12,6 +12,7 @@ For existing studies, use [experiment operations](OPERATIONS.md): `python3 scrip
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
 | [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
+| [WORKER-DIVERSITY.md](WORKER-DIVERSITY.md) | Declared differences, evidence overlap, shared errors, complementarity and cost-aware decision value |
 | [AGENT-LIFECYCLE.md](AGENT-LIFECYCLE.md) | Agent identity, actual initialization receipts, context, memory, reset and fork semantics; recommended production contract |
 | [AGENT-LIFECYCLE-RESEARCH.md](AGENT-LIFECYCLE-RESEARCH.md) | 29 annotated research/practitioner entries and access limits |
 | [HARNESS.md](HARNESS.md) | Framework choices, architecture, isolation, deterministic startup, execution and replay |

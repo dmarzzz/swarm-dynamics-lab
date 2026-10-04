@@ -1,0 +1,779 @@
+{
+  "pairs": {
+    "T0--T1": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 0,
+      "same_answer": 0,
+      "answer_agreement": null,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 18,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 1,
+      "correctness_phi": null,
+      "missingness_agreement": 0.9
+    },
+    "T0--T2": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 1,
+      "same_answer": 1,
+      "answer_agreement": 1.0,
+      "double_wrong": 1,
+      "same_wrong": 1,
+      "same_wrong_per_scorable": 0.05263157894736842,
+      "joint_noncorrect": 19,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 0,
+      "correctness_phi": null,
+      "missingness_agreement": 1.0
+    },
+    "T0--R0": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 1,
+      "same_answer": 0,
+      "answer_agreement": 0.0,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 8,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 11,
+      "correctness_phi": null,
+      "missingness_agreement": 0.5
+    },
+    "T0--R1": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 1,
+      "same_answer": 0,
+      "answer_agreement": 0.0,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 10,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 9,
+      "correctness_phi": null,
+      "missingness_agreement": 0.5
+    },
+    "T1--T2": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 0,
+      "same_answer": 0,
+      "answer_agreement": null,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 18,
+      "a_correct_b_not": 1,
+      "b_correct_a_not": 0,
+      "correctness_phi": null,
+      "missingness_agreement": 0.9
+    },
+    "T1--R0": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 0,
+      "same_answer": 0,
+      "answer_agreement": null,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 7,
+      "a_correct_b_not": 1,
+      "b_correct_a_not": 11,
+      "correctness_phi": -0.2763853991962833,
+      "missingness_agreement": 0.4
+    },
+    "T1--R1": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 0,
+      "same_answer": 0,
+      "answer_agreement": null,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 9,
+      "a_correct_b_not": 1,
+      "b_correct_a_not": 9,
+      "correctness_phi": -0.223606797749979,
+      "missingness_agreement": 0.4
+    },
+    "T2--R0": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 1,
+      "same_answer": 0,
+      "answer_agreement": 0.0,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 8,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 11,
+      "correctness_phi": null,
+      "missingness_agreement": 0.5
+    },
+    "T2--R1": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 1,
+      "same_answer": 0,
+      "answer_agreement": 0.0,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 10,
+      "a_correct_b_not": 0,
+      "b_correct_a_not": 9,
+      "correctness_phi": null,
+      "missingness_agreement": 0.5
+    },
+    "R0--R1": {
+      "assigned": 20,
+      "scorable": 19,
+      "co_answered": 10,
+      "same_answer": 9,
+      "answer_agreement": 0.9,
+      "double_wrong": 0,
+      "same_wrong": 0,
+      "same_wrong_per_scorable": 0.0,
+      "joint_noncorrect": 8,
+      "a_correct_b_not": 2,
+      "b_correct_a_not": 0,
+      "correctness_phi": 0.8090398349558905,
+      "missingness_agreement": 0.9
+    }
+  },
+  "workers": {
+    "T0": {
+      "correct": 0,
+      "unique_correct": 0,
+      "valid_outputs": 1
+    },
+    "T1": {
+      "correct": 1,
+      "unique_correct": 1,
+      "valid_outputs": 1
+    },
+    "T2": {
+      "correct": 0,
+      "unique_correct": 0,
+      "valid_outputs": 1
+    },
+    "R0": {
+      "correct": 11,
+      "unique_correct": 2,
+      "valid_outputs": 11
+    },
+    "R1": {
+      "correct": 9,
+      "unique_correct": 0,
+      "valid_outputs": 11
+    }
+  },
+  "candidate_oracle": 12,
+  "size_strata": {
+    "0": {
+      "pairs": {
+        "T0--T1": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 6,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 1,
+          "correctness_phi": null,
+          "missingness_agreement": 0.875
+        },
+        "T0--T2": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 7,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 1.0
+        },
+        "T0--R0": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 2,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 5,
+          "correctness_phi": null,
+          "missingness_agreement": 0.375
+        },
+        "T0--R1": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 4,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 3,
+          "correctness_phi": null,
+          "missingness_agreement": 0.5
+        },
+        "T1--T2": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 6,
+          "a_correct_b_not": 1,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 0.875
+        },
+        "T1--R0": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 1,
+          "a_correct_b_not": 1,
+          "b_correct_a_not": 5,
+          "correctness_phi": -0.6454972243679028,
+          "missingness_agreement": 0.25
+        },
+        "T1--R1": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 1,
+          "b_correct_a_not": 3,
+          "correctness_phi": -0.3535533905932738,
+          "missingness_agreement": 0.375
+        },
+        "T2--R0": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 2,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 5,
+          "correctness_phi": null,
+          "missingness_agreement": 0.375
+        },
+        "T2--R1": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 4,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 3,
+          "correctness_phi": null,
+          "missingness_agreement": 0.5
+        },
+        "R0--R1": {
+          "assigned": 8,
+          "scorable": 7,
+          "co_answered": 4,
+          "same_answer": 3,
+          "answer_agreement": 0.75,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 2,
+          "a_correct_b_not": 2,
+          "b_correct_a_not": 0,
+          "correctness_phi": 0.5477225575051662,
+          "missingness_agreement": 0.875
+        }
+      },
+      "workers": {
+        "T0": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "T1": {
+          "correct": 1,
+          "unique_correct": 1,
+          "valid_outputs": 1
+        },
+        "T2": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "R0": {
+          "correct": 5,
+          "unique_correct": 2,
+          "valid_outputs": 5
+        },
+        "R1": {
+          "correct": 3,
+          "unique_correct": 0,
+          "valid_outputs": 4
+        }
+      },
+      "candidate_oracle": 6
+    },
+    "1": {
+      "pairs": {
+        "T0--T1": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 7,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 0.8571428571428571
+        },
+        "T0--T2": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 1,
+          "same_answer": 1,
+          "answer_agreement": 1.0,
+          "double_wrong": 1,
+          "same_wrong": 1,
+          "same_wrong_per_scorable": 0.14285714285714285,
+          "joint_noncorrect": 7,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 1.0
+        },
+        "T0--R0": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 1,
+          "same_answer": 0,
+          "answer_agreement": 0.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.5714285714285714
+        },
+        "T0--R1": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 1,
+          "same_answer": 0,
+          "answer_agreement": 0.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.42857142857142855
+        },
+        "T1--T2": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 7,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 0.8571428571428571
+        },
+        "T1--R0": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.42857142857142855
+        },
+        "T1--R1": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.2857142857142857
+        },
+        "T2--R0": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 1,
+          "same_answer": 0,
+          "answer_agreement": 0.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.5714285714285714
+        },
+        "T2--R1": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 1,
+          "same_answer": 0,
+          "answer_agreement": 0.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 4,
+          "correctness_phi": null,
+          "missingness_agreement": 0.42857142857142855
+        },
+        "R0--R1": {
+          "assigned": 7,
+          "scorable": 7,
+          "co_answered": 4,
+          "same_answer": 4,
+          "answer_agreement": 1.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": 1.0,
+          "missingness_agreement": 0.8571428571428571
+        }
+      },
+      "workers": {
+        "T0": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 1
+        },
+        "T1": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "T2": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 1
+        },
+        "R0": {
+          "correct": 4,
+          "unique_correct": 0,
+          "valid_outputs": 4
+        },
+        "R1": {
+          "correct": 4,
+          "unique_correct": 0,
+          "valid_outputs": 5
+        }
+      },
+      "candidate_oracle": 4
+    },
+    "2": {
+      "pairs": {
+        "T0--T1": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 5,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 1.0
+        },
+        "T0--T2": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 5,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 1.0
+        },
+        "T0--R0": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "T0--R1": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "T1--T2": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 5,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": null,
+          "missingness_agreement": 1.0
+        },
+        "T1--R0": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "T1--R1": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "T2--R0": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "T2--R1": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 0,
+          "same_answer": 0,
+          "answer_agreement": null,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 2,
+          "correctness_phi": null,
+          "missingness_agreement": 0.6
+        },
+        "R0--R1": {
+          "assigned": 5,
+          "scorable": 5,
+          "co_answered": 2,
+          "same_answer": 2,
+          "answer_agreement": 1.0,
+          "double_wrong": 0,
+          "same_wrong": 0,
+          "same_wrong_per_scorable": 0.0,
+          "joint_noncorrect": 3,
+          "a_correct_b_not": 0,
+          "b_correct_a_not": 0,
+          "correctness_phi": 1.0,
+          "missingness_agreement": 1.0
+        }
+      },
+      "workers": {
+        "T0": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "T1": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "T2": {
+          "correct": 0,
+          "unique_correct": 0,
+          "valid_outputs": 0
+        },
+        "R0": {
+          "correct": 2,
+          "unique_correct": 0,
+          "valid_outputs": 2
+        },
+        "R1": {
+          "correct": 2,
+          "unique_correct": 0,
+          "valid_outputs": 2
+        }
+      },
+      "candidate_oracle": 2
+    }
+  },
+  "declared_pair_differences": {
+    "T0--T1": [
+      "psm"
+    ],
+    "T0--T2": [
+      "psm"
+    ],
+    "T0--R0": [
+      "family",
+      "psm",
+      "model_bundle"
+    ],
+    "T0--R1": [
+      "family",
+      "psm",
+      "transform",
+      "model_bundle"
+    ],
+    "T1--T2": [
+      "psm"
+    ],
+    "T1--R0": [
+      "family",
+      "psm",
+      "model_bundle"
+    ],
+    "T1--R1": [
+      "family",
+      "psm",
+      "transform",
+      "model_bundle"
+    ],
+    "T2--R0": [
+      "family",
+      "psm",
+      "model_bundle"
+    ],
+    "T2--R1": [
+      "family",
+      "psm",
+      "transform",
+      "model_bundle"
+    ],
+    "R0--R1": [
+      "transform"
+    ]
+  },
+  "shared_pixel_source_jaccard": 1.0,
+  "interpretation": "Same receipt pixels and shared extractor; different engines are not proven independent."
+}

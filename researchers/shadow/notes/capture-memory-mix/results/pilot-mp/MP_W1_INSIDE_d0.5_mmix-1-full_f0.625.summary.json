@@ -1,0 +1,82 @@
+{
+  "run": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.625",
+  "params": {
+    "stage": "MP",
+    "split": "dev",
+    "world": "W1_INSIDE",
+    "dose": 0.5,
+    "memory": "mix:1/full@0.625",
+    "tasks": "0-11",
+    "seeds": [
+      1
+    ],
+    "arms": [
+      "A0_no_purge",
+      "A1_purge",
+      "A2_purge_wipe"
+    ],
+    "cfg": {
+      "n_agents": 16,
+      "beta": 2.5,
+      "h_inside": 0.1,
+      "h_outside": 0.5,
+      "entrench_rounds": 5,
+      "takeover_max_rounds": 60,
+      "clean_takeover_rounds": 20,
+      "recovery_rounds": 40,
+      "capture_frac": 0.75,
+      "capture_streak": 3,
+      "recover_frac": 0.75,
+      "recover_streak": 10,
+      "eval_round": 30
+    },
+    "backend": "http"
+  },
+  "episodes_per_arm": 12,
+  "stats": {
+    "A0_no_purge": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 1.375,
+      "delta": 0.125,
+      "invalid": 0,
+      "calls": 5928,
+      "usd": 0.12433899999999999
+    },
+    "A1_purge": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 3.75,
+      "delta": 2.5,
+      "invalid": 0,
+      "calls": 7694,
+      "usd": 0.16151500000000002
+    },
+    "A2_purge_wipe": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 0.0,
+      "delta": -1.25,
+      "invalid": 0,
+      "calls": 9460,
+      "usd": 0.19388999999999998
+    }
+  },
+  "metrics": {
+    "captured": 1.0,
+    "frac_T_A0_no_purge": 0.1146,
+    "delta_A0_no_purge": 0.0104,
+    "frac_T_A1_purge": 0.3125,
+    "delta_A1_purge": 0.2083,
+    "frac_T_A2_purge_wipe": 0.0,
+    "delta_A2_purge_wipe": -0.1042,
+    "wipe_minus_purge": -0.3125,
+    "episodes": 36,
+    "invalid": 0,
+    "model_calls": 23082,
+    "cost_usd": 0.4797
+  },
+  "backend": "http:openai/gpt-4o-mini",
+  "code": "3ffb56b6",
+  "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.625.jsonl"
+}

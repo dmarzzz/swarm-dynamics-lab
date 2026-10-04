@@ -1,0 +1,121 @@
+{
+  "method": "Paired receipt bootstrap, 2000 replicates, seed 71203; exploratory percentile intervals. Wilson 95% accepted-error intervals. Receipt independence is an assumption; no multiplicity correction.",
+  "arms": {
+    "mixed-robustness/majority": {
+      "accepted_error_wilson95": [
+        0,
+        0.2991527535509594
+      ]
+    },
+    "mixed-robustness/provenance-dissent": {
+      "accepted_error_wilson95": [
+        0,
+        0.3244156195108769
+      ]
+    },
+    "mixed/majority": {
+      "accepted_error_wilson95": null
+    },
+    "mixed/provenance-dissent": {
+      "accepted_error_wilson95": null
+    },
+    "related/majority": {
+      "accepted_error_wilson95": [
+        0.20654329147389294,
+        1
+      ]
+    },
+    "related/provenance-dissent": {
+      "accepted_error_wilson95": [
+        0.20654329147389294,
+        1
+      ]
+    },
+    "single/R0": {
+      "accepted_error_wilson95": [
+        2.7755575615628914e-17,
+        0.2588400172488141
+      ]
+    },
+    "single/R1": {
+      "accepted_error_wilson95": [
+        0.05136660067100063,
+        0.4769861375782448
+      ]
+    },
+    "single/T0": {
+      "accepted_error_wilson95": [
+        0.20654329147389294,
+        1
+      ]
+    },
+    "single/T1": {
+      "accepted_error_wilson95": [
+        0,
+        0.7934567085261071
+      ]
+    },
+    "single/T2": {
+      "accepted_error_wilson95": [
+        0.20654329147389294,
+        1
+      ]
+    }
+  },
+  "contrasts": {
+    "mixed/majority minus related/majority": {
+      "wrong": {
+        "difference": -0.05263157894736842,
+        "ci95": [
+          -0.15789473684210525,
+          0.0
+        ],
+        "denominator": 19
+      },
+      "coverage": {
+        "difference": -0.05263157894736842,
+        "ci95": [
+          -0.15789473684210525,
+          0.0
+        ],
+        "denominator": 19
+      }
+    },
+    "mixed/provenance-dissent minus related/provenance-dissent": {
+      "wrong": {
+        "difference": -0.05263157894736842,
+        "ci95": [
+          -0.15789473684210525,
+          0.0
+        ],
+        "denominator": 19
+      },
+      "coverage": {
+        "difference": -0.05263157894736842,
+        "ci95": [
+          -0.15789473684210525,
+          0.0
+        ],
+        "denominator": 19
+      }
+    },
+    "mixed/provenance-dissent minus mixed/majority": {
+      "wrong": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "denominator": 19
+      },
+      "coverage": {
+        "difference": 0.0,
+        "ci95": [
+          0.0,
+          0.0
+        ],
+        "denominator": 19
+      }
+    }
+  }
+}

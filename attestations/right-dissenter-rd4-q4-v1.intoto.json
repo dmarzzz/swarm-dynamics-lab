@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Improve the design, evaluate against the plan, and resolve gaps identified in previous runs."
+   },
+   "internalParameters": {
+    "commit": "2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "7ff1792369e2f7608da7b239e1c50081984e817dcbbb6f1c20991b772e35bf20"
+     },
+     "uri": "researchers/vishesh/notes/dissent/src/rd4_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7"
+     },
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "98cde6641d62a407e2d850368be6e70f116a9a0122e40d3c9296668ee49330bb"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/results/q4-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "eec9386aecac05a393ded5382688a8264eb45f7ac2970c9e94e839f5ce6ca769"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd4/results/q4-a1/records.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "2d85cdfbbc6ffc782a2b98ce92e293652ea9c2e5"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T06:25:00Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T06:25:00Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "9907e25ec0627a1a57eb01fbccb2efecd9ce431ece003b87fd56a643be71dbb2"
+   },
+   "name": "artifacts/right-dissenter-rd4-q4/right-dissenter-rd4-q4-v1.png"
+  }
+ ]
+}

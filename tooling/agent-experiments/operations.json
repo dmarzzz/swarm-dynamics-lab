@@ -75,15 +75,15 @@
     },
     {
       "id": "immune-response-v3",
-      "title": "Immune Response v3",
+      "title": "Immune Response",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
-      "setup_path": null,
+      "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Create or link the current setup record; reconcile the interrupted attempt and subsequent cleanup record, preserve its ledger, and verify the approved Dmarz provisioning path before replacement."
+      "next_action": "Finish verified dedicated-host provisioning, register the pinned A3 public plan, then queue bounded dispatch with the preserved cumulative ledger."
     },
     {
       "id": "influence-swarms",
@@ -120,6 +120,18 @@
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
       "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample."
+    },
+    {
+      "id": "antsy-diversity-v7",
+      "title": "Antsy worker diversity v7",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/antsy-diversity-v7",
+      "setup_path": "researchers/vishesh/notes/antsy-diversity-v7/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/antsy-diversity-v7/reviews/S0-repair-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T06:27:00.898397+00:00",
+      "checked_commit": "f0be4c82149c5c986d56cf19cd23afa4f8ef2646",
+      "next_action": "Qualification failed despite100 valid calls. Read the competence/cost audit; a successor needs competent perception controls, a prospective amendment and fresh qualification. S1 unrun."
     }
   ]
 }

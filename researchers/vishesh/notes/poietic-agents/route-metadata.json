@@ -1,0 +1,81 @@
+{
+  "checked_utc": "2026-10-04T04:59:59.175360+00:00",
+  "source_kind": "public_catalog_no_inference",
+  "routes": {
+    "generalist": {
+      "name": "Anthropic | anthropic/claude-4.5-haiku-20251001",
+      "model_id": "anthropic/claude-haiku-4.5",
+      "provider_name": "Anthropic",
+      "tag": "anthropic",
+      "pricing": {
+        "prompt": "0.000001",
+        "completion": "0.000005",
+        "web_search": "0.01",
+        "input_cache_read": "0.0000001",
+        "input_cache_write": "0.00000125",
+        "input_cache_write_1h": "0.000002",
+        "discount": 0
+      },
+      "context_length": 200000,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "top_k",
+        "stop",
+        "tools",
+        "tool_choice",
+        "structured_outputs",
+        "response_format"
+      ],
+      "status": 0,
+      "source": "https://openrouter.ai/api/v1/models/anthropic/claude-haiku-4.5/endpoints"
+    },
+    "cheap_generative": {
+      "name": "Alibaba | qwen/qwen3-8b-04-28",
+      "model_id": "qwen/qwen3-8b",
+      "provider_name": "Alibaba",
+      "tag": "alibaba",
+      "pricing": {
+        "prompt": "0.000000117",
+        "completion": "0.000000455",
+        "discount": 0
+      },
+      "context_length": 131072,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "seed",
+        "presence_penalty",
+        "response_format",
+        "tools",
+        "tool_choice",
+        "top_k",
+        "frequency_penalty",
+        "stop"
+      ],
+      "status": 0,
+      "source": "https://openrouter.ai/api/v1/models/qwen/qwen3-8b/endpoints"
+    },
+    "typed_choice": {
+      "name": "TypeSafe | typesafe/jev-1.13-20260917",
+      "model_id": "typesafe/jev-1.13",
+      "provider_name": "TypeSafe",
+      "tag": "typesafe",
+      "pricing": {
+        "prompt": "0.000000042",
+        "completion": "0",
+        "discount": 0
+      },
+      "context_length": 32000,
+      "supported_parameters": [],
+      "status": 0,
+      "source": "https://openrouter.ai/api/v1/models/typesafe/jev-1.13/endpoints"
+    }
+  }
+}

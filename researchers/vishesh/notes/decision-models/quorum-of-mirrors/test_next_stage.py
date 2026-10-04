@@ -4,7 +4,7 @@ from contextlib import closing
 from types import SimpleNamespace
 from unittest.mock import patch
 from next_stage import make_manifest,validate_manifest,checked_response,count_reference,analyze
-from next_runtime import Ledger,hashes,run,allocation_check,preflight,safe_reason
+from next_runtime import Ledger,hashes,run,allocation_check,preflight,safe_reason,research_check
 from qualification import SNAPSHOT,PROVIDER,RESERVE,manifest as old_manifest,digest
 from relay import Budget
 
@@ -129,6 +129,21 @@ class NextRuntime(unittest.TestCase):
             self.assertEqual(call.call_count,1);self.assertEqual(s['failed'],1);self.assertEqual(s['unstarted'],15);self.assertFalse(s['qualified']);self.assertEqual(ledger.audit()['calls'],33)
             self.assertNotIn('MUST-NOT-EXPORT',(p/'out'/'receipts.jsonl').read_text());self.assertEqual((p/'out'/'cases.html').read_text().count('<td>unstarted</td>'),15)
 class AdmissionMutations(unittest.TestCase):
+    def test_owner_direction_preserves_honest_research_status(self):
+        checked=research_check('unused',None,'owner-directed-exploratory')
+        self.assertEqual(checked['researcher_review'],'not_required_by_owner')
+        self.assertEqual(checked['formal_hypothesis_status'],'not_accepted')
+        self.assertIn('OPERATOR-AUTHORIZATION.json',hashes())
+        with self.assertRaisesRegex(ValueError,'owner_direction_missing'):
+            research_check('unused',None,'arbitrary-waiver')
+        with patch('next_runtime.json.loads',return_value={'experiment':'another-study'}):
+            with self.assertRaisesRegex(ValueError,'owner_direction_missing'):
+                research_check('unused',None,'owner-directed-exploratory')
+
+    def test_owner_direction_does_not_admit_later_stage(self):
+        with self.assertRaisesRegex(ValueError,'stage_not_admitted'):
+            preflight({'research_policy':'owner-directed-exploratory'},make_manifest('QM-M1-01'))
+
     def test_safe_errors_are_actionable_without_leaking_bodies(self):
         self.assertEqual(safe_reason(ValueError('accepted_hypothesis_missing')),'accepted_hypothesis_missing')
         self.assertEqual(safe_reason(ValueError('PRIVATE BODY MUST NOT ESCAPE')),'ValueError')
@@ -142,11 +157,11 @@ class AdmissionMutations(unittest.TestCase):
                 source_sha256=hashes(),checked_at=now,expires_at=now+300)
             (p/'allocation.json').write_text(json.dumps(allocation))
             import hashlib
-            plan_hash=hashlib.sha256(Path('NEXT-RUN-PLAN.md').read_bytes()).hexdigest()
+            plan_hash=hashlib.sha256(Path(__file__).with_name('NEXT-RUN-PLAN.md').read_bytes()).hexdigest()
             url='https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/plan.md'
             manifest_url='https://github.com/dmarzzz/swarm-lab/blob/'+'b'*40+'/spec.json'
             c=dict(manifest_sha256=digest(m),source_sha256=hashes(),deadline=now+300,
-                authorization=str(Path('AUTHORIZATION.json').resolve()),repo='fixture',hypothesis='fixture',
+                authorization=str(Path(__file__).with_name('AUTHORIZATION.json').resolve()),repo='fixture',hypothesis='fixture',
                 allocation_receipt=str(p/'allocation.json'),public_plan_url=url,plan_sha256=plan_hash,
                 public_manifest_url=manifest_url,run_tldr='Bounded Q1 qualification; no efficacy claim',ledger=str(p/'ledger.sqlite'))
             registered=dict(url=url,plan_sha256=plan_hash,registered_tldr='TLDR: fixture '+manifest_url)

@@ -45,6 +45,7 @@ Status: DRAFT — replace every bracketed field before freezing. Record amendmen
 - Scorer independence, protected truth, rubric and calibration: [fill]
 - Human/LLM judge blinding, agreement, audit sample and disagreement rule: [fill]
 - Instrumentation checks, positive/negative controls and fault-injection gate: [fill]
+- If claiming swarm diversity: [declared model/prompt/tool/context/evidence differences; co-answer and missingness denominators; same-wrong errors, directed rescue and paired decision value; see ../WORKER-DIVERSITY.md; otherwise mark not applicable]
 
 ## Sample size and analysis
 

@@ -6,7 +6,7 @@
    "externalParameters": {
     "harness": "codex",
     "model": "gpt-6-astra",
-    "prompt": "Yes you have approval. Go ahead and fix up the experimental design and then run it."
+    "prompt": "sha256:1c1ca1dff01720b7312f999b15b23ab88c29c8d0c3e7eeab1f325e4f67b6e473"
    },
    "internalParameters": {
     "commit": "61c81e01c967b759d9cdb99853096beb745296e9-dirty",

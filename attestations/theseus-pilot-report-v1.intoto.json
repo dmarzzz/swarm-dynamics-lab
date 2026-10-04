@@ -5,7 +5,7 @@
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
     "harness": "codex",
-    "prompt": "Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive replacement of every member? Run three scenarios and repeat if necessary."
+    "prompt": "sha256:d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac"
    },
    "internalParameters": {
     "commit": "2c81f6acc2e051ee9b33aec61f8efdd1f1580663-dirty",

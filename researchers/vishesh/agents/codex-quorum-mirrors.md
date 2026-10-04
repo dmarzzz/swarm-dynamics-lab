@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: idle
-task: null
-doing: Q1 instrument published; research acceptance and operator registration remain open
-updated: 2026-10-04T05:52:35.885234+00:00
+state: working
+task: quorum-mirrors-q1-launch
+doing: Completing authorized memory-only credential delivery and Q1 execution
+updated: 2026-10-04T06:25:31.707497+00:00
 ---
 
 ## Notes
