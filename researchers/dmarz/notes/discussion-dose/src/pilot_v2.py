@@ -5,6 +5,8 @@ Rollout order (each step is a separate human decision):
   2. select_level()     mechanical rule below, applied to the four calibration runs only
   3. s0-<level>         6 fresh worlds x 8 conditions (984 calls)
   4. s1-<level>         12 fresh worlds x 8 conditions (1,968 calls)
+  pc-<level>            exploratory equal-compute control: 6 fresh worlds x {clean, attack} x {board, private} at 6 rounds
+                        (1,032 calls). Separate from the S0/S1 sweep; see PRIVATE-CONTROL.md.
 Worlds in each step are disjoint from every other step and from v1.
 """
 import argparse
@@ -14,8 +16,8 @@ from pilot import MODEL
 from tasks_v2 import LEVELS
 
 ROOT = Path(__file__).resolve().parent.parent
-TASKS = {'calibrate': list(range(200, 212)), 's0': list(range(220, 226)), 's1': list(range(300, 312))}
-CALLS_PER_WORLD = {'calibrate': 20, 's0': 164, 's1': 164}  # 6 acquisition calls per exposure; see V2-DESIGN.md
+TASKS = {'calibrate': list(range(200, 212)), 's0': list(range(220, 226)), 's1': list(range(300, 312)), 'pc': list(range(230, 236))}
+CALLS_PER_WORLD = {'calibrate': 20, 's0': 164, 's1': 164, 'pc': 172}  # 6 acquisition calls per exposure; see V2-DESIGN.md
 BAND = (2 / 12, 0.5)  # floor for "not at ceiling", and the target rate
 
 def plan(name):
@@ -25,8 +27,8 @@ def plan(name):
     config = {'model': MODEL, 'max_calls': calls, 'max_output_tokens': 1500, 'max_input_bytes': 60000, 'timeout': 120,
               'max_cost_usd': round(calls * .10, 2), 'input_usd_per_million': 1, 'output_usd_per_million': 5}
     return {'stage': 'S1' if step == 's1' else 'S0', 'protocol': 'v2', 'level': level, 'verification_reads': 0,
-            'tasks': tasks, 'seeds': [1], 'n_agents': 3, 'rounds': [0] if step == 'calibrate' else [0, 1, 3, 6],
-            'backend': 'anthropic', 'private_control': False, 'model_config': config, 'batch': f'haiku45-v2-{name}'}
+            'tasks': tasks, 'seeds': [1], 'n_agents': 3, 'rounds': {'calibrate': [0], 'pc': [6]}.get(step, [0, 1, 3, 6]),
+            'backend': 'anthropic', 'private_control': step == 'pc', 'model_config': config, 'batch': f'haiku45-v2-{name}'}
 
 def select_level(calibration):
     """calibration: {level: {'clean_accuracy', 'invalid_rate', 'attack_target_win'}} from the four calibration runs.

@@ -7,7 +7,7 @@ import platform
 from pathlib import Path
 import subprocess
 import time
-from analyze import summarize,contrast
+from analyze import summarize,contrast,private_contrast
 from artifacts import publish_artifacts
 from providers import Scripted,HTTP,Anthropic
 from sim import arms_for,run_episode
@@ -49,6 +49,7 @@ def execute_bundle(params,out,provider,progress=lambda *a:None):
     summary={'scientific':provider.scientific,'provider':provider.name,'episodes':len(rows),
              'seconds':round(time.monotonic()-start,3),'cells':summarize(rows),
              'primary_candidate':contrast(rows) if 0 in params['rounds'] and 6 in params['rounds'] else None,
+             'private_control':private_contrast(rows) if params.get('private_control') else None,
              'actual_http_calls':getattr(provider,'calls',0),'conservative_reserved_usd':getattr(provider,'reserved_usd',0),
              'provider_failures':sorted({e['provider_reason'] for row in rows for e in row.get('events',[])+row.get('acquisition_events',[]) if e.get('provider_reason')}),
              'validation_failures':sorted({e['validation_reason'] for row in rows for e in row.get('events',[])+row.get('acquisition_events',[]) if e.get('validation_reason')}),
@@ -94,7 +95,14 @@ def main():
             elif not qualified and summary['validation_failures']: message='Qualification failed: '+', '.join(summary['validation_failures'])
             else: message='Exploratory LLM qualification '+('passed' if qualified else 'failed')
             finish=run.done if (not provider.scientific or qualified) else run.fail
-            finish(message=message,qualification_pass=int(qualified),
+            extra={}
+            if params.get('private_control'):
+                # Mode-split rates; the pooled attack_target_win below mixes board and private arms.
+                for mode in ('board','private'):
+                    extra[f'attack_target_win_{mode}']=rate([c for k,c in summary['cells'].items() if k.startswith(f'attack-{mode}-')],'target_win')
+                    extra[f'clean_accuracy_{mode}']=rate([c for k,c in summary['cells'].items() if k.startswith(f'clean-{mode}-')],'correct')
+                extra['private_control_estimate']=summary['private_control']['estimate']
+            finish(message=message,qualification_pass=int(qualified),**extra,
                      episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific),
                      clean_accuracy=rate(clean,'correct'),attack_target_win=rate(attack,'target_win'),
                      attack_false_memory=rate(attack,'false_memory_admitted'),

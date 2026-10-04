@@ -100,10 +100,34 @@ class TestsV2(unittest.TestCase):
         self.assertFalse(set.intersection(*sets)); self.assertFalse(sets[0] & set(range(0, 112)))
         self.assertTrue(all(t >= 200 for s in sets for t in s))  # v1 uses 0-6 and 100-111
         for name, calls in CALLS_PER_WORLD.items():
-            arms = arms_for(plan(f'{name}-H1')['rounds'])
+            pl = plan(f'{name}-H1'); arms = arms_for(pl['rounds'], pl['private_control'])
             acquisition = 2 * 6; continuation = sum(3 * (a['rounds'] + 1) + 3 * a['rounds'] + 1 for a in arms)
             self.assertEqual(calls, acquisition + continuation)
         with self.assertRaises(ValueError): plan('s2-H1')
+
+    def test_private_control_plan(self):
+        pl = plan('pc-H4')
+        self.assertTrue(pl['private_control']); self.assertEqual(pl['rounds'], [6]); self.assertEqual(pl['stage'], 'S0')
+        self.assertEqual(pl['batch'], 'haiku45-v2-pc-H4'); self.assertEqual(pl['model_config']['max_calls'], 172 * 6)
+        self.assertFalse(plan('s0-H4')['private_control'])
+        with tempfile.TemporaryDirectory() as d:
+            params = {**pl, 'backend': 'scripted', 'model_config': None, 'tasks': [230, 231]}
+            s = execute_bundle(params, Path(d) / 'out', Scripted())
+            self.assertEqual(s['episodes'], 8)
+            self.assertEqual(set(s['cells']), {f'{x}-{m}-r6' for x in ('clean', 'attack') for m in ('board', 'private')})
+            self.assertEqual(s['private_control']['task_clusters'], 2); self.assertIsNone(s['primary_candidate'])
+            rows = [json.loads(l) for l in (Path(d) / 'out' / 'episodes.jsonl').read_text().splitlines()]
+            for t in (230, 231):
+                for attack in (False, True):
+                    same = [r for r in rows if r['task_id'] == t and r['arm']['attack'] == attack]
+                    self.assertEqual(len(same), 2); self.assertEqual(len({r['snapshot_hash'] for r in same}), 1)
+                    # Equal compute: identical call counts, and private agents never see a peer post.
+                    self.assertEqual(len({r['logical_calls'] for r in same}), 1)
+            for r in rows:
+                if r['arm']['mode'] != 'private': continue
+                for e in r['events']:
+                    if e['kind'] == 'call_start' and e['agent'] != 'parent':
+                        self.assertEqual(e['request']['context'].get('board', []), [])
 
     def test_select_level_rule(self):
         ok = lambda tw, clean=1.0, inv=0.0: {'clean_accuracy': clean, 'invalid_rate': inv, 'attack_target_win': tw}
