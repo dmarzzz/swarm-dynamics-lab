@@ -3,7 +3,7 @@
   python src/chain.py run --stages S0,P0,Q0,S1   exit 0 all requested stages done, 3 stopped at a
                                                  failed stage or gate, other non-zero internal error
   python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low at
-                                                 this source hash: queues a continuation batch s1-001-r<n>
+                                                 this source hash: queues a continuation batch s1-<attempt>-r<n>
                                                  with exactly the not-started assignments; same ledger
   python src/chain.py status                     chain-status.json plus ledger totals, one JSON line
   python src/chain.py verify                     artifact checksums against the hub, every saved answer
@@ -118,7 +118,7 @@ def execute_run(run, entry, status, deadline, opener, sr, units=None, prior_rows
                      qualification_passed=s['qualification_passed'], errors=s['errors'], billing_pauses=s['billing_pauses'],
                      billing_pause_seconds=s['billing_pause_seconds'], billing_affected_calls=s['billing_affected_calls'],
                      resumable=s['resumable'], elapsed_seconds=s['elapsed_seconds'], tokens_per_byte_max=s['tokens_per_byte_max'],
-                     retrieval_count=s['retrieval_count'], retrieval_bytes=s['retrieval_bytes'], headline=s.get('headline'))
+                     retrieval_count=s['retrieval_count'], retrieval_bytes=s['retrieval_bytes'], headline=s.get('headline'), work=s.get('work'))
     status['ledger'] = ledger_totals(); write_status(status)
     return outcome, code, reason
 
@@ -257,10 +257,13 @@ def regrade(a, r):
     if r['status'] != 'completed':
         return 'answer' not in r and 'evaluation' not in r
     try:
-        answer = study.validate(r['answer'])
+        full = study.revalidate(r)          # the returned object, validated again in its recorded key order
     except Exception:
         return False
-    return answer == r['answer'] and close(study.evaluate(a, answer), r['evaluation']) and sim.reference(a['packet']) == r['reference']
+    again = study.stored(full)
+    return (again['answer'] == r['answer'] and again['tolerated'] == r['tolerated'] and again['key_order'] == r['key_order']
+            and sim.work_report(a['packet'], full) == r['work_report']
+            and close(study.evaluate(a, full), r['evaluation']) and sim.reference(a['packet']) == r['reference'])
 
 
 def verify_stage(sr, stage, entry, reference, probe=None, prior_rows=None, original=True):
@@ -293,7 +296,7 @@ def verify_stage(sr, stage, entry, reference, probe=None, prior_rows=None, origi
     everyone = study.combine(list(prior_rows or []) + rows)
     checks['analysis_recomputed'] = close(saved, json.loads(json.dumps(analyze.analyze(everyone))))
     t = worker.totals(rows, len(assigned))
-    checks['totals_recomputed'] = all(close(summary[k], v) for k, v in t.items())
+    checks['totals_recomputed'] = all(close(summary[k], v) for k, v in t.items()) and summary['work'] == worker.work_totals(rows)
     gate, _ = worker.gate_of(stage, rows, study.check_invariants() if stage == 'S0' else None, probe)
     checks['gate_recomputed'] = (None if gate is None else int(gate)) == summary['qualification_passed']
     budget = study.design()['budget']; failed = sum(r['status'] == 'failed' for r in everyone)

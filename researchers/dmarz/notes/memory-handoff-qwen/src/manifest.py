@@ -1,6 +1,6 @@
 """Assignment manifest: per stage the count, every assignment id with its packet hash in dispatch
-order, the number of distinct packets and a digest. The reserved second qualification set is
-listed too. `python3 src/manifest.py` writes manifest.json; `--check` compares.
+order, the number of distinct packets and a digest. Both qualification sets are listed (set a was
+used by attempt 001, set b is used by attempt 002). `python3 src/manifest.py` writes manifest.json; `--check` compares.
 """
 import argparse
 import hashlib
@@ -24,14 +24,14 @@ def stage_entry(rows):
 
 def build():
     stages = {stage: stage_entry(study.assignments(stage)) for stage in study.STAGES}
-    reserved = stage_entry(study.qualification_fixtures('b'))
-    digest = hashlib.sha256(json.dumps({**{s: stages[s]['digest'] for s in study.STAGES}, 'qualification_b': reserved['digest'],
+    sets = {which: stage_entry(study.qualification_fixtures(which)) for which in ('a', 'b')}
+    digest = hashlib.sha256(json.dumps({**{s: stages[s]['digest'] for s in study.STAGES}, **{'qualification_' + w: sets[w]['digest'] for w in sets},
                                         'system': hashlib.sha256(study.SYSTEM.encode()).hexdigest()}, sort_keys=True).encode()).hexdigest()
     return {'study': study.EXPERIMENT, 'format': 'one "<assignment id> <sha256 of the system message and user message>" per line, dispatch order',
             'source_hash': study.source_hash(), 'digest': digest,
             'system_sha256': hashlib.sha256(study.SYSTEM.encode()).hexdigest(),
             'qualification_set': study.design()['qualification']['set'],
-            'stages': stages, 'qualification_b_reserved': reserved}
+            'attempt': study.design()['attempt'], 'stages': stages, 'qualification_sets': sets}
 
 
 def render(manifest):

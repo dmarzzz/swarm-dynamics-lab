@@ -130,7 +130,16 @@ def analyze(rows):
                              'input_tokens': sum((r.get('accounting') or {}).get('input_tokens', 0) for r in group),
                              'output_tokens': sum((r.get('accounting') or {}).get('output_tokens', 0) for r in group),
                              'cost_usd': math.fsum((r.get('accounting') or {}).get('actual_usd', 0) for r in group)}
-    return {'unit': 'root', 'roots': len(roots), 'assigned': len(main),
+    working = {}
+    for policy in sim.POLICIES + ('all',):
+        group = [r for r in main if r['status'] == 'completed' and (policy == 'all' or r['policy'] == policy)]
+        flag = lambda k: sum(int((r.get('work_report') or {}).get(k) == 1) for r in group)
+        working[policy] = {'answers': len(group), 'listing_given': flag('listing_given'),
+                           'listing_matches_message': flag('listing_matches_message'),
+                           'follows_from_own_listing': flag('follows_from_own_listing'),
+                           'work_malformed': sum(int(bool((r.get('tolerated') or {}).get('work_malformed'))) for r in group),
+                           'work_before_value': sum(int(bool((r.get('tolerated') or {}).get('work_before_value'))) for r in group)}
+    return {'unit': 'root', 'roots': len(roots), 'assigned': len(main), 'working_fields': working,
             'observed': sum(r['status'] == 'completed' for r in main),
             'failed': sum(r['status'] == 'failed' for r in main), 'not_started': sum(r['status'] == 'not_started' for r in main),
             'distinct_packets': len({r['packet_hash'] for r in main}),

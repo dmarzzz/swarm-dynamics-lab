@@ -21,6 +21,7 @@ import copy
 import hashlib
 import json
 import random
+import re
 import time
 
 FAMILIES = ('capacity', 'total_cost', 'dependency')
@@ -306,11 +307,34 @@ def reference(packet, use_versions=True):
     return {'value': value + packet['task']['delta'], 'sources': support['sources']}
 
 
+def listing(packet):
+    """The records the answer format asks the successor to list: every record cited for the requested
+    fact key, plus the current version of a superseded origin when it is in the message, each with
+    what it says (rule 1) and whether it is the current version of its origin (rules 2 and 3)."""
+    key = packet['task']['key']
+    current = {}
+    for e in packet['source_registry']:
+        current[e['origin']] = max(current.get(e['origin'], 0), e['current_version'])
+    return [{'id': r['id'], 'origin': r['origin'], 'version': r['version'],
+             'current': r['version'] >= current.get(r['origin'], r['version']), 'value': r['facts'][key]}
+            for r in visible_records(packet, use_versions=False) if key in r['facts']]
+
+
+def reference_answer(packet):
+    """The reference in the attempt-002 answer format: the working fields, then value and sources."""
+    ref = reference(packet); records = listing(packet); delta = packet['task']['delta']
+    counting = [r for r in records if r['current']]
+    accepted = None if ref['value'] is None else ref['value'] - delta
+    origins = {r['origin'] for r in counting if r['value'] == accepted} if accepted is not None else set()
+    return {'records': records, 'counting_values': [r['value'] for r in counting], 'distinct_origins': len(origins),
+            'value': ref['value'], 'sources': ref['sources']}
+
+
 def control(packet, behavior):
     """Scripted actors with known behaviour. They validate the instrument; they are not model evidence."""
     key, delta = packet['task']['key'], packet['task']['delta']
     if behavior == 'reference':
-        return reference(packet)
+        return reference_answer(packet)
     if behavior == 'abstain':
         return {'value': None, 'sources': []}
     if behavior == 'version_blind':          # follows the policy except that it never checks versions
@@ -329,19 +353,119 @@ CONTROLS = ('reference', 'trust_memory', 'version_blind', 'abstain', 'wrong_enti
 
 # ------------------------------------------------------------------ answer format and scoring
 
-def validate(obj, max_sources=16):
-    """Structure only. A wrong, unsupported or badly cited answer with valid structure is a measured
-    outcome, never a failed call."""
-    if type(obj) is not dict or set(obj) != {'value', 'sources'}:
-        raise ValueError('invalid response fields')
-    value, sources = obj['value'], obj['sources']
-    if value is not None and (type(value) is not int or abs(value) > 10000):
-        raise ValueError('invalid integer')
-    if type(sources) is not list or len(sources) > max_sources or any(type(s) is not str or not 0 < len(s) <= 64 for s in sources):
-        raise ValueError('invalid sources')
-    if len(sources) != len(set(sources)):
-        raise ValueError('duplicate source')
-    return {'value': value, 'sources': list(sources)}
+WORK_KEYS = ('records', 'counting_values', 'distinct_origins')
+ANSWER_KEYS = WORK_KEYS + ('value', 'sources')
+RECORD_KEYS = ('id', 'origin', 'version', 'current', 'value')
+
+
+def integer_like(v):
+    """(int, how) for an integer, a number with a zero fraction or a string of digits; None otherwise.
+    Booleans, fractions, non-finite numbers and words are not integers."""
+    if isinstance(v, bool):
+        return None
+    if isinstance(v, int):
+        return v, 'int'
+    if isinstance(v, float):
+        return (int(v), 'float') if v == v and v not in (float('inf'), float('-inf')) and v.is_integer() else None
+    if isinstance(v, str) and re.fullmatch(r'\s*[-+]?\d+(\.0+)?\s*', v):
+        return int(v.strip().split('.')[0]), 'string'
+    return None
+
+
+def truth_value(v):
+    """True/False for a boolean or the strings "true"/"false" (any case); None otherwise."""
+    if isinstance(v, bool):
+        return v
+    if isinstance(v, str) and v.strip().lower() in ('true', 'false'):
+        return v.strip().lower() == 'true'
+    return None
+
+
+def well_formed_work(obj):
+    """True when all three working fields are present with the asked types (`current` may be a string)."""
+    records = obj.get('records')
+    if not isinstance(records, list) or any(
+            not isinstance(r, dict) or any(k not in r for k in RECORD_KEYS) or not isinstance(r['id'], str)
+            or not isinstance(r['origin'], str) or integer_like(r['version']) is None or truth_value(r['current']) is None
+            or integer_like(r['value']) is None for r in records):
+        return False
+    values = obj.get('counting_values')
+    if not isinstance(values, list) or any(integer_like(v) is None for v in values):
+        return False
+    return integer_like(obj.get('distinct_origins')) is not None
+
+
+def validate(obj):
+    """Attempt-002 validation, decided in advance (preregistration A5). The call is valid when the
+    object has `value` (an integer or null) and `sources` (a list of strings). Tolerated and counted:
+    an integer written as 45.0 or "45"; repeated source IDs (removed); `sources` null (read as empty);
+    missing, partial or oddly typed working fields; extra keys; any key order; `current` as a string.
+    A wrong, unsupported or badly cited answer is a measured outcome, never a failed call.
+    Returns {'value', 'sources', 'raw', 'key_order', 'tolerated'}; `obj` must keep its key order."""
+    if not isinstance(obj, dict) or 'value' not in obj or 'sources' not in obj:
+        raise ValueError('missing value or sources')
+    how = 'null'; value = None
+    if obj['value'] is not None:
+        parsed = integer_like(obj['value'])
+        if parsed is None:
+            raise ValueError('value is neither an integer nor null')
+        value, how = parsed
+    sources = obj['sources']
+    if sources is None:
+        sources = []
+    elif not isinstance(sources, list) or any(not isinstance(x, str) for x in sources):
+        raise ValueError('sources is not a list of strings')
+    unique = list(dict.fromkeys(sources))
+    keys = list(obj); present = [k for k in WORK_KEYS if k in obj]
+    records = obj.get('records') if isinstance(obj.get('records'), list) else []
+    tolerated = {'value_as_float': int(how == 'float'), 'value_as_string': int(how == 'string'),
+                 'duplicate_sources': len(sources) - len(unique), 'sources_null': int(obj['sources'] is None),
+                 'extra_keys': sorted(k for k in keys if k not in ANSWER_KEYS),
+                 'work_missing': [k for k in WORK_KEYS if k not in obj],
+                 'work_malformed': int(not well_formed_work(obj)),
+                 'work_before_value': int(bool(present) and all(keys.index(k) < keys.index('value') for k in present)),
+                 'current_as_string': sum(1 for r in records if isinstance(r, dict) and isinstance(r.get('current'), str))}
+    return {'value': value, 'sources': unique, 'raw': obj, 'key_order': keys, 'tolerated': tolerated}
+
+
+def work_report(packet, answer):
+    """What the working fields show, reported and never gated: whether the listed records match the
+    message, and whether the answer follows from the model's own listing. None where the listing
+    cannot be read."""
+    raw = answer.get('raw') or {}; task = packet['task']
+    records = raw.get('records')
+    out = {'listing_given': 0, 'listing_ids_match': None, 'listing_values_match': None, 'listing_current_match': None,
+           'listing_matches_message': None, 'follows_from_own_listing': None, 'counting_values_consistent': None,
+           'distinct_origins_consistent': None}
+    if not isinstance(records, list):
+        return out
+    got = []
+    for r in records:
+        if not isinstance(r, dict) or not isinstance(r.get('id'), str):
+            return out
+        value = integer_like(r.get('value')); current = truth_value(r.get('current'))
+        got.append({'id': r['id'], 'origin': r['origin'] if isinstance(r.get('origin'), str) and r['origin'] else r['id'],
+                    'value': None if value is None else value[0], 'current': current})
+    expected = {r['id']: r for r in listing(packet)}; mine = {r['id']: r for r in got}
+    ids = set(mine) == set(expected) and len(mine) == len(got)
+    values = ids and all(mine[i]['value'] == expected[i]['value'] for i in expected)
+    current = ids and all(mine[i]['current'] == expected[i]['current'] for i in expected)
+    counting = [r for r in got if r['current'] is True and r['value'] is not None]
+    stated = sorted({r['value'] for r in counting})
+    accepted = None
+    if len(stated) == 1 and len({r['origin'] for r in counting}) >= task['min_origins']:
+        accepted = stated[0]
+    own = None if accepted is None else accepted + task['delta']
+    listed = raw.get('counting_values')
+    listed_values = [integer_like(v) for v in listed] if isinstance(listed, list) else None
+    origins = integer_like(raw.get('distinct_origins'))
+    out.update(listing_given=1, listing_ids_match=int(ids), listing_values_match=int(values), listing_current_match=int(current),
+               listing_matches_message=int(ids and values and current), follows_from_own_listing=int(own == answer['value']),
+               counting_values_consistent=None if listed_values is None or any(v is None for v in listed_values)
+               else int(sorted(v[0] for v in listed_values) == sorted(r['value'] for r in counting)),
+               distinct_origins_consistent=None if origins is None
+               else int(origins[0] == (len({r['origin'] for r in counting}) if accepted is not None else 0)))
+    return out
 
 
 def evaluator(w, state, policy, cfg):

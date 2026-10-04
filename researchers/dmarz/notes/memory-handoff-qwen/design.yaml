@@ -3,7 +3,7 @@ version: 1
 experiment: memory-handoff-qwen
 status: exploratory
 program: researchers/dmarz/notes/overnight-program-2026-10-04 (research program v5, line M)
-attempt: '001'
+attempt: '002'       # the one permitted repair; attempt 001 stopped at the qualification gate (reviews/chain-001-post.md)
 
 # Model route (selected-model.json of the program). The request body is request_template plus messages.
 provider: openrouter
@@ -65,7 +65,7 @@ engineering_roots: [5301, 5302, 5303, 5304, 5305, 5306]
 dispatch_seed: memory-handoff-dispatch-v1
 
 qualification:
-  set: a                         # attempt 001 uses set a; the one permitted repair (attempt 002) uses set b
+  set: b                         # attempt 001 used set a; attempt 002, the one permitted repair, uses set b
   roots_a: [5501, 5502, 5503, 5504, 5505, 5506]
   roots_b: [5601, 5602, 5603, 5604, 5605, 5606]
   # One root per memory state (index = position in the root list), four policies each: 24 fixtures.
@@ -85,7 +85,7 @@ stages:
 
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
-  max_attempted_calls: 624       # attempt 001 (600) plus the qualification of the one permitted repair attempt (24), same ledger
+  max_attempted_calls: 600       # attempt 002 runs on a fresh ledger on a fresh server; no further repair exists
   max_failed: 6                  # S1 only: larger of 3 and 1% of 576, rounded up
   aggregate_usd: 2
   reservation_margin: 10         # each open reservation is 10 times the snapshot-price byte bound
@@ -93,7 +93,7 @@ budget:
   max_input_tokens: 8000
   max_input_bytes: 16000         # 6,400 tokens at the assumed worst case of 2.5 characters per token
   assumed_min_chars_per_token: 2.5
-  max_visible_chars: 1000
+  max_visible_chars: 4000        # attempt 002 answers carry working fields; 1,000 output tokens cannot exceed this
   request_timeout_seconds: 120
   stage_timeout_seconds: 6000
   chain_timeout_seconds: 7800
@@ -110,6 +110,28 @@ budget:
   max_transport_attempts: 800
   input_usd_per_million: 0.03
   output_usd_per_million: 0.13
+
+# What attempt 001 froze and how it ended. Attempt 002 changes the answer format and one instruction
+# sentence; every user message is byte-identical (selftest, against records/attempt-001-manifest.json).
+attempt_001:
+  code_commit: b699012283655d0a749c2cc4991ee9e22b8e52c4
+  launch_commit: 0d54225c23238cf17022d9859da93c05ef2854ea
+  source_hash: b4ab9025e2288c7c7f652e7d210371ab7818022acc1ee155801e4300b5044ba3
+  manifest_digest: c11aba23be85689f89245f7674ec108fefa89ed9ea4d8f112eb08cc15a067e3b
+  manifest_sha256: e3adeca3abb59092d6e38f7e34dac0ec279262208c7a1a7885237bbac8f85541
+  system_sha256: dc3f18a8ac2be19712198de3efbfab25085f335e7d070d471360f487ce607e6c
+  outcome: stopped at Q0 (qualification_failed); 24 of 24 valid, 19 of 24 supported; S1 not run
+  never_pooled_with_attempt_002: true
+
+answer_format:
+  version: 2
+  keys: [records, counting_values, distinct_origins, value, sources]
+  scored: [value, sources]
+  working_fields: [records, counting_values, distinct_origins]       # reported, never gated
+  tolerated: [value as a number with a zero fraction, value as a string of digits, repeated source IDs, sources null,
+              missing or malformed working fields, extra keys, any key order, current as a string]
+  invalid: [not one JSON object, a repeated key, value or sources missing, value neither integer-like nor null,
+            sources neither a list of strings nor null, longer than max_visible_chars, cut off at max_tokens]
 
 primary_contrast:
   metric: inherited_error

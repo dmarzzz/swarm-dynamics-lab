@@ -38,7 +38,7 @@ import worker       # noqa: E402
 sys.modules.setdefault('openrouter_provider', provider)        # the reference tests import the adapter by its reference name
 import test_openrouter_provider as reference_tests  # noqa: E402
 
-D = study.design(); C = study.cfg(); B = D['budget']
+D = study.design(); C = study.cfg(); B = D['budget']; QSET = D['qualification']['set']; batch = study.batch
 KEY = 'selftest-key-not-a-credential-0123456789'
 REPO = study.ROOT.parents[3]
 TRUTH_FREE = lambda state, policy: (policy == 'reset' or state in ('copies', 'false_original')
@@ -216,7 +216,7 @@ class Instrument(unittest.TestCase):
         self.assertEqual(len(inv['checks']), 25)
         for name, passed in inv['checks'].items():
             with self.subTest(name): self.assertTrue(passed)
-        self.assertLessEqual(inv['sizes']['max_request_bytes'], 6000)
+        self.assertLessEqual(inv['sizes']['max_request_bytes'], 7000)
 
     def test_reference_equals_the_hand_written_table_in_every_cell(self):
         seen = collections.Counter()
@@ -276,19 +276,109 @@ class Instrument(unittest.TestCase):
             self.assertEqual(body['messages'][0], {'role': 'system', 'content': study.SYSTEM})
         for label in ('misquote', 'stale', 'false_original', 'raw inheritance', 'metadata-only', 'content-bound', 'reset'):
             self.assertNotIn(label, study.SYSTEM.lower())
-        self.assertIn('{"value": <integer or null>, "sources": [<record IDs>]}', study.SYSTEM)
+        self.assertEqual(study.SYSTEM, study.SYSTEM_HEAD + study.ANSWER_002); self.assertTrue(study.SYSTEM_HEAD.rstrip().endswith("Never substitute another key's value."))
+        shape = '{"records": [{"id": <record ID>, "origin": <origin>, "version": <integer>, "current": <true or false>, "value": <integer>}], "counting_values": [<integers>], "distinct_origins": <integer>, "value": <integer or null>, "sources": [<record IDs>]}'
+        self.assertIn(shape, study.ANSWER_002)
+        self.assertIn('Before answering, list the records cited for the requested fact key with what each says and whether it is the current version of its origin, then apply the source policy.', study.ANSWER_002)
+        example = next(line for line in study.ANSWER_002.splitlines() if line.startswith('{"records": [{"id": "rec-example"'))
+        self.assertEqual(list(sim.strict_json(example)), list(sim.ANSWER_KEYS)); self.assertEqual(list(sim.strict_json(example)['records'][0]), list(sim.RECORD_KEYS))
+        self.assertEqual(sim.validate(sim.strict_json(example))['tolerated']['work_malformed'], 0)
 
-    def test_validate_is_structural_and_strict(self):
-        good = [{'value': 5, 'sources': ['rec-a']}, {'value': None, 'sources': []}, {'value': -3, 'sources': ['x', 'y']},
-                {'value': None, 'sources': ['rec-a']}, {'value': 7, 'sources': []}]          # the last two are valid structure, scored unsupported
-        for obj in good: self.assertEqual(study.validate(obj), obj)
-        bad = [[], {'value': 5}, {'value': 5, 'sources': ['a'], 'note': 'x'}, {'value': '5', 'sources': []}, {'value': 5.0, 'sources': []},
-               {'value': True, 'sources': []}, {'value': 10001, 'sources': []}, {'value': 5, 'sources': 'rec-a'}, {'value': 5, 'sources': [1]},
-               {'value': 5, 'sources': ['a', 'a']}, {'value': 5, 'sources': ['']}, {'value': 5, 'sources': ['a'] * 0 + [str(i) for i in range(17)]}]
-        for obj in bad:
-            with self.assertRaises(ValueError): study.validate(obj)
-        with self.assertRaises(ValueError): study.decode('{"value": 1, "value": 2, "sources": []}')
-        with self.assertRaises(ValueError): study.decode('{"value": NaN, "sources": []}')
+    def test_tolerated_variants_pass_and_invalid_forms_fail(self):
+        """Preregistration A5, decided in advance: a harmless variant of a correct answer is valid and counted; the listed invalid forms fail."""
+        a = next(x for x in study.assignments('S1') if x['id'] == 'r5401-stale-content'); ref = sim.reference_answer(a['packet'])
+        want = {'value': ref['value'], 'sources': ref['sources']}; self.assertEqual(want['value'], 43)
+        plain = study.decode(json.dumps(ref))
+        self.assertEqual(({k: plain[k] for k in want}, plain['key_order'], plain['tolerated']),
+                         (want, list(sim.ANSWER_KEYS), {'value_as_float': 0, 'value_as_string': 0, 'duplicate_sources': 0, 'sources_null': 0, 'extra_keys': [],
+                                                        'work_missing': [], 'work_malformed': 0, 'work_before_value': 1, 'current_as_string': 0}))
+        flags = {'value_as_float': {'value_as_float': 1}, 'value_as_string': {'value_as_string': 1}, 'duplicate_sources': {'duplicate_sources': 1},
+                 'extra_key': {'extra_keys': ['note']}, 'work_missing': {'work_missing': list(sim.WORK_KEYS), 'work_malformed': 1, 'work_before_value': 0},
+                 'work_after_value': {'work_before_value': 0}, 'current_as_string': {'current_as_string': 2},
+                 'work_malformed': {'work_malformed': 1, 'work_missing': ['counting_values']}, 'sources_null_or_pretty': {}, 'plain': {}}
+        for n, kind in enumerate(rehearse.TOLERATED_VARIANTS):
+            got = study.decode(rehearse.tolerated_text(ref, n))
+            self.assertEqual({k: got[k] for k in want}, want, kind); self.assertEqual(study.evaluate(a, got)['supported'], 1, kind)
+            for flag, value in flags[kind].items(): self.assertEqual(got['tolerated'][flag], value, (kind, flag))
+            self.assertEqual({k: study.revalidate(study.stored(got))[k] for k in ('value', 'sources', 'tolerated', 'key_order')},
+                             {k: got[k] for k in ('value', 'sources', 'tolerated', 'key_order')}, kind)      # a saved row validates again identically
+        null = sim.reference_answer(next(x for x in study.assignments('S1') if x['id'] == 'r5401-copies-content')['packet'])
+        got = study.decode(rehearse.tolerated_text(null, 9)); self.assertEqual((got['value'], got['sources'], got['tolerated']['sources_null']), (None, [], 1))
+        more = {'{"value": 43, "sources": ["rec-dzreyblo"]}': 43, '{"sources": ["rec-dzreyblo"], "value": "43"}': 43, '{"value": 43.000, "sources": []}': 43,
+                '{"value": -7, "sources": ["x", "x", "y"]}': -7, '{"value": null, "sources": []}': None, '{"value": null, "sources": ["rec-a"]}': None,
+                '{"records": null, "counting_values": "n/a", "distinct_origins": null, "value": 43, "sources": ["unknown-id"]}': 43,
+                '{"records": [{"id": "rec-dzreyblo"}], "value": 43, "sources": ["rec-dzreyblo"], "confidence": 0.9}': 43,
+                '{"value": 123456789, "sources": ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r"]}': 123456789}
+        for text, value in more.items(): self.assertEqual(study.decode(text)['value'], value, text)
+        self.assertEqual(study.decode('{"value": -7, "sources": ["x", "x", "y"]}')['sources'], ['x', 'y'])
+        invalid = ['[]', '[{"value": 43, "sources": []}]', '"43"', '43', 'null', '{"value": 43}', '{"sources": []}', '{"records": [], "counting_values": [], "distinct_origins": 0}',
+                   '{"value": true, "sources": []}', '{"value": 43.5, "sources": []}', '{"value": "forty-three", "sources": []}', '{"value": "null", "sources": []}',
+                   '{"value": [43], "sources": []}', '{"value": {"n": 43}, "sources": []}', '{"value": NaN, "sources": []}', '{"value": 43, "sources": "rec-a"}',
+                   '{"value": 43, "sources": [1]}', '{"value": 43, "sources": [["rec-a"]]}', '{"value": 43, "sources": {"id": "rec-a"}}',
+                   '{"value": 43, "value": 43, "sources": []}', '{"value": 43, "sources": [], "sources": []}',
+                   '{"records": [], "records": [], "value": 43, "sources": []}', '{"records": [{"id": "a", "id": "a"}], "value": 43, "sources": []}',
+                   'The value is 43.', '```json\n{"value": 43, "sources": []}\n```', '{"value": 43, "sources": []} because the record says so',
+                   '{"value": 43, "sources": []}{"value": 43, "sources": []}', '{"value": 43, "sources": [', '']
+        for text in invalid:
+            with self.assertRaises(Exception, msg=text): study.decode(text)
+
+    def test_working_fields_are_reported_and_never_scored(self):
+        a = next(x for x in study.assignments('S1') if x['id'] == 'r5401-stale-content'); ref = sim.reference_answer(a['packet'])
+        good = sim.validate(ref); report = sim.work_report(a['packet'], good)
+        self.assertEqual((report['listing_matches_message'], report['follows_from_own_listing'], report['counting_values_consistent'], report['distinct_origins_consistent']), (1, 1, 1, 1))
+        base = study.evaluate(a, good)
+        # attempt 001's qa02 pattern: the listing is right, the value is the superseded one
+        slip = sim.validate(dict(ref, value=a['evaluator']['false_answer'])); r = sim.work_report(a['packet'], slip)
+        self.assertEqual((r['listing_matches_message'], r['follows_from_own_listing'], study.evaluate(a, slip)['supported']), (1, 0, 0))
+        # a wrong listing with the right answer is still supported: the working fields are not scored
+        wrong = json.loads(json.dumps(ref)); wrong['records'][1]['value'] += 5; wrong['counting_values'] = [1, 2]; wrong['distinct_origins'] = 7
+        w = sim.validate(wrong); r = sim.work_report(a['packet'], w)
+        self.assertEqual((r['listing_ids_match'], r['listing_values_match'], r['listing_matches_message'], r['follows_from_own_listing'], r['counting_values_consistent']), (1, 0, 0, 0, 0))
+        self.assertEqual(study.evaluate(a, w), base)
+        for change in ({'records': 'none'}, {'records': [{'origin': 'x'}]}, {}):
+            v = sim.validate(dict({k: ref[k] for k in ('value', 'sources')}, **change)); r = sim.work_report(a['packet'], v)
+            self.assertEqual((r['listing_given'], r['listing_matches_message'], r['follows_from_own_listing']), (0, None, None)); self.assertEqual(study.evaluate(a, v), base)
+        stringy = json.loads(json.dumps(ref))
+        for rec in stringy['records']: rec.update(current=str(rec['current']), value=str(rec['value']), version=float(rec['version']))
+        self.assertEqual(sim.work_report(a['packet'], sim.validate(stringy))['listing_matches_message'], 1)
+        for x in study.assignments('S1')[:120] + study.qualification_fixtures('b'):                      # the reference's own working fields are consistent everywhere
+            v = sim.validate(sim.reference_answer(x['packet'])); r = sim.work_report(x['packet'], v)
+            self.assertEqual((r['listing_matches_message'], r['follows_from_own_listing'], r['counting_values_consistent'], r['distinct_origins_consistent'], v['tolerated']['work_malformed']), (1, 1, 1, 1, 0), x['id'])
+
+    def test_attempt_002_user_messages_are_byte_identical_to_the_attempt_001_freeze(self):
+        """Attempt 002 changes the answer instruction only. Recompute attempt 001's frozen hashes (system
+        message of attempt 001 + user message) from today's packets: every one must match."""
+        frozen_path = study.ROOT / 'records' / 'attempt-001-manifest.json'; old = D['attempt_001']
+        self.assertEqual(hashlib.sha256(frozen_path.read_bytes()).hexdigest(), old['manifest_sha256'])
+        frozen = json.loads(frozen_path.read_text())
+        self.assertEqual((frozen['source_hash'], frozen['digest'], frozen['system_sha256']), (old['source_hash'], old['manifest_digest'], old['system_sha256']))
+        self.assertEqual(hashlib.sha256(study.SYSTEM_ATTEMPT_001.encode()).hexdigest(), old['system_sha256'])
+        self.assertEqual(study.SYSTEM_ATTEMPT_001, study.SYSTEM_HEAD + study.ANSWER_001); self.assertNotEqual(study.SYSTEM, study.SYSTEM_ATTEMPT_001)
+        line = lambda a: f'{a["id"]} ' + hashlib.sha256((study.SYSTEM_ATTEMPT_001 + '\n' + study.user_text(a['packet'])).encode()).hexdigest()
+        self.assertEqual([line(a) for a in study.qualification_fixtures('b')], frozen['qualification_b_reserved']['assignments'])
+        self.assertEqual([line(a) for a in study.assignments('S1')], frozen['stages']['S1']['assignments'])
+        self.assertEqual([line(a) for a in study.assignments('S0')], frozen['stages']['S0']['assignments'])
+        self.assertEqual([line(a) for a in study.qualification_fixtures('a')], frozen['stages']['P0']['assignments'] + frozen['stages']['Q0']['assignments'])
+        self.assertEqual(len(frozen['stages']['S1']['assignments']), 576)
+        now = manifest.load()                                               # and today's hashes use today's system message
+        self.assertNotEqual(now['system_sha256'], old['system_sha256']); self.assertEqual(now['qualification_sets']['b']['assignments'],
+                                                                                              now['stages']['P0']['assignments'] + now['stages']['Q0']['assignments'])
+
+    def test_longest_plausible_answer_stays_well_under_the_output_limit(self):
+        """max_tokens stays 1,000. Attempt 001 measured 44 output tokens for a 75-character answer with three IDs
+        (1.7 characters per token). The longest reference answer, pretty-printed, and a listing of every record of the
+        largest content packet must stay well under 1,000 tokens at that ratio and under the character limit."""
+        everything = study.assignments('S1') + study.assignments('S0')
+        compact = max(len(json.dumps(sim.reference_answer(a['packet']))) for a in everything)
+        pretty = max(len(json.dumps(sim.reference_answer(a['packet']), indent=2)) for a in everything)
+        def every_record(a):
+            out = sim.reference_answer(a['packet'])
+            out['records'] = [{'id': r['id'], 'origin': r['origin'], 'version': r['version'], 'current': True, 'value': list(r['facts'].values())[0]}
+                              for r in a['packet']['retrieved_records']] or out['records']
+            return len(json.dumps(out, indent=2))
+        widest = max(every_record(a) for a in everything)
+        self.assertLessEqual(compact, 450); self.assertLessEqual(pretty, 650); self.assertLessEqual(widest, 1200)
+        self.assertLess(widest / (75 / 44), 720); self.assertLess(widest, B['max_visible_chars'] / 3); self.assertEqual(B['max_output_tokens'], 1000)
 
     def test_scorer_known_answers(self):
         cell = {(a['state'], a['policy']): a for a in study.assignments('S1') if a['root'] == 5401}
@@ -332,7 +422,8 @@ class Instrument(unittest.TestCase):
     def test_stage_counts_caps_and_splits(self):
         self.assertEqual({s: len(study.assignments(s)) for s in study.STAGES}, {'S0': 192, 'P0': 1, 'Q0': 23, 'S1': 576})
         self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576}); self.assertEqual(sum(B['max_calls'].values()), 600)
-        self.assertEqual((B['max_attempted_calls'], B['reservation_margin']), (600 + 24, 10))        # the one repair attempt's 24 qualification calls share the ledger
+        self.assertEqual((B['max_attempted_calls'], B['reservation_margin'], B['max_visible_chars']), (600, 10, 4000))   # attempt 002: fresh ledger, no further repair
+        self.assertEqual((D['attempt'], QSET, [batch(s) for s in study.STAGES]), ('002', 'b', ['s0-002', 'p0-002', 'q0-002', 's1-002']))
         self.assertEqual((B['max_failed'], B['aggregate_usd'], B['workers'], B['request_timeout_seconds']), (6, 2, 4, 120))
         self.assertEqual(B['max_failed'], max(3, -(-576 // 100)))
         self.assertGreaterEqual(B['max_transport_attempts'] - B['max_attempted_calls'], 40)
@@ -340,9 +431,9 @@ class Instrument(unittest.TestCase):
                          ({'retry_every_seconds': 60, 'max_wait_seconds': 1200}, [429, 502, 503, 529], 2, [2, 6]))
         self.assertEqual(D['request_template'], {'model': 'qwen/qwen3.7-flash', 'provider': {'only': ['alibaba'], 'allow_fallbacks': False, 'require_parameters': True},
                                                  'reasoning': {'enabled': False}, 'max_tokens': 1000, 'response_format': {'type': 'json_object'}})
-        fixtures = study.qualification_fixtures('a')
-        self.assertEqual(study.assignments('P0')[0]['id'], fixtures[0]['id']); self.assertEqual([a['id'] for a in study.assignments('Q0')], [f['id'] for f in fixtures[1:]])
-        self.assertFalse({f['root'] for f in fixtures} & {f['root'] for f in study.qualification_fixtures('b')})
+        fixtures = study.qualification_fixtures(QSET)
+        self.assertEqual(study.assignments('P0')[0]['id'], fixtures[0]['id']); self.assertEqual(fixtures[0]['id'], 'qb00-r5601-copies-content'); self.assertEqual([a['id'] for a in study.assignments('Q0')], [f['id'] for f in fixtures[1:]])
+        self.assertFalse({f['root'] for f in fixtures} & {f['root'] for f in study.qualification_fixtures('a')})
         self.assertTrue(all(r < 10000 for r in ALL_ROOTS)); self.assertEqual(len(set(ALL_ROOTS)), 42)
         order = [a['id'] for a in study.assignments('S1')]; self.assertEqual(order, [a['id'] for a in study.assignments('S1')])
         self.assertNotEqual(order, sorted(order))                                # seeded shuffle, not grid order
@@ -384,7 +475,7 @@ class Instrument(unittest.TestCase):
         self.assertLess(manifest.PATH.stat().st_size, 300_000)
         m = manifest.load(); self.assertEqual(m['source_hash'], study.source_hash())
         self.assertEqual({s: m['stages'][s]['count'] for s in study.STAGES}, dict(B['max_calls'], S0=192))
-        self.assertEqual(m['qualification_b_reserved']['count'], 24)
+        self.assertEqual((m['qualification_sets']['a']['count'], m['qualification_sets']['b']['count'], m['attempt']), (24, 24, '002'))
         hashed = sorted(p.name for p in [study.ROOT / 'design.yaml', study.ROOT / 'experiment.yaml', study.ROOT / 'requirements.txt'] + list((study.ROOT / 'src').glob('*.py')))
         self.assertIn('provider.py', hashed); self.assertIn('test_openrouter_provider.py', hashed)
         for outside in ('README.md', 'READY.yaml', 'manifest.json', 'preregistration.md', 'SETUP.md', 'RUN.md'): self.assertNotIn(outside, hashed)
@@ -398,6 +489,7 @@ class Instrument(unittest.TestCase):
         self.assertEqual((r['provider'], r['model'], r['max_calls'], r['max_calls_total'], r['usd_cap'], r['chain_timeout_seconds']),
                          ('openrouter', D['model'], B['max_calls'], sum(B['max_calls'].values()), B['aggregate_usd'], B['chain_timeout_seconds']))
         self.assertEqual(r['source_hash'], study.source_hash()); self.assertEqual(r['selftests'], TOTAL['tests'])
+        self.assertEqual(r['review'], 'reviews/chain-002-pre.md'); self.assertIn(study.source_hash(), (study.ROOT / r['review']).read_text())
 
     def test_no_secret_address_or_token_in_the_package(self):
         import re
@@ -414,22 +506,35 @@ class Adapter(unittest.TestCase):
             api, sent, _, _ = adapter(env, [ok_response(sim.reference(a['packet']))])
             answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), 's1-001:' + a['id'], study.validate)
         self.assertEqual(sent[0], study.request_body(a['packet'])); self.assertEqual(tuple(sent[0]), provider.BODY_KEYS)
-        self.assertEqual(acct['request_bytes'], a['request_bytes']); self.assertEqual(answer, sim.reference(a['packet']))
+        self.assertEqual(acct['request_bytes'], a['request_bytes']); self.assertEqual({k: answer[k] for k in ('value', 'sources')}, sim.reference(a['packet']))
         bound = a['request_bytes'] * 0.03 + 1000 * 0.13                                                      # byte-based upper bound at the frozen prices
         self.assertTrue(10 * bound <= acct['reserved_usd'] * 1e6 < 10 * bound + 1)                            # reserved with the 10x margin
         self.assertLess(4 * acct['reserved_usd'], 0.02)                                                       # four open reservations stay far under the cap
         self.assertEqual({k: v for k, v in sent[0].items() if k != 'messages'}, D['request_template'])
 
-    def test_duplicate_json_keys_and_invalid_answers_are_failed_calls_with_the_text_kept(self):
-        cases = {'{"value": 1, "value": 2, "sources": []}': 'invalid_json', '{"value": 1, "sources": [], "sources": []}': 'invalid_json',
-                 '{"value": "7", "sources": []}': 'invalid_answer', '{"value": 7}': 'invalid_answer', 'The value is 7.': 'invalid_json',
-                 '```json\n{"value": 7, "sources": []}\n```': 'invalid_json'}
+    def test_through_the_adapter_tolerated_variants_are_valid_calls_and_invalid_forms_are_failed_calls(self):
+        a = next(x for x in study.assignments('S1') if x['id'] == 'r5401-stale-content'); ref = sim.reference_answer(a['packet'])
         with Env() as env:
+            for n, kind in enumerate(rehearse.TOLERATED_VARIANTS):
+                api, sent, _, _ = adapter(env, [ok_response(rehearse.tolerated_text(ref, n))])
+                answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), f's1-002:t{n}', study.validate)
+                self.assertEqual((answer['value'], answer['sources'], acct['usage_reported']), (43, ref['sources'], True), kind)
+            cases = {'{"value": 1, "value": 2, "sources": []}': 'invalid_json', '{"value": 1, "sources": [], "sources": []}': 'invalid_json',
+                     '{"records": [], "records": [], "value": 1, "sources": []}': 'invalid_json',
+                     '{"value": "seven", "sources": []}': 'invalid_answer', '{"value": 7}': 'invalid_answer', '{"sources": []}': 'invalid_answer',
+                     '{"value": 7.5, "sources": []}': 'invalid_answer', '{"value": true, "sources": []}': 'invalid_answer',
+                     '{"value": 7, "sources": "rec-a"}': 'invalid_answer', '[{"value": 7, "sources": []}]': 'invalid_answer',
+                     'The value is 7.': 'invalid_json', '```json\n{"value": 7, "sources": []}\n```': 'invalid_json',
+                     '{"value": 7, "sources": []} as the record says': 'invalid_json', '{"value": 7, "sources": []}' + ' ' * 4000: 'answer_too_long'}
             for n, (text, want) in enumerate(cases.items()):
                 api, sent, _, _ = adapter(env, [ok_response(text)])
-                with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', f's1-001:x{n}', study.validate)
+                with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', f's1-002:x{n}', study.validate)
                 self.assertEqual(cm.exception.category, want, text); self.assertEqual(len(sent), 1)       # never retried
-                self.assertEqual(cm.exception.accounting['answer_text'], text); self.assertTrue(cm.exception.accounting['usage_reported'])
+                self.assertTrue(cm.exception.accounting['usage_reported'])
+                if want != 'answer_too_long': self.assertEqual(cm.exception.accounting['answer_text'], text[:2000])
+            api, sent, _, _ = adapter(env, [ok_response(json.dumps(ref), **{'choices': [{'finish_reason': 'length', 'message': {'role': 'assistant', 'content': json.dumps(ref)[:80]}}]})])
+            with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', 's1-002:cut', study.validate)
+            self.assertEqual(cm.exception.category, 'truncated_output')
 
     def test_failed_request_keeps_status_body_and_request_id_and_no_credential(self):
         with Env() as env:
@@ -524,6 +629,16 @@ class Worker(unittest.TestCase):
             self.assertIsNone(reason); q = summary['gate']['qualification']
             self.assertEqual((q['fixtures'], q['supported'], summary['model_calls'], len(stub.bodies)), (24, 24, 23, 23))
             self.assertEqual(summary['gate']['probe_row'], probe['id']); self.assertIsNotNone(run.final[1]['cost_per_call_usd'])
+            self.assertEqual(summary['work'], dict(summary['work'], answers=23, listing_matches_message=23, follows_from_own_listing=23, work_malformed=0, work_before_value=23))
+            for k in ('work_malformed', 'listing_matches_message', 'follows_from_own_listing'): self.assertEqual(run.final[1][k], summary['work'][k])
+            row = rows[0]; self.assertEqual(set(row['answer']), {'value', 'sources'}); self.assertEqual(row['key_order'], list(sim.ANSWER_KEYS))
+            self.assertEqual((row['raw']['value'], row['tolerated']['work_malformed'], row['work_report']['listing_matches_message']), (row['answer']['value'], 0, 1))
+        with Env() as env:                                    # the same qualification written in the tolerated variants passes the same gate
+            probe = probe_row(env); run = FakeRun('q0', study.params('Q0'))
+            summary, rows, reason, _ = stage('Q0', env, rehearse.Stub('reference', variants=True), run=run, probe_row=probe)
+            self.assertIsNone(reason); self.assertEqual(summary['gate']['qualification']['supported'], 24)
+            w = summary['work']; self.assertTrue(all(w[k] > 0 for k in ('value_as_string', 'duplicate_sources', 'extra_keys', 'work_missing', 'work_malformed', 'current_as_string')))
+            self.assertLess(w['work_before_value'], 23)
         with Env() as env:
             stub = Capture('reference'); run = FakeRun('q0', study.params('Q0'))
             summary, rows, reason, _ = stage('Q0', env, stub, run=run)            # no chain-status, no saved P0 row
@@ -593,9 +708,9 @@ class Worker(unittest.TestCase):
             self.assertTrue(any(r['accounting'].get('http_status') == 402 and 'Insufficient credits' in r['accounting']['error_body'] for r in dangling))
             self.assertEqual((summary['model_calls'], summary['answered_calls'], summary['voided_calls']), (29, 29, len(dangling)))
             first = provider.Ledger(os.environ[provider.LEDGER_ENV], B).transact()
-            self.assertEqual((first['calls_by_batch'], first['voided_calls']), ({'s1-001': 29}, len(dangling)))
+            self.assertEqual((first['calls_by_batch'], first['voided_calls']), ({batch('S1'): 29}, len(dangling)))
             units = sorted(r['id'] for r in rows if r['status'] == 'not_started')
-            params = dict(study.params('S1'), batch='s1-001-r1', continuation=1)
+            params = dict(study.params('S1'), batch=batch('S1') + '-r1', continuation=1)
             more, rows2, reason2, out2 = stage('S1', env, rehearse.Stub('reference'), params=params, units=units, prior_rows=rows)
             self.assertIsNone(reason2); self.assertEqual((more['planned'], more['graded'], more['continuation']['units']), (547, 547, 547))
             final = study.combine(rows + rows2)
@@ -603,10 +718,10 @@ class Worker(unittest.TestCase):
             a = json.loads((out2 / 'analysis.json').read_text()); self.assertEqual((a['observed'], a['primary']['estimate']), (576, -0.5))
             ledger = provider.Ledger(os.environ[provider.LEDGER_ENV], B).transact()
             # answered plus open S1 calls never exceed the exact cap: the continuation shares the batch family's allowance
-            self.assertEqual((ledger['usage_reported_calls'], ledger['attempted_calls'], ledger['calls_by_batch']), (576, 576, {'s1-001': 576}))
-            self.assertEqual(ledger['calls_by_batch']['s1-001'], B['max_calls']['S1'])
+            self.assertEqual((ledger['usage_reported_calls'], ledger['attempted_calls'], ledger['calls_by_batch']), (576, 576, {batch('S1'): 576}))
+            self.assertEqual(ledger['calls_by_batch'][batch('S1')], B['max_calls']['S1'])
             api = provider.OpenRouter(provider.Ledger(os.environ[provider.LEDGER_ENV], B), study.provider_config(), rehearse.Stub('reference'))
-            with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', 's1-001-r2:one-more', study.validate)
+            with self.assertRaises(provider.CallFailure) as cm: api.call(study.SYSTEM, 'U', batch('S1') + '-r2:one-more', study.validate)
             self.assertEqual(cm.exception.category, 'stage_call_cap_reached')
             with self.assertRaises(worker.StageFailed):                              # a continuation needs its own batch name
                 worker.execute(study.params('S1'), env.path / 'results' / 'bad', None, opener=rehearse.Stub('reference'), units=units[:2], prior_rows=rows)
@@ -637,7 +752,7 @@ class Chain(unittest.TestCase):
     """One full chain on an in-memory hub with the capturing stub, shared by the tests below."""
     @classmethod
     def setUpClass(cls):
-        cls.env = Env().__enter__(); cls.hub = FakeHub(); cls.stub = Capture('reference'); clock = Clock()
+        cls.env = Env().__enter__(); cls.hub = FakeHub(); cls.stub = Capture('reference', variants=True); clock = Clock()    # answers in the tolerated variants
         out = io.StringIO()
         with patch('sys.stdout', out):
             cls.code = chain.run_chain(list(study.STAGES), sr=cls.hub, opener=cls.stub, clock=clock.now, sleep=clock.sleep)
@@ -649,6 +764,9 @@ class Chain(unittest.TestCase):
 
     def test_chain_runs_all_stages_behind_the_gates(self):
         self.assertEqual(self.code, 0); self.assertEqual(self.status['state'], 'completed'); self.assertTrue(self.status['all_stages_done'])
+        w = self.status['stages']['S1']['work']                      # the stub wrote every tolerated variant; all 576 are valid and scored as usual
+        self.assertEqual((w['answers'], self.status['stages']['S1']['valid']), (576, 576))
+        self.assertTrue(all(w[k] > 0 for k in ('value_as_float', 'value_as_string', 'duplicate_sources', 'sources_null', 'extra_keys', 'work_missing', 'work_malformed', 'current_as_string')))
         self.assertEqual({s: self.status['stages'][s]['calls'] for s in study.STAGES}, B['max_calls'])
         self.assertEqual([r['status'] for r in self.hub.rows], ['done'] * 4); self.assertEqual(len(self.stub.bodies), 600)
         self.assertEqual(self.status['ledger']['attempted_calls'], 600); self.assertEqual(self.status['stages']['S1']['headline']['inherited_error_content_minus_metadata'], -0.5)
@@ -660,13 +778,13 @@ class Chain(unittest.TestCase):
         """What actually left the adapter: byte-for-byte the request built from each assignment's
         packet, no evaluator field, and no truth in any cell where no genuine record carries it."""
         sent = collections.Counter(self.stub.bodies)
-        fixtures = study.qualification_fixtures('a') + study.assignments('S1')
+        fixtures = study.qualification_fixtures(QSET) + study.assignments('S1')
         want = collections.Counter(json.dumps(study.request_body(a['packet'])).encode() for a in fixtures)
         self.assertEqual(sent, want); self.assertEqual(sum(sent.values()), 600)
         for raw in sent:
             body = json.loads(raw); text = raw.decode().lower()
             self.assertEqual(tuple(body), provider.BODY_KEYS); self.assertEqual(body['messages'][0]['content'], study.SYSTEM)
-            for word in ('truth', 'expected', 'evaluator', 'false_answer', 'packet_hash', 'qualification', 'r54', 'r55'):
+            for word in ('truth', 'expected', 'evaluator', 'false_answer', 'packet_hash', 'qualification', 'r54', 'r55', 'r56'):
                 self.assertNotIn(word, text)
             self.assertEqual(set(json.loads(body['messages'][1]['content'])), set(sim.PACKET_KEYS))
         for a in fixtures:
@@ -761,7 +879,7 @@ class Gates(unittest.TestCase):
         with self.assertRaises(coordinator.GateRefused): coordinator.enqueue_continuation(hub, 1)          # S1 finished: nothing to continue
         hub.rows[-1]['status'] = 'failed'
         ids = coordinator.enqueue_continuation(hub, 1); row = next(r for r in hub.rows if r['run'] == ids[0])
-        self.assertEqual((row['params']['batch'], row['params']['continuation'], row['params']['stage']), ('s1-001-r1', 1, 'S1'))
+        self.assertEqual((row['params']['batch'], row['params']['continuation'], row['params']['stage']), ('s1-002-r1', 1, 'S1'))
         hub.queue.clear(); row['status'] = 'failed'
         with self.assertRaises(coordinator.GateRefused) as cm: coordinator.enqueue_continuation(hub, 1)
         self.assertEqual(str(cm.exception), 'batch_exists_no_replay')
