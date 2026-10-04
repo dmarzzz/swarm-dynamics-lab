@@ -137,3 +137,10 @@ class RuntimeWindow(unittest.TestCase):
             self.assertEqual(native_run.allocation_time_valid((now+datetime.timedelta(minutes=minutes)).isoformat(),now),expected)
         self.assertIn('timeout=3000',(i.BASE/'launch.py').read_text())
         self.assertIn('deadline=time.time()+3000',(i.BASE/'relay.py').read_text())
+
+class PublicPlanContract(unittest.TestCase):
+    def test_actual_public_plan_schema(self):
+        import importlib.util
+        path=i.BASE.parent.parent/'experiment-documentation/public_plan.py'
+        spec=importlib.util.spec_from_file_location('verification_public_plan',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+        module.validate({'id':'immune-response-v3','description':'TLDR: bounded verification comparison','url':'https://github.com/dmarzzz/swarm-lab/blob/'+'a'*40+'/researchers/vishesh/notes/immune-response-v3/verification-study/PLAN.md'},(i.BASE/'PLAN.md').read_text(),'Verification comparison with explicit guard and paired fresh evidence; fixed outcomes and no swarm population claim.')
