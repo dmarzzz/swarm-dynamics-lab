@@ -23,3 +23,7 @@
 **evidence_confidence:** 0/4 for improved native decisions using this dataset, assessed by vishesh/codex-village-fit on 2026-10-04. Source structure and software tests support feasibility only.
 
 **sample_size_summary:** 0 labeled/evaluated Village episodes; 8,000 privately parsed records across four noncontiguous development prefixes are not 8,000 independent cases. Existing study samples remain separate.
+
+## A10 prospective competence transfer
+
+A10 adopts linked evidence/diagnosis/action/outcome traces, explicit freshness and unknown labels, controlled advice, varied development families and sealed holdout values. The newer Telephone inspection still lacks a historical visibility audit and repair ground truth; it does not establish service-controller competence. All A10 service cases are authored and share generator ancestry. No raw Village source text is used. See the [frozen prospective plan](controller-study/PLAN.md) and [generalizable competence guidance](../../../../tooling/agent-experiments/CONTROLLER-COMPETENCE.md).

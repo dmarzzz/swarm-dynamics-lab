@@ -174,3 +174,5 @@ Theseus v1's local public-plan helper checks immutable URL shape and sections bu
 ## Prospective claim scope
 
 Apply [claim-scoping guidance](CLAIM-SCOPE.md) before implementation: identify the intended inference, independent units, comparator and untested boundaries. If the useful claim needs broader evidence, improve the design prospectively; do not rely on a post-hoc caveat.
+
+For controller or advice-dependent studies, use [controller competence guidance](CONTROLLER-COMPETENCE.md) to distinguish basic evidence use and effective action from the larger collaboration hypothesis. Apply prospectively, with study-specific gates and honest source/holdout provenance.

@@ -1,0 +1,13 @@
+{
+  "model": "anthropic/claude-opus-4.6",
+  "input_usd_per_million": 5,
+  "output_usd_per_million": 25,
+  "max_output_tokens": 512,
+  "max_input_bytes": 8000,
+  "timeout_seconds": 60,
+  "total_api_cap_usd": 8,
+  "qualified_nonreasoning_endpoint": true,
+  "provider": "anthropic",
+  "allow_fallbacks": false,
+  "pricing_verified_date": "2026-10-04"
+}

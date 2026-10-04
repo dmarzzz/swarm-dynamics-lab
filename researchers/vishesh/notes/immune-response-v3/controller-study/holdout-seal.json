@@ -1,0 +1,11 @@
+{
+  "sha256": "86781ebaeef3566ad54da58a2e5fd6d0d18ec736dc1708adda36daff9a23cbea",
+  "count_per_model": 4,
+  "model_cohorts": [
+    "sonnet",
+    "opus"
+  ],
+  "operator_contents_inspected": false,
+  "native_consumed": false,
+  "ancestry": "same authored generator; distinct random values and heldout fault roles"
+}
