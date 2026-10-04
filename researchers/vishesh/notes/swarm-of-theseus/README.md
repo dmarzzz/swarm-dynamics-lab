@@ -1,6 +1,10 @@
 # Swarm of Theseus — SOC-24
 
-Status: prospective exploratory S0/S1 instrument, not an accepted hypothesis or confirmatory study. Owner: vishesh/codex-theseus. Plan written 2026-10-04 UTC before implementation or execution. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates remain closed.
+Status: completed exploratory S0/S1 pilot, not an accepted hypothesis or confirmatory study. Owner: vishesh/codex-theseus. Plan written 2026-10-04 UTC before implementation or execution. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates remain closed.
+
+## Results status
+
+S1 completed 36/36 trajectories with zero failures. Notes and notes plus mentoring each achieved 100% post-turnover task accuracy, versus 52.08% with neither; arbitrary convention survival varied. The predeclared exploratory contrast was +47.92 points (six paired synthetic worlds). See [full results](RESULTS.md), [audit](results/S1-a1/audit.json), and [review history](reviews/S1-a1-post.md). All failed qualification attempts remain preserved. The prospective plan below and its dated amendments are historical; per-run immutable links retain their original versions.
 
 ## TLDR
 

@@ -1,0 +1,59 @@
+{
+  "assigned": 12,
+  "completed": 8,
+  "failed": 4,
+  "by_scenario": {
+    "seed-bank": {
+      "founders": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.875,
+        "convention": 0.16666666666666666
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.9375,
+        "convention": 0.9166666666666666
+      }
+    },
+    "observatory": {
+      "founders": {
+        "n": 2,
+        "completed": 0,
+        "accuracy": 0,
+        "convention": 0
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 0,
+        "accuracy": 0,
+        "convention": 0
+      }
+    },
+    "repair-dock": {
+      "founders": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.625,
+        "convention": 0.0
+      },
+      "verbatim": {
+        "n": 2,
+        "completed": 2,
+        "accuracy": 0.625,
+        "convention": 0.0
+      }
+    }
+  },
+  "qualification_passed": false,
+  "cost": {
+    "calls": 257,
+    "actual_usd": 0.46082700000000004,
+    "input_tokens": 149887,
+    "output_tokens": 62188,
+    "usage_missing": 0
+  },
+  "stage": "S0",
+  "source_commit": "4c1272651eecf4d2ceef3dd6ebd4e473c08be066"
+}

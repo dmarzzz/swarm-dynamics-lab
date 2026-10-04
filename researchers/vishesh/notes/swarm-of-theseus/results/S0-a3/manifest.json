@@ -1,0 +1,92 @@
+{
+  "attempt": "S0-a3",
+  "stage": "S0",
+  "source": "fcee9c26074ec72dfa262ae750812828b983421b",
+  "assignments": [
+    {
+      "scenario": "observatory",
+      "seed": 104,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 105,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 104,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 104,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 104,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 104,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 105,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 104,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 105,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 105,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 105,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 105,
+      "arm": "founders"
+    }
+  ],
+  "source_hashes": {
+    "design.yaml": "b8a56277240c0c133d198412e0d8b3051f788685df2e48c9e9082085763d726a",
+    "README.md": "f15929370c6e046f24c359c0519747287daa9dc9e1d35c40b486c3231452f5b9",
+    "experiment.yaml": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb",
+    "model-config.json": "d519f396a39bcf43c0f85009ea943cc11362571cbd7e2d28855bed68371457b8",
+    "reviews/S0-a1-pre.md": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57",
+    "reviews/S0-a3-pre.md": "87daa9c11c59a0701ec676b4294670110f17bfe6cd0300beea0a7ffdf9bbb1c8",
+    "reviews/S0-a1-post.md": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f",
+    "reviews/S0-a2-post.md": "e2af7b1a87a3484ca90417d1eee0ef82992d1efc812d0dbe7629a2873d85b1b1",
+    "reviews/S0-a2-pre.md": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20",
+    "src/study.py": "b6eeef2d9a1d1f454255f2aa02404d0046bc0155607ce47f74623e8cdd75bbc7",
+    "src/provider.py": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+    "src/audit.py": "90377e26cf3bd71e61d3d0c0387788863544b8e3d6584cab31f54ab21bc98a4e",
+    "src/public_plan.py": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934",
+    "src/analyze.py": "88cc2bd4fd7b932c815fbd1672ea50e8efb364071d34e58664889eb1d68132de",
+    "src/render.py": "99b011d9b47104010e5f0ae2f93d2d317d2153638829cb9c6c728bc0a82c8460",
+    "src/runner.py": "0978722511a2bf9a010929eba947ea87de63115d39b347b34011eb583f8b16a5",
+    "tests/test_study.py": "2e381336730730071141436a704abc01de5b3608b3f432668e216d1d8aa49ac2"
+  },
+  "created_utc": "2026-10-04T01:53:36.231914+00:00",
+  "allocation": "swarm-of-theseus-v1",
+  "claim": "vishesh-swarm-theseus",
+  "host": "sim-shadow",
+  "model": "claude-haiku-4-5-20251001",
+  "process_compliance": "preflight-passed"
+}

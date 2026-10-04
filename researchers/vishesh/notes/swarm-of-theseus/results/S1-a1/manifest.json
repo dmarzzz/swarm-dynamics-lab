@@ -1,0 +1,218 @@
+{
+  "attempt": "S1-a1",
+  "stage": "S1",
+  "source": "a773ff5410442fcf351cfc817550b3fc92a88994",
+  "assignments": [
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "both"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "notes"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "both"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "both"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "both"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "mentor"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "mentor"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "neither"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "founders"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "notes"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "neither"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "both"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "neither"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "neither"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "mentor"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 200,
+      "arm": "notes"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "notes"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "neither"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "founders"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "notes"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "notes"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "mentor"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 201,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 201,
+      "arm": "mentor"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "both"
+    },
+    {
+      "scenario": "observatory",
+      "seed": 201,
+      "arm": "founders"
+    },
+    {
+      "scenario": "seed-bank",
+      "seed": 200,
+      "arm": "founders"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "verbatim"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "neither"
+    },
+    {
+      "scenario": "repair-dock",
+      "seed": 200,
+      "arm": "mentor"
+    }
+  ],
+  "source_hashes": {
+    "design.yaml": "f9b2c293775a375ee23892c7083e08e72b0fb70e6908e65f7e1c6df832aecedc",
+    "DEPLOYMENT.md": "08b3c71484b2ec1f4b30d8d5d0f881da80363f0277d1936602bd451b51325d02",
+    "README.md": "0c69fa227a6ff3fd914b48bc625e4796d297cc7b9d732cfb6484404a6747faa4",
+    "experiment.yaml": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb",
+    "model-config.json": "4b36fd0932680b861f11711321121fc17639c1033286f0ae2b703273bbc53bf0",
+    "reviews/S0-a4-pre.md": "47d0f9d211f01a6ac1e5d975df1e3c54697b4061cf1f2dad8a4daf31621e6dc6",
+    "reviews/S0-a1-pre.md": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57",
+    "reviews/S0-a3-pre.md": "87daa9c11c59a0701ec676b4294670110f17bfe6cd0300beea0a7ffdf9bbb1c8",
+    "reviews/S0-a1-post.md": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f",
+    "reviews/S0-a3-post.md": "ace8e4aa86a06933b26c43193a54e8527bcf95a94afbfd335756ad420a9e859f",
+    "reviews/S0-a4-post.md": "f9721246c556ed48368bae5752630386b71bb11dae5e9b3b9c4f2a4ea8b42aab",
+    "reviews/S0-a2-post.md": "e2af7b1a87a3484ca90417d1eee0ef82992d1efc812d0dbe7629a2873d85b1b1",
+    "reviews/S1-a1-pre.md": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
+    "reviews/S0-a2-pre.md": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20",
+    "src/summary_figure.py": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3",
+    "src/study.py": "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b",
+    "src/provider.py": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+    "src/audit.py": "90377e26cf3bd71e61d3d0c0387788863544b8e3d6584cab31f54ab21bc98a4e",
+    "src/public_plan.py": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934",
+    "src/analyze.py": "0ca0740ba06634bc760a10084f7e36288d93b4b05db7451de34113eab9e70e76",
+    "src/render.py": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976",
+    "src/runner.py": "7586498b7e82d7f4ce0236c58a523f2eb73fad8a3214eaa21b5568c2f6dd5ad3",
+    "tests/test_study.py": "ea2bffbcf690581cd5a375f5d96844ba0aee8359a4ac6e72651c0f3059ca2413"
+  },
+  "created_utc": "2026-10-04T02:09:40.190413+00:00",
+  "allocation": "swarm-of-theseus-v1",
+  "claim": "vishesh-swarm-theseus",
+  "host": "sim-shadow",
+  "model": "claude-haiku-4-5-20251001",
+  "process_compliance": "preflight-passed"
+}
