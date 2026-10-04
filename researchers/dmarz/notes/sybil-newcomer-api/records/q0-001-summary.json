@@ -1,0 +1,70 @@
+{
+  "params": {
+    "stage": "Q0",
+    "backend": "anthropic",
+    "batch": "q0-001",
+    "source_hash": "f38a9658dcb5e403e9dfaeccfd201c603b84d947ed085779374b278ceb4ef943",
+    "code": "996a4af01ebfff3071b88c60914472b171798053"
+  },
+  "planned": 36,
+  "started": 36,
+  "terminal": 36,
+  "graded": 36,
+  "analyzed": 36,
+  "invalid": 0,
+  "not_started": 0,
+  "model_calls": 36,
+  "cost_usd": 0.04356,
+  "input_tokens": 36360,
+  "output_tokens": 1440,
+  "elapsed_seconds": 21.5276234869998,
+  "qualification": {
+    "cells": [
+      {
+        "shape": "full",
+        "count": 12,
+        "expected": 12,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1,
+        "passed": true
+      },
+      {
+        "shape": "common_only",
+        "count": 12,
+        "expected": 12,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      },
+      {
+        "shape": "sparse",
+        "count": 12,
+        "expected": 12,
+        "fact_accuracy": 1.0,
+        "exact_packet_rate": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true
+      }
+    ],
+    "passed": true
+  },
+  "study_accounting": {
+    "attempted_calls": 36,
+    "reserved_usd": 0.337581,
+    "actual_usd": 0.04356,
+    "usage_reported_calls": 36
+  },
+  "initial_study_accounting": {
+    "attempted_calls": 0,
+    "reserved_usd": 0.0,
+    "actual_usd": 0.0,
+    "usage_reported_calls": 0
+  },
+  "reporting_errors": [],
+  "visualization": {
+    "mapping": "v1",
+    "frames": 9
+  }
+}

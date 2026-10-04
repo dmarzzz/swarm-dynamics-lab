@@ -1,0 +1,18 @@
+{
+  "stage": "Q0",
+  "source_hash": "f38a9658dcb5e403e9dfaeccfd201c603b84d947ed085779374b278ceb4ef943",
+  "assignments": 36,
+  "rows": 36,
+  "invalid": 0,
+  "worlds": 0,
+  "world_rounds": 0,
+  "history_records": 0,
+  "all_assignments_worlds_history_packets_grades_and_analysis_match": true,
+  "accounting_reconciled": true,
+  "gif_frames": 9,
+  "final_size": [
+    1800,
+    1200
+  ],
+  "note": "All science recomputed from frozen runtime; no model calls. Playback in public browser is a separate deployment check."
+}

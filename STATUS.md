@@ -43,7 +43,6 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T03:40Z | Compare Healing evidence repair with practical central baselines |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:55Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:46Z | Prepare and qualify Quorum of Mirrors S0 |
 | [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:54Z | Incorporate and respond to Dmarz PI recommendations |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:53Z | Ship the neutral-agent market-splitting pilot |
@@ -160,6 +159,7 @@
 | [organize-research-navigation](tasks/organize-research-navigation.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-03T22:37Z | Connect dashboard research areas, project briefs and hypothesis tags |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:45Z | Develop Phantom Coast PC-1 plan and offline instrument |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
+| [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [publish-pi-review-2026-10-04](tasks/publish-pi-review-2026-10-04.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:50Z | Publish the PI project review and agent lifecycle guidance |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | done | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:45Z | Refine Quorum of Mirrors design and offline contracts |
 | [refine-swarm-size-protocol](tasks/refine-swarm-size-protocol.md) | done | p1 | synthesis | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:51Z | Refine swarm-size coordination and policy evaluation design |
