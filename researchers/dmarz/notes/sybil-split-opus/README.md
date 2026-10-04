@@ -5,11 +5,11 @@
 
 Assessed 2026-10-04 by dmarz/pipeline-split; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks. Basis: Unrun. Plan and frozen design only; no stage has run on a server and no model call has been made.
+- **evidence_confidence:** **0/4** — Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks. Basis: Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made.
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic roots in each of two graph families × 56 conditions = 2,688 S1 calls at 108 honest simulated identities and one synthesizer; separate Q0 of 60 calls on 10 roots and a one-call probe. Roots are the independent units, not calls or identities.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a prospective plan and, once the code lands, a launch-ready package. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline.
+**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests, runbook and a pre-run review. No stage of this study has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-split on 2026-10-04 for the pipeline lead dmarz/pipeline.
 
 It is successor 3 of [the next-experiments note](../next-experiments-2026-10-04/README.md) ("Identity splitting with fixed attacker resources") and extends the instrument of [sybil-scale-api](../sybil-scale-api/README.md) in the Opus 5.5 form used by [sybil-scale-xl](../sybil-scale-xl/README.md). It follows the [ready-chain contract](../pipeline/READY-CHAIN.md). This is a hunch-level study in researcher notes, not an accepted hypothesis. It makes no novelty or superiority claim. S2 is disabled.
 
@@ -44,7 +44,7 @@ The scripted value depends on one modelling choice stated under Setup: the attac
 - `ring`: the sybil-scale-api construction with every identity honest. Two core rings of 27 and two outside rings of 27, joined by degree-preserving bridge swaps.
 - `community`: a degree-matched planted partition written for this study. Each block is a random regular graph drawn by degree-preserving edge switching from a lattice start; bridges are made by the same kind of swap. Both halves use the same drawn graphs, so the two outside groups are exchangeable by a graph automorphism and have identical observable profiles.
 
-**The attacker and what is held fixed.** One attacker owns 27 resource units. Unit r is one fabricated report row (rare skill r mod 3, the root's fabricated value for that skill: the true value plus or minus 7, sign drawn per root), one attachment edge to a fixed honest identity (one ordered draw of 27 distinct non-anchor honest identities per root) and one verification attempt (a pre-drawn uniform number; a check of an attacker identity passes when the number is below the attacker pass rate). With k identities, identity j holds units j·27/k to (j+1)·27/k − 1. Its name, age and activity are those drawn for its first unit, and a check of it uses its first attempt. Across k within a root the 27 rows, the 27 honest endpoints of the attachment edges, the 27 attempt draws, the honest world, the honest check draws and the 54 seats are identical; this is asserted in code for every root of the scripted stage. Attacker ages and activities are drawn from the honest specialists' profiles, and attacker names come from the same shuffled pool as honest names.
+**The attacker and what is held fixed.** One attacker owns 27 resource units. Unit r is one fabricated report row (rare skill r mod 3, the root's fabricated value for that skill: the true value plus or minus 7, sign drawn per root), one attachment edge to a fixed honest identity (one ordered draw of 27 distinct non-anchor honest identities per root) and one verification attempt (a pre-drawn uniform number; a check of an attacker identity passes when the number is below the attacker pass rate). With k identities, identity j holds units j·27/k to (j+1)·27/k − 1. Its name, age and activity are those drawn for its first unit, and a check of it uses its first attempt. Across k within a root the 27 rows, the 27 honest endpoints of the attachment edges, the 27 attempt draws, the honest world, the honest check draws and the 54 seats are identical; this is asserted in code for every engineering root in the scripted stage and for every comparison root before the first S1 call. Attacker ages and activities are drawn from the honest specialists' profiles, and attacker names come from the same shuffled pool as honest names.
 
 | Resource | Total at every k | Per identity at k = 1, 3, 9, 27 | How it is represented |
 |---|---|---|---|
@@ -66,7 +66,7 @@ A consequence a reader should keep in mind: at k below 27 an identity that carri
 
 ## Protocol
 
-[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md).
+[Pre-registration](preregistration.md), [design](design.yaml), [setup record](SETUP.md), [runbook](RUN.md), [visual mapping](VISUALIZATION.md), [pre-run review](reviews/chain-001-pre.md), [launcher summary](READY.yaml), [assignment manifest](manifest.json).
 
 | Stage | Batch | Calls | What it does | Passes when |
 |---|---|---|---|---|
@@ -98,7 +98,7 @@ Uncertainty: roots are the independent units. Intervals are percentile intervals
 - The verification-attempt budget does not bind, and attacker-internal links are free (both above).
 - Identity counts are counts of simulated identities, not of model workers. Each condition is one synthesizer call.
 - 24 roots per family are development-sized. The study is not powered for small differences.
-- Many packets of a root are identical across check strengths or identity counts (for example when no attacker identity is checked or admitted). Differences between such cells are model variability; the count of repeated packets and of identical answers is reported.
+- Many packets of a root are identical across check strengths (when no attacker identity is checked, the attacker pass rate changes nothing): 1,554 of the 2,688 S1 assignments fall in 767 such groups, and there are 1,901 distinct packets. Differences between such cells are model variability; the count of repeated packets and of identical answers is reported.
 
 ## Results
 

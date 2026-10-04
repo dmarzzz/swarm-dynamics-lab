@@ -2005,16 +2005,17 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks.",
-        "rationale": "Unrun. Plan and frozen design only; no stage has run on a server and no model call has been made."
+        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made."
       },
       "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots in each of two graph families \u00d7 56 conditions = 2,688 S1 calls at 108 honest simulated identities and one synthesizer; separate Q0 of 60 calls on 10 roots and a one-call probe. Roots are the independent units, not calls or identities.",
       "sources": [
         "researchers/dmarz/notes/sybil-split-opus/README.md",
         "researchers/dmarz/notes/sybil-split-opus/preregistration.md",
         "researchers/dmarz/notes/sybil-split-opus/design.yaml",
-        "researchers/dmarz/notes/sybil-split-opus/experiment.yaml"
+        "researchers/dmarz/notes/sybil-split-opus/experiment.yaml",
+        "researchers/dmarz/notes/sybil-split-opus/reviews/chain-001-pre.md"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "prepared_unrun"
     },
     {
       "id": "poietic-agents",
