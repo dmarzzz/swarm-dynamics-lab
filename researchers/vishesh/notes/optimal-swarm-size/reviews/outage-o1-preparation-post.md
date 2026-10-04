@@ -1,0 +1,11 @@
+# O1 preparation closeout — no native attempt
+
+The outage emulator and bounded OpenRouter runner are built and pushed.22 prototype checks pass locally and on the exact clean worker source;68 shared study checks pass after the Q-A7 route amendment. Offline reference fixtures all recover; this is software evidence, not Haiku competence. The saved-state replay shows initial outage, tick2 failover/stale repair rejection and recovery. The public experiment page visibly renders the immutable plan/TLDR and correctly shows0runs.
+
+Execution: planned O1 schedule12, assigned0, started0, graded0, model calls0. Q-A7 remains planned8/started0. Scientific outcomes and route health are unknown. No API credential relay was started. The source ledger remains unchanged:631historical calls, USD1.810840 settled, USD0.220480 held, USD2.031320 exposure within original20. No additional spend or machine creation.
+
+Automatic platform review rejected the proposed handoff because changing the canonical accounting path was not specifically authorized. The rejected action was not executed. The concrete handoff preserves a read-only original archive, fences the old write path, transfers all database rows/settings, verifies hash/totals and establishes exactly one writable destination. A scoped owner approval is pending. Do not work around this rejection with a copied/new ledger or dispatch on another study's claimed worker.
+
+[Eleven-dimension scientific preparation assessment](../results/outage-o1-preparation/scientific-assessment.json) is the owning agent's review. Capability remains unknown and resource admission has a gap; all passes are explicitly within preparation scope. The generated operational closeout is not independent scientific validation. No run or model effect is claimed.
+
+After the specific approval, recheck claim/account/idle processes, verify no open original ledger handles, perform the authorized audited handoff, refresh immutable runtime/public admission and start O1. Advance to its optional demonstration only at the declared competence gate. Q-A7 follows only if O1 is operationally healthy, with separate exact route/plan/ledger admission. Any native failure receives its own trace diagnosis and post-mortem. No automatic new science or broader N sweep.

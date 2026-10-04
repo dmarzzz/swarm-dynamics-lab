@@ -1,0 +1,134 @@
+{
+  "assessor": "vishesh/codex-idea-scores",
+  "date": "2026-10-04",
+  "attempt": "outage-o1-preparation",
+  "scope": "Preparation review only, no native attempt or scientific outcome",
+  "decision": "blocked",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Scoped instrument/competence question and outcome-dependent decisions are prospective.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+          "sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four operational emulator mechanisms with explicit synthetic-development limits; no population generalization.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+          "sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Offline stable/change, stale/unsafe and strong deterministic reference checks pass; no native manipulation evidence yet.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/validation/offline.json",
+          "sha256": "eb7b8f3c593bb62071934178f1d65328303eb914a2ab5d0b0b2a5e393c9d6b59"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No native agent has run this interface. Offline success is not model competence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1-preparation/status.json",
+          "sha256": "9fb8cfa70e5d6c274a830ad0eef3e9c7985b4cdb02bf299cda794ebf3fedc72d"
+        }
+      ],
+      "next_action": "Resolve the specific ledger-handoff approval and refresh admission before native qualification.",
+      "acceptance_check": "Approved single-writer handoff preserves every historical row and hold; admitted four-episode qualification satisfies the prospective threshold."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Independent final-state checker and negative mutations validated; no native endpoint estimated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/validation/offline.json",
+          "sha256": "eb7b8f3c593bb62071934178f1d65328303eb914a2ab5d0b0b2a5e393c9d6b59"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Four qualification mechanisms; optional demonstration is one template block and descriptive only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/PLAN.md",
+          "sha256": "01dd3479220032404af6c34f1e9050d490d1604dce18cde2c42fa260c3b25999"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Fixed rolling memory, public-only board, schema and route specified and offline tested; delivered native context absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/validation/offline.json",
+          "sha256": "eb7b8f3c593bb62071934178f1d65328303eb914a2ab5d0b0b2a5e393c9d6b59"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Preparation records planned12/assigned0/started0, zero paid calls; no failed task scores manufactured.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1-preparation/status.json",
+          "sha256": "9fb8cfa70e5d6c274a830ad0eef3e9c7985b4cdb02bf299cda794ebf3fedc72d"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Original ledger untouched; platform rejected canonical-path migration pending specific authorization. No duplicate budget created.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1-preparation/status.json",
+          "sha256": "9fb8cfa70e5d6c274a830ad0eef3e9c7985b4cdb02bf299cda794ebf3fedc72d"
+        }
+      ],
+      "next_action": "Resolve the specific ledger-handoff approval and refresh admission before native qualification.",
+      "acceptance_check": "Approved single-writer handoff preserves every historical row and hold; admitted four-episode qualification satisfies the prospective threshold."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Committed source installed clean;22 worker tests and68 shared route regressions. Frozen plan verified publicly.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/results/outage-o1-preparation/status.json",
+          "sha256": "9fb8cfa70e5d6c274a830ad0eef3e9c7985b4cdb02bf299cda794ebf3fedc72d"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Scripted saved-state replay inspected at initial, failover and final ticks; public page visibly shows plan and0runs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/optimal-swarm-size/outage-prototype/validation/offline.json",
+          "sha256": "eb7b8f3c593bb62071934178f1d65328303eb914a2ab5d0b0b2a5e393c9d6b59"
+        }
+      ]
+    }
+  ]
+}
