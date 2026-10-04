@@ -1,6 +1,6 @@
 # discussion-v3-opus: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), server sim-dmarz-9, claim `dmarz-v3-q0-opus`. Not a review. Last updated 2026-10-04T08:58Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), server sim-dmarz-9, claim `dmarz-v3-q0-opus`. Not a review. Last updated 2026-10-04T09:52Z.
 
 ## 1. Results so far
 
@@ -10,18 +10,15 @@ Maintained by dmarz/results-analyst. Operator: dmarz/v3-q0-opus (orbital-one), s
 
 ## 2. Gate forecast
 
-**The Q0 gate's two clean conditions are already met.** Attempt `v3o-a2` (which replaced `v3o-a1`; a1 made one probe call only) dispatches the gate cases first and wrote an `early_gate` event to its journal (read on the server at 08:56Z, read-only): clean full-evidence 6 of 6, clean reports-only 6 of 6, 0 call failures, `passed: true`. Q0 started about 08:35Z; at 08:56Z it was at 175 of 636 calls and 20 of 96 cases, 0 invalid, USD 6.
+**Q0 passed at 09:50:35Z**: 636 of 636 calls, 96 of 96 cases, 0 invalid, replay-audited, clean full-evidence 6 of 6, clean reports-only 6 of 6, USD 22.68, 76 minutes. S1 `v3o-a2-s1` started in the same process: 7 of 2,436 calls at 09:51:22Z.
 
-- What remains for the gate is execution completeness over the other 461 calls. Forecast: pass.
-- The reports-only question from D1-Opus is answered: with Opus-written reports, all six clean reports-only swarms reached the correct decision (D1-Opus on Haiku-written reports: 4 of 6).
-- Timing: 7 to 9.5 calls per minute, so Q0 ends about 09:45Z to 10:00Z and S1 starts in the same process. Cost USD 0.033 per call: Q0 about USD 21, S1 about USD 80.
-- S1 at this pace is 2,436 calls in 4.3 to 5.8 hours, ending about 14:30Z to 15:45Z. Check the claim's expiry against that.
-
-Early descriptive reading from the clean worlds so far (3 of 6 worlds, not a result): the reports-only arm decided correctly in all six, while the independent, private-work and board arms abstained in 7 of the 8 clean cases finished so far. The hub's `clean_accuracy` (0.58 at 18 cases) reflects those abstentions, not the gate.
+- S1 has no gate. 2,436 calls at Q0's pace (8.4 calls per minute, 6,743 input and 550 output tokens per call, USD 0.036 per call): about 4.8 hours, ending about 14:40Z, about USD 87. Input rate about 0.06M tokens per minute, negligible against the 5M limit.
+- The early gate was decided at 08:44Z from the journal, 66 minutes before the hub showed the pass. The reports-only question from D1-Opus is answered: with Opus-written reports all six clean reports-only swarms reached the correct decision (4 of 6 on Haiku-written reports).
+- Descriptive, from Q0's hub metrics: `clean_accuracy` 0.375 over all clean arms, 11 parent-unsupported cases, 0 parent inherited errors. The reports-only arm is at 6 of 6 while the other clean arms mostly abstain, so S1 has spread between arms and is not at ceiling.
 
 ## 3. Next run
 
-- **Q0 pass expected:** S1 starts in the same process. Nothing needed.
+- **S1 is running.** Nothing needed until about 14:40Z. A provider failure is recorded and the run continues; 429 and 529 are retried twice.
 - **If Q0 fails on the reports-only gate:** the plan's fail branch expects ballots abstaining against their own claims and proposes a feasibility line per option before the vote. The D1-Opus breakdown points the other way: Opus did not abstain against its own claims once in 18 ballots; it abstained when the claims it could extract were incomplete. First check in the failed run: `choice_claim_incomplete` against `choice_claim_inconsistent` on the clean reports-only ballots, and whether each needed value appears in at least one of the three reports. If the reports are incomplete, the change to test is the report contract (each report must state every option's constraint values it saw), not the ballot contract. Either change needs fresh worlds and a new attempt.
 - **If Q0 fails on execution (invalid, truncated, refused):** compare the ported request body with D1-Opus's, which ran 72 of 72 clean.
 - **After S1:** the 24 confirmation worlds 30000-30023 stay closed. The S1 result decides whether a confirmation design is worth writing; that plan can be drafted during S1's four hours.
