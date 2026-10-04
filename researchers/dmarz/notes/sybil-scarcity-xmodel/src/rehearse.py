@@ -63,29 +63,37 @@ class Stub:
         with self.lock: self.out_of_credit = False; self.credit_after = None
 
     def __call__(self, request, timeout=None):
-        if request.full_url != provider.URL:
+        mod = study.route()
+        if request.full_url != mod.URL:
             raise AssertionError('the rehearsal stub only answers the provider endpoint')
         body = json.loads(request.data)
         d = study.spec()
-        if tuple(body) != provider.BODY_KEYS or {k: body[k] for k in body if k != 'messages'} != d['request_template'] \
+        if tuple(body) != mod.BODY_KEYS or {k: body[k] for k in body if k != 'messages'} != d['request_template'] \
                 or [m['role'] for m in body['messages']] != ['system', 'user']:
-            raise urllib.error.HTTPError(provider.URL, 400, 'bad request', {}, io.BytesIO(b'{"error":{"message":"unexpected parameter"}}'))
+            raise urllib.error.HTTPError(mod.URL, 400, 'bad request', {}, io.BytesIO(b'{"error":{"message":"unexpected parameter"}}'))
         with self.lock:
             if self.credit_after is not None and self.answered >= self.credit_after: self.out_of_credit = True
             if self.out_of_credit:
                 self.refused += 1
-                raise urllib.error.HTTPError(provider.URL, 402, 'payment required', {},
+                raise urllib.error.HTTPError(mod.URL, 402, 'payment required', {},
                                              io.BytesIO(b'{"error":{"code":402,"message":"Insufficient credits. Add more to continue."}}'))
             self.answered += 1
         answer = study.scripted(json.loads(body['messages'][1]['content']))
         if self.mode == 'never_abstain':
             answer = {'values': {k: (0 if v is None else v) for k, v in answer['values'].items()}}
         tokens = int(len(request.data) * 0.45)
+        if mod is provider:
+            return Response(json.dumps({
+                'id': 'gen-rehearsal', 'model': d['canonical_model'], 'provider': 'Alibaba', 'object': 'chat.completion',
+                'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer)}}],
+                'usage': {'prompt_tokens': tokens, 'completion_tokens': 40, 'total_tokens': tokens + 40,
+                          'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
+        # OpenAI Chat Completions shape; reasoning at effort low is billed as output (stub: 300 of 340)
         return Response(json.dumps({
-            'id': 'gen-rehearsal', 'model': d['canonical_model'], 'provider': 'Alibaba', 'object': 'chat.completion',
-            'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer)}}],
-            'usage': {'prompt_tokens': tokens, 'completion_tokens': 40, 'total_tokens': tokens + 40,
-                      'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
+            'id': 'chatcmpl-rehearsal', 'model': d['canonical_model'], 'object': 'chat.completion',
+            'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
+            'usage': {'prompt_tokens': tokens, 'completion_tokens': 340, 'total_tokens': tokens + 340,
+                      'completion_tokens_details': {'reasoning_tokens': 300}, 'prompt_tokens_details': {'cached_tokens': 0}}}).encode())
 
 
 class FakeClock:
@@ -136,7 +144,7 @@ def chain_once(label, stub, hub_dir, base, sr, then_resume=False):
     os.environ.update(SWARM_HUB_URL=require_local(url), SWARM_HUB_TOKEN=token, SWARM_SOURCE='dmarz/pipeline-scarcity-qwen-rehearsal',
                       SWARM_SPOOL=str(work / 'spool'), STUDY_RESULTS_DIR=str(work / 'results'),
                       STUDY_BUDGET_LEDGER=str(work / 'ledger' / 'ledger.jsonl'))
-    os.environ[provider.KEY_ENV] = 'rehearsal-stub-not-a-credential'
+    os.environ[study.route().KEY_ENV] = 'rehearsal-stub-not-a-credential'
     require_local(sr._config().get('SWARM_HUB_URL'))
     started = time.monotonic(); clock = FakeClock(); result = {'label': label, 'stub': stub.mode}
     try:
@@ -163,7 +171,10 @@ def main():
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     ap.add_argument('--hub-dir', required=True); ap.add_argument('--keep', action='store_true', help='keep the temporary directory')
     ap.add_argument('--tmp', help='parent directory for the temporary files')
+    ap.add_argument('--model', help='ladder model to rehearse (sets STUDY_MODEL; default the first)')
     a = ap.parse_args()
+    if a.model: os.environ['STUDY_MODEL'] = a.model
+    study.model()                                              # refuses a model outside the ladder
     hub_dir = Path(a.hub_dir).resolve()
     if not (hub_dir / 'hub.py').is_file() or not (hub_dir / 'swarm_report.py').is_file():
         raise SystemExit('--hub-dir must hold hub.py and swarm_report.py')
@@ -193,7 +204,7 @@ def main():
         'b_stopped_at_Q0': gate.get('stopped_stage') == 'Q0' and gate.get('reason') == 'gate_failed',
         'b_no_S1_run_on_hub': all(not str(x).startswith('s1') for x, _ in gate.get('hub_runs', [('s1', '')])),
         'b_only_qualification_calls': gate.get('stub_answered') == q,
-        'c_stop_exit_3': bill.get('exit') == 3 and bill.get('reason') == provider.BILLING_STOP and bill.get('stopped_stage') == 'S1',
+        'c_stop_exit_3': bill.get('exit') == 3 and bill.get('reason') == study.route().BILLING_STOP and bill.get('stopped_stage') == 'S1',
         'c_nothing_failed_at_stop': (bill.get('stages') or {}).get('S1', {}).get('failed') == 0
                                     and (bill.get('stages') or {}).get('S1', {}).get('valid') == 150
                                     and (bill.get('stages') or {}).get('S1', {}).get('billing_pauses') == 1,

@@ -120,6 +120,29 @@ def model():
     return m
 
 
+def route(m=None):
+    """The reference adapter module of a model's route: provider.py (OpenRouter) or openai_provider.py
+    (OpenAI). Both expose Ledger, CallFailure, INTEGRITY, BILLING_STOP, LEDGER_ENV and call()."""
+    api = spec(m)['api']
+    if api == 'openrouter':
+        import provider
+        return provider
+    if api == 'openai':
+        import openai_provider
+        return openai_provider
+    raise ValueError('unknown_api')
+
+
+def make_backend(ledger, config, opener=None, clock=None, sleep=None, m=None):
+    import time
+    mod = route(m)
+    cls = mod.OpenRouter if mod.__name__ == 'provider' else mod.OpenAI
+    return cls(ledger, config, opener, clock or time.monotonic, sleep or time.sleep)
+
+
+BILLING_STOPS = ('provider_credit_balance_low', 'provider_billing_stopped')
+
+
 def spec(m=None):
     return design()['models'][m or model()]
 
@@ -154,8 +177,11 @@ def budget(m=None):
 
 def adapter_config(m=None):
     s = spec(m)
-    return {'model': m or model(), 'canonical_model': s.get('canonical_model'), 'provider': s.get('provider'),
-            'request_template': s.get('request_template'), 'request': s.get('request'), 'budget': budget(m)}
+    c = {'model': m or model(), 'canonical_model': s.get('canonical_model'), 'request_template': s.get('request_template'),
+         'budget': budget(m)}
+    if s.get('provider'):
+        c['provider'] = s['provider']
+    return c
 
 
 def results_dir():

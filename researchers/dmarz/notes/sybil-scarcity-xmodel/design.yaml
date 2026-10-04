@@ -38,16 +38,31 @@ models:
   gpt-6-sol:
     tag: sol
     api: openai
-    # Not yet runnable: the reference OpenAI adapter (dmarz/openai-route) and the verified price
-    # table are added in a later code commit, which changes the source hash. Until then selecting
-    # this model is refused (model_not_ready). Fixed now: reasoning_effort low (recorded in every
-    # row), max_completion_tokens 2000, JSON-object mode, 2 requests in flight.
-    ready: false
-    request:
+    # Added in the second code commit with the reference OpenAI adapter (main 8290d7ad). The values
+    # pre-registered in the first commit are unchanged: reasoning_effort low (recorded in every row),
+    # max_completion_tokens 2000, JSON-object mode, 2 requests in flight, cap USD 150.
+    canonical_model: gpt-6-sol
+    request_template:              # the reference OpenAI adapter's body: exactly these keys plus messages
+      model: gpt-6-sol
       reasoning_effort: low
       max_completion_tokens: 2000
       response_format:
         type: json_object
+    budget:
+      aggregate_usd: 150           # set by dmarz/fleet-monitor (about 1.6x the expected cost)
+      max_output_tokens: 2000      # visible plus reasoning tokens
+      max_input_tokens: 50000      # sanity ceiling (0.87 tokens per byte of the largest request); Opus measured 23,373 tokens per packet
+      reservation_margin: 2        # cost is computed from the pinned prices, so the byte bound already holds
+      retry:
+        transport_retries: 2
+        retryable_http_status: [429, 500, 502, 503, 504]
+        backoff_seconds: [2, 6]
+        retry_after_cap_seconds: 20
+      prices:                      # the reference adapter's PRICES row (standard tier, retrieved 2026-10-04T12:10Z)
+        input: 2.0
+        cached_input: 0.2
+        cache_write: 2.5
+        output: 10.0
 parent:
   study: sybil-scarcity-opus
   # SHA-256 of the parent's files on main. S0 refuses to pass unless they are unchanged.

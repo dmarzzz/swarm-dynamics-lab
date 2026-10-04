@@ -19,9 +19,14 @@ from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
 
 import analyze
+import openai_provider
 import provider
 import render
 import study
+
+# Failure types and integrity categories of both reference adapters (each chain uses one of them).
+FAILURES = (provider.CallFailure, openai_provider.CallFailure)
+INTEGRITY = set(provider.INTEGRITY) | set(openai_provider.INTEGRITY)
 
 ARTIFACTS = ('final_frame.png', 'initial_frame.png', 'progress.png', 'replay.gif', 'assignments.jsonl.gz',
              'episodes.jsonl.gz', 'audits.jsonl.gz', 'summary.json', 'analysis.json')
@@ -69,13 +74,6 @@ def row_base(a, p, run_name):
     return r
 
 
-def make_backend(api, ledger, config, opener, clock, sleep):
-    """The adapter of the model's route. Each adapter is a reference copy covered by the source hash."""
-    if api == 'openrouter':
-        return provider.OpenRouter(ledger, config, opener, clock, sleep)
-    raise RuntimeError('adapter_not_available:' + api)
-
-
 def merge(prior_rows, rows):
     """One row per unit: a continuation's row replaces the earlier not-started row of the same unit."""
     latest = {r['id']: r for r in prior_rows or []}
@@ -105,13 +103,13 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
     ledger = None
     if p['backend'] != 'scripted':
         path = os.environ.get(provider.LEDGER_ENV); assert path, 'persistent_budget_required'
-        path = study.ledger_path(path)
+        path = study.ledger_path(path); route = study.route()
         # A continuation runs under the unchanged caps: the ledger voided the reservations of the calls
         # a billing stop left unanswered, and a continuation batch shares its original batch's allowance.
         config = study.adapter_config()
         assert total <= config['budget']['max_calls'][stage], 'assignments_exceed_stage_call_cap'
-        ledger = provider.Ledger(path, config['budget'])
-        backend = backend or make_backend(p['backend'], ledger, config, opener, clock or time.monotonic, sleep or time.sleep)
+        ledger = route.Ledger(path, config['budget'])
+        backend = backend or study.make_backend(ledger, config, opener, clock, sleep)
     initial = ledger.transact() if ledger else {}
     rows = state['rows']; reporting_errors = []
     control = {'reason': 'invariant_violations' if violations and not strict else None, 'failed': 0}
@@ -129,7 +127,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
                 answer, accounting = backend.call(study.SYSTEM, study.user_text(a['packet']), p['batch'] + ':' + a['id'], study.validate)
             r.update(answer=answer, accounting=accounting, evaluation=study.evaluate(a, answer),
                      reference_evaluation=study.evaluate(a, study.scripted(a['packet'])), status='completed')
-        except provider.CallFailure as exc:
+        except FAILURES as exc:
             r.update(error=exc.category, accounting=exc.accounting)
         except Exception as exc:
             r.update(error='internal_' + type(exc).__name__, accounting={})
@@ -154,10 +152,10 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
                     pending.pop(f); r = f.result()
                     if r['status'] != 'completed':
                         category = r['error']
-                        if category == provider.BILLING_STOP:
+                        if category in study.BILLING_STOPS:
                             # not a model outcome: the unit is not started and can be resumed
-                            r['status'] = 'not_started'; stopped = True; control['reason'] = provider.BILLING_STOP
-                        elif category in provider.INTEGRITY or category == 'stage_deadline' or category.startswith('internal_'):
+                            r['status'] = 'not_started'; stopped = True; control['reason'] = category
+                        elif category in INTEGRITY or category == 'stage_deadline' or category.startswith('internal_'):
                             control['failed'] += 1; stopped = True; control['reason'] = control['reason'] or 'integrity_failure:' + category
                         else:
                             control['failed'] += 1
@@ -207,7 +205,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
                'not_started': sum(r['status'] == 'not_started' for r in rows),
                'errors': sorted({r['error'] for r in rows if r.get('error')}), **t, **billing,
                'max_failed': None if strict else budget['max_failed'], 'stop_reason': control['reason'],
-               'resumable': int(stage == 'S1' and control['reason'] == provider.BILLING_STOP),
+               'resumable': int(stage == 'S1' and control['reason'] in study.BILLING_STOPS),
                'elapsed_seconds': time.monotonic() - start,
                'qualification': study.qualification(rows) if stage in ('S0', 'Q0') else None, 'model': p['model'],
                'probe': probe, 'max_tokens_per_byte': tokens_per_byte(rows),
