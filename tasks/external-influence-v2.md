@@ -3,14 +3,16 @@ id: external-influence-v2
 type: task
 title: Build expanded external-influence procurement pilot
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-experiments
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T00:34Z
+updated: 2026-10-04T00:34Z
 ---
 
 ## Goal
