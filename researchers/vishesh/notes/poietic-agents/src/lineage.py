@@ -100,6 +100,7 @@ def run_lineage(engine, assigned, backend, qualified, clock=time.monotonic, slee
                 try:
                     checked=backend(actor.model,sections,choices,call_id)
                     event['receipt']=checked;action=checked['action'];status='started'
+                    engine._remember(actor,dict(metered_model_call=call_id,usage=checked['usage'],model_role=actor.model))
                     result=engine.dispatch(actor_id,action,task)
                     if action['type']=='answer':answer=result;status='answered';break
                 except (ValueError,PermissionError,KeyError,TypeError,TimeoutError) as exc:
@@ -131,6 +132,7 @@ def run_lineage(engine, assigned, backend, qualified, clock=time.monotonic, slee
                 calls.append(event);emit(event)
                 try:
                     checked=backend(actor.model,sections,choices,call_id);event['receipt']=checked;action=checked['action']
+                    engine._remember(actor,dict(metered_model_call=call_id,usage=checked['usage'],model_role=actor.model))
                     if set(action)!={'type','operation','payload'} or action['type']!='propose':raise ValueError('proposal_shape')
                     result=engine.propose(actor_id,epoch,call_id,action['operation'],action['payload'],qualified)
                     emit(result)

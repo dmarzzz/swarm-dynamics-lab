@@ -1,6 +1,6 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T06:41:40.696466+00:00",
+  "checked_utc": "2026-10-04T06:49:50.441625+00:00",
   "assessor": "vishesh/codex-heterogeneous",
   "scope": "same-author offline software validation, not independent code review or model evidence",
   "tests_passed": 54,
@@ -21,10 +21,10 @@
     "src/admission.py": "f451c1885607862d86780052cf2e0fcd0c41c2a22fafead7da786175188d98e8",
     "src/budget.py": "bde3cfd6270cfbd8392383316c48a8eb84431d345518502ddcb5fb8d7d1d339b",
     "src/common.py": "e3f39d17d06f89c93b78edcb1c0ca12c1ab6be5601d49f312d1a4e7cb6a71027",
-    "src/engine.py": "c64062fd141d01351f336efdd92eac45a3c44e407350e74bcadc1773bd7503e5",
+    "src/engine.py": "bbaa579cfa275fdd6ebbc2da0461cc89ab96ec38dc353431ed8d0aeba18167f4",
     "src/evaluator.py": "a05ecdf438322ddf2325e590c583e9631e3b271c12dad0dc0ae8226a93093a44",
     "src/launch.py": "6a34456a96541861eaf77b0e8a12ff16e210efa99d46f35ca487ac9972e06b39",
-    "src/lineage.py": "3ffeb15a3c708ae63cc2b7951b5b4a3b1ac6748bcf0b975aeda639d61e277ce6",
+    "src/lineage.py": "a2500040ed30ee029b5e4e10aa1aac99b28dd80ac3adc4a9178af4ba919963c9",
     "src/native.py": "07b2b6b08e8e0ad2d2eb4ee832befc2be6d2b4a6dc06c8591889209535e8987a",
     "src/operators.py": "e728ceb4820564ae8eac1335237b03bd641628e0b50ab8391dbc1ed38a136fe5",
     "src/prepare.py": "2b37b54e791406763bbe6eca5e0ba764361afa9b07b45e9239c4c194984267a7",
@@ -32,7 +32,7 @@
     "src/relay.py": "f8a8006649afe3446508316c86afc39ebe589e9191569ed9fb3c9e1fae312f94",
     "src/render.py": "c420fbe18ba8b029797974bfceff8cc5db849060f68b901ec7803f3954cef8cb",
     "src/world.py": "f8be5acb5260f5edb0bda93a354facde9d89a3fa340ec75f1bb217c90c26e1bb",
-    "tests/test_instrument.py": "6957e169d0642f34a2cdade41f96c911cd6526d450c8f5b5f6372e803a4e8fca"
+    "tests/test_instrument.py": "8c3c1618b752dfe1fb0d07d168439511a91f9f91f08f33a5dc40c0c5e32c1b01"
   },
   "assignment_count": 144,
   "assignment_sha256": "e960ce96ad56e31c488de181f857b6dc334e3922ed252312407024e3f73fb6c7",
