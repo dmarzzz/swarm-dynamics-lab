@@ -183,6 +183,16 @@ class HTTPPolicy:
             self.reserved -= est
             self.ledger.add(self.model, est, 1)          # a failed request may still have cost; charge the estimate
             raise ModelFailure(last or "provider error")
+        # Preserve even rejected responses without putting them into the valid
+        # scientific cohort. The receipt sidecar follows the configured ledger.
+        receipt = {"requested_model": self.model, "received_at": time.time(), "response": resp}
+        encoded = json.dumps(receipt).replace(self.key, "[REDACTED]")
+        receipt_path = self.ledger.path.with_name(self.ledger.path.stem + "-receipts.jsonl")
+        with receipt_path.open("a") as stream:
+            fcntl.flock(stream, fcntl.LOCK_EX)
+            stream.write(encoded + "\n")
+            stream.flush()
+            os.fsync(stream.fileno())
         reported_cost = (resp.get("usage") or {}).get("cost")
         if reported_cost is None:
             cost = est
@@ -197,6 +207,13 @@ class HTTPPolicy:
         self.spent_session += cost
         self.ledger.add(self.model, cost, 1)
         resp["_cost"] = cost
+        if resp.get("model") != self.model:
+            raise ModelFailure("returned model does not exactly match requested model; receipt retained")
+        provider = resp.get("provider")
+        if not isinstance(provider, str) or not provider.strip():
+            raise ModelFailure("missing provider receipt")
+        if self.provider_order and provider not in self.provider_order:
+            raise ModelFailure("returned provider not in configured order; receipt retained")
         return resp
 
     @staticmethod
@@ -247,7 +264,8 @@ class HTTPPolicy:
                                     "kind": getattr(ag, "kind", None), "L": ag.L, "n": len(ag.mem), "n_orig": n_o,
                                     "last5_orig": sum(1 for w in last if w == sim.ORIG), "flip": flip,
                                     "p_orig": None if p is None else round(p, 4), "mass": round(tot, 4),
-                                    "provider": resp.get("provider")}) + "\n")
+                                    "provider": resp.get("provider"), "requested_model": self.model,
+                                    "returned_model": resp.get("model"), "response_id": resp.get("id")}) + "\n")
         if p is not None:
             return p
         ctx["low_mass"] = ctx.get("low_mass", 0) + 1
