@@ -64,7 +64,8 @@ source_hash: <study.source_hash() at the pinned commit>
   the stop reason is `end_turn` and the answer equals the expected values. Its measured input and output
   tokens are written to its summary and to the hub.
 - `Q0` is the clean qualification with the thresholds frozen in `design.yaml`.
-- `S1` is the comparison. One call per assignment. Answers are never retried.
+- `S1` is the comparison. Answers are never retried. Multi-turn studies run episodes; an episode's later
+  inputs depend on its earlier answers, and the manifest lists episodes with the hash of their fixed inputs.
 
 Every stage is one hub run. A stage ends `done` only when all of its rows are valid and, for S0, P0 and
 Q0, its gate passed (`qualification_passed: 1`). Otherwise it ends `failed`, with every assignment
@@ -132,6 +133,35 @@ batch with the scripted stage and qualification again.
   `budget.max_transport_attempts`; an attempt over that cap is refused. `max_calls` still counts
   assignments dispatched: a retried call is one call, reserved once, billed at most once.
 - Each row records its `attempts`; the stage summary and the hub metrics report `transport_attempts`.
+
+## Failure handling
+
+Added 2026-10-04 at 10:20Z at dmarz/fleet-monitor's request, for every package pinned after that time
+(sybil-scarcity-opus and sybil-split-opus were pinned earlier and stop at the first failed call). Cause:
+another study's main stage stopped at 481 of 576 calls because one token-counting request returned HTTP
+400 while the account's credit balance was exhausted for about four minutes, and its record kept only a
+category name.
+
+1. Keep the evidence. A failed HTTP request keeps its status, its response body (first 2,000 characters)
+   and the request id header in the row. Request headers and credentials are never stored.
+2. Token counting never fails a call. After the retry rule, any other counting failure gets one re-send
+   after 2 s; then the reservation falls back to the size of the request body in bytes as the input-token
+   bound, marked `count_fallback`, and the call proceeds.
+3. One failed call does not strand the main stage. In S1 a call without a valid answer is recorded as
+   failed with its evidence and dispatch continues until failed units exceed `budget.max_failed` (the
+   larger of 3 and 1% of the stage's units; a unit is a call, or an episode in multi-turn studies).
+   Integrity failures still stop dispatch at once: a ledger refusal, a reservation bound breach, a model
+   id mismatch, a source or batch mismatch, a deadline. S1 ends `done` when failed units are within the
+   limit and reports them; S0, P0 and Q0 stay strict. Failed and not-started units stay in their
+   denominators with outcome bounds; nothing is dropped, imputed or re-run.
+4. A billing outage is not a model failure. An HTTP 400, 402 or 403 whose body names the credit balance
+   pauses dispatch for the whole stage; the same call is re-sent every 60 s for up to 20 minutes; nothing
+   is recorded as a model outcome meanwhile; the pause is reported to the hub and in the summary
+   (`billing_pauses`, `billing_pause_seconds`, `billing_affected_calls`). If the outage outlasts the
+   limit the stage stops with reason `provider_credit_balance_low` and the unfinished units are recorded
+   as not started. Pre-registered: those units may be resumed at the same source hash as a dated
+   amendment. `python src/chain.py resume` does that (continuation batch `s1-001-r1`) and refuses after
+   any other kind of stop; the launcher's `resume` action runs it.
 
 ## Opus 5.5 request rules
 
