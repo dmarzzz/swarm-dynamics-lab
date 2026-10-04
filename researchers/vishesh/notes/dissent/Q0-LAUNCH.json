@@ -1,0 +1,20 @@
+{
+  "host": "sim-right-dissenter",
+  "claim": "vishesh-right-dissenter",
+  "claim_until": "2026-10-04T10:06:57Z",
+  "source_commit": "6c85ab76c714d998e32e8275233e50bc5b17495a",
+  "assignment_sha256": "b5895268ce776aa5171887c88b49948cb6c3ba903642f551ed35354cdc2e7ba3",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/bf5c8d8b33242b78231198a5038178c94ab01c9f/researchers/vishesh/notes/dissent/LIVE-PLAN.md",
+  "plan_sha256": "e306c0186c77fd8d60babc83bf78fb29f967c6d74c5672a8f17d7f4cb3a9d844",
+  "run_id": "right-dissenter/q0-a1",
+  "recorded_utc": "2026-10-04T04:08:12.672799+00:00",
+  "exclusive": true,
+  "owner": "vishesh",
+  "machine": "2 vCPU / 4 GB",
+  "hourly_usd": 0.03571,
+  "infrastructure_cap_usd": 1,
+  "api_cap_usd": 1,
+  "max_unique_calls": 500,
+  "workers": 1,
+  "status": "provisioning; on-host validation pending"
+}

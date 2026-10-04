@@ -1,7 +1,7 @@
 # Right Dissenter qualification pre run assessment
 
 - Experiment: `right-dissenter`; owner `vishesh/codex-decision-models`; attempt Q0-A1; first native attempt.
-- Status at preparation: waiting for the study budget and dedicated allocation. This record alone cannot launch a worker.
+- Status: owner cap approved; dedicated exclusive allocation obtained. Q0-LAUNCH.json binds the source, assignment and public plan. On-host validation and a refreshed public preflight must pass immediately before dispatch.
 - Question: can the pinned Jev route interpret clean current observations across both action directions in all three domains?
 - Practical decision: permit the bounded RD-2 development comparison only after the clean competence gate passes. A failure requires a separately recorded diagnostic.
 
@@ -32,3 +32,7 @@ One worker, 18 unique requests, no retry, 45-minute wall limit, stop after five 
 ## Visualization mapping
 
 RD-V2 in LIVE-PLAN.md. Q0 has no meaningful temporal protocol trajectory: live progress shows terminal/18 and correct/all-assigned; final PNG shows correct/6 and valid/6 in each scenario plus the gate outcome. No synthetic replay substitutes for this qualification. Saved requests, decisions and elapsed times retain the call sequence. S1 receives the measured protocol GIF. Verify displayed counts against summary.json and public artifact loading.
+
+## Approved launch binding
+
+The owner approved USD 2 total and instructed creation/borrowing through Demars's fleet. Dedicated host `sim-right-dissenter`, exclusive claim `vishesh-right-dissenter` through 2026-10-04T10:06:57Z. Runtime source `6c85ab76c714d998e32e8275233e50bc5b17495a`; Q0 assignment SHA-256 `b5895268ce776aa5171887c88b49948cb6c3ba903642f551ed35354cdc2e7ba3`. One worker and 18 assigned private decisions; all existing qualification thresholds remain unchanged. See AUTHORIZATION.json and Q0-LAUNCH.json.
