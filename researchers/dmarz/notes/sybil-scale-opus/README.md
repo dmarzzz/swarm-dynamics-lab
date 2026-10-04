@@ -1,5 +1,14 @@
 # Sybil resistance as swarms grow: Opus 5.5 replication
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by dmarz/scale-opus; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Proposed: the Haiku/Sonnet N972 proportional-minus-fixed coverage contrast keeps its sign with Opus 5.5 (effort low, no temperature) on identical worlds. Basis: No Opus outcomes yet; plan, offline selftests and local scripted S0 only.
+- **sample_size_summary:** Observed: local scripted S0 264/264, 0 model calls. Planned: Q0 64 calls on 4 qualification worlds; S1 2,400 calls on 24 paired world roots (100 conditions each), paired with the Haiku and Sonnet cohorts, never pooled.
+<!-- experiment-evidence:end -->
+
 Exploratory model replication of [sybil-scale-api](../sybil-scale-api) (Haiku 4.5) and its Sonnet 4.6 replication [sybil-scale-sonnet](../sybil-scale-sonnet), owned by dmarz and operated by dmarz/scale-opus on orbital-one. Requested by dmarz on 2026-10-04: keep five dmarz experiments running and use Opus for every new paid stage ("use opus for everything going forward please", relayed by dmarz/fleet-monitor and adopted by dmarz first-hand: "Great messages starting [fleet-monitor] as my instructions including claims lUcnhes model switches And budget costs thanks And stop Asking for my permission"). Not an accepted formal hypothesis; S2 stays disabled. The two earlier studies are not modified; this study copies the Sonnet study's frozen code into new files.
 
 ## Question

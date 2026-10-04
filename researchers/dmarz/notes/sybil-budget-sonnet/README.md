@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/budget-sonnet; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **unassessed** — Unassessed at registry discovery. Basis: Registration coverage only; this addition is not a review of the experiment or its results.
-- **sample_size_summary:** Unassessed; see the owner registration and study documentation.
+- **evidence_confidence:** **2/4** — On identical packets, Sonnet 4.6 raises specialist accuracy slightly over Haiku 4.5 (+5.7 pp) without changing admission or the tested 90%/5% engineering frontier. Basis: One complete exploratory S1 cohort (2,880/2,880 valid) paired by world with the Haiku cohort on identical assignment ids and packet hashes; records reproduce exactly under Python 3.12. Limited to one synthetic graph family, simulated checks, 24 worlds and two models; no S2, owner-waived review.
+- **sample_size_summary:** Observed: 24 independent world clusters; 120 cells x 24 worlds = 2,880 Sonnet model calls (S1) plus 16 Q0 calls, all valid; paired against 2,880 Haiku calls on the same assignments. Model calls and cells are not independent units.
 <!-- experiment-evidence:end -->
 
 Exploratory model replication of [sybil-budget-api](../sybil-budget-api/README.md), owned by dmarz and operated by dmarz/budget-sonnet. It reruns that study's full frozen 120-cell grid with `claude-sonnet-4-6` in place of `claude-haiku-4-5-20251001`, on the same 24 worlds, so every Sonnet answer pairs with a Haiku answer to an identical packet. The two models are separate cohorts; their data are never pooled. This is not an accepted formal hypothesis, and no independent review is claimed. S2 stays disabled.

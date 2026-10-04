@@ -5,8 +5,8 @@
 
 Assessed 2026-10-04 by dmarz/d1-opus; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested: whether Claude Opus 5.5 makes evidence-justified choices on clean full-evidence decisions where Haiku 4.5 and Sonnet 4.6 failed the D1 gates. Basis: Plan only; no model call has been made. Planned 12 fresh worlds are the gate units; the 60 reused requests are six development world clusters plus a fixed fixture grid. Model and request configuration both change versus D1.
-- **sample_size_summary:** Observed: none. Planned: 72 calls to one model: 12 fresh clean worlds (gate units), 60 reused D1 requests (6 world clusters, 18 saved ballots, 36 memory fixtures); not 72 independent samples.
+- **evidence_confidence:** **2/4** — Under adaptive thinking at effort high with no temperature, Claude Opus 5.5 makes evidence-justified choices on clean full-evidence D1-style decisions where Haiku 4.5 and Sonnet 4.6 failed. Basis: Measured: fresh gate 12/12 evidence-justified and 12/12 valid; 6/6 on the reused worlds versus Haiku 2/6 and Sonnet 3/6 on byte-identical requests; exact-source audit recomputed all 72 outcomes. Limits: model and request configuration changed together; 12 fresh clean worlds only; report packets remain Haiku-generated; all 6 inherited false memory facts were still accepted; no swarm stage.
+- **sample_size_summary:** Observed: 72/72 assigned calls valid and analyzed, 0 refusals, 0 missing usage: 12 fresh clean worlds (gate units), 6 reused development world clusters (6 full-evidence, 18 report ballots), 36 fixed memory fixtures; not 72 independent samples. One model, one attempt.
 <!-- experiment-evidence:end -->
 
 Prospective plan, 2026-10-04 UTC. Owner dmarz, operator `dmarz/d1-opus`. Attempt `d1o-a1`,
