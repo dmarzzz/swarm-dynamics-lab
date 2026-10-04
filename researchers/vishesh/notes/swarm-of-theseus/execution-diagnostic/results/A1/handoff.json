@@ -1,0 +1,1 @@
+{"attempt": "A1", "evidence": "manifest.json, calls/, summary.json, terminal.json", "next_action": "Run shared offline finalize hook and complete scientific assessment; retain original ledger, upload/readback, release claim. No successor dispatch.", "status": "scientific_review_required"}

@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "study_id": "swarm-of-theseus-acquisition-a1",
+  "attempt": "A1",
+  "assessor": "vishesh/codex-theseus",
+  "assessed_at": "2026-10-04T16:49:57.784954+00:00",
+  "source_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
+  "verdict": "blocked",
+  "execution": "failed_provider_429",
+  "scientific_interpretation": "inconclusive_no_model_response",
+  "qualification": "not_established",
+  "actual_new_charge_usd": null,
+  "unresolved_exposure_usd": 0.010452,
+  "successor_authorized": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Withheld-policy acquisition question and outcome decisions remain clear; no answer observed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Finite identifiable histories and disjoint held-out patterns pass offline; no native transfer evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Neither learned-policy nor true-policy executor was called.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ],
+      "next_action": "Close this attempt; before a separately approved request resolve provider health and implement/test allowlisted failure metadata without modifying frozen evidence.",
+      "acceptance_check": "Safe category/Retry-After tests pass; original unknown charge retained or evidenced; any new attempt has fresh scope/admission, complete observed controls and distinct identity."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "One HTTP429, no actor answer; R1 remains the separate supplied-policy qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ],
+      "next_action": "Close this attempt; before a separately approved request resolve provider health and implement/test allowlisted failure metadata without modifying frozen evidence.",
+      "acceptance_check": "Safe category/Retry-After tests pass; original unknown charge retained or evidenced; any new attempt has fresh scope/admission, complete observed controls and distinct identity."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Exact request and terminal status retained, but provider category/Retry-After were discarded, so underlying429cause is unresolved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ],
+      "next_action": "Close this attempt; before a separately approved request resolve provider health and implement/test allowlisted failure metadata without modifying frozen evidence.",
+      "acceptance_check": "Safe category/Retry-After tests pass; original unknown charge retained or evidenced; any new attempt has fresh scope/admission, complete observed controls and distinct identity."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Six roots planned, zero root outcomes;1provider failure is not an independent cognitive observation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ],
+      "next_action": "Close this attempt; before a separately approved request resolve provider health and implement/test allowlisted failure metadata without modifying frozen evidence.",
+      "acceptance_check": "Safe category/Retry-After tests pass; original unknown charge retained or evidenced; any new attempt has fresh scope/admission, complete observed controls and distinct identity."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Only actual rendered request matches frozen manifest; no truth/test/operator context leakage or external tools.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "204assigned,1started/terminal failure,203unstarted retained;0retries and no invented output.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "OriginalUSD5 retained; unknownUSD0.010452 not refunded; prior+exposureUSD0.8226830437.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source/runtime/manifest and actual request/status evidence reconstruct the attempt; hosted availability not reproducible.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Figure and one-event replay expose failure/missingness and state accuracy unobserved; visual inspection complete.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+          "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/summary.json",
+          "sha256": "4afa1e58eb25ed37a8f5412ed778d5704c9b09870f69249c6b1bb340c1e9ac98"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A1/trace-review.json",
+          "sha256": "819f86b2fcee76097b6805d6fad721231a4fc9d5c73ba90a61b0afbfc2a661d3"
+        }
+      ]
+    }
+  ]
+}

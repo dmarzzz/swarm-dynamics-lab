@@ -27,3 +27,7 @@ This is the next proposal, not another run admission. Current native work stops 
 ## Current preparation, 2026-10-04
 
 The proposal above is now concretized in [A1-PLAN.md](A1-PLAN.md), with implementation,15offline checks and [blocked queue status](A1-STATUS.md). Binary incident labels avoid source leakage; support IDs must identify their source by content. The current owner direction authorizes this single ready iteration, but actual native admission is still blocked by the orbital-one credential/dispatch handoff. No turnover or additional repair run follows automatically.
+
+## A1 native disposition
+
+[A1 actually ran and stopped on HTTP429](RESULTS-A1.md) before any model response. The acquisition design remains empirically untested. Do not interpret conservative missing-as-incorrect counts as a learning failure or tune the scientific task on this evidence. Next useful preparation is safe provider-failure metadata and account availability resolution; no paid retry or successor is authorized. PreserveUSD0.010452unknown exposure and the originalUSD5ledger.

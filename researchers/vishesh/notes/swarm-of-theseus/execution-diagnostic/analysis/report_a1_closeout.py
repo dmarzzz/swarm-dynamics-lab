@@ -1,0 +1,21 @@
+"""Retrospective saved-data reporting for the stopped A1 attempt; no model calls."""
+from pathlib import Path
+import json,hashlib,sys
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+root=Path(sys.argv[1]);summary=json.loads((root/'summary.json').read_text());manifest=json.loads((root/'manifest.json').read_text())
+starts=list((root/'calls').glob('*-started.json'));finishes=list((root/'calls').glob('*-finished.json'));assert len(starts)==len(finishes)==1
+start=json.loads(starts[0].read_text());finish=json.loads(finishes[0].read_text());assignment=next(a for a in manifest['assignments'] if a['id']+'-started.json'==starts[0].name)
+assert start['request']==assignment['request'] and finish['error']=='http_429' and finish['raw_text'] is None
+trace={'evidence_type':'actual_experimental_request_and_terminal_provider_status','assignment':assignment['id'],'request':start['request'],'request_sha256':start['request_sha256'],'returned_text':None,'parsed_response':None,'provider_error':'http_429','error_body_retained':False,'usage':None,'external_agent_tool_calls':[],'simulated_actions':[],'checkpoint_created':False,'outcome':'no_model_response','reserved_usd':start['reserved_usd'],'source_commit':manifest['source_commit'],'operator_transcripts_included':False}
+(root/'trace-review.json').write_text(json.dumps(trace,indent=2)+'\n')
+(root/'TRACE-REVIEW.md').write_text('# A1 actual native trace review\n\nOne request was sent; zero model answer text or agent tool actions were returned. This is not a qualification miss by a model. Exact actor instructions and observations are below; they are experimental inputs, not owner/operator prompts.\n\nAssignment: `'+assignment['id']+'`. Request hash matches the frozen manifest. Model '+start['request']['model']+', temperature0, max_tokens1200. The history uniquely identifies A=canary,B=probe; source-name labels are withheld. No current test case, true mapping, future feedback or operator conversation occurs in the delivered request. No acquired policy/checkpoint or executor action exists.\n\n```json\n'+json.dumps(start['request'],indent=2)+'\n```\n\nReturned model text: **absent**. Terminal provider status: **HTTP429**. Served model and usage: **unknown**. No external agent tools are configured or called. A retry was prohibited and none occurred. The frozen handler did not retain a provider error category/body or Retry-After; transient rate throttling versus quota/billing restriction cannot be distinguished from this record. Do not invent a returned answer or infer a rule-application error. Preserve the fullUSD0.010452 reservation.\n')
+fig,axes=plt.subplots(1,2,figsize=(16,7),gridspec_kw={'width_ratios':[1.2,1]});fig.suptitle('Theseus A1 stopped on HTTP 429',fontsize=24);fig.text(.5,.89,'No model response • learning and execution accuracy are unobserved',ha='center',fontsize=16)
+axes[0].barh(['Learning calls (12)','Executor calls (192)'],[1,0],color='#d45b4f',label='Provider failure')
+axes[0].barh(['Learning calls (12)','Executor calls (192)'],[11,192],left=[1,0],color='#d5d9de',label='Not started')
+axes[0].set_xlim(0,205);axes[0].set_xlabel('Assigned call slots — not independent samples');axes[0].legend(loc='lower right');axes[0].set_title('1 attempted / 204 assigned; zero retries')
+axes[1].axis('off');axes[1].text(0,.94,'Native reconciliation\n\n204 assigned · 1 started · 1 terminal failure\n0 valid responses · 203 unstarted\n0 learned policies · 0 executor actions\n\nNew actual charge: unknown\nUnresolved reservation: USD0.010452\nPrior estimated spend: USD0.812231\nPrior + unresolved: USD0.822683 of USD5\n\nSix planned worlds; zero observed outcomes.\nNo acquisition or culture result.\nWorker exited; no second attempt.',va='top',fontsize=15,linespacing=1.5)
+fig.tight_layout(rect=(0,.03,1,.83));fig.savefig(root/'results.png',dpi=120);plt.close(fig)
+p=root/'replay.html';s=p.read_text().replace('<h1>Theseus A1 • withheld-policy acquisition screen</h1>','<h1>Theseus A1: HTTP429 stop</h1><p><strong>No model response. Scientific accuracy is unobserved.</strong></p>');p.write_text(s)
+print(json.dumps({'actual_request_reviewed':assignment['id'],'responses_available':0,'request_matches_manifest':True,'scientific_outcome':'inconclusive_provider_stop'}))
