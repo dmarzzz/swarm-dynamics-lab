@@ -11,8 +11,12 @@ def reconcile_assignments(assignments, rows):
     if set(ids) - set(assigned): raise ValueError('unassigned episode')
     by_id = {a['id']: a for a in assignments}
     for row in rows:
-        for field, value in by_id[row['id']].items():
-            if field not in row or type(row[field]) is not type(value) or row[field] != value:
+        assignment = by_id[row['id']]
+        fields = set(assignment) | {'kind', 'world', 'family', 'stratum', 'attack', 'arm', 'state'}
+        for field in fields:
+            if (field in row) != (field in assignment):
+                raise ValueError(f'episode {row["id"]} differs from assignment field {field}')
+            if field in assignment and (type(row[field]) is not type(assignment[field]) or row[field] != assignment[field]):
                 raise ValueError(f'episode {row["id"]} differs from assignment field {field}')
     return sorted(set(assigned) - set(ids))
 
