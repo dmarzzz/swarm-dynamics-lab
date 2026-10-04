@@ -13,3 +13,5 @@ All observed phases, failures and six terminals are retained; replay/final SVG d
 ## Next steps
 
 First execute the four already registered D0 diagnostics on historical procurement fixtures using 0.6B, preserving direct-comparison limitations. Then prospectively amend for a single 1.7B schema-repair qualification on fresh task7204/seed31. Enforce only actor-visible candidate/cardinality/citation/range constraints, leaving prompts, arithmetic and chair decision authority unchanged. Record a new plan/source and no retroactive relabeling. Only a passing fresh qualification may unlock S1; a valid wrong choice is a substantive result, not a software defect to erase.
+
+Final trace audit clarifies the generic citation-validator label: every offending ID was supplied to the actor, but the three failed teams returned three or four citations per candidate where the contract permitted at most two. No invented citation ID was found in these failures. See evidence/Q1/citation-diagnosis.json.

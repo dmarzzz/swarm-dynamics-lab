@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "studies": [
+    {
+      "id": "quorum-of-mirrors",
+      "title": "Quorum of Mirrors",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
+      "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/ITERATION-3-POST.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read SETUP.md and the preceding native post-mortem; resolve applicable research gates and freeze the prospective S1 instrument before seeking current admission."
+    },
+    {
+      "id": "phantom-coast",
+      "title": "Phantom Coast",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/phantom-coast",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/reviews/S0-A1-POST.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read the completed pilot post-mortem; any follow-up needs its own question, prospective plan and current admission."
+    },
+    {
+      "id": "right-dissenter",
+      "title": "Right Dissenter",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/dissent",
+      "setup_path": "researchers/vishesh/notes/dissent/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/dissent/reviews/Q1-SETUP-POST.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read the account-boundary correction and setup post-mortem; resolve the approved allocation path before considering a fresh qualification attempt."
+    },
+    {
+      "id": "optimal-swarm-size",
+      "title": "Optimal Swarm Size",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/optimal-swarm-size",
+      "setup_path": null,
+      "postmortem_path": "researchers/vishesh/notes/optimal-swarm-size/reviews/q1-setup-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Create or link the current SETUP.md, reconcile later records with the setup post-mortem, then verify current research, provider and allocation evidence."
+    },
+    {
+      "id": "heterogeneous-swarms",
+      "title": "Heterogeneous Swarms",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/heterogeneous-swarms",
+      "setup_path": null,
+      "postmortem_path": null,
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Select one explicit question from the research shortlist and write its prospective setup record before experimental implementation."
+    },
+    {
+      "id": "swarm-of-theseus-v2",
+      "title": "Swarm of Theseus v2",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/swarm-of-theseus/v2",
+      "setup_path": "researchers/vishesh/notes/swarm-of-theseus/v2/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-post.md",
+      "adapter": "theseus-v2",
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read the failed qualification and closeout; a new diagnostic needs a prospective amendment and current admission. Adapter availability does not authorize another S0 or S1."
+    },
+    {
+      "id": "immune-response-v3",
+      "title": "Immune Response v3",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/immune-response-v3",
+      "setup_path": null,
+      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Create or link the current setup record; reconcile the interrupted attempt and subsequent cleanup record, preserve its ledger, and verify the approved Dmarz provisioning path before replacement."
+    },
+    {
+      "id": "influence-swarms",
+      "title": "How to win agents and influence swarms",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/influence-swarms/scenario",
+      "setup_path": null,
+      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D1-01-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read LATEST-RESULTS.md and the diagnostic post-mortem; qualify a prospectively amended architecture before comparison. Preserve the satisfied single researcher review and its scope."
+    },
+    {
+      "id": "healing-helping-hands",
+      "title": "Healing Helping Hands",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/healing-helping-hands",
+      "setup_path": "researchers/vishesh/notes/healing-helping-hands/composite/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Read the composite setup record and preceding practical post-mortem; reconcile any later attempt and obtain current stage admission before collection."
+    },
+    {
+      "id": "antsy-receipt-v6",
+      "title": "Antsy receipt extraction v6",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/antsy-receipt-v6",
+      "setup_path": null,
+      "postmortem_path": "researchers/vishesh/notes/antsy-receipt-v6/reviews/E0-reparse-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T04:40:34Z",
+      "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
+      "next_action": "Create or link the current setup record; reconcile the parser repair and any subsequent held-out measurements before deciding on a new experiment. Trace replay does not create a fresh sample."
+    }
+  ]
+}

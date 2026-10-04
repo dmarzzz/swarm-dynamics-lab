@@ -1,0 +1,41 @@
+{
+  "batch": "v3-d1-a1",
+  "d1_call_limit": 120,
+  "d1_reservation_usd": 4.110168,
+  "following_experiment_launch_forbidden": true,
+  "launch_owner": "dmarz/discussion-bench-v3",
+  "no_other_batch_authorized_by_this_record": true,
+  "other_obligation_envelopes": [
+    {
+      "hold_usd": 267.456,
+      "scope": "market Sonnet and Haiku lifetime envelope",
+      "source": "researchers/dmarz/notes/market-split-api/parallel-plan.md",
+      "source_sha256": "8c5c8fc64eaf73230355c043fadd51dd7ea1c6fd6626595ae509cd07c9ac6b9c"
+    },
+    {
+      "hold_usd": 60.0,
+      "scope": "sybil combined actual plus commitment guard",
+      "source": "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md",
+      "source_sha256": "0eac1254d67c3bad781095810bd867fe6eb2a2717077d829502d1c5f8cf08deb"
+    },
+    {
+      "hold_usd": 20.97216,
+      "scope": "compositional currently admitted q0-005 whole batch",
+      "source": "researchers/dmarz/notes/compositional-safety/reviews/q0-005-pre.md",
+      "source_sha256": "3459f188940366b182ea5d66e1143f4c82eb4ffd68160f36cb66fa6c4b2f3736"
+    },
+    {
+      "hold_usd": 40.0,
+      "scope": "soc07 whole study including conditional stages retained conservatively",
+      "source": "researchers/dmarz/notes/soc07-private-judgments/execution.json",
+      "source_sha256": "a4c56206813804c6fe41c508254d40423700aaeb69ee83dcb64f545b8265676c"
+    }
+  ],
+  "pool_usd": 500,
+  "reported_cost_hold_definition": "Sum of all recognized nonnegative hub cost metrics from dmarz-source or dmarz-owned experiments. Deliberately includes cumulative/duplicate metrics; conservative hold, NOT reconciled billing. No reported unknown usage in snapshot. Other lifetime envelopes also overlap observed spend; retained conservatively.",
+  "reported_cost_hold_usd": 97.493163,
+  "reserved_other_model_spend_usd": 388.42816,
+  "schema": "discussion-d1-conservative-budget-reservation-v1",
+  "snapshot_unix": 1791089056.565341,
+  "unallocated_after_d1_usd": 9.968509
+}

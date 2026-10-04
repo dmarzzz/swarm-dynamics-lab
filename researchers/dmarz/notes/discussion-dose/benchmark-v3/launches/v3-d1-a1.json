@@ -1,0 +1,33 @@
+{
+  "attempt": "v3-d1-a1",
+  "budget_receipt": "v3-d1-a1-budget.json",
+  "calls": 120,
+  "claim": "dmarz-discussion-d1",
+  "cloud_raw_retrieval_verified": false,
+  "d1_reservation_usd": 4.110168,
+  "holdout_opened": false,
+  "hub_run": "discussion-dose-v3/v3-d1-a1",
+  "launch_owner": "dmarz/discussion-bench-v3",
+  "launched_utc": "2026-10-04T04:48:10Z",
+  "lifecycle_mode": "owner-controlled-local-cleanup",
+  "manifest_sha256": "34ccbb8d5540b7243bdbd47222a04bbc2b41d404cf607eaf8e2e4ba45adfad3f",
+  "models": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-4-6"
+  ],
+  "next_experiment_launch_authorized": false,
+  "next_experiment_plan_required": true,
+  "preflight_sha256": "f84e161dd8ae48bdfd72f9a2c4e17f40226e584b8ad05d3912aa5e2d68b27507",
+  "rehearsal": {
+    "assigned": 120,
+    "deliberate_failure": 1,
+    "duplicate_refused": true,
+    "exact_source_audit": true,
+    "physical_calls": 0,
+    "retrieved_artifacts": 6
+  },
+  "server": "sim-discussion-d1",
+  "source_commit": "e9678355c79984e8fc3530f0644c1ba6fa4de9af",
+  "stage": "D1",
+  "status": "running"
+}

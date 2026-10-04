@@ -17,3 +17,7 @@ Tested source and current registered plan: 2a1453a3f4befaf86006dcb04bdfe6aafdb3c
 ## Capacity escalation correction
 
 The user directed resolving fleet capacity rather than stopping at claimed machines. The Mac fallback is withdrawn. New capacity is requested through the authoritative Dmarz provisioner in [allocate-healing-qwen-jev](../../../../../tasks/allocate-healing-qwen-jev.md): a concrete CPU worker specification, expiry, exclusive allocation and account/state/budget checks. This workspace has no dmarz state or approved provisioner credential; only the fleet owner executor may perform creation. No deployment or execution is claimed by filing that request.
+
+## Authorized dedicated capacity, 2026-10-04 UTC
+
+The user confirmed provisioner access and explicitly authorized creation. The approved local credential now matches all 12 known Dmarz fleet hosts. Created only sim-healing-c1, 4 CPU / 8 GiB, USD 0.07143/hour, using the original empty Vishesh owner state with locking. Private fleet PR 143 merged the host, generated inventory and heterogeneous-map typing fix; PR 145 merged its fresh exclusive three-hour claim. SSH and cloud-init readiness verified. Standard secured simulation software is being installed. No C1 inference yet. The earlier statement that access was unavailable is superseded; the allocation request is obsolete. No existing machine was changed.

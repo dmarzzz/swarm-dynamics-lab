@@ -1,0 +1,74 @@
+[
+  {
+    "case_id": "repro-ac1f40384b8a",
+    "arm": "reproduction",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": null,
+    "correct": null
+  },
+  {
+    "case_id": "repro-2d6946c21f6e",
+    "arm": "reproduction",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": null,
+    "correct": null
+  },
+  {
+    "case_id": "repro-6614aa4fa838",
+    "arm": "reproduction",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": null,
+    "correct": null
+  },
+  {
+    "case_id": "control-2160",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "PROCEED",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "control-2161",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "control-2162",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "PROCEED",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "control-2163",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": "HOLD",
+    "correct": true
+  },
+  {
+    "case_id": "control-2164",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "PROCEED",
+    "expected": "PROCEED",
+    "correct": true
+  },
+  {
+    "case_id": "control-2165",
+    "arm": "fresh-control",
+    "status": "completed",
+    "action": "HOLD",
+    "expected": "HOLD",
+    "correct": true
+  }
+]

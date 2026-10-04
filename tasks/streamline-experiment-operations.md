@@ -3,7 +3,7 @@ id: streamline-experiment-operations
 type: task
 title: Integrate a lean experiment operations interface
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,13 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T04:40Z
-updated: 2026-10-04T04:40Z
+updated: 2026-10-04T04:49Z
+outputs:
+- scripts/experiment.py
+- tooling/agent-experiments/OPERATIONS.md
+- tooling/agent-experiments/operations.json
+- scripts/test_experiment_operations.py
+- scripts/test_experiment_theseus.py
 ---
 
 ## Goal
@@ -21,7 +27,7 @@ Implement the owner-approved first operations increment: a compact experiment re
 
 ## Done when
 
-- [ ] Add registry and safe shared CLI with one existing-study adapter.
-- [ ] Exercise stale source/config, duplicate launch, interrupted execution, context and budget behavior offline.
-- [ ] Document reuse/invalidation, recovery and unsupported operations; integrate local context and CI.
-- [ ] Pass repository checks and publish the implementation with accurate capability limits.
+- [x] Add registry and safe shared CLI with one existing-study adapter.
+- [x] Exercise stale source/config, duplicate launch, interrupted execution, context and budget behavior offline.
+- [x] Document reuse/invalidation, recovery and unsupported operations; integrate local context and CI.
+- [x] Pass repository checks and publish the implementation with accurate capability limits.

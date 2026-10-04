@@ -1,0 +1,14 @@
+{
+  "stage": "S1",
+  "frames": 48,
+  "events": 2409,
+  "all_terminals_included": false,
+  "all_responses_included": false,
+  "sampled_frames": 48,
+  "available_response_terminal_frames": 786,
+  "final_valid": 48,
+  "final_correct": 11,
+  "gif_frames": 48,
+  "final_contains_all_terminal_states": true,
+  "sampling_note": "GIF samples 48 recorded prefixes; intermediate transitions may be skipped. HTML and JSON preserve every event."
+}

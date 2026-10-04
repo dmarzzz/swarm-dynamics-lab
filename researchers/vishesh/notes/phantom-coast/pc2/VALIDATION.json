@@ -1,0 +1,18 @@
+{
+  "mode": "offline software validation only",
+  "tests_passed": 20,
+  "native_calls": 0,
+  "observed_adaptive_episodes": 0,
+  "development_seeds_exercised": [
+    300,
+    301
+  ],
+  "reserved_stages_unavailable": true,
+  "plan_publication_commit": "a250808391bb2e1f224a12d23d3d2f1fcbc0ace0",
+  "files": {
+    "src/contract.py": "672613a706485fe3f6c45dfb610770c2e9b11a01a5b4ccfc44b856aec40ae870",
+    "tests/test_contract.py": "2e00b593790cc38003e9026eb8701285dd4a9972b64690b52938cc009dc8cdfe",
+    "PLAN.md": "503085960b8813b7f34156a4ac51ff2288213c69de53352d31384c80e138e20a"
+  },
+  "checked_utc": "2026-10-04T04:46:45.378253+00:00"
+}

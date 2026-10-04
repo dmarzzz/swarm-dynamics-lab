@@ -11,12 +11,13 @@ created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-updated: 2026-10-04T04:35Z
+updated: 2026-10-04T04:56Z
 history:
 - '2026-10-04T02:51Z released by vishesh/codex-experiments: Native Q0-Q3 attempts, measured replays and post-mortems published. Q2 fully valid but failed competence; Q3 diagnostic passed without opening comparison gate. Full fresh qualification and paired comparison require additional authorized budget. Dedicated claim released in agentops PR 64; no workers remain.'
 - '2026-10-04T03:43Z released by vishesh/codex-experiments: Iteration 2 implemented and offline validated: 24 tests, 12/12 scripted decisions, zero paid calls. Q4 native run awaits additional authorized shared budget, review-influence-q4-dossiers and fresh exclusive fleet allocation. See scenario/ITERATION-02.md.'
 - '2026-10-04T04:31Z released by vishesh/codex-experiments: Next iteration executed: Q4 12 valid/10 acceptable; D1 4 valid/2 acceptable, report removal did not repair approval failure. Published measured replays, raw evidence and post-mortems at 5391230e. Comparison remains ineligible after failed qualification; no duplicate review or budget blocker. Dedicated machine released PR125; zero workers. Preserve quota and adverse outcomes. Further prospective workflow redesign remains.'
-claimed_at: 2026-10-04T04:35Z
+- '2026-10-04T04:53Z released by vishesh/codex-experiments: Iteration 3 complete and published at d0146786: D2 30 valid decisions, 108 calls, USD0.391659. Targeted review 3/6 versus general review 4/6 and generalist 5/6; repair screen failed as valid adverse result. Source audit, paired cases, practical costs and measured PNG/GIF/HTML delivered; 24 hub artifacts verified, worker stopped, machine released PR144. S1 unqualified; no review/budget approval pending. Next distinct design: typed per-candidate model assessment with fresh cases, not a favorable reroll.'
+claimed_at: 2026-10-04T04:56Z
 ---
 
 ## Goal
@@ -36,3 +37,5 @@ Four native attempts published with immutable evidence, measured GIF/HTML replay
 Iteration 2: fresh pull and PI feedback incorporated; four new Q4 dossiers, selected-deployment approval control, answer-label counterbalance, exact Q4 gate and missingness-aware paired analysis. 24 tests pass, 12/12 scripted decisions acceptable. No new model result. Native collection requires additional authorized shared budget, independent dossier review (review-influence-q4-dossiers), and fresh dedicated allocation. See scenario/ITERATION-02.md.
 
 Latest closeout, 2026-10-04: duplicate review retired; approved budget and exclusive allocation obtained. Q4 completed 12 valid decisions, 10 acceptable. Four-call D1 report removal did not repair approval failure. Both post-mortems and measured replays published; claim released through agentops PR125. The paired comparison is ineligible because qualification failed, not because another review or budget approval is pending. Retain task for prospective workflow redesign if pursued; do not rerun the same case until favorable. See scenario/LATEST-RESULTS.md.
+
+D2 follow-up, 2026-10-04: 30 valid decisions across six fresh authored dossiers; 108 calls/USD0.391659. Matched targeted-review instructions yielded 3/6 acceptable versus general review 4/6 and cheaper generalist 5/6. Source audit, all outcomes, measured replay/GIF and practical cost report published; no execution failure. Targeted repair rejected, not retried until favorable. S1 remains ineligible; no review/budget approval is pending. See scenario/RESULTS-D2.md.

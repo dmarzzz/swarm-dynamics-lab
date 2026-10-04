@@ -1,0 +1,400 @@
+{
+  "openalex": {
+    "query": {
+      "oql": "works where full text has (data incest social learning)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "value": "data incest social learning",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/works?filter=fulltext.search:data incest social learning&per_page=10"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2069930327",
+        "title": "Online Reputation and Polling Systems: Data Incest, Social Learning, and Revealed Preferences",
+        "doi": "https://doi.org/10.1109/tcss.2014.2377891"
+      },
+      {
+        "id": "https://openalex.org/W2952884488",
+        "title": "Online Reputation and Polling Systems: Data Incest, Social Learning and Revealed Preferences",
+        "doi": "https://doi.org/10.48550/arxiv.1501.00994"
+      },
+      {
+        "id": "https://openalex.org/W1510143506",
+        "title": "Removal of Data Incest in Multi-agent Social Learning in Social Networks",
+        "doi": "https://doi.org/10.48550/arxiv.1309.6687"
+      },
+      {
+        "id": "https://openalex.org/W4410385231",
+        "title": "Multiagent Sensing: Social Learning and Data Incest",
+        "doi": "https://doi.org/10.1017/9781009449441.007"
+      },
+      {
+        "id": "https://openalex.org/W2479105126",
+        "title": "Multi-agent sensing: social learning and data incest",
+        "doi": "https://doi.org/10.1017/cbo9781316471104.007"
+      },
+      {
+        "id": "https://openalex.org/W4254484490",
+        "title": "Sibling Incest",
+        "doi": "https://doi.org/10.1007/978-1-4899-7497-6_31"
+      },
+      {
+        "id": "https://openalex.org/W2109021863",
+        "title": "The influence of incest on adolescence : a social work perspective",
+        "doi": null
+      },
+      {
+        "id": "https://openalex.org/W274929850",
+        "title": "FAMILY DYNAMICS OF INCEST PERCEIVED BY ADOLESECENTS",
+        "doi": null
+      },
+      {
+        "id": "https://openalex.org/W2139583936",
+        "title": "The construction of a social reality : an examination of father-daughter incest",
+        "doi": null
+      },
+      {
+        "id": "https://openalex.org/W2107635267",
+        "title": "Suckling, adoption and the incest taboo: Significance of studying kinship for social science and for Qatar",
+        "doi": "https://doi.org/10.5339/qfarf.2012.ahp42"
+      }
+    ]
+  },
+  "round-0": {
+    "query": {
+      "oql": "works where full text has (Bayesian social learning data incest)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "value": "Bayesian social learning data incest",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/works?filter=fulltext.search:Bayesian social learning data incest&per_page=10"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2479105126",
+        "title": "Multi-agent sensing: social learning and data incest",
+        "doi": "https://doi.org/10.1017/cbo9781316471104.007"
+      },
+      {
+        "id": "https://openalex.org/W2952884488",
+        "title": "Online Reputation and Polling Systems: Data Incest, Social Learning and Revealed Preferences",
+        "doi": "https://doi.org/10.48550/arxiv.1501.00994"
+      },
+      {
+        "id": "https://openalex.org/W2258351523",
+        "title": "Bayesian Learning Without Recall",
+        "doi": "https://doi.org/10.1109/tsipn.2016.2631943"
+      },
+      {
+        "id": "https://openalex.org/W3127156905",
+        "title": "Organized to learn: the influence of social structure on social learning opportunities in a group",
+        "doi": "https://doi.org/10.1016/j.isci.2021.102117"
+      },
+      {
+        "id": "https://openalex.org/W2583404450",
+        "title": "Statistical signal processing on dynamic graphs with applications in social networks",
+        "doi": "https://doi.org/10.14288/1.0223171"
+      },
+      {
+        "id": "https://openalex.org/W4392642121",
+        "title": "Bayesian network quantization method and structural learning",
+        "doi": "https://doi.org/10.11606/t.18.2024.tde-08032024-101119"
+      },
+      {
+        "id": "https://openalex.org/W4300920286",
+        "title": "Dynamics of Information Diffusion and Social Sensing",
+        "doi": "https://doi.org/10.48550/arxiv.1412.4171"
+      },
+      {
+        "id": "https://openalex.org/W2883510379",
+        "title": "Dynamics of Information Diffusion and Social Sensing",
+        "doi": "https://doi.org/10.1016/b978-0-12-813677-5.00021-3"
+      },
+      {
+        "id": "https://openalex.org/W4404351657",
+        "title": "Interacting Large Language Model Agents. Interpretable Models and Social Learning",
+        "doi": "https://doi.org/10.48550/arxiv.2411.01271"
+      },
+      {
+        "id": "https://openalex.org/W4298854743",
+        "title": "Do Incest, Depression, Parental Drinking, Serious Romantic Relationships, and Living with Parents Influence Patterns of Substance Use During Emerging Adulthood?",
+        "doi": "https://doi.org/10.17615/m4r0-6n27"
+      }
+    ]
+  },
+  "round-1": {
+    "query": {
+      "oql": "works where full text has (multi agent evidence provenance false corroboration)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "value": "multi agent evidence provenance false corroboration",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/works?filter=fulltext.search:multi agent evidence provenance false corroboration&per_page=10"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W7169678469",
+        "title": "Provenance Is Not Independence: The False-Corroboration Exclusion Rule for Multi-Agent Memory",
+        "doi": "https://doi.org/10.5281/zenodo.21431717"
+      },
+      {
+        "id": "https://openalex.org/W7169676276",
+        "title": "Provenance Is Not Independence: The False-Corroboration Exclusion Rule for Multi-Agent Memory",
+        "doi": "https://doi.org/10.5281/zenodo.21431716"
+      },
+      {
+        "id": "https://openalex.org/W7207701188",
+        "title": "Not All Agreement Counts as Corroboration: Provenance-Conserving Multi-View Fusion for Typed Action Admission in Human-Robot Collaboration",
+        "doi": "https://doi.org/10.48550/arxiv.2609.01662"
+      },
+      {
+        "id": "https://openalex.org/W7213531353",
+        "title": "GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2609.17695"
+      },
+      {
+        "id": "https://openalex.org/W7201869221",
+        "title": "SkillTrace: Multi-Trace Provenance Auditing for LLM-Agent Skill Reuse",
+        "doi": "https://doi.org/10.48550/arxiv.2608.05204"
+      },
+      {
+        "id": "https://openalex.org/W7171496385",
+        "title": "Grading the Narrators: An Isn\u0101d\u2013Rij\u0101l Framework for Claim-Level Provenance in Multi-Agent Knowledge Systems",
+        "doi": "https://doi.org/10.5281/zenodo.21639449"
+      },
+      {
+        "id": "https://openalex.org/W7214757364",
+        "title": "Certified Multi-Source Integrity for Structured Agent Actions",
+        "doi": "https://doi.org/10.48550/arxiv.2609.34245"
+      },
+      {
+        "id": "https://openalex.org/W4417100132",
+        "title": "Auditing medical multi-agent AI reveals risks of false consensus",
+        "doi": "https://doi.org/10.48550/arxiv.2510.10185"
+      },
+      {
+        "id": "https://openalex.org/W7160935534",
+        "title": "When Agents Overtrust Environmental Evidence: An Extensible Agentic Framework for Benchmarking Evidence-Grounding Defects in LLM Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2605.08828"
+      },
+      {
+        "id": "https://openalex.org/W7123474733",
+        "title": "BayesRAG: Probabilistic Mutual Evidence Corroboration for Multimodal Retrieval-Augmented Generation",
+        "doi": "https://doi.org/10.48550/arxiv.2601.07329"
+      }
+    ]
+  },
+  "round-2": {
+    "query": {
+      "oql": "works where full text has (provenance evidence duplication agent memory)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "fulltext.search",
+            "value": "provenance evidence duplication agent memory",
+            "operator": "has"
+          }
+        ]
+      },
+      "url": "/works?filter=fulltext.search:provenance evidence duplication agent memory&per_page=10"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W7169676276",
+        "title": "Provenance Is Not Independence: The False-Corroboration Exclusion Rule for Multi-Agent Memory",
+        "doi": "https://doi.org/10.5281/zenodo.21431716"
+      },
+      {
+        "id": "https://openalex.org/W7213531353",
+        "title": "GraphEcho: Structural Redundancy and Evidence Provenance in LLM Graph Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2609.17695"
+      },
+      {
+        "id": "https://openalex.org/W7162462260",
+        "title": "Mitigating Provenance-Role Collapse in Long-Term Agents via Typed Memory Representation",
+        "doi": "https://doi.org/10.48550/arxiv.2605.25869"
+      },
+      {
+        "id": "https://openalex.org/W4417090127",
+        "title": "Chronology of multi-agent interactions for provenance of evolving information",
+        "doi": "https://doi.org/10.1098/rsos.251988"
+      },
+      {
+        "id": "https://openalex.org/W7204021391",
+        "title": "A Graph-Based Provenance Model for Human-Agent Software Workflows",
+        "doi": null
+      },
+      {
+        "id": "https://openalex.org/W7214708583",
+        "title": "Stashbird: Efficient Speaker-Indexed Memory for Conversational Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2609.34242"
+      },
+      {
+        "id": "https://openalex.org/W7202195765",
+        "title": "SodaMem: Evidence-Grounded Temporal Graph Memory for LLM Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2608.08055"
+      },
+      {
+        "id": "https://openalex.org/W7170461370",
+        "title": "Auditing Provenance Sensitivity in LLM Agent Action Selection",
+        "doi": "https://doi.org/10.48550/arxiv.2607.20827"
+      },
+      {
+        "id": "https://openalex.org/W7169097947",
+        "title": "Oracle Agent Memory as an Enterprise Memory Substrate for Long-Horizon AI Agents",
+        "doi": "https://doi.org/10.48550/arxiv.2607.13157"
+      },
+      {
+        "id": "https://openalex.org/W4417136827",
+        "title": "Memory Fabric for Conversational AI Agents: Enabling Shared and Persistent Memory Across Users",
+        "doi": "https://doi.org/10.36227/techrxiv.176523350.08289935/v1"
+      }
+    ]
+  },
+  "forward-guo": {
+    "query": {
+      "oql": "works where it cites (W2626967530)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "referenced_works",
+            "value": "W2626967530"
+          }
+        ]
+      },
+      "url": "/works?filter=referenced_works:W2626967530&per_page=5"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W3102100346",
+        "title": "A review of uncertainty quantification in deep learning: Techniques, applications and challenges",
+        "doi": "https://doi.org/10.1016/j.inffus.2021.05.008"
+      },
+      {
+        "id": "https://openalex.org/W2951934944",
+        "title": "Opportunities and obstacles for deep learning in biology and medicine",
+        "doi": "https://doi.org/10.1098/rsif.2017.0387"
+      },
+      {
+        "id": "https://openalex.org/W3183048323",
+        "title": "A survey of uncertainty in deep neural networks",
+        "doi": "https://doi.org/10.1007/s10462-023-10562-9"
+      },
+      {
+        "id": "https://openalex.org/W2950501364",
+        "title": "Content-aware image restoration: pushing the limits of fluorescence microscopy",
+        "doi": "https://doi.org/10.1038/s41592-018-0216-7"
+      },
+      {
+        "id": "https://openalex.org/W2989996808",
+        "title": "PointPainting: Sequential Fusion for 3D Object Detection",
+        "doi": "https://doi.org/10.1109/cvpr42600.2020.00466"
+      }
+    ]
+  },
+  "forward-seeley": {
+    "query": {
+      "oql": "works where it cites (W2094111527)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "referenced_works",
+            "value": "W2094111527"
+          }
+        ]
+      },
+      "url": "/works?filter=referenced_works:W2094111527&per_page=5"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W2071762535",
+        "title": "The honeybee as a model for understanding the basis of cognition",
+        "doi": "https://doi.org/10.1038/nrn3357"
+      },
+      {
+        "id": "https://openalex.org/W2110421839",
+        "title": "The role of metacognition in human social interactions",
+        "doi": "https://doi.org/10.1098/rstb.2012.0123"
+      },
+      {
+        "id": "https://openalex.org/W2602327558",
+        "title": "Physiological Markers of Motor Inhibition during Human Behavior",
+        "doi": "https://doi.org/10.1016/j.tins.2017.02.006"
+      },
+      {
+        "id": "https://openalex.org/W2588849466",
+        "title": "A distributed, hierarchical and recurrent framework for reward-based choice",
+        "doi": "https://doi.org/10.1038/nrn.2017.7"
+      },
+      {
+        "id": "https://openalex.org/W2571151646",
+        "title": "State-of-science: situation awareness in individuals, teams and systems",
+        "doi": "https://doi.org/10.1080/00140139.2017.1278796"
+      }
+    ]
+  },
+  "forward-berdahl": {
+    "query": {
+      "oql": "works where it cites (W2098210520)",
+      "oqo": {
+        "get_rows": "works",
+        "filter_rows": [
+          {
+            "column_id": "referenced_works",
+            "value": "W2098210520"
+          }
+        ]
+      },
+      "url": "/works?filter=referenced_works:W2098210520&per_page=5"
+    },
+    "results": [
+      {
+        "id": "https://openalex.org/W4211017739",
+        "title": "Machine behaviour",
+        "doi": "https://doi.org/10.1038/s41586-019-1138-y"
+      },
+      {
+        "id": "https://openalex.org/W2611350544",
+        "title": "Dissipation of stop-and-go waves via control of autonomous vehicles: Field experiments",
+        "doi": "https://doi.org/10.1016/j.trc.2018.02.005"
+      },
+      {
+        "id": "https://openalex.org/W3159096324",
+        "title": "Hybrid Intelligence",
+        "doi": "https://doi.org/10.1007/s12599-019-00595-2"
+      },
+      {
+        "id": "https://openalex.org/W2513054915",
+        "title": "Collective cell durotaxis emerges from long-range intercellular force transmission",
+        "doi": "https://doi.org/10.1126/science.aaf7119"
+      },
+      {
+        "id": "https://openalex.org/W2019377098",
+        "title": "Exploration versus exploitation in space, mind, and society",
+        "doi": "https://doi.org/10.1016/j.tics.2014.10.004"
+      }
+    ]
+  }
+}

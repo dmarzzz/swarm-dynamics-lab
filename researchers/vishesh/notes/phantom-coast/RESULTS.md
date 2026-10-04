@@ -61,3 +61,7 @@ The next useful design would separate incomplete evidence from interpretation. B
 [Q0 summary](results/Q0-A1-summary.json), [S0 summary](results/S0-A1-summary.json), [Q0 post-mortem](reviews/Q0-A1-POST.md), [S0 post-mortem](reviews/S0-A1-POST.md), [prospective S0 assessment](reviews/S0-A1-PRE.md). Full sanitized provider maps/probabilities, actual requests, timing and usage are in each hub run's `records.json`; raw HTTP secrets are never included. Hash inventories are in DELIVERY.json. These are recorded native outcomes, unlike the historical offline fixture viewer.
 
 Run `python researchers/vishesh/notes/phantom-coast/src/audit_saved.py <downloaded-S0-directory> <audit.json>` to recompute the audit. Run `python researchers/vishesh/notes/phantom-coast/src/plot_saved.py <summary.json> <figure.png>` with matplotlib to rebuild the descriptive PNG/SVG. No provider calls occur in either command. Frozen native source and run configs remain attached to the original immutable plan and run artifacts.
+
+## Subsequent analysis presentation
+
+Iteration 2 adds the [complete paired native replay](visualization/native-replay.html), with every swarm actor and event available rather than a stride-sampled animation. Its [audit](results/NATIVE-REPLAY-AUDIT.json) matches the original record hash. No scores, requests or original run artifacts were changed. The [PC-2 successor](pc2/README.md) is separately labelled unrun.

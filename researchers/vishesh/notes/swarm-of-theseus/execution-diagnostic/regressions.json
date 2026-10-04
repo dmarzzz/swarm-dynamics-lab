@@ -1,0 +1,485 @@
+{
+  "status": "HISTORICAL DEVELOPMENT FIXTURES, NOT NEW MODEL RESULTS",
+  "errors": [
+    {
+      "error_id": "E01",
+      "original_case_id": "incident:302:qualification:0:A:0",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "context": "incident",
+      "case": {
+        "id": "incident:302:qualification:0:A:0",
+        "class": "A",
+        "summary": "needs attention",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "canary",
+      "original_action": "none",
+      "expected_action": "canary",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E02",
+      "original_case_id": "incident:302:qualification:5:B:2",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 5,
+      "category": "no_specific_case_level_diagnosis",
+      "context": "incident",
+      "case": {
+        "id": "incident:302:qualification:5:B:2",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "ledger",
+      "expected_action": "none",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E03",
+      "original_case_id": "migration:302:qualification:0:A:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-old",
+      "case": {
+        "id": "migration:302:qualification:0:A:0",
+        "class": "A",
+        "summary": "looks clear",
+        "queue": "west",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "canary",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E04",
+      "original_case_id": "migration:302:qualification:0:B:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-old",
+      "case": {
+        "id": "migration:302:qualification:0:B:0",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E05",
+      "original_case_id": "migration:302:qualification:0:B:1",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-old",
+      "case": {
+        "id": "migration:302:qualification:0:B:1",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E06",
+      "original_case_id": "migration:302:qualification:5:B:1",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-new",
+      "case": {
+        "id": "migration:302:qualification:5:B:1",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "west",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E07",
+      "original_case_id": "migration:302:qualification:5:B:2",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-new",
+      "case": {
+        "id": "migration:302:qualification:5:B:2",
+        "class": "B",
+        "summary": "looks clear",
+        "queue": "east",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E08",
+      "original_case_id": "migration:302:qualification:5:A:0",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "context": "migration-new",
+      "case": {
+        "id": "migration:302:qualification:5:A:0",
+        "class": "A",
+        "summary": "looks clear",
+        "queue": "west",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "canary",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E09",
+      "original_case_id": "migration:303:qualification:0:B:0",
+      "run": "S0-repair-migration-303-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "context": "migration-old",
+      "case": {
+        "id": "migration:303:qualification:0:B:0",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "canary",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E10",
+      "original_case_id": "release:302:qualification:0:B:0",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "category": "correct_evidence_wrong_action",
+      "context": "release",
+      "case": {
+        "id": "release:302:qualification:0:B:0",
+        "class": "B",
+        "summary": "looks clear",
+        "queue": "east",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R3 decisions-only single authoritative output",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E11",
+      "original_case_id": "release:302:qualification:0:B:1",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "category": "notebook_command_disagreement",
+      "context": "release",
+      "case": {
+        "id": "release:302:qualification:0:B:1",
+        "class": "B",
+        "summary": "looks clear",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "ship",
+      "expected_action": "hold",
+      "repairs": [
+        "R3 decisions-only single authoritative output",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E12",
+      "original_case_id": "release:302:qualification:5:B:0",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 5,
+      "category": "false_evidence_or_condition_statement",
+      "context": "release",
+      "case": {
+        "id": "release:302:qualification:5:B:0",
+        "class": "B",
+        "summary": "needs attention",
+        "queue": "east",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        }
+      },
+      "governing_source": "ledger",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    },
+    {
+      "error_id": "E13",
+      "original_case_id": "release:303:qualification:0:A:1",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 0,
+      "category": "no_specific_case_level_diagnosis",
+      "context": "release",
+      "case": {
+        "id": "release:303:qualification:0:A:1",
+        "class": "A",
+        "summary": "looks clear",
+        "queue": "central",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        }
+      },
+      "governing_source": "probe",
+      "original_action": "hold",
+      "expected_action": "ship",
+      "repairs": [
+        "R1 clean executor",
+        "R2 keyed evidence",
+        "R4 atomic decisions"
+      ],
+      "acceptance": "Saved erroneous action must fail independent scoring; corrected deterministic fixture must pass. Fresh model cases, not these development examples, must test whether interface repair helps."
+    }
+  ]
+}

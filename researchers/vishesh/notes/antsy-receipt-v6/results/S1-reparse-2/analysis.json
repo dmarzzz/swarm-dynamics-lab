@@ -1,0 +1,191 @@
+{
+  "independent_unit": "receipt; vendor/layout independence not established",
+  "assigned": 50,
+  "scorable": 47,
+  "pipelines": {
+    "A": {
+      "correct": 5,
+      "scorable": 47,
+      "missing": 44,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 39.39249371400001,
+      "wall_s_median": 0.5844449160003933,
+      "wall_s_p90": 1.441557912999997
+    },
+    "B": {
+      "correct": 8,
+      "scorable": 47,
+      "missing": 39,
+      "ambiguous": 1,
+      "failed": 0,
+      "wall_s_total": 71.05393348301004,
+      "wall_s_median": 0.8779051310002615,
+      "wall_s_p90": 3.477771200999996
+    },
+    "C": {
+      "correct": 9,
+      "scorable": 47,
+      "missing": 37,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 59.904962678996526,
+      "wall_s_median": 0.8569807454996408,
+      "wall_s_p90": 2.3340243130005547
+    },
+    "D": {
+      "correct": 9,
+      "scorable": 47,
+      "missing": 40,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 196.9329765720031,
+      "wall_s_median": 2.2578007749998505,
+      "wall_s_p90": 11.188564834001227
+    },
+    "E": {
+      "correct": 5,
+      "scorable": 47,
+      "missing": 41,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 166.64069501799895,
+      "wall_s_median": 2.157916451499659,
+      "wall_s_p90": 8.487225384998965
+    }
+  },
+  "paired": {
+    "selective-check minus agreement": {
+      "correct": {
+        "difference": 0.0425531914893617,
+        "bootstrap_95": [
+          0.0,
+          0.10638297872340426
+        ]
+      },
+      "wrong": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": -0.0425531914893617,
+        "bootstrap_95": [
+          -0.10638297872340426,
+          0.0
+        ]
+      }
+    },
+    "selective-check minus always-check": {
+      "correct": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "agreement minus confidence": {
+      "correct": {
+        "difference": -0.0425531914893617,
+        "bootstrap_95": [
+          -0.10638297872340426,
+          0.0
+        ]
+      },
+      "wrong": {
+        "difference": -0.0425531914893617,
+        "bootstrap_95": [
+          -0.10638297872340426,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": 0.0851063829787234,
+        "bootstrap_95": [
+          0.02127659574468085,
+          0.1702127659574468
+        ]
+      }
+    }
+  },
+  "uncertain_reference_bounds": {
+    "fixed-B": {
+      "accepted": 10,
+      "unknown_accepted": 1,
+      "scorable_accepted_error_wilson_95": [
+        0.019890887638544907,
+        0.434999705576656
+      ],
+      "error_rate_bounds": [
+        0.1,
+        0.2
+      ]
+    },
+    "confidence": {
+      "accepted": 13,
+      "unknown_accepted": 1,
+      "scorable_accepted_error_wilson_95": [
+        0.08894166839405471,
+        0.5323053349335657
+      ],
+      "error_rate_bounds": [
+        0.23076923076923078,
+        0.3076923076923077
+      ]
+    },
+    "agreement": {
+      "accepted": 9,
+      "unknown_accepted": 1,
+      "scorable_accepted_error_wilson_95": [
+        0.02241749145005667,
+        0.4708881822128535
+      ],
+      "error_rate_bounds": [
+        0.1111111111111111,
+        0.2222222222222222
+      ]
+    },
+    "always-check": {
+      "accepted": 11,
+      "unknown_accepted": 1,
+      "scorable_accepted_error_wilson_95": [
+        0.017876213095072896,
+        0.4041500267952385
+      ],
+      "error_rate_bounds": [
+        0.09090909090909091,
+        0.18181818181818182
+      ]
+    },
+    "selective-check": {
+      "accepted": 11,
+      "unknown_accepted": 1,
+      "scorable_accepted_error_wilson_95": [
+        0.017876213095072896,
+        0.4041500267952385
+      ],
+      "error_rate_bounds": [
+        0.09090909090909091,
+        0.18181818181818182
+      ]
+    }
+  },
+  "checker_introduced_errors": []
+}

@@ -11,7 +11,7 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](..
 
 **Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
 
-Latest measured iteration: [qualification and frozen-input diagnostic](LATEST-RESULTS.md). Qualification completed 12 valid decisions with two substantive team approval errors; removing analyst reports did not fix that error. The larger comparison was not run.
+Latest measured iteration: [matched approval-review diagnostic](RESULTS-D2.md). Thirty valid decisions across six fresh authored dossiers; targeted review 3/6 acceptable versus general review 4/6 and cheaper generalist 5/6. The repair screen failed; the external-influence comparison remains unrun.
 
 ## TLDR
 

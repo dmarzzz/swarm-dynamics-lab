@@ -1,0 +1,1 @@
+{"utc": "2026-10-04T04:21:36.348824+00:00", "models": [{"name": "qwen3:1.7b", "digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7", "size": 2401920613, "size_vram": 2401920613, "context_length": 8192}]}

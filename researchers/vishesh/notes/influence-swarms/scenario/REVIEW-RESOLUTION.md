@@ -17,3 +17,7 @@ Owner instruction, 2026-10-04 UTC: one researcher review is sufficient. Dmarz's 
 ## Next step
 
 The researcher-review gate is satisfied. Freeze the final runtime and plan, reverify the dedicated claim and remaining approved quota, then run qualification. Only valid complete qualification permits the registered comparison. No scientific success or model reliability is implied by closing the duplicate review task. Budget approval and machine preparation already exist; their live status must still be checked at dispatch.
+
+## Later evidence received and incorporated
+
+At the next pull, Dmarz had actually completed the [independent Q4 arithmetic/rendered-record audit](../../../../dmarz/notes/inbox-reviews-2026-10-04/influence-q4-review.md), with a PASS for answerability and pinned receipts. This strengthens the source-grounded interpretation of Q4's adverse model choices. It does not undo the administrative retirement, introduce a second required sign-off, certify D2's new cases, or pass native qualification. The targeted/general review diagnostic retains the requested narrow ballot interpretation and unchanged model-choice endpoint. Q4 and D1 are complete; the active follow-up is indexed in SETUP.md.

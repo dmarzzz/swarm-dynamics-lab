@@ -1,0 +1,32 @@
+{
+  "stage": "D1",
+  "budget_approved": true,
+  "host": "sim-shadow",
+  "claim": "vishesh-right-dissenter-replacement",
+  "claim_until": "2026-10-04T05:30:08Z",
+  "source_commit": "dfd45d63ac21a610d04eff71942c78e1c71a9297",
+  "file_hashes": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+    "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "11c4e03762aa13f02f46f9f138df7c0baf45cdb81b98c3a56b20becffce043cb",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "491b5717f0006c32524b34e1f146240fa1fb33a013291fa279acee75365bc970",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "d3afa9ec198d70840112f1e51d5bc6321f2ebde7fc203f03872e307aa35cafb7",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/validation_worker.py": "e27d504fad06876bc84662050629fdebf55c5bcfefb69ca5a9cc3b63cd6ff4f3",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/dissent/results/s1-a1/calls.json": "956be6fe66ec1b61df6d887b7da8a995795b19d5e7de62cf30b66f8a8c21ffda",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "assignment_sha256": "2b7af802767fdd35795c88ac5cc797fbb86f1f597ff133dca5ec6c2779ecaf69",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/7a2dc8ec9b692197556673ac641f143ac1d675c0/researchers/vishesh/notes/dissent/D1-PLAN.md",
+  "plan_sha256": "f1d4fd80e3507f4617e1128a0325f8f7825379dba2f0715f697757bb30d4e977",
+  "run_id": "right-dissenter/d1-a1",
+  "run_tldr": "TLDR: D1-A1 repeats three S1 rejected inputs once as labelled bug reproductions and adds six fresh clarified clean controls. Identify fixed response-validation predicates without relaxing validation; record validity, errors, costs and all nine assignments. No response replaces S1, and unreproduced historical errors remain unknown.",
+  "parent_attempt": "right-dissenter/s1-a1",
+  "allocation_verified": true,
+  "allocation_receipt_sha256": "a55f4c95af7a50f99216dd9b158b3a4cc054352cb3919d800a209aefe04ca2e6"
+}

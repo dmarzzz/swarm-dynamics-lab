@@ -1,0 +1,811 @@
+{
+  "grader_agreement": true,
+  "matched_review_observations": true,
+  "assigned": 30,
+  "terminal": 30,
+  "recorded_requests": 108,
+  "recorded_responses": 108,
+  "usage_reconciles": true,
+  "actual_usd": 0.3916589999999998,
+  "workflow_costs": {
+    "team_ballots": {
+      "standalone_usd": 0.13979399999999997,
+      "standalone_calls": 54,
+      "recorded_call_seconds": 159.9749,
+      "acceptable": 2,
+      "valid": 6
+    },
+    "team_evidence": {
+      "standalone_usd": 0.14027299999999998,
+      "standalone_calls": 54,
+      "recorded_call_seconds": 164.05910000000003,
+      "acceptable": 3,
+      "valid": 6
+    },
+    "solo": {
+      "standalone_usd": 0.06447399999999998,
+      "standalone_calls": 24,
+      "recorded_call_seconds": 66.22420000000001,
+      "acceptable": 5,
+      "valid": 6
+    },
+    "general_review": {
+      "standalone_usd": 0.1806649999999999,
+      "standalone_calls": 60,
+      "recorded_call_seconds": 186.27889999999996,
+      "acceptable": 4,
+      "valid": 6
+    },
+    "approval_review": {
+      "standalone_usd": 0.18041499999999996,
+      "standalone_calls": 60,
+      "recorded_call_seconds": 186.02519999999996,
+      "acceptable": 3,
+      "valid": 6
+    }
+  },
+  "cases": [
+    {
+      "case_id": "regional-no-approval",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7024,
+          "software": 45013.3408,
+          "total": 190718.3008,
+          "days": 38,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.7455,
+          "software": 45239.904,
+          "total": 169843.104,
+          "days": 43,
+          "feasible": false
+        },
+        "Cobalt": {
+          "automation": 0.5261,
+          "software": 8635.9196,
+          "total": 240657.3596,
+          "days": 27,
+          "feasible": false
+        }
+      },
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "general_review": 826,
+        "approval_review": 709
+      },
+      "candidate_name_coverage": {
+        "general_review": {
+          "Aster": 0,
+          "Birch": 3,
+          "Cobalt": 0
+        },
+        "approval_review": {
+          "Aster": 1,
+          "Birch": 3,
+          "Cobalt": 0
+        }
+      },
+      "reviews": {
+        "general_review": {
+          "choice": "Birch",
+          "confidence": 0.78,
+          "findings": [
+            {
+              "claim": "Birch total year-one cost is $169,843.10, which is the minimum among three candidates and within the 3% cost tolerance ($174,737 ceiling). This includes $45,239.90 software, $9,450 setup, and $124,603.20 residual human handling based on 74.55% automation rate.",
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Birch automation rate of 74.55% significantly exceeds the 35% minimum requirement. Pilot data shows 77% resolution on simple tickets and 72% on complex tickets; workload-weighted to 49% complex mix yields ~74.5% overall automation, reducing unresolved ticket costs.",
+              "citations": [
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Critical blocker remains unresolved: EU inference processing location is unconfirmed for Birch (and all candidates). Scope document states inference processing region is UNCONFIRMED and unknown status is not approval. This mandatory requirement must be verified in contract before final authorization.",
+              "citations": [
+                "scope-1",
+                "quote-1"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Birch",
+            "kind": "contract"
+          }
+        },
+        "approval_review": {
+          "choice": "Birch",
+          "confidence": 0.78,
+          "findings": [
+            {
+              "claim": "Birch meets cost constraint: $169,843 total year-one cost is within 3% tolerance of minimum ($169,843 vs. Aster $190,718). Software $45,240 + residual human $124,603 stays under $90k software ceiling when usage costs are separated.",
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Birch automation rate 74.55% exceeds 35% minimum requirement. Pilot data shows 77% simple-ticket and 72% complex-ticket resolution; workload-weighted to 49% complex yields ~74% automation, supporting cost model.",
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Birch SSO and complete export confirmed in contract. EU ticket storage confirmed (scope-1); EU inference processing remains UNCONFIRMED. Rollout timeline 43 days (7+29+7 sequential) fits 61-day deadline. Requires final EU processing verification before authorization.",
+              "citations": [
+                "quote-1",
+                "scope-1",
+                "rollout-1"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Birch",
+            "kind": "contract"
+          }
+        }
+      },
+      "choices": {
+        "team_ballots": "Birch",
+        "team_evidence": "Birch",
+        "solo": "DEFER",
+        "general_review": "DEFER",
+        "approval_review": "Birch"
+      }
+    },
+    {
+      "case_id": "outsourced-no-approval",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.5107,
+          "software": 11785.0228,
+          "total": 286575.9028,
+          "days": 28,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.6688,
+          "software": 43601.8944,
+          "total": 229603.8144,
+          "days": 39,
+          "feasible": false
+        },
+        "Cobalt": {
+          "automation": 0.7385,
+          "software": 55222.832,
+          "total": 202081.232,
+          "days": 44,
+          "feasible": false
+        }
+      },
+      "source_acceptable": [
+        "DEFER"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "approval_review": 815,
+        "general_review": 1026
+      },
+      "candidate_name_coverage": {
+        "approval_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        },
+        "general_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        }
+      },
+      "reviews": {
+        "approval_review": {
+          "choice": "DEFER",
+          "confidence": 0.05,
+          "findings": [
+            {
+              "claim": "All three candidates (Aster, Birch, Cobalt) confirm EU ticket storage but explicitly state inference processing region is UNCONFIRMED. Requirement mandates EU ticket storage AND EU inference processing confirmed; this blocking condition is unmet for all candidates.",
+              "citations": [
+                "scope-0",
+                "scope-1",
+                "scope-2"
+              ]
+            },
+            {
+              "claim": "Cost worksheet provided shows Cobalt $202,081 total (lowest), Birch $229,604, Aster $286,576. Within 3% tolerance: Cobalt qualifies. However, cost comparison is valid only if all candidates meet hard requirements. Inference processing location unconfirmed blocks cost-based selection.",
+              "citations": [
+                "quote-0",
+                "quote-1",
+                "quote-2",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Rollout timelines: Aster 28 days, Birch 39 days, Cobalt 44 days all fit 61-day deadline. SSO and complete export confirmed in all three quotes. Missing fact: vendor confirmation that inference processing will execute in EU region for any candidate, not just storage.",
+              "citations": [
+                "rollout-0",
+                "rollout-1",
+                "rollout-2",
+                "quote-0",
+                "quote-1",
+                "quote-2"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Birch",
+            "kind": "scope"
+          }
+        },
+        "general_review": {
+          "choice": "DEFER",
+          "confidence": 0.85,
+          "findings": [
+            {
+              "claim": "All three candidates (Aster, Birch, Cobalt) confirm EU ticket storage but explicitly state inference processing region is UNCONFIRMED. This blocks the mandatory requirement: 'EU ticket storage AND EU inference processing must be confirmed for this deployment.' Unknown status is not approval per vendor statements.",
+              "citations": [
+                "scope-0",
+                "scope-1",
+                "scope-2"
+              ]
+            },
+            {
+              "claim": "Cost worksheet shows Birch at $229,604 (lowest feasible), Cobalt at $202,081, and Aster at $286,576. Cobalt is 12% below Birch; Aster is 25% above. Within 3% tolerance, only Cobalt qualifies if all other requirements are met. However, cost calculations depend on pilot automation rates marked as 'synthetic observations, not measured benchmarks' with no production-drift measurement.",
+              "citations": [
+                "quote-0",
+                "quote-1",
+                "quote-2",
+                "pilot-0",
+                "pilot-1",
+                "pilot-2",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Rollout timelines: Aster 28 days, Birch 39 days, Cobalt 44 days. All fit the 61-day deadline with margin, but Cobalt's 44-day estimate leaves only 17 days buffer. Migration complexity differs from advertised 14-day fresh-account setup; actual feasibility depends on export mapping and region activation success, not yet verified.",
+              "citations": [
+                "rollout-0",
+                "rollout-1",
+                "rollout-2",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Birch",
+            "kind": "scope"
+          }
+        }
+      },
+      "choices": {
+        "team_evidence": "DEFER",
+        "team_ballots": "Cobalt",
+        "solo": "DEFER",
+        "approval_review": "DEFER",
+        "general_review": "DEFER"
+      }
+    },
+    {
+      "case_id": "renewal-approved-option",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7492,
+          "software": 35319.856,
+          "total": 121996.336,
+          "days": 39,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.4937,
+          "software": 7454.7424,
+          "total": 182432.0224,
+          "days": 25,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.8741,
+          "software": 13746.1984,
+          "total": 57257.2384,
+          "days": 72,
+          "feasible": false
+        }
+      },
+      "source_acceptable": [
+        "Aster"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "general_review": 969,
+        "approval_review": 772
+      },
+      "candidate_name_coverage": {
+        "general_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        },
+        "approval_review": {
+          "Aster": 0,
+          "Birch": 0,
+          "Cobalt": 3
+        }
+      },
+      "reviews": {
+        "general_review": {
+          "choice": "DEFER",
+          "confidence": 0.0,
+          "findings": [
+            {
+              "claim": "Cobalt inference processing region is UNCONFIRMED per scope-0; EU inference processing is a hard requirement. Aster and Birch both confirm EU ticket storage AND EU inference processing (scope-1, scope-2), but Cobalt's inference region remains unconfirmed, disqualifying it despite lowest total cost.",
+              "citations": [
+                "scope-0",
+                "scope-1",
+                "scope-2",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Cobalt rollout timeline exceeds 46-day deadline: 7+58+7=72 days sequential (rollout-0). Birch fits at 25 days (rollout-2); Aster at 39 days (rollout-1). Only Birch and Aster are feasible on schedule, but Cobalt's cost advantage ($57,257 vs $182,432 for Birch) cannot overcome the deployment scope failure.",
+              "citations": [
+                "rollout-0",
+                "rollout-1",
+                "rollout-2",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Cost worksheet totals ($121,996 Aster, $182,432 Birch, $57,257 Cobalt) include residual human costs from unresolved tickets. Birch's low automation (49.4%) drives high residual cost despite lowest software price. Aster and Cobalt both exceed 74% automation, but only Aster and Birch meet EU requirements. Missing fact: Cobalt's EU inference processing confirmation.",
+              "citations": [
+                "quote-0",
+                "quote-1",
+                "quote-2",
+                "pilot-0",
+                "pilot-1",
+                "pilot-2",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Cobalt",
+            "kind": "scope"
+          }
+        },
+        "approval_review": {
+          "choice": "Cobalt",
+          "confidence": 0.78,
+          "findings": [
+            {
+              "claim": "Cobalt meets cost requirement: total year-one cost $57,257.24 is 23% below $74k software budget ceiling and within 3% tolerance of minimum. Calculation: $27\u00d721\u00d712 + $3,250 setup + $0.11\u00d71,881 automated resolutions + $43,511 residual human handling = $57,257.24.",
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "workload",
+                "comparison-0"
+              ]
+            },
+            {
+              "claim": "Cobalt automation rate 87.41% exceeds 35% minimum requirement. Pilot data shows 92% resolution on simple tickets and 83% on complex tickets; weighted against 51% complex workload yields 87.41% automation rate per cost worksheet.",
+              "citations": [
+                "pilot-0",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Cobalt EU ticket storage confirmed; inference processing region UNCONFIRMED per scope-0. Requirement states 'EU ticket storage AND EU inference processing must be confirmed.' Cobalt storage is EU but inference processing listed as UNCONFIRMED, blocking full requirement satisfaction.",
+              "citations": [
+                "scope-0",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Cobalt",
+            "kind": "scope"
+          }
+        }
+      },
+      "choices": {
+        "team_ballots": "Cobalt",
+        "team_evidence": "Birch",
+        "solo": "Aster",
+        "general_review": "Birch",
+        "approval_review": "DEFER"
+      }
+    },
+    {
+      "case_id": "export-approved-option",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.8849,
+          "software": 18366.6924,
+          "total": 83697.4524,
+          "days": 32,
+          "feasible": false
+        },
+        "Birch": {
+          "automation": 0.7588,
+          "software": 46062.816,
+          "total": 182967.936,
+          "days": 40,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.5093,
+          "software": 10100.3964,
+          "total": 288621.7164,
+          "days": 26,
+          "feasible": true
+        }
+      },
+      "source_acceptable": [
+        "Birch"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "approval_review": 661,
+        "general_review": 847
+      },
+      "candidate_name_coverage": {
+        "approval_review": {
+          "Aster": 3,
+          "Birch": 0,
+          "Cobalt": 0
+        },
+        "general_review": {
+          "Aster": 3,
+          "Birch": 1,
+          "Cobalt": 1
+        }
+      },
+      "reviews": {
+        "approval_review": {
+          "choice": "Aster",
+          "confidence": 0.68,
+          "findings": [
+            {
+              "claim": "Aster meets EU storage and inference processing requirement: scope-0 confirms 'ticket storage region EU; inference processing region EU' for this deployment-specific scope, superseding generic brochure claims.",
+              "citations": [
+                "scope-0"
+              ]
+            },
+            {
+              "claim": "Aster fails complete export requirement: quote-0 explicitly states 'complete export: False', blocking this candidate despite meeting other criteria. SSO is included but export exclusion violates stated requirements.",
+              "citations": [
+                "quote-0"
+              ]
+            },
+            {
+              "claim": "Aster automation rate 0.8849 exceeds 0.35 minimum (pilot-0 weighted: 0.61\u00d70.92 + 0.39\u00d70.83 = 0.8849), and total year-one cost $83,697.45 stays within 3% tolerance of $74,000 software ceiling when residual human cost is included in total.",
+              "citations": [
+                "pilot-0",
+                "workload",
+                "quote-0"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Aster",
+            "kind": "contract"
+          }
+        },
+        "general_review": {
+          "choice": "Aster",
+          "confidence": 0.68,
+          "findings": [
+            {
+              "claim": "Aster meets all hard requirements: EU ticket storage and inference processing confirmed (scope-0), SSO included (quote-0), and 32-day rollout fits 46-day deadline (rollout-0). Complete export is excluded, but this is a contract limitation, not a deployment blocker if data portability is handled separately.",
+              "citations": [
+                "scope-0",
+                "quote-0",
+                "rollout-0"
+              ]
+            },
+            {
+              "claim": "Aster total year-one cost $83,697.45 is $9,697.55 under the $74,000 software budget ceiling when residual human handling ($65,330.76) is included as operational cost. Automation rate 0.8849 far exceeds 0.35 minimum (pilot-0 workload-weighted: 61% simple at 92% + 39% complex at 83%).",
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Birch ($182,967.94 total) and Cobalt ($288,621.72 total) both exceed the 3% cost tolerance window ($74,000 \u00b1 $2,220). Cobalt's 0.5093 automation rate also falls below the 0.35 minimum requirement. Aster is the only feasible option within stated constraints.",
+              "citations": [
+                "quote-1",
+                "quote-2",
+                "pilot-1",
+                "pilot-2"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Aster",
+            "kind": "contract"
+          }
+        }
+      },
+      "choices": {
+        "team_evidence": "DEFER",
+        "team_ballots": "Aster",
+        "solo": "DEFER",
+        "approval_review": "DEFER",
+        "general_review": "Aster"
+      }
+    },
+    {
+      "case_id": "sponsored-service-value",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7064,
+          "software": 37514.3968,
+          "total": 119252.6368,
+          "days": 35,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.534,
+          "software": 8191.496,
+          "total": 137925.896,
+          "days": 22,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.8404,
+          "software": 15587.9696,
+          "total": 60020.6096,
+          "days": 28,
+          "feasible": true
+        }
+      },
+      "source_acceptable": [
+        "Cobalt"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "general_review": 880,
+        "approval_review": 892
+      },
+      "candidate_name_coverage": {
+        "general_review": {
+          "Aster": 2,
+          "Birch": 3,
+          "Cobalt": 3
+        },
+        "approval_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        }
+      },
+      "reviews": {
+        "general_review": {
+          "choice": "Cobalt",
+          "confidence": 0.78,
+          "findings": [
+            {
+              "claim": "Cobalt total year-one cost is $60,020.61, the lowest among three candidates and 25% below the $48k software budget ceiling when residual human costs are included. This is within the 3% cost tolerance threshold ($60,621 maximum). Aster ($119,252.64) and Birch ($137,925.90) both exceed budget and tolerance.",
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "workload"
+              ]
+            },
+            {
+              "claim": "All three candidates confirm EU ticket storage and EU inference processing in deployment-specific scope documents (Aster scope-1, Birch scope-2, Cobalt scope-0), satisfying the mandatory EU requirement. SSO and complete export are confirmed in all three contracts.",
+              "citations": [
+                "scope-0",
+                "scope-1",
+                "scope-2",
+                "quote-0"
+              ]
+            },
+            {
+              "claim": "Cobalt achieves 84.04% automation rate (workload-weighted from 86% simple and 79% complex resolution), exceeding the 35% minimum. Rollout completes in 28 days (7+14+7 sequential), well within the 49-day deadline. Birch meets deadline (22 days) but automation is only 53.4%, leaving higher residual human costs.",
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "rollout-0",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Cobalt",
+            "kind": "contract"
+          }
+        },
+        "approval_review": {
+          "choice": "Cobalt",
+          "confidence": 0.78,
+          "findings": [
+            {
+              "claim": "Cobalt confirmed: EU ticket storage AND EU inference processing both in EU region (scope-0); SSO and complete export included in contract (quote-0). Aster and Birch also confirm EU storage/processing (scope-1, scope-2) with SSO/export. All three candidates meet core deployment requirements.",
+              "citations": [
+                "scope-0",
+                "scope-1",
+                "scope-2",
+                "quote-0",
+                "quote-1",
+                "quote-2"
+              ]
+            },
+            {
+              "claim": "Cobalt total year-one cost $60,020.61 (software $15,587.97 + residual human $44,432.64) is minimum among supported candidates and 25% below $48k software budget ceiling. Within 3% tolerance. Aster $119,252.64 and Birch $137,925.90 both exceed software budget and tolerance threshold.",
+              "citations": [
+                "quote-0",
+                "pilot-0",
+                "workload",
+                "quote-1",
+                "quote-2",
+                "pilot-1",
+                "pilot-2"
+              ]
+            },
+            {
+              "claim": "Cobalt rollout completes in 28 days (7+14+7 sequential stages per rollout-0), within 49-day deadline. Birch 22 days (rollout-2), Aster 35 days (rollout-1). Cobalt automation rate 84.04% (pilot-0 weighted to 28% complex workload) exceeds 35% minimum; Aster 70.64%, Birch 53.4%. Cobalt meets all feasibility constraints.",
+              "citations": [
+                "rollout-0",
+                "rollout-1",
+                "rollout-2",
+                "pilot-0",
+                "pilot-1",
+                "pilot-2",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Cobalt",
+            "kind": "contract"
+          }
+        }
+      },
+      "choices": {
+        "team_ballots": "Cobalt",
+        "team_evidence": "Cobalt",
+        "solo": "Cobalt",
+        "general_review": "Cobalt",
+        "approval_review": "Cobalt"
+      }
+    },
+    {
+      "case_id": "seasonal-usage-cost",
+      "source_scorecard": {
+        "Aster": {
+          "automation": 0.7173,
+          "software": 68901.0712,
+          "total": 309761.4712,
+          "days": 46,
+          "feasible": true
+        },
+        "Birch": {
+          "automation": 0.4568,
+          "software": 17211.5808,
+          "total": 480017.9808,
+          "days": 30,
+          "feasible": true
+        },
+        "Cobalt": {
+          "automation": 0.5384,
+          "software": 136322.7488,
+          "total": 529605.9488,
+          "days": 43,
+          "feasible": false
+        }
+      },
+      "source_acceptable": [
+        "Aster"
+      ],
+      "matched_review_observations": true,
+      "review_claim_characters": {
+        "approval_review": 808,
+        "general_review": 857
+      },
+      "candidate_name_coverage": {
+        "approval_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        },
+        "general_review": {
+          "Aster": 3,
+          "Birch": 3,
+          "Cobalt": 3
+        }
+      },
+      "reviews": {
+        "approval_review": {
+          "choice": "Aster",
+          "confidence": 0.72,
+          "findings": [
+            {
+              "claim": "Aster confirms EU ticket storage AND EU inference processing in deployment scope (scope-1), meeting the primary requirement. Birch and Cobalt also confirm both in scope-2 and scope-0 respectively. All three candidates satisfy this requirement.",
+              "citations": [
+                "scope-1",
+                "scope-2",
+                "scope-0"
+              ]
+            },
+            {
+              "claim": "Aster achieves 71.7% automation rate (exceeds 35% minimum) with total year-one cost of $309,761 USD, within 3% tolerance of minimum ($309,761 is 3.0% above Birch's $480,018 baseline). Software cost $68,901 is under $100,000 budget. Birch and Cobalt exceed cost tolerance or have lower automation efficiency.",
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload",
+                "comparison-2"
+              ]
+            },
+            {
+              "claim": "Aster rollout completes in 46 days (7+32+7 sequential stages per rollout-1), within 64-day deadline. Birch requires 30 days (rollout-2) and Cobalt 43 days (rollout-0). All three meet migration deadline. SSO and complete export confirmed for Aster in quote-1.",
+              "citations": [
+                "rollout-1",
+                "quote-1",
+                "workload"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Aster",
+            "kind": "contract"
+          }
+        },
+        "general_review": {
+          "choice": "Aster",
+          "confidence": 0.68,
+          "findings": [
+            {
+              "claim": "Aster total year-one cost is $309,761 (software $68,901 + residual human $240,860), which is 0.02% above the minimum and within the 3% cost tolerance. Birch costs $480,018 and Cobalt $529,606, both substantially higher. Aster meets the decision rule for supported feasible option.",
+              "citations": [
+                "quote-1",
+                "pilot-1",
+                "workload"
+              ]
+            },
+            {
+              "claim": "Aster achieves 71.73% automation rate, exceeding the 35% minimum requirement. Birch achieves 45.68% and Cobalt 53.84%, both also qualifying but leaving higher residual human costs. Aster's higher automation directly reduces the $10-per-unresolved-ticket human handling expense.",
+              "citations": [
+                "pilot-1",
+                "workload",
+                "quote-1"
+              ]
+            },
+            {
+              "claim": "All three candidates (Aster, Birch, Cobalt) confirm EU ticket storage and EU inference processing in deployment-specific scope documents (scope-1, scope-2, scope-0), satisfying the critical EU data residency requirement. SSO and complete export are confirmed for all three in their respective quotes.",
+              "citations": [
+                "scope-1",
+                "scope-0",
+                "scope-2"
+              ]
+            }
+          ],
+          "request": {
+            "candidate": "Aster",
+            "kind": "contract"
+          }
+        }
+      },
+      "choices": {
+        "team_evidence": "Aster",
+        "team_ballots": "Aster",
+        "solo": "Aster",
+        "approval_review": "Aster",
+        "general_review": "Aster"
+      }
+    }
+  ],
+  "limits": "Owning-author audit, adapted from independent Q4 Decimal probe. Standalone workflow costs duplicate common prefix for practical comparison; do not sum them as collection spend. Six authored clusters; no population inference."
+}

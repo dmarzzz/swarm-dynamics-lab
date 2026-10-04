@@ -2,7 +2,7 @@
 import gzip,hashlib,json,re,shutil
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1]
-SAFE=('manifest.json','public-plan-receipt.json','summary.json','episodes.jsonl','events.jsonl','comparison.json','diagnosis.json','decision-diagnosis.json','visual-validation.json','image-validation.json','publication.json','image-publication.json','runtime-samples.jsonl','replay.html','final.svg','final.png','replay.gif')
+SAFE=('manifest.json','public-plan-receipt.json','summary.json','episodes.jsonl','events.jsonl','comparison.json','diagnosis.json','citation-diagnosis.json','decision-diagnosis.json','visual-validation.json','image-validation.json','publication.json','image-publication.json','runtime-samples.jsonl','reconciliation.json','replay.html','final.svg','final.png','replay.gif')
 def package():
  out=BASE/'evidence';out.mkdir(exist_ok=True);index=[]
  for stage in ('Q0','Q1','D0','Q2','S1'):

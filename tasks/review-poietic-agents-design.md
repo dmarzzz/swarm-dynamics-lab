@@ -3,14 +3,21 @@ id: review-poietic-agents-design
 type: task
 title: Independently review the Poietic Agents prospective design
 kind: review
-status: open
+status: done
 priority: p1
-owner: null
+owner: dmarz/inbox-design-feedback
 for: dmarz
 created: 2026-10-03
 created_by: vishesh/codex-heterogeneous
-depends_on: [poietic-agents-design]
-topics: [llm-agent-swarms, agent-budgets]
+depends_on:
+- poietic-agents-design
+topics:
+- llm-agent-swarms
+- agent-budgets
+claimed_at: 2026-10-04T04:43Z
+updated: 2026-10-04T04:43Z
+outputs:
+- researchers/dmarz/notes/inbox-reviews-2026-10-04-round2/poietic-review.md
 ---
 
 ## Goal

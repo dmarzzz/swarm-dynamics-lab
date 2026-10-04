@@ -15,8 +15,14 @@ Question: can evidence-backed dissent earn a bounded check and recover after wit
 
 Study artifacts remain under this directory and public Swarm Live. Q0 source and model versions, allocation, executable command and output are in results/q0-a1/configuration.json and manifest.json. Keys are locally consumed through approved protected aliases; never in published artifacts. The same ledger enforces $1 API/500 calls across attempts; host cap is $1/six hours. Deployment uses the original owner infrastructure state and may modify only this host. Workers stop and claim releases only after durable upload, followed by authorized teardown.
 
-Issue ledger: Q0 sufficient-evidence ambiguity is suspected, not proven; Q1 paired intervention and six uncertainty controls test it. Missing SETUP index at Q0 is a process deviation, documented here retrospectively. The original public-plan preflight did pass. Current action: implement and qualify RD-3 within the approved cap after prospective publication.
+Issue ledger: Q0 sufficient-evidence ambiguity is suspected, not proven; Q1 paired intervention and six uncertainty controls test it. Missing SETUP index at Q0 is a process deviation, documented here retrospectively. The original public-plan preflight did pass. Historical next action at index creation: implement and qualify RD-3. The final status below supersedes that pending action.
 
 ## Current admission correction
 
 G3 is **blocked**: account identity failed. G2 Q1 passes 51 local/on-host software checks. G4 remains failed for Q0; Q1 has zero native calls. G5 Q0 artifact readback and public image verification pass, while allocation compliance fails. [Q1 setup post-mortem](reviews/Q1-SETUP-POST.md) records cause, containment and resume conditions. Budget remains approved. Replacement host must come from verified Dmarz account; CLEANUP.json verifies removal of the erroneous allocation and unchanged other droplets.
+
+## Final gate and closeout evidence
+
+G2: 53 checks pass. G3: Q1/S1/D1 admitted on exclusively claimed sim-shadow with exact-host/source/public preflight receipts. G4: Q1 passed 18/18 clean and 6/6 controls. G5: every assignment reconciled, all artifacts hash-read back, PNG and 23-frame GIF visually verified, workers/relay/tunnel stopped and borrowed host released/preserved. G0 formal review and S2 remain incomplete/closed. Q0 allocation noncompliance and retrospective setup index remain historical failures.
+
+Final result: evidence gate 24/60 versus always-check 30/60, with 31 versus 40 checks. D1 did not reproduce the three S1 validation rejections; historical reasons remain unknown. The new fixed-code/numeric diagnostic closes prospective observability, not missing historical data. See REPORT.md, BUDGET-STATUS.json and CLOSEOUT.json. Next action: complete-valid-result for the bounded comparison; any redesigned recovery policy requires a separate prospective plan.

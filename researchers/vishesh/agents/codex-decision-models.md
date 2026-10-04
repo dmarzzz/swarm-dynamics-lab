@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-live-study
-doing: Recovered verified idle Dmarz fleet host sim-shadow, exclusive claim through 05:30Z; deploying Q1 under original approved cap.
-updated: 2026-10-04T04:27:46.239298+00:00
+doing: Completed bounded Right Dissenter study; results and measured replay published, Dmarz fleet claim released, no running workers. Formal S2 unopened.
+updated: 2026-10-04T04:54:16.003385+00:00
 ---
 
 ## Notes
