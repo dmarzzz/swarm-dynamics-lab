@@ -1,6 +1,6 @@
 # Janitor finder, 2026-10-04
 
-Finder: `shadow/sol-janitor-find`. Findings are triage requests, not fixes or merge approval. First five reached main at `83273081`; two follow-up batches extend the append-only queue to 40 findings. Baseline inspected: `952a618c`, then `83273081` after rebasing the initial queue. Findings include shared code, Shadow's adapters/factory, and explicitly authorized local orchestration scripts. No model calls, metered collector runs, credential transfers, or external messages were made.
+Finder: `shadow/sol-janitor-find`. Findings are triage requests, not fixes or merge approval. First five reached main at `83273081`; two follow-up batches extended the append-only queue to 40 findings; the artifact-registration follow-up adds high-severity J041. Baseline inspected: `952a618c`, then `83273081` after rebasing the initial queue. Findings include shared code, Shadow's adapters/factory, and explicitly authorized local orchestration scripts. No model calls, metered collector runs, credential transfers, or external messages were made.
 
 Read [FINDINGS.jsonl](FINDINGS.jsonl) in severity order. IDs remain stable. The fixer owns `janitor/<id>` branches and requests independent Fable and Astra approval before squash merge. Teammates' data, execution ledgers, READY files and preregistrations remain read-only. Shared-code PR descriptions must credit the original researcher. Local orchestration paths are outside this repo: propose a reviewable copied wrapper/patch and clearly distinguish a merged patch from deployment to the live script.
 
@@ -10,7 +10,8 @@ Read [FINDINGS.jsonl](FINDINGS.jsonl) in severity order. IDs remain stable. The 
 2. J021-J022 and J026: stop false-green verification and push success.
 3. J010: require requested/returned model receipts.
 4. J003 and J018: make claims and batching safe under concurrency.
-5. J032: add an immutable-evidence diff guard without editing historical evidence.
+5. J041: scope Flight Deck artifact filing to the new version key; preserve old lock entries and attestation bytes. Fixer PR must explicitly name dmarz (@dmarzzz), the shared tool's author. See [code-path analysis and scoped fix](J041-ARTIFACT-SCOPE.md).
+6. J032: add an immutable-evidence diff guard without editing historical evidence.
 
 The capture-memory-mix correction lane is already active. Coordinate with that lane before proposing overlapping adapter changes; do not invalidate a running attempt by silently changing its pinned runtime. Every cap finding refers to code, not an assertion that actual overspending occurred.
 
@@ -31,5 +32,9 @@ Static tools were installed in an ephemeral `/tmp/swarm-janitor-tools` virtualen
 `python3 researchers/shadow/notes/janitor-2026-10-04/probes/resume_batch_probes.py` establishes J017 and J038-J040 using temporary synthetic records: a higher-liked duplicate raises `KeyError('score')`; changed model resumes silently; duplicate A-arm records skip a missing B-arm; saved USD 0.50 becomes USD 0.00 in the resumed summary. [Saved output](probes/resume-batch-results.json).
 
 ShellCheck 0.11.0 on local shell orchestration found concrete SC2155 masking at report credential exports, plus lower-value quoting and `cd` warnings ([output](probes/shellcheck.txt)). Only confirmed behavioral defects were promoted. J033-J037 cover alternate metered entry points, import-time dispatch, fail-closed credential loading and alert pagination. J038-J040 cover execution lineage and resume accounting. These are code defects, not edits to existing results.
+
+## Artifact-registration follow-up
+
+`python3 researchers/shadow/notes/janitor-2026-10-04/probes/artifact_scope_probes.py` invokes the real add command in a temporary synthetic project only. It changes two unrelated historical lock entries, drops a third absent artifact entry, rewrites two unrelated statements, nulls a private ingredient's saved digest and rehashes an edited input into old build provenance. [Saved results](probes/artifact-scope-results.json). This independently supports the rollback reports from sol-identity and sol-askswarm. Proposed fix: selected-key merge into the existing lock plus selected-key statement generation, with all old versions/bundles preserved. No real registry was mutated by this probe.
 
 No teammates' experiment outcomes were modified. `lab.py check` passed before the initial push (0 errors, 5 preexisting unresolved-link warnings).

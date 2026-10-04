@@ -1,0 +1,18 @@
+{
+  "fixture_only": true,
+  "new_entry_present": true,
+  "unrelated_lock_entries_changed": [
+    "changed-input@1",
+    "private-input@1"
+  ],
+  "unrelated_lock_entries_removed": [
+    "absent-artifact@1"
+  ],
+  "unrelated_statements_rewritten": [
+    "changed-input-v1.intoto.json",
+    "private-input-v1.intoto.json"
+  ],
+  "private_ingredient_digest_before": "a756205b385b05cf9b2685d4ec1e74165a8318609b2ece061bee6e1113932d8a",
+  "private_ingredient_digest_after": null,
+  "historical_dependency_digest_recomputed": true
+}
