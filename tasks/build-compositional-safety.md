@@ -3,9 +3,9 @@ id: build-compositional-safety
 type: task
 title: Ship the compositional safety benchmark and qualification
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/patchwork-hypotheses
+owner: null
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/patchwork-hypotheses
@@ -14,8 +14,9 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 - swarm-detection
-claimed_at: 2026-10-04T02:30Z
-updated: 2026-10-04T03:53Z
+updated: 2026-10-04T04:04Z
+history:
+- '2026-10-04T04:04Z released by dmarz/patchwork-hypotheses: Simulator, runner and live dashboard shipped; S0 and all four Q0 attempts reconciled. q0-004 failed: 10/24 safe, twelve incomplete, two provider refusals. Worker and uploads finished; sim-dmarz claim released. Resume after requested approved model connection, bounded diagnosis and fresh current-source qualification; P1/S1/S2 remain closed.'
 ---
 
 ## Goal
