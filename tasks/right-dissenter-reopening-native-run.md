@@ -3,7 +3,7 @@ id: right-dissenter-reopening-native-run
 type: task
 title: Execute and review the approved RD6 Q0 and conditional D0
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -14,7 +14,13 @@ topics:
 - dissent
 - decision-models
 claimed_at: 2026-10-04T19:08Z
-updated: 2026-10-04T19:29Z
+updated: 2026-10-04T19:44Z
+outputs:
+- researchers/vishesh/notes/dissent/reopening/RUN-STATUS.md
+- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-POST.md
+- researchers/vishesh/notes/dissent/reopening/reviews/Q0-A1-QUALITY.json
+- researchers/vishesh/notes/dissent/reopening/STARTUP-REPAIR.md
+- researchers/vishesh/notes/dissent/reopening/offline/validation.json
 ---
 
 ## Goal
