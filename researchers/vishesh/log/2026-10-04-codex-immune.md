@@ -31,3 +31,11 @@ Refreshed fleet and claimed sim-dmarz-3 exclusively through merged agentops PR 4
 Owner clarified not to borrow dmarz-owned machines. Released the unused sim-dmarz-3 claim in agentops PR 50. Created new vishesh-owned sim-immune-response with a verified create-only OpenTofu plan, 2 vCPU / 4 GB, expiry October 5; fleet PR 52 and exclusive-claim PR 53 merged. Provisioning state is preserved in owner-only durable local storage. No old machine was modified, no model API calls started, and the additional model-budget question remains pending.
 
 Dedicated host readiness verified: standard Ansible provision exited zero, exact runtime 3db6f44 passed 13 tests, immutable public-plan check passed, rendering dependencies installed, firewall/SSH checks passed and reporting heartbeat is active. Mirrored old release and new claim to hub. Model credential not installed and model calls remain zero pending the separate budget decision.
+
+## Scenario-grounded iteration and native evidence
+
+Replaced the copying task with executable deployment contracts, persistent data, real action consequences, delayed handoffs, a healthy-control case and registry unavailability. Frozen protocol removes oracle affected-record lists and reduces team episodes to nine calls. Offline suites a1/a2 each recorded 192 presentation variants with zero invalid. Ten scenario regressions pass, and all 48 case/configuration checks are invariant across the typed-label amendment.
+
+A1 used 108 calls/$0.169049 and failed the healthy control; a2 used 108/$0.221422 and preserved the healthy system but often ignored a failing data-readability check. The prespecified single-commander retain control used 24/$0.050788, recovered incident cases better but damaged its healthy control. All 28 native episodes retained, no provider/response failures, total $0.441259; cumulative conservative reservation $1.815067 against the single approved $8 grant. No reset/refund, no holdout and no favorable-outcome reruns.
+
+Published all runs including failures, full trace replay, frames/GIFs, comparison figure and bad-decision analysis. The qualified scientific conclusion is limited: deterministic contract checking is the strong baseline; neither model architecture demonstrates reliable recovery plus restraint. Complete evidence and next design gates are in scenario-study/ASSESSMENT.md.

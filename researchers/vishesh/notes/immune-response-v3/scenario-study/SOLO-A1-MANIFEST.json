@@ -1,0 +1,33 @@
+{
+  "backend": "anthropic",
+  "architecture": "solo",
+  "assigned": [
+    {
+      "case": "stale_advice",
+      "seed": 9101,
+      "arm": "retain"
+    },
+    {
+      "case": "migrated_data",
+      "seed": 9101,
+      "arm": "retain"
+    },
+    {
+      "case": "false_alarm",
+      "seed": 9101,
+      "arm": "retain"
+    },
+    {
+      "case": "registry_partition",
+      "seed": 9101,
+      "arm": "retain"
+    }
+  ],
+  "source_sha256": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
+  "protocol_sha256": "d483a8a0bfca8d7440e7b9cce181eb0c232db13b86a04cfa3b50cf7356775be2",
+  "commit": "0ba2c951489000ab907bef1ffa7d52261cc4f2bb",
+  "started": 1791082109.1955683,
+  "python": "3.12.3",
+  "config_sha256": "9aa4854f0650b97962c4c8bc23f51f88791d56eef6225a27140e395df75ba96e",
+  "model": "claude-haiku-4-5-20251001"
+}
