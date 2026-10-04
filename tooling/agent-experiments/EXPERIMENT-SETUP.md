@@ -1,5 +1,14 @@
 # Runbook: from a new question to an auditable experiment
 
+## Default experiment spending authorization
+
+Owner directive, 2026-10-04 UTC: when the owner directs launching a Vishesh-owned experiment without specifying a budget, USD 2 total is already approved. Do not ask again for approval of that default amount. An explicit experiment-specific budget takes precedence, including a smaller cap; existing budgets are not reset or topped up. Phantom Coast retains its explicit USD 5 total cap and accumulated spend.
+
+The default is cumulative per experiment, covering all stages, qualification, attempts, retries, coordinator/model/tool charges and incremental infrastructure costs. A new stage, restart, machine, ledger or renamed continuation does not create another USD 2 allowance. Carry actual spend and unresolved reservations forward. Record the default owner directive as the budget authority, resolve a concrete cap and request envelope before launch, reserve costs before dispatch and stop at the remaining limit. Any increase beyond the applicable cap needs owner authorization.
+
+This standing budget approval applies when an experiment is directed to launch; it does not start experiments automatically, authorize other researchers' spending or replace public-plan, qualification, source/runtime, credential or approved-account/allocation checks. Generic shared templates remain disabled until the operator fills the study-specific budget and admission evidence; use this default as that budget authority rather than requesting a redundant USD 2 confirmation.
+
+
 ## Researcher review is optional for Vishesh-owned experiments
 
 Owner directive, 2026-10-04 UTC: skip the researcher-review step for Vishesh-owned experiments, including Phantom Coast. No independent researcher, design, dossier or researcher sign-off is required to prepare, qualify or launch these experiments. This supersedes the earlier single-review requirement and conflicting researcher-approval launch gates in study plans and runbooks. The owning agent completes the pre-run assessment, resolves known substantive defects and records limitations; optional feedback must not become a blocking approval step.

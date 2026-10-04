@@ -21,3 +21,7 @@ Pulled current research and operations workflow. Published RUNNER-PRE before nat
 ## Owner-directed review process change
 
 User explicitly requested skipping researcher review. Updated standing workspace/shared process for Vishesh-owned experiments and removed reviewer identity/receipt/pass requirements from PC-2 admission. Preserved historical assessments, added prospective amendment and refreshed source hashes. 44 offline checks pass, including two proving the removed gate stays removed; budget/public-plan/fleet/source/qualification checks remain. No paid run or new spend.
+
+## Standing default experiment budget
+
+Owner authorized USD 2 total by default when directing an experiment launch. Recorded in local/shared instructions and setup/operations guidance, scoped to Vishesh-owned experiments. Explicit budgets take precedence; all stages/retries and incremental infrastructure share the cumulative cap. Phantom Coast remains USD 5, with its ledger unchanged. Documentation-only change; no launch or spending occurred.
