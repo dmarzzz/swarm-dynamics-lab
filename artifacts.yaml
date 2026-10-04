@@ -1,5 +1,3 @@
-# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `fd add`, check with
-#   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Lab
 summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
@@ -1925,4 +1923,79 @@ artifacts:
           - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/summary.json
           - researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/visualization-errors.json
         commit: 4d735ecae0e67403274ed0af682a0ebd609828a3-dirty
+  - id: vishesh-theseus-d1-results
+    category: content
+    type: figure
+    title: Theseus D1 measured interface comparison
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-results/vishesh-theseus-d1-results-v1.png
+        built_at: '2026-10-04T06:57:47Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/presentation/report.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-postmortem
+    category: content
+    type: doc
+    title: Theseus D1 results and postmortem
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-postmortem/vishesh-theseus-d1-postmortem-v1.md
+        built_at: '2026-10-04T06:57:48Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-replay
+    category: content
+    type: doc
+    title: Theseus D1 measured output inspector
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-replay/vishesh-theseus-d1-replay-v1.html
+        built_at: '2026-10-04T06:57:49Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/summary.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence.tar.gz
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
+  - id: vishesh-theseus-d1-evidence
+    category: content
+    type: dataset
+    title: Theseus D1 complete execution evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-evidence/vishesh-theseus-d1-evidence-v1.gz
+        built_at: '2026-10-04T06:57:49Z'
+        note: vishesh/codex-theseus; measured D1, 144 calls; not culture-preservation evidence.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:5c30a4b28b9662c83977c7a9810635070a80d972335743935504c3dcee0905e2
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/manifest.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/D1/evidence-hashes.json
+        commit: 6b3f708d3cf69640a967f8b0b73c6af6069fef22-dirty
 requires: '1.2'

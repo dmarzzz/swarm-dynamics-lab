@@ -1,0 +1,35 @@
+{
+  "uploaded_to_run": "D1-610-migration-old-E-7",
+  "receipts": [
+    {
+      "name": "results.png",
+      "sha256": "c87024ba12bebf8d061927dca445cb40ce3f35c0e159e483a9725ce1b5d27c94",
+      "verified_readback": true
+    },
+    {
+      "name": "RESULTS-D1.md",
+      "sha256": "f5dd1400634d65eb957191a84d08f09d4a23a7939fd1578bffb45fcfb1b18a99",
+      "verified_readback": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "77e696205db7a8452507b2f67b3d2d952311a439136f39c4765c90155fd7e004",
+      "verified_readback": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "9adbc600b40a9421da6630edd207f369825eb864f925c55eb6ffc6d34a4a99cd",
+      "verified_readback": true
+    },
+    {
+      "name": "replay.html",
+      "sha256": "73a94a01aa69887a732c02475b63340a518171a869c7d8ba1e60dd04c702221c",
+      "verified_readback": true
+    },
+    {
+      "name": "terminal.json",
+      "sha256": "ee7679687a7f48ed396b80ee0f96deb24517280be8084ba8f65e01dd31a24d2d",
+      "verified_readback": true
+    }
+  ]
+}
