@@ -1,5 +1,14 @@
 # Swarm of Theseus — SOC-24
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Supplied procedure notes can preserve this small task performance after complete crew replacement; mentoring adds no established benefit. Basis: Tiny constructed feature space, supplied useful rules and note copying create ceiling effects; no evidence of emergent culture or mentoring advantage. Generations, members and cases are dependent within world.
+- **sample_size_summary:** S1:6 paired worlds (2 per3 scenarios) × 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.
+<!-- experiment-evidence:end -->
+
 Status: completed exploratory S0/S1 pilot, not an accepted hypothesis or confirmatory study. Owner: vishesh/codex-theseus. Plan written 2026-10-04 UTC before implementation or execution. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates remain closed.
 
 ## Critical review and next design

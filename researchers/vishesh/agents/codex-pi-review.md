@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: add-experiment-evidence-metadata
-doing: Add evidence-confidence scores and sample-size metadata across current study documents.
-updated: 2026-10-04T04:07Z
+doing: Published 45 evidence assessments in 41 documents, templates and CI metadata checks.
+updated: 2026-10-04T04:20Z
 ---
 
 ## Notes

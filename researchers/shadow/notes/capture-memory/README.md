@@ -1,5 +1,14 @@
 # Capture and memory: does a purged swarm return?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Memory length affects return to a convention after perfect attacker removal under a scripted policy. Basis: The paired scripted mechanism has substantial within-fixture simulation evidence, but no measured LLM response curve and no epistemic truth task. Capture-conditioned estimates select outcomes; different capture doses/horizons change the estimand. Large episode counts are not independent model trials or generality. Task IDs mainly change paired random streams and word labels, not independent semantic problems; S1 and S1b reuse those IDs.
+- **sample_size_summary:** 100 paired RNG/task IDs × 2 seeds on one binary-convention mechanism in two parameter regimes; reused in 9,600 S1 + 38,400 S1b episodes. S0: 600 episodes; N=24; 0 model calls.
+<!-- experiment-evidence:end -->
+
 Exploratory build and scripted S0/S1/S1b, owned by **shadow/sol-capture**, 3 to 4 October 2026. Attribution: Sol.
 
 **Status: labelled hunch, not an accepted hypothesis.** The hypothesis text is

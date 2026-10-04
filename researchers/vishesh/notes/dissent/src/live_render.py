@@ -26,6 +26,19 @@ def render(out):
             d.text((380,y+70),f"{v['valid']}/6 valid responses",font=font(25),fill=MUTED)
         d.text((70,850),'Qualification: '+('PASS' if s['qualification_passed'] else 'FAIL'),font=font(44),fill=GREEN if s['qualification_passed'] else RED)
         d.text((70,920),'Thresholds: 17/18 valid, 16/18 correct, at least 5/6 correct in every scenario.',font=font(25),fill=MUTED)
+    elif s['stage']=='Q1':
+        for i,scenario in enumerate(('bridge','build','alarm')):
+            y=225+i*180;d.text((70,y),scenario.title(),font=font(34),fill=FG)
+            for j,arm in enumerate(('generic','clarified')):
+                v=s['by_instruction'][arm][scenario];yy=y+j*68
+                d.text((325,yy),arm,font=font(26),fill=MUTED)
+                d.rectangle((530,yy,1450,yy+42),fill='#253642')
+                if v['correct']:d.rectangle((530,yy,530+920*v['correct']/6,yy+42),fill=BLUE if j==0 else GREEN)
+                d.text((1480,yy),f"{v['correct']}/6",font=font(30),fill=FG)
+        controls=sum(x['correct'] for x in s['by_instruction']['uncertainty'].values())
+        d.text((70,820),f'Absent/conflicting evidence: {controls}/6 correct DEFER',font=font(32),fill=FG)
+        d.text((70,890),'Clarified qualification: '+('PASS' if s['qualification_passed'] else 'FAIL'),font=font(42),fill=GREEN if s['qualification_passed'] else RED)
+        d.text((70,963),'18 matched clean pairs; 6 uncertainty controls. Repeated grammar, not semantic generalization.',font=font(25),fill=MUTED)
     else:
         d.text((70,205),'Policy',font=font(26),fill=MUTED);d.text((420,205),'Correct on time / 60 assigned',font=font(26),fill=MUTED)
         d.text((1310,205),'Harmful flips',font=font(25),fill=MUTED);d.text((1550,205),'Checks',font=font(25),fill=MUTED)

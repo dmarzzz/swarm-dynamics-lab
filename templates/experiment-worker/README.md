@@ -24,6 +24,10 @@ run-workers.sh        one worker per core in tmux on a server
 results/              local outputs (episodes/, pulled/, <stage>.md, <stage>_cells.csv, <stage>_tradeoff.png)
 ```
 
+## Evidence metadata
+
+Every copied study needs `evidence_confidence` and `sample_size_summary` in its README, following the [shared rubric](../../experiments/EVIDENCE-METADATA.md). Register a row in `experiments/evidence-metadata.json` and render the fields with `python3 scripts/experiment_evidence.py --write`. Use an explicit claim, rationale and dated source; distinguish independent task roots from agents, calls and repeated outcomes. Label planned counts as planned and update the metadata after each analyzed cohort. These are reporting fields, not additions to the frozen `experiment.yaml` or a claim that the hub automatically displays them.
+
 ## Review and repair every attempt
 
 Follow the shared [run-review cycle](../../tooling/agent-experiments/RUN-REVIEW.md).

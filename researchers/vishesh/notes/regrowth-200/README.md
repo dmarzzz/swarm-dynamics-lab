@@ -1,5 +1,14 @@
 # Regrowth 200: distributed route repair
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The added Laya heads did not improve final routing quality on this one map; both model arms remained far below exact routing on shortest paths. Basis: Descriptive trajectories only; model arms share100%valid but6.5%shortest final routes, so fast recovery to poor quality is not advantage. Hybrid adds compute and sees Qwen proposals. Missing original public registration is preserved separately.
+- **sample_size_summary:** One fixed map × 3 architectures ×damage/control =6/6 worlds;200 cell identities,80 rounds. No replicated map sample.
+<!-- experiment-evidence:end -->
+
 **Registration status: retrospective repair.** The pilot ran with a local protocol and source hashes, but no plan URL was registered on the live hub. That is a process failure, recorded in [REGISTRATION-FAILURE.md](REGISTRATION-FAILURE.md). This public explanation was added after the results were known. It is not a preregistration or a confirmatory study.
 
 ## TLDR

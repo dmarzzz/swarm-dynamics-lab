@@ -12,12 +12,12 @@ from provider import Anthropic, CallFailure, Ledger
 from render import font
 
 
-def cases():
+def cases(attempt="i0-003"):
     path = common.ROOT/'results/q0-004'
     hashes = json.loads((path/'artifact-hashes.json').read_text())
     assert hashlib.sha256((path/'episodes.jsonl').read_bytes()).hexdigest() == hashes['episodes.jsonl']
     rows = {r['episode_id']: r for r in map(json.loads, (path/'episodes.jsonl').read_text().splitlines())}
-    selected = common.design()['diagnostics']['i0-003']['cases']
+    selected = common.design()['diagnostics'][attempt]['cases']
     result = []
     for index, item in enumerate(selected):
         row = rows[item['episode']]
@@ -53,14 +53,14 @@ def picture(rows, items):
 
 def execute(attempt):
     import swarm_report as sr
-    if attempt != 'i0-003': raise ValueError('unregistered_diagnostic')
-    commit=common.frozen(attempt);items=cases()
+    if attempt not in ('i0-003','i0-004'): raise ValueError('unregistered_diagnostic')
+    commit=common.frozen(attempt);items=cases(attempt)
     out=common.ROOT/'results'/attempt;out.mkdir(parents=True,exist_ok=False)
     registration=dict(json.loads((common.ROOT/'registration'/f'{attempt}.json').read_text()),launch_verified_at=time.time())
     common.dump(out/'public-plan-receipt.json',registration)
     assigned=[dict(case=i['case'],condition=c) for i in items for c in ('original','clarified')]
     random.Random('i0-003-paired-order').shuffle(assigned)
-    common.dump(out/'manifest.json',dict(attempt=attempt,stage='I0',parent_attempt='q0-004',commit=commit,hashes=common.hashes(),assignments=assigned,cases=items))
+    common.dump(out/'manifest.json',dict(attempt=attempt,stage='I0',parent_attempt=common.design()['diagnostics'][attempt]['parent_attempt'],commit=commit,hashes=common.hashes(),assignments=assigned,cases=items))
     ledger=Ledger(common.ROOT/'accounting/study.jsonl');before=ledger.transact();rows=[];frames=[picture([],items)];started=time.monotonic()
     with sr.start(common.EXP,params=dict(stage='I0',kind='interface-diagnostic',attempt=attempt,plan_url=registration['url']),message=registration['registered_tldr'],run=f'{common.EXP}/{attempt}-diagnostic') as run:
         for assignment in assigned:

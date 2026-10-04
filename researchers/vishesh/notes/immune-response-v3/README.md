@@ -1,5 +1,14 @@
 # Immune Response
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Selective repair mechanisms behave as designed across synthetic recurrence, benign-learning and missing-lineage cases. Basis: Scripted mechanisms and oracle incident labels establish fixture behavior only. Eight actors and 24 rounds per episode are not replicates. Current family status belongs to later scenario/receipt studies, not this completed cohort.
+- **sample_size_summary:** Engineering:16 task roots × 5 strata × 9 arms =720 outcomes; native task6700 was not run.
+<!-- experiment-evidence:end -->
+
 ## Current status — 2026-10-04 UTC
 
 The latest iteration is the [evidence-checking receipt study](evidence-study/README.md). Its native diagnostic was stopped after a wrong-cloud-account incident: **3 completed, 1 partial and 12 unstarted assignments**. The [interruption post-mortem](evidence-study/reviews/receipt-a2-post.md) preserves all 16 assignments and the remaining account-verification and reporting repairs. There is no completed qualification or treatment-effect claim. Historical allocation and execution descriptions below do not authorize a relaunch.

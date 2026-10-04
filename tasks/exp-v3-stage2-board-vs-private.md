@@ -1,7 +1,7 @@
 ---
 id: exp-v3-stage2-board-vs-private
 type: task
-title: E3: v3 stage 2, board vs private work with revised baseline (24 worlds)
+title: "E3: v3 stage 2, board vs private work with revised baseline (24 worlds)"
 kind: experiment
 status: open
 priority: p2

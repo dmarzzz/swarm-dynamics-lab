@@ -1,5 +1,14 @@
 # Swarm of Theseus v2
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The first v2 native screen failed action competence; procedure-continuity effects remain untested. Basis: Execution completed without invalid or missing responses, but explicit-rule and learner cells failed unchanged competence floors. These are observed rule-application errors, not evidence of cultural loss. A bounded repair on fresh seeds is planned; S1 was not started.
+- **sample_size_summary:** S0: 6 scenario/world roots (2 per 3 scenarios) × 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.
+<!-- experiment-evidence:end -->
+
 **Built and offline-checked; no v2 model results yet.** This is an exploratory instrument for learned procedure continuity, not a demonstration of emergent culture or a novelty claim. The public plan was written before implementation; an explicit prospective amendment adds a common feedback interruption. Read [PLAN.md](PLAN.md), [the pre-run assessment](reviews/S0-pre.md), and [the prior evidence/social review](../redesign/SOCIAL-GROUNDING.md).
 
 The original result mostly showed that supplying and copying a useful rule works. This iteration asks a harder practical question: can successors retain the useful part of an inherited procedure while correcting the obsolete part, even when fresh feedback is interrupted?

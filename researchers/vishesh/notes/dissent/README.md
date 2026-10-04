@@ -1,5 +1,14 @@
 # Dissent: The Right Dissenter
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether bounded evidence-backed challenge improves decisions against wrong majority reports without needless disruption. Basis: Votes are scripted; repeated native adjudications may share saved responses. Seven policies, five source/vote roles and temporal events do not multiply independent case count.
+- **sample_size_summary:** No native results. Planned Q0: 18 clean decisions. S1: 52 roots × 7 policies = 364 trajectories containing 420 decision opportunities (48 static roots and 4 temporal roots with 3 steps each), across 3 scenarios.
+<!-- experiment-evidence:end -->
+
 Research area connecting minority evidence, collective correction and typed decision models. Canonical question **DM-03**, jointly tagged **dissent** and **decision-models**. DM-14 is a related question. Tags are many-to-many; each idea keeps one ID and one assessment history.
 
 The practical rule: a dissenter can earn a bounded independent check. Evidence determines whether the group changes its decision. A challenge must also be able to withdraw and reopen when facts change.

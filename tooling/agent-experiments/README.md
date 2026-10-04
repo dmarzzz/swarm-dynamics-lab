@@ -7,6 +7,7 @@ For new studies, start with [the setup runbook](EXPERIMENT-SETUP.md) and copy [t
 | Artifact | Purpose |
 | --- | --- |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
+| [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
 | [AGENT-LIFECYCLE.md](AGENT-LIFECYCLE.md) | Agent identity, actual initialization receipts, context, memory, reset and fork semantics; recommended production contract |
 | [AGENT-LIFECYCLE-RESEARCH.md](AGENT-LIFECYCLE-RESEARCH.md) | 29 annotated research/practitioner entries and access limits |

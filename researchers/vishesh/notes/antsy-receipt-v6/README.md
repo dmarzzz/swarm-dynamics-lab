@@ -1,5 +1,14 @@
 # Antsy v6: accept, check, or refer a receipt total
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested application question: fallible OCR checks improve receipt-total acceptance and referral decisions enough to justify their measured cost. Basis: Only a prospective total-amount tool pilot is tracked. Five pipelines share Tesseract, so agreement is correlated. The 50-receipt test evaluation remains unopened; model comparisons require a separate qualification and no results are inherited from v4/v5.
+- **sample_size_summary:** Observed: none. Planned: 20 train receipts for development (5 OCR pipelines, ≤100 calls); then 50 untouched test receipts after freezing policies. Vendor/layout independence unverified; model study separate.
+<!-- experiment-evidence:end -->
+
 Exploratory instrument and application pilot, not an accepted hypothesis or production payment system. Plan written before implementation, 2026-10-04 UTC. Parent: [v5 issue ledger](../antsy-verification-v5/ISSUES.md). Repository refresh:3ccbfd02a6d54713103732867cd43f6d4b2f0d6b.
 
 ## Why this experiment

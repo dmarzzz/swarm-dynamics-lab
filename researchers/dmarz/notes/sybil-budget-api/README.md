@@ -1,5 +1,14 @@
 # Verification budget and verifier reliability
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The bounded packet qualification passed; the verification-budget main study has launched but no final comparison is reported at this cutoff. Basis: Exact clean qualification passed and the tracked deployment record now confirms S1 launch. Completed main counts and treatment estimates are not reconciled in the repository; qualification and dispatch do not establish the budget frontier. Identities, facts and cells remain dependent within worlds.
+- **sample_size_summary:** Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds × 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.
+<!-- experiment-evidence:end -->
+
 Exploratory follow-up to [sybil-scale-api](../sybil-scale-api/RESULTS.md), owned by dmarz. This is a bounded synthetic study with model synthesis, not hundreds of autonomous model agents and not an accepted formal hypothesis. The owner explicitly authorized shipping both follow-ups in parallel and waived independent review on 2026-10-04. Own planning, qualification, reconciliation and post-run assessments remain required; S2 stays disabled.
 
 ## Question

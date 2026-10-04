@@ -3,7 +3,7 @@ import argparse,contextlib,datetime,json,os,subprocess,sys,time,urllib.request,u
 from pathlib import Path
 from cases import digest
 from jev import request
-from live_design import SNAPSHOT,qualification,development,assignments,frozen_requests
+from live_design import SNAPSHOT,qualification,diagnostic,development,assignments,frozen_requests
 from protocol import episode,summarize,ARMS
 from policies import ExactReference
 
@@ -73,17 +73,18 @@ def main(a):
     os.environ.update(SWARM_SOURCE='vishesh/codex-decision-models',SWARM_HOST='sim-right-dissenter')
     import swarm_report as sr
     # Fixed strings only; reporter errors never printed with private endpoints.
-    run=quiet(sr.start,'right-dissenter',run=config['run_id'],params={'stage':a.stage,'design':'RD-2','source':config['source_commit'],'plan_url':config['plan_url'],'scripted_votes':a.stage=='S1'},message=config['run_tldr'])
+    run=quiet(sr.start,'right-dissenter',run=config['run_id'],params={'stage':a.stage,'design':'RD-3','source':config['source_commit'],'plan_url':config['plan_url'],'scripted_votes':a.stage=='S1'},message=config['run_tldr'])
     quiet(run.__enter__)
+    if hasattr(sr,'report'):quiet(sr.report,'log',experiment='right-dissenter',run=config['run_id'],url=config['plan_url'],message='Immutable plan binding for this attempt.')
     try:
-        cases={x['case_id']:x for x in (qualification() if a.stage=='Q0' else development())}
+        cases={x['case_id']:x for x in (qualification() if a.stage=='Q0' else diagnostic() if a.stage=='Q1' else development())}
         for item in assigned:
             if policy.consecutive>=5 or time.monotonic()-policy.started>2700:break
             item['status']='started';save(a.out/'manifest.json',manifest);c=cases[item['case_id']]
-            if a.stage=='Q0':
+            if a.stage in ('Q0','Q1'):
                 try:action=policy('private',c['packet']);status='completed'
                 except Exception:action='DEFER';status='failed'
-                result={'case_id':c['case_id'],'scenario':c['scenario'],'arm':'private','final':action,'status':status,'expected':c['expected'],'correct':action==c['expected'] and status=='completed'}
+                result={'case_id':c['case_id'],'scenario':c['scenario'],'arm':c.get('arm','private'),'seed':c['seed'],'final':action,'status':status,'expected':c['expected'],'correct':action==c['expected'] and status=='completed'}
                 rows.append(result)
             else:
                 results=episode(c,item['arm'],exact if item['arm']=='exact-reference' else policy,random_check=item['random_check'] if item['arm']=='matched-random' else None)
@@ -96,6 +97,14 @@ def main(a):
             per={s:{'correct':sum(x['correct'] for x in rows if x['scenario']==s),'valid':sum(x['status']=='completed' for x in rows if x['scenario']==s),'assigned':6} for s in ('bridge','build','alarm')}
             correct=sum(x['correct'] for x in rows);valid=sum(x['status']=='completed' for x in rows)
             report={'assigned':18,'terminal':len(rows),'correct':correct,'valid':valid,'by_scenario':per,'qualification_passed':valid>=17 and correct>=16 and all(v['correct']>=5 for v in per.values())}
+        elif a.stage=='Q1':
+            per={arm:{s:{'correct':sum(x['correct'] for x in rows if x['arm']==arm and x['scenario']==s),'valid':sum(x['status']=='completed' for x in rows if x['arm']==arm and x['scenario']==s),'assigned':2 if arm=='uncertainty' else 6} for s in ('bridge','build','alarm')} for arm in ('generic','clarified','uncertainty')}
+            clean=list(per['clarified'].values());controls=list(per['uncertainty'].values())
+            report={'assigned':42,'terminal':len(rows),'correct':sum(x['correct'] for x in rows),'valid':sum(x['status']=='completed' for x in rows),'by_instruction':per,'qualification_passed':sum(x['valid'] for x in clean)>=17 and sum(x['correct'] for x in clean)>=16 and all(x['correct']>=5 for x in clean) and sum(x['correct'] for x in controls)==6}
+            pairs={}
+            for x in rows:
+                if x['arm']!='uncertainty':pairs.setdefault(x['seed'],{})[x['arm']]=x['correct']
+            report['paired_changes']={name:sum(p.get('generic')==a and p.get('clarified')==b for p in pairs.values()) for name,a,b in [('improved',False,True),('worsened',True,False),('both_correct',True,True),('both_wrong',False,False)]}
         else:
             report={'assigned':total,'terminal':len(rows),'by_arm':{arm:summarize([x for x in rows if x['arm']==arm]) for arm in ARMS}}
             for arm,values in report['by_arm'].items():
@@ -114,6 +123,6 @@ def main(a):
         quiet(run.fail,message='Study execution failed: '+type(e).__name__);raise
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--stage',choices=['Q0','S1'],required=True);p.add_argument('--config',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
+    p=argparse.ArgumentParser();p.add_argument('--stage',choices=['Q0','Q1','S1'],required=True);p.add_argument('--config',type=Path,required=True);p.add_argument('--out',type=Path,required=True)
     try:main(p.parse_args())
     except Exception as e:print(json.dumps({'worker_failed':type(e).__name__}));raise SystemExit(1)

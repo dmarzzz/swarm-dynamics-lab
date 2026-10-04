@@ -1,7 +1,7 @@
 ---
 id: exp-v3-model-ladder
 type: task
-title: E2: v3 screen on Sonnet 5.5 if Haiku cannot compute
+title: "E2: v3 screen on Sonnet 5.5 if Haiku cannot compute"
 kind: experiment
 status: open
 priority: p2

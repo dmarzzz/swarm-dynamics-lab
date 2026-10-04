@@ -1,0 +1,20 @@
+{
+  "offline_tests": 51,
+  "passed": true,
+  "frozen_clean_pairs": 18,
+  "uncertainty_controls": 6,
+  "scope": "software checks only; no native Q1 calls",
+  "source_hashes": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+    "researchers/vishesh/notes/dissent/src/jev.py": "18f274ef2a93fccbc6dfdf69f1fd2687638716b7eca9d48c6cd406e91ae7d7b8",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "36dacf733cb3ecdb8027db89f99fe6cc56b4e3acabb76e7ece18f558bee13b36",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "7cf78a15b92d03d121ef0d709f55b472b00ff4995ff08a869ddb30f44e6ead0a",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "01df8cfa5115f99facb8c3a4d667eb458e639138ad373b58658e180012cb7c21",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00"
+  }
+}

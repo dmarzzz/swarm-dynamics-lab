@@ -1,5 +1,14 @@
 # Avalon Swarm
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../experiments/evidence-metadata.json), [rubric](../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Scripted recovery and communication mechanics work at increasing logical population size. Basis: Programmed repair, synthetic identities and environment audits do not establish LLM benefit; small recovery difference descriptive. Large logical population is a capacity check, not large independent sample.
+- **sample_size_summary:** 45 scripted worlds:15v0.1 scale (5sizes × 3topologies),15recovery (5paired seeds × 3arms),15v0.2 consensus checks;one scale seed per condition.
+<!-- experiment-evidence:end -->
+
 A runnable research prototype for studying trust, deceptive claims, coordination, and recovery in populations of **100, 200, 500, 1,000, and 2,000 agents**. Created for swarm-dynamics tooling, 3 October 2026. Version 0.2 uses scripted agents; it does not contain results from LLM agents.
 
 The research question is: **When misleading claims spread through a swarm, does verified evidence actually repair collective decisions, or does the swarm keep repeating its earlier mistakes?**

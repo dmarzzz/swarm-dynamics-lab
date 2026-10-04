@@ -211,13 +211,14 @@ class Accounting(unittest.TestCase):
         with tempfile.TemporaryDirectory() as td:
             l=Ledger(Path(td)/'ledger.jsonl');adapter=Anthropic(l,opener=response,key='fake',workspace='fake')
             answer,usage=adapter.call({'actions':['wait']},'first')
-            self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],.0003)
+            expected=(100*common.design()['budget']['input_usd_per_million']+10*common.design()['budget']['output_usd_per_million'])/1e6
+            self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],expected)
             self.assertEqual(usage['stop_reason'],'end_turn')
             with self.assertRaises(CallFailure) as caught:adapter.call({'actions':['inspect']},'second')
             self.assertEqual(caught.exception.category,'invalid_action')
             self.assertEqual(json.loads(caught.exception.accounting['response_text'])['action'],'wait')
             self.assertEqual(l.transact()['usage_reported_calls'],2)
-            self.assertAlmostEqual(l.transact()['actual_usd'],.0006)
+            self.assertAlmostEqual(l.transact()['actual_usd'],2*expected)
 
     def test_empty_refusal_retains_category_and_cost(self):
         def response(*args,**kwargs):

@@ -23,6 +23,13 @@ TODO question, treatment, comparator, success metric and limitations in plain la
 
 TODO testable question, prospective prediction if any, primary contrast and claim boundary.
 
+## Evidence metadata
+
+- **evidence_confidence:** unassessed — name the claim and rationale using the [0–4 rubric](https://github.com/dmarzzz/swarm-lab/blob/main/experiments/EVIDENCE-METADATA.md); do not reuse an agent confidence value.
+- **sample_size_summary:** observed independent units and completed/assigned outcomes; label planned units separately.
+
+Add this study and its supporting paths to `experiments/evidence-metadata.json`, then run `python3 scripts/experiment_evidence.py --write`. Keep frozen registration and run configurations unchanged.
+
 ## Setup
 
 TODO environment, versions, hardware, seeds. Put code in this folder under src/ and outputs under results/.

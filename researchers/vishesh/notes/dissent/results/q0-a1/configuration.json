@@ -1,0 +1,27 @@
+{
+  "stage": "Q0",
+  "budget_approved": true,
+  "host": "sim-right-dissenter",
+  "claim": "vishesh-right-dissenter",
+  "claim_until": "2026-10-04T10:06:57Z",
+  "source_commit": "16a22642691cf071db476211012ab0bf3ba50888",
+  "file_hashes": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "ab69e34346cfae82d6fdbfa5b3662c1cc39a159b01354038258bd71af09e780f",
+    "researchers/vishesh/notes/dissent/src/jev.py": "27a28420a4171689c24e68024a5d5c6e1c2f7f915847df7cd3cc4b598741dff7",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "23aa1502e0ff20e0be95c5ecf5aa8cd5d140fe40c71931eed69b483d1a7ef3ec",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "91116216fa344e6e37a1d88ef8bf634d3b33c21e17dc007903fab8a64b0a8c72",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "5d98b8015507dc82424f469cc80b4a758617b5da2d9dffe51c0413cc3fc268a0",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "assignment_sha256": "b5895268ce776aa5171887c88b49948cb6c3ba903642f551ed35354cdc2e7ba3",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/bf5c8d8b33242b78231198a5038178c94ab01c9f/researchers/vishesh/notes/dissent/LIVE-PLAN.md",
+  "plan_sha256": "e306c0186c77fd8d60babc83bf78fb29f967c6d74c5672a8f17d7f4cb3a9d844",
+  "run_id": "right-dissenter/q0-a1",
+  "run_tldr": "TLDR: Q0-A1 tests whether the pinned native Jev route interprets 18 clean observations across bridge, build and alarm cases against exact expected actions. Require 17/18 valid, 16/18 correct and 5/6 correct per scenario; this small grammar qualification does not test spontaneous dissent or operational reliability."
+}

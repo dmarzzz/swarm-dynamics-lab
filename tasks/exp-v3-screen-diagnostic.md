@@ -1,7 +1,7 @@
 ---
 id: exp-v3-screen-diagnostic
 type: task
-title: E1: v3 competence-screen diagnostic (work step vs capability, Haiku)
+title: "E1: v3 competence-screen diagnostic (work step vs capability, Haiku)"
 kind: experiment
 status: open
 priority: p2

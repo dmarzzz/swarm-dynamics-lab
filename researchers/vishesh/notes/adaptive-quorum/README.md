@@ -1,5 +1,14 @@
 # Adaptive quorum under urgency
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Fixed and adaptive quorum policies tied on the tested evidence tapes; the small fixture does not establish an adaptive stopping advantage. Basis: Fixed/adaptive policies tied; shared full tapes mean outcomes are paired. Source independence supplied, not detected. Small synthetic qualification does not establish adaptive advantage.
+- **sample_size_summary:** Per backend:6 task clusters × 3 worlds × 2 deadlines × 4 policies =144 outcomes; scripted andLaya both complete.
+<!-- experiment-evidence:end -->
+
 ## TLDR
 
 When should five scouts commit to an API choice as a deadline approaches? Compare majority, fixed evidence quorum, a reduced final-round quorum and a central solver on shared recommendation tapes. Measure correctness, false commitment and delay. This tests a stopping rule on a fixed evidence schedule, not autonomous API research; a tied pilot does not show an adaptive advantage.
