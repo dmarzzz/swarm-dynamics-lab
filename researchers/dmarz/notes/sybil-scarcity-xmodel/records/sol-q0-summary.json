@@ -1,0 +1,146 @@
+{
+  "analyzed": 48,
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0,
+  "continuation": null,
+  "cost_usd": 2.270212,
+  "elapsed_seconds": 84.3675163759981,
+  "episodes": 48,
+  "errors": [],
+  "experiment": "sybil-scarcity-xmodel-sol",
+  "failed": 0,
+  "fixture_exact": null,
+  "graded": 48,
+  "initial_study_accounting": {
+    "actual_usd": 0.046259,
+    "attempted_calls": 1,
+    "calls_by_batch": {
+      "p0-002-sol": 1
+    },
+    "calls_by_stage": {
+      "P0": 1
+    },
+    "cap_calls": 1489,
+    "cap_transport_attempts": 1700,
+    "cap_usd": 150,
+    "committed_usd": 0.046259,
+    "input_tokens": 18232,
+    "output_tokens": 68,
+    "reserved_usd": 0.324995,
+    "transport_attempts": 1,
+    "usage_reported_calls": 1,
+    "voided_calls": 0
+  },
+  "input_tokens": 875136,
+  "invalid": 0,
+  "invariant_violations": [],
+  "max_failed": null,
+  "max_request_bytes": 57085,
+  "max_tokens_per_byte": 0.3194729187474811,
+  "model": "gpt-6-sol",
+  "model_calls": 48,
+  "normalized_answers": 0,
+  "not_started": 0,
+  "output_tokens": 8242,
+  "params": {
+    "backend": "openai",
+    "batch": "q0-002-sol",
+    "code": "1e56c70ee43b38419d29ce570f86acd5e5568335",
+    "model": "gpt-6-sol",
+    "source_hash": "f3ffc908cfb96205a4abbbd3c1594de54eec133ec3313c380475e82972b369b7",
+    "stage": "Q0"
+  },
+  "passed": false,
+  "planned": 48,
+  "primary_contrast_pp": null,
+  "probe": null,
+  "qualification": {
+    "groups": [
+      {
+        "assigned": 16,
+        "carriers": 1,
+        "exact_packet_rate": 0.0625,
+        "exact_packets": 1,
+        "expected": 16,
+        "fact_accuracy": 0.5729166666666666,
+        "fields": 96,
+        "fields_matched": 55,
+        "missing_abstention": 1.0,
+        "passed": false,
+        "valid": 16,
+        "withheld_abstained": 8,
+        "withheld_fields": 8
+      },
+      {
+        "assigned": 16,
+        "carriers": 9,
+        "exact_packet_rate": 0.3125,
+        "exact_packets": 5,
+        "expected": 16,
+        "fact_accuracy": 0.5625,
+        "fields": 96,
+        "fields_matched": 54,
+        "missing_abstention": 1.0,
+        "passed": false,
+        "valid": 16,
+        "withheld_abstained": 8,
+        "withheld_fields": 8
+      },
+      {
+        "assigned": 16,
+        "carriers": 81,
+        "exact_packet_rate": 0.125,
+        "exact_packets": 2,
+        "expected": 16,
+        "fact_accuracy": 0.3125,
+        "fields": 96,
+        "fields_matched": 30,
+        "missing_abstention": 1.0,
+        "passed": false,
+        "valid": 16,
+        "withheld_abstained": 8,
+        "withheld_fields": 8
+      }
+    ],
+    "packets": 48,
+    "passed": false,
+    "structurally_valid": 48
+  },
+  "qualification_passed": 0,
+  "rare_accuracy": null,
+  "reason": "gate_failed",
+  "reporting_errors": [],
+  "resumable": 0,
+  "started": 48,
+  "stop_reason": null,
+  "study_accounting": {
+    "actual_usd": 2.316471,
+    "attempted_calls": 49,
+    "calls_by_batch": {
+      "p0-002-sol": 1,
+      "q0-002-sol": 48
+    },
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 48
+    },
+    "cap_calls": 1489,
+    "cap_transport_attempts": 1700,
+    "cap_usd": 150,
+    "committed_usd": 2.316471,
+    "input_tokens": 893368,
+    "output_tokens": 8310,
+    "reserved_usd": 15.920945,
+    "transport_attempts": 49,
+    "usage_reported_calls": 49,
+    "voided_calls": 0
+  },
+  "terminal": 48,
+  "transport_attempts": 48,
+  "visualization": {
+    "frames": 11,
+    "mapping": "v1"
+  },
+  "voided_calls": 0
+}

@@ -2595,7 +2595,8 @@
       "id": "sybil-scarcity-xmodel",
       "title": "Does Sybil-resistant accuracy depend on repeated knowledge? Cross-model replication",
       "documents": [
-        "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md"
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-scarcity-xmodel-qwen",
@@ -2609,18 +2610,20 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "On packets byte-identical to sybil-scarcity-opus, a synthesizer other than Opus 5.5 (qwen3.7-flash without reasoning; gpt-6-sol at reasoning effort low) also loses specialist accuracy when each rare fact has one truthful carrier instead of 81.",
-        "rationale": "No S1 outcome exists for either model. The Qwen chain ended at the pre-registered clean qualification (no comparison possible for Qwen); the gpt-6-sol chain is running. Each model is a separate chain; results will never be pooled."
+        "rationale": "No S1 outcome exists: both pre-registered configurations stopped at the clean-packet qualification that Opus 5.5 passed 48/48 (Qwen: 1-carrier profile below threshold; gpt-6-sol at effort low: abstention on 148 of 264 present facts). Nothing about the claim can be scored. Not independently reviewed."
       },
-      "sample_size_summary": "Observed: qwen/qwen3.7-flash chain stopped at its Q0 gate (48/48 valid answers on the parent's 48 clean packets; 1-carrier profile below threshold), so 0 S1 outcomes; gpt-6-sol chain launched, no outcome yet. Planned per model: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls; roots are the independent units.",
+      "sample_size_summary": "Observed: 0 S1 outcomes. qwen/qwen3.7-flash and gpt-6-sol (effort low) each answered the parent's 48 clean qualification packets (48/48 valid) and each failed the gate; follow-up F1 (gpt-6-sol, effort none) pre-registered, not yet run. Planned per configuration: 24 paired synthetic world roots x 60 conditions = 1,440 S1 calls; roots are the independent units.",
       "sources": [
         "researchers/dmarz/notes/sybil-scarcity-xmodel/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/RESULTS.md",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/SETUP.md",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/design.yaml",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/experiment.yaml",
         "researchers/dmarz/notes/sybil-scarcity-xmodel/preregistration.md",
-        "researchers/dmarz/notes/sybil-scarcity-xmodel/reviews/chain-001-post.md"
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/reviews/chain-001-post.md",
+        "researchers/dmarz/notes/sybil-scarcity-xmodel/reviews/chain-002-post.md"
       ],
-      "status_at_assessment": "qwen_stopped_at_q0_sol_running"
+      "status_at_assessment": "both_models_stopped_at_q0_followup_f1_prepared"
     },
     {
       "id": "wild-evidence-depth",
