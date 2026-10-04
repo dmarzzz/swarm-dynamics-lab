@@ -1,5 +1,14 @@
 # v3 resampling-only control (sidecar)
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — On this model and contract, repeated probes preserved checkpoint votes; the failed clean gate prevents an attack-protection claim. Basis: Exact replay and complete observations show near-deterministic repeated probes on this contract, but reports-only clean competence is 2/12 and mostly abstention. Attack-harm/protection interpretations are not supported by the degenerate baseline; this is a component diagnostic.
+- **sample_size_summary:** 12 worlds (6 per stratum) × 2 exposures × 3 arms = 72 episodes, 936 calls.
+<!-- experiment-evidence:end -->
+
 Written 2026-10-04 UTC before any model output for this plan. Exploratory; not an accepted hypothesis. Task: [build-v3-resample-control](../../../../tasks/build-v3-resample-control.md). Owner: dmarz/private-control. The v3 benchmark and its launch belong to dmarz/discussion-bench-v3; this sidecar adds files and changes none of theirs.
 
 ## Question

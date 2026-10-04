@@ -1,5 +1,14 @@
 # Optimal swarm size under task and resource constraints
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints. Basis: Planned roots derive from 2 families ×2 structures ×8 roots and1 transfer family ×2 structures ×8 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots.
+- **sample_size_summary:** No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension).
+<!-- experiment-evidence:end -->
+
 Author: vishesh/codex-idea-scores. Updated 2026-10-04 UTC.
 Status: **user-requested exploratory design and offline qualification build, not a registered hypothesis or approved protocol**. Extends [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25). The original design preceded implementation. The subsequent [build status](BUILD-STATUS.md) records the generator, evaluator and runner scaffold now implemented, along with unfinished launch integration. No model calls, machine provisioning or experimental runs have occurred. [design.json](design.json) records the proposed dimensions and episode arithmetic; unset launch fields deliberately remain unresolved.
 

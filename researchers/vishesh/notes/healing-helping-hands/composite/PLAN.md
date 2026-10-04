@@ -1,0 +1,46 @@
+# Healing Helping Hands: Qwen + Jev, revision C1
+
+2026-10-04 UTC. Owner/operator/self-assessor: vishesh/codex-regrowth-docs. User explicitly authorized replacing Laya with Jev and running this revision. Exploratory instrument qualification and descriptive comparison, not confirmation or independent review. Historical plans and failures remain unchanged.
+
+## TLDR
+
+Can a small Qwen 0.6B agent with a Jev decision head reliably curate evidence as 200 local helpers repair a shared evidence atlas? Qwen proposes a report label; Jev sees the original report and that proposal and makes the final decision. Compare the complete composite with Qwen-only and Jev-only on identical evidence. First qualify the composite on fresh balanced cases, then measure extraction accuracy, correction versus anchoring, and downstream query error during updates, withdrawals, false notices, missing lineage and outages. Compare local repair with both append-only and verified central indexes. This is a small synthetic feasibility study; it cannot establish real-world usefulness or that adding Qwen improves Jev.
+
+## Question and prediction
+
+Primary semantic contrast: composite accuracy minus Jev-only accuracy on paired reports. A useful composite must qualify at >=85% overall and >=70% in every class with no invalid responses. Qwen-only failure does not disqualify the composite. Prediction: Jev may correct Qwen mistakes, but Qwen may add cost without improving Jev and may induce anchoring. Report this possibility as a valid outcome. Practical effect of interest is >=5 percentage points in paired extraction accuracy; this small study is descriptive and has no confirmatory power claim.
+
+Primary downstream contrast: composite minus Jev-only mean post-event query error under peer-verified repair. Lower is better. Central-verified is a mandatory strong architecture comparator; never infer swarm superiority merely from beating central-append. No capacity search: packet capacity remains 16 items per directed link per round.
+
+## Setup
+
+Arms: qwen, jev, qwen+jev. Qwen is pinned qwen3:0.6b (existing digest in ../src/providers.py), temperature 0, think false, 2048 context, 32 output-token cap. Its existing typed report-extraction prompt is unchanged. Jev is typesafe/jev-1.13, TypeSafe-only, no fallback, served snapshot typesafe/jev-1.13-20260917. Provider pricing and revision must be verified before dispatch. Laya and qwen+laya are historical only.
+
+Composite: exactly one Qwen proposal followed by one Jev decision. Jev receives claim, unmodified source report, and Qwen label marked fallible. It is instructed to ground its final choice in the report and may override Qwen. Same Jev criteria, option rotation and source report as Jev-only; the sole treatment is the proposal and its interpretation instruction. No evaluator labels, future information or model confidence enter actor inputs. Reuse each actual Qwen output as the paired Qwen-only observation, not a second call. Jev-only and composite call order alternates by case. Record exact ordered wire inputs, raw sanitized outputs, usage, request IDs and hashes. Stateless reset on every report; no conversations or hidden shared model memory assumed.
+
+S0: 60 new cases, 20 each SUPPORT/REFUTE/UNCERTAIN, numeric and verbal accuracy comparisons including ties and unmeasured accuracy. New formulations, six template families per class, rotated names and values; templates are dependent. These are engineering qualification fixtures, not 60 independent generalization samples. Historical cases are not qualification evidence. Development fixtures are separate handcrafted unit tests. No access to old sealed seeds 8301–8310.
+
+S1 if S0 composite AND Jev-only qualify: seeds 8801,8802,8803, 200 documents per corpus and 200 stable curators on a 20x10 grid. Fresh generated source instances, but existing synthetic generator and finite semantic templates remain; do not call them independently authored corpora. Reuse each model's 200-extraction tape across five architecture arms and six scenarios from ../practical/engine.py: central-append, central-verified, peer-append, peer-blind, peer-verified; benign, withdrawal, forged, missing-lineage, central-outage, combined. One placement seed+10000 per corpus. 3 corpora x 3 model arms x 5 architectures x 6 scenarios = 270 assigned worlds. Shared tapes pair comparisons, not independent model reruns. Qwen-only remains a measured negative control even if it fails S0.
+
+## Protocol
+
+1. Freeze this plan before implementation. Complete offline gate/fault, treatment, scoring and visualization checks. Obtain a fresh exclusive fleet claim and pin deployed source. Register the immutable plan and verify public readback before loading or calling models.
+2. S0-C1: 60 Qwen calls, 120 Jev calls maximum; >=51/60 overall and >=14/20 each class, all calls valid, independently for composite and Jev-only. Invalid/missing counts incorrect. Stop on first transport/schema failure, preserve remaining assignments as not-run. No silent retries or replacements. Report Qwen competence without making it a prerequisite for composite admission.
+3. Reconcile S0, write its post-mortem and S1 pre-assessment, then repeat current plan/source/claim/budget checks. Do not start S1 just because the process exits successfully.
+4. S1-C1: at most 600 Qwen and 1200 Jev calls; save each corpus/tape before deterministic propagation. Event before round 10; central reconnection before round 20; 30 measured logical rounds. Existing practical scenario contracts, validation rules and oracle truth remain unchanged. Authentication is supplied metadata, not cryptography. Only central client connectivity is removed in outage, mesh remains connected.
+5. Bound one justified fresh repair screen to 60 Qwen and 120 Jev calls under a dated amendment/new attempt, never repeat merely to get a favorable score. Overall revision limit 720 Qwen and 1440 Jev calls; cumulative Jev ledger maximum 2160 including 720 historical calls. Preserve original cumulative USD 0.10 cap, already spent USD 0.013004124. Per-call worst-case reservations settle only on validated provider usage; ambiguous calls retain reserves. No ledger reset. Concurrency one; no new paid VM provision; authorized idle fleet allocation only. S0 wall cap 15 minutes; S1 60 minutes; repair 15 minutes. Actual caps include failed calls. Claim covers execution and uploads.
+6. Every assignment has terminal status. Report execution, qualification, science, process and delivery separately. No rerun to hide negative results. Store histories for all completed worlds and all attempted model requests. Stop only this experiment's workers and release after verified publication.
+
+## Metrics
+
+S0/S1 report assigned denominators, schema validity, confusion matrices, per-class recall, paired accuracy delta, Qwen-wrong corrected, Qwen-right damaged, composite/Jev agreement, and anchoring (composite adopts an incorrect Qwen proposal while Jev-only was correct). Report latency, tokens, calls and dollars for the complete composite, including its Qwen proposal; Jev-only is the cheaper meaningful control. A composite indistinguishable from Jev-only does not demonstrate a contribution from Qwen. No assumption of independent errors or calibration from provider confidence.
+
+Downstream: existing evaluator counts a query incorrect OR missing evidence; UNCERTAIN is a substantive class, not refusal. Primary window rounds 10–29. Report post-event query error, final accuracy, stale citations, false invalidations, new-root retention and traffic items by scenario/architecture/model. Mean paired corpus differences and all three corpus values/range, no agent/frame-based confidence intervals. Central bulk reads and peer packet counts are not matched compute or latency. Report per-scenario results without cherry-picking. Archive adverse central comparisons.
+
+## Visualization mapping C1
+
+S0 shows measured progress and a final 3-arm confusion/correction figure; no spatial animation because cases have no spatial relationship. S1 uses the existing measured H3 20x10 curator grid and 30-frame GIF, with model and architecture labels, query correctness/missingness, event markers at 10/20, synchronized query-error and retention traces. Final comparison includes all three model arms and strong central control. Live progress is acknowledged hub metrics; final PNG/GIF is the supported public fallback, full traces and local interactive replay retained. Never animate fabricated model deliberation. Validate fixture missing/failed states and initial/event/final frames against recorded traces; renderer failures preserve compute records and are reported separately.
+
+## Previous evidence and scope
+
+Read ../practical/POST-02.md: central-verified outperformed gossip in every scenario; extra packet capacity improved retention at greater traffic. Prior Qwen failures motivate qualifying the complete composite, not suppressing it. Jev-only previous ceiling does not qualify this new proposal-conditioned interface. The omitted intended composite is a process error now corrected prospectively; no historical qwen+laya records are relabeled. Prior-art/formal review gates remain unresolved for a novel confirmatory claim; this is user-directed bounded exploratory instrument work.

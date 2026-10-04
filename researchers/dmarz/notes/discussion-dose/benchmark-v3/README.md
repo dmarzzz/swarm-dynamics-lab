@@ -1,5 +1,14 @@
 # Discussion and memory benchmark v3
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The completed V3 diagnostic failed clean competence and exposed inherited-memory failure; discussion efficacy remains unestablished. Basis: Execution and replay pass, but clean competence fails (2/6 full evidence; 1/6 reports only; gate 5/6). This supports a diagnostic finding, not a qualified treatment null or reliable protective effect. Three worlds per attack stratum and fixed fixtures do not establish broad security.
+- **sample_size_summary:** 6 worlds; 48 swarm episodes + 12 full-evidence probes + 36 fixed-memory fixtures = 96 cases, 636 calls.
+<!-- experiment-evidence:end -->
+
 An implemented, local-first benchmark for **SEC-47: where does the fork-and-return chain fail?** It separates private evidence, report exchange, additional discussion, final voting, majority memory merge and a fresh parent's use of that memory. The [question links](../QUESTION-LINKS.md) state the narrower relationship to SOC-07 and the deferred SEC-52 extension.
 
 **Release scope:** executable benchmark and model adapter. The [first real-model qualification is complete](RESULTS-Q0.md): 636 calls, 96 cases, $4.387237, zero invalid outputs, but failed clean competence (2/6 full-evidence and 1/6 reports-only). Independent instrument review subsequently passed; this model configuration is not qualified for expansion. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.

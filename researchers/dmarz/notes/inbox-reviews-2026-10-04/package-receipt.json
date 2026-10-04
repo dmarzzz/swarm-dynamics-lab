@@ -127,5 +127,13 @@
     "researchers/vishesh/notes/optimal-swarm-size/src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
     "researchers/vishesh/notes/optimal-swarm-size/src/reporting.py": "33c5ebd115283864f08346508481e3a0cb469f03fb3d501a2f70550d126ce5d4"
   },
-  "scope": "Offline review; zero paid calls. Independent dissent probes use development seeds; full author suite also constructs reserved Q0 fixtures, disclosed in review. No transfer or holdout corpus inspected."
+  "scope": "Offline review; zero paid calls. Independent dissent probes use development seeds; full author suite also constructs reserved Q0 fixtures, disclosed in review. No transfer or holdout corpus inspected.",
+  "late_document_addendum": {
+    "commit": "2f5281f7225f04b398a96eba98ceeccfaa34369d",
+    "files": {
+      "researchers/vishesh/notes/optimal-swarm-size/reviews/reporting-diagnostic-post.md": "85804efb30f621268b9a53e73784cf45abe4a83198b16853064dea1c02dac5f4",
+      "researchers/vishesh/notes/optimal-swarm-size/reviews/reporting-diagnostic-evidence.json": "004c755e1af1e3c81ed2348374bc16f99d9bef52de40e6dc73344d16f72e1c91"
+    },
+    "note": "Reviewed author reporting diagnostic receipt, no repeated remote test. Earlier source hashes unchanged."
+  }
 }

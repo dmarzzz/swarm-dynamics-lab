@@ -26,6 +26,7 @@
 - Confounds, coverage gaps, evidence/resource mismatches, leakage and timing problems:
 - Execution success versus qualification success versus scientific conclusion:
 - Which claims remain justified, which need correction, and what is still unknown?
+- Updated evidence_confidence and sample_size_summary in the study entry, with independent unit, assigned/completed/missing counts, scoped rationale and source date; keep prior cohorts separate:
 
 ## Failure and repair ledger
 

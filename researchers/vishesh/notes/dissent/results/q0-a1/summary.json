@@ -1,0 +1,33 @@
+{
+  "assigned": 18,
+  "terminal": 18,
+  "correct": 12,
+  "valid": 18,
+  "by_scenario": {
+    "bridge": {
+      "correct": 6,
+      "valid": 6,
+      "assigned": 6
+    },
+    "build": {
+      "correct": 3,
+      "valid": 6,
+      "assigned": 6
+    },
+    "alarm": {
+      "correct": 3,
+      "valid": 6,
+      "assigned": 6
+    }
+  },
+  "qualification_passed": false,
+  "stage": "Q0",
+  "served_model": "typesafe/jev-1.13-20260917",
+  "unique_requests": 18,
+  "completed_calls": 18,
+  "logical_calls": 18,
+  "cost_usd": 0.00042966,
+  "input_tokens": 10230,
+  "elapsed_seconds": 8.347756757000013,
+  "missing": 0
+}

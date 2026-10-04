@@ -1,5 +1,14 @@
 # Heterogeneous Jev / Haiku / Qwen research
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether mixed-model or self-differentiating swarms provide specialization beyond compute, correlation and coordination costs. Basis: Existing rubric scores measure editorial interest/preferences, not empirical confidence. Exact model, sample and launch contracts remain to be frozen per successor.
+- **sample_size_summary:** No experiments launched; 38 research questions with prospective designs, not 38 empirical samples.
+<!-- experiment-evidence:end -->
+
 Added 2026-10-04 UTC for Vishesh. The original scan contains 30 exploratory questions, 29 primary sources and five X evidence/lead records. The biological revision adds eight questions, eight directly read X discussions, 11 new library entries, two freshly revisited papers and five new prospective designs. All 38 questions have metadata, editorial self-reviews and rubric scores. No experiments were launched.
 
 **Current recommendation after owner feedback:** [HX-31: self-differentiating swarms](frontiers/PRIORITIES.md), **94/100**, combining shared services and capability shedding with workflow hardening. HX-33 (82) supports the main project; HX-32 (34) is deprioritized, HX-35 (60) parked, and HX-37 (66) consolidated into HX-31. [Revised scores](frontiers/SCORES.md) preserve previous values and the unchanged rubric. Earlier top-five recommendations are superseded; original HX-01–HX-30 scores remain historical and unchanged.

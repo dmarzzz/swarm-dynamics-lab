@@ -1,5 +1,14 @@
 # How to win agents and influence swarms
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: an explicit ledger and enforced final score rule makes checking affect the committed decision. Basis: Enforced deterministic choice is an engineering intervention, not proof of improved model reasoning.
+- **sample_size_summary:** No live-qualified result; offline score-enforcement branch superseded by procurement scenario study.
+<!-- experiment-evidence:end -->
+
 ## Current direction
 
 The [procurement scenario redesign](scenario/README.md) supersedes the proposed quality-01 scientific sweep. It tests evidence integration with model decision authority intact, includes a cheaper solo baseline, and grounds errors in workload costs and named constraints. The score-enforcement implementation below is retained as an engineering branch, not proof of improved reasoning.

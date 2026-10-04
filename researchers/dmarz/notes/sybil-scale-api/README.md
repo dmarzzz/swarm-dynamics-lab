@@ -1,5 +1,14 @@
 # Sybil resistance as swarms grow
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **2/4** — The completed controlled sweep describes verification-resource and admission-policy effects on specialist accuracy in one graph family, not an equal-cost coverage advantage. Basis: Complete qualified results and clustered intervals support the fixture-specific unequal-verification-budget effect. Equal-budget random reaches the same accuracy; plurality is a strong comparator. Total attacker resources scale with N, so this is not fixed-resource identity splitting or autonomous-agent scaling.
+- **sample_size_summary:** 24 paired worlds × 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36–972 simulated identities.
+<!-- experiment-evidence:end -->
+
 Exploratory follow-up to [sybil-specialists-api](../sybil-specialists-api), addressing SEC-19 and SEC-43. Authorized by dmarz: “great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously and show me the results when youre done”. This is a frozen exploratory scaling study, not an accepted formal hypothesis or a deployable identity defense. S2 remains disabled.
 
 ## Question

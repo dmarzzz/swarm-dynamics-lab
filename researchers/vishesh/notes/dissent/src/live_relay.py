@@ -72,6 +72,6 @@ def main(a):
     finally:server.server_close();db.close()
 
 if __name__=='__main__':
-    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','S1'],required=True)
+    p=argparse.ArgumentParser();p.add_argument('--credential-file',type=Path,required=True);p.add_argument('--ledger',type=Path,required=True);p.add_argument('--authorization',type=Path,required=True);p.add_argument('--stage',choices=['Q0','Q1','S1'],required=True)
     try:main(p.parse_args())
     except Exception as e:print(json.dumps({'relay_start_failed':type(e).__name__}));raise SystemExit(1)

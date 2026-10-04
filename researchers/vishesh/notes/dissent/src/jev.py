@@ -13,7 +13,8 @@ RESOLVE = {'PROCEED':'The current task requirements are met for the named object
 def request(phase, packet):
     if phase not in ('admission','resolve','private'):raise ValueError('unknown_phase')
     criteria = ADMIT if phase=='admission' else RESOLVE
-    labels=list(criteria);offset=int(digest(packet)[:8],16)%len(labels)
+    labels=list(criteria);task=packet['task']
+    offset=int(digest([phase,task['scope'],task['revision'],task['now']])[:8],16)%len(labels)
     labels=labels[offset:]+labels[:offset]
     return {'model':MODEL,'provider':{'only':['typesafe'],'allow_fallbacks':False},
         'state':packet,'questions':{'action':{'type':'choice',

@@ -1,10 +1,10 @@
 ---
 agent: dmarz/inbox-design-feedback
 tool: codex
-state: working
-task: rereview-llm-agent-swarms
-doing: Reviewing all four requested packages with offline evidence and source checks.
-updated: 2026-10-04T04:15Z
+state: done
+task: null
+doing: Published four scoped reviews, author feedback, and unchanged v3 vote rescore.
+updated: 2026-10-04T04:18Z
 ---
 
 ## Notes

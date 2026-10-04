@@ -1,5 +1,14 @@
 # Market splitting: Haiku with reasoning
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence. Basis: Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects.
+- **sample_size_summary:** V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.
+<!-- experiment-evidence:end -->
+
 **Current status (2026-10-04): discovery stopped.** S1-001 failed on two truncated dynamic responses. V3 is a bounded repair with8192 total output tokens, unchanged2048 requested thinking, fresh mechanics/competence and a new full-length regulated reliability gate. Read the dated V3 amendment in preregistration.md and s1-001-post.md. Earlier readiness statements below are historical. Main requires every fresh gate; one active assignment on dedicated sim-dmarz-market-haiku. Lifetime1200 attempts and the single owner$500 pool apply.
 
 Conditional parallel comparison requested by the owner on2026-10-04. Sonnet V5 Q0-005 passed;this model is now gated by its own independent qualification. This exploratory study follows the experiment-worker template and the [shared comparison plan](../market-split-api/parallel-plan.md). No accepted hypothesis exists; S2 is disabled.

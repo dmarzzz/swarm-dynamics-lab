@@ -2,13 +2,29 @@ import sys,unittest,sqlite3,tempfile,json,types,contextlib,io
 from unittest.mock import patch
 from pathlib import Path
 sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
-from live_design import assignments,qualification,development,frozen_requests
+from live_design import assignments,qualification,diagnostic,development,frozen_requests
 from live_relay import reserve,RESERVE
 from protocol import episode,actor_packet,validate_challenge
 from policies import ExactReference
 from cases import digest
 
 class LiveTests(unittest.TestCase):
+    def test_diagnostic_pairs_uncertainty_and_seeds(self):
+        from jev import request
+        q=diagnostic();self.assertEqual(len(q),42);self.assertEqual(len(frozen_requests('Q1')),42)
+        self.assertFalse({x['seed'] for x in q}&{x['seed'] for x in qualification()})
+        self.assertEqual(sum(x['arm']=='uncertainty' for x in q),6)
+        for x in q:self.assertEqual(ExactReference()('private',x['packet']),x['expected'])
+        for seed in range(2120,2138):
+            a,b=[x for x in q if x['seed']==seed]
+            self.assertEqual(list(request('private',a['packet'])['questions']['action']['criteria']),list(request('private',b['packet'])['questions']['action']['criteria']))
+            import copy
+            pa,pb=copy.deepcopy(a['packet']),copy.deepcopy(b['packet'])
+            self.assertNotEqual(pa['task'].pop('instructions'),pb['task'].pop('instructions'))
+            self.assertEqual(pa,pb)
+        for c in development():
+            for task in [c['task']]+[f['task'] for f in c['frames']]:self.assertIn('exactly one requirement',task['instructions'])
+
     def test_assignment_denominators(self):
         self.assertEqual(len(qualification()),18)
         self.assertEqual(len(development()),52)
@@ -69,14 +85,14 @@ class LiveTests(unittest.TestCase):
             def fail(self,*a,**k):pass
         hub=types.SimpleNamespace(start=lambda *a,**k:FakeRun())
         renderer=types.SimpleNamespace(render=lambda *a:None)
-        for stage,total in [('Q0',18),('S1',420)]:
+        for stage,total in [('Q0',18),('Q1',42),('S1',420)]:
             with tempfile.TemporaryDirectory() as t:
                 out=Path(t)/'out';cfg=Path(t)/'cfg.json';cfg.write_text(json.dumps({'run_id':'unit-test-only','source_commit':'fixture','plan_url':'fixture','run_tldr':'Unit test only, no model or hub calls.'}))
                 args=types.SimpleNamespace(stage=stage,out=out,config=cfg)
                 with patch.object(live_worker,'verify_config',return_value={}),patch.object(live_worker,'NativePolicy',FakePolicy),patch.dict(sys.modules,{'swarm_report':hub,'live_render':renderer}),contextlib.redirect_stdout(io.StringIO()):live_worker.main(args)
                 s=json.loads((out/'summary.json').read_text())
                 self.assertEqual(s['terminal'],total);self.assertEqual(s['missing'],0)
-                if stage=='Q0':self.assertTrue(s['qualification_passed'])
+                if stage in ('Q0','Q1'):self.assertTrue(s['qualification_passed'])
                 else:self.assertEqual(s['by_arm']['exact-reference']['assigned_decisions'],60)
     def test_stopped_worker_preserves_missing_and_fails_hub_run(self):
         import live_worker,time

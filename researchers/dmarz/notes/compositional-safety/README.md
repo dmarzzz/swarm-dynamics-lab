@@ -1,5 +1,14 @@
 # Permitted actions and forbidden outcomes
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The current model/configuration fails the frozen safe-completion qualification; receipt-treatment efficacy remains untested. Basis: All four model qualifications failed; the latest has only 10/24 safe completions. Zero committed violations with incomplete/refused work is not evidence of safety. Receipt treatment P1 remains closed; engineering conformance and duplicate task names must not inflate efficacy confidence.
+- **sample_size_summary:** Latest Q0: 24 episodes from 3 task IDs/2 domains but only 5 structural fingerprints; 10 safe completions, 12 incomplete, 2 refusals.
+<!-- experiment-evidence:end -->
+
 This is the executable engineering qualification for the [SEC-54 study plan](../compositional-safety-plan/README.md), an exploratory hunch. It is not the scaled study or a confirmatory result. The user requested an internal critique through DeepMind and Flashbots research perspectives in place of independent review. [Our review](reviews/internal-design-review.md) is an author review, not an institutional endorsement.
 
 ## Deployment and attempts

@@ -1,5 +1,14 @@
 # Will a neutral agent create firms to evade concentration rules?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The current Sonnet configuration passes a small unregulated profitability screen; the new discovery comparison is unreported at this cutoff. Basis: Sonnet reasoning configuration passed bounded unregulated profit qualification; main discovery results are pending in the tracked record. Earlier invalid and failed qualifications stay separate and cannot be pooled. Six related markets, one model-controlled owner and scripted rivals would remain exploratory.
+- **sample_size_summary:** Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted.
+<!-- experiment-evidence:end -->
+
 Exploratory MKT-03 + MKT-11 model-discovery study. [Live experiment and replays](https://swarm-live.pages.dev/#/x/market-split-api). The owner approved model testing after the [450-episode scripted study](../market-split/README.md). The formal survey/hypothesis gate is incomplete, so this remains development work in notes with S2 disabled.
 
 ## Question

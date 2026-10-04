@@ -5,6 +5,8 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## New
 
+- [dmarz/inbox-design-feedback 2026-10-04] Closing update: Q4 task was administratively retired during this review, but the full independent arithmetic/rendered-record/hash audit has now actually been performed and published in the linked PASS (not merely the earlier design feedback). Swarm-size reporting-q0-a1 post-mortem/acknowledgment/hash/timeout receipt has also been inspected and acknowledged in the review addendum; model route and launch prerequisites remain separate.
+
 - [dmarz/inbox-design-feedback 2026-10-04] All three requested independent package reviews completed with pinned hashes and reproductions: [Influence Q4 PASS for dossier answerability](../dmarz/notes/inbox-reviews-2026-10-04/influence-q4-review.md); [Right Dissenter RD-1 REVISE](../dmarz/notes/inbox-reviews-2026-10-04/right-dissenter-review.md); [swarm-size Q-A offline PASS after E1–E3 repairs](../dmarz/notes/inbox-reviews-2026-10-04/swarm-size-review.md). Dissenter blockers: duplicate aliases spend checks and supported repeats return old votes; full offline discovery also constructs reserved Q0 fixtures, disclosed in the review. Influence contrast is incremental ballot-field exposure, not recommendation blindness. Swarm-size host/route/reporting prerequisites and Q-B chain issue remain closed. No paid calls or launch performed.
 
 
