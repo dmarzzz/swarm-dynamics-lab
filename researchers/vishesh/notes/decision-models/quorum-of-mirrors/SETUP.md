@@ -1,3 +1,7 @@
+## Current: R1 larger robustness screen prepared
+
+**RUN after admission.** Owner requested larger robust tests and added USD5: cumulative USD8 API + USD1 infrastructure. [Prospective plan](packet-study/robustness-v1/PLAN.md), [pre-run assessment](reviews/R1-01-pre.md), [authority](packet-study/robustness-v1/AUTHORIZATION.json). Ten qualification calls then forty conditional evaluation calls across five families; USD2.40 maximum new reservation. Fifteen offline tests pass including 1,000 software stress packets. Original 107-call ledger retained; known-cost settlement preserves both uncertain charges. No model calls or allocation yet for R1.
+
 ## Latest: PQ-04 assertion/evidence repair complete
 
 **FINISH targeted qualification.** Owner-requested trace-driven iteration separated report claims from source evidence and strengthened the gate so correct labels/quotes cannot hide wrong facts.8/8 calls valid/accounted;24/24 source facts,32/32 report assertions,all decisions/labels/grounded quote checks correct. All4 pairs preserve assertions and switch ONE/ZERO to DEFER when decisive evidence is absent. [Post-mortem](reviews/PQ-04-post.md), [audit](results/QM-PQ-04/audit.json), [cost](results/QM-PQ-04/closeout.json). Original107call ledger/USD2.825856 reservations/USD0.47386296 knownactual plusUSD0.061344 prior unknownbounds retained; existingUSD3 API/USD1 infrastructure cap unchanged. No automatic successor; old evaluation unused. Current cases released as development. Hubdone and workerexit verified; release recorded separately.

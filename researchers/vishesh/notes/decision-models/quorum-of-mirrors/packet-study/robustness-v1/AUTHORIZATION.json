@@ -1,0 +1,17 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-R1-01",
+  "authority": "Owner requested larger robust tests and authorized USD5 additional cumulative budget on 2026-10-04 in the owning task.",
+  "original_api_cap_usd": 1,
+  "original_infrastructure_cap_usd": 1,
+  "prior_addition_usd": 2,
+  "additional_usd": 5,
+  "cumulative_api_cap_usd": 8,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 9,
+  "max_new_calls": 50,
+  "max_new_reserved_usd": 2.4,
+  "retains_original_calls_and_uncertainty": true,
+  "conditional_evaluation_requires_qualification": true,
+  "automatic_retry": false
+}

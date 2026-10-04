@@ -1,0 +1,11 @@
+{
+  "corpus_sha256": "4f82cb3671a6009bb43f4a4d7ca58b49d0dbeda886eb23fabc918cf68eed2a56",
+  "roots": 25,
+  "calls": 50,
+  "qualification_calls": 10,
+  "evaluation_calls": 40,
+  "qa": "50/50 exact against typed labels using same-input parser; disjoint fresh split seeds",
+  "operator_individual_case_access_before_run": false,
+  "templates_known": true,
+  "old_evaluation_opened": false
+}
