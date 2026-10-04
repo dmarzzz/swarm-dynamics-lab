@@ -420,14 +420,16 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence.",
-        "rationale": "Q2 adverse team approvals are valid. Q3 changed both wording and profile, so it cannot establish a wording effect; attempts cannot be pooled. Chair forks are paired; no broad influence comparison has qualified."
+        "rationale": "Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled."
       },
-      "sample_size_summary": "Q2:3 dossiers \u00d7 3 workflows =9 valid decisions (7 acceptable); Q3:1 fresh diagnostic dossier \u00d7 3 workflows =3 acceptable. Main study not run; planned288 decisions nest in6 authored families/24 profiles.",
+      "sample_size_summary": "Q4:4 authored dossiers \u00d7 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers \u00d7 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0\u2013Q3 retained separately. Main comparison unrun.",
       "sources": [
         "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
-        "researchers/vishesh/notes/influence-swarms/scenario/README.md"
+        "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md"
       ],
-      "status_at_assessment": "qualification_failed_main_unrun"
+      "status_at_assessment": "qualification_failed_main_unrun",
+      "source_commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
     },
     {
       "id": "healing-pilot03",

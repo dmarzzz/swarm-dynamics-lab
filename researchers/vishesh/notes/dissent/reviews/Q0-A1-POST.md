@@ -19,3 +19,7 @@ The 1800px qualification PNG agrees with 6/6, 3/6, 3/6 and displays FAIL. Qualif
 ## Next action: diagnostic
 
 Preserve Q0 unchanged. Publish Q1's explicit criterion repair and paired diagnostic before implementation, use disjoint qualification seeds, unchanged clean gate plus uncertainty controls, and the same cumulative cap. Advance S1 only if that prospective gate passes. Do not rerun unchanged for a favorable outcome.
+
+## Later allocation and artifact audit
+
+All seven hub artifacts were read back and hash-verified, and the public PNG was visually verified. Account verification after Q0 found the created host used the wrong default account. This is a separate process failure; the original Q0 plan preflight remains genuine. See [Q1 setup post-mortem](Q1-SETUP-POST.md). Q1 has not run.

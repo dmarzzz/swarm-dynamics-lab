@@ -1,5 +1,9 @@
 # Phantom Coast: PC-1
 
+**Native Q0 and S0 completed.** [Results](RESULTS.md): 540 valid map requests, no final history disagreement across six pilot worlds, $0.162723246 API cost. [Public experiment and replays](https://swarm-live.pages.dev/#/x/phantom-coast). The existing Mars host was released after verified delivery. See [current status](LIVE-READINESS.md) and [setup evidence](SETUP.md). Historical offline files below remain instrument-development evidence, not native outcomes.
+
+The assessment below predates S0 and is retained at its stated evidence cutoff; the new results above do not imply an independent review upgrade.
+
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
@@ -9,10 +13,8 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](..
 - **sample_size_summary:** Q0: 6 world roots × 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.
 <!-- experiment-evidence:end -->
 
-**Registered on Swarm Live; native launch preparation implemented; no model experiment run.** See [current live readiness](LIVE-READINESS.md) and [PC-1L amendment](LIVE-PLAN.md). DM-01 asks whether a false map can alter the evidence a swarm gathers. The first stage isolates history-dependent judgment before testing that adaptive loop.
-
 - [Prospective plan](PLAN.md): paired worlds, eight swarm trajectories, pooled/deterministic baselines, qualification criteria, and separately gated adaptive extension.
-- [Assessment and remaining work](REPORT.md): evaluation against the handoff and plan, with explicit launch blockers.
+- [Historical offline assessment](REPORT.md): evaluation against the handoff and plan, with explicit launch blockers.
 - [Fixture replay](visualization/index.html): saved deterministic software fixtures, including missing responses. Download/open locally or serve this folder; GitHub does not render the HTML as a running page.
 - [Validation receipt](VALIDATION.json), [pre-assessment](reviews/OFFLINE-01-PRE.md), [post-assessment](reviews/OFFLINE-01-POST.md).
 - [Public plan receipt](PLAN-PUBLICATION.json): immutable content verified; no run registration claimed.

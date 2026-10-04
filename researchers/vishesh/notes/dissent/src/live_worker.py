@@ -1,5 +1,5 @@
 """Single-worker exploratory runner. Strict source/public/allocation receipts required."""
-import argparse,contextlib,datetime,json,os,subprocess,sys,time,urllib.request,urllib.error
+import argparse,contextlib,datetime,json,os,platform,subprocess,sys,time,urllib.request,urllib.error
 from pathlib import Path
 from cases import digest
 from jev import request
@@ -43,7 +43,8 @@ class NativePolicy:
         return row['checked']['action']
 
 def verify_config(config,stage):
-    if config['stage']!=stage or config.get('budget_approved') is not True or config['host']!='sim-right-dissenter':raise ValueError('launch_config')
+    if config['stage']!=stage or config.get('budget_approved') is not True or config['host']!='sim-shadow':raise ValueError('launch_config')
+    if config.get('allocation_verified') is not True or platform.node()!=config['host'] or len(config.get('allocation_receipt_sha256',''))!=64:raise ValueError('allocation_identity_mismatch')
     if datetime.datetime.fromisoformat(config['claim_until'].replace('Z','+00:00'))<=datetime.datetime.now(datetime.timezone.utc):raise ValueError('claim_expired')
     head=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     if head!=config['source_commit']:raise ValueError('source_commit_mismatch')
@@ -70,7 +71,7 @@ def main(a):
     for row in assigned:row['status']='planned'
     save(a.out/'manifest.json',manifest);rows=[];save(a.out/'records.json',rows)
     policy=NativePolicy(a.out,frozen_requests(a.stage));exact=ExactReference()
-    os.environ.update(SWARM_SOURCE='vishesh/codex-decision-models',SWARM_HOST='sim-right-dissenter')
+    os.environ.update(SWARM_SOURCE='vishesh/codex-decision-models',SWARM_HOST=config['host'])
     import swarm_report as sr
     # Fixed strings only; reporter errors never printed with private endpoints.
     run=quiet(sr.start,'right-dissenter',run=config['run_id'],params={'stage':a.stage,'design':'RD-3','source':config['source_commit'],'plan_url':config['plan_url'],'scripted_votes':a.stage=='S1'},message=config['run_tldr'])

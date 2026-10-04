@@ -1,0 +1,12 @@
+{
+  "status": "blocked",
+  "reason": "verified_Dmarz_account_allocation_required",
+  "budget_approved": true,
+  "planned_calls": 42,
+  "started_calls": 0,
+  "tested_source": "a77e88205a8cd4bb113de84ee42476f2cdc23d74",
+  "offline_checks": 51,
+  "preflight_before_allocation_correction": "passed but no longer sufficient",
+  "old_host_deleted": true,
+  "resume": "Rebind to new authorized allocation, verify account receipt, exclusive claim, current source and public plan before dispatch."
+}

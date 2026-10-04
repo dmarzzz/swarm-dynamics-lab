@@ -1,0 +1,105 @@
+{
+  "assigned": 20,
+  "scorable": 20,
+  "unscorable": 0,
+  "invalid_ocr": 0,
+  "arms": {
+    "fixed-B": {
+      "assigned": 20,
+      "scorable": 20,
+      "correct": 4,
+      "wrong": 1,
+      "refer": 15,
+      "unscorable_accept": 0,
+      "conditional_error": 0.2,
+      "coverage": 0.25,
+      "checks": 0,
+      "initial_ocr_calls": 20,
+      "total_pipeline_wall_s": 35.7618039420031,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.125,
+        "0.25": 0.2375,
+        "0.5": 0.425
+      }
+    },
+    "confidence": {
+      "assigned": 20,
+      "scorable": 20,
+      "correct": 4,
+      "wrong": 1,
+      "refer": 15,
+      "unscorable_accept": 0,
+      "conditional_error": 0.2,
+      "coverage": 0.25,
+      "checks": 0,
+      "initial_ocr_calls": 60,
+      "total_pipeline_wall_s": 91.5672215300001,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.125,
+        "0.25": 0.2375,
+        "0.5": 0.425
+      }
+    },
+    "agreement": {
+      "assigned": 20,
+      "scorable": 20,
+      "correct": 3,
+      "wrong": 0,
+      "refer": 17,
+      "unscorable_accept": 0,
+      "conditional_error": 0.0,
+      "coverage": 0.15,
+      "checks": 0,
+      "initial_ocr_calls": 60,
+      "total_pipeline_wall_s": 91.5672215300001,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.085,
+        "0.25": 0.2125,
+        "0.5": 0.425
+      }
+    },
+    "always-check": {
+      "assigned": 20,
+      "scorable": 20,
+      "correct": 4,
+      "wrong": 0,
+      "refer": 16,
+      "unscorable_accept": 0,
+      "conditional_error": 0.0,
+      "coverage": 0.2,
+      "checks": 40,
+      "initial_ocr_calls": 60,
+      "total_pipeline_wall_s": 281.28897722999864,
+      "checker_wall_s": 189.72175569999854,
+      "assumed_loss": {
+        "0.1": 0.08,
+        "0.25": 0.2,
+        "0.5": 0.4
+      }
+    },
+    "selective-check": {
+      "assigned": 20,
+      "scorable": 20,
+      "correct": 4,
+      "wrong": 0,
+      "refer": 16,
+      "unscorable_accept": 0,
+      "conditional_error": 0.0,
+      "coverage": 0.2,
+      "checks": 34,
+      "initial_ocr_calls": 60,
+      "total_pipeline_wall_s": 266.6123345119995,
+      "checker_wall_s": 175.0451129819994,
+      "assumed_loss": {
+        "0.1": 0.08,
+        "0.25": 0.2,
+        "0.5": 0.4
+      }
+    }
+  },
+  "candidate_oracle_correct": 4,
+  "checker_new_correct": 0
+}

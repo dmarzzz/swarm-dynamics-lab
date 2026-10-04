@@ -17,3 +17,7 @@ User approved the pending up-to-USD-10 increase and said someone will review the
 ## Dedicated machine resolved through local session history
 
 User directed checking existing sessions. Antsy history identified a released Dmarz fleet machine. Refreshed claims, checked processes and containers, exclusively claimed sim-test-01 (PR103), prepared isolated source/environment and passed all 24 scenario tests. Claim mirrored on hub. Prior sim-dmarz-3 workload untouched; no new cloud resource, no model calls. Review remains pending; claim expires 07:08:17 UTC.
+
+## Authorized next iteration completed
+
+Retired duplicate dossier-review gate per owner; Dmarz feedback remains the one researcher review. Ran frozen Q4 on dedicated sim-test-01: 12 valid, 10 acceptable, both team chairs selected an unapproved supplier while acknowledging the approval gap. Prospective four-call D1 removed reports from frozen chair inputs: the approval error persisted; approved-alternative controls remained correct. These are adverse findings, not execution failures. No S1 escalation or favorable-outcome reroll. Total 60 calls, USD 0.181772; no missing usage. Published raw traces, post-mortems, measured frames and HTML/GIF replays. Verified zero workers and released allocation in PR125. The original external-influence effect remains untested; next design question is explicit approval verification, not a second researcher sign-off.

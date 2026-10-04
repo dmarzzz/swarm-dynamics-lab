@@ -1,0 +1,30 @@
+{
+  "native_replay_frames_match_manifest": true,
+  "cohort_figure_matches_saved_bounds": true,
+  "original_final_frame_separator_glyph_issue": true,
+  "replays": [
+    {
+      "stage": "Q0",
+      "frames": 18,
+      "sampled": false,
+      "stride": 1,
+      "first": "Q0-200-clean-0",
+      "last": "Q0-205-clean-2"
+    },
+    {
+      "stage": "S0",
+      "frames": 59,
+      "sampled": true,
+      "stride": 9,
+      "first": "206-B-social-reset-0-1",
+      "last": "211-B-pooled-reset-2"
+    }
+  ],
+  "post_run_ascii_label_smoke_passed": true,
+  "public_page_verified_done": true,
+  "public_visible_artifacts": [
+    "final_frame.png",
+    "replay.gif",
+    "cohort_results.png"
+  ]
+}

@@ -1,34 +1,34 @@
-# The Right Dissenter: design and implementation report
+# The Right Dissenter: first native result
 
-## Current conclusion
+The first qualification ran to completion but **failed: 12/18 decisions correct**. All 18 responses were valid. The model correctly interpreted all bridge reports and all negative build/alarm reports, but deferred on every positive build and alarm report. No dissent-policy effect has been measured: the broader S1 comparison remains gated.
 
-A standalone three-scenario study is [registered publicly](https://swarm-live.pages.dev/#/x/right-dissenter), with its immutable plan, research/X source map, bounded native runner, and PNG/GIF result views. No native Jev effect has been measured yet. Forty-nine software checks passed, including fake-provider integration; these are software validation only. Paid dispatch awaits the proposed study cap and dedicated allocation.
+| Scenario | Correct | Valid | Assigned |
+|---|---:|---:|---:|
+| Bridge | 6 | 6 | 6 |
+| Build | 3 | 6 | 6 |
+| Alarm | 3 | 6 | 6 |
+| Total | 12 | 18 | 18 |
 
-The strongest claim the current evidence supports is that the implemented state machine can account for correction, corruption, withdrawal, repeated evidence and reopening without passing evaluator labels to its policy interface. It does not establish that Jev can make those judgments reliably, that the protocol beats always-check, or that the tasks capture real deployment complexity.
+The prospective thresholds were >=16/18 correct, >=17/18 valid and >=5/6 correct per domain. The run used typesafe/jev-1.13-20260917, 18 unique calls, 10,230 input tokens and $0.00042966. Measured worker duration was 8.35 seconds; hub duration includes later documentation updates and should not be used as latency. No retries or missing observations occurred.
 
-The first native step is 18 clean decisions across the three domains. Passing it permits 52 root cases and seven policies, producing 60 decision opportunities per policy. A content-inconsistent objection is a key negative control: it asks whether the judge notices that an objection's own evidence supports the majority. A seeded random check allocation separates evidence selection from merely obtaining another observation. These are prospective design choices, not findings.
+[Public run and measured figure](https://swarm-live.pages.dev/#/r/right-dissenter%2Fq0-a1), [summary](results/q0-a1/summary.json), [complete requests and validated responses](results/q0-a1/calls.json), [post-mortem](reviews/Q0-A1-POST.md).
 
-## Future results structure
+## What this suggests
 
-Each actual attempt must supply its immutable plan/preflight, source/model hashes, assignment table and resource receipts before filling this section with observations. Report each scenario and arm separately, with all assigned units retained.
+The generic requirement may underspecify whether one positive observation is sufficient. This is a testable explanation, not an established cause. [Q1](Q1-PLAN.md) pairs generic and explicit single-criterion instructions on 18 fresh packets and adds six absent/conflicting-evidence controls. Qualification uses unchanged clean thresholds plus all six correct DEFER controls. It has passed 51 software checks but made no native calls.
 
-| Required result | Current value |
-|---|---|
-| Native assignments / requests / completed decisions | Not run |
-| Correct on-time commitments | Not measured |
-| Wrong-majority corrections | Not measured |
-| Harmful reversals of correct majorities | Not measured |
-| Verification use and failures | Not measured |
-| Withdrawal / reopening / repeated interruption | Not measured on native models |
-| Actual paid cost and model latency | No paid calls |
-| Public measured replay | Not available; local scripted preview only |
+Fresh identifiers do not create new semantic templates. Even a Q1 pass would support only the bounded synthetic S1 comparison, not general operational reliability. An exact grammar parser already solves these clean packets; Jev must demonstrate value beyond a transparent rule and always-check in the eventual comparison. Scripted votes, fixed evidence ancestry and shared identical model responses limit interpretation.
 
-Evaluate whether interventions improve useful completion while accounting for wrong proceeds, unnecessary holds, deferrals, deadlines and verification expense. Separate the controlled-consensus causal screen from natural-minority formation. Do not pool qualification fixtures with holdout tasks or treat temporal frames as independent samples.
+## Allocation and process failure
 
-## Interpretation risks to revisit
+I provisioned the temporary host through the default local credential without proving it belonged to Dmarz's DigitalOcean account. The subsequent account check confirmed the mismatch. This violated the requested allocation boundary despite the approved $2 cap and the shared fleet entry. Further calls stopped before Q1. Outcomes and the spend ledger were preserved, artifacts verified, and the exclusive claim released; [CLEANUP.json](CLEANUP.json) verifies host removal and unchanged other droplets. A verified Dmarz-account allocation is required to resume.
 
-The exact parser solves the controlled grammar. Native inference must justify its added complexity on a reviewed semantic task, or the practical recommendation may be to use deterministic checks. Basic scope checks are intentionally in code and shared across arms. A positive correction count can coexist with unacceptable harmful reversals. A blocked verifier can make accurate abstention useless before a deadline. Persistent disagreement may be warranted under contradictory noisy evidence.
+The immutable plan was published and publicly verified before Q0. Its original URL is retained on that run. SETUP.md was added retrospectively and is labelled accordingly. These facts do not erase the allocation failure. [Q1 setup post-mortem](reviews/Q1-SETUP-POST.md) separates process compliance from measured model performance.
 
-## Publication and provenance
+## Research context and remaining work
 
-The research repository contains the design and implementation. The companion local preview is a working design aid, not an external scientific deliverable. A future public figure, film or dataset must go through the repository's Flight Deck provenance workflow and the supported Swarm Live publication path. DMars/CD owns shared deployment; this work does not invoke Cloudflare account authorization.
+[SOURCES.md](SOURCES.md) maps the already-catalogued minority-correction, withholding, honeybee inhibition, evidence-ancestry and correlated-judge literature and map-demo X threads to the design. No unsupported claim of full thread access or completed independent research review is made.
+
+Next: establish the authorized allocation, run Q1 against its published gate, review it, and only then admit the fixed 52-root/seven-policy S1 study. Formal confirmation remains closed. There is no current evidence that the Right Dissenter policy improves outcomes or suppresses useful dissent.
+
+Q0 compute estimate is $0.011643 for 0.326 allocation hours at the verified $0.03571/hour rate; the actual invoice is not yet available. Cumulative API usage remains $0.00042966. No Q1 cost exists.

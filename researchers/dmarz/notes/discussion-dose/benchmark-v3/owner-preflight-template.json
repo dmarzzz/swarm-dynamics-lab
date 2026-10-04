@@ -1,0 +1,38 @@
+{
+  "checks": {
+    "dedicated_claim_merged_exclusive": false,
+    "hub_single_dispatch_verified": false,
+    "owner_account_verified": false,
+    "owner_cleanup_path_verified": false,
+    "public_page_design_verified": false,
+    "rehearsal_client_independence": false,
+    "rehearsal_cloud_retrieval": false,
+    "rehearsal_duplicate_refusal": false,
+    "rehearsal_durable_journal": false,
+    "rehearsal_failure_capture": false,
+    "rehearsal_operator_retrieval": false,
+    "rehearsal_progress": false,
+    "rehearsal_upload": false,
+    "shared_budget_reservation_recorded": false,
+    "single_owner_state_writer": false,
+    "six_hour_claim_coverage_secured": false,
+    "watchdog_active": false,
+    "worker_restart_disabled": false
+  },
+  "claim_id": "dmarz-discussion-d1",
+  "claim_until": "2026-10-04T10:09:39Z",
+  "evidence_sha256": "REPLACE_WITH_PRIVATE_REHEARSAL_EVIDENCE_SHA256",
+  "hub_run": "discussion-dose-v3/v3-d1-a1",
+  "launch_owner": "dmarz/discussion-bench-v3",
+  "lifecycle_mode": "owner-controlled-local-cleanup",
+  "manifest_sha256": "REPLACE_WITH_FROZEN_MANIFEST_SHA256",
+  "model_availability": [
+    "claude-haiku-4-5-20251001",
+    "claude-sonnet-4-6"
+  ],
+  "request_compatibility_verified": false,
+  "reserved_other_model_spend_usd": null,
+  "schema": "d1-owner-preflight-v1",
+  "server": "sim-discussion-d1",
+  "shared_model_spend_usd": null
+}

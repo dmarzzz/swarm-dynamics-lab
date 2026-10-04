@@ -1,0 +1,14 @@
+{
+  "deleted_host": "sim-right-dissenter",
+  "verified_utc": "2026-10-04T04:25:26.719587+00:00",
+  "dedicated_resources_deleted": true,
+  "other_droplets_unchanged": true,
+  "backup_preserved": true,
+  "elapsed_allocation_hours": 0.326,
+  "rate_usd_per_hour": 0.03571,
+  "estimated_compute_usd": 0.011643,
+  "invoiced_cost": "not yet available",
+  "api_calls": 18,
+  "api_cost_usd": 0.00042966,
+  "q1_calls": 0
+}

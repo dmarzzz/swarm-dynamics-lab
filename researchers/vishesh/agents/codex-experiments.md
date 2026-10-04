@@ -1,12 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: working
+state: idle
 task: influence-native-rerun
-doing: Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains
-updated: 2026-10-04T03:43Z
+doing: Q4 and D1 executed and published; valid approval failures preserved; comparison ineligible after failed qualification; dedicated machine released
+updated: 2026-10-04T04:30Z
 ---
 
-See notes/influence-swarms/scenario/ITERATION-02.md. No native calls or fleet claim this iteration. User approved up to USD 10 more; authority now USD 55 with USD 44.902316 reservations preserved. See scenario/BUDGET-AUTHORIZATION.md. Q4 requires new exclusive claim and review-influence-q4-dossiers before launch. Preserve every Q0-Q3 result and both offline iteration audits.
-
-Q4 allocation: vishesh-influence-q4 on sim-test-01, expiry 2026-10-04T07:08:17Z, merged agentops PR 103. Separate checkout prepared and 24 tests pass. No native worker or new budget lease yet. Reverify/renew allocation before launch.
+See notes/influence-swarms/scenario/LATEST-RESULTS.md and DEPLOYMENT.md. Sixty native calls cost USD 0.181772. No duplicate review remains. No worker remains; machine claim released in agentops PR 125. Preserve shared budget authority and host subledger. Further design work should test explicit candidate approval checks against the generalist on fresh dossiers, without replacing adverse results or presenting enforced decisions as model reasoning.

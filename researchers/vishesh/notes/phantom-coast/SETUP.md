@@ -18,7 +18,7 @@ Question: does earlier report order leave maps different after the same final ev
 | G3 Q0 admission | Pass for scoped diagnostic; setup index absent | [Q0 launch receipt](reviews/Q0-A1-LAUNCH.json), [deployment](DEPLOYMENT.md) | Historical gap remains recorded |
 | G4 Qualification | Pass | [Q0 post-mortem](reviews/Q0-A1-POST.md): 18 valid, 648 correct cells | S0 uses identical frozen source |
 | G3 S0 admission | Prospective receipts pass; setup-index process gap | [S0 pre-assessment](reviews/S0-A1-PRE.md), [launch receipt](reviews/S0-A1-LAUNCH.json) published before launch | Audit and close out |
-| G5 Closeout | In progress | Saved native records and hub artifacts | Reconcile every assignment, publish analysis, remove runtime credential, release claim |
+| G5 Closeout | Pass with recorded process caveat | [Results](RESULTS.md), DELIVERY.json and CLEANUP.json; 2026-10-04 UTC self-review | Complete-valid-result; future study separately admitted |
 
 ## Design and instrument index
 
@@ -34,8 +34,8 @@ Immutable public plan: https://github.com/dmarzzz/swarm-lab/blob/1ba879ac84a54b8
 
 Budget reference phantom-coast-usd5-20261004: $5 total, $4 API, $1 infrastructure, 540 calls, one worker, 60 minutes per stage, six-hour host limit. Same remote SQLite ledger across Q0/S0; no retries; stop at five consecutive failures or before reservation exceeds cap. Q0 consumed $0.005926284, leaving $3.994073716 API allowance before S0.
 
-Exclusive existing Mars host sim-dmarz-5, claim vishesh-phantom-coast-q0, expiry 2026-10-04T10:06:11Z. Merged claim PR100; no competing active/planned claim or experiment workload at allocation. No new provisioning, account login or infrastructure expense. Authorized processes consume a protected credential file; no credential content is an artifact. Configs bind fresh claim checks, source and assignment hashes. Exact worker command: `python src/live_worker.py --stage Q0|S0 --config <stage-config> --out <fresh-output> --ledger <shared-ledger> --credential-file <protected-file>` from the frozen repository; full non-secret config preserved with each attempt.
+Exclusive existing Mars host sim-dmarz-5, claim vishesh-phantom-coast-q0, expiry 2026-10-04T10:06:11Z. Merged claim PR100; no competing active/planned claim or experiment workload at allocation. No new provisioning, account login or infrastructure expense. Authorized processes consume a protected credential file; no credential content is an artifact. Configs bind fresh claim checks, source and assignment hashes. Exact worker command: `/srv/swarm/phantom-coast/venv/bin/python researchers/vishesh/notes/phantom-coast/src/live_worker.py --stage Q0|S0 --config <stage-config> --out <fresh-output> --ledger /srv/swarm/phantom-coast/budget.sqlite --credential-file <protected-file>` from the frozen repository; full non-secret config preserved with each attempt.
 
 ## Attempt history and closeout
 
-Q0-A1 completed and passed. S0-A1 is the already prescribed comparison, not a tuned rerun. Final reconciliation, usage and artifact hashes will be indexed in RESULTS.md and S0-A1 post-mortem. Execution, validity, scientific conclusion, process compliance and visualization remain separate. Next-stage work requires a fresh prospective design and admission; unused funds do not authorize automatic expansion.
+Q0-A1 completed and passed. S0-A1 completed its prescribed comparison with 522 valid maps and no final history difference. Final reconciliation, usage and artifact hashes are indexed in [RESULTS.md](RESULTS.md) and [S0 post-mortem](reviews/S0-A1-POST.md). Execution, validity, scientific conclusion, process compliance and visualization remain separate. Next-stage work requires a fresh prospective design and admission; unused funds do not authorize automatic expansion.
