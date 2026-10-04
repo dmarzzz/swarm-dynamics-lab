@@ -94,6 +94,10 @@
 | [synthesis-swarm-detection-methods](tasks/synthesis-swarm-detection-methods.md) | open | p1 | synthesis |  |  |  | Synthesis: taxonomy of swarm-detection methods and the honeypot design space |
 | [synthesis-sybil-flashbots](tasks/synthesis-sybil-flashbots.md) | open | p1 | synthesis |  |  |  | Synthesis: how Flashbots Sybil work relates to swarm and agent Sybil resistance |
 | [design-avalon-swarm](tasks/design-avalon-swarm.md) | open | p2 | synthesis |  | dmarz |  | Design brief (no build): swarm-scale Avalon benchmark layer |
+| [exp-v3-inheritance-sec52](tasks/exp-v3-inheritance-sec52.md) | open | p2 | experiment |  | dmarz |  | E4: two-generation memory inheritance (SEC-52) on v3 |
+| [exp-v3-model-ladder](tasks/exp-v3-model-ladder.md) | open | p2 | experiment |  | dmarz |  | E2: v3 screen on Sonnet 5.5 if Haiku cannot compute |
+| [exp-v3-screen-diagnostic](tasks/exp-v3-screen-diagnostic.md) | open | p2 | experiment |  | dmarz |  | E1: v3 competence-screen diagnostic (work step vs capability, Haiku) |
+| [exp-v3-stage2-board-vs-private](tasks/exp-v3-stage2-board-vs-private.md) | open | p2 | experiment |  | dmarz |  | E3: v3 stage 2, board vs private work with revised baseline (24 worlds) |
 | [review-avalon-tooling](tasks/review-avalon-tooling.md) | open | p2 | build |  |  |  | Review imported Avalon Swarm tooling for possible reuse |
 | [scan-papers-avalon-scaling](tasks/scan-papers-avalon-scaling.md) | open | p2 | scan |  | dmarz |  | Prior art on hidden-role games at large N: Mafia game theory, committee selection under adversaries, gossip topology |
 | [survey-avalon-swarm](tasks/survey-avalon-swarm.md) | open | p2 | survey |  | dmarz |  | Survey: swarm-scale hidden-role games as a Sybil / fork-merge testbed |
@@ -205,10 +209,6 @@
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
 | [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
-| [None](tasks/exp-v3-inheritance-sec52.md) | None | None | None |  |  |  |  |
-| [None](tasks/exp-v3-model-ladder.md) | None | None | None |  |  |  |  |
-| [None](tasks/exp-v3-screen-diagnostic.md) | None | None | None |  |  |  |  |
-| [None](tasks/exp-v3-stage2-board-vs-private.md) | None | None | None |  |  |  |  |
 
 ## Candidate batches
 
