@@ -2434,4 +2434,1020 @@ artifacts:
           - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/episodes.jsonl
           - researchers/dmarz/notes/market-split-opus/results/fleet-recovery/hub/market-split-opus__e180c27ca67e/calls.jsonl
         commit: cd5cb44baa2581338fa2dbb8886a6aaedf18781b-dirty
+  - id: latest-experiment-results-2026-10-04
+    category: content
+    type: doc
+    title: Latest experiment results — 4 October 2026
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/latest-experiment-results-2026-10-04/latest-experiment-results-2026-10-04-v1.tsx
+        built_at: '2026-10-04T08:15:39Z'
+        note: Frozen evidence review through 08:11:40 UTC. Source reports and public hub state retained; selected arithmetic
+          checked. No new experiments.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a105f5-6a1f-7810-909b-adf5391d72de
+        prompt: can u review the latest results from our experiments?
+        ingredients:
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/src/build_review.py
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/src/file_review.py
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/sources.json
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/results-cells.csv
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/market-split-api/RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/market-split-api/report/s1-002/episode-results.csv
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/README.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/README.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3_cells.csv
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/dissent/rd4/REPORT.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/compositional-safety/reviews/q0-007-post.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/healing-helping-hands/composite/C3-S0-POST.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-post.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D3.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md
+          - researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/public-state-2026-10-04T081140Z.json
+        commit: 20fc167694be76c84fcc342618306d00e2813eee-dirty
+  - id: large-swarm-experiment-proposal-2026-10-04
+    category: content
+    type: doc
+    title: A larger active-evidence swarm experiment
+    versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v2.tsx
+        built_at: '2026-10-04T08:40:03Z'
+        note: Withdraw the premature scale, model and cost recommendation. Record evaluation validity as unresolved and the
+          prerequisite to any experiment recommendation; preserve v1 as history.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a105f5-6a1f-7810-909b-adf5391d72de
+        prompt: if we dont have a good eval then we shouldnt even do thiss, please dont take evals so laxily. we cant plan
+          really without knowing what the eval will be
+        ingredients:
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/proposal.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/build_review.py
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/file_correction.py
+          - tooling/agent-experiments/EXPERIMENT-SETUP.md
+          - artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v1.tsx
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v1.tsx
+        built_at: '2026-10-04T08:28:56Z'
+        note: Exploratory proposal and conditional cost calculator. Credential excluded from the quoted request excerpt; no
+          experimental calls or resources launched.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a105f5-6a1f-7810-909b-adf5391d72de
+        prompt: can u think of what experiment we could run from all of these on a much larger scale, potentially even using
+          multiple simulation servers.
+        ingredients:
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/proposal.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/build_review.py
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/file_review.py
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-haiku-4.5.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/anthropic--claude-sonnet-5.5.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/deepseek--deepseek-v4.1-flash.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/portfolio-evidence.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/previous-next-experiments.md
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/qwen--qwen3.8-flash.json
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/scarcity-proposal.md
+          - researchers/dmarz/notes/large-swarm-proposal-2026-10-04/inputs/source-index.json
+          - https://arxiv.org/abs/2603.01045
+          - https://arxiv.org/abs/2505.11556
+          - https://arxiv.org/abs/2512.08296
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/cookbook/administration/usage-accounting
+        commit: 20fc167694be76c84fcc342618306d00e2813eee-dirty
+  - id: overnight-research-program-2026-10-04
+    category: content
+    type: doc
+    title: Seven-hour Swarm Evidence research program
+    versions:
+      - v: 5
+        date: 2026-10-04
+        path: artifacts/overnight-research-program-2026-10-04/overnight-research-program-2026-10-04-v5.html
+        built_at: '2026-10-04T09:31:52Z'
+        note: 'Prospective v5: distinguish supplied-affordance use from strategy discovery; legitimate product entry, persistent
+          allocation, 192-call cue diagnostic; 8,304 total calls. No experiments launched.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: the sybil think, its a bit cheap that we say we dont tell it that i can create a new identity, but we give
+          it two options and that happens to be on and its very low effort to compute the trade off if ur an afent
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v5.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/revise_program_discovery.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_discovery.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v4.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v5.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-library__code__gh-brunomazorra-llms-sybils.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__evidence.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__scoring.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__worlds.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-haiku__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-newcomer-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__healing-helping-hands__composite__C3-S1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc4__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__NEXT-ITERATION.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__contract.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__engine.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__R1-PLAN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-surveys__sybil-resistance.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v5-market-split-prompt.txt
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://arxiv.org/abs/2410.00031
+          - https://arxiv.org/abs/2603.08853
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 4
+        date: 2026-10-04
+        path: artifacts/overnight-research-program-2026-10-04/overnight-research-program-2026-10-04-v4.html
+        built_at: '2026-10-04T09:26:02Z'
+        note: 'Prospective v4: large native Sybil-under-rules market plus trust, verification and memory follow-ups; 8,112
+          total call ceiling. No experiments launched.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: 'honestly im looking for maybe one new set of experiment line which is very well thought out and ran at a
+          large scale, then probably 3 more lines which atleast have some conenction and advance some of the work of our other
+          experiments to study swarm dynamcis
+
+          i really want one which exapnds on the will they sybil under rules and make it much larger and a bit more complex'
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-library__code__gh-brunomazorra-llms-sybils.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__evidence.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__scoring.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__worlds.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-haiku__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-newcomer-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__healing-helping-hands__composite__C3-S1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc4__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__NEXT-ITERATION.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__contract.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__engine.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__R1-PLAN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-surveys__sybil-resistance.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://arxiv.org/abs/2410.00031
+          - https://arxiv.org/abs/2603.08853
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 3
+        date: 2026-10-04
+        path: artifacts/overnight-research-program-2026-10-04/overnight-research-program-2026-10-04-v3.html
+        built_at: '2026-10-04T09:03:17Z'
+        note: 'Prospective v3: 180 identities over three hosts, Qwen3.7 Flash selected through Alibaba, 6,880-call ceiling
+          and proposed $5 cap. No launch.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: i think we could use 3 if we wanted as well and do a diff total number to make it work. and ya lets find something
+          more affortable on open router and just pick it
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_180.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_180.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://openrouter.ai/api/v1/models/qwen/qwen3-30b-a3b-instruct-2507/endpoints
+          - https://openrouter.ai/api/v1/models/inception/mercury-2.5/endpoints
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/overnight-research-program-2026-10-04/overnight-research-program-2026-10-04-v2.html
+        built_at: '2026-10-04T08:56:29Z'
+        note: 'Prospective v2: 200 total identities across two hosts, one world and sequential checkpoint continuations. Retains
+          historical evidence and supersedes the v1 small-world plan. No launch.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: i think we should target like 200 total and maybe across more than 1 machine since we have IP constraints
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_200.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_200.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints
+          - https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/overnight-research-program-2026-10-04/overnight-research-program-2026-10-04-v1.html
+        built_at: '2026-10-04T08:37:49Z'
+        note: Prospective program, historical evidence synthesis and five session briefs. No experimental implementation or
+          launch.
+        by: codex
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: sha256:18b37a111d29b253bfc66ee9341e9b36701bc68252506639b54129a98a89f4f0
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints
+          - https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+  - id: overnight-research-canvas-2026-10-04
+    category: content
+    type: doc
+    title: Interactive seven-hour research program
+    versions:
+      - v: 5
+        date: 2026-10-04
+        path: artifacts/overnight-research-canvas-2026-10-04/overnight-research-canvas-2026-10-04-v5.tsx
+        built_at: '2026-10-04T09:31:53Z'
+        note: 'Prospective v5: distinguish supplied-affordance use from strategy discovery; legitimate product entry, persistent
+          allocation, 192-call cue diagnostic; 8,304 total calls. No experiments launched.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: the sybil think, its a bit cheap that we say we dont tell it that i can create a new identity, but we give
+          it two options and that happens to be on and its very low effort to compute the trade off if ur an afent
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v5.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/revise_program_discovery.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_discovery.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v4.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v5.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-library__code__gh-brunomazorra-llms-sybils.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__evidence.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__scoring.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__worlds.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-haiku__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-newcomer-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__healing-helping-hands__composite__C3-S1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc4__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__NEXT-ITERATION.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__contract.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__engine.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__R1-PLAN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-surveys__sybil-resistance.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v5-market-split-prompt.txt
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://arxiv.org/abs/2410.00031
+          - https://arxiv.org/abs/2603.08853
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 4
+        date: 2026-10-04
+        path: artifacts/overnight-research-canvas-2026-10-04/overnight-research-canvas-2026-10-04-v4.tsx
+        built_at: '2026-10-04T09:26:04Z'
+        note: 'Prospective v4: large native Sybil-under-rules market plus trust, verification and memory follow-ups; 8,112
+          total call ceiling. No experiments launched.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: 'honestly im looking for maybe one new set of experiment line which is very well thought out and ran at a
+          large scale, then probably 3 more lines which atleast have some conenction and advance some of the work of our other
+          experiments to study swarm dynamcis
+
+          i really want one which exapnds on the will they sybil under rules and make it much larger and a bit more complex'
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_portfolio.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index-v4.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-library__code__gh-brunomazorra-llms-sybils.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__evidence.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__scoring.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__worlds.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-haiku__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__market-split-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-budget-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-newcomer-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__healing-helping-hands__composite__C3-S1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc4__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__NEXT-ITERATION.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__contract.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__engine.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__R1-PLAN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-surveys__sybil-resistance.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v4-tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://arxiv.org/abs/2410.00031
+          - https://arxiv.org/abs/2603.08853
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 3
+        date: 2026-10-04
+        path: artifacts/overnight-research-canvas-2026-10-04/overnight-research-canvas-2026-10-04-v3.tsx
+        built_at: '2026-10-04T09:03:19Z'
+        note: 'Prospective v3: 180 identities over three hosts, Qwen3.7 Flash selected through Alibaba, 6,880-call ceiling
+          and proposed $5 cap. No launch.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: i think we could use 3 if we wanted as well and do a diff total number to make it work. and ya lets find something
+          more affortable on open router and just pick it
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_180.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/selected-model.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_180.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v2.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/fleet-audit-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openrouter-models-v3.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-inception__mercury-2.5-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3-30b-a3b-instruct-2507-endpoints.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/v3-qwen__qwen3.7-flash-endpoints.json
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+          - https://openrouter.ai/qwen/qwen3.7-flash
+          - https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints
+          - https://openrouter.ai/api/v1/models
+          - https://openrouter.ai/api/v1/models/qwen/qwen3-30b-a3b-instruct-2507/endpoints
+          - https://openrouter.ai/api/v1/models/inception/mercury-2.5/endpoints
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/overnight-research-canvas-2026-10-04/overnight-research-canvas-2026-10-04-v2.tsx
+        built_at: '2026-10-04T08:56:31Z'
+        note: 'Prospective v2: 200 total identities across two hosts, one world and sequential checkpoint continuations. Retains
+          historical evidence and supersedes the v1 small-world plan. No launch.'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: i think we should target like 200 total and maybe across more than 1 machine since we have IP constraints
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review-v2.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program_200.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program_200.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/SETUP-v1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/program-v1.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints
+          - https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+          - https://openrouter.ai/docs/api_reference/limits
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/overnight-research-canvas-2026-10-04/overnight-research-canvas-2026-10-04-v1.tsx
+        built_at: '2026-10-04T08:37:50Z'
+        note: Prospective program, historical evidence synthesis and five session briefs. No experimental implementation or
+          launch.
+        by: codex
+        session: codex:01a10604-8694-7b71-8df7-11fea1aee0da
+        prompt: sha256:18b37a111d29b253bfc66ee9341e9b36701bc68252506639b54129a98a89f4f0
+        ingredients:
+          - researchers/dmarz/notes/overnight-program-2026-10-04/program.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/methods-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/build_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/src/file_program.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/google--gemini-2.5-flash-lite.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/large-proposal.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/openai--gpt-6-luna.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/prior-review.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__compositional-safety__reviews__q0-007-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__discussion-dose__src__tasks.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__market-split-api__report__s1-002__episode-results.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__pipeline__READY-CHAIN.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__results-cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-budget-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-newcomer-sonnet__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__reviews__s1-001-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-api__src__sim.py
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-sonnet__results-summary.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scale-xl__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__dmarz__notes__sybil-scarcity-opus__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__shadow__notes__capture-memory-mix__results__MP3_cells.csv
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__antsy-targeted-v8__RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__decision-models__quorum-of-mirrors__reviews__Q1-02-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__dissent__rd4__REPORT.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__healing-helping-hands__composite__C3-S0-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__immune-response-v3__evidence-study__reviews__receipt-a3-post.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__LATEST-RESULTS.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__influence-swarms__scenario__RESULTS-D3.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc2__reviews__S1-A1-POST.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__phantom-coast__pc3__README.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D1.md
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/source-index.json
+          - researchers/dmarz/notes/overnight-program-2026-10-04/inputs/tooling__agent-experiments__EXPERIMENT-SETUP.md
+          - https://swarmchasing.com/
+          - https://swarmchasing.com/logistics/
+          - https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints
+          - https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints
+          - https://openrouter.ai/docs/guides/routing/provider-selection
+          - https://openrouter.ai/docs/guides/best-practices/reasoning-tokens
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
+  - id: evaluation-shortlist-2026-10-04
+    category: content
+    type: doc
+    title: 'Existing evaluations: suitability and scorer audit'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/evaluation-shortlist-2026-10-04/evaluation-shortlist-2026-10-04-v1.tsx
+        built_at: '2026-10-04T08:51:55Z'
+        note: Primary-source benchmark shortlist with pinned evaluator inspection and reproducible offline counterexamples.
+          No paid model runs or deployment; no claim of qualified experiment readiness.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a105f5-6a1f-7810-909b-adf5391d72de
+        prompt: look for those
+        ingredients:
+          - researchers/dmarz/notes/eval-search-2026-10-04/review.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/SETUP.md
+          - researchers/dmarz/notes/eval-search-2026-10-04/fixture-audit.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/src/build_review.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/src/audit_fixtures.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/src/file_review.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--LICENSE
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--evaluator.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--scenarios.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--task.md
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentdojo--LICENSE
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentdojo--slack-user_tasks.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentsnet--LICENSE
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentsnet--LiteralMessagePassing.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/browsecomp-plus--LICENSE
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/browsecomp-plus--evaluate_run.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-21_n100.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-21_n2.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-30_n2.json
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--LICENSE
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--metrics.py
+          - researchers/dmarz/notes/eval-search-2026-10-04/inputs/source-index.json
+          - https://aclanthology.org/2026.acl-long.1023.pdf
+          - https://arxiv.org/html/2505.11556v3
+          - https://arxiv.org/html/2507.08616v1
+          - https://arxiv.org/html/2510.05244v1
+          - https://arxiv.org/html/2603.01045v2
+          - https://arxiv.org/html/2608.20317
+          - https://github.com/TheAgentCompany/TheAgentCompany
+          - https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/evaluator.py
+          - https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/task.md
+          - https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/data/benchmark.json
+          - https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/src/hiddenbench/generation.py
+          - https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/src/hiddenbench/metrics.py
+          - https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/dmarz/notes/discussion-dose/src/bench_v3/evidence.py
+          - https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reference.py
+          - https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/vishesh/notes/phantom-coast/pc3/README.md
+          - https://github.com/ethz-spylab/agentdojo
+          - https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/slack/user_tasks.py
+          - https://github.com/floriangroetschla/AgentsNet/blob/269f576e966f441e54ba72a653769663a4f4322c/LiteralMessagePassing.py
+          - https://github.com/hover-nlp/hover/tree/39b84697f196308f398a251a7aea9b82ae0f0562
+          - https://github.com/hover-nlp/hover/tree/39b84697f196308f398a251a7aea9b82ae0f0562/my_transformers/data/metrics
+          - https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/benchmarks/III-21_n2.json
+          - https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/src/engine.py
+          - https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/src/utils/metrics.py
+          - https://github.com/texttron/BrowseComp-Plus
+          - https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/docs/llm_as_judge.md
+          - https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/scripts_evaluation/evaluate_run.py
+          - https://hover-nlp.github.io/
+        commit: e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty
 requires: '1.2'

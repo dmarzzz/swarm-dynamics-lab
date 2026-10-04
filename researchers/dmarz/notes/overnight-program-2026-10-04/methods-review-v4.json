@@ -1,0 +1,38 @@
+{
+  "scope": "Three bounded Codex subagent reviews and root synthesis; same researcher",
+  "decisions": [
+    "Make the market-splitting successor the flagship, replacing the prior information-diffusion flagship",
+    "Preserve concentrated local markets; make all three competitors native",
+    "Connected180-controllerworld has one economy-level unit;60marketsnotindependent",
+    "No new resources/calls/edges on account registration",
+    "Separate prohibition effect from enforcement; mechanically zero bypass is not learned compliance",
+    "Trustfollow-up freezes audits and creditmass",
+    "Verificationfollow-up holds objective/infofixed",
+    "Memoryfollow-up separates origin from truth and includes falseoriginals"
+  ],
+  "main_calls": [
+    5760,
+    504,
+    576,
+    576
+  ],
+  "qualification_caps": [
+    552,
+    48,
+    48,
+    48
+  ],
+  "total_cap": 8112,
+  "selected_model": "qwen/qwen3.7-flash",
+  "runtime_minutes_at_1call_s_plus25pct": 154.5,
+  "scope_limits": [
+    "No new experimental results",
+    "No automatic model/top-up/line expansion",
+    "All scientific instruments still require implementation and admission"
+  ],
+  "final_review": {
+    "arithmetic": "passed",
+    "tautology_units_resources": "passed",
+    "fix_incorporated": "All-native rivals require focal-owner-only recombination to attribute fine avoidance; joint market masking reported separately. Added 0.6/0.3/0.1 fixture."
+  }
+}

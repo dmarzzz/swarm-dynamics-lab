@@ -1,0 +1,168 @@
+[
+  {
+    "path": "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+    "sha256": "319f503cea4feaf401e8ee410be8a54c62a66ed173b9e7d6e1c5c1a3a6c067e7"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+    "sha256": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-budget-api/RESULTS.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-budget-api/RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/RESULTS.md",
+    "sha256": "525f49ee57881080d1bd10d1d86ecbf88553085251b350304eab5e3cf4be9dc5"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-budget-api/results-cells.csv",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-budget-api/results-cells.csv",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/results-cells.csv",
+    "sha256": "64bc687fa03ad57eafcc9bdb0514b632f1281d2ab945b099f1ed6f463cd671f5"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-budget-api/reviews/s1-001-post.md",
+    "sha256": "edc67bb6eace06bd9603f66f7ff036c4aa285c466d0a188a0df2d528a1711de3"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/RESULTS.md",
+    "sha256": "6097054f301ba5ae8a97980e14a615a6d9731b01c0de7f72b9984303fea5876a"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/sybil-newcomer-sonnet/reviews/s1-001-post.md",
+    "sha256": "59036b5f262eee8da34830a1a7e8a88fc556769d522e93067a5483f04fece38b"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-api/RESULTS.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/market-split-api/RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/market-split-api/RESULTS.md",
+    "sha256": "bb2162e8ba37b4e0856136dd6185804dd5f04413698a9539f8e65cf62ac5c16f"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-api/report/s1-002/episode-results.csv",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/market-split-api/report/s1-002/episode-results.csv",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/market-split-api/report/s1-002/episode-results.csv",
+    "sha256": "acb6996e031566428ebdbe69f04e60c5b0920ad872091664a79e90457bc79f02"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc2/README.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/README.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/README.md",
+    "sha256": "fd92728f8735a601a2e6b5ec22227d2ed9414d2908c16a45f3529d163e1577ac"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md",
+    "sha256": "ae592612430412a7649deb91f59c5841786e2a4b889148593b66461954b47627"
+  },
+  {
+    "path": "researchers/shadow/notes/capture-memory-mix/README.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/README.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/README.md",
+    "sha256": "e84f3437061e3332b37d17f6a49ce023467a96e8f55a0eb08b699637177c4a08"
+  },
+  {
+    "path": "researchers/shadow/notes/capture-memory-mix/results/MP3.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3.md",
+    "sha256": "6a5c726c54edc150142d282c2d8f6bebe886d23805e4bca819d713eb5c876ff9"
+  },
+  {
+    "path": "researchers/shadow/notes/capture-memory-mix/results/MP3_cells.csv",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3_cells.csv",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/shadow/notes/capture-memory-mix/results/MP3_cells.csv",
+    "sha256": "95d99b9534c247e12be3e97c493900262b3b72adc8bed54d9b8957e424f63c93"
+  },
+  {
+    "path": "researchers/vishesh/notes/dissent/rd4/REPORT.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/dissent/rd4/REPORT.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/dissent/rd4/REPORT.md",
+    "sha256": "b219d62664be1a65d398c566781cbb6c8abfc0476f8404c7217fe9cc521414cc"
+  },
+  {
+    "path": "researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+    "sha256": "8d5b24026e7620a6244ab23dd2bef9e470b6dd6885c6bf55822d270ab7c4cf29"
+  },
+  {
+    "path": "researchers/dmarz/notes/compositional-safety/reviews/q0-007-post.md",
+    "ref": "f1f65c45",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/f1f65c45/researchers/dmarz/notes/compositional-safety/reviews/q0-007-post.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/f1f65c45/researchers/dmarz/notes/compositional-safety/reviews/q0-007-post.md",
+    "sha256": "de14017a1606b49ffbfc4f90b72a68b1deca9134de30c90c746c9427ad617da7"
+  },
+  {
+    "path": "researchers/vishesh/notes/healing-helping-hands/composite/C3-S0-POST.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/healing-helping-hands/composite/C3-S0-POST.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/healing-helping-hands/composite/C3-S0-POST.md",
+    "sha256": "04642e60c55494caf2e0854c28b199eb848f56eb75c5421e9d90ad96b504bb89"
+  },
+  {
+    "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-post.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-post.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a3-post.md",
+    "sha256": "4d73851e98ca8ad381e033a555bd3812ccd4c198b9adc2ea252dd3f08ed72d50"
+  },
+  {
+    "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+    "sha256": "1651a8e9e8461c0c97b19d091c729641e123f0a2d724297a53a8964e5c28f3be"
+  },
+  {
+    "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D1.md",
+    "sha256": "f5dd1400634d65eb957191a84d08f09d4a23a7939fd1578bffb45fcfb1b18a99"
+  },
+  {
+    "path": "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D3.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D3.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D3.md",
+    "sha256": "c5939719441fe96edd7b995a7ca51e53c417ec936effbcd2da1e7d73a442ddcc"
+  },
+  {
+    "path": "researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md",
+    "ref": "ee14e0f3c7f6004f696574da63f0cb8ef6caab43",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/ee14e0f3c7f6004f696574da63f0cb8ef6caab43/researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md",
+    "sha256": "0186c37fd35bbc637155100c7176b6e8f712bb58b1b2892a247a7aa87cbf9bc8"
+  },
+  {
+    "url": "https://swarm-live.pages.dev/api/state",
+    "local": "researchers/dmarz/notes/latest-results-review-2026-10-04/inputs/public-state-2026-10-04T081140Z.json",
+    "sha256": "9e2cbf8e7de03e16362cf43b906f1f01bb37025245a832b6fcbb6408282ab5bc"
+  }
+]

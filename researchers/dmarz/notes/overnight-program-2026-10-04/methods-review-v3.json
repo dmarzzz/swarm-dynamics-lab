@@ -1,0 +1,26 @@
+{
+  "review": "Independent bounded subagent review of allocation arithmetic; same researcher",
+  "chosen_population": 180,
+  "hosts": 3,
+  "per_host": 60,
+  "communities": 10,
+  "per_community": 18,
+  "per_community_per_host": 6,
+  "main_calls": 6300,
+  "qualification_cap": 580,
+  "total_cap": 6880,
+  "main_minutes_at_075_plus25pct": 175,
+  "collection_headroom_minutes": 35,
+  "rejected_216_alternative": {
+    "main_calls": 7560,
+    "total_calls": 8176,
+    "main_minutes_at_075_plus25pct": 210,
+    "headroom_minutes": 0
+  },
+  "limits": [
+    "Three hosts do not multiply account quota",
+    "Actual scale qualification must use 18-member community topology and maximum context",
+    "Second small qualification slot is bounded repair of selected model",
+    "One world; no independent-agent bootstrap"
+  ]
+}

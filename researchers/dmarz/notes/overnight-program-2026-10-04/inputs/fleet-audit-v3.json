@@ -1,0 +1,32 @@
+{
+  "at": "2026-10-04T09:01:14.919582+00:00",
+  "claim_commit": "a52fed497e0e2dd410896bafefedc2c25080a961",
+  "candidates": [
+    {
+      "host": "research-01",
+      "online": true,
+      "cpus": 2,
+      "mem_gb": 3.8,
+      "mem_used_gb": 0.5,
+      "claimed": false
+    },
+    {
+      "host": "sim-dmarz-2",
+      "online": true,
+      "cpus": 4,
+      "mem_gb": 7.8,
+      "mem_used_gb": 0.6,
+      "claimed": false
+    },
+    {
+      "host": "sim-vishesh",
+      "online": true,
+      "cpus": 4,
+      "mem_gb": 7.8,
+      "mem_used_gb": 0.6,
+      "claimed": false
+    }
+  ],
+  "previous_candidate_sim_dmarz_3_claimed": true,
+  "note": "Read-only capacity snapshot. No claims created. Machine placement remains subject to current ownership and launch checks."
+}

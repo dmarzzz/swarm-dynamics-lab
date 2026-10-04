@@ -1,0 +1,87 @@
+[
+  {
+    "file": "agentsnet--LiteralMessagePassing.py",
+    "url": "https://github.com/floriangroetschla/AgentsNet/blob/269f576e966f441e54ba72a653769663a4f4322c/LiteralMessagePassing.py",
+    "commit": "269f576e966f441e54ba72a653769663a4f4322c",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentsnet--LICENSE",
+    "url": "https://github.com/floriangroetschla/AgentsNet/blob/269f576e966f441e54ba72a653769663a4f4322c/LICENSE",
+    "commit": "269f576e966f441e54ba72a653769663a4f4322c",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentcompany--evaluator.py",
+    "url": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/evaluator.py",
+    "commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentcompany--task.md",
+    "url": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/task.md",
+    "commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentcompany--scenarios.json",
+    "url": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/scenarios.json",
+    "commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentcompany--LICENSE",
+    "url": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/LICENSE",
+    "commit": "98b68ef82a47690c316f42fddb05baafaab56851",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentdojo--LICENSE",
+    "url": "https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/LICENSE",
+    "commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "read_depth": "selected evaluator and task inspected; no benchmark/model execution"
+  },
+  {
+    "file": "agentdojo--slack-user_tasks.py",
+    "url": "https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/slack/user_tasks.py",
+    "commit": "089ed468cf3ed0322acc66b0211f26d9d90dbf60",
+    "read_depth": "UserTask1 utility and ground_truth inspected; no full harness execution"
+  },
+  {
+    "file": "browsecomp-plus--evaluate_run.py",
+    "url": "https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/scripts_evaluation/evaluate_run.py",
+    "commit": "046949032b0328319cc9a02663a759ec601d9402",
+    "read_depth": "answer judge, retrieval/citation score and missing-result aggregation inspected"
+  },
+  {
+    "file": "browsecomp-plus--LICENSE",
+    "url": "https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/LICENSE",
+    "commit": "046949032b0328319cc9a02663a759ec601d9402",
+    "read_depth": "MIT license"
+  },
+  {
+    "file": "silo--metrics.py",
+    "url": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/src/utils/metrics.py",
+    "read_depth": "selected exact/partial metrics and fixed official example answers audited"
+  },
+  {
+    "file": "silo--III-21_n100.json",
+    "url": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/benchmarks/III-21_n100.json",
+    "read_depth": "selected exact/partial metrics and fixed official example answers audited"
+  },
+  {
+    "file": "silo--III-30_n2.json",
+    "url": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/benchmarks/III-30_n2.json",
+    "read_depth": "selected exact/partial metrics and fixed official example answers audited"
+  },
+  {
+    "file": "silo--III-21_n2.json",
+    "url": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/benchmarks/III-21_n2.json",
+    "read_depth": "selected exact/partial metrics and fixed official example answers audited"
+  },
+  {
+    "file": "silo--LICENSE",
+    "url": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/LICENSE",
+    "read_depth": "selected exact/partial metrics and fixed official example answers audited"
+  }
+]

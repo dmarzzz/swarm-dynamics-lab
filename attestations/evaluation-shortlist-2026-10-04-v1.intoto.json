@@ -1,0 +1,257 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "look for those"
+   },
+   "internalParameters": {
+    "commit": "e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty",
+    "session": "codex:01a105f5-6a1f-7810-909b-adf5391d72de"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "aec1a6337f8a40a6d1b3ad2fd88f27391f50bf43311666b32c12e2a21c8ab0d0"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/review.json"
+    },
+    {
+     "digest": {
+      "sha256": "7911a43013940b17f49b8191edd3878a7c0adc9e76cbd3f3e73c2edb525ea681"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/SETUP.md"
+    },
+    {
+     "digest": {
+      "sha256": "00f6f2e1f8547f3a65e8b52591535b3c4d541373997d38eac845599495def793"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/fixture-audit.json"
+    },
+    {
+     "digest": {
+      "sha256": "49b454fdcc3ade41308e8035851341f76ab5f65a6d93ae7ed287ac5f0e19a583"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/src/build_review.py"
+    },
+    {
+     "digest": {
+      "sha256": "56d4aef91f8ae341f4e84bbf26efde1d68a81905da512f926d91a6e74ad3162a"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/src/audit_fixtures.py"
+    },
+    {
+     "digest": {
+      "sha256": "d35997a0fb4bba17b2f9861d22be0a0769daf07383934d4d718a8eb3886123ac"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/src/file_review.py"
+    },
+    {
+     "digest": {
+      "sha256": "2d6976a9b482bb14d9cd4f0d97ce6e14305496f1649b8667cb91d027c670930f"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--LICENSE"
+    },
+    {
+     "digest": {
+      "sha256": "482f9d6a65b28d424240a329b16db45e99c650d29f950538cb4633c92dc4aefc"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--evaluator.py"
+    },
+    {
+     "digest": {
+      "sha256": "fb8bea13473e2ee13068cf1168d8a0da730a9ca2313aacff10b5efb121d6499f"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--scenarios.json"
+    },
+    {
+     "digest": {
+      "sha256": "5f317f380e8c140a2345d7dcbb72cf492326c85ac0054c57690e983f914a41a5"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentcompany--task.md"
+    },
+    {
+     "digest": {
+      "sha256": "4285a071f2d382338e52b4fb0a186d952984a34d43a33d8872e1a1d8cb43401e"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentdojo--LICENSE"
+    },
+    {
+     "digest": {
+      "sha256": "25e43a0c58109765da090aa2f01bfb0892aaee70ca1622028074d7b49443a57b"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentdojo--slack-user_tasks.py"
+    },
+    {
+     "digest": {
+      "sha256": "83b5208e7b309e87f188506d292a53cd272f0423047436a9a79566fdfbb51c13"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentsnet--LICENSE"
+    },
+    {
+     "digest": {
+      "sha256": "969f7504d6b52d544833244f8eb52f791a00f12078230ac7787203f50ade68ae"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/agentsnet--LiteralMessagePassing.py"
+    },
+    {
+     "digest": {
+      "sha256": "a580afd0716e99a1c43fb297a950620a55980305aae9fcd236141101a7e21803"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/browsecomp-plus--LICENSE"
+    },
+    {
+     "digest": {
+      "sha256": "1a21233937c377ab6323c98ff9af67742756a57fbacab4ebf9bc30852eae530a"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/browsecomp-plus--evaluate_run.py"
+    },
+    {
+     "digest": {
+      "sha256": "75d52c6d98b1dc10ada904bca43460b7494277584884ece63761cd54302a2df3"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-21_n100.json"
+    },
+    {
+     "digest": {
+      "sha256": "6e87a36634212ed626412ce2b4d2c184cea67749b63e544affa321be1a397e38"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-21_n2.json"
+    },
+    {
+     "digest": {
+      "sha256": "d0f0f1da8fe31e0b5a71ec81e7c20f8a0dd17c923fb39d7bf2cd53ba0b45767f"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--III-30_n2.json"
+    },
+    {
+     "digest": {
+      "sha256": "6b0382b16279f26ff69014300541967a356a666eb0b91b422f6862f6b7dad17e"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--LICENSE"
+    },
+    {
+     "digest": {
+      "sha256": "d0dbd36a281f5e475522c1db7f1a0522831bc760a6f83b7a4198eef3acc1d06e"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/silo--metrics.py"
+    },
+    {
+     "digest": {
+      "sha256": "aa36b1ed18066ad5a2d0186ad4b5a9662ab4682f84ff35fe2d7cad62852df887"
+     },
+     "uri": "researchers/dmarz/notes/eval-search-2026-10-04/inputs/source-index.json"
+    },
+    {
+     "uri": "https://aclanthology.org/2026.acl-long.1023.pdf"
+    },
+    {
+     "uri": "https://arxiv.org/html/2505.11556v3"
+    },
+    {
+     "uri": "https://arxiv.org/html/2507.08616v1"
+    },
+    {
+     "uri": "https://arxiv.org/html/2510.05244v1"
+    },
+    {
+     "uri": "https://arxiv.org/html/2603.01045v2"
+    },
+    {
+     "uri": "https://arxiv.org/html/2608.20317"
+    },
+    {
+     "uri": "https://github.com/TheAgentCompany/TheAgentCompany"
+    },
+    {
+     "uri": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/evaluator.py"
+    },
+    {
+     "uri": "https://github.com/TheAgentCompany/TheAgentCompany/blob/98b68ef82a47690c316f42fddb05baafaab56851/workspaces/tasks/admin-get-best-vendor-quote/task.md"
+    },
+    {
+     "uri": "https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/data/benchmark.json"
+    },
+    {
+     "uri": "https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/src/hiddenbench/generation.py"
+    },
+    {
+     "uri": "https://github.com/Yassellee/HiddenBench_ICML/blob/3be6ca16973e4fb751ffc0dfb7eb11f2d28335d1/src/hiddenbench/metrics.py"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/dmarz/notes/discussion-dose/src/bench_v3/evidence.py"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/vishesh/notes/decision-models/quorum-of-mirrors/reference.py"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/1979234ac4b20dc88f732c16d0d79e05b6189b57/researchers/vishesh/notes/phantom-coast/pc3/README.md"
+    },
+    {
+     "uri": "https://github.com/ethz-spylab/agentdojo"
+    },
+    {
+     "uri": "https://github.com/ethz-spylab/agentdojo/blob/089ed468cf3ed0322acc66b0211f26d9d90dbf60/src/agentdojo/default_suites/v1/slack/user_tasks.py"
+    },
+    {
+     "uri": "https://github.com/floriangroetschla/AgentsNet/blob/269f576e966f441e54ba72a653769663a4f4322c/LiteralMessagePassing.py"
+    },
+    {
+     "uri": "https://github.com/hover-nlp/hover/tree/39b84697f196308f398a251a7aea9b82ae0f0562"
+    },
+    {
+     "uri": "https://github.com/hover-nlp/hover/tree/39b84697f196308f398a251a7aea9b82ae0f0562/my_transformers/data/metrics"
+    },
+    {
+     "uri": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/benchmarks/III-21_n2.json"
+    },
+    {
+     "uri": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/src/engine.py"
+    },
+    {
+     "uri": "https://github.com/jwyjohn/acl26-silo-bench/blob/e74127782ed1c42fff474249961f022c063d76f2/src/utils/metrics.py"
+    },
+    {
+     "uri": "https://github.com/texttron/BrowseComp-Plus"
+    },
+    {
+     "uri": "https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/docs/llm_as_judge.md"
+    },
+    {
+     "uri": "https://github.com/texttron/BrowseComp-Plus/blob/046949032b0328319cc9a02663a759ec601d9402/scripts_evaluation/evaluate_run.py"
+    },
+    {
+     "uri": "https://hover-nlp.github.io/"
+    },
+    {
+     "digest": {
+      "gitCommit": "e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:51:55Z",
+    "invocationId": "codex:01a105f5-6a1f-7810-909b-adf5391d72de",
+    "startedOn": "2026-10-04T08:51:55Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "4f51c14d374bac6c246862694197b9aa2a5f2da0f1c926b8d09d4a007e896c4e"
+   },
+   "name": "artifacts/evaluation-shortlist-2026-10-04/evaluation-shortlist-2026-10-04-v1.tsx"
+  }
+ ]
+}

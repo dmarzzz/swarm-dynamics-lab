@@ -1,0 +1,76 @@
+"""Apply the owner's three-host, affordable-model decision to the saved plan."""
+from pathlib import Path
+import json, html
+
+B = Path(__file__).resolve().parents[1]
+CANVAS = Path('/Users/halcyon/.cursor/projects/Users-halcyon-swarm-labs-agentops/canvases/overnight-research-program.canvas.tsx')
+P = json.loads((B/'inputs/program-v2.json').read_text())
+P.update(title='180 agents, three machines, one shared world', version=3,
+ subtitle='Qwen3.7 Flash selected for the seven-hour investigation',
+ status='PROPOSED v3 · model selected · implementation and qualification pending · no experiment or session loop launched',
+ recommendation='Use 180 persistent model-backed identities, 60 on each of three existing machines, in one shared world. Select Qwen3.7 Flash through Alibaba on OpenRouter, with reasoning disabled for bounded decisions. This allocation keeps the large-swarm investigation while leaving more time for analysis and closeout.',
+ cutoff='Historical evidence retained with its original timestamps (latest portfolio audit 08:29 UTC). Model prices/endpoints and candidate-host claims refreshed around 09:01 UTC, 4 October 2026. Refresh again before execution.')
+P['counts'].update(agents=180,hosts=3,agents_per_host=60,agents_per_community=18,main_calls=6300,scale_qualification=180,total_qualification_cap=580,total_call_cap=6880)
+P['model_selection']={
+ 'model':'qwen/qwen3.7-flash','observed_canonical_slug':'qwen/qwen3.7-flash-20260727','provider':'alibaba',
+ 'reasoning_enabled':False,'response_format':'json_object','schema_validation':'local; no provider JSON-schema guarantee',
+ 'input_usd_per_million':0.03,'output_usd_per_million':0.13,'price_tier':'under 32,000 prompt tokens; study cap is 8,000',
+ 'status':'selected, not yet task-qualified','automatic_model_fallback':False,
+ 'request_template':{'model':'qwen/qwen3.7-flash','provider':{'only':['alibaba'],'allow_fallbacks':False,'require_parameters':True},'reasoning':{'enabled':False},'max_tokens':1000,'response_format':{'type':'json_object'}},
+ 'cost_scenarios':[{'input_tokens_per_call':2000,'output_tokens_per_call':300,'calls':6880,'usd':0.68112},{'input_tokens_per_call':8000,'output_tokens_per_call':1000,'calls':6880,'usd':2.5456}],
+ 'proposed_study_cap_usd':5,
+ 'note':'Token-only scenarios exclude five Claude Code sessions, credit-purchase fees/taxes and extra paid tools. No caching discounts assumed. No new paid tools included. Verify actual remaining owner authority; no budget is allocated by this document.'}
+
+def body(title,text):
+ next(s for s in P['sections'] if s['title']==title)['body']=text
+
+# Identity-count changes are scoped so the 200-call small qualification stays intact.
+replacements=[('200 total','180 total'),('200 persistent','180 persistent'),('200 identities','180 identities'),('200 active','180 active'),('200 interacting','180 interacting'),('all 200','all 180'),('200 assigned','180 assigned'),('200-agent','180-agent'),('200-identity','180-identity'),('two-host','three-host'),('two-machine','three-machine'),('two machines','three machines'),('both machines','all three machines'),('both hosts','all three hosts'),('two hosts','three hosts'),('7,600','6,880'),('7,000','6,300'),('600 qualification','580 qualification')]
+for s in P['sections']:
+ if s['title']=='What changed from the earlier proposals':continue
+ for a,b in replacements:s['body']=s['body'].replace(a,b)
+body('The scope decision','The owner allows three machines and a different total population, and asked us to select an affordable OpenRouter model. Choose 180 persistent logical identities, 60 per machine, in one world with one dispatch authority and one shared protocol. Ten communities of eighteen divide evenly across three hosts. Qwen3.7 Flash through Alibaba is selected; it remains subject to the task/latency qualification. The five Claude Code sessions manage development, execution and analysis outside the 180 experimental identities. These identities use bounded state and API requests; they are not 180 Claude Code sessions. No new servers or subscriptions are assumed.')
+body('What changed from the earlier proposals','The larger task proposed up to 456,192 calls. This task’s v1 used 48 small independent roots; v2 used 200 agents over two machines. V3 chooses 180 agents over three machines and fixes the affordable model to Qwen3.7 Flash. This keeps a large interacting world and reduces the total ceiling to 6,880 calls. A 216-agent alternative would consume all 210 available collection minutes at 0.75 calls/s plus 25% overhead; 180 leaves 35 minutes. This is a scheduling choice, not a server capacity limit. Historical versions and their methods assumptions remain frozen inputs. The other task, “Review latest experiment results,” is evaluating BrowseComp-Plus/HoVer; neither is represented here as integrated.')
+body('Topology: logical communities span both hosts','Create ten communities of eighteen identities. Each community has six identities on each of three hosts; preserve that mapping in both branches. Each identity has four fixed local neighbors and one cross-community neighbor, selected to keep the overall graph connected. One round produces one bounded public message and a private structured judgment. The next round receives at most five selected peer messages from the preceding round. Freeze the graph and ordering before collection. Machine boundaries do not define social communities or treatment assignment.')
+next(s for s in P['sections'] if s['title']=='Topology: logical communities span both hosts')['title']='Topology: each community spans all three hosts'
+body('Existing machines and IP uncertainty','At approximately 09:01 UTC, sim-dmarz-2 and sim-vishesh were online with four CPUs/about 7.8 GiB memory each; research-01 was online with two CPUs/about 3.8 GiB. None had an active planned/running claim in the fetched registry. These are three candidates, not reserved machines or measured capacity guarantees. The previous candidate sim-dmarz-3 is now claimed and is excluded. Refresh ownership and claim all three before remote work. Keeping only sixty bounded identities and two or three in-flight API calls per host makes the smaller third machine a reasonable candidate, subject to the scale check. No specific per-IP quota is verified. Per-host pacing and one global account/provider limiter remain required; multiple IPs do not imply multiple account quotas.')
+body('One world, two continuations','Manifest: 180 identities × five shared prefix rounds = 900 calls. Save the complete checkpoint. Fifteen ordinary continuation rounds use 2,700 calls; restore the checkpoint in a separate namespace, then fifteen source-aware continuation rounds use 2,700. Main ceiling: 6,300 calls. Branches run sequentially with at most 180 active logical identities, so this does not require 360 simultaneous agents. Freeze routing, access, message slots and token ceilings; change only the prespecified aggregation representation/instructions. Both branches receive authentic origin receipts, which establish ancestry rather than truth.')
+body('Qualification: at most 600 calls','Qualification ceiling is 580 calls: at most two small configurations at 200 calls each, then one 180-call full-scale check. Small configuration = twenty development identities × five rounds × two disjoint fixtures (full evidence / one required fact absent). Both configurations use the selected Qwen3.7 Flash / Alibaba endpoint with reasoning disabled; the second slot permits one bounded implementation/prompt repair using fresh fixtures, not a search across models. Predeclare the scorer: all responses structurally valid, at least 18/20 correct final clean judgments, and 20/20 correct absent-evidence abstentions. Exercise both packet formats. Then use the actual 180-identity, ten-community topology on a separate max-context scale fixture: sixty calls per host, both formats balanced across machines. Require every call accounted and valid, checkpoint/resume integrity and measured round time supporting the schedule. A failed scale check ends launch; there is no second scale attempt. JSON mode does not enforce schema: validate locally and preserve invalid responses without automatic repair calls.')
+next(s for s in P['sections'] if s['title']=='Qualification: at most 600 calls')['title']='Qualification: at most 580 calls'
+body('Rate, runtime and the seven-hour cutoff','Start at two in-flight requests per host, six globally. Only within verified provider limits, the ceiling is three per host/nine globally. 180 identities do not require 180 simultaneous requests. At 0.75 accounted calls/s, 6,300 main calls plus 25% planning overhead take 175 minutes, leaving 35 minutes in the T+90–300 collection window. This is arithmetic, not a measured benchmark. Require representative throughput of at least 0.75/s and max-context round/queue-tail projections for all 35 executed rounds plus checkpoint/reset to fit the remaining window with that reserve. Public provider speed statistics are context only. If readiness fails, use the saved-data fallback; do not quietly change the selected model or shrink the main manifest after seeing outcomes.')
+body('Model and cost envelope','Selected model: qwen/qwen3.7-flash, provider alibaba, observed canonical version qwen/qwen3.7-flash-20260727. Current standard paid price is $0.03/M input and $0.13/M output below 32,000 prompt tokens; our 8,000-input cap stays in that tier. Disable reasoning with reasoning.enabled=false and pin the provider with fallbacks disabled and require_parameters=true. Use JSON-object mode plus local validation, not JSON-schema enforcement. Reasoning-off support and usage must be verified in qualification. No default promotion to a more expensive model. At 6,880 total calls, 2,000 input +300 output tokens averages $0.68; at 8,000 +1,000 it is $2.55. The same token mix is about 72% cheaper than v2’s Luna quote. Propose a reduced $5 study cap including outstanding reservations, only within verified remaining authority. Costs exclude the five Claude management sessions and any credit-purchase fees/taxes. No caching discount or paid retrieval/judge is assumed. This is a chosen configuration, not evidence it has passed the task.')
+body('One cross-host accounting authority',next(s for s in P['sections'] if s['title']=='One cross-host accounting authority')['body'].replace('fixed pair of disjoint host budgets','fixed set of three disjoint host budgets').replace('the other host','another host'))
+P['sections'].insert(18,{'title':'Why this affordable model was selected','group':'Decision','body':'The live endpoint comparison put Qwen3.7 Flash / Alibaba at $0.03/$0.13 per million input/output tokens, Qwen3-30B-A3B-Instruct / StreamLake at $0.04815/$0.19305, and Mercury 2.5 / Inception at $0.04/$0.15. Qwen3.7 Flash is the least expensive of this practical shortlist, with a first-party endpoint, JSON mode, tool parameters and optional reasoning. Still cheaper models exist; selection is a judgment about cost and suitability for this workflow, not a claim that Qwen wins a benchmark or is the absolute cheapest model. Task competence will be checked directly before the main run. Free/promotional routing is not the basis of the overnight throughput plan.'})
+for title in ['Why this is the strongest submission strategy']:
+ s=next(s for s in P['sections'] if s['title']==title)
+ s['body']=s['body'].replace('one inspectable causal result','one inspectable swarm trajectory and comparison')
+
+for row in P['schedule']:
+ for k in ['work','gate']:
+  for a,b in replacements:row[k]=row[k].replace(a,b)
+  row[k]=row[k].replace('two-host','three-host').replace('1,000 shared-prefix','900 shared-prefix').replace('3,000 ordinary','2,700 ordinary').replace('3,000 source-aware','2,700 source-aware').replace('one 200-call full-scale','one 180-call full-scale')
+P['schedule'][2]['work']='Up to two 200-call small qualifications of the selected model, then one 180-call max-context operational check.'
+for role in P['roles']:
+ for key in ['owns','prompt']:
+  for a,b in replacements:role[key]=role[key].replace(a,b)
+  role[key]=role[key].replace('100 per host','60 per host').replace('two hosts','three hosts').replace('both hosts','all three hosts').replace('200-agents/one-world overnight program v2','180-agents/one-world overnight program v3').replace('Two hundred','One hundred eighty').replace('Ten communities of twenty, each split ten per host.','Ten communities of eighteen, each split six per host.').replace('180 max-context calls','180 max-context calls')
+  role[key]=role[key].replace('Refresh sim-dmarz-2/-3 availability','Refresh sim-dmarz-2, sim-vishesh and research-01 availability').replace('$25 proposed cap','$5 proposed cap').replace('Full-scale check is 200 max-context calls','Full-scale check is 180 max-context calls').replace('second configuration','second configuration')
+  role[key]=role[key].replace('v2. Read','v3. Read')
+ role['prompt']=role['prompt'].replace('three hosts do not imply two quotas','three hosts do not imply three quotas').replace('bootstrap 200 agents','bootstrap 180 agents')
+ role['prompt']+=' Selected model is qwen/qwen3.7-flash through alibaba, reasoning disabled, JSON-object mode with local validation; provider fallbacks disabled. The second small qualification slot is one bounded repair on fresh fixtures, not another model search. Full-scale topology is ten communities of eighteen with six members per host; 60 calls per host. Total ceiling 6,880 calls and proposed $5 cap. Do not infer quota multiplication from three IPs.'
+P['sources']=[s for s in P['sources'] if s['label'] not in ['OpenRouter standard Luna price quote','Gemini backup price quote']]
+P['sources'] += [
+ {'label':'Selected Qwen3.7 Flash model and current pricing','url':'https://openrouter.ai/qwen/qwen3.7-flash'},
+ {'label':'Selected Alibaba endpoint and context pricing tiers','url':'https://openrouter.ai/api/v1/models/qwen/qwen3.7-flash/endpoints'},
+ {'label':'OpenRouter live model catalog','url':'https://openrouter.ai/api/v1/models'},
+ {'label':'Qwen 30B comparison endpoint','url':'https://openrouter.ai/api/v1/models/qwen/qwen3-30b-a3b-instruct-2507/endpoints'},
+ {'label':'Mercury comparison endpoint','url':'https://openrouter.ai/api/v1/models/inception/mercury-2.5/endpoints'}]
+(B/'program.json').write_text(json.dumps(P,indent=2,ensure_ascii=False))
+(B/'selected-model.json').write_text(json.dumps(P['model_selection'],indent=2))
+
+# Reuse the historical display renderer with the new program's display constants.
+renderer=(B/'src/build_program.py').read_text().split('# Standalone HTML has no dependency on the IDE or a running service.\n',1)[1]
+renderer=renderer.replace('48 roots','180 agents').replace('Independent units','One world · three machines').replace('5,760','6,300').replace('5760','6300').replace('6720','6880').replace('48 independent roots','180 agents · three machines')
+renderer=renderer.replace('href="#s6">Experiment','href="#s10">Experiment').replace('href="#s18">Fallback','href="#s21">Fallback').replace("'snapshots':len(index),",'')
+renderer=renderer.replace('Planning sensitivity:6,300calls','Planning sensitivity: 6,300 calls')
+exec(compile(renderer,str(B/'src/build_program.py')+'[display only]','exec'))
