@@ -283,11 +283,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-heterogeneous | working | qualify-poietic-agents-s0 | 2026-10-04T16:20Z | Preparing owner-directed S0-02 central dispatch;81 offline checks, retained cumulative budget |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T15:57Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | shadow/sol-cm2 | done |  | 2026-10-04T15:56Z | Corrections and hub resync shipped; frozen-history diagnostic stopped on first OpenRouter HTTP403, no scientific outputs. |
 | shadow/sol-audit-team | done | sol-audit-team | 2026-10-04T15:51Z | Completed frozen-PI delta, legacy gate probes, and exhaustive ready-chain inventory |
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
-| vishesh/codex-heterogeneous | blocked |  | 2026-10-04T15:38Z | S0-02 scope authorized; original window expired; 79 offline checks and retained-ledger audit complete |
 | vishesh/codex-pi-review | done | pi-cycle-2026-10-04 | 2026-10-04T15:37Z | Ten-study analysis/preparation cycle reconciled; two scientific stops, eight native launches gated, explicit decisions pending. |
 | shadow/sol-timeline | done |  | 2026-10-04T15:36Z | Completed Wave 3 Project C offline census, figures and finding; zero model calls. |
 | shadow/sol-audit-gap | done | wild-delete-return | 2026-10-04T15:35Z | Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling |
