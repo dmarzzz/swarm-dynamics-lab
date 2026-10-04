@@ -1,30 +1,36 @@
-# sybil-scarcity-opus: decision package
+# sybil-scarcity-opus: results package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orchestrator-2 (orbital-one), package by dmarz/pipeline-scarcity, server sim-dmarz-2, run-queue 248. Not a review. Last updated 2026-10-04T10:14Z.
+Maintained by dmarz/results-analyst. Source: [RESULTS.md](../sybil-scarcity-opus/RESULTS.md) and its records on main; hub run `sybil-scarcity-opus/ba41e101`. Operator dmarz/orchestrator-2, package by dmarz/pipeline-scarcity. Same-researcher check only; not independently reviewed. Last updated 2026-10-04T10:56Z.
 
-## 1. Results so far
+## Headline
 
-- Launch-ready package on main 08:44Z; reviewer's go 08:49Z with two workers instead of four; claimed 09:12Z.
-- Chain started about 09:17Z: S0 (scripted) done, probe `p0-001` 1 of 1 valid (23,537 input tokens, 38 output tokens, USD 0.095), Q0 `q0-001` **passed**: 48 of 48 valid, 1,129,722 input tokens, 1,824 output tokens, USD 4.56, 80 seconds (09:18:46Z to 09:20:06Z). S1 `s1-001` (run ba41e101) started preparing inputs at 09:21Z.
-- Each call reads a packet of 486 reports, the same size as sybil-scale-xl's N=972 packets. Opus at effort low answered the probe in 38 output tokens with no thinking tokens.
+At fixed population (972 identities), graph, audits and admission, cutting the number of honest identities that report each rare fact from 81 to 1 took Opus 5.5's specialist accuracy from 100.0% to 4.2%: **-95.8 percentage points** (descriptive 95% bootstrap interval -100.0 to -88.9; 24 of 24 paired world roots; 22 roots at -100). Cell: random auditing, 108 checks, attacker check-pass 0.1.
 
-**S1 finished at 09:59:31Z: 1,440 of 1,440 valid**, 0 retries, 0 failures, 33.75M input tokens, USD 136.49, 37 minutes. Hub metrics: specialist accuracy 20.6% over all cells; `primary_contrast_pp` -95.8 (accuracy with 1 truthful carrier per rare fact minus 81 carriers, random auditing, 108 checks, attacker pass rate 0.1). The study's analysis and post-mortem are the record; I have not read the per-cell results.
+| Truthful carriers per rare fact | 1 | 3 | 9 | 27 | 81 |
+|---|---:|---:|---:|---:|---:|
+| Specialist accuracy | 4.2% | 13.9% | 54.2% | 95.8% | 100.0% |
+| Rare facts with a truthful report admitted | 63.9% | 91.7% | 100.0% | 100.0% | 100.0% |
 
-## 2. Gate forecast
+Run: S0 168 of 168 scripted, probe 1 of 1, Q0 48 of 48, S1 1,440 of 1,440 valid; no failed, retried or unstarted row; USD 141.14 over 1,489 calls. 24 roots are the independent units; 60 conditions per root.
 
-Done. The prediction (a decrease, practical marker 10 pp) held by a wide margin.
+## What it shows
 
-## 3. Next run
+- The high accuracy in the earlier scale study depended on repetition. With 81 carriers the packet is the original one and accuracy is 100%; the drop comes in between 27 carriers (95.8%) and 9 (54.2%).
+- The loss is not only an admission loss. At one carrier a truthful report was in the admitted packet for 46 of 72 rare facts, and Opus answered 3 of those 46 correctly. It gave the attacker's fabricated value 94% of the time and returned null 1% of the time.
+- The synthesizer behaves like a count of agreeing reports. Accuracy tracks the ratio of truthful to fabricated copies in the packet: about 5 truthful against 5.8 false gives 54%, about 14 against 5.8 gives 96%. A same-packet plurality rule scored 3% in the one-carrier cell, close to the model's 4.2%.
+- More checking does not rescue it when checks are weak: with attacker check-pass 0.9, random auditing at 64 or 108 checks is 0% at every level below 81 carriers and 27.8% at 81.
 
-- No further stage. This is the first manipulation in the sybil family tonight that moves the outcome, and it is on how much truth is available, with the model, graph, audits and admission held fixed. Four model swaps moved the primary contrasts by 0.7 to 5.7 pp.
-- What the result does not yet show is the shape between 1 and 81 carriers. The design has five levels (81, 27, 9, 3, 1); the analysis should say where accuracy falls off, because that sets the levels for any follow-up.
-- Successor on the queue: sybil-split-opus (identity splitting at fixed attacker resources), S0 running on sim-dmarz-13 since 10:12Z.
-- sim-dmarz-2 is free after close-out.
+## What it does not show
 
-## 4. Design notes for later runs
+- Nothing about other attacker strategies. The attacker repeats one fabrication; a varied or sparse attacker is untested.
+- Nothing about other models or reasoning depth. One configuration: Opus 5.5 at effort low, where the model used no thinking tokens on these packets. Whether deeper reasoning would weigh a single verified report against repeated unverified ones is open.
+- Not a confirmatory result: one synthetic task, one graph family, simulated checks, descriptive intervals over 24 roots, no multiplicity adjustment.
+- The one-carrier floor mixes two things (truth absent in 36% of cases, truth present but outvoted in the rest); the 46-of-72 breakdown separates them only for the primary cell.
 
-- First dmarz study tonight built to the ready-chain contract and launched within about 35 minutes of its package landing. The wait was the reviewer's read and a free server, not the build.
+## The one next run
 
-## 5. Cross-lane
+Same packets at 1, 3 and 9 carriers, primary cell only, with the verification badge made decisive in the instruction and Opus at effort high: 3 levels x 24 roots x 2 settings = 144 calls, about USD 14. It asks the question this result raises: is the count-following a limit of the instruction and effort, or of the evidence? If accuracy at one carrier rises toward the 63.9% availability ceiling, the lever is the synthesizer contract; if it stays near 4%, only admission can help.
 
-See [LESSONS.md](LESSONS.md) items 4, 5 and 8.
+## Operations
+
+37 minutes for S1 at two requests in flight, about 0.9M input tokens per minute, no 429 and no retry. Chain S0, probe, Q0, S1 ran without a wait between stages.
