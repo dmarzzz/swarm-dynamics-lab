@@ -319,6 +319,12 @@ calls and is blocked by independent review. See [section 11](#11-factory-status)
 **8h. Claude freeze: infrastructure-blocked, inconclusive.** No model completion or behavioral estimate exists,
 and the reduced offline fixture did not reproduce freeze. See [section 7](#7-freeze-on-claude-inconclusive-infrastructure-blocked).
 
+**8i. Memory-mix rescue on Claude: infrastructure-blocked, no result.** Source:
+[claude-pool/FINDING.md](notes/capture-memory-mix/claude-pool/FINDING.md). Preregistered (all-full vs 1/3 memory1,
+N = 12, four freeze-claude roots, 20 rounds). Qualification got 20 HTTP attempts, 8 HTTP429 and 12 HTTP503, zero
+completions, so the >50% blocked rule stopped it. No effect estimate. The offline scripted reference already
+predicted no rescue at this size (mean mix minus full -0.04, 95% root bootstrap [-0.25, +0.13]; Monte Carlo +0.007).
+
 ## 9. Reviews and audits
 
 **Review of dmarz's discussion benchmark v3** ([review-discussion-benchmark-v3.md](notes/review-discussion-benchmark-v3.md)).
