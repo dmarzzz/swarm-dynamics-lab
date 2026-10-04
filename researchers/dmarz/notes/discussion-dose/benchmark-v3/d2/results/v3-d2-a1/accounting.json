@@ -1,0 +1,144 @@
+{
+  "all_observed_cost_usd": 0.127741,
+  "all_physical_inference_calls": 73,
+  "assigned": 72,
+  "attempt": "v3-d2-a1",
+  "audit": {
+    "complete_journal": true,
+    "ok": true,
+    "outcomes_recomputed": 72,
+    "requests_verified": 72
+  },
+  "batch_totals": {
+    "calls": 72,
+    "input_tokens": 39030,
+    "observed_cost_usd": 0.125037,
+    "output_tokens": 982
+  },
+  "budget_cap_usd": 5,
+  "compatibility_probe": {
+    "calls": 1,
+    "checked_utc": "2026-10-04T08:25:53.216546+00:00",
+    "counts_toward_results": false,
+    "input_tokens": 626,
+    "model": "claude-opus-5-5",
+    "observed_cost_usd": 0.002704,
+    "output_tokens": 10,
+    "reported_to_hub": false,
+    "returned_model": "claude-opus-5-5",
+    "status": "valid",
+    "stop_reason": "end_turn"
+  },
+  "cost_basis": "provider-reported token usage at list prices read 2026-10-04 (USD per million input/output: Opus 4/20, Sonnet 3/15, Haiku 1/5); not reconciled against an invoice",
+  "frozen_manifest_sha256": "6c7721976102f3d336a1e203e0fbcabcf4c0830b94ec4f3b431899e8b8bbf82c",
+  "go": {
+    "by": "dmarz/fleet-monitor",
+    "kind": "same-researcher check under the owner waiver; not independent review",
+    "recorded_utc_operator_clock": "2026-10-04T08:25:14Z",
+    "time_stated_in_go_message": "2026-10-04 08:28 UTC"
+  },
+  "hub_artifacts_read_back_and_matched": [
+    {
+      "bytes": 101,
+      "name": "audit.json",
+      "sha256": "b14eea3cd6efe1d857aaabf383bc5ff30890ef0ea4b90c6abd12cf2dce69c491"
+    },
+    {
+      "bytes": 155870,
+      "name": "events.jsonl",
+      "sha256": "22fabd276d7d4cce09aa071c9439afb3d0404ff6368bdf466ce919020502f663"
+    },
+    {
+      "bytes": 40573,
+      "name": "manifest.json",
+      "sha256": "8b6e9fa3d2e038a113674554872a2ab7f5154601236f10ad55be7444dcbfaf32"
+    },
+    {
+      "bytes": 89602,
+      "name": "outcomes.json",
+      "sha256": "0d2834d5db16aa6850f11379fab71df3b0852c3c446f95ddaa1949549d010f5c"
+    },
+    {
+      "bytes": 29,
+      "name": "reporting.json",
+      "sha256": "8ecd99135a54a772e0858fc60ad02dce69163b34a1e165be1648cc6027f6280b"
+    },
+    {
+      "bytes": 29000,
+      "name": "summary.json",
+      "sha256": "28133b82cfede0641b75c2f4efa3bd6eda1ed6fdc2fade52fbe04380b13782a2"
+    }
+  ],
+  "hub_final_counters": {
+    "assigned_calls": 72,
+    "invalid_calls": 0,
+    "observed_usage_cost_usd": 0.125037,
+    "physical_model_calls": 72,
+    "started_calls": 72,
+    "terminal_calls": 72,
+    "usage_missing_calls": 0
+  },
+  "hub_run": "discussion-dose-v3/v3-d2-a1",
+  "invalid": 0,
+  "output_ceiling_stops": 0,
+  "per_model": {
+    "claude-haiku-4-5-20251001": {
+      "cache_tokens": 0,
+      "calls": 24,
+      "input_tokens": 11596,
+      "observed_cost_usd": 0.012676,
+      "output_tokens": 216,
+      "returned_models": [
+        "claude-haiku-4-5-20251001"
+      ],
+      "summed_latency_seconds": 19.728,
+      "valid": 24
+    },
+    "claude-opus-5-5": {
+      "cache_tokens": 0,
+      "calls": 24,
+      "input_tokens": 15814,
+      "observed_cost_usd": 0.074276,
+      "output_tokens": 551,
+      "returned_models": [
+        "claude-opus-5-5"
+      ],
+      "summed_latency_seconds": 56.658,
+      "valid": 24
+    },
+    "claude-sonnet-4-6": {
+      "cache_tokens": 0,
+      "calls": 24,
+      "input_tokens": 11620,
+      "observed_cost_usd": 0.038085,
+      "output_tokens": 215,
+      "returned_models": [
+        "claude-sonnet-4-6"
+      ],
+      "summed_latency_seconds": 23.708,
+      "valid": 24
+    }
+  },
+  "preflight_sha256": "1a7b468afe92112f8a925be914a40e604e239af4a78057f84893ae320a953fbc",
+  "private_archive_sha256": "fee5dcdb8166e62bfc6541c7a04516855ec581bb0034765f47268e946ca0387a",
+  "probe_receipt_sha256": "1498a8d04ed0c5ca4023cc72be0425159b1115ca87ae290c53bce764515302a6",
+  "provider_failures": 0,
+  "refusals": 0,
+  "retries": 0,
+  "schema": "d2-accounting-v1",
+  "service_ended_utc": "2026-10-04T08:27:58Z",
+  "service_started_utc": "2026-10-04T08:26:06Z",
+  "source_commit": "aef218e8fd19470f74aac7bd5749876711a3038f",
+  "started": 72,
+  "summary_sha256": "28133b82cfede0641b75c2f4efa3bd6eda1ed6fdc2fade52fbe04380b13782a2",
+  "terminal": 72,
+  "unresolved": 0,
+  "unstarted": 0,
+  "usage_missing": 0,
+  "valid": 72,
+  "watchdog": {
+    "observations_during_paid_run": 2,
+    "warnings": 0
+  },
+  "worst_case_reservation_usd": 3.387356
+}

@@ -1,10 +1,10 @@
 ---
 agent: dmarz/v3-d2-opus
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: null
-doing: "D2 v3-d2-a1 Phase 1 complete: pinned aef218e8, 72-assignment scripted rehearsal passed on sim-dmarz-3 with zero model calls. Waiting for an explicit go from dmarz/fleet-monitor before preflight, the one-call Opus probe and the 72-call run."
-updated: 2026-10-04T08:20Z
+doing: "D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor."
+updated: 2026-10-04T08:33Z
 ---
 
 ## Notes

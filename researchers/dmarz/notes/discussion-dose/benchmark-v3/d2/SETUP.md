@@ -1,8 +1,8 @@
 # Experiment setup record: discussion-dose-v3 / D2 (v3-d2-a1)
 
-Status at this commit: instrument built and tested offline and on the server; plan and pre-run assessment written;
-**no model call made**. The zero-model rehearsal runs at this commit and its receipt is added afterwards in
-`launches/`. The paid run waits for the reviewer's explicit go. Follows the
+Status, 2026-10-04 08:40 UTC: **complete.** The 72-call run finished with 72 valid answers at the pinned commit
+`aef218e8`; [results](RESULTS.md) and the [post-run review](../../reviews/v3-d2-a1-post.md) are published and the
+claim is released. No successor is authorized or started. Follows the
 [shared setup runbook](../../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and the
 [run review cycle](../../../../../../tooling/agent-experiments/RUN-REVIEW.md).
 
@@ -24,7 +24,10 @@ Status at this commit: instrument built and tested offline and on the server; pl
 - Previous attempt and lessons: [D1 results](../RESULTS-D1.md), [D1 post-mortem](../../reviews/v3-d1-a1-post.md).
   Lessons used: both D1 models failed after correct extraction, so D2 removes extraction; never resubmit an
   ambiguous call; the launch-policy miss at D1 closeout is why the launch route is stated as a deviation here.
-- Current stage: G3 admission pending the rehearsal receipt and the reviewer's go.
+- Launch route, corrected after the go: `dmarz/fleet-monitor` states that Dan told the fleet monitor directly to
+  pick two stopped experiments and run them on halcyon as managed sub-agents, which overrides the run-queue default.
+  The pinned plan described that instruction as relayed and unconfirmed by this agent.
+- Current stage: closed (G5).
 
 ## Gate evidence
 
@@ -33,9 +36,9 @@ Status at this commit: instrument built and tested offline and on the server; pl
 | G0 Question and research gates | pass for diagnosis | Existing SEC-47 link and D1 post-mortem issue D1-C1; no formal hypothesis claimed. `dmarz/v3-d2-opus`, 2026-10-04 | Stay in bounded development scope |
 | G1 Plan before implementation | pass | D2-PLAN first committed as `fb82a38f` (2026-10-04T04:59Z); the first D2 code is `df70c7e9` (2026-10-04T07:48Z). The amendment [PLAN](PLAN.md) was written after the code and before any model call, and fixes no detail after seeing a model output | None |
 | G2 Instrument and offline checks | pass for offline software | 29 D2 tests, 15 D1 tests and 57 v3 tests pass on the server under Python 3.12.3 at the pinned commit; 29 D2 tests also pass locally under Python 3.9.6. All 48 canonical values match the retained clean Q0 records on both machines. Same-author checks. | Rehearsal on the server |
-| G3 Attempt admission | pending | [Pre-run assessment](../../reviews/v3-d2-a1-pre.md); claim `dmarz-discussion-v3-d2` on `sim-dmarz-3` merged 2026-10-04T07:33Z | Rehearsal receipt, then reviewer go, then preflight and probe |
+| G3 Attempt admission | pass | [Pre-run assessment](../../reviews/v3-d2-a1-pre.md); claim `dmarz-discussion-v3-d2` on `sim-dmarz-3`; [rehearsal receipt](launches/v3-d2-a1-rehearsal.json); go from `dmarz/fleet-monitor` (same-researcher check, not independent) recorded 2026-10-04T08:25Z; preflight passed; one-call Opus probe returned a parsed answer | None |
 | G4 Qualification before escalation | not applicable | D2 is itself the diagnostic for a failed qualification; it qualifies nothing | None |
-| G5 Reconciliation and closeout | pending | | After the run |
+| G5 Reconciliation and closeout | pass | 72 assigned, started, terminal, valid; audit recomputed 72 of 72; hub artifacts read back; USD 0.127741 including the probe; [results](RESULTS.md), [post-run review](../../reviews/v3-d2-a1-post.md); claim released. `dmarz/v3-d2-opus`, 2026-10-04 | None |
 
 ## Design and instrument index
 
@@ -70,8 +73,8 @@ repository.
 | Freeze | `... <commit> prepare` | Manifest hash recorded in `launches/` after this commit |
 | Zero-cost admission checks | `... <commit> admission-dry` | Same |
 | Rehearse | `... <commit> rehearse`, then `status`, `duplicate`, `verify --batch v3-d2-a1-rehearsal` | Same |
-| Paid, after the go | `... <commit> preflight --go-utc <time>`, `probe`, `launch` | Not run |
-| Verify and close | `... <commit> verify --batch v3-d2-a1`, `close` | Not run |
+| Paid, after the go | `... <commit> preflight --go-utc <time>`, `probe`, `launch` | Run once, 08:25 to 08:28 UTC |
+| Verify and close | `... <commit> verify --batch v3-d2-a1`, `close` | Done; [accounting](results/v3-d2-a1/accounting.json) |
 | Resume interrupted execution | Unsupported by design: audit with `--allow-interrupted`, never restart | |
 | Stop | Create `v3-d2-a1.stop` in the ledger directory; stops the next dispatch only | |
 
@@ -86,15 +89,24 @@ repository.
 - Credentials: alias `secrets/discussion-dose.sops.env` in the private repository. The value goes over ssh standard
   input into process memory and is inherited by the service by variable name. It is not written to disk or passed
   as an argument.
-- Go or no-go: pending. Decision-maker: `dmarz/fleet-monitor` on dmarz's behalf.
+- Go or no-go: go, from `dmarz/fleet-monitor` on dmarz's behalf, recorded 2026-10-04T08:25:14Z by the operator
+  clock (the go message states 08:28 UTC). Effort `high`, the comparison arms and the 4,000-token ceiling were
+  confirmed in the same message.
 
 ## Attempt and repair history
 
 | Attempt / parent | Stage | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Disposition |
 |---|---|---|---|---|
-| v3-d2-a1 / v3-d1-a1 | D2 | [pre](../../reviews/v3-d2-a1-pre.md) | 72 / 0 / 0 / 0 / 0 | Not started |
+| v3-d2-a1 / v3-d1-a1 | D2 | [pre](../../reviews/v3-d2-a1-pre.md), [rehearsal](launches/v3-d2-a1-rehearsal.json), [accounting](results/v3-d2-a1/accounting.json) | 72 / 72 / 72 / 72 / 72 | [Post-mortem](../../reviews/v3-d2-a1-post.md): complete valid result. Opus 6/6 and 18/18; Sonnet and Haiku 5/6 and 16/18 |
 
 ## Closeout
 
-Pending. Results go to `results/v3-d2-a1/` beside this file and the post-run review to
-`reviews/v3-d2-a1-post.md`. The claim is released after artifact readback.
+- Execution passed; response validity 72/72; qualification not applicable; scientific conclusion exploratory;
+  reporting complete.
+- All 72 outcomes retained and audited; per-item table and summary in `results/v3-d2-a1/`.
+- Actual cost USD 0.127741 (batch 0.125037, probe 0.002704) against a reservation of USD 3.387356 and a cap of
+  USD 5; list-price calculation from reported usage, not invoice-reconciled.
+- No missing outcomes or exclusions. Deviations are listed in the post-run review.
+- Artifacts read back from the hub and matched. Worker and watchdog stopped. Claim released.
+- Next action: none started. Any follow-up on the Haiku and Sonnet sum-predicate errors needs dmarz's decision and
+  its own plan.

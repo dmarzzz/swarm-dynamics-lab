@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/v3-d2-opus; source `9d119dfd` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/v3-d2-opus; source `aef218e8` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested: on a compact fact table with a one-field answer, Opus 5.5 stays at ceiling and Haiku 4.5 and Sonnet 4.6 pass the canonical-decision and single-option feasibility screens they are also asked. Basis: Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1.
-- **sample_size_summary:** Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.
+- **evidence_confidence:** **1/4** — On a compact fact table with a one-field answer, Opus 5.5 answers the six D1 worlds without error (6/6 decisions, 18/18 single-option feasibility checks) while Sonnet 4.6 and Haiku 4.5 each score 5/6 and 16/18 and miss the same two sum-over-budget options. Basis: Measured: 72/72 valid, exact-source audit recomputed all outcomes, known-answer controls discriminate. Limits: six reused dependent world clusters, one response per item with no repeats, only two sum-violating options, and the Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling.
+- **sample_size_summary:** Observed: 72/72 assigned calls valid and analyzed (24 per model: 6 decisions + 18 single-option checks) on 6 reused development world clusters; 3 models on identical items; one response per item; not 72 independent samples. Plus 1 uncounted Opus probe.
 <!-- experiment-evidence:end -->
 
 Prospective plan, 2026-10-04 UTC, by `dmarz/v3-d2-opus`. Parent attempt `v3-d1-a1`. The design is

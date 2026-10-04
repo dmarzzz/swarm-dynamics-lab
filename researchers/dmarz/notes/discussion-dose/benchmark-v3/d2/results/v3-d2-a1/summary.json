@@ -1,0 +1,1130 @@
+{
+  "assigned_calls": 72,
+  "attempt": "v3-d2-a1",
+  "holdout_opened": false,
+  "limitations": [
+    "Six reused development world clusters; descriptive diagnostics only.",
+    "Evidence packaging and the response contract change together; D1 and D2 are not interchangeable trials.",
+    "The Opus arm differs from the comparison arms in model, always-on thinking, effort, sampling default and output ceiling.",
+    "Each world has exactly one feasible option; multiple-feasible tie-breaking is not tested.",
+    "One response per model and item; no repeats, so no within-model variability estimate.",
+    "Comparison-arm refusals and unexpected blocks share one failure reason; only the Opus adapter separates them.",
+    "Ambiguous dispatched calls are never retried; absent usage is unknown cost, not zero."
+  ],
+  "models": {
+    "claude-haiku-4-5-20251001": {
+      "actual_cost_complete": true,
+      "assigned_calls": 24,
+      "atomic": {
+        "above_always_infeasible_baseline": true,
+        "always_feasible_baseline_correct": 6,
+        "always_infeasible_baseline_correct": 12,
+        "assigned": 18,
+        "correct": 16,
+        "false_negative": 0,
+        "false_positive": 2,
+        "feasible_assigned": 6,
+        "infeasible_assigned": 12,
+        "invalid": 0,
+        "required": 18,
+        "terminal": 18,
+        "true_negative": 10,
+        "true_positive": 6
+      },
+      "canonical": {
+        "abstain": 0,
+        "assigned": 6,
+        "constraint_violation": 1,
+        "correct": 5,
+        "feasible_choice": 5,
+        "invalid": 0,
+        "required": 6,
+        "terminal": 6,
+        "wrong_nonabstain": 1
+      },
+      "composition": {
+        "assigned": 6,
+        "derived_correct": 6,
+        "disagrees_with_canonical_vote": 1,
+        "missing": 0,
+        "multiple_predicted_feasible": 2,
+        "none_predicted_feasible": 0
+      },
+      "failures": {},
+      "families": {
+        "capacity": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 1
+        },
+        "dependency": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        },
+        "total_cost": {
+          "atomic_assigned": 6,
+          "atomic_correct": 4,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        }
+      },
+      "input_tokens": 11596,
+      "latency_seconds": [
+        1.395397,
+        0.638085,
+        0.873873,
+        0.951286,
+        0.70985,
+        0.65407,
+        0.593791,
+        0.634987,
+        0.899884,
+        0.987031,
+        1.018841,
+        0.678436,
+        0.679389,
+        0.707176,
+        0.651251,
+        0.956672,
+        0.687885,
+        0.931862,
+        0.857263,
+        0.924191,
+        0.827696,
+        0.885506,
+        0.927312,
+        0.656297
+      ],
+      "model": "claude-haiku-4-5-20251001",
+      "observed_usage_cost_microusd": 12676,
+      "output_ceiling_stops": 0,
+      "output_tokens": 216,
+      "physical_calls_observed": 24,
+      "refusal_stop_reasons": 0,
+      "returned_models": [
+        "claude-haiku-4-5-20251001"
+      ],
+      "role": "comparison_arm",
+      "screen": {
+        "atomic_pass": false,
+        "canonical_pass": false,
+        "complete_valid_usage": true,
+        "model_qualified": false,
+        "reading": "atomic_fail_inspect_predicate_task_interface_semantics"
+      },
+      "started": 24,
+      "terminal": 24,
+      "unresolved": [],
+      "unstarted": 0,
+      "usage_missing_calls": [],
+      "valid": 24,
+      "worlds": [
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "capacity",
+          "world": 20001
+        },
+        {
+          "atomic_correct": 2,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": true,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "multiple_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "total_cost",
+          "world": 20002
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "dependency",
+          "world": 20003
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 0,
+          "canonical_vote": "B",
+          "composition": {
+            "agrees_with_canonical_vote": 0,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "capacity",
+          "world": 20004
+        },
+        {
+          "atomic_correct": 2,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "multiple_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "total_cost",
+          "world": 20005
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "B",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "B",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "B",
+          "family": "dependency",
+          "world": 20006
+        }
+      ]
+    },
+    "claude-opus-5-5": {
+      "actual_cost_complete": true,
+      "assigned_calls": 24,
+      "atomic": {
+        "above_always_infeasible_baseline": true,
+        "always_feasible_baseline_correct": 6,
+        "always_infeasible_baseline_correct": 12,
+        "assigned": 18,
+        "correct": 18,
+        "false_negative": 0,
+        "false_positive": 0,
+        "feasible_assigned": 6,
+        "infeasible_assigned": 12,
+        "invalid": 0,
+        "required": 18,
+        "terminal": 18,
+        "true_negative": 12,
+        "true_positive": 6
+      },
+      "canonical": {
+        "abstain": 0,
+        "assigned": 6,
+        "constraint_violation": 0,
+        "correct": 6,
+        "feasible_choice": 6,
+        "invalid": 0,
+        "required": 6,
+        "terminal": 6,
+        "wrong_nonabstain": 0
+      },
+      "composition": {
+        "assigned": 6,
+        "derived_correct": 6,
+        "disagrees_with_canonical_vote": 0,
+        "missing": 0,
+        "multiple_predicted_feasible": 0,
+        "none_predicted_feasible": 0
+      },
+      "failures": {},
+      "families": {
+        "capacity": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        },
+        "dependency": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        },
+        "total_cost": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        }
+      },
+      "input_tokens": 15814,
+      "latency_seconds": [
+        2.269356,
+        1.932548,
+        1.898875,
+        3.035156,
+        3.266975,
+        2.23495,
+        1.961331,
+        1.714512,
+        2.931037,
+        2.474156,
+        2.368998,
+        2.875758,
+        2.128512,
+        2.165194,
+        2.448542,
+        2.208883,
+        2.167522,
+        2.300085,
+        3.002899,
+        2.196708,
+        2.273631,
+        2.0358,
+        2.423466,
+        2.343385
+      ],
+      "model": "claude-opus-5-5",
+      "observed_usage_cost_microusd": 74276,
+      "output_ceiling_stops": 0,
+      "output_tokens": 551,
+      "physical_calls_observed": 24,
+      "refusal_stop_reasons": 0,
+      "returned_models": [
+        "claude-opus-5-5"
+      ],
+      "role": "model_under_test",
+      "screen": {
+        "atomic_pass": true,
+        "canonical_pass": true,
+        "complete_valid_usage": true,
+        "model_qualified": false,
+        "reading": "both_screens_pass_nominate_separate_contract_test"
+      },
+      "started": 24,
+      "terminal": 24,
+      "unresolved": [],
+      "unstarted": 0,
+      "usage_missing_calls": [],
+      "valid": 24,
+      "worlds": [
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "capacity",
+          "world": 20001
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "total_cost",
+          "world": 20002
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "dependency",
+          "world": 20003
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "capacity",
+          "world": 20004
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "total_cost",
+          "world": 20005
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "B",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "B",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "B",
+          "family": "dependency",
+          "world": 20006
+        }
+      ]
+    },
+    "claude-sonnet-4-6": {
+      "actual_cost_complete": true,
+      "assigned_calls": 24,
+      "atomic": {
+        "above_always_infeasible_baseline": true,
+        "always_feasible_baseline_correct": 6,
+        "always_infeasible_baseline_correct": 12,
+        "assigned": 18,
+        "correct": 16,
+        "false_negative": 0,
+        "false_positive": 2,
+        "feasible_assigned": 6,
+        "infeasible_assigned": 12,
+        "invalid": 0,
+        "required": 18,
+        "terminal": 18,
+        "true_negative": 10,
+        "true_positive": 6
+      },
+      "canonical": {
+        "abstain": 0,
+        "assigned": 6,
+        "constraint_violation": 1,
+        "correct": 5,
+        "feasible_choice": 5,
+        "invalid": 0,
+        "required": 6,
+        "terminal": 6,
+        "wrong_nonabstain": 1
+      },
+      "composition": {
+        "assigned": 6,
+        "derived_correct": 6,
+        "disagrees_with_canonical_vote": 1,
+        "missing": 0,
+        "multiple_predicted_feasible": 2,
+        "none_predicted_feasible": 0
+      },
+      "failures": {},
+      "families": {
+        "capacity": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        },
+        "dependency": {
+          "atomic_assigned": 6,
+          "atomic_correct": 6,
+          "canonical_assigned": 2,
+          "canonical_correct": 1
+        },
+        "total_cost": {
+          "atomic_assigned": 6,
+          "atomic_correct": 4,
+          "canonical_assigned": 2,
+          "canonical_correct": 2
+        }
+      },
+      "input_tokens": 11620,
+      "latency_seconds": [
+        1.041149,
+        0.923704,
+        0.949952,
+        1.265132,
+        0.86575,
+        1.610539,
+        0.906045,
+        0.877719,
+        0.895929,
+        0.966393,
+        0.833127,
+        0.817869,
+        1.033652,
+        1.036419,
+        0.909213,
+        0.945424,
+        0.871064,
+        0.874354,
+        0.950101,
+        0.956864,
+        0.885819,
+        1.325891,
+        0.916681,
+        1.049249
+      ],
+      "model": "claude-sonnet-4-6",
+      "observed_usage_cost_microusd": 38085,
+      "output_ceiling_stops": 0,
+      "output_tokens": 215,
+      "physical_calls_observed": 24,
+      "refusal_stop_reasons": 0,
+      "returned_models": [
+        "claude-sonnet-4-6"
+      ],
+      "role": "comparison_arm",
+      "screen": {
+        "atomic_pass": false,
+        "canonical_pass": false,
+        "complete_valid_usage": true,
+        "model_qualified": false,
+        "reading": "atomic_fail_inspect_predicate_task_interface_semantics"
+      },
+      "started": 24,
+      "terminal": 24,
+      "unresolved": [],
+      "unstarted": 0,
+      "usage_missing_calls": [],
+      "valid": 24,
+      "worlds": [
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "capacity",
+          "world": 20001
+        },
+        {
+          "atomic_correct": 2,
+          "atomic_gold": {
+            "A": true,
+            "B": false,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": true,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "A",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "A",
+            "derived_correct": 1,
+            "state": "multiple_predicted_feasible"
+          },
+          "correct_option": "A",
+          "family": "total_cost",
+          "world": 20002
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 0,
+          "canonical_vote": "B",
+          "composition": {
+            "agrees_with_canonical_vote": 0,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "dependency",
+          "world": 20003
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "capacity",
+          "world": 20004
+        },
+        {
+          "atomic_correct": 2,
+          "atomic_gold": {
+            "A": false,
+            "B": false,
+            "C": true
+          },
+          "atomic_predictions": {
+            "A": true,
+            "B": false,
+            "C": true
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "C",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "C",
+            "derived_correct": 1,
+            "state": "multiple_predicted_feasible"
+          },
+          "correct_option": "C",
+          "family": "total_cost",
+          "world": 20005
+        },
+        {
+          "atomic_correct": 3,
+          "atomic_gold": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "atomic_predictions": {
+            "A": false,
+            "B": true,
+            "C": false
+          },
+          "canonical_correct": 1,
+          "canonical_vote": "B",
+          "composition": {
+            "agrees_with_canonical_vote": 1,
+            "derived_choice": "B",
+            "derived_correct": 1,
+            "state": "one_predicted_feasible"
+          },
+          "correct_option": "B",
+          "family": "dependency",
+          "world": 20006
+        }
+      ]
+    }
+  },
+  "observed_usage_cost_microusd": 125037,
+  "paired_items": [
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20001-A",
+      "option": "A",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20001
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20001-B",
+      "option": "B",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20001
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20001-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20001
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20002-A",
+      "option": "A",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20002
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 0,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 0
+      },
+      "item": "atom-20002-B",
+      "option": "B",
+      "opus_minus_haiku": 1,
+      "opus_minus_sonnet": 1,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20002
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20002-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20002
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20003-A",
+      "option": "A",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20003
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20003-B",
+      "option": "B",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20003
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20003-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20003
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20004-A",
+      "option": "A",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20004
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20004-B",
+      "option": "B",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20004
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20004-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20004
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 0,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 0
+      },
+      "item": "atom-20005-A",
+      "option": "A",
+      "opus_minus_haiku": 1,
+      "opus_minus_sonnet": 1,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20005
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20005-B",
+      "option": "B",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20005
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20005-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20005
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20006-A",
+      "option": "A",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20006
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20006-B",
+      "option": "B",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20006
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "atom-20006-C",
+      "option": "C",
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "feasibility",
+      "sonnet_minus_haiku": 0,
+      "world": 20006
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "dec-20001",
+      "option": null,
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "decision",
+      "sonnet_minus_haiku": 0,
+      "world": 20001
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "dec-20002",
+      "option": null,
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "decision",
+      "sonnet_minus_haiku": 0,
+      "world": 20002
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 0
+      },
+      "item": "dec-20003",
+      "option": null,
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 1,
+      "probe": "decision",
+      "sonnet_minus_haiku": -1,
+      "world": 20003
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 0,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "dec-20004",
+      "option": null,
+      "opus_minus_haiku": 1,
+      "opus_minus_sonnet": 0,
+      "probe": "decision",
+      "sonnet_minus_haiku": 1,
+      "world": 20004
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "dec-20005",
+      "option": null,
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "decision",
+      "sonnet_minus_haiku": 0,
+      "world": 20005
+    },
+    {
+      "correct": {
+        "claude-haiku-4-5-20251001": 1,
+        "claude-opus-5-5": 1,
+        "claude-sonnet-4-6": 1
+      },
+      "item": "dec-20006",
+      "option": null,
+      "opus_minus_haiku": 0,
+      "opus_minus_sonnet": 0,
+      "probe": "decision",
+      "sonnet_minus_haiku": 0,
+      "world": 20006
+    }
+  ],
+  "qualification": false,
+  "schema": "d2-canonical-atomic-v1",
+  "scientific": true,
+  "started": 72,
+  "successors_dispatched": false,
+  "terminal": 72,
+  "unresolved": []
+}

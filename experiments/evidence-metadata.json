@@ -1438,28 +1438,31 @@
     },
     {
       "id": "discussion-dose-v3-d2-a1",
-      "title": "Discussion v3 D2 \u2014 run plan with Opus arm (v3-d2-a1)",
+      "title": "Discussion v3 D2 \u2014 compact decisions and feasibility checks, Opus arm (v3-d2-a1)",
       "documents": [
-        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md"
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/RESULTS.md"
       ],
       "experiment_ids": [
         "discussion-dose-v3"
       ],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested: on a compact fact table with a one-field answer, Opus 5.5 stays at ceiling and Haiku 4.5 and Sonnet 4.6 pass the canonical-decision and single-option feasibility screens they are also asked.",
-        "rationale": "Instrument built and tested with scripted controls only; no model outcome. The Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling, and packaging and contract change together against D1."
+        "score": 1,
+        "claim": "On a compact fact table with a one-field answer, Opus 5.5 answers the six D1 worlds without error (6/6 decisions, 18/18 single-option feasibility checks) while Sonnet 4.6 and Haiku 4.5 each score 5/6 and 16/18 and miss the same two sum-over-budget options.",
+        "rationale": "Measured: 72/72 valid, exact-source audit recomputed all outcomes, known-answer controls discriminate. Limits: six reused dependent world clusters, one response per item with no repeats, only two sum-violating options, and the Opus arm differs from the comparison arms in thinking, effort, sampling and output ceiling."
       },
-      "sample_size_summary": "Observed: none. Planned: 6 reused development world clusters; 3 models on identical items; 72 calls (18 canonical decisions + 54 single-option checks) plus 1 uncounted Opus probe; one response per item.",
+      "sample_size_summary": "Observed: 72/72 assigned calls valid and analyzed (24 per model: 6 decisions + 18 single-option checks) on 6 reused development world clusters; 3 models on identical items; one response per item; not 72 independent samples. Plus 1 uncounted Opus probe.",
       "sources": [
-        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/PLAN.md",
-        "researchers/dmarz/notes/discussion-dose/reviews/v3-d2-a1-pre.md"
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/RESULTS.md",
+        "researchers/dmarz/notes/discussion-dose/reviews/v3-d2-a1-post.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/results/v3-d2-a1/summary.json",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/d2/results/v3-d2-a1/audit.json"
       ],
-      "status_at_assessment": "implemented_not_started",
+      "status_at_assessment": "completed_exploratory",
       "assessor": "dmarz/v3-d2-opus",
       "assessed_at": "2026-10-04",
-      "source_commit": "9d119dfd76dbfb4464390a7a8dec6eaefd4c7523"
+      "source_commit": "aef218e8fd19470f74aac7bd5749876711a3038f"
     },
     {
       "id": "sybil-newcomer-sonnet",

@@ -19,3 +19,7 @@ The [implemented v3 benchmark](benchmark-v3/README.md), based on the [v3 plan](V
 ## D1 stronger-model diagnostic
 
 The [completed D1 comparison](benchmark-v3/RESULTS-D1.md) isolates model identity on 60 identical saved requests/model. Sonnet improves some decision and memory behavior but fails both clean gates; both models propagate all six locally supported false memory values. This refines SEC-47’s baseline-versus-return/merge distinction without identifying a discussion effect. The [D2 proposal](benchmark-v3/D2-PLAN.md) studies canonical decisions and atomic predicates before fresh qualification. It is published but unstarted; no atlas or formal hypothesis status changes.
+
+## D2 compact-format diagnostic
+
+The [completed D2 run](benchmark-v3/d2/RESULTS.md) (`v3-d2-a1`) asks the six D1 worlds as a compact fact table with a one-field answer. Opus 5.5 scores 6/6 decisions and 18/18 single-option feasibility checks. Sonnet 4.6 and Haiku 4.5 each score 5/6 and 16/18; both miss the same two options whose summed cost exceeds the budget. This places the smaller models' baseline decision errors before any return or merge step in SEC-47's chain. It is exploratory: six reused worlds, one response per item, and the Opus arm differs in configuration. No atlas or formal hypothesis status changes.
