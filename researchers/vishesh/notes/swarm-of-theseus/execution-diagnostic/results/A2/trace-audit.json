@@ -1,0 +1,5182 @@
+{
+  "cohort": "A2 OpenRouter Anthropic Haiku4.5",
+  "source_commit": "b5484ca0d9c7f199bf70c5412dcd5d363a8aefd7",
+  "actor_operator_context_shared": false,
+  "actual_calls": 196,
+  "wire_disagreements": [],
+  "served_routes": [
+    {
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "count": 196
+    }
+  ],
+  "cost_sum_usd": 0.156627,
+  "learner_records": [
+    {
+      "id": "A2-7304-incident-learn",
+      "expected": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "c3018b5d9349deaf",
+            "1aef04dc96729e9a"
+          ],
+          "B": [
+            "521f2fe9f935bebe",
+            "4e5b632b431d6f1e"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": true,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "a4e659fa1e265043",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "fb4d753d4811b5a9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "1743af89a548f6bb",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "c3018b5d9349deaf",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "521f2fe9f935bebe",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "faecfa0f1af52e09",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "4e5b632b431d6f1e",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "1aef04dc96729e9a",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "canary"
+        ],
+        "B": [
+          "probe"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "A",
+          "id": "1743af89a548f6bb",
+          "observed": "quiet",
+          "asserted_source_prediction": "activated"
+        },
+        {
+          "class": "A",
+          "id": "1aef04dc96729e9a",
+          "observed": "activated",
+          "asserted_source_prediction": "quiet"
+        },
+        {
+          "class": "B",
+          "id": "fb4d753d4811b5a9",
+          "observed": "quiet",
+          "asserted_source_prediction": "activated"
+        },
+        {
+          "class": "B",
+          "id": "4e5b632b431d6f1e",
+          "observed": "activated",
+          "asserted_source_prediction": "quiet"
+        }
+      ]
+    },
+    {
+      "id": "A2-7300-release-learn",
+      "expected": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "768865a305977311",
+            "9dbed3ebb3fe5e35",
+            "5908b3a8e9252868"
+          ],
+          "B": [
+            "a66b4682aec789f4",
+            "d1b0f493a44bc522",
+            "8059d4b4418f0493"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "d1b0f493a44bc522",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "dc856b152a487af9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "768865a305977311",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "a66b4682aec789f4",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "9dbed3ebb3fe5e35",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "5908b3a8e9252868",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "8059d4b4418f0493",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "446bf0c7761dd00a",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "probe"
+        ],
+        "B": [
+          "ledger"
+        ]
+      },
+      "contradictions": []
+    },
+    {
+      "id": "A2-7302-incident-learn",
+      "expected": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "returned": {
+        "mapping": {
+          "A": "canary",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "77a4013d1a43e480",
+            "16eef0e4290ec300",
+            "45e4ef118650ad19"
+          ],
+          "B": [
+            "415640e1ea3687fb",
+            "39e021b538b9f14b",
+            "3fb667a2f618a02d"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": true,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "77a4013d1a43e480",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "16eef0e4290ec300",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "415640e1ea3687fb",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "39e021b538b9f14b",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "3fb667a2f618a02d",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "7689d316a966cc36",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "45e4ef118650ad19",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "d7acf6d42072102f",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "ledger"
+        ],
+        "B": [
+          "probe"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "A",
+          "id": "16eef0e4290ec300",
+          "observed": "quiet",
+          "asserted_source_prediction": "activated"
+        },
+        {
+          "class": "A",
+          "id": "d7acf6d42072102f",
+          "observed": "activated",
+          "asserted_source_prediction": "quiet"
+        },
+        {
+          "class": "B",
+          "id": "39e021b538b9f14b",
+          "observed": "quiet",
+          "asserted_source_prediction": "activated"
+        },
+        {
+          "class": "B",
+          "id": "7689d316a966cc36",
+          "observed": "activated",
+          "asserted_source_prediction": "quiet"
+        }
+      ]
+    },
+    {
+      "id": "A2-7302-release-learn",
+      "expected": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "returned": {
+        "mapping": {
+          "A": "ledger",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "d7acf6d42072102f",
+            "77a4013d1a43e480",
+            "16eef0e4290ec300",
+            "45e4ef118650ad19"
+          ],
+          "B": [
+            "3fb667a2f618a02d",
+            "415640e1ea3687fb",
+            "39e021b538b9f14b",
+            "7689d316a966cc36"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": false,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "77a4013d1a43e480",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "16eef0e4290ec300",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "415640e1ea3687fb",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "39e021b538b9f14b",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "3fb667a2f618a02d",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "7689d316a966cc36",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "45e4ef118650ad19",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "d7acf6d42072102f",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "ledger"
+        ],
+        "B": [
+          "probe"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "B",
+          "id": "39e021b538b9f14b",
+          "observed": "hold",
+          "asserted_source_prediction": "ship"
+        },
+        {
+          "class": "B",
+          "id": "3fb667a2f618a02d",
+          "observed": "ship",
+          "asserted_source_prediction": "hold"
+        }
+      ]
+    },
+    {
+      "id": "A2-7305-incident-learn",
+      "expected": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "returned": {
+        "mapping": {
+          "A": "canary",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "72868463fa9b5e7a",
+            "ad168e8b54e873e7"
+          ],
+          "B": [
+            "9648186555d7c172",
+            "eacf09d07d5c7f83"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "860300e4b1116f20",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "9648186555d7c172",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "c7dc3cf7888c691b",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "eacf09d07d5c7f83",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "72868463fa9b5e7a",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "d16bc0d270b51b6d",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "fc85527fcb1bd94c",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "ad168e8b54e873e7",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "canary"
+        ],
+        "B": [
+          "ledger"
+        ]
+      },
+      "contradictions": []
+    },
+    {
+      "id": "A2-7304-release-learn",
+      "expected": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "returned": {
+        "mapping": {
+          "A": "canary",
+          "B": "probe"
+        },
+        "support": {
+          "A": [
+            "1aef04dc96729e9a",
+            "faecfa0f1af52e09"
+          ],
+          "B": [
+            "4e5b632b431d6f1e",
+            "a4e659fa1e265043"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "a4e659fa1e265043",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "fb4d753d4811b5a9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "1743af89a548f6bb",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "c3018b5d9349deaf",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "521f2fe9f935bebe",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "faecfa0f1af52e09",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "4e5b632b431d6f1e",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "1aef04dc96729e9a",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "ship"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "canary"
+        ],
+        "B": [
+          "probe"
+        ]
+      },
+      "contradictions": []
+    },
+    {
+      "id": "A2-7301-release-learn",
+      "expected": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "130a7152aef20050"
+          ],
+          "B": [
+            "2ae1e64100222fc5"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": true,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "b18184e8c8d3a275",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "338d2c0eced2d91b",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "93b9eb0f67b86a17",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "130a7152aef20050",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "e01516b1b3d8b261",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "858c3d39c2b84c67",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "d3878e15009df028",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "2ae1e64100222fc5",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "probe"
+        ],
+        "B": [
+          "canary"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "B",
+          "id": "338d2c0eced2d91b",
+          "observed": "hold",
+          "asserted_source_prediction": "ship"
+        },
+        {
+          "class": "B",
+          "id": "2ae1e64100222fc5",
+          "observed": "ship",
+          "asserted_source_prediction": "hold"
+        }
+      ]
+    },
+    {
+      "id": "A2-7303-incident-learn",
+      "expected": {
+        "A": "ledger",
+        "B": "canary"
+      },
+      "returned": {
+        "mapping": {
+          "A": "ledger",
+          "B": "canary"
+        },
+        "support": {
+          "A": [
+            "6b75fedc97406156",
+            "58d5599d44b01c09",
+            "ea112eea6e517544"
+          ],
+          "B": [
+            "8b4188da9db104c4",
+            "4aad8c3d4722ab21",
+            "32b4418505071113"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "8b4188da9db104c4",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "6b75fedc97406156",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "f0e68082f4f9e9d9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "62f758669cc61361",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "ea112eea6e517544",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "4aad8c3d4722ab21",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "58d5599d44b01c09",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "32b4418505071113",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "ledger"
+        ],
+        "B": [
+          "canary"
+        ]
+      },
+      "contradictions": []
+    },
+    {
+      "id": "A2-7305-release-learn",
+      "expected": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "canary"
+        },
+        "support": {
+          "A": [
+            "860300e4b1116f20",
+            "72868463fa9b5e7a",
+            "ad168e8b54e873e7"
+          ],
+          "B": [
+            "9648186555d7c172",
+            "eacf09d07d5c7f83",
+            "d16bc0d270b51b6d"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": true,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "860300e4b1116f20",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "9648186555d7c172",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "c7dc3cf7888c691b",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "eacf09d07d5c7f83",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "72868463fa9b5e7a",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "d16bc0d270b51b6d",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "fc85527fcb1bd94c",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "ad168e8b54e873e7",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "canary"
+        ],
+        "B": [
+          "ledger"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "A",
+          "id": "860300e4b1116f20",
+          "observed": "hold",
+          "asserted_source_prediction": "ship"
+        },
+        {
+          "class": "A",
+          "id": "72868463fa9b5e7a",
+          "observed": "ship",
+          "asserted_source_prediction": "hold"
+        },
+        {
+          "class": "B",
+          "id": "9648186555d7c172",
+          "observed": "ship",
+          "asserted_source_prediction": "hold"
+        },
+        {
+          "class": "B",
+          "id": "eacf09d07d5c7f83",
+          "observed": "hold",
+          "asserted_source_prediction": "ship"
+        }
+      ]
+    },
+    {
+      "id": "A2-7303-release-learn",
+      "expected": {
+        "A": "ledger",
+        "B": "canary"
+      },
+      "returned": {
+        "mapping": {
+          "A": "ledger",
+          "B": "canary"
+        },
+        "support": {
+          "A": [
+            "6b75fedc97406156",
+            "62f758669cc61361",
+            "ea112eea6e517544"
+          ],
+          "B": [
+            "8b4188da9db104c4",
+            "f0e68082f4f9e9d9",
+            "4aad8c3d4722ab21"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "8b4188da9db104c4",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "6b75fedc97406156",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "f0e68082f4f9e9d9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "62f758669cc61361",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "ea112eea6e517544",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "4aad8c3d4722ab21",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "58d5599d44b01c09",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "hold"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "32b4418505071113",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "ship"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "ledger"
+        ],
+        "B": [
+          "canary"
+        ]
+      },
+      "contradictions": []
+    },
+    {
+      "id": "A2-7301-incident-learn",
+      "expected": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "130a7152aef20050",
+            "e01516b1b3d8b261"
+          ],
+          "B": [
+            "338d2c0eced2d91b",
+            "2ae1e64100222fc5"
+          ]
+        }
+      },
+      "qualified": false,
+      "mapping_valid": true,
+      "exact_mapping": false,
+      "support_valid": false,
+      "visible_history": [
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "b18184e8c8d3a275",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "338d2c0eced2d91b",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "93b9eb0f67b86a17",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "130a7152aef20050",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "e01516b1b3d8b261",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "858c3d39c2b84c67",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "d3878e15009df028",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "2ae1e64100222fc5",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "probe"
+        ],
+        "B": [
+          "canary"
+        ]
+      },
+      "contradictions": [
+        {
+          "class": "B",
+          "id": "338d2c0eced2d91b",
+          "observed": "quiet",
+          "asserted_source_prediction": "activated"
+        },
+        {
+          "class": "B",
+          "id": "93b9eb0f67b86a17",
+          "observed": "activated",
+          "asserted_source_prediction": "quiet"
+        }
+      ]
+    },
+    {
+      "id": "A2-7300-incident-learn",
+      "expected": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "returned": {
+        "mapping": {
+          "A": "probe",
+          "B": "ledger"
+        },
+        "support": {
+          "A": [
+            "768865a305977311",
+            "5908b3a8e9252868",
+            "9dbed3ebb3fe5e35"
+          ],
+          "B": [
+            "a66b4682aec789f4",
+            "8059d4b4418f0493",
+            "d1b0f493a44bc522"
+          ]
+        }
+      },
+      "qualified": true,
+      "mapping_valid": true,
+      "exact_mapping": true,
+      "support_valid": true,
+      "visible_history": [
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "d1b0f493a44bc522",
+            "queue": "west",
+            "summary": "looks clear"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "dc856b152a487af9",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "768865a305977311",
+            "queue": "east",
+            "summary": "looks clear"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "a66b4682aec789f4",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": false
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": true
+              },
+              "probe": {
+                "fresh": false,
+                "signal": false
+              }
+            },
+            "id": "9dbed3ebb3fe5e35",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        },
+        {
+          "case": {
+            "class": "A",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": true,
+                "signal": false
+              },
+              "probe": {
+                "fresh": false,
+                "signal": true
+              }
+            },
+            "id": "5908b3a8e9252868",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": false,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": true
+              },
+              "probe": {
+                "fresh": true,
+                "signal": true
+              }
+            },
+            "id": "8059d4b4418f0493",
+            "queue": "west",
+            "summary": "needs attention"
+          },
+          "outcome": "activated"
+        },
+        {
+          "case": {
+            "class": "B",
+            "evidence": {
+              "canary": {
+                "fresh": true,
+                "signal": true
+              },
+              "ledger": {
+                "fresh": false,
+                "signal": false
+              },
+              "probe": {
+                "fresh": true,
+                "signal": false
+              }
+            },
+            "id": "446bf0c7761dd00a",
+            "queue": "east",
+            "summary": "needs attention"
+          },
+          "outcome": "quiet"
+        }
+      ],
+      "compatible_sources": {
+        "A": [
+          "probe"
+        ],
+        "B": [
+          "ledger"
+        ]
+      },
+      "contradictions": []
+    }
+  ],
+  "wrong_decisions": [
+    {
+      "id": "A2-7301-incident-learned-2",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "f15577cb22d4b4dc",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "canary",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"f15577cb22d4b4dc\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-4",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        },
+        "id": "62dbe468fe59acf0",
+        "queue": "west",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "probe",
+      "returned_action": "none",
+      "action_under_supplied_policy": "none",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\": [{\"id\": \"62dbe468fe59acf0\", \"command\": \"console1/none\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-4",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        },
+        "id": "016981125ac5fc5d",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "none",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"016981125ac5fc5d\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-0",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "f590685f50961e43",
+        "queue": "west",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "none",
+      "returned_action": "probe",
+      "action_under_supplied_policy": "probe",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"f590685f50961e43\",\"command\":\"console1/probe\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-5",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "7256f2506911c964",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "probe",
+      "returned_action": "none",
+      "action_under_supplied_policy": "none",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"7256f2506911c964\",\"command\":\"console1/none\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7305-release-learned-2",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        },
+        "id": "d9b932812255e21e",
+        "queue": "east",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "correct_action": "hold",
+      "returned_action": "ship",
+      "action_under_supplied_policy": "ship",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"d9b932812255e21e\",\"command\":\"console1/ship\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7305-release-learned-7",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "cbd89f6fe86b9a8b",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "correct_action": "ship",
+      "returned_action": "hold",
+      "action_under_supplied_policy": "hold",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"cbd89f6fe86b9a8b\",\"command\":\"console1/hold\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-1",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        },
+        "id": "c8086b3435fa5b61",
+        "queue": "east",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "probe",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"c8086b3435fa5b61\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7301-release-learned-2",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "f15577cb22d4b4dc",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "ship",
+      "returned_action": "hold",
+      "action_under_supplied_policy": "hold",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"f15577cb22d4b4dc\",\"command\":\"console1/hold\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-3",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        },
+        "id": "5178e08fa1c9e5b8",
+        "queue": "west",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "ledger",
+      "returned_action": "none",
+      "action_under_supplied_policy": "none",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"5178e08fa1c9e5b8\",\"command\":\"console1/none\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-6",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "2fb698875857eb94",
+        "queue": "west",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "probe",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"2fb698875857eb94\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-0",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        },
+        "id": "75cf78ad74bccfc8",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "ledger",
+      "returned_action": "canary",
+      "action_under_supplied_policy": "canary",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"75cf78ad74bccfc8\",\"command\":\"console1/canary\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7305-release-learned-4",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        },
+        "id": "bd17c07c7bcf112d",
+        "queue": "west",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "correct_action": "ship",
+      "returned_action": "hold",
+      "action_under_supplied_policy": "hold",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"bd17c07c7bcf112d\",\"command\":\"console1/hold\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7301-incident-learned-3",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        },
+        "id": "32b05d0cf45eb3cb",
+        "queue": "west",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "canary",
+      "returned_action": "none",
+      "action_under_supplied_policy": "none",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"32b05d0cf45eb3cb\",\"command\":\"console1/none\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7301-incident-learned-4",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        },
+        "id": "8254c44590cde260",
+        "queue": "east",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "none",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"8254c44590cde260\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-3",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        },
+        "id": "f01d17440d729ff1",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "canary",
+      "returned_action": "none",
+      "action_under_supplied_policy": "none",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"f01d17440d729ff1\",\"command\":\"console1/none\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7301-release-learned-4",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": false
+          }
+        },
+        "id": "8254c44590cde260",
+        "queue": "east",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "hold",
+      "returned_action": "ship",
+      "action_under_supplied_policy": "ship",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"8254c44590cde260\",\"command\":\"console1/ship\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7305-release-learned-0",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        },
+        "id": "aafaf7b467516cc3",
+        "queue": "west",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "canary"
+      },
+      "correct_action": "hold",
+      "returned_action": "ship",
+      "action_under_supplied_policy": "ship",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"aafaf7b467516cc3\",\"command\":\"console1/ship\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7304-incident-learned-2",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": false,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": true,
+            "signal": true
+          }
+        },
+        "id": "f810464001ef1822",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "canary",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "probe",
+        "B": "ledger"
+      },
+      "correct_action": "canary",
+      "returned_action": "probe",
+      "action_under_supplied_policy": "probe",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"f810464001ef1822\",\"command\":\"console1/probe\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-5",
+      "arm": "learned",
+      "case": {
+        "class": "A",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": true
+          },
+          "ledger": {
+            "fresh": true,
+            "signal": false
+          },
+          "probe": {
+            "fresh": false,
+            "signal": true
+          }
+        },
+        "id": "8c02c9e590990c34",
+        "queue": "east",
+        "summary": "looks clear"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "none",
+      "returned_action": "canary",
+      "action_under_supplied_policy": "canary",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"8c02c9e590990c34\",\"command\":\"console1/canary\"}]}",
+      "valid_response": true
+    },
+    {
+      "id": "A2-7302-incident-learned-1",
+      "arm": "learned",
+      "case": {
+        "class": "B",
+        "evidence": {
+          "canary": {
+            "fresh": true,
+            "signal": false
+          },
+          "ledger": {
+            "fresh": false,
+            "signal": true
+          },
+          "probe": {
+            "fresh": false,
+            "signal": false
+          }
+        },
+        "id": "bd2ce76d448594d7",
+        "queue": "east",
+        "summary": "needs attention"
+      },
+      "true_policy": {
+        "A": "ledger",
+        "B": "probe"
+      },
+      "supplied_policy": {
+        "A": "canary",
+        "B": "ledger"
+      },
+      "correct_action": "none",
+      "returned_action": "ledger",
+      "action_under_supplied_policy": "ledger",
+      "classification": "policy_induced",
+      "raw_text": "{\"decisions\":[{\"id\":\"bd2ce76d448594d7\",\"command\":\"console1/ledger\"}]}",
+      "valid_response": true
+    }
+  ],
+  "failure_classes": {
+    "policy_induced": 21
+  },
+  "trace_hashes": [
+    {
+      "id": "A2-7304-incident-learn",
+      "request_sha256": "c4b5b78931882db2913481233a05e7840d503633a62d8096406a20d77d1d797b",
+      "response_sha256": "39022791dd550ec299b3f37632b091cdb7b96b42ba8c62f90777c17682b01c6f",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learn",
+      "request_sha256": "d22f861309a615498c56d795c7eeea72e6688ad3a7ea5b492cb77bb3f837b2a2",
+      "response_sha256": "58448c256a79f982a0d82058d9469bb59466f3b4ea3ed4abcb388b99a3c8f357",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learn",
+      "request_sha256": "c6b1a8b8dc01600ff4ea3ef0241219855cef549cd8b41c3b7edd0bd75cfdfc00",
+      "response_sha256": "abc89313cbed12712b37d7fdfbfb7ed6a5c4b0b211a17e33a486041f02103fe0",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-learn",
+      "request_sha256": "82a80d9cb2990025b98bff403bf2ea1d2fe3d66c3576227f599532a5ad324bbc",
+      "response_sha256": "2903579a5d14ff23080506f60645b10e9b103c40b47328db1a56c4fef6b15e8b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learn",
+      "request_sha256": "bcb3661829ee6765932fc132e55946904a60900e301221b95a8cddaec91a9b32",
+      "response_sha256": "bb31320866608fcde06e6990b09c5a76a8cc1d77fda84f7b23f465ecb18dd6b7",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learn",
+      "request_sha256": "dac9d434e72eb9120b713cb910b3746ebf6b31e34221fd2b82add53cfbd15c78",
+      "response_sha256": "7e4b1e2f4d2de468a437b539b7e085faca7269d7b737fbb77f38d7e48c991f29",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learn",
+      "request_sha256": "f9e6660bec3b4256138be93f4b449d165ae7ee04592d8035377731c98adf0aea",
+      "response_sha256": "ed255f45205c63d3003042638c15fe01f99b5199de8714fc5e0fdb4bbe878666",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learn",
+      "request_sha256": "19461f0d04b8f7d619330f3bacbb1e9a878a2b501c59ea83544c048200a285c8",
+      "response_sha256": "fbe5dbebf3a3c4e93b8364a2d23069da746f3b7e2333f8c1151b5f368f2cc97c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learn",
+      "request_sha256": "5489f2425101d955c3e7fbfd0c51047c58acf044424f3175271ac047d4d07189",
+      "response_sha256": "0c5d31b9510bed386022748435b32e5b2a429a46ad57291e8fa2e6ebc0b63aa5",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learn",
+      "request_sha256": "de1560afd0328909231912034642c8b31a3db80cbd7b0007dc79963d5ba9423d",
+      "response_sha256": "7a74cfd2c72f1c60dbc2e8da2f6a7150e0d562b6c732640e99b352a01b4683b3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learn",
+      "request_sha256": "bc76bba05ccbb2794c6122ffaa6e6b3b8d2758d1f4076312e4951d0a9aef9d72",
+      "response_sha256": "5b4006e7e6726a660cbc68f5d7795df1486341770cfb077a55552b79567135fc",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learn",
+      "request_sha256": "a2032b5b1e0c6fe3dba3a9108c723bfb18a9a28a0b035450882fd2f302602781",
+      "response_sha256": "bd55f43cdc44c13212a7af415b5839db222999852b251400f52a1ad78210f6f3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-1",
+      "request_sha256": "53a653773853dafad36155ddc34e0f8de231e93ae60bb5e801c3e730d28ba8b1",
+      "response_sha256": "78826de8f3a9007b676e8e302bdb70ea11c94ed77b7551bffda4cb5cfa3f5b54",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-5",
+      "request_sha256": "e5574972941924d1ab32186b9dc7b2764c79a52c06295535987a12a209584d63",
+      "response_sha256": "6b102147a8138d35dbeb6f13b40795807148c7d3eb8f0288c8084cd9d8e7016a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-1",
+      "request_sha256": "630baac770a64f258ce09a4bd65d55494f0b7cf2d6e4b5a8b524f246e9062fd1",
+      "response_sha256": "1baef3525b3cd11672c73967239520826ed80eec362ca9c5b8cfaf0710c8da8c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-3",
+      "request_sha256": "b6c008e4b0c087bd5762097baef9e9d483fcb9d2acef517797a7a61624fff782",
+      "response_sha256": "52e3f83dd71399899c19f9b66363dae1c876a0fe6b2673fb08428995e3677517",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-4",
+      "request_sha256": "08528d9469d4444f618cad0c21bc52149b8118e4c2c676387bf6534f42df256d",
+      "response_sha256": "63b83837726be2a77bca0f2ca81efcd3e66a84d652c598bf428f84b5bcd2d71c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-1",
+      "request_sha256": "6e2a977cc55cc11875b202736448c73841c845b8777aaf23b587c726a415f479",
+      "response_sha256": "6d6b8c9984854b3e40d8ed6aa7c9bf6d03d10153ff6d84eb64e115ee850e0c72",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-2",
+      "request_sha256": "668f873bc97245711a426b55d955f43b57ab15509c79e4f507b6d3d708f79f99",
+      "response_sha256": "d1c200a2492433c4f21bbf940b04ad8bd1672fd1c4c9cba6b8f6de484365e87d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-2",
+      "request_sha256": "84f4f54382f50761f50504ad72acd931674857290a370baf0a16863b2312b949",
+      "response_sha256": "82bce2b89fd7f6312f22183925022d5cde0db1be70c1e04295320bc803ad003e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-2",
+      "request_sha256": "f8a7097ce8df419452f36b7fe10ac3fedbbf770e38d0363090ff6beaf52968dd",
+      "response_sha256": "119a6740ee46d7cb00fba3730b15d05d68ef5bc1106ae214265312009ccbe693",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-6",
+      "request_sha256": "de59ad11ce4fed3c95a757f5f70a5e33e97f82483cd1284c5fd7f4eba6343669",
+      "response_sha256": "b256074a0088d6e4d5507385f257bef159f98e18f728510b847c29a0178591f0",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-3",
+      "request_sha256": "a4bc7eefc6cf8674821112fe854d821070dd2d9069b648a74b80547b0763f14d",
+      "response_sha256": "8c610709b3223b6ede08e618b0fac34f1d3e991aaac6a62ab88d67ec044bbae1",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-6",
+      "request_sha256": "ffd4012cac869deefbeb82db136ec50825f2d52d12c53b5d92621ba848f2e19f",
+      "response_sha256": "bf44a695df82471cb37b205775193860c76b3a2e897dd02dd356b965c220a71c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-0",
+      "request_sha256": "e59286150d9f68c75d63f189d50ee347114bed22387979f3a45bfb7695ae43dd",
+      "response_sha256": "876336e090d3f46010da3ca0f2cdf971caaf3a27849fb78b27f565191ca751fb",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-1",
+      "request_sha256": "fe430dfb39841dc74fbb423d3fca2cdbc8dae024130c45e4f027886c51067c40",
+      "response_sha256": "da0d277f6a91b60aab15373b89c94804e4af60f4739855c48754bdc8038ee4aa",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-4",
+      "request_sha256": "8d5b57c98d55c6ebd643a9f07a83f9cdfd90e6cee1f8e384aa2b22588ee03f1b",
+      "response_sha256": "76dc5ad9eecdf097ef7d7b677694afe316ae5ecfec15319ed816e0e6588ff522",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-1",
+      "request_sha256": "f70b2a2203a4b0e247e51570cd1bba965f35017e651130fb68aa0138659c31dd",
+      "response_sha256": "6690769fa4c15c23602d83a34b15ad55a03e915d20b551866205c9a4b104a3f4",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-1",
+      "request_sha256": "4a97aca4df000aa4aecd98d231fae0d14f4ad07a29408ebd895a558d16a0623a",
+      "response_sha256": "897599f58eb20179da2b508d941953af1acd34fea233612daf7b6dbc8be670e6",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-4",
+      "request_sha256": "c9a339c8bcbbb96b41b2a7995dc4e8b8e20f9a88ce56d942bfc26de7a09ad179",
+      "response_sha256": "93451617876d0fc25aae115c0bc58dbc7021094bde2fbb97d836066bc8cdcb13",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-7",
+      "request_sha256": "bd80b36f79a3be5ea8c8d1369dcf674f0413950be5a7d8cd08ea42a37328ab96",
+      "response_sha256": "1c80004785e3a5b155bb11b21311a802fd07b60c55384774b77ee4203d119654",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-6",
+      "request_sha256": "4e8d83efa31736d11e9daf204164c564b845bd1401fb21004897d14819e5cffa",
+      "response_sha256": "431c9bc0de614c3ff319ce34dbf66619404b1615698596e91a98b789480c9fa4",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-7",
+      "request_sha256": "a3f7994a24283814f6ecfacb466e4e0ad2d8a5816a66de8b97d3588089ba2bff",
+      "response_sha256": "b777951a384ec5760756b0ad7b125041f750884b72ed781f3e2edf47f1fc0c5e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-3",
+      "request_sha256": "ca07407f468134e7848404e1c2c031809adebb0ccd4a92f213f06a5d86f93d28",
+      "response_sha256": "5a2b85d795ce09e4fe8cfa00af35c3f90bc547d8e488a82e075d8ac46990cc53",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-5",
+      "request_sha256": "4bcd9c77c2bb56d0c46ed1ed0b331cffd2462b87021663c6a28f40d305acc6df",
+      "response_sha256": "fce8892088a1f7e3d4cc26db640749f7870397266ffd9da7e1a0f8aa8a93c90e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-5",
+      "request_sha256": "09e8ad2e557a52daf6453436faed86ca1ecd5a3f3e3c0741781e8fe0c436b2de",
+      "response_sha256": "576595edb266aab09b1d96dd8ab3554ed422522589d6c89f7275a7edd6b0842d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-5",
+      "request_sha256": "d2711899fe8f115d9e95ff4b5972f945f1145a562e33015d984fce007c3f623d",
+      "response_sha256": "5a55bf4641ec16fdb5407559fc9f9af54d4a8a37adaac17e63c5a37f3119fccf",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-6",
+      "request_sha256": "a4f896dd36ddf81227466418f1d9d963dbceed8f6b7acff1120c2695d8141031",
+      "response_sha256": "e03800775a41fd9b8ec822fe365542f297cf884400a81a53798f802ae3a97c85",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-6",
+      "request_sha256": "4a04fc57c7a334268252206f6dfd3a3496885a8d601431e5d4d9289d8f956007",
+      "response_sha256": "b921bc7a45b2ec72a7a38a23bf19f0fe72aa877fc9f5ad198e10d9caac4e4d59",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-7",
+      "request_sha256": "a6d0c6319f1ada6af7d282daafe3f1dc772c9893dcd4dcea97e22ba8f5204963",
+      "response_sha256": "641920aea42c5f35503451a7fe46eb87fd053acb5155a08704a5353b5c7a7576",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-2",
+      "request_sha256": "bc02b43c44cb6903a7521a2ae6b373611225d8b8414b755115eb48ba9889c92b",
+      "response_sha256": "12d2f95db212d2c50146d003b39304b72dfc40a5e02d74ead65c8ce5b98d181b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-4",
+      "request_sha256": "ac37f4804f1e3f304c2e8fd7b2dafca333fdb223fbb1d7cf6add5b1b41749925",
+      "response_sha256": "676f6ece9b2a9055d6b56710ff850a0bb4331ce35b155c8985935aa2ecbd23e9",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-6",
+      "request_sha256": "2e7565f5f210fc43ccf475cbcccd78e7eb0281574faecf07d0e1152c284ac2e7",
+      "response_sha256": "8e237fdd6dec9dc508913da00ea08d008f7e755ffef47000db2a67b8976c0afe",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-3",
+      "request_sha256": "fc9bb7cceda04bdd0cfc8afb724b1a93e615feeac017f91013e24937e506109c",
+      "response_sha256": "e51c21eac0cec3d358bef682b171717418b3172dbdda24dfbb9fe603cbdad698",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-7",
+      "request_sha256": "d970dbd5fe2cca0192f1f3aa86d6aa16ef1e6025d7a1aa6bbe986d6f6f018f59",
+      "response_sha256": "187bf63107fc983a3bb56797bfb2cd4909ddfd5c5c67eff6d5ad15f559ea5ff3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-5",
+      "request_sha256": "e3d1437b4003260477723b09e79c1e049d6df9c7a604bbad0509d15edb88957d",
+      "response_sha256": "05bec8c825ba1b0648f37ebd15821967a240984f8e1a69c62758ef09c1db87f9",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-3",
+      "request_sha256": "700118638cd63f41df9f35449e7e4d1cf07389f0c612876ad475ee9b0127b51d",
+      "response_sha256": "ce96df2261bc83d1f6c191b48b4f62e8f2f310fd2b5996c948421d3923cc39ab",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-6",
+      "request_sha256": "e3c1ca3bb580e91335f7b78535a4f699e838e065519d827585ef128683ce518d",
+      "response_sha256": "984e82da3b53a2206080c807b209f0055268c06839b01a7e5e00e032c0bdd3cd",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-4",
+      "request_sha256": "cef28336402ca2070a659a987c770ecf804284077eca29227d3be839eb7669af",
+      "response_sha256": "44376a2f4c347db155194a423eb95c10d14473f521c91e996f2a725a99ed8cdd",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-0",
+      "request_sha256": "320cfc7dfd2564dac8b9eeda07be8e6f0beffcbfd8aa09705c4543bb72b621af",
+      "response_sha256": "44ea9927274453ee733defb880372c73c29d05bd201399878937a9fb52358287",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-4",
+      "request_sha256": "d5f2ab5f26bee837ac23b340f21cabe883318dcb8eb2f6c570d65102ca2f6586",
+      "response_sha256": "aec2368df4950740831db2131bb55d985dac477fbd39d9d093dea275ef33f504",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-2",
+      "request_sha256": "04a07bd88662f326943f40a00e288c2a22ed7df3b81ddf4505c911c858dfe3c5",
+      "response_sha256": "2af9ca3c4b90c7d4c6272331e981e23ea3aaf5032a6c5351412cbce7d89dc135",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-4",
+      "request_sha256": "218f93971bab64ed8e12e9b0d909688ca83915887764401fcac2a603d78b3468",
+      "response_sha256": "9364520ecbc201f3a1761089c31868fa1a2d2797bb46b9a208cf27aca3a53f85",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-5",
+      "request_sha256": "6af8ea90e0e82424008a45ee361527eb9ffa0a2c4e1dda38ee8670e42e0fc400",
+      "response_sha256": "f783ee806d6886df0a9a0c6c1030d3ecd150e4e1a33675570e44fb6dc46482a7",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-0",
+      "request_sha256": "0ae3b97a316f64d17766e4dc30e3f45bf79221d66340950ea4bed0d2b1d113bc",
+      "response_sha256": "a7cc7fef057a49558bcc88acc2f8f81d6d6194261686e79dc7ed784164b8ae57",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-2",
+      "request_sha256": "31663a6e3f19b421b7f444f43cecfc69990e2860dc6bf828a3f7f8e91c3fbcb7",
+      "response_sha256": "71494854125b85ee291a4b6deb31fe590f54326666485d1db0a8f3b90a3cebf4",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-6",
+      "request_sha256": "fc24c6a9837e2b60636b02ca015d241a362e1c5afae0a953ab722236ad0c78c4",
+      "response_sha256": "c1d17ae084b38d23191b8708c164b2d7d4f91d986ff3a838520f3be39e80357a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-5",
+      "request_sha256": "065579ddb26d9339af50a1b950da5ce3f5a99dd094cbad1c650d4b4959735613",
+      "response_sha256": "6a2a5f115febc4bc47fdebe9eb024f6b2eaa0f4f5fd6b5745a1980eacdde55ca",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-2",
+      "request_sha256": "2e9f928f84a7662abf8c49d8a93d2d57d77ffb70fce5be342b63fc562f2bad36",
+      "response_sha256": "68fd6ba6ebe2279c0bfc00c74c34f9811ab57e5519d1726c2ce73efb51645cf3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-3",
+      "request_sha256": "5d0455cd5df03fa8bf5f293335098c05b6d12efdda050cdd6bc270d8c8ae10c4",
+      "response_sha256": "0ad9c593b36f9e1c5049853fdd9b82335b984e181d72985f2ac140a43d548c56",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-6",
+      "request_sha256": "0ea18d326edab34304beb8ea2f6c245b72341af5eea1ffcf11b02f7f4c8e1ea3",
+      "response_sha256": "7a4acea95d8f03206f243e224e8d04a35bdc22cd54138a3795b970ec11ea3212",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-1",
+      "request_sha256": "4a2a6c9f36f859f8478d73020132ffb8a85532a803b37b089d1d6c0d78229d0a",
+      "response_sha256": "c9543f0017749995626f88b55e4e35821d11ed0ebb5363815f2b9cbb572c95eb",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-7",
+      "request_sha256": "9df28a546789083e080ac31a376db4b888bbf2657cebf297065d819c57754dbc",
+      "response_sha256": "9320e93d8f32123bab7ddca30e96a33c2b5c80c93fdd4ef43d2a282cd0426550",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-1",
+      "request_sha256": "27f95b3b73fdaad7a1ebec1dbd7951da014e21bc3b77905029b81ae13d8d1e84",
+      "response_sha256": "e9010bb2f70be231780529303c5bbb011bf5c0512ddfc6b2219e5847c8de92f1",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-2",
+      "request_sha256": "bca1614ffaa7c0c2de4df18fd62352452501626b010295198389c854313f3fa4",
+      "response_sha256": "21602da26d99aa0ff7370216971da720adb9beb8b987ab0efc343aca07ad9080",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-1",
+      "request_sha256": "9582ef7f6c5ebebaf43510f4be3d940fe7ca89de6f7329fc4c86c587bf44cbab",
+      "response_sha256": "083dee19deb6369bc3dd00cf6e41853218e8af4f2550f4b7eeb7da24595eaf48",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-5",
+      "request_sha256": "e7100e2b26f07a0ede2206a09c0e6ffda2691c0bac11bb8b6e8e6976968937ac",
+      "response_sha256": "fbc714c1d9ac8553c2a85a30424da1be7a98c5bf1a86bd709910bef4edc0b1c2",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-1",
+      "request_sha256": "20fe029bc56bbb3e3a1b69f3c50e10ada9f9e3c4258ddbfcf972950c54133c08",
+      "response_sha256": "ba61f525a68957d97430bcc363e7361aa6e001be515a1402b3795dbc438bf88a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-1",
+      "request_sha256": "9fa3e06e6b6d2225c3b21dd88ed11b153f26b796cdfbab33dbc7e430f65caaae",
+      "response_sha256": "17d5699b6cd5c038734eb42f0c1897fe809196ce4be0b6b7365f3ed395bd7c64",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-5",
+      "request_sha256": "c91924b319363934d551e7315d3372842cad71d04d3c086f8575eea8d7fec0e9",
+      "response_sha256": "70ea6f932d8afc78e0cd6ce2c2b4ea39c5921191a6c716a9e98d8837e4e83faf",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-0",
+      "request_sha256": "a7a92e331764fcb4852f8c4bd2aff6ae1453a92a16abf980d219ed30f937305e",
+      "response_sha256": "52cda974fa68d971cfdc244c694d01934dae6149cf59261fbb8005f2849ab854",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-7",
+      "request_sha256": "b8224354b955d242bb6be4a0cdabfa10b1747739cfa60c5c31a9d8bbef045b6e",
+      "response_sha256": "55448c3781e8fa1acd94234103763115e6f37db3f353f3adbab1cfb612250128",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-2",
+      "request_sha256": "81ba6af947728bbcb3581374e524a0784e5ac05dd791cab502470a170273e2c8",
+      "response_sha256": "56bf14087473b5f46e651d97218c969b41b7a39235021afbe3d92653886f0a36",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-0",
+      "request_sha256": "316668096c3467a6cdc515eb650240fb98020d672b314d4e2d3a6523cc87d356",
+      "response_sha256": "c1fb74fee17e493d740c2c40c258a0d04907b86e45a6f8a090efbbf0275dda47",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-7",
+      "request_sha256": "0496086d4c1c74b99b557bf665dfbdb82d7b42913719877b840cc32cdda7c1e4",
+      "response_sha256": "22d84aa673ca08e67b4ab88ab783056d56a427e483e3ee4551e1fcd40dd81e83",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-6",
+      "request_sha256": "bbc6e59b26b3c174d8581c124c0bddc4d2d60a50238d4b0cc567d243a41053f8",
+      "response_sha256": "797b15140de33ff6852d7d61762b8127c07defaea719a070fb0b59be10b8d34d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-0",
+      "request_sha256": "a17d8c14c3425bac003996b7186f921430d3fa9e038b29030fddb10fbdb03a84",
+      "response_sha256": "40ce1a9788193e7522fefd4eec6cce31d0afe9a93634d45b48c87abbe1cd88ee",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-0",
+      "request_sha256": "ffe899c80b003d19a455fed6beafd356f3605e00583e36cb9b25a3860c16af42",
+      "response_sha256": "0402acab9e7a6a2a13133fd22b74957a6b08b4a552e229740c27f2abe7bbf45b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-4",
+      "request_sha256": "0fb0e6bf3ad38336528afb9cefe3deb9dee92504c7528d6b9a8e8b8e9addb0a3",
+      "response_sha256": "005287c6c5c19b0dfd6a3c7a91a7815147b1a694fde22f0399012ab6d7190085",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-7",
+      "request_sha256": "74069fc5d733c15806efd5cb9db9dcde37cbd9a63f90b7f0a27916afa79c224f",
+      "response_sha256": "cfce798921f8370d4fcd0aaa28d3361ba1020fe3f62b118dcbc3ab9838d8e5dc",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-0",
+      "request_sha256": "0bfcb9bdf0e38c69c2476c2e071fd0d8654d613f2ebc6945ac013c0408c5ecbf",
+      "response_sha256": "cd295b2a45a136d0c25d07b28adc7ab56feeb51b07b8b046132a6d3ffe5dac71",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-5",
+      "request_sha256": "00d71a3b04b7be74300e6f14536d8d7b6bc2f586ef76842e95c55db805d89778",
+      "response_sha256": "ce80a8b1ead89e1a177d9d3a56a2cb20fc50869e56392505e1028672ebbd819a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-2",
+      "request_sha256": "97aa11a37e02c64a88166f5ed23d6d4ae28a3a5b983d9e6ff32772eef8819c7c",
+      "response_sha256": "9cfb94566a515b08bb10a29abf47b1e5e71b9bb6f244ffd87d0130dee5ab23b0",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-5",
+      "request_sha256": "d35ba26784972850f92b92360abd59acf0dc10134700a31dcdeb13482a02d86f",
+      "response_sha256": "e66b733a9581847ab4a42f91eab2fe87a9aa217271d514353e3b848287713486",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-0",
+      "request_sha256": "1dae5e2e743685deafdc368929ea813a8e2d10300d9160b3be3e3f36a252a878",
+      "response_sha256": "bb5d2b2fc952582db57295b4eba9d803a099c04712ff3c54ec3c924a1a9a8785",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-6",
+      "request_sha256": "3270b732de357e7e6814d4f110674307afdfb61d761fd16c0c26022f79e8142c",
+      "response_sha256": "d2c2c7e6a875f80d9c91cf7611810afd3a827fe0a1bce7ce974252188804f80c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-7",
+      "request_sha256": "2814bcdf8a40681558495dc7cd6bfd2797e4e4cb3a62de19e52aad96a037fcc7",
+      "response_sha256": "7a542c1b4a32596bf79d7c60d6d8dc3080cbd85256650f17457a7761cf7c37f4",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-2",
+      "request_sha256": "afc2f21de06a1846c608f281042f585217bc798ed2512b456358d5f6cae31114",
+      "response_sha256": "a67b85255c9550d428c10b016dcf78523fa01668cc7a8f1d083d058d374acea1",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-0",
+      "request_sha256": "4ddee2621362a2dff7d08e48e9492a0a897d6355e53c4bf871fb988f4e043872",
+      "response_sha256": "9e2de417016e591ea0fba8a9a37061f338a3f34a38ee02e6b42050f3902fdc69",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-6",
+      "request_sha256": "6e93cc8f56e0c01ae0679cf50a549b8be90bae79604b22575217691839504458",
+      "response_sha256": "40c36777ade3d85c3b45d0af0b4541188513d560fae077e9ae32ae7dfb291723",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-4",
+      "request_sha256": "7b22cc950c52ac7880bfcc8cb134ea559165571776b4a104aaccac679a1f470d",
+      "response_sha256": "1606142f4db4eaadfbd95ff5304ab9964e51a3d91f8f346d33263b6065a19a64",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-3",
+      "request_sha256": "00f95d32636e9cca8e6ade088c0007a5f3790c11a789f7a9c070c521ef779296",
+      "response_sha256": "7694c81f171ceae757822dfa4fe47b89939eb03d8a8f548bde837767533c8331",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-1",
+      "request_sha256": "ed4cf9fe5571e821fe54974bc8525c8bf7c15652b3581975e0d900e5ec846b19",
+      "response_sha256": "dc9f683565ce6c6fb37a86d2fe7a43382a098e0a0236673d6293aee1d99d9ea5",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-2",
+      "request_sha256": "7f7bc781bb3f04b98246f605887869b7d12c64d2775a0f273fc2054bd68b16cf",
+      "response_sha256": "94de46922fda10700afdbaf3afe447a20ea7bd189ef5d4549ba4b751410f9947",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-5",
+      "request_sha256": "3b14b8b372ff5b0bcd63e072e08e3431def538efcbb213b9450bc24277582c88",
+      "response_sha256": "1e01dc5796117eaf58aed9caa6ab7db5f50a6039493d390830adf5472ece2f1f",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-6",
+      "request_sha256": "e0cca4301d353122b931378ab5458de8e722b15ead88f61a3b3e26fa2dbce568",
+      "response_sha256": "6d8470b42b80642450c7c2974b81bdd66894eb83f9d1b9452f0d809b73b689fe",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-7",
+      "request_sha256": "311d2adf3065b32e693d4f33d6e21f871c2dee3b615c94f4903f69627f8925d3",
+      "response_sha256": "b9e4103e6a30461f7e4812f76cd1f62721f8ddc55add628ff342b7ede17bfd45",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-5",
+      "request_sha256": "5e2369e21ec9ea9f6f0436e870dd1e025e7a8758d86177948b943bcd8236d916",
+      "response_sha256": "dff8e09d037b8f25e191a3ad3d380a8bca94a33fa81779e4498247a5b25acc1e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-7",
+      "request_sha256": "2ba4b3853b65904416bbf513afcdea6a41274e1be9047d964751a73296317282",
+      "response_sha256": "356ecc583b3f3bab8c3dc2fd7a30a77fa00697df0087873893144b58c0ff1461",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-0",
+      "request_sha256": "b2da499921168b5aec0e50c83ec87251ed19e0d7f9668a34a4a8da79e90da315",
+      "response_sha256": "8552d2c8aa9939b60be1e2261076f270174e50dcffbc088e307e08299bfc25c6",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-2",
+      "request_sha256": "f86146ad5db78cf0db13c137af80866e481a77f8c5ef959dbcd29ce75c575d3c",
+      "response_sha256": "348a85bdb4d718bfb63a1260eff966af91128d848109077c82961d23efb968f3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-7",
+      "request_sha256": "1ce822f9fd83bb5b4889f08823898db7841b5696ca65044744d85f81d9e770f0",
+      "response_sha256": "4c18378c27e7c64dfaabfc931c35f80b89c0d1b5526f2b76e0ddb7a543e7e5c3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-2",
+      "request_sha256": "95bcb909ced478c594b208d1340b3c99679e24ab18afc6f4f4bc65deb972525b",
+      "response_sha256": "9aab84719ddd120f96b45e2b75bdbbeb3f591cee8b062c60299d8bc5d88e3267",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-7",
+      "request_sha256": "0b13fa1801e5733ddd75eac20dabe72949d32a9b66fa43947a8ca72e6b648bfa",
+      "response_sha256": "c0f3d720e7e0b7bbba635ee2d371d4af91a5399af9f4a938ec1a00908daf754e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-1",
+      "request_sha256": "f3ea6760746267e78a3dc1ab859e85b48cd37ae2d23855b55456ba032c4eb69c",
+      "response_sha256": "3201f6b777fcc95b80e7359516b42bee08d309870e99ff34f0c61f17e3951c8a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-1",
+      "request_sha256": "d3b3c34d8576ce76253bbcbba2723af116f7e3811c657f11737f83ea3a2bd6b6",
+      "response_sha256": "d704de8b4c9052b6d81cbe01e01e6de96e05ac5998e72c6e053036fad0149fbb",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-0",
+      "request_sha256": "9b0e09ed9320e2d3f1d29cc59e550db335f2f921bf13268e91eafd08a18ee76b",
+      "response_sha256": "326c6a9a84c58dcebfe929ef2aec95c927d5efb96c1ea18b69cafb6a96ef97bc",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-2",
+      "request_sha256": "865affec8a7abb0105ca244f1adbf8cfd127674b9660e7ea4c16a8b6d5f01234",
+      "response_sha256": "bd1b0c1514839aa86707a6aafd7068c8bd970398d2fc33ffa251137b8e3a7b9e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-3",
+      "request_sha256": "5eae0e87f9fdffc58b775c5997872f6fcdaa1755ba46a3a73b42c52d11e43f11",
+      "response_sha256": "47a16071205d9cd21013690af34fabbb8aeec2941d18df194fc2bb3a71723639",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-5",
+      "request_sha256": "1570721a1df159a80b9177c17d4fb0e62d9fba24bc291355a0417ee4ffffccba",
+      "response_sha256": "10fda316b6484aded379bf6b1fb04d15f5e8c1eb53c93a62c07364f06c1a9108",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-7",
+      "request_sha256": "b7b590868665c2a5d2a79294086fd10de7c5a01e3087dfd943eb57d7f80a3a92",
+      "response_sha256": "1df2679de4fba4bf9f43b67cc7da18484abe69d3b4ab743cf8bda9dc1d4c702b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-6",
+      "request_sha256": "ae4b7d08764dd6dc0b05ac7fbfe563fa56562e883fd748c8ac6f4d8268c4ef2f",
+      "response_sha256": "93799488b1797f570a209f5d8c713adcee9302b63a457c06373d1e284d44eff3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-4",
+      "request_sha256": "6d2f5e2bc0407e3c070ed2f342b65ecf34bc835b4636e9af43a755077a187b49",
+      "response_sha256": "ad3705fc093ad9af1a11083fedb05d9ab56a0abc7f8be4c49faef4952055244d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-6",
+      "request_sha256": "baf2766de0e4a9e0ebc052ee5af459e034a7eb827c249d0141727cc69291429d",
+      "response_sha256": "98700a942d609235c779529200f851d6e2d9a06c1b21d43fdf1d12ec186bd3fa",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-ceiling-2",
+      "request_sha256": "eb0bbc55a60815c80a5ef7f92c9101f200bf1ed8cf6a6089a55a58ec77135989",
+      "response_sha256": "51304a3e72998928178641e2a8ce8e5c6880f9bb857eb8235e93d93261450c71",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-6",
+      "request_sha256": "9fa47f7d63848e217904dd97867327aaa4bb6f329987ed63e9ae570e629e1798",
+      "response_sha256": "a824beef91d57893b9225efe48d4197b95cd1cdc749d82495d056850630ba282",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-3",
+      "request_sha256": "462a466ef6826da4d630e537f3eae5d52b05adc04bc8368d38c5de3fe30ef3b1",
+      "response_sha256": "e348b6dea23207207775e3d0c871c40b8763afb84d3ffddfec24895e5f700c86",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-0",
+      "request_sha256": "05e7b87957f20d811d1380a413561a8960e9d997f49a8b2c9ad2bd4ad6bb8c34",
+      "response_sha256": "387aba168fed828dcc1846ed33cc388d1010aeaff9674bd31ed0527884b72379",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-1",
+      "request_sha256": "3843ec390d53b6a2030d03cbc0cf94b83bd00ef94a56d643570c80c8ffaa4a6e",
+      "response_sha256": "9096c3c49df77fc639a67d75a948f16a79eadd03e5dd14ca278437264aaa878b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-4",
+      "request_sha256": "fae9ab0f2b75626166d692a4b6c955652c34502de23d90e38c4035024c3cafeb",
+      "response_sha256": "b84b227ce8a378ab5b62ae00f9197fcbd6c4887842966b3878c45ab575b2773c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-ceiling-2",
+      "request_sha256": "ed14a8fd7078b0536136cdf47ce33bc7371498c9e17920c047ab996c52b812c0",
+      "response_sha256": "7caee29f7d0afb4faff4b3fa98e5115a6f54c2e5fe906c1bf94346d5c5a11dcf",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-0",
+      "request_sha256": "8af82b36e5a13f11e819ccf41ea03f3bacb0023fdace9129e2a053caac7a2a48",
+      "response_sha256": "3d625f47178565b77e0fa3ca19f6b0cee9d9031053eeba69776e4011781014c4",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-4",
+      "request_sha256": "4b0496d9fc6d5e145d3185fad0b379b5c87ce996093480133c882d07c8340184",
+      "response_sha256": "ec0ead49498ba35deee5b8604b3bd1d8c011d6c13720f02dc3cf12c6b52d0409",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-3",
+      "request_sha256": "593a057cdc68c3362736fe006defa96e1f4493297b80120c6c3d298b87020e92",
+      "response_sha256": "0fa96f372e649f36af7399197dc3b3ade60656c1c566078536df77835f14bb6c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-1",
+      "request_sha256": "7a0f4e311cd9634b76a750ca4856bde89b019880978159a412d07e2dcc729c58",
+      "response_sha256": "5eb2f3cacb95627d60b66df25a49eefae675aaeb012972ea529a6b42b6cbbff3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-1",
+      "request_sha256": "5e03273e7746d8e5d3a263ad8c4b766b3127f9bc6c9dcc16f6a4399070ce5020",
+      "response_sha256": "761f876ddec5f9c5e6698690fde11098f2492180cc945a7f74ffe9c1d6a16390",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-3",
+      "request_sha256": "2378d532f3d709f892d14102b09030936bbd1a24ef168c34b8a209a6cf9242d7",
+      "response_sha256": "6ca091be3a14f1edb8a977b5f23275ad347164115a94ee2ef5e4798bc7f8b130",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-4",
+      "request_sha256": "677499551c34104f9d96fc0a49eea207f9e57289b2133e4983cb086dd9387f0c",
+      "response_sha256": "3b3e49a7b0bdeea37b803f61000f1dc556f45c776a29f8006e44f0028e277126",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-4",
+      "request_sha256": "42df570ec01b9d7acde13500b5ba9b9d23e029954db4df88c9019fe10ab34a24",
+      "response_sha256": "664e3f7bfb39b276283cba35e114c453a5cd168c232a27057831598e25dc8e9e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-4",
+      "request_sha256": "708ce50c2fc9337733043b9e33b8fad00add15983a31e631ecd68a2dea18b231",
+      "response_sha256": "b3239260788c157e8b3e31fa6a2a67b951c5062411d8dc737dc4bc02ea8e0f9b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-7",
+      "request_sha256": "044b479ba7d7d9a435b30d35d365222e88d2beec4b61e49b1712f7a5081775da",
+      "response_sha256": "54f26c9dcf09b71f64db7ffa6e4bd0014b8160e2b49ba319c78eae150516c8fb",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-4",
+      "request_sha256": "cfb3af9f1f53fd26ecddab7fe2ce00e5a168adce18706aab5cceb3f083c8bdc6",
+      "response_sha256": "5b15cc301255aec12066211e2afa8c263730feb3fc4001606ec5cfcaef48736e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-4",
+      "request_sha256": "f3e1bef3e5c24c07d6573809e2dbf974817de1ba5a0a7a2d73d09734aabd464f",
+      "response_sha256": "02995a378a86478c25accf0afaeeea778a1c2ea4bfc2eb699a385b2d613f68db",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-7",
+      "request_sha256": "bdb5528175f91aadbb24034b972efa256c6dbf75fc90331082f0f30bdf564c30",
+      "response_sha256": "aedff669cec7ff70ac08eb348c3a23948272de0c4d588470cb94610945bf2cbf",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-0",
+      "request_sha256": "a0cf9ac28a65d0db7268f3f523b2a40085ecb2d98d4d9ac223ff7c13e014ba3b",
+      "response_sha256": "9ff3e6e1ed4d63a3e59650874d1ee1b8ae79088cc72a046b0a30f239fd37c06e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-4",
+      "request_sha256": "ccd2fe1d90203474b8b882bc719e2cf8d138f462edf985814d526b73052616bb",
+      "response_sha256": "09cdb54d69494b48c654563c7debeaaeb07640694d172645254891104b6bdc98",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-2",
+      "request_sha256": "14a4cefb1171f5a5e15e6f2d068e6fdfcb1b108175ccccd2cdb1bd13103e2f5c",
+      "response_sha256": "6345e68a9230eb08ad6614dd5871bfbcbcb60f399f4029ddfede5b8df9a90b7d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-4",
+      "request_sha256": "452b055771cd1efd94ba7f632d0c1ab0be12e6a2c0f0e7a6402de09dcd2fbfb2",
+      "response_sha256": "d97daf0d86e224de3be9ddcc747e42185ff7fe18d9adfc0ca4fec3a636894508",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-5",
+      "request_sha256": "8a6edd0e0cea7a52338d674332f7b0133b89b5014c6266144b5e987e72ceed46",
+      "response_sha256": "05bc7004de435b345fb815b01bfe93f8f35d03259642d69334e8e528b44d2f8f",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-5",
+      "request_sha256": "0e3fe62b2d70a43f28948f8e0cd8e4c8d7bb6a3f890298d8e762df05d6bf3914",
+      "response_sha256": "2a375343a6d1d02f878b4176fd85d99037ee750e20f4edd77aaf3fd25b853db3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-4",
+      "request_sha256": "0e25b28a626293c5b0549720a3b57cd2514e8ea948fdc99457562e1d02f8d746",
+      "response_sha256": "d4b602b9fc6ccaecba6d81811ab25b4347c813fd7819cc28268759b545072179",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-0",
+      "request_sha256": "6649f7364274d645e964cd5a5bbcc77c8bc60a3d9b81f5222f6ba7af3be409f0",
+      "response_sha256": "f8f1a0cbfe526c5110699099deb5e9fe797dfe8fea01707b70b9d7757e56aa33",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-5",
+      "request_sha256": "fc272469c0400854889e7ec39f7068fadb0b42a1313b7888e153f3550943dde9",
+      "response_sha256": "be4e559317375211f834d5766111e28e83b3be380f5eaa66f23150a46c035362",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-3",
+      "request_sha256": "21cc845b638b16dc344e215338eef18c8c478de8d284df99da72cf3587ead52e",
+      "response_sha256": "004fcc2e098c0ca0a8b18bdef70292c8aa1e2240f6a2b4a961b25777db9ce215",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-4",
+      "request_sha256": "75d53669fee963dbbf5ad30ab2425b7670840786ded18982753837cbf14a3744",
+      "response_sha256": "d12df981e66eaa4d22eec9a4901fb43e36250d129fa9273b6a3b3e703fbaf025",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-5",
+      "request_sha256": "99ac6004e65b7e757fc61249bfd1136693b10697ca32d27b7174a8bd222b35ca",
+      "response_sha256": "5a3aba9f9f40b3a07f1de52bcfdfbafd26b616abb3d31ac9ad600e13f6612f46",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-3",
+      "request_sha256": "162425b3d990c4a7259203cb9e2acade738c437886b2191513e8736c7ac8fbb0",
+      "response_sha256": "d6e510175c29e74f937e8602cffbd772ee5f1f5c354cbe9014fb38509e4625a8",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-3",
+      "request_sha256": "cfc3cc4996f2aa354dff9c5aac226bc275f21fa1a8a119672fdf77f3a1a275b5",
+      "response_sha256": "e5034fb5ac27b02ecebb856829fa3d1025752ad282fadb359bec60151a5ea07e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-4",
+      "request_sha256": "aed355bc727e09ff120586b5da61162a7455c6b884da679d1e235c8da49c862f",
+      "response_sha256": "bcafba943ee08835b118eda90fc0bb25fe4a872a06fbe1a738b2c2df08755a66",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-5",
+      "request_sha256": "2bbb6f5b7c43dcfb2d57c054d160d75652bbb5b665e804d3acc52f6ffff1f9f6",
+      "response_sha256": "65cee18f901247550662acd2451081a968a400b9623e4802f475fcb9ab32a6bb",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-0",
+      "request_sha256": "9e271f556c1e5a37e68e51f4be0efa4bb611ea523a1a8f8752dec246079df3ce",
+      "response_sha256": "7ab02eebd2f939d48021c3475d0bbdf35849defac7d83be249792c750278127b",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-2",
+      "request_sha256": "96e3870459e3e95eab1524c2192c74ed54665539587f25278d9b9d4251bfde47",
+      "response_sha256": "8f6e2208515ccbb9fa76b8d282bf81b30c49710b4bb4d8e4a22104021eed5550",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-7",
+      "request_sha256": "cd48ef4a47a526824f574af0dbc55b78820b5d601c4120ba92b5e67c399d46fd",
+      "response_sha256": "a70e957aa430c4bc292d6a3813e1b7a0e34ff6f189df60334849c46b5bafebcd",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-0",
+      "request_sha256": "ae58db8fa3c8bd1037c8859fdb9af4fbab606cf9b5367cd323eb4bc82f4ac382",
+      "response_sha256": "00f23368ac7897060f8da1ca0fb9610e0a48084353ee48339f447193bbace9bd",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-5",
+      "request_sha256": "542e22696e05e50f0b3a83d16600a81ab0fe09d237fa970384915593d0af9363",
+      "response_sha256": "1245f183e793ed57408ca9096ac5a049f569c48d6bb41676dceae9bf69497d11",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-7",
+      "request_sha256": "997c84588b558c40ee93487893709f28cae567a53bc74258f45dd1fa038de104",
+      "response_sha256": "14cbdb65c712c608c37ed4698700204841b0fb41b6f0f8930cf118f5dca3f976",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-2",
+      "request_sha256": "40f39e4b5298fcf82858f988d464df77c47d1dfcebd4781ae8f06538dd222f85",
+      "response_sha256": "4aadb35e5d0dff5a08fa90958df1ebe4c517a22a42f48895587e333b27031f96",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-ceiling-6",
+      "request_sha256": "eace72a04bb5e7074531c6c75144db15abb5ffb73f58b0e5356341fa387fb4be",
+      "response_sha256": "31f31aff3db21318dd03f039197a13b35771ec95e93353a4b214202eefa5a159",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-incident-learned-0",
+      "request_sha256": "adb0f9977f9fab0529532ea03bc1cab78478553f840405257fbfe1c85146beb2",
+      "response_sha256": "55026150f73360271a987171b7cfffa3be327ae8dce2fb533e892f723ae26e2a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-1",
+      "request_sha256": "5dca56a4d578266b48f6f0bcf1e144a266b90b15bda7138ac7907fdfd9a6e0d3",
+      "response_sha256": "a6ecfb22c7f11ea2ff6584fe354aac2440719baa68c0c8857e8c25264cefd74c",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-7",
+      "request_sha256": "3ecade827236b0946455a13111c7e6b9b0fa5cc0cd7e860716d1008b90e5779a",
+      "response_sha256": "416e7238bef868951f6f5ef95c99df429fb6dfbc5815ef98304f72de37fa5e88",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-3",
+      "request_sha256": "390691163ab1e51084a79a344b75a0e6805837a74071428d718c270bba663c37",
+      "response_sha256": "f257a61c75847d2dce715a6b700dadd88ce91157a52fa8a74e085760442771b2",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-5",
+      "request_sha256": "bb207a99c37e58aea583306f692ba8c28a927a68f5d7e0b7dc1277db2a15de8f",
+      "response_sha256": "cb1d3630da160d36bfdd19125db899df52f9e3f0b253a3bad948e5f3a82604c6",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-3",
+      "request_sha256": "188d46946003a1b153380ef30fd8c4e5403423535db82f11bb09a944eeadb444",
+      "response_sha256": "bf91c6895b54e0a9b4605ea4e11f3db471718a865aaeaefb467cffde3893d6b6",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-learned-6",
+      "request_sha256": "6f316b1fb779cb4f8b767486e0aa1e6ffc84227f2e2e34fed5655a27c7d022a4",
+      "response_sha256": "33159370c36f9bab2276c6ea7f57e5206543c55c15faf30506272b46a318e60f",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-3",
+      "request_sha256": "454a19b8f81eee9842809ebe21f72540db28d7a58329b441e65cd250ce39ffff",
+      "response_sha256": "f37bc6bfa87d2e64db193c69374e9ae9c950b8adf355c14019cfee649e8301d3",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-3",
+      "request_sha256": "f1197d9f746e29ee465df82fe8b5be22c6926f6ae6c81910d675d5dd0fc10f87",
+      "response_sha256": "e6fc3869b0d8a56747e26714db05e0b0dcd87cf29093f602c7c332f5adb237da",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-1",
+      "request_sha256": "0f70a0a74fa3013f9bbe6aba0d281fdfdc1326c46a6d3c650a6dd050b3d9bb23",
+      "response_sha256": "cbcb40694eb41fdcc66d7c9f818afa47e269748b961878ce4c9d498c44a9d32a",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-3",
+      "request_sha256": "b00310b2380d4837100bb5fd677a09d71ce453e052e120242ba09e6b27885d05",
+      "response_sha256": "1fb4ac21353add2b3db34f74b7e4b1d16ce8d500345cf9bbf188553a6d268dc8",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-learned-3",
+      "request_sha256": "e4586ab6619ab3dffc7f844181f0f01fd09f3452486e0bbbcd29edfd398762b1",
+      "response_sha256": "2427d16ae7d06d8823a754fa89aea0beeca6dcdb70d1a223ab8e8754d72ff264",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-0",
+      "request_sha256": "309561f126ba167b99625c7daf111b19dd623c38e61ee81fd2fdae319d568ef4",
+      "response_sha256": "bbe20a6cd7528512f7e2ddab9a5c4de6c784bd01b1fbfb7d777e6b0c9b633cb8",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-1",
+      "request_sha256": "fb66ff482e461ec9f2200aaf288e883a1ee72b1475e6cad5f0bf387e703ff886",
+      "response_sha256": "9ca0db62a46c3276f81cf70894c1158d899cd51cf10d98bbeb5c1bbd0e126f01",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-0",
+      "request_sha256": "c50350efb9fe8f392efe35fbb061e51d5f733030b72fa565d5187bd39e1bc353",
+      "response_sha256": "f7c55cb0b6463a6d6c8c8895fd639d74fbbd76890fbfd502980b53bd7c6c9e62",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-ceiling-3",
+      "request_sha256": "b9fef7be10c96110bff3e1b913e2d59c1af475039368a90637d4c359b98147ba",
+      "response_sha256": "36a090687b5f34b82f49ac3996e3942e3399e5c33b12d94259d16d02c27b36f8",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-3",
+      "request_sha256": "eceee3f4b0ee90dc3059c68b8465d63d3e3949e2d82dfd6b30eed03fccbf7994",
+      "response_sha256": "f7d7fbcbf476a67d7671dbce480b45cc620ffca6ce597d8555ece91cbc4e20b2",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-ceiling-6",
+      "request_sha256": "6ad00745865eb2b02809994d6f77a188f2c4fa6b06032f257f0164dce8766dfa",
+      "response_sha256": "3fdec063516fd1d4d7dadbdb6f31f54d4e94a762293aa01979bc0cdca98c4a5d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-2",
+      "request_sha256": "03911d09235bfdf6622232dc24702fbd35e01eaea08be47b89ca5d330bdafed9",
+      "response_sha256": "1af98ac124d4354f9ff71d4293786ff89450dd6c44283ca77cb4f7c4e52dfd9d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-ceiling-6",
+      "request_sha256": "7321d2e1aa966bfb227f94d44168e8df25a60d17a006e52f7db5bbcb1c49d311",
+      "response_sha256": "9fdf4c1369c47a47fb7dcd9dd32dc54ae36ad50343255f49b1bc8e1e5e8f88fc",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-release-learned-7",
+      "request_sha256": "323bc697726d6432d2edd7aaf2f918b0ba6696e9e1d79cf79346ea9ef93c93f5",
+      "response_sha256": "0bf89ad982f6c35982e473e268a2481fcde04a9a42593f654260157e45d08180",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-release-ceiling-2",
+      "request_sha256": "a424d25d72b23c401f750bc1e6bde92444585ddd72f61555495d7e705163ac15",
+      "response_sha256": "00f40db16ffdccb9f066d4f1bffe14d8cc1d4f7fcdb43119520024896533cf4e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-learned-6",
+      "request_sha256": "32a8429b6eac6aae0ded15f3c185ebb24a9c0e719205bdd3ca087d459b4e13ff",
+      "response_sha256": "c45b892307a995e656877d84066a5571e8c86f54a2969d4f12eb6d9b4c008e4d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-7",
+      "request_sha256": "79d2b7369e047f4f7db37da52ad9e3885125d783a3f6c299f108a08cd9f8cba5",
+      "response_sha256": "da28ed46b9a55b4f4e5e9b7fab2ec3416e1306da5643d0122d41e68725f463ae",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-6",
+      "request_sha256": "20aa980bca16d3937863716acd3ce9cde6a4ef315915c0f3e69baf9708156118",
+      "response_sha256": "ec54645475d602f0944e6ce3437c90dbcdc81dd1f2ab70deeae0e62e3ae94b7e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-learned-0",
+      "request_sha256": "c31bd64d621d8991db020e310909e1d167151386b51084ff57b207bd629f43e4",
+      "response_sha256": "fea84027364c92763cd3f310ea983efe03b7b91568174b5ab1bc315fcbae7ccc",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7300-incident-learned-7",
+      "request_sha256": "877e36e0d902bee734618e9d024fdc9e2dd659e49191cb89b56c16f82026ce49",
+      "response_sha256": "4df0883e2cb2cb6c1c4721dfb1436d7008b2298f79c8913b27fac55b25a95a5e",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-7",
+      "request_sha256": "1588de983834b06bc23252d041a199432a604ff2381a51ba1b924c82b4c16904",
+      "response_sha256": "8d7e8398ad6b1119cb6132d1a544a21ab31272fac8a800dfa4dcab0e5a59fd10",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-incident-learned-1",
+      "request_sha256": "97995d202ce9afe9543bd40566d84a9b641a09a43161677937e95ff49413f5c5",
+      "response_sha256": "0f650e9a3adaa0ad176284a500a411c145065822cef69b5ef88f329883f38ee2",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7302-release-ceiling-2",
+      "request_sha256": "cc3a5a53bcd2902278f510b118b7a0fb8823eba97b76359eddcf343358c89040",
+      "response_sha256": "926a360850c5d99030f5ba6782a2cd6fe9abe9ba0fdb73a489f4348d3f87ec41",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-3",
+      "request_sha256": "60fb77a154cf8e61a96791bebd5abadc40d04fff91d5d837a56672fe626d68b3",
+      "response_sha256": "41cf6ed0098b3e832ded10773ed543999c4c726bc397d729186068bf9964040d",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-learned-4",
+      "request_sha256": "6c8030f1ce9a74b4d3d8c0d1ab3cd5c206518867aca53e016ccab9d874598acd",
+      "response_sha256": "298ef52ce0eb4c071ee25ccd8b8c8c7290ec05c5e3147dc8bccc0c20d86a7bc2",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-incident-learned-0",
+      "request_sha256": "f25c23c9eb1042d0222e64647488aab9bdfbbaff28e48eb1b3e24d629f9862c3",
+      "response_sha256": "06a63e9a51d73941f4386a027c6120ff43c266f91838a27cf27766c81f45fe24",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-release-learned-1",
+      "request_sha256": "6a4816daa8e280acd3874846f8b506c8f0c37a2e9bed0583e7c08132ba6e6376",
+      "response_sha256": "13700359aee9204c7d66210d3980424fa723724fb3349d71b19e0dd742890648",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7303-release-ceiling-5",
+      "request_sha256": "8ad5a1cff0df61aa8459888d652d4f0521226bc8e47876ef521b796098d49176",
+      "response_sha256": "683304addfb3630815c5710359ff2175e20f8668116b1e8af5e45e373908f450",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7301-release-ceiling-5",
+      "request_sha256": "ec198d2a94c0c66751f9efafb7bec324db2f9eb97116ac8d93c7491d8ee2e1bb",
+      "response_sha256": "bfc6537ebbcc04020560509627a10f2561a641eece020ef8e6e0d62e49b653e6",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7304-incident-ceiling-6",
+      "request_sha256": "cd3e7a9df65d9b7b041e0fc84cf9c69198de977f69a8bcac1617eff474a08da1",
+      "response_sha256": "260f443f170de5852be23c6bbe502f40d9d9281eecce2529c7b351bc0c4d3320",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    },
+    {
+      "id": "A2-7305-incident-ceiling-1",
+      "request_sha256": "ff07b0441b02df827e57981470b2aa818cc35e0191048ff5a88cb46f52c79f1e",
+      "response_sha256": "e702195ac1db47e9cd59ec29c96ff328d7b04218f11a201455408948a63f7761",
+      "model": "anthropic/claude-haiku-4.5",
+      "provider": "Anthropic",
+      "error": null
+    }
+  ]
+}

@@ -15,3 +15,11 @@ Next action: stop this attempt. Resolve provider health and propose/test safe er
 ## Current continuation: A2, approved but provider HOLD
 
 This remains the authoritative setup record for the execution/acquisition lineage. [A2 plan](A2-PLAN.md) precedes implementation; [current assessment](A2-PRE.md) is blocked. [Status](A2-STATUS.md) and [validation](a2-validation.json) distinguish30offline checks from zero native calls. Exact A1 actor input parity retained; unique A2 identity, original cost carry-forward and fresh provider evidence gates added. General claim-scope guidance and selective-preservation/controller contracts are concrete. Approval is current; provider recovery is unresolved. Temporary claim330 released332 before deployment. No A2 model or infrastructure spend. Resume: resolve route rejection then fresh public/runtime/account/exclusive/budget admission, one A2 only.
+
+## A2 native closeout — 2026-10-04
+
+A2 ran via the owner-approved OpenRouter route. 196 of 204 assigned calls completed, with zero provider errors/retries; eight dependent calls remained unstarted after an invalid learned mapping. Six of twelve policies qualified. Learned-policy actions: 67/88 observed correct (67/96 assigned); true-policy ceiling:96/96. All21 wrong actions faithfully followed a wrong learned policy.
+
+**FINISH / PARK.** Read [the post-mortem](RESULTS-A2.md). No A3 or turnover run is authorized by this closeout. New cost USD0.156627; cumulative estimated plus unresolved exposure USD0.9793100437 of originalUSD5. A1unknownUSD0.010452 retained. Direct-Anthropic recovery remains unestablished.
+
+The worker exited; twelve uploaded artifacts passed hash readback. Exclusive machine claim released in [PR354](https://github.com/dmarzzz/swarm-labs-agentops/pull/354).

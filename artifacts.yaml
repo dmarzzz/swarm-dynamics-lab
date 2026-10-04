@@ -3703,4 +3703,55 @@ artifacts:
           - researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json
           - researchers/vishesh/notes/dissent/rd5/src/rd5_render.py
         commit: 9461ba1c7ecafad7ccaa609bb53a8145b414a233-dirty
+  - id: theseus-a2-native-figure
+    category: content
+    type: figure
+    title: Theseus A2 acquisition result
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a2-native-figure/theseus-a2-native-figure-v1.png
+        built_at: '2026-10-04T19:06:01Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2
+        ingredients:
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json
+        commit: ab7580b56f38e96ed04f9f4ff789d2a29e2d7ef9-dirty
+  - id: theseus-a2-native-evidence
+    category: content
+    type: dataset
+    title: Theseus A2 native evidence and closeout
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a2-native-evidence/theseus-a2-native-evidence-v1.gz
+        built_at: '2026-10-04T19:06:01Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2
+        ingredients:
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json
+        commit: ab7580b56f38e96ed04f9f4ff789d2a29e2d7ef9-dirty
+  - id: theseus-a2-native-postmortem
+    category: content
+    type: doc
+    title: Theseus A2 scientific postmortem
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-a2-native-postmortem/theseus-a2-native-postmortem-v1.md
+        built_at: '2026-10-04T19:06:01Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2
+        ingredients:
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json
+          - /private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json
+        commit: ab7580b56f38e96ed04f9f4ff789d2a29e2d7ef9-dirty
 requires: '1.2'

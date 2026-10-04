@@ -72,11 +72,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/swarm-of-theseus/v2",
       "setup_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A1.md",
+      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A2.md",
       "adapter": "theseus-v2",
       "checked_at": "2026-10-04T16:51:19.347559+00:00",
-      "checked_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
-      "next_action": "A2 approved and offline prepared; zero native calls. Read A2-STATUS/A2-PRE and A1-SETUP. HOLD pending route-specific provider recovery after fresh429. Preserve originalUSD5 and A1 unresolvedUSD0.010452. Existing A2 approval retained; refresh all admission after recovery. Legacy v2 USD15 adapter is not A2.",
+      "checked_commit": "b5484ca0d9c7f199bf70c5412dcd5d363a8aefd7",
+      "next_action": "FINISH / PARK A2: acquisition6/12, execution ceiling96/96, all21 wrong actions policy-induced. Read RESULTS-A2 and A1-SETUP. No successor dispatched. Original USD5 cumulative estimated plus unresolvedUSD0.9793100437; retain A1unknownUSD0.010452. Legacy adapter is not A2.",
       "next_run_approval": "owner"
     },
     {

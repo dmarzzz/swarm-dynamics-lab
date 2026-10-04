@@ -1,0 +1,179 @@
+{
+  "A2-7304-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": false,
+      "B": false
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "ledger"
+    },
+    "qualified": false
+  },
+  "A2-7300-release-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "ledger"
+    },
+    "qualified": true
+  },
+  "A2-7302-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": false,
+      "B": false
+    },
+    "mapping": {
+      "A": "canary",
+      "B": "ledger"
+    },
+    "qualified": false
+  },
+  "A2-7302-release-learn": {
+    "mapping_valid": false,
+    "contract_valid": false,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": false,
+      "B": false
+    },
+    "mapping": null,
+    "qualified": false
+  },
+  "A2-7305-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "canary",
+      "B": "ledger"
+    },
+    "qualified": true
+  },
+  "A2-7304-release-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "canary",
+      "B": "probe"
+    },
+    "qualified": true
+  },
+  "A2-7301-release-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": true,
+      "B": false
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "ledger"
+    },
+    "qualified": false
+  },
+  "A2-7303-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "ledger",
+      "B": "canary"
+    },
+    "qualified": true
+  },
+  "A2-7305-release-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": false,
+      "B": false
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "canary"
+    },
+    "qualified": false
+  },
+  "A2-7303-release-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "ledger",
+      "B": "canary"
+    },
+    "qualified": true
+  },
+  "A2-7301-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": false,
+    "support_valid": false,
+    "support_by_class": {
+      "A": true,
+      "B": false
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "ledger"
+    },
+    "qualified": false
+  },
+  "A2-7300-incident-learn": {
+    "mapping_valid": true,
+    "contract_valid": true,
+    "exact_mapping": true,
+    "support_valid": true,
+    "support_by_class": {
+      "A": true,
+      "B": true
+    },
+    "mapping": {
+      "A": "probe",
+      "B": "ledger"
+    },
+    "qualified": true
+  }
+}

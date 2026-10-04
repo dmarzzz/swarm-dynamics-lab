@@ -3501,10 +3501,10 @@
     },
     {
       "id": "theseus-acquisition-a2",
-      "title": "Swarm of Theseus A2 approved acquisition preparation",
+      "title": "Swarm of Theseus A2: acquisition failed, execution ceiling passed",
       "assessor": "vishesh/codex-theseus",
       "assessed_at": "2026-10-04",
-      "source_commit": "d4b6fed5186533b9fa3bd84f9991722e31326af3",
+      "source_commit": "b5484ca0d9c7f199bf70c5412dcd5d363a8aefd7",
       "documents": [
         "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-STATUS.md"
       ],
@@ -3513,17 +3513,18 @@
       ],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "A2 is approved and offline prepared; acquisition remains untested.",
-        "rationale": "Zero A2 generation calls. Thirty offline checks and scripted preservation cases establish software behavior only; fresh direct-provider rejection blocks native launch."
+        "score": 1,
+        "claim": "On these fixed cases, acquisition failed while supplied true-policy execution passed; wrong learned policies explain all21 wrong actions.",
+        "rationale": "6/12 qualified policies; learned67/88 observed, ceiling96/96; all196 traces audited with zero disagreements. Synthetic fixed roots, single model route; no turnover or culture evidence."
       },
-      "sample_size_summary": "Planned: six fixed roots,12learners,96nested test case/family pairs,204calls. Observed:0A2native calls/answers/root outcomes; development fixtures are not empirical samples.",
+      "sample_size_summary": "Six fixed synthetic roots;12 nested learners,184 observed of192 assigned paired actions;196 total terminal calls of204 assigned. Eight dependent actions unstarted after invalid mapping. Not196 independent samples.",
       "sources": [
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-PLAN.md",
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-PRE.md",
-        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a2-validation.json"
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A2.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/scientific-post-mortem.json"
       ],
-      "status_at_assessment": "approved_prepared_provider_hold"
+      "status_at_assessment": "completed_reviewed_valid_negative_parked"
     },
     {
       "id": "phantom-coast-pc8",

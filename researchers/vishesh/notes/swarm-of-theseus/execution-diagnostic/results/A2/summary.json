@@ -1,0 +1,74 @@
+{
+  "evidence_type": "measured_model_outputs",
+  "assigned_calls": 204,
+  "started_calls": 196,
+  "terminal_calls": 196,
+  "graded_decisions": 192,
+  "observed_decisions": 184,
+  "terminal_decision_records": 184,
+  "learning": {
+    "assigned": 12,
+    "exact_mapping": 6,
+    "valid_support": 6,
+    "qualified_policies": 6
+  },
+  "arms": {
+    "learned": {
+      "assigned": 96,
+      "observed": 88,
+      "observed_accuracy": 0.7613636363636364,
+      "correct": 67,
+      "valid": 88,
+      "family_correct": {
+        "release": 34,
+        "incident": 33
+      },
+      "root_correct": {
+        "7300": 16,
+        "7301": 11,
+        "7302": 2,
+        "7303": 16,
+        "7304": 10,
+        "7305": 12
+      },
+      "false_releases": 3,
+      "false_incident_activations": 5,
+      "useful_releases": 7,
+      "qualified": false
+    },
+    "ceiling": {
+      "assigned": 96,
+      "observed": 96,
+      "observed_accuracy": 1.0,
+      "correct": 96,
+      "valid": 96,
+      "family_correct": {
+        "release": 48,
+        "incident": 48
+      },
+      "root_correct": {
+        "7300": 16,
+        "7301": 16,
+        "7302": 16,
+        "7303": 16,
+        "7304": 16,
+        "7305": 16
+      },
+      "false_releases": 0,
+      "false_incident_activations": 0,
+      "useful_releases": 12,
+      "qualified": true
+    }
+  },
+  "audit_disagreements": [],
+  "request_hash_mismatches": [],
+  "provider_errors": 0,
+  "unknown_usage_calls": 0,
+  "actual_model_usd": 0.156627,
+  "reserved_dispatch_usd": 1.718898,
+  "unresolved_exposure_usd": 0.0,
+  "prior_estimated_usd": 0.8122310437,
+  "prior_unresolved_usd": 0.010452,
+  "cumulative_estimated_plus_unresolved_usd": 0.9793100437,
+  "qualification_passed": false
+}

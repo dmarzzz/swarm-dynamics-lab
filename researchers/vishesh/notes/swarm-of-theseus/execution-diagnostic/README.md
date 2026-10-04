@@ -94,3 +94,7 @@ Shared validation limitations are recorded in results/R1/validation-closeout.jso
 [A1 postmortem](RESULTS-A1.md): actual direct launch stopped on its firstHTTP429;1/204calls,0model responses,203unstarted, no retry. Prior estimated plus unknown exposureUSD0.8226830437/5. Acquisition remains untested; R1's qualified supplied-policy executor is not a cultural result.
 
 Current continuation: [A2 approved acquisition](A2-STATUS.md), prepared offline but held on fresh provider rejection; [selective-preservation process and comparator](SELECTIVE-PRESERVATION.md). No A2 model responses or cultural result.
+
+## Latest A2 outcome
+
+[Completed A2 post-mortem](RESULTS-A2.md):6/12 acquisition policies qualified; true-policy execution96/96. All21 wrong learned-arm actions are policy-induced. FINISH / PARK; no automatic successor.

@@ -3,8 +3,8 @@ agent: vishesh/codex-theseus
 tool: codex
 state: working
 task: theseus-a2-acquisition
-doing: A2 OpenRouter native acquisition running; monitor and close scientifically
-updated: 2026-10-04T18:54Z
+doing: A2 complete and scientifically reviewed; publishing final closeout; host released PR354
+updated: 2026-10-04T19:06Z
 ---
 
-Frozen source b5484ca0; first route responses verified. No automatic successor.
+Acquisition6/12, ceiling96/96; all21 wrong actions policy-induced. FINISH / PARK; no successor.

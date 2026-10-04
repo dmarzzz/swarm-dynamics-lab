@@ -1,0 +1,182 @@
+{
+  "schema_version": 1,
+  "study_id": "swarm-of-theseus-acquisition-a2",
+  "attempt": "A2",
+  "assessor": "vishesh/codex-theseus",
+  "assessed_at": "2026-10-04T19:04:21.001642+00:00",
+  "source_commit": "b5484ca0d9c7f199bf70c5412dcd5d363a8aefd7",
+  "verdict": "complete_valid_result",
+  "execution": "completed",
+  "qualification": "failed",
+  "scientific_interpretation": "valid_negative_acquisition",
+  "successor_authorized": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Withheld-policy acquisition, contrast and claim boundary were prospective.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Visible histories uniquely identify policies; failures contradict evidence. Synthetic scope only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "True-policy ceiling isolates execution; it is not an equal-information benefit comparator.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Acquisition qualified only 6/12; execution ceiling 96/96. Preservation advancement is unsupported.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ],
+      "next_action": "Park acquisition lane; develop evidence-admission comparator offline before proposing any successor.",
+      "acceptance_check": "A concrete held-out design shows a residual role beyond exact consistency checking, preserving capability gates."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Scoring replay agrees; eight unstarted outcomes remain missing with assigned denominators shown.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six fixed roots support bounded diagnosis only; nested calls are not independent n.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen assigned requests and route audited; operator context excluded; dated backend snapshot not independently established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "204 assigned=196 terminal+8 unstarted; all started traces retained; no provider errors or retries.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original USD5 retained; actual A2 0.156627, A1 unknown0.010452 retained; relay ledger reconciled.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source, inputs, wire hashes and all raw outputs permit saved-data replay, not deterministic hosted regeneration.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Figure and completion-order replay expose root denominators and missingness; no cultural-evolution claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json",
+          "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json",
+          "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c"
+        }
+      ]
+    }
+  ]
+}

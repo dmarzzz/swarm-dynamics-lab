@@ -9415,6 +9415,75 @@
    "sha256": "cd616e174c3943128455f1d5795e9c49df1de5f74b14bf8bfda71dabbf50a151",
    "size_bytes": 5656
   },
+  "theseus-a2-native-evidence@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791140464,
+     "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d",
+     "size": 1729,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json"
+    },
+    {
+     "mtime": 1791140474,
+     "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c",
+     "size": 153764,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json"
+    }
+   ],
+   "mime": "application/octet-stream",
+   "mtime": 1791140712,
+   "path": "artifacts/theseus-a2-native-evidence/theseus-a2-native-evidence-v1.gz",
+   "prompt_sha256": "acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2",
+   "sha256": "3972155800479cebc29ef3d4d731653c958122d7d1cc027f310c774448a9c1b5",
+   "size_bytes": 250830
+  },
+  "theseus-a2-native-figure@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791140464,
+     "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d",
+     "size": 1729,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json"
+    },
+    {
+     "mtime": 1791140474,
+     "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c",
+     "size": 153764,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791140661,
+   "path": "artifacts/theseus-a2-native-figure/theseus-a2-native-figure-v1.png",
+   "prompt_sha256": "acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2",
+   "sha256": "bf278e294b8eab3571e0b874ba04940aa2e8a45f238a3106c59a30e909a69857",
+   "size_bytes": 146580
+  },
+  "theseus-a2-native-postmortem@1": {
+   "host": "mac",
+   "ingredients": [
+    {
+     "mtime": 1791140464,
+     "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d",
+     "size": 1729,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/summary.json"
+    },
+    {
+     "mtime": 1791140474,
+     "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c",
+     "size": 153764,
+     "uri": "/private/tmp/swarm-theseus/researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/A2/trace-audit.json"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791140661,
+   "path": "artifacts/theseus-a2-native-postmortem/theseus-a2-native-postmortem-v1.md",
+   "prompt_sha256": "acf81b3ef0a22337796caade26ae471c242852090745bd18cc5117ff201079b2",
+   "sha256": "60ea48cfaf677a84829cc8181b7c6d71bca50cc4c6ea7c5bad043b8fae4b17b4",
+   "size_bytes": 4862
+  },
   "theseus-film@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [

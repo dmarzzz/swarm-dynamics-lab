@@ -1,0 +1,62 @@
+[
+  {
+    "name": "results.png",
+    "sha256": "bf278e294b8eab3571e0b874ba04940aa2e8a45f238a3106c59a30e909a69857",
+    "readback_verified": true
+  },
+  {
+    "name": "RESULTS-A2.md",
+    "sha256": "60ea48cfaf677a84829cc8181b7c6d71bca50cc4c6ea7c5bad043b8fae4b17b4",
+    "readback_verified": true
+  },
+  {
+    "name": "TRACE-REVIEW.md",
+    "sha256": "e358b36e708847120f1ac390f3195174a3cc4cbd0f21b652144f755fcde2fb82",
+    "readback_verified": true
+  },
+  {
+    "name": "trace-audit.json",
+    "sha256": "45197ce7555b1895522bd9db0062b36a3e975710babeacc2cc85714d9190bc8c",
+    "readback_verified": true
+  },
+  {
+    "name": "scientific-post-mortem.json",
+    "sha256": "78fffdd50068f854ec2d98e9adc37cc10b65f0a406149c7556e6d0f3fb8a9889",
+    "readback_verified": true
+  },
+  {
+    "name": "summary.json",
+    "sha256": "0b14266282ab59a971ead85bacd37829be2cde9e2713dd48d8172cc2bea8ef1d",
+    "readback_verified": true
+  },
+  {
+    "name": "manifest.json",
+    "sha256": "60b5b46b99d8cbb87f58ad2a8334757815683f752b6dbd328a8dada5ec3abf23",
+    "readback_verified": true
+  },
+  {
+    "name": "terminal.json",
+    "sha256": "5294606a3cc60996f7210684f303df51a7215aa19eb694f6b1750a40ffc1d7a9",
+    "readback_verified": true
+  },
+  {
+    "name": "replay.html",
+    "sha256": "7f7f0b1c0c23c62983619fa6073435398b82323b5cd0273f3537ae0166a6b956",
+    "readback_verified": true
+  },
+  {
+    "name": "decisions.csv",
+    "sha256": "590e37ae590e6beeaf346d210ff4033d4b439dc2387cd5b40e1cd08f97af0d6c",
+    "readback_verified": true
+  },
+  {
+    "name": "closeout.json",
+    "sha256": "adc4c9cba8d77b190ba8f56d064e57313f97d42ace4865033d69a75704314137",
+    "readback_verified": true
+  },
+  {
+    "name": "evidence.tar.gz",
+    "sha256": "3972155800479cebc29ef3d4d731653c958122d7d1cc027f310c774448a9c1b5",
+    "readback_verified": true
+  }
+]
