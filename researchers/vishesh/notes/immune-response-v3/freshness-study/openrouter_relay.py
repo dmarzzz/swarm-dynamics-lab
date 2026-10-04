@@ -19,8 +19,8 @@ def main():
    status=400;result={'error':'refused'}
    try:
     size=int(self.headers.get('Content-Length','0'));assert self.path=='/invoke' and 0<size<=18000 and not failed and time.time()<deadline
-    data=json.loads(self.rfile.read(size));assert set(data)=={'request_id','body'};rid=data['request_id'];assert isinstance(rid,str) and len(rid)==32 and rid not in seen and len(seen)<60
-    body=data['body'];validate_wire(body);encoded=json.dumps(body).encode();cost=(len(encoded)+512+512*5)/1e6;assert reserved+cost<=1.14432
+    data=json.loads(self.rfile.read(size));assert set(data)=={'request_id','body'};rid=data['request_id'];assert isinstance(rid,str) and len(rid)==32 and rid not in seen and len(seen)<18
+    body=data['body'];validate_wire(body);encoded=json.dumps(body).encode();cost=(len(encoded)+512+512*5)/1e6;assert reserved+cost<=0.343296
     seen.add(rid);reserved+=cost;record({'request_id':rid,'state':'reserved','reserved_usd':cost})
     req=urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',encoded,{'Content-Type':'application/json','Authorization':'Bearer '+key})
     with opener.open(req,timeout=55) as r:raw=r.read(1_000_001)

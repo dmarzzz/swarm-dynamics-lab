@@ -17,11 +17,11 @@ class OpenRouterPolicy(TracePolicy):
  def __init__(self):
   assert Path(os.environ['SWARM_BUDGET_LEDGER']).is_file()
   HTTPPolicy.__init__(self);assert self.base=='http://127.0.0.1:18765' and not self.key
-  self.run_id=os.environ['SWARM_ATTEMPT_ID'];assert self.run_id=='freshness-a5'
+  self.run_id=os.environ['SWARM_ATTEMPT_ID'];assert self.run_id=='freshness-a6'
   self.usage_path=Path(os.environ['SWARM_USAGE_LOG']);self.actual_usd=0.;self.usage_missing=0
   with sqlite3.connect(self.ledger) as db:assert not db.execute('select count(*) from immune_requests where run_id=?',(self.run_id,)).fetchone()[0]
  def reserve(self,encoded):
-  if self.calls>=60:raise ValueError('attempt_limit')
+  if self.calls>=18:raise ValueError('attempt_limit')
   return super().reserve(encoded)
  def complete(self,request,fallback):
   body=wire(request);validate_wire(body);encoded=json.dumps(body).encode();rid=self.reserve(encoded)
