@@ -83,3 +83,11 @@ class SavedAudit(unittest.TestCase):
    p=Path(td);rows=paired();actor=NativeActor(provider,L(),A(),lambda r:None,'test');s=execute(rows,actor,p);(p/'cases.json').write_text(json.dumps(rows));(p/'traces.json').write_text(json.dumps(actor.records));self.assertTrue(audit_saved(p)['verified']);self.assertEqual(s['optimal_count_difference'],0)
    rs=json.loads((p/'records.json').read_text());site=next(iter(rs[0]['decision']['map']));rs[0]['decision']['map'][site]='LAND';(p/'records.json').write_text(json.dumps(rs))
    with self.assertRaises(ValueError):audit_saved(p)
+
+class PublicPlan(unittest.TestCase):
+ def test_shared_registration_contract(self):
+  sys.path.insert(0,str(B.parent.parent/'experiment-documentation'))
+  from public_plan import validate
+  url='https://github.com/dmarzzz/swarm-lab/blob/'+('a'*40)+'/researchers/vishesh/notes/phantom-coast/pc10/PLAN.md'
+  receipt=validate({'id':'phantom-coast-pc10','url':url,'description':'TLDR: paired individual-control wording diagnostic'},(B/'PLAN.md').read_text(),'TLDR: sixteen paired calls; frozen objective diagnostic, not population poisoning evidence.')
+  self.assertEqual(receipt['experiment'],'phantom-coast-pc10')
