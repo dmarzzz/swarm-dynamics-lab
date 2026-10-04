@@ -1,0 +1,115 @@
+{
+ "accepted": 1,
+ "asked": 1,
+ "billing": {
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0
+ },
+ "cost_usd": 0.004219,
+ "detail": {
+  "count": 1,
+  "measurement": {
+   "actual_usd": 0.004219,
+   "attempts": 1,
+   "computed_usd": 0.0042185,
+   "error_body": null,
+   "finish_reason": "stop",
+   "http_status": null,
+   "input_tokens": 1136,
+   "latency_seconds": 2.687433743994916,
+   "output_tokens": 138,
+   "provider_reported_usd": null,
+   "reasoning_tokens": 81,
+   "request_bytes": 5221,
+   "reserved_usd": 0.033053,
+   "response_id": "chatcmpl-EVLJxfqrsa2Af7zp9wGC4VcTe7k11",
+   "response_meta": null,
+   "response_model": "gpt-6-sol",
+   "response_provider": null
+  },
+  "passed": true,
+  "passed_count": 1,
+  "probes": [
+   {
+    "admin": {
+     "command": "register",
+     "product": "B"
+    },
+    "admin_result": "accepted",
+    "case": "register_other",
+    "expected": {
+     "command": "register",
+     "product": "B"
+    },
+    "passed": true,
+    "probe": "probe-00",
+    "reason": null,
+    "role": 0,
+    "status": "accepted"
+   }
+  ]
+ },
+ "dropped_zero_orders": 0,
+ "elapsed_seconds": 6.4085610329930205,
+ "failed_calls": 0,
+ "failure": null,
+ "gate": {
+  "passed": true
+ },
+ "hosts": [
+  "sim-dmarz-10",
+  "sim-dmarz-2",
+  "sim-dmarz-8"
+ ],
+ "in_flight_per_host": 3,
+ "input_tokens": 1136,
+ "internal_error": null,
+ "max_prompt_tokens": 1136,
+ "model_calls": 1,
+ "normalizations": 0,
+ "normalized": {},
+ "not_started": 0,
+ "output_tokens": 138,
+ "params": {
+  "backend": "openrouter",
+  "batch": "p0-002-gpt-6-sol-r1",
+  "code": "ef269aa901b45e6ba1b99acc47adeedf1acfe73b",
+  "model": "gpt-6-sol",
+  "replication": "r1",
+  "source_hash": "a1371e7c2df0f3ff171726a6da121b03df86e76b7ec8dc320cb8b820a567729e",
+  "stage": "P0"
+ },
+ "planned": 1,
+ "rejected_commands": 0,
+ "reporting_errors": [],
+ "study_accounting": {
+  "actual_usd": 0.004219,
+  "attempted_calls": 1,
+  "calls_by_stage": {
+   "P0": 1
+  },
+  "cap_calls": 8478,
+  "cap_transport_attempts": 9800,
+  "cap_usd": 120,
+  "committed_usd": 0.004219,
+  "input_tokens": 1136,
+  "output_tokens": 138,
+  "reserved_usd": 0.033053,
+  "transport_attempts": 1,
+  "usage_reported_calls": 1
+ },
+ "transport": {
+  "dead_slots": [],
+  "events": [],
+  "hub_errors": 0,
+  "lost_calls_after_reissue": 0,
+  "lost_tasks": 0,
+  "reissue_refused": null,
+  "reissued_calls": 0,
+  "rerouted_calls": 0,
+  "tasks": 1
+ },
+ "transport_attempts": 1,
+ "void": 0
+}

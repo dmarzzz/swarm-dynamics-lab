@@ -20,3 +20,5 @@ python3 scripts/run-ready-chain.py sybil-rules-180 <launch commit> status --host
 ```
 
 The claim must list exactly those three servers (one claim per server triple; the launcher refuses overlapping claims).
+
+**Not run, on dmarz's instruction (2026-10-04, dated by dmarz/flagship-market).** At about 19:16Z dmarz said: "dont spin up anymore experiments once these have ended, just make sure all the results and post mortems are pushed and then notify me". R2 was cancelled before launch: no server was claimed for it, no stage ran and no model call was made. Model dependence on the identical economy remains untested.
