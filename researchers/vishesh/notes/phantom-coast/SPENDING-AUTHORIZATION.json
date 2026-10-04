@@ -1,0 +1,12 @@
+{
+  "authorization_id": "phantom-coast-usd5-20261004",
+  "authorized_total_usd": 5,
+  "api_cap_usd": 4,
+  "infrastructure_cap_usd": 1,
+  "max_host_hours": 6,
+  "approved": true,
+  "user_authorization": "Yes you can use $5 total. Go ahead and run the experiment. And then get it a machine to use. Create one if needed from Mars's DigitalOcean.",
+  "recorded_utc": "2026-10-04T04:04:03.121527+00:00",
+  "cloud_account_scope": "Mars DigitalOcean; verify account before creation",
+  "scope": "Q0 then gated S0, bounded repairs within the same cumulative cap; no automatic replenishment"
+}

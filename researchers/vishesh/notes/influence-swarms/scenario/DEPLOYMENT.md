@@ -19,3 +19,11 @@ Each attempt retains its own manifest, source/config signature, cases, request/r
 Final subquota: USD 1.005589 reserved across 78 calls, USD 0.394411 remaining; no reservation refunded. Verified zero native workers after uploads. Q2 hub status is failed because competence qualification failed, despite nine valid outputs; Q3 hub status is done for its narrow diagnostic. Q2 has 15 artifacts and Q3 has 10 after supplemental replay uploads, none spooled.
 
 Dedicated claim released after upload verification through agentops PR 64 (merged). Git claim status is authoritative; the local agentops hub mirror could not update because sops is unavailable. No native worker remains.
+
+## Q4 fresh allocation — 2026-10-04 UTC
+
+Local-session reconciliation found Antsy had released sim-test-01 in Dmarz's established fleet. Refreshed claims and actual process/container checks confirmed it was free: no experiment worker and zero running containers. Allocated it exclusively under vishesh-influence-q4, merged agentops PR 103, until 2026-10-04T07:08:17Z. This is a different machine from the occupied sim-dmarz-3; no new droplet or billing-account change occurred. Existing workloads were untouched.
+
+A separate /srv/swarm/influence-q4 checkout and /srv/swarm/influence-q4-venv environment are prepared; all 24 scenario regression tests pass on the host. Reporter is available and the allocation was mirrored to the hub. No model credential or budget ledger was copied. No native model calls are running. Before launch, incorporate the independent verdict, pin reviewed source, reverify this claim (renew if expired), and reserve a non-overlapping quota from the approved authority. Dossier review remains open. Release the allocation if the study cannot proceed before expiry.
+
+The new-droplet proposal sim-influence-q4 was not provisioned; the available existing Dmarz fleet allocation fulfills the dedicated-machine requirement. Known local DigitalOcean contexts did not match Dmarz's fleet; they were not used to create resources.

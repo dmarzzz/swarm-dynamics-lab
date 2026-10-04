@@ -3,7 +3,7 @@ agent: vishesh/codex-immune
 tool: codex
 state: blocked
 task: immune-response-evidence-receipts
-doing: Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path
+doing: Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation
 updated: 2026-10-04T03:56Z
 ---
 
