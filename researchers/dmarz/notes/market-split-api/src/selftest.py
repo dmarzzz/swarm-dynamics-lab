@@ -3,6 +3,9 @@
 import copy
 import json
 import socket
+import subprocess
+import sys
+import types
 import tempfile
 import unittest
 import urllib.error
@@ -45,6 +48,17 @@ class Checks(unittest.TestCase):
         with patch.object(common,'design',return_value=d):
             with self.assertRaises(provider.CallFailure):self.client().call(observation(),'new')
         self.assertEqual(provider.Ledger(self.path/'ledger.jsonl').transact()['attempted_calls'],1)
+    def test_concurrent_reservation_ceiling(self):
+        script="import sys;from unittest.mock import patch;import provider,common;d=common.design();d['budget']['max_attempted_calls']=1;ctx=patch.object(common,'design',return_value=d);ctx.start();provider.Ledger(sys.argv[1]).transact({'type':'reserve','call_id':sys.argv[2],'micro_usd':1})"
+        procs=[subprocess.Popen([sys.executable,'-c',script,str(self.path/'ledger.jsonl'),str(i)],cwd=Path(provider.__file__).parent,stdout=subprocess.PIPE,stderr=subprocess.PIPE) for i in range(2)]
+        results=[p.communicate() for p in procs]
+        self.assertEqual(sorted(p.returncode for p in procs),[0,1])
+        self.assertEqual(self.ledger.transact()['attempted_calls'],1)
+    def test_stop_marker_prevents_dispatch(self):
+        (self.path/'results').mkdir();(self.path/'results/test-STOP').write_text('halt')
+        def dispatch():raise AssertionError('must not dispatch after peer failure')
+        with patch.object(common,'ROOT',self.path),patch.object(common,'frozen'),patch.dict(sys.modules,{'swarm_report':types.SimpleNamespace(next_run=dispatch)}),patch.dict('os.environ',{'SWARM_SOURCE':'offline'}),patch.object(sys,'argv',['worker','--attempt','test','--max-runs','9']):
+            worker.main()
     def test_corrupt_ledger_fail_closed(self):
         (self.path/'ledger.jsonl').write_text('{broken')
         with self.assertRaises(json.JSONDecodeError):self.client().call(observation(),'never')

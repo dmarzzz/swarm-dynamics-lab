@@ -29,7 +29,8 @@ def main():
         metrics['qualification_pass']=int(metrics['valid']==len(d['interface_probes']))
         common.dump(out/'summary.json',{'params':params,'metrics':metrics})
         im=Image.new('RGB',(1800,1000),'#111b20');draw=ImageDraw.Draw(im)
-        font_path='/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+        from matplotlib import font_manager
+        font_path=font_manager.findfont('DejaVu Sans')
         from PIL import ImageFont
         title=ImageFont.truetype(font_path,42);font=ImageFont.truetype(font_path,28)
         draw.text((80,70),'MARKET SPLIT / INTERFACE QUALIFICATION',font=title,fill='#e1e9eb')
