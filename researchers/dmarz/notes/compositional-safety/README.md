@@ -11,7 +11,9 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | s0-001 | 84/84 scripted safe completions | [Post-mortem](reviews/s0-001-post.md) |
 | q0-001 | Failed qualification: 21/24 safe, two invalid, one violation | [Post-mortem](reviews/q0-001-post.md) |
 | q0-002 | Failed qualification: 20/24 safe, four incomplete, zero invalid | [Post-mortem](reviews/q0-002-post.md) |
-| q0-003 | Running Sonnet 5.5 qualification; nonterminal responses require diagnosis | [Frozen assessment](reviews/q0-003-pre.md) |
+| q0-003 | Failed qualification: 16/24 safe, eight nonterminal responses | [Post-mortem](reviews/q0-003-post.md) |
+| i0-001 | One failure reproduced as provider cyber refusal | [Diagnostic](reviews/i0-001-post.md) |
+| i0-002 | Documented fallback-model compatibility check prepared | [Assessment](reviews/i0-002-pre.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
 
 ## Question
@@ -56,7 +58,7 @@ python3 src/worker.py P1 p1-001 --qualification results/q0-003
 
 Credentials are supplied via `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`; never save them here. The hub configuration comes from the server. The study reserves at most $185 and 9,216 calls cumulatively, inside the owner's shared $500 authorization. This local ledger does not centrally enforce other studies' spending. Reservations remain consumed after failed requests; actual reported cost is separate. Runtime/model/prompt/source/design hashes and attempt IDs accompany results. Do not delete the accounting ledger between stages.
 
-Current qualification uses pinned `claude-sonnet-5-5`, default sampling, `thinking: {type: between_tools}` and high effort. Earlier Haiku attempts remain separate failed qualifications. The model/settings change tests capability; it does not establish a causal comparison between models.
+The next compatibility check uses pinned `claude-sonnet-5`, default sampling, disabled thinking and high effort. Earlier Haiku and Sonnet 5.5 attempts remain separate failed qualifications. The model/settings change tests capability; it does not establish a causal comparison between models.
 
 ## Visualization
 
