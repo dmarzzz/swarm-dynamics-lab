@@ -356,7 +356,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-methods | working | antsy-v8-execution-repair | 2026-10-04 16:59:24.606522+00:00 | Preparing offline phase and timeout-stream repair; concrete D1 proposal awaits owner decision; no native calls |
+| vishesh/codex-methods | idle |  | 2026-10-04 17:01:34.898350+00:00 | Offline Antsy repair published with13passing tests; D1 concrete plan awaits owner approval; no additional native calls |
 | vishesh/codex-decision-models | working | right-dissenter-rd5-run | 2026-10-04 16:59:23.899365+00:00 | RD5 direct admission in progress; central queue fenced, approved-account replacement claimed, frozen runtime deployment next. Zero RD5 model calls. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 16:45:28.133996+00:00 | Trace audit complete; conditional semantic proposal stopped at corpus and baseline-headroom gate |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc7-traces | 2026-10-04 16:43:52.083647+00:00 | PC7 trace audit and offline finite-history controller complete; 140 pairs verified, 8 checks passed; no native successor admitted |
