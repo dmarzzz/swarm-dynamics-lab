@@ -1,0 +1,39 @@
+# PC11: GPT-6 Sol qualification and ten-agent pilot
+
+Prospective 2026-10-04; owning operator vishesh/codex-phantom-coast. Written before implementation. Owner directed qualification followed by ten GPT-6 Sol agents. Researcher review not required. Original USD5 total/API4/infra1 authority and accumulated spend remain unchanged.
+
+## TLDR
+
+Test whether GPT-6 Sol can interpret evidence and choose useful inspections, then conditionally observe whether one false report changes nine initially unexposed agents' maps. Eight qualification snapshots precede one matched world with ten separately initialized agents in each of four conditions: truthful/false report crossed with peers visible/withheld. Primary pilot endpoint is the difference-in-differences of final target error among nine unseeded agents; report uncertainty, missingness, inspections and corrections separately. One world is a mechanism/feasibility pilot, not population inference or evidence of persistent truth poisoning.
+
+## Question and prediction
+
+PC10 yielded correct evidence interpretation but two suboptimal private-report inspections under both wordings. Model/interface transfer is now the diagnostic: does the requested GPT-6 Sol configuration pass the same capability requirements? Saved Jev responses cannot answer this. Prediction: maps/corrections pass; inspection qualification is uncertain. Conditional pilot prediction: visible peers may propagate the seeded error before a direct receipt, but noiseless receipts should correct it. Support would justify a separately designed multiworld study; null/correction would reject persistence in this setting; failed qualification stops the population stage; missing/integrity evidence yields an inconclusive attempt, never a reroll.
+
+## Setup
+
+Model openai/gpt-6-sol via the existing OpenRouter consumer, OpenAI provider only, no model/provider fallback or retry. Chat JSON output, reasoning effort none, provider default sampling, maximum512 completion tokens. This is a new model AND interface cohort, not a causal attribution to model identity alone. Record served model/provider, request/response hashes, usage and exact route. No tools, assistant-session context or hidden inter-agent memory. Each call receives only the frozen task and actor packet, its prior maps, permitted prior-round peer maps, private report and common inspection receipts. Ten agents are ten isolated context streams, not ten independent statistical replicates.
+
+Four binary locations have independent LAND prior .5; report accuracy .8, direct inspection noiseless; losses correct0/wrong1/UNKNOWN.25. Only one agent sees a private report; poison deterministically flips it for the intervention. This controlled intervention is not a draw from the truthful reliability model. All sites remain legal; two shared inspection slots; plurality of at least six valid proposals, deterministic tie order. Ties and repeated/failed inspections spend slots. The inspection recommendation explicitly uses individual counterfactual control of remaining slots, adaptive direct evidence and no future peer/report arrivals; this supports an exact individual reference, not a claim that plurality optimizes collective utility. Actual pilot peer updates still occur; the distinction is stated in the task.
+
+## Protocol
+
+Q0-A1: eight reachable authored capability templates: empty evidence, positive/negative private report, nonrepeat, two report corrections, false consensus overridden by direct truth, and residual evidence gap. New PC11 IDs/placements are parameter variations, not independent semantic holdouts. All use the ten-agent packet. Freeze expected maps and all tied optimal actions via finite-horizon arithmetic and independent world enumeration. Require8/8 valid,32/32 labels,6/6 inspections. One response per case; no rephrasing after responses.
+
+Only if Q0 passes, S1-A1: one prospectively seeded world, four arms, ten actors, three synchronous rounds (120 calls). Arm order fixed by a separate seeded shuffle. Each round's ten packets are built before collecting answers. Each arm starts fresh; no outcomes leak across arms. Seed actor, target, world and tie order are matched. No early success stopping. No second world or automatic stage expansion. Qualification8 + pilot120 =128 calls maximum; each call at most one HTTP dispatch. Stop on any transport, integrity or accounting failure, any invalid output,30minutes, expired admission/claim, or budget breach. Retain all assigned missing outcomes rather than replacing failed agents.
+
+## Metrics
+
+Qualification is the frozen conjunction above. Pilot primary: final target-wrong fraction difference (false−truthful) with peers minus that difference without peers; denominator9 per arm. Missing outcomes produce worst/best bounds. Report each arm and each round including seeded actor separately, UNKNOWN separately, observed-cell errors, final all-cell loss, first target inspection/censoring, unique coverage/repeats, and correction after direct receipt. Retain actual decisions and reconstruct every packet/action/score from saved data. Exact same-information scripted policy and deliberately faulty peer-copy policy validate the instrument; scripted controls are not model evidence. Peer evidence can be dependent, so the evidence-only reference ignores peer opinions; it is not a normative social inference oracle.
+
+Independent unit is one world with four paired arms, not120 calls or40 agents. No standard error, p-value, broad effect or mediation claim. Descriptive resolution1/9 per arm, with no useful between-world precision. No score-dependent world selection. Practical claim only: whether the pipeline produces interpretable spread/correction trajectories. Current simplified four-site sensing scenario lacks natural-language persuasion, external misinformation and environmental drift; those are outside scope.
+
+## Budget and admission
+
+Closed PC10 known USD.847742490, conservative exposure.859838490 (nine unresolved historical calls.012096). Predecessor ledger SHA2568637bd97fef2be548a310a0c8d60b69dd3eb226f030b8a974fce70658e2932e3. Each request body at most6400 UTF-8 bytes; reserve input at conservative one token/byte plus128 framing tokens at USD2.50/M (cache-write ceiling), plus512 output at10/M: USD.02144 per call.128-call bound2.74432; maximum API exposure3.604158490 <4. Forecast roughly.5–1.0 incremental API, not a guarantee. Abort if live route exceeds pinned prices. Reuse one current exclusively allocated approved-account machine; no new incremental infrastructure authorized by this implementation. Keep sole continuation ledger and fence prior canonical writer. Preparation/reporting estimate45–90minutes; native work up to30minutes.
+
+Before any native call publish immutable plan, register condition-specific TLDR and verify rendered public page; refresh clean source/runtime, offline tests, account/resource identity, exclusive claim, credential metadata and predecessor ledger evidence. Qualification and S1 have separate public run records, with conditional gate evidence checked before S1. Close both operationally and scientifically, reconcile cost/readbacks and release allocation. No central queue request is needed; direct owner-authorized dispatch.
+
+## Sources and scope
+
+[PC10 post-mortem](../pc10/Q1-A1-POST.md), [external review proposals](../EXTERNAL-REVIEW-PROPOSALS.md), [design transfer](../DESIGN-TRANSFER.md) and frozen PC9 controls inform this bounded continuation. Prior-art scope is inherited orientation, not a new systematic survey or formal accepted hypothesis. Official [GPT-6 Sol documentation](https://developers.openai.com/api/docs/models/gpt-6-sol), [OpenRouter parameters](https://openrouter.ai/docs/api/reference/parameters) and the live public model catalog checked2026-10-04 establish interface/pricing; actual served identity remains a runtime check.
