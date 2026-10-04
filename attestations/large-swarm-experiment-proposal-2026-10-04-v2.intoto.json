@@ -1,0 +1,89 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "if we dont have a good eval then we shouldnt even do thiss, please dont take evals so laxily. we cant plan really without knowing what the eval will be"
+   },
+   "internalParameters": {
+    "commit": "e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7-dirty",
+    "session": "codex:01a105f5-6a1f-7810-909b-adf5391d72de"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "98d537d95ee530c36cbff0e28707f14a9eae9dec29874a0ec2797d0a7b25174e"
+     },
+     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/proposal.json"
+    },
+    {
+     "digest": {
+      "sha256": "da0fe31b410d013ca89ee43386168c6beab14307cf78b31315728e0b98c22f2c"
+     },
+     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/SETUP.md"
+    },
+    {
+     "digest": {
+      "sha256": "8440d9021a154cb8883b987d65cc178d6a7d54203310705ad6bc0d19d623f806"
+     },
+     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/build_review.py"
+    },
+    {
+     "digest": {
+      "sha256": "e08fe1bf2753faaf7a6c4a28863bb8bf904be09946fd0067918229e6432c4600"
+     },
+     "uri": "researchers/dmarz/notes/large-swarm-proposal-2026-10-04/src/file_correction.py"
+    },
+    {
+     "digest": {
+      "sha256": "f4abe2e9d9678f43c9d3ad99bdf19d11daec9e7466b51137c0f07ee2ec63f21e"
+     },
+     "uri": "tooling/agent-experiments/EXPERIMENT-SETUP.md"
+    },
+    {
+     "digest": {
+      "sha256": "dc555ee5b993ae1e378c050709cf4ebed1c941e1e690b54a29c03a1c94d9ea38"
+     },
+     "uri": "artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v1.tsx"
+    },
+    {
+     "digest": {
+      "gitCommit": "e4dd48fc30d7f2aa2ec06eb14ba19993c22447f7"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "dc555ee5b993ae1e378c050709cf4ebed1c941e1e690b54a29c03a1c94d9ea38"
+     },
+     "uri": "artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v1.tsx"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T08:40:03Z",
+    "invocationId": "codex:01a105f5-6a1f-7810-909b-adf5391d72de",
+    "startedOn": "2026-10-04T08:40:03Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "66b82c6f5101b7156e9ebddb6666ae25234c030316d146ef1b1cd2a530d7fad4"
+   },
+   "name": "artifacts/large-swarm-experiment-proposal-2026-10-04/large-swarm-experiment-proposal-2026-10-04-v2.tsx"
+  }
+ ]
+}

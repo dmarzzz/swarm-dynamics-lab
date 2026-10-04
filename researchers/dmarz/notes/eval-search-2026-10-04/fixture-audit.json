@@ -1,0 +1,46 @@
+{
+  "scope": "SCRIPTED FIXTURES \u2014 NOT MODEL EVIDENCE. Extracted scorer functions only; not end-to-end runs.",
+  "agentsnet_consensus_constant_zero": 1.0,
+  "agentsnet_consensus_disagreement": 0.0,
+  "agentsnet_valid_vertex_cover": 1.0,
+  "agentsnet_empty_vertex_cover": {
+    "exception": "ZeroDivisionError",
+    "message": "float division by zero"
+  },
+  "agentcompany_vendor_listed_order": true,
+  "agentcompany_vendor_reversed_same_rows": false,
+  "agentdojo_one_irrelevant_message": true,
+  "agentdojo_two_messages_one_summary": false,
+  "browsecomp_citation_ids_matching": {
+    "num_citations": 1,
+    "num_relevant": 1,
+    "precision": 1.0,
+    "recall": 1.0
+  },
+  "browsecomp_citation_ids_missing": {
+    "num_citations": 0,
+    "num_relevant": 1,
+    "precision": 0.0,
+    "recall": 0.0
+  },
+  "browsecomp_citation_scope": "Only document IDs are inputs. These scores cannot establish whether a claim is supported by the document.",
+  "silo_gold_III-21_n100": {
+    "exact": 1.0,
+    "partial": 0.46149999999999997
+  },
+  "silo_gold_III-30_n2": {
+    "exact": 1.0,
+    "partial": {
+      "exception": "TypeError",
+      "message": "unhashable type: 'list'"
+    }
+  },
+  "silo_alternative_sorted_partition": {
+    "lengths": [
+      19,
+      21
+    ],
+    "same_sorted_concatenation": true,
+    "exact": 0.0
+  }
+}

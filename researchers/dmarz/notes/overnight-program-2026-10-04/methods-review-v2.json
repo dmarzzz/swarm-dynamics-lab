@@ -1,0 +1,20 @@
+{
+  "review": "Separate Codex subagent feasibility check; same researcher, no independent implementation audit",
+  "arithmetic": {
+    "prefix_calls": 1000,
+    "ordinary_calls": 3000,
+    "source_aware_calls": 3000,
+    "qualification_cap": 600,
+    "total_cap": 7600,
+    "main_minutes_at_075_with_25pct_overhead": 194.44444444444446
+  },
+  "required_fixes_incorporated": [
+    "One world/checkpoint; agents and communities are dependent",
+    "Bound context and sparse communication",
+    "Qualify late/max-size contexts with both formats",
+    "Restore complete checkpoint with branch-qualified call IDs",
+    "Implement actual cross-host reservation authority",
+    "Disclose ordinary-first order/time confounding",
+    "Only one full-scale qualification attempt"
+  ]
+}

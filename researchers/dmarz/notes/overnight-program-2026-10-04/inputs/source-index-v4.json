@@ -1,0 +1,146 @@
+[
+  {
+    "path": "researchers/dmarz/README.md",
+    "snapshot": "inputs/v4-researchers__dmarz__README.md",
+    "sha256": "4bcaf73346b7c03f935193286b54fed25387493086dbecbc307b4e5796626ca1",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "tooling/agent-experiments/EXPERIMENT-SETUP.md",
+    "snapshot": "inputs/v4-tooling__agent-experiments__EXPERIMENT-SETUP.md",
+    "sha256": "f4abe2e9d9678f43c9d3ad99bdf19d11daec9e7466b51137c0f07ee2ec63f21e",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-api/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__market-split-api__RESULTS.md",
+    "sha256": "bb2162e8ba37b4e0856136dd6185804dd5f04413698a9539f8e65cf62ac5c16f",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-api/src/sim.py",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__market-split-api__src__sim.py",
+    "sha256": "275ed5189877755dcbfdec550bd95a303a645aba149a23675a5dc2424df1d8e2",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-opus/README.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__market-split-opus__README.md",
+    "sha256": "99e8133f7e3317cf827c7700c1cc657122287a473395874f37953bad0eac22be",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/market-split-haiku/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__market-split-haiku__RESULTS.md",
+    "sha256": "ef5a26a450a399ad46deb4a7c65d5bb7e0c5a35546922f67e4770b99823c7e5a",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-budget-api/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__sybil-budget-api__RESULTS.md",
+    "sha256": "525f49ee57881080d1bd10d1d86ecbf88553085251b350304eab5e3cf4be9dc5",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-scale-api/src/sim.py",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__sybil-scale-api__src__sim.py",
+    "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-budget-sonnet/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__sybil-budget-sonnet__RESULTS.md",
+    "sha256": "92ab8da0c89ced63c46a44ea38105d50b68a24c27a36fc4ba6f8700ab713dfcf",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/sybil-newcomer-opus/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__sybil-newcomer-opus__RESULTS.md",
+    "sha256": "eba1e80f6b6fb7f40a44e8ab0440946a4388b23d42ccf381a0fa0ba3f18226d7",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc4/reviews/S1-A1-POST.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__phantom-coast__pc4__reviews__S1-A1-POST.md",
+    "sha256": "1aa096008e8ed2a746be5ab6d5e4ef964b3abb51f512561f4d5acfeb1b094c19",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__reviews__S1-A1-POST.md",
+    "sha256": "b5e8e2bb24e4de6962b951a74f74fc95f14633a188112aa45b369524f6e04025",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc5/NEXT-ITERATION.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__NEXT-ITERATION.md",
+    "sha256": "c080b3a518ced00397454bf0de4687aa5b55d8b7524f18d7dee53ffef07c7750",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc5/src/contract.py",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__contract.py",
+    "sha256": "18610c5b7fde5ed9cd2b55445ec113d91510938a28cd3871a2a409c7450104c1",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/phantom-coast/pc5/src/engine.py",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__phantom-coast__pc5__src__engine.py",
+    "sha256": "0371aea6173ecfce23cdc8366023ba020ac9eb1160b512fb7f991e05bfa19bf6",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__discussion-dose__d1-opus__RESULTS.md",
+    "sha256": "8d5b24026e7620a6244ab23dd2bef9e470b6dd6885c6bf55822d270ab7c4cf29",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/discussion-dose/src/bench_v3/worlds.py",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__worlds.py",
+    "sha256": "9313b89aa57628d1855e15bf97d879a7609fe631bd57beacf0cce785bb490fe0",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/discussion-dose/src/bench_v3/evidence.py",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__evidence.py",
+    "sha256": "f6b6aa14467053f7b8e28fea44113e9f4fd4a26d35f44fe72aad6e3720fd9acc",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/dmarz/notes/discussion-dose/src/bench_v3/scoring.py",
+    "snapshot": "inputs/v4-researchers__dmarz__notes__discussion-dose__src__bench_v3__scoring.py",
+    "sha256": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-D2.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__RESULTS-D2.md",
+    "sha256": "9e83e324f126035f2dd2e5adcce4ec08c20c461f9eb07f93429a690236ea2c76",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/R1-PLAN.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__swarm-of-theseus__execution-diagnostic__R1-PLAN.md",
+    "sha256": "02319fd1997ac3d11932e3cab525946bd53d228497f5dc90a99972f95cdb4d4d",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "researchers/vishesh/notes/healing-helping-hands/composite/C3-S1-POST.md",
+    "snapshot": "inputs/v4-researchers__vishesh__notes__healing-helping-hands__composite__C3-S1-POST.md",
+    "sha256": "c3a465cde326864bb1d7d4d34f8eb3c45c1cdf3f4cfd07e47c5282523f1d057e",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "library/code/gh-brunomazorra-llms-sybils.md",
+    "snapshot": "inputs/v4-library__code__gh-brunomazorra-llms-sybils.md",
+    "sha256": "b8e558f67d29870efe738796f081ccddf35d44ff7f653902ec8049a84fc3e193",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  },
+  {
+    "path": "surveys/sybil-resistance.md",
+    "snapshot": "inputs/v4-surveys__sybil-resistance.md",
+    "sha256": "7e791e97f306cae4b44ef8b93e00f899d08a739a4e803eeb203b8f645783e917",
+    "observed_checkout": "79d72678e5f0d63b4f5177209a9609d7e92e60d6"
+  }
+]

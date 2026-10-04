@@ -1,0 +1,46 @@
+{
+  "model": "qwen/qwen3.7-flash",
+  "observed_canonical_slug": "qwen/qwen3.7-flash-20260727",
+  "provider": "alibaba",
+  "reasoning_enabled": false,
+  "response_format": "json_object",
+  "schema_validation": "local; no provider JSON-schema guarantee",
+  "input_usd_per_million": 0.03,
+  "output_usd_per_million": 0.13,
+  "price_tier": "under 32,000 prompt tokens; study cap is 8,000",
+  "status": "selected, not yet task-qualified",
+  "automatic_model_fallback": false,
+  "request_template": {
+    "model": "qwen/qwen3.7-flash",
+    "provider": {
+      "only": [
+        "alibaba"
+      ],
+      "allow_fallbacks": false,
+      "require_parameters": true
+    },
+    "reasoning": {
+      "enabled": false
+    },
+    "max_tokens": 1000,
+    "response_format": {
+      "type": "json_object"
+    }
+  },
+  "cost_scenarios": [
+    {
+      "input_tokens_per_call": 2000,
+      "output_tokens_per_call": 300,
+      "calls": 8304,
+      "usd": 0.822096
+    },
+    {
+      "input_tokens_per_call": 8000,
+      "output_tokens_per_call": 1000,
+      "calls": 8304,
+      "usd": 3.07248
+    }
+  ],
+  "proposed_study_cap_usd": 5,
+  "note": "Token scenarios exclude five managing sessions and credit-purchase fees/taxes. The $5 figure is a planning reserve within the existing cumulative dmarz authority, not a newly granted budget or a substitute for the cumulative ledger. No paid retrieval or model judge is included."
+}

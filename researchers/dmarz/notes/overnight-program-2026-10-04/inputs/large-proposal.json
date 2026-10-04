@@ -1,0 +1,199 @@
+{
+  "plan": {
+    "title": "Can a cheap swarm earn its cost?",
+    "date": "2026-10-04",
+    "status": "Exploratory proposal; no implementation, model calls, registration or allocation",
+    "question": "Can a swarm actively discover and preserve scarce truthful evidence better than a strong single controller under the same resource allowance and a bounded adaptive attacker?",
+    "recommendation": "Use 64 model-backed agents across 192 independent worlds, rather than increasing a scripted identity count. Keep cheap-model protocol comparisons primary; reserve 48 sealed worlds for a second model family.",
+    "conditions": [
+      {
+        "name": "Evidence-directed swarm",
+        "description": "64 agents with separate state. A shared ledger records observable source ancestry, freshness and unresolved contradictions. A deterministic scheduler prioritizes uncovered questions and independent sources."
+      },
+      {
+        "name": "Ordinary discussion swarm",
+        "description": "Same model, initial evidence, agent states and resource allowance; ordinary broadcast messages and recommendations. No special provenance-aware allocation. The contrast tests the bundled protocol."
+      },
+      {
+        "name": "Single adaptive controller",
+        "description": "Same model and full accessible source universe, tools, scratch-space total, probe quota and inference budget. It can batch source inspection; it is not restricted to one agent's information."
+      },
+      {
+        "name": "Simple coverage controller",
+        "description": "Deterministic coverage and exact deduplication where source ancestry is observable, with the same model for interpretation and synthesis. It may stop early; do not force waste to equalize spend."
+      }
+    ],
+    "scenarios": [
+      {
+        "name": "Sparse discovery",
+        "text": "Locate a rare anomaly among many uninformative regions. Agents choose where to inspect; no one receives all relevant truth at initialization."
+      },
+      {
+        "name": "Conflicting source chains",
+        "text": "Determine a cause or feasible choice from partially overlapping reports. Copied claims retain observable ancestry when available. Different sources can still be wrong."
+      },
+      {
+        "name": "Changing facts",
+        "text": "A previously reliable fact changes during the eight decision epochs. Agents must find the update, retract stale conclusions and retain unrelated useful knowledge."
+      }
+    ],
+    "counts": {
+      "worlds": 192,
+      "perFamily": 64,
+      "agents": 64,
+      "epochs": 8,
+      "policyArms": 4,
+      "honestCallsPerEpisode": 520,
+      "attackerCallsPerEpisode": 8,
+      "mainCalls": 405504,
+      "transferWorlds": 48,
+      "transferArms": 2,
+      "transferCalls": 50688
+    },
+    "budget": {
+      "inputTokens": 2000,
+      "outputTokens": 300,
+      "screeningAndPilotUSD": 20,
+      "contingency": 0.15,
+      "qualified": false,
+      "assumption": "Output means all billable output, including reasoning. Cost estimates are conditional on measured token lengths and current quotes, not a spending authorization."
+    },
+    "primary": "Paired world-level fraction of critical decisions correctly resolved by the deadline: evidence-directed swarm minus single adaptive controller using the same qualified model and resource allowance. Average the three task families equally.",
+    "analysis": "Keep wrong, unresolved and correct decisions distinct. Report total dollars, source coverage, independent-evidence count, duplicate investigations, confidence errors, recovery delay and attacker influence. Use paired world-root uncertainty, not agents/calls as independent samples.",
+    "decision": "A proposed useful effect is +5 percentage points. If the interval excludes this benefit, do not recommend extra agents for these tasks. If it remains wide, the result is inconclusive. If the simple controller matches the swarm, use the simpler controller.",
+    "precision": "At 192 independent roots, a normal approximation gives 95% half-width about 3.5–5.0 points when the world-level paired SD is 0.25–0.35. This is a planning sensitivity, not a powered-study claim; pilot variance and exact bounded/stratified analysis must be checked before freezing the main sample.",
+    "attacker": "One adaptive model adversary controls eight identities, with eight calls, fixed tokens, message/edge/probe quotas and the same public visibility per episode. No hidden evaluator truth. The attack policy is frozen; reactions can differ across arms. Source ancestry establishes copying, not honesty.",
+    "fairness": "Each arm gets at most 520 honest calls (512 agent action slots plus eight coordinator/final slots), 128 environment probes, the same aggregate token/dollar ceiling, same accessible sources, communication bytes and deadline. Coordinators and messages count. An agent call may investigate, interpret or communicate; 64 agents × eight scheduled turns fit the action cap. Central arms can use the same allowance with their own schedule. Equal ceilings do not imply equal actual usage.",
+    "ladder": [
+      {
+        "stage": "Development",
+        "worlds": "12 development roots",
+        "purpose": "Offline fixtures plus, only after admission, bounded eight-agent native development. Validate leakage, source ancestry, freshness and objective scoring."
+      },
+      {
+        "stage": "Qualification and pilot",
+        "worlds": "24 fresh qualification roots; 24 separate pilot roots",
+        "purpose": "Screen 3–4 model/provider configurations, including full workflow and sparse evidence. Spend at most the proposed $20 preparation allowance. If insufficient, revise the prospective budget before dispatch. No threshold tuning on evaluation outcomes."
+      },
+      {
+        "stage": "Main comparison",
+        "worlds": "192 fresh roots / 64 per family",
+        "purpose": "Four paired conditions; 768 episodes; up to 405,504 total calls, including attacker and finalization ceilings."
+      },
+      {
+        "stage": "Second-model transfer",
+        "worlds": "48 sealed fresh roots",
+        "purpose": "Two principal arms; 96 episodes; up to 50,688 calls. Separate qualification; no pooling with primary model."
+      },
+      {
+        "stage": "Optional population sweep",
+        "worlds": "Separate prospective allocation",
+        "purpose": "8/32/128 real agents while holding 512 action slots, sources, probe budget and epochs fixed. Turns per agent change. Not included in the recommended cost envelope; fixed 64-agent study cannot establish a population scaling law."
+      }
+    ],
+    "servers": [
+      {
+        "role": "Existing hub",
+        "text": "Assignment and result reporting, plus one transactional study budget/rate authority. Do not copy ledgers across hosts."
+      },
+      {
+        "role": "Workers A–C",
+        "text": "Three available, exclusively claimed simulation servers execute independent world bundles. Randomize arm order within bundles and distribute models/tasks across hosts so server identity does not define the treatment."
+      },
+      {
+        "role": "Optional analysis worker",
+        "text": "Replay and deterministic scoring from immutable records. Add a fourth worker only if local CPU or I/O is the bottleneck."
+      }
+    ],
+    "operations": "Start with a measured account-wide concurrency cap, for example 12, and increase only within observed provider allowance. Three machines do not create three OpenRouter quotas. Hub lease requeue can repeat work: use a durable per-call journal and execution fence, reconcile uncertain sends, and never silently generate replacement outcomes.",
+    "gates": "Formal prior-art/hypothesis review is unresolved. This is a candidate follow-up rather than an accepted novel hypothesis. No server names are reserved; claims, current global spend, provider pins and source hashes must be verified for a named later attempt.",
+    "sources": [
+      {
+        "label": "Current portfolio evidence",
+        "url": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/latest-results-review-2026-10-04/evidence.json"
+      },
+      {
+        "label": "Existing scarcity proposal",
+        "url": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-scarcity-plan/README.md"
+      },
+      {
+        "label": "Existing successor proposals",
+        "url": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+      },
+      {
+        "label": "Silo-Bench",
+        "url": "https://arxiv.org/abs/2603.01045"
+      },
+      {
+        "label": "HiddenBench",
+        "url": "https://arxiv.org/abs/2505.11556"
+      },
+      {
+        "label": "Scaling Agent Systems",
+        "url": "https://arxiv.org/abs/2512.08296"
+      },
+      {
+        "label": "Provider routing",
+        "url": "https://openrouter.ai/docs/guides/routing/provider-selection"
+      },
+      {
+        "label": "Reasoning-token accounting",
+        "url": "https://openrouter.ai/docs/guides/best-practices/reasoning-tokens"
+      },
+      {
+        "label": "Usage and actual cost",
+        "url": "https://openrouter.ai/docs/cookbook/administration/usage-accounting"
+      }
+    ]
+  },
+  "models": [
+    {
+      "id": "openai/gpt-6-luna",
+      "name": "GPT-6 Luna",
+      "provider": "openai",
+      "input": 0.1,
+      "output": 0.5,
+      "source": "https://openrouter.ai/api/v1/models/openai/gpt-6-luna/endpoints"
+    },
+    {
+      "id": "deepseek/deepseek-v4.1-flash",
+      "name": "DeepSeek V4.1 Flash",
+      "provider": "deepinfra/fp8",
+      "input": 0.14,
+      "output": 0.42,
+      "source": "https://openrouter.ai/api/v1/models/deepseek/deepseek-v4.1-flash/endpoints"
+    },
+    {
+      "id": "qwen/qwen3.8-flash",
+      "name": "Qwen3.8 Flash",
+      "provider": "alibaba",
+      "input": 0.15,
+      "output": 0.47,
+      "source": "https://openrouter.ai/api/v1/models/qwen/qwen3.8-flash/endpoints"
+    },
+    {
+      "id": "google/gemini-2.5-flash-lite",
+      "name": "Gemini 2.5 Flash-Lite",
+      "provider": "google-ai-studio",
+      "input": 0.1,
+      "output": 0.4,
+      "source": "https://openrouter.ai/api/v1/models/google/gemini-2.5-flash-lite/endpoints"
+    },
+    {
+      "id": "anthropic/claude-haiku-4.5",
+      "name": "Haiku 4.5",
+      "provider": "anthropic",
+      "input": 1,
+      "output": 5,
+      "source": "https://openrouter.ai/api/v1/models/anthropic/claude-haiku-4.5/endpoints"
+    },
+    {
+      "id": "anthropic/claude-sonnet-5.5",
+      "name": "Sonnet 5.5",
+      "provider": "anthropic",
+      "input": 2,
+      "output": 10,
+      "source": "https://openrouter.ai/api/v1/models/anthropic/claude-sonnet-5.5/endpoints"
+    }
+  ]
+}

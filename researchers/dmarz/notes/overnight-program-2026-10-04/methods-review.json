@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "status": "prospective_planning_review_not_execution",
+  "reviewed_at": "2026-10-04",
+  "source_file": "researchers/dmarz/notes/discussion-dose/src/tasks.py",
+  "sections": [
+    {
+      "title": "Review status and scope",
+      "text": "This is a prospective methods review of an exploratory overnight candidate, not an accepted hypothesis, preregistration, spending authorization or launch instruction. No model requests, experiments or machine allocations are authorized by this file. The proposal tests source-aware processing in three model agents; the surrounding large-identity simulations remain a separate evidence class."
+    },
+    {
+      "title": "Fixed allocation",
+      "text": "Reserve 48 fresh independent world roots, blocked as 24 roots in each of two task families. Cross every root with two source-scarcity regimes, clean and attacked exposure, and three methods. With ten calls per assigned method episode, the evaluation ceiling is 48 \u00d7 2 \u00d7 2 \u00d7 3 \u00d7 10 = 5,760 calls. A root is generated once and paired across all twelve cells; copies, methods, rounds, fields and calls are not new independent samples."
+    },
+    {
+      "title": "Two reusable task families",
+      "text": "Reuse the existing discussion-dose/src/tasks.py total_cost and dependency families, with its separate independent_answer checker as an audit anchor. The shipment family requires base plus freight within a budget and arrival before a deadline. The station family requires sufficient direct capacity or a functioning backup whose transfer cost meets a bound. These use different arithmetic/logical structures while retaining the existing three-option environment, JSON interface, private reports and journal. Use new world roots and versioned evidence packaging; do not create another simulator platform or claim these are two real-world domains."
+    },
+    {
+      "title": "Task difficulty and source contract",
+      "text": "Freeze each world's public rules, candidate values, answer uniqueness and permitted information before exposing methods. Every primary evaluation cell must remain solvable from its authorized source union. Define a public source-precedence contract using observable document type and authentic retrieval receipts, identically for all methods; this is a synthetic task convention, not learned real-world source trust. Independently verify that no option can be selected from labels, ordering, a constant corruption offset or an invariant numeric extremum without using the intended evidence."
+    },
+    {
+      "title": "Scarcity regimes",
+      "text": "Define scarcity as the number of distinct authentic source roots containing the decisive task fact, not the number of agent identities or copied messages. Scarce has exactly one such root; redundant has exactly three, with the original root retained and two separately generated source records added. Use a fixed-size catalog and fixed evidence-slot budget: the two additional records replace matched records containing only already-available nondecisive facts. Keep the world, true answer, attacker packet, source types/precedence, retrieval limits, catalog ordering rule and total slots paired. This manipulation changes redundancy of decision-relevant evidence; it does not isolate rarity from truth-bearing packet composition."
+    },
+    {
+      "title": "Observable provenance without an oracle",
+      "text": "A source-root identifier records the actual originating document, and child/parent receipt links record actual copying or retrieval; the runtime attaches these fields and rejects invented successful-retrieval receipts. All methods can inspect the same fields. Identifiers are opaque and randomized, with no truth, honesty, attacker, scarce-carrier or target labels. Authenticity verifies origin only, not correctness. Hidden answer keys and evaluator labels never enter actor packets. The three redundant records are distinct generated source roots, not three empirically independent real-world observations; describe that modeling assumption explicitly."
+    },
+    {
+      "title": "Fixed misinformation exposure",
+      "text": "Use one frozen scripted misleading recommendation root per world, with identical copies, positions and message/token allowances across methods and scarcity regimes. Its incorrect option label is sampled from the two incorrect options with balanced, root-randomized A/B/C labels; do not use truth-plus-seven or another deterministic numeric tell. Clean exposure substitutes a length-matched correct recommendation at those exact slots. Both versions retain their authentic single-root lineage. This tests repeated misleading recommendations against retrievable task evidence, not adaptive adversaries, autonomous collusion or forged source authentication."
+    },
+    {
+      "title": "Three methods and causal decomposition",
+      "text": "Method B is ordinary three-agent broadcast and aggregation. Method L uses the identical agents, initial allocation, retrieval allowance, communication graph and turn schedule, but presents support grouped by authentic source root and explicitly prevents copied endorsements from being counted as independent support. Method S is one same-model adaptive controller with the same authorized evidence universe and a ten-call ceiling. Freeze the exact B-to-L packet transformation and instruction delta before qualification. Their primary contrast is a lineage-aware aggregation policy effect; S is a practical baseline. Do not add coverage-based routing to L, because that would bundle evidence acquisition with aggregation."
+    },
+    {
+      "title": "Ten-call interaction contract",
+      "text": "For B and L, use three private first reports, three responses to one shared report packet, three private final decisions, and one fresh downstream consumer. Actor outputs are structured and bounded; tool requests permitted at each stage and their deterministic delivery are specified prospectively. The final consumer receives only the frozen method output and must answer the same downstream task, so correct present decisions and correct inherited information can be distinguished. S has up to nine adaptive solver calls plus one fresh downstream consumer using the same downstream question and output contract; its context and evidence access must be specified rather than described as automatically equivalent to a team. Record unused calls instead of manufacturing work to spend them."
+    },
+    {
+      "title": "Clean and absent-evidence controls",
+      "text": "Every evaluation root has a paired clean exposure under both scarcity regimes and all methods; the clean catalog, recommendation and source receipts must be internally consistent. Never drop clean failures or call abstention on a solvable clean task safe success. Separately, qualification includes deliberately missing-evidence packets whose public evidence permits more than one answer and whose correct response is ABSTAIN. Construct missingness by removing every decisive-fact carrier and every other statement or recommendation that resolves the answer, then verify ambiguity with an information-set oracle. Missing-evidence qualification is not silently mixed into the main solvable-task estimand."
+    },
+    {
+      "title": "Exact primary contrasts",
+      "text": "For each root r and scarcity s, define C[m,r,s,e] as correct downstream completion under method m and exposure e; a wrong option, abstention or invalid response on a solvable assigned episode is not correct completion. The primary benefit is mean over all 48 roots and both scarcity regimes of C[L,attacked] minus C[B,attacked]. The co-reported clean difference uses C[L,clean] minus C[B,clean]. Report the attack-specific difference-in-differences as secondary: (C[L,attacked]\u2212C[B,attacked])\u2212(C[L,clean]\u2212C[B,clean]). Averaging regimes occurs within each root before uncertainty estimation."
+    },
+    {
+      "title": "Wrong answers, abstention and scarcity interaction",
+      "text": "Define W as a valid non-null incorrect downstream option and A as explicit abstention; keep malformed, refused, interrupted and unstarted states distinct. Report attacked harmful-answer reduction mean(W[B]\u2212W[L]) beside the primary correct-completion contrast and abstention difference, so refusing every task cannot appear beneficial. The secondary scarcity interaction is the within-root L-minus-B attacked correct-completion effect in scarce minus the same effect in redundant. Present each family and each regime separately; do not select the most favorable stratum as the headline after collection."
+    },
+    {
+      "title": "Independent units and precision limits",
+      "text": "Bootstrap or otherwise resample whole roots within the two prespecified family blocks, retaining all paired conditions. Publish the 48-root denominator, family counts, assignment counts and descriptive intervals. Do not use 5,760 calls, agent ballots, copied reports or repeated model invocations as the sample size. This is an exploratory comparison with a limited task family universe; a wide interval means unresolved. Forty-eight roots do not establish a three-percentage-point clean-performance noninferiority guarantee. Any useful-effect threshold must be a prospective decision aid, not a claim of certified statistical power."
+    },
+    {
+      "title": "Bounded fresh qualification",
+      "text": "For each candidate model/configuration, qualification is exactly eight fresh roots, two assigned to each family-by-scarcity block, crossed with full and deliberately missing evidence and all three methods: 8 \u00d7 2 \u00d7 3 \u00d7 10 = 480 maximum calls. Use at most two prospectively named candidate configurations, for a combined 960-call qualification ceiling; every call, unsuccessful request and repair attempt counts within that ceiling. No additional paid probes, retries or hidden warmups are allowed. Qualification roots are disjoint from evaluation roots and test interface validity, correct extraction/decisions, valid abstention, lineage fidelity and complete logging. Freeze numeric competence thresholds and a deterministic configuration-selection rule before the first call."
+    },
+    {
+      "title": "Qualification failure and stopping",
+      "text": "The instrument and qualification decision must be reached within the proposed 90-minute preparation gate. Offline fixes may use retained traces and scripted fixtures, but any changed paid configuration must fit the same maximum-two-configurations and 960-call qualification envelope on fresh roots. Never lower competence thresholds because a model fails, reuse qualification roots as evaluation data, or continue paid diagnostics after the ceiling. If neither candidate qualifies or the instrument misses the gate, do not launch the 5,760-call batch; finish the evidence observatory and saved-data synthesis instead."
+    },
+    {
+      "title": "Offline baselines and accounting",
+      "text": "Compute report plurality, authentic-root-deduplicated plurality and a scripted coverage selector from retained packets as offline diagnostics; distinguish packets they actually received from oracle access. These do not create additional independent LLM evidence or a fourth paid arm. Before dispatch, serialize exact requests, measure byte/token bounds, estimate conservative reservations and qualify latency under the available rate limits. The combined maximum is 6,720 paid calls across qualification and evaluation. That ceiling is not permission to spend; retain the owner's existing cumulative budget, unknown-charge reservations and shared provider caps."
+    },
+    {
+      "title": "Missing outcomes and independent audit",
+      "text": "Write the full assignment manifest before calls and retain every attempt, source/prompt hash, actual model identifier, stop reason, usage record and terminal disposition. Do not retry an ambiguous dispatch automatically or relabel a retry as a fresh root. For operational delivered-correctness, unreturned/invalid assigned episodes are failures to deliver; separately provide scientific correct-completion bounds for unknown outcomes and complete-case sensitivity results. An independent analyst replays every saved score, source-parent link, pairing invariant and assigned denominator without reading treatment conclusions into the grader."
+    },
+    {
+      "title": "Morning claim and submission product",
+      "text": "Freeze new dispatch early enough to reserve the final 90 minutes for reconciliation, independent recomputation, plots and a two-minute replay. The measured viewer should expose source roots, copied endorsements, retrieved versus missing evidence, present decisions and the downstream consumer, with failures visible. The supported claim is a bounded comparison of source-aware aggregation in a small native swarm; no result proves large-population emergence, general Sybil resistance, a universal model ranking or real-world adversarial robustness. Preserve null and adverse outcomes as results and integrate them with existing studies without pooling incompatible protocols."
+    }
+  ]
+}
