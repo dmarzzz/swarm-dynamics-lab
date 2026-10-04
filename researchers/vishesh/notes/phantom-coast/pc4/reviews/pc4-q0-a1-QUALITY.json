@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T08:46:58.840350+00:00",
+  "attempt": "pc4-q0-a1",
+  "verdict": "advance",
+  "outcome_interpretation": "Evidence screen passed; only the unchanged prospective S1 is admitted after fresh resource/source/plan checks.",
+  "independent_review": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Evidence precedence and abstention screen prespecified; not a test of quota superiority.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four balanced worlds, complete and partially observed maps with false old reports exercise the required interface.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Current sensor evidence and unobserved cells distinguish grounding from indiscriminate answer generation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "24/24 native maps valid; all864 expected labels correct (576 observed and288 unknown).",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact expected evidence maps independently reconstructed by same-operator audit; zero mismatches.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Four roots and24 dependent map draws appropriately scoped as a bounded qualification screen, not population inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned native model and frozen source; identical endpoint field contract; no shared memory.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Every assignment reconciles through journal, request hash and final record; all24 terminal.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.006204870 new known; USD0.580539078 cumulative exposure; qualification ended before S1 admission.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Saved manifests/worlds/requests/hashes reconstruct screen; hosted outputs are retained rather than promised seed-identical.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Tabular qualification summary reports864 labels/zero mismatches and4 independent roots; no misleading native sensing replay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/PLAN.md",
+          "sha256": "6ce135172303eeffa86539e85931a066f0c47ae1e5185368154d874eb92a12ac"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-summary.json",
+          "sha256": "cc70eac2198c52e36ce9b94c108198dabc08bb2b734b6ccce1009a32ff80d23a"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc4/results/Q0-A1-audit.json",
+          "sha256": "0344e9840c507bcf963a199c69958f558386accd9cbad0c479c61385a97d854a"
+        }
+      ]
+    }
+  ],
+  "parent_handoff_sha256": "8d9b332d3f1200767f6e8313298a6c8688aec408661328acee3dbafe1366513d"
+}

@@ -1,0 +1,3 @@
+# PC-4 Q0-A1 post-mortem
+
+Completed: 24 assigned, started, terminal and valid maps across four independent roots; all 864 expected labels match evidence reconstruction, zero precedence or abstention errors. Native qualification passes its prospectively fixed screen. Cost USD0.006204870; cumulative conservative exposure USD0.580539078, retaining nine historical unknown charges. All ten local/Linux offline tests passed and public immutable plan verified before calls. Operator audit reconstructs assignments, requests and endpoint expectations; no independent review claimed. Advance only to the already specified S1 under fresh admission. This screen does not establish inspection strategy or general competence.
