@@ -21,4 +21,4 @@ Prepare the owner-requested original-primary, repaired-primary and selective-che
 
 ## Done when
 
-- Build and validate case suite, comparison engine and complete trace capture; publish the bounded native plan and readiness evidence.
+- [x] Build and validate case suite, comparison engine and complete trace capture; publish the bounded native plan and readiness evidence.

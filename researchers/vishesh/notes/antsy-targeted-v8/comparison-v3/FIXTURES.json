@@ -1,0 +1,247 @@
+{
+  "scope": "24 authored parser controls, 8 families, 3 amount variants; no OCR sampling",
+  "case_sha256": "fe7bf32c65e06d106efa47f22986487b9676308f9dce690bbff6f8d69f3bf763",
+  "passed": true,
+  "rows": [
+    {
+      "case": "ordinary-17000",
+      "family": "ordinary",
+      "expected": "17000.00",
+      "original": "17000.00",
+      "repaired": "17000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "quantity-17000",
+      "family": "quantity",
+      "expected": "17000.00",
+      "original": null,
+      "repaired": "17000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "distractors-17000",
+      "family": "distractors",
+      "expected": "17000.00",
+      "original": "17000.00",
+      "repaired": "17000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "missing-17000",
+      "family": "missing",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "damaged_quantity-17000",
+      "family": "damaged_quantity",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "conflicting-17000",
+      "family": "conflicting",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "spurious_number-17000",
+      "family": "spurious_number",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "explicit_final_unresolved-17000",
+      "family": "explicit_final_unresolved",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "ordinary-86000",
+      "family": "ordinary",
+      "expected": "86000.00",
+      "original": "86000.00",
+      "repaired": "86000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "quantity-86000",
+      "family": "quantity",
+      "expected": "86000.00",
+      "original": null,
+      "repaired": "86000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "distractors-86000",
+      "family": "distractors",
+      "expected": "86000.00",
+      "original": "86000.00",
+      "repaired": "86000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "missing-86000",
+      "family": "missing",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "damaged_quantity-86000",
+      "family": "damaged_quantity",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "conflicting-86000",
+      "family": "conflicting",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "spurious_number-86000",
+      "family": "spurious_number",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "explicit_final_unresolved-86000",
+      "family": "explicit_final_unresolved",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "ordinary-245000",
+      "family": "ordinary",
+      "expected": "245000.00",
+      "original": "245000.00",
+      "repaired": "245000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "quantity-245000",
+      "family": "quantity",
+      "expected": "245000.00",
+      "original": null,
+      "repaired": "245000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "distractors-245000",
+      "family": "distractors",
+      "expected": "245000.00",
+      "original": "245000.00",
+      "repaired": "245000.00",
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "missing-245000",
+      "family": "missing",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "damaged_quantity-245000",
+      "family": "damaged_quantity",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "conflicting-245000",
+      "family": "conflicting",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "spurious_number-245000",
+      "family": "spurious_number",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    },
+    {
+      "case": "explicit_final_unresolved-245000",
+      "family": "explicit_final_unresolved",
+      "expected": null,
+      "original": null,
+      "repaired": null,
+      "pass": true,
+      "order_invariant": true,
+      "translation_invariant": true
+    }
+  ]
+}

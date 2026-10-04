@@ -1,0 +1,29 @@
+{
+  "scope": "offline software and case preparation; no native OCR calls",
+  "tests": {
+    "comparison": 17,
+    "inherited_capture_and_diagnostic": 17,
+    "shared_receipts": 14,
+    "operations_regression": 60
+  },
+  "authored_parser_controls": 24,
+  "instrument_sha256": "249513410b67e84ebc77136475b3225a4e3b86d1a10cad7cd69dfd6ea6c54931",
+  "source_sha256": {
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/cases.py": "ddb10990612ac5c99afdccdad0fb007e5580e4ff2ad8b9cd1064898b33c14839",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/common.py": "3fd08b7d983ed1597675c05dccc278f4ef2afdd249d8e92d724e0b15624ebc4e",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/compare.py": "dbce0f46279b51f2c7f7feb32201db4c90594162436ea0c1dd9af6ac0fcc0cba",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/development_audit.py": "821185d3de8f7f84c1961df4d975151c5da4d0267c42533d1f9ba626ad0b05c7",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/pack_cases.py": "0a49ab0167771b6271491159fed225cff1549b954bec830a257115e83025a8f3",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/receipts.py": "f57f9d61a75571183468e45896e7fa8c7a59f365557c6a59e2c121b7758b2a89",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/render.py": "4daa83a904cdfdcd37b378d3cd627318546ba16d0e2d5c62be272465f8ef0135",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/runner.py": "06fccd3edee92976b0c2f1a08a96eb3a6873bc3509dabef89054d4fe7510649e",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/test_comparison.py": "bca7e92c1a53fb25c852a7213e3752c0c8c7712a036f0f139eb3b2717528a85c",
+    "researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/src/worker.py": "4619d4eae5928e020236fb663eaba684ad1290edaf4111ed64838b4156c9ef3c"
+  },
+  "real_images": 36,
+  "cross_split_duplicate_pixel_hashes": 0,
+  "manual_review": "12 development total crops only; no qualification/evaluation contents displayed",
+  "native_qualification": "unrun",
+  "native_evaluation": "unrun",
+  "new_charge_usd": 0
+}

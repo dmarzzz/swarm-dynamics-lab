@@ -1,0 +1,122 @@
+{
+  "scope": "Development annotation text with true geometry; labels stripped before parser; not native OCR or fresh evaluation",
+  "cases": 12,
+  "original_correct": 11,
+  "repaired_correct": 11,
+  "rows": [
+    {
+      "source_row": 80,
+      "gold": "17999.00",
+      "original": "17999.00",
+      "repaired": "17999.00",
+      "repaired_correct": true,
+      "observation_sha256": "774ee9cfb78ff56ba75e5b8fd6a8aacfe0dc7900a974ff175964d31416eb452c",
+      "reasons": [
+        "excluded_context"
+      ]
+    },
+    {
+      "source_row": 81,
+      "gold": "36000.00",
+      "original": "36000.00",
+      "repaired": "36000.00",
+      "repaired_correct": true,
+      "observation_sha256": "318b3afa945565c0dc5491cd417cf65985013118dfbd29d70689abaa2d2a069d",
+      "reasons": []
+    },
+    {
+      "source_row": 82,
+      "gold": "23000.00",
+      "original": "23000.00",
+      "repaired": "23000.00",
+      "repaired_correct": true,
+      "observation_sha256": "064903907b8b7063450002635e5d318d94953f19fea48bd4e0858a3462d1a24e",
+      "reasons": []
+    },
+    {
+      "source_row": 83,
+      "gold": "101000.00",
+      "original": "101000.00",
+      "repaired": "101000.00",
+      "repaired_correct": true,
+      "observation_sha256": "b77aa64485bdea9c8b919534fb02786906bb7a16cbf3f4cd9f9dcd2253e2aad0",
+      "reasons": []
+    },
+    {
+      "source_row": 84,
+      "gold": "31000.00",
+      "original": "31000.00",
+      "repaired": "31000.00",
+      "repaired_correct": true,
+      "observation_sha256": "ef03c58f3bc796fc21f61b7e84fdf06d318ab2fdb581d30eef021dc8f489d7db",
+      "reasons": []
+    },
+    {
+      "source_row": 85,
+      "gold": "57200.00",
+      "original": "57200.00",
+      "repaired": "57200.00",
+      "repaired_correct": true,
+      "observation_sha256": "f7819e71112fb47d4104846b975265825fa954f069774aa2517e38708d0f423b",
+      "reasons": []
+    },
+    {
+      "source_row": 86,
+      "gold": "22660.00",
+      "original": "22660.00",
+      "repaired": "22660.00",
+      "repaired_correct": true,
+      "observation_sha256": "6b2723d96fa9447054e6ec67958488895837cb3ecde640694359cdbba00fc1af",
+      "reasons": [
+        "excluded_context"
+      ]
+    },
+    {
+      "source_row": 87,
+      "gold": "24000.00",
+      "original": "24000.00",
+      "repaired": "24000.00",
+      "repaired_correct": true,
+      "observation_sha256": "5ce7b7de5c35bf95952125e18a7668991e7b5c7662ac93180ada11c53060a747",
+      "reasons": []
+    },
+    {
+      "source_row": 88,
+      "gold": "50039.00",
+      "original": "45490.00",
+      "repaired": "45490.00",
+      "repaired_correct": false,
+      "observation_sha256": "ebf20df6e9bd4ab978a2a42d09dae17446bd6d78b39118a14bfe2b89bf1595a1",
+      "reasons": []
+    },
+    {
+      "source_row": 89,
+      "gold": "5000.00",
+      "original": "5000.00",
+      "repaired": "5000.00",
+      "repaired_correct": true,
+      "observation_sha256": "90ba31053bc4e930e054878d87dea9b731bb1ccdd664330b2ce48432e0400da1",
+      "reasons": []
+    },
+    {
+      "source_row": 90,
+      "gold": "28000.00",
+      "original": "28000.00",
+      "repaired": "28000.00",
+      "repaired_correct": true,
+      "observation_sha256": "a1221a6761a9e1e8f3ae92b5a7d32c6f4c739b3e6106446f5cfb419445c0beb9",
+      "reasons": [
+        "excluded_context"
+      ]
+    },
+    {
+      "source_row": 91,
+      "gold": "24000.00",
+      "original": "24000.00",
+      "repaired": "24000.00",
+      "repaired_correct": true,
+      "observation_sha256": "720de03291a7fd2f1f894c15937ca9cf60809d2a5e9611caa7601c090494e1ba",
+      "reasons": []
+    }
+  ]
+}

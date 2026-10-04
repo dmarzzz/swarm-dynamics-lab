@@ -1,0 +1,88 @@
+{
+  "dataset": "naver-clova-ix/cord-v2",
+  "revision": "7f0115a4b758a71d6473b8d085751692da2fef98",
+  "shard_sha256": "da3994eee1bf9bd3c57f0d53a72c3a6812c8696c5ba26245987949ddf73483cc",
+  "splits": {
+    "development": {
+      "count": 12,
+      "source_rows": [
+        80,
+        81,
+        82,
+        83,
+        84,
+        85,
+        86,
+        87,
+        88,
+        89,
+        90,
+        91
+      ],
+      "actor_sha256": "d7b8f3b0f5d13ee21f07d6658ee8a16fe14a03283eaed6ae95346f41ac00bfc4",
+      "gold_sha256": "3f0b75a05339b891e345b1d00f5d87cee9fc046ee058d622ea1c9228091da282",
+      "counts": {
+        "scorable": 12,
+        "line_corroborated": 12,
+        "large_image": 7,
+        "has_quantity": 4,
+        "has_subtotal": 8,
+        "duplicate_images": 0
+      }
+    },
+    "qualification": {
+      "count": 6,
+      "source_rows": [
+        100,
+        101,
+        102,
+        103,
+        104,
+        105
+      ],
+      "actor_sha256": "5b8adb481001ce9eefe594bf0c590d22c93eca1e198a3610f7f19c4aee0163bc",
+      "gold_sha256": "8b2b2e02d5fcfcfdbce1a0e9b66d051fef9ff944f1a245a3fe51d3b45eb07570",
+      "counts": {
+        "scorable": 6,
+        "line_corroborated": 6,
+        "large_image": 4,
+        "has_quantity": 0,
+        "has_subtotal": 5,
+        "duplicate_images": 0
+      }
+    },
+    "evaluation": {
+      "count": 18,
+      "source_rows": [
+        120,
+        121,
+        122,
+        123,
+        124,
+        125,
+        126,
+        127,
+        128,
+        129,
+        130,
+        131,
+        132,
+        133,
+        134,
+        135,
+        136,
+        137
+      ],
+      "actor_sha256": "118eda4c61c7708e313b80a89615b39e5398587ebf3daeeece458991bc1aa19e",
+      "gold_sha256": "74222da24df9f8611637120c6864d136fe94ff12fa571324997593bd8b08926c",
+      "counts": {
+        "scorable": 16,
+        "line_corroborated": 16,
+        "large_image": 14,
+        "has_quantity": 5,
+        "has_subtotal": 12,
+        "duplicate_images": 0
+      }
+    }
+  }
+}

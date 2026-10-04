@@ -80,3 +80,9 @@ G3/G4: owner-approved diagnostic executed within admitted bounds; original quali
 ## Saved-data field and shared trace repair — latest
 
 [Trace repair v2](trace-repair-v2/README.md) prospectively planned and validated offline. Eight retained outputs from three receipts replayed; the separate quantity-label candidate repairs primary train62, while the noisy checker remains unresolved. No fresh accuracy or complementary-reader benefit established. Shared operations closeout now audits trace manifests; the retrospective D1 bridge explicitly reports missing full effective-context receipts. No historical worker/result edits, native calls, allocation or additional spend. Finish this repair; qualification stays closed pending a justified, owner-approved material successor.
+
+## Receipt comparison v3 — current preparation
+
+[Prospective comparison plan](comparison-v3/PLAN.md) published before code. [Case assessment](comparison-v3/CASE-QUALITY.md) and [validation](comparison-v3/validation.json):36 real CORD images frozen as12 development/6 qualification/18 evaluation;34 source totals corroborated,2 retained unscorable;24 authored parser controls;108 offline tests passed. Only development crops were manually viewed. Native OCR count0 for this revision.
+
+G0/G1 prepared for a narrow primary-parser/selective-checker feasibility comparison, not a general swarm claim. G2 offline checks pass; shared trace receipts integrated into the new native controller including actual context and interruptions. G3 still requires the concrete native-scope decision and current public page/source/runtime/budget/allocation checks. G4 unrun. Q0-comparison max12calls/20min; E0-comparison conditional on passing Q, max36calls/40min; zero incremental charge, no new machine or budget. Existing D1 allocation was released and cannot be borrowed. No automatic retry or evaluation.
