@@ -29,7 +29,6 @@
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
-| [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed (stale) | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [factory-provenance-invariance](tasks/factory-provenance-invariance.md) | claimed | p0 | experiment | shadow/sol-factory | shadow | 2026-10-04T17:13Z | Run Shadow's bounded provenance duplication-invariance diagnostic |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
 | [scan-papers-fm-bft-aggregation](tasks/scan-papers-fm-bft-aggregation.md) | claimed (stale) | p0 | scan | dmarz/fm-bft-aggregation |  | 2026-10-03T18:12Z | Catalogue the papers: Byzantine thresholds for merging (BFT, robust aggregation, design diversity) |
@@ -54,6 +53,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
+| [telephone-design-package](tasks/telephone-design-package.md) | claimed | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:25Z | Develop Telephone exploratory design and resource guide |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -109,6 +109,7 @@
 | [audit-gap-opportunities](tasks/audit-gap-opportunities.md) | done | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:18Z | Audit judging fit and run an unowned forensic evidence-coverage analysis |
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | done | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T11:38Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
 | [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | done | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:47Z | Build and run a lean exploratory experiment factory for Shadow |
+| [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | done | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T18:26Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | done | p0 | build | dmarz/pipeline-split-qwen | dmarz | 2026-10-04T12:37Z | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | done | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T11:37Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
 | [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | done | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T11:37Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
@@ -299,14 +300,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
-| vishesh/codex-village-fit | done |  | 2026-10-04T18:16Z | Pushed seven offline study contracts and ranked unrun/new fits; real episode annotation remains next. |
+| vishesh/codex-village-fit | working |  | 2026-10-04T18:16Z | Developing Telephone design, research and dataset resource documentation. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
 | vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T18:09Z | D6 diagnostic complete;firstHTTP429 and circuitstop,secondconditionunstarted;closeout complete and native collection on hold |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
-| dmarz/pipeline-scarcity-qwen | working | build-sybil-scarcity-xmodel | 2026-10-04T18:05Z | sybil-scarcity-xmodel: Qwen chain launched by the fleet monitor (c0537bf7); gpt-6-sol ready (code 9461ba1c, source hash cac7255a, reviews/chain-002-pre.md); no launch, no model call by me. |
 | vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
 | vishesh/fm-security-review | done | inbox-followthrough-vishesh-oct04 | 2026-10-04T17:48Z | Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed. |
