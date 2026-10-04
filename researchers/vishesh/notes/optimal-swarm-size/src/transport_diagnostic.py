@@ -23,8 +23,10 @@ def main():
     journal({'kind':'service_start','t':0,'actor':0,'phase':'transport','item':None})
     failure=None;answer=None
     try:
-        answer=Provider(cfg,bank,row['id'],journal)([{'role':'system','content':'Return only valid JSON.'},{'role':'user','content':'Return exactly {"ok":true}.'}],start+60,0,'transport',None)
-        if strict_json(answer)!={'ok':True}:failure='diagnostic_answer_mismatch'
+        answer=Provider(cfg,bank,row['id'],journal)([{'role':'system','content':'Return raw JSON only. Do not use Markdown code fences, formatting or commentary.'},{'role':'user','content':'Return exactly {"ok":true}.'}],start+60,0,'transport',None)
+        try:
+            if strict_json(answer)!={'ok':True}:failure='diagnostic_answer_mismatch'
+        except ValueError:failure='malformed_output'
     except Exception as exc:failure=safe_code(exc)
     elapsed=time.monotonic()-start
     journal({'kind':'service_end','t':elapsed,'actor':0,'phase':'transport','item':None})
