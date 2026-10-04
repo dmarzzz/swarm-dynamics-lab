@@ -1,5 +1,12 @@
 # Runbook: from a new question to an auditable experiment
 
+## Researcher review is optional for Vishesh-owned experiments
+
+Owner directive, 2026-10-04 UTC: skip the researcher-review step for Vishesh-owned experiments, including Phantom Coast. No independent researcher, design, dossier or researcher sign-off is required to prepare, qualify or launch these experiments. This supersedes the earlier single-review requirement and conflicting researcher-approval launch gates in study plans and runbooks. The owning agent completes the pre-run assessment, resolves known substantive defects and records limitations; optional feedback must not become a blocking approval step.
+
+Keep prospective plans and public registration, offline checks, bounded native qualification, honest analysis, original spending limits, secure credentials, current exclusive approved-account allocation, and source/runtime verification. Continue prior-art work and record research scope honestly, but do not reintroduce the skipped reviewer as a research-scope sign-off. A waived review is recorded as not required by owner direction, never as passed, independent validation or formal hypothesis acceptance. Preserve historical reviews and immutable plans. Other researchers' policies are unchanged. Update legacy launcher review gates before use rather than supplying a fabricated approval receipt.
+
+
 Shared experiment setup workflow for Swarm Lab, established 2026-10-04 UTC from the existing Swarm Lab workflows. Start here for a new topic, thesis, experiment version or follow-up. Use the [methods guide](GUIDE.md) for statistical detail and the [agent lifecycle contract](AGENT-LIFECYCLE.md) for initialization and memory. This document consolidates the process; it does not retrofit enforcement into existing launchers or authorize spending.
 
 ## Start a setup record

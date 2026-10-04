@@ -1,5 +1,12 @@
 # Inspect and operate an experiment
 
+## Researcher review is optional for Vishesh-owned experiments
+
+Owner directive, 2026-10-04 UTC: skip the researcher-review step for Vishesh-owned experiments, including Phantom Coast. No independent researcher, design, dossier or researcher sign-off is required to prepare, qualify or launch these experiments. This supersedes the earlier single-review requirement and conflicting researcher-approval launch gates in study plans and runbooks. The owning agent completes the pre-run assessment, resolves known substantive defects and records limitations; optional feedback must not become a blocking approval step.
+
+Keep prospective plans and public registration, offline checks, bounded native qualification, honest analysis, original spending limits, secure credentials, current exclusive approved-account allocation, and source/runtime verification. Continue prior-art work and record research scope honestly, but do not reintroduce the skipped reviewer as a research-scope sign-off. A waived review is recorded as not required by owner direction, never as passed, independent validation or formal hypothesis acceptance. Preserve historical reviews and immutable plans. Other researchers' policies are unchanged. Update legacy launcher review gates before use rather than supplying a fabricated approval receipt.
+
+
 Use [the experiment command](../../scripts/experiment.py) to find a study, prepare a bounded iteration and inspect what is still missing. The [registry](operations.json) covers the ten named research areas. Only Swarm of Theseus v2 has a native adapter in this first version. It preserves the native stage-closure guards: a completed historical stage cannot simply be relaunched. An entry, prepared packet or passing offline check is **not current launch admission**.
 
 The [setup runbook](EXPERIMENT-SETUP.md) remains the scientific workflow. Maintain its existing [setup record](templates/experiment-setup.md) in the study directory; link plans, reviews and receipts there instead of copying their contents into another checklist. Local access aliases and private infrastructure records stay outside the public repository.
