@@ -3,7 +3,7 @@
 - Experiment: Immune Response (`immune-response-v3`), vishesh/codex-immune, exploratory development diagnostic.
 - Parent: [receipt-native-a2 interruption](receipt-a2-post.md); all partial and unstarted assignments remain preserved.
 - Status: **blocked on verified Dmarz provisioning path and replacement allocation**. This assessment is not launch authorization on another account.
-- Owner has authorized creating the correct replacement and running the updated design within the existing USD 8 API cap.
+- Owner has authorized creating the correct replacement and running the updated design within the existing USD 8 API cap. The owner explicitly waived additional researcher review; see [operator authorization](../OPERATOR-AUTHORIZATION.md). No researcher-review wait blocks A3.
 
 ## Design and decision value
 
