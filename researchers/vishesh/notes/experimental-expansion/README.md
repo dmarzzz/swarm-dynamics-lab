@@ -36,3 +36,5 @@ The Contributions dashboard shows **New** for seven days after publication, and 
 ## Requested addition, 2026-10-04
 
 EX-25 adds conditional swarm-size selection across problem design, urgency, cost, memory and hardware. Related SOC-02/PHY-09/BUD-06/BUD-08 cards cover narrower mechanisms. The live catalogue now contains 219 atlas + 79 contributions = 298 records; the original count reconciliation above remains a dated snapshot. See [EX-25](https://swarm-research.pages.dev/#/contributions?q=EX-25).
+
+The [EX-25 design draft](../optimal-swarm-size/README.md) now specifies objectives, roster accounting, resource profiles, paired tasks, staged counts, held-out sizing rules and measured-event visualization. It is not an approved or registered run plan.

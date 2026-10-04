@@ -601,3 +601,5 @@ For a specified problem and solution approach, what number of agents yields the 
 **Feasibility:** Start with an explicit design and offline scheduling/queue fixtures; qualify bounded model tasks only after the lab review, public-plan registration, machine allocation and budget gates. No experiment is launched by this question.
 
 **Theory and animation:** Catalogue leads inherited from related atlas cards; no new full-methods review or claim that optimal swarm sizing is an unoccupied research gap. Proposed theory connections are finite-group information aggregation, queueing and parallel speedup with coordination overhead. Visual concept: animate workers, dependency queues and memory pressure while a phase map shows the best tested size as deadlines and resources change.
+
+**EX-25 detailed design:** [Optimal swarm size under task and resource constraints](../optimal-swarm-size/README.md), with [machine-readable planning counts](../optimal-swarm-size/design.json).
