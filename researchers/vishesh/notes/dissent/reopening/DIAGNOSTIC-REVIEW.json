@@ -1,0 +1,161 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd5-h5-a1",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T18:40:10.572706+00:00",
+  "parent_handoff_sha256": "66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752",
+  "verdict": "diagnostic",
+  "outcome_interpretation": "Prospective successor assessment. RD5 stays a complete valid adverse result; no owner launch decision or native outcome is asserted.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "A component diagnostic separates history, ballots, absolute clock and evidence age. It does not repeat the failed reserve-policy screen.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Twelve reciprocal cases in six authored families use three finite grammars. Case checks support this narrow input-susceptibility question; field realism remains limited.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
+          "sha256": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Six matched conditions retain actor evidence and case-locked criterion order; distinct Q0 and identical-input repeats are prospectively declared. Ballot removal changes content and length together.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
+          "sha256": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No RD6 native qualification exists. RD5 isolated qualification does not establish full-context competence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ],
+      "next_action": "Run only approved Q0, inspect all18 traces, close it out and refresh D0 admission.",
+      "acceptance_check": "18/18 valid correct, reviewed native bundle; complete-context D0 competence measured separately."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All assigned slots, paired unknown bounds and error categories are defined. Literal rules are a strong practical reference; model value is not inferred from native failure.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
+          "sha256": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Twelve authored cases are nested in six shared families; 144 dependent D0 observations and 18 separate Q0 requests. No population interval or untouched holdout.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Only frozen requests reach the resolver. Context transforms and two repeated byte-identical requests are explicit; evaluator labels remain outside actor payloads.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
+          "sha256": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "unknown",
+      "finding": "Native event/response/budget reconciliation remains prospective. Offline fault evidence cannot certify future acquisition.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        }
+      ],
+      "next_action": "Reconcile every assigned outcome against original relay reservations and append-only events before scientific review.",
+      "acceptance_check": "Assigned equals completed plus invalid plus failed plus unstarted; all spend and unknown dispatches retained."
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "The proposed lifetime650 exceeds the old500 ceiling; USD2 split cap remains. Original488 calls and historical reservations are retained, but scope approval/allocation are absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        }
+      ],
+      "next_action": "Obtain the concrete changed-scope decision and fresh approved-account exclusive allocation; do not reset the ledger.",
+      "acceptance_check": "Bound owner scope receipt, lifetime650 and unchanged cumulative USD1 API/USD1 infrastructure caps plus current allocation."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Fixture construction, known-answer witness and exact request hashes reconstruct this finite development instrument. Hosted responses are not reproduced by seed alone.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/cases.py",
+          "sha256": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "unknown",
+      "finding": "Expected fixture and saved-result viewers separate observed from expected status. Browser rendering has not been verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+          "sha256": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582"
+        }
+      ],
+      "next_action": "Check all native cells, transitions and failure states against saved evidence, and verify rendering through an allowed interface.",
+      "acceptance_check": "Data/grid checks agree and rendering evidence is recorded without representing synthetic fixtures as native."
+    }
+  ]
+}

@@ -17,7 +17,7 @@ def main():
     output=BASE/'offline';output.mkdir(exist_ok=True)
     manifest=build()
     (output/'manifest.json').write_text(json.dumps(manifest,indent=2,allow_nan=False)+'\n')
-    dependencies=[BASE/'PLAN.md',BASE/'cases.py',BASE/'prepare_offline.py',BASE/'tests/test_cases.py',BASE.parent/'rd5/src/rd5_core.py',BASE.parent/'rd5/src/common.py']
+    dependencies=[BASE/'PLAN.md',BASE/'cases.py',BASE/'prepare_offline.py',BASE/'next-run-plan.json',BASE/'DIAGNOSTIC-REVIEW.json',BASE.parent/'rd5/src/rd5_core.py',BASE.parent/'rd5/src/common.py',BASE.parent/'src/jev.py'] + sorted(BASE.glob('native*.py')) + sorted((BASE/'tests').glob('test_*.py'))
     root=BASE.parents[4]
     checks={'kind':'offline known-answer and fault fixtures; no native execution','native_calls':0,
             'tests_passed':check.stderr.count(' ... ok'), 'assignments':len(manifest['assignments']),
@@ -27,7 +27,12 @@ def main():
             'manifest_sha256':hashlib.sha256((output/'manifest.json').read_bytes()).hexdigest(),
             'dependencies':{str(p.relative_to(root)):hashlib.sha256(p.read_bytes()).hexdigest() for p in dependencies},
             'review_boundary':'Owning-agent label/fixture checks; no independent audit, native qualification or untouched holdout.',
-            'native_integration':'not implemented; no dispatch or ledger mutation is available here'}
+            'native_integration':'implemented and tested with synthetic ledgers/fake transports only; native admission pending',
+            'network_policy':'Native integration tests deny socket connections; no provider or SSH calls.',
+            'ledger_policy':'Tests use disposable synthetic databases only; original authority never opened for writes.',
+            'coverage':['exact ordered wire bytes','source/approval/account/lease/plan gates','original-ledger identity and historical floor','duplicate assignment and stage fences','separate identical-input calls','Q0-to-D0 qualification barrier','pre/post dispatch disconnects','unknown reservations','invalid route/schema and over-reservation charges','wall-clock timeout','supervisor child cleanup','artifact collection failure','saved arithmetic and all-cell grid','relay accounting','offline finalize hook'],
+            'rendering':'HTML data/structure verified for initial, transition, failure and final fixtures; browser layout remains unverified',
+            'repairs_found_offline':['Separate sidecar lock avoids macOS flock/SQLite lock conflict while retaining single-writer fencing.','Invalid provider responses are retained separately from transport failures; known cost still settles.']}
     (output/'validation.json').write_text(json.dumps(checks,indent=2)+'\n')
     (output/'unit-tests.txt').write_text(check.stdout+check.stderr)
     escape=html.escape

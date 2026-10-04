@@ -1,7 +1,7 @@
 {
   "kind": "offline known-answer and fault fixtures; no native execution",
   "native_calls": 0,
-  "tests_passed": 23,
+  "tests_passed": 73,
   "assignments": 162,
   "Q0_requests": 18,
   "D0_requests": 144,
@@ -14,11 +14,44 @@
   "dependencies": {
     "researchers/vishesh/notes/dissent/reopening/PLAN.md": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582",
     "researchers/vishesh/notes/dissent/reopening/cases.py": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8",
-    "researchers/vishesh/notes/dissent/reopening/prepare_offline.py": "ae8a0b0bff90a01021f93302a8e2fa3d3b3bcfb9b99dd3d37617e5af4a80f98c",
-    "researchers/vishesh/notes/dissent/reopening/tests/test_cases.py": "51356e1dcd6ec8b404f66f11ec784263936552c252c440de5b52743c41edab81",
+    "researchers/vishesh/notes/dissent/reopening/prepare_offline.py": "1752b8e5e590a8341dae7af9f6d7b06345b2f2c85ac1e2b8f256690f00ca4739",
+    "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "45f1d844105362efb0182f453691d04a57847f1da0f583e38957fdd459d55036",
+    "researchers/vishesh/notes/dissent/reopening/DIAGNOSTIC-REVIEW.json": "65d04eba9e404a528e4a2ee3624c102c7ca4d1fa5dba9cdb87f1e3232035e576",
     "researchers/vishesh/notes/dissent/rd5/src/rd5_core.py": "aebd8afb934d3bbeac376d338e7987d7bbc73f0d38947d7592b0907339c75af6",
-    "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248"
+    "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248",
+    "researchers/vishesh/notes/dissent/src/jev.py": "d288f630c2241ef0062886fc66b87c31d834ca9f52b744e0cd3bdd9aad89e9dc",
+    "researchers/vishesh/notes/dissent/reopening/native.py": "79f7b51e35e11beb58d81b32001806e15c0ee609810afbb55f343d170a17b366",
+    "researchers/vishesh/notes/dissent/reopening/native_budget.py": "8c51dcc75eb42925757882d16f641a58e8444bf792df0826f402ebc261de9cd7",
+    "researchers/vishesh/notes/dissent/reopening/native_gates.py": "9770aff443b5b1cff10537d6a46e7db9d60e9abff2daa42a3b9e429c215f7cc6",
+    "researchers/vishesh/notes/dissent/reopening/native_operator.py": "2d71b02a724adf9e3dfee2b04eb32ff1ed02637213b6a6dc58f64b544207350c",
+    "researchers/vishesh/notes/dissent/reopening/native_report.py": "9ff74206876a2b2b606fb57bab0fba4ef9dabdb0d0f1f5cbac3f7e15cf56e965",
+    "researchers/vishesh/notes/dissent/reopening/tests/test_cases.py": "51356e1dcd6ec8b404f66f11ec784263936552c252c440de5b52743c41edab81",
+    "researchers/vishesh/notes/dissent/reopening/tests/test_native.py": "a626005285fd30ba10b708010b4b0ed52eaf780fb3feee1e966276240004c1dc"
   },
   "review_boundary": "Owning-agent label/fixture checks; no independent audit, native qualification or untouched holdout.",
-  "native_integration": "not implemented; no dispatch or ledger mutation is available here"
+  "native_integration": "implemented and tested with synthetic ledgers/fake transports only; native admission pending",
+  "network_policy": "Native integration tests deny socket connections; no provider or SSH calls.",
+  "ledger_policy": "Tests use disposable synthetic databases only; original authority never opened for writes.",
+  "coverage": [
+    "exact ordered wire bytes",
+    "source/approval/account/lease/plan gates",
+    "original-ledger identity and historical floor",
+    "duplicate assignment and stage fences",
+    "separate identical-input calls",
+    "Q0-to-D0 qualification barrier",
+    "pre/post dispatch disconnects",
+    "unknown reservations",
+    "invalid route/schema and over-reservation charges",
+    "wall-clock timeout",
+    "supervisor child cleanup",
+    "artifact collection failure",
+    "saved arithmetic and all-cell grid",
+    "relay accounting",
+    "offline finalize hook"
+  ],
+  "rendering": "HTML data/structure verified for initial, transition, failure and final fixtures; browser layout remains unverified",
+  "repairs_found_offline": [
+    "Separate sidecar lock avoids macOS flock/SQLite lock conflict while retaining single-writer fencing.",
+    "Invalid provider responses are retained separately from transport failures; known cost still settles."
+  ]
 }

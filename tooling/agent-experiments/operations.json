@@ -35,9 +35,9 @@
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:20:56.800853+00:00",
+      "checked_at": "2026-10-04T18:56:17.685039+00:00",
       "checked_commit": "0c00781507b9477bfa2347504ed0bade43a7ae4b",
-      "next_action": "RD5 completed and reviewed: Q5 passed, H5 adverse reserve result; no workers or allocation retained. Authoritative SETUP remains rd5/SETUP.md. Review the reopening/PLAN.md offline diagnostic draft (18 Q0 plus conditional144 D0; proposed lifetime650 under unchanged USD2 cap). Changed scope/call ceiling needs owner decision; native integration/current admission are not ready. Do not relaunch the completed RD5 packet.",
+      "next_action": "RD5 complete/reviewed; no workers or allocation retained. RD6 reopening manual native integration and 73 offline checks are complete; see reopening/OPERATOR.md and the authoritative rd5/SETUP.md. Owner decision remains for 18 Q0 plus conditional 144 D0, lifetime 650 under unchanged USD 2 split cap. After approval refresh actual public/source/route/ledger/account/allocation evidence and qualify Q0; no automatic launch or RD5 relaunch.",
       "next_run_approval": "owner"
     },
     {
