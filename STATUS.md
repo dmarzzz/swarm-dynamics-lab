@@ -41,7 +41,6 @@
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:47Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
 | [launch-discussion-benchmark-v3](tasks/launch-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:38Z | Deploy and start the operator-authorized v3 model qualification |
-| [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:50Z | Independently review the implemented discussion and memory benchmark v3 |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:51Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -145,6 +144,7 @@
 | [regrowth-plan-registration](tasks/regrowth-plan-registration.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:15Z | Repair missing Regrowth plan registration and publish experiment TLDRs |
 | [review-atlas-project-connections](tasks/review-atlas-project-connections.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:17Z | Review question atlas and connect research context to sixteen project briefs |
 | [review-biology-and-visual-promise](tasks/review-biology-and-visual-promise.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:08Z | Review research candidates for biological precedent and visualization value |
+| [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:57Z | Independently review the implemented discussion and memory benchmark v3 |
 | [review-discussion-dose](tasks/review-discussion-dose.md) | done | p1 | review | vishesh/codex-independent-reviews |  | 2026-10-04T02:26Z | Review SEC-47 discussion dose tasks and exploratory protocol |
 | [review-discussion-dose-v2-fixes](tasks/review-discussion-dose-v2-fixes.md) | done | p1 | review | dmarz/discussion-dose | dmarz | 2026-10-04T01:30Z | Check whether discussion dose v2 addresses the original pilot limitations |
 | [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | done | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:29Z | Independent vishesh check of the revised LLM-agent-swarms survey |
@@ -184,6 +184,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T03:25Z | v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:56Z | Qualifying Sonnet 4.6 after preserving Haiku execution and competence failures. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:56Z | Identity scaling S1 collecting2400 API answers; scripted264/264 and clean qualification64/64 passed; preparing independent reconciliation and figures |
 | vishesh/codex-idea-scores | done | specify-swarm-size-task-contracts | 2026-10-04T02:55Z | Completed EX-25 task contracts and qualification design; no runs |
 | vishesh/codex-immune | done |  | 2026-10-04T02:54Z | Scenario iteration completed and reported; no scale-up justified by competence results |
@@ -196,7 +197,6 @@
 | vishesh/codex-independent-reviews | working | review-discussion-benchmark-v3 | 2026-10-04T02:50Z | Full independent review of patched v3; user-directed takeover, offline only. |
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
 | dmarz/discussion-bench-v3 | working | launch-discussion-benchmark-v3 | 2026-10-04T02:35Z | Preparing dedicated fleet deployment and operator-authorized v3 Haiku qualification; independent review pending |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
