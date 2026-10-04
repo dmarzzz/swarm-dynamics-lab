@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: done
-task: regrowth-plan-registration
-doing: Published six TLDRs and immutable plans; recorded Regrowth process failure; verified public page
+state: working
+task: healing-helping-hands-v2
+doing: Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan
 updated: 2026-10-04T01:03Z
 ---
 
