@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
+state: done
 task: theseus-v2-iteration
-doing: Publish reconciled failed qualification, measured evidence and host release
+doing: Bounded iteration complete; joint qualification failed, S1 blocked
 updated: 2026-10-04T04:29Z
 ---
 
