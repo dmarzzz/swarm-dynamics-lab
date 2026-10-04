@@ -1,0 +1,24 @@
+{
+  "test_count": 22,
+  "failures": 0,
+  "errors": 0,
+  "fixture_evaluations_in_reference_test": 96,
+  "label": "offline unit fixtures, not model evidence",
+  "replay_fixture": {
+    "arm": "contract",
+    "root": 0,
+    "changing": true,
+    "success": true,
+    "roster": [
+      4,
+      4,
+      1,
+      1,
+      1,
+      1,
+      1,
+      1
+    ]
+  },
+  "shared_study_regression_count": 65
+}

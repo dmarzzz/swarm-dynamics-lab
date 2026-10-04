@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: done
-task: refine-swarm-size-question
-doing: Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged.
+state: working
+task: outage-size-prototype
+doing: Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration.
 updated: 2026-10-04T18:11Z
 ---
 
