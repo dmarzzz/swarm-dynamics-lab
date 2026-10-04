@@ -82,8 +82,10 @@ def provider_config():
 # ------------------------------------------------------------------ the request
 
 SYSTEM = ('You decide which one cell of a map to inspect. Read the map, the evidence, the objective and the '
-          'consequences of each allowed action, then choose. Answer with one JSON object and nothing else, in '
-          'exactly this shape: {"inspect": "<row>,<column>"}. The value must be one of the two allowed cells, '
+          'consequences of each allowed action. Before choosing, write the expected total cost of the final map for '
+          'each of the two allowed actions, then choose. Answer with one JSON object and nothing else, in '
+          'exactly this shape: {"cost_if_inspect": {"<first allowed cell>": <number>, "<second allowed cell>": <number>}, '
+          '"inspect": "<row>,<column>"}. The value of "inspect" must be one of the two allowed cells, '
           'written exactly as listed. Do not add other keys and do not write anything outside the JSON object.')
 
 RESULT = {'measured': 'correct direct measurement', 'unknown': 'returned as UNKNOWN', 'kept': 'direct measurement kept'}
@@ -227,8 +229,14 @@ def user_text(w, error, unknown_cost, representation):
             f'You have one inspection. Allowed cells, in this order: {a}; {b}.\n'
             'After the inspection the final map is filled in by the fixed rule under CONSEQUENCES and every cell is scored.\n'
             'Objective: minimize the expected total cost of the final map.'
-            + BLOCK_START + consequence_block(w, error, unknown_cost, representation) + BLOCK_END +
-            f'Reply with exactly one of these JSON objects: {{"inspect": "{a}"}} or {{"inspect": "{b}"}}')
+            + BLOCK_START + consequence_block(w, error, unknown_cost, representation) + BLOCK_END + answer_block(a, b))
+
+
+def answer_block(a, b):
+    """The only part of the user message that differs from attempt 001."""
+    return ('First write the expected total cost of the final map for each allowed action, then your choice. '
+            f'Reply with one JSON object of exactly this form: {{"cost_if_inspect": {{"{a}": <number>, "{b}": <number>}}, "inspect": "<cell>"}} '
+            f'where <cell> is {a} or {b}.')
 
 
 def split_block(text):
@@ -237,12 +245,68 @@ def split_block(text):
     return head, block, tail
 
 
+def squeeze(text):
+    """A cell name with surrounding whitespace and spaces around the comma removed."""
+    return re.sub(r'\s*,\s*', ',', text.strip())
+
+
+def number(value):
+    """A written cost as a float, or None. Numbers and numeric strings count; booleans, nulls and words do not."""
+    if isinstance(value, bool): return None
+    if isinstance(value, (int, float)): out = float(value)
+    elif isinstance(value, str):
+        try: out = float(value.strip())
+        except ValueError: return None
+    else: return None
+    return out if out == out and abs(out) != float('inf') else None
+
+
 def validate(obj, legal_cells):
-    """The local schema: exactly {"inspect": <one of the two legal cells, as a string>}. Strict."""
-    if type(obj) is not dict or set(obj) != {'inspect'}: raise ValueError('answer_keys')
+    """The local schema of attempt 002, decided in advance (preregistration, "Attempt 002").
+    Valid: one JSON object whose `inspect` is a string naming one of the two legal cells after trimming
+    whitespace and removing spaces around the comma. Everything about `cost_if_inspect` and any extra key is
+    tolerated and recorded in `work`. (The adapter has already rejected text that is not JSON, and any
+    object that repeats a key.) Returns the choice, what was noted, and the object as returned."""
+    if type(obj) is not dict or 'inspect' not in obj: raise ValueError('answer_object_or_inspect_missing')
     value = obj['inspect']
-    if type(value) is not str or value not in legal_cells: raise ValueError('answer_value')
-    return {'inspect': value}
+    if type(value) is not str or squeeze(value) not in legal_cells: raise ValueError('answer_value')
+    key = design()['answer']['work_key']; written = obj.get(key); keys = list(obj)
+    costs = {cell: None for cell in legal_cells}; spaced = strings = False; other = []
+    if isinstance(written, dict):
+        for k, v in written.items():
+            cell = squeeze(k) if isinstance(k, str) else None
+            if cell in costs and costs[cell] is None and number(v) is not None:
+                costs[cell] = number(v); spaced = spaced or cell != k; strings = strings or isinstance(v, str)
+            elif cell not in costs: other.append(str(k)[:40])
+    work = {'costs': costs, 'work_malformed': any(v is None for v in costs.values()),
+            'costs_as_strings': strings, 'cost_keys_respaced': spaced, 'cost_extra_keys': other[:8],
+            'extra_keys': [str(k)[:40] for k in keys if k not in ('inspect', key)][:8],
+            'cost_before_inspect': (keys.index(key) < keys.index('inspect')) if key in keys else None,
+            'inspect_respaced': squeeze(value) != value}
+    return {'inspect': squeeze(value), 'work': work, 'raw': obj}
+
+
+def scripted_answer(name, a):
+    """The answer object a scripted policy returns: the analytic expected cost of each action, then its choice."""
+    w = layout(a['layout'])
+    costs = {cell: sim.expected_loss(a['error'], a['unknown_cost'], sim.action_of(w, cell)) for cell in a['legal_cells']}
+    return {design()['answer']['work_key']: costs, 'inspect': policy(name, a)}
+
+
+def work_check(a, answer):
+    """The written costs against the analytic expected cost of each action (U for inspecting the reported cell,
+    e for the cell without evidence), and whether the choice contradicts the model's own two numbers. Reported,
+    never gated."""
+    w = layout(a['layout']); costs = answer['work']['costs']; tol = design()['answer']['work_tolerance']; out = {}
+    for action in sim.ACTIONS:
+        written = costs.get(sim.cell_of(w, action)); truth = sim.expected_loss(a['error'], a['unknown_cost'], action)
+        out[f'cost_{action}'] = written
+        out[f'abs_error_{action}'] = None if written is None else round(abs(written - truth), 12)
+    both = all(out[f'cost_{x}'] is not None for x in sim.ACTIONS); chosen = sim.action_of(w, answer['inspect'])
+    favour = None if not both else 'tie' if out['cost_check'] == out['cost_explore'] else min(sim.ACTIONS, key=lambda x: out[f'cost_{x}'])
+    out.update(both_written=both, both_correct=both and all(out[f'abs_error_{x}'] <= tol for x in sim.ACTIONS),
+               own_numbers_favour=favour, contradicts_own_numbers=bool(both and favour != 'tie' and favour != chosen))
+    return out
 
 
 # ------------------------------------------------------------------ assignments
@@ -319,8 +383,12 @@ def policy(name, a):
     raise ValueError('unknown_policy')
 
 
-def evaluate(a, choice):
-    return sim.score(layout(a['layout']), a['error'], a['unknown_cost'], choice)
+def evaluate(a, choice, answer=None):
+    """The grade of the choice (only `inspect` is graded) and, when the validated answer is given, the report on
+    the written costs."""
+    out = sim.score(layout(a['layout']), a['error'], a['unknown_cost'], choice)
+    if answer is not None: out['work'] = work_check(a, answer)
+    return out
 
 
 def combine(rows):
@@ -417,7 +485,8 @@ def check_request(a):
     rc, uc = w['report_cell'], w['unknown_cell']
     if sorted(a['legal_cells']) != sorted([rc, uc]) or rc == uc: out.append(f'{tag}:both_actions_must_be_legal')
     a1, a2 = a['legal_cells']
-    if f'Allowed cells, in this order: {a1}; {a2}.' not in text or not text.endswith(f'{{"inspect": "{a1}"}} or {{"inspect": "{a2}"}}'):
+    if f'Allowed cells, in this order: {a1}; {a2}.' not in text or not text.endswith(answer_block(a1, a2)) \
+            or f'{{"{a1}": <number>, "{a2}": <number>}}' not in text:
         out.append(f'{tag}:legal_cells_not_listed_in_order')
     low = (SYSTEM + '\n' + text).lower()
     if any(word in low for word in FORBIDDEN) or str(a['layout']) in text: out.append(f'{tag}:forbidden_text')
@@ -468,8 +537,8 @@ def policy_rows(rows, name):
     """The rows a scripted policy would produce (evaluator-side, no call)."""
     out = []
     for a in rows:
-        choice = policy(name, a)
-        out.append(dict(a, status='completed', answer={'inspect': choice}, evaluation=evaluate(a, choice)))
+        answer = validate(scripted_answer(name, a), a['legal_cells'])
+        out.append(dict(a, status='completed', answer=answer, evaluation=evaluate(a, answer['inspect'], answer)))
     return out
 
 

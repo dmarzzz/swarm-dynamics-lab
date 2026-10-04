@@ -87,7 +87,8 @@ def analyze(rows):
     """`rows`: one terminal row per unit (study.combine has been applied). Uses the grid rows (main or engineering)."""
     grid = [r for r in rows if r['kind'] in study.GRID_KINDS]
     if not grid:
-        return {'cells': [], 'note': 'this stage has no grid units', 'failures': failure_report(rows)}
+        return {'cells': [], 'note': 'this stage has no grid units', 'failures': failure_report(rows),
+                'work': dict({rep: work_summary([r for r in rows if r['representation'] == rep]) for rep in study.REPRESENTATIONS}, all=work_summary(rows))}
     d = study.design(); a = d['analysis']; layouts = sorted({r['layout'] for r in grid}); cases = study.cases()
     by = {(r['layout'], r['error'], r['unknown_cost'], r['representation']): r for r in grid}
     cells, strata = [], []
@@ -159,6 +160,7 @@ def analyze(rows):
                           'cost_usd': math.fsum(x.get('actual_usd', 0) for x in acct),
                           'cost_per_valid_choice_usd': (math.fsum(x.get('actual_usd', 0) for x in acct) / sum(valid(r) for r in grid))
                           if any(valid(r) for r in grid) else None},
+            'work': dict({rep: work_summary([r for r in grid if r['representation'] == rep]) for rep in study.REPRESENTATIONS}, all=work_summary(grid)),
             'failures': failure_report(rows)}
 
 
@@ -166,9 +168,30 @@ def scripted_rows(kind, by_representation):
     """Rows of the scripted policies named per representation, e.g. {'prose': 'always_explore', 'table': 'optimal'}."""
     out = []
     for a in study.grid(kind):
-        choice = study.policy(by_representation[a['representation']], a)
-        out.append(dict(a, status='completed', answer={'inspect': choice}, evaluation=study.evaluate(a, choice)))
+        answer = study.validate(study.scripted_answer(by_representation[a['representation']], a), a['legal_cells'])
+        out.append(dict(a, status='completed', answer=answer, evaluation=study.evaluate(a, answer['inspect'], answer)))
     return out
+
+
+def work_summary(rows):
+    """The written costs, reported and never gated: how often both were written, their absolute error against the
+    analytic expected costs, how often the choice contradicts the model's own two numbers, and the tolerated
+    variants of the answer format. Over valid rows; rows without a recorded work check are counted separately."""
+    good = [r for r in rows if valid(r)]; checked = [r for r in good if (r.get('evaluation') or {}).get('work')]
+    w = [r['evaluation']['work'] for r in checked]; noted = [r['answer']['work'] for r in checked]
+    both = [x for x in w if x['both_written']]
+    errors = [x[f'abs_error_{action}'] for x in both for action in sim.ACTIONS]
+    return {'valid': len(good), 'checked': len(checked), 'both_written': len(both), 'work_malformed': len(w) - len(both),
+            'both_correct': sum(x['both_correct'] for x in both),
+            'mean_abs_error_check': mean(x['abs_error_check'] for x in both), 'mean_abs_error_explore': mean(x['abs_error_explore'] for x in both),
+            'max_abs_error': max(errors) if errors else None,
+            'choice_contradicts_own_costs': sum(x['contradicts_own_numbers'] for x in both),
+            'own_costs_tied': sum(x['own_numbers_favour'] == 'tie' for x in both),
+            'own_costs_favour_the_optimum': sum(x['own_numbers_favour'] == r['evaluation']['optimal_action'] for x, r in zip(w, checked) if x['both_written']),
+            'tolerated': {'costs_as_strings': sum(n['costs_as_strings'] for n in noted), 'cost_keys_respaced': sum(n['cost_keys_respaced'] for n in noted),
+                          'extra_keys': sum(bool(n['extra_keys'] or n['cost_extra_keys']) for n in noted),
+                          'inspect_before_cost': sum(n['cost_before_inspect'] is False for n in noted),
+                          'inspect_respaced': sum(n['inspect_respaced'] for n in noted)}}
 
 
 def discrimination(kind='engineering'):

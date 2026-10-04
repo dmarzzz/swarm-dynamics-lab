@@ -134,12 +134,12 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
         try:
             if time.monotonic() > stop_at: raise provider.CallFailure('stage_deadline', {'attempted': False})
             if scripted:
-                answer = study.validate({'inspect': study.policy('optimal', a)}, a['legal_cells'])
+                answer = study.validate(study.scripted_answer('optimal', a), a['legal_cells'])
                 accounting = {'attempted': False, 'usage_reported': False, 'attempts': 0, 'actual_usd': 0, 'reserved_usd': 0}
             else:
                 answer, accounting = backend.call(study.SYSTEM, study.user_for(a), f'{p["batch"]}:{a["id"]}',
                                                   lambda obj: study.validate(obj, a['legal_cells']))
-            r.update(status='completed', answer=answer, accounting=accounting, evaluation=study.evaluate(a, answer['inspect']))
+            r.update(status='completed', answer=answer, accounting=accounting, evaluation=study.evaluate(a, answer['inspect'], answer))
         except provider.CallFailure as exc:
             if exc.category == provider.BILLING_STOP:
                 # a billing outage that outlasted its limit: not an outcome, nothing is failed
@@ -246,6 +246,8 @@ def summarize(p, rows, total, violations, control, prior, probe_rows, continuati
                'content_bytes_mean': analyze.mean(r['content_bytes'] for r in rows),
                'regret_prose': (reps.get('prose') or {}).get('mean_regret'), 'regret_table': (reps.get('table') or {}).get('mean_regret'),
                'table_minus_prose_regret': primary.get('estimate'), 'table_minus_prose_bounds': primary.get('bounds_all_assigned'),
+               'work': analyze.work_summary(rows), 'work_malformed': analyze.work_summary(rows)['work_malformed'],
+               'choice_contradicts_own_costs': analyze.work_summary(rows)['choice_contradicts_own_costs'],
                'stage_units': {'assigned': len(study.assignments(stage)), **{s: count(everyone, s) for s in ('completed', 'failed', 'not_started')}}}
     return summary, analysis
 
@@ -258,7 +260,7 @@ def failures(rows, probe_rows, summary):
     if summary['params']['stage'] in ('P0', 'Q0'):
         for r in (list(probe_rows or []) if summary['params']['stage'] == 'Q0' else []) + list(rows):
             if r['status'] == 'completed' and not r['evaluation']['optimal']:
-                misses.append({'id': r['id'], 'answer': r['answer'], 'optimal_cell': r['evaluation']['optimal_cell'],
+                misses.append({'id': r['id'], 'answer': r['answer'], 'work': r['evaluation'].get('work'), 'optimal_cell': r['evaluation']['optimal_cell'],
                                'optimal_action': r['evaluation']['optimal_action'], 'margin': r['evaluation']['margin'],
                                'system': study.SYSTEM, 'user': study.user_for(r)})
     report['qualification_misses'] = misses
@@ -267,7 +269,7 @@ def failures(rows, probe_rows, summary):
 
 def hub_metrics(summary):
     m = {k: summary[k] for k in HUB_KEYS}
-    for k in ('qualification_passed', 'regret_prose', 'regret_table', 'table_minus_prose_regret'):
+    for k in ('qualification_passed', 'regret_prose', 'regret_table', 'table_minus_prose_regret', 'work_malformed', 'choice_contradicts_own_costs'):
         if summary.get(k) is not None: m[k] = summary[k]
     if (summary.get('probe') or {}).get('tokens_per_byte') is not None: m['probe_tokens_per_byte'] = summary['probe']['tokens_per_byte']
     return m

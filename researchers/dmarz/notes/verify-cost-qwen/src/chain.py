@@ -275,9 +275,9 @@ def close(a, b):
 def regrade(a, r):
     """True when the saved answer is valid for the assignment and scoring it again gives the saved evaluation."""
     if r['status'] != 'completed': return 'answer' not in r and 'evaluation' not in r
-    try: answer = study.validate(r['answer'], a['legal_cells'])
+    try: answer = study.validate(r['answer']['raw'], a['legal_cells'])       # the object as the model returned it, validated again
     except (ValueError, KeyError, TypeError): return False
-    return close(json.loads(json.dumps(study.evaluate(a, answer['inspect']))), r['evaluation'])
+    return close(json.loads(json.dumps(answer)), r['answer']) and close(json.loads(json.dumps(study.evaluate(a, answer['inspect'], answer))), r['evaluation'])
 
 
 def verify_stage(sr, stage, entry, reference, prior_rows=None, original=True, probe=None):
@@ -338,7 +338,9 @@ def units(rows, reference):
             'primary_estimate': p['estimate'], 'primary_layouts': p['layouts'], 'primary_assigned_layouts': p['assigned_layouts'],
             'primary_interval95': p['interval95'], 'primary_bounds_all_assigned': p['bounds_all_assigned'],
             'regret_prose': a['representations']['prose']['mean_regret'], 'regret_table': a['representations']['table']['mean_regret'],
-            'reliable_source_flagged': len(a['reliable_source']['flagged']), 'failures_by_category': a['failures']['by_category']}
+            'reliable_source_flagged': len(a['reliable_source']['flagged']), 'failures_by_category': a['failures']['by_category'],
+            'work_malformed': a['work']['all']['work_malformed'], 'both_costs_correct': a['work']['all']['both_correct'],
+            'choice_contradicts_own_costs': a['work']['all']['choice_contradicts_own_costs']}
 
 
 def verify(sr=None):

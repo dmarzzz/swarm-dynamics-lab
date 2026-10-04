@@ -3,7 +3,8 @@ title: When is verification worth its cost? (Qwen3.7 Flash, program v5 line V)
 description: One-step decision assay. One qwen/qwen3.7-flash call chooses between checking a report
   of stated error probability and exploring a cell with no evidence, when leaving a cell UNKNOWN has
   a stated cost. 24 paired layouts x 12 risk and cost cases x 2 equal-information representations
-  (explicit prose, action-consequence table) = 576 calls, scored by expected regret against the
+  (explicit prose, action-consequence table) = 576 calls; from attempt 002 the answer first states the
+  expected cost of each action, then the choice; only the choice is scored, by expected regret against the
   analytic minimum-loss action. Scripted map consequences; exploratory; not multi-step sensing.
 owner: dmarz
 params:
@@ -36,6 +37,8 @@ metrics:
 - billing_pauses
 - billing_pause_seconds
 - billing_affected_calls
+- work_malformed
+- choice_contradicts_own_costs
 - regret_prose
 - regret_table
 - table_minus_prose_regret

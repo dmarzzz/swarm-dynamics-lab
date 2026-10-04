@@ -134,6 +134,10 @@ def cost_panel(d, rows, a, total, stage, elapsed, accounting, x0, y0):
         rs = a['reliable_source']
         lines.append((f'reliable-source strata (e <= 0.20): worst optimal-count change table minus prose {rs["worst_optimal_table_minus_prose"]}; '
                       f'flagged {len(rs["flagged"])}', BAD if rs['flagged'] else MUTED))
+    wk = (a.get('work') or {}).get('all')
+    if wk and wk['checked']:
+        lines.append((f'written costs: both present {wk["both_written"]}/{wk["checked"]}, both correct {wk["both_correct"]}; '
+                      f'choice against own numbers {wk["choice_contradicts_own_costs"]}; malformed {wk["work_malformed"]} (reported, not graded)', MUTED))
     f = a.get('failures') or {}
     if f.get('units_without_a_valid_answer'):
         lines.append(('without a valid answer: ' + ', '.join(f'{k} {v}' for k, v in f['by_category'].items()), BAD))

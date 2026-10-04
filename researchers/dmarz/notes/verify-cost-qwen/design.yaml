@@ -4,7 +4,7 @@ version: 1
 experiment: verify-cost-qwen
 status: exploratory
 program: research program v5, line V (2026-10-04)
-attempt: '001'
+attempt: '002'      # the one bounded repair after attempt 001 stopped at the qualification gate (reviews/chain-001-post.md)
 
 # Model route: the program's selected-model.json request template, unchanged. Reasoning is disabled,
 # so `effort` does not apply; the key stays only because the ready-chain launcher requires the field.
@@ -37,7 +37,12 @@ costs: {wrong: 1.0, correct: 0.0}
 error_probabilities: [0.05, 0.20, 0.50, 0.80]   # probability that the report is wrong
 unknown_costs: [0.10, 0.25, 0.75]               # cost of returning UNKNOWN for a cell
 representations: [prose, table]                  # same objective, facts and action consequences
-answer: {key: inspect}                           # {"inspect": "<row>,<column>"}, one of the two legal cells
+# Attempt 002: the model writes the expected cost of each allowed action inside its answer, then its choice.
+# Only `inspect` is graded; the written costs are reported, never gated. Attempt 001's answer was {"inspect": "<cell>"}.
+answer:
+  key: inspect
+  work_key: cost_if_inspect        # {"cost_if_inspect": {"<first cell>": <number>, "<second cell>": <number>}, "inspect": "<cell>"}
+  work_tolerance: 0.005            # a written cost within this distance of the analytic cost counts as correct
 
 layouts:                 # all task ids stay below 10000
   engineering: [2600, 2601, 2602, 2603]
@@ -52,7 +57,7 @@ layouts:                 # all task ids stay below 10000
 # the two sets share no layout and no pair. The first six of a set make checking optimal, the last
 # six make exploring optimal; the expected-loss margin |e - U| is at least min_margin in every one.
 qualification:
-  set: a                 # attempt 001 uses set a; the one permitted repair (attempt 002) uses set b
+  set: b                 # attempt 001 used set a; this attempt, the one permitted repair, uses set b
   min_margin: 0.60
   fixtures_a:
   - [0.90, 0.05]
@@ -82,7 +87,7 @@ qualification:
   - [0.07, 0.97]
   valid_required: 24               # valid structure throughout: P0's row and Q0's 23 rows
   optimal_required_per_format: 11  # of 12, in each representation
-  repairs_allowed: 1               # one bounded repair on set b; a failed repeat ends the line
+  repairs_allowed: 0               # this attempt is the repair; none remains, and a failed repeat ends the line
 
 stages:
   S0: {backend: scripted, assignments: 144}    # 4 engineering layouts x 24 + both qualification sets (24 + 24)
@@ -93,13 +98,13 @@ stages:
 
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
-  max_attempted_calls: 624         # 600 for this attempt, plus the 24 qualification calls of the one permitted repair attempt (002) in the same ledger
+  max_attempted_calls: 600         # this attempt's ledger, on a fresh server; no further repair exists
   aggregate_usd: 2                 # settled actual cost plus open reservations
   reservation_margin: 10           # each reservation is 10 times the snapshot-price bound (request bytes as input tokens plus the full output limit)
   max_output_tokens: 1000
   max_input_tokens: 8000
   max_input_bytes: 6000            # a request of at most 6,000 bytes cannot exceed 6,000 tokens
-  max_visible_chars: 400
+  max_visible_chars: 4000          # about the 1,000-token output limit: a verbose but complete answer is not a failure
   request_timeout_seconds: 120
   stage_timeout_seconds: 5400
   chain_timeout_seconds: 7200
@@ -110,7 +115,7 @@ budget:
     retryable_http_status: [429, 502, 503, 529]
     backoff_seconds: [2, 6]
     retry_after_cap_seconds: 20
-  max_transport_attempts: 784      # 624 calls + 160: two full billing outages (21 attempts each) and 118 transport retries
+  max_transport_attempts: 760      # 600 calls + 160: two full billing outages (21 attempts each) and 118 transport retries
   max_failed: 6                    # S1 only: the larger of 3 and 1% of 576 calls, rounded up
   billing_outage:
     retry_every_seconds: 60
