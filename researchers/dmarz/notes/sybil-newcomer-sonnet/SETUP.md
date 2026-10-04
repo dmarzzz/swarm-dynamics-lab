@@ -52,7 +52,7 @@ Operations entry: explicitly manual (private launcher `scripts/run-sybil-newcome
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
-| s0-local-001 | local S0 v1 | reviews/s0-local-001-pre.md | see post | reviews/s0-local-001-post.md |
+| s0-local-001 | local S0 v1 | reviews/s0-local-001-pre.md | 198/198/198/198/198 | reviews/s0-local-001-post.md: advance |
 
 ## Closeout
 
