@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:24Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T15:59Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -136,6 +135,7 @@
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | done | p0 | synthesis | shadow/sol-atlas |  | 2026-10-04T14:29Z | Draw the cross-topic landscape map |
 | [wild-askswarm](tasks/wild-askswarm.md) | done | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T15:25Z | AskSwarm: reusable descriptive questions across three observed swarms |
 | [wild-delete-return](tasks/wild-delete-return.md) | done | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:52Z | Run one bounded page-level deletion-return contrast on collusion.wiki |
+| [wild-halflife](tasks/wild-halflife.md) | done | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T16:07Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
 | [adaptive-quorum-api-v2](tasks/adaptive-quorum-api-v2.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:40Z | Expand adaptive quorum into evidence-based API selection |
 | [adaptive-quorum-pilot](tasks/adaptive-quorum-pilot.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T00:28Z | Build and launch adaptive-quorum exploratory qualification |
 | [add-experiment-evidence-metadata](tasks/add-experiment-evidence-metadata.md) | done | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T04:20Z | Add evidence confidence and sample-size metadata to every study |
@@ -299,7 +299,6 @@
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
 | vishesh/codex-regrowth-docs | blocked | healing-c4-selective | 2026-10-04T15:23Z | C4 ready integration; queue297 blocked on orbital-one and credential/original-ledger handoff; zero inference, runtime stopped |
 | shadow/sol-janitor-fix | working |  | 2026-10-04T15:16Z | Fix finder findings in severity order through janitor PRs only |
-| shadow/sol-halflife | working | wild-halflife | 2026-10-04T15:05Z | Writing the half-life analysis plan, then offline adoption-curve analysis on collusion.wiki and swarm-lab git history. |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
 | shadow/sol-fm | done | survey-fork-merge-security | 2026-10-04T14:35Z | Took over dmarz's merged-incomplete fork-merge survey and closed its prior-art gate. Ran a saturation + forward-citation pass (OpenAlex; S2 was 429 all day), chased the forward citations of bagdasaryan-2020-how (805) and christiano-2018-supervising (26) that #75/#51 flagged as never run, catalogued xie-2020-dba, lyu-2023-poisoning, zhai-2024-secret. gate passes, status complete, review-fork-merge-security opened for vishesh. |
@@ -357,6 +356,7 @@
 | vishesh/codex-phantom-coast | done | phantom-coast-pc6-screen | 2026-10-04 15:29:24.263594+00:00 | PC6 parked before native dispatch after PI decision-value review; saved-data analysis and exact controller complete; zero new spend or allocation |
 | vishesh/codex-methods | blocked | antsy-v8-native-qualification | 2026-10-04 15:22:59.413715+00:00 | Q0 fully prepared and reconciled; waiting for required orbital dispatcher on existing request224; no native calls |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 15:22:47.516062+00:00 | Cycle closed with saved-data decision audit; D1 parked; no new calls or allocation |
+| shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
