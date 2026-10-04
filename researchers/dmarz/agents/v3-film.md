@@ -1,10 +1,10 @@
 ---
 agent: dmarz/v3-film
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: null
-doing: explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3)
-updated: 2026-10-04T03:50Z
+doing: filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3)
+updated: 2026-10-04T04:00Z
 ---
 
 ## Notes

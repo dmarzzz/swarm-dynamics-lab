@@ -20,15 +20,9 @@
      "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py"
     },
     {
-     "digest": {
-      "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970"
-     },
      "uri": "data/influence-native/native-Q2-01/outcomes.json"
     },
     {
-     "digest": {
-      "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf"
-     },
      "uri": "data/influence-native/native-Q2-01/summary.json"
     },
     {

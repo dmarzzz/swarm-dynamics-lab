@@ -1,0 +1,98 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "can u create a video simulation which explains and illustrates Discussion and memory v3 results so far. it should be totally self contained video menaing u should understand the experiment and its implications if the hypothesis is true or not and then show a visual verison of thhe simulatuon playing out and then finally the result"
+   },
+   "internalParameters": {
+    "commit": "09b4b0cc5e3abd1de430c4055df7ba0cb38ba841-dirty",
+    "session": "claude:07de6180-8318-4052-83f7-932547a35da5"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
+    },
+    {
+     "digest": {
+      "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
+    },
+    {
+     "digest": {
+      "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "digest": {
+      "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "digest": {
+      "sha256": "19fa1d7bcdc611a1ddd28ae37038205a674decfc84f198b1584ae977b2e6c51a"
+     },
+     "uri": "data/discussion-v3/v3-q0-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "f8736a1541279c9dc090e4d746976812b5ed3f327cd99aae3d637c295b8f715d"
+     },
+     "uri": "data/discussion-v3/v3-q0-a1/episodes.json"
+    },
+    {
+     "digest": {
+      "sha256": "a47f4ff76f5ae40c7bd9ffcb8bf30f2d2da4e5c24ada76dcda62cccafd512802"
+     },
+     "uri": "data/discussion-v3/v3-q0-a1/events.jsonl"
+    },
+    {
+     "digest": {
+      "sha256": "e6b51f427b9cd1c8383814928935abb3c0ff955aaf517b41c7fc09ebe38253c0"
+     },
+     "uri": "data/discussion-v3/v3-q0-a1/manifest.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "09b4b0cc5e3abd1de430c4055df7ba0cb38ba841"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T03:56:01Z",
+    "invocationId": "claude:07de6180-8318-4052-83f7-932547a35da5",
+    "startedOn": "2026-10-04T03:56:01Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "729e647bd4acb103eee3dc78efd0eaf704ae44143c05dab076088c608b44556b"
+   },
+   "name": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4"
+  }
+ ]
+}

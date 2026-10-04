@@ -20,15 +20,9 @@
      "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/animate_native.py"
     },
     {
-     "digest": {
-      "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151"
-     },
      "uri": "data/influence-native/native-Q2-01/case-2.json"
     },
     {
-     "digest": {
-      "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460"
-     },
      "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
     },
     {

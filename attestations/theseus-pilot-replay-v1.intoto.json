@@ -4,7 +4,7 @@
   "buildDefinition": {
    "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
    "externalParameters": {
-    "harness": "vishesh/codex-theseus",
+    "harness": "codex",
     "prompt": "Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive replacement of every member? Run three scenarios and repeat if necessary."
    },
    "internalParameters": {
@@ -34,7 +34,7 @@
   },
   "runDetails": {
    "builder": {
-    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-theseus"
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
    },
    "metadata": {
     "finishedOn": "2026-10-04T02:38:09Z",
