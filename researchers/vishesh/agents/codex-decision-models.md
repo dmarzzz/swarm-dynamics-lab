@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: done
-task: right-dissenter-rd5-build
-doing: RD5 instrument and frozen run packets prepared; 61 offline checks pass; owner plan decision and native/runtime qualification pending.
-updated: 2026-10-04T08:16:31.236072+00:00
+state: working
+task: right-dissenter-rd5-run
+doing: Owner approved frozen RD5 Q5 and conditional H5; preparing central dispatch, dedicated allocation and fresh admission under the original ledger.
+updated: 2026-10-04T08:39:19.733616+00:00
 ---
 
 ## Notes
