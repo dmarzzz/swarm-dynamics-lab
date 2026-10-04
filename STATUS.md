@@ -38,6 +38,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T08:01Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [build-sybil-scarcity-opus](tasks/build-sybil-scarcity-opus.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T07:52Z | Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready |
 | [build-sybil-split-opus](tasks/build-sybil-split-opus.md) | claimed | p1 | build | dmarz/pipeline-split | dmarz | 2026-10-04T07:52Z | Prepare the identity-splitting experiment with fixed attacker resources on Opus 5.5 to launch-ready |
@@ -263,7 +264,7 @@
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
 | dmarz/v3-d2-opus | working |  | 2026-10-04T07:35Z | Building discussion benchmark v3 D2 (canonical decisions plus single-option feasibility checks) with an added Opus arm; no model call until the pre-run review is on main and the reviewer says go |
-| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety q0-007 (Opus 5.5, adaptive thinking) ready on sim-dmarz-5; q0-006 was rejected by the API (post-mortem filed) |
+| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-008 -> p1-002 (Opus 5.5, design v9) on sim-dmarz-5; q0-007 passed 24/24 |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T07:14Z | Central S0 run request submitted; awaiting approved OpenRouter selector and dispatcher admission; zero calls/spend |
 | vishesh/codex-theseus | done | theseus-d1-launch | 2026-10-04T07:04Z | D1 complete; postmortem and evidence published, claim released and temporary host retired |
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T06:56Z | C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run |
@@ -291,10 +292,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-decision-models | working | right-dissenter-rd5-build | 2026-10-04 07:59:48.671019+00:00 | Implementing RD5 repairs and offline fault checks; preparing bounded Q5/H5 packets without native dispatch. |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc2-live | 2026-10-04 07:55:17.660703+00:00 | PC-2 complete; 1791/1792 pilot responses valid; USD 0.358051260 cumulative exposure; artifacts verified and allocation released |
 | vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
 | vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-interface-repair | 2026-10-04 06:59:50.549036+00:00 | Fixing output-token contract and rerunning the sole bounded Q1 interface repair |
-| vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
