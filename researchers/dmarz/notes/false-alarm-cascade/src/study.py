@@ -109,11 +109,27 @@ def code_revision():
         return os.environ.get('STUDY_CODE_COMMIT', 'unknown')
 
 
-def params(stage):
+def params(stage, continuation=0):
+    """Run parameters. `continuation` k > 0 names the k-th continuation of S1 after a billing stop:
+    batch `s1-001-r<k>`, same stage, same source hash."""
     if stage not in STAGES:
         raise ValueError('unknown_stage')
+    if continuation and stage != 'S1':
+        raise ValueError('continuation_only_for_S1')
+    batch = f'{stage.lower()}-{design()["attempt"]}' + (f'-r{continuation}' if continuation else '')
     return dict(stage=stage, backend='scripted' if stage == 'S0' else 'anthropic',
-                batch=f'{stage.lower()}-{design()["attempt"]}', source_hash=source_hash(), code=code_revision())
+                batch=batch, source_hash=source_hash(), code=code_revision())
+
+
+def continuation_index(stage, batch):
+    """0 for the stage's own batch, k for its k-th continuation batch; ValueError otherwise."""
+    base = params(stage)['batch']
+    if batch == base:
+        return 0
+    tail = batch[len(base):] if batch.startswith(base + '-r') else ''
+    if stage == 'S1' and tail[2:].isdigit() and int(tail[2:]) >= 1 and tail == f'-r{int(tail[2:])}':
+        return int(tail[2:])
+    raise ValueError('batch_mismatch')
 
 
 def mean(values):
@@ -481,10 +497,51 @@ def plan(stage):
 
 
 def slots(unit):
-    """The planned call rows of a unit, in order: [(row id, member, round)]."""
+    """The planned call rows of a unit, in order: [(row id, member, round)]. A continuation unit
+    plans only the rows listed in `only`."""
     if unit['type'] == 'fixture':
         return [(unit['id'], unit['member'], unit['round'])]
-    return [(f'{unit["id"]}.{m}.r{t}', m, t) for t in range(1, unit['rounds'] + 1) for m in unit['models']]
+    every = [(f'{unit["id"]}.{m}.r{t}', m, t) for t in range(1, unit['rounds'] + 1) for m in unit['models']]
+    return [s for s in every if s[0] in unit['only']] if 'only' in unit else every
+
+
+def unit_of(row):
+    return row['episode'] or row['id']
+
+
+def merge_rows(runs):
+    """Rows of a stage's run and its continuations as one set with every row id exactly once.
+    A later run may replace only a row that was not started; a row that completed or failed is
+    never replaced, never re-run and never counted twice."""
+    merged = {}
+    for rows in runs:
+        for r in rows:
+            earlier = merged.get(r['id'])
+            if earlier is not None and earlier['status'] != 'not_started':
+                raise ValueError('row_counted_twice')
+            merged[r['id']] = r
+    return list(merged.values())
+
+
+def failed_units(rows):
+    return {unit_of(r) for r in rows if r['status'] == 'failed'}
+
+
+def continuation_units(prior):
+    """The S1 episodes a continuation runs: every episode that has rows not started and no failed
+    call, in the stage's dispatch order, each with the row ids still to run and the answers already
+    saved. An episode that was interrupted continues at its first call that was not started: every
+    call is stateless and its packet is rebuilt from the fixed inputs and the saved answers, so no
+    call is repeated. An episode ended by a failed call is a failed unit and is never resumed."""
+    by_id = {r['id']: r for r in prior}
+    failed = failed_units(prior)
+    units = []
+    for unit in plan('S1')['units']:
+        rows = [by_id[s[0]] for s in slots(unit)]
+        todo = [r['id'] for r in rows if r['status'] == 'not_started']
+        if todo and unit['id'] not in failed:
+            units.append(dict(unit, only=todo, known={r['id']: r['answer'] for r in rows if r['status'] == 'completed'}))
+    return units
 
 
 def row_base(unit, slot):

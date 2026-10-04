@@ -32,7 +32,8 @@ import worker
 D = study.design()
 W = D['world']
 IDS = study.ids()
-ENV = {'SWARM_MODEL_API_KEY': 'selftest-not-a-key', 'SWARM_MODEL_WORKSPACE_ID': 'selftest'}
+ENV = {'SWARM_MODEL_API_KEY': 'selftest-not-a-key', 'SWARM_MODEL_WORKSPACE_ID': 'selftest-not-a-workspace'}
+CREDIT = json.loads(rehearse.CREDIT_BODY)
 ANSWER = {'decisions': {x: 'skip' for x in IDS}, 'claims': [], 'rationale': 'none'}
 
 
@@ -52,9 +53,11 @@ def message(text=None, model=None, stop='end_turn', content=None, usage=None):
                 {'type': 'text', 'text': text if text is not None else json.dumps(ANSWER)}]}
 
 
-def http_error(code, retry_after=None):
+def http_error(code, retry_after=None, body=None, request_id=None):
     headers = {'retry-after': str(retry_after)} if retry_after is not None else {}
-    return urllib.error.HTTPError(provider.MESSAGES_URL, code, 'error', headers, io.BytesIO(b'{}'))
+    if request_id:
+        headers['request-id'] = request_id
+    return urllib.error.HTTPError(provider.MESSAGES_URL, code, 'error', headers, io.BytesIO(json.dumps(body or {}).encode()))
 
 
 class Script:
@@ -578,7 +581,19 @@ class Tests(unittest.TestCase):
         self.assertEqual((b['episode_workers'], b['fixture_workers'], b['workers']), (2, 5, 10))
         self.assertLessEqual(b['episode_workers'] * W['model_agents'], b['workers'])     # at most 10 requests in flight
         self.assertLessEqual(b['workers'], 10)
-        self.assertGreaterEqual(b['max_transport_attempts'], b['max_attempted_calls'])
+        self.assertGreaterEqual(b['max_transport_attempts'], b['max_attempted_calls'] + 40)      # room for billing-outage re-sends
+        import math as _math
+        self.assertEqual(b['max_failed'], max(3, _math.ceil(0.01 * D['stages']['S1']['episodes'])))
+        self.assertEqual(b['max_failed'], 3)
+        self.assertEqual(b['billing_outage'], {'retry_every_seconds': 60, 'max_wait_seconds': 1200})
+        self.assertEqual((b['count_timeout_seconds'], b['count_resend_wait_seconds']), (30, 2))
+        self.assertEqual([study.params('S1', k)['batch'] for k in (0, 1, 2)], ['s1-001', 's1-001-r1', 's1-001-r2'])
+        self.assertEqual([study.continuation_index('S1', x) for x in ('s1-001', 's1-001-r1', 's1-001-r12')], [0, 1, 12])
+        for stage, batch in (('S1', 's1-002'), ('S1', 's1-001-r0'), ('S1', 's1-001-r01'), ('S1', 's1-001-rx'), ('Q0', 'q0-001-r1'), ('S1', 's1-001-r1-r1')):
+            with self.assertRaises(ValueError):
+                study.continuation_index(stage, batch)
+        with self.assertRaises(ValueError):
+            study.params('Q0', 1)
         self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001', 'q0-001', 's1-001'])
         self.assertGreaterEqual(b['chain_timeout_seconds'], b['stage_timeout_seconds'] + chain.DRAIN_SECONDS)
         plan = study.plan('S1')
@@ -725,22 +740,125 @@ class Tests(unittest.TestCase):
                 client.call(packet, 's1-001:a')
             self.assertEqual((failure.exception.category, failure.exception.accounting['attempts'], clock.sleeps), ('http_429', 1, []))
 
-    def test_count_tokens_uses_the_same_retry_rule(self):
+    def test_failed_requests_keep_status_body_and_request_id_and_no_credential(self):
         packet = study.probe_fixture()['packet']
+        leak = f'bad request for key {ENV["SWARM_MODEL_API_KEY"]} in workspace {ENV["SWARM_MODEL_WORKSPACE_ID"]} ' + 'x' * 5000
+        body = {'type': 'error', 'error': {'type': 'invalid_request_error', 'message': leak}}
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
+            client, opener, clock, ledger = api(td, [http_error(400, body=body, request_id='req_011CSelftest')])
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:a')
+            acc = failure.exception.accounting
+            self.assertEqual((failure.exception.category, acc['http_status'], acc['request_id']), ('http_400', 400, 'req_011CSelftest'))
+            self.assertIn('invalid_request_error', acc['error_body'])
+            self.assertEqual(len(acc['error_body']), 2000)                      # cut to 2,000 characters
+            saved = json.dumps(acc)
+            for secret in ENV.values():
+                self.assertNotIn(secret, saved)                                 # scrubbed even when the provider echoes it
+            self.assertIn('[redacted]', acc['error_body'])
+            for header in ('x-api-key', 'anthropic-workspace-id', 'anthropic-version'):
+                self.assertNotIn(header, saved.lower())
+            # The same evidence for a failed count request, which does not fail the call.
+            client, opener, clock, ledger = api(td, [message()], count_outcomes=[http_error(400, body=body, request_id='req_count'), {'input_tokens': 900}], name='b')
+            _, acc = client.call(packet, 's1-001:a')
+            self.assertEqual([(e['category'], e['http_status'], e['request_id']) for e in acc['count_errors']], [('count_http_400', 400, 'req_count')])
+            self.assertNotIn(ENV['SWARM_MODEL_API_KEY'], json.dumps(acc))
+            # A refusal and an invalid answer keep what the provider returned, for reading later.
+            client, _, _, _ = api(td, [message(stop='refusal', content=[]), message(text='{"decisions": 1}')], name='c')
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:a')
+            self.assertEqual((failure.exception.category, failure.exception.accounting['stop_reason']), ('refusal', 'refusal'))
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:b')
+            self.assertEqual((failure.exception.category, failure.exception.accounting['answer_text']), ('invalid_structured_answer', '{"decisions": 1}'))
+
+    def test_count_tokens_never_fails_a_call(self):
+        packet = study.probe_fixture()['packet']
+        size = len(json.dumps(provider.request_body(packet)).encode())
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
+            # 529 follows the retry rule.
             client, opener, clock, ledger = api(td, [message()], count_outcomes=[http_error(529), {'input_tokens': 900}], name='a')
             _, account = client.call(packet, 's1-001:a')
             self.assertEqual((account['count_attempts'], account['attempts'], account['counted_input_tokens'], clock.sleeps), (2, 1, 900, [2]))
-            self.assertEqual(ledger.transact()['transport_attempts'], 1)        # only messages attempts count toward the cap
-            for name, outcomes, category in (('b', [http_error(429)] * 3, 'count_http_429'), ('c', [http_error(500)], 'count_http_500'),
-                                             ('d', [{'input_tokens': 0}], 'count_missing'), ('e', [TimeoutError()], 'count_transport_TimeoutError')):
+            self.assertEqual((ledger.transact()['transport_attempts'], account['count_fallback']), (1, False))   # count attempts are not ledger attempts
+            # Any other failure: one re-send after 2 s. 400 then success.
+            client, opener, clock, _ = api(td, [message()], count_outcomes=[http_error(400), {'input_tokens': 900}], name='b')
+            _, account = client.call(packet, 's1-001:a')
+            self.assertEqual((account['count_attempts'], account['counted_input_tokens'], account['count_fallback'], clock.sleeps), (2, 900, False, [2]))
+            self.assertEqual(len(account['count_errors']), 1)
+            normal = account['reserved_usd']
+            # 400 twice, a timeout twice, a malformed body twice: the byte-count fallback, and the call completes.
+            for name, outcomes, categories in (('c', [http_error(400), http_error(400)], ['count_http_400'] * 2),
+                                               ('d', [TimeoutError(), http_error(500)], ['count_transport_TimeoutError', 'count_http_500']),
+                                               ('e', [{'input_tokens': 0}, {'oops': 1}], ['count_missing'] * 2)):
                 client, opener, clock, ledger = api(td, [message()], count_outcomes=outcomes, name=name)
-                with self.assertRaises(provider.CallFailure) as failure:
-                    client.call(packet, 's1-001:a')
-                self.assertEqual(failure.exception.category, category)
-                self.assertFalse(failure.exception.accounting['attempted'])
-                self.assertEqual(ledger.transact()['attempted_calls'], 0)       # nothing reserved, nothing sent to messages
-                self.assertEqual(opener.messages(), [])
+                answer, account = client.call(packet, 's1-001:a')
+                self.assertEqual(answer['decisions'], ANSWER['decisions'])
+                self.assertEqual([e['category'] for e in account['count_errors']], categories)
+                self.assertEqual((account['count_fallback'], account['counted_input_tokens'], clock.sleeps), (True, size, [2]))
+                self.assertEqual(len([s for s in opener.sent if s[0] == provider.COUNT_URL]), 2)       # exactly one re-send
+                self.assertGreaterEqual(account['reserved_usd'], normal)        # an upper bound: never below the counted reservation
+                self.assertEqual(account['reserved_usd'], ((int(size * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
+                self.assertEqual((ledger.transact()['attempted_calls'], account['usage_reported']), (1, True))
+            self.assertGreater(size, 1000)                                      # the sample packet's tokens are far below its bytes
+            # 429 three times: the retry rule is exhausted, no further re-send, fallback.
+            client, opener, clock, _ = api(td, [message()], count_outcomes=[http_error(429)] * 3, name='f')
+            _, account = client.call(packet, 's1-001:a')
+            self.assertEqual((account['count_fallback'], account['count_attempts'], clock.sleeps), (True, 3, [2, 6]))
+            # The count request has its own short time budget.
+            self.assertEqual([t for (u, _, _), t in zip(opener.sent, opener.timeouts) if u == provider.COUNT_URL][0], D['budget']['count_timeout_seconds'])
+
+    def test_billing_outage_pauses_and_resends_the_same_call(self):
+        packet = study.probe_fixture()['packet']
+        outage = D['budget']['billing_outage']
+        credit = lambda code=400: http_error(code, body=CREDIT, request_id='req_credit')
+        self.assertTrue(provider.is_credit_error({'http_status': 400, 'error_body': 'Your CREDIT BALANCE is too low'}))
+        self.assertFalse(provider.is_credit_error({'http_status': 400, 'error_body': 'max_tokens: must be positive'}))
+        self.assertFalse(provider.is_credit_error({'http_status': 500, 'error_body': 'credit balance'}))
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
+            # Four minutes of outage: four rejections, then the same call succeeds. Nothing fails.
+            for name, code in (('a', 400), ('b', 402), ('c', 403)):
+                client, opener, clock, ledger = api(td, [credit(code) for _ in range(4)] + [message()], name=name)
+                answer, account = client.call(packet, 's1-001:a')
+                self.assertEqual(answer['decisions'], ANSWER['decisions'])
+                self.assertEqual(clock.sleeps, [60] * 4)                         # the slow schedule, outside the 300 s request budget
+                self.assertEqual((account['attempts'], account['billing_rejections'], account['billing_pauses_led'], account['billing_wait_seconds']), (5, 4, 1, 240))
+                self.assertEqual(len({json.dumps(b, sort_keys=True) for _, b, _ in opener.messages()}), 1)     # the same request each time
+                totals = ledger.transact()
+                self.assertEqual((totals['attempted_calls'], totals['transport_attempts'], totals['usage_reported_calls'], totals['voided_calls']), (1, 5, 1, 0))
+                self.assertEqual(client.billing_state(), None)
+            # A 403 that does not name the credit balance is an ordinary failed call, with its evidence.
+            client, opener, clock, _ = api(td, [http_error(403, body={'error': {'message': 'forbidden'}}), message()], name='d')
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:a')
+            self.assertEqual((failure.exception.category, failure.exception.accounting['http_status'], clock.sleeps), ('http_403', 403, []))
+            # The outage outlasts 1,200 s: the call ends as provider_credit_balance_low, its reservation is voided.
+            client, opener, clock, ledger = api(td, [credit() for _ in range(30)], name='e')
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:a')
+            acc = failure.exception.accounting
+            self.assertEqual(failure.exception.category, provider.CREDIT_STOP)
+            self.assertEqual(clock.sleeps, [outage['retry_every_seconds']] * (outage['max_wait_seconds'] // outage['retry_every_seconds']))
+            self.assertEqual((acc['attempts'], acc['billing_wait_seconds'], acc['voided'], acc['attempted']), (21, 1200, True, False))
+            self.assertEqual(acc['billing_last_error']['http_status'], 400)
+            totals = ledger.transact()
+            self.assertEqual((totals['attempted_calls'], totals['transport_attempts'], totals['voided_calls'], totals['committed_usd'], totals['calls_by_stage']), (0, 21, 1, 0, {}))
+            self.assertFalse(provider.is_integrity(provider.CREDIT_STOP))
+            self.assertEqual(client.billing_state(), 'stopped')
+            # After that verdict no new call is sent.
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:b')
+            self.assertEqual((failure.exception.category, len(opener.messages())), (provider.CREDIT_STOP, 21))
+            # A credit error on the count request does not fail the call either: fallback, then the messages
+            # request meets the same outage and pauses.
+            client, opener, clock, ledger = api(td, [credit(), message()], count_outcomes=[credit(), credit()], name='f')
+            _, account = client.call(packet, 's1-001:a')
+            self.assertEqual((account['count_fallback'], account['billing_rejections'], clock.sleeps), (True, 1, [2, 60]))
+            # A non-credit failure during the pause ends the pause and fails that call in the ordinary way.
+            client, opener, clock, ledger = api(td, [credit(), http_error(500)], name='g')
+            with self.assertRaises(provider.CallFailure) as failure:
+                client.call(packet, 's1-001:a')
+            self.assertEqual((failure.exception.category, client.billing_state()), ('http_500', None))
 
     def test_ledger_call_caps_dollar_cap_and_attempt_cap(self):
         b = D['budget']
@@ -817,6 +935,25 @@ class Tests(unittest.TestCase):
             with self.assertRaises(provider.CallFailure) as failure:
                 ledger.transact({'type': 'refund', 'call_id': 's1-001:a'})
             self.assertEqual(failure.exception.category, 'unknown_ledger_event')
+        # A void gives back the reservation and the place under the call caps, never for a settled call.
+        with tempfile.TemporaryDirectory() as td:
+            ledger = provider.Ledger(Path(td) / 'ledger')
+            ledger.transact({'type': 'reserve', 'call_id': 'p0-001:a', 'micro_usd': 700})
+            ledger.transact({'type': 'attempt', 'call_id': 'p0-001:a', 'n': 1})
+            totals = ledger.transact({'type': 'void', 'call_id': 'p0-001:a', 'reason': provider.CREDIT_STOP})
+            self.assertEqual((totals['attempted_calls'], totals['committed_usd'], totals['voided_calls'], totals['transport_attempts']), (0, 0, 1, 1))
+            ledger.transact({'type': 'reserve', 'call_id': 'p0-001-r1:a', 'micro_usd': 700})          # the P0 cap of one call is free again
+            ledger.transact({'type': 'response', 'call_id': 'p0-001-r1:a', 'actual_micro_usd': 100})
+            for call_id in ('p0-001-r1:a', 'p0-001:a', 'nothing'):
+                with self.assertRaises(provider.CallFailure) as failure:
+                    ledger.transact({'type': 'void', 'call_id': call_id})
+                self.assertEqual(failure.exception.category, 'void_refused')
+            self.assertEqual(provider.Ledger(Path(td) / 'ledger').transact(), ledger.transact())
+        self.assertTrue(all(provider.is_integrity(c) for c in ('stage_call_cap_exhausted', 'study_call_cap_exhausted', 'aggregate_budget_exhausted',
+                                                               'duplicate_call_refused', 'transport_attempt_cap_exhausted', 'reservation_bound_breached',
+                                                               'model_mismatch', 'stage_deadline', 'internal_KeyError')))
+        self.assertFalse(any(provider.is_integrity(c) for c in ('http_500', 'http_429', 'transport_TimeoutError', 'refusal', 'invalid_structured_answer',
+                                                                'missing_usage', 'nonterminal_output', 'answer_too_long', 'transport_timeout_budget')))
 
     def test_attempt_cap_refuses_before_sending(self):
         b = D['budget']
@@ -941,66 +1078,95 @@ class Tests(unittest.TestCase):
             worker.execute(run.params, Path(td) / 'out', run, ledger_path=Path(td) / 'l')
         self.assertEqual(hub.record['run/0']['status'], 'failed')
 
-    def test_episode_rounds_carry_model_output_forward_and_a_failed_call_ends_the_episode(self):
+    def test_episode_rounds_carry_model_output_forward_and_a_failed_call_ends_only_its_episode(self):
         class Echo:
-            """A backend whose answers depend on the board, and that can fail one chosen call."""
-            def __init__(self, fail=None):
-                self.fail, self.lock, self.calls, self.in_flight, self.peak = fail, threading.Lock(), [], 0, 0
+            """A backend whose answers depend on the board, and that fails the calls it is told to."""
+            def __init__(self, fail=(), category='refusal'):
+                self.fail, self.category, self.lock, self.calls, self.in_flight, self.peak = set(fail), category, threading.Lock(), [], 0, 0
 
             def call(self, packet, call_id):
-                import time as _time
                 with self.lock:
                     self.calls.append(call_id)
                     self.in_flight += 1
                     self.peak = max(self.peak, self.in_flight)
-                _time.sleep(0.001)
                 with self.lock:
                     self.in_flight -= 1
-                if self.fail and call_id.endswith(self.fail):
-                    raise provider.CallFailure('refusal', {'attempted': True, 'attempts': 1, 'usage_reported': True,
-                                                           'actual_usd': 0.01, 'input_tokens': 2000, 'output_tokens': 100})
+                if call_id.split(':')[1] in self.fail:
+                    raise provider.CallFailure(self.category, {'attempted': True, 'attempts': 1, 'usage_reported': True,
+                                                               'actual_usd': 0.01, 'input_tokens': 2000, 'output_tokens': 100})
                 answer = study.scripted_answer(packet, 'credulous', False)
                 answer['claims'] = [{'resource': f'r{packet["round"]:02d}', 'claim': 'honeypot'}]
                 answer['rationale'] = f'round {packet["round"]} with {len(packet["board"])} board entries'
                 return study.normalize(answer), {'attempted': True, 'attempts': 1, 'usage_reported': True, 'actual_usd': 0.02,
                                                  'input_tokens': 2000, 'output_tokens': 600, 'latency_seconds': 0.001}
-        first = study.plan('S1')['units'][0]
-        backend = Echo(fail=f'{first["id"]}.{first["models"][2]}.r3')
+        units = study.plan('S1')['units']
+        first = units[0]
+        slot = lambda unit, member, t: f'{unit["id"]}.{unit["models"][member]}.r{t}'
+
+        # One failed call: its episode ends there, every other episode runs, the stage is done.
+        backend = Echo(fail=[slot(first, 2, 3)])
         record, summary, failure, rows, files = self.run_worker('S1', backend=backend)
-        self.assertEqual((failure, record['status']), ('invalid_rows:refusal', 'failed'))
-        self.assertEqual(len(rows), 3600)
-        self.assertEqual(len({r['id'] for r in rows}), 3600)
+        self.assertEqual((failure, record['status']), (None, 'done'))
+        self.assertEqual((len(rows), len({r['id'] for r in rows})), (3600, 3600))
         failed = [r for r in rows if r['status'] == 'failed']
         self.assertEqual([(r['episode'], r['round'], r['error']) for r in failed], [(first['id'], 3, 'refusal')])
         mine = [r for r in rows if r['episode'] == first['id']]
         self.assertEqual(sum(r['status'] == 'completed' for r in mine), 14)             # rounds 1-2 and four calls of round 3
         self.assertTrue(all(r['status'] == 'not_started' and 'packet' not in r for r in mine if r['round'] > 3))
-        started = [r for r in rows if r['status'] != 'not_started']
-        # Only episodes that were in flight have rows: two at a time, and none was dispatched after the failure.
-        self.assertLessEqual({r['episode'] for r in started}, {u['id'] for u in study.plan('S1')['units'][:3]})
-        self.assertLessEqual(len(started), 15 + 30 + 30)
-        self.assertEqual(len(backend.calls), len(started))
+        self.assertTrue(all(r['status'] == 'completed' for r in rows if r['episode'] != first['id']))   # dispatch continued
+        self.assertEqual(len(backend.calls), 3600 - 15)
         self.assertLessEqual(backend.peak, D['budget']['workers'])
-        self.assertEqual(record['metrics']['model_calls'], len(started))
-        self.assertEqual((record['metrics']['episodes'], record['metrics']['invalid']), (3600, 3600 - len(started) + 1))
-        self.assertAlmostEqual(record['metrics']['cost_usd'], 0.02 * (len(started) - 1) + 0.01)
-        self.assertEqual(record['metrics']['team_episodes_complete'], 0)
-        self.assertEqual(summary['analyzed'], len(started) - 1)
+        m = record['metrics']
+        self.assertEqual((m['episodes'], m['invalid'], m['failed'], m['not_started'], m['failed_episodes'], m['model_calls']), (3600, 16, 1, 15, 1, 3585))
+        self.assertAlmostEqual(m['cost_usd'], 0.02 * 3584 + 0.01)
+        self.assertEqual((m['team_episodes'], m['team_episodes_complete']), (120, 119))
+        self.assertIn('1 failed episodes, limit 3', record['message'])
+        self.assertEqual((summary['failed_units'], summary['max_failed'], summary['failure'], summary['analyzed']), (1, 3, None, 3584))
+        self.assertTrue(set(worker.ARTIFACTS) <= set(files))
         # Later packets contain the earlier model output: the echoed claims and the agent's own decisions.
         third = next(r for r in mine if r['round'] == 3 and r['status'] == 'completed')
-        mates = [m for m in first['models'] if m != third['member']]
         self.assertEqual({(e['round'], e['author'], e['resource']) for e in third['packet']['board'] if e['author'] in first['models']},
                          {(t, m, f'r{t:02d}') for t in (1, 2) for m in first['models']})
         self.assertTrue(all(len(v) == 2 for v in third['packet']['your_decisions'].values()))
         second = next(r for r in mine if r['round'] == 2 and r['member'] == third['member'])
         self.assertEqual({x: v[1] for x, v in third['packet']['your_decisions'].items()}, second['answer']['decisions'])
-        self.assertEqual(len(mates), 4)
-        # The analysis keeps every root and bounds what was not observed.
+        # The analysis keeps every root and bounds what was not observed (the failed episode is a C0 or FA+C cell).
+        self.assertIn(first['condition'], ('C0', 'FA+C'))
         primary = analyze.analyze(rows)['primary']
-        self.assertEqual((primary['roots'], primary['mean'], primary['interval']), (24, None, None))
-        self.assertLessEqual(primary['complete_roots'], 1)
-        self.assertLessEqual(primary['all_assigned_bounds'][0], -0.95)
-        self.assertGreaterEqual(primary['all_assigned_bounds'][1], 0.95)
+        self.assertEqual((primary['roots'], primary['complete_roots'], primary['mean'], primary['interval']), (24, 23, None, None))
+        lo, hi = primary['all_assigned_bounds']
+        self.assertTrue(lo < hi and hi - lo <= 1 / 24 + 1e-9)             # one root's 15 decisions unknown, at most
+        self.assertIsNotNone(primary['complete_case_mean'])
+        self.assertNotIn('residual_avoidance_pp', m)                      # no point estimate is reported with a missing cell
+
+        # Three failed episodes are within the limit; two failed calls in one episode are one failed unit.
+        backend = Echo(fail=[slot(units[0], 0, 1), slot(units[0], 1, 1), slot(units[5], 0, 2), slot(units[9], 4, 6)])
+        record, summary, failure, rows, _ = self.run_worker('S1', backend=backend)
+        self.assertEqual((failure, record['status'], summary['failed_units'], record['metrics']['failed']), (None, 'done', 3, 4))
+        self.assertEqual(record['metrics']['team_episodes_complete'], 117)
+
+        # The fourth failed episode exceeds the limit: dispatch stops and the stage fails.
+        backend = Echo(fail=[slot(units[i], 0, 1) for i in (0, 2, 4, 6, 30)])
+        record, summary, failure, rows, _ = self.run_worker('S1', backend=backend)
+        self.assertEqual((failure, record['status'], summary['failed_units']), ('failed_units_exceed_limit', 'failed', 4))
+        started = {r['episode'] for r in rows if r['status'] != 'not_started'}
+        self.assertLessEqual(started, {u['id'] for u in units[:8]})       # nothing new after the fourth failure
+        self.assertEqual(record['metrics']['failed_episodes'], 4)
+        self.assertEqual(len(rows), 3600)
+
+        # An integrity failure stops dispatch at once, whatever the count.
+        backend = Echo(fail=[slot(units[1], 0, 2)], category='model_mismatch')
+        record, summary, failure, rows, _ = self.run_worker('S1', backend=backend)
+        self.assertEqual((failure, record['status'], summary['failed_units']), ('integrity_failure:model_mismatch', 'failed', 1))
+        self.assertLessEqual({r['episode'] for r in rows if r['status'] != 'not_started'}, {u['id'] for u in units[:3]})
+        self.assertLess(len(backend.calls), 100)
+
+        # P0 and Q0 stay strict: one ordinary failed call stops the stage and fails its gate.
+        q0 = study.plan('Q0')['units']
+        backend = Echo(fail=[q0[0]['id']])
+        record, summary, failure, rows, _ = self.run_worker('Q0', backend=backend)
+        self.assertEqual((failure, record['status'], record['metrics']['qualification_passed']), ('invalid_rows:refusal', 'failed', 0))
+        self.assertLessEqual(len(backend.calls), D['budget']['fixture_workers'])
 
     # ---------------------------------------------------------------- gates and chain
 
@@ -1033,6 +1199,34 @@ class Tests(unittest.TestCase):
                 self.assertEqual(str(failure.exception), refusal)
             else:
                 coordinator.gate(runs, stage, study.params(stage))
+        # A continuation of S1 is admitted only after a credit stop, in order, and never twice.
+        def s1(status='failed', billing_stop=1, batch=None, source_hash=None):
+            r = hub_run('S1', status=status, batch=batch, source_hash=source_hash)
+            r['metrics']['billing_stop'] = billing_stop
+            return r
+        base = [hub_run('S0'), hub_run('P0'), hub_run('Q0')]
+        resume_cases = [
+            (1, base + [s1()], None),
+            (1, base, 'resume_requires_credit_stop'),                                   # S1 never ran
+            (1, base + [s1(billing_stop=0)], 'resume_requires_credit_stop'),            # S1 failed for another reason
+            (1, base + [s1(status='done', billing_stop=0)], 'resume_requires_credit_stop'),
+            (1, base + [s1(source_hash=other)], 'resume_requires_credit_stop'),
+            (1, base + [s1(), s1(batch='s1-001-r1')], 'batch_exists_no_replay'),
+            (1, [hub_run('S0'), hub_run('P0'), s1()], 'exact_runtime_qualification_required:Q0'),
+            (2, base + [s1(), s1(batch='s1-001-r1')], None),
+            (2, base + [s1(), s1(batch='s1-001-r1', status='done', billing_stop=0)], 'resume_requires_credit_stop'),
+            (2, base + [s1()], 'resume_requires_credit_stop'),                           # r1 was skipped
+            (1, base + [s1(), s1(batch='s1-001-r2')], 'resume_out_of_order'),
+        ]
+        for k, runs, refusal in resume_cases:
+            if refusal:
+                with self.assertRaises(ValueError) as failure:
+                    coordinator.resume_gate(runs, study.params('S1', k), k)
+                self.assertEqual(str(failure.exception), refusal, (k, refusal))
+            else:
+                coordinator.resume_gate(runs, study.params('S1', k), k)
+        with self.assertRaises(ValueError):
+            coordinator.resume_gate(base + [s1()], study.params('S1'), 0)
         hub = FakeHub()
         ids = coordinator.enqueue(hub, 'S0')
         self.assertEqual((len(ids), hub.registered, hub.record[ids[0]]['params']), (1, [study.EXPERIMENT], study.params('S0')))
@@ -1152,6 +1346,83 @@ class Tests(unittest.TestCase):
             q0 = [r for r in hub.record.values() if r['params']['stage'] == 'Q0'][0]
             self.assertEqual((q0['status'], q0['metrics']['qualification_passed'], q0['metrics']['model_calls'], q0['metrics']['invalid']), ('failed', 0, 24, 0))
             self.assertEqual(stub.message_calls, 25)
+
+    def test_billing_stop_leaves_rows_not_started_and_resume_runs_exactly_those(self):
+        no_wait = rehearse.no_wait
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
+            root, ledger, hub = Path(td) / 'results', Path(td) / 'l.jsonl', FakeHub()
+            # An outage that ends: the chain completes, one pause is reported, no row failed.
+            stub = rehearse.Stub('private', credit=lambda n: 60 <= n < 63)
+            self.assertEqual(chain.run_chain(['S0', 'P0', 'Q0', 'S1'], hub, root, ledger, opener=stub, sleep=no_wait), chain.EXIT_DONE)
+            s1 = chain.read_status(root)['stages']['S1']
+            self.assertEqual((s1['status'], s1['invalid'], s1['failed'], s1['billing']['stopped']), ('done', 0, 0, False))
+            self.assertGreaterEqual(s1['billing']['pauses'], 1)
+            self.assertGreaterEqual(s1['billing']['pause_seconds'], 60)
+            self.assertEqual(stub.credit_errors, 3)
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=stub, sleep=no_wait), chain.EXIT_STOPPED)     # nothing to resume
+            self.assertEqual(len(hub.record), 4)
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
+            root, ledger, hub = Path(td) / 'results', Path(td) / 'l.jsonl', FakeHub()
+            # An outage that does not end, starting in the middle of S1.
+            stub = rehearse.Stub('private', credit=lambda n: n >= 25 + 333)
+            self.assertEqual(chain.run_chain(['S0', 'P0', 'Q0', 'S1'], hub, root, ledger, opener=stub, sleep=no_wait), chain.EXIT_STOPPED)
+            status = chain.read_status(root)
+            self.assertEqual((status['state'], status['stopped_stage'], status['reason']), ('stopped_at_gate', 'S1', provider.CREDIT_STOP))
+            entry = status['stages']['S1']
+            rows = analyze.read_rows(Path(entry['results_dir']) / 'episodes.jsonl.gz')
+            interrupted = [r for r in rows if r.get('interrupted')]
+            self.assertEqual((len(rows), sum(r['status'] == 'failed' for r in rows)), (3600, 0))       # nothing failed, nothing skipped
+            self.assertTrue(interrupted and all(r['status'] == 'not_started' and r['interrupted'] == provider.CREDIT_STOP for r in interrupted))
+            self.assertEqual(sum(r['status'] == 'completed' for r in rows), stub.answered - 25)
+            run = [r for r in hub.record.values() if r['params']['batch'] == 's1-001'][0]
+            self.assertEqual((run['status'], run['metrics']['billing_stop'], run['metrics']['failed_episodes'], run['metrics']['failed']), ('failed', 1, 0, 0))
+            self.assertIn(provider.CREDIT_STOP, run['message'])
+            self.assertEqual(entry['billing']['interrupted_rows'], len(interrupted))
+            self.assertEqual(provider.Ledger(ledger).transact()['attempted_calls'], stub.answered)      # voided calls hold no place under the caps
+            self.assertTrue(chain.verify(hub, root)['ok'])
+            # The continuation: exactly the rows not started, interrupted episodes continuing where they stopped.
+            units = study.continuation_units(rows)
+            todo = sorted(r['id'] for r in rows if r['status'] == 'not_started')
+            self.assertEqual(sorted(x for u in units for x in u['only']), todo)
+            partial = [u for u in units if u['known']]
+            self.assertTrue(partial and all(len(u['known']) + len(u['only']) == 30 for u in units))
+            # A resume while the outage lasts stops again, and a second continuation is then admitted.
+            again = rehearse.Stub('private', credit=lambda n: n >= 500)
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=again, sleep=no_wait), chain.EXIT_STOPPED)
+            status = chain.read_status(root)
+            self.assertEqual((status['reason'], [c['batch'] for c in status['stages']['S1']['continuations']]), (provider.CREDIT_STOP, ['s1-001-r1']))
+            healthy = rehearse.Stub('private')
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=healthy, sleep=no_wait), chain.EXIT_DONE)
+            status = chain.read_status(root)
+            self.assertEqual((status['state'], [c['batch'] for c in status['stages']['S1']['continuations']]), ('completed', ['s1-001-r1', 's1-001-r2']))
+            self.assertEqual([c['status'] for c in status['stages']['S1']['continuations']], ['failed', 'done'])
+            self.assertEqual(status['stages']['S1']['status'], 'failed')          # the original run's record is not rewritten
+            merged = chain.saved_rows(chain.stage_entries(status, 'S1'))
+            self.assertEqual((len(merged), len({r['id'] for r in merged}), sum(r['status'] == 'completed' for r in merged)), (3600, 3600, 3600))
+            self.assertEqual(stub.answered - 25 + again.answered + healthy.answered, 3600)        # no call was made twice
+            totals = provider.Ledger(ledger).transact()
+            self.assertEqual((totals['attempted_calls'], totals['calls_by_stage']['S1']), (3625, 3600))
+            final = json.loads((Path(status['stages']['S1']['continuations'][-1]['results_dir']) / 'analysis.json').read_text())
+            self.assertEqual((final['primary']['roots'], final['primary']['complete_roots'], final['primary']['mean']), (24, 24, 0))
+            self.assertEqual(final['actors']['model']['team_episodes_complete'], 120)
+            done = [r for r in hub.record.values() if r['params']['batch'] == 's1-001-r2'][0]
+            self.assertEqual((done['status'], done['metrics']['invalid'], done['metrics']['residual_avoidance_pp']), ('done', 0, 0))
+            # A resumed packet equals the packet the uninterrupted episode would have built (same answers, same board).
+            report = chain.verify(hub, root)
+            self.assertTrue(report['ok'], report)
+            self.assertEqual(set(report['stages']), {'S0', 'P0', 'Q0', 'S1', 'S1-r1', 'S1-r2'})
+            self.assertTrue(report['stages']['S1']['rows_once_across_continuations'])
+            # Nothing further may be resumed, and a row can never be counted twice.
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=healthy, sleep=no_wait), chain.EXIT_STOPPED)
+            with self.assertRaises(ValueError):
+                study.merge_rows([merged, merged[:1]])
+            self.assertEqual(study.continuation_units(merged), [])
+            # A different source hash refuses the resume before anything is queued.
+            before = len(hub.record)
+            stopped = dict(status, state='stopped_at_gate', stopped_stage='S1', reason=provider.CREDIT_STOP, source_hash='0' * 64)
+            chain.write_status(root, stopped)
+            self.assertEqual(chain.resume_chain(hub, root, ledger, opener=healthy, sleep=no_wait), chain.EXIT_STOPPED)
+            self.assertEqual(len(hub.record), before)
 
     # ---------------------------------------------------------------- analysis and rendering
 

@@ -8,5 +8,5 @@ max_calls: {S0: 0, P0: 1, Q0: 24, S1: 3600}
 max_calls_total: 3625
 usd_cap: 360
 chain_timeout_seconds: 32400
-selftests: 35
-source_hash: 8dfa3d6e0f4a6c91f28cdc7e81a7ddec928b360b294979f3e518d260b44649c1
+selftests: 38
+source_hash: 0c6391286fc0a95cc1d4d753cc23eaca0da80d38294094958dd610ade23c4352

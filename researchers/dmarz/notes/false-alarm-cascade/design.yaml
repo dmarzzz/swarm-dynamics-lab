@@ -160,6 +160,9 @@ budget:
   max_answer_chars: 12000
   max_input_bytes: 60000
   request_timeout_seconds: 300
+  count_timeout_seconds: 30       # the free token count is a short request; its own budget
+  count_resend_wait_seconds: 2    # one re-send of a failed count, then the byte-count fallback
+  max_failed: 3                   # S1: failed episodes tolerated; larger of 3 and 1% of 120, rounded up
   stage_timeout_seconds: 28800
   chain_timeout_seconds: 32400
   retries: 0
@@ -172,7 +175,10 @@ budget:
     - 2
     - 6
     retry_after_cap_seconds: 20
-  max_transport_attempts: 4000
+  max_transport_attempts: 4000    # 3,625 calls plus 375 for retries and billing-outage re-sends
+  billing_outage:                 # HTTP 400/402/403 naming the credit balance: pause, do not fail
+    retry_every_seconds: 60
+    max_wait_seconds: 1200
   episode_workers: 2      # episodes in flight; each sends its 5 agent calls of a round together
   fixture_workers: 5      # single-call fixtures in flight (P0, Q0)
   workers: 10             # most requests in flight at any time

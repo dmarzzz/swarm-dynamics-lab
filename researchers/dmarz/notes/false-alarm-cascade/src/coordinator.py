@@ -1,5 +1,9 @@
 """The software gate. A stage is queued only behind exactly one passed run of the previous stage
-at the same source hash, and a batch name is never queued twice (no replay)."""
+at the same source hash, and a batch name is never queued twice (no replay).
+
+One more door, for the billing-outage rule: a continuation of S1 (batch `s1-001-r<k>`) is queued
+only when S1 and every earlier continuation at this source hash ended `failed` with the hub metric
+`billing_stop == 1`, that is, stopped by `provider_credit_balance_low` and by nothing else."""
 import yaml
 
 import study
@@ -23,10 +27,31 @@ def gate(runs, stage, p):
             raise ValueError(f'exact_runtime_qualification_required:{previous}')
 
 
-def enqueue(sr, stage):
-    p = study.params(stage)
+def resume_gate(runs, p, continuation):
+    """Raise ValueError unless the k-th continuation of S1 may be queued."""
+    if continuation < 1 or p != study.params('S1', continuation):
+        raise ValueError('resume_params_mismatch')
+    gate(runs, 'S1', p)                         # the batch is new and Q0 passed exactly once at this hash
+    family = [study.params('S1', k)['batch'] for k in range(continuation)]
+    for batch in family:
+        same = [r for r in runs if (r.get('params') or {}).get('batch') == batch
+                and (r.get('params') or {}).get('source_hash') == p['source_hash']]
+        if len(same) != 1 or same[0].get('status') != 'failed' or (same[0].get('metrics') or {}).get('billing_stop') != 1:
+            raise ValueError('resume_requires_credit_stop')
+    later = [r for r in runs if (r.get('params') or {}).get('stage') == 'S1'
+             and (r.get('params') or {}).get('source_hash') == p['source_hash']
+             and (r.get('params') or {}).get('batch') not in family]
+    if later:
+        raise ValueError('resume_out_of_order')
+
+
+def enqueue(sr, stage, continuation=0):
+    p = study.params(stage, continuation)
     runs = sr.runs(study.EXPERIMENT, limit=5000)
-    gate(runs, stage, p)
+    if continuation:
+        resume_gate(runs, p, continuation)
+    else:
+        gate(runs, stage, p)
     exp = yaml.safe_load((study.ROOT / 'experiment.yaml').read_text())
     assert exp['id'] == study.EXPERIMENT
     sr.register(exp.pop('id'), **exp)

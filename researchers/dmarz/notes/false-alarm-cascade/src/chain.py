@@ -1,6 +1,8 @@
 """Chain driver: queue each stage behind its software gate and execute it in this process.
 
     python src/chain.py run --stages S0,P0,Q0,S1     exit 0 done, 3 stopped at a stage or gate, else internal error
+    python src/chain.py resume                       only after S1 stopped with provider_credit_balance_low:
+                                                     queue and run a continuation with exactly the rows not started
     python src/chain.py status                       chain-status.json plus ledger totals (one JSON line)
     python src/chain.py verify                       hub checksums, regraded rows, recomputed analysis (one JSON line)
 
@@ -93,12 +95,12 @@ def projection(sr, ledger_path):
     return projection_check(cost / calls, provider.Ledger(ledger_path).transact()['committed_usd'])
 
 
-def run_chain(stages, sr, results_root=None, ledger_path=None, opener=None):
+def run_chain(stages, sr, results_root=None, ledger_path=None, opener=None, sleep=None):
     """Run the requested stages in order. Returns the process exit code."""
     root = Path(results_root) if results_root else study.results_root()
     root.mkdir(parents=True, exist_ok=True)
     try:
-        return _run_chain(stages, sr, root, ledger_path, opener)
+        return _run_chain(stages, sr, root, ledger_path, opener, sleep)
     except Exception as exc:
         # An internal error also leaves a truthful status file: stopped, nothing further queued.
         status = read_status(root) or {'experiment': study.EXPERIMENT, 'stages': {}}
@@ -109,7 +111,7 @@ def run_chain(stages, sr, results_root=None, ledger_path=None, opener=None):
         return EXIT_INTERNAL
 
 
-def _run_chain(stages, sr, root, ledger_path, opener):
+def _run_chain(stages, sr, root, ledger_path, opener, sleep=None):
     budget = study.design()['budget']
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     previous = read_status(root) or {}
@@ -173,7 +175,7 @@ def _run_chain(stages, sr, root, ledger_path, opener):
         try:
             with run:
                 summary = worker.execute(run.params, out, run, ledger_path=ledger_path, opener=opener,
-                                         deadline=chain_deadline)
+                                         deadline=chain_deadline, sleep=sleep)
         except worker.StageFailed as exc:
             entry.update(_usage(exc.summary), status='failed', reason=exc.reason, ended=now())
             return stop(stage, exc.reason)
@@ -190,12 +192,100 @@ def _run_chain(stages, sr, root, ledger_path, opener):
     return EXIT_DONE
 
 
+def stage_entries(status, stage):
+    """The stage's run entry followed by its continuations, in order."""
+    entry = (status.get('stages') or {}).get(stage)
+    if not entry:
+        return []
+    return [entry] + list(entry.get('continuations') or [])
+
+
+def saved_rows(entries):
+    """Rows of a run and its continuations as one set, every row exactly once."""
+    return study.merge_rows([analyze.read_rows(Path(e['results_dir']) / 'episodes.jsonl.gz') for e in entries])
+
+
+def resume_chain(sr, results_root=None, ledger_path=None, opener=None, sleep=None):
+    """Continue S1 after a billing stop. Allowed only when the chain's last stop was S1 with
+    `provider_credit_balance_low` at the current source hash. Queues one continuation run that
+    holds exactly the rows not started, under the same ledger and caps. Returns the exit code."""
+    root = Path(results_root) if results_root else study.results_root()
+    status = read_status(root)
+    ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
+
+    def refuse(reason):
+        print(f'chain resume refused: {reason}', file=sys.stderr)
+        return EXIT_STOPPED
+    if not status or status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' \
+            or status.get('reason') != provider.CREDIT_STOP:
+        return refuse('last_stop_was_not_a_credit_stop_of_S1')
+    if status.get('source_hash') != study.source_hash():
+        return refuse('source_hash_changed')
+    missing = [name for name in PAID_ENVIRONMENT if not os.environ.get(name)] + ([] if ledger_path else [provider.LEDGER_ENV])
+    if missing:
+        return refuse('missing_environment:' + ','.join(missing))
+    entries = stage_entries(status, 'S1')
+    if not entries or entries[-1].get('reason') != provider.CREDIT_STOP or not all(e.get('results_dir') for e in entries):
+        return refuse('no_interrupted_S1_run')
+    k = len(entries)
+    p = study.params('S1', k)
+    budget = study.design()['budget']
+    entry = {'status': 'gating', 'batch': p['batch'], 'started': now(), 'continuation': k}
+    try:
+        try:
+            ids = coordinator.enqueue(sr, 'S1', continuation=k)
+        except ValueError as exc:
+            return refuse(str(exc))
+        run = sr.next_run(study.EXPERIMENT)
+        if run is None or len(ids) != 1 or run.id != ids[0] or run.params != p or run.attempt != 1:
+            if run is not None:
+                run.fail('chain refused a run it did not queue; not executed', episodes=0, invalid=0, model_calls=0,
+                         input_tokens=0, output_tokens=0, cost_usd=0)
+            return refuse('unexpected_run_in_queue')
+        prior = saved_rows(entries)
+        out = root / f'{run.id.replace("/", "__")}-attempt-{run.attempt}'
+        entry.update(status='running', run=run.id, results_dir=str(out))
+        status['stages']['S1'].setdefault('continuations', []).append(entry)
+        status.update(state='running', current_stage='S1', resumed=now())
+        write_status(root, status)
+        deadline = time.monotonic() + budget['chain_timeout_seconds'] - DRAIN_SECONDS
+        try:
+            with run:
+                summary = worker.execute(run.params, out, run, ledger_path=ledger_path, opener=opener,
+                                         deadline=deadline, prior=prior, sleep=sleep)
+        except worker.StageFailed as exc:
+            entry.update(_usage(exc.summary), status='failed', reason=exc.reason, ended=now())
+            status.update(state='stopped_at_gate', stopped_stage='S1', reason=exc.reason, ended=now())
+            write_status(root, status)
+            print(f'chain stopped at S1 continuation {k}: {exc.reason}', file=sys.stderr)
+            return EXIT_STOPPED
+        entry.update(_usage(summary), ended=now())
+        if (sr.get_run(run.id) or {}).get('status') != 'done':
+            entry.update(status='failed', reason='hub_did_not_record_done')
+            status.update(state='stopped_at_gate', stopped_stage='S1', reason='hub_did_not_record_done', ended=now())
+            write_status(root, status)
+            return EXIT_STOPPED
+        entry['status'] = 'done'
+        status.update(state='completed', ended=now())
+        for key in ('stopped_stage', 'reason', 'current_stage', 'refused'):
+            status.pop(key, None)
+        write_status(root, status)
+        return EXIT_DONE
+    except Exception as exc:
+        status.update(state='stopped_at_gate', stopped_stage='S1', reason='internal_error_' + type(exc).__name__, ended=now())
+        write_status(root, status)
+        print(f'chain: internal error {type(exc).__name__}', file=sys.stderr)
+        return EXIT_INTERNAL
+
+
 def _usage(summary):
     if not summary:
         return {'calls': None, 'input_tokens': None, 'output_tokens': None, 'cost_usd': None}
     return {'calls': summary['model_calls'], 'transport_attempts': summary['transport_attempts'], 'input_tokens': summary['input_tokens'],
             'output_tokens': summary['output_tokens'], 'cost_usd': summary['cost_usd'],
             'planned': summary['planned'], 'valid': summary['graded'], 'invalid': summary['invalid'],
+            'failed': summary['failed'], 'not_started': summary['not_started'], 'failed_units': summary['failed_units'],
+            'count_fallbacks': summary['count_fallbacks'], 'billing': summary['billing'],
             'gate_passed': summary['gate']['passed'], 'elapsed_seconds': summary['elapsed_seconds']}
 
 
@@ -220,15 +310,17 @@ def _plain(value):
 
 
 SUMMARY_KEYS = ('planned', 'started', 'terminal', 'graded', 'analyzed', 'invalid', 'failed', 'not_started', 'model_calls',
-                'input_tokens', 'output_tokens', 'cost_usd', 'transport_attempts', 'qualification', 'probe', 'gate', 'failure')
+                'input_tokens', 'output_tokens', 'cost_usd', 'transport_attempts', 'qualification', 'probe', 'gate', 'failure',
+                'failed_units', 'prior_failed_units', 'max_failed', 'integrity_failure', 'count_fallbacks', 'billing', 'continuation')
 
 
 def replay(units, by_id):
     """Rebuild every actor input from the fixed inputs and the saved answers, and regrade.
 
     Returns (packets_ok, grades_ok). A saved packet must equal the packet the instrument builds
-    from the episode's fixed inputs and the saved answers of the rounds before; a row after the
-    point where its episode stopped must carry no packet."""
+    from the episode's fixed inputs and the saved answers of the rounds before. A row after the
+    point where its episode stopped must be not started and carry no packet. A row interrupted by
+    a billing stop is not started and keeps the packet it would have sent."""
     packets_ok = grades_ok = True
     for unit in units:
         if unit['type'] == 'fixture':
@@ -238,19 +330,21 @@ def replay(units, by_id):
             if r['status'] == 'completed':
                 grades_ok &= _plain(study.evaluate(unit['context'], unit['packet'], r['answer'])) == r['evaluation']
             continue
+        whole = {k: v for k, v in unit.items() if k != 'only'}
         ep = study.Episode(unit['root'], unit['condition'])
         packets_ok &= study.digest(ep.fixed_inputs()) == unit['fixed_hash'] == study.digest(unit['fixed_inputs'])
         context, alive = ep.context(), True
         for t in range(1, ep.rounds + 1):
             answers = {}
             for m in ep.models:
-                r = by_id[f'{unit["id"]}.{m}.r{t}']
+                r = by_id[f'{whole["id"]}.{m}.r{t}']
                 if not alive:
                     packets_ok &= 'packet' not in r and r['status'] == 'not_started'
                     continue
                 if 'packet' in r:
                     packet = ep.packet(m, t)
                     packets_ok &= r['packet'] == _plain(packet) and study.digest(packet) == r['packet_hash']
+                    packets_ok &= r['status'] != 'not_started' or r.get('interrupted') == provider.CREDIT_STOP
                     if r['status'] == 'completed':
                         grades_ok &= _plain(study.evaluate(context, packet, r['answer'])) == r['evaluation']
                         answers[m] = r['answer']
@@ -263,8 +357,9 @@ def replay(units, by_id):
     return bool(packets_ok), bool(grades_ok)
 
 
-def verify_stage(sr, stage, entry, manifest):
-    """Every check for one executed stage, from the saved files and the hub's artifact records."""
+def verify_stage(sr, stage, entry, manifest, earlier=()):
+    """Every check for one executed run, from the saved files and the hub's artifact records.
+    `earlier` holds the entries of the run it continues (an S1 continuation), oldest first."""
     checks = {}
     out = Path(entry['results_dir'])
     detail = sr.get_run(entry['run']) or {}
@@ -277,21 +372,39 @@ def verify_stage(sr, stage, entry, manifest):
         rows = analyze.read_rows(out / 'episodes.jsonl.gz')
         saved = json.loads((out / 'summary.json').read_text())
         analysis = json.loads((out / 'analysis.json').read_text())
+        prior = saved_rows(earlier) if earlier else None
     except (OSError, ValueError) as exc:
         checks['records_readable'] = False
         return {'ok': False, 'checks': checks, 'error': type(exc).__name__}
     checks['records_readable'] = True
-    by_id = {r['id']: r for r in rows}
     planned = [slot[0] for unit in units for slot in study.slots(unit)]
-    checks['assignments_match_manifest'] = [mf.line(u) for u in units] == manifest['stages'][stage]['units']
-    checks['rows_cover_assignments'] = sorted(by_id) == sorted(planned) and len(rows) == len(planned)
-    packets_ok, grades_ok = replay(units, by_id) if checks['rows_cover_assignments'] else (False, False)
+    lines = [mf.line(u) for u in units]
+    if earlier:
+        # A continuation holds exactly the rows not started in episodes without a failed call,
+        # in the stage's dispatch order, and never a row that already completed or failed.
+        expected = study.continuation_units(prior)
+        checks['assignments_match_manifest'] = (
+            [(u['id'], u['only']) for u in units] == [(u['id'], u['only']) for u in expected]
+            and [x for x in manifest['stages'][stage]['units'] if x in set(lines)] == lines)
+        try:
+            everything = study.merge_rows([prior, rows])
+        except ValueError:
+            everything = None
+        checks['no_row_counted_twice'] = everything is not None
+    else:
+        checks['assignments_match_manifest'] = lines == manifest['stages'][stage]['units']
+        everything = rows
+    checks['rows_cover_assignments'] = sorted(r['id'] for r in rows) == sorted(planned) and len(rows) == len(planned)
+    by_id = {r['id']: r for r in everything or []}
+    ok = checks['rows_cover_assignments'] and everything is not None
+    packets_ok, grades_ok = replay(units, by_id) if ok else (False, False)
     checks['packets_replayed_from_saved_answers'] = packets_ok
     checks['grades_recomputed'] = grades_ok
     recomputed = _plain(worker.summarize(saved['params'], rows, len(planned), saved['invariants'], saved['elapsed_seconds'],
-                                         saved['initial_study_accounting'], saved['study_accounting']))
+                                         saved['initial_study_accounting'], saved['study_accounting'],
+                                         len(study.failed_units(prior)) if earlier else 0))
     checks['summary_recomputed'] = all(recomputed[k] == saved[k] for k in SUMMARY_KEYS)
-    checks['analysis_recomputed'] = _plain(analyze.analyze(rows)) == analysis
+    checks['analysis_recomputed'] = everything is not None and _plain(analyze.analyze(everything)) == analysis
     checks['source_hash_matches'] = saved['params']['source_hash'] == study.source_hash()
     metrics = detail.get('metrics') or {}
     checks['hub_metrics_match'] = (metrics.get('episodes') == saved['planned'] and metrics.get('invalid') == saved['invalid']
@@ -314,12 +427,22 @@ def verify(sr, results_root=None):
         report['error'] = 'manifest_unreadable'
         return report
     for stage in study.STAGES:
-        entry = (status.get('stages') or {}).get(stage)
-        if entry and entry.get('run') and entry.get('results_dir'):
+        entries = [e for e in stage_entries(status, stage) if e.get('run') and e.get('results_dir')]
+        for k, entry in enumerate(entries):
+            name = stage if k == 0 else f'{stage}-r{k}'
             try:
-                report['stages'][stage] = verify_stage(sr, stage, entry, manifest)
+                report['stages'][name] = verify_stage(sr, stage, entry, manifest, entries[:k])
             except Exception as exc:
-                report['stages'][stage] = {'ok': False, 'error': type(exc).__name__}
+                report['stages'][name] = {'ok': False, 'error': type(exc).__name__}
+        if len(entries) > 1:
+            # The stage as a whole: every planned row exactly once across the run and its continuations.
+            try:
+                rows = saved_rows(entries)
+                planned = [slot[0] for unit in study.plan(stage)['units'] for slot in study.slots(unit)]
+                report['stages'][stage]['rows_once_across_continuations'] = sorted(r['id'] for r in rows) == sorted(planned)
+            except (ValueError, OSError):
+                report['stages'][stage]['rows_once_across_continuations'] = False
+            report['stages'][stage]['ok'] = report['stages'][stage]['ok'] and report['stages'][stage]['rows_once_across_continuations']
     report['ok'] = bool(report['stages']) and all(s['ok'] for s in report['stages'].values())
     return report
 
@@ -329,7 +452,7 @@ def main(argv=None):
     sub = ap.add_subparsers(dest='command', required=True)
     r = sub.add_parser('run')
     r.add_argument('--stages', required=True, help='ordered contiguous sub-list, e.g. S0,P0,Q0,S1')
-    for name in ('run', 'status', 'verify'):
+    for name in ('run', 'resume', 'status', 'verify'):
         s = r if name == 'run' else sub.add_parser(name)
         s.add_argument('--results-dir', help='default: $STUDY_RESULTS_DIR, else <study>/results')
     a = ap.parse_args(argv)
@@ -341,14 +464,16 @@ def main(argv=None):
         report = verify(sr, a.results_dir)
         print(json.dumps(report, sort_keys=True))
         return EXIT_DONE if report['ok'] else EXIT_INTERNAL
+    def terminate(signum, frame):
+        raise Terminated()
+    if a.command == 'resume':
+        signal.signal(signal.SIGTERM, terminate)
+        return resume_chain(sr, a.results_dir)
     try:
         stages = parse_stages(a.stages)
     except ValueError as exc:
         print(f'chain: {exc}', file=sys.stderr)
         return 2
-
-    def terminate(signum, frame):
-        raise Terminated()
     signal.signal(signal.SIGTERM, terminate)
     return run_chain(stages, sr, a.results_dir)
 

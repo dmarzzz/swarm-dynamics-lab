@@ -2,18 +2,26 @@
 
     python3 src/rehearse.py --hub-dir <dir with hub.py and swarm_report.py>
 
-Runs the chain three times, each on a fresh hub, in fresh temporary result and ledger directories:
+Runs the chain six times, each on a fresh hub, in fresh temporary result and ledger directories:
   (a) S0, P0, Q0, S1 to completion with a stub that answers every call by the private-evidence
       reference policy (and posts claims by the scripted rule), then `chain verify`;
   (b) with a stub that skips on any suspicious inspection, which must fail Q0, stop the chain with
       exit 3, and leave no S1 run on the hub;
-  (c) with the reference stub and one HTTP 500 during S1, which must end that episode, stop new
-      dispatch, record every remaining call as not started and still report usage.
+  (c) with the reference stub and one HTTP 500 during S1: that episode ends, dispatch continues,
+      S1 ends done with one failed episode and the primary contrast reported as bounds;
+  (d) with an HTTP 500 in every 40th S1 call: the fourth failed episode exceeds the limit of 3,
+      dispatch stops and S1 ends failed;
+  (e) with a credit-balance error three times and then a healthy provider: one pause, no failed
+      row, S1 done;
+  (f) with a credit-balance error that does not end: S1 stops with provider_credit_balance_low and
+      the unfinished rows not started; then `chain resume` with a healthy stub completes S1, and
+      the analysis and `verify` see every row exactly once.
 
 The stub reads the request exactly as the provider sends it, so each later round's answer depends
 on the board that earlier stub answers produced. It refuses any hub that is not on 127.0.0.1 and
-blocks every other network destination for the process. A rehearsal answer is never a sample and
-never leaves the machine. No model call is made.
+blocks every other network destination for the process. The provider's waits are replaced by a
+no-op, so nothing sleeps. A rehearsal answer is never a sample and never leaves the machine. No
+model call is made.
 """
 import argparse
 import io
@@ -52,6 +60,11 @@ class _Response(io.BytesIO):
         return False
 
 
+CREDIT_BODY = json.dumps({'type': 'error', 'error': {
+    'type': 'invalid_request_error',
+    'message': 'Your credit balance is too low to access the Anthropic API. Please go to Plans & Billing to upgrade or purchase credits.'}}).encode()
+
+
 class Stub:
     """Stands in for the model endpoint. Answers count_tokens and messages requests in the real
     response shape: a thinking block before one text block, model id, stop reason and usage.
@@ -59,12 +72,14 @@ class Stub:
     mode 'private': the private-evidence reference decision for the packet in the request, with
                     claims by the scripted rule.
     mode 'jumpy':   skip on any suspicious inspection (an over-cautious agent); fails Q0.
-    `fail_at`: the n-th messages request of the chain is answered with HTTP 500 (scenario c).
+    `fail`:   a function of the messages request's ordinal; True answers it with HTTP 500.
+    `credit`: a function of the ordinal; True answers it with the HTTP 400 credit-balance error.
     """
-    def __init__(self, mode='private', output_tokens=600, fail_at=None, hold=0.002):
-        self.mode, self.output_tokens, self.fail_at, self.hold = mode, output_tokens, fail_at, hold
+    def __init__(self, mode='private', output_tokens=600, fail=None, credit=None, hold=0.002):
+        self.mode, self.output_tokens, self.fail, self.credit, self.hold = mode, output_tokens, fail, credit, hold
         self.lock = threading.Lock()
         self.count_calls = self.message_calls = self.in_flight = self.max_in_flight = 0
+        self.credit_errors = self.answered = 0
 
     def __call__(self, request, timeout=None):
         url = request.full_url
@@ -93,13 +108,20 @@ class Stub:
             self.max_in_flight = max(self.max_in_flight, self.in_flight)
         try:
             time.sleep(self.hold)                   # long enough for concurrent requests to overlap
-            if self.fail_at is not None and n == self.fail_at:
-                raise urllib.error.HTTPError(url, 500, 'stub failure', {}, io.BytesIO(b'{}'))
+            if self.credit and self.credit(n):
+                with self.lock:
+                    self.credit_errors += 1
+                raise urllib.error.HTTPError(url, 400, 'Bad Request', {'request-id': f'req_stub_{n:06d}'}, io.BytesIO(CREDIT_BODY))
+            if self.fail and self.fail(n):
+                raise urllib.error.HTTPError(url, 500, 'stub failure', {'request-id': f'req_stub_{n:06d}'},
+                                             io.BytesIO(b'{"type": "error", "error": {"type": "api_error", "message": "stub failure"}}'))
             answer = study.jumpy_answer(packet) if self.mode == 'jumpy' else study.scripted_answer(packet, 'private', True)
             answer['rationale'] = 'Stub answer from own inspection counts.'
         finally:
             with self.lock:
                 self.in_flight -= 1
+        with self.lock:
+            self.answered += 1
         return _Response(json.dumps({
             'id': f'msg_stub_{n:06d}', 'type': 'message', 'role': 'assistant', 'model': body['model'],
             'content': [{'type': 'thinking', 'thinking': '', 'signature': 'stub'},
@@ -107,6 +129,10 @@ class Stub:
             'stop_reason': 'end_turn', 'stop_sequence': None,
             'usage': {'input_tokens': tokens, 'output_tokens': self.output_tokens,
                       'cache_creation_input_tokens': 0, 'cache_read_input_tokens': 0}}).encode())
+
+
+def no_wait(seconds):
+    """Replaces the provider's sleep in the rehearsal: backoffs and billing waits take no time."""
 
 
 def block_network():
@@ -160,8 +186,9 @@ def stage_runs(sr):
     return {(r.get('params') or {}).get('stage'): r for r in sr.runs(study.EXPERIMENT, limit=5000)}
 
 
-def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
-    """One chain on a fresh hub, fresh results directory and fresh ledger."""
+def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False, resume_with=None):
+    """One chain on a fresh hub, fresh results directory and fresh ledger. With `resume_with`, a
+    second stub then drives `chain resume` on the same hub, results and ledger."""
     base = tmp / name
     base.mkdir()
     with (base / 'hub.log').open('w') as log:
@@ -169,32 +196,46 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False):
         try:
             require_local(sr)
             wait_for_hub(sr, proc)
+            ledger_path = base / 'ledger' / 'ledger.jsonl'
             started = time.monotonic()
-            code = chain.run_chain(stages, sr, base / 'results', base / 'ledger' / 'ledger.jsonl', opener=stub)
+            code = chain.run_chain(stages, sr, base / 'results', ledger_path, opener=stub, sleep=no_wait)
             elapsed = time.monotonic() - started
             status = chain.read_status(base / 'results')
-            runs = stage_runs(sr)
-            report = None
-            replay_refused = None
+            out = {'exit': code, 'seconds': elapsed, 'status': status, 'runs': stage_runs(sr),
+                   'stub_messages': stub.message_calls, 'stub_counts': stub.count_calls,
+                   'max_in_flight': stub.max_in_flight, 'credit_errors': stub.credit_errors,
+                   'ledger': provider.Ledger(ledger_path).transact(), 'replay_refused': None, 'verify': None}
+            entries = chain.stage_entries(status or {}, 'S1')
+            if entries and all((Path(e.get('results_dir', '')) / 'episodes.jsonl.gz').exists() for e in entries):
+                out['s1_rows'] = analyze.read_rows(Path(entries[0]['results_dir']) / 'episodes.jsonl.gz')
+            else:
+                out['s1_rows'] = None
+            if resume_with is not None:
+                # A resume that is not allowed is refused and queues nothing.
+                started = time.monotonic()
+                code = chain.resume_chain(sr, base / 'results', ledger_path, opener=resume_with, sleep=no_wait)
+                status = chain.read_status(base / 'results')
+                entries = chain.stage_entries(status or {}, 'S1')
+                out['resume'] = {'exit': code, 'seconds': time.monotonic() - started, 'status': status,
+                                 'runs': sr.runs(study.EXPERIMENT, limit=5000),
+                                 'rows': analyze.read_rows(Path(entries[-1]['results_dir']) / 'episodes.jsonl.gz') if len(entries) > 1 else None,
+                                 'merged': chain.saved_rows(entries) if len(entries) > 1 else None,
+                                 'stub_messages': resume_with.message_calls,
+                                 'ledger': provider.Ledger(ledger_path).transact(),
+                                 'again': chain.resume_chain(sr, base / 'results', ledger_path, opener=resume_with, sleep=no_wait)}
+                out['status'] = status
             if verify:
                 started_verify = time.monotonic()
-                report = chain.verify(sr, base / 'results')
-                report['seconds'] = time.monotonic() - started_verify
+                out['verify'] = chain.verify(sr, base / 'results')
+                out['verify']['seconds'] = time.monotonic() - started_verify
             if name == 'a':
                 try:
                     coordinator.enqueue(sr, 'S0')
-                    replay_refused = False
+                    out['replay_refused'] = False
                 except ValueError as exc:
-                    replay_refused = str(exc) == 'batch_exists_no_replay'
-            rows = None
-            entry = ((status or {}).get('stages') or {}).get('S1')
-            if entry and entry.get('results_dir') and (Path(entry['results_dir']) / 'episodes.jsonl.gz').exists():
-                rows = analyze.read_rows(Path(entry['results_dir']) / 'episodes.jsonl.gz')
-            ledger = provider.Ledger(base / 'ledger' / 'ledger.jsonl').transact()
-            return {'exit': code, 'seconds': elapsed, 'status': status, 'runs': runs, 'verify': report,
-                    'replay_refused': replay_refused, 'ledger': ledger, 's1_rows': rows,
-                    'stub_messages': stub.message_calls, 'stub_counts': stub.count_calls,
-                    'max_in_flight': stub.max_in_flight}
+                    out['replay_refused'] = str(exc) == 'batch_exists_no_replay'
+                out['resume_refused'] = chain.resume_chain(sr, base / 'results', ledger_path, opener=stub, sleep=no_wait) == chain.EXIT_STOPPED
+            return out
         finally:
             proc.terminate()
             try:
@@ -231,22 +272,33 @@ def main(argv=None):
     required = set(worker.REQUIRED_METRICS)
     paid_before_s1 = budget['max_calls']['P0'] + budget['max_calls']['Q0']
     per_round = len(d['world']['members']) - 1
+    s1_rows = budget['max_calls']['S1']
+    after = d['windows']['after_correction']
     checks = {}
+
+    def metrics(run, stage):
+        return run['runs'].get(stage, {}).get('metrics') or {}
+
+    def count(rows, status):
+        return sum(r['status'] == status for r in rows)
     try:
         a_run = scenario(sr, hub_dir, tmp, 'a', Stub('private'), stages, verify=True)
         runs = a_run['runs']
         checks['a_exit_zero'] = a_run['exit'] == 0
         checks['a_state_completed'] = (a_run['status'] or {}).get('state') == 'completed'
         checks['a_all_stages_done'] = all(runs.get(s, {}).get('status') == 'done' for s in stages)
-        checks['a_metrics_reported'] = all(required <= set(runs.get(s, {}).get('metrics') or {}) for s in stages)
-        checks['a_calls_per_stage'] = {s: (runs.get(s, {}).get('metrics') or {}).get('model_calls') for s in stages} == budget['max_calls']
-        checks['a_gates_passed'] = all((runs.get(s, {}).get('metrics') or {}).get('qualification_passed') == 1 for s in stages[:3])
+        checks['a_metrics_reported'] = all(required <= set(metrics(a_run, s)) for s in stages)
+        checks['a_calls_per_stage'] = {s: metrics(a_run, s).get('model_calls') for s in stages} == budget['max_calls']
+        checks['a_gates_passed'] = all(metrics(a_run, s).get('qualification_passed') == 1 for s in stages[:3])
         checks['a_ledger_total_calls'] = a_run['ledger']['attempted_calls'] == budget['max_attempted_calls'] == a_run['stub_messages']
         checks['a_verify_ok'] = bool(a_run['verify'] and a_run['verify']['ok'])
         checks['a_replay_refused'] = a_run['replay_refused'] is True
-        s1 = (runs.get('S1', {}).get('metrics') or {})
+        checks['a_resume_refused_without_credit_stop'] = a_run['resume_refused'] is True
+        s1 = metrics(a_run, 'S1')
         checks['a_team_episodes_complete'] = s1.get('team_episodes') == s1.get('team_episodes_complete') == d['stages']['S1']['episodes']
         checks['a_requests_in_flight_within_limit'] = 1 < a_run['max_in_flight'] <= budget['workers']
+        checks['a_no_failure_no_fallback_no_pause'] = (s1.get('failed') == 0 and s1.get('failed_episodes') == 0
+                                                       and s1.get('count_fallbacks') == 0 and s1.get('billing_pauses') == 0)
         # The stub is the private-evidence policy, so the paired contrast must be exactly zero.
         checks['a_reference_stub_shows_zero_effect'] = s1.get('residual_avoidance_pp') == 0 and s1.get('cascade_size_pp') == 0
         rows = a_run['s1_rows'] or []
@@ -261,33 +313,100 @@ def main(argv=None):
         checks['b_state_stopped_at_gate'] = status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'Q0'
         checks['b_no_s1_run_on_hub'] = 'S1' not in runs and 'S1' not in (status.get('stages') or {})
         checks['b_q0_failed_with_metrics'] = (runs.get('Q0', {}).get('status') == 'failed'
-                                              and required <= set(runs.get('Q0', {}).get('metrics') or {})
-                                              and (runs['Q0']['metrics']).get('qualification_passed') == 0)
+                                              and required <= set(metrics(b_run, 'Q0'))
+                                              and metrics(b_run, 'Q0').get('qualification_passed') == 0)
         checks['b_s0_p0_done'] = all(runs.get(s, {}).get('status') == 'done' for s in ('S0', 'P0'))
         checks['b_calls_stopped_before_s1'] = b_run['ledger']['attempted_calls'] == paid_before_s1 == b_run['stub_messages']
 
-        fail_at = paid_before_s1 + 2 * per_round + 3          # the third call of the third S1 round dispatched
-        c_run = scenario(sr, hub_dir, tmp, 'c', Stub('private', fail_at=fail_at), stages, verify=True)
-        runs = c_run['runs']
-        status = c_run['status'] or {}
+        # (c) One failed call. The first two episodes dispatched are a C0 and an FA+C episode, so the
+        # failure lands in a cell of the primary contrast and the contrast must be reported as bounds.
+        one = paid_before_s1 + 2 * per_round + 3
+        c_run = scenario(sr, hub_dir, tmp, 'c', Stub('private', fail=lambda n: n == one), stages, verify=True)
         rows = c_run['s1_rows'] or []
         failed = [r for r in rows if r['status'] == 'failed']
-        checks['c_exit_stopped'] = c_run['exit'] == chain.EXIT_STOPPED
-        checks['c_stopped_at_s1'] = (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1'
-                                     and status.get('reason') == 'invalid_rows:http_500')
-        checks['c_s1_failed_with_metrics'] = (runs.get('S1', {}).get('status') == 'failed'
-                                              and required <= set(runs.get('S1', {}).get('metrics') or {}))
-        checks['c_one_failed_call_rest_accounted'] = (
-            len(rows) == budget['max_calls']['S1'] and len(failed) == 1 and failed[0].get('error') == 'http_500'
-            and sum(r['status'] == 'not_started' for r in rows) + sum(r['status'] == 'completed' for r in rows) + 1 == len(rows))
-        # No round was dispatched after the failure: at most the calls of the two episodes in flight.
-        started = len(rows) - sum(r['status'] == 'not_started' for r in rows)
-        checks['c_dispatch_stopped'] = started <= fail_at - paid_before_s1 + budget['workers'] and started == c_run['stub_messages'] - paid_before_s1
+        s1 = metrics(c_run, 'S1')
+        checks['c_exit_zero_and_s1_done'] = c_run['exit'] == 0 and c_run['runs'].get('S1', {}).get('status') == 'done'
+        checks['c_one_failed_call_with_evidence'] = (len(failed) == 1 and failed[0].get('error') == 'http_500'
+                                                     and failed[0]['accounting'].get('http_status') == 500
+                                                     and 'stub failure' in failed[0]['accounting'].get('error_body', '')
+                                                     and failed[0]['accounting'].get('request_id', '').startswith('req_stub_'))
         episode = failed[0]['episode'] if failed else None
         later = [r for r in rows if r['episode'] == episode and r['round'] > failed[0]['round']] if failed else []
         checks['c_failed_episode_ends_there'] = bool(later) and all(r['status'] == 'not_started' and 'packet' not in r for r in later)
-        checks['c_verify_ok_on_partial_stage'] = bool(c_run['verify'] and c_run['verify']['ok'])
-        checks['c_usage_reported'] = (runs.get('S1', {}).get('metrics') or {}).get('model_calls') == started
+        checks['c_dispatch_continued'] = (len(rows) == s1_rows and count(rows, 'not_started') == len(later)
+                                          and count(rows, 'completed') == s1_rows - len(later) - 1)
+        checks['c_metrics_truthful'] = (s1.get('failed') == 1 and s1.get('failed_episodes') == 1
+                                        and s1.get('invalid') == len(later) + 1 and s1.get('team_episodes_complete') == 119
+                                        and s1.get('model_calls') == s1_rows - len(later))
+        primary = None
+        entry = ((c_run['status'] or {}).get('stages') or {}).get('S1') or {}
+        if entry.get('results_dir'):
+            primary = json.loads((Path(entry['results_dir']) / 'analysis.json').read_text())['primary']
+        checks['c_primary_reported_as_bounds'] = bool(
+            primary and primary['mean'] is None and primary['roots'] == 24 and primary['complete_roots'] == 23
+            and primary['all_assigned_bounds'][0] < primary['all_assigned_bounds'][1] and primary['complete_case_mean'] == 0
+            and 'residual_avoidance_pp' not in s1)
+        checks['c_verify_ok'] = bool(c_run['verify'] and c_run['verify']['ok'])
+
+        # (d) A failure in every 40th S1 call: the fourth failed episode exceeds max_failed = 3.
+        d_run = scenario(sr, hub_dir, tmp, 'd', Stub('private', fail=lambda n: n > paid_before_s1 and (n - paid_before_s1) % 40 == 3),
+                         stages, verify=True)
+        rows = d_run['s1_rows'] or []
+        status = d_run['status'] or {}
+        s1 = metrics(d_run, 'S1')
+        started = len(rows) - count(rows, 'not_started')
+        checks['d_exit_stopped'] = d_run['exit'] == chain.EXIT_STOPPED
+        checks['d_stopped_over_the_limit'] = (status.get('state') == 'stopped_at_gate' and status.get('stopped_stage') == 'S1'
+                                              and status.get('reason') == 'failed_units_exceed_limit')
+        checks['d_s1_failed_with_metrics'] = (d_run['runs'].get('S1', {}).get('status') == 'failed' and required <= set(s1)
+                                              and s1.get('failed_episodes') == budget['max_failed'] + 1 == len({r['episode'] for r in rows if r['status'] == 'failed'}))
+        checks['d_dispatch_stopped'] = (len(rows) == s1_rows and started == d_run['stub_messages'] - paid_before_s1
+                                        and started <= 40 * (budget['max_failed'] + 1) + budget['workers'] and s1.get('model_calls') == started)
+        checks['d_verify_ok'] = bool(d_run['verify'] and d_run['verify']['ok'])
+
+        # (e) A billing outage that ends: three credit-balance errors, then a healthy provider.
+        first = paid_before_s1 + 4 * per_round + 2
+        e_run = scenario(sr, hub_dir, tmp, 'e', Stub('private', credit=lambda n: first <= n < first + 3), stages, verify=True)
+        rows = e_run['s1_rows'] or []
+        s1 = metrics(e_run, 'S1')
+        checks['e_exit_zero_and_s1_done'] = e_run['exit'] == 0 and e_run['runs'].get('S1', {}).get('status') == 'done'
+        checks['e_no_row_failed'] = len(rows) == s1_rows and count(rows, 'completed') == s1_rows and s1.get('invalid') == 0
+        checks['e_pause_reported'] = (e_run['credit_errors'] == 3 and s1.get('billing_pauses', 0) >= 1 and s1.get('billing_pause_seconds', 0) >= 60
+                                      and 1 <= s1.get('billing_affected_calls', 0) <= 3)
+        checks['e_resends_recorded_in_ledger'] = (e_run['ledger']['transport_attempts'] == budget['max_attempted_calls'] + 3
+                                                  and e_run['ledger']['attempted_calls'] == budget['max_attempted_calls'])
+        checks['e_reference_stub_shows_zero_effect'] = s1.get('residual_avoidance_pp') == 0
+        checks['e_verify_ok'] = bool(e_run['verify'] and e_run['verify']['ok'])
+
+        # (f) A billing outage that does not end, then a resume with a healthy provider.
+        f_run = scenario(sr, hub_dir, tmp, 'f', Stub('private', credit=lambda n: n >= paid_before_s1 + 200), stages,
+                         verify=True, resume_with=Stub('private'))
+        rows = f_run['s1_rows'] or []
+        interrupted = [r for r in rows if r.get('interrupted')]
+        runs = {(r.get('params') or {}).get('batch'): r for r in f_run['resume']['runs']}
+        first_run, second_run = runs.get('s1-001', {}), runs.get('s1-001-r1', {})
+        merged = f_run['resume']['merged'] or []
+        checks['f_stage_stopped_for_credit'] = (f_run['exit'] == chain.EXIT_STOPPED and first_run.get('status') == 'failed'
+                                                and (first_run.get('metrics') or {}).get('billing_stop') == 1
+                                                and 'provider_credit_balance_low' in (first_run.get('message') or ''))
+        checks['f_rows_not_started_not_failed'] = (len(rows) == s1_rows and count(rows, 'failed') == 0 and len(interrupted) >= 1
+                                                   and all(r['status'] == 'not_started' and r['accounting'].get('voided') for r in interrupted if r['accounting'].get('attempts'))
+                                                   and (first_run.get('metrics') or {}).get('failed_episodes') == 0)
+        checks['f_slow_schedule_followed'] = any(r['accounting'].get('billing_wait_seconds') == budget['billing_outage']['max_wait_seconds'] for r in interrupted)
+        checks['f_resume_completes'] = (f_run['resume']['exit'] == 0 and second_run.get('status') == 'done'
+                                        and (f_run['resume']['status'] or {}).get('state') == 'completed')
+        checks['f_continuation_holds_exactly_the_not_started_rows'] = (
+            f_run['resume']['rows'] is not None
+            and sorted(r['id'] for r in f_run['resume']['rows']) == sorted(r['id'] for r in rows if r['status'] == 'not_started')
+            and f_run['resume']['stub_messages'] == count(rows, 'not_started'))
+        checks['f_every_row_exactly_once'] = (len(merged) == s1_rows == len({r['id'] for r in merged}) and count(merged, 'completed') == s1_rows)
+        checks['f_same_ledger_and_caps'] = (f_run['resume']['ledger']['attempted_calls'] == budget['max_attempted_calls']
+                                            and f_run['resume']['ledger']['voided_calls'] == sum(bool(r['accounting'].get('voided')) for r in interrupted))
+        checks['f_analysis_complete_after_resume'] = ((second_run.get('metrics') or {}).get('residual_avoidance_pp') == 0
+                                                      and (second_run.get('metrics') or {}).get('team_episodes_complete') == 120)
+        checks['f_second_resume_refused'] = f_run['resume']['again'] == chain.EXIT_STOPPED
+        checks['f_verify_ok_with_continuation'] = bool(f_run['verify'] and f_run['verify']['ok']
+                                                       and set(f_run['verify']['stages']) == {'S0', 'P0', 'Q0', 'S1', 'S1-r1'})
 
         checks['nothing_spooled'] = not list((tmp / 'spool').glob('*.json')) if (tmp / 'spool').exists() else True
         checks['committed_tree_untouched'] = not (study.ROOT / 'results').exists() or not any((study.ROOT / 'results').iterdir())
@@ -296,17 +415,23 @@ def main(argv=None):
             stages_out = {}
             for s, e in ((run['status'] or {}).get('stages') or {}).items():
                 stages_out[s] = {k: e.get(k) for k in ('status', 'reason', 'calls', 'input_tokens', 'output_tokens', 'cost_usd',
-                                                      'planned', 'valid', 'elapsed_seconds') if e.get(k) is not None}
+                                                      'planned', 'valid', 'failed', 'not_started', 'failed_units', 'elapsed_seconds') if e.get(k) is not None}
+                if e.get('continuations'):
+                    stages_out[s]['continuations'] = [{k: c.get(k) for k in ('batch', 'status', 'calls', 'planned', 'valid', 'elapsed_seconds')} for c in e['continuations']]
             return {'exit': run['exit'], 'seconds': round(run['seconds'], 1), 'state': (run['status'] or {}).get('state'),
                     'stopped_stage': (run['status'] or {}).get('stopped_stage'), 'reason': (run['status'] or {}).get('reason'),
                     'stages': stages_out, 'ledger_calls': run['ledger']['attempted_calls'],
-                    'max_requests_in_flight': run['max_in_flight'],
+                    'max_requests_in_flight': run['max_in_flight'], 'credit_errors': run['credit_errors'],
                     'stub_cost_usd_not_real': run['ledger']['actual_usd']}
         result = {'rehearsal': 'passed' if all(checks.values()) else 'FAILED', 'checks': checks,
                   'source_hash': study.source_hash(), 'model_calls_made': 0,
                   'full_chain': brief(a_run), 'verify_seconds': round(a_run['verify']['seconds'], 1) if a_run['verify'] else None,
                   'verify_stages': {s: v.get('ok') for s, v in (a_run['verify'] or {}).get('stages', {}).items()},
-                  'failed_qualification_chain': brief(b_run), 'failed_call_chain': brief(c_run)}
+                  'failed_qualification_chain': brief(b_run), 'one_failed_call_chain': brief(c_run),
+                  'over_the_failure_limit_chain': brief(d_run), 'billing_pause_chain': brief(e_run),
+                  'billing_stop_and_resume_chain': dict(brief(f_run), first_exit=f_run['exit'], resume_exit=f_run['resume']['exit'],
+                                                        resume_seconds=round(f_run['resume']['seconds'], 1),
+                                                        interrupted_rows=len(interrupted), resumed_rows=len(f_run['resume']['rows'] or []))}
     finally:
         if a.keep:
             print(f'rehearsal files kept in {tmp}', file=sys.stderr)
