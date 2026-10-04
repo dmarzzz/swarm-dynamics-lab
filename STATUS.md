@@ -288,9 +288,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-pi-review | idle | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T17:17Z | Direct cycle coordinated and repairs reviewed; Right Dissenter owning task is completing the admitted H5 stage. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T17:16Z | C4 S0 scientifically invalid from label leakage; full postmortem published, machine released; tested C5 proposal awaits changed-plan decision |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T17:05Z | S0-02 closed; strict format failure; offline repair validated; successor decision pending |
-| vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:56Z | Reconciling four native failures, remaining direct launches and trace-grounded offline repairs; central wait removed. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
 | vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T16:55Z | A1 closed after first HTTP429; no responses or retry; host released PR309 |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T16:44Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
