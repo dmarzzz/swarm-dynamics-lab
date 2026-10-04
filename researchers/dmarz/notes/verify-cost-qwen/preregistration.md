@@ -85,3 +85,15 @@ Said up front, before any run on either model:
 (vii) **Failure handling** is the same four-part rule. The OpenAI adapter's billing-stop category is `provider_billing_stopped`; `chain.py resume` accepts it for the `gpt-6-luna` chain exactly as it accepts `provider_credit_balance_low` for the Qwen chain. Transport re-sends for `gpt-6-luna`: HTTP 429 (rate limit), 500, 502, 503, 504.
 
 (viii) **Each chain has its own scripted S0.** The scripted stage answers the engineering layouts and both qualification sets in the chain's own answer schema, so it is not shared between the models; it makes no call. This differs from the contract's wording that one scripted S0 serves every model of a ladder, for that reason. The two chains must not run at the same time against the same hub experiment (the hub hands out queued runs per experiment); they run one after the other.
+
+### Amendment to "Second pre-registered model", dated 2026-10-04 (about 12:45Z), before any run on gpt-6-luna
+
+What changes: the `gpt-6-luna` chain qualifies on **set a** (layouts 2800 to 2811, `qualification.fixtures_a`), not on set b as item (iii) above says. Its P0 is the first fixture of set a (`qa-2800-e90-u05-prose`) and its Q0 the other 23. Nothing else in items (i) to (viii) changes: the original answer schema, `reasoning_effort: low`, `max_completion_tokens: 1500`, the thresholds (24 of 24 valid, at least 11 of 12 optimal in each representation), the 576 S1 assignments, the caps and USD 5.
+
+Who decided it: dmarz/fleet-monitor at 12:38Z, correcting its own earlier instruction; relayed to this builder by dmarz/pipeline.
+
+Reason: `gpt-6-luna` gets the original attempt-001 instrument. On set a its P0 and Q0 requests are byte-identical to the 24 requests Qwen answered in attempt 001 (10 of 12 optimal with the prose, 8 of 12 with the table), so the two models are compared on identical requests. `gpt-6-luna` has seen neither set. A selftest proves that the chain's P0, Q0 and S1 request hashes equal the hashes in attempt 001's committed manifest.
+
+What was known when this was decided: Qwen's attempt 002 had run (launched 12:30Z) and failed qualification on set b under the repaired answer schema: 24 of 24 valid, prose 6 of 12 and table 4 of 12 optimal (10 of 24). As pre-registered, that was the only repair and the Qwen route of this line has ended. That result played no part in the choice of fixtures for a different model and a different answer schema: the choice follows from wanting identical requests to attempt 001, and it was made before any call to `gpt-6-luna`.
+
+Consequences: the `gpt-6-luna` chain is called chain 003 in the documents (review `reviews/chain-003-pre.md`); its batch names keep the model tag (`s0-002-gpt-6-luna`, `p0-002-gpt-6-luna`, `q0-002-gpt-6-luna`, `s1-002-gpt-6-luna`) and are unused on the hub. It is now the only chain of this study that can still run: the Qwen batches `s0-002` to `q0-002` exist on the hub and are refused a second time. Results of `gpt-6-luna` are reported on their own and are never pooled with either Qwen attempt.
