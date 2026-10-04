@@ -1,0 +1,12 @@
+{
+  "attempt": "D0-01",
+  "checked_utc": "2026-10-04T18:18:56.253860+00:00",
+  "rendered_page_verified": true,
+  "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
+  "rendered_tldr_matches_outcome": true,
+  "three_D0_condition_runs_terminal_failed": true,
+  "historical_runs_preserved": true,
+  "final_aggregate_artifacts_hash_verified": 9,
+  "raw_payloads_public": false,
+  "qualification_passed": false
+}

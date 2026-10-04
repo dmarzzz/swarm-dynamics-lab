@@ -2,7 +2,7 @@
 
 Updated 2026-10-04T08:59:25.064917+00:00; operator vishesh/codex-heterogeneous. Follow the [setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md), [operations guide](../../../../tooling/agent-experiments/OPERATIONS.md) and [quality rubric](../../../../tooling/agent-experiments/RUN-QUALITY.md).
 
-Current gate: G3 diagnostic admission. The owner approved the prepared D0-01 diagnostic on2026-10-04. Read [prospective plan](D0-01-PLAN.md) and [assessment](reviews/D0-01-pre.md).106offline tests pass; frozen publication, current allocation and actual ledger/relay checks precede one36-call attempt. No successor stage is included.
+Current gate: G5 complete for D0-01; capability failed, no successor admission. Read [post-mortem](reviews/D0-01-post.md), [eleven-dimension assessment](reviews/D0-01-scientific.json), [trace review](results/D0-01/trace-review.json) and [cost closeout](results/D0-01/cost-closeout.json). D0 executed3of36calls with33unstarted,106runtimechecks,9verified aggregate artifacts and released allocation. Original total capUSD2, conservative cumulative exposureUSD0.568560890. Offline repairs may proceed; a changed native plan needs the owner's updated decision.
 
 
 | Gate | Evidence and status | Next action |
@@ -32,3 +32,8 @@ No new native attempt was started. Saved assignments, call starts, request hashe
 ## S0-02 completed cycle
 
 One-shot approved execution at f362 passed81runtimechecks;1 started/143 unstarted/144 terminal, no qualified role.12 artifact readbacks match, all workers stopped and allocation released. Operational finalize and owning scientific review complete.106 offline checks now validate prompt/billing repairs, which are unexecuted. Cumulative upper exposureUSD 0.562186183; no successor authority or new ledger. ProposedD0-01 has3 fresh paired roots/36 decisions and a separately implemented diagnostic runner awaiting owner approval and runtime admission. Prior-art review remains incomplete; no efficacy or novelty claim.
+
+
+## D0-01 completed cycle
+
+One approved diagnostic executed at38544138. Repeated Haiku wrapper failure and QwenHTTP429 stop prevent qualification. Complete private trace audit and public aggregate readback, both original ledgers reconciled, full claim lifetime charged, worker/relay/allocation stopped. The owning scientific review is complete; operational finalize is retained separately. No automatic rerun or efficacy stage.

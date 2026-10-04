@@ -1,0 +1,9 @@
+{
+  "experiment": "poietic-agents",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/385441384fe4875609f369bcf6c15ebc94092abd/researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+  "commit": "385441384fe4875609f369bcf6c15ebc94092abd",
+  "plan_sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607",
+  "registered_tldr": "TLDR: Poietic D0-01 tests the repaired Haiku, Qwen and Jev action interfaces on three paired four-step cases per role: fetch, answer, refresh and structural change. Compare against protected expected actions; require 12/12 valid and correct per role with zero protected access. Maximum 36 calls, no retries; an interface failure stops that role and transport/integrity failure stops all. Diagnostic only: not full qualification, a model ranking, or evidence of swarm benefit. Owner approved this scope; original cumulative USD 2 cap and spending ledger retained. Prior S0-02 failed on its first interface response. Raw traces remain private; publish aggregates and hashes.",
+  "run_tldr": "TLDR: Poietic D0-01 screens Haiku, Qwen and Jev interfaces against expected actions, with 12 requests per contract. Require 12 correct, 12 valid and zero protected access. Fresh repaired interface; no retries; first interface failure stops a role; transport/integrity stops all. Diagnostic only; no full qualification or swarm benefit claim.",
+  "checked_utc": "2026-10-04T18:13:00.324086+00:00"
+}

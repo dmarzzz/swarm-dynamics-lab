@@ -1,0 +1,33 @@
+{
+  "generalist": {
+    "verified": true,
+    "catalog_name": "Anthropic | anthropic/claude-4.5-haiku-20251001",
+    "pricing": {
+      "prompt": "0.000001",
+      "completion": "0.000005",
+      "web_search": "0.01",
+      "input_cache_read": "0.0000001",
+      "input_cache_write": "0.00000125",
+      "input_cache_write_1h": "0.000002",
+      "discount": 0
+    }
+  },
+  "cheap_generative": {
+    "verified": true,
+    "catalog_name": "Alibaba | qwen/qwen3-8b-04-28",
+    "pricing": {
+      "prompt": "0.000000117",
+      "completion": "0.000000455",
+      "discount": 0
+    }
+  },
+  "typed_choice": {
+    "verified": true,
+    "catalog_name": "TypeSafe | typesafe/jev-1.13-20260917",
+    "pricing": {
+      "prompt": "0.000000042",
+      "completion": "0",
+      "discount": 0
+    }
+  }
+}

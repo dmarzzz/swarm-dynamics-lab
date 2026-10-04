@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "worker_stopped": true,
+  "checks": [
+    {
+      "role": "generalist",
+      "name": "summary.json",
+      "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0",
+      "hash_matches": true,
+      "bytes": 4889
+    },
+    {
+      "role": "generalist",
+      "name": "artifact-manifest.json",
+      "sha256": "bd6a26b09fda502a0b0c94e8169e1da1be579ab29d13fa3996d016d083a5754c",
+      "hash_matches": true,
+      "bytes": 889
+    },
+    {
+      "role": "generalist",
+      "name": "final_frame.png",
+      "sha256": "1923da15e483336a3bc865db9ee93e9d468714e835ce84952fc9eaab9ea0e88f",
+      "hash_matches": true,
+      "bytes": 51039
+    },
+    {
+      "role": "cheap_generative",
+      "name": "summary.json",
+      "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0",
+      "hash_matches": true,
+      "bytes": 4889
+    },
+    {
+      "role": "cheap_generative",
+      "name": "artifact-manifest.json",
+      "sha256": "bd6a26b09fda502a0b0c94e8169e1da1be579ab29d13fa3996d016d083a5754c",
+      "hash_matches": true,
+      "bytes": 889
+    },
+    {
+      "role": "cheap_generative",
+      "name": "final_frame.png",
+      "sha256": "1923da15e483336a3bc865db9ee93e9d468714e835ce84952fc9eaab9ea0e88f",
+      "hash_matches": true,
+      "bytes": 51039
+    },
+    {
+      "role": "typed_choice",
+      "name": "summary.json",
+      "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0",
+      "hash_matches": true,
+      "bytes": 4889
+    },
+    {
+      "role": "typed_choice",
+      "name": "artifact-manifest.json",
+      "sha256": "bd6a26b09fda502a0b0c94e8169e1da1be579ab29d13fa3996d016d083a5754c",
+      "hash_matches": true,
+      "bytes": 889
+    },
+    {
+      "role": "typed_choice",
+      "name": "final_frame.png",
+      "sha256": "1923da15e483336a3bc865db9ee93e9d468714e835ce84952fc9eaab9ea0e88f",
+      "hash_matches": true,
+      "bytes": 51039
+    }
+  ],
+  "checked_utc": "2026-10-04T18:13:41.930736+00:00"
+}

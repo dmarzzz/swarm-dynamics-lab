@@ -1,0 +1,20 @@
+{
+  "retrospective_counterfactual_only": true,
+  "native_grade_unchanged": "invalid",
+  "strict_parser_failure_reproduced": true,
+  "one_outer_json_fence_pair": true,
+  "inner_top_level_fields": [
+    "endpoint",
+    "entities",
+    "type"
+  ],
+  "inner_type": "fetch",
+  "inner_action_exactly_matches_expected": true,
+  "counterfactual_effect": {
+    "schema_valid": true,
+    "correct": true,
+    "protected_access_violation": false,
+    "action_executed": true,
+    "definition_sha256": "9a1d195d1b1c908d7484170114193ad19999dfc8feef0aa9eb3b6dc41fbff866"
+  }
+}

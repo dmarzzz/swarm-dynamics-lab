@@ -1,0 +1,19 @@
+{
+  "attempt": "D0-01",
+  "source_commit": "385441384fe4875609f369bcf6c15ebc94092abd",
+  "tests_passed": 106,
+  "python": "Python 3.12.3",
+  "pillow": "11.3.0",
+  "reporter_sha256": "ecd800d0faadfa624122c7acf3e1f96027f388acacd5c26249f0ad460cc790d5",
+  "original_authority_unchanged": true,
+  "prior_calls_at_admission": 37,
+  "prior_api_exposure_usd": 0.480002,
+  "maximum_new_calls": 36,
+  "actual_new_calls": 3,
+  "public_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/385441384fe4875609f369bcf6c15ebc94092abd/researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+  "public_plan_sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607",
+  "registered_and_rendered_before_calls": true,
+  "exclusive_approved_existing_resource_verified": true,
+  "owner_updated_scope_approved": true,
+  "independent_researcher_review": "not required by owner direction; no independent validation claimed"
+}

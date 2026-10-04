@@ -1,3 +1,7 @@
+## Latest handoff: D0-01 closed
+
+Read [D0-01 post-mortem](reviews/D0-01-post.md) and [scientific assessment](reviews/D0-01-scientific.json) before another iteration. Three calls, one correct fetch,33unstarted,36terminal; Haiku wrapper failure and Qwen429. Original authority unchanged,40cumulative calls,USD0.568560890 conservative total, all workers stopped and claim released. Current approval is consumed. Do not execute historical commands below as a new launch. Recommended next work is offline; changed native scope needs an updated owner decision.
+
 # Current D0-01 execution
 
 The owner approved the prepared diagnostic on2026-10-04. Follow [D0-01 plan](D0-01-PLAN.md) and [pre-run assessment](reviews/D0-01-pre.md). Native entry points are diagnostic_prepare.py, diagnostic_relay.py and diagnostic_launch.py; no oldS0 launcher. Preserve original37calls/USD0.480002API exposure and original cumulative caps. If the unexpired original deadline meets the one-hour diagnostic maximum, retain it unchanged. No copied/new ledger or reset. Current exclusive resource, frozen runtime, public registration, model catalog and relay health remain mandatory. One36-decision attempt; no retries/follow-up. Use private operational receipts without printing credentials. Public artifact uploads contain only aggregate summary, frame and hashes. At completion privately retain every raw trace, verify public hashes, reconcile lifetime cost, stop/release, finalize offline and complete scientific review.

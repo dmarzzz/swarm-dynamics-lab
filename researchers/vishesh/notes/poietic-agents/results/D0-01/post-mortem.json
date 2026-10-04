@@ -1,0 +1,56 @@
+{
+  "disposition": "offline-diagnosis",
+  "execution": "reconciled",
+  "qualification": false,
+  "diagnostic": false,
+  "scientific_conclusion": "none",
+  "process_compliance": "admitted-D0-only",
+  "reporting": [
+    {
+      "contract": "generalist",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "generalist",
+      "name": "artifact-manifest.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "generalist",
+      "name": "final_frame.png",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "artifact-manifest.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "cheap_generative",
+      "name": "final_frame.png",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "summary.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "artifact-manifest.json",
+      "acknowledged": true
+    },
+    {
+      "contract": "typed_choice",
+      "name": "final_frame.png",
+      "acknowledged": true
+    }
+  ],
+  "next_action": "Owner reviews all retained failures, usage and interface controls before any escalation"
+}

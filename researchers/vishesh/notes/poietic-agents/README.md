@@ -3,15 +3,15 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-heterogeneous; source `f3621c64` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-heterogeneous; source `38544138` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Reversible self-differentiation improves lifetime swarm efficiency without losing quality; this intended efficacy claim remains untested. Basis: Both qualification attempts failed at interfaces. S0-02 retained one HTTP200 fenced/nested response and stopped; no model qualifies or efficacy comparison exists. The106 offline repair/diagnostic checks do not establish native behavior.
-- **sample_size_summary:** S0-01:36/144 started over9generalist cases,0usable responses. S0-02:1/144 started over1generalist root,0executable actions,143unstarted;144terminal. Other roles untested. Four steps per case dependent;0swarm efficacy roots. Proposed diagnostic3paired roots/36dependent decisions is unrun.
+- **evidence_confidence:** **0/4** — Reversible self-differentiation improves lifetime swarm efficiency without losing quality; this intended efficacy claim remains untested. Basis: D0-01 stopped after3calls:Haiku fenced JSON, Qwen correct fetch thenHTTP429, Jev unstarted. No full qualification or efficacy comparison; offline checks do not supply missing native behavior.
+- **sample_size_summary:** S0-01:36calls;S0-02:1call. D0-01:3/36started on the first of3planned paired roots,1correct action,33unstarted,36terminal;0complete sequences and0swarm efficacy roots. Four steps within a case are dependent.
 <!-- experiment-evidence:end -->
 
 **Prospective design and qualification package v0.2 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
 
-This revision contains retrospective closeouts for S0-01 and S0-02 and an unexecuted offline repair/diagnostic proposal. S0-01 used the [original preregistered plan](https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md); this updated revision was not its preregistration.
+This revision contains retrospective closeouts for S0-01, S0-02 and the completed D0-01 diagnostic. S0-01 used the [original preregistered plan](https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md); this updated revision was not its preregistration.
 
 An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher feedback has been received and its three measurement changes are implemented; native qualification and the question-specific prior-art work remain open. Both native qualification attempts failed at interface boundaries; no model is qualified and no swarm efficacy result exists.
 
@@ -55,7 +55,7 @@ S0-01 made 36 actual generalist calls, then stopped after repeated relay errors.
 
 S0-02 executed once at frozen f362 source after81 runtime checks and complete admission. Its first Haiku response was HTTP 200 but contained fenced, nested JSON; the strict parser stopped after1 call, leaving143 unstarted and 144 terminal. No role qualifies. All12hub artifacts verified. New API costUSD 0.00077; cumulative conservative exposureUSD 0.562186183 including allocation lifetime, under the originalUSD 2cap. Worker, relay and allocation are released. See the [post-mortem](reviews/S0-02-post.md), [trace review](results/S0-02/trace-review.json) and [scientific assessment](reviews/S0-02-scientific.json).
 
-The current source contains an offline-only explicit action-contract and billing repair, with106 passing checks. The [proposed36 decision diagnostic](reviews/S0-02-repair-plan.md) uses3 fresh paired roots and has a separately implemented manifest/runner and requires owner approval plus current admission before collection. It is not full qualification. No successor is authorized or running; S1/S2 remain closed. Historical immutable plans and failed outcomes are preserved.
+D0-01 executed the owner-approved36-decision screen at frozen38544138 after106runtime checks. It stopped after3calls:Haiku returned the correct flat fetch inside a rejected Markdown fence;Qwen executed a correct fetch then receivedHTTP429;Jev was unstarted. All36outcomes are terminal,33unstarted,9aggregate artifacts verified. No role passes the diagnostic or qualifies. Cumulative conservative exposureUSD0.568560890 ofUSD2; worker/relay and allocation released. See [post-mortem](reviews/D0-01-post.md), [scientific review](reviews/D0-01-scientific.json) and [aggregate evidence](results/D0-01/summary.json). Raw traces remain private. Next work is offline interface/transport diagnosis; no successor is authorized or running andS1/S2 remain closed.
 
 Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
 

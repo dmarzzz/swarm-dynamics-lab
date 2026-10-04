@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Poietic D0-01 tests the repaired Haiku, Qwen and Jev action interfaces on three paired four-step cases per role: fetch, answer, refresh and structural change. Compare against protected expected actions; require 12/12 valid and correct per role with zero protected access. Maximum 36 calls, no retries; an interface failure stops that role and transport/integrity failure stops all. Diagnostic only: not full qualification, a model ranking, or evidence of swarm benefit. Owner approved this scope; original cumulative USD 2 cap and spending ledger retained. Prior S0-02 failed on its first interface response. Raw traces remain private; publish aggregates and hashes.",
+  "description": "TLDR: Poietic D0-01 tested repaired Haiku,Qwen and Jev action interfaces on3paired four-step cases, requiring12/12valid and correct perrole. Diagnostic stopped at3calls:Haiku returned exact correct fetch inside rejected Markdown fences;Qwen executed one correct fetch thenHTTP429;Jev unstarted.36terminal/33unstarted;no retries,no full qualification or swarm efficacy conclusion. All9aggregate artifacts verified;full rawtraces archived privately;worker/relay/allocation released. Total conservative exposureUSD0.568560890 under originalUSD2. Scientific review complete;next work offline,no successor authorized.",
   "params": {
     "stage": {
       "type": "str",

@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "study_id": "poietic-agents",
+  "attempt": "d0-01",
+  "verdict": "repair",
+  "outcome_interpretation": "Repeated strict wrapper failure plus provider429; diagnostic closed, no qualified role or swarm result.",
+  "assessor": "vishesh/codex-heterogeneous",
+  "assessed_at": "2026-10-04T18:17:30.538850+00:00",
+  "evidence_revision": "385441384fe4875609f369bcf6c15ebc94092abd",
+  "review_complete": true,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The published diagnostic asks whether explicit interface instructions support required actions; no prompt causal contrast or swarm efficacy inference is made. Outcome informs whether full qualification is worth proposing.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+          "sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/summary.json",
+          "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Fictional operations fixtures expose the initial fetch but no sequence completes. Answer/refresh/three structural variants remain unobserved; new generator IDs are not broad task diversity.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+          "sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/summary.json",
+          "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0"
+        }
+      ],
+      "next_action": "Retain current failure; assess interface normalization offline before any fresh native plan.",
+      "acceptance_check": "A future admitted screen must observe all four necessary steps and disclose fixture realism and root dependence."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "One correct Qwen fetch and one strict Haiku wrapper rejection are observed; no native structural follow-through controls or Jev alternatives are observed. Finite-choice Jev has expected-action assistance and cannot support model ranking.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/trace-review.json",
+          "sha256": "6b559323084ad64877b8774ee57896af217b0066c9b43b4ed566b1a49c1d8171"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+          "sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607"
+        }
+      ],
+      "next_action": "Keep collective claims closed and retain declared reference/negative controls in any updated plan.",
+      "acceptance_check": "Saved outcomes must demonstrate action/effect controls across the required lifecycle before qualification is considered."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Haiku0/12 valid, Qwen1/12 valid and correct, Jev0started; zero complete sequences. Stripping Haiku fences retrospectively yields exact correct fetch but never changes native invalid grading.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/summary.json",
+          "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/format-diagnosis.json",
+          "sha256": "2cb2901f4224943b327bcce1ecbdef9dd946d701710ee93d208031889161b956"
+        }
+      ],
+      "next_action": "Specify and fault-test a narrowly bounded wrapper policy offline; separately diagnose provider429.",
+      "acceptance_check": "Any new interface needs an owner-approved fresh screen and original full qualification thresholds; no broad competence claim from wrapper replay."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All36assigned cells retained. Raw invalid, valid/correct and provider refusal separated; successful effect replays. Known billing survives invalid parsing and unknown429 billing retains full reserve.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/trace-review.json",
+          "sha256": "6b559323084ad64877b8774ee57896af217b0066c9b43b4ed566b1a49c1d8171"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/cost-closeout.json",
+          "sha256": "3e8fd7f5a73c71dc146ae270d65cae92f74206ef532417e69e0fed1dbdea2482"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three planned paired generator roots and four dependent steps per role; only the first root has calls, no complete sequence, zero efficacy roots. This supports failure diagnosis only, not population accuracy or model ranking.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/D0-01-PLAN.md",
+          "sha256": "0b7b6e358651e5bfd00d772bbf3ef39e9c74f91f06a01b7401b5455f664e1607"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/summary.json",
+          "sha256": "b2c5f5f96a4bf87b9c7c5eba13a78cf4ce6c7992ee3c6f0ee99fd86cb459e7b0"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All three effective requests/context receipts reconstruct from frozen declared state. TwoHTTP200 served routes match their pins;429 contains no served-answer evidence. No operator conversation or undeclared fallback was supplied.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/trace-review.json",
+          "sha256": "6b559323084ad64877b8774ee57896af217b0066c9b43b4ed566b1a49c1d8171"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/route-check.json",
+          "sha256": "f68962324801a07c0a47e39813dc3a30df176ccd2e8756f778adb0499c28a41b"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "36terminal assignments,3starts joined to3provider receipts and3charge rows,33unstarted; all3started records and both misses reviewed. Raw private evidence retained, public hashes matched for9artifacts.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/trace-review.json",
+          "sha256": "6b559323084ad64877b8774ee57896af217b0066c9b43b4ed566b1a49c1d8171"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/manifest.json",
+          "sha256": "1ceff101aae3be7aa5ab639a833cd2b8191d0435ab601a4a69d8c4da03c7992b"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/artifact-readback.json",
+          "sha256": "61ba43ee6d59a2ecc38af63cbe29ad3f020d35d8f893e4452f4f552d3b088d4b"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original ledger/hash/deadline unchanged;40cumulative calls with37uncertain entries. Full207-second allocation and all charges giveUSD0.568560890upper underUSD2; worker/relay/tunnel stopped and claim released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/cost-closeout.json",
+          "sha256": "3e8fd7f5a73c71dc146ae270d65cae92f74206ef532417e69e0fed1dbdea2482"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/admitted-validation.json",
+          "sha256": "e792f6de53e6e1e16e31824c6ce9c28e97d0d380e955c267d6ff7cab726b6d6d"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen38544138source,106checks onPython3.12.3/Pillow11.3.0, saved native request/response/effect hashes and exact input replay identify this diagnostic. Hosted answers are not asserted deterministic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/admitted-validation.json",
+          "sha256": "e792f6de53e6e1e16e31824c6ce9c28e97d0d380e955c267d6ff7cab726b6d6d"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/trace-review.json",
+          "sha256": "6b559323084ad64877b8774ee57896af217b0066c9b43b4ed566b1a49c1d8171"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/manifest.json",
+          "sha256": "1ceff101aae3be7aa5ab639a833cd2b8191d0435ab601a4a69d8c4da03c7992b"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final PNG visually checked:generalist0/12correct,1started,11unstarted;Qwen1/12correct,2started,10unstarted;Jev0started,12unstarted. Explicit diagnostic-only label and assigned denominators; all3copies hash-match. Footer states acceptance criterion.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/final_frame.png",
+          "sha256": "1923da15e483336a3bc865db9ee93e9d468714e835ce84952fc9eaab9ea0e88f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/D0-01/artifact-readback.json",
+          "sha256": "61ba43ee6d59a2ecc38af63cbe29ad3f020d35d8f893e4452f4f552d3b088d4b"
+        }
+      ],
+      "next_action": "",
+      "acceptance_check": ""
+    }
+  ],
+  "parent_handoff_sha256": "9eacc10ea5b0d10ed6c31e047cd3e752b4d933a329b2e4d086df2f76bf5198ee",
+  "native_attempt": "D0-01"
+}

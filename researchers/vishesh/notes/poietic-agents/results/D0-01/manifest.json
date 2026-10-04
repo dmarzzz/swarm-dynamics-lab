@@ -1,0 +1,45 @@
+{
+  "attempt": "D0-01",
+  "raw_payloads_public": false,
+  "private_native_evidence": {
+    "assignments.json": {
+      "sha256": "a09b5a7bf58af8617c909209c063a6438c26bc607f9a0369afb9735aed65d31f",
+      "bytes": 5091
+    },
+    "call-starts.jsonl": {
+      "sha256": "ffa344abfc9604d9769fef4842ed97ad1b8578e86e44589f166a4e396bfc89a5",
+      "bytes": 581
+    },
+    "responses.jsonl": {
+      "sha256": "ef681f89b14d1f2bb1ac8e60bdda9be7025461b95a4ecca61ed51cd83be5a8e6",
+      "bytes": 13932
+    },
+    "transport.jsonl": {
+      "sha256": "653cd519533939158531c51f0ebfbfec827f05fd7a9a5e3c5949b4d323ed1fe8",
+      "bytes": 102
+    },
+    "records.json": {
+      "sha256": "def5cbdfecf6e9802793d5de76c7673696dfbb9ebd98c56c655699f42c85d64a",
+      "bytes": 23880
+    },
+    "provider-receipts.json": {
+      "sha256": "27051988e8a5661f42e115702e9d70cdf3472fccc5e007d85b8953bbfabf5b68",
+      "bytes": 2989
+    }
+  },
+  "public_artifacts": [
+    "summary.json",
+    "public-plan.json",
+    "route-check.json",
+    "post-mortem.json",
+    "final_frame.png",
+    "final_frame.svg",
+    "artifact-manifest.json",
+    "artifact-readback.json",
+    "trace-review.json",
+    "format-diagnosis.json",
+    "cost-reconciliation.json",
+    "cost-closeout.json"
+  ],
+  "private_archive_verified": true
+}

@@ -1,0 +1,86 @@
+{
+  "attempt": "D0-01",
+  "retrospective_saved_data_review": true,
+  "reviewer": "vishesh/codex-heterogeneous",
+  "same_author_audit": true,
+  "assigned": 36,
+  "started": 3,
+  "terminal": 36,
+  "unstarted": 33,
+  "reviewed_started_records": 3,
+  "misses_reviewed": 2,
+  "records_and_summary_reconcile": true,
+  "all_native_requests_reconstructed": true,
+  "provider_receipts_joined": true,
+  "ledger_rows_joined": true,
+  "artifact_manifest_matches": true,
+  "per_call": [
+    {
+      "id": "D0-01:generalist:0:0",
+      "role": "generalist",
+      "case": 0,
+      "step": 0,
+      "status": "invalid",
+      "schema_valid": false,
+      "correct": false,
+      "failure_code": "JSONDecodeError",
+      "request_reconstructed": true,
+      "context_reconstructed": true,
+      "expected_action_type": "fetch",
+      "usage_reconciled": true,
+      "cost_usd": 0.000771,
+      "served_model": "anthropic/claude-haiku-4.5",
+      "served_provider": "Anthropic",
+      "parse_error": "JSONDecodeError",
+      "parse_error_code": null,
+      "markdown_fenced": true,
+      "content_chars": 77,
+      "json_type": "unparseable"
+    },
+    {
+      "id": "D0-01:cheap_generative:0:0",
+      "role": "cheap_generative",
+      "case": 0,
+      "step": 0,
+      "status": "valid",
+      "schema_valid": true,
+      "correct": true,
+      "failure_code": null,
+      "request_reconstructed": true,
+      "context_reconstructed": true,
+      "expected_action_type": "fetch",
+      "usage_reconciled": true,
+      "cost_usd": 7.2098e-05,
+      "served_model": "qwen/qwen3-8b",
+      "served_provider": "Alibaba",
+      "returned_action_type": "fetch",
+      "returned_action_fields": [
+        "endpoint",
+        "entities",
+        "type"
+      ],
+      "action_effect_replayed": true,
+      "protected_access_violation": false
+    },
+    {
+      "id": "D0-01:cheap_generative:0:1",
+      "role": "cheap_generative",
+      "case": 0,
+      "step": 1,
+      "status": "failed",
+      "schema_valid": false,
+      "correct": false,
+      "failure_code": "http_429",
+      "request_reconstructed": true,
+      "context_reconstructed": true,
+      "expected_action_type": "answer",
+      "relay_diagnostic": {
+        "error_type": "provider_http",
+        "http_status": 429,
+        "error_markers": [
+          "provider"
+        ]
+      }
+    }
+  ]
+}

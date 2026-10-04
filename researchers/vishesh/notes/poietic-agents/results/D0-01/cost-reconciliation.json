@@ -1,0 +1,18 @@
+{
+  "worker_and_children_stopped": true,
+  "checked_at": 1791137673.9823475,
+  "mirror_settlements_match": true,
+  "original_authority_unchanged": true,
+  "remote_tunnel_closed": true,
+  "local_relay_and_tunnel_stopped": true,
+  "cumulative_calls": 40,
+  "new_calls": 3,
+  "new_known_usd": 0.000843098,
+  "new_api_exposure_usd": 0.002267482,
+  "cumulative_known_usd": 0.001613098,
+  "cumulative_api_exposure_usd": 0.482269482,
+  "unresolved_historical_calls": 36,
+  "new_uncertain_calls": 1,
+  "historical_charges_unchanged": true,
+  "native_summary_preserved": true
+}
