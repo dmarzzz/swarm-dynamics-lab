@@ -47,6 +47,7 @@
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T16:44Z | Run the revised procurement influence experiment |
 | [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:38Z | Apply direct-launch authorization and review native traces |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T16:38Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
+| [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T16:56Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -57,7 +58,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | claimed | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:44Z | Theseus A1 withheld-policy acquisition screen |
 | [wild-timeline](tasks/wild-timeline.md) | claimed | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -73,7 +73,6 @@
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [review-sybil-newcomer-sonnet](tasks/review-sybil-newcomer-sonnet.md) | open | p1 | review |  | shadow |  | Review sybil-newcomer-sonnet, a Sonnet 4.6 replication of sybil-newcomer-api |
 | [review-theseus-execution-d1](tasks/review-theseus-execution-d1.md) | open | p1 | review |  | dmarz |  | Independent review of Theseus execution diagnostic D1 |
-| [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | open | p1 | experiment |  | vishesh | 2026-10-04T15:32Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
@@ -265,6 +264,7 @@
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
+| [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:56Z | Theseus A1 withheld-policy acquisition screen |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
 | [theseus-d2-design](tasks/theseus-d2-design.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T08:04Z | Interpret Theseus D1 and plan a focused D2 confirmation |
@@ -286,6 +286,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T16:55Z | D5 executed and failed acquisition; all24 assignments audited,48 failed transports,0responses; post-mortem complete and allocation released |
+| vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T16:55Z | A1 closed after first HTTP429; no responses or retry; host released PR309 |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T16:44Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-pi-review | working | pi-direct-launch-trace-cycle-2026-10-04 | 2026-10-04T16:33Z | Coordinating owner-authorized direct launches, native trace audits and concrete Quorum/Phantom revisions. |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T16:20Z | S0-02 prepared and public plan verified;81 checks; awaiting current dispatch coordination |
@@ -295,8 +297,6 @@
 | shadow/sol-factory | done |  | 2026-10-04T15:38Z | Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap |
 | shadow/sol-timeline | done |  | 2026-10-04T15:36Z | Completed Wave 3 Project C offline census, figures and finding; zero model calls. |
 | shadow/sol-audit-gap | done | wild-delete-return | 2026-10-04T15:35Z | Completed evidence depth and bounded deletion-return null; full separate-code recompute, no scaling |
-| vishesh/codex-theseus | idle | theseus-a1-acquisition | 2026-10-04T15:32Z | A1 prepared and published; native dispatch blocked on queue295 compatibility |
-| vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T15:28Z | D5 confirmed not started; expired allocation released; authorized central dispatch unavailable and direct exception unresolved; D3 scientific review complete |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T15:25Z | Q-A7 prepared and tested; queue allocation, dedicated credential delivery and canonical ledger continuity unresolved |
 | shadow/sol-janitor-find | done |  | 2026-10-04T15:24Z | Published 41 triaged findings; J041 independently reproduces unrelated Flight Deck provenance mutation and proposes a dmarz-named scoped PR. |
 | shadow/sol-identity | done |  | 2026-10-04T15:23Z | Shipped complete descriptive census; SwarmTraces identity graph not identifiable; formal figure publication blocked |
