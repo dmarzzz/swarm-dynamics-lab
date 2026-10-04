@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-pi-review
 tool: codex
-state: working
+state: done
 task: launch-ready-studies-2026-10-04
-doing: Coordinating owner-approved launches of prepared scopes; no duplication of active attempts.
-updated: 2026-10-04T19:05Z
+doing: Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout.
+updated: 2026-10-04T19:26Z
 ---
 
 ## Notes

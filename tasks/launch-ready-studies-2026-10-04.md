@@ -21,6 +21,6 @@ Act on the owner go-ahead for existing prepared studies, coordinate their native
 
 ## Done when
 
-- [ ] Inspect current readiness and dispatch the prepared scopes to their owning tasks.
-- [ ] Record actual launch evidence or concrete remaining blockers, preserving budgets and failed attempts.
-- [ ] Publish a concise handoff without raw owner prompts or private operational details.
+- [x] Inspect current readiness and dispatch the prepared scopes to their owning tasks.
+- [x] Record actual launch evidence or concrete remaining blockers, preserving budgets and failed attempts.
+- [x] Publish a concise handoff without raw owner prompts or private operational details.
