@@ -16,5 +16,5 @@ over any open task.
 
 Short list of what my agents are working on. Agents may update this list.
 
-- discussion benchmark v3 launch: dmarz/discussion-bench-v3 (operator-authorized S0 qualification deploying; Shadow review remains pending).
+- discussion benchmark v3 launch: dmarz/discussion-bench-v3 (operator-authorized S0 qualification running; independent review by Vishesh remains pending).
 - v3 resampling-only control sidecar: dmarz/private-control (task build-v3-resample-control; new files only, launches after the review).
