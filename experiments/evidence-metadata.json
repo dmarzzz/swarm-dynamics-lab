@@ -3030,6 +3030,32 @@
         "researchers/shadow/factory/specs/split-sonnet-no-links-weak-or.json"
       ],
       "status_at_assessment": "lead"
+    },
+    {
+      "id": "theseus-acquisition-a1",
+      "title": "Swarm of Theseus A1 withheld-policy acquisition",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "daf5c507fc1256ab566937614f4833399e434ea1",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-acquisition-a1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Acquisition from labeled history with the true policy withheld remains untested.",
+        "rationale": "Prospective plan and15offline software checks only; native dispatch blocked by orbital-one credential/launcher compatibility. R1 qualification is a separate supplied-policy cohort."
+      },
+      "sample_size_summary": "Observed: none,0native calls. Planned: six fixed acquisition roots,12learners and96distinct test case/family pairs;204call slots,96executor calls per arm. No culture test.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PREPARATION-POST.md"
+      ],
+      "status_at_assessment": "prepared_dispatch_blocked"
     }
   ],
   "source_sha256": {

@@ -23,3 +23,7 @@ If acquisition qualifies, test **selective inheritance**, not generic access to 
 The primary cultural endpoint should require both correct retention and correct updating. A static archive win over no memory is a useful baseline, not the main contribution. A matched controller tying the swarm is a valid result. Do not infer swarm-specific benefit from a majority-vote scaffold.
 
 This is the next proposal, not another run admission. Current native work stops after R1, evidence is archived and the host is released. Remaining authority is approximately USD4.187769 of the original USD5, with no new allocation or automatic top-up.
+
+## Current preparation, 2026-10-04
+
+The proposal above is now concretized in [A1-PLAN.md](A1-PLAN.md), with implementation,15offline checks and [blocked queue status](A1-STATUS.md). Binary incident labels avoid source leakage; support IDs must identify their source by content. The current owner direction authorizes this single ready iteration, but actual native admission is still blocked by the orbital-one credential/dispatch handoff. No turnover or additional repair run follows automatically.

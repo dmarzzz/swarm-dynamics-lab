@@ -84,3 +84,7 @@ Failure handling preserves call-start and finished records, writes every assigne
 The completed D2/R1 runs answer the bounded executor question within their stated limits. Acquisition, changed-rule identifiability, swarm advantage and cultural preservation still require their own subsequent designs.
 
 Shared validation limitations are recorded in results/R1/validation-closeout.json. Do not confuse unrelated registry failures with native execution or qualification.
+
+## Current continuation: A1 acquisition
+
+[A1 status](A1-STATUS.md): prospective plan and tested instrument published;204planned calls,0native calls. Orbital-one dispatch compatibility is blocked; no culture result. R1's bounded F qualification remains the latest native evidence.

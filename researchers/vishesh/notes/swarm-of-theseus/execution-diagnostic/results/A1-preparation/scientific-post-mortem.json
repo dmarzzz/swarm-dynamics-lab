@@ -1,0 +1,148 @@
+{
+  "schema_version": 1,
+  "study_id": "swarm-of-theseus-acquisition-a1",
+  "attempt": "a1-preparation",
+  "assessor": "vishesh/codex-theseus",
+  "assessed_at": "2026-10-04T15:31:09.795244+00:00",
+  "scope": "Offline preparation and blocked dispatch only; not a native scientific attempt",
+  "verdict": "blocked",
+  "parent_native_review": [
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/results/R1/scientific-post-mortem.json",
+      "sha256": "dccc52fd519427e4de177898136df3f59a0532b74462ae5b43e5227f925b09a9"
+    }
+  ],
+  "operational_handoff_sha256": "80038dadb7697ea6c24a024c52037e8db6cdb4732f1a1f8d1e411f323406793b",
+  "outcome_interpretation": "No new model evidence. Ready offline package, native dispatch remains blocked. Preserve R1 qualified F and original budget; do not claim cultural preservation.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Acquisition is an explicit unmeasured prerequisite; R1 supplied mappings and cannot answer it.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
+          "sha256": "bb396cee60c4c3874ca3c1c13379f72ed0e7881a86b0bb78715f47185a05266b"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Offline identifiable training, pattern-disjoint tests and all six mappings; finite synthetic feasibility scope only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+          "sha256": "dc0f316460a4dd92247b1cd99b7b4a9e050ed3d39e3ddf8ddb7e561ba92c8036"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact enumerator plus original F ceiling; paired cases, added acquisition costs disclosed; no collective claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
+          "sha256": "bb396cee60c4c3874ca3c1c13379f72ed0e7881a86b0bb78715f47185a05266b"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "F passes historical R1; no A1 learner or fresh native ceiling observations.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-R1.md",
+          "sha256": "80241e8a14635a07a0aba9a44b11d6a33076d5a88badb36d28857c5c83462283"
+        }
+      ],
+      "next_action": "Resolve orbital-one dispatch/authorized credential handoff, then refresh admission and collect only the bounded A1 packet.",
+      "acceptance_check": "Current approved-account exclusive claim, verified SSH/source/runtime/original ledger, immutable public page/plan receipt; native204slots reconciled and prospective gates assessed without fallback or retry."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Strict policy, content-support and assigned-action endpoints; two same-author scorers agree on software fixtures.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+          "sha256": "dc0f316460a4dd92247b1cd99b7b4a9e050ed3d39e3ddf8ddb7e561ba92c8036"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six designed root blocks,12nested learners,96distinct case/family pairs; feasibility coverage and coarse precision stated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PLAN.md",
+          "sha256": "bb396cee60c4c3874ca3c1c13379f72ed0e7881a86b0bb78715f47185a05266b"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "unknown",
+      "finding": "Projection and F parity pass offline; remote runtime/source/credential receipt is absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-PRE.md",
+          "sha256": "640048e72fbf465b6a5bbb6c1ed77bafd0a29aa923e939103a5b18340720326b"
+        }
+      ],
+      "next_action": "Resolve orbital-one dispatch/authorized credential handoff, then refresh admission and collect only the bounded A1 packet.",
+      "acceptance_check": "Current approved-account exclusive claim, verified SSH/source/runtime/original ledger, immutable public page/plan receipt; native204slots reconciled and prospective gates assessed without fallback or retry."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Prepared204slots, native0; duplicate fence, missingness and invalid-parent propagation pass actual-loop mock test.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+          "sha256": "dc0f316460a4dd92247b1cd99b7b4a9e050ed3d39e3ddf8ddb7e561ba92c8036"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Original USD5 retained; new spend0. Orbital-only dispatch incompatible with currently available local Keychain-only launcher path.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-STATUS.md",
+          "sha256": "330eefe9899a196e4d81f00410e9daf3ad686fcf07e5d8cf3ea161064f45a1e7"
+        }
+      ],
+      "next_action": "Resolve orbital-one dispatch/authorized credential handoff, then refresh admission and collect only the bounded A1 packet.",
+      "acceptance_check": "Current approved-account exclusive claim, verified SSH/source/runtime/original ledger, immutable public page/plan receipt; native204slots reconciled and prospective gates assessed without fallback or retry."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "unknown",
+      "finding": "Pinned source and checks published; exact fleet runtime and admitted receipt not yet established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-RUNBOOK.md",
+          "sha256": "abb099f1d7b2db17236dfbbf42d1478f713fc635e766147299c9a1915cb62cec"
+        }
+      ],
+      "next_action": "Resolve orbital-one dispatch/authorized credential handoff, then refresh admission and collect only the bounded A1 packet.",
+      "acceptance_check": "Current approved-account exclusive claim, verified SSH/source/runtime/original ledger, immutable public page/plan receipt; native204slots reconciled and prospective gates assessed without fallback or retry."
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Mixed-state1920px software figure inspected; missingness exposed and fixture-labeled. Native readback not claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-VALIDATION.json",
+          "sha256": "dc0f316460a4dd92247b1cd99b7b4a9e050ed3d39e3ddf8ddb7e561ba92c8036"
+        }
+      ]
+    }
+  ]
+}

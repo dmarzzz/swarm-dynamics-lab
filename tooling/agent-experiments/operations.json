@@ -71,12 +71,12 @@
       "title": "Swarm of Theseus v2",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/swarm-of-theseus/v2",
-      "setup_path": "researchers/vishesh/notes/swarm-of-theseus/v2/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-post.md",
+      "setup_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-R1.md",
       "adapter": "theseus-v2",
-      "checked_at": "2026-10-04T14:31:29.036364+00:00",
-      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Repair offline; hold turnover pilot. Read researchers/vishesh/notes/swarm-of-theseus/v2/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
+      "checked_at": "2026-10-04T15:30:28.125872+00:00",
+      "checked_commit": "daf5c507fc1256ab566937614f4833399e434ea1",
+      "next_action": "A1 prepared, native0: read execution-diagnostic/A1-STATUS.md and A1-RUNBOOK.md. R1 F qualifies192/192; old v2 failures are historical. A1 manual Haiku contract blocked on orbital-one queue/authorized credential handoff (private request295). Preserve USD5 original diagnostic lineage; do not run the historical USD15 adapter or turnover. Refresh all public/account/claim/runtime/ledger gates after dispatch compatibility resolves.",
       "next_run_approval": "owner"
     },
     {
