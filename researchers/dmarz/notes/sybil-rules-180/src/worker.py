@@ -288,14 +288,14 @@ def stage_q0(ctx, probes=range(1, 18)):
 
 def stage_x0(ctx):
     d = study.design()
-    b, q = d['budget'], d['qualification']
+    b, q, e = d['budget'], d['qualification'], d['economy']
     econ, rules = study.context_packets()
     sim.begin_round(econ.state)
     items = [ctx.item(econ, oid, rules) for oid in econ.natives]
     ctx.planned += len(items)
     sizes = [len(transport.request_bytes(study.provider_config(), study.SYSTEMS[it['system']], it['user'])) for it in items]
     half = len(items) // 2
-    parts, accepted = [], 0
+    parts, accepted, reasons = [], 0, {}
     for chunk, flight in ((items[:half], b['in_flight_per_host']), (items[half:], b['in_flight_per_host_max'])):
         t0 = time.monotonic()
         rows = ctx.ask(chunk, f'context-{flight}', in_flight=flight)
@@ -305,11 +305,19 @@ def stage_x0(ctx):
                       for r in rows.values())
         for it in chunk:
             r = rows[it['unit']]
-            good = r['ok'] and sim.resolve(econ.state, it['oid'], r['answer'])['status'] == 'accepted'
+            res = sim.resolve(econ.state, it['oid'], r['answer'] if r['ok'] else None, None if r['ok'] else 'call_failed:' + str(r.get('category')))
+            good = res['status'] == 'accepted'
             accepted += good
             ctx.accepted += good
+            ctx.void += not good
+            if not good:
+                reasons[str(res['reason'])] = reasons.get(str(res['reason']), 0) + 1
+        latency = sorted((r.get('accounting') or {}).get('latency_seconds') or 0 for r in rows.values() if r['ok'])
         parts.append({'in_flight_per_host': flight, 'calls': len(chunk), 'ok': ok, 'failed': len(chunk) - ok,
                       'rate_limited': limited, 'seconds': None if ctx.scripted else seconds,
+                      'latency_mean': None if ctx.scripted or not latency else sum(latency) / len(latency),
+                      'latency_p95': None if ctx.scripted or not latency else latency[int(0.95 * (len(latency) - 1))],
+                      'latency_max': None if ctx.scripted or not latency else latency[-1],
                       'calls_per_second': None if ctx.scripted or seconds <= 0 else ok / seconds})
         ctx.report(f'context check at {flight} in flight per host: {ok}/{len(chunk)} ok')
     lo, hi = parts
@@ -318,15 +326,20 @@ def stage_x0(ctx):
     chosen = hi if raise_ok else lo
     rate = chosen['calls_per_second']
     s1 = b['max_calls']['S1']
-    projected = None if rate in (None, 0) else s1 / rate * q['projection_overhead_factor']
+    rounds = e['warmup_rounds'] + len(study.branch_order()) * e['branch_rounds']
+    # Full main stage from the measured rate (which already contains one hub exchange per dispatch), a 25% margin,
+    # and two hub polling intervals per round.
+    projected = None if rate in (None, 0) else s1 / rate * q['projection_overhead_factor'] + rounds * 2 * b['hub_poll_seconds']
     failed = lo['failed'] + hi['failed']
     detail = {'parts': parts, 'max_request_bytes': max(sizes), 'max_prompt_tokens': ctx.max_prompt_tokens,
-              'valid_actions': accepted, 'failed_calls': failed, 'in_flight_selected': chosen['in_flight_per_host'],
+              'valid_actions': accepted, 'invalid_action_reasons': reasons, 'failed_calls': failed,
+              'in_flight_selected': chosen['in_flight_per_host'],
               'calls_per_second': rate, 'projected_s1_seconds': projected,
               'planning_marker_met': None if rate is None else bool(rate >= q['planning_marker_calls_per_second']),
               'checks': {'request_bytes_within_limit': max(sizes) <= b['max_input_bytes'],
                          'prompt_tokens_within_ceiling': ctx.max_prompt_tokens <= b['max_input_tokens'],
                          'failed_calls_within_limit': failed <= q['context_max_failed_calls'],
+                         'valid_actions_at_least_minimum': accepted >= q['context_min_valid_actions'],
                          'projected_s1_fits_stage_timeout': ctx.scripted or (projected is not None and projected <= b['stage_timeout_seconds']['S1'])}}
     detail['passed'] = all(detail['checks'].values())
     return detail
@@ -335,12 +348,12 @@ def stage_x0(ctx):
 def stage_s1(ctx):
     d = study.design()
     e, mat = d['economy'], d['material']
-    ctx.planned += e['markets'] * 3 * (e['warmup_rounds'] + len(e['branches']) * e['branch_rounds'])
+    ctx.planned += e['markets'] * 3 * (e['warmup_rounds'] + len(study.branch_order()) * e['branch_rounds'])
     world = study.main_world()
     natives = list(world['owners'])
     ctx.run_records = run_records = {'warm': []}
     ctx.meta = meta = {'markets': e['markets'], 'start_products': study.main_start_products(), 'threshold': d['cfg']['threshold'],
-                       'stage': ctx.stage, 'scripted': ctx.scripted, 'branch_order': study.branch_order()}
+                       'stage': ctx.stage, 'scripted': ctx.scripted, 'branch_order': study.branch_order(), 'cfg': d['cfg']}
     detail = {'warmup': {'status': 'running', 'void_rounds': 0, 'rounds': 0}, 'branches': {}, 'hosts': None}
 
     def after(label, info):
@@ -418,23 +431,24 @@ def invariants(ctx, detail):
     checks = {}
     s1 = detail['S1']
     hashes = {i['restored_hash'] for i in s1['branches'].values()}
-    checks['checkpoint_identical_across_branches'] = hashes == {s1['checkpoint_hash']} and len(s1['branches']) == len(e['branches'])
+    checks['checkpoint_identical_across_branches'] = hashes == {s1['checkpoint_hash']} and len(s1['branches']) == len(study.branch_order()) == 4
     checks['checkpoint_after_warmup'] = s1['checkpoint_round'] == e['warmup_rounds']
     units = [json.loads(line)['unit'] for line in (ctx.out / 'calls.jsonl').read_text().splitlines()]
-    main_units = [u for u in units if u.split('.')[0] in ('warm', 'A', 'B', 'C')]
+    main_units = [u for u in units if u.split('.')[0] in ('warm', 'A', 'B', 'C', 'A2')]
     checks['call_ids_unique'] = len(set(units)) == len(units)
     checks['main_call_count'] = len(main_units) == d['budget']['max_calls']['S1']
     checks['branch_qualified_call_ids'] = all(sum(u.startswith(b + '.') for u in main_units) == e['markets'] * 3 * e['branch_rounds']
-                                              for b in e['branches'])
+                                              for b in study.branch_order())
     checks['paid_stage_counts'] = (detail['P0']['count'] == d['budget']['max_calls']['P0'] and detail['Q0_calls'] == d['budget']['max_calls']['Q0']
                                    and detail['X0_calls'] == d['budget']['max_calls']['X0'] and detail['D1_calls'] == d['budget']['max_calls']['D1'])
     rounds = ctx.rounds
-    main = [r for r in rounds if r['label'] in ('warm', 'A', 'B', 'C')]
+    main = [r for r in rounds if r['label'] in ('warm', 'A', 'B', 'C', 'A2')]
     by = {}
     for r in main:
         by.setdefault(r['label'], {}).setdefault(r['round'], {})[r['market']] = r
-    checks['identical_shocks_across_branches'] = all(by['A'][rd][m]['shock'] == by['B'][rd][m]['shock'] == by['C'][rd][m]['shock']
+    checks['identical_shocks_across_branches'] = all(by['A'][rd][m]['shock'] == by['B'][rd][m]['shock'] == by['C'][rd][m]['shock'] == by['A2'][rd][m]['shock']
                                                      for rd in by.get('A', {}) for m in by['A'][rd])
+    checks['repeat_continuation_same_rules_as_A'] = study.branch_rules('A2') == study.branch_rules('A')
     checks['no_charge_in_warmup'] = all(sum(x['charge']) == 0 for r in main if r['label'] == 'warm' for x in r['owners'].values())
     # Under the owner-level rule a split changes nothing: the charge equals the owner-level charge in every row.
     checks['owner_rule_removes_saving'] = all(
@@ -614,6 +628,11 @@ def _finish(ctx, detail):
         if econ and 'branches' in econ:
             for b, s in econ['branches'].items():
                 metrics[f'sustained_masking_fraction_{b}'] = s['sustained_masking_fraction']
+                metrics[f'sustained_masking_fraction_dominant_{b}'] = s['sustained_masking_fraction_dominant']
+                if s['void_rate'] is not None:
+                    metrics[f'void_rate_{b}'] = s['void_rate']
+            if econ['primary']['noise_floor_abs_A_minus_A2'] is not None:
+                metrics['noise_floor_abs_A_minus_A2'] = econ['primary']['noise_floor_abs_A_minus_A2']
             if econ['primary']['B_minus_A'] is not None:
                 metrics['primary_contrast_B_minus_A'] = econ['primary']['B_minus_A']
     failure = ctx.failure
@@ -669,7 +688,8 @@ def gate_lines(stage, detail):
     if stage == 'X0':
         lines = [f'{p["calls"]} calls at {p["in_flight_per_host"]} in flight per host: {p["ok"]} ok, {p["rate_limited"]} rate-limited, '
                  f'{p["calls_per_second"] if p["calls_per_second"] is None else round(p["calls_per_second"], 2)} calls per second' for p in detail['parts']]
-        return lines + [f'largest prompt: {detail["max_prompt_tokens"]} tokens (ceiling 8,000); largest request {detail["max_request_bytes"]} bytes',
+        return lines + [f'valid actions on the maximum-context case: {detail["valid_actions"]} of 180 (gate 171)',
+                        f'largest prompt: {detail["max_prompt_tokens"]} tokens (ceiling 8,000); largest request {detail["max_request_bytes"]} bytes',
                         f'in flight per host selected for S1 and D1: {detail["in_flight_selected"]}',
                         f'projected S1 seconds: {detail["projected_s1_seconds"]}', f'passed: {detail["passed"]}']
     return [f'passed: {detail.get("passed")}']

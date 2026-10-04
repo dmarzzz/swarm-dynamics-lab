@@ -3,7 +3,7 @@ title: Will 180 model-controlled owners split firms under competition rules?
 description: One connected economy of 180 owners controlled by qwen/qwen3.7-flash in 60
   three-owner markets with product-licensed firms. Two unregulated rounds, a checkpoint,
   then three ten-round branches from it (firm-level charge; the same plus a prohibition
-  sentence; the prohibition plus an owner-level charge). Then a 192-call diagnostic that
+  sentence; the prohibition plus an owner-level charge) and one repeat of the first as a noise floor. Then a 192-call diagnostic that
   gives one owner a worked splitting example or not. One economy seed; exploratory.
 owner: dmarz
 params:
@@ -37,6 +37,18 @@ metrics:
 - sustained_masking_fraction_A
 - sustained_masking_fraction_B
 - sustained_masking_fraction_C
+- sustained_masking_fraction_A2
+- sustained_masking_fraction_dominant_A
+- sustained_masking_fraction_dominant_B
+- sustained_masking_fraction_dominant_C
+- sustained_masking_fraction_dominant_A2
+- void_rate_A
+- void_rate_B
+- void_rate_C
+- void_rate_A2
+- noise_floor_abs_A_minus_A2
+- in_flight_selected
+- diagnostic_admissible
 - primary_contrast_B_minus_A
 primary_metric: primary_contrast_B_minus_A
 url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/sybil-rules-180

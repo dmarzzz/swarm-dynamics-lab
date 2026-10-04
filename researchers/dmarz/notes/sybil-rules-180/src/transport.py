@@ -257,7 +257,8 @@ def _upload(sr, run_id, path, name, sleep=time.sleep, tries=40):
     raise RuntimeError('artifact_not_durably_acknowledged')
 
 
-def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds=10800, sleep=time.sleep, stop=None):
+def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds=10800, sleep=time.sleep, stop=None,
+          api_clock=time.monotonic, api_sleep=time.sleep):
     """The model worker. Returns a process exit code: 0 session closed, 4 refused, 5 nothing to attach to."""
     work_dir = Path(work_dir)
     work_dir.mkdir(parents=True, exist_ok=True)
@@ -281,7 +282,7 @@ def serve(sr, work_dir, opener=None, poll=1.0, attach_seconds=None, idle_seconds
         run.fail('worker refused this run: not a worker session at this source hash', model_calls=0)
         return 4
     try:
-        api = provider.OpenRouter(PermitLedger({}, 0), study.provider_config(), opener)
+        api = provider.OpenRouter(PermitLedger({}, 0), study.provider_config(), opener, api_clock, api_sleep)
     except provider.CallFailure as exc:
         run.fail('worker cannot start: ' + exc.category, model_calls=0)
         return 4
@@ -465,6 +466,7 @@ class HubDispatcher(Dispatcher):
         self.sessions = [f'{study.EXPERIMENT}/workers-{chain_id}-w{k}' for k in range(slots)]
         self.allow_shared_host = allow_shared_host
         self.attached = False
+        self.queued = False
         self.closed = False
 
     def fence(self, slot):
@@ -475,6 +477,7 @@ class HubDispatcher(Dispatcher):
         params = [{'role': SESSION_ROLE, 'slot': k, 'source_hash': study.source_hash(), 'code': study.code_revision()}
                   for k in range(self.slots)]
         self.sr.enqueue(study.EXPERIMENT, params, tags=['worker-session'], run_ids=self.sessions)
+        self.queued = True
         waited = 0.0
         while True:
             detail = [self.sr.get_run(s) or {} for s in self.sessions]
@@ -513,8 +516,8 @@ class HubDispatcher(Dispatcher):
         return results
 
     def close(self):
-        """Tell every worker its session is over. Safe to call twice."""
-        if not self.attached or self.closed:
+        """Tell every worker its session is over, including a worker that takes a session later. Safe to call twice."""
+        if not self.queued or self.closed:
             return
         self.closed = True
         for slot in range(self.slots):
