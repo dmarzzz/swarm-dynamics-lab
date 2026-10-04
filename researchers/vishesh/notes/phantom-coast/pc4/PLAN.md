@@ -6,13 +6,13 @@ Prospective diagnostic, 2026-10-04 UTC. Written before implementation by vishesh
 
 Does explicitly checking inherited reports improve mapping compared with uniform sensing, and when is checking wasteful? Compare exact quotas of zero, two and four reported cells with uniform sampling, all using twelve distinct noiseless inspections. Cross each with zero, two and four false reports. Primary contrast: four-check minus uniform native consensus decision loss under four false reports; useful target -2/36. Thirty-two independent paired worlds, balanced reported terrain and two geometries. Wrong answers, abstentions, deterministic evidence controls and cost are separate outcomes. This is a scripted allocation diagnostic with native map interpretation, not learned planning or evidence of swarm intelligence.
 
-## PI critique and decision
+## Question and prediction
 
 PC-3 eliminated repeats, yet misleading teams checked 1.5/4 report cells versus 3/4 unguarded; errors rose from 8 to 20 per 288 labels while unknowns fell. Loss improved only 2.26 percentage points, below the 5.56-point target; guarded uniform was better. All inspected cells were mapped correctly. Thus coverage is an insufficient objective and the positive utility result depends on abstention cost. Eight roots and unequal endpoint action context weaken inference. No first-legal-cell choices occurred in guarded arms; reject order bias as an established cause. Accept source-allocation diagnosis as a testable hypothesis, not a proven cognitive cause. Preserve PC-3 as a valid adverse/inconclusive result.
 
 Revise the previous suggestion: drop quota one and expensive native sensing baselines from this diagnostic, retaining the strongest comparator (uniform). Native controller competence is a later question, not inferred from a programmed schedule. Balance reported LAND/WATER so the previous all-LAND report region cannot drive the result. Add partial corruption and equal endpoint context. Keep deterministic reconstruction to distinguish predictable allocation arithmetic from native interpretation. Do not retune after outcomes.
 
-## Setup and controls
+## Setup
 
 Six-by-six stationary terrain; twelve LAND, twenty-four WATER. Four reported cells form either a contiguous 2x2 block or a nonadjacent scattered set. Exactly two reported cells are LAND and two WATER; ten other LAND cells sampled elsewhere. Report epoch zero, nominal reliability 0.8. False-count conditions 0, 2 and 4 flip none, one LAND plus one WATER, or all four labels. The two-flip set and report order are seeded and fixed across acquisition policies. True reliability is deliberately varied; the reported reliability is a manipulated, potentially miscalibrated claim. No truth, seed, condition name, quota or future observation is visible to the model.
 
@@ -22,7 +22,7 @@ Every endpoint has the same fields: task, actor, cells and evidence (observation
 
 Pinned TypeSafe typesafe/jev-1.13-20260917 via typesafe/jev-1.13, no provider fallback; decisions endpoint. Route ceiling 32,000 input tokens per question, USD0.000000042/token, zero output/request charge. Receipt model and provider checked. Split probability normalization, chosen-maximum and confidence validation reasons. Never retain raw errors or secret material.
 
-## Protocol and sample allocation
+## Protocol
 
 Development roots 1200-1207 only. Q0 uses four fresh roots 1300-1303: per root, three actors each map (a) complete direct measurements plus four conflicting old reports, and (b) twelve direct measurements including all four false reports, leaving twenty-four unobserved cells. Twenty-four calls total. Require all twenty-four responses valid; every directly observed label correct, every unobserved label UNKNOWN, for all individual maps. This qualifies evidence precedence and abstention, not desired quota superiority. Failure blocks S1; no automatic repair/replacement.
 
@@ -30,7 +30,7 @@ S1 roots 1400-1431, sixteen block and sixteen scattered. Each root has twelve de
 
 One worker, one request at a time, at most sixty minutes per stage. Stop at five consecutive invalid/failed calls, admission deadline, route change or budget refusal. No retries/resume. Preserve every assignment including unstarted/invalid calls, journal started and terminal events with fsync, reserve before wire, never overwrite prior attempts. Invalid maps contribute UNKNOWN to consensus; no complete-case exclusion. Analyze assigned roots and report incomplete execution explicitly; do not declare practical success after early termination.
 
-## Metrics and analysis
+## Metrics
 
 Primary paired root difference: q4 minus uniform consensus loss under false-count four, L=(wrong+0.25*UNKNOWN)/36. Negative favors verification. Practical target mean <= -2/36, full execution required; descriptive t31 interval and root range, geometry strata, leave-one-root-out range. Do not equate point-target success or interval with confirmatory evidence. Secondary q2 and q0 contrasts, all corruption levels, single actor and deterministic endpoints. Report wrong and UNKNOWN separately, error bounds [wrong/36,(wrong+UNKNOWN)/36], and treatment-effect identification bounds [treated lower-control upper,treated upper-control lower] separately from sampling intervals. Utility sensitivity at abstention penalties 0,0.25,0.5,1; report the error/abstention break-even. No multiple-testing discovery claims. No picking the best quota after looking.
 
