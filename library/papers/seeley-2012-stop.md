@@ -9,7 +9,7 @@ url: https://doi.org/10.1126/science.1210361
 doi: "10.1126/science.1210361"
 arxiv: null
 cite: "Seeley, T. D., Visscher, P. K., Schlegel, T., Hogan, P. M., Franks, N. R., & Marshall, J. A. R. (2012). Stop Signals Provide Cross Inhibition in Collective Decision-Making by Honeybee Swarms. Science, 335(6064), 108–111. https://doi.org/10.1126/science.1210361"
-topics: ["collective-decision", "swarm-intelligence"]
+topics: [dissent, "collective-decision", "swarm-intelligence"]
 added_by: dmarz/collective-decision
 accessed: 2026-10-03
 read_depth: abstract

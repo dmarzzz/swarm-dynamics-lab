@@ -1,0 +1,30 @@
+{
+  "stage": "Q1",
+  "budget_approved": true,
+  "host": "sim-shadow",
+  "claim": "vishesh-right-dissenter-replacement",
+  "claim_until": "2026-10-04T05:30:08Z",
+  "source_commit": "b21ce280760d0c91e2ba500002aae087b4df62d9",
+  "file_hashes": {
+    "researchers/vishesh/notes/dissent/src/live_render.py": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+    "researchers/vishesh/notes/dissent/src/jev.py": "18f274ef2a93fccbc6dfdf69f1fd2687638716b7eca9d48c6cd406e91ae7d7b8",
+    "researchers/vishesh/notes/dissent/src/live_worker.py": "d3b662ba4d6d7461d2a479aa26f08814c17e00f01daa3636b73c3883da7f82f4",
+    "researchers/vishesh/notes/dissent/src/live_relay.py": "7cf78a15b92d03d121ef0d709f55b472b00ff4995ff08a869ddb30f44e6ead0a",
+    "researchers/vishesh/notes/dissent/src/live_design.py": "01df8cfa5115f99facb8c3a4d667eb458e639138ad373b58658e180012cb7c21",
+    "researchers/vishesh/notes/dissent/src/protocol.py": "637559e808c22c269ee2727069b629b47ad5f49fd8a2dd5f8309e2fe0419d195",
+    "researchers/vishesh/notes/dissent/src/cases.py": "92d3fda2a87d77e2fb3951513a92f27444cc836a6438cb2cc2e38976ad21541a",
+    "researchers/vishesh/notes/dissent/src/launch.py": "0247abcd00b36ca10f8d58aca562250d5e2639c1062c34b53b3b8a7d746cf43c",
+    "researchers/vishesh/notes/dissent/src/cli.py": "53c17fb342511c4e0c1858bf6498751ab04fbb5ef01bab3c2ba74ea0eb77190b",
+    "researchers/vishesh/notes/dissent/src/policies.py": "74514d5c82dc43dfe1ef835f91bc81ff4981646aad9e65e277227a65d007db1b",
+    "researchers/vishesh/notes/dissent/src/study.py": "4736e6b0c41217fc5df9d3ef919807de9ac08b4c1dade15e00aebef663d7ba00",
+    "researchers/vishesh/notes/experiment-documentation/public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "assignment_sha256": "ca6fa3fbcf594b4b2c706e3a3f23c740050080fea195809c56dc2d0b79ad1649",
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md",
+  "plan_sha256": "a8c306009027194b24c2dd4308f0b9057a8524f6aea3cf021f2094145ac3ef19",
+  "run_id": "right-dissenter/q1-a1",
+  "run_tldr": "TLDR: Q1-A1 pairs generic and explicit single-criterion instructions on 18 fresh clean Jev packets plus six absent/conflicting-evidence controls. Compare accuracy by scenario and paired changes; qualify only clarified 16/18 correct, 17/18 valid, 5/6 per domain and all six valid DEFER controls. Repeated synthetic grammar limits generalization.",
+  "parent_attempt": "right-dissenter/q0-a1",
+  "allocation_verified": true,
+  "allocation_receipt_sha256": "a55f4c95af7a50f99216dd9b158b3a4cc054352cb3919d800a209aefe04ca2e6"
+}

@@ -1,0 +1,1437 @@
+{
+  "snapshot_utc": "2026-10-04T02:58:11.098785+00:00",
+  "snapshot_path": "/tmp/grove-review-2026-10-04-addendum",
+  "scope": "New/changed non-review files since initial snapshot; review-authored files handled separately",
+  "files": [
+    {
+      "path": "AGENTS.md",
+      "bytes": 1268,
+      "sha256": "e26658893c8272dee4920794e7fcfbff18b23da2434efed7b9cc3426d6acfbe0"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-combined.json",
+      "bytes": 307266,
+      "sha256": "c6be2ec464d9a6f07a252e7260cbf61830a453bed86a4fbaed853dd53c809a32"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-erasure.json",
+      "bytes": 275955,
+      "sha256": "521e97090ad78f9742cf963045f73e10cfb1f834136e66a5ce06f8027ad23698"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence+withdrawals-none.json",
+      "bytes": 275943,
+      "sha256": "f5f9e83238a04c4d28f79ffdfe84d3e014067b0b420a5dd5e0d7732e9cd74f8c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-combined.json",
+      "bytes": 277734,
+      "sha256": "c415d5456730f212af5ed0f2aae99632e7991ce72838c9b3e8a23cc45a9fe33c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-erasure.json",
+      "bytes": 275941,
+      "sha256": "f9fea241ab3cd9332a37e48787b31e55648830dda6ad467563448fb740262add"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-evidence-only-withdrawal.json",
+      "bytes": 277757,
+      "sha256": "99160277e9fd027917caa6a20cf8eff8373658c1052875d89cc73bae058c6294"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-none-combined.json",
+      "bytes": 135876,
+      "sha256": "b56b7443d8e53097580f97ff8d526123a55978c220b5fa2c2a10269c1a99d346"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-none-none.json",
+      "bytes": 134202,
+      "sha256": "4d3bad6bccc8e41171520f296adc28546b87be14132fac3081ba9ff787e9ace2"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-exact-none-withdrawal.json",
+      "bytes": 135143,
+      "sha256": "2a4ed84db235483e8c9f062eab34abe615861f295dab6b18ddc007f2bc8e8e0c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence+withdrawals-combined.json",
+      "bytes": 307262,
+      "sha256": "378ddf740f16ffe5a4921294be9dd475c99036a824d956539a24e3560a3804b2"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence+withdrawals-none.json",
+      "bytes": 275939,
+      "sha256": "61d7dcc49aa95cfb26f6b83afbccc3a5f52e2129c808659d8e5ea43167f4f694"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence-only-erasure.json",
+      "bytes": 275937,
+      "sha256": "f36cb3691bf56ea06ea7b4ea5e2f1b7ac5aac882b8c17d5e6eedd10f212775d4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-evidence-only-withdrawal.json",
+      "bytes": 277753,
+      "sha256": "bd5662300c850521203b031977e2003334502873fd5eae0ecd42ac5205c76229"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-none-combined.json",
+      "bytes": 135872,
+      "sha256": "ccbb59f51af4b928711ed7a816c92d389217547e871093ff4462f80c317d730f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-none-erasure.json",
+      "bytes": 135090,
+      "sha256": "618a7b1a4393783870527451c9fd6c31c4582f611f852511ed52c285702b3a5b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-none-none.json",
+      "bytes": 134198,
+      "sha256": "77f7b5dd8a05ff29284fbbeb632bb5413413a5e704e105257567d5b134860f21"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-jev-none-withdrawal.json",
+      "bytes": 135139,
+      "sha256": "90b1f13d6963c34ecc6dcf3ad70a3f2f4f7e42b47963fe6cd9db697c0ef3dc64"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-combined.json",
+      "bytes": 191,
+      "sha256": "df22e057a6549b98e285cf3c084b238c511be8f63b290c6fa097302e86374340"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-erasure.json",
+      "bytes": 189,
+      "sha256": "c23e930bb02c502309afd237048a661e92216000546fc279d41988a415e1eb9f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence+withdrawals-none.json",
+      "bytes": 183,
+      "sha256": "60e2b158c1a7ec736a700115418b73664ea160c5c922976127537f0b202de0f9"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-evidence-only-combined.json",
+      "bytes": 177,
+      "sha256": "f3aa870cd7889043f4bbdcd154d7c3830c9a3cd0d3094413e357cd5bb2e1336b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-combined.json",
+      "bytes": 159,
+      "sha256": "dfdeba5cce29e0e5aa69ce4493099a36e884aac5471a3bc166780feb7263447d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-erasure.json",
+      "bytes": 157,
+      "sha256": "d596d2e5b455783d70d4202cbe1629d4d5fbb085885d3e8732ebfafbb13566fc"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-none.json",
+      "bytes": 151,
+      "sha256": "8964fab38431497d2e39b685f4ea85aee1357ed51b0a45b5c190358b7ceb618d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+laya-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "aac61c37f1b2e10d29d3751962ff7edbeab448e6647d0e8b7ea3f139a94e8aba"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence+withdrawals-combined.json",
+      "bytes": 191,
+      "sha256": "1c41e0efafdb61f7320d36d725384d1f93d8504d7c90d3de6e60f02dc9f44328"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence+withdrawals-erasure.json",
+      "bytes": 189,
+      "sha256": "fa1e3b15133deb515ea1579b9a2788c440267badfd1b6ed061774a82d328b8e2"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence-only-erasure.json",
+      "bytes": 175,
+      "sha256": "2943cfc2be5ac43c1bc626909aad5faddb3e8d2e96358a358582ee043f9182a4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-evidence-only-withdrawal.json",
+      "bytes": 181,
+      "sha256": "7be2896bb64b2e1c61a96d2ef02ac1a9d0d1af5f80c9c28dd61c1ebc08ee0567"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-combined.json",
+      "bytes": 159,
+      "sha256": "5e1f9115b02036c3fb5a63dfbb0be8cd1fe24bd14f58b5df0b4c2e614af417ea"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-erasure.json",
+      "bytes": 157,
+      "sha256": "fc64b68ca2098de1ba660d12763e7696a2056430bde9672aadcbda2538ea5d93"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen+qwen-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "df156c9c16ef69b40126c64f66d9d9c87ca8a691ada3ce1418008fe3ab1a3e7f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence+withdrawals-combined.json",
+      "bytes": 181,
+      "sha256": "e29ba7519a39b9c3484c2643afb6f8f73b5e1241a09d92c8f0069f259e9aaa02"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence+withdrawals-withdrawal.json",
+      "bytes": 185,
+      "sha256": "180872f364b1944f0c74bb8b1f6089f9cb9e8248b2fbca4c2b772d25e32a9b6c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence-only-combined.json",
+      "bytes": 167,
+      "sha256": "3ddf648af5ecdada4e7ebd95b1cc26f23b19c97a7f892246adb0bc4cba3e64f2"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-evidence-only-withdrawal.json",
+      "bytes": 171,
+      "sha256": "9736f643a9f6cce64f545b453f1c68047bcf2846006f4e4a82e1b3d47da9f4a0"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-combined.json",
+      "bytes": 149,
+      "sha256": "1734c4224c293eb945578573cf393c01cce499e2e05351b35602c3892b9e62d6"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-erasure.json",
+      "bytes": 147,
+      "sha256": "eb3f7de0883bf0c457dbeea1400a6c203afe0d20a0e6354b0ebd8747953413af"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-none.json",
+      "bytes": 141,
+      "sha256": "572ac4b1324c5a6410357a8839e37b91ff34f7d12b53834b988e7c5cd3e7306b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8701-qwen-none-withdrawal.json",
+      "bytes": 153,
+      "sha256": "802d6477f1bc0618b12c0883e1b977051fa3a44da3ae6e963604f557a854adb4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence+withdrawals-combined.json",
+      "bytes": 306507,
+      "sha256": "b4ea06094c4881ab11db04dbb8e27b2176a78bdbc88d7b90334f4158111dc951"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence+withdrawals-withdrawal.json",
+      "bytes": 306546,
+      "sha256": "528469aeeb9579f332004c4fbaa0c3128007d4ced86a143c56de1ec8c8abc7aa"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence-only-combined.json",
+      "bytes": 277244,
+      "sha256": "a5bc4398bcb07fcb1efb753a497a2f28bcfecab46028f9e76de75241ffbab8c4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-evidence-only-erasure.json",
+      "bytes": 275630,
+      "sha256": "68e36d02b89d7d455c4c2a0813c5c930fc3266e6f029cca29d526763d7870c85"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-none-combined.json",
+      "bytes": 135941,
+      "sha256": "9246447dbab79c698fe50af73eb75b4984f502e7e07dcb0ec9cfb112a6cf0a7a"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-none-erasure.json",
+      "bytes": 135144,
+      "sha256": "8b25ab1a9c4d33dc55b85f5ba20b5a287b1598c840d520ff3f01ed41328f5473"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-none-none.json",
+      "bytes": 134202,
+      "sha256": "c01566c38d3f426e9ff9f67b21b97a8dbe8750c26c06511c7dfb699c884adf7f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-exact-none-withdrawal.json",
+      "bytes": 135113,
+      "sha256": "707b3da055493d1506d75dc023d63aa7e0bdca198f9b3b8a1db464d26d927a0a"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-combined.json",
+      "bytes": 306503,
+      "sha256": "18347c6d22e59e4a6bdcfb149c3d2e7fd564a4fea52921f0672f66cf0d7d0818"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-none.json",
+      "bytes": 275616,
+      "sha256": "8a19e24f73419135addca4a54c44975481fefb88e5203777a14cd133f8b313a7"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence+withdrawals-withdrawal.json",
+      "bytes": 306542,
+      "sha256": "8e3bf9797b54f158e6db4204a9cb85fd6693902cbbff93e8259b89323a1a418b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence-only-combined.json",
+      "bytes": 277240,
+      "sha256": "3fd0528f385ffd473d86ed56e8a426ed306902c5d0805b573b1d2a825bdd8068"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-evidence-only-none.json",
+      "bytes": 275602,
+      "sha256": "b3ed472dd1a11a056ebb39b99d009f4e92cf9a8f2086abd9f2c815c2ca0b3ffb"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-none-combined.json",
+      "bytes": 135937,
+      "sha256": "6365ffeb0c7392d7e29fcdf846878f0dd5cc7953317ddbb2cba46cf373b303c8"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-none-erasure.json",
+      "bytes": 135140,
+      "sha256": "e464551a1f000f6a5415c92ddd1b1c42f3958e3af20f568ca6791b5e3c85d7a7"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-jev-none-none.json",
+      "bytes": 134198,
+      "sha256": "5d078f1755a64e0ae871d8ce70a3dba9cca68eef2c5d9ee587a0a48465c00e83"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence+withdrawals-combined.json",
+      "bytes": 191,
+      "sha256": "c8cf8ea6f4330d8295a35928dc951571ea9d9f4d666838a621e43ff2758f0ad4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence-only-none.json",
+      "bytes": 169,
+      "sha256": "52b493ebb47b77748ef49ab0abb01f86b2e5a4b8dbfd96602841cf7681f0ce1c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-evidence-only-withdrawal.json",
+      "bytes": 181,
+      "sha256": "3d34af3f7588431ee3d645140c91eedfdd679d957dff0a948b50e279e6ae0245"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-erasure.json",
+      "bytes": 157,
+      "sha256": "91074779f9441fd2bf0d4914c7ecab6c412cb94bc0dba107dff26bcf9d42737b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-none.json",
+      "bytes": 151,
+      "sha256": "a253a2220542ba7c373ee70931bef6e555e15ff91b946f0d513680d8388f8790"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+laya-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "c54d5541c4c6da92b557b52dee5f9ba3d8303a5e51a709bb8f07f575f16794ac"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-combined.json",
+      "bytes": 191,
+      "sha256": "c5ec55b7192345d56f1ec4eed52576067aaa8a895a21f1c095729985c309af22"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-erasure.json",
+      "bytes": 189,
+      "sha256": "82a5b9ac9db1d8f91cce92a7b1fa4ba542eb45231718e322bba99cf6e47130a6"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-none.json",
+      "bytes": 183,
+      "sha256": "f1ff321b29fdba57f93d385251c2dabdd2161f28615f24446f836a547d53f161"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence+withdrawals-withdrawal.json",
+      "bytes": 195,
+      "sha256": "a434f438fcb1d1ea626a5ecb04ee0c98879a119c0cf2c3d6e8afeb8a469074e4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-combined.json",
+      "bytes": 177,
+      "sha256": "3faf3a5bb73c7a6105d45e1d7aef6c685d8faf26132750e899a21f9c3a196242"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-erasure.json",
+      "bytes": 175,
+      "sha256": "da99fd0ad8f930846af030735893db40e3a45e4716a5ef5368071a048790e285"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-none.json",
+      "bytes": 169,
+      "sha256": "c07acd32eb5cf20bf477c0d5191daa2bc8520fef79a440ced6b828b87f8e247e"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-evidence-only-withdrawal.json",
+      "bytes": 181,
+      "sha256": "b0b9b1dde65e52b07b854a9eea45bb36c946548d5266cf084cf7b23f371b2c84"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-combined.json",
+      "bytes": 159,
+      "sha256": "639bc092ab727ed209877c400d9274199b3653fe2f733ad4ccea9c32b10d85cb"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-erasure.json",
+      "bytes": 157,
+      "sha256": "a7ca1d8564d433b70c4b7012f5126fdf314a26282b1224c8df0d6432bfd61d0a"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen+qwen-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "3de3d483b5766db94f73ca35fe276aa631d5adac870e4558417d3af623073740"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence+withdrawals-combined.json",
+      "bytes": 181,
+      "sha256": "577d38604b5b103547de71da5af97a1757a9a1bafbd137f4dbe7eb35a0913216"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence+withdrawals-none.json",
+      "bytes": 173,
+      "sha256": "38cda960a2858df300391d4b693cfaf7bda9c34471676f5fe7acf5c98a6b504d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-combined.json",
+      "bytes": 167,
+      "sha256": "66a8d4180b23bf1c8e4f8d8f4e69cb8d09a0559f1519c19794be5e08105567fd"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-erasure.json",
+      "bytes": 165,
+      "sha256": "3a6ee14f84b3e3f5bdfd1f7191d6349d93a30ec02a992c5c9dc664101ef349e7"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-evidence-only-none.json",
+      "bytes": 159,
+      "sha256": "7319589ef222f65694d3393a16b5619c4520e036ef999bc650fad74927412daf"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-combined.json",
+      "bytes": 149,
+      "sha256": "dfe4a62c0d69ae16f457affe4f4d9328a4d6f40a17a73022a580703017dccf47"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-erasure.json",
+      "bytes": 147,
+      "sha256": "54c1da3c8996c31aaddfe5527c968801c1f0509dcf3b7d5aada5db85f97850b7"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-none.json",
+      "bytes": 141,
+      "sha256": "40d8bd8b33a340eb1152d71bebac9ecee9b68d75c8afaeeb7ef5be8e3f70fdd3"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8702-qwen-none-withdrawal.json",
+      "bytes": 153,
+      "sha256": "7d39c14f2935a5c15358df0871b73412e1f686879d4267008574e64304e5301a"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-combined.json",
+      "bytes": 305859,
+      "sha256": "6cc281145c57ffc5418006c3bd934323bfaaeee32ddc9f70e443cc24c3a102f0"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-erasure.json",
+      "bytes": 275743,
+      "sha256": "5a2d89c0be8732d97378a882739003d1acba10987f8cbd65939846a4370337bd"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence+withdrawals-none.json",
+      "bytes": 275723,
+      "sha256": "d044450b9085412fa1678fcff8d6a88e65526c8a0286c1a0d9f4ab54cbf3751b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-combined.json",
+      "bytes": 277059,
+      "sha256": "736d2e7491e431a592ab8419469f603d696f0ca4992cfc731c588d261bfc940c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-erasure.json",
+      "bytes": 275729,
+      "sha256": "367105838b4a64365e5971a3ee7255a08cc9bdff8f564312097bb5e4aba3e28d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-none.json",
+      "bytes": 275709,
+      "sha256": "9445694a3c1de8e64ebdc89a58b01295aba53ac8ce29a87ba8ee7a8f47d71be0"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-evidence-only-withdrawal.json",
+      "bytes": 277086,
+      "sha256": "307b1af4b2069da3d90d0f1efdc698fe95fc4c39b0f77a911bc928b528c60ad8"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-exact-none-withdrawal.json",
+      "bytes": 135276,
+      "sha256": "c161446669cbe95f48f768ed685510649bef9de77251a3db2b0a1e8a17e53260"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-combined.json",
+      "bytes": 305855,
+      "sha256": "ba3e3009084640f0eb0d9900f3c130b84001d1fcfabc2c88a967f48c386a657e"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-none.json",
+      "bytes": 275719,
+      "sha256": "25b5a3d55ad21ed65d5b42f3e5be3b76e43b0eda8fb369e4142b24666deb4f41"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence+withdrawals-withdrawal.json",
+      "bytes": 305870,
+      "sha256": "14ea4a99af20136a44590b2b9eae2ed6227fc03f9f241e546539b689a2b24200"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence-only-combined.json",
+      "bytes": 277055,
+      "sha256": "a157cc8ede3e3f0253ea31af6363a6eaceb67b171891130b811be8f4ad9c640e"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-evidence-only-none.json",
+      "bytes": 275705,
+      "sha256": "50f57a574b0f109dd6e115ee7c6fca2d3de7a8927bab0ef8a026f67aecc5d368"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-none-erasure.json",
+      "bytes": 135105,
+      "sha256": "25dbab173409dab55abcd7ade7f1a482c798baf794fab99d4d3eb526b41ab8f8"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-jev-none-withdrawal.json",
+      "bytes": 135272,
+      "sha256": "645f50d6fea33cddb0fb910eeac38a38355b3c7f3d73a637cc3d4bc4eafc7aed"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-combined.json",
+      "bytes": 191,
+      "sha256": "eb69a5aff0d6efbd4709542f1699bfdb23e1ae614c93106c27f22292a7188083"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-erasure.json",
+      "bytes": 189,
+      "sha256": "ab8c06d979ad4eab13ac738278ac3b1c0905489e7b1aec98e4550a9be55da539"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence+withdrawals-withdrawal.json",
+      "bytes": 195,
+      "sha256": "fba329d49cce8dca5616b4ff3d826834154b41385f7598ca5955c6d17f650b52"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence-only-erasure.json",
+      "bytes": 175,
+      "sha256": "20244b03bf6b108df301f159bac3e6865d4fd9d0df9e4b8db2adf9cec952b9ea"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-evidence-only-withdrawal.json",
+      "bytes": 181,
+      "sha256": "d107e99e05465c47acb410852f19490f000839a79389a2eda2201e0d469e3957"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-erasure.json",
+      "bytes": 157,
+      "sha256": "70363b604ab12446e6aa1c345f7277fb0f91bb4c130561e7bc7a4c2807bbea39"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-none.json",
+      "bytes": 151,
+      "sha256": "d840c19817436a6ee26ed7d9bb283c515e2e7775b0a7a334e0a890f23e3ca117"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+laya-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "0b49a096b45e69755063edbea632db413ddc9d2fdbdb3d095b027f4d44f92b3f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-erasure.json",
+      "bytes": 189,
+      "sha256": "3f833f37c5bd4eb93acc8155acf63709c3265af291695cc679f31ce21fe228b1"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-none.json",
+      "bytes": 183,
+      "sha256": "37652de6cfe19178784f1d541223c52a5d05caa2436734bb4906d7582eb39f7b"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence+withdrawals-withdrawal.json",
+      "bytes": 195,
+      "sha256": "e8f14122ab6b8571073a80a6f000a0f2be4e4e4111ddbe257aa9fd44524788d7"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-evidence-only-erasure.json",
+      "bytes": 175,
+      "sha256": "a8982ae65a4a7f311b0e1e758f6641a4baf404b30df3d97de40a4434b5c5fb80"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-combined.json",
+      "bytes": 159,
+      "sha256": "2ca9a959b600dc739fe9a2c0cbf892133839d00d1d0f675ec148787be040a372"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-none.json",
+      "bytes": 151,
+      "sha256": "6f65a102ade096261755ff5275643953b6f4f60de11bc72e3589b3b0d3aa62b8"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen+qwen-none-withdrawal.json",
+      "bytes": 163,
+      "sha256": "cdcea0d14c01fce5fd5ea85640579ac717af2f90ce89d9ee47bd365abb3c2173"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-combined.json",
+      "bytes": 181,
+      "sha256": "1d0520bdf0303e5a59186f5699046b7de82fbda65f700f906c5fb557c40f7a1f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-erasure.json",
+      "bytes": 179,
+      "sha256": "b92a0e555d8948339c5034e4297427b70d83a022d9c00532a485d692d460c895"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence+withdrawals-withdrawal.json",
+      "bytes": 185,
+      "sha256": "6259d894f82983c200de592a1b82776d36608365604c56805720be88c1fa50cf"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence-only-erasure.json",
+      "bytes": 165,
+      "sha256": "7eb56032bd5efe4cb7cfd08b5e7f8576e51afdb971b6ae0fc8f2a6f7a5377801"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-evidence-only-none.json",
+      "bytes": 159,
+      "sha256": "b2d1450baab7bf3c7282e681417049ce2f62097c01b33dee61d46b532fd3cadf"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-none-none.json",
+      "bytes": 141,
+      "sha256": "fb9c3aa517b39478304782e669850219d2e3e07f65361eff3ccd9ce066450a87"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/8703-qwen-none-withdrawal.json",
+      "bytes": 153,
+      "sha256": "1a421a450e91219d3781973eb3796077e92173bcfa3eead430ea1e519f907d6d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/audit.json",
+      "bytes": 7415,
+      "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/calls.jsonl",
+      "bytes": 413716,
+      "sha256": "d069665f834f6f28e55c32bc0900a185f79d54efb1b303ccd4b4d128c614df8c"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/corpus-8702.json",
+      "bytes": 40529,
+      "sha256": "82404b4cc59b2f32cb9ea976bef1d0504e38f0cef47d9d736228d49df6888c61"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/corpus-8703.json",
+      "bytes": 40482,
+      "sha256": "90ff153a55ae6f7c791e78d77a30f2d98aca47a1664bd2470886724be1bd86a4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/manifest.json",
+      "bytes": 36759,
+      "sha256": "dbb3d44dba6628cf47ac6f1f806c18a99aea416f8e51d8794a5075fc12138ad4"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/plan-receipt.json",
+      "bytes": 1085,
+      "sha256": "b28b55d664f5964780c46a8c396f340ccdb1914856487663323f66a3e510b88d"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/progress.json",
+      "bytes": 62,
+      "sha256": "d3990e97527a746c9e1d891ed3a73055a1e1e111e84e932f7b9da22cbd2f75bb"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/qualification-fixtures.json",
+      "bytes": 8377,
+      "sha256": "477c4eee5cca2d967e245bb199162653ca152d11f534c4dbe08930daa2a83c0f"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/tapes-8701.json",
+      "bytes": 4419,
+      "sha256": "5932581de296baf24c37d1d060681350aaf6ad4aba27d408590f999aeea8f068"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/tapes-8702.json",
+      "bytes": 4419,
+      "sha256": "aa1e04c2368917f43c1938f1a27a489f37b13460b309d9f606f4b8be1a137679"
+    },
+    {
+      "path": "healing-helping-hands/site/artifact-manifest.json",
+      "bytes": 1694,
+      "sha256": "5c60e6efb502d9dd1d18d775486a12363caa0ab667098b7a6fd06b836975985d"
+    },
+    {
+      "path": "healing-helping-hands/site/data.js",
+      "bytes": 10009546,
+      "sha256": "ffe38576d649ae733f22a6b6b69892fbe578c7bb9d9ba9f2ae16de69a167d021"
+    },
+    {
+      "path": "healing-helping-hands/site/event.png",
+      "bytes": 71398,
+      "sha256": "0fa46338c629b2d8adeeb6e5ca9c17386fb7d82ac75f55879e1d6e18eb838434"
+    },
+    {
+      "path": "healing-helping-hands/site/final.png",
+      "bytes": 66208,
+      "sha256": "61a9a6213743b19869bef3667820c457b514f50fd5d08e87bc47858f4b21eeb4"
+    },
+    {
+      "path": "healing-helping-hands/site/index.html",
+      "bytes": 14349,
+      "sha256": "4052725ec51ba836024b9fd6f291fc6f51d2a4abc1b719549383aeb181c0f5be"
+    },
+    {
+      "path": "healing-helping-hands/site/initial.png",
+      "bytes": 65437,
+      "sha256": "6bae0246bba3cc08693b37115533670b193a315b22da5efcfa51897f3df5b9d1"
+    },
+    {
+      "path": "healing-helping-hands/site/outcomes.png",
+      "bytes": 135398,
+      "sha256": "1f26170b0be62beff88944dd2aa0b4f3e097c09aeb36bea330d8d0eecd03e21a"
+    },
+    {
+      "path": "healing-helping-hands/site/paired-effects.json",
+      "bytes": 6398,
+      "sha256": "17eea6f0bf8645e6ae4a542506f78fbfd19af4f6d10d114743f6042537d56d0d"
+    },
+    {
+      "path": "healing-helping-hands/site/recovery.gif",
+      "bytes": 501634,
+      "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d"
+    },
+    {
+      "path": "healing-helping-hands/site/recovery.mp4",
+      "bytes": 364541,
+      "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7"
+    },
+    {
+      "path": "healing-helping-hands/site/replay.zip",
+      "bytes": 940453,
+      "sha256": "7d6514db45fe2db8500dd72a1481f731600ba55521aa6484219f9591b737544e"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-combined.png",
+      "bytes": 71102,
+      "sha256": "6b8a9d585b562c1c1dd18cb2240bc610ab604209d4da7746b10c7cadc9b15e23"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-erasure.png",
+      "bytes": 69759,
+      "sha256": "98b201cb532287e96a10a2de6595420f4f33247eeda72c3bd98d2b84ae3114a5"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-none.png",
+      "bytes": 69570,
+      "sha256": "155a6013f984a11c4fa2117839cfec4790e3720b64edc535fbfd0db01d806239"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 70403,
+      "sha256": "ef0ad2bc1a512522c0cfbb9c69062db665a4bf4ef2b312870d13f5a7b13b39e9"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-combined.png",
+      "bytes": 75673,
+      "sha256": "e0e5f0c44f8ecb4b9cb20fb0279470c58e62ca5f9326cb1684de69687a5c3a71"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-erasure.png",
+      "bytes": 69493,
+      "sha256": "4eb4dce9aca39d64603c8807922822fdf29024ef08fb362e59d856eb3a9a1a3e"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-none.png",
+      "bytes": 69029,
+      "sha256": "5a70e23929be861e96a6232f3f100687ade322155fd4a49a9464e72acb224560"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-evidence-only-withdrawal.png",
+      "bytes": 75516,
+      "sha256": "cb5da48d4a51f4570f17b80fc3b2cac9dbec1bfce905c8839765150f554ad3c7"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-none-combined.png",
+      "bytes": 74748,
+      "sha256": "de8b7a55051fffd2ae264e6a66d2ffe99786491c84d7ce2e1ef6eb5bcea42fbe"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-none-erasure.png",
+      "bytes": 73349,
+      "sha256": "a2fba74acf1422388c6c22c06db2f668435a5633cefe4f245d6e58c327ebd73a"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-none-none.png",
+      "bytes": 72474,
+      "sha256": "0003cf6e03512a9bd7ef21a5c595226781398931aae1533d6f857f3c70f30c19"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-exact-none-withdrawal.png",
+      "bytes": 74324,
+      "sha256": "f938b56bbe1a5b3417c6ce3bacca460c1820a99cace38cfe2d8e59590df51a28"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-combined.png",
+      "bytes": 70744,
+      "sha256": "faa2db47e6fe08198a0d08c9f5732129335b1ce48b4275195cfb5c2fad1898bc"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-erasure.png",
+      "bytes": 69391,
+      "sha256": "1042e09cca6bdf6eb9ffe44aea367f5926dc59da5b62b64783542e2a80fcb4ee"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-none.png",
+      "bytes": 69180,
+      "sha256": "a0c4bc52bc94e1fb1cb4738b9d9040decb8487df0c61785d2b3d747a677a8158"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 70052,
+      "sha256": "ca3ba25c80f768a76150025aaab5398fbc1ec9fa989d9a710b032cdfdacbc225"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-combined.png",
+      "bytes": 74985,
+      "sha256": "c2e5c5cb57da7e6fe587f7c2e696892aca00b94aa902f4977bd10c8933e05c23"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-erasure.png",
+      "bytes": 69044,
+      "sha256": "659a45547fb4399a55493614667e27500dcecc28b2295533af9e77d0bd9a0a9b"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-none.png",
+      "bytes": 68271,
+      "sha256": "d67620bed62b4a5a36b24f2fc652011af17a047473e7ed86164edd072c2fe1f6"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-evidence-only-withdrawal.png",
+      "bytes": 75149,
+      "sha256": "21cba8521cb564d0e1fe6137a41a200ab1f27c8a330ce1fa722d83e610077e23"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-none-combined.png",
+      "bytes": 74379,
+      "sha256": "71e13c10e03b1261455984caba23d126b40718608017eb7d44c48aecc0952b8b"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-none-erasure.png",
+      "bytes": 73003,
+      "sha256": "ab10dc12c50d18624ca36509b3ffa66e95a641af4cf24bbecbff0f73c971d753"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-none-none.png",
+      "bytes": 71917,
+      "sha256": "a36876d3e4ab8b08c1541442b77569a3c70f778503a7cb3abf0835f39a155844"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8701-jev-none-withdrawal.png",
+      "bytes": 74049,
+      "sha256": "a7c610e08a82242fdb402c5ebaee1e9faeb93c624860db5bd37a7ad2c315c143"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-combined.png",
+      "bytes": 71772,
+      "sha256": "273f6924df2b94f31abcfa36a5164f67e4bbd7a00ef4eb5b4e748bae4457e926"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-erasure.png",
+      "bytes": 69586,
+      "sha256": "a85e0a93bcd38d0d4b6dab12c5bae5319ed9f3b316676e7e4323488418d84037"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-none.png",
+      "bytes": 69403,
+      "sha256": "462ba179ec57c95294fd41a29f937ef505510d80c7bdc39425a4eaf30e1cc5b5"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 71155,
+      "sha256": "c081a0a02b61d6d37d486af21fa064b26c19cf41b833224706bc044f53d77115"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-combined.png",
+      "bytes": 75579,
+      "sha256": "db9ebd33f7c1edfe1a827d7facc407570f8fc9e68aeb12943dbf6ee6622f17a6"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-erasure.png",
+      "bytes": 69309,
+      "sha256": "1591018b59cfea730391936971af73dba43f2e127211b223617dfff4afd593c1"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-none.png",
+      "bytes": 68857,
+      "sha256": "68c6ecad9c52f737c559e7b8a6829b86cf093aa6e5d438060c3c93987c122de7"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-evidence-only-withdrawal.png",
+      "bytes": 75470,
+      "sha256": "34cd752fd6aec6d43df738508173d89b09067e0c6e6ef523f090ba55271d92b0"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-none-combined.png",
+      "bytes": 74679,
+      "sha256": "a1ea628c5f6ede5a7a0e0a754734a464864f48ef9182a84ebc4c9cf06431d1ae"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-none-erasure.png",
+      "bytes": 73645,
+      "sha256": "a9a8bf467aa7a4929e9abbba7b9a5116f2271a5949db2efcb95cf7948483ad22"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-none-none.png",
+      "bytes": 72983,
+      "sha256": "d33377cff67064a5f947cee8dfcaabdc2d190f63356e3e38a7fe93e9850c7769"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-exact-none-withdrawal.png",
+      "bytes": 74420,
+      "sha256": "a8c89df1b7aa8134afff236aa41904cd437d4ba82ec13e5c2bf9048d15b5b912"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-combined.png",
+      "bytes": 71401,
+      "sha256": "c54f5a0290a863677af90fd9a32ad149b877bb54ec20c90778ca582012371357"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-erasure.png",
+      "bytes": 69206,
+      "sha256": "c204f653a9e3c33e664377b5fe47a6044472e240d802014e56ec465987c2e57e"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-none.png",
+      "bytes": 69001,
+      "sha256": "2e7202035f02674d47328efdefbe9b7d9af18644c7b228e1c52decdcc417755e"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 70791,
+      "sha256": "8cbaae5f20ec170605576ebca3cfe43aa1d2a9db18b4d967c2d28d20ecce1ae5"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-combined.png",
+      "bytes": 74890,
+      "sha256": "021eeb4f67df6786d7fe2cef11f7568c97ed07be9b670e016732e31d2a94d7c8"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-erasure.png",
+      "bytes": 68855,
+      "sha256": "e41181a98cf1b596158ec86026a322d081bf46c2009fe5e273a9ffee5ce1abbe"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-none.png",
+      "bytes": 68092,
+      "sha256": "a00cb068c1632a7ee5ddde75234767a4c2fbf0f986add19f9247d789ce4f7258"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-evidence-only-withdrawal.png",
+      "bytes": 75104,
+      "sha256": "7307589087347424588e163c15c2c6331a0544d8900b955f84ba4d6188ba2490"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-none-combined.png",
+      "bytes": 74299,
+      "sha256": "05c5985dab197fe4057252d38c0d7ba59a889e9457f634435b7ed0f339bece28"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-none-erasure.png",
+      "bytes": 73289,
+      "sha256": "5538370762b9fcbbc82ec6591010ee5a6e8b852354c9e64126f56c6ecd4ad094"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-none-none.png",
+      "bytes": 72419,
+      "sha256": "7baa839cf9de081b29efa8d5b0d0a517bd54247382b7781d7f9a69df464b42af"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8702-jev-none-withdrawal.png",
+      "bytes": 74140,
+      "sha256": "a1e25345a1e84136bb7481fc736727c55545d5457560225295bc13539fa705aa"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-combined.png",
+      "bytes": 71030,
+      "sha256": "a97c9fd53c2afec9bfd487d51a26773e719f40d8da654fb3db4bc293a0bee712"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-erasure.png",
+      "bytes": 69576,
+      "sha256": "c67df54392bb8193c8fc80f53ee0694daa563d8be3dd446bb53c974685b62d2b"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-none.png",
+      "bytes": 69379,
+      "sha256": "cd063c0ecd8792b694bdb395b44476b8c5af6ed401450c7273be650162b62571"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 70319,
+      "sha256": "ffc976bf3734204a46cebff54b74f18303cddeab73325b79ed8aa505572cc078"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-combined.png",
+      "bytes": 75490,
+      "sha256": "f98cf10d47c0efcfdc74f23d43ac1fec0c4642c7dd3f2208f02c7648574500fc"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-erasure.png",
+      "bytes": 69307,
+      "sha256": "78db2e00d222db7c50ef0e95df8277ce766e9350277e846e6745d9174e99e572"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-none.png",
+      "bytes": 68801,
+      "sha256": "796c7acf0fa17fe5891d1a19eaf7e5812b29575e30224522f152b259bc9bc831"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-evidence-only-withdrawal.png",
+      "bytes": 75330,
+      "sha256": "b8bc5c6958500fdcbd7bc85fd2084fca219ee4da508f165515f00b36dc007aaf"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-none-combined.png",
+      "bytes": 74464,
+      "sha256": "8dfdf8e1aedae71aa0bf629085b2867bfb36143cb01e2163100793807af74e52"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-none-erasure.png",
+      "bytes": 73137,
+      "sha256": "05ca13e63fa62dbcc079b3613bed0c1a86aa528180df788e3783a8c5ac414477"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-none-none.png",
+      "bytes": 72636,
+      "sha256": "9e82229c08e319c69ec6f016762701e29050691773a75d318d5b07eaefe718c2"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-exact-none-withdrawal.png",
+      "bytes": 74568,
+      "sha256": "2412becbcb47dd52d07fd3f6f0137bbc10ea1edc133383767b1e7b73dc56bb4f"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-combined.png",
+      "bytes": 70624,
+      "sha256": "8612b2c8ea63f0eba618fb34ca1e077d2fd2df2238607332e3c89ce7bec31337"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-erasure.png",
+      "bytes": 69199,
+      "sha256": "073838fac355d2ae1b9b30b98b3e1a1cd59ef41213806755023adaa332dc2f66"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-none.png",
+      "bytes": 68982,
+      "sha256": "50bce8f279b80901d3e2869164cbffaa74e5fa91849d673cf478d4730f8a94de"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-and-withdrawals-withdrawal.png",
+      "bytes": 69953,
+      "sha256": "9bdb2b71b49b7c1f8229c42caabb4ee2fa53cebcf3d357e8314ee15cef32351f"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-combined.png",
+      "bytes": 74822,
+      "sha256": "40f22f434ce616f5afc114ab6f1fdbf9e96b0c45a2b9d576c0857436358d09bd"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-erasure.png",
+      "bytes": 68858,
+      "sha256": "32127706a5bc9b8e412dbcfcfbc13533a48921b1ed8bcd16f665292c0291cd4d"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-none.png",
+      "bytes": 68044,
+      "sha256": "6f49bf6e102283a22e272b034d7fa43d2771df749683e1e2f80a50d3643e8a7f"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-evidence-only-withdrawal.png",
+      "bytes": 74992,
+      "sha256": "c2a3738ab83c695d4a5744f32b7d92ff7510d656ef2bca62d1a255b2f8c787b1"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-none-combined.png",
+      "bytes": 74038,
+      "sha256": "231118af351c131202adf33b27dcc7dbcce47332251411ef44326fd2f5467d4b"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-none-erasure.png",
+      "bytes": 72790,
+      "sha256": "e3e87f9befdb2ca56dea1aee2bc3b23df7533f4661efb54d2720e9a65c654346"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-none-none.png",
+      "bytes": 72041,
+      "sha256": "64d77f8e0b58a08743f89a07b57fb41400939e6f52ae68a44679616af5e90b53"
+    },
+    {
+      "path": "healing-helping-hands/site/world-frames/8703-jev-none-withdrawal.png",
+      "bytes": 74290,
+      "sha256": "19e77d3c4faa67c72d2c3f7aed47d41a3d2fbc552239aa8d252f8be950e1ae4b"
+    },
+    {
+      "path": "healing-helping-hands/visualization/world_frames.py",
+      "bytes": 2701,
+      "sha256": "b4f74d5211877c75a86c26c7be0db7e16e3443cc70590e96e121c7c49fb58b47"
+    },
+    {
+      "path": "immune-response-review/SCENARIO-ASSESSMENT.md",
+      "bytes": 8004,
+      "sha256": "962891407fe4a7276348aaedabf7cfd1f62f5f1e589ead74ba22935f02e06218"
+    },
+    {
+      "path": "immune-response-review/SCENARIO-SPEC.md",
+      "bytes": 11632,
+      "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda"
+    },
+    {
+      "path": "immune-response-review/scenario-comparison.png",
+      "bytes": 116382,
+      "sha256": "318559a3f5a0144b3012b335c26a837e387da2ac6669dbc656b9d565cb8dbddc"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/final_frame.png",
+      "bytes": 84906,
+      "sha256": "9423ba52ce7f826966fd17196aff3b089368dd2f491637de47f9aa2138b55d2a"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/manifest.json",
+      "bytes": 17524,
+      "sha256": "3ce723b718c1929ac06f423747381dc443150209175a0db21a9f85ffc7168eb7"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/replay.gif",
+      "bytes": 182521,
+      "sha256": "91c4bbf18621a9c44227b501cc39ab0079605e3c8da6311a07ec0aefdca5062f"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/replay.html",
+      "bytes": 554034,
+      "sha256": "04538af5abd4447e47b46e6fb7e9b248e9b4cab8186af133c105b5174ef4b78c"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/summary.json",
+      "bytes": 2018,
+      "sha256": "0c2841ca3c02d1adabb2c6de9ebbd32b41c6b5907c5fc4e780380c7ed1501cdb"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a1/visualization-provenance.json",
+      "bytes": 220,
+      "sha256": "08701bd553473c69382b25e8d65df8e7dee6e2d8d3d695a1a6af200f6cbfde29"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/final_frame.png",
+      "bytes": 84906,
+      "sha256": "9423ba52ce7f826966fd17196aff3b089368dd2f491637de47f9aa2138b55d2a"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/manifest.json",
+      "bytes": 17525,
+      "sha256": "d5dee24e99734cf9c80a78b72a3ee74369b5e2d7cf88631088f42c7f55a9bc1f"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/replay.gif",
+      "bytes": 182521,
+      "sha256": "91c4bbf18621a9c44227b501cc39ab0079605e3c8da6311a07ec0aefdca5062f"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/replay.html",
+      "bytes": 554983,
+      "sha256": "b73d5fdbe554b4528f9ae8b0f23caac5e9fb80a9974d1585487f1f72900e0a3e"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/summary.json",
+      "bytes": 2018,
+      "sha256": "0c2841ca3c02d1adabb2c6de9ebbd32b41c6b5907c5fc4e780380c7ed1501cdb"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering-a2/visualization-provenance.json",
+      "bytes": 220,
+      "sha256": "996e93c47e4a695e81c0345fec97fa2b27008ee6afb9e010263cec48c875063a"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering/final_frame.png",
+      "bytes": 83745,
+      "sha256": "d05392dbc4a47167b0b98ea56ed123a7bc25907feed5a5d3f7573695824a2890"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering/manifest.json",
+      "bytes": 17524,
+      "sha256": "3ce723b718c1929ac06f423747381dc443150209175a0db21a9f85ffc7168eb7"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering/replay.gif",
+      "bytes": 173457,
+      "sha256": "8ca42bd5acaab72e5cc2ad274e2b7a3d93142948643d934cdef6c9378d747499"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering/replay.html",
+      "bytes": 552824,
+      "sha256": "5c7fdad343bf21cffcd5e46f2a9af8157690a28d9c3af333723d70ef6a84099c"
+    },
+    {
+      "path": "immune-response-review/scenario-engineering/summary.json",
+      "bytes": 2018,
+      "sha256": "0c2841ca3c02d1adabb2c6de9ebbd32b41c6b5907c5fc4e780380c7ed1501cdb"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/final_frame.png",
+      "bytes": 105986,
+      "sha256": "3abde63b4512e1a431ecaa0e321fc232377b50c8e369b95617a9cd56e6606f18"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/manifest.json",
+      "bytes": 1528,
+      "sha256": "88870e83ef5556741b2532365c9d8b1afaf95169d9cceaee04b713d3403d533b"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/replay.gif",
+      "bytes": 199306,
+      "sha256": "45ed82f6b734ab6212966e4f0c7768c3515f78fc9198ef9ba1aa353124df3fba"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/replay.html",
+      "bytes": 55609,
+      "sha256": "37f80ca68650a5b63e06ddb08487fe27c6d6733b8869036de1f423ab5e1a3e16"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/summary.json",
+      "bytes": 2036,
+      "sha256": "2fb8696ba716367485ab04a03115eaba2d6e9630d2ee859dd6a56e16c61b0f4a"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a1/visualization-provenance.json",
+      "bytes": 221,
+      "sha256": "94feecb682c4aaeee6626ef8d16d3ed217bfa9597eb4f78df70219a36d18f31d"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/final_frame.png",
+      "bytes": 88324,
+      "sha256": "34fc5b464c106210506761b3e798fdd938cf213867e9c6e04b5dbd1044da3e9b"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/manifest.json",
+      "bytes": 1528,
+      "sha256": "fc1543d2bf2bcc823ff0599598fefd94974ecb2a6a300c81667f1f6461700181"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/replay.gif",
+      "bytes": 182927,
+      "sha256": "61fb7fcd8610b4b85f7bcfc631eacd91d458b527b45ff3e6872f529c5ec81e98"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/replay.html",
+      "bytes": 61656,
+      "sha256": "734ed83f1cd7b9f36be66cee8c75258997a15d0ad88ece415edad364d530543b"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/summary.json",
+      "bytes": 2036,
+      "sha256": "f58eae8b6727701dc667641d089d5b64b69e004d40543f50030440e0ca535815"
+    },
+    {
+      "path": "immune-response-review/scenario-native-a2/visualization-provenance.json",
+      "bytes": 221,
+      "sha256": "dcdc1de04cd64f95ac6eadb7d7fdba9c5044ce480d417b386fa88ffbfdf8e22f"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/final_frame.png",
+      "bytes": 88153,
+      "sha256": "3f5ce91d4cb2ae592b3c5d0e7787b93627706c408d6a0f033b665c4f952f25e8"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/manifest.json",
+      "bytes": 834,
+      "sha256": "e325c913ac9084c3eb7dec442a1969d25404654bb6f812107b4c3f5736f54b30"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/replay.gif",
+      "bytes": 168397,
+      "sha256": "80080634deaf9d59dee3b36f0bc0c67aa02eddca7931d70383c20abedef40c21"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/replay.html",
+      "bytes": 25343,
+      "sha256": "bce3e80c8db98aaa484e2b9dc0d5a2eab5d7ca41b39eb3d5a05bb5721f3c800c"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/summary.json",
+      "bytes": 845,
+      "sha256": "381daa5f7510c5e82401946aecf1d7ded4549cc7e4d5e3d7fc6339a63aa1e1dd"
+    },
+    {
+      "path": "immune-response-review/scenario-solo-a1/visualization-provenance.json",
+      "bytes": 221,
+      "sha256": "94187a0952db9a82783340e1512e52b348c03f266e0d9a781a09b0941bb0f850"
+    },
+    {
+      "path": "local-run-records/antsy-verification-v4/jev-budget-final.json",
+      "bytes": 422176,
+      "sha256": "8cc09660d40c6233feefefcce49374a21e26c24008fcc4bd038a0966a7118827"
+    },
+    {
+      "path": "swarm-of-theseus/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "swarm-of-theseus/DEPLOYMENT.md",
+      "bytes": 6201,
+      "sha256": "2385e5ef374ee38e9098575a10fe38f6da12d46842389f485d5510aa0afec0f6"
+    },
+    {
+      "path": "swarm-of-theseus/README.md",
+      "bytes": 15085,
+      "sha256": "2e0bc3af7a46e5f719f45a076a7c374b484703cf5eeaea4835f1da458d94cf48"
+    },
+    {
+      "path": "swarm-of-theseus/RESULTS.md",
+      "bytes": 8202,
+      "sha256": "5af038d90fb9da83d6ae749da0a36d2613fe8ee2da783ceab44361a168644508"
+    },
+    {
+      "path": "swarm-of-theseus/design.yaml",
+      "bytes": 625,
+      "sha256": "f9b2c293775a375ee23892c7083e08e72b0fb70e6908e65f7e1c6df832aecedc"
+    },
+    {
+      "path": "swarm-of-theseus/evidence.tar.gz",
+      "bytes": 372168,
+      "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc"
+    },
+    {
+      "path": "swarm-of-theseus/experiment.yaml",
+      "bytes": 767,
+      "sha256": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb"
+    },
+    {
+      "path": "swarm-of-theseus/model-config.json",
+      "bytes": 335,
+      "sha256": "4b36fd0932680b861f11711321121fc17639c1033286f0ae2b703273bbc53bf0"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/DESIGN.md",
+      "bytes": 14071,
+      "sha256": "4e1c7058e0fc2707fbb556b0677653e2c056e5b60cdbcf294dcb8eda70d6dcab"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/REVIEW-PLAN.md",
+      "bytes": 1366,
+      "sha256": "d466e946a8db0d5ccf08b46063217580566632dff19609f2868c79e6dae74461"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/REVIEW.md",
+      "bytes": 7893,
+      "sha256": "7f24a8b782f52b62d21c8b86da7c4d9219e72d73bd4f20a2e184711b28f40e68"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/audit_structure.py",
+      "bytes": 2247,
+      "sha256": "94e5ae4c410425955d0d2bdccb40597524c53b161e89d265274be6dd457bad25"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/structural-audit.json",
+      "bytes": 772,
+      "sha256": "f46b0d22daa4848db0dc89e32139d3134563060212431bd86cb91a72c2476391"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a1-post.md",
+      "bytes": 2262,
+      "sha256": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a1-pre.md",
+      "bytes": 5767,
+      "sha256": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a2-post.md",
+      "bytes": 4372,
+      "sha256": "e2af7b1a87a3484ca90417d1eee0ef82992d1efc812d0dbe7629a2873d85b1b1"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a2-pre.md",
+      "bytes": 6072,
+      "sha256": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a3-post.md",
+      "bytes": 3309,
+      "sha256": "ace8e4aa86a06933b26c43193a54e8527bcf95a94afbfd335756ad420a9e859f"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a3-pre.md",
+      "bytes": 6637,
+      "sha256": "87daa9c11c59a0701ec676b4294670110f17bfe6cd0300beea0a7ffdf9bbb1c8"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a4-post.md",
+      "bytes": 2843,
+      "sha256": "f9721246c556ed48368bae5752630386b71bb11dae5e9b3b9c4f2a4ea8b42aab"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a4-pre.md",
+      "bytes": 7280,
+      "sha256": "47d0f9d211f01a6ac1e5d975df1e3c54697b4061cf1f2dad8a4daf31621e6dc6"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S1-a1-post.md",
+      "bytes": 4014,
+      "sha256": "bee085f1bf7321d6f5c82804a4f124170f8630b35030aeae539789cb4f5b27e5"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S1-a1-pre.md",
+      "bytes": 4967,
+      "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c"
+    },
+    {
+      "path": "swarm-of-theseus/src/analyze.py",
+      "bytes": 3019,
+      "sha256": "0ca0740ba06634bc760a10084f7e36288d93b4b05db7451de34113eab9e70e76"
+    },
+    {
+      "path": "swarm-of-theseus/src/audit.py",
+      "bytes": 3555,
+      "sha256": "9302d85a22f5933acd60bac3f1df16dc471cdebe652877fa98781f133e8a98f2"
+    },
+    {
+      "path": "swarm-of-theseus/src/package_evidence.py",
+      "bytes": 1522,
+      "sha256": "ef2bb29867c2bcf9a0e6b71158cbd7c1ccdbaabb489e7ef4691b376098ffce61"
+    },
+    {
+      "path": "swarm-of-theseus/src/provider.py",
+      "bytes": 8066,
+      "sha256": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510"
+    },
+    {
+      "path": "swarm-of-theseus/src/public_plan.py",
+      "bytes": 2547,
+      "sha256": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934"
+    },
+    {
+      "path": "swarm-of-theseus/src/render.py",
+      "bytes": 3731,
+      "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976"
+    },
+    {
+      "path": "swarm-of-theseus/src/runner.py",
+      "bytes": 7114,
+      "sha256": "59b84e493aa3bec2a428f5f8362db390eb13ea3c0bd6ba47329960d94605f49d"
+    },
+    {
+      "path": "swarm-of-theseus/src/study.py",
+      "bytes": 8350,
+      "sha256": "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b"
+    },
+    {
+      "path": "swarm-of-theseus/src/summary_figure.py",
+      "bytes": 2420,
+      "sha256": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3"
+    },
+    {
+      "path": "swarm-of-theseus/tests/test_study.py",
+      "bytes": 5306,
+      "sha256": "ea2bffbcf690581cd5a375f5d96844ba0aee8359a4ac6e72651c0f3059ca2413"
+    }
+  ]
+}

@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: run-market-split-api
-doing: Qualifying Sonnet 4.6 after preserving Haiku execution and competence failures.
-updated: 2026-10-04T02:56Z
+doing: Running Sonnet serially; Haiku passed fresh mechanics/profit gates and now starts full-length regulated reliability on its dedicated host.
+updated: 2026-10-04T04:25Z
 ---
 
 ## Notes

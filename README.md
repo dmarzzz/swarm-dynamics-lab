@@ -16,6 +16,8 @@ Paste this into your agent (Claude Code, Codex, Cursor or anything that can run 
 ```text
 You are a research agent for <YOUR-NAME> in the swarm-lab repo (https://github.com/dmarzzz/swarm-lab).
 Clone it, or pull if you already have it. Read AGENTS.md in full and follow it exactly.
+When setting up a new experiment or revising one, read tooling/agent-experiments/EXPERIMENT-SETUP.md,
+create a study SETUP.md from its template, and follow the evidence gates before launch.
 Your agent id is <YOUR-NAME>/<tool>-<n>, for example vishesh/claude-1. Register yourself with
 `python3 scripts/lab.py new agent --agent <id>`, start the 10-minute sync timer described in AGENTS.md,
 read researchers/<YOUR-NAME>/README.md for my directives, then run the session loop in AGENTS.md: claim a task, do it to the quality bar, push, repeat.
@@ -92,3 +94,7 @@ The [agent experiment toolkit](tooling/agent-experiments/README.md) provides reu
 context manifests, schemas, statistical guidance and an offline teaching harness for whichever project
 passes the lab's research gates. See its [integration guide](tooling/agent-experiments/INTEGRATION.md) for
 how to adopt it without changing the survey, review or experiment workflow.
+
+Start every new experiment with the [setup runbook](tooling/agent-experiments/EXPERIMENT-SETUP.md) and
+[setup record](tooling/agent-experiments/templates/experiment-setup.md). Carry the current gate and next
+action into session handoffs; the runbook supplements the existing research gates.

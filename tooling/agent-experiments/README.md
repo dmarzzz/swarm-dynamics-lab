@@ -2,12 +2,15 @@
 
 Research cutoff: **3 October 2026 (UTC)**. Reusable methods and offline tooling for swarm-lab research. This is a reusable methods package, not a gate-passing survey, accepted hypothesis, or executed LLM experiment. Read [swarm-lab integration](INTEGRATION.md) before adapting it to a research project.
 
-Start with [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
+For new studies, start with [the setup runbook](EXPERIMENT-SETUP.md) and copy [the setup record](templates/experiment-setup.md). Then use [the main guide](GUIDE.md), copy [the preregistration template](templates/protocol.md), and adapt [the worked collective-sensing example](examples/collective-sensing/PROTOCOL.md). The [literature review](LITERATURE.md) distinguishes verified research findings, authors' proposals, and this guide's recommendations. [Search notes](SEARCH-LOG.md) document coverage and limits.
 
 | Artifact | Purpose |
 | --- | --- |
 | [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
+| [Experiment evidence metadata](../../experiments/EVIDENCE-METADATA.md) | Defined 0–4 evidence-confidence scale, independent sample-size summaries and update workflow |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
+| [AGENT-LIFECYCLE.md](AGENT-LIFECYCLE.md) | Agent identity, actual initialization receipts, context, memory, reset and fork semantics; recommended production contract |
+| [AGENT-LIFECYCLE-RESEARCH.md](AGENT-LIFECYCLE-RESEARCH.md) | 29 annotated research/practitioner entries and access limits |
 | [HARNESS.md](HARNESS.md) | Framework choices, architecture, isolation, deterministic startup, execution and replay |
 | [LITERATURE.md](LITERATURE.md) | Evidence synthesis and annotated bibliography |
 | [templates/protocol.md](templates/protocol.md) | Reusable protocol and preregistration |
@@ -22,7 +25,7 @@ Start with [the main guide](GUIDE.md), copy [the preregistration template](templ
 | [scripts/validate.py](scripts/validate.py) | Artifact/schema, pairing, replay and integrity checks |
 | [VALIDATION.md](VALIDATION.md) | Actual checks performed and remaining limitations |
 
-Run the demonstration from this folder with Python 3.10 or newer:
+The historical demonstration used the commands below with Python 3.10 or newer. Before a new Swarm Lab run, follow the public-plan registration and launch gates in [the lifecycle runbook](AGENT-LIFECYCLE.md). The default validator executes the demonstration twice; it is not a read-only audit command:
 
 ```sh
 python3 scripts/toy_harness.py --config examples/collective-sensing/config.json --out ../../data/agent-study-demo

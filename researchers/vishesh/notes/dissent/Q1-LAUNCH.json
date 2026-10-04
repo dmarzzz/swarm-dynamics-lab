@@ -1,0 +1,10 @@
+{
+  "status": "completed_qualification_passed",
+  "configuration": "results/q1-a1/configuration.json",
+  "public_preflight": "results/q1-a1/public-plan-receipt.json",
+  "registered_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md",
+  "assigned": 42,
+  "terminal": 42,
+  "replaced_host": "sim-shadow",
+  "retrospective_index": true
+}

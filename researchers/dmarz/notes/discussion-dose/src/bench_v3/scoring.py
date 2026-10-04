@@ -41,6 +41,26 @@ def majority(ballots, n=3):
     return next((v for v, count in counts.items() if count > n / 2), 'ABSTAIN')
 
 
+def quorum_state(ballots):
+    """Observed fixed N=3 decision and possible completions of failed ballots.
+
+    A missing ballot is never an evidence-based abstention. Completion bounds
+    describe unidentified counterfactuals, not additional model observations.
+    """
+    if len(ballots) != 3: raise ValueError('fixed electorate must contain three ballots')
+    missing = sum(b is None for b in ballots)
+    decision = majority(ballots)
+    alternatives = set()
+    for votes in product(('A', 'B', 'C', 'ABSTAIN'), repeat=missing):
+        replacements = iter(votes)
+        complete = [b if b is not None else {'vote': next(replacements)} for b in ballots]
+        alternatives.add(majority(complete))
+    return {'decision': decision, 'invalid_ballots': missing,
+            'state': 'majority' if decision != 'ABSTAIN' else 'incomplete_no_quorum' if missing else 'complete_no_quorum',
+            'completion_decisions': sorted(alternatives),
+            'counterfactual_unidentified': len(alternatives) > 1}
+
+
 def merge(ballots, n=3):
     records = {}
     for agent, ballot in enumerate(ballots):
@@ -119,7 +139,8 @@ def evaluate(case, corpus, ballots, memory, parent, initial):
     answer = reference_winner(case['task'], case['truth'])
     choices = possible_decisions(case['task'], corpus)
     expected = choices[0] if len(choices) == 1 else 'ABSTAIN'
-    decision = majority(ballots); valid = all(b is not None for b in ballots)
+    quorum = quorum_state(ballots)
+    decision = quorum['decision']; valid = not quorum['invalid_ballots']
     true_records = sum(r['value'] == case['truth'][r['key']] for r in memory)
     by_id = {d['id']: d for d in corpus}
     unsupported = sum(any(by_id[s]['facts'].get(r['key']) != r['value'] for s in r['sources']) for r in memory)
@@ -130,12 +151,22 @@ def evaluate(case, corpus, ballots, memory, parent, initial):
     final_state = checkpoint(case, ballots)
     raw_conflict = len(resolve(case['target_key'], corpus, case['task']['policy'])) > 1
     inherited_conflict = len(resolve(case['target_key'], reported_records(ctx), ctx['task']['policy'])) > 1
-    return {'vote_invalid': int(not valid), 'vote_correct': int(valid and decision == answer),
-            'vote_justified': int(valid and decision == expected),
-            'vote_target': int(valid and decision == case['target']),
-            'vote_abstain': int(valid and decision == 'ABSTAIN'),
-            'vote_correct_abstain': int(valid and decision == 'ABSTAIN' and expected == 'ABSTAIN'),
-            'vote_unnecessary_abstain': int(valid and decision == 'ABSTAIN' and expected != 'ABSTAIN'),
+    # Review F1 (shadow, 2026-10-04): score the fixed-quorum decision that actually reached memory and the parent.
+    # An invalid ballot is a non-vote inside majority(); vote_invalid stays as the flag, and an ABSTAIN with an
+    # invalid ballot is flagged separately because it may be lack of quorum caused by the failure.
+    return {'vote_invalid': int(not valid), 'vote_correct': int(decision == answer),
+            'vote_justified': int(decision == expected),
+            'vote_target': int(decision == case['target']),
+            'vote_abstain': int(decision == 'ABSTAIN'),
+            'vote_abstain_with_invalid': int(decision == 'ABSTAIN' and not valid),
+            'vote_correct_abstain': None if not valid and decision == 'ABSTAIN' else int(decision == 'ABSTAIN' and expected == 'ABSTAIN'),
+            'vote_unnecessary_abstain': None if not valid and decision == 'ABSTAIN' else int(decision == 'ABSTAIN' and expected != 'ABSTAIN'),
+            'vote_incomplete_no_quorum': int(quorum['state'] == 'incomplete_no_quorum'),
+            'vote_counterfactual_unidentified': int(quorum['counterfactual_unidentified']),
+            'vote_correct_completion_lower': int(all(v == answer for v in quorum['completion_decisions'])),
+            'vote_correct_completion_upper': int(any(v == answer for v in quorum['completion_decisions'])),
+            'vote_target_completion_lower': int(all(v == case['target'] for v in quorum['completion_decisions'])),
+            'vote_target_completion_upper': int(any(v == case['target'] for v in quorum['completion_decisions'])),
             'memory_records': len(memory), 'memory_true_records': true_records,
             'memory_false_records': len(memory) - true_records,
             'memory_precision': true_records / len(memory) if memory else None,
@@ -146,10 +177,11 @@ def evaluate(case, corpus, ballots, memory, parent, initial):
             'memory_raw_target_conflict': int(raw_conflict),
             'memory_conflict_retained': int(raw_conflict and inherited_conflict),
             'memory_conflict_lost': int(raw_conflict and not inherited_conflict),
+            'memory_conflict_loss_structural': int(raw_conflict and not inherited_conflict),
             'memory_source_mentions': sum(len(r['sources']) for r in memory),
             'memory_distinct_origins': len({roots[s] for r in memory for s in r['sources']}),
-            'correct_vote_bad_memory': int(valid and decision == answer and true_records < len(memory)),
-            'correct_vote_bad_parent': int(valid and decision == answer and followup['parent_groundtruth_wrong'] == 1),
-            'abstain_vote_bad_memory': int(valid and decision == 'ABSTAIN' and true_records < len(memory)),
+            'correct_vote_bad_memory': int(decision == answer and true_records < len(memory)),
+            'correct_vote_bad_parent': int(decision == answer and followup['parent_groundtruth_wrong'] == 1),
+            'abstain_vote_bad_memory': int(decision == 'ABSTAIN' and true_records < len(memory)),
             'initial_false_endorsements': initial_state['false_endorsements'],
             'final_false_endorsements': final_state['false_endorsements'], **followup}

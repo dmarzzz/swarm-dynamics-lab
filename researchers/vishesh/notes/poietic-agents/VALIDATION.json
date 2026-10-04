@@ -1,0 +1,24 @@
+{
+  "schema": "poietic-design-validation-v0.1",
+  "checked_utc": "2026-10-04T04:34:07.328908+00:00",
+  "scope": "document integrity, arithmetic, references and publication only; no experimental implementation or model qualification",
+  "checks": {
+    "json_yaml_parse": "pass",
+    "S0_requests_144_and_max_288": "pass",
+    "S1_16_lineages_768_assigned_jobs": "pass",
+    "local_markdown_links": "pass",
+    "seven_S0_S1_TLDRs_with_shared_validator": "pass",
+    "four_new_papers_arxiv_crossref": "0 problems",
+    "immutable_public_plan_hash": "pass",
+    "public_registration_fields": "pass",
+    "shared_public_plan_network_preflight": "pass",
+    "public_UI_title_TLDR_plan_protocol_zero_runs": "pass",
+    "repository_check": "0 errors; 5 pre-existing missing-citation warnings"
+  },
+  "plan_commit": "4a373dad56aab6a7129f16748a2edf312ce6d048",
+  "plan_sha256": "43a500549a4685bdcf42b97646f34149a4ee3d96ba4e1c487475e12d4a1efdc0",
+  "measured_experimental_results": false,
+  "model_calls": 0,
+  "queued_runs": 0,
+  "started_runs": 0
+}

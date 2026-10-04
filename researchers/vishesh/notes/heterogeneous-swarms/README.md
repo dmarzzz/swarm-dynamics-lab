@@ -1,12 +1,25 @@
 # Heterogeneous Jev / Haiku / Qwen research
 
-Added 2026-10-04 UTC for Vishesh. Thirty exploratory questions, 29 primary sources, five X evidence/lead records, individual editorial reviews and rubric scores, and five detailed prospective designs. No experiments were launched.
+<!-- experiment-evidence:start -->
+## Evidence metadata
 
-The central question is **when typed Jev decisions and generative Haiku/Qwen agents produce useful specialization, rather than extra cost, correlated errors or a shared bottleneck**. “Quen” is interpreted as Qwen; exact models remain to be pinned.
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: whether mixed-model or self-differentiating swarms provide specialization beyond compute, correlation and coordination costs. Basis: Existing rubric scores measure editorial interest/preferences, not empirical confidence. Exact model, sample and launch contracts remain to be frozen per successor.
+- **sample_size_summary:** No experiments launched; 38 research questions with prospective designs, not 38 empirical samples.
+<!-- experiment-evidence:end -->
+
+**Selected project:** [Poietic Agents](../poietic-agents/README.md) turns HX-31 into a prospective design and review package. New close prior art narrows the novelty claim; no run or formal research acceptance is implied.
+
+Added 2026-10-04 UTC for Vishesh. The original scan contains 30 exploratory questions, 29 primary sources and five X evidence/lead records. The biological revision adds eight questions, eight directly read X discussions, 11 new library entries, two freshly revisited papers and five new prospective designs. All 38 questions have metadata, editorial self-reviews and rubric scores. No experiments were launched.
+
+**Current recommendation after owner feedback:** [HX-31: self-differentiating swarms](frontiers/PRIORITIES.md), **94/100**, combining shared services and capability shedding with workflow hardening. HX-33 (82) supports the main project; HX-32 (34) is deprioritized, HX-35 (60) parked, and HX-37 (66) consolidated into HX-31. [Revised scores](frontiers/SCORES.md) preserve previous values and the unchanged rubric. Earlier top-five recommendations are superseded; original HX-01–HX-30 scores remain historical and unchanged.
+
+The original central question was **when typed Jev decisions and generative Haiku/Qwen agents produce useful specialization, rather than extra cost, correlated errors or a shared bottleneck**. “Quen” is interpreted as Qwen; exact models remain to be pinned.
 
 Read the [literature synthesis](LITERATURE.md), [search/access log](SEARCH-LOG.md), [full question bank](QUESTION-BANK.md), [five designs](DESIGNS.md), [review](REVIEW.md), [source metadata](sources.json), [question metadata](questions.json), [scores](SCORES.md) and [validation](VALIDATION.md). [Browse HX in the dashboard](https://swarm-research.pages.dev/#/contributions?bank=HX).
 
-## Top five under the owner’s rubric
+## Original shortlist under the owner’s rubric — historical
 
 Weights: visual 30%, practical 30%, physical/biological mechanism 25%, team-relative novelty 15%. These are assistant assessments on Vishesh’s behalf, not human or peer-review votes. Each component is 0–100; totals use half-up rounding. Formal reviewer scores remain NA.
 
@@ -18,7 +31,7 @@ Weights: visual 30%, practical 30%, physical/biological mechanism 25%, team-rela
 | 4 | HX-05 — A reserve of diverse specialists for recovery | 96 | 87 | 92 | 65 | **88** |
 | 5 | HX-09 — Who pays the cost of saying no? | 92 | 95 | 70 | 75 | **85** |
 
-These five lead **this new bank**, not a re-ranking of every existing team question. Scores express preferences, not effect sizes, novelty confidence, execution readiness or probability of success. Literature overlap is separately explicit on every card. Close scores should not be overinterpreted.
+These five led **the initial 30-question bank**, not a re-ranking of every existing team question. Scores express preferences, not effect sizes, novelty confidence, execution readiness or probability of success. Literature overlap is separately explicit on every card. Close scores should not be overinterpreted.
 
 ## What the research changed
 
@@ -26,4 +39,4 @@ A direct September 30 Jev missing-answer study caused HX-04 to fall from the ini
 
 The five retained opportunities are conditional mechanism tests, not claims that nobody has studied them. The broad background scan is complete as a contribution; the lab’s formal survey gate is not passed. No full-read counts, saturation or independent approval have been invented. Before promotion, complete full-methods/citation checks and obtain a different researcher’s review.
 
-At the integrated publication snapshot: 219 atlas + 124 contributed records = 343 question records, including these 30; concurrent DM additions are preserved. Related records are not independent research ideas. The parent task is `heterogeneous-agent-research`.
+At the original publication snapshot (before the biological revision): 219 atlas + 124 contributed records = 343 question records, including these 30; concurrent DM additions are preserved. Related records are not independent research ideas. The parent task is `heterogeneous-agent-research`.

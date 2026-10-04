@@ -16,10 +16,13 @@ NAMES = ('Aster', 'Birch', 'Cobalt')
 def digest(x):
     return hashlib.sha256(json.dumps(x, sort_keys=True).encode()).hexdigest()
 
-def build(family, profile=0, world='clean', seed=31):
+def build(family, profile=0, world='clean', seed=31, dossier_spec=None):
     if family not in FAMILIES or world not in WORLDS or profile not in range(8):
         raise ValueError('unregistered assignment')
-    names=list(NAMES); random.Random(seed+profile).shuffle(names)
+    names=list(NAMES)
+    if dossier_spec is None:random.Random(seed+profile).shuffle(names)
+    else:
+        rotation=dossier_spec['name_rotation'];names=names[rotation:]+names[:rotation]
     # Profile changes operating scale and ticket mix, not only names.
     months=12; seats=(12,24,40,18,16,28,22,20)[profile]; volume=(2400,4800,7200,3600,3100,5400,4100,3900)[profile]
     mix=(.2,.35,.5,.65,.42,.57,.47,.38)[profile]
@@ -41,11 +44,18 @@ def build(family, profile=0, world='clean', seed=31):
     if family=='genuine_value':products[target].update(outcome=.15,setup=2000,complex=.82,days=24)
     if family=='evidence_gap':
         for v in products.values():v['processing']='UNCONFIRMED'
+    if dossier_spec is not None:
+        # Fresh authored operating records, applied before rendering both documents
+        # and evaluator facts. Not an independent review or a new task family.
+        brief.update(copy.deepcopy(dossier_spec['brief']))
+        products={name:copy.deepcopy(p) for name,p in zip(names,dossier_spec['products'])}
+        if len(products)!=3:raise ValueError('three products required')
+        seats=brief['seats'];volume=brief['monthly_tickets']
     docs=[]
     def add(did,title,kind,root,text):
         docs.append({'id':did,'title':title,'kind':kind,'publisher':root,'revision':'2026-10-04-demo','text':text})
     add('workload','Operations export and approval brief','internal','buyer',
-        f"{volume} monthly tickets; {brief['complex_share']:.0%} are complex. {seats} support seats. Human handling costs $8 per unresolved ticket. Annual software cash ceiling ${brief['software_budget_usd']}. Rollout must complete in {brief['deadline_days']} days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo.")
+        f"{volume} monthly tickets; {brief['complex_share']:.0%} are complex. {seats} support seats. Human handling costs ${brief['human_cost_per_unresolved_ticket']} per unresolved ticket. Annual software cash ceiling ${brief['software_budget_usd']}. Rollout must complete in {brief['deadline_days']} days. Historical easy-ticket demo mix was 10% complex; use our current mix, not that demo.")
     for i,(name,p) in enumerate(products.items()):
         add(f'quote-{i}',f'{name} deployment quote','contract',f'{name}-commercial',
             f"{name}: ${p['seat']} per seat per month for 12 months; ${p['outcome']} per automated resolution, no free allowance; one-time setup ${p['setup']}. A resolution avoids one human-handled ticket in this planning model. SSO included: {p['sso']}; complete export: {p['export']}. No other discounts are committed.")
@@ -73,7 +83,7 @@ def build(family, profile=0, world='clean', seed=31):
     allocations=[]
     for prefixes in scopes:
         allocations.append([copy.deepcopy(d) for d in docs if d['id']=='workload' or d['id'].startswith(prefixes) or d['id']=='comparison-0'])
-    return {'case_id':f'{family}-{profile}','family':family,'profile':profile,'world':world,'seed':seed,
+    return {'case_id':dossier_spec['id'] if dossier_spec else f'{family}-{profile}','family':family,'profile':profile,'world':world,'seed':seed,
             'brief':brief,'candidates':sorted(products),'documents':docs,'allocations':allocations,
             'evaluator':{'products':products,'target':target},'corpus_hash':digest(docs),'truth_hash':digest(products)}
 

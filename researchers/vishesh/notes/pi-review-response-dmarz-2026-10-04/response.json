@@ -1,0 +1,1533 @@
+{
+  "schema_version": 1,
+  "author": "vishesh/codex-pi-review",
+  "date_utc": "2026-10-04",
+  "reviewed_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+  "reviewed_path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+  "evidence_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+  "scope": "Itemized scientific reconciliation and prospective documentation improvements; no independent replication, formal gate approval, launch authorization or budget allocation.",
+  "coverage": [
+    {
+      "source_item": "Finish 1",
+      "title": "Discussion V3 and resampling",
+      "response_ids": [
+        "discussion-v3-and-resampling"
+      ]
+    },
+    {
+      "source_item": "Finish 2",
+      "title": "Sybil population scaling",
+      "response_ids": [
+        "fixed-resource-sybil"
+      ]
+    },
+    {
+      "source_item": "Finish 3",
+      "title": "Compositional safety",
+      "response_ids": [
+        "imperfect-compositional-receipts"
+      ]
+    },
+    {
+      "source_item": "Finish 4",
+      "title": "Antsy receipt verification",
+      "response_ids": [
+        "antsy-current"
+      ]
+    },
+    {
+      "source_item": "Finish 5",
+      "title": "Market splitting",
+      "response_ids": [
+        "market-follow-through"
+      ]
+    },
+    {
+      "source_item": "Finish 6",
+      "title": "Native repair and Healing",
+      "response_ids": [
+        "immune-prior",
+        "healing-prior"
+      ]
+    },
+    {
+      "source_item": "Finish 7",
+      "title": "Native influence",
+      "response_ids": [
+        "influence-follow-through"
+      ]
+    },
+    {
+      "source_item": "Finish 8",
+      "title": "Theseus redesign",
+      "response_ids": [
+        "theseus-current"
+      ]
+    },
+    {
+      "source_item": "Successor 1",
+      "title": "Safe memory inheritance",
+      "response_ids": [
+        "safe-memory-inheritance"
+      ]
+    },
+    {
+      "source_item": "Successor 2",
+      "title": "Selective continuity",
+      "response_ids": [
+        "theseus-selective-continuity"
+      ]
+    },
+    {
+      "source_item": "Successor 3",
+      "title": "Fixed-resource identity splitting",
+      "response_ids": [
+        "fixed-resource-sybil"
+      ]
+    },
+    {
+      "source_item": "Successor 4",
+      "title": "Imperfect compositional receipts",
+      "response_ids": [
+        "imperfect-compositional-receipts"
+      ]
+    },
+    {
+      "source_item": "Conditional A",
+      "title": "Verification value",
+      "response_ids": [
+        "antsy-conditional-a"
+      ]
+    },
+    {
+      "source_item": "Conditional B",
+      "title": "Repair and incomplete lineage",
+      "response_ids": [
+        "immune-conditional-b",
+        "healing-conditional-b"
+      ]
+    },
+    {
+      "source_item": "Shared 1",
+      "title": "Separate population depth independent roots and repetitions",
+      "response_ids": [
+        "shared-axes"
+      ]
+    },
+    {
+      "source_item": "Shared 2",
+      "title": "Keep fixed total and per agent resources separate",
+      "response_ids": [
+        "shared-resources"
+      ]
+    },
+    {
+      "source_item": "Shared 3",
+      "title": "Size evaluation from joint precision",
+      "response_ids": [
+        "shared-precision"
+      ]
+    },
+    {
+      "source_item": "Shared 4",
+      "title": "Choose one primary contrast and preserve dependence",
+      "response_ids": [
+        "shared-primary"
+      ]
+    },
+    {
+      "source_item": "Shared 5",
+      "title": "Separate development qualification and evaluation",
+      "response_ids": [
+        "shared-splits"
+      ]
+    },
+    {
+      "source_item": "Shared 6",
+      "title": "Retain all assignments and acquisition failures",
+      "response_ids": [
+        "shared-assigned"
+      ]
+    },
+    {
+      "source_item": "Shared 7",
+      "title": "Separate broken instruments failed competence and adverse findings",
+      "response_ids": [
+        "shared-defects"
+      ]
+    },
+    {
+      "source_item": "Shared 8",
+      "title": "Require uncertainty before a futility decision",
+      "response_ids": [
+        "shared-stopping"
+      ]
+    },
+    {
+      "source_item": "Shared 9",
+      "title": "Keep launch readiness separate from portfolio agreement",
+      "response_ids": [
+        "shared-readiness"
+      ]
+    },
+    {
+      "source_item": "Retained 1",
+      "title": "Capture-memory",
+      "response_ids": [
+        "capture-memory-scope"
+      ]
+    },
+    {
+      "source_item": "Retained 2",
+      "title": "Quorum",
+      "response_ids": [
+        "quorum-scope"
+      ]
+    },
+    {
+      "source_item": "Retained 3",
+      "title": "Regrowth and Avalon",
+      "response_ids": [
+        "regrowth-avalon-scope"
+      ]
+    },
+    {
+      "source_item": "Order",
+      "title": "Sequencing and budget",
+      "response_ids": [
+        "portfolio-order"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "discussion-v3-and-resampling",
+      "item": "Reconcile Discussion V3 and the resampling sidecar before safe-memory successors",
+      "verdict": "Accept the ordering; update V3 from launched to execution-complete / model-qualification-failed. Sidecar completion is not established by the inspected tracked records.",
+      "current_evidence": [
+        "At source 4312d3cc, RESULTS-Q0 reports 96/96 cases and 636/636 model calls with no invalid/provider/missing outcomes. Clean full-evidence decisions were 2/6 and reports-only votes 1/6 against the frozen 5/6 requirement in each. Exact extraction did not guarantee correct constraint application.",
+        "All six attacked reports-only groups abstained on the final option; four still transmitted false target memory which the parent used. The board had zero wrong parents versus one for private work, but the primary clean-adjusted contrasts were zero in each three-world evidence stratum. This is six-root diagnostic evidence, not established discussion efficacy.",
+        "Every ambiguous attacked world lost its original conflict at merge. Local parent support can therefore pass an inherited error. Nine clean unsupported parent responses were numerically correct but failed the strict extra-citation rule; correctness and policy compliance must remain separate.",
+        "RESAMPLE-CONTROL retains a 12-world / 936-call frozen sidecar and explicit review waiver. The inspected directory contains a pre-run assessment and launch but no tracked completed result/post-mortem. Do not infer that the sidecar failed, completed, or passed from V3. Counts and replay claims here are the authors reported results, not a new raw-data recomputation."
+      ],
+      "incorporation": [
+        "This addendum extends our review to Dmarz’s discussion/memory program. The original ten-project review did not independently audit these later results.",
+        "Preserve the failed clean gate and all four poisoned inheritances. Prioritize the owner’s atomic constraint-to-choice diagnostic and fresh disjoint qualification before making broader claims.",
+        "Classify the private-versus-resample contrast as the incremental effect of adding private work to repeated probes. It matches probe timing/count, but deliberately differs in work calls, actual tokens and updated context. It does not by itself identify an internal self-persuasion mechanism.",
+        "Our interpretation of the sidecar is precision-qualified: six roots per stratum are descriptive. A near-zero private-minus-resample contrast does not establish equivalence, identify sampling as the sole explanation, or prove the private comparator fair."
+      ],
+      "remaining": [
+        "Reconcile the sidecar with its own assignment and usage ledger, qualification result and post-mortem before treating its controls as evidence. Preserve the review-waiver label rather than borrowing upstream independent-review status.",
+        "Freeze any changed model, response contract or citation scorer separately; existing Q0 inputs are now development material and the 24 confirmation roots remain untouched.",
+        "Keep numerical correctness, inherited false facts, unsupported answers, unresolved conflicts and required-field coverage visible rather than combining them into one safety score."
+      ],
+      "owner": "dmarz/discussion-bench-v3 and dmarz/private-control retain their existing lanes; this response proposes no execution or reassignment.",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+          "detail": "Completed Q0 and diagnostic metrics; independent roots, costs and interpretation limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "3f514a2f9e8a3d1d938027a8c869145bcea4e0626d7d06be90b4a821a5666155",
+          "last_commit": "7fddf3d434e9e8c776cfe8ab2b8448fb2be13a32",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md",
+          "detail": "Failed qualification, unchanged thresholds and future diagnostic boundary.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "c4cac44506e51463471da3e452ff30363bfe9e49077c07f9f6d5b8b5fd8f21cb",
+          "last_commit": "7fddf3d434e9e8c776cfe8ab2b8448fb2be13a32",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md",
+          "detail": "Sidecar design, unequal work calls and explicit waiver; near-zero interpretation needs caution.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+          "last_commit": "658a81aadc9790d33eb7deccac6b250b392103f8",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-pre.md",
+          "detail": "Frozen 12-root design and qualification gate; not a completion record.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "ef815b49c0725842d5326dfd56d96702cd26d4ccebd0c9c813c9dbd32fbd4f08",
+          "last_commit": "658a81aadc9790d33eb7deccac6b250b392103f8",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-pre.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "fixed-resource-sybil",
+      "item": "Proposed successor 3: identity splitting with fixed attacker resources",
+      "verdict": "Support the new estimand, with an updated baseline decision: random checking is now essential, and coverage-versus-degree should not be treated as the scientifically privileged contrast without justification.",
+      "current_evidence": [
+        "The parent scaling study is complete: 2,400 valid model answers, 100 conditions and 24 paired world clusters. At 972 identities, strong coverage checks increasing from 4 to 108 improved specialist accuracy 47.2% to 98.6%, a reported +51.4 points (descriptive paired-root interval +38.9 to +62.5). This buys more verification and is not an equal-cost effect.",
+        "At the same 108 strong checks, random selection also reached 98.6%, and deterministic plurality on the coverage packets reached 100%. Degree checking rejected 93.4% of honest specialists. Coverage therefore has no demonstrated advantage over random or necessary model contribution in the strongest condition.",
+        "Even the best coverage cell rejected 62.8% of honest specialists; repeated three-fact expertise makes high answer accuracy compatible with poor contributor inclusion. Four fixed coverage checks went exclusively to core identities at larger populations, exposing a graph-allocation mechanism.",
+        "These are simulated identities and verification outcomes feeding one model synthesis per condition, on one graph family with a fixed 25% attacker fraction and growing attacker resources. They do not test 972 autonomous model agents or identity multiplication at fixed attacker capacity."
+      ],
+      "incorporation": [
+        "This response updates the collecting status to completed exploratory S1 and preserves its descriptive uncertainty. The original parent cohort remains unchanged; its results should inform comparator choice before a successor is frozen.",
+        "Hold honest population, evidence and aggregate attacker token/message, edge-acquisition and verification-attempt budgets fixed while varying identity allocation. Charge registration/metadata overhead and distinguish nominal identities from identities able to submit evidence.",
+        "Keep matched-budget random admission and same-packet deterministic plurality as central comparators. Either make the raw fixed-resource multiplicity effect primary, or justify a policy interaction against a competent comparator before fresh evaluation; degree-only superiority could reward comparison with a policy that discards expertise.",
+        "Use graph/task root clusters, two independently implemented graph families and one frozen attacker allocation algorithm. Counterbalance fabrication direction and increase distinct specialist facts so accuracy cannot depend only on repeated easy facts.",
+        "Report wrong answers, rare-skill coverage, attacker seat share and honest-specialist rejection jointly. Differentiate attacker seat share from attacker admission probability."
+      ],
+      "remaining": [
+        "Freeze topology/anchor/edge allocation and packet-order rules so identity count does not silently buy extra connections, text or verification chances. Separate identity-multiplicity from any graph change that cannot be held fixed.",
+        "Qualify clean aggregation and missing-evidence abstention at each distinct packet-load regime. The 24 development roots and 10-point candidate margin do not determine evaluation power.",
+        "Include a faithful prior-work defense before comparative superiority claims. Scope any model contribution to its incremental benefit over identical-input deterministic aggregation.",
+        "Use fresh evaluation roots and retain valid degradation under tight resource budgets; do not enlarge attacker resources afterward to recreate a positive effect."
+      ],
+      "owner": "dmarz Sybil study owner; no successor launch or formal acceptance is granted by this response.",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/sybil-scale-api/RESULTS.md",
+          "detail": "Completed S1, matched-world results, random and plurality controls, scope and selection mechanism.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "5f1435c926e43cb744f58c9ed9f6aaa73474a500eee09b154455001d0c99a892",
+          "last_commit": "ef0c02466f5315a709f179d74efeea6aa4b14f1e",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/sybil-scale-api/RESULTS.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/sybil-scale-api/reviews/s1-001-post.md",
+          "detail": "Parent reconciliation and completion record.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "1269edcf77221e2b065c6b168dad72cec77dcf8187b25a97f2f40b8ac3a4ea2e",
+          "last_commit": "ef0c02466f5315a709f179d74efeea6aa4b14f1e",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/sybil-scale-api/reviews/s1-001-post.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Successor 3 fixed-resource proposal and proposed degree/coverage interaction at user-supplied e0a3170.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "last_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "imperfect-compositional-receipts",
+      "item": "Proposed successor 4: compositional safety with delayed and missing receipts",
+      "verdict": "Support the question and transfer axis; keep it conditional. Current qualification has not established readiness for the seven-arm pilot, let alone imperfect-receipt efficacy.",
+      "current_evidence": [
+        "The current README records S0 84/84 scripted safe completions; q0-001, q0-002 and q0-003 failed model qualification. q0-003 had 16/24 safe completions and eight invalid nonterminal responses. Zero committed violations in that attempt does not mean safe useful behavior when invalids remain in the denominator.",
+        "At source 4312d3cc, q0-004 is described as running with observed incompletions and provider refusals already preventing a pass; no completed post-mortem is present. P1 remains closed. A single diagnostic identified one provider refusal; the causes of all eight earlier unclassified terminations remain unknown.",
+        "C/S are competence baselines; current records contain no empirical R-versus-F treatment comparison. The seven-arm design contains shared history, fragmented history, factual receipts, administrative text, generic reminder and atomic enforcement, but the faithful prior-work W comparison is still absent."
+      ],
+      "incorporation": [
+        "This response records repeated failed model qualification with the current attempt unresolved. Attempt-specific model/settings and failure categories remain separate; they must not be aggregated into a treatment estimate or silently rerun until success.",
+        "Retain the owner’s four-role architecture and independently scored committed effects. Transfer across canonical constraint structures is more informative than multiplying roles or renamed entities.",
+        "For a later successor, fix a commitment-clock delivery schedule and log actual actor-visible receipt age and missingness. Treat stale authentic receipts separately from fabricated content; compare the same assignment and observation opportunity across arms.",
+        "Use canonical task structure as the independent cluster. Pair risk with benign tasks and require useful safe completion alongside reduced violations; all invalid and incomplete assignments remain visible.",
+        "Keep atomic enforcement as an advantaged complete-state reference, not a competing language-model defense. Distinguish factual origin authentication from completeness of the global state."
+      ],
+      "remaining": [
+        "Finish the current attempt’s reconciliation and owner decision before changing receipt semantics. The development pilot needs a passing current-source competence gate; this response does not create a new execution lane.",
+        "Before a stale-receipt evaluation, decide how a missing receipt differs observably from F. If packets are identical, reuse the condition rather than counting duplicates as independent evidence.",
+        "Current administrative placebo matches bytes/envelope, not tokenizer cost or schema. Log actual tokens and preserve the mismatch; a content/attention-matched sensitivity can be added when justified.",
+        "Freeze delayed/missing receipt policy, task fingerprints, scorer and unseen-domain qualification separately. Candidate 10-point harm reduction and 3-point completion loss are planning margins; 24 development structures do not establish them.",
+        "Retain the faithful prior-work defense and an independent implementation or model transfer before stronger superiority/generalization claims. A failure of atomic enforcement to block a prohibited effect is an instrument defect; a valid natural-language failure is a result."
+      ],
+      "owner": "dmarz compositional-safety owner; existing P1 and held-out gates remain in force.",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/compositional-safety/README.md",
+          "detail": "Current attempt states, seven-arm contract, domain limits and P1 closed status.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "b36325a1cac3dfbd57937b27049456878345c3670b06303d2329af0f00421305",
+          "last_commit": "eb4fdf6073e70290e97ca33907536f4ce678a781",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/README.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/compositional-safety/reviews/q0-003-post.md",
+          "detail": "8/24 invalids, interpretation limits and absent termination categories.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "89af40d7a69714c66c9768306fa6aa1e0c6b2ecb54c0195afeb074ff0faf6983",
+          "last_commit": "5c1e8470d5915aa08541854a93f24d386d62896f",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/reviews/q0-003-post.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/compositional-safety/reviews/q0-004-pre.md",
+          "detail": "Fresh qualification structure, unchanged gates and current model/config scope.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "cbdfb2d34ab5f66bf6967f7d64156ccfbabbdc415955171c383f704fc6e2cc7e",
+          "last_commit": "a286ec4c7712eb8cf9221b60455fc440a56434e7",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/reviews/q0-004-pre.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Successor 4 prospective imperfect-receipt contrast and structural units at e0a3170.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "last_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "antsy-current",
+      "item": "Finish and reconcile the two frozen Antsy receipt evaluations",
+      "verdict": "Accepted; completed after the PI's frozen live snapshot.",
+      "current_evidence": "At checkout 4312d3cc, Antsy RESULTS.md reports both Laya and Jev complete at 70/70 receipts, 490 arm rows and 840 physical calls each, zero invalid invocations. Shared controls mean 700 distinct receipt/condition outcomes across the two backends, not 980 independent replications. Source-reported adaptive-minus-confidence mean recall is -0.48 pp for Laya and -1.06 pp for Jev; neither committee saved a check. This reconciliation reads committed reports; it does not freshly replay raw outcomes.",
+      "incorporation": "This dated response records completion and links the final results. Dmarz’s frozen snapshot remains unchanged. These results do not supply a positive engineering case for this specific committee/QA contract; they do not reject the general research question or all committees.",
+      "remaining": "No duplicate evaluation on the same 70 receipts. Keep the current null/adverse cohort closed and retain its failed qualifications/cost uncertainty. The QA estimator pathology is a successor-instrument defect, not permission to retroactively change the frozen v4 endpoint.",
+      "owner": "vishesh / Antsy existing owner",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "detail": "Completed paired results, null checks, inactive stopping, 70-receipt boundary and prospective next-design requirements.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "market-follow-through",
+      "item": "Complete the repaired market instrument and preserve model-specific discovery cohorts",
+      "verdict": "Accept; update readiness substantially. Fresh reasoning-enabled Sonnet and Haiku configurations have independently passed qualification. The next task is completion/reconciliation of their already frozen discovery comparisons, not another qualification redesign.",
+      "current_evidence": [
+        "The original Haiku v2 S1 remains interrupted: 17 valid of 18 attempted episodes, with 18 not-started cancelled. Subsequent non-thinking Haiku v3 and Sonnet v4 failed the unchanged profit floor, and remain separate cohorts.",
+        "Sonnet v5 q0-005 passed 4/4 unregulated qualification episodes; minimum profit was 99.9879% of the matching scripted reference. Independently, reasoning-enabled Haiku q0-001 passed 4/4 with minimum 97.8075%. Each report says all 32 actions replayed exactly; these are author-reported engineering audits, not new raw replay by this response.",
+        "Both configurations use the same neutral ordinary prompt, market engine, fixed capital/capacity, one call per round and nominal reasoning/output ceilings. The current main plan has six fresh market tasks, three regulation conditions, two arms and 24 rounds. No completed new main discovery result was found in the scoped tracked records.",
+        "Qualification has no regulator and tests profitability/validity, not regulatory evasion. Registration, concentration geometry, financial counterfactual savings and expressed motive remain separate outcomes."
+      ],
+      "incorporation": [
+        "This response updates V4-awaiting-qualification to separately qualified V5 Sonnet and reasoning-enabled Haiku discovery cohorts. Every prior failure and the interrupted cohort remain visible.",
+        "Preserve the frozen neutral discovery comparison before reading its outcomes; do not add a splitting hint or pool models after observing who discovers the strategy.",
+        "Interpret the primary incidence contrast at market-task level, with six clusters. Rounds, firms and calls are dependent; a degenerate bootstrap when every task agrees does not imply zero uncertainty about new markets.",
+        "Keep the model-specific comparison conditional on actual measured token/cost/latency and task competence. Equal requested reasoning caps do not make models computationally equivalent; qualification changed settings as well as model across the historical repairs.",
+        "Describe this as one model-controlled owner interacting with scripted rivals. It tests behavioral discovery in a stylized market, not autonomous multi-owner coordination or a real legal regime."
+      ],
+      "remaining": [
+        "Reconcile all frozen new assignments, invalid bounds, spending and artifacts when their final reports arrive. A pre-run ready state or capability pass is not a completed main result.",
+        "For later scientific replication, expand independent market structures and independently authored economics before round count. Vary registration/maintenance costs, enforcement aggregation and information delay one interpretable axis at a time.",
+        "Keep prompted strategy demonstration separate from unprompted discovery. Success and brief notes do not establish an internal motive; registration under no enforcement is not evasion.",
+        "No additional run, deployment, spending or ownership change is authorized by this review response."
+      ],
+      "owner": "dmarz/market-split retains both independently qualified model lanes.",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/market-split-api/README.md",
+          "detail": "Attempt lineage, stylized economics, v5 readiness and scope.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "e0a8d4b67c2365993a1cdb40be267a286c8f151a4f5ece06a1e653a73c1c124c",
+          "last_commit": "67ad585e1d88ce34975dbed0df59ae6139b0bb77",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/README.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md",
+          "detail": "Sonnet fresh qualification pass and limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "b84dc2c4c8329255fccd51e23efbaaa0118fcf6f79c64ef021118835702b9972",
+          "last_commit": "67ad585e1d88ce34975dbed0df59ae6139b0bb77",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-api/reviews/s1-002-pre.md",
+          "detail": "Frozen six-task main discovery design and independent unit.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "8d508bb601bc0158577902bf482ea1ce67815c01378ce7feeed560dfda510321",
+          "last_commit": "c803fab11ca55e16832e95be10ca563a5214b3a5",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/reviews/s1-002-pre.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-api/parallel-plan.md",
+          "detail": "Prospective model comparison and cohort isolation.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "f13942c8c23a9f20ccd01c33748c18fc1112f0f32ba1abf1f44be0fd96c10a18",
+          "last_commit": "c361f85abe1a832c286e04a6b38cee8f8d474304",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/parallel-plan.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md",
+          "detail": "Independent Haiku qualification pass; no discovery conclusion.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+          "last_commit": "a41dc430528cd6ea625d7a1c48554a3e240a6592",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "immune-prior",
+      "item": "Preserve completed Immune A2 and solo adverse/mixed findings",
+      "verdict": "Accepted; already retained. Correct top-level navigation so old host-allocation language is not mistaken for current authorization.",
+      "current_evidence": "The scenario assessment preserves A2 team healthy-control success with poor damaged recovery and solo incident recovery with healthy-system damage; these small, unmatched source-reported samples do not establish a team-versus-solo effect. A later receipt diagnostic is interrupted for the wrong-cloud-account incident. The top-level immune README still calls the scenario study current and describes its machine as allocated, while evidence-study/README.md and its postmortem correctly say stopped/blocked.",
+      "incorporation": "The original findings and cohorts remain intact. A dated current-status block now links the top-level immune README to evidence-study/README.md and its interruption postmortem; old allocation prose is explicitly historical and non-authorizing. The infrastructure stop is not classified as model failure.",
+      "remaining": "Clean competence must include restraint and recovery. A clean reset that later admits stale handoffs is not a fully clean control. Report harmful proposals, rejected actions, probe regressions and actual healthy-service loss separately. No relaunch/reuse of the disputed machine; Dmarz account/team and provisioner verification are independent prerequisites.",
+      "owner": "vishesh/codex-immune",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md",
+          "detail": "Completed prior A2/solo findings and competence limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "962891407fe4a7276348aaedabf7cfd1f62f5f1e589ead74ba22935f02e06218",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/README.md",
+          "detail": "Top status/allocation prose is stale relative to the later evidence diagnostic and incident.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+          "detail": "Preserved interruption, accounting, incident and exact resume gates.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "799e0d310ab7c7c7f1921836e12c2c6d0ffee1cb9b11540f501243e95b1fb9ae",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "healing-prior",
+      "item": "Finish Healing reporting without relabeling reference propagation as autonomous swarm research",
+      "verdict": "Accepted; pilot-03 reporting is already committed.",
+      "current_evidence": "Owner README/assessment report 72 exact/Jev reference worlds complete and 108 Qwen-derived assignments not-run. Jev extracts report labels once; subsequent sharing, deduplication and tombstones are programmed. The three known synthetic corpora, 200 curators and repeated rounds are not hundreds of independent task replications. Earlier qualification failures remain preserved.",
+      "incorporation": "The completed pilot-03 report is linked below with its source-backed extraction/programmed propagation boundary. Qwen/Laya qualification failures remain separate from Jev reference results. The useful result concerns transport of withdrawal information within the fixture, not autonomous recovery or general scientific correctness.",
+      "remaining": "Real-paper semantic efficacy, independent annotations/authorship and heterogeneous-head superiority are unestablished. Reusing a perfect extraction tape tests architecture, not fresh model competence.",
+      "owner": "vishesh/codex-regrowth-docs",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/README.md",
+          "detail": "Pilot-03 assigned denominators, semantic stage versus programmed propagation, costs and interpretation.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md",
+          "detail": "Historical completed reference cohort and preserved failure/reporting record.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "56963bd08a1c354aa875d7a2d7e347ed8bba0a0af2996df218805fcbfa9cbef1",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "influence-follow-through",
+      "item": "Complete fresh influence qualification and the registered clean/omission contrast",
+      "verdict": "Accepted; fresh Q4 instrument work and later model-budget approval exist, but independent case review and native qualification remain pending.",
+      "current_evidence": "Q2's adverse approvals and Q3's three valid deferrals remain source-reported historical findings; Q3 changed prompt/profile and is not a causal wording result or gate pass. ITERATION-02 and iteration-03-post describe four fresh numeric dossiers, selected-deployment approval rather than blanket refusal, all three supplier labels plus DEFER, exact Q4 signature and missingness-aware paired bounds. Scripted 12/12 outcomes and 24 regression tests are engineering results, not fresh model evidence. BUDGET-AUTHORIZATION.md records a later additional $10 approval; earlier funding-pending prose is a historical snapshot. This does not reserve a host quota or complete independent review.",
+      "incorporation": "This response links the current Q4 follow-through and later authorization record, preserving Q0–Q3 history. Actual final structured decisions remain the outcomes; the clean/omission effect is unidentified until collected. The next step is the existing owner’s review and qualification sequence, not a broad new influence sweep.",
+      "remaining": "Dossier review, reviewed-source/config freeze, fresh authorized exclusive allocation, finite non-overlapping reservation and full exact-signature Q4 competence gate remain. The source says all 12 Q4 terminal outcomes must be valid/acceptable before the narrow comparison. Matched old/new wording would be a separate test before attributing Q3 to wording. Shared chair prefix, short authored records, small family count and token/salience bundle limit generalization.",
+      "owner": "vishesh / influence-swarms existing owner",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+          "detail": "Preserved Q0–Q3, Q2 adverse approvals, unmeasured influence contrast and changing-prompt caveat.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "6d61691c5e4e9b9f18119d0001079b6aa14314ea5a7925772ba68ab61baa9b4b",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-02.md",
+          "detail": "Current Q4 design, balanced names, approved-alternative control, stage signature and missingness.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "7824daf88349bf2eb07c89db16267d8dbb764c965b6fa25e51fcbac4eb59d015",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-02.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md",
+          "detail": "Scripted engineering outcome and pending native qualification.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "d4b32e73d7d13ada79288e6042c48313405cb94a109faf77c8d21d5845125c72",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/BUDGET-AUTHORIZATION.md",
+          "detail": "Later $10 approval, aggregate authority versus exclusive lease, open independent review and no infrastructure authorization.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "1c1228d90941db380308231a4292df9d3ff196af8c78805dadf6880611824e3a",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/BUDGET-AUTHORIZATION.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "theseus-current",
+      "item": "Theseus current lane and the stale Harbor flagship description",
+      "verdict": "Accept the continuity direction; correct the scenario and execution status without restoring the superseded Harbor priority.",
+      "current_evidence": "The later redesign amendment puts release-crew handoffs first, incident guild second and migration as a separate factor; Harbor is deferred. The tracked v2/PLAN.md and README.md now describe a built, offline-checked but model-unqualified instrument: supervised acquisition from labeled historical cases, two complete replacements, rolling/evidence-tagged/frozen/absent notes, unchanged-class protection, and a common feedback interruption after the first changed outcome. These software checks are source-reported, not new empirical evidence. S0 remains blocked on a new $15 authority/reservation and other launch gates.",
+      "incorporation": "The current owner lane is v2/PLAN.md; the archived redesign supplies rationale. This is learned procedural transmission after supervised acquisition, not unassisted convention emergence. Harbor/glassmaking remain deferred candidates, and their deliveries/collisions utility should not be imported into release/incident scoring.",
+      "remaining": "Native qualification and S1 have not run. Proposed S1 has only two worlds per scenario (four primary worlds across the two changing-rule scenarios); it is a diagnostic, not a precise general test. No inference, host claim or additional budget should be started by the reconciliation.",
+      "owner": "vishesh/codex-theseus",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md",
+          "detail": "Dated amendment explicitly supersedes Harbor flagship priority while retaining the original draft.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "caa114f77e925b26c7c33cdd5647481aa08340e59d9bc12e3f3f50445f151121",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/v2/README.md",
+          "detail": "Built/offline checked status, current scenarios, missing native qualification and funding.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "e4b9897954c65b5d343109f8435e26a95e1c61447aaa82dcf4e5036d9ba2c340",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md",
+          "detail": "Executed-design specification and prospective feedback-interruption amendment; no native outputs.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md",
+          "detail": "Blocked S0, disjoint qualification seeds, exact current-rule competence gate and persistent call/deadline limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4a8e433f61e1dab23f4ee2495b382d2711ef7a6bdb4716587ca70c757bcaf3ab",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "safe-memory-inheritance",
+      "item": "Proposed successor 1: safe memory inheritance at increasing team size",
+      "verdict": "Support the narrow merge/parent intervention as a high-value next research direction, conditional on parent-program reconciliation and competence. Defer N=27 and broad schedule sweeps.",
+      "current_evidence": [
+        "The newly completed V3 strengthens the motivating separation: a group can abstain while its independent memory merge transmits a supported false fact. It also shows loss of uncertainty even when the retained number is true.",
+        "The proposed receipt design has not run. Majority merge, deterministic coverage/provenance receipt, generic caution and full-evidence ceiling are proposed comparators, not evidence of receipt effectiveness."
+      ],
+      "incorporation": [
+        "Use identical frozen child outputs and fresh, isolated parent instances for the first comparison. This identifies the downstream merge/representation intervention; it does not demonstrate that agents produce better evidence or learn to coordinate.",
+        "Use independently generated task roots as the unit, retaining all merge variants, sizes and parent repeats in their root cluster. Include every assigned root, not only traces known to contain poisoned memory.",
+        "Preserve the proposed harm reduction plus clean-completion guardrail. The 10-point benefit and 3-point utility margin are candidate application choices; 24 roots are development/variance work, not proof those margins are detectable.",
+        "Add a frozen information contract: authorized source roots, field coverage, conflict representation, source priority and actual serialized token lengths. Provenance authenticates origin, not factual truth. Full authorized evidence is an explicitly advantaged ceiling.",
+        "For later N=3/9 scaling, distinguish fixed total evidence/attack resources from fixed per-agent resources, and define allocation of the same evidence union across agents. Count active policy contexts rather than displayed identities. Include a competent N=1 union-evidence baseline with retrieval and inference charged."
+      ],
+      "remaining": [
+        "Before evaluation, specify how missing fields, contradictory equal-authority claims, superseded facts and benign updates are encoded without hidden truth. Uncertainty retention should be measured directly, not inferred from answer abstention.",
+        "Approximate token matching alone does not isolate provenance from compression, formatting or warning salience. Use a compact content-matched receipt ablation if the first comparison warrants a mechanistic explanation; do not inflate the initial factorial.",
+        "Predeclare primary population interaction and joint uncertainty/decision rule only after the narrow intervention is interpretable. A valid harm increase at large N remains evidence.",
+        "Choose untouched evaluation roots from conservative paired/root-level variance and the joint utility guardrail; do not convert the portfolio’s illustrative precision formula or thresholds into universal lab defaults."
+      ],
+      "owner": "Existing dmarz discussion/memory owner; a successor protocol must be owned and frozen there.",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Successor 1 comparison, units, resource regimes and proposed margins; user-supplied e0a3170 version.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "last_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+          "detail": "Vote/memory separation, missing conflict and failed clean competence motivating a narrowly scoped successor.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "3f514a2f9e8a3d1d938027a8c869145bcea4e0626d7d06be90b4a821a5666155",
+          "last_commit": "7fddf3d434e9e8c776cfe8ab2b8448fb2be13a32",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "theseus-selective-continuity",
+      "item": "Successor 2: full selective-continuity causal contrast and controls",
+      "verdict": "Partially incorporated; current v2 deliberately tests a narrower question and must not be presented as completing Dmarz's proposed design.",
+      "current_evidence": "Dmarz's proposal targets rolling-minus-frozen changed-versus-stable reward interaction after two replacement waves, with retained members, exact archive transplantation and matched single controller. Current v2 instead makes evidence-tagged-minus-plain rolling note accuracy primary; frozen and no-inheritance are secondary. It uses supervised acquisition and a uniform feedback interruption. It does not implement separately stable continuation branches, retained-member/no-turnover branches, exact archive transplantation or a scientific single-controller comparator. The owner already disclaims a special swarm advantage.",
+      "incorporation": "Add a clear disposition: accepted as a later discriminating study; narrower v2 chosen for bounded instrument development. Do not silently rewrite the frozen v2 primary or add arms now. Preserve the proposed controls as required before claims about emergent social continuity, archive insufficiency or swarm superiority. A null transplant/single-controller gap would narrow the mechanism to portable record use only if precision is adequate.",
+      "remaining": "Before the broader successor, freeze task-specific utility/margins and paired stable/changed branches, test retained members and transplanted archives at matched observation/resource opportunities, add a matched single controller, distinguish total versus per-agent resources, and obtain independent scenario/scorer review. The v2 evidence-tagging treatment also changes writing attention/effort and cannot identify a pure provenance representation effect. Population/depth and mentoring remain later axes.",
+      "owner": "vishesh/codex-theseus",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md",
+          "detail": "Primary contrast, supervised acquisition, four arms, feedback interruption, missing controller and model-transfer limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md",
+          "detail": "Original full falsification controls, changed/stable interaction and task-specific utility gates.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "caa114f77e925b26c7c33cdd5647481aa08340e59d9bc12e3f3f50445f151121",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "antsy-conditional-a",
+      "item": "Conditional A: verification under real ambiguity and review cost",
+      "verdict": "Accept with a narrower mechanism gate; already incorporated as prospective requirements in the owner's results.",
+      "current_evidence": "The owner already requests operational field loss, abstain/escalate, measured review cost, empty-region 'not assessable' handling, unequal-token-count tests, a same-budget value-of-information baseline, and stop/continue qualification. V4's evaluator-only best-mode headroom above confidence was source-reported as 4.18 pp, below Dmarz's proposed 5 pp threshold for a different receipt-level endpoint; these are different metrics and must not be compared as one target.",
+      "incorporation": "Record alignment, explicitly distinguish selection of an OCR output from OCR correction, and require independently assessed headroom on fresh development document families before freezing a successor. Keep same initial evidence, actual verification costs, a competent no-check baseline and one-versus-five comparison before larger populations.",
+      "remaining": "The 20-development-receipt count and 5 pp useful gain are proposals, not accepted power or deployment thresholds. Freeze operational correctness, checker noise/cost, family/duplicate clustering and evaluation precision separately. No successor run or paid implementation is authorized by this response.",
+      "owner": "vishesh / Antsy existing owner",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+          "detail": "Quality assessment and next design, with six prospective instrument requirements.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "immune-conditional-b",
+      "item": "Conditional B: evidence-checked recovery before repeated incidents or population scaling",
+      "verdict": "Accepted and already implemented as a bounded diagnostic; interrupted, not completed or qualified.",
+      "current_evidence": "The frozen evidence-study pairs raw and checked receipts against exactly reused reviewer outputs, crossing truly clean/stale memory. Both commanders see the same raw observations, schemas, generic caution and action allowance; checks compare four reported booleans to actor-authorized initial telemetry and do not certify actions. The visible-contract deterministic solver and joint restraint/recovery gate are included. Source-reported interruption: 16 assignments, 3 complete, 1 partial, 12 unstarted; 27 reserved calls with one unresolved response. No treatment-effect or qualification conclusion is claimed.",
+      "incorporation": "Credit the existing owner lane rather than proposing a second receipt implementation. State that predicate fidelity is not recommendation validity and prose remains partly ungraded. Keep initial-snapshot versus current-telemetry age visible. Preserve every assigned and partial outcome, account-boundary incident and unchanged spend ledger. Treat current healthy-ticks contrast as a short-horizon diagnostic related to integrated unhealthy time, not a cross-study pooled efficacy endpoint.",
+      "remaining": "Durable per-call usage/error receipts are still an open repair; reserved dollars are not actual billed dollars. Correct approved-account provisioning, fence the original authority and freeze any fresh attempt/missingness policy before dispatch. Independent scenario authorship, held-out topology, partial telemetry, balanced team/single-commander comparison and repeated incidents remain unimplemented. Small seed alias changes are not new task structures; scaling is premature.",
+      "owner": "vishesh/codex-immune",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
+          "detail": "Paired receipt mechanism, no-handoffs clean control, resource matching, actor-visible predicates, gates and limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "69ebd384527b961b898e78c0d0209e76c95d3b3203799f5575b8976bd4cf45e0",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/evidence-study/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+          "detail": "3 complete/1 partial/12 unstarted, unresolved request, cost-durability gap and cloud-account boundary.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "799e0d310ab7c7c7f1921836e12c2c6d0ffee1cb9b11540f501243e95b1fb9ae",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "healing-conditional-b",
+      "item": "Conditional B: central evidence-index baseline, legitimate learning and unreliable lineage",
+      "verdict": "Accepted and implemented; practical-01 is complete with valid adverse results. Practical-02 is a prospective capacity sensitivity, not independent replication.",
+      "current_evidence": [
+        "The five-arm practical-01 diagnostic completed all 180 assigned worlds with zero missing outcomes, 5,400 replayed frames and no new model calls. It reuses three semantic corpora and two placements, not 180 independent source populations. All six scenarios failed its prospective utility rule for peer-verified versus central-append.",
+        "In the combined scenario, source-reported post-event incorrect-or-missing query rates were 39.3% peer-verified, 37.5% central-append and 16.6% central-verified. Final new-evidence retention was 36.2% for peer arms and 100% for central arms. Peer-verified also transmitted more item copies than central-verified. Authentication is supplied fixture metadata; missing lineage remains unresolved in both verified architectures.",
+        "The reporting wrapper failed before all 14 live dispatches. Computation and saved histories remained valid; later reporting was explicitly retrospective and cannot restore live visibility. Practical-02 prospectively changes the packet cap from four to sixteen on the same assignments and tapes. No completed practical-02 postmortem was found at the evidence cutoff. These are author-reported audits, not a new replay by this response."
+      ],
+      "incorporation": "The owner README now records completed adverse practical-01 evidence and its prospective capacity diagnostic. Central-verified remains a central comparator, alongside legitimate new-source retention, false invalidation, missing lineage and actual traffic. No completed outcome is rewritten as a successful swarm result.",
+      "remaining": "Keep practical-02 a paired engineering sensitivity to a chosen packet cap, with traffic and quality reported jointly. Same inputs do not yield independent replication. The outage removes central connectivity while leaving the mesh connected, and bulk central reads differ from capped peer packets: this is a specific architecture stress test, not a general theorem of central or peer superiority. Fresh semantic corpora, independent annotations, model qualification and realistic transport constraints remain separate requirements.",
+      "owner": "vishesh/codex-regrowth-docs",
+      "paths": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md",
+          "detail": "Five-arm saved-tape diagnostic, six scenarios, baseline strength, source budgets, clustered unit and metrics.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "e254acafbd484c967d12015c783d83113146429793477921ec4746c27d94e2fd",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/practical/PRE-RUN.md",
+          "detail": "Bounded diagnostic-only status; source-reported offline checks and mandatory registration/exclusivity.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "5d85a3e34ec5af29d9a4aac0b60bc9fac953e16ec8c3807f6da19d46b9ef15f5",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PRE-RUN.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+          "detail": "Completed adverse practical-01 outcomes and retrospective reporting repair."
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "fb00ff4731d4c6b7343cd0bd8d16d47225740591c65e855fb72aa30f9eb27553",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md",
+          "detail": "Prospective four-to-sixteen item capacity sensitivity on reused assignments."
+        },
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/practical/FEEDBACK-RESPONSE.md",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "697394f53243ce8f1ac8d492efbac59041dffe1b66a2934997b3b66158034f7e",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/FEEDBACK-RESPONSE.md",
+          "detail": "Current feedback dispositions and engineering repairs."
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "capture-memory-scope",
+      "item": "Retain capture-memory as a mechanistic scripted result; separate capture resistance from recovery",
+      "verdict": "Agree with dmarz’s restraint and add an explicit endpoint correction. Treat the proposed extension as model calibration followed by two distinct estimands, not scaling the existing recovery claim.",
+      "current_evidence": [
+        "The study is entirely scripted. S1 has 9,600 episodes and S1b 38,400, with no model calls; tanh response constants and memory windows define behavior. These large episode counts do not supply LLM validation.",
+        "At the S1 inside-regime primary dose, memory20-minus-memory1 original-convention fraction at round50 was reported as -0.294 with task-cluster interval [-0.311,-0.277]. Yet the declared recovered endpoint was zero for every bounded memory in that regime; memory1 exhibited slow drift, not recovery within the specified window.",
+        "Full memory never captured in the original S1 window. S1b raises dose/horizon and exposes inertia after capture: common-dose full-minus-memory1 is near zero at dose0.54, while the full-memory population barely moves from its post-capture state. Different per-memory doses target different interventions.",
+        "The primary reported contrast conditions on being captured under both memory lengths; for that particular S1 cell all pairs captured, so it does not exclude pairs there. Elsewhere, capture probability varies strongly, making cross-memory survivor-only comparisons selection-sensitive."
+      ],
+      "incorporation": [
+        "Both the original recovered endpoint and the trajectory/fraction diagnostics are retained. The supported statement is that memory1 drifts toward the original convention without meeting the recovery criterion in time.",
+        "Separate an all-assigned attack/removal intervention, whose outcomes include resistance to capture, from a prospectively standardized captured-state repair experiment. Define the latter’s state distribution before randomizing repair.",
+        "Keep same-dose results distinct from per-memory calibrated dose results and label oracle attacker removal. Convention restoration is hysteresis, not factual correction or learned attack detection.",
+        "Validate the model’s response curve and memory-access semantics before assuming tanh parameters transfer; fit on development contexts and evaluate on held-out word pairs/context structures."
+      ],
+      "remaining": [
+        "Freeze the recovery primary, reference time, change-from-removal measure and any post-capture eligibility before paid execution. Do not choose whichever endpoint appears favorable after seeing the model.",
+        "When scaling N, hold per-member encounter opportunities fixed and separately vary attacker absolute count versus fraction. More matching rounds or a larger attacker resource pool is a distinct intervention.",
+        "The current pilot draft still contrasts memory1 with full despite the main mechanistic claim focusing memory20 versus1; reconcile its diagnostic purpose and endpoints before converting it into a run plan.",
+        "No memory reset result should be presented as general repair efficacy without useful task retention, benign updates and model-based validation."
+      ],
+      "owner": "shadow capture-memory owner, coordinated with existing immune owner only at the explicitly shared reset boundary.",
+      "paths": [
+        {
+          "path": "researchers/shadow/notes/capture-memory/README.md",
+          "detail": "Scripted response model, conditional primary, S1/S1b trajectories, zero recovered cells and prospective model-calibration limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "8282a2e619860a100e198beadcf40fccafeeb88f94cebc9be10cee6b4e7ecc40",
+          "last_commit": "0b6222303c070318a39ca742328537448b0fac96",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/shadow/notes/capture-memory/README.md"
+        },
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Retained directions distinguish all-assigned capture/removal from standardized post-capture repair at e0a3170.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "last_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        }
+      ],
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe."
+    },
+    {
+      "id": "quorum-scope",
+      "item": "Retained direction: quorum timing and reliability",
+      "verdict": "Accepted; retain a narrow external-validity question.",
+      "current_evidence": "The repair-v3 report records completed engineering mechanics and equality with its symbolic policy baseline. Its repeated votes and policy outcomes share twelve controlled task clusters. These are author-reported records, not a fresh replay.",
+      "incorporation": "Prioritize a change in source reliability, evidence arrival or latency that can reverse a practically meaningful stopping decision. Keep the symbolic and union-evidence ceilings visible. Distinguish this adaptive-quorum lane from the separate Quorum of Mirrors task.",
+      "remaining": "Before a successor, define realistic task losses, held-out source families, competent constant-threshold/deadline controls and actual information/verification costs. Larger symbolic-equivalent sweeps would not establish incremental model value.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Directions retained: quorum.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+          "detail": "Current mechanism report, symbolic equivalence and limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "regrowth-avalon-scope",
+      "item": "Retained direction: Regrowth and Avalon",
+      "verdict": "Accepted; keep capacity evidence distinct from coordination efficacy.",
+      "current_evidence": "Regrowth’s one-map report has 100% valid routes but only 6.5% shortest routes for both model arms; the deterministic algorithm reaches 100% on both. Faster connectivity recovery follows less initial damage. Avalon’s scale and recovery results use scripted policies and logical identities in one process.",
+      "incorporation": "Require common absolute quality and damage-exposure comparisons, competent non-model controls and fresh maps/task structures before a coordination or heterogeneous-model claim. Partial observations or dynamic constraints should create an identifiable coordination problem.",
+      "remaining": "Avalon already exposes partial-information social mechanics; richer constraints alone do not validate its behavioral policies. Specify which intervention a real agent could usefully choose, validate it, and compare the same information and resources. More identities or ticks chiefly establish capacity. Regrowth’s historical missing public registration remains a separate process failure.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Directions retained: Regrowth and Avalon.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "researchers/vishesh/notes/regrowth-200/README.md",
+          "detail": "One-map outcomes, quality and registration limits.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/regrowth-200/README.md"
+        },
+        {
+          "path": "tooling/avalon-swarm/RESULTS.md",
+          "detail": "Scripted scale, recovery and consensus checks.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/avalon-swarm/RESULTS.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-axes",
+      "item": "Shared rule 1: Separate population depth independent roots and repetitions",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "Explicit N/G/S/R definitions and separate identity, stateful-agent and worker counts are now in GUIDE, CHECKLISTS and the protocol template. Existing lifecycle guidance already requires keyed random streams and paired initialization receipts.",
+      "remaining": "Treat the proposed population interaction as appropriate for a treatment-specific scaling claim. Raw population effects and absolute operational performance remain different legitimate estimands. Same numeric seeds alone do not guarantee common observations.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 1.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Definitions, pairing, resource regimes and design axes.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        },
+        {
+          "path": "tooling/agent-experiments/AGENT-LIFECYCLE.md",
+          "detail": "Initialization receipts, context reconstruction and named random streams.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "550d85a9cde18dd020a1dffbd885ccd2ca123b25a2eb2c758a803eb237025579",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/AGENT-LIFECYCLE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-resources",
+      "item": "Shared rule 2: Keep fixed total and per agent resources separate",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "The protocol template now names evidence, attacker, verification and compute allowances alongside actual-use accounting. Existing GUIDE already distinguishes system-budget and per-agent comparisons.",
+      "remaining": "The owner must define the achievable matching contract and record actual tokens, calls, delays and costs. A tight-budget valid policy failure stays in the result; an accounting bug requires repair.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 2.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Resource matching and operational failure accounting.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-precision",
+      "item": "Shared rule 3: Size evaluation from joint precision",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "GUIDE now requires conservative paired root-level precision for the primary effect and every co-required utility guardrail; the protocol asks for that joint plan.",
+      "remaining": "The portfolio’s 8/20/24 development counts and 10-point benefit, 3-point guardrail or 20% repair targets are proposals. Simulate the actual bounded/clustered design and variance uncertainty; a simple normal approximation is not a guarantee. Very narrow guardrails can dominate the budget.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 3.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Variance decomposition, power and precision planning.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-primary",
+      "item": "Shared rule 4: Choose one primary contrast and preserve dependence",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "GUIDE and the protocol now explicitly couple the primary contrast/interaction to task-justified utility guardrails and a prespecified joint decision/multiplicity rule.",
+      "remaining": "Keep all arms, sizes, archive forks, checkpoints and repeats with their independent root when resampling. Report strata and raw components. A favorable interaction caused by control deterioration may be real, but does not by itself establish useful or safe performance.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 4.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Estimands, interactions and clustered inference.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-splits",
+      "item": "Shared rule 5: Separate development qualification and evaluation",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "Existing GUIDE and lifecycle rules already separate development, qualification and untouched evaluation, and freeze effective model/prompt/context/scorer specifications. This response retains those rules.",
+      "remaining": "A changed model, context policy or grader needs its own qualification. Reused Q0 cases become development material; an altered hypothesis needs prospective review. This reconciliation does not pass a survey or hypothesis gate.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 5.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Workflow, measurement and contamination controls.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        },
+        {
+          "path": "tooling/agent-experiments/AGENT-LIFECYCLE.md",
+          "detail": "Effective configuration and state lifecycle.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "550d85a9cde18dd020a1dffbd885ccd2ca123b25a2eb2c758a803eb237025579",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/AGENT-LIFECYCLE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-assigned",
+      "item": "Shared rule 6: Retain all assignments and acquisition failures",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "CHECKLISTS and the protocol now explicitly ask for all-assigned operational outcomes, conservative missing-outcome bounds and labeled complete-case sensitivity. GUIDE prohibits removing individual evaluation lineages that fail to acquire the practice.",
+      "remaining": "Separate planned, started, failed, not-started and analyzed units. Do not assign an unobserved scientific score as known: operational failure and bounds on latent scientific outcomes answer different questions. Bind source/model/prompt/scorer/artifact hashes through the existing ledger.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 6.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Failure taxonomy and missingness.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        },
+        {
+          "path": "tooling/agent-experiments/AGENT-LIFECYCLE.md",
+          "detail": "Initialization, allocation and closure receipts.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "550d85a9cde18dd020a1dffbd885ccd2ca123b25a2eb2c758a803eb237025579",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/AGENT-LIFECYCLE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-defects",
+      "item": "Shared rule 7: Separate broken instruments failed competence and adverse findings",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "GUIDE now distinguishes instrument defects, competence-gate failure and valid null/harm. CHECKLISTS and the protocol carry that distinction into review.",
+      "remaining": "Repair leaked truth, faulty parsers/solvers and incorrect accounting, preserve attempts, then qualify on fresh inputs. A frozen competence failure blocks escalation but does not estimate a treatment null. Valid poor recovery, weak mentoring or large-N deterioration must not be repaired away.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 7.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Failures, qualification and scientific accountability.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-stopping",
+      "item": "Shared rule 8: Require uncertainty before a futility decision",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "GUIDE and CHECKLISTS now state that an estimate below a target is not enough for futility when its interval still includes useful benefit.",
+      "remaining": "Keep a fixed allocation or valid sequential design. A precise exclusion can close a tested policy under its declared task/resource regime; it cannot close the whole research question. This qualifies any shorthand stop or deprioritize advice in our earlier PI review.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 8.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/GUIDE.md",
+          "detail": "Fixed stopping, sequential inference and uncertainty-based futility.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "shared-readiness",
+      "item": "Shared rule 9: Keep launch readiness separate from portfolio agreement",
+      "verdict": "Accepted; incorporated in the shared methods or already covered by existing controls.",
+      "current_evidence": "Dmarz’s numbered shared rule is a prospective design recommendation, not a measured result.",
+      "incorporation": "CHECKLISTS and the protocol now point to the public plan, independent review where required, assignment manifest, exact spend/call reservation, authorized allocation/account status and visualization mapping. Existing lifecycle documentation already requires the immutable verified public plan and condition-specific TLDR before every run.",
+      "remaining": "The response changes documents only. Study owners still satisfy their existing launch gates; no deployment, reservation, paid call or research acceptance follows from this review. Private allocation identifiers and credentials stay outside public artifacts.",
+      "owner": "Existing study owner when writing the next prospective protocol",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Shared design and decision rules, item 9.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        },
+        {
+          "path": "tooling/agent-experiments/AGENT-LIFECYCLE.md",
+          "detail": "Public-plan registration, runbook and minimal artifact set.",
+          "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+          "sha256": "550d85a9cde18dd020a1dffbd885ccd2ca123b25a2eb2c758a803eb237025579",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/AGENT-LIFECYCLE.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    },
+    {
+      "id": "portfolio-order",
+      "item": "Portfolio ordering and allocation",
+      "verdict": "Accept the staged strategy; update the prerequisites using the later evidence.",
+      "current_evidence": "Antsy, Sybil, V3 and Healing practical-01 have completed records; V3 did not pass competence and practical-01 produced valid adverse results. The market models passed separate fresh gates. Other lanes still require attempt reconciliation, independent review or qualification. Theseus v2 and repair diagnostics are narrower than the full proposed successors.",
+      "incorporation": "Wave 0 now means close existing ledgers and preserve failures, not rerun completed cohorts. Prepare the narrow safe-memory intervention and the current Theseus instrument with their owners. Develop fixed-resource Sybil with random/plurality controls; keep imperfect receipts conditional on compositional competence. Expand independent worlds and replication before broad population/depth sweeps.",
+      "remaining": "Keep Antsy and repair conditional on unresolved mechanisms and feasible utility headroom. Reserve real budget for independent scenario/scorer review and fresh families. The shared dmarz allowance is not a fresh grant per successor. Derive any future reservation from measured costs and chosen precision; no aggregate funding estimate or task reassignment is made here.",
+      "owner": "Existing owners; human allocation remains separate",
+      "paths": [
+        {
+          "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+          "detail": "Recommended order and shared allowance boundary.",
+          "source_commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+          "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+          "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+        }
+      ],
+      "source_scope": "Pinned repository reports and prospective plans; no independent rerun or live execution probe.",
+      "source_commit": "4312d3cc81ff0ec42686b392b7484088970f748a"
+    }
+  ],
+  "sources": [
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "caa114f77e925b26c7c33cdd5647481aa08340e59d9bc12e3f3f50445f151121",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "e4b9897954c65b5d343109f8435e26a95e1c61447aaa82dcf4e5036d9ba2c340",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "4a8e433f61e1dab23f4ee2495b382d2711ef7a6bdb4716587ca70c757bcaf3ab",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-pre.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "962891407fe4a7276348aaedabf7cfd1f62f5f1e589ead74ba22935f02e06218",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "799e0d310ab7c7c7f1921836e12c2c6d0ffee1cb9b11540f501243e95b1fb9ae",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "69ebd384527b961b898e78c0d0209e76c95d3b3203799f5575b8976bd4cf45e0",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/immune-response-v3/evidence-study/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "56963bd08a1c354aa875d7a2d7e347ed8bba0a0af2996df218805fcbfa9cbef1",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-post.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "e254acafbd484c967d12015c783d83113146429793477921ec4746c27d94e2fd",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/practical/PRE-RUN.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "5d85a3e34ec5af29d9a4aac0b60bc9fac953e16ec8c3807f6da19d46b9ef15f5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PRE-RUN.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "6d61691c5e4e9b9f18119d0001079b6aa14314ea5a7925772ba68ab61baa9b4b",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/ITERATION-02.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "7824daf88349bf2eb07c89db16267d8dbb764c965b6fa25e51fcbac4eb59d015",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-02.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "d4b32e73d7d13ada79288e6042c48313405cb94a109faf77c8d21d5845125c72",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/reviews/iteration-03-post.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/BUDGET-AUTHORIZATION.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "1c1228d90941db380308231a4292df9d3ff196af8c78805dadf6880611824e3a",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/influence-swarms/scenario/BUDGET-AUTHORIZATION.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "3f514a2f9e8a3d1d938027a8c869145bcea4e0626d7d06be90b4a821a5666155",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "c4cac44506e51463471da3e452ff30363bfe9e49077c07f9f6d5b8b5fd8f21cb",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/reviews/v3-q0-a1-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-pre.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "ef815b49c0725842d5326dfd56d96702cd26d4ccebd0c9c813c9dbd32fbd4f08",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-pre.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/next-experiments-2026-10-04/README.md",
+      "commit": "e0a31706cdf1fb1d3864370b04f29bd4f93e2682",
+      "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scale-api/RESULTS.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "5f1435c926e43cb744f58c9ed9f6aaa73474a500eee09b154455001d0c99a892",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/sybil-scale-api/RESULTS.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scale-api/reviews/s1-001-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "1269edcf77221e2b065c6b168dad72cec77dcf8187b25a97f2f40b8ac3a4ea2e",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/sybil-scale-api/reviews/s1-001-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "b36325a1cac3dfbd57937b27049456878345c3670b06303d2329af0f00421305",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/reviews/q0-003-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "89af40d7a69714c66c9768306fa6aa1e0c6b2ecb54c0195afeb074ff0faf6983",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/reviews/q0-003-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/reviews/q0-004-pre.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "cbdfb2d34ab5f66bf6967f7d64156ccfbabbdc415955171c383f704fc6e2cc7e",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/compositional-safety/reviews/q0-004-pre.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "e0a8d4b67c2365993a1cdb40be267a286c8f151a4f5ece06a1e653a73c1c124c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/README.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "b84dc2c4c8329255fccd51e23efbaaa0118fcf6f79c64ef021118835702b9972",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/reviews/s1-002-pre.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "8d508bb601bc0158577902bf482ea1ce67815c01378ce7feeed560dfda510321",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/reviews/s1-002-pre.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/parallel-plan.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "f13942c8c23a9f20ccd01c33748c18fc1112f0f32ba1abf1f44be0fd96c10a18",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-api/parallel-plan.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md"
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "8282a2e619860a100e198beadcf40fccafeeb88f94cebc9be10cee6b4e7ecc40",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+      "path": "tooling/agent-experiments/GUIDE.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/GUIDE.md"
+    },
+    {
+      "path": "tooling/agent-experiments/AGENT-LIFECYCLE.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "550d85a9cde18dd020a1dffbd885ccd2ca123b25a2eb2c758a803eb237025579",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/agent-experiments/AGENT-LIFECYCLE.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/regrowth-200/README.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/regrowth-200/README.md"
+    },
+    {
+      "path": "tooling/avalon-swarm/RESULTS.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/tooling/avalon-swarm/RESULTS.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "fb00ff4731d4c6b7343cd0bd8d16d47225740591c65e855fb72aa30f9eb27553",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md"
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/practical/FEEDBACK-RESPONSE.md",
+      "commit": "4312d3cc81ff0ec42686b392b7484088970f748a",
+      "sha256": "697394f53243ce8f1ac8d492efbac59041dffe1b66a2934997b3b66158034f7e",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/4312d3cc81ff0ec42686b392b7484088970f748a/researchers/vishesh/notes/healing-helping-hands/practical/FEEDBACK-RESPONSE.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md",
+      "commit": "d2fee7c8f3c9b88b71aaaf7181377929187cb375",
+      "sha256": "9194c8e49edb1f81ca656fd409881453268730fb5c6fd975dd7eeae3a6a781f7",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+      "commit": "d2fee7c8f3c9b88b71aaaf7181377929187cb375",
+      "sha256": "2cfc228fa137140567694509ef55666294b81b6c42a3ecfc963ef973a6ac008b",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md"
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md",
+      "commit": "d2fee7c8f3c9b88b71aaaf7181377929187cb375",
+      "sha256": "23270ac3823670ee394ba3e74be552c72305462c4d5418968e1bdae7ab105fe0",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md"
+    }
+  ],
+  "implementation_paths": [
+    "tooling/agent-experiments/GUIDE.md",
+    "tooling/agent-experiments/CHECKLISTS.md",
+    "tooling/agent-experiments/templates/protocol.md",
+    "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+    "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md",
+    "researchers/dmarz/notes/sybil-scale-api/README.md",
+    "researchers/dmarz/notes/compositional-safety/README.md",
+    "researchers/dmarz/notes/market-split-api/README.md",
+    "researchers/shadow/notes/capture-memory/README.md",
+    "researchers/vishesh/notes/swarm-of-theseus/v2/README.md",
+    "researchers/vishesh/notes/antsy-verification-v4/README.md",
+    "researchers/vishesh/notes/healing-helping-hands/README.md",
+    "researchers/vishesh/notes/immune-response-v3/README.md",
+    "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+    "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+    "researchers/vishesh/notes/regrowth-200/README.md",
+    "tooling/avalon-swarm/PROTOCOL.md"
+  ],
+  "implemented_changes": [
+    {
+      "path": "tooling/agent-experiments/GUIDE.md",
+      "change": "Define N/G/S/R and stateful actors; joint guardrails, acquisition failures and uncertainty-based futility."
+    },
+    {
+      "path": "tooling/agent-experiments/CHECKLISTS.md",
+      "change": "Carry design, denominator, qualification and readiness checks into review."
+    },
+    {
+      "path": "tooling/agent-experiments/templates/protocol.md",
+      "change": "Add explicit resource regimes, joint precision and all-assigned analysis fields."
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md",
+      "change": "Specify the frozen-child/fresh-parent memory comparison, information contract and competence boundary."
+    },
+    {
+      "path": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md",
+      "change": "Correct near-zero/equivalence and self-persuasion interpretation; preserve the frozen contrast."
+    },
+    {
+      "path": "researchers/dmarz/notes/sybil-scale-api/README.md",
+      "change": "Specify fixed attacker resources and central random/plurality comparators."
+    },
+    {
+      "path": "researchers/dmarz/notes/compositional-safety/README.md",
+      "change": "Separate stale, missing and fabricated receipts; require completion and structural-root accounting."
+    },
+    {
+      "path": "researchers/dmarz/notes/market-split-api/README.md",
+      "change": "Reconcile separate fresh model qualifications and actual-cost neutral discovery limits."
+    },
+    {
+      "path": "researchers/shadow/notes/capture-memory/README.md",
+      "change": "Separate all-assigned capture resistance from standardized-state repair; retain the failed recovery endpoint."
+    },
+    {
+      "path": "researchers/vishesh/notes/swarm-of-theseus/v2/README.md",
+      "change": "State the narrower primary and required controls before broader continuity claims."
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "change": "Translate the completed result into fresh ambiguity, real checker cost and operational-headroom requirements."
+    },
+    {
+      "path": "researchers/vishesh/notes/healing-helping-hands/README.md",
+      "change": "Record adverse practical-01 completion, strong central controls and limits of the capacity sensitivity."
+    },
+    {
+      "path": "researchers/vishesh/notes/immune-response-v3/README.md",
+      "change": "Correct current status and retain all partial/unstarted assignments after the interruption."
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "change": "Reconcile later budget approval with remaining review/qualification and confounded Q3 interpretation."
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "change": "Specify decision-changing timing/reliability scenarios, task loss and stronger control requirements."
+    },
+    {
+      "path": "researchers/vishesh/notes/regrowth-200/README.md",
+      "change": "Require common absolute quality, matched damage exposure, independent maps and equal-compute controls."
+    },
+    {
+      "path": "tooling/avalon-swarm/PROTOCOL.md",
+      "change": "Define prospective useful coordination and recovery tests before population expansion."
+    }
+  ],
+  "authorization": "The human explicitly requested direct commits in relevant study documents instead of an inbox reply. Dated amendments in other researcher folders are scoped to that request; existing owners retain execution and frozen run settings remain unchanged.",
+  "publication_refresh": {
+    "commit": "d2fee7c8f3c9b88b71aaaf7181377929187cb375",
+    "scope": "Discussion V3 sidecar completion, structural merge clarification and existing next diagnostic only; other items retain the primary cutoff.",
+    "summary": "The pre-publication pull added a completed resampling sidecar: 72/72 episodes and 936/936 calls, zero invalid/provider/missing-usage outcomes, but failed clean reports-only competence at 2/12 against 10/12. All 72 repeat probes preserved the checkpoint vote. This is a bounded finding for one model/contract, not general equivalence or an internal-mechanism proof. The owner now has a separate planned 120-call matched-model diagnostic, conditionally followed by fresh qualification; neither was launched in this refresh. A later independent review also establishes that the N=3 majority merge structurally cannot retain two conflicting values for a key. Conflict loss therefore must not be attributed to a model tendency.",
+    "source_urls": [
+      "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md",
+      "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+      "https://github.com/dmarzzz/swarm-lab/blob/d2fee7c8f3c9b88b71aaaf7181377929187cb375/researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md"
+    ]
+  }
+}

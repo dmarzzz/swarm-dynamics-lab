@@ -1,0 +1,10 @@
+{
+  "checked_utc": "2026-10-04T04:26:05.864516+00:00",
+  "approved_total_usd": 2,
+  "api_calls": 18,
+  "api_cost_usd": 0.00042966,
+  "api_committed_including_uncertain_usd": 0.00042966,
+  "max_calls": 500,
+  "q1_calls": 0,
+  "new_cap_approval_required": false
+}

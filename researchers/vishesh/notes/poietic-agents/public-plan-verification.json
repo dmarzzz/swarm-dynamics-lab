@@ -1,0 +1,10 @@
+{
+  "experiment": "poietic-agents",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/4a373dad56aab6a7129f16748a2edf312ce6d048/researchers/vishesh/notes/poietic-agents/README.md",
+  "commit": "4a373dad56aab6a7129f16748a2edf312ce6d048",
+  "plan_sha256": "43a500549a4685bdcf42b97646f34149a4ee3d96ba4e1c487475e12d4a1efdc0",
+  "registered_tldr": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent caching, static specialists and adaptive alternatives; count learning, communication and recovery costs. Prospective exploratory design, no runs launched; exact runtime, review, budget and dedicated allocation remain launch gates.",
+  "run_tldr": "This qualification tests generalist interpretation of clean operations tasks and tool receipts against independently computed reference answers. Measure correctness, valid output, access violations and actual cost over 48 probes; it does not test swarm differentiation.",
+  "checked_utc": "2026-10-04T04:32:37.165408+00:00",
+  "scope": "Public documentation gate only. No run admitted; runtime, review, qualification, budget and allocation gates remain closed. Repeat preflight against the resolved pre-run version before any native request."
+}

@@ -23,3 +23,25 @@ A required pull encountered simultaneous artifact registrations from another loc
 ## Qualification launched, 02:56:50Z
 
 Exact frozen source passed all 55 tests on the dedicated Python 3.12.3 server. Fixed a missing reporter configuration during preparation before model dispatch. One Haiku batch `discussion-dose-v3/v3-q0-a1` is now running with 96 cases/636 calls, no retry or automatic successor. Verified durable model responses, measured usage, public progress and a three-agent live frame. Initial resource snapshot: 3.24 GiB free, worker CPU 4.7%, so the user's larger-server authorization is not needed yet. Stored dated deployment/start evidence; independent review transferred to Vishesh and remains pending. Confirmation holdout stays closed.
+
+## Completed Q0 analysis
+
+All 636 real calls / 96 cases completed for $4.387237; no invalid/provider-failed calls. Exact-source replay and all artifact hashes verified. Clean competence failed at 2/6 full-evidence and 1/6 reports-only, despite exact full-evidence extraction in all six worlds. Both three-round clean arms reached 6/6. Reports-only attacked votes all abstained but four parents inherited false memory. Recorded all denominators, memory fixture outcomes, strict extra-citation penalties and zero predeclared contrasts in benchmark-v3/RESULTS-Q0.md and reviews/v3-q0-a1-post.md. Independent instrument review passed with matching runtime hashes. User allowed a stronger model next; no new batch or confirmation opened. Browser playback of local replay passed. Remaining issues: capability diagnostics, cross-Python float audit stability and public replay delivery.
+
+Completion: uploaded and download-verified both analysis documents; released the exclusive claim and retired only sim-discussion-v3, verified absent at the provider. Other owner machines unchanged. Monitor paused. Follow-up task diagnose-discussion-v3-q0 preserves the user’s stronger-model authorization and remaining repair acceptance criteria; no next batch launched.
+
+## Successor planning and cloud feasibility
+
+Verified Q0 report/table blobs on remote main. Planned v3-d1-a1: 60 saved requests per model (Haiku 4.5 and compatibility comparator Sonnet 4.6), 120 total. All 18 saved report contexts were independently checked answerable; the planning receipt hashes every input and balances model order. Frozen-use estimate $0.760540, actual usage will be measured. Conditional fresh clean qualification is 60 calls on reserved 50001–50006; no new-world outcomes generated.
+
+Read Shadow's pass-with-fixes alongside Vishesh's pass. Added candid result/post-mortem clarification: failure-path F1/F2 do not affect Q0's fully valid responses, but require repair before new paid work. Conflict loss under this merge is structurally guaranteed.
+
+Official OpenAI documentation confirms hosted tasks can work while the computer sleeps; local project schedules require the desktop app and computer. Planned cloud coordinator plus existing hub, dedicated systemd worker/watchdog, durable records and separate owner cleanup executor. Current local infrastructure state/access cannot be assumed in a cloud task. No new cloud task, server, automation or paid call was launched; planning completion is distinct from cloud readiness.
+
+Validation note: plan input selection/count/pairing/link checks and lab.py check passed; Flight Deck strict check was clean with 24 artifacts before publication. The final sync pulled concurrent Theseus artifact registrations (27 total); repository-wide strict validation now reports four invalid provenance `by` enum values attributed to vishesh/codex-theseus. No plan/result file caused those errors. Preserved the other researcher's artifacts unchanged; no paid work depends on a claim that this latest global check is clean.
+
+## D1 owner deployment preparation, 04:21 UTC
+
+The user requested a stronger-model run as soon as possible. The hosted cloud task is preparing the runner and actual review repairs; it has repository access but lacks provider/hub/fleet credentials. The owner-side lane therefore owns the only paid dispatch. Both exact planned model IDs are available (read-only provider lookup, zero inference calls). Dedicated sim-discussion-d1 allocation and exclusive claim are merged; owner account identity and authoritative state were checked privately, and all 12 existing droplets were unchanged by creation.
+
+Minimal provisioning passed after first-boot updates released a package lock. The server reproduced all 60 saved Q0 request hashes and the balanced 120-call schedule. A systemd-only smoke service completed after the initiating connection disconnected. The empty initial sparse checkout failed closed before input staging; its empty worktree was preserved and sparse initialization corrected. The actual harness rehearsal, immutable manifest and paid dispatch remain pending. No D1 model calls, fresh qualification or holdout cases have been launched. Worker independence is verified at the service level; full hosted access and autonomous owner cleanup remain unverified.

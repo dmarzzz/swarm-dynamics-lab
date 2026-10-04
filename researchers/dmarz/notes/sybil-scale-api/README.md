@@ -1,5 +1,14 @@
 # Sybil resistance as swarms grow
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **2/4** — The completed controlled sweep describes verification-resource and admission-policy effects on specialist accuracy in one graph family, not an equal-cost coverage advantage. Basis: Complete qualified results and clustered intervals support the fixture-specific unequal-verification-budget effect. Equal-budget random reaches the same accuracy; plurality is a strong comparator. Total attacker resources scale with N, so this is not fixed-resource identity splitting or autonomous-agent scaling.
+- **sample_size_summary:** 24 paired worlds × 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36–972 simulated identities.
+<!-- experiment-evidence:end -->
+
 Exploratory follow-up to [sybil-specialists-api](../sybil-specialists-api), addressing SEC-19 and SEC-43. Authorized by dmarz: “great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously and show me the results when youre done”. This is a frozen exploratory scaling study, not an accepted formal hypothesis or a deployable identity defense. S2 remains disabled.
 
 ## Question
@@ -39,4 +48,20 @@ The prior 12-world API pilot demonstrated the strong-check utility / weak-check 
 
 ## Results
 
-Pending execution. Initial and progress frames, final scaling curves and a measured completion replay will appear on [the live experiment](https://swarm-live.pages.dev/#/x/sybil-scale-api). No favorable outcome is required for completion.
+Completed: 2,400/2,400 valid comparison answers, 24 paired worlds and 100 conditions; no failed or retried calls. All 264 scripted cases and 64 clean API qualifications passed first. Total model usage including qualification was USD 19.453925.
+
+At 972 identities with informative checks and visible badges, proportional coverage checking (108 checks) achieved 98.6% specialist accuracy versus 47.2% with four checks: +51.4 percentage points, descriptive paired-world 95% interval +38.9 to +62.5. Attacker seat share fell from 11.5% to 3.6%. Random checking at the same 108-check budget also achieved 98.6%; this is not evidence that coverage is uniquely superior. With weak checks, coverage accuracy was 52.8% versus 45.8%, while attacker seat share rose from 11.5% to 21.5%.
+
+The check-history audit explains a scaling failure: four coverage checks all targeted outside identities at N=36, but all targeted core identities at each larger size. High answer accuracy also did not mean broad inclusion: the strong/proportional coverage condition still rejected 62.8% of honest specialists at N=972.
+
+Read the [results and limitations](RESULTS.md), [all 100 cells](results-cells.csv), [complete aggregate analysis](results-summary.json), [post-mortem](reviews/s1-001-post.md) and [deployment record](DEPLOYMENT.md). The [live experiment](https://swarm-live.pages.dev/#/x/sybil-scale-api) includes final scaling curves and a measured completion replay. These remain exploratory results from simulated reporters and checks with API report synthesis; S2 stays disabled.
+
+## Prospective fixed-resource study amendment, 2026-10-04
+
+The [PI portfolio's identity-splitting proposal](../next-experiments-2026-10-04/README.md) addresses a different estimand: hold the honest population and evidence fixed while dividing one attacker's unchanged message/token, edge-acquisition and verification-attempt budgets among more identities. Charge registration and metadata overhead, and distinguish nominal identities from identities with resources to contribute. The completed scaling study cannot answer that question because total attacker resources grew with population.
+
+Make **matched-budget random admission and identical-packet deterministic aggregation central controls**. Random checking matched coverage's 98.6% accuracy at 972 identities with 108 strong checks; plurality on those coverage packets reached 100%. The proposed coverage-versus-degree interaction is therefore not sufficient to establish superiority over a competent alternative. Before fresh evaluation, justify that primary contrast or prioritize the raw fixed-resource multiplicity effect and a comparison against random. Preserve the completed study's original primary contrast unchanged.
+
+Use graph/task roots as clusters across every identity allocation and policy, with a frozen attacker allocation rule and independently implemented graph families. Fix trusted anchors, edge opportunities and packet order; qualify aggregation and missing-evidence abstention at each distinct packet-load regime. Counterbalance fabricated-value direction and diversify specialist facts so repeated easy answers cannot conceal exclusion. Report wrong answers, rare-skill coverage, honest-specialist rejection and attacker seat share together; the latter is not attacker admission probability.
+
+The proposed 24 roots are development material, and a 10-point benefit is a candidate practical margin. Choose untouched evaluation size from paired root-level variation and utility requirements. A faithful published-defense comparator is needed before superiority claims. This is a prospective design amendment, not a new run, hypothesis acceptance or change to the frozen parent study.

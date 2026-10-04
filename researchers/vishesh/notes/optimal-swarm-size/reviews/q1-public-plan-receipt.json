@@ -1,0 +1,9 @@
+{
+  "experiment": "optimal-swarm-size-q1",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/1002752f5d95db7ddb27e8186c3e7cc751467df1/researchers/vishesh/notes/optimal-swarm-size/reviews/q1-pre.md",
+  "commit": "1002752f5d95db7ddb27e8186c3e7cc751467df1",
+  "plan_sha256": "5abd1a6203fe74a050e611fc7d156d0bda7e6a772955e2ea298c43f126cd38aa",
+  "registered_tldr": "TLDR: Qualify synthetic evidence and bounded code-repair tasks before a matched-size study. Treatment: N=1 screening then N=2,4,8,16 under calibrated caps. Comparator: N=1 calibration reference, not a matched size-effect comparison. Metrics: verified on-time success, quality, cost and latency. Limitations: synthetic fixtures, small root count, hosted compute and exploratory calibration.",
+  "run_tldr": "TLDR: Q-A evidence parallel root 0, N=1 screening versus later matched-N qualification; verified success, quality, latency and cost; synthetic exploratory tasks only.",
+  "checked_utc": "2026-10-04T03:56:24.618498+00:00"
+}

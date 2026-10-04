@@ -1,0 +1,314 @@
+{
+  "scope": "Independent reporting and denominator check. Original files and dirty agentops checkout unchanged; no model calls or server access.",
+  "agentops_origin_main": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+  "deployed_app": {
+    "path": "data/completion-audit-2026-10-04/live-app.js",
+    "url": "https://swarm-live.pages.dev/js/app.js",
+    "sha256": "361cf517ca4cbb68b54c2653ceaf2236278f39f57d2a7e376c965e9a5f071daa",
+    "byte_identical_to_origin_main_app": true,
+    "limits": "Hub, api, charts and catalogue source inspected at origin/main. Independent public fetches of api/charts/catalogue returned 403; their deployed bytes were not verified. Hub runtime source revision was not independently attested; observed payloads corroborate its inspected limit behavior."
+  },
+  "full_inventory": {
+    "path": "data/completion-audit-2026-10-04/hub-runs-sanitized.json",
+    "sha256": "73e605bc6e60405e097ad4036e438bdc43ed034bd6ff7f4fed6bab623dd14ab3",
+    "rows": 1210,
+    "unique_run_ids": 1210,
+    "nonempty_experiment_ids": 31,
+    "raw_status_counts": {
+      "running": 4,
+      "done": 1128,
+      "failed": 40,
+      "cancelled": 27,
+      "planned": 11
+    },
+    "latest_update_utc": "2026-10-04T04:11:26.454756+00:00",
+    "requested_query_limit": 5000,
+    "query_cap_binding": false,
+    "state_global_limit": 2000,
+    "global_cap_binding_at_observed_cutoffs": false
+  },
+  "public_original": {
+    "utc": "2026-10-04T04:09:14.842916+00:00",
+    "registrations": 32,
+    "metadata_job_total": 1189,
+    "embedded_rows": 871,
+    "statuses": {
+      "running": 3,
+      "done": 1108,
+      "planned": 11,
+      "failed": 40,
+      "cancelled": 27
+    }
+  },
+  "public_followup": {
+    "utc": "2026-10-04T04:17:46.591111+00:00",
+    "registrations": 35,
+    "metadata_job_total": 1231,
+    "embedded_rows": 913,
+    "statuses": {
+      "running": 7,
+      "done": 1145,
+      "planned": 12,
+      "cancelled": 27,
+      "failed": 40
+    }
+  },
+  "healing": {
+    "full_jobs": 515,
+    "full_statuses": {
+      "done": 508,
+      "failed": 7
+    },
+    "fresh_payload_rows": 200,
+    "visible_statuses": {
+      "done": 199,
+      "failed": 1
+    },
+    "omitted_jobs": 315,
+    "omitted_statuses": {
+      "done": 309,
+      "failed": 6
+    },
+    "omitted_failed_job_ids": [
+      "healing-helping-hands/practical-01-reporting-failure",
+      "healing-helping-hands/jev-qualification-01",
+      "healing-helping-hands/diagnostic-04",
+      "healing-helping-hands/diagnostic-03",
+      "healing-helping-hands/pilot-02-review",
+      "healing-helping-hands/pilot-01-review"
+    ],
+    "omitted_failed_analysis_jobs": 5,
+    "interpretation": "Six of seven failed job records are outside each fresh state payload. Five are explicitly analysis jobs; the sixth is a reporting audit. These are not six additional independent failed model episodes. The visible failed job is a later archive-integrity audit."
+  },
+  "claims": [
+    {
+      "claim": "Condition-table means include only done jobs with numeric metric values, equally weighted by job. Failed/cancelled/pending jobs and missing metrics are excluded. Displayed plus/minus is sample standard deviation across included job metrics, not a confidence interval or episode-weighted estimate.",
+      "sources": [
+        {
+          "path": "data/completion-audit-2026-10-04/live-app.js",
+          "line": 498
+        },
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/app.js",
+          "lines": [
+            498,
+            518
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/app.js#L498-L518"
+        }
+      ]
+    },
+    {
+      "claim": "Chart source also uses done numeric metrics and skips analysis jobs. This is verified source behavior; deployed chart bytes were not independently checked.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/charts.js",
+          "lines": [
+            29,
+            47
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/charts.js#L29-L47"
+        }
+      ]
+    },
+    {
+      "claim": "Fresh state selects the newest 2000 jobs globally, increments metadata counts, then embeds at most 200 per experiment in descending updated order. The 2000 global limit is not binding for observed totals 1189,1210 or 1231.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "hub/hub.py",
+          "lines": [
+            628,
+            644
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/hub/hub.py#L628-L644"
+        }
+      ]
+    },
+    {
+      "claim": "Authenticated runs query defaults to 200 and caps at 5000. Root requested 5000 and retained 1210 unique rows, so the requested cap is not binding.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "hub/hub.py",
+          "lines": [
+            574,
+            583
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/hub/hub.py#L574-L583"
+        }
+      ]
+    },
+    {
+      "claim": "The experiment detail header recomputes counts from the visible slice after removing analysis jobs; the failure panel also scans only visible rows. It cannot show an older failed record absent from its input.",
+      "sources": [
+        {
+          "path": "data/completion-audit-2026-10-04/live-app.js",
+          "line": 416
+        },
+        {
+          "path": "data/completion-audit-2026-10-04/live-app.js",
+          "line": 465
+        },
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/app.js",
+          "lines": [
+            412,
+            470
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/app.js#L412-L470"
+        }
+      ]
+    },
+    {
+      "claim": "A persistent client can temporarily retain more than 200 rows by merging deltas keyed by run ID; source performs a fresh full load every 5 minutes. Thus 200 is a fresh-payload cap, not an invariant in-memory client cap.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/api.js",
+          "lines": [
+            57,
+            100
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/api.js#L57-L100"
+        },
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "hub/hub.py",
+          "lines": [
+            596,
+            613
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/hub/hub.py#L596-L613"
+        }
+      ]
+    },
+    {
+      "claim": "Top-level totals() omits cancelled statuses. Source queueBar also omits them, while catalogue summary includes cancelled in its denominator. Different widgets therefore need not show the same total.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/app.js",
+          "lines": [
+            109,
+            117
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/app.js#L109-L117"
+        },
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/charts.js",
+          "lines": [
+            178,
+            182
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/charts.js#L178-L182"
+        },
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "site/public/js/catalogue.js",
+          "lines": [
+            12,
+            19
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/site/public/js/catalogue.js#L12-L19"
+        }
+      ]
+    },
+    {
+      "claim": "Hub jobs are mutable status records; reassignment increments attempts on the same run ID. Unique run count is not a complete count of historical execution attempts.",
+      "sources": [
+        {
+          "repo": "dmarzzz/swarm-labs-agentops",
+          "commit": "02c88f31fed31c51c7047b608c97cbeb9baabca8",
+          "path": "hub/hub.py",
+          "lines": [
+            349,
+            381
+          ],
+          "url": "https://github.com/dmarzzz/swarm-labs-agentops/blob/02c88f31fed31c51c7047b608c97cbeb9baabca8/hub/hub.py#L349-L381"
+        }
+      ]
+    },
+    {
+      "claim": "Worker-selected status can mean execution or qualification. Audited V3 is done despite failed clean qualification; the resampling run is failed despite complete valid outputs. Done-only means may therefore omit valid adverse scientific results.",
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json"
+        }
+      ]
+    }
+  ],
+  "portfolio_issues": [
+    {
+      "issue": "Duplicate Avalon cohorts across files",
+      "action": "Deduplicate before any aggregate. dmarz.json attempts 83\u201385 and other.json attempts 6\u20138 are the same scale-final, recovery-pilot, consensus-v 02 records:3 cohorts and 45 saved world outcomes, not 90.",
+      "sources": [
+        {
+          "path": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json",
+          "line": 7942
+        },
+        {
+          "path": "researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json",
+          "line": 454
+        }
+      ]
+    },
+    {
+      "issue": "Mixed units and reproducibility reruns",
+      "action": "Do not sum arm episodes, worlds, calls, probes, scripted fault checks, bundles and analysis summaries as one denominator. Local/fleet reruns of shared seeded inputs are operations attempts, not independent scientific replication."
+    },
+    {
+      "issue": "Different completion definitions",
+      "action": "other.json completed means retained execution end-state; dmarz.json often excludes invalid output. Valid compositional loops are terminal execution but functional incompletion. Normalize operational terminal, structural validity, functional completion and safe success separately."
+    },
+    {
+      "issue": "Unrun proposals appear in missing counts",
+      "action": "dmarz.json v 3-d 1-a 1 has 120 proposed requests labeled planned/missing; conditional diagnostics 48/60 and SOC07 proposals likewise. These are not missing executed outcomes. Separate proposed, assigned-unstarted, cancelled and genuinely missing terminal records; other.json uses null for unfrozen plans."
+    },
+    {
+      "issue": "Registration names are not canonical families",
+      "action": "discussion-dose versions/resample and market-split variants need a predefined canonical family map before any family-level fraction. Do not automatically strip suffixes from Sybil studies that may test distinct questions."
+    },
+    {
+      "issue": "Backend labels alone do not establish model execution",
+      "action": "All completed other.json cohorts are scripted. Its model tracks and board/Neff proposals are unrun. dmarz billing/startup-only records labeled model are not observed model responses. Keep service failures distinct from model behavior."
+    },
+    {
+      "issue": "Analysis jobs duplicate primary outcomes",
+      "action": "Capture 203 includes 3 analysis jobs; template 84 includes 2; scripted market 16 includes 1; scripted Sybil 35 includes 1. Never sum every job metrics.episodes without matching parent manifests."
+    },
+    {
+      "issue": "Repeated and clustered input roots",
+      "action": "Capture S1/S1 b reuse 100 development task IDs and some dose cells. Avalonv 0.1/v 0.2 share initialization. Collective 960 worlds use 60 scenario clusters. DiscussionH1\u2013H6 reuse development worlds. Keep scientific root and attempt identities separately."
+    }
+  ],
+  "crosschecks": {
+    "within_dmarz_duplicate_attempt_ids": 0,
+    "within_dmarz_duplicate_hub_run_links": 0,
+    "dmarz_hub_family_summary_matches_full_saved_inventory": true,
+    "cross_file_duplicate_cohorts": 3,
+    "cross_file_duplicate_world_outcomes": 45
+  },
+  "snapshot_limit": "Original public 04:09:14 has 32 registrations/1189 job counts/871 embedded rows. Full query 04:11:27 has 1210 rows across 31 nonempty experiment IDs. Followup public 04:17:46 has 35 registrations/1231 job counts/913 embedded rows. Different cutoffs and zero-run registrations explain differences; do not mix them as one simultaneous population.",
+  "report_ready": "The live page is a monitoring view, not a complete scientific denominator. Its condition averages use completed jobs with numeric metrics, and fresh experiment payloads contain at most 200 recent jobs. Healing had 515 jobs but 200 visible rows; six of seven failed job records were outside that slice. The full saved inventory contains 1210 unique jobs:1128 done,40 failed,27 cancelled,4 running and 11 planned. These are job statuses, not scientific-success or model-refusal rates.",
+  "no_supported_claims": [
+    "Intentional concealment or deletion of failures",
+    "A global refusal percentage",
+    "A pooled success rate across mixed units",
+    "1210 independent trials or 1210 model executions"
+  ]
+}

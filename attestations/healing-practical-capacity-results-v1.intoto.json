@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Improve the design, evaluate against the plan, and make the results more practical, robust, compelling, and interesting."
+   },
+   "internalParameters": {
+    "commit": "f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty",
+    "session": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "1e295089d68270cefc4469061de057de98770b406404d882d7dc5947b974b0cf"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/practical/compare.py"
+    },
+    {
+     "digest": {
+      "sha256": "558e059c8487c709ea5a23ded16566c70ba8737e916faf35482ca3d26964540b"
+     },
+     "uri": "data/healing-practical/recorded-inputs.tar.gz"
+    },
+    {
+     "digest": {
+      "sha256": "ceb67c7849a92927c7e016c9e7f7b49a194c13acfb52bfbca538cbdbdad2310e"
+     },
+     "uri": "data/healing-practical/capacity-results.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:01:51Z",
+    "invocationId": "codex:01a10454-dfe7-7793-87de-f7edb762ee6e",
+    "startedOn": "2026-10-04T04:01:51Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "8f3ca72589b5a503f5460c05c50d178e3265eddede269f43ec8f67704b332410"
+   },
+   "name": "artifacts/healing-practical-capacity-results/healing-practical-capacity-results-v1.png"
+  }
+ ]
+}

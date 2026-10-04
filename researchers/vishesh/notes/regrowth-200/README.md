@@ -1,5 +1,14 @@
 # Regrowth 200: distributed route repair
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — The added Laya heads did not improve final routing quality on this one map; both model arms remained far below exact routing on shortest paths. Basis: Descriptive trajectories only; model arms share100%valid but6.5%shortest final routes, so fast recovery to poor quality is not advantage. Hybrid adds compute and sees Qwen proposals. Missing original public registration is preserved separately.
+- **sample_size_summary:** One fixed map × 3 architectures ×damage/control =6/6 worlds;200 cell identities,80 rounds. No replicated map sample.
+<!-- experiment-evidence:end -->
+
 **Registration status: retrospective repair.** The pilot ran with a local protocol and source hashes, but no plan URL was registered on the live hub. That is a process failure, recorded in [REGISTRATION-FAILURE.md](REGISTRATION-FAILURE.md). This public explanation was added after the results were known. It is not a preregistration or a confirmatory study.
 
 ## TLDR
@@ -52,3 +61,11 @@ The model arms met the recovery threshold after four rounds, versus 18 for the a
 Before launch, publish a versioned plan, register its URL and a reader-facing TLDR, verify both through the public page, and store a preflight receipt. Each run must identify its exact condition and comparison. See the [documentation contract](../experiment-documentation/README.md). Follow-up research needs repeated held-out maps, randomized head locations, equal-compute extra-Qwen controls, a Laya head blinded to Qwen's proposal, and matched initial damage exposure.
 
 [Live experiment](https://swarm-live.pages.dev/#/x/regrowth-200)
+
+## Prospective design amendment 2026-10-04
+
+Incorporating [Dmarz's Regrowth recommendation](https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md), a follow-up should make coordination necessary through partial observations or changing constraints and evaluate it on independently generated maps. The completed six-world pilot and its retrospective-registration label remain unchanged.
+
+Use a **common absolute route-quality target** for every arm, alongside connectivity, excess hops and integrated quality loss after damage. Match pre-damage quality and damage exposure where the estimand permits; otherwise report those differences explicitly. Returning quickly to a poor or minimally disrupted baseline is not superior repair. Keep the exact local-information routing algorithm, and charge the hybrid's extra calls against an equal-budget extra-Qwen control. Randomize second-head placement and separate seeing Qwen's proposal from an independent second judgment.
+
+The independent unit is the map/disturbance root. Keep damage/control arms, head placements and repeated executions clustered within it; cells and rounds do not replace map diversity. Define total compute versus per-cell compute as separate resource regimes. Qualify the same initialization, context/reset rules and current-source action contract on fresh development maps before freezing a successor. No new run or registration is implied by this amendment.

@@ -1,0 +1,24 @@
+{
+  "stage": "S0",
+  "status": "diagnostic-ready",
+  "source_commit": "1ba879ac84a54b82f21c0f597760cfebaf43f3bf",
+  "host": "sim-dmarz-5",
+  "claim_id": "vishesh-phantom-coast-q0",
+  "claim_until": "2026-10-04T10:06:11Z",
+  "api_cap_usd": 4,
+  "infrastructure_cap_usd": 1,
+  "new_infrastructure_cost_usd": 0,
+  "tests_passed": 46,
+  "public_preflight": {
+    "experiment": "phantom-coast",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/1ba879ac84a54b82f21c0f597760cfebaf43f3bf/researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md",
+    "commit": "1ba879ac84a54b82f21c0f597760cfebaf43f3bf",
+    "plan_sha256": "f439e27c8ae4eb3795dbe86047b194b568e871a765cb6897853016745025bb6b",
+    "registered_tldr": "TLDR: First qualify native Jev on complete synthetic maps, then compare early report order with social/private decisions and retained/reset state against pooled and deterministic baselines. Measure whole-map error bounds, missing responses and paired history disagreement. Exploratory fixed-evidence pilot; no adaptive scouting or changed-weight claim.",
+    "run_tldr": "S0-A1 compares paired early report order under social/private decisions and reset/retained maps in six worlds against pooled and deterministic baselines. Measures whole-map error bounds and history divergence; an exploratory fixed-evidence pilot, not adaptive scouting.",
+    "checked_utc": "2026-10-04T04:14:11.245961+00:00"
+  },
+  "assignment_sha256": "6bfc45238e9349e93d7ec6cac1cf0411401a2f7add8bf460ff85c4a976a63125",
+  "model_calls_at_preflight": "Q0 only; see post-mortem",
+  "visualization_mapping": "PC-V2"
+}

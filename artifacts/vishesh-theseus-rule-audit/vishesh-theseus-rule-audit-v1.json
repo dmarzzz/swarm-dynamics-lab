@@ -1,0 +1,5926 @@
+{
+  "scope": "Retrospective descriptive audit; candidate signature matches are nonexclusive, not causal evidence. No model calls.",
+  "checks": {
+    "durable_request_response_matches": 48,
+    "rule_and_case_matches": 48,
+    "complete_unique_valid_commands": 48,
+    "complete_provider_outputs": 48,
+    "uniquely_identifiable_history_classes": 72,
+    "independent_scores_match": 288,
+    "exact_current_table_rows": 144,
+    "clean_ceiling_rule_delivered": 12,
+    "ceiling_system_learner_framing": 12
+  },
+  "groups": {
+    "S0/incident/ceiling/0": {
+      "n": 12,
+      "correct": 9
+    },
+    "S0/incident/ceiling": {
+      "n": 24,
+      "correct": 20
+    },
+    "S0/ceiling": {
+      "n": 72,
+      "correct": 58
+    },
+    "S0/all": {
+      "n": 144,
+      "correct": 107
+    },
+    "S0/incident/ceiling/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/ceiling/bits01": {
+      "n": 14,
+      "correct": 13
+    },
+    "S0/incident/ceiling/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/bits11": {
+      "n": 9,
+      "correct": 6
+    },
+    "S0/incident/ceiling/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/0/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/ceiling/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/ceiling/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/5": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0/incident/ceiling/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/5/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/5/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/ceiling/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/ceiling/bits00": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0/incident/learner/0": {
+      "n": 12,
+      "correct": 7
+    },
+    "S0/incident/learner": {
+      "n": 24,
+      "correct": 15
+    },
+    "S0/learner": {
+      "n": 72,
+      "correct": 49
+    },
+    "S0/incident/learner/0/position0": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0/incident/learner/bits01": {
+      "n": 14,
+      "correct": 7
+    },
+    "S0/incident/learner/0/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/bits11": {
+      "n": 9,
+      "correct": 7
+    },
+    "S0/incident/learner/0/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/0/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/learner/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/learner/5": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0/incident/learner/5/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/5/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/learner/5/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/incident/learner/5/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/incident/learner/bits00": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0/migration/ceiling/0": {
+      "n": 12,
+      "correct": 12
+    },
+    "S0/migration/ceiling": {
+      "n": 24,
+      "correct": 22
+    },
+    "S0/migration/ceiling/0/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/bits01": {
+      "n": 13,
+      "correct": 13
+    },
+    "S0/migration/ceiling/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/bits11": {
+      "n": 11,
+      "correct": 9
+    },
+    "S0/migration/ceiling/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/5": {
+      "n": 12,
+      "correct": 10
+    },
+    "S0/migration/ceiling/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/5/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/5/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/migration/ceiling/5/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/migration/ceiling/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/ceiling/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/0": {
+      "n": 12,
+      "correct": 9
+    },
+    "S0/migration/learner": {
+      "n": 24,
+      "correct": 19
+    },
+    "S0/migration/learner/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/migration/learner/bits01": {
+      "n": 13,
+      "correct": 12
+    },
+    "S0/migration/learner/0/position1": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0/migration/learner/bits11": {
+      "n": 11,
+      "correct": 7
+    },
+    "S0/migration/learner/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/5": {
+      "n": 12,
+      "correct": 10
+    },
+    "S0/migration/learner/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/5/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/5/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/migration/learner/5/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/migration/learner/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/migration/learner/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/ceiling/0": {
+      "n": 12,
+      "correct": 10
+    },
+    "S0/release/ceiling": {
+      "n": 24,
+      "correct": 16
+    },
+    "S0/release/ceiling/0/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/ceiling/bits01": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0/release/ceiling/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/ceiling/bits11": {
+      "n": 11,
+      "correct": 4
+    },
+    "S0/release/ceiling/0/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/0/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/ceiling/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/ceiling/5": {
+      "n": 12,
+      "correct": 6
+    },
+    "S0/release/ceiling/5/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/5/position2": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0/release/ceiling/5/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/5/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/ceiling/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0/release/ceiling/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/learner/0": {
+      "n": 12,
+      "correct": 7
+    },
+    "S0/release/learner": {
+      "n": 24,
+      "correct": 15
+    },
+    "S0/release/learner/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/learner/bits01": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0/release/learner/0/position1": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0/release/learner/bits11": {
+      "n": 11,
+      "correct": 6
+    },
+    "S0/release/learner/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/learner/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/learner/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/learner/0/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/learner/5": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0/release/learner/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/learner/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/learner/5/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0/release/learner/5/position3": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0/release/learner/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0/release/learner/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0/release/learner/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/0": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0-repair/incident/ceiling": {
+      "n": 24,
+      "correct": 22
+    },
+    "S0-repair/ceiling": {
+      "n": 72,
+      "correct": 59
+    },
+    "S0-repair/all": {
+      "n": 144,
+      "correct": 111
+    },
+    "S0-repair/incident/ceiling/0/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/bits11": {
+      "n": 9,
+      "correct": 8
+    },
+    "S0-repair/incident/ceiling/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/0/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/incident/ceiling/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/bits01": {
+      "n": 13,
+      "correct": 12
+    },
+    "S0-repair/incident/ceiling/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0-repair/incident/ceiling/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/bits10": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/ceiling/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/incident/learner/0": {
+      "n": 12,
+      "correct": 12
+    },
+    "S0-repair/incident/learner": {
+      "n": 24,
+      "correct": 19
+    },
+    "S0-repair/learner": {
+      "n": 72,
+      "correct": 52
+    },
+    "S0-repair/incident/learner/0/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/bits11": {
+      "n": 9,
+      "correct": 8
+    },
+    "S0-repair/incident/learner/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/bits01": {
+      "n": 13,
+      "correct": 10
+    },
+    "S0-repair/incident/learner/0/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/5": {
+      "n": 12,
+      "correct": 7
+    },
+    "S0-repair/incident/learner/5/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/incident/learner/5/position1": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0-repair/incident/learner/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/5/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/incident/learner/bits10": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/incident/learner/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/incident/learner/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/0": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0-repair/migration/ceiling": {
+      "n": 24,
+      "correct": 17
+    },
+    "S0-repair/migration/ceiling/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/bits11": {
+      "n": 15,
+      "correct": 8
+    },
+    "S0-repair/migration/ceiling/0/position1": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/ceiling/bits01": {
+      "n": 7,
+      "correct": 7
+    },
+    "S0-repair/migration/ceiling/0/position2": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/ceiling/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/0/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/5": {
+      "n": 12,
+      "correct": 9
+    },
+    "S0-repair/migration/ceiling/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/ceiling/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/ceiling/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/ceiling/5/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/0": {
+      "n": 12,
+      "correct": 9
+    },
+    "S0-repair/migration/learner": {
+      "n": 24,
+      "correct": 19
+    },
+    "S0-repair/migration/learner/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/bits11": {
+      "n": 15,
+      "correct": 11
+    },
+    "S0-repair/migration/learner/0/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/bits01": {
+      "n": 7,
+      "correct": 6
+    },
+    "S0-repair/migration/learner/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/5": {
+      "n": 12,
+      "correct": 10
+    },
+    "S0-repair/migration/learner/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/migration/learner/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/bits00": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/migration/ceiling/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/bits00": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/migration/learner/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/release/ceiling/0": {
+      "n": 12,
+      "correct": 9
+    },
+    "S0-repair/release/ceiling": {
+      "n": 24,
+      "correct": 20
+    },
+    "S0-repair/release/ceiling/0/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/bits01": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0-repair/release/ceiling/0/position1": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0-repair/release/ceiling/bits11": {
+      "n": 10,
+      "correct": 7
+    },
+    "S0-repair/release/ceiling/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/ceiling/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/5": {
+      "n": 12,
+      "correct": 11
+    },
+    "S0-repair/release/ceiling/5/position0": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/ceiling/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/release/ceiling/5/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/5/position4": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/ceiling/5/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/learner/0": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0-repair/release/learner": {
+      "n": 24,
+      "correct": 14
+    },
+    "S0-repair/release/learner/0/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/learner/bits01": {
+      "n": 12,
+      "correct": 8
+    },
+    "S0-repair/release/learner/0/position1": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0-repair/release/learner/bits11": {
+      "n": 10,
+      "correct": 4
+    },
+    "S0-repair/release/learner/0/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/learner/0/position3": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/learner/0/position4": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/learner/0/position5": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/learner/5": {
+      "n": 12,
+      "correct": 6
+    },
+    "S0-repair/release/learner/5/position0": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/learner/5/position1": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/learner/5/position2": {
+      "n": 2,
+      "correct": 2
+    },
+    "S0-repair/release/learner/bits10": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/release/learner/5/position3": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/learner/5/position4": {
+      "n": 2,
+      "correct": 0
+    },
+    "S0-repair/release/learner/5/position5": {
+      "n": 2,
+      "correct": 1
+    },
+    "S0-repair/release/ceiling/bits00": {
+      "n": 1,
+      "correct": 1
+    },
+    "S0-repair/release/learner/bits00": {
+      "n": 1,
+      "correct": 1
+    }
+  },
+  "candidate_signatures": {
+    "S0/incident/ceiling/correct": {
+      "decisions": 24,
+      "matches": 20,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/incident/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/incident/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/incident/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/incident/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/correct": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 7,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/incident/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 7,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/correct": {
+      "decisions": 24,
+      "matches": 22,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/migration/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 20,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/migration/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 22,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/migration/ceiling/signal_only": {
+      "decisions": 24,
+      "matches": 22,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/migration/ceiling/fresh_only": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/all_sources_ready": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/summary_shortcut": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/always_hold": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/always_ship": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/correct": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/migration/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/migration/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/migration/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/signal_only": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/fresh_only": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/all_sources_ready": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/summary_shortcut": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/always_hold": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/always_ship": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/migration/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/correct": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/release/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/release/ceiling/signal_only": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/release/ceiling/fresh_only": {
+      "decisions": 24,
+      "matches": 6,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 5,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/all_sources_ready": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/release/ceiling/summary_shortcut": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/always_hold": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0/release/ceiling/always_ship": {
+      "decisions": 24,
+      "matches": 5,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/correct": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/release/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/signal_only": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/fresh_only": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/all_sources_ready": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/summary_shortcut": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0/release/learner/always_hold": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/always_ship": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0/release/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/correct": {
+      "decisions": 24,
+      "matches": 22,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/correct": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 2,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 5,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 24,
+      "whole_batches": 4,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 7,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/incident/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/correct": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/signal_only": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/fresh_only": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/all_sources_ready": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/summary_shortcut": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/always_hold": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/always_ship": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 5,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/correct": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 20,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 20,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/signal_only": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/fresh_only": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/all_sources_ready": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/summary_shortcut": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/always_hold": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/always_ship": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 11,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/migration/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 7,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/correct": {
+      "decisions": 24,
+      "matches": 20,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/always_source_probe": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/always_source_ledger": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/always_source_canary": {
+      "decisions": 24,
+      "matches": 17,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/swapped_class": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/stale_rule": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/signal_only": {
+      "decisions": 24,
+      "matches": 19,
+      "whole_batches": 1,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/fresh_only": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/all_sources_ready": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/summary_shortcut": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/always_hold": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/always_ship": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/row_shift_-1": {
+      "decisions": 24,
+      "matches": 6,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/ceiling/row_shift_1": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/correct": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/always_source_probe": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/always_source_ledger": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/always_source_canary": {
+      "decisions": 24,
+      "matches": 15,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/swapped_class": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/stale_rule": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/signal_only": {
+      "decisions": 24,
+      "matches": 13,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/fresh_only": {
+      "decisions": 24,
+      "matches": 10,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/signal_OR_fresh": {
+      "decisions": 24,
+      "matches": 9,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/all_sources_ready": {
+      "decisions": 24,
+      "matches": 18,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/summary_shortcut": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/always_hold": {
+      "decisions": 24,
+      "matches": 16,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/always_ship": {
+      "decisions": 24,
+      "matches": 8,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/row_shift_-1": {
+      "decisions": 24,
+      "matches": 12,
+      "whole_batches": 0,
+      "batches": 4
+    },
+    "S0-repair/release/learner/row_shift_1": {
+      "decisions": 24,
+      "matches": 14,
+      "whole_batches": 0,
+      "batches": 4
+    }
+  },
+  "errors": [
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-ceiling",
+      "step": 5,
+      "position": 4,
+      "id": "incident:300:qualification:5:A:1",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "probe",
+      "action": "none",
+      "notebook": "Applied explicit rule deterministically: Class A triggers on probe signal, Class B on ledger signal. Freshness and summary are non-authoritative. A:2,A:1,A:0 all have probe=false\u2192none. B:0,B:2 have ledger=true\u2192ledger. B:1 has ledger=false\u2192none. Rule is consistent with all historical and feedback outcomes."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 0,
+      "position": 0,
+      "id": "incident:300:qualification:0:A:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "ledger",
+      "notebook": "Pattern analysis: Class A incidents with ledger signal \u2192 canary precaution (training). Class B incidents with ledger signal \u2192 ledger precaution (training). Probe signal without ledger \u2192 probe precaution. Stale probe data with no other signals \u2192 none. Class A with stale probe and ledger signal \u2192 none (historical precedent). Applied ledger for ledger-signal cases, probe for probe-signal cases, none for stale/clear patterns."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 0,
+      "position": 2,
+      "id": "incident:300:qualification:0:A:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "probe",
+      "notebook": "Pattern analysis: Class A incidents with ledger signal \u2192 canary precaution (training). Class B incidents with ledger signal \u2192 ledger precaution (training). Probe signal without ledger \u2192 probe precaution. Stale probe data with no other signals \u2192 none. Class A with stale probe and ledger signal \u2192 none (historical precedent). Applied ledger for ledger-signal cases, probe for probe-signal cases, none for stale/clear patterns."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 0,
+      "position": 3,
+      "id": "incident:300:qualification:0:B:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "probe",
+      "notebook": "Pattern analysis: Class A incidents with ledger signal \u2192 canary precaution (training). Class B incidents with ledger signal \u2192 ledger precaution (training). Probe signal without ledger \u2192 probe precaution. Stale probe data with no other signals \u2192 none. Class A with stale probe and ledger signal \u2192 none (historical precedent). Applied ledger for ledger-signal cases, probe for probe-signal cases, none for stale/clear patterns."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 5,
+      "position": 4,
+      "id": "incident:300:qualification:5:A:1",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "probe",
+      "action": "canary",
+      "notebook": "Pattern confirmed: Class A with ledger+probe signals \u2192 canary. Class B with ledger signal \u2192 ledger. Probe signal alone without ledger \u2192 probe. All-clear or stale-only \u2192 none. Applied canary to A:1 (ledger+probe), ledger to B:0 and B:2 (ledger signal), none to A:2, B:1, A:0 (no actionable signals or stale data). Consistent with training/feedback outcomes."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 0,
+      "position": 0,
+      "id": "incident:301:qualification:0:B:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "canary",
+      "notebook": "Applied explicit rule: Class A uses ledger signal, Class B uses canary signal. Freshness and summary ignored per rule. B:1 canary=true\u2192canary; B:2 canary=false\u2192none; A:2 ledger=true\u2192ledger; B:0 canary=true\u2192none (stale probe noted but irrelevant); A:1 ledger=false\u2192none; A:0 ledger=false\u2192none. History confirms pattern: ledger governs A, canary governs B regardless of other signals."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 0,
+      "position": 3,
+      "id": "incident:301:qualification:0:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "canary",
+      "action": "none",
+      "notebook": "Applied explicit rule: Class A uses ledger signal, Class B uses canary signal. Freshness and summary ignored per rule. B:1 canary=true\u2192canary; B:2 canary=false\u2192none; A:2 ledger=true\u2192ledger; B:0 canary=true\u2192none (stale probe noted but irrelevant); A:1 ledger=false\u2192none; A:0 ledger=false\u2192none. History confirms pattern: ledger governs A, canary governs B regardless of other signals."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 0,
+      "position": 4,
+      "id": "incident:301:qualification:0:A:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ledger",
+      "action": "none",
+      "notebook": "Applied explicit rule: Class A uses ledger signal, Class B uses canary signal. Freshness and summary ignored per rule. B:1 canary=true\u2192canary; B:2 canary=false\u2192none; A:2 ledger=true\u2192ledger; B:0 canary=true\u2192none (stale probe noted but irrelevant); A:1 ledger=false\u2192none; A:0 ledger=false\u2192none. History confirms pattern: ledger governs A, canary governs B regardless of other signals."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 0,
+      "position": 0,
+      "id": "incident:301:qualification:0:B:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "ledger",
+      "notebook": "Pattern analysis: Service-A incidents with ledger+probe signals \u2192 ledger command (aligns with training A:2,A:4-7). Service-B with canary signal \u2192 canary command (training B:3-7). Service-B with ledger+probe but no canary \u2192 ledger command. All-false signals with fresh data \u2192 none (training B:0). Probe staleness alone doesn't override signal pattern. Ledger is primary diagnostic for A-class; canary for B-class with signal. Central queue incidents prioritized."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 0,
+      "position": 1,
+      "id": "incident:301:qualification:0:B:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "none",
+      "action": "probe",
+      "notebook": "Pattern analysis: Service-A incidents with ledger+probe signals \u2192 ledger command (aligns with training A:2,A:4-7). Service-B with canary signal \u2192 canary command (training B:3-7). Service-B with ledger+probe but no canary \u2192 ledger command. All-false signals with fresh data \u2192 none (training B:0). Probe staleness alone doesn't override signal pattern. Ledger is primary diagnostic for A-class; canary for B-class with signal. Central queue incidents prioritized."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 5,
+      "position": 0,
+      "id": "incident:301:qualification:5:B:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "canary",
+      "action": "none",
+      "notebook": "Service-A pattern: ledger+probe signals\u2192ledger; all-false\u2192none. Service-B pattern: canary signal\u2192canary; ledger+probe without canary\u2192ledger; all-false\u2192none. Probe staleness doesn't override signal patterns. Central queue prioritized. Case 5:A:0 has stale probe but all-false signals\u2192none. Case 5:B:2 has ledger+probe signals without canary\u2192ledger per feedback pattern."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 5,
+      "position": 2,
+      "id": "incident:301:qualification:5:A:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "none",
+      "action": "ledger",
+      "notebook": "Service-A pattern: ledger+probe signals\u2192ledger; all-false\u2192none. Service-B pattern: canary signal\u2192canary; ledger+probe without canary\u2192ledger; all-false\u2192none. Probe staleness doesn't override signal patterns. Central queue prioritized. Case 5:A:0 has stale probe but all-false signals\u2192none. Case 5:B:2 has ledger+probe signals without canary\u2192ledger per feedback pattern."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 5,
+      "position": 5,
+      "id": "incident:301:qualification:5:B:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "none",
+      "action": "ledger",
+      "notebook": "Service-A pattern: ledger+probe signals\u2192ledger; all-false\u2192none. Service-B pattern: canary signal\u2192canary; ledger+probe without canary\u2192ledger; all-false\u2192none. Probe staleness doesn't override signal patterns. Central queue prioritized. Case 5:A:0 has stale probe but all-false signals\u2192none. Case 5:B:2 has ledger+probe signals without canary\u2192ledger per feedback pattern."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-ceiling",
+      "step": 5,
+      "position": 2,
+      "id": "migration:300:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule deterministically: Ship iff source signal=true AND fresh=true. Class A uses canary; Class B uses ledger. A:2 canary(F,F)\u2192hold. B:2 canary(T,T) but ledger(F,F)\u2192hold. A:0 canary(T,F)\u2192hold. A:1 canary(T,T)\u2192ship. B:0 ledger(F,F)\u2192hold. B:1 ledger(T,T)\u2192ship. Rule is deterministic; summary ignored. Probe freshness irrelevant. History and feedback confirm this approach."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 0,
+      "position": 0,
+      "id": "migration:300:qualification:0:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Pattern analysis: canary+ledger+probe all true\u2192ship (B:2, A:0). Canary true alone\u2192ship if ledger fresh (B:1). Mixed signals with stale probe\u2192hold (B:0, A:0). Canary false with probe true\u2192hold (A:1). All false\u2192hold (A:2). Service class A stricter: requires stronger consensus. Stale data points increase hold bias. Summary 'looks clear' insufficient without signal alignment."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 0,
+      "position": 1,
+      "id": "migration:300:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Pattern analysis: canary+ledger+probe all true\u2192ship (B:2, A:0). Canary true alone\u2192ship if ledger fresh (B:1). Mixed signals with stale probe\u2192hold (B:0, A:0). Canary false with probe true\u2192hold (A:1). All false\u2192hold (A:2). Service class A stricter: requires stronger consensus. Stale data points increase hold bias. Summary 'looks clear' insufficient without signal alignment."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 5,
+      "position": 2,
+      "id": "migration:300:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Decision logic: All-true signals (canary+ledger+probe) ship; mixed/stale signals hold. Case A:1 ships (all true). Case B:1 ships (canary true, ledger fresh). Cases A:2, B:2, A:0, B:0 hold due to signal conflicts or stale probe data. Service class A requires stricter consensus; stale evidence increases hold bias. Summary field ignored per feedback pattern\u2014signal freshness and alignment drive decisions."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-ceiling",
+      "step": 5,
+      "position": 3,
+      "id": "migration:301:qualification:5:A:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule consistently: Class A ships iff ledger fresh=true AND signal=true; Class B ships iff canary fresh=true AND signal=true. B:2 shipped (canary fresh+signal). A:1,A:2,A:0 held (ledger signal=false or missing). B:1 shipped (canary fresh+signal). B:0 held (canary signal=false). Rule validated against feedback and history. Probe and summary ignored per directive."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 0,
+      "position": 1,
+      "id": "migration:301:qualification:0:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Pattern analysis: ledger signal is critical discriminator. All shipped cases in history had ledger=true. Class A: conservative stance\u2014hold unless all three signals positive. Class B: ledger=true enables ship despite other signals. Stale probes warrant caution. Case B:1 (all fresh, ledger+canary true) ships; others hold. Central queue shows mixed outcomes; east/west queues favor hold when ledger false."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 5,
+      "position": 3,
+      "id": "migration:301:qualification:5:A:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Ledger signal remains primary discriminator across all classes. Class B cases with ledger=true and fresh canary ship (B:2, B:1); stale probe or missing ledger signal triggers hold (B:0). Class A cases hold unless all three signals positive\u2014none qualify here. A:0 stale probe adds risk. Central queue shows volatility; east/west favor conservative stance when ledger false. Summary text unreliable; evidence-driven decisions override green labels."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-ceiling",
+      "step": 5,
+      "position": 2,
+      "id": "release:300:qualification:5:A:2",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Applied explicit rule: Ship iff source signal=true AND fresh=true. Class A source=probe, Class B source=ledger. A:1 probe fresh=true signal=false\u2192hold. B:2 ledger fresh=true signal=true\u2192ship. A:2 canary signal=true but source is probe (fresh=true signal=false)\u2192hold. B:1 ledger fresh=true signal=false\u2192hold. A:0 probe fresh=false\u2192hold. B:0 ledger fresh=true signal=true\u2192ship. Rule deterministic; summary disregarded per guidance."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "position": 0,
+      "id": "release:300:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Pattern analysis: History shows canary signal is strongest single indicator\u2014all canary-true cases shipped except one (B:3 held, anomaly). Ledger or probe signals alone warrant hold for A-class; B-class more permissive. Stale probe data acceptable if other signals clear. B:0 all-clear with fresh canary/ledger\u2192ship. A:0 stale probe but all signals clear\u2192ship. A:1,A:2,B:1,B:2 have signal conflicts (ledger or probe positive)\u2192hold conservatively. Service class A stricter threshold applied."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "position": 1,
+      "id": "release:300:qualification:0:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Pattern analysis: History shows canary signal is strongest single indicator\u2014all canary-true cases shipped except one (B:3 held, anomaly). Ledger or probe signals alone warrant hold for A-class; B-class more permissive. Stale probe data acceptable if other signals clear. B:0 all-clear with fresh canary/ledger\u2192ship. A:0 stale probe but all signals clear\u2192ship. A:1,A:2,B:1,B:2 have signal conflicts (ledger or probe positive)\u2192hold conservatively. Service class A stricter threshold applied."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "position": 4,
+      "id": "release:300:qualification:0:A:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Pattern analysis: History shows canary signal is strongest single indicator\u2014all canary-true cases shipped except one (B:3 held, anomaly). Ledger or probe signals alone warrant hold for A-class; B-class more permissive. Stale probe data acceptable if other signals clear. B:0 all-clear with fresh canary/ledger\u2192ship. A:0 stale probe but all signals clear\u2192ship. A:1,A:2,B:1,B:2 have signal conflicts (ledger or probe positive)\u2192hold conservatively. Service class A stricter threshold applied."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "position": 5,
+      "id": "release:300:qualification:0:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Pattern analysis: History shows canary signal is strongest single indicator\u2014all canary-true cases shipped except one (B:3 held, anomaly). Ledger or probe signals alone warrant hold for A-class; B-class more permissive. Stale probe data acceptable if other signals clear. B:0 all-clear with fresh canary/ledger\u2192ship. A:0 stale probe but all signals clear\u2192ship. A:1,A:2,B:1,B:2 have signal conflicts (ledger or probe positive)\u2192hold conservatively. Service class A stricter threshold applied."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 5,
+      "position": 1,
+      "id": "release:300:qualification:5:B:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied learned pattern: canary signal is primary indicator; any ledger/probe signal triggers hold for A-class; B-class allows ship if canary clear. A:0 held despite all-clear signals due to stale probe (freshness matters). B:1 shipped on all-clear fresh data. B:0 shipped: canary+ledger both positive but B-class permits. Conservative stance on A-class conflicts. Stale data treated as risk factor."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 5,
+      "position": 3,
+      "id": "release:300:qualification:5:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Applied learned pattern: canary signal is primary indicator; any ledger/probe signal triggers hold for A-class; B-class allows ship if canary clear. A:0 held despite all-clear signals due to stale probe (freshness matters). B:1 shipped on all-clear fresh data. B:0 shipped: canary+ledger both positive but B-class permits. Conservative stance on A-class conflicts. Stale data treated as risk factor."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 0,
+      "position": 2,
+      "id": "release:301:qualification:0:A:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when source signal=true AND fresh=true. Class A uses ledger (all cases have ledger.signal=false). Class B uses canary (B:1 has canary.signal=true but B:0,B:2 have canary.signal=false). All cases fail the dual-condition requirement. History confirms: ship only when both conditions met (e.g., A:4,A:5,A:7 shipped with ledger fresh+signal; B:3,B:4,B:5,B:6 shipped with canary fresh+signal). Hold all current cases."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 0,
+      "position": 3,
+      "id": "release:301:qualification:0:B:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when source signal=true AND fresh=true. Class A uses ledger (all cases have ledger.signal=false). Class B uses canary (B:1 has canary.signal=true but B:0,B:2 have canary.signal=false). All cases fail the dual-condition requirement. History confirms: ship only when both conditions met (e.g., A:4,A:5,A:7 shipped with ledger fresh+signal; B:3,B:4,B:5,B:6 shipped with canary fresh+signal). Hold all current cases."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "position": 0,
+      "id": "release:301:qualification:5:B:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when class source has BOTH signal=true AND fresh=true. Class A source is canary; Class B source is canary. Current cases: A:1 (canary fresh+signal), A:2 (canary fresh+signal) meet criteria but ledger/probe signals mixed. B:1 (canary fresh+signal) meets criteria but ledger signal=false. Feedback shows mismatches (e.g., 0:A:0 should ship but held). Rule interpretation: strict dual-condition on designated source only. All current cases fail: A:0,A:1,A:2 have canary.signal=true but A:1 ledger.signal=false; B:0,B:2 canary.signal=false; B:1 canary.signal=true. Hold all pending review of rule application consistency."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "position": 1,
+      "id": "release:301:qualification:5:A:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when class source has BOTH signal=true AND fresh=true. Class A source is canary; Class B source is canary. Current cases: A:1 (canary fresh+signal), A:2 (canary fresh+signal) meet criteria but ledger/probe signals mixed. B:1 (canary fresh+signal) meets criteria but ledger signal=false. Feedback shows mismatches (e.g., 0:A:0 should ship but held). Rule interpretation: strict dual-condition on designated source only. All current cases fail: A:0,A:1,A:2 have canary.signal=true but A:1 ledger.signal=false; B:0,B:2 canary.signal=false; B:1 canary.signal=true. Hold all pending review of rule application consistency."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "position": 2,
+      "id": "release:301:qualification:5:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when class source has BOTH signal=true AND fresh=true. Class A source is canary; Class B source is canary. Current cases: A:1 (canary fresh+signal), A:2 (canary fresh+signal) meet criteria but ledger/probe signals mixed. B:1 (canary fresh+signal) meets criteria but ledger signal=false. Feedback shows mismatches (e.g., 0:A:0 should ship but held). Rule interpretation: strict dual-condition on designated source only. All current cases fail: A:0,A:1,A:2 have canary.signal=true but A:1 ledger.signal=false; B:0,B:2 canary.signal=false; B:1 canary.signal=true. Hold all pending review of rule application consistency."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "position": 3,
+      "id": "release:301:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when class source has BOTH signal=true AND fresh=true. Class A source is canary; Class B source is canary. Current cases: A:1 (canary fresh+signal), A:2 (canary fresh+signal) meet criteria but ledger/probe signals mixed. B:1 (canary fresh+signal) meets criteria but ledger signal=false. Feedback shows mismatches (e.g., 0:A:0 should ship but held). Rule interpretation: strict dual-condition on designated source only. All current cases fail: A:0,A:1,A:2 have canary.signal=true but A:1 ledger.signal=false; B:0,B:2 canary.signal=false; B:1 canary.signal=true. Hold all pending review of rule application consistency."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "position": 4,
+      "id": "release:301:qualification:5:A:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Applied explicit rule: Ship only when class source has BOTH signal=true AND fresh=true. Class A source is canary; Class B source is canary. Current cases: A:1 (canary fresh+signal), A:2 (canary fresh+signal) meet criteria but ledger/probe signals mixed. B:1 (canary fresh+signal) meets criteria but ledger signal=false. Feedback shows mismatches (e.g., 0:A:0 should ship but held). Rule interpretation: strict dual-condition on designated source only. All current cases fail: A:0,A:1,A:2 have canary.signal=true but A:1 ledger.signal=false; B:0,B:2 canary.signal=false; B:1 canary.signal=true. Hold all pending review of rule application consistency."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 0,
+      "position": 1,
+      "id": "release:301:qualification:0:A:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Pattern analysis: Service A ships when canary+ledger both signal true (cases A:1, A:0) or mixed with probe true. A:2 held due to canary false despite probe signal. Service B: shipped when all three fresh and canary+ledger true (B:1 pattern). B:0 held due to stale probe. B:2 held due to canary false. Key rule: require canary fresh+signal true for ship; ledger signal matters for A-class. Stale probes trigger hold unless compensated by strong ledger+canary alignment."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 5,
+      "position": 2,
+      "id": "release:301:qualification:5:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Decision logic: Canary fresh+signal true is primary ship criterion. A-class requires ledger signal alignment; B-class more tolerant. Stale probe data triggers hold unless compensated by strong canary+ledger consensus. B:2 ships (canary+ledger true, fresh). A:1 ships (all fresh, canary+ledger true). B:0 held (stale probe). A:0 held (stale probe, ledger false). A:2 ships (canary+ledger true, probe fresh+signal). B:1 held (canary signal false despite ledger true). Pattern: freshness + canary signal + ledger alignment drive decisions."
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 5,
+      "position": 3,
+      "id": "release:301:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Decision logic: Canary fresh+signal true is primary ship criterion. A-class requires ledger signal alignment; B-class more tolerant. Stale probe data triggers hold unless compensated by strong canary+ledger consensus. B:2 ships (canary+ledger true, fresh). A:1 ships (all fresh, canary+ledger true). B:0 held (stale probe). A:0 held (stale probe, ledger false). A:2 ships (canary+ledger true, probe fresh+signal). B:1 held (canary signal false despite ledger true). Pattern: freshness + canary signal + ledger alignment drive decisions."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 0,
+      "position": 2,
+      "id": "incident:302:qualification:0:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "canary",
+      "action": "none",
+      "notebook": "Class A governed by CANARY source: apply canary precaution when CANARY signal=YES, else none. Class B governed by LEDGER source: apply ledger precaution when LEDGER signal=YES, else none. Summary, queue, and freshness are ignored per rule. All six cases processed: A cases use CANARY signal (YES\u2192canary, NO\u2192none); B cases use LEDGER signal (YES\u2192ledger, NO\u2192none)."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 5,
+      "position": 5,
+      "id": "incident:302:qualification:5:B:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "ledger",
+      "notebook": "Applied rule: Class A uses probe precaution when PROBE signal=YES, else none. Class B uses ledger precaution when LEDGER signal=YES, else none. Summary, queue, canary, and freshness are ignored per instructions. All six cases evaluated independently against their governing source signals."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 5,
+      "position": 1,
+      "id": "incident:302:qualification:5:A:1",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "none",
+      "action": "canary",
+      "notebook": "Class A: CANARY signal governs (YES\u2192canary, NO\u2192none). Class B: LEDGER signal governs (YES\u2192ledger, NO\u2192none). All six current cases resolved by applying binary signal check per class. Feedback confirms rule stability across qualification rounds. Summary, queue, and freshness remain noise. No rule adjustments needed."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 5,
+      "position": 3,
+      "id": "incident:302:qualification:5:A:0",
+      "source": "probe",
+      "governing": {
+        "fresh": false,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "probe",
+      "action": "none",
+      "notebook": "Class A: CANARY signal governs (YES\u2192canary, NO\u2192none). Class B: LEDGER signal governs (YES\u2192ledger, NO\u2192none). All six current cases resolved by applying binary signal check per class. Feedback confirms rule stability across qualification rounds. Summary, queue, and freshness remain noise. No rule adjustments needed."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 5,
+      "position": 0,
+      "id": "incident:303:qualification:5:A:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ledger",
+      "action": "probe",
+      "notebook": "Class A governed by PROBE signal: action probe when YES, none otherwise. Class B governed by CANARY signal: action canary when YES, none otherwise. Freshness, queue, and summary are irrelevant. All six qualification cases matched inferred rules perfectly. Current cases applied deterministic mapping: A cases use PROBE signal, B cases use CANARY signal. No rule adjustments needed."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 5,
+      "position": 1,
+      "id": "incident:303:qualification:5:A:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "none",
+      "action": "probe",
+      "notebook": "Class A governed by PROBE signal: action probe when YES, none otherwise. Class B governed by CANARY signal: action canary when YES, none otherwise. Freshness, queue, and summary are irrelevant. All six qualification cases matched inferred rules perfectly. Current cases applied deterministic mapping: A cases use PROBE signal, B cases use CANARY signal. No rule adjustments needed."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 5,
+      "position": 5,
+      "id": "incident:303:qualification:5:A:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "none",
+      "action": "probe",
+      "notebook": "Class A governed by PROBE signal: action probe when YES, none otherwise. Class B governed by CANARY signal: action canary when YES, none otherwise. Freshness, queue, and summary are irrelevant. All six qualification cases matched inferred rules perfectly. Current cases applied deterministic mapping: A cases use PROBE signal, B cases use CANARY signal. No rule adjustments needed."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "position": 2,
+      "id": "migration:302:qualification:0:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "position": 4,
+      "id": "migration:302:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "position": 5,
+      "id": "migration:302:qualification:0:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY source: ship only when canary signal=true AND fresh=true. Class B governed by LEDGER source: ship only when ledger signal=true AND fresh=true. Case A:2 ships (canary YES+YES). Cases A:1, A:0 hold (canary signal or fresh missing). Cases B:2, B:0, B:1 hold (ledger fresh missing or signal missing). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "position": 1,
+      "id": "migration:302:qualification:5:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "position": 4,
+      "id": "migration:302:qualification:5:B:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "position": 5,
+      "id": "migration:302:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has both signal=true AND fresh=true. A:1 ships (CANARY: signal YES, fresh YES). A:2 holds (CANARY: signal NO). A:0 holds (CANARY: fresh NO). B:0,B:1,B:2 all hold (LEDGER signal YES but B:0 fresh NO; B:1,B:2 signal NO). Summary and queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 0,
+      "position": 1,
+      "id": "migration:302:qualification:0:A:1",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Class A governed by CANARY (signal+fresh=ship). Class B governed by LEDGER (signal+fresh=ship). A:2 CANARY YES+YES\u2192ship. A:1 CANARY NO but LEDGER YES+YES\u2192ship. A:0 CANARY YES+YES\u2192ship. B:2 LEDGER NO+YES\u2192hold. B:0 LEDGER YES+YES but PROBE NO+NO\u2192hold (PROBE fresh missing). B:1 LEDGER YES+YES\u2192ship. Pattern: each class has one governing source requiring both signal and fresh YES to ship."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 0,
+      "position": 4,
+      "id": "migration:302:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY (signal+fresh=ship). Class B governed by LEDGER (signal+fresh=ship). A:2 CANARY YES+YES\u2192ship. A:1 CANARY NO but LEDGER YES+YES\u2192ship. A:0 CANARY YES+YES\u2192ship. B:2 LEDGER NO+YES\u2192hold. B:0 LEDGER YES+YES but PROBE NO+NO\u2192hold (PROBE fresh missing). B:1 LEDGER YES+YES\u2192ship. Pattern: each class has one governing source requiring both signal and fresh YES to ship."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 5,
+      "position": 1,
+      "id": "migration:302:qualification:5:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY (requires signal YES + fresh YES to ship). Class B governed by LEDGER (requires signal YES + fresh YES to ship). A:1 CANARY YES+YES\u2192ship. A:2 CANARY NO\u2192hold. A:0 CANARY YES but fresh NO\u2192hold. B:0 LEDGER NO\u2192hold. B:1 LEDGER YES but CANARY NO\u2192hold. B:2 LEDGER YES+YES\u2192ship. Feedback corrected A:1 rule: CANARY governs, not LEDGER. B:0 feedback shows LEDGER YES+YES shipped despite PROBE NO, confirming LEDGER governs B."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 5,
+      "position": 5,
+      "id": "migration:302:qualification:5:A:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY (requires signal YES + fresh YES to ship). Class B governed by LEDGER (requires signal YES + fresh YES to ship). A:1 CANARY YES+YES\u2192ship. A:2 CANARY NO\u2192hold. A:0 CANARY YES but fresh NO\u2192hold. B:0 LEDGER NO\u2192hold. B:1 LEDGER YES but CANARY NO\u2192hold. B:2 LEDGER YES+YES\u2192ship. Feedback corrected A:1 rule: CANARY governs, not LEDGER. B:0 feedback shows LEDGER YES+YES shipped despite PROBE NO, confirming LEDGER governs B."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-ceiling",
+      "step": 0,
+      "position": 0,
+      "id": "migration:303:qualification:0:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE (signal+fresh). Class B governed by CANARY (signal+fresh). Applied rule: ship only when governing source has both signal=true AND fresh=true. All other cases held. Summary, queue, and ledger ignored per rule. No anomalies detected."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-learner",
+      "step": 0,
+      "position": 0,
+      "id": "migration:303:qualification:0:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE (signal+fresh=ship). Class B governed by CANARY (signal+fresh=ship). Rule: ship only when governing source has both signal YES and fresh YES; otherwise hold. Summary and queue ignored per spec. PROBE fresh=NO blocks A:0. CANARY fresh=YES enables B:2,B:1. LEDGER fresh mismatch in A:2 (signal YES but fresh YES, PROBE governs so hold). B:0 PROBE fresh=NO overrides other signals."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "position": 1,
+      "id": "release:302:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has signal=true AND fresh=true. A:2 (canary NO/YES)\u2192hold; B:0 (ledger YES/YES but class B uses ledger, not canary)\u2192hold; A:0 (canary NO/YES)\u2192hold; B:2 (ledger NO/YES)\u2192hold; B:1 (ledger NO/YES)\u2192hold; A:1 (canary YES/YES)\u2192ship. Correction: B:1 ledger is NO/YES, not both true\u2192hold. A:1 canary YES/YES\u2192ship."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "position": 4,
+      "id": "release:302:qualification:0:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Class A governed by CANARY; Class B governed by LEDGER. Ship only when governing source has signal=true AND fresh=true. A:2 (canary NO/YES)\u2192hold; B:0 (ledger YES/YES but class B uses ledger, not canary)\u2192hold; A:0 (canary NO/YES)\u2192hold; B:2 (ledger NO/YES)\u2192hold; B:1 (ledger NO/YES)\u2192hold; A:1 (canary YES/YES)\u2192ship. Correction: B:1 ledger is NO/YES, not both true\u2192hold. A:1 canary YES/YES\u2192ship."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 5,
+      "position": 1,
+      "id": "release:302:qualification:5:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE source: ship only when probe signal=YES AND fresh=YES. Class B governed by LEDGER source: ship only when ledger signal=YES AND fresh=YES. Applied rule strictly without summary or queue influence. A:2 ships (probe YES+YES). A:0 holds (probe YES but fresh NO). A:1 holds (probe NO). B:0 holds (ledger YES but fresh NO). B:1 ships (ledger YES+YES). B:2 holds (ledger NO)."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 0,
+      "position": 0,
+      "id": "release:302:qualification:0:A:2",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Class A governed by LEDGER (signal+fresh both YES\u2192ship). Class B governed by CANARY (signal+fresh both YES\u2192ship). A:2 has LEDGER YES+YES\u2192ship. B:0 has CANARY NO\u2192hold. A:0 has LEDGER NO\u2192hold. B:2 has CANARY NO\u2192hold. B:1 has CANARY YES+YES\u2192ship. A:1 has CANARY YES+YES\u2192ship. Summary and queue irrelevant per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 0,
+      "position": 1,
+      "id": "release:302:qualification:0:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by LEDGER (signal+fresh both YES\u2192ship). Class B governed by CANARY (signal+fresh both YES\u2192ship). A:2 has LEDGER YES+YES\u2192ship. B:0 has CANARY NO\u2192hold. A:0 has LEDGER NO\u2192hold. B:2 has CANARY NO\u2192hold. B:1 has CANARY YES+YES\u2192ship. A:1 has CANARY YES+YES\u2192ship. Summary and queue irrelevant per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 0,
+      "position": 4,
+      "id": "release:302:qualification:0:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Class A governed by LEDGER (signal+fresh both YES\u2192ship). Class B governed by CANARY (signal+fresh both YES\u2192ship). A:2 has LEDGER YES+YES\u2192ship. B:0 has CANARY NO\u2192hold. A:0 has LEDGER NO\u2192hold. B:2 has CANARY NO\u2192hold. B:1 has CANARY YES+YES\u2192ship. A:1 has CANARY YES+YES\u2192ship. Summary and queue irrelevant per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 5,
+      "position": 0,
+      "id": "release:302:qualification:5:A:2",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Revised governance: Class A governed by LEDGER (both signal+fresh YES\u2192ship). Class B governed by CANARY (both signal+fresh YES\u2192ship). Feedback corrections: A:2 qual LEDGER YES+YES but action hold (fresh requirement stricter?); B:0 qual LEDGER YES+YES\u2192ship despite CANARY NO; B:1 qual CANARY YES+YES but action hold (LEDGER NO blocks?). Hypothesis: Class B requires BOTH CANARY signal+fresh AND LEDGER signal YES. Class A requires LEDGER signal+fresh both YES. Current: A:2 LEDGER YES+YES\u2192ship; B:0 LEDGER YES but CANARY NO\u2192hold; A:0 LEDGER YES but fresh NO\u2192hold; B:1 LEDGER YES but CANARY NO\u2192hold; B:2 CANARY YES+YES\u2192ship; A:1 LEDGER NO\u2192hold."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 5,
+      "position": 1,
+      "id": "release:302:qualification:5:B:0",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Revised governance: Class A governed by LEDGER (both signal+fresh YES\u2192ship). Class B governed by CANARY (both signal+fresh YES\u2192ship). Feedback corrections: A:2 qual LEDGER YES+YES but action hold (fresh requirement stricter?); B:0 qual LEDGER YES+YES\u2192ship despite CANARY NO; B:1 qual CANARY YES+YES but action hold (LEDGER NO blocks?). Hypothesis: Class B requires BOTH CANARY signal+fresh AND LEDGER signal YES. Class A requires LEDGER signal+fresh both YES. Current: A:2 LEDGER YES+YES\u2192ship; B:0 LEDGER YES but CANARY NO\u2192hold; A:0 LEDGER YES but fresh NO\u2192hold; B:1 LEDGER YES but CANARY NO\u2192hold; B:2 CANARY YES+YES\u2192ship; A:1 LEDGER NO\u2192hold."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 5,
+      "position": 3,
+      "id": "release:302:qualification:5:B:1",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": true
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Revised governance: Class A governed by LEDGER (both signal+fresh YES\u2192ship). Class B governed by CANARY (both signal+fresh YES\u2192ship). Feedback corrections: A:2 qual LEDGER YES+YES but action hold (fresh requirement stricter?); B:0 qual LEDGER YES+YES\u2192ship despite CANARY NO; B:1 qual CANARY YES+YES but action hold (LEDGER NO blocks?). Hypothesis: Class B requires BOTH CANARY signal+fresh AND LEDGER signal YES. Class A requires LEDGER signal+fresh both YES. Current: A:2 LEDGER YES+YES\u2192ship; B:0 LEDGER YES but CANARY NO\u2192hold; A:0 LEDGER YES but fresh NO\u2192hold; B:1 LEDGER YES but CANARY NO\u2192hold; B:2 CANARY YES+YES\u2192ship; A:1 LEDGER NO\u2192hold."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 5,
+      "position": 4,
+      "id": "release:302:qualification:5:B:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Revised governance: Class A governed by LEDGER (both signal+fresh YES\u2192ship). Class B governed by CANARY (both signal+fresh YES\u2192ship). Feedback corrections: A:2 qual LEDGER YES+YES but action hold (fresh requirement stricter?); B:0 qual LEDGER YES+YES\u2192ship despite CANARY NO; B:1 qual CANARY YES+YES but action hold (LEDGER NO blocks?). Hypothesis: Class B requires BOTH CANARY signal+fresh AND LEDGER signal YES. Class A requires LEDGER signal+fresh both YES. Current: A:2 LEDGER YES+YES\u2192ship; B:0 LEDGER YES but CANARY NO\u2192hold; A:0 LEDGER YES but fresh NO\u2192hold; B:1 LEDGER YES but CANARY NO\u2192hold; B:2 CANARY YES+YES\u2192ship; A:1 LEDGER NO\u2192hold."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 0,
+      "position": 1,
+      "id": "release:303:qualification:0:A:1",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE source; Class B governed by CANARY source. Ship only when governing source has both signal=true AND fresh=true. Case B:1 ships (CANARY: YES+YES). Case B:2 ships (CANARY: YES+YES). All others hold due to missing dual-true condition on their governing source. Summary and other sources ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 0,
+      "position": 1,
+      "id": "release:303:qualification:0:A:1",
+      "source": "probe",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE (signal+fresh=ship). Class B governed by CANARY (signal+fresh=ship). A:1 PROBE lacks fresh. A:2 PROBE lacks signal. A:0 PROBE lacks both. B:0 CANARY lacks fresh. B:1,B:2 CANARY both YES\u2192ship. Summary/queue ignored per rule."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 5,
+      "position": 4,
+      "id": "release:303:qualification:5:B:0",
+      "source": "canary",
+      "governing": {
+        "fresh": true,
+        "signal": true
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": true
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": false,
+          "signal": false
+        }
+      },
+      "summary": "needs attention",
+      "truth": "ship",
+      "action": "hold",
+      "notebook": "Class A governed by PROBE (both signal+fresh required). Class B governed by CANARY (both signal+fresh required). Feedback corrected prior error: A:1 qual has PROBE signal+fresh=YES\u2192ship but accepted=ship confirms PROBE governs. B:1 qual has CANARY fresh=NO\u2192hold despite PROBE both YES. Revised: A needs PROBE signal AND fresh both YES. B needs CANARY signal AND fresh both YES. Current: A:1 PROBE fresh only; A:2 PROBE signal only; B:1 CANARY signal only; B:0 CANARY both NO."
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 5,
+      "position": 5,
+      "id": "release:303:qualification:5:A:2",
+      "source": "ledger",
+      "governing": {
+        "fresh": true,
+        "signal": false
+      },
+      "evidence": {
+        "canary": {
+          "fresh": true,
+          "signal": false
+        },
+        "ledger": {
+          "fresh": true,
+          "signal": false
+        },
+        "probe": {
+          "fresh": true,
+          "signal": true
+        }
+      },
+      "summary": "looks clear",
+      "truth": "hold",
+      "action": "ship",
+      "notebook": "Class A governed by PROBE (both signal+fresh required). Class B governed by CANARY (both signal+fresh required). Feedback corrected prior error: A:1 qual has PROBE signal+fresh=YES\u2192ship but accepted=ship confirms PROBE governs. B:1 qual has CANARY fresh=NO\u2192hold despite PROBE both YES. Revised: A needs PROBE signal AND fresh both YES. B needs CANARY signal AND fresh both YES. Current: A:1 PROBE fresh only; A:2 PROBE signal only; B:1 CANARY signal only; B:0 CANARY both NO."
+    }
+  ],
+  "equivalent_input_groups": [
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:0:A:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:300:qualification:0:A:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:300:qualification:0:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:0:B:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:300:qualification:0:B:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:5:A:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:300:qualification:5:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:5:B:0",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:300:qualification:5:B:2",
+          "action": "ledger"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:0:A:1",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:300:qualification:0:A:2",
+          "action": "probe"
+        },
+        {
+          "id": "incident:300:qualification:0:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:0:B:2",
+          "action": "probe"
+        },
+        {
+          "id": "incident:300:qualification:0:B:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:5:A:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:300:qualification:5:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-300-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:300:qualification:5:B:0",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:300:qualification:5:B:2",
+          "action": "ledger"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:0:B:1",
+          "action": "canary"
+        },
+        {
+          "id": "incident:301:qualification:0:B:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:0:A:2",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:301:qualification:0:A:1",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:5:B:1",
+          "action": "canary"
+        },
+        {
+          "id": "incident:301:qualification:5:B:0",
+          "action": "canary"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:5:A:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:301:qualification:5:A:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:301:qualification:5:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:0:B:1",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:301:qualification:0:B:2",
+          "action": "probe"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:0:A:2",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:301:qualification:0:A:1",
+          "action": "ledger"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:5:B:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:301:qualification:5:B:0",
+          "action": "canary"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-incident-301-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:301:qualification:5:A:2",
+          "action": "ledger"
+        },
+        {
+          "id": "incident:301:qualification:5:A:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:301:qualification:5:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:0:B:0",
+          "action": "ship"
+        },
+        {
+          "id": "migration:300:qualification:0:B:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:0:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:0:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:5:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:5:B:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:5:A:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:0:B:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:0:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:0:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:5:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:5:B:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-300-learner",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:300:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:300:qualification:5:A:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:0:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:0:B:0",
+          "action": "ship"
+        },
+        {
+          "id": "migration:301:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:301:qualification:5:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:5:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:0:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:301:qualification:5:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-migration-301-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:301:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:301:qualification:5:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:0:B:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:5:A:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "release:300:qualification:5:B:0",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:0:B:0",
+          "action": "ship"
+        },
+        {
+          "id": "release:300:qualification:0:B:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:0:A:0",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:5:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-300-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:300:qualification:5:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:300:qualification:5:B:0",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:0:A:1",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:0:B:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:5:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:5:B:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:5:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:0:A:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:0:B:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "release:301:qualification:5:B:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0",
+      "run": "S0-release-301-learner",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:301:qualification:5:A:1",
+          "action": "ship"
+        },
+        {
+          "id": "release:301:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:301:qualification:5:A:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:0:A:2",
+          "action": "canary"
+        },
+        {
+          "id": "incident:302:qualification:0:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:0:B:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:302:qualification:0:B:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:5:B:0",
+          "action": "none"
+        },
+        {
+          "id": "incident:302:qualification:5:B:2",
+          "action": "ledger"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:5:A:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:302:qualification:5:A:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:0:A:2",
+          "action": "canary"
+        },
+        {
+          "id": "incident:302:qualification:0:A:0",
+          "action": "canary"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:0:B:1",
+          "action": "none"
+        },
+        {
+          "id": "incident:302:qualification:0:B:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:5:B:0",
+          "action": "none"
+        },
+        {
+          "id": "incident:302:qualification:5:B:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-302-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:302:qualification:5:A:1",
+          "action": "canary"
+        },
+        {
+          "id": "incident:302:qualification:5:A:2",
+          "action": "none"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:0:B:2",
+          "action": "canary"
+        },
+        {
+          "id": "incident:303:qualification:0:B:0",
+          "action": "canary"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:0:A:0",
+          "action": "probe"
+        },
+        {
+          "id": "incident:303:qualification:0:A:1",
+          "action": "probe"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:5:A:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:303:qualification:5:A:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:5:B:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:303:qualification:5:B:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:0:B:2",
+          "action": "canary"
+        },
+        {
+          "id": "incident:303:qualification:0:B:0",
+          "action": "canary"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:0:A:0",
+          "action": "probe"
+        },
+        {
+          "id": "incident:303:qualification:0:A:1",
+          "action": "probe"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:5:A:2",
+          "action": "probe"
+        },
+        {
+          "id": "incident:303:qualification:5:A:0",
+          "action": "probe"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-incident-303-learner",
+      "step": 5,
+      "key": [
+        "B",
+        false,
+        null
+      ],
+      "decisions": [
+        {
+          "id": "incident:303:qualification:5:B:2",
+          "action": "none"
+        },
+        {
+          "id": "incident:303:qualification:5:B:0",
+          "action": "none"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:0:A:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:302:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:302:qualification:0:B:1",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:5:B:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:302:qualification:5:B:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:5:A:1",
+          "action": "ship"
+        },
+        {
+          "id": "migration:302:qualification:5:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 0,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:0:A:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:302:qualification:0:A:0",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:302:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:5:B:1",
+          "action": "hold"
+        },
+        {
+          "id": "migration:302:qualification:5:B:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-302-learner",
+      "step": 5,
+      "key": [
+        "A",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:302:qualification:5:A:1",
+          "action": "ship"
+        },
+        {
+          "id": "migration:302:qualification:5:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:303:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:303:qualification:0:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:303:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:303:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:303:qualification:5:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:303:qualification:0:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "migration:303:qualification:0:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:303:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-migration-303-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "migration:303:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "migration:303:qualification:5:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:0:A:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:302:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:0:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:302:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:5:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:302:qualification:5:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 0,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:0:A:2",
+          "action": "ship"
+        },
+        {
+          "id": "release:302:qualification:0:A:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 0,
+      "key": [
+        "B",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:0:B:2",
+          "action": "hold"
+        },
+        {
+          "id": "release:302:qualification:0:B:1",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-302-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:302:qualification:5:B:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:302:qualification:5:B:1",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:0:B:1",
+          "action": "ship"
+        },
+        {
+          "id": "release:303:qualification:0:B:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "release:303:qualification:5:B:0",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-ceiling",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "release:303:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:303:qualification:5:A:2",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 0,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:0:B:1",
+          "action": "ship"
+        },
+        {
+          "id": "release:303:qualification:0:B:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": false
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 5,
+      "key": [
+        "B",
+        true,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:5:B:2",
+          "action": "ship"
+        },
+        {
+          "id": "release:303:qualification:5:B:0",
+          "action": "hold"
+        }
+      ],
+      "inconsistent": true
+    },
+    {
+      "stage": "S0-repair",
+      "run": "S0-repair-release-303-learner",
+      "step": 5,
+      "key": [
+        "A",
+        false,
+        true
+      ],
+      "decisions": [
+        {
+          "id": "release:303:qualification:5:A:1",
+          "action": "hold"
+        },
+        {
+          "id": "release:303:qualification:5:A:0",
+          "action": "hold"
+        },
+        {
+          "id": "release:303:qualification:5:A:2",
+          "action": "ship"
+        }
+      ],
+      "inconsistent": true
+    }
+  ],
+  "freshness_coverage": {
+    "S0/ceiling/probe": {
+      "stale": 24,
+      "n": 72
+    },
+    "S0/ceiling/ledger": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0/ceiling/canary": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0/learner/probe": {
+      "stale": 24,
+      "n": 72
+    },
+    "S0/learner/ledger": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0/learner/canary": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0-repair/ceiling/probe": {
+      "stale": 24,
+      "n": 72
+    },
+    "S0-repair/ceiling/ledger": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0-repair/ceiling/canary": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0-repair/learner/probe": {
+      "stale": 24,
+      "n": 72
+    },
+    "S0-repair/learner/ledger": {
+      "stale": 0,
+      "n": 72
+    },
+    "S0-repair/learner/canary": {
+      "stale": 0,
+      "n": 72
+    }
+  },
+  "input_event_sha256": {
+    "S0/events/S0-incident-300-ceiling-00.json": "404b4ca2a0a23aa724cbf71101d1623db89b80e430f10344c18a1e66a8fd77fc",
+    "S0/events/S0-incident-300-ceiling-05.json": "c2b76899793104ee3df535e6492804af57d32ac8619a4b10164fca8981a7cd7d",
+    "S0/events/S0-incident-300-learner-00.json": "48b9781de72c414e858965a9624a8f70842d950f9852a38ee7ab62a65223af90",
+    "S0/events/S0-incident-300-learner-05.json": "2e3e41d8353e991aae95b59c32cb0f00caf166b9e1a93e265671b1e4e270556e",
+    "S0/events/S0-incident-301-ceiling-00.json": "558fc52fe1c80ff2cba606e33d56021d86282d18f5be7019e523656633ca586f",
+    "S0/events/S0-incident-301-ceiling-05.json": "5654e0bbb8df774443a27f141a19c546e739e28e8daff590c7b0c4c0faffeafd",
+    "S0/events/S0-incident-301-learner-00.json": "cea9a4b5d501ec492f70db0742580245cdda95b22d8b07ca97ce9bb3cdb63da9",
+    "S0/events/S0-incident-301-learner-05.json": "cd4d623f170d700ad235e35b015bcc28ac81fc066f51404623b2b35858d367f6",
+    "S0/events/S0-migration-300-ceiling-00.json": "66f4e4949551223dd61de65a55995d54423a4b2fb8639f6225545e934f5359b5",
+    "S0/events/S0-migration-300-ceiling-05.json": "c7527b0374ddcf41ff6d43ccbe097081e4fd7aadc2d6a3f88a4d5b70591000ff",
+    "S0/events/S0-migration-300-learner-00.json": "a6653dc9d20c3d1d613a057d99c96813778bc213e1fa89b24671d3b17d912692",
+    "S0/events/S0-migration-300-learner-05.json": "9fd523a9bcd6311cdd33fefd3c3384839e0e8e535939386a6c7c1afd0d0cb804",
+    "S0/events/S0-migration-301-ceiling-00.json": "b390b1663afd37ec79bbb2088451e5740b646ae6be164e8ffd5fbb2229ba62b6",
+    "S0/events/S0-migration-301-ceiling-05.json": "d0c0a4e37d37dc5d51eb3d87a88fd41e6e4431bf6c69cf20b1e2c5457d2b6141",
+    "S0/events/S0-migration-301-learner-00.json": "6e1497205329f0d0274e7af68470814d3c5dab033da86e7486955d2fa2173f1d",
+    "S0/events/S0-migration-301-learner-05.json": "34b8b584da0b387c989dfec7dde6e9d8555853577b204d32b537baeb6ee1d708",
+    "S0/events/S0-release-300-ceiling-00.json": "3ca37b752c21e51818d6514b55e715e80ba37e9305d208c4b79dcd5a5a13cf7a",
+    "S0/events/S0-release-300-ceiling-05.json": "770a871c374475e97bd4eca74c5d4f354b7517e94c6646645b1ebc955db91edc",
+    "S0/events/S0-release-300-learner-00.json": "4b7ec8d562f08b7487afec4eacdb6020b5ccb518a2e2bbdd9fcf2c1a17dad3ea",
+    "S0/events/S0-release-300-learner-05.json": "b1681e3452da1c6fa821f25aaec82f79ec88b09933856e79a689f5b3c17c3fe3",
+    "S0/events/S0-release-301-ceiling-00.json": "d8e5fe7df590450f3cdf8ce4e85002a14e26240b01654fece997cff4ca39029f",
+    "S0/events/S0-release-301-ceiling-05.json": "6a3f651d147d0f0daf271e9a71a3c58f3458faf5b75ebbddfc829d8b3547bca5",
+    "S0/events/S0-release-301-learner-00.json": "a7060680f620ac5777d2a80b9ecb62aeefad069d6f16abf5c353b2b1f4d924a5",
+    "S0/events/S0-release-301-learner-05.json": "20367bdf72fe7f0bb85a95b0220582663e8f4789e2820eed5119c80681ab92ce",
+    "S0-repair/events/S0-repair-incident-302-ceiling-00.json": "7dd9283828000d366a43818dad2790ea9b6592dbaa7bb2700dcfd706aa9879fa",
+    "S0-repair/events/S0-repair-incident-302-ceiling-05.json": "4b510a43c77be337013fd0e4240edb7bc5386b86db3d9fd0940a5d66392ed989",
+    "S0-repair/events/S0-repair-incident-302-learner-00.json": "df7226a5b63a9805a776ab5a376c7da4de96f7aba96b98b35f5406b78debec22",
+    "S0-repair/events/S0-repair-incident-302-learner-05.json": "aa4eeb7f254eb601cddf84166ac0b974cf60d17b408e1a1bce83cba6136044de",
+    "S0-repair/events/S0-repair-incident-303-ceiling-00.json": "43029e9c38d39d1df4a4319cb8f69d122584294bc7bbf8a0a51a45f0265764b5",
+    "S0-repair/events/S0-repair-incident-303-ceiling-05.json": "eca9263e405c3b0b9c2cfa5d78fa4f61186b14979cb6959558c54565aca413ca",
+    "S0-repair/events/S0-repair-incident-303-learner-00.json": "13b9adb36f25a334adf8cfc646a95c5f5f68efbb0e14b771684da459864e50c0",
+    "S0-repair/events/S0-repair-incident-303-learner-05.json": "f85cc93ad466aadf809664d374f2378cb33cb8a87b4fd5f5e5e6a467d789debe",
+    "S0-repair/events/S0-repair-migration-302-ceiling-00.json": "2c9960c888d3ea7a05ae79b8f91c6505a607f6e13f8640ac2f396df67054417c",
+    "S0-repair/events/S0-repair-migration-302-ceiling-05.json": "2b07142722f559f9231d8c9ed2fb9bc6bab6e89871e8232a7f2cc8a355d716a0",
+    "S0-repair/events/S0-repair-migration-302-learner-00.json": "5a48d371dfcc0debc1f54777033904939c92097d9394ab032cf8c18f8b38c31c",
+    "S0-repair/events/S0-repair-migration-302-learner-05.json": "fb1ba9564f8ae187862a868b8d3ab60fc1c724c0b83cb8a1764cb3f8112eec47",
+    "S0-repair/events/S0-repair-migration-303-ceiling-00.json": "a59371c44371782e8ce39c94086bc050bd0b69f0ddb4ce379be3c359d02380dc",
+    "S0-repair/events/S0-repair-migration-303-ceiling-05.json": "aa3e45c3bcf0bc50653e43387550d60a25db939be6b86bd822c9be1089a9e86d",
+    "S0-repair/events/S0-repair-migration-303-learner-00.json": "5d8aad65935ec78125471aa3a9d140c178e2445f4e32cf22ede864244ea2e072",
+    "S0-repair/events/S0-repair-migration-303-learner-05.json": "2cc389f729c5013a8b31604ff25a04f7690a0d1b7f31515b1c877f2ece64446b",
+    "S0-repair/events/S0-repair-release-302-ceiling-00.json": "976555492eb99d33bcd495ecbaef070f59211fc03d38f75c0dd094e4af0db4d9",
+    "S0-repair/events/S0-repair-release-302-ceiling-05.json": "f9c33914946cc882a759e3b29cf900b49dae281cbb7502ce33d93ad0a555801f",
+    "S0-repair/events/S0-repair-release-302-learner-00.json": "d80b6adfd7cda903e226bc1e4744707017ed57e7b0a7b36f823c7e402966521e",
+    "S0-repair/events/S0-repair-release-302-learner-05.json": "29ddf0e2354bba8990bd1034ffccce956848bf500d84091a906952f6d61d454a",
+    "S0-repair/events/S0-repair-release-303-ceiling-00.json": "82c41dc0fab8580451a7699bf75eb9574cf700001426704990ef11ba4d266f97",
+    "S0-repair/events/S0-repair-release-303-ceiling-05.json": "03d5c1b6f6488e8dfab9b36a241292a1795a4d86fe56f77e834a7344101c1d5a",
+    "S0-repair/events/S0-repair-release-303-learner-00.json": "75f6bfbd33d5a8b4298fe9bc01243e65e4bc728ec1ee8ffc0033ea13b4a6d09a",
+    "S0-repair/events/S0-repair-release-303-learner-05.json": "73d1490388f68f4a2b7ae5b63e3504a9c13b82953bd495fc67e8553499421ee4"
+  }
+}

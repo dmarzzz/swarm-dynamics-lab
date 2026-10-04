@@ -1,0 +1,1237 @@
+{
+  "schema_version": 1,
+  "assessed_at": "2026-10-04",
+  "assessor": "vishesh/codex-pi-review",
+  "source_commit": "9781739cd06e0c9606ed0ed053bf91b5e2a42b57",
+  "studies": [
+    {
+      "id": "quorum-of-mirrors",
+      "title": "Quorum of Mirrors \u2014 repeated reports versus independent sources",
+      "documents": [
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/README.md"
+      ],
+      "experiment_ids": [
+        "quorum-of-mirrors"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
+        "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
+      },
+      "sample_size_summary": "S0: 8 bit triples \u00d7 2 reliability settings \u00d7 2 identical-request samples = 16 configurations, 32/32 valid calls, 29 MAP-correct; not 32 independent worlds. S1 not run.",
+      "sources": [
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json"
+      ],
+      "status_at_assessment": "qualification_passed_no_swarm_efficacy"
+    },
+    {
+      "id": "phantom-coast",
+      "title": "Phantom Coast: PC-1",
+      "documents": [
+        "researchers/vishesh/notes/phantom-coast/README.md"
+      ],
+      "experiment_ids": [
+        "phantom-coast"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Native Jev passed the clean synthetic mapping screen; the history-persistence effect remains unestablished.",
+        "rationale": "All 18 clean maps were valid and correct across six generated worlds. This qualifies the clean mapping contract only; 648 cell choices and three observers per world are dependent, and no history-persistence cohort result is tracked at this cutoff."
+      },
+      "sample_size_summary": "Q0: 6 world roots \u00d7 3 observers = 18/18 valid maps, 648/648 cells correct. Gated S0 plans 6 new paired worlds and 522 map requests; no S0 effect result tracked.",
+      "sources": [
+        "researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md",
+        "researchers/vishesh/notes/phantom-coast/reviews/Q0-A1-POST.md",
+        "researchers/vishesh/notes/phantom-coast/results/Q0-A1-summary.json"
+      ],
+      "status_at_assessment": "qualification_passed_main_not_reconciled",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md": "f439e27c8ae4eb3795dbe86047b194b568e871a765cb6897853016745025bb6b",
+        "researchers/vishesh/notes/phantom-coast/reviews/Q0-A1-POST.md": "503758852288a40d5bdf4f9581687d74d33665b5fe46b237dd00b6d898cba307",
+        "researchers/vishesh/notes/phantom-coast/results/Q0-A1-summary.json": "ad5b9ace75770dedd56236ce0fb91bdc7baa40ebb9e2b1cb6e42eeeef9272219"
+      }
+    },
+    {
+      "id": "right-dissenter",
+      "title": "Dissent: The Right Dissenter",
+      "documents": [
+        "researchers/vishesh/notes/dissent/README.md"
+      ],
+      "experiment_ids": [
+        "right-dissenter"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/dissent/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: whether bounded evidence-backed challenge improves decisions against wrong majority reports without needless disruption.",
+        "rationale": "Votes are scripted; repeated native adjudications may share saved responses. Seven policies, five source/vote roles and temporal events do not multiply independent case count."
+      },
+      "sample_size_summary": "No native results. Planned Q0: 18 clean decisions. S1: 52 roots \u00d7 7 policies = 364 trajectories containing 420 decision opportunities (48 static roots and 4 temporal roots with 3 steps each), across 3 scenarios.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/README.md",
+        "researchers/vishesh/notes/dissent/LIVE-PLAN.md"
+      ],
+      "status_at_assessment": "planned_not_run"
+    },
+    {
+      "id": "optimal-swarm-size",
+      "title": "Optimal swarm size under task and resource constraints",
+      "documents": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md"
+      ],
+      "experiment_ids": [
+        "optimal-swarm-size-q1"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: whether a conditional launch rule can choose useful swarm size under task and resource constraints.",
+        "rationale": "Planned roots derive from 2 families \u00d72 structures \u00d78 roots and1 transfer family \u00d72 structures \u00d78 roots; population N=1/2/4/8/16. Fits/validation share no roots; profiles, sizes and repetitions are dependent within roots."
+      },
+      "sample_size_summary": "No model runs. Planned 32 core roots and 16 transfer roots; 2,512 episodes including 80 qualification and 512 fresh policy trials (3,792 with optional extension).",
+      "sources": [
+        "researchers/vishesh/notes/optimal-swarm-size/README.md",
+        "researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md",
+        "researchers/vishesh/notes/optimal-swarm-size/design.json"
+      ],
+      "status_at_assessment": "planned_not_run"
+    },
+    {
+      "id": "heterogeneous-swarms",
+      "title": "Heterogeneous swarms research designs",
+      "documents": [
+        "researchers/vishesh/notes/heterogeneous-swarms/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: whether mixed-model or self-differentiating swarms provide specialization beyond compute, correlation and coordination costs.",
+        "rationale": "Existing rubric scores measure editorial interest/preferences, not empirical confidence. Exact model, sample and launch contracts remain to be frozen per successor."
+      },
+      "sample_size_summary": "No experiments launched; 38 research questions with prospective designs, not 38 empirical samples.",
+      "sources": [
+        "researchers/vishesh/notes/heterogeneous-swarms/README.md"
+      ],
+      "status_at_assessment": "research_proposals_no_experiments"
+    },
+    {
+      "id": "theseus-v1",
+      "title": "Swarm of Theseus original cohort",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/README.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/swarm-of-theseus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Supplied procedure notes can preserve this small task performance after complete crew replacement; mentoring adds no established benefit.",
+        "rationale": "Tiny constructed feature space, supplied useful rules and note copying create ceiling effects; no evidence of emergent culture or mentoring advantage. Generations, members and cases are dependent within world."
+      },
+      "sample_size_summary": "S1:6 paired worlds (2 per3 scenarios) \u00d7 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+      ],
+      "status_at_assessment": "completed_exploratory"
+    },
+    {
+      "id": "theseus-v2",
+      "title": "Swarm of Theseus v2",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/v2/README.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The first v2 native screen failed action competence; procedure-continuity effects remain untested.",
+        "rationale": "Execution completed without invalid or missing responses, but explicit-rule and learner cells failed unchanged competence floors. These are observed rule-application errors, not evidence of cultural loss. A bounded repair on fresh seeds is planned; S1 was not started."
+      },
+      "sample_size_summary": "S0: 6 scenario/world roots (2 per 3 scenarios) \u00d7 2 readers = 12/12 two-checkpoint runs; 24 calls, 144 dependent decisions. Qualification failed; 24-continuation S1 not started.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-post.md",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/summary.json",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-pre.md"
+      ],
+      "status_at_assessment": "completed_failed_qualification",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-post.md": "d6ae2ddf66a272c7660cc457da48a8a85640f85b7c0eaf08fb48fda9dee3abf0",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/summary.json": "422fc892bd2b1da61bce6730c61082c074dcdd53d564090a87ddb98f8852bb0c",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json": "b67ad145865010a9c0ff741eea1dda64145bfc2e925eb1f9c3967d40742d82a3",
+        "researchers/vishesh/notes/swarm-of-theseus/v2/reviews/S0-repair-pre.md": "ded71c16a61ed5798affdebaddf5edea5d2c18cd62cf7546e5e3595219158b9a"
+      }
+    },
+    {
+      "id": "immune-v1",
+      "title": "Immune response v1 scripted cohort",
+      "documents": [
+        "researchers/vishesh/notes/actual-experiments/immune-response/README.md"
+      ],
+      "experiment_ids": [
+        "immune-response"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/actual-experiments/immune-response/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Oracle restoration repairs private/shared-state contamination in a programmed fixture.",
+        "rationale": "Deterministic engineering evidence only; names/ownership are permuted within a tightly specified fixture. Native v1 completion is not established by these sources."
+      },
+      "sample_size_summary": "Scripted S0:1 task \u00d7 3 strata \u00d7 6 arms =18 outcomes; S1:2 tasks \u00d7 3 strata \u00d7 6 arms =36 outcomes; 8 actors and24 rounds per trajectory.",
+      "sources": [
+        "researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md",
+        "researchers/vishesh/notes/actual-experiments/immune-response/preregistration-v1.md"
+      ],
+      "status_at_assessment": "historical_scripted_completed"
+    },
+    {
+      "id": "immune-v2",
+      "title": "Immune response v2 native diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/actual-experiments/immune-response/README.md"
+      ],
+      "experiment_ids": [
+        "immune-response"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/actual-experiments/immune-response/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: shared restoration contributes beyond private repair and stale-record blocking.",
+        "rationale": "Single native task and failed primary comparator prevent a robust LLM effect estimate; programmed equal results across incident strata do not demonstrate breadth."
+      },
+      "sample_size_summary": "Scripted:256 S1 outcomes from8 task IDs \u00d7 4 strata \u00d7 8 arms. Native:one shared-evidence task,8 arm outcomes with1 contract failure.",
+      "sources": [
+        "researchers/vishesh/notes/actual-experiments/immune-response/README.md",
+        "researchers/vishesh/notes/actual-experiments/immune-response/RESULTS-v2.md",
+        "researchers/vishesh/notes/actual-experiments/immune-response/DEPLOYMENT-v2.md"
+      ],
+      "status_at_assessment": "scripted_complete_native_unqualified"
+    },
+    {
+      "id": "immune-v3-engineering",
+      "title": "Immune response v3 scripted engineering",
+      "documents": [
+        "researchers/vishesh/notes/immune-response-v3/README.md"
+      ],
+      "experiment_ids": [
+        "immune-response-v3"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/immune-response-v3/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Selective repair mechanisms behave as designed across synthetic recurrence, benign-learning and missing-lineage cases.",
+        "rationale": "Scripted mechanisms and oracle incident labels establish fixture behavior only. Eight actors and 24 rounds per episode are not replicates. Current family status belongs to later scenario/receipt studies, not this completed cohort."
+      },
+      "sample_size_summary": "Engineering:16 task roots \u00d7 5 strata \u00d7 9 arms =720 outcomes; native task6700 was not run.",
+      "sources": [
+        "researchers/vishesh/notes/immune-response-v3/README.md",
+        "researchers/vishesh/notes/immune-response-v3/design.json",
+        "researchers/vishesh/notes/immune-response-v3/ENGINEERING-RESULTS.json"
+      ],
+      "status_at_assessment": "scripted_engineering_complete"
+    },
+    {
+      "id": "immune-scenario",
+      "title": "Immune response scenario diagnostics",
+      "documents": [
+        "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+      ],
+      "experiment_ids": [
+        "immune-response-v3"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/immune-response-v3/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The small scenario diagnostics exposed failed team recovery and healthy-service damage by the solo baseline; they do not identify a causal team-versus-solo advantage.",
+        "rationale": "Healthy control failed in A1; A2 often failed repair; solo repaired incidents but damaged healthy control. All are valid adverse decisions, not provider failures. Sequential architecture runs are not a randomized causal team-versus-solo estimate."
+      },
+      "sample_size_summary": "Native:4 related scenarios; team A1/A2 each12/12 episodes (3 arms), solo4/4;240 calls. A2 engineering192 episodes includes16 name variants, not192 independent situations.",
+      "sources": [
+        "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md",
+        "researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A1-RESULTS.json",
+        "researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json",
+        "researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+      ],
+      "status_at_assessment": "completed_adverse_qualification"
+    },
+    {
+      "id": "immune-receipt",
+      "title": "Immune evidence receipt diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md"
+      ],
+      "experiment_ids": [
+        "immune-response-v3"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/immune-response-v3/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: fact-checking frozen reviewer recommendations improves commander recovery beyond generic caution and identical raw evidence.",
+        "rationale": "Wrong-account interruption is a process failure, preserved separately from three completed outcomes. No treatment effect or resumed authorization follows from partial data; reviewers are shared within raw/checked pairs."
+      },
+      "sample_size_summary": "Native diagnostic:16 assigned;3 complete,1 partial,12 unstarted. Four related cases \u00d7 2 memory states \u00d7 2 paired receipt arms; no completed qualification.",
+      "sources": [
+        "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md",
+        "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md"
+      ],
+      "status_at_assessment": "interrupted_no_qualification"
+    },
+    {
+      "id": "influence-v1",
+      "title": "External influence v1",
+      "documents": [
+        "researchers/vishesh/notes/actual-experiments/external-influence/README.md"
+      ],
+      "experiment_ids": [
+        "external-influence"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/actual-experiments/external-influence/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: decision-focused checking can outperform random checking against externally manipulated evidence.",
+        "rationale": "Native qualification does not measure attack resistance. Scripted effects reflect authored policies; rendering repetitions and five actors are not fresh task roots."
+      },
+      "sample_size_summary": "Scripted S1:12 task roots with2 render seeds,9 worlds,2 doses,7 policies =3,024 outcomes. Native:one clean task,7 valid/correct policy outcomes;67 calls.",
+      "sources": [
+        "researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md",
+        "researchers/vishesh/notes/actual-experiments/external-influence/design.yaml",
+        "researchers/vishesh/notes/external-influence-v2/README.md"
+      ],
+      "status_at_assessment": "scripted_complete_native_clean_qualification_only"
+    },
+    {
+      "id": "influence-v2",
+      "title": "External influence v2 hosted cohort",
+      "documents": [
+        "researchers/vishesh/notes/external-influence-v2/README.md"
+      ],
+      "experiment_ids": [
+        "external-influence-v2"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/external-influence-v2/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The hosted fixture comparison exposed poor use of corrective evidence and no reliable verification advantage; it does not establish general attack robustness.",
+        "rationale": "Matched call slots and adverse results support a narrow implementation diagnosis. One fixture per domain, authored scores and failed evidence integration prevent general robustness or superiority claims."
+      },
+      "sample_size_summary": "50/50 valid native arm outcomes; one fixture in each of3 domains (only1 procurement primary),9 actors per arm and750 calls.",
+      "sources": [
+        "researchers/vishesh/notes/external-influence-v2/README.md",
+        "researchers/vishesh/notes/external-influence-v2/design.yaml",
+        "researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md"
+      ],
+      "status_at_assessment": "completed_exploratory"
+    },
+    {
+      "id": "influence-v2-local",
+      "title": "External influence local model qualifications",
+      "documents": [
+        "researchers/vishesh/notes/external-influence-v2/README.md"
+      ],
+      "experiment_ids": [
+        "external-influence-v2"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/external-influence-v2/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The unchanged local 0.6B and 1.7B replacements failed bounded workflow qualification; attack resistance remains untested.",
+        "rationale": "Q0 and D0 produced no valid teams; Q1 produced three valid teams but only two correct decisions. Invalid teams leave harm unknown. Model, profiles and future schema repair differ across attempts, so their counts must remain separate; no matched efficacy or broad model ranking follows."
+      },
+      "sample_size_summary": "Q0/Q1 each use 3 domain roots \u00d7 2 cases: 0/6 and 3/6 valid teams (Q1: 2 correct). D0: 0/4 valid historical procurement cases. 87 calls across attempts; main S1 unrun.",
+      "sources": [
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q0-post.md",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q1-post.md",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/D0-post.md",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md"
+      ],
+      "status_at_assessment": "completed_failed_qualifications_repair_planned",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q0-post.md": "ef6b25caec6a2e46256281968b1a26271ac7d5a7b3662d98a53527c80a529a1b",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/Q1-post.md": "80e6f8f73b3e78eb0921836cc998a856bd3a67bd1a61f3f3500d83261246266b",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/reviews/D0-post.md": "918d6acc201dc49d3ff3a923e22c7456a748fb305ace5c2e5d3aba3b73898e08",
+        "researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md": "16b394c8329045afa03ab092d15e5cb63c920a6fc3009578a07721cf9c8eb1f5"
+      }
+    },
+    {
+      "id": "influence-quality-repair",
+      "title": "Influence score enforcement prototype",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/README.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/influence-swarms/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: an explicit ledger and enforced final score rule makes checking affect the committed decision.",
+        "rationale": "Enforced deterministic choice is an engineering intervention, not proof of improved model reasoning."
+      },
+      "sample_size_summary": "No live-qualified result; offline score-enforcement branch superseded by procurement scenario study.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/README.md"
+      ],
+      "status_at_assessment": "archived_offline_proposal"
+    },
+    {
+      "id": "influence-scenario",
+      "title": "Influence procurement scenario",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/README.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/influence-swarms/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence.",
+        "rationale": "Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled."
+      },
+      "sample_size_summary": "Q4:4 authored dossiers \u00d7 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers \u00d7 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0\u2013Q3 retained separately. Main comparison unrun.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/LATEST-RESULTS.md"
+      ],
+      "status_at_assessment": "qualification_failed_main_unrun",
+      "source_commit": "84ee032eda80360cc54c5234f8ffc3afe3649cec"
+    },
+    {
+      "id": "healing-pilot03",
+      "title": "Healing pilot03",
+      "documents": [
+        "researchers/vishesh/notes/healing-helping-hands/README.md"
+      ],
+      "experiment_ids": [
+        "healing-helping-hands"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Sharing withdrawal notices improves recovery in the programmed evidence atlas with qualified extraction.",
+        "rationale": "Exact and Jev trajectories coincide on engineered fixtures; source authenticity and withdrawals supplied. Three corpora and programmed forwarding do not establish autonomous research or heterogeneous-head superiority. Earlier pilot01/02 each completed36 exact worlds and left108 model worlds not-run."
+      },
+      "sample_size_summary": "Pilot03:3 paired synthetic corpora \u00d7 3 policies \u00d7 4 scenarios \u00d7 5 extractor definitions =180 assigned;72 exact/Jev worlds complete,108 Qwen-derived not-run.",
+      "sources": [
+        "researchers/vishesh/notes/healing-helping-hands/README.md",
+        "researchers/vishesh/notes/healing-helping-hands/results-summary.json",
+        "researchers/vishesh/notes/healing-helping-hands/PILOT-03-OVERVIEW.md"
+      ],
+      "status_at_assessment": "completed_limited_mechanism",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/vishesh/notes/healing-helping-hands/README.md": "0bc297df249fbeeea649d4a5249a691977f6ec9e100326d1e04f03d5ab64ef89",
+        "researchers/vishesh/notes/healing-helping-hands/results-summary.json": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
+        "researchers/vishesh/notes/healing-helping-hands/PILOT-03-OVERVIEW.md": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082"
+      }
+    },
+    {
+      "id": "healing-practical01",
+      "title": "Healing practical01",
+      "documents": [
+        "researchers/vishesh/notes/healing-helping-hands/practical/README.md",
+        "researchers/vishesh/notes/healing-helping-hands/README.md"
+      ],
+      "experiment_ids": [
+        "healing-helping-hands"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "No scenario met the peer-verified utility rule against central append; the observed capped-mesh disadvantage is specific to these reused fixtures and unequal transport mechanisms.",
+        "rationale": "No scenario met the prospective peer-verified utility rule; valid adverse result. Central bulk reads and capped mesh packets are unequal, metadata authentication is supplied, and corpus reuse precludes independent semantic replication. Reporting failure repaired retrospectively without rerunning computation."
+      },
+      "sample_size_summary": "Practical01:3 reused corpora \u00d7 2 placements \u00d7 6 scenarios \u00d7 5 policies =180/180 worlds;36 paired event blocks;0 new model calls.",
+      "sources": [
+        "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+        "researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md"
+      ],
+      "status_at_assessment": "completed_valid_adverse"
+    },
+    {
+      "id": "healing-practical02",
+      "title": "Healing practical02 capacity diagnostic",
+      "documents": [
+        "researchers/vishesh/notes/healing-helping-hands/practical/README.md",
+        "researchers/vishesh/notes/healing-helping-hands/README.md"
+      ],
+      "experiment_ids": [
+        "healing-helping-hands"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Increasing mesh capacity improves this programmed delivery protocol, but it does not outperform the version-aware central index.",
+        "rationale": "The complete paired cap-4 versus cap-16 diagnostic preserves three reused corpora and all five policies. Capacity buys lower error and better retention through more traffic; unequal central/mesh transport and reused extraction tapes prevent an equal-resource or fresh-model benefit claim. The adverse strong-baseline comparison remains valid."
+      },
+      "sample_size_summary": "Practical02: same 3 corpora \u00d7 2 placements \u00d7 6 scenarios \u00d7 5 policies = 180/180 worlds; cap 4\u219216. Together both capacities yield 360 dependent worlds, 0 new model calls.",
+      "sources": [
+        "researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md",
+        "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md",
+        "researchers/vishesh/notes/healing-helping-hands/practical/results-summary.json",
+        "researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md"
+      ],
+      "status_at_assessment": "completed_valid_capacity_diagnostic",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/vishesh/notes/healing-helping-hands/practical/POST-02.md": "190999ccb9270e35d86d5f4de61f519cbef2f9e0f25ebf8d0a8e2a78c19f310b",
+        "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52",
+        "researchers/vishesh/notes/healing-helping-hands/practical/results-summary.json": "ceb67c7849a92927c7e016c9e7f7b49a194c13acfb52bfbca538cbdbdad2310e",
+        "researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md": "fb00ff4731d4c6b7343cd0bd8d16d47225740591c65e855fb72aa30f9eb27553"
+      }
+    },
+    {
+      "id": "antsy-v1",
+      "title": "Antsy adaptive quorum v1",
+      "documents": [
+        "researchers/vishesh/notes/adaptive-quorum/README.md"
+      ],
+      "experiment_ids": [
+        "adaptive-quorum"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/adaptive-quorum/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Fixed and adaptive quorum policies tied on the tested evidence tapes; the small fixture does not establish an adaptive stopping advantage.",
+        "rationale": "Fixed/adaptive policies tied; shared full tapes mean outcomes are paired. Source independence supplied, not detected. Small synthetic qualification does not establish adaptive advantage."
+      },
+      "sample_size_summary": "Per backend:6 task clusters \u00d7 3 worlds \u00d7 2 deadlines \u00d7 4 policies =144 outcomes; scripted andLaya both complete.",
+      "sources": [
+        "researchers/vishesh/notes/adaptive-quorum/results/S0.md",
+        "researchers/vishesh/notes/adaptive-quorum/README.md"
+      ],
+      "status_at_assessment": "completed_qualification_tied"
+    },
+    {
+      "id": "antsy-v2",
+      "title": "Antsy adaptive quorum v2 historical cohort",
+      "documents": [
+        "researchers/vishesh/notes/adaptive-quorum-v2/README.md"
+      ],
+      "experiment_ids": [
+        "adaptive-quorum-api-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: whether adaptive quorum improves decisions after a competent evidence-integration instrument is established; that prerequisite failed in this cohort.",
+        "rationale": "Preserved failure is evidence about this task/model interface but cannot support a quorum-effect claim. Full tapes and population/deadline variants are dependent within tasks."
+      },
+      "sample_size_summary": "168 arm outcomes across6 task clusters; clean-task qualification failed; noS1.",
+      "sources": [
+        "researchers/vishesh/notes/adaptive-quorum-v2/results/laya-analysis.md",
+        "researchers/vishesh/notes/adaptive-quorum-v2/design.json"
+      ],
+      "status_at_assessment": "failed_clean_qualification"
+    },
+    {
+      "id": "antsy-v3",
+      "title": "Antsy adaptive quorum repair v3",
+      "documents": [
+        "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+      ],
+      "experiment_ids": [
+        "adaptive-quorum-api-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Adaptive thresholds trade abstention against late correction or misinformation in the guarded factual selector.",
+        "rationale": "Every learned-policy choice matched symbolic control; guarded host logic limits AI claims. Twelve engineered clusters are the task diversity, not 2,688 independent outcomes. Rendering failure and exact-prefix recovery preserved."
+      },
+      "sample_size_summary": "S1:12 task clusters \u00d7 2 populations \u00d7 2 deadlines \u00d7 4 worlds \u00d7 2 schedules =384 paired blocks;7 policies \u21922,688 outcomes. Q2:22/22 pass.",
+      "sources": [
+        "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+        "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/results/S1/summary.json"
+      ],
+      "status_at_assessment": "completed_synthetic_mechanism"
+    },
+    {
+      "id": "antsy-v4",
+      "title": "Antsy receipt verification v4",
+      "documents": [
+        "researchers/vishesh/notes/antsy-verification-v4/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-verification-v4"
+      ],
+      "registration_paths": [
+        "researchers/vishesh/notes/antsy-verification-v4/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "Neither tested committee improved observed mean recall or saved checks over the no-check confidence router on these 70 receipts; this does not establish general harm or equivalence.",
+        "rationale": "Strong control, held-apart calibration and complete paired data support a limited negative result. Receipt-level descriptive intervals are available, but vendor/layout dependence is unquantified; token recall and flawed regional updates limit practical generalization. Valid null/adverse results do not reduce confidence by themselves."
+      },
+      "sample_size_summary": "70 paired evaluation receipts, excluding 20 calibration and 10 qualification receipts; 700 distinct outcomes after shared-control deduplication. Per backend: 70/70 receipts, 490 rows, 840 calls; vendor/layout dependence is unquantified.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md"
+      ],
+      "status_at_assessment": "completed_valid_null_adverse"
+    },
+    {
+      "id": "antsy-v5",
+      "title": "Antsy receipt diagnostics v5",
+      "documents": [
+        "researchers/vishesh/notes/antsy-verification-v5/README.md"
+      ],
+      "experiment_ids": [
+        "antsy-verification-v5"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Null-neutral updates fix a specific estimator defect and explicit-cost planning changes deterministic check allocation.",
+        "rationale": "Numerical reconstruction supports the narrow repair; saved purchases do not reveal counterfactual model behavior. D1 changes estimator and action allocation together; assumed check price is not measured economics. No fresh efficacy/generalization claim."
+      },
+      "sample_size_summary": "Same70 v4 receipts reused as development diagnostics; D0=2,940 rows,D1=1,400 rows;20 historical calibration receipts;0 new model calls or fresh evaluation receipts.",
+      "sources": [
+        "researchers/vishesh/notes/antsy-verification-v5/README.md",
+        "researchers/vishesh/notes/antsy-verification-v5/RESULTS.md"
+      ],
+      "status_at_assessment": "completed_engineering_reanalysis"
+    },
+    {
+      "id": "regrowth-200",
+      "title": "Regrowth 200: distributed route repair",
+      "documents": [
+        "researchers/vishesh/notes/regrowth-200/README.md"
+      ],
+      "experiment_ids": [
+        "regrowth-200"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The added Laya heads did not improve final routing quality on this one map; both model arms remained far below exact routing on shortest paths.",
+        "rationale": "Descriptive trajectories only; model arms share100%valid but6.5%shortest final routes, so fast recovery to poor quality is not advantage. Hybrid adds compute and sees Qwen proposals. Missing original public registration is preserved separately."
+      },
+      "sample_size_summary": "One fixed map \u00d7 3 architectures \u00d7damage/control =6/6 worlds;200 cell identities,80 rounds. No replicated map sample.",
+      "sources": [
+        "researchers/vishesh/notes/regrowth-200/README.md"
+      ],
+      "status_at_assessment": "completed_descriptive_registration_failure"
+    },
+    {
+      "id": "avalon",
+      "title": "Avalon Swarm",
+      "documents": [
+        "tooling/avalon-swarm/README.md"
+      ],
+      "experiment_ids": [
+        "avalon-swarm"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Scripted recovery and communication mechanics work at increasing logical population size.",
+        "rationale": "Programmed repair, synthetic identities and environment audits do not establish LLM benefit; small recovery difference descriptive. Large logical population is a capacity check, not large independent sample."
+      },
+      "sample_size_summary": "45 scripted worlds:15v0.1 scale (5sizes \u00d7 3topologies),15recovery (5paired seeds \u00d7 3arms),15v0.2 consensus checks;one scale seed per condition.",
+      "sources": [
+        "tooling/avalon-swarm/RESULTS.md"
+      ],
+      "status_at_assessment": "completed_scripted_engineering"
+    },
+    {
+      "id": "collective-sensing-example",
+      "title": "Collective sensing scripted example",
+      "documents": [
+        "tooling/agent-experiments/examples/collective-sensing/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Deduplicating repeated sources changes programmed majority decisions on generated binary signals.",
+        "rationale": "Scenario-cluster bootstrap describes the toy sampling only. This is a reproducible analysis example, not LLM evidence or confirmation of the prospective research hypothesis."
+      },
+      "sample_size_summary": "60 scenario clusters \u00d7 4 fresh repetitions \u00d7 4 scripted conditions =960/960 worlds;4,800 dependent agent decisions,0 model calls.",
+      "sources": [
+        "tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
+      ],
+      "status_at_assessment": "completed_scripted_example"
+    },
+    {
+      "id": "discussion-dose",
+      "title": "Discussion allowance and corruption in a fork and merge swarm",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/discussion-dose/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The six-world corrected qualification is executable and exposes a memory-coverage defect; it does not estimate discussion protection.",
+        "rationale": "Six repaired development worlds; contamination disappeared before discussion, creating a ceiling. The 48 correct decisions and 47 correct parents support bounded execution and a memory-coverage failure, not discussion protection. Earlier failed attempts stay separate."
+      },
+      "sample_size_summary": "6 worlds \u00d7 2 exposures \u00d7 4 doses = 48 completed episodes; 3 actors, 1,020 calls.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/RESULTS-AND-REFLECTION.md",
+        "researchers/dmarz/notes/discussion-dose/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_qualification_only"
+    },
+    {
+      "id": "discussion-dose-v2",
+      "title": "Discussion allowance and corruption in a fork and merge swarm",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "More difficult source conflicts enable a descriptive discussion-dose comparison.",
+        "rationale": "Calibration levels reuse worlds and are not independent samples. Only six fresh worlds support the dose comparison; four attacked-dose outcomes are invalid and claims/votes may disagree. Selection of H4 was developmental; no confirmatory effect is established."
+      },
+      "sample_size_summary": "Calibration: 12 shared worlds \u00d7 6 levels \u00d7 2 exposures = 144 episodes; dose pilot: 6 fresh worlds, 48 episodes (44 valid).",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/RESULTS-V2.md",
+        "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+      ],
+      "status_at_assessment": "completed_exploratory_with_invalids"
+    },
+    {
+      "id": "discussion-dose-v2-private-control",
+      "title": "Discussion v2 private control",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/PRIVATE-CONTROL.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The small board-versus-private diagnostic reports a descriptive contrast; an incremental protective discussion effect remains unresolved.",
+        "rationale": "Clean decisions pass this small screen, but one board episode is invalid and the contrast rests on two worlds. The descriptive interval includes zero; private reflection itself is active and v2 probes were independently sampled. A general peer-effect claim is unresolved."
+      },
+      "sample_size_summary": "6 paired worlds \u00d7 2 exposures \u00d7 2 modes = 24 episodes; 23 valid, 1,015 calls.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
+      ],
+      "status_at_assessment": "completed_exploratory_with_invalids"
+    },
+    {
+      "id": "discussion-dose-v3",
+      "title": "Discussion and memory benchmark v3",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+      ],
+      "experiment_ids": [
+        "discussion-dose-v3"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The completed V3 diagnostic failed clean competence and exposed inherited-memory failure; discussion efficacy remains unestablished.",
+        "rationale": "Execution and replay pass, but clean competence fails (2/6 full evidence; 1/6 reports only; gate 5/6). This supports a diagnostic finding, not a qualified treatment null or reliable protective effect. Three worlds per attack stratum and fixed fixtures do not establish broad security."
+      },
+      "sample_size_summary": "6 worlds; 48 swarm episodes + 12 full-evidence probes + 36 fixed-memory fixtures = 96 cases, 636 calls.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md",
+        "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+      ],
+      "status_at_assessment": "completed_failed_qualification"
+    },
+    {
+      "id": "discussion-v3-resample",
+      "title": "v3 resampling-only control (sidecar)",
+      "documents": [
+        "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+      ],
+      "experiment_ids": [
+        "discussion-v3-resample"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "On this model and contract, repeated probes preserved checkpoint votes; the failed clean gate prevents an attack-protection claim.",
+        "rationale": "Exact replay and complete observations show near-deterministic repeated probes on this contract, but reports-only clean competence is 2/12 and mostly abstention. Attack-harm/protection interpretations are not supported by the degenerate baseline; this is a component diagnostic."
+      },
+      "sample_size_summary": "12 worlds (6 per stratum) \u00d7 2 exposures \u00d7 3 arms = 72 episodes, 936 calls.",
+      "sources": [
+        "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md"
+      ],
+      "status_at_assessment": "completed_failed_qualification"
+    },
+    {
+      "id": "soc07-private-judgments",
+      "title": "SOC-07: keep the first judgment private, but allow revision",
+      "documents": [
+        "researchers/dmarz/notes/soc07-private-judgments/README.md"
+      ],
+      "experiment_ids": [
+        "soc07-private-judgments"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/soc07-private-judgments/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested efficacy question: keeping first judgments private improves team decisions without suppressing valid correction.",
+        "rationale": "Only a plan, implementation and S0 pre-review are committed at this cutoff. No completed model evidence is available; illustrative 960-world confirmation remains closed. Five actors, repeated answers and calls are not independent observations."
+      },
+      "sample_size_summary": "Planned: 12 qualification worlds; separate 24-world replay and 24-world live pilots, 2 repeats each; 192 and 240 episodes.",
+      "sources": [
+        "researchers/dmarz/notes/soc07-private-judgments/README.md",
+        "researchers/dmarz/notes/soc07-private-judgments/design.json",
+        "researchers/dmarz/notes/soc07-private-judgments/reviews/s0-pre.md"
+      ],
+      "status_at_assessment": "implemented_no_model_results_in_repository"
+    },
+    {
+      "id": "sybil-specialists",
+      "title": "Sybil defense and useful specialist teams",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Coverage verification recovers rare expertise at the cost of some malicious admission in a scripted graph.",
+        "rationale": "Reconciled synthetic results show the built-in utility/security tradeoff, but one graph family, programmed reports and an externally supplied verifier limit interpretation. The observed malicious-admission increase exceeds the suggested adoption margin. This supplies no LLM evidence."
+      },
+      "sample_size_summary": "S1: 12 paired worlds, 864 scripted arm outcomes across 18 cells; S0: 4 worlds, 256 outcomes; N=36 identities.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists/README.md",
+        "researchers/dmarz/notes/sybil-specialists/results-summary.json",
+        "researchers/dmarz/notes/sybil-specialists/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_scripted_development"
+    },
+    {
+      "id": "sybil-specialists-api",
+      "title": "Sybil resistance: model synthesis and verification badges",
+      "documents": [
+        "researchers/dmarz/notes/sybil-specialists-api/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-specialists-api"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-specialists-api/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "The completed controlled comparison describes verifier/admission effects on synthesis within one constructed graph family.",
+        "rationale": "Qualified, complete 12-world pilot supports the bounded strong-check/weak-check tradeoff; a single model, graph family and fixed fabrication do not generalize. The badge interval spans harm and benefit, so badge efficacy remains unresolved."
+      },
+      "sample_size_summary": "12 paired worlds \u00d7 16 conditions = 192 valid S1 answers; 24 Q0 packets; 36 simulated identities and 1 model synthesizer.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-specialists-api/README.md",
+        "researchers/dmarz/notes/sybil-specialists-api/results-summary.json",
+        "researchers/dmarz/notes/sybil-specialists-api/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_exploratory_model_pilot"
+    },
+    {
+      "id": "sybil-scale-api",
+      "title": "Sybil resistance as swarms grow",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-api/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-api"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-api/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "The completed controlled sweep describes verification-resource and admission-policy effects on specialist accuracy in one graph family, not an equal-cost coverage advantage.",
+        "rationale": "Complete qualified results and clustered intervals support the fixture-specific unequal-verification-budget effect. Equal-budget random reaches the same accuracy; plurality is a strong comparator. Total attacker resources scale with N, so this is not fixed-resource identity splitting or autonomous-agent scaling."
+      },
+      "sample_size_summary": "24 paired worlds \u00d7 100 deduplicated conditions = 2,400 valid S1 answers; 64 Q0 calls; 36\u2013972 simulated identities.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-api/README.md",
+        "researchers/dmarz/notes/sybil-scale-api/results-summary.json",
+        "researchers/dmarz/notes/sybil-scale-api/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_exploratory_model_pilot"
+    },
+    {
+      "id": "sybil-budget-api",
+      "title": "Verification budget and verifier reliability",
+      "documents": [
+        "researchers/dmarz/notes/sybil-budget-api/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-budget-api"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-budget-api/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The bounded packet qualification passed; the verification-budget main study has launched but no final comparison is reported at this cutoff.",
+        "rationale": "Exact clean qualification passed and the tracked deployment record now confirms S1 launch. Completed main counts and treatment estimates are not reconciled in the repository; qualification and dispatch do not establish the budget frontier. Identities, facts and cells remain dependent within worlds."
+      },
+      "sample_size_summary": "Q0: 4 worlds, 16/16 valid packets. S1 launched: 24 paired worlds \u00d7 120 cells = 2,880 assigned answers, N=324/972; completed count not reconciled in repo.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-budget-api/README.md",
+        "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json",
+        "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md",
+        "researchers/dmarz/notes/sybil-budget-api/experiment.yaml"
+      ],
+      "status_at_assessment": "qualification_passed_main_collecting_no_reconciled_counts",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-budget-api/README.md": "297a5bb49ba2265af870357b25f9770bac3d1d57d6deaf3778d602e815418747",
+        "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json": "9a6f252c7295ef8781b64fc14e3fb9302901563c2ea0edd11cd63cc2d1f3c5a8",
+        "researchers/dmarz/notes/sybil-budget-api/DEPLOYMENT.md": "0eac1254d67c3bad781095810bd867fe6eb2a2717077d829502d1c5f8cf08deb",
+        "researchers/dmarz/notes/sybil-budget-api/experiment.yaml": "d4d68a36998fc55857ab7243e93c8f000f575abc1ff21f567b2376fc5460c3cc"
+      }
+    },
+    {
+      "id": "sybil-newcomer-api",
+      "title": "Knowledgeable newcomers versus a trusted Sybil coalition",
+      "documents": [
+        "researchers/dmarz/notes/sybil-newcomer-api/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-newcomer-api"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "In this synthetic task, sleeper attacks sharply reduced specialist accuracy; renewal checking did not establish its planned improvement over reputation or an advantage over equal-cost random checking.",
+        "rationale": "Same-owner assessment: twenty-four paired roots, passed qualification and fully reconciled outcomes support this narrow result. The primary interval spans zero and useful effects; one task family, one model, scripted actors and only twelve warm-up audits limit stronger conclusions. Independent review was waived."
+      },
+      "sample_size_summary": "Observed: 24 paired roots from one synthetic task family; 1,944/1,944 S1 outcomes analyzed, zero missing; 24 honest + 1/4/16 controller identities, three model snapshots. Q0 separately: 36/36 clean calls on six roots.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md",
+        "researchers/dmarz/notes/sybil-newcomer-api/verification-summary.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json",
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
+      ],
+      "status_at_assessment": "complete_valid_inconclusive_primary_allocation_closed",
+      "source_commit": "59822556c5ee3eac62fc9d9ee08bd1f26cc20c19",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-newcomer-api/RESULTS.md": "006b480f464096789141805bb4b8bc2ecef7a65097c3d4ede3663ee051eb9667",
+        "researchers/dmarz/notes/sybil-newcomer-api/verification-summary.json": "b00067bbac418b4355e04179bcc436930447f4854137a088418969f5253927e9",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/s1-001-summary.json": "1efb7499d707b4c624fe40a411500a35b1f9b52f9fa1e6f034b9f92d9157f2e5",
+        "researchers/dmarz/notes/sybil-newcomer-api/reviews/s1-001-post.md": "a0272119b2aec5ca03efe9777169c25672bd1ce7a81fcc59f5deed834f934446",
+        "researchers/dmarz/notes/sybil-newcomer-api/records/closeout.json": "32a3a125e7c8d18c9c4ff05c771d43781b50d5859b5134ee1bb909ec05cb04ed",
+        "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2"
+      },
+      "assessor": "dmarz/sybil-specialists",
+      "assessed_at": "2026-10-04"
+    },
+    {
+      "id": "market-split",
+      "title": "Can one owner\u2019s many firms defeat a concentration-based regulator?",
+      "documents": [
+        "researchers/dmarz/notes/market-split/README.md"
+      ],
+      "experiment_ids": [
+        "market-split"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/market-split/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Changing firm identities can alter regulatory accounting while total ownership resources remain fixed.",
+        "rationale": "Programmed splitting and optimization validate the mechanism in six related markets but cannot establish spontaneous model discovery. Resource conservation and paired accounting are explicit; external economic realism and independent rivals remain untested."
+      },
+      "sample_size_summary": "6 S1 market clusters \u00d7 2 seeds \u00d7 12 conditions \u00d7 3 policies = 432 scripted episodes; 18 S0; 0 model calls.",
+      "sources": [
+        "researchers/dmarz/notes/market-split/README.md",
+        "researchers/dmarz/notes/market-split/analysis/s1-summary.json",
+        "researchers/dmarz/notes/market-split/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_scripted_development"
+    },
+    {
+      "id": "market-split-api",
+      "title": "Will a neutral agent create firms to evade concentration rules?",
+      "documents": [
+        "researchers/dmarz/notes/market-split-api/README.md"
+      ],
+      "experiment_ids": [
+        "market-split-api"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/market-split-api/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The current Sonnet configuration passes a small unregulated profitability screen; the new discovery comparison is unreported at this cutoff.",
+        "rationale": "Sonnet reasoning configuration passed bounded unregulated profit qualification; main discovery results are pending in the tracked record. Earlier invalid and failed qualifications stay separate and cannot be pooled. Six related markets, one model-controlled owner and scripted rivals would remain exploratory."
+      },
+      "sample_size_summary": "Current Sonnet Q0: 2 markets, 4/4 episodes; S1 planned: 6 markets, 36 episodes/864 calls. Earlier Haiku S1: 17 valid, 1 invalid, 18 unstarted.",
+      "sources": [
+        "researchers/dmarz/notes/market-split-api/README.md",
+        "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md",
+        "researchers/dmarz/notes/market-split-api/experiment.yaml"
+      ],
+      "status_at_assessment": "current_qualification_passed_main_not_reconciled"
+    },
+    {
+      "id": "market-split-haiku",
+      "title": "Market splitting: Haiku with reasoning",
+      "documents": [
+        "researchers/dmarz/notes/market-split-haiku/README.md"
+      ],
+      "experiment_ids": [
+        "market-split-haiku"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/market-split-haiku/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Haiku V2 passed its short profitability screen but failed execution in the longer discovery cohort; V3 has only scripted rehearsal evidence.",
+        "rationale": "Two dynamic episodes returned nonterminal outputs at the 3,072-token ceiling; the original stop reason was not retained, so exhaustion is inferred. The incomplete cohort supports no discovery estimate. Increased V3 output headroom requires fresh native gates and makes future Sonnet comparisons configuration comparisons, not model-only effects."
+      },
+      "sample_size_summary": "V2 Q0: 2 markets,4/4 qualified. S1: 6 assigned markets/36 episodes; 2 complete, 2 failed partial, 32 unstarted, 60 calls. V3: 12/12 mock episodes, 0 model calls; fresh native gates pending.",
+      "sources": [
+        "researchers/dmarz/notes/market-split-haiku/README.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md",
+        "researchers/dmarz/notes/market-split-haiku/preregistration.md",
+        "researchers/dmarz/notes/market-split-haiku/experiment.yaml"
+      ],
+      "status_at_assessment": "v2_discovery_execution_failed_v3_scripted_only",
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "source_sha256": {
+        "researchers/dmarz/notes/market-split-haiku/README.md": "6ca88a43af337731b86ee77b7af22d6ffe9dc006dac2f87a1db8196fe7dc3ff5",
+        "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+        "researchers/dmarz/notes/market-split-haiku/reviews/s1-001-post.md": "c220ffd508da2ba8a8a5223839413a7f34890ab822068443b4983dc9ad970ebe",
+        "researchers/dmarz/notes/market-split-haiku/reviews/s0-fleet-003-post.md": "7783e2efd0fcab788de350e1ac49f868746c233a8d73338c2b29d1481a457588",
+        "researchers/dmarz/notes/market-split-haiku/preregistration.md": "ccecdcb83fba556781d48c38cd4fda1386b341170e7e574d8ceee101ff14f39a",
+        "researchers/dmarz/notes/market-split-haiku/experiment.yaml": "233345a41fd60a60ee5d80dd89530b5febe7d6771ab2f1de7d212e30773e0730"
+      }
+    },
+    {
+      "id": "compositional-safety",
+      "title": "Permitted actions and forbidden outcomes",
+      "documents": [
+        "researchers/dmarz/notes/compositional-safety/README.md"
+      ],
+      "experiment_ids": [
+        "compositional-safety"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/compositional-safety/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The current model/configuration fails the frozen safe-completion qualification; receipt-treatment efficacy remains untested.",
+        "rationale": "All four model qualifications failed; the latest has only 10/24 safe completions. Zero committed violations with incomplete/refused work is not evidence of safety. Receipt treatment P1 remains closed; engineering conformance and duplicate task names must not inflate efficacy confidence."
+      },
+      "sample_size_summary": "Latest Q0: 24 episodes from 3 task IDs/2 domains but only 5 structural fingerprints; 10 safe completions, 12 incomplete, 2 refusals.",
+      "sources": [
+        "researchers/dmarz/notes/compositional-safety/README.md",
+        "researchers/dmarz/notes/compositional-safety/records/q0-004-summary.json",
+        "researchers/dmarz/notes/compositional-safety/design.yaml",
+        "researchers/dmarz/notes/compositional-safety/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_failed_qualification"
+    },
+    {
+      "id": "capture-memory",
+      "title": "Capture and memory: does a purged swarm return?",
+      "documents": [
+        "researchers/shadow/notes/capture-memory/README.md"
+      ],
+      "experiment_ids": [
+        "capture-memory"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/capture-memory/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Memory length affects return to a convention after perfect attacker removal under a scripted policy.",
+        "rationale": "The paired scripted mechanism has substantial within-fixture simulation evidence, but no measured LLM response curve and no epistemic truth task. Capture-conditioned estimates select outcomes; different capture doses/horizons change the estimand. Large episode counts are not independent model trials or generality. Task IDs mainly change paired random streams and word labels, not independent semantic problems; S1 and S1b reuse those IDs."
+      },
+      "sample_size_summary": "100 paired RNG/task IDs \u00d7 2 seeds on one binary-convention mechanism in two parameter regimes; reused in 9,600 S1 + 38,400 S1b episodes. S0: 600 episodes; N=24; 0 model calls.",
+      "sources": [
+        "researchers/shadow/notes/capture-memory/README.md",
+        "researchers/shadow/notes/capture-memory/design.yaml",
+        "researchers/shadow/notes/capture-memory/results/S1.md",
+        "researchers/shadow/notes/capture-memory/results/S1b.md",
+        "researchers/shadow/notes/capture-memory/experiment.yaml"
+      ],
+      "status_at_assessment": "completed_scripted_development"
+    },
+    {
+      "id": "antsy-v6",
+      "documents": [
+        "researchers/vishesh/notes/antsy-receipt-v6/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Untested application question: fallible OCR checks improve receipt-total acceptance and referral decisions enough to justify their measured cost.",
+        "rationale": "Only a prospective total-amount tool pilot is tracked. Five pipelines share Tesseract, so agreement is correlated. The 50-receipt test evaluation remains unopened; model comparisons require a separate qualification and no results are inherited from v4/v5."
+      },
+      "sample_size_summary": "Observed: none. Planned: 20 train receipts for development (5 OCR pipelines, \u2264100 calls); then 50 untouched test receipts after freezing policies. Vendor/layout independence unverified; model study separate.",
+      "status_at_assessment": "new_prospective_application_plan",
+      "sources": [
+        "researchers/vishesh/notes/antsy-receipt-v6/README.md"
+      ],
+      "source_commit": "b51e3f1f449c2743e7ddf7eda9977503bc450f45",
+      "title": "Antsy receipt v6 prospective application",
+      "source_sha256": {
+        "researchers/vishesh/notes/antsy-receipt-v6/README.md": "9f9756efc0f597a421a6f07349655800fed0a51c8a16da8308fe5363bac51587"
+      }
+    }
+  ],
+  "source_sha256": {
+    "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md": "857b7939056058e709f56cab6108adae8d9e264e083fcf3f9253c05e6e866ce2",
+    "researchers/vishesh/notes/phantom-coast/README.md": "2a5176e26fc12aca7729ce1943c972acb8008021b7b91343f174fee396dc96e6",
+    "researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md": "cadcdb07c1cb8dcf0fb677e07862008d386d73270746930d77b406fb54c3572b",
+    "researchers/vishesh/notes/dissent/README.md": "462938035553aa14e2b36c80ae0e53990e5ae092705e71db29f7ccc2a1e96281",
+    "researchers/vishesh/notes/dissent/LIVE-PLAN.md": "e306c0186c77fd8d60babc83bf78fb29f967c6d74c5672a8f17d7f4cb3a9d844",
+    "researchers/vishesh/notes/optimal-swarm-size/README.md": "825847ed0c0e81eadbe0f003dead4737d0c395eaa7eddec5c8ddda46a96958e2",
+    "researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md": "f8e7b3882d8863786bbbc68517598a96f88f794cfbe998e30995b4bb89130985",
+    "researchers/vishesh/notes/optimal-swarm-size/design.json": "37e9d4d946d1ceea0f19814f66569167760286ed17351b2b69d61a33e550a758",
+    "researchers/vishesh/notes/heterogeneous-swarms/README.md": "eee016d645cb4b3ae0c8dd715652516955b09cfbab11c69c8723cc6e193e6c98",
+    "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md": "5af038d90fb9da83d6ae749da0a36d2613fe8ee2da783ceab44361a168644508",
+    "researchers/vishesh/notes/swarm-of-theseus/v2/README.md": "f27e19a1384654fb390d1f528fa749789b0a9a9ba4dd7d4c1bf8a317f6a017b6",
+    "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md": "ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06",
+    "researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md": "76795779764ad7f7d7bc8e9320edb3262113e8e0085f967905d9a5778167e213",
+    "researchers/vishesh/notes/actual-experiments/immune-response/preregistration-v1.md": "d4322a8659915b094d7539a69921bae8897347d5ad23aa4d607b6ea8780acb3c",
+    "researchers/vishesh/notes/actual-experiments/immune-response/README.md": "fabc215bbbf37ea95d7816ff10a78e00005b10b9f3ae86ee55f9a7b26df6f5e9",
+    "researchers/vishesh/notes/actual-experiments/immune-response/RESULTS-v2.md": "276fab0960a0653118c35a55b6fbf2ac485e11d980ec574ca5262e5720291be4",
+    "researchers/vishesh/notes/actual-experiments/immune-response/DEPLOYMENT-v2.md": "3abe7fd4a224f65c0103f872ca43e511e7a11545fd5ead8c1763258fe0fa6c0d",
+    "researchers/vishesh/notes/immune-response-v3/README.md": "e2873d24280fb6204a0051b019b9d270a3d40a6d64d4d689cb4c93fd62a1d28f",
+    "researchers/vishesh/notes/immune-response-v3/design.json": "649cd64bd71e16976903fac35ff3c79782f33c9466815fcbf081a29810936bd6",
+    "researchers/vishesh/notes/immune-response-v3/ENGINEERING-RESULTS.json": "8e3d1a38df4ea43d5a5aecfabfb44a6fcf5bd4a28fcd9dfe698875ad946ba279",
+    "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
+    "researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A1-RESULTS.json": "2fb8696ba716367485ab04a03115eaba2d6e9630d2ee859dd6a56e16c61b0f4a",
+    "researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json": "f58eae8b6727701dc667641d089d5b64b69e004d40543f50030440e0ca535815",
+    "researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json": "381daa5f7510c5e82401946aecf1d7ded4549cc7e4d5e3d7fc6339a63aa1e1dd",
+    "researchers/vishesh/notes/immune-response-v3/evidence-study/README.md": "69ebd384527b961b898e78c0d0209e76c95d3b3203799f5575b8976bd4cf45e0",
+    "researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md": "799e0d310ab7c7c7f1921836e12c2c6d0ffee1cb9b11540f501243e95b1fb9ae",
+    "researchers/vishesh/notes/actual-experiments/external-influence/design.yaml": "8d78ffbe1c99d8b6d77af7f58e12914fcd35056ff0f71a350c4053d25c29f92a",
+    "researchers/vishesh/notes/external-influence-v2/README.md": "3d78288311ee004ae381d6f50c35f57e4db2fc9578b8818677db98981c4f1e0f",
+    "researchers/vishesh/notes/external-influence-v2/design.yaml": "13ada399767588a33133a53646bbd09557ef0dd6b641c6c3c060295d1c1e625e",
+    "researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39",
+    "researchers/vishesh/notes/external-influence-v2/local-agents/PLAN.md": "7e38da3a88a653a0d27679be167e51adb885f3132e8ca337468d183dc695aa01",
+    "researchers/vishesh/notes/influence-swarms/README.md": "03eb8e92b66e42fd1d59833e255cfbac6b07f14839958c4202d0628c04276a71",
+    "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md": "6d61691c5e4e9b9f18119d0001079b6aa14314ea5a7925772ba68ab61baa9b4b",
+    "researchers/vishesh/notes/influence-swarms/scenario/README.md": "2554146e7f3a81cf0f606e6f86f142230479bd74d21ebcfa9ee72bffc9d04836",
+    "researchers/vishesh/notes/healing-helping-hands/README.md": "418eab696b3ca1ed0b718a242cc93e568abf9b9bd4ac97a4349e313126f5a9cd",
+    "researchers/vishesh/notes/healing-helping-hands/results-summary.json": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
+    "researchers/vishesh/notes/healing-helping-hands/practical/POST-01.md": "fcc9159dd90a34769b22562a9bb2301c866ff73be9f714ee1478ca8cfafc5f52",
+    "researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md": "e254acafbd484c967d12015c783d83113146429793477921ec4746c27d94e2fd",
+    "researchers/vishesh/notes/healing-helping-hands/practical/PRE-02.md": "fb00ff4731d4c6b7343cd0bd8d16d47225740591c65e855fb72aa30f9eb27553",
+    "researchers/vishesh/notes/adaptive-quorum/results/S0.md": "4cc9f9acdf3d73cf3684a7fc720d7031962dba14a484bf5cd7230b9e699d7472",
+    "researchers/vishesh/notes/adaptive-quorum/README.md": "2075cfab52cbb57775c677beab8cc62069eb7345ed3e26755427db4555fd6198",
+    "researchers/vishesh/notes/adaptive-quorum-v2/results/laya-analysis.md": "f03b8f019b7fa7dbf017601054d8446edbf66e3fdedd37844bfbeb8f7f3675bd",
+    "researchers/vishesh/notes/adaptive-quorum-v2/design.json": "6f0874307ebeee3cb2bbafeb40d7594773c2525c037f69027efa19a6cf77fabd",
+    "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md": "3ab940048492a578d811c19cee669006253aab33ce3d8e85bafae1d963121d3d",
+    "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/results/S1/summary.json": "898ff574768fd2d300a04b5b62b8fc56ac0fcf7800c68849872434b760ad07a9",
+    "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md": "3b7fa0be9abe577123842c81ca80b9d33032502db228acc32b8ab19b5fb593db",
+    "researchers/vishesh/notes/antsy-verification-v5/README.md": "1b64eb470f7c2f3e3eedf863e651058c98cd3059919308d26c489d46d96d944f",
+    "researchers/vishesh/notes/antsy-verification-v5/RESULTS.md": "06d2512c8a31cadddb11c24f04ca65f6fe7d7792fc4590915fe89590a7d43f48",
+    "researchers/vishesh/notes/regrowth-200/README.md": "9d9fe78145fda34b4d26ebb19c20b007a5a29054e718702bb5493e7a664278a3",
+    "tooling/avalon-swarm/RESULTS.md": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
+    "tooling/agent-experiments/examples/collective-sensing/RESULTS.md": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b",
+    "researchers/dmarz/notes/discussion-dose/RESULTS-AND-REFLECTION.md": "8935e4ec3eef43687aade9bd6bd8f0ef6f5c05a5b56bb0513226523b62bf3c89",
+    "researchers/dmarz/notes/discussion-dose/experiment.yaml": "3264be4dae791b9c26b5c3d1c8eb23e98354d93482eb5f5e894d4e9260bc88e3",
+    "researchers/dmarz/notes/discussion-dose/RESULTS-V2.md": "99159a73e5435bef057bbefb7bc112e8f08f380b8f8c5219eb3087ccbfca0c0f",
+    "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+    "researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6",
+    "researchers/dmarz/notes/discussion-dose/benchmark-v3/RESULTS-Q0.md": "2cfc228fa137140567694509ef55666294b81b6c42a3ecfc963ef973a6ac008b",
+    "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md": "b3d2bec0e35ff8625b466fdfb64deca07156ba852f1bd716de1d2c35703da5cc",
+    "researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md": "9194c8e49edb1f81ca656fd409881453268730fb5c6fd975dd7eeae3a6a781f7",
+    "researchers/dmarz/notes/soc07-private-judgments/README.md": "0dc8aa6e0da0ad62c5039b1b755bac40fccfe3439b94a4b4bdfa8c9f246ce4e1",
+    "researchers/dmarz/notes/soc07-private-judgments/design.json": "5edf78ac93e342a38c60e1cb8eb50a37771989a2ff9a3dbd356dba6d1dd1c0d1",
+    "researchers/dmarz/notes/soc07-private-judgments/reviews/s0-pre.md": "f835612ff1d09ede64e8380e4efc45c4dfbd092b406f825cb0f828ecd52be735",
+    "researchers/dmarz/notes/sybil-specialists/README.md": "b74179bb38aef770310474a395ffa54c1c0c1e0b35c927e63567d70291eb7f8e",
+    "researchers/dmarz/notes/sybil-specialists/results-summary.json": "a8dac29c6fa30b4cde5e1dc86ee6be12a3f6bae218133fa35cae9a4c75a31a29",
+    "researchers/dmarz/notes/sybil-specialists/experiment.yaml": "e21fc90ede4c38888751331fccc5260fdcdc4df6b19ae04c7787d4d09c1b8a9e",
+    "researchers/dmarz/notes/sybil-specialists-api/README.md": "bf6af2a573ea07688051101ea6f3a2a5e07731bac6747e4e8861aadce428c0d2",
+    "researchers/dmarz/notes/sybil-specialists-api/results-summary.json": "db5d1224fbd35120be03be82699a6954737d02db8a87c56bf1ffb0ed55c9987a",
+    "researchers/dmarz/notes/sybil-specialists-api/experiment.yaml": "a29b341b4857850f7bd81629d44ec7e254f04929bbf6d6eee7bf0feabaeaa220",
+    "researchers/dmarz/notes/sybil-scale-api/README.md": "3b6976678628498fbf39c21031c3d820980bcbad436ea42f13620aafa72cf0ca",
+    "researchers/dmarz/notes/sybil-scale-api/results-summary.json": "24095c029d241b2392a807d514ac32a0414cfe0f996db288e64beb460732f1bd",
+    "researchers/dmarz/notes/sybil-scale-api/experiment.yaml": "cc23f511068ce97a3308f04ab600ca47201c211c5bd1282bc580d87bbbcf3804",
+    "researchers/dmarz/notes/sybil-budget-api/README.md": "297a5bb49ba2265af870357b25f9770bac3d1d57d6deaf3778d602e815418747",
+    "researchers/dmarz/notes/sybil-budget-api/q0-verification-summary.json": "9a6f252c7295ef8781b64fc14e3fb9302901563c2ea0edd11cd63cc2d1f3c5a8",
+    "researchers/dmarz/notes/sybil-budget-api/experiment.yaml": "d4d68a36998fc55857ab7243e93c8f000f575abc1ff21f567b2376fc5460c3cc",
+    "researchers/dmarz/notes/sybil-newcomer-api/README.md": "24322d6bb8116bae089c304228d2ed6ba82b8adb4bd5af2c3b2d0e5c603b51f3",
+    "researchers/dmarz/notes/sybil-newcomer-api/design.yaml": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2",
+    "researchers/dmarz/notes/sybil-newcomer-api/records/q0-001-summary.json": "8ce77b6197a4a983c2b4156d3ca0139b6991da716eec081cf7b4c6126c24f465",
+    "researchers/dmarz/notes/sybil-newcomer-api/experiment.yaml": "ee39d775caa31d6e9844524b347ff97bfe563253479710b6b4471d18893c910c",
+    "researchers/dmarz/notes/market-split/README.md": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
+    "researchers/dmarz/notes/market-split/analysis/s1-summary.json": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786",
+    "researchers/dmarz/notes/market-split/experiment.yaml": "05d16fec60b270d7d16eb6e43316350c09ff9a225225a4783b450461b6676fe8",
+    "researchers/dmarz/notes/market-split-api/README.md": "18ac63e2725971913c391ed595fcf43b359ec3c344b4bbff1ceb71c64e51ecbe",
+    "researchers/dmarz/notes/market-split-api/reviews/q0-005-post.md": "b84dc2c4c8329255fccd51e23efbaaa0118fcf6f79c64ef021118835702b9972",
+    "researchers/dmarz/notes/market-split-api/experiment.yaml": "b2322179ff600d118e829f1b6e22b29c552edb31ca1cd63aae218b84ec07906f",
+    "researchers/dmarz/notes/market-split-haiku/README.md": "ed0a92d6248579ba3083461278a3ce6fe26b7dfdb91747de7cecec24e8b0b7ba",
+    "researchers/dmarz/notes/market-split-haiku/reviews/q0-001-post.md": "981f5b55193d29d47dd260711a73fafc8da52808a8dddc8d4c407cf25e3ade29",
+    "researchers/dmarz/notes/market-split-haiku/experiment.yaml": "340c87c82e5a05ca56bd5fe3420230aec3ce462555fbd048b6c5692948c7c48b",
+    "researchers/dmarz/notes/compositional-safety/README.md": "927de18459fa41aece279785d9f69ec08a663cd381f2b5f435d2c02eebb840e5",
+    "researchers/dmarz/notes/compositional-safety/records/q0-004-summary.json": "0e4b34c090e1a4e4fe0eae8bbd82b6f3b5ab5ea6c38256f522f25f2196232279",
+    "researchers/dmarz/notes/compositional-safety/design.yaml": "b7b87dfd65834eb7765f35f846fe4c58f78e729dd89c3ce2e942edcb2901f3be",
+    "researchers/dmarz/notes/compositional-safety/experiment.yaml": "36d007ea69735b5757c7e46efd86adcbd39cc0227d1bc1852d29247f78d7afe7",
+    "researchers/shadow/notes/capture-memory/README.md": "6c570eff062a147cca5a18c450c5d2ffb4040c2b0454fb7315f628f1590cabf8",
+    "researchers/shadow/notes/capture-memory/design.yaml": "e232f30ebbceb9c38d7d3934585dcb7d85162afad11a6c100d3569da9e04bc41",
+    "researchers/shadow/notes/capture-memory/results/S1.md": "4dbc8ba7c108e51b2133c386fe47dce5398e775af25d4a2393982d00e6fd5c2c",
+    "researchers/shadow/notes/capture-memory/results/S1b.md": "325136e04f9db41620481c2e91ed107b33ddeabee36c7c73142aea3cdf2604e9",
+    "researchers/shadow/notes/capture-memory/experiment.yaml": "d857fad461e997312436b6ec6469c690c4987d2b14848fa6572f25cb8206de28"
+  },
+  "scope_note": "33 registered or implemented study IDs, with separate version/cohort entries, one scripted methods example and two unrun design entries. All researcher registration files are covered; additional code-registered studies are listed explicitly. Initial assessments pin 9781739c; materially updated rows pin b51e3f1f. These source-reported assessments are not live job status or independent replication."
+}

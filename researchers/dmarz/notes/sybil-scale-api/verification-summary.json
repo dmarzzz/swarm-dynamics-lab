@@ -1,0 +1,342 @@
+{
+  "worker_active": false,
+  "budget": {
+    "attempted_calls": 2464,
+    "reserved_usd": 68.300028,
+    "actual_usd": 19.453925,
+    "usage_reported_calls": 2464
+  },
+  "runs": [
+    {
+      "run": "sybil-scale-api/27014911",
+      "status": "done",
+      "artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      },
+      "summary": {
+        "params": {
+          "stage": "Q0",
+          "backend": "anthropic",
+          "batch": "q0-001",
+          "source_hash": "134fd9552ee8bf45777cb751b4104465a7bfd079eb33bc27f1c226c8a6f4b322",
+          "code": "45390d685aedc535d8a3e5959df9270c5e6bb7e0"
+        },
+        "planned": 64,
+        "started": 64,
+        "terminal": 64,
+        "graded": 64,
+        "analyzed": 64,
+        "invalid": 0,
+        "not_started": 0,
+        "model_calls": 64,
+        "cost_usd": 0.6619970000000001,
+        "input_tokens": 649312,
+        "output_tokens": 2537,
+        "elapsed_seconds": 22.623853758999758,
+        "qualification": {
+          "cells": [
+            {
+              "n": 36,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 108,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 324,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 972,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            }
+          ],
+          "passed": true
+        },
+        "study_accounting": {
+          "attempted_calls": 64,
+          "reserved_usd": 2.205736,
+          "actual_usd": 0.661997,
+          "usage_reported_calls": 64
+        },
+        "initial_study_accounting": {
+          "attempted_calls": 0,
+          "reserved_usd": 0.0,
+          "actual_usd": 0.0,
+          "usage_reported_calls": 0
+        },
+        "reporting_errors": [],
+        "visualization": {
+          "mapping": "v1",
+          "frames": 33
+        }
+      }
+    },
+    {
+      "run": "sybil-scale-api/2c43c19e",
+      "status": "done",
+      "artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      },
+      "summary": {
+        "params": {
+          "stage": "S0",
+          "backend": "scripted",
+          "batch": "s0-001",
+          "source_hash": "134fd9552ee8bf45777cb751b4104465a7bfd079eb33bc27f1c226c8a6f4b322",
+          "code": "ebe0befa8dc9fb2247c58def2ed23e286affc214"
+        },
+        "planned": 264,
+        "started": 264,
+        "terminal": 264,
+        "graded": 264,
+        "analyzed": 264,
+        "invalid": 0,
+        "not_started": 0,
+        "model_calls": 0,
+        "cost_usd": 0,
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "elapsed_seconds": 36.78729946200019,
+        "qualification": {
+          "cells": [
+            {
+              "n": 36,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 108,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 324,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            },
+            {
+              "n": 972,
+              "count": 16,
+              "expected": 16,
+              "fact_accuracy": 1.0,
+              "exact_packet_rate": 1.0,
+              "missing_abstention": 1.0,
+              "passed": true
+            }
+          ],
+          "passed": true
+        },
+        "study_accounting": {},
+        "initial_study_accounting": {},
+        "reporting_errors": [],
+        "visualization": {
+          "mapping": "v1",
+          "frames": 33
+        }
+      }
+    },
+    {
+      "run": "sybil-scale-api/56defc84",
+      "status": "done",
+      "artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      },
+      "summary": {
+        "params": {
+          "stage": "S1",
+          "backend": "anthropic",
+          "batch": "s1-001",
+          "source_hash": "134fd9552ee8bf45777cb751b4104465a7bfd079eb33bc27f1c226c8a6f4b322",
+          "code": "722bfc3308affc75ab34d360bae6aca36b50acb5"
+        },
+        "planned": 2400,
+        "started": 2400,
+        "terminal": 2400,
+        "graded": 2400,
+        "analyzed": 2400,
+        "invalid": 0,
+        "not_started": 0,
+        "model_calls": 2400,
+        "cost_usd": 18.791928,
+        "input_tokens": 18296288,
+        "output_tokens": 99128,
+        "elapsed_seconds": 1151.9223684589997,
+        "qualification": null,
+        "study_accounting": {
+          "attempted_calls": 2464,
+          "reserved_usd": 68.300028,
+          "actual_usd": 19.453925,
+          "usage_reported_calls": 2464
+        },
+        "initial_study_accounting": {
+          "attempted_calls": 64,
+          "reserved_usd": 2.205736,
+          "actual_usd": 0.661997,
+          "usage_reported_calls": 64
+        },
+        "reporting_errors": [],
+        "visualization": {
+          "mapping": "v1",
+          "frames": 33
+        }
+      }
+    }
+  ],
+  "independent_reconciliation": {
+    "assigned": 2400,
+    "rows": 2400,
+    "recomputed": 2400,
+    "source_hash": "134fd9552ee8bf45777cb751b4104465a7bfd079eb33bc27f1c226c8a6f4b322",
+    "analysis_matches": true
+  },
+  "server_environment": {
+    "python": "3.12.3",
+    "architecture": "x86_64",
+    "cpus": 4,
+    "packages": {
+      "numpy": "2.2.6",
+      "Pillow": "11.3.0",
+      "PyYAML": "6.0.1"
+    }
+  },
+  "local_analysis_environment": {
+    "python": "3.12.13",
+    "numpy": "2.2.6",
+    "Pillow": "11.3.0",
+    "PyYAML": "6.0.1"
+  },
+  "initial_local_rounding_check": {
+    "python": "3.9",
+    "numpy": "2.0.2",
+    "differing_float_entries": 302,
+    "max_absolute_difference": 3.3306690738754696e-16,
+    "resolution": "match Python 3.12 and pinned dependencies; exact agreement, no data change"
+  }
+}

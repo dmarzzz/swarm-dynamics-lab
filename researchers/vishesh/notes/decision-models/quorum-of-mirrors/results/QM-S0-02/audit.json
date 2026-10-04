@@ -1,0 +1,26 @@
+{
+  "assignment_reconciliation": "32 planned, 32 unique valid terminal records, 0 missing",
+  "summary_matches_recomputed": true,
+  "cost_reconciled": true,
+  "public_plan_verified_before_dispatch": true,
+  "visual_inspection": "Browser rendered matrix; observed all 32 rows in accessibility tree and inspected screenshot; wrong/defer rows match receipts",
+  "hub_artifacts_verified": [
+    "matrix.html",
+    "summary.json",
+    "manifest.json",
+    "public-plan-receipt.json",
+    "matrix.csv",
+    "receipts.jsonl"
+  ],
+  "pending_uploads": 0,
+  "sha256": {
+    "budget-receipt.json": "1b7c3a415dbf9ba675ce704a872b5ad751d8ea50769915a26bfc4310bd07eea3",
+    "summary.json": "a6f7a0729f5a607d71ba674a909025e622c235277ff8ef1ce393522383795a2b",
+    "receipts.jsonl": "22996afe008eb59fb86805294785ac6ecef317f4acfa41a3cb61d4e838638dba",
+    "deployment.json": "f2e8a7ccf3f75781684c24970993445cb4eba95c7c5c3802b2ff0d8a65aad717",
+    "matrix.html": "8862e9ba9f5b3ab020c85c54882df18445101f964da860cf5b01a33deb3c4d71",
+    "matrix.csv": "243318cfd02d37a137bb8325a3e8b2aaa9624ae625d3e9fd16ec7c4df6629b4a",
+    "manifest.json": "2ca3a277fbff18264fe8db1ba9209dfc86b89f053e8519aa5e37edb28d9f97af",
+    "public-plan-receipt.json": "2bac9b8cac3be441f199b05cedd7e432c69df1ec424e6e9f02385c91fbc00015"
+  }
+}

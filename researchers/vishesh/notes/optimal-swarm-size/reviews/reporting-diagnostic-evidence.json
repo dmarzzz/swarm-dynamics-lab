@@ -1,0 +1,79 @@
+{
+  "verification": {
+    "run": "optimal-swarm-size-reporting-q0/92cb8f74bd7cffc1",
+    "model_calls": 0,
+    "artifact_hash_matches": {
+      "assignment.json": true,
+      "trace.jsonl": true,
+      "outcome.json": true,
+      "replay.html": true
+    },
+    "source_client_sha256": "ecd800d0faadfa624122c7acf3e1f96027f388acacd5c26249f0ad460cc790d5",
+    "public_status": "done",
+    "public_tldr_present": true,
+    "passed": true
+  },
+  "diagnostic": {
+    "run": "optimal-swarm-size-reporting-q0/92cb8f74bd7cffc1",
+    "model_calls": 0,
+    "progress_acknowledged": true,
+    "publication_complete": true,
+    "sha256": {
+      "assignment.json": "b612e0a87bdd3b2a662698fec24d76f48721a508b082afe82d9e754b4232c2a2",
+      "trace.jsonl": "3237f1c2867bdd7fb0fde27db39e094aa9b6aef9a6a4b7098e27b299cf48f346",
+      "outcome.json": "84706d3969d5dcd44b88c6bd589765c04b27c8eaed8234d0e24abc5285e66275",
+      "replay.html": "ea0e7d2d8a4905bf3558ab9ec18e5b5d723209c3cde53fe0d2fdfed82402d4af"
+    }
+  },
+  "publication": {
+    "run": "optimal-swarm-size-reporting-q0/92cb8f74bd7cffc1",
+    "complete": true,
+    "artifacts": {
+      "assignment.json": {
+        "acknowledged": true,
+        "spooled": false,
+        "code": null
+      },
+      "trace.jsonl": {
+        "acknowledged": true,
+        "spooled": false,
+        "code": null
+      },
+      "outcome.json": {
+        "acknowledged": true,
+        "spooled": false,
+        "code": null
+      },
+      "replay.html": {
+        "acknowledged": true,
+        "spooled": false,
+        "code": null
+      }
+    },
+    "terminal": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    }
+  },
+  "public_plan": {
+    "experiment": "optimal-swarm-size-reporting-q0",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/03e854ff60d12c6bd803ef6b434e34f684fc3b0a/researchers/vishesh/notes/optimal-swarm-size/reviews/reporting-diagnostic-pre.md",
+    "commit": "03e854ff60d12c6bd803ef6b434e34f684fc3b0a",
+    "plan_sha256": "f30d037f16cfe698655e2eb9acfaa26361e91fcddf705700dd3276376f23d9d2",
+    "registered_tldr": "TLDR: Verify spawned reporting, public visibility and four artifact byte hashes using one synthetic episode versus known local bytes. Metrics: acknowledgment, hash equality and terminal state. No model calls or scientific performance claims.",
+    "run_tldr": "TLDR: reporting-q0-a1 synthetic adapter check versus known bytes; acknowledgment, hashes and public terminal state; zero model calls and no scientific result.",
+    "checked_utc": "2026-10-04T04:10:59.459669+00:00"
+  },
+  "timeout_check": {
+    "kind": "offline_child_timeout_check",
+    "model_calls": 0,
+    "receipt": {
+      "acknowledged": false,
+      "spooled": false,
+      "code": "reporting_timeout"
+    },
+    "elapsed_s": 30.02410958299879,
+    "passed": true
+  }
+}

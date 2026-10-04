@@ -25,7 +25,7 @@ def plot(records,out):
     fig=plt.figure(figsize=(18,11),dpi=100,facecolor=BG)
     fig.text(.055,.943,'ONE OWNER / MANY FIRMS',fontsize=25,weight='bold')
     model=rs[0].get('model','unknown model');label={'claude-haiku-4-5-20251001':'Haiku 4.5','claude-sonnet-4-6':'Sonnet 4.6'}.get(model,model)
-    fig.text(.055,.901,f'Neutral-model discovery pilot · {label} · MKT-03 + MKT-11',fontsize=13,color=MUTED)
+    fig.text(.055,.901,f'Neutral-model discovery pilot · {label} · {rs[0]["attempt_id"]} · MKT-03 + MKT-11',fontsize=13,color=MUTED)
     fig.text(.055,.84,f'{observed}/{len(dynamic)} flexible portfolios registered a new firm',fontsize=23,color=COLORS['firm'])
     fig.text(.055,.797,f'{evasions}/{len(firm)} firm-rule episodes met the sustained evasion criterion.  {len(good)}/{len(rs)} completed episodes valid.',fontsize=13)
     if len(rs)!=36:fig.text(.945,.84,'PARTIAL / IN PROGRESS',ha='right',color=COLORS['owner'],fontsize=14,weight='bold')

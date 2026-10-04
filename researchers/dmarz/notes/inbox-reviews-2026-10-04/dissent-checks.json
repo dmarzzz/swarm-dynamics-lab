@@ -1,0 +1,59 @@
+{
+  "examples": [
+    {
+      "scenario": "bridge",
+      "decisions": [
+        "HOLD"
+      ],
+      "checks": [
+        1
+      ],
+      "closures": [
+        "supported"
+      ]
+    },
+    {
+      "scenario": "build",
+      "decisions": [
+        "PROCEED"
+      ],
+      "checks": [
+        0
+      ],
+      "closures": [
+        "open"
+      ]
+    },
+    {
+      "scenario": "alarm",
+      "decisions": [
+        "PROCEED",
+        "PROCEED",
+        "HOLD"
+      ],
+      "checks": [
+        1,
+        0,
+        1
+      ],
+      "closures": [
+        "withdrawn",
+        "suppressed_repeat",
+        "supported"
+      ]
+    }
+  ],
+  "alias_multiplicity": {
+    "first_checks": 1,
+    "duplicate_only_checks": 1,
+    "ledger_total": 2,
+    "reason": "checked"
+  },
+  "supported_repeat": {
+    "first_final": "HOLD",
+    "repeat_final": "PROCEED",
+    "repeat_closure": "suppressed_repeat",
+    "repeat_correct": false
+  },
+  "gold_mutation_projection_unchanged": true
+}

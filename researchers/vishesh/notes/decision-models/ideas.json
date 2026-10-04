@@ -115,40 +115,46 @@
     },
     {
       "id": "DM-03",
-      "title": "Stop-Signal Swarm",
+      "title": "The Right Dissenter (Stop-Signal Swarm)",
       "status": "exploratory hunch; not a registered hypothesis",
-      "question": "Can evidence-backed inhibitory messages stop a wrong decision cascade without silencing a correct minority?",
-      "comparison": "Compare endorsement-only exchange, contradiction-linked stop signals, random throttling and fixed rate limits at the same message budget; include true novel evidence and false alarms.",
+      "question": "Can a minority earn a bounded independent check that repairs wrong consensus without causing harmful reversals or repeated interruption?",
+      "comparison": "Compare evidence-gated checks with majority, unconditional veto, always-check, quota-matched random checking, pooled evidence and an exact synthetic reference across provenance, applicability and temporal-change scenarios.",
       "metrics": [
-        "Incorrect cascade size",
-        "Correct-minority survival",
-        "Decision latency",
-        "Useful completion",
-        "False inhibition"
+        "Correct on-time decisions over all assignments",
+        "Wrong-majority corrections",
+        "Harmful reversals",
+        "Verification cost and failures",
+        "Withdrawal and valid reopening",
+        "Repeated interruptions and deadline misses"
       ],
-      "prediction": "Targeted inhibition may contain bad cascades, but excessive inhibition may suppress valid new information.",
-      "falsifier": "Drop the biological-mechanism claim if random throttling or simple rate limits achieve the same tradeoff.",
-      "confounds": "An oracle contradiction detector would give the answer away; evidence availability and stop-message bandwidth must match.",
-      "decision_value": "Determines whether to implement a distinct evidence-backed stop channel rather than merely slowing communication.",
-      "feasibility": "Design sketch only; qualify a pinned model and publish a registered plan before any calls. No experiment implemented or run.",
+      "prediction": "A bounded evidence challenge may recover wrong consensus with fewer harmful reversals than unconditional dissent and less checking than always-check.",
+      "falsifier": "Narrow or reject the proposed gate if always-check or a deterministic rule dominates its useful-completion versus cost frontier, or if apparent gains depend on truth leakage or omitted failures.",
+      "confounds": "A guaranteed-correct dissenter, oracle verification, unequal new evidence, stale-record persistence, uncounted deferrals and selection of only wrong-majority episodes can all manufacture improvement.",
+      "decision_value": "Determines when a minority should trigger an independent check, when it should withdraw, and what new evidence can reopen a resolved challenge.",
+      "feasibility": "RD-1 plan and offline implementation under dissent/. Native execution remains gated; no measured Jev result.",
       "sources": [
         "seeley-2012-stop",
         "hu-2026-jevadvbench",
-        "lorenz-2011-how"
+        "lorenz-2011-how",
+        "he-2026-minority",
+        "mansuri-2026-multi",
+        "hamdi-2013-removal"
       ],
       "atlas": [
         "SOC-10"
       ],
       "briefs": [
-        "decision-models"
+        "decision-models",
+        "dissent"
       ],
       "scenario": "Typed decisions",
-      "delta": "Honeybee cross-inhibition is direct biological prior. The Jev test concerns model-generated contradiction judgments with non-oracle evidence, beyond generic dissent.",
-      "source_note": "Primary reading and access depth documented in decision-models/SOURCES.md. Scores are editorial screening, not a novelty certification.",
+      "delta": "RD-1 develops three practical scenarios and a bounded evidence acquisition/closure protocol. Native semantic competence, formal novelty and comparative benefit remain unestablished.",
+      "source_note": "RD-1 at researchers/vishesh/notes/dissent/PLAN.md. Earlier score is historical and becomes stale after this content revision.",
       "activity": {
         "added_at": "2026-10-04T02:29:37Z",
         "tags_added_at": {
-          "decision-models": "2026-10-04T02:29:37Z"
+          "decision-models": "2026-10-04T02:29:37Z",
+          "dissent": "2026-10-04T03:00:17Z"
         }
       },
       "assessment": {
@@ -571,7 +577,7 @@
       "metrics": [
         "False-action rate",
         "Abstention quality",
-        "Risk\u2013coverage"
+        "Risk–coverage"
       ],
       "prediction": "Closed menus may conceal unanswerability.",
       "falsifier": "Keep as qualification unless a new downstream consequence emerges.",
@@ -685,7 +691,8 @@
         "SOC-10"
       ],
       "briefs": [
-        "decision-models"
+        "decision-models",
+        "dissent"
       ],
       "scenario": "Typed decisions",
       "delta": "Good companion treatment; overlaps established dissent questions.",
@@ -693,7 +700,8 @@
       "activity": {
         "added_at": "2026-10-04T02:29:37Z",
         "tags_added_at": {
-          "decision-models": "2026-10-04T02:29:37Z"
+          "decision-models": "2026-10-04T02:29:37Z",
+          "dissent": "2026-10-04T03:00:17Z"
         }
       },
       "assessment": {

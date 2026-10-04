@@ -1,5 +1,14 @@
 # Antsy: commit now, or wait for better evidence?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Adaptive thresholds trade abstention against late correction or misinformation in the guarded factual selector. Basis: Every learned-policy choice matched symbolic control; guarded host logic limits AI claims. Twelve engineered clusters are the task diversity, not 2,688 independent outcomes. Rendering failure and exact-prefix recovery preserved.
+- **sample_size_summary:** S1:12 task clusters × 2 populations × 2 deadlines × 4 worlds × 2 schedules =384 paired blocks;7 policies →2,688 outcomes. Q2:22/22 pass.
+<!-- experiment-evidence:end -->
+
 Antsy tests when a team should stop gathering evidence and choose an API under a deadline. Its visual story is a race between agreement, corroboration and newly arriving misinformation. This is a **synthetic engineering experiment**, not an accepted lab hypothesis or a production procurement benchmark.
 
 ## Current result
@@ -45,3 +54,11 @@ Connects to the original [quorum](../../project-briefs/quorum.md), [collective s
 ## Measured visual results
 
 [Conditional tradeoffs](https://swarm-live.pages.dev/api/a/adaptive-quorum-api-v2/repair-v3-S1-attempt-2/tradeoffs.png) · [Late correction replay](https://swarm-live.pages.dev/api/a/adaptive-quorum-api-v2/repair-v3-S1-attempt-2/replay-early-wrong-late.gif) · [Late misinformation replay](https://swarm-live.pages.dev/api/a/adaptive-quorum-api-v2/repair-v3-S1-attempt-2/replay-late-wrong-late.gif). All eight selected replays and their final frames load on the [completed run](https://swarm-live.pages.dev/#/r/adaptive-quorum-api-v2%2Frepair-v3-S1-attempt-2).
+
+## Prospective design amendment 2026-10-04
+
+Incorporating [Dmarz's quorum recommendation](https://github.com/dmarzzz/swarm-lab/blob/e0a31706cdf1fb1d3864370b04f29bd4f93e2682/researchers/dmarz/notes/next-experiments-2026-10-04/README.md), the next useful extension changes a stopping decision through new evidence timing or reliability, rather than repeating symbolically equivalent choices at more sizes. The completed S1 results and scoring remain frozen.
+
+Before a successor, write a small set of independently authored scenarios where waiting can reveal a correction, introduce misinformation, or miss an operational deadline. Specify the source-reliability and delay process separately from agent inference, retain constant-two, constant-three and deadline controls, and compare correct decisions together with abstention and deadline loss. Use task-specific costs to justify the utility weights; show component outcomes so a preferred conclusion cannot depend only on those weights.
+
+Retain the symbolic/full-information reference as an explicitly advantaged ceiling and a competent N=1 solver with the same evidence actually available by cutoff. Measure actual verification and inference costs; cached shared histories do not constitute independently measured policy deployment costs. Pair conditions within fresh task roots and distinguish a treatment-specific size interaction from a raw increase in population. Freeze total-information and resource regimes before evaluating a semantic task. These requirements define a prospective extension, not a claim that the current guarded fact-selection model adds value beyond its symbolic baseline.

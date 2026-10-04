@@ -5,7 +5,7 @@
   "max_output_tokens": 1024,
   "max_input_bytes": 22528,
   "timeout_seconds": 60,
-  "total_api_cap_usd": 1.4,
+  "total_api_cap_usd": 8,
   "qualified_nonreasoning_endpoint": true,
   "pricing_verified_date": "2026-10-04",
   "pricing_source": "https://platform.claude.com/docs/en/about-claude/pricing"

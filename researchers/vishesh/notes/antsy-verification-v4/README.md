@@ -1,5 +1,14 @@
 # Antsy: test before trust
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **2/4** — Neither tested committee improved observed mean recall or saved checks over the no-check confidence router on these 70 receipts; this does not establish general harm or equivalence. Basis: Strong control, held-apart calibration and complete paired data support a limited negative result. Receipt-level descriptive intervals are available, but vendor/layout dependence is unquantified; token recall and flawed regional updates limit practical generalization. Valid null/adverse results do not reduce confidence by themselves.
+- **sample_size_summary:** 70 paired evaluation receipts, excluding 20 calibration and 10 qualification receipts; 700 distinct outcomes after shared-control deduplication. Per backend: 70/70 receipts, 490 rows, 840 calls; vendor/layout dependence is unquantified.
+<!-- experiment-evidence:end -->
+
 **Question:** when three OCR configurations disagree about a real receipt, which output should a system trust—and which small verification would most improve that decision?
 
 A receipt-processing service can run several cheap OCR configurations, but reviewing every output is expensive. High OCR confidence is not proof that the important text was recovered. Antsy gives a decision-maker two regional quality checks and asks it to select one output. Five local Laya roles propose checks and vote on when to stop. They compete against a fixed configuration, confidence alone, random checks, a deterministic check rule, and one agent with all the same observations.
@@ -55,6 +64,16 @@ The biological connection is limited: distributed assessment and commitment rese
 A measured comparison chart, an oracle-headroom plot, and time-ordered replays for the first three receipts in each run—not selected success stories. A replay shows estimated quality, actual paid checks, votes, stopping and final selection. Hidden scores appear only after commitment. There are no decorative ants implying movements or observations that did not occur.
 
 **Completed results:** [the skeptical assessment](RESULTS.md) reports both 70-receipt studies. Confidence alone achieved 56.78% recall, versus 56.30% for Laya and 55.72% for Jev committees; neither adaptive committee saved checks. Both full runs passed the integrity audit with zero invalid calls. Earlier Jev qualification failures remain documented. A failed run remains visible, with the repair and its unchanged or amended protocol identified separately.
+
+## PI follow-through — 2026-10-04 UTC
+
+Both frozen evaluations are complete; the [results](RESULTS.md) supersede the [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) historical running-status snapshot. Neither committee improved the observed mean over confidence alone or activated useful early stopping. Keep that completed comparison intact. It is evidence about this selector and QA contract, not a reason to abandon verification generally or rerun these receipts until a committee wins.
+
+A successor is conditional on fresh development documents demonstrating both decision headroom and informative purchasable checks. Repair empty-region handling and unequal-region weighting before testing efficacy. Use measured, imperfect checker outputs and actual review cost, with explicit abstain/escalate actions; distinguish choosing an OCR output from correcting its contents. Compare confidence/no-check, a competent single solver, a deterministic value-of-information policy and a committee with the same initial evidence and declared total resource allowance. Qualify cases that require both stopping and continued checking before expanding beyond one versus five decision agents.
+
+Freeze a required-field decision loss and report correct receipt-level decisions, false confident decisions, warranted abstention, checks and total cost. Token recall remains secondary. The existing 4.18-point recall headroom is not comparable to the PI's proposed 5-point improvement in receipt-level field decisions: those are different endpoints. The latter is a candidate useful-effect target to justify prospectively, not a threshold already established by v4.
+
+Use new document families for development and untouched evaluation, cluster duplicates and dependent vendor/layout templates, and size evaluation from paired uncertainty. Do not tune on these 70 evaluation receipts. These are successor-design requirements; no new run, model allocation or modification of the completed protocol follows from this amendment.
 
 ## Separately authorized Jev comparison
 

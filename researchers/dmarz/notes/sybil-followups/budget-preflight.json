@@ -1,0 +1,53 @@
+{
+  "observed_at_utc": "2026-10-04T03:50:35.627308+00:00",
+  "owner_shared_cap_usd": 500,
+  "followups_actual_plus_unsettled_cap_usd": 60,
+  "reported_hub_cost_nonbilling_usd": 63.76642,
+  "replaced_reported_market_cost_usd": 5.337684,
+  "other_cohort_bounds_usd": {
+    "market_split_lifetime_1600_calls": 189.39,
+    "market_haiku_lifetime_1000_calls": 39.456,
+    "compositional_current_Q0_004_full_reservation": 42,
+    "soc07_announced_cap": 40
+  },
+  "sum_with_followups_usd": 429.274736,
+  "buffer_usd": 70.725264,
+  "limitations": [
+    "Reported hub costs are operational telemetry, not provider billing; repeated analysis totals make this conservative but missing usage remains uncertain.",
+    "Resampling control completed all936 calls, so its prior93.6USD allowance is replaced by reported6.097136USD; no active successor in snapshot.",
+    "The compositional current Q0-004 entire42USD reservation is added conservatively on top of observed charges; P1 is closed until qualification.",
+    "Market lifetime bounds replace their observed charges; SOC-07 retains40USD announced allowance.",
+    "Future independent launches must respect the same500USD owner cap; the followups60USD shared ledger only governs these two studies."
+  ],
+  "provenance": [
+    "dmarz researcher budget directive",
+    "private hub sanitized prelaunch snapshot",
+    "market-split-api deployment.md and design.yaml",
+    "market-split-haiku design.yaml",
+    "discussion-dose/launch/resample-v3-a1.json",
+    "merged SOC-07 fleet claim"
+  ],
+  "paid_qualification_checkpoint": {
+    "observed_at_utc": "2026-10-04T03:53:42.232260+00:00",
+    "known_followup_actual_usd": 0.366548,
+    "settled_calls": 52,
+    "unsettled_reservations_usd": 0,
+    "both_model_qualification_gates_passed": true,
+    "remaining_within_unchanged_60_usd_guard": true
+  },
+  "dedicated_host_partition": {
+    "state": "implemented_and_verified_before_S1",
+    "budget_host": "sim-dmarz-4",
+    "newcomer_host": "sim-dmarz-sybil-newcomer",
+    "budget_total_allocation_usd": 50,
+    "newcomer_total_allocation_usd": 10,
+    "retained_checkpoint_calls_each": 52,
+    "retained_checkpoint_actual_usd_each": 0.366548,
+    "permanent_peer_holds_usd": {
+      "budget": 10,
+      "newcomer": 50
+    },
+    "combined_conservative_actual_ceiling_usd": 59.633452,
+    "holds_are_not_model_calls_or_actual_charges": true
+  }
+}

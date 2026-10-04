@@ -1,5 +1,7 @@
 # Thirty heterogeneous-swarm questions
 
+**2026-10-04 biological revision:** see [eight new cards](frontiers/QUESTION-BANK.md) and [the revised shortlist](frontiers/README.md). The material below preserves the original 30-question scan.
+
 All are exploratory hunches, not registered hypotheses. Scores use the owner’s rubric; reviews are same-author editorial checks. The first five in the sorted ranking are expanded in [DESIGNS.md](DESIGNS.md).
 
 ## HX-01 — Reflexes and deliberation: when does a fast controller destabilize the swarm? (91/100)

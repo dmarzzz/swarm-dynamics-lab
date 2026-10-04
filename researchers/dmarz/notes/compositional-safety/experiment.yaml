@@ -1,7 +1,7 @@
 id: compositional-safety
 title: Permitted actions and forbidden outcomes
 description: 'SEC-54 exploratory qualification: exact simulated information flow,
-  approval reuse and aggregate commitments. Distinct from the reviewed scaled study.'
+  approval reuse and aggregate commitments. Distinct from the proposed scaled study.'
 owner: dmarz
 params:
   stage:

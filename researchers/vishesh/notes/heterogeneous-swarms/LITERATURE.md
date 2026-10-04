@@ -1,5 +1,7 @@
 # Heterogeneous swarms: established work and remaining questions
 
+**2026-10-04 biological revision:** see [biological prior-art boundaries](frontiers/LITERATURE.md) and [the revised shortlist](frontiers/README.md). The material below preserves the original 30-question scan.
+
 Research snapshot: 2026-10-04 UTC / October 3 Pacific. This is a source-grounded scoping review, not a completed systematic survey. [Source records](sources.json) give access depth and URLs. Nineteen papers, six repositories and four first-party posts/API/project pages were opened. Three fresh X posts and two inherited X records are discussed in [search notes](SEARCH-LOG.md). Most papers were screened at abstract level; selected methods passages were inspected for Self-MoA, C2-MAS and reward-design theory. No paper is newly certified as read in full, no code was run, and no experimental results are claimed.
 
 ## What heterogeneous means here

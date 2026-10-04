@@ -1,0 +1,67 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "Build and verify a clear visual explanation of the improved experiment."
+   },
+   "internalParameters": {
+    "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",
+    "session": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "c132411cf0eb0a18cad5bd56396393d42855794ed0f05d68b071e60b1a1f4133"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "ece6e9fc7c8f6852c004fb9e97b14ac0f346adf79cb26d2a5918768068fc03c3"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py"
+    },
+    {
+     "digest": {
+      "sha256": "7547844fe902782d9dd7f98f45de1b9f126fd7012f66c71924583be20645413c"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py"
+    },
+    {
+     "digest": {
+      "sha256": "1498ff1c09f7096ddc858a925538d5fc31bd3dcbda09b9cc4b02032e55937983"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py"
+    },
+    {
+     "digest": {
+      "gitCommit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T03:54:59Z",
+    "invocationId": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T03:54:59Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "2b54c848f5197147017dfd6c915686f42b305a211ec8548417988aadd7f7afd1"
+   },
+   "name": "artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png"
+  }
+ ]
+}

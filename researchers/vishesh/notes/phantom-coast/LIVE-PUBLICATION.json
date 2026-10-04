@@ -1,0 +1,9 @@
+{
+  "experiment": "phantom-coast",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/fa967eefe4476997ee17bae004d0f3dc959d3950/researchers/vishesh/notes/phantom-coast/LIVE-PLAN.md",
+  "commit": "fa967eefe4476997ee17bae004d0f3dc959d3950",
+  "plan_sha256": "cadcdb07c1cb8dcf0fb677e07862008d386d73270746930d77b406fb54c3572b",
+  "registered_tldr": "TLDR: First qualify native Jev on complete synthetic maps, then compare early report order with social/private decisions and retained/reset state against pooled and deterministic baselines. Measure whole-map error bounds, missing responses and paired history disagreement. Exploratory fixed-evidence pilot; no adaptive scouting or changed-weight claim.",
+  "run_tldr": "Q0-A1 tests native Jev on six complete synthetic maps with three private reset observers each, against exact terrain labels; measures validity and whole-map and land/water error bounds. This is competence qualification, not evidence of a history or exploration effect.",
+  "checked_utc": "2026-10-04T03:55:43.422819+00:00"
+}

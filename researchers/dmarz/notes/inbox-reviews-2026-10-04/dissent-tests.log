@@ -1,0 +1,54 @@
+test_assignment_denominators (test_live.LiveTests) ... ok
+test_fixed_random_allocation_is_not_alternation (test_live.LiveTests) ... ok
+test_qualification_balanced_and_blind (test_live.LiveTests) ... ok
+test_requests_exclude_evaluator (test_live.LiveTests) ... ok
+test_reservation_survives_failure_and_duplicate (test_live.LiveTests) ... ok
+test_semantic_challenge_passes_hard_gate (test_live.LiveTests) ... ok
+test_temporal_recovery_exact_reference (test_live.LiveTests) ... ok
+test_worker_contract_with_fake_provider_and_hub (test_live.LiveTests) ... ok
+test_absent_challenge_no_tool (test_protocol.ProtocolTests) ... ok
+test_all_three_scenario_contracts (test_protocol.ProtocolTests) ... ok
+test_blind_veto_causes_harm (test_protocol.ProtocolTests) ... ok
+test_check_budget_enforced (test_protocol.ProtocolTests) ... ok
+test_correct_dissent_repairs_wrong_majority (test_protocol.ProtocolTests) ... ok
+test_expired_or_future_evidence (test_protocol.ProtocolTests) ... ok
+test_failure_is_not_silent_majority (test_protocol.ProtocolTests) ... ok
+test_invalid_policy_output (test_protocol.ProtocolTests) ... ok
+test_late_correct_observation_not_success (test_protocol.ProtocolTests) ... ok
+test_matched_random_false_spends_nothing (test_protocol.ProtocolTests) ... ok
+test_missing_check_remains_in_denominator (test_protocol.ProtocolTests) ... ok
+test_no_gold_or_condition_leak_and_mutation (test_protocol.ProtocolTests) ... ok
+test_noisy_verifier_can_cause_false_reversal (test_protocol.ProtocolTests) ... ok
+test_policy_cannot_mutate_world (test_protocol.ProtocolTests) ... ok
+test_public_packet_contains_no_check_before_acquisition (test_protocol.ProtocolTests) ... ok
+test_report_order_does_not_change_exact_check (test_protocol.ProtocolTests) ... ok
+test_reproducible_case_and_reserved_seed_guard (test_protocol.ProtocolTests) ... ok
+test_reverse_direction_is_not_special (test_protocol.ProtocolTests) ... ok
+test_same_ancestry_new_id_is_not_new_evidence (test_protocol.ProtocolTests) ... ok
+test_scope_and_stale_rejected (test_protocol.ProtocolTests) ... ok
+test_temporal_withdraw_repeat_and_reopen (test_protocol.ProtocolTests) ... ok
+test_tie_and_invalid_votes (test_protocol.ProtocolTests) ... ok
+test_unknown_or_duplicate_citation_rejected (test_protocol.ProtocolTests) ... ok
+test_wrong_dissent_withdraws (test_protocol.ProtocolTests) ... ok
+test_zero_denominators_are_null (test_protocol.ProtocolTests) ... ok
+test_choice_must_match_maximum (test_protocol.WireTests) ... ok
+test_confidence_boolean_rejected (test_protocol.WireTests) ... ok
+test_live_gate_closed_by_default (test_protocol.WireTests) ... ok
+test_missing_or_extra_labels_rejected (test_protocol.WireTests) ... ok
+test_probability_mutations (test_protocol.WireTests) ... ok
+test_provider_and_snapshot_checked (test_protocol.WireTests) ... ok
+test_request_does_not_contain_credential (test_protocol.WireTests) ... ok
+test_tape_exact_binding_and_duplicates (test_protocol.WireTests) ... ok
+test_valid_wire (test_protocol.WireTests) ... ok
+test_duplicate_assignments_rejected (test_study.StudyTests) ... ok
+test_interruption_retains_all_assignments (test_study.StudyTests) ... ok
+test_natural_votes_and_unanimous_cases_kept (test_study.StudyTests) ... ok
+test_private_views_do_not_see_peers (test_study.StudyTests) ... ok
+test_provider_failures_still_terminal (test_study.StudyTests) ... ok
+test_random_arm_requires_frozen_schedule (test_study.StudyTests) ... ok
+test_reconcile_and_never_overwrite (test_study.StudyTests) ... ok
+
+----------------------------------------------------------------------
+Ran 49 tests in 7.772s
+
+OK

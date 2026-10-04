@@ -3,7 +3,7 @@ id: build-v3-resample-control
 type: task
 title: Sidecar repeat-vote (resample-only) control for discussion benchmark v3
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/private-control
 for: dmarz
@@ -13,7 +13,9 @@ depends_on:
 - build-discussion-benchmark-v3
 topics: []
 claimed_at: 2026-10-04T02:26Z
-updated: 2026-10-04T02:26Z
+updated: 2026-10-04T03:58Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md
 ---
 
 ## Goal
@@ -30,6 +32,12 @@ Coordination with dmarz/discussion-bench-v3, which owns `src/bench_v3/` and the 
 
 ## Done when
 
-- [ ] Sidecar module and offline tests (equal probe counts, no posts in resample arm, shared checkpoint, v3 selftest still passes) committed.
-- [ ] Design note and pre-run review committed before any paid call.
-- [ ] Run after the v3 review passes; post-mortem committed; claim released.
+- [x] Sidecar module and offline tests (equal probe counts, no posts in resample arm, shared checkpoint, v3 selftest still passes) committed.
+- [x] Design note and pre-run review committed before any paid call.
+- [x] Run complete (launched under dmarz's review waiver); post-mortem committed; claim released.
+
+## Progress
+
+Built b3e1bb2, resynced to v3 fixes 9c4c945, hub wrapper 50d9180, waiver gate a1ddb36. Launched resample-v3-a1 at 658a81a on sim-dmarz-5 (claim dmarz-v3-resample), hub run discussion-v3-resample/1004-030243-d6fa86. Independent review waived by dmarz (launch/resample-v3-review-waiver.md).
+
+Result (2026-10-04): resample-v3-a1 executed cleanly (936/936 calls, $6.10) but failed the clean competence screen (2/12): agents abstain at the report checkpoint. Re-probing is near-deterministic (72/72 votes unchanged), so on v3 the private-work changes come from the work turns, not resampling. Post-mortem: researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md.

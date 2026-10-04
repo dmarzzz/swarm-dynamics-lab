@@ -1,0 +1,13 @@
+{
+  "attempt": "QM-S0-01",
+  "status": "setup_failed",
+  "reason": "output_parent_missing",
+  "assigned": 32,
+  "started": 0,
+  "model_calls": 0,
+  "reserved_usd": 0,
+  "worker_exit": 1,
+  "qualification": "not_evaluated",
+  "public_preflight": "passed",
+  "next_attempt": "QM-S0-02"
+}

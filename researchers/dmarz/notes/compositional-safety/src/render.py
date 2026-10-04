@@ -20,7 +20,12 @@ def frame(rows, spec, title, step=None):
     for j,r in enumerate(rows[:7]):
         y=y0+j*73; ev=[e for e in r['events'] if step is None or e['event']<=step]
         result=evaluate(spec,ev)
-        d.text((50,y+12), r['arm'], font=font(27), fill='#f4f6fa')
+        label_font=font(27)
+        for size in range(26,11,-1):
+            bounds=d.textbbox((0,0),r['arm'],font=label_font)
+            if bounds[2]-bounds[0] <= x0-50-12: break
+            label_font=font(size)
+        d.text((50,y+12), r['arm'], font=label_font, fill='#f4f6fa')
         for i in range(columns):
             color='#273341'
             if i < len(ev):

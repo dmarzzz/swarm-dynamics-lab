@@ -1,0 +1,56 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Yes you have approval. Go ahead and fix up the experimental design and then run it."
+   },
+   "internalParameters": {
+    "commit": "61c81e01c967b759d9cdb99853096beb745296e9-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "f5c855f309f0eabd2b95d2b2f063f84e3edca5054aba10b89d6cb2215989d308"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py"
+    },
+    {
+     "digest": {
+      "sha256": "6964098154c8a7762ddd81d7ee9f5a3d13be745d841d3e31e6ff2337c0d66984"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/results/S0-repair/manifest.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "61c81e01c967b759d9cdb99853096beb745296e9"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:26:10Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T04:26:10Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0"
+   },
+   "name": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz"
+  }
+ ]
+}

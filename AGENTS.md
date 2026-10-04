@@ -22,6 +22,23 @@ The work runs in phases, and the order is enforced:
 Phases overlap across topics: one topic can be in experiments while another is still being scanned. Within a
 topic, the order holds. The tool `scripts/lab.py` and CI enforce it.
 
+## Required setup workflow for new experiments
+
+When a session starts work on a new experimental question, thesis, study or material revision, read
+[the experiment setup runbook](tooling/agent-experiments/EXPERIMENT-SETUP.md) before implementation.
+Copy its [setup record](tooling/agent-experiments/templates/experiment-setup.md) into the owned study
+directory as `SETUP.md`, fix the copied links, and maintain evidence for each gate. Include the runbook,
+setup record, current gate and exact next action in experiment handoffs so the next session resumes the
+same process. This applies to exploratory setup as well as formal experiments; existing prior-art,
+hypothesis and different-researcher review gates remain binding.
+
+Write the plan before experimental implementation. Before each attempt, read the previous post-mortem,
+complete the pre-run assessment, and satisfy public-plan registration, qualification, source/version,
+budget and applicable machine/account checks. Missing or stale required evidence blocks launch.
+Account for every assigned outcome, retain failed attempts, and complete the post-mortem and closeout.
+The runbook is a required workflow, not a claim that all launchers enforce it automatically. Resource
+ownership directives retain their stated scope; this requirement grants no new spending or deployment authority.
+
 ## Quick start
 
 ```bash
@@ -259,6 +276,10 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 - Report every run, including failures. Separate measured results from interpretation.
 - When results land, update the hypothesis status (`supported`, `refuted`) and log it.
 
+### Experiment evidence metadata
+
+Owner requirement, 2026-10-04: every experiment entry, including exploratory studies in researcher notes, must expose `evidence_confidence` and `sample_size_summary` using [the shared rubric](experiments/EVIDENCE-METADATA.md). State the claim, rationale, assessor/date and supporting evidence; distinguish independent sample units from agents/calls and planned counts from observed outcomes. Keep redesigned or model-specific cohorts separate. Update the editable registry and render the fields after analysis; do not modify frozen execution inputs to add reporting metadata. These scores do not replace qualification, uncertainty estimates or research gates.
+
 ### Required pre-run and post-run review
 
 For every experiment attempt (including exploratory S0/S1 work), follow
@@ -318,9 +339,16 @@ satisfy this requirement. Offline local unit tests do not need a fleet allocatio
   verify uploads, then release; the owner handles teardown of temporary machines through agentops.
   Do not interrupt or move existing runs merely to apply this new rule retroactively.
 
-Owner clarification, 2026-10-04 UTC: for Immune Response, provision a new `sim-immune-response`
-machine owned by vishesh. Do not allocate an existing dmarz-owned or dmarz-named machine merely
-because it is free. The prior sim-dmarz-3 claim was released without running an experiment.
+Owner correction, 2026-10-04 UTC: Immune Response needs its own dedicated machine within
+Dmarz's existing DigitalOcean account/team and Swarm Lab provisioning setup. Do not borrow an
+existing dmarz-named machine or provision through the user's personal/default DigitalOcean account.
+The earlier interpretation that researcher ownership authorized a different billing account was wrong.
+Before any create/apply, match the credential's actual account/team to an explicit approved identity
+from the established Swarm Lab provisioner, verify the infrastructure state/project and exact resource
+plan, and fail closed if identity or authorized access is unavailable. A fleet owner field, host name,
+working credential or local default context is not account authorization. Record verification privately;
+never publish account identifiers or secrets. Do not relaunch the mistaken deployment. The original
+unused sim-dmarz-3 claim and the mistaken sim-immune-response deployment remain historical records.
 
 The detailed launch checklist is
 [researchers/vishesh/notes/experiment-machine-workflow.md](researchers/vishesh/notes/experiment-machine-workflow.md).
@@ -374,3 +402,7 @@ python3 .flightdeck/fd.py check --strict .
 - Edits to another researcher's files, to generated files, or to claim fields by hand.
 - Force pushes, history rewrites, or committing large binaries.
 - Marking `read_depth: full` or `ran` without doing it.
+
+## Single researcher review for Vishesh's experiments
+
+Owner clarification, 2026-10-04 UTC: require one researcher review, not separate design and dossier sign-offs or approval from both Dmarz and Shadow. For How to win agents and influence swarms, Dmarz's published design feedback satisfies the researcher-review requirement by explicit owner direction. Retire the extra Q4 dossier-review gate. Resolve substantive feedback through the owning agent's implementation and validation; do not automatically request a second researcher review for routine repairs. Keep tests, bounded model qualification, public plans, budget and dedicated-account allocation checks. A completed design review must not be misrepresented as an independent code/arithmetic audit or formal hypothesis acceptance. This clarification supersedes duplicate review requirements in this owner's experiment plans.

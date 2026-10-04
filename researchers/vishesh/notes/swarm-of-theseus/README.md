@@ -1,10 +1,21 @@
 # Swarm of Theseus — SOC-24
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Supplied procedure notes can preserve this small task performance after complete crew replacement; mentoring adds no established benefit. Basis: Tiny constructed feature space, supplied useful rules and note copying create ceiling effects; no evidence of emergent culture or mentoring advantage. Generations, members and cases are dependent within world.
+- **sample_size_summary:** S1:6 paired worlds (2 per3 scenarios) × 6 arms =36/36 trajectories; 3 members per world. Across qualification/S1:68 completed,4 failed of72 started.
+<!-- experiment-evidence:end -->
+
 Status: completed exploratory S0/S1 pilot, not an accepted hypothesis or confirmatory study. Owner: vishesh/codex-theseus. Plan written 2026-10-04 UTC before implementation or execution. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates remain closed.
 
 ## Critical review and next design
 
 The user-requested retrospective review concludes that v1 is a useful transmission baseline, but its headline is largely explained by preserving a supplied rule. It should not be scaled as a novel culture result. All mentoring comes directly from founders; two scenarios reuse the same four binary inputs; repair actors receive the new rule explicitly. Read the [critical review](redesign/REVIEW.md), [structural audit](redesign/structural-audit.json), and [unrun selective-continuity design](redesign/DESIGN.md). The new question is whether descendants can preserve acquired useful practices while selectively revising obsolete ones. No v2 result is claimed.
+
+The [X-source grounding update](redesign/SOCIAL-GROUNDING.md) changes the next priority to repeated software-team handoffs and rare-hazard institutional memory, with model/runtime migration tested separately. It records live versus cached source access and does not claim that social attention establishes novelty.
 
 ## Results status
 

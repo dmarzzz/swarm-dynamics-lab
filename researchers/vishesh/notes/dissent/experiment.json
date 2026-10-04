@@ -1,0 +1,31 @@
+{
+  "id": "right-dissenter",
+  "title": "The Right Dissenter",
+  "owner": "vishesh",
+  "description": "TLDR: Can evidence-backed dissent earn a bounded independent check, withdraw when wrong, and reopen on new evidence? Three synthetic scenarios compare Jev admission with majority, veto, always-check, fixed random checking, pooled evidence and an exact rule. Measure correct on-time decisions, harmful reversals, checking cost and recovery. Scripted votes and fixed grammar limit generalization; exploratory study, independent review pending.",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md",
+  "params": {
+    "stage": {
+      "type": "str",
+      "role": "stage"
+    },
+    "design": {
+      "type": "str",
+      "role": "fixed"
+    },
+    "source": {
+      "type": "str",
+      "role": "fixed"
+    },
+    "scripted_votes": {
+      "type": "bool",
+      "role": "fixed"
+    }
+  },
+  "metrics": [
+    "correct_all_assigned",
+    "terminal",
+    "cost_usd"
+  ],
+  "primary_metric": "correct_all_assigned"
+}

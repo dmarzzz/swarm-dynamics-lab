@@ -72,7 +72,7 @@ class Anthropic:
 
     def call(self, packet, call_id):
         body = {'model':self.d['model'],'max_tokens':self.b['max_output_tokens'],
-                'temperature':0,'system':SYSTEM,
+                'thinking':self.d['thinking'],'system':SYSTEM,
                 'messages':[{'role':'user','content':json.dumps(packet, sort_keys=True)}],
                 'output_config':{'format':{'type':'json_schema','schema':SCHEMA}}}
         encoded = json.dumps(body).encode()
@@ -114,11 +114,14 @@ class Anthropic:
         if data.get('stop_reason') != 'end_turn':
             raise CallFailure('nonterminal_output', account)
         content = data.get('content', [])
-        if len(content)==1 and content[0].get('type')=='text':account['response_text']=content[0]['text']
+        texts = [b for b in content if b.get('type')=='text']
+        if len(texts)==1:account['response_text']=texts[0]['text']
         try:
-            if len(content)!=1 or content[0].get('type')!='text':
+            # Thinking is billed but never logged or replayed to the stateless actor.
+            if (len(texts)!=1 or content[-1].get('type')!='text'
+                or any(b.get('type') not in ('thinking','redacted_thinking') for b in content[:-1])):
                 raise ValueError('text_block')
-            answer = json.loads(content[0]['text'])
+            answer = json.loads(texts[0]['text'])
             sim.validate(answer, packet)
         except Exception:
             raise CallFailure('invalid_structured_answer', account) from None

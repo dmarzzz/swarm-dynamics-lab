@@ -1,5 +1,21 @@
 # Immune Response
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Immune response v1 scripted cohort** (`immune-v1`)
+
+- **evidence_confidence:** **1/4** — Oracle restoration repairs private/shared-state contamination in a programmed fixture. Basis: Deterministic engineering evidence only; names/ownership are permuted within a tightly specified fixture. Native v1 completion is not established by these sources.
+- **sample_size_summary:** Scripted S0:1 task × 3 strata × 6 arms =18 outcomes; S1:2 tasks × 3 strata × 6 arms =36 outcomes; 8 actors and24 rounds per trajectory.
+
+**Immune response v2 native diagnostic** (`immune-v2`)
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: shared restoration contributes beyond private repair and stale-record blocking. Basis: Single native task and failed primary comparator prevent a robust LLM effect estimate; programmed equal results across incident strata do not demonstrate breadth.
+- **sample_size_summary:** Scripted:256 S1 outcomes from8 task IDs × 4 strata × 8 arms. Native:one shared-evidence task,8 arm outcomes with1 contract failure.
+<!-- experiment-evidence:end -->
+
 ## TLDR
 
 After a bad record contaminates a swarm, is repairing private memories enough, or must the shared store also be repaired? Compare Q11 with Q10F, holding private repair and stale-record blocking fixed. Eight actors face returning stale data and a later genuine update; measure correct mock-deployment, recovery and relapse. Oracle incident labels make this a repair-mechanism test, not autonomous detection.

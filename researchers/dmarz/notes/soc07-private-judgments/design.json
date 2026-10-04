@@ -209,5 +209,63 @@
     "money_cap_usd": null,
     "compute_hour_cap": null,
     "allow_paid_execution": false
-  }
+  },
+  "amendments": [
+    {
+      "id": "A1",
+      "date": "2026-10-04",
+      "by": "dmarz/soc07-private, on dmarz's instruction",
+      "summary": "Exploratory S0 and S1 run on a hosted API model instead of the pinned open weights. Every field above is the original plan and is kept unchanged; execution.json holds what actually runs.",
+      "reason": "No server in the fleet has a GPU. dmarz chose the Anthropic Haiku model and adapter pattern that the sybil-scale-api and discussion v3 studies use on the same night.",
+      "model": {
+        "provider": "Anthropic Messages API",
+        "id": "claude-haiku-4-5-20251001",
+        "replaces": "Qwen/Qwen3-8B revision b968826d9c46dd6066d109eabc6255188de91218 (kept as a later replication)",
+        "fallback_inside_study": null
+      },
+      "sampling": {
+        "kept": {
+          "temperature": 0.7
+        },
+        "not_sent": {
+          "top_p": "the API rejects temperature together with top_p on this model",
+          "top_k": "model-card default for Qwen, not carried over",
+          "min_p": "does not exist on the API",
+          "presence_penalty": "does not exist on the API",
+          "enable_thinking": "thinking is simply not requested",
+          "seed": "the API has no seed; policy seeds are derived and recorded but cannot be sent"
+        },
+        "added": "provider structured output (one fixed JSON schema per phase); the strict parser still decides validity and there is still no repair call"
+      },
+      "pins_not_available": [
+        "weights revision",
+        "dtype",
+        "quantization",
+        "runtime_image_digest",
+        "tokenizer_hash",
+        "chat_template_hash"
+      ],
+      "token_accounting": "Tokens are the provider's reported usage, not a local tokenizer count. The 4,096-token input cap is enforced on reported input tokens after each response (a call above it is a failure and its output is discarded) and guarded before dispatch by a 16,384-byte request limit. Cost is measured in dollars at USD 1 per million input tokens and USD 5 per million output tokens.",
+      "retry": "automatic_retries stays 0 for answers and invalid_output_repairs stays 0. Added: at most 2 transport retries, only for HTTP 429 or 529, where the provider did not run the model; all attempts share the one 60-second request budget. A timeout is never retried.",
+      "budget": {
+        "money_cap_usd": 40,
+        "split": {
+          "public_decision_path": 30,
+          "auxiliary_private_final": 10
+        },
+        "max_calls": {
+          "s1q": 12,
+          "s1r": 672,
+          "s1l": 4080
+        },
+        "allow_paid_execution": "only with launch/s1-approval.json committed after the reviewer's go"
+      },
+      "review": "Cross-researcher review waived by dmarz for this study. Reviewer: dmarz/fleet-monitor. See launch/review-waiver.md. No accepted hypothesis exists; results are exploratory.",
+      "closed": [
+        "s2l",
+        "s3"
+      ],
+      "details": "README.md section 11 and execution.json"
+    }
+  ]
 }

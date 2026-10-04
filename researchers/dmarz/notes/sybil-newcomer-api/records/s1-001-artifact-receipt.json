@@ -1,0 +1,95 @@
+{
+  "run": "sybil-newcomer-api/8def40e4",
+  "status": "done",
+  "attempts": 1,
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "f38a9658dcb5e403e9dfaeccfd201c603b84d947ed085779374b278ceb4ef943",
+    "code": "e9db4c58a8847d2f54d60a8ff3cc70f81f58263e"
+  },
+  "metrics": {
+    "episodes": 1944,
+    "invalid": 0,
+    "model_calls": 1944,
+    "cost_usd": 3.0886590000000003,
+    "qualification_passed": 0,
+    "rare_accuracy": 0.44427297668038407
+  },
+  "progress": {
+    "completed": 1944,
+    "failed": 0,
+    "errors": []
+  },
+  "verified_artifacts": [
+    "assignments.jsonl.gz",
+    "episodes.jsonl.gz",
+    "worlds.jsonl.gz",
+    "history.jsonl.gz",
+    "summary.json",
+    "analysis.json",
+    "final_frame.png",
+    "replay.gif",
+    "replay_start.png",
+    "progress.png",
+    "initial_frame.png"
+  ],
+  "verified_images": {
+    "initial_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "final_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "replay.gif": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 8
+    }
+  },
+  "worker_active": false,
+  "study_accounting": {
+    "attempted_calls": 1980,
+    "reserved_usd": 20.591978,
+    "actual_usd": 3.132219,
+    "usage_reported_calls": 1980
+  },
+  "guard_checkpoint": {
+    "actual_usd": 3.455207,
+    "held_usd": 50.0,
+    "committed_usd": 53.455207,
+    "reservations": 1997,
+    "settled": 1996,
+    "cap_usd": 60.0
+  },
+  "allocation_hold_note": "The $50 held value is the permanent peer-host allocation, not API spend or an unpriced request.",
+  "public_visual_audit": {
+    "verified_by": "parent operator",
+    "final_counts": [
+      1944,
+      1944
+    ],
+    "failed": 0,
+    "not_started": 0,
+    "maincell_accuracy": {
+      "random": 26.4,
+      "reputation": 12.5,
+      "renewal": 20.8
+    },
+    "replay_rounds_visibly_advanced": [
+      1,
+      6
+    ],
+    "all_frames_decoded": 8,
+    "dimensions": [
+      1800,
+      1200
+    ]
+  },
+  "resource_release": "Pending parent archive and teardown; worker exited"
+}

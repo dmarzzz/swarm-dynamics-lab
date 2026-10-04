@@ -1,5 +1,23 @@
 # How to win agents and influence swarms
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source snapshots shown per cohort ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**External influence v2 hosted cohort** (`influence-v2`)
+Source: `9781739c`.
+
+- **evidence_confidence:** **1/4** — The hosted fixture comparison exposed poor use of corrective evidence and no reliable verification advantage; it does not establish general attack robustness. Basis: Matched call slots and adverse results support a narrow implementation diagnosis. One fixture per domain, authored scores and failed evidence integration prevent general robustness or superiority claims.
+- **sample_size_summary:** 50/50 valid native arm outcomes; one fixture in each of3 domains (only1 procurement primary),9 actors per arm and750 calls.
+
+**External influence local model qualifications** (`influence-v2-local`)
+Source: `b51e3f1f`.
+
+- **evidence_confidence:** **1/4** — The unchanged local 0.6B and 1.7B replacements failed bounded workflow qualification; attack resistance remains untested. Basis: Q0 and D0 produced no valid teams; Q1 produced three valid teams but only two correct decisions. Invalid teams leave harm unknown. Model, profiles and future schema repair differ across attempts, so their counts must remain separate; no matched efficacy or broad model ranking follows.
+- **sample_size_summary:** Q0/Q1 each use 3 domain roots × 2 cases: 0/6 and 3/6 valid teams (Q1: 2 correct). D0: 0/4 valid historical procurement cases. 87 calls across attempts; main S1 unrun.
+<!-- experiment-evidence:end -->
+
 ## Follow-up design
 
 The [scenario redesign and candid assessment](../influence-swarms/scenario/README.md) replace the planned scalar-score follow-up with deeper procurement cases, a cheaper generalist baseline and model decision authority. Historical results below remain unchanged.
@@ -44,3 +62,9 @@ Hold the underlying task and external evidence exposure fixed across policies. C
 ## Metrics
 
 Report harmful target selection, correct legitimate choice, utility regret, invalid outcomes and actual cost. Keep procurement primary and transfer results separate; count tasks rather than agents as independent units.
+
+## Running a version with local agents
+
+A prospective local-model variant replaces historical Haiku calls with shared local Qwen3 0.6B weights while retaining the same nine-agent teams and task protocol. It starts with six clean/superior competence screens across all three domains; a passing model can repeat the original 50 assignments (450 episode-local identities). Qwen3 1.7B is a declared fallback if 0.6B fails qualification. Four simultaneous calls bound the desktop load. See the [local experimental plan](local-agents/PLAN.md) for qualification gates, historical comparators, metrics, diagnostics and limitations. No result is claimed yet; registration and competence gates precede inference.
+
+Local qualification update: the initial 0.6B configuration failed candidate coverage in all six teams. The 1.7B fallback produced three valid teams and two correct decisions out of six; three teams failed citation validation. A [prospective schema-repair plan](local-agents/PLAN-v2.md) now encodes only actor-visible output constraints before a fresh qualification. Original failed attempts remain unchanged. These are usability findings, not attack-resistance results.

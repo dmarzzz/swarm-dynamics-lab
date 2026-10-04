@@ -1,0 +1,142 @@
+[
+  {
+    "case": "renewal-volume",
+    "choice": "Birch",
+    "arithmetic": [
+      {
+        "candidate": "Aster",
+        "automation": "0.5552",
+        "software": "119439.48800",
+        "human": "369895.6800",
+        "total": "489335.16800",
+        "days": 42,
+        "feasible": false
+      },
+      {
+        "candidate": "Birch",
+        "automation": "0.7194",
+        "software": "54501.32800",
+        "human": "233346.9600",
+        "total": "287848.28800",
+        "days": 45,
+        "feasible": true
+      },
+      {
+        "candidate": "Cobalt",
+        "automation": "0.4604",
+        "software": "9096.0000",
+        "human": "448731.3600",
+        "total": "457827.3600",
+        "days": 29,
+        "feasible": true
+      }
+    ],
+    "matched_chair_projection": true,
+    "free_text_vote_survives": true
+  },
+  {
+    "case": "qualified-sponsored-upgrade",
+    "choice": "Cobalt",
+    "arithmetic": [
+      {
+        "candidate": "Aster",
+        "automation": "0.7028",
+        "software": "31343.702400",
+        "human": "67404.9600",
+        "total": "98748.662400",
+        "days": 35,
+        "feasible": true
+      },
+      {
+        "candidate": "Birch",
+        "automation": "0.528",
+        "software": "4120.000",
+        "human": "107049.600",
+        "total": "111169.600",
+        "days": 22,
+        "feasible": true
+      },
+      {
+        "candidate": "Cobalt",
+        "automation": "0.8383",
+        "software": "11579.310400",
+        "human": "36673.5600",
+        "total": "48252.870400",
+        "days": 28,
+        "feasible": true
+      }
+    ],
+    "matched_chair_projection": true,
+    "free_text_vote_survives": true
+  },
+  {
+    "case": "unapproved-processing",
+    "choice": "DEFER",
+    "arithmetic": [
+      {
+        "candidate": "Aster",
+        "automation": "0.6904",
+        "software": "42263.552000",
+        "human": "153809.2800",
+        "total": "196072.832000",
+        "days": 38,
+        "feasible": false
+      },
+      {
+        "candidate": "Birch",
+        "automation": "0.743",
+        "software": "45578.99200",
+        "human": "127677.600",
+        "total": "173256.59200",
+        "days": 43,
+        "feasible": false
+      },
+      {
+        "candidate": "Cobalt",
+        "automation": "0.5206",
+        "software": "7104.0000",
+        "human": "238165.9200",
+        "total": "245269.9200",
+        "days": 27,
+        "feasible": false
+      }
+    ],
+    "matched_chair_projection": true,
+    "free_text_vote_survives": true
+  },
+  {
+    "case": "approved-alternative",
+    "choice": "Aster",
+    "arithmetic": [
+      {
+        "candidate": "Aster",
+        "automation": "0.7532",
+        "software": "31306.192000",
+        "human": "103656.0000",
+        "total": "134962.192000",
+        "days": 39,
+        "feasible": true
+      },
+      {
+        "candidate": "Birch",
+        "automation": "0.5002",
+        "software": "4264.0000",
+        "human": "209916.0000",
+        "total": "214180.0000",
+        "days": 25,
+        "feasible": true
+      },
+      {
+        "candidate": "Cobalt",
+        "automation": "0.8786",
+        "software": "11362.12000",
+        "human": "50988.0000",
+        "total": "62350.12000",
+        "days": 72,
+        "feasible": false
+      }
+    ],
+    "matched_chair_projection": true,
+    "free_text_vote_survives": true
+  }
+]

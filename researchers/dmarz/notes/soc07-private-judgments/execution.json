@@ -1,0 +1,180 @@
+{
+  "schema_version": 1,
+  "study": "soc07-private-judgments",
+  "status": "exploratory",
+  "amendment": "A1, 2026-10-04 UTC: execution amendment to design.json; see README section 11",
+  "authorized_stages": [
+    "s0",
+    "s1q",
+    "s1r",
+    "s1l"
+  ],
+  "closed_stages": [
+    "s2l",
+    "s3"
+  ],
+  "launch_manifest": {
+    "version": "m1",
+    "note": "Everything a model switch would change. A switch is a dated amendment to this block (plus a budget entry for the new qualification set), then a fresh S0, a fresh reviewer approval and a fresh S1-Q on new worlds. No code changes.",
+    "model": "claude-haiku-4-5-20251001",
+    "temperature": 0.7,
+    "thinking": {
+      "type": "off",
+      "budget_tokens": 0
+    },
+    "output_token_caps": {
+      "initial": 256,
+      "discussion": 256,
+      "final_public": 64,
+      "final_private": 64,
+      "qualification": 128
+    },
+    "input_usd_per_million": 1,
+    "output_usd_per_million": 5,
+    "price_note": "Claude Haiku 4.5 list price, USD 1 input and USD 5 output per million tokens; the same figures the sybil-scale-api and discussion v3 studies used on 2026-10-04",
+    "qualification_set": 0
+  },
+  "s0": {
+    "id": "s0",
+    "kind": "scripted_fixtures",
+    "worlds": 60,
+    "worlds_per_regime": 20,
+    "repeats": 1,
+    "arms": [
+      "private",
+      "public",
+      "never",
+      "prepare",
+      "vote"
+    ],
+    "agents": 5,
+    "policies": [
+      "always_correct",
+      "evidence_follower",
+      "stubborn",
+      "majority_follower"
+    ],
+    "model_calls": 0
+  },
+  "provider": {
+    "boundary": "src/adapter.py AnthropicAdapter (native Messages API over HTTPS, standard library only)",
+    "endpoint": "https://api.anthropic.com/v1/messages",
+    "api_version": "2023-06-01",
+    "structured_output": "output_config.format json_schema, one fixed schema per phase",
+    "tools": [],
+    "prompt_caching": "not requested; any reported cache usage is a failure",
+    "fallback_model": null,
+    "plan_parameters_not_sent": [
+      "top_p",
+      "top_k",
+      "min_p",
+      "presence_penalty",
+      "enable_thinking",
+      "seed",
+      "revision",
+      "dtype",
+      "quantization"
+    ],
+    "credential_aliases": [
+      "SWARM_MODEL_API_KEY",
+      "SWARM_MODEL_WORKSPACE_ID"
+    ],
+    "thinking_rule": "launch_manifest.thinking: off sends no thinking field; budget sends thinking {type: enabled, budget_tokens: N}, adds N to max_tokens for every call and omits temperature (the API does not accept a temperature with thinking enabled)"
+  },
+  "limits": {
+    "input_token_cap_per_request": 4096,
+    "max_request_bytes": 16384,
+    "reservation_envelope_tokens": 1024,
+    "request_timeout_seconds": 60,
+    "episode_timeout_seconds": 600,
+    "auxiliary_private_final_timeout_seconds": 60,
+    "max_inflight_requests": 5,
+    "stage_timeout_seconds": 14400
+  },
+  "retry": {
+    "invalid_output_repairs": 0,
+    "answer_retries": 0,
+    "transport_retries": 2,
+    "retryable_http_status": [
+      429,
+      529
+    ],
+    "backoff_seconds": [
+      2,
+      6
+    ],
+    "retry_after_cap_seconds": 20,
+    "scope": "only a request the provider rejected before running the model (rate limit or overload); all attempts and waits share the one 60 second request budget; timeouts and every other failure are never retried"
+  },
+  "circuit_breaker": {
+    "halt_categories": [
+      "http_400",
+      "http_401",
+      "http_403",
+      "http_404",
+      "http_413",
+      "credit_balance_low",
+      "model_mismatch",
+      "unexpected_cache_usage",
+      "reservation_bound_breached",
+      "missing_usage",
+      "leak_blocked",
+      "public_budget_exhausted"
+    ],
+    "max_consecutive_provider_failures": 5
+  },
+  "budget": {
+    "study_usd_cap": 40,
+    "public_path_usd": 30,
+    "auxiliary_private_usd": 10,
+    "shared_allowance_note": "inside dmarz's USD 500 total API allowance for all experiments",
+    "stages": {
+      "s1q": {
+        "max_calls": 12,
+        "public": 12,
+        "aux": 0,
+        "retry_allowance": 6
+      },
+      "s1r": {
+        "max_calls": 672,
+        "public": 480,
+        "aux": 192,
+        "retry_allowance": 34
+      },
+      "s1l": {
+        "max_calls": 4080,
+        "public": 2880,
+        "aux": 1200,
+        "retry_allowance": 204
+      }
+    }
+  },
+  "gates": {
+    "s1q": {
+      "min_correct": 10,
+      "min_valid": 11,
+      "of": 12
+    },
+    "s1": {
+      "min_parse_valid_rate": 0.95,
+      "max_budget_timeout_failure_rate": 0.05,
+      "max_detected_leaks": 0,
+      "max_truncated_rate_per_phase": 0.05
+    },
+    "s1r_clean_competence": {
+      "arms": [
+        "private",
+        "public"
+      ],
+      "min_correct": 13,
+      "of": 16,
+      "note": "focal public final answer correct in clean-regime replay episodes; below this the team prompts are suspect and S1-L does not start"
+    }
+  },
+  "review": {
+    "reviewer": "dmarz/fleet-monitor",
+    "cross_researcher_review": "waived by dmarz for this study",
+    "waiver": "launch/review-waiver.md",
+    "paid_launch_requires": "launch/s1-approval.json"
+  }
+}

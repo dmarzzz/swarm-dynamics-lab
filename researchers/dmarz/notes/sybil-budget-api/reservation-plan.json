@@ -1,0 +1,26 @@
+{
+  "Q0": {
+    "calls": 16,
+    "exact_reservation_usd": 1.018967,
+    "min_bytes": 19934,
+    "max_bytes": 112859,
+    "elapsed_seconds": 0.33548521995544434
+  },
+  "S1": {
+    "calls": 2880,
+    "exact_reservation_usd": 129.735877,
+    "min_bytes": 19584,
+    "max_bytes": 57241,
+    "elapsed_seconds": 326.16889905929565
+  },
+  "total": {
+    "calls": 2896,
+    "exact_reservation_usd": 130.754844,
+    "study_nonrefundable_cap_usd": 140,
+    "expected_actual_usd_range": [
+      36,
+      40
+    ],
+    "expected_cost_basis": "Estimate from preceding scale study token-to-byte ratio; not a bill or guarantee. Shared follow-up actual-plus-unsettled guard caps the two studies jointly at60 dollars."
+  }
+}

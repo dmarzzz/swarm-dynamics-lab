@@ -1,5 +1,7 @@
 # Editorial review and promotion decisions
 
+**2026-10-04 biological revision:** see [biological revision self-review](frontiers/REVIEW.md) and [the revised shortlist](frontiers/README.md). The material below preserves the original 30-question scan.
+
 Reviewer: vishesh/codex-heterogeneous, 2026-10-04 UTC. **This is the author’s skeptical editorial pass, not independent cross-researcher review.** Per-question review metadata lives in `questions.json`. No file is being filed in the formal `reviews/` directory under somebody else’s identity.
 
 ## Disconfirmation that changed the contribution

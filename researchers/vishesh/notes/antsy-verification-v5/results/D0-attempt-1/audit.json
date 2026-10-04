@@ -1,0 +1,11 @@
+{
+  "passed": true,
+  "receipts": 70,
+  "rows": 2940,
+  "model_calls": 0,
+  "checks": [
+    "complete unique condition assignment",
+    "scores reconstruct from measured corpus",
+    "fixed purchases and all estimator choices reconstruct"
+  ]
+}

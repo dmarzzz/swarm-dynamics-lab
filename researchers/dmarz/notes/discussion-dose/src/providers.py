@@ -8,9 +8,10 @@ import urllib.request
 from tasks import feasible
 
 class ProviderFailure(Exception):
-    def __init__(self,message,public_reason=None):
+    def __init__(self,message,public_reason=None,http_status=None):
         super().__init__(message)
         self.public_reason=public_reason
+        self.http_status=http_status
 
 
 class Scripted:
@@ -130,18 +131,24 @@ class Anthropic(HTTP):
         self.input_tokens=0; self.output_tokens=0
         self.usage_missing_calls=0
         self.last_response_text=None
+        self.last_model=None
+
+    def request_body(self, request):
+        """Serialize before dispatch; D1 checks that model is the only difference."""
+        return {'model':self.model,'system':self.system_prompt,
+                'messages':[{'role':'user','content':json.dumps(request,sort_keys=True)}],
+                'temperature':0,'max_tokens':self.max_output_tokens,
+                'output_config':{'format':{'type':'json_schema','schema':self.response_schema(request['phase'],request['context'])}}}
 
     def complete(self, request):
-        self.last_usage={}; self.last_response_text=None
-        if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted')
+        self.last_usage={}; self.last_response_text=None; self.last_model=None
+        if self.calls >= self.max_calls: raise ProviderFailure('call budget exhausted', 'provider_local_limit')
         content=json.dumps(request,sort_keys=True)
-        if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded')
-        body={'model':self.model,'system':self.system_prompt,'messages':[{'role':'user','content':content}],
-              'temperature':0,'max_tokens':self.max_output_tokens,
-              'output_config':{'format':{'type':'json_schema','schema':self.response_schema(request['phase'],request['context'])}}}
+        if len(content.encode()) > self.max_input_bytes: raise ProviderFailure('input byte budget exceeded', 'provider_local_limit')
+        body=self.request_body(request)
         encoded=json.dumps(body).encode()
         reservation=((len(encoded)+512)*self.input_rate+self.max_output_tokens*self.output_rate)/1_000_000
-        if self.reserved_usd+reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted')
+        if self.reserved_usd+reservation > self.max_cost_usd: raise ProviderFailure('dollar reservation exhausted', 'provider_local_limit')
         headers={'Content-Type':'application/json','x-api-key':self.key,'anthropic-version':'2023-06-01'}
         if self.workspace: headers['anthropic-workspace-id']=self.workspace
         req=urllib.request.Request(self.base+'/messages',data=encoded,headers=headers)
@@ -151,17 +158,19 @@ class Anthropic(HTTP):
             with urllib.request.urlopen(req,timeout=self.timeout) as r: raw=r.read(2_000_001)
             if len(raw)>2_000_000: raise ProviderFailure('response too large')
             response=json.loads(raw); usage=response.get('usage',{})
+            self.last_model=response.get('model')
             self.last_usage={k:v for k,v in usage.items() if k in ('input_tokens','output_tokens','cache_creation_input_tokens','cache_read_input_tokens') and type(v) is int and v>=0}
             if all(k in self.last_usage for k in ('input_tokens','output_tokens')):
                 if any(self.last_usage.get(k,0) for k in ('cache_creation_input_tokens','cache_read_input_tokens')):
-                    raise ProviderFailure('unexpected cached usage; accounting requires review')
+                    raise ProviderFailure('unexpected cached usage; accounting requires review', 'provider_accounting_error')
                 billed=(self.last_usage['input_tokens']*self.input_rate+self.last_usage['output_tokens']*self.output_rate)/1_000_000
                 self.actual_cost_usd+=billed
                 self.input_tokens+=self.last_usage['input_tokens']; self.output_tokens+=self.last_usage['output_tokens']
                 self.usage_missing_calls-=1
-            if response.get('stop_reason')!='end_turn': raise ProviderFailure('incomplete response')
+            if response.get('stop_reason')!='end_turn':
+                raise ProviderFailure('incomplete response', 'provider_schema_refusal' if response.get('stop_reason')=='refusal' else 'provider_incomplete')
             blocks=response['content']
-            if len(blocks)!=1 or blocks[0].get('type')!='text': raise ProviderFailure('unexpected response blocks')
+            if len(blocks)!=1 or blocks[0].get('type')!='text': raise ProviderFailure('unexpected response blocks', 'provider_schema_refusal')
             self.last_response_text=blocks[0]['text']
             return self.response_decoder(self.last_response_text)
         except urllib.error.HTTPError as e:
@@ -171,6 +180,8 @@ class Anthropic(HTTP):
                 error=json.loads(e.read(16384)).get('error',{})
                 if e.code==400 and 'credit balance is too low' in error.get('message','').lower(): reason='provider_credit_balance_low'
             except Exception: pass
-            raise ProviderFailure(f'provider HTTP {e.code}',public_reason=reason) from None
+            raise ProviderFailure(f'provider HTTP {e.code}',public_reason=reason,http_status=e.code) from None
         except ProviderFailure: raise
-        except Exception as e: raise ProviderFailure('provider '+type(e).__name__) from None
+        except Exception as e:
+            from bench_v3.failures import safe_failure
+            raise ProviderFailure('provider failure', **{'public_reason':safe_failure(e)['reason']}) from None

@@ -1,0 +1,152 @@
+schema: poietic-design-v0.1
+id: poietic-agents
+title: Poietic Agents
+owner: vishesh
+author: vishesh/codex-heterogeneous
+status: exploratory-design
+source_question: HX-31
+consolidated_questions:
+- HX-37
+supporting_questions:
+- HX-33
+implementation_started: false
+arms:
+  A0: generalists
+  A1: shared_cache
+  A2: static_specialists
+  A3: poietic
+  A4: central_adaptive
+  A5: learned_frozen
+  A6: single_solver
+s1_arms:
+- A0
+- A1
+- A2
+- A3
+cfg:
+  n_agents: 6
+  epochs: 8
+  jobs_per_epoch: 6
+  acquisition_epochs:
+  - 1
+  - 2
+  stable_epochs:
+  - 3
+  - 4
+  change_epoch: 5
+  post_change_epochs:
+  - 5
+  - 6
+  - 7
+  - 8
+  max_proposals_per_agent_per_boundary: 1
+  max_probe_jobs_per_proposal: 2
+  transport_retries: 1
+  max_concurrent_calls: 2
+  max_input_tokens: 8192
+  max_output_tokens: 1024
+  request_timeout_seconds: 45
+  job_deadline_seconds: 120
+  max_model_turns_per_job: 4
+  max_tool_operations_per_job: 12
+splits:
+  offline_development:
+    namespace: poietic-dev-v1
+    root_range:
+    - 0
+    - 99
+  S0:
+    namespace: poietic-s0-v1
+    probe_range:
+    - 100
+    - 147
+    contracts:
+    - generalist
+    - cheap_generative
+    - typed_choice
+  S1:
+    namespace: poietic-s1-v1
+    roots:
+    - 200
+    - 201
+    - 202
+    - 203
+    replicates:
+    - 1
+  S2:
+    namespace: poietic-holdout-v1
+    reserved_root_range:
+    - 10000
+    - 19999
+    roots: null
+    opened: false
+s1_cells:
+- root: 200
+  world: overlap_shift
+- root: 201
+  world: overlap_shift
+- root: 202
+  world: schema_shift
+- root: 203
+  world: schema_shift
+stages:
+  S0:
+    status: blocked
+    logical_requests: 144
+    max_physical_requests: 288
+    proposed_api_usd: 5
+    proposed_infrastructure_usd: 2
+    max_wall_hours: 2
+    worker_count: 1
+    qualification:
+      correct_at_least: 44
+      schema_valid_at_least: 48
+      denominator_per_contract: 48
+      protected_access_violations: 0
+  S1:
+    status: blocked
+    root_count: 4
+    lineages: 16
+    assigned_jobs: 768
+    max_physical_requests: 8000
+    proposed_api_usd: 25
+    proposed_infrastructure_usd: 4
+    max_wall_hours: 4
+    worker_count: 1
+  S2:
+    status: closed-research-gates
+    sample_size: null
+    primary_comparator: null
+    fixed: false
+primary_estimand:
+  quantity: total_deployment_usd_per_assigned_job
+  guardrails:
+  - verified_success_noninferiority
+  - absolute_verified_success
+  failure_denominator: all_assigned_jobs
+  cluster: independent_workload_root_family
+  s2_proposed_cost_ratio_max: 0.8
+  s2_proposed_quality_difference_min: -0.02
+  s2_proposed_absolute_quality_min: 0.95
+  s2_joint_rule: all_three_one_sided_95_percent_bounds_pass
+budget:
+  authorization_status: not-recorded
+  authorized_api_usd: 0
+  authorized_infrastructure_usd: 0
+  independent_ledgers:
+  - actual_spend
+  - physical_usage
+  - synthetic_toll_sensitivity
+  shared_budget_must_not_reset: true
+future_cells:
+- stable_high_overlap
+- stable_low_overlap
+- overlap_shift
+- schema_shift
+- exogenous_actor_loss
+- paired_learned_provider_withdrawal
+deferred_ablations:
+- no_model_downgrade
+- no_service_sharing
+- no_workflow_hardening
+launchable: false

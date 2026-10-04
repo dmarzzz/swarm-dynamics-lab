@@ -1,0 +1,97 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "okay so lets create an experiment plan for the next experiment on the previous result, and then in parallel create another experiment plan for what you just mentioned in the last reply, and ignore the indepdent review requreiment and ship both of those experiments in parallel"
+   },
+   "internalParameters": {
+    "commit": "e2d7b6a577f8c3b938eaccfe2778e0de8742ba78-dirty",
+    "session": "codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "c7970f14a00ed46fd07a52189f0da0e626f299957fa69081826146aa1c143fd7"
+     },
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "eeb2705e1d01329cfb5f379e6490cfcad48ed0234c12c8cc7f7bbe16928813a3"
+     },
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/sim.py"
+    },
+    {
+     "digest": {
+      "sha256": "bf6109198ea22ce597c402c7c2f2783cce07f8231f15632548dc5efda8f13301"
+     },
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/src/study.py"
+    },
+    {
+     "digest": {
+      "sha256": "7501f57d648188a1c8249da31b4a5e4b8c847a7df3757978db5428128d2f47f2"
+     },
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/design.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce"
+     },
+     "uri": "researchers/dmarz/notes/sybil-newcomer-api/requirements.txt"
+    },
+    {
+     "digest": {
+      "sha256": "5bd9725703a6c52f47939a2807928f15dbc18e8995f82e7488a828534d2f3150"
+     },
+     "uri": "data/sybil-followups/newcomer-s1/episodes.jsonl.gz"
+    },
+    {
+     "digest": {
+      "sha256": "cdac3ffe94f69e3e3751896a5cbcc59720f37807a4089c0bbd17f7d2b3da2d5d"
+     },
+     "uri": "data/sybil-followups/newcomer-s1/history.jsonl.gz"
+    },
+    {
+     "digest": {
+      "sha256": "1efb7499d707b4c624fe40a411500a35b1f9b52f9fa1e6f034b9f92d9157f2e5"
+     },
+     "uri": "data/sybil-followups/newcomer-s1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "525979822591a3447cfc49d943d6f7683508e25543407871c0ed8fed05fd2bd9"
+     },
+     "uri": "/System/Library/Fonts/Supplemental/Arial.ttf"
+    },
+    {
+     "digest": {
+      "gitCommit": "e2d7b6a577f8c3b938eaccfe2778e0de8742ba78"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:35:45Z",
+    "invocationId": "codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5",
+    "startedOn": "2026-10-04T04:35:45Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "a2c2523cda7b4465f79356a22d0286f3279cb9219c43a5c297437a8bb4e8c4d2"
+   },
+   "name": "artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png"
+  }
+ ]
+}

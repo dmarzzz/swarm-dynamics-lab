@@ -1,0 +1,7 @@
+# Post-mortem: i0-002
+
+2026-10-04;market-split-haiku;dmarz/market-split;parents0-fleet-002. Disposition: advance to Q0-001. All6assigned fresh mechanics calls completed and passed requested-operation plus unchanged semantic validation. Six calls,$0.028879,zero unpriced/retries. All3artifact hashes verified and recovered;1800×1000 static result table and exact raw actions retained. No missing observations. Separate study ledger8calls/$0.045739 includes failedi0-001,never reset.
+
+The probe-only objective clarification passes the declared6/6acceptancecheck without schema-forcing the action or post-correcting it. This resolves the observed mechanics priority issue for fresh70–75fixtures,not all possible model failures. It does not demonstrate profit competence or discovery. The ordinary Q0/S1 system text remains byte-identical to SonnetV5;no probe field,examples or transcripts enter ordinary calls. Both models retain identical sim.py,prompt.txt,policy.py,analyze.py andrender.py;the extra mechanics instruction exists only inside Haiku’s probe request branch.16offline checks and12mockepisodes had already passed.
+
+Sourcec0c1fff06e1fe4c8244b17667e7317392b35ea0686dd4c616a3f860f4ccfee96;design7995afceebefe0d2995918025b9c3f555e387cbe179734f67ee379e2dbd4f6b0. NextQ0tasks62/63,seed31,botharms,eight unregulated rounds,32callsmaximum;require4/4valid,positive and>=75%reference. Main remains blocked until that independent check passes. Read its pre-run assessment before dispatch.

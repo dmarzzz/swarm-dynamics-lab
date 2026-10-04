@@ -1,0 +1,47 @@
+{
+  "id": "poietic-agents",
+  "title": "Poietic Agents",
+  "owner": "vishesh",
+  "description": "TLDR: Can identical agents discover and revise shared data services, shed redundant tools and skills, and use cheaper execution while preserving correct, fresh, on-time answers? Compare generalists, coherent caching, static specialists and adaptive alternatives; count learning, communication and recovery costs. Prospective exploratory design, no runs launched; exact runtime, review, budget and dedicated allocation remain launch gates.",
+  "params": {
+    "stage": {
+      "type": "str",
+      "role": "stage",
+      "description": "S0 qualification | S1 development | S2 closed pending formal review"
+    },
+    "arm": {
+      "type": "str",
+      "role": "condition",
+      "description": "A0 generalists | A1 cache | A2 static | A3 Poietic; A4-A6 deferred"
+    },
+    "world": {
+      "type": "str",
+      "role": "condition",
+      "description": "Separate overlap or schema changes; later isolated provider-loss tests"
+    },
+    "root_id": {
+      "type": "int",
+      "role": "replicate"
+    },
+    "replicate": {
+      "type": "int",
+      "role": "replicate"
+    },
+    "design_version": {
+      "type": "str",
+      "role": "fixed",
+      "default": "0.1"
+    }
+  },
+  "metrics": [
+    "verified_success_rate",
+    "total_deployment_usd_per_assigned_job",
+    "duplicate_fetch_rate",
+    "stale_rate",
+    "actual_model_usd",
+    "assigned_jobs",
+    "terminal_jobs"
+  ],
+  "primary_metric": "verified_success_rate",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/4a373dad56aab6a7129f16748a2edf312ce6d048/researchers/vishesh/notes/poietic-agents/README.md"
+}

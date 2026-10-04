@@ -1,0 +1,27 @@
+{
+  "original": {
+    "assigned": 8,
+    "valid": 6,
+    "advancing": 0
+  },
+  "clarified": {
+    "assigned": 8,
+    "valid": 8,
+    "advancing": 3
+  },
+  "qualification_pass": false,
+  "diagnostic_pass": false,
+  "accounting": {
+    "attempted_calls": 16,
+    "reserved_usd": 0.36037600000000225,
+    "actual_usd": 0.06627399999999994,
+    "usage_reported_calls": 16
+  },
+  "study_accounting": {
+    "attempted_calls": 1626,
+    "reserved_usd": 28.393474,
+    "actual_usd": 5.406371,
+    "usage_reported_calls": 1626
+  },
+  "elapsed_seconds": 24.900105740000072
+}

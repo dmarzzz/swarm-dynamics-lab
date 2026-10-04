@@ -1,5 +1,18 @@
 # How to win agents and influence swarms
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Untested efficacy question: displaying preliminary peer recommendations changes harmful selection under misleading outside evidence. Basis: Updated by vishesh/codex-experiments on 2026-10-04: Q4 has two valid team approval errors; D1 report removal did not repair the selected error. These diagnostic findings do not establish external influence. Main comparison remains unrun after failed qualification; dependent cohorts cannot be pooled.
+- **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
+<!-- experiment-evidence:end -->
+
+**Current review status:** one researcher review is required and Dmarz’s design feedback satisfies it by owner instruction. The separate dossier review is retired. Q4 means the next qualification run, not another review. See [review resolution](REVIEW-RESOLUTION.md). Historical pending-review entries below describe earlier states.
+
+Latest measured iteration: [qualification and frozen-input diagnostic](LATEST-RESULTS.md). Qualification completed 12 valid decisions with two substantive team approval errors; removing analyst reports did not fix that error. The larger comparison was not run.
+
 ## TLDR
 
 A support team has to choose a helpdesk before its existing contract expires. The cheapest seat price is not necessarily the cheapest operation: automated-resolution charges, difficult tickets still needing people, migration dependencies and deployment-specific hosting commitments can reverse the decision. Six specialists read different parts of the same procurement file. Two checkers retrieve requested records. A chair must decide whether to buy or defer.
@@ -7,6 +20,18 @@ A support team has to choose a helpdesk before its existing contract expires. Th
 **Why run this?** Delegating diligence only helps if the final decision preserves the facts specialists uncover. A repeated outside claim may instead become six apparently independent recommendations. We test whether hiding those preliminary votes—while preserving their findings and exactly the same records—changes the final decision. A cheaper single-reviewer workflow tests whether the team was worth using at all.
 
 **Status:** implemented and rerun on native Haiku 4.5. Q2 completed all nine decisions with valid outputs: seven acceptable and two adverse. Both team chairs selected a supplier despite missing mandatory processing approval; the generalist deferred. A targeted Q3 diagnostic clarified immediate purchase authority and all three workflows deferred on a fresh case. The full influence comparison remains unqualified and unrun. See [measured results](RESULTS.md). This is an exploratory instrument, not a reviewed hypothesis or a real vendor evaluation. [Assessment](ASSESSMENT.md), [protocol](PROTOCOL.md), [source grounding](SOURCES.md), [agent contracts](AGENT-SPEC.md), and [pre-run review](reviews/scenario-01-pre.md) distinguish evidence from plans.
+
+Latest iteration: [design changes and plan assessment](ITERATION-02.md). Four fresh qualification dossiers, selected-deployment approval control, answer-label counterbalancing and missingness-aware paired analysis are implemented. Offline audit passes; no additional model results this iteration.
+
+## PI follow-through — 2026-10-04 UTC
+
+The [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) narrow sequence is retained: qualify the final decision contract, then measure the existing paired clean/omission contrast before a broader influence sweep. The [latest engineering post-mortem](reviews/iteration-03-post.md) documents four fresh dossiers covering all three supplier choices and DEFER, selected-deployment approval, exact-source qualification and missingness-aware paired bounds. Its scripted success is instrument evidence, not native Q4 qualification.
+
+The later [budget authorization](BUDGET-AUTHORIZATION.md) records an additional aggregate USD 10 approval; earlier funding-pending statements describe older snapshots. Independent dossier review, a fresh authorized exclusive allocation, a non-overlapping quota and complete exact-signature Q4 qualification remain required. Funding approval alone does not complete those gates or authorize a broader study.
+
+Preserve Q2's adverse approvals and Q3's successful deferrals separately. Q3 changed both the profile and purchase-authority wording, so it cannot identify the effect of wording; a matched old/new wording comparison would be a separate study. Likewise, displaying ballots bundles recommendation content with its salience and token footprint. The planned contrast identifies that display intervention, not a general peer-pressure mechanism.
+
+Keep every assigned case and missing chair outcome in the paired analysis. Shared prefixes, repeated profiles and label permutations do not increase independent scenario diversity. Reviewers must check genuine-value acceptance, useful deferral and the fully approved alternative as well as misleading promotion. Broader claims require independently authored dossiers after this frozen narrow comparison; no historical outcome, primary endpoint or active protocol is changed here.
 
 ## Question and prediction
 

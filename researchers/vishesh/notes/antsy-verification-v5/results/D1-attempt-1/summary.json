@@ -1,0 +1,205 @@
+{
+  "conditions": [
+    {
+      "cost": 0,
+      "arm": "confidence-only",
+      "n": 70,
+      "quality": 0.5678045857473897,
+      "checks": 0.0,
+      "utility": 0.5678045857473897,
+      "stopped_before_two": 70,
+      "null_checks": 0
+    },
+    {
+      "cost": 0,
+      "arm": "random-two",
+      "n": 70,
+      "quality": 0.5829656151941335,
+      "checks": 2.0,
+      "utility": 0.5829656151941335,
+      "stopped_before_two": 0,
+      "null_checks": 53
+    },
+    {
+      "cost": 0,
+      "arm": "forced-two",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 2.0,
+      "utility": 0.589127102516335,
+      "stopped_before_two": 0,
+      "null_checks": 30
+    },
+    {
+      "cost": 0,
+      "arm": "cost-aware",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 1.7142857142857142,
+      "utility": 0.589127102516335,
+      "stopped_before_two": 12,
+      "null_checks": 17
+    },
+    {
+      "cost": 0.01,
+      "arm": "confidence-only",
+      "n": 70,
+      "quality": 0.5678045857473897,
+      "checks": 0.0,
+      "utility": 0.5678045857473897,
+      "stopped_before_two": 70,
+      "null_checks": 0
+    },
+    {
+      "cost": 0.01,
+      "arm": "random-two",
+      "n": 70,
+      "quality": 0.5829656151941335,
+      "checks": 2.0,
+      "utility": 0.5629656151941335,
+      "stopped_before_two": 0,
+      "null_checks": 53
+    },
+    {
+      "cost": 0.01,
+      "arm": "forced-two",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 2.0,
+      "utility": 0.569127102516335,
+      "stopped_before_two": 0,
+      "null_checks": 30
+    },
+    {
+      "cost": 0.01,
+      "arm": "cost-aware",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 1.7,
+      "utility": 0.572127102516335,
+      "stopped_before_two": 13,
+      "null_checks": 17
+    },
+    {
+      "cost": 0.02,
+      "arm": "confidence-only",
+      "n": 70,
+      "quality": 0.5678045857473897,
+      "checks": 0.0,
+      "utility": 0.5678045857473897,
+      "stopped_before_two": 70,
+      "null_checks": 0
+    },
+    {
+      "cost": 0.02,
+      "arm": "random-two",
+      "n": 70,
+      "quality": 0.5829656151941335,
+      "checks": 2.0,
+      "utility": 0.5429656151941334,
+      "stopped_before_two": 0,
+      "null_checks": 53
+    },
+    {
+      "cost": 0.02,
+      "arm": "forced-two",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 2.0,
+      "utility": 0.549127102516335,
+      "stopped_before_two": 0,
+      "null_checks": 30
+    },
+    {
+      "cost": 0.02,
+      "arm": "cost-aware",
+      "n": 70,
+      "quality": 0.5796898730791056,
+      "checks": 1.2714285714285714,
+      "utility": 0.5542613016505342,
+      "stopped_before_two": 30,
+      "null_checks": 12
+    },
+    {
+      "cost": 0.05,
+      "arm": "confidence-only",
+      "n": 70,
+      "quality": 0.5678045857473897,
+      "checks": 0.0,
+      "utility": 0.5678045857473897,
+      "stopped_before_two": 70,
+      "null_checks": 0
+    },
+    {
+      "cost": 0.05,
+      "arm": "random-two",
+      "n": 70,
+      "quality": 0.5829656151941335,
+      "checks": 2.0,
+      "utility": 0.4829656151941335,
+      "stopped_before_two": 0,
+      "null_checks": 53
+    },
+    {
+      "cost": 0.05,
+      "arm": "forced-two",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 2.0,
+      "utility": 0.48912710251633507,
+      "stopped_before_two": 0,
+      "null_checks": 30
+    },
+    {
+      "cost": 0.05,
+      "arm": "cost-aware",
+      "n": 70,
+      "quality": 0.5784106463534503,
+      "checks": 0.42857142857142855,
+      "utility": 0.556982074924879,
+      "stopped_before_two": 64,
+      "null_checks": 0
+    },
+    {
+      "cost": 0.1,
+      "arm": "confidence-only",
+      "n": 70,
+      "quality": 0.5678045857473897,
+      "checks": 0.0,
+      "utility": 0.5678045857473897,
+      "stopped_before_two": 70,
+      "null_checks": 0
+    },
+    {
+      "cost": 0.1,
+      "arm": "random-two",
+      "n": 70,
+      "quality": 0.5829656151941335,
+      "checks": 2.0,
+      "utility": 0.3829656151941334,
+      "stopped_before_two": 0,
+      "null_checks": 53
+    },
+    {
+      "cost": 0.1,
+      "arm": "forced-two",
+      "n": 70,
+      "quality": 0.589127102516335,
+      "checks": 2.0,
+      "utility": 0.38912710251633503,
+      "stopped_before_two": 0,
+      "null_checks": 30
+    },
+    {
+      "cost": 0.1,
+      "arm": "cost-aware",
+      "n": 70,
+      "quality": 0.5784106463534503,
+      "checks": 0.12857142857142856,
+      "utility": 0.5655535034963075,
+      "stopped_before_two": 68,
+      "null_checks": 0
+    }
+  ],
+  "interpretation": "Development diagnostic on previously evaluated receipts; cost assumptions, ideal QA, approximate calibration scenarios; no independent generalization claim"
+}

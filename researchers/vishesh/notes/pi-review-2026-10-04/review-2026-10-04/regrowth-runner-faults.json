@@ -1,0 +1,12 @@
+{
+  "laya_cap": {
+    "exception": "laya_call_budget",
+    "cap": 4000,
+    "actual_calls": 4019,
+    "overshoot": 19
+  },
+  "laya_failure_streak": {
+    "exception": "pilot_wall_budget",
+    "consecutive_laya_failures_not_stopped": 20
+  }
+}

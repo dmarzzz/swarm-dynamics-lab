@@ -1,0 +1,154 @@
+{
+  "stage": "Q0",
+  "origin": "native-jev",
+  "scripted_initial_votes": false,
+  "started_utc": "2026-10-04T04:14:29.350616+00:00",
+  "assignments": [
+    {
+      "case_id": "5444a7a0184f",
+      "scenario": "bridge",
+      "seed": 2100,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "951717e45ee3",
+      "scenario": "bridge",
+      "seed": 2101,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "e12b06dfdc19",
+      "scenario": "bridge",
+      "seed": 2102,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "3c9d61185537",
+      "scenario": "bridge",
+      "seed": 2103,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "d575afda7e03",
+      "scenario": "bridge",
+      "seed": 2104,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "afc6d6a1714f",
+      "scenario": "bridge",
+      "seed": 2105,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "a7253945ca64",
+      "scenario": "build",
+      "seed": 2106,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "9ae2ff528670",
+      "scenario": "build",
+      "seed": 2107,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "7a023b637e88",
+      "scenario": "build",
+      "seed": 2108,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "3137f99ccc9d",
+      "scenario": "build",
+      "seed": 2109,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "525ff878941f",
+      "scenario": "build",
+      "seed": 2110,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "2ad8a218f11d",
+      "scenario": "build",
+      "seed": 2111,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "4f7bd7fe9122",
+      "scenario": "alarm",
+      "seed": 2112,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "2b35e2bb9195",
+      "scenario": "alarm",
+      "seed": 2113,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "8489e4498680",
+      "scenario": "alarm",
+      "seed": 2114,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "2a98c479d64f",
+      "scenario": "alarm",
+      "seed": 2115,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "8bc6267d7098",
+      "scenario": "alarm",
+      "seed": 2116,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "800b20d8e50e",
+      "scenario": "alarm",
+      "seed": 2117,
+      "arm": "private",
+      "opportunities": 1,
+      "status": "completed"
+    }
+  ],
+  "assignment_sha256": "b5895268ce776aa5171887c88b49948cb6c3ba903642f551ed35354cdc2e7ba3",
+  "total_opportunities": 18
+}

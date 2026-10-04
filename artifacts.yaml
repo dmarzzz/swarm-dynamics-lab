@@ -1,5 +1,5 @@
-# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `python3 .flightdeck/fd.py add …`;
-# check with `python3 .flightdeck/fd.py check --strict .`
+# Artifact manifest v1 (schema: .flightdeck/artifacts-1.json). Add versions with `fd add`, check with
+#   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Lab
 summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
@@ -203,7 +203,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-figure/theseus-pilot-figure-v1.png
         built_at: '2026-10-04T02:38:08Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -221,7 +221,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -239,7 +239,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-report/theseus-pilot-report-v1.md
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -261,7 +261,7 @@ artifacts:
         date: 2026-10-03
         path: artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
         built_at: '2026-10-04T02:38:09Z'
-        by: vishesh/codex-theseus
+        by: codex
         session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
         prompt: 'Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive
           replacement of every member? Run three scenarios and repeat if necessary.'
@@ -677,5 +677,698 @@ artifacts:
           - researchers/vishesh/notes/healing-helping-hands/visualization/render.py
           - data/healing-helping-hands/render-inputs.tar.gz
         commit: 3e242058d727b50d6bdcaedf3cd457a5554c6b2b-dirty
-requires: '1.2'
+  - id: pi-next-experiments-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs next experiments — scaling-aware PI recommendations
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md
+        built_at: '2026-10-04T03:00:57Z'
+        note: Prospective PI recommendations. Public snapshot 2026-10-04 02:45:49 UTC; source refreshes at 438ff98 and afad8f0.
+          No experiments launched.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: okay so can u use this to suggest the next set of experiments on top of our existing ones to progress as u
+          mentioned here; make sure to push this to github
+        ingredients:
+          - https://arxiv.org/abs/1810.08240
+          - https://arxiv.org/abs/2403.08882
+          - https://arxiv.org/abs/2410.08948
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md
+          - https://lakens.github.io/statistical_inferences/08-samplesizejustification
+          - researchers/dmarz/notes/compositional-safety-plan/README.md
+          - researchers/dmarz/notes/compositional-safety/README.md
+          - researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md
+          - researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md
+          - researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/plan.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py
+          - researchers/dmarz/notes/sybil-scale-api/README.md
+          - researchers/dmarz/notes/sybil-scale-api/preregistration.md
+          - researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - researchers/vishesh/notes/antsy-verification-v4/README.md
+          - researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - researchers/vishesh/notes/healing-helping-hands/README.md
+          - researchers/vishesh/notes/immune-response-v3/README.md
+          - researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - researchers/vishesh/notes/immune-response-v3/scenario-study/README.md
+          - templates/experiment-worker/README.md
+          - tooling/agent-experiments/GUIDE.md
+          - tooling/agent-experiments/RUN-REVIEW.md
+        commit: afad8f0829b3ac550036061b7cb10da3c3f3e02b-dirty
+  - id: pi-next-experiments-view-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs next experiments — interactive analytical document
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-next-experiments-view-2026-10-04/pi-next-experiments-view-2026-10-04-v1.tsx
+        built_at: '2026-10-04T03:00:58Z'
+        note: Prospective PI recommendations. Public snapshot 2026-10-04 02:45:49 UTC; source refreshes at 438ff98 and afad8f0.
+          No experiments launched.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: okay so can u use this to suggest the next set of experiments on top of our existing ones to progress as u
+          mentioned here; make sure to push this to github
+        ingredients:
+          - https://arxiv.org/abs/1810.08240
+          - https://arxiv.org/abs/2403.08882
+          - https://arxiv.org/abs/2410.08948
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md
+          - https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md
+          - https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md
+          - https://lakens.github.io/statistical_inferences/08-samplesizejustification
+          - researchers/dmarz/notes/compositional-safety-plan/README.md
+          - researchers/dmarz/notes/compositional-safety/README.md
+          - researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md
+          - researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md
+          - researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/plan.json
+          - researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py
+          - researchers/dmarz/notes/sybil-scale-api/README.md
+          - researchers/dmarz/notes/sybil-scale-api/preregistration.md
+          - researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - researchers/vishesh/notes/antsy-verification-v4/README.md
+          - researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - researchers/vishesh/notes/healing-helping-hands/README.md
+          - researchers/vishesh/notes/immune-response-v3/README.md
+          - researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - researchers/vishesh/notes/immune-response-v3/scenario-study/README.md
+          - templates/experiment-worker/README.md
+          - tooling/agent-experiments/GUIDE.md
+          - tooling/agent-experiments/RUN-REVIEW.md
+        commit: afad8f0829b3ac550036061b7cb10da3c3f3e02b-dirty
+  - id: pi-research-program-review-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Labs research program review — 4 October 2026
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx
+        built_at: '2026-10-04T02:38:53Z'
+        note: Frozen public hub snapshot 02:33:54 UTC; selected live status follow-up 02:37:33 UTC. PI judgments distinguish
+          scripted controls, qualification and small model pilots. Managed canvas copy opens beside the conversation.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: you're the PI of swarm labs, please review all of the research and results we have done in this project including
+          the live experiment results from https://swarm-live.pages.dev/#/ and do a review of our research program. say where
+          it's strong and where it's weak and give an honest assessment of our results right now
+        ingredients:
+          - /Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py
+          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md
+          - /Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md
+          - /Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md
+          - /Users/halcyon/swarm-lab/templates/experiment-worker/README.md
+          - /Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md
+          - /Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md
+          - https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md
+          - https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py
+          - https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2
+          - https://swarm-live.pages.dev/#/x/capture-memory
+          - https://swarm-live.pages.dev/#/x/healing-helping-hands
+          - https://swarm-live.pages.dev/#/x/influence-swarms
+          - https://swarm-live.pages.dev/#/x/market-split-api
+          - https://swarm-live.pages.dev/#/x/regrowth-200
+          - https://swarm-live.pages.dev/#/x/swarm-of-theseus
+          - https://swarm-live.pages.dev/#/x/template-quorum
+          - /Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md
+          - /Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md
+          - /Users/halcyon/swarm-lab/library/INDEX.md
+          - /Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md
+          - /Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json
+          - https://swarm-live.pages.dev/api/state
+          - https://lamport.azurewebsites.net/pubs/byz.pdf
+        commit: 96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15-dirty
+  - id: sybil-scale-api-visible
+    category: content
+    type: figure
+    title: 'Sybil resistance across swarm sizes: visible badges'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-scale-api-visible/sybil-scale-api-visible-v1.png
+        built_at: '2026-10-04T03:13:49Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously
+          and show me the results when youre done
+        ingredients:
+          - researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py
+          - researchers/dmarz/notes/sybil-scale-api/src/render.py
+          - researchers/dmarz/notes/sybil-scale-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-scale-api/src/study.py
+          - researchers/dmarz/notes/sybil-scale-api/src/sim.py
+          - researchers/dmarz/notes/sybil-scale-api/design.yaml
+          - researchers/dmarz/notes/sybil-scale-api/experiment.yaml
+          - researchers/dmarz/notes/sybil-scale-api/requirements.txt
+          - data/sybil-scale-api/s1-001/summary.json
+          - data/sybil-scale-api/s1-001/episodes.jsonl.gz
+          - data/sybil-scale-api/s1-001/assignments.jsonl.gz
+          - data/sybil-scale-api/s1-001/worlds.jsonl.gz
+          - data/sybil-scale-api/s1-001/analysis.json
+        commit: 1560dbfdc3fb7f21ef1772ff23fcfd07ef21a907-dirty
+  - id: sybil-scale-api-hidden
+    category: content
+    type: figure
+    title: 'Sybil resistance across swarm sizes: hidden badges'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-scale-api-hidden/sybil-scale-api-hidden-v1.png
+        built_at: '2026-10-04T03:13:51Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously
+          and show me the results when youre done
+        ingredients:
+          - researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py
+          - researchers/dmarz/notes/sybil-scale-api/src/render.py
+          - researchers/dmarz/notes/sybil-scale-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-scale-api/src/study.py
+          - researchers/dmarz/notes/sybil-scale-api/src/sim.py
+          - researchers/dmarz/notes/sybil-scale-api/design.yaml
+          - researchers/dmarz/notes/sybil-scale-api/experiment.yaml
+          - researchers/dmarz/notes/sybil-scale-api/requirements.txt
+          - data/sybil-scale-api/s1-001/summary.json
+          - data/sybil-scale-api/s1-001/episodes.jsonl.gz
+          - data/sybil-scale-api/s1-001/assignments.jsonl.gz
+          - data/sybil-scale-api/s1-001/worlds.jsonl.gz
+          - data/sybil-scale-api/s1-001/analysis.json
+        commit: 1560dbfdc3fb7f21ef1772ff23fcfd07ef21a907-dirty
+  - id: vishesh-theseus-v2-assessment
+    category: content
+    type: doc
+    title: Swarm of Theseus v2 design and implementation assessment
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-assessment/vishesh-theseus-v2-assessment-v1.md
+        built_at: '2026-10-04T03:54:58Z'
+        by: codex
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified
+          in previous runs.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
+  - id: vishesh-theseus-v2-unit-replay
+    category: content
+    type: doc
+    title: Swarm of Theseus v2 software fixture replay — not model evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-unit-replay/vishesh-theseus-v2-unit-replay-v1.html
+        built_at: '2026-10-04T03:54:59Z'
+        by: codex
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Build the improved three scenarios and show more animations, with evaluation quality preserved.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
+  - id: vishesh-theseus-v2-unit-frame
+    category: content
+    type: figure
+    title: Swarm of Theseus v2 software fixture frame — not model evidence
+    versions:
+      - v: 2
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v2.png
+        built_at: '2026-10-04T03:56:52Z'
+        note: Use a portable separator and distinguish incorrect actions from missing outcomes. Authored by vishesh/codex-theseus;
+          harness metadata corrected to schema enum codex.
+        by: codex
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Verify and correct the visual fixture frame, preserving its explicit non-model provenance.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+        commit: 33fa302579480d100117c2fd6590f82b255e3163-dirty
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-unit-frame/vishesh-theseus-v2-unit-frame-v1.png
+        built_at: '2026-10-04T03:54:59Z'
+        by: codex
+        session: vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Build and verify a clear visual explanation of the improved experiment.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/render.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/engine.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
+        commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+        note: Authored by vishesh/codex-theseus; harness metadata corrected to schema enum codex.
+  - id: healing-practical-capacity-results
+    category: content
+    type: figure
+    title: 'Healing Helping Hands: capacity, verification and central baselines'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-practical-capacity-results/healing-practical-capacity-results-v1.png
+        built_at: '2026-10-04T04:01:51Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Improve the design, evaluate against the plan, and make the results more practical, robust, compelling, and
+          interesting.
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/practical/compare.py
+          - data/healing-practical/recorded-inputs.tar.gz
+          - data/healing-practical/capacity-results.json
+        commit: f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty
+  - id: healing-practical-repair-film
+    category: content
+    type: film
+    title: 'Healing Helping Hands: measured cap-16 repair replay'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-practical-repair-film/healing-practical-repair-film-v1.mp4
+        built_at: '2026-10-04T04:01:51Z'
+        note: First corpus and layout, combined scenario, prospectively selected; cap 16. Recorded logical rounds. H.264 conversion
+          of measured GIF with silent AAC track.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Make the results more practical, robust, compelling, and interesting with visually compelling results and
+          animations.
+        ingredients:
+          - data/healing-practical/recovery.gif
+          - researchers/vishesh/notes/healing-helping-hands/practical/render.py
+          - data/healing-practical/recorded-inputs.tar.gz
+        commit: f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty
+  - id: vishesh-theseus-v2-initial-evidence
+    category: codebase
+    type: package
+    title: Theseus v2 S0 raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+        built_at: '2026-10-04T04:26:09Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0/manifest.json
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-repair-evidence
+    category: codebase
+    type: package
+    title: Theseus v2 S0-repair raw evidence
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+        built_at: '2026-10-04T04:26:10Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/src/runner.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/results/S0-repair/manifest.json
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-measured-figure
+    category: content
+    type: figure
+    title: Theseus v2 qualification results
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-measured-figure/vishesh-theseus-v2-measured-figure-v1.png
+        built_at: '2026-10-04T04:26:11Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-measured-replay
+    category: content
+    type: doc
+    title: Theseus v2 measured qualification replay
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-measured-replay/vishesh-theseus-v2-measured-replay-v1.html
+        built_at: '2026-10-04T04:26:13Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/analysis/qualification_report.py
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: vishesh-theseus-v2-results
+    category: content
+    type: doc
+    title: Theseus v2 qualification postmortem
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-v2-results/vishesh-theseus-v2-results-v1.md
+        built_at: '2026-10-04T04:26:15Z'
+        note: vishesh/codex-theseus; measured qualification, joint gate failed, no turnover pilot.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Yes you have approval. Go ahead and fix up the experimental design and then run it.
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
+          - researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md
+        commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: right-dissenter-q0
+    category: content
+    type: figure
+    title: 'Right Dissenter Q0: failed native qualification'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-q0/right-dissenter-q0-v1.png
+        built_at: '2026-10-04T04:29:22Z'
+        note: Measured native Q0 result. Qualification FAIL. Original renderer preserved from frozen source 16a22642691cf071db476211012ab0bf3ba50888.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/results/q0-a1/live_render.py
+          - researchers/vishesh/notes/dissent/results/q0-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/q0-a1/records.json
+        commit: ac0e8122d4dfbc52bbc0cc4faaf34a2a735aa2ea-dirty
+  - id: influence-native-q4-results
+    category: content
+    type: figure
+    title: 'Fresh procurement qualification: ten acceptable, two adverse decisions'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-q4-results/influence-native-q4-results-v1.png
+        built_at: '2026-10-04T04:26:08Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Okay then you should have what you need and let’s get going on running the next iteration of the experiment.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py
+          - data/influence-native/native-Q4-01/outcomes.json
+          - data/influence-native/native-Q4-01/summary.json
+        commit: 84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty
+  - id: influence-native-d1-replay
+    category: content
+    type: doc
+    title: 'Frozen-input diagnostic: report removal does not fix the approval error'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-native-d1-replay/influence-native-d1-replay-v1.html
+        built_at: '2026-10-04T04:26:09Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Okay then you should have what you need and let’s get going on running the next iteration of the experiment.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py
+          - data/influence-native/native-D1-01/manifest.json
+          - data/influence-native/native-D1-01/summary.json
+          - data/influence-native/native-D1-01/case-0.json
+          - data/influence-native/native-D1-01/case-1.json
+          - data/influence-native/native-D1-01/events-0.jsonl
+          - data/influence-native/native-D1-01/events-1.jsonl
+          - data/influence-native/native-D1-01/outcomes.json
+        commit: 84ee032eda80360cc54c5234f8ffc3afe3649cec-dirty
+  - id: sybil-newcomer-api-s1
+    category: content
+    type: figure
+    title: 'Newcomer trust: measured S1 histories and specialist accuracy'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-newcomer-api-s1/sybil-newcomer-api-s1-v1.png
+        built_at: '2026-10-04T04:35:45Z'
+        by: codex
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: okay so lets create an experiment plan for the next experiment on the previous result, and then in parallel
+          create another experiment plan for what you just mentioned in the last reply, and ignore the indepdent review requreiment
+          and ship both of those experiments in parallel
+        ingredients:
+          - researchers/dmarz/notes/sybil-newcomer-api/src/render.py
+          - researchers/dmarz/notes/sybil-newcomer-api/src/sim.py
+          - researchers/dmarz/notes/sybil-newcomer-api/src/study.py
+          - researchers/dmarz/notes/sybil-newcomer-api/design.yaml
+          - researchers/dmarz/notes/sybil-newcomer-api/requirements.txt
+          - data/sybil-followups/newcomer-s1/episodes.jsonl.gz
+          - data/sybil-followups/newcomer-s1/history.jsonl.gz
+          - data/sybil-followups/newcomer-s1/summary.json
+          - /System/Library/Fonts/Supplemental/Arial.ttf
+        commit: e2d7b6a577f8c3b938eaccfe2778e0de8742ba78-dirty
+  - id: vishesh-theseus-rule-audit
+    category: content
+    type: dataset
+    title: Theseus saved-evidence rule application audit
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-rule-audit/vishesh-theseus-rule-audit-v1.json
+        built_at: '2026-10-04T04:38:50Z'
+        note: vishesh/codex-theseus; retrospective audit of 48 saved calls; zero additional model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
+          step. Why are you not just doing it and telling me?
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json
+        commit: 063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty
+  - id: vishesh-theseus-rule-diagnosis
+    category: content
+    type: doc
+    title: Theseus rule application diagnosis
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-rule-diagnosis/vishesh-theseus-rule-diagnosis-v1.md
+        built_at: '2026-10-04T04:38:51Z'
+        note: vishesh/codex-theseus; retrospective audit of 48 saved calls; zero additional model calls.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful
+          step. Why are you not just doing it and telling me?
+        ingredients:
+          - artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz
+          - artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json
+        commit: 063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty
+  - id: swarm-completion-audit-2026-10-04
+    category: content
+    type: doc
+    title: Swarm Lab completion and baseline failure audit
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-audit-2026-10-04/swarm-completion-audit-2026-10-04-v1.md
+        built_at: '2026-10-04T04:35:28Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+  - id: swarm-completion-ledger-2026-10-04
+    category: content
+    type: dataset
+    title: Swarm Lab attempt-by-attempt completion audit ledger
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-ledger-2026-10-04/swarm-completion-ledger-2026-10-04-v1.json
+        built_at: '2026-10-04T04:35:29Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+  - id: swarm-completion-view-2026-10-04
+    category: deployment
+    type: app
+    title: Swarm Lab completion audit interactive evidence view
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/swarm-completion-view-2026-10-04/swarm-completion-view-2026-10-04-v1.tsx
+        built_at: '2026-10-04T04:35:30Z'
+        note: Read-only audit; original failures preserved; snapshot and publication supplement explicitly separated.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5
+        prompt: Review all Swarm Lab experiments to determine how widespread **agent stalling, provider refusals, and failures
+          to complete baseline tasks** are, and whether our current reporting hides these problems. This request is an evidence
+          audit; do not launch new paid experiments or provision servers.
+        ingredients:
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/adapter-map.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/compositional-replay.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/family-status-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/independent-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/other.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/prevalence.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/probe-i0-003.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-compositional.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-dmarz.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-reporting.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/publication-supplement-vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/reporting-check.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/evidence/vishesh.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/README.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PREVALENCE.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/PORTFOLIO.md
+          - researchers/dmarz/notes/completion-audit-2026-10-04/portfolio.json
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_audit.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_prevalence.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_compositional.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/audit_probe.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_report.py
+          - researchers/dmarz/notes/completion-audit-2026-10-04/src/build_canvas.py
+        commit: 4d007242b7ae5117d7f497036fa51f2225d7f993-dirty
+    source: researchers/dmarz/notes/completion-audit-2026-10-04
 requires: '1.2'

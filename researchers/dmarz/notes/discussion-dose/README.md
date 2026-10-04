@@ -1,5 +1,21 @@
 # Discussion allowance and corruption in a fork and merge swarm
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Discussion allowance and corruption in a fork and merge swarm** (`discussion-dose`)
+
+- **evidence_confidence:** **1/4** — The six-world corrected qualification is executable and exposes a memory-coverage defect; it does not estimate discussion protection. Basis: Six repaired development worlds; contamination disappeared before discussion, creating a ceiling. The 48 correct decisions and 47 correct parents support bounded execution and a memory-coverage failure, not discussion protection. Earlier failed attempts stay separate.
+- **sample_size_summary:** 6 worlds × 2 exposures × 4 doses = 48 completed episodes; 3 actors, 1,020 calls.
+
+**Discussion allowance and corruption in a fork and merge swarm** (`discussion-dose-v2`)
+
+- **evidence_confidence:** **1/4** — More difficult source conflicts enable a descriptive discussion-dose comparison. Basis: Calibration levels reuse worlds and are not independent samples. Only six fresh worlds support the dose comparison; four attacked-dose outcomes are invalid and claims/votes may disagree. Selection of H4 was developmental; no confirmatory effect is established.
+- **sample_size_summary:** Calibration: 12 shared worlds × 6 levels × 2 exposures = 144 episodes; dose pilot: 6 fresh worlds, 48 episodes (44 valid).
+<!-- experiment-evidence:end -->
+
 **Current implementation:** [discussion and memory benchmark v3](benchmark-v3/README.md) is a runnable offline package with evidence-answerability checks, shared-start communication controls, 36 parent-memory fixtures and exact trace replay. No v3 paid run has launched; independent review and model qualification remain pending. The original protocol description below is historical.
 
 ## Results and reflection

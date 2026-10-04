@@ -48,3 +48,15 @@ The internal verdict may become ready for bounded qualification once these check
 Remaining study-quality concerns are open above. In particular, no claim is made about independent task diversity, prior-defense superiority, economic incentives or unseen-model transfer. These objections prevent scaled inference, but do not prevent measuring whether this implementation and one model are competent enough to develop further.
 
 Second pre-model review caught an observability confound: privileged scripted solvability at 24 turns did not establish solvability by a history-limited agent. A constructed seven-source/depth-three fixture requires 35 turns under the cyclic schedule. The added regression fails at 24 and passes under the new 40-turn ceiling. The suite now passes 10 tests. This is a verified design repair made before model data. Qualification now also applies the per-domain floor separately to C and S.
+
+## First-model interface findings
+
+The first frozen qualification exposed rejected responses for which the adapter retained a category and usage but not the generated answer. This limits retrospective diagnosis. It also showed that generated commentary on non-message actions could be mistaken for a broadcast; the declared simulator only broadcasts explicit message actions. The next version uses a local-action enum (still containing globally forbidden options), records rejected task-only response text and specific categories, and clarifies the broadcast contract. Eleven offline tests pass, including ID-renaming/irrelevant-message metamorphic checks and invalid-action retention. Fresh model qualification is required before this repair is treated as successful. The original behavioral violation and rejected responses remain in q0-001.
+
+A remaining placebo issue deserves a dedicated control before scaled inference: matching filler length to an informative receipt may itself reveal state through length. P1 is descriptive engineering only; a confirmatory design should use a fixed-size envelope or a state-independent matched length schedule, plus tokenizer accounting. No receipt-specific causal claim is allowed from the present approximate control alone.
+
+The placebo byte-length issue has now been repaired before P1: R and P use a fixed 4,096-byte envelope, P is constant across states, and overflow refuses execution instead of truncating relevant facts. The packet regression verifies exact envelope sizes. Tokenizer and inner-schema differences remain measured limitations; this is not a claim of perfect compute matching.
+
+## Readiness audit after q0-002
+
+The author critique now has observed counterevidence: a model can avoid violations by failing to act, so zero violations alone cannot qualify this experiment. Four such incompletions keep P1 closed. Fresh qualification of a stronger model preserves the same success definition and all failed attempts. A separate reporting audit corrects cumulative-versus-bundle cost display; immutable stage accounting remains the source for spend. These are internal assessments, with no claim that a DeepMind or Flashbots researcher reviewed or approved them.

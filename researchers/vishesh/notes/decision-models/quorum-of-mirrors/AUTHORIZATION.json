@@ -1,0 +1,10 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "owner_approved": true,
+  "api_cap_usd": 1,
+  "infrastructure_cap_usd": 1,
+  "max_infrastructure_hours": 6,
+  "approved_instruction": "You have the spending approval. Continue.",
+  "recorded_utc": "2026-10-04T03:52:54.430707+00:00",
+  "shared_other_study_allowances": false
+}

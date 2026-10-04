@@ -1,0 +1,19 @@
+{
+  "stage": "Q4",
+  "planned": 12,
+  "terminal": 12,
+  "valid": 12,
+  "invalid": 0,
+  "acceptable": 10,
+  "qualified": false,
+  "calls": 56,
+  "input_tokens": 108490,
+  "output_tokens": 10346,
+  "actual_usd": 0.16021999999999997,
+  "usage_missing": 0,
+  "seconds": 167.51,
+  "source_signature": "045bac9ddc59f1d48cb86cbaca71007105cbccd1d8a618f56030f51d3a7b3ead",
+  "diagnostic_passed": false,
+  "report_errors": [],
+  "outcomes_hash": "f618263e58d701908a1238853f5bd794f3cc93232217558f718cb4dd89b9efba"
+}

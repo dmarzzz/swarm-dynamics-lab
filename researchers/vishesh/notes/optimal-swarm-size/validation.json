@@ -1,0 +1,33 @@
+{
+  "kind": "offline software checks; not an experimental run",
+  "test_methods": 32,
+  "passed": true,
+  "model_calls": 0,
+  "files": {
+    "src/budget.py": "694deaf93368d875c45af7663f19b9fcae8138c52cfe8a1a8610c251b94456a2",
+    "src/engine.py": "b30280cb314606ebd55acac5bd50a3e91ff8928b1785ce70178541b1b3feda40",
+    "src/failures.py": "17efb161f0d14e1d49700288a52e62fd1c9302fa7d178f218d08f2d947ce30dd",
+    "src/manifest.py": "f744a392e1cdb9cf4d73fa54d87402900f815028727a85f426bcd094d28bf627",
+    "src/provider.py": "64c92390a59a34a22fdfd7f4237f501d42934584afe02dfedbf03e110d795eb0",
+    "src/register.py": "7e740510431ceb06e0ee30d07a7ac85618196805caff19b3d5a3f8592f7bbfa5",
+    "src/replay.py": "2cc57e9600a598bde6d184d003300e8761f00d793372c309e3e470ed02ce68f0",
+    "src/reporting.py": "33c5ebd115283864f08346508481e3a0cb469f03fb3d501a2f70550d126ce5d4",
+    "src/reporting_diagnostic.py": "d4039b4c19d80c75c22d7d9c230e6dc40657b4a547b97d8950cb11dbe56025bb",
+    "src/run_qualification.py": "288bcb195864488b00ff347adb4fad766b9e31726ff11940eb6cf4e334d5a607",
+    "src/tasks.py": "aebcc37c36af3cfa4f38b2a58ba3808145475d7047e85c5c81eed8f57fddc14a",
+    "src/test_budget.py": "405be35713f879ecf9f9cacef012d7598c0f741ef4559a8317bdc59398dc099f",
+    "src/test_engine.py": "85cfb9ab63443a90af8977844a4098b7b09480a46356eaf32f3d5b306975c0b1",
+    "src/test_failures.py": "b50b8cb65c1418867b8426fd90082586f80881b6cf8b3b6f41579b4f9586c553",
+    "src/test_launch.py": "ff914626fa631fbd598e78f94043a6aec2ccc2aa9e26f13d9ac850bba7c863cc",
+    "src/test_provider.py": "d3f5db27be009d496c7eb59c3707eaab1b9cdb50f57fec0c759451a0fd91e06a",
+    "src/test_replay.py": "f2581e553095420d4a72874406ff5ce4eff3c537c5916adbd78474727f315b37",
+    "src/test_reporting.py": "ae31a74d7ec55f894830e2aae263e48ad745823c95f283876fd181df262a395e",
+    "src/test_tasks.py": "c28dbd1b1a3cd8a2daab8e009b49bc69844c3f09ce3501d202475fe2ff70af49",
+    "src/transport_diagnostic.py": "fb2c39823c50b5de18ab28ba3c8b83b412b000a71ca6d9a1f0a98d52e66ab4e0"
+  },
+  "unverified": [
+    "Anthropic live transport diagnostic",
+    "new source live allocation/public registration",
+    "adapter engineering amendment review"
+  ]
+}

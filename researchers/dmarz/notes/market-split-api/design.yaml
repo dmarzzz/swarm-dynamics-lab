@@ -1,4 +1,4 @@
-version: market-split-api-v4
+version: market-split-api-v5
 status: exploratory-hunch
 experiment: market-split-api
 model: claude-sonnet-4-6
@@ -24,8 +24,8 @@ stages:
   S0:
     backend: mock
     tasks:
-    - 46
-    - 47
+    - 54
+    - 55
     seeds:
     - 31
     rounds: 8
@@ -36,8 +36,8 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 46
-    - 47
+    - 54
+    - 55
     seeds:
     - 31
     rounds: 8
@@ -68,7 +68,7 @@ budget:
     cap'
   owner_shared_usd: 500
   max_attempted_calls: 1600
-  max_output_tokens: 800
+  max_output_tokens: 3072
   max_input_bytes: 20000
   request_timeout_seconds: 90
   stage_timeout_seconds: 7200
@@ -88,21 +88,24 @@ holdout:
 - 1000
 - 1999
 interface_probes:
-- task: 48
+- task: 56
   n: 1
   operation: register
-- task: 49
+- task: 57
   n: 2
   operation: register
-- task: 50
+- task: 58
   n: 3
   operation: register
-- task: 51
+- task: 59
   n: 2
   operation: consolidate
-- task: 52
+- task: 60
   n: 3
   operation: maintain
-- task: 53
+- task: 61
   n: 4
   operation: consolidate
+thinking:
+  type: enabled
+  budget_tokens: 2048

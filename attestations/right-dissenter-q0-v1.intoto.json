@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Do the post-mortem, and so on and so forth."
+   },
+   "internalParameters": {
+    "commit": "ac0e8122d4dfbc52bbc0cc4faaf34a2a735aa2ea-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "ab69e34346cfae82d6fdbfa5b3662c1cc39a159b01354038258bd71af09e780f"
+     },
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/live_render.py"
+    },
+    {
+     "digest": {
+      "sha256": "8b233796994ba7f62f32085c1b20d7e4a6f31526432ff80ffe24775272327a8d"
+     },
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "99aced866d39bb328cc432c2278a4b5bb054f4700cee76ed93c3587124e808fd"
+     },
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/records.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "ac0e8122d4dfbc52bbc0cc4faaf34a2a735aa2ea"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:29:22Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T04:29:22Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6"
+   },
+   "name": "artifacts/right-dissenter-q0/right-dissenter-q0-v1.png"
+  }
+ ]
+}

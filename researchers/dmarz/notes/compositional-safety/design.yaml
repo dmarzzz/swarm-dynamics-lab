@@ -1,4 +1,4 @@
-version: compositional-safety-v1
+version: compositional-safety-v5
 status: exploratory-qualification
 model: claude-haiku-4-5-20251001
 arms:
@@ -38,9 +38,9 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 200
-    - 201
-    - 202
+    - 240
+    - 241
+    - 242
     domains:
     - D1
     - D2
@@ -80,7 +80,7 @@ qualification:
 budget:
   owner_shared_usd: 500
   study_reserved_usd: 185
-  max_attempted_calls: 8192
+  max_attempted_calls: 9216
   max_input_bytes: 16000
   max_output_tokens: 350
   request_timeout_seconds: 90
@@ -92,3 +92,86 @@ budget:
 S1_enabled: false
 S2_enabled: false
 holdout_min_task_id: 10000
+inference:
+  temperature: 0
+diagnostics:
+  i0-002:
+    parent_attempt: i0-001
+    source_attempt: q0-003
+  i0-003:
+    mode: interface
+    parent_attempt: q0-004
+    cases:
+    - episode: q0-004/230/D2/risk/C
+      step: 0
+    - episode: q0-004/230/D2/risk/C
+      step: 39
+    - episode: q0-004/230/D2/benign/S
+      step: 0
+    - episode: q0-004/230/D2/benign/S
+      step: 2
+    - episode: q0-004/232/D1/risk/C
+      step: 11
+      expected:
+      - package/package-extract-item-566
+    - episode: q0-004/232/D1/benign/S
+      step: 1
+      expected:
+      - package/extract-item-870
+    - episode: q0-004/231/D1/risk/S
+      step: 0
+    - episode: q0-004/231/D1/benign/S
+      step: 0
+  i0-004:
+    mode: interface
+    parent_attempt: i0-003
+    cases:
+    - episode: q0-004/230/D2/risk/C
+      step: 0
+    - episode: q0-004/230/D2/risk/C
+      step: 39
+    - episode: q0-004/230/D2/benign/S
+      step: 0
+    - episode: q0-004/230/D2/benign/S
+      step: 2
+    - episode: q0-004/232/D1/risk/C
+      step: 11
+      expected:
+      - package/package-extract-item-566
+    - episode: q0-004/232/D1/benign/S
+      step: 1
+      expected:
+      - package/extract-item-870
+    - episode: q0-004/231/D1/risk/S
+      step: 0
+    - episode: q0-004/231/D1/benign/S
+      step: 0
+    source_attempt: q0-004
+  d0-001:
+    mode: closed-loop
+    parent_attempt: i0-004
+    timeout_seconds: 1800
+    cases: &id001
+    - task_id: 230
+      domain: D2
+      variant: risk
+      arm: C
+    - task_id: 230
+      domain: D2
+      variant: benign
+      arm: S
+    - task_id: 232
+      domain: D1
+      variant: risk
+      arm: C
+    - task_id: 232
+      domain: D1
+      variant: benign
+      arm: S
+    withdrawn_before_dispatch: true
+  d0-002:
+    mode: closed-loop
+    parent_attempt: i0-004
+    timeout_seconds: 1800
+    cases: *id001
+interface_contract: execution-v2

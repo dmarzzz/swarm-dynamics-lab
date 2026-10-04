@@ -1,5 +1,7 @@
 # External evidence injection and the value of dissent — experimental-design bundle
 
+**Superseded proposal:** the active implementation is [How to win agents and influence swarms](../influence-swarms/scenario/README.md). The broad mechanism grid below is historical, not the current launch plan. See the [review response](../influence-swarms/scenario/REVIEW-RESOLUTION.md).
+
 **Status: HUNCH / experimental-design proposal — not a hypothesis; the prior-art gate has not been passed for this question.**
 Nothing here belongs in `hypotheses/`, nothing here is a measured result, and no code has been built. It is a design document plus the supporting notes it rests on, filed for comment.
 

@@ -4461,6 +4461,110 @@
       "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
       "assessed_at": "2026-10-04",
       "candidate_sha256": "616304ca3ee6438b1cfd4d658640769fb0df712a9843b382d8c40193392b834a"
+    },
+    "HX-31": {
+      "dimensions": {
+        "visual": 98,
+        "practical": 96,
+        "theory": 90,
+        "novelty": 88
+      },
+      "score": 94,
+      "rationale": "The owner clarified an initially uniform swarm that removes duplicated data/tool work, reduces skill/context loads, downgrades models and reorganizes communication. Strong practical mechanism; the biological analogy is narrower than the original 98 theory score implied.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3eb74ec455845be867022d9214c40de1991044661f58f3f2278cb771bd2c4dd8"
+    },
+    "HX-32": {
+      "dimensions": {
+        "visual": 50,
+        "practical": 25,
+        "theory": 30,
+        "novelty": 25
+      },
+      "score": 34,
+      "rationale": "The owner identifies an ordinary modularity/interface problem. No compelling deployment scenario or distinct biological mechanism justifies the former exceptional scores.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "46a16ad6ce8860dae726ab243b635931b0668e477fc476b757b43303196cd09a"
+    },
+    "HX-33": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 92,
+        "theory": 75,
+        "novelty": 55
+      },
+      "score": 82,
+      "rationale": "Useful workspace/tool hardening and portability comparison; lower conceptual distinctiveness and a more modest biological connection than initially scored.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "f304049f0837becd80ebedb2c60709a508c0eeb1c0abde4f715ff5fba3f569c1"
+    },
+    "HX-34": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 94,
+        "theory": 91,
+        "novelty": 55
+      },
+      "score": 88,
+      "rationale": "Focus on a conflict between cultural replication and host utility in benign skill exchange. Mere contagion, prompt injection or model-specific susceptibility is not new. Prevent popular shared skills from crowding out more useful but less transmissible alternatives.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "d21395a30865105c5117c1e84a03835ce203c11d678e5ae901788c2c23ab83d3"
+    },
+    "HX-35": {
+      "dimensions": {
+        "visual": 80,
+        "practical": 35,
+        "theory": 65,
+        "novelty": 60
+      },
+      "score": 60,
+      "rationale": "Interesting conceptual possibility, but realistic deployment relevance and a persuasive practical intervention remain weak. Biological speciation is an analogy, not an established mechanism here.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b13ac0a57849c5cd4cb4aa3251690601c27d7c2f4d3ca27d71c1e2e6baec72f6"
+    },
+    "HX-36": {
+      "dimensions": {
+        "visual": 96,
+        "practical": 76,
+        "theory": 93,
+        "novelty": 78
+      },
+      "score": 87,
+      "rationale": "Negative frequency dependence preserving useful cross-model niches, beyond adversarial program improvement. Determine whether maintaining minority model families can improve resilience without a fixed quota.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2bf8087f982271cb74053ec40dc527d76d6ffcbbc0444cae8ee2f0955198fe46"
+    },
+    "HX-37": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 85,
+        "theory": 55,
+        "novelty": 10
+      },
+      "score": 66,
+      "rationale": "The owner’s useful interpretation is expensive exploration followed by cheaper or deterministic execution. Treat this as temporal workflow hardening within HX-31; original failed-artifact salvage is an optional mechanism, not a second flagship.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant reassessment after explicit owner feedback)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "b271acf7df0bfcf3c8b70edafb177e61e02069b4af507099fd437000bee377a3"
+    },
+    "HX-38": {
+      "dimensions": {
+        "visual": 98,
+        "practical": 86,
+        "theory": 94,
+        "novelty": 74
+      },
+      "score": 90,
+      "rationale": "Transient induction, maintenance and repair of functional differentiation, with memory-location ablations. Learn whether a small initialization intervention can replace permanent role scaffolding while preserving repair.",
+      "assessed_by": "vishesh/codex-heterogeneous (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "8538a2bf29cd5106b114b7aa5a022e19d581a07165ab013b2e929b181ea16878"
     }
   }
 }

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: idle
-task: healing-helping-hands-v2
-doing: Review and reference pilot published; original Qwen heterogeneous claim remains unqualified
-updated: 2026-10-04T02:51Z
+state: blocked
+task: healing-qwen-jev
+doing: C1 composite built and registered; dedicated worker requested through Dmarz provisioning task allocate-healing-qwen-jev
+updated: 2026-10-04T04:21Z
 ---
 
 ## Notes

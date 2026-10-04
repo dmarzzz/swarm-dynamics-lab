@@ -1,0 +1,11 @@
+{
+  "workers_stopped": true,
+  "runtime_credential_removed": true,
+  "ledger_backed_up": true,
+  "existing_server_retained": true,
+  "verified_utc": "2026-10-04T04:27:31.756229+00:00",
+  "claim_released": true,
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/128",
+  "release_merged_utc": "2026-10-04T04:28:16Z",
+  "ledger_sha256": "20990a20826e7343745cb4f2d833886f8cc89460cb537b0fa1ac0a6318527d61"
+}

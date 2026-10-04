@@ -1,0 +1,118 @@
+{
+  "verified_utc": "2026-10-04T04:27:28.859617+00:00",
+  "local_hub_sha256_match": true,
+  "runs": [
+    {
+      "stage": "Q0",
+      "status": "done",
+      "artifacts": [
+        {
+          "name": "final_frame.png",
+          "size": 46135,
+          "sha256": "506402cc9ff3a911eb088c3c0f35f818ecbeb3924827b7017fca6ab77c4a7d66"
+        },
+        {
+          "name": "replay.gif",
+          "size": 162328,
+          "sha256": "a271544278bcacef45159a6d0ee98193ea792fa6f68433b44476c36e6abdf43b"
+        },
+        {
+          "name": "summary.json",
+          "size": 865,
+          "sha256": "ad5b9ace75770dedd56236ce0fb91bdc7baa40ebb9e2b1cb6e42eeeef9272219"
+        },
+        {
+          "name": "manifest.json",
+          "size": 2264,
+          "sha256": "2b52b5cf9dae8f3976a7fb98ab58cba879921bc4d7d4c6d9744df1447521a7f1"
+        },
+        {
+          "name": "config.json",
+          "size": 1775,
+          "sha256": "6352887d7148143767491cbd7f80a1cd618f92a6b5bd260ba04659f12b39c260"
+        },
+        {
+          "name": "replay-manifest.json",
+          "size": 538,
+          "sha256": "7ac4d7743f658e871aa01cdb7d9ce429ccc990d23b5c723b6ebc20f92b96ceb6"
+        },
+        {
+          "name": "public-plan.json",
+          "size": 1040,
+          "sha256": "0bac788cb14c65c2250c317c89461a798d949bcdc4dace6feea8ca74a28dcfa1"
+        },
+        {
+          "name": "route.json",
+          "size": 148,
+          "sha256": "955813600fd741d97f80cb83e818ff71583fa8d5b73da41421ae408658fefd97"
+        },
+        {
+          "name": "records.json",
+          "size": 693569,
+          "sha256": "d083d360abb31637dc0a1e3b56049803ea2c2d22216a0765d329f2bcd6b0e3b4"
+        }
+      ]
+    },
+    {
+      "stage": "S0",
+      "status": "done",
+      "artifacts": [
+        {
+          "name": "final_frame.png",
+          "size": 46090,
+          "sha256": "130ce9e215cda12728a920cab97b56c92cdd47f1fa2445384f8f371e7f18f1f7"
+        },
+        {
+          "name": "replay.gif",
+          "size": 809194,
+          "sha256": "e1549e021f6b335097bccb59d70f38e7cd015bd618349f3f01205ec3aacee433"
+        },
+        {
+          "name": "summary.json",
+          "size": 220323,
+          "sha256": "d774af95a21e44c227f02717f66deccc9b2d9cf0577cd0817e04e2c466b03af5"
+        },
+        {
+          "name": "manifest.json",
+          "size": 106970,
+          "sha256": "b30972a2fb8789f4e6214f71948962b3b0c940f2c60d648bdc73b184181e6748"
+        },
+        {
+          "name": "config.json",
+          "size": 1776,
+          "sha256": "e9f01ac019e42d1124ad0cee4b5ccb45a0d0e238fffed8ec2548eaafd4794db6"
+        },
+        {
+          "name": "replay-manifest.json",
+          "size": 1944,
+          "sha256": "c82f9808c9788e816cc3dbd11aa9c802641ea980d4fd4fd58c6b558eb4404c73"
+        },
+        {
+          "name": "public-plan.json",
+          "size": 1041,
+          "sha256": "9e9f24e713d22bdfe2aa7ec0a6e67b1e5e262a18d1c7ada1955e9d1858c5dcbc"
+        },
+        {
+          "name": "route.json",
+          "size": 148,
+          "sha256": "955813600fd741d97f80cb83e818ff71583fa8d5b73da41421ae408658fefd97"
+        },
+        {
+          "name": "records.json",
+          "size": 18726805,
+          "sha256": "f1c5ed4961ef1ff427b102866ef13ab737181a5f9cdfbc51f83e6ed91ccd0615"
+        },
+        {
+          "name": "cohort_results.png",
+          "size": 258326,
+          "sha256": "b4e4d54fda8c10c7582dd2e2ae9ce879767e52991aa11b0e47bd546f07d4a7aa"
+        },
+        {
+          "name": "S0-A1-audit.json",
+          "size": 110684,
+          "sha256": "efc99b69a0c24fbb28873885276a4529dddae1557166c2ae612c6c69b0437827"
+        }
+      ]
+    }
+  ]
+}

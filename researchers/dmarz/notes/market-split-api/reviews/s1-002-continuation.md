@@ -1,0 +1,11 @@
+# Operational continuation: s1-002
+
+2026-10-04 04:06 UTC. Status: ready. Owner dmarz/market-split.
+
+The owner's allocation correction requires one experiment and one active assignment per server. Both old launchers were held at assignment boundaries; six Sonnet bundles finished and twelve remain planned, with no active or failed assignment. All 288 main calls are priced at $4.715400. The cumulative study ledger has 832 attempts, 832 priced responses and $6.152725 including prior qualification and failures. No result is discarded or rerun.
+
+Resume the existing twelve untouched S1-002 assignments serially on sim-dmarz-2 under exclusive claim dmarz-market-split-api, extended through 2026-10-04 10:01:19 UTC (agentops PR96). Haiku has stopped and will use its own dedicated host before any further API work. Confirm the merged claim, zero active workers, unchanged source/design hashes and the operator-allocation hold text before clearing that hold. Never clear a material-failure marker.
+
+The scientific configuration remains frozen: engine 657a77e7c1101c1bd2b6b2ea752f0407b2fc4b690988144711cbe7c727f79b58, design 230ef6ac07afc36dd5142155ab826452f21ce836d3f5d0919c69292a676f26e5, original queue/attempt identities, six tasks, both arms, three regulations and 24 rounds. No prompt, actor code, cases or metrics change. One finite worker may take at most nine assignments, followed by review and a separate finite worker for the remaining assignments. Each retains its two-hour dispatch limit; the overall operational window is extended because concurrency fell, without extra cases or an API cap increase. The study still permits at most 1600 lifetime attempts; expected completion remains 1408. The shared owner $500 budget is unchanged.
+
+The mapping remains market-split-api-v1 with measured progress, final frames and full replay. All stopping rules and acceptance checks in s1-002-pre.md continue. The earlier two-worker and shared-host paragraphs are superseded only by this allocation amendment. The first firm-regulated market showed sustained fragmentation and an explicit brief avoidance note; this interim observation is retained without retuning or treating one market as a completed estimate.

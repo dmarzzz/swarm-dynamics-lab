@@ -1,0 +1,51 @@
+"""Native launcher: real allocation + budget receipt, durable outcomes, measured images."""
+import argparse,gzip,hashlib,json,os,subprocess,sys
+from pathlib import Path
+import study_receipts as study, render_receipts as render
+sys.path.insert(0,str(study.ROOT.parent/'src'))
+from hub_worker import allocation,upload as base_upload
+sys.path.insert(0,str(study.ROOT.parent.parent/'experiment-documentation'))
+from public_plan import check
+
+def upload(job,out):
+ base_upload(job,out)
+ p=out/'usage.jsonl'
+ if p.exists():
+  raw=p.read_bytes();chunk=out/'usage.jsonl.gz.part0000';chunk.write_bytes(gzip.compress(raw,mtime=0));job.artifact(chunk,chunk.name)
+  index=json.loads((out/'artifact-index.json').read_text());index.append({'file':'usage.jsonl','sha256':hashlib.sha256(raw).hexdigest(),'encoding':'gzip','parts':[chunk.name]})
+  (out/'artifact-index.json').write_text(json.dumps(index,indent=2));job.artifact(out/'artifact-index.json','artifact-index.json')
+
+def main():
+ p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);a=p.parse_args();out=Path(a.out)
+ if out.exists():raise ValueError('output_exists')
+ receipt=allocation(a.receipt);expected=16
+ if receipt.get('cloud_account_verified') is not True or len(receipt.get('cloud_verification_sha256',''))!=64:raise ValueError('verified_cloud_account_receipt_required')
+ os.environ['SWARM_ATTEMPT_ID']='receipt-native-a3'
+ os.environ['SWARM_USAGE_LOG']=str(out/'usage.jsonl')
+ tldr='Paired evidence receipt diagnostic: 16 deployment episodes, identical shared reviewer advice, clean and stale memory, raw versus checked probe claims; maximum 120 calls.'
+ public=check('immune-response-v3',tldr)
+ import swarm_report as sr
+ job=sr.start('immune-response-v3',params={'stage':'receipt-native-a3','backend':'anthropic','episodes':expected,'max_calls':120,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
+ print(json.dumps({'run':job.id}),flush=True)
+ try:
+  p=subprocess.Popen([sys.executable,str(study.ROOT/'study_receipts.py'),'--backend','anthropic','--out',str(out)],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
+  for line in p.stdout:
+   progress=json.loads(line);print(json.dumps(progress),flush=True)
+   try:
+    rows=[json.loads(x) for x in (out/'episodes.jsonl').read_text().splitlines()];render.plot(rows,out/'live_frame.png',backend='anthropic');job.artifact(out/'live_frame.png','live_frame.png');job.progress(progress['recorded'],progress['assigned'],message='Recorded complete episode; no reruns',episodes=progress['recorded'])
+   except Exception:pass
+  if p.wait()!=0:raise RuntimeError('study_process_failed')
+  (out/'allocation-receipt.json').write_text(json.dumps(receipt,indent=2));(out/'public-plan-receipt.json').write_text(json.dumps(public,indent=2))
+  render.render(out);summary=json.loads((out/'summary.json').read_text());upload(job,out)
+  qualified=summary['execution_qualified'] and summary['qualification_passed']
+  metrics={'episodes':summary['recorded'],'invalid':summary['invalid'],'execution_qualified':int(summary['execution_qualified']),'joint_qualified':int(qualified),'model_backed':1,'actual_usd':summary['actual_usd']}
+  if qualified:job.done(message='Bounded diagnostic gates passed; no independent graph or population claim',**metrics)
+  else:job.fail('Joint recovery/preservation gate failed; all adverse outcomes retained',**metrics)
+  print(json.dumps({'completed':True,'qualified':qualified,'actual_usd':summary['actual_usd']}),flush=True)
+ except Exception as exc:
+  try:upload(job,out)
+  except Exception:pass
+  job.fail('Native or reporting interruption: '+type(exc).__name__);raise
+if __name__=='__main__':
+ try:main()
+ except Exception as e:print(json.dumps({'stopped':type(e).__name__}),flush=True);raise SystemExit(1)

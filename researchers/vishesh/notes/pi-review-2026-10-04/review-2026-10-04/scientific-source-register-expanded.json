@@ -1,0 +1,260 @@
+{
+  "repository": "dmarzzz/swarm-lab",
+  "ref": "f027940fcb5b892057e65306f8e7550456ed2945",
+  "scope": "Pinned first-party project documents supplementing local evidence. Reported numerical results are not newly reproduced unless the review says so. Later task-worktree documents are separately hashed and dated.",
+  "sources": [
+    {
+      "path": "researchers/vishesh/notes/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/README.md",
+      "blob_sha": "a117e7d9f21ce4709c7adc89caf40f33360e0388",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "0f76a00b0a75a26446668e3c9e5987483aed90c4ecced73aa478087b65916225",
+      "local_bytes": 8866
+    },
+    {
+      "path": "researchers/vishesh/notes/actual-experiments/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/actual-experiments/README.md",
+      "blob_sha": "7e0a3fa4c2c8c04d254ecd892e90562c9a8c0db5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/actual-experiments/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "48426cd2be29785c54d806ae9f7d1064cd6602625b2a3968c8e9727a943c4097",
+      "local_bytes": 5198
+    },
+    {
+      "path": "researchers/vishesh/notes/priority-research-expansion/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/priority-research-expansion/README.md",
+      "blob_sha": "c029fd5ba53c557a58ae780dd68049cb303a256d",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/priority-research-expansion/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "04de497431e2a878c93e67eaed80aa622955193143bbad2c209fecc8d2eb220d",
+      "local_bytes": 13834
+    },
+    {
+      "path": "researchers/vishesh/notes/experimental-expansion/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/experimental-expansion/README.md",
+      "blob_sha": "de559b80bd9ed947e254b277f0debf51b37e6c43",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/experimental-expansion/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "c4469d5c0d2e293ec3c15dcd5fb05223578e53d9277f97c601db4279ced6ed84",
+      "local_bytes": 5184
+    },
+    {
+      "path": "researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "blob_sha": "994bd3d96002c276a14c3a283cf53c7cd85cb55a",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/heterogeneous-swarms/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "a0d90bdc20e1b70b66df70fba201dc01dab7303758c8daede3dd78783ded307b",
+      "local_bytes": 3253
+    },
+    {
+      "path": "researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "blob_sha": "21a4cfac1448260af3dac0b80e54b525e16ae804",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "26f0b0d4db398c71a1fb2ac3c92a6ef726d0a989e2b06814aa96a61e829ddac3",
+      "local_bytes": 16415
+    },
+    {
+      "path": "researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "blob_sha": "3ee0da3df18b6754c704454bfdd5e63df4756173",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/optimal-swarm-size/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "05e39d781a95162eef2b8b89f7bb9ffdd4184283d8322568e25bdea66cddb96e",
+      "local_bytes": 22143
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/README.md",
+      "blob_sha": "85e0d3883eccb28b7d407a68436c48d89653ea4d",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/external-influence-v2/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "294952f16013e6141e9fa8bb48e1a00a9e86854b7e6ee36f8ab09cad2ce0f019",
+      "local_bytes": 4585
+    },
+    {
+      "path": "researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "blob_sha": "828b24d9e6eec91c7151893ecd83170d41d3cc52",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "3c132eed786ffb87f3a3038da06d8d6ba4b2c387077885b44a5093ca462276da",
+      "local_bytes": 8674
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "blob_sha": "c449625de0ea489bf1609c822d89595e43c663d5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/SPEC.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "7b4d8108a9a737506ce30a1839d2a21e2ce7875ea485b00850eab371a48ebdae",
+      "local_bytes": 6518
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "blob_sha": "73da221f50b4cf0fc87c1fd55eb52a5f9bf8fc45",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "af104f40b3e6dd1008ead19bfef511985544965784c5ae7f2427e287a1cd8b13",
+      "local_bytes": 8341
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "blob_sha": "7ae119b85123d8b1a471ad282f135c2096f72e9c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/RESULTS.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "55dcbaa174ef160a6a08f463a0ce4e0484c4821ff5c9ce99577187a7634426c2",
+      "local_bytes": 10068
+    },
+    {
+      "path": "researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "blob_sha": "f4414c4b90374b8a8722a6caf8631e335b709a4c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/antsy-verification-v4/SPEC.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "e2b3584ee605a1330a64320b036f29926c8aa9c83175339db09dd178537d1025",
+      "local_bytes": 6026
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/PLAN.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PLAN.md",
+      "blob_sha": "fc692d47125acd9664ded9018599eb8bdcec13d2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/dissent/PLAN.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "481d38cb6be0f48517ce9337c7b160f5d1d07b1be7307e73416086e8c37465a6",
+      "local_bytes": 15535
+    },
+    {
+      "path": "researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "blob_sha": "90e5b4f7e2a085b5d2b64d645fe950e0473cc1d2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/dissent/PARAMETERS.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "6697fb565e573e2f4f3a86dbfae17c14341ada4d3415e738c765a81aef93e9f3",
+      "local_bytes": 4070
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "blob_sha": "d732d6c38a8e21203cbb8cb4a4de6b54b2adb9da",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/influence-swarms/scenario/README.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "122fe4c80c17ce90c4dc7409daaf639c2323dc1409f6183069d6a482c4d9472c",
+      "local_bytes": 6030
+    },
+    {
+      "path": "dashboard/RESEARCH-AREAS.md",
+      "local": "review-2026-10-04/scientific-sources/dashboard/RESEARCH-AREAS.md",
+      "blob_sha": "2c8f5543f10b6a90abc412c978e995b98bd19490",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/dashboard/RESEARCH-AREAS.md",
+      "reading_depth": "full document, unless overridden by review entry",
+      "local_copy_sha256": "19bff23cdb8a9367c3d7591fa6838ee0b1e66371f1732129a4efbd66f0ee09e3",
+      "local_bytes": 4357
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+      "blob_sha": "f0ba6c8084b28e440e09e2213f6fa98b0ae67b69",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "bbc201fa6e5818579b828d2328f1b676edb9d56b01c5a3bfb842044b62a6fe28",
+      "local_bytes": 6113
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/PROTOCOL.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/PROTOCOL.md",
+      "blob_sha": "25eec933d370bf93bada3370b89cc5b87180ba88",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/influence-swarms/scenario/PROTOCOL.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "b5f3ecd2525c947cafd47832beedfad5256e438b4da4524df8de76fbf3e90886",
+      "local_bytes": 5687
+    },
+    {
+      "path": "researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md",
+      "blob_sha": "096432a6189146a0df0ade6f4f29f5b0f4327e87",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/influence-swarms/scenario/ASSESSMENT.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "61d6f7af8c569e412bcc07c0a5ad6bfdd6ab2eac774bb8c89baaca622ce8b066",
+      "local_bytes": 6680
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "blob_sha": "6e144f997386470fef902a12ff96e9fe21b38d1a",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "730ab0adc571f66387d224ae0071bcc62228a6b65966e80f63e6a651720c3e2e",
+      "local_bytes": 7017
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md",
+      "blob_sha": "e47da17bee0ebc9e90500667b465053f64dd8aa2",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/AUDIT.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "f05bd374d39e6755f7decb87abdc27a96cb4ea26713e8521f5b2dfe36b3ee760",
+      "local_bytes": 6345
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+      "blob_sha": "c1669736ee10451822a04704b5fba6d63a24e3d5",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/README.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "40dadd3e702866f56da2200c0bd6a85f6bc3858ad290cbeac77af8909daae273",
+      "local_bytes": 2415
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum/README.md",
+      "blob_sha": "1ec098773d7409f5863110aa058179cc89181b26",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum/README.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "125eb3a01e9b9a17851989fbada1e17467e60f3c4ca91780cc032f0de097f8fc",
+      "local_bytes": 4694
+    },
+    {
+      "path": "researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md",
+      "blob_sha": "d66c36e60c6caa5a0768bc45e4fd4d28c4fd3f94",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "9bee4817621afafc6fc10e087273929b9e09a41adc4d4d444177915428adf6a4",
+      "local_bytes": 7757
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/README.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/README.md",
+      "blob_sha": "3fd35cf5a49fb8e10e54a7cc5beb96dec13ea624",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/decision-models/README.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "22084de5c4785d3c47854f871f35e57be705a372821cf0da4b5c48cc6c9e43ca",
+      "local_bytes": 3419
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+      "blob_sha": "b5c1055585d671ed5eb4b3a9f5771270af697228",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/decision-models/TOP-FIVE.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "a2e6d0eee7ace7adf01cb555e30f6e5cec8250a60b1325ed5446b264fa22d9d5",
+      "local_bytes": 12869
+    },
+    {
+      "path": "researchers/vishesh/notes/decision-models/REIMAGINING.md",
+      "local": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/decision-models/REIMAGINING.md",
+      "blob_sha": "08cb176c57c686a3a4600f311dabb922aa5b739c",
+      "url": "https://github.com/dmarzzz/swarm-lab/blob/f027940fcb5b892057e65306f8e7550456ed2945/researchers/vishesh/notes/decision-models/REIMAGINING.md",
+      "reading_depth": "Full document reviewed; author-reported remote results not independently replayed in this addendum.",
+      "local_copy_sha256": "db058b553c979e605daf5a89cbf7e3f53c3521d6cb423ba43b492371f2e5bd5d",
+      "local_bytes": 17567
+    }
+  ],
+  "copy_note": "blob_sha identifies the remote source. local_copy_sha256 identifies the saved reading copy; copying may normalize the final newline. Later worktree source snapshots have separate registers."
+}

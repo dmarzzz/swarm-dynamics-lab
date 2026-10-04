@@ -1,0 +1,61 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "Evaluate each one. Improve the design. Evaluate against the plan. Resolve any gaps or failures identified in previous runs."
+   },
+   "internalParameters": {
+    "commit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty",
+    "session": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "ca0cab4c530e6ca6e4966da3385d10c475067ffb0a8fd110a8ebc55036aa3d06"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md"
+    },
+    {
+     "digest": {
+      "sha256": "1498ff1c09f7096ddc858a925538d5fc31bd3dcbda09b9cc4b02032e55937983"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py"
+    },
+    {
+     "digest": {
+      "sha256": "80bf20558a9a245c63b4f3be6cee5e84566d5cb10a9f5d00ce297b1dc436041b"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "addecbcd43ee6f07993db2f3f4578ef2aab356e1"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T03:54:58Z",
+    "invocationId": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T03:54:58Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "ef1be7515d1b088e494cea3b117f14bb66a5468f8bd548290841e05c28ae0225"
+   },
+   "name": "artifacts/vishesh-theseus-v2-assessment/vishesh-theseus-v2-assessment-v1.md"
+  }
+ ]
+}

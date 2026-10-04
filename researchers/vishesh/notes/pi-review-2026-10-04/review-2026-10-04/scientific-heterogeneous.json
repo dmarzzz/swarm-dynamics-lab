@@ -1,0 +1,311 @@
+[
+  {
+    "id": "SCI-HX",
+    "name": "Heterogeneous swarms: five prospective mechanism studies (HX-02, HX-01, HX-03, HX-05, HX-09)",
+    "evidence_class": "Prospective design sketches only. Reviewed pinned README.md and DESIGNS.md at dmarzzz/swarm-lab f027940fcb5b892057e65306f8e7550456ed2945; no experimental results or qualified model configurations accompany these two documents.",
+    "decision": "Keep the staged programme, but run one qualified mechanism study first. HX-02 is a practical first candidate; HX-03 has the clearest scientific question about information dependence. HX-01 and HX-09 first need inexpensive control/queue demonstrations; merge HX-05 with recovery work unless it adds an identifiable response-diversity mechanism. None currently supports an effectiveness or novelty claim.",
+    "interest": {
+      "judgment": "Editorial assessment: Scientifically promising questions with unusually sensible baseline and stopping language for early sketches; the interest lies in mechanisms, not mixing vendor names.",
+      "why": "The designs separate allocation, stale plans, correlated errors, reserve exposure and rejection feedback. Typed decision interfaces can make those mechanisms measurable, especially when generated plans and reports are unreliable.",
+      "novelty_boundary": "Adaptive allocation, multirate control, ensemble complementarity, redundancy and queue admission are established ideas, as the document recognizes. The 85–92 shortlist scores express owner preferences, not evidence or scientific quality. A frontier claim needs a new failure regime or transferable mechanism beyond ordinary code and capability-matched homogeneous teams; the stated literature scan is not yet a completed methods-level novelty assessment."
+    },
+    "robustness": {
+      "supported": "The protocol sketches correctly propose independent worlds, paired disturbances, development/test separation, preserved failed qualifications, objective evaluators, realized resource reporting and simple-rule kill criteria. They explicitly avoid treating provider identity as immutable or seeds as new task families.",
+      "unsupported": "No model has demonstrated the required stage capabilities here; no task generator, frozen difficulty distribution, semantic adapter validation, variance estimate, effect estimate or sample-size justification is supplied. These are readiness gaps, not negative results.",
+      "unit": "An independently generated task world or graph, with all decisions, agents and repeated calls nested within it. Paired arm outcomes share a world; repeating a seed or provider call is not another task population.",
+      "independent_variation": "Vary graph structure, task content, capability requirements and exogenous shocks across worlds. Block by family and development-calibrated difficulty. Repeated model realizations can estimate within-world variability; a second family tests transfer only after the first mechanism is established.",
+      "assessment": "The suggested 12 development worlds per family is a feasibility starting point, not an adequacy threshold. Pilot variation, rare-failure frequency and precision around a prespecified useful-effect margin should determine later allocation. Test families and disturbance regimes must be frozen before confirmatory evaluation."
+    },
+    "scenario_quality": {
+      "size": "No fixed graph or swarm size is scientifically required yet. A small graph can identify the mechanism if it has genuine dependencies, alternative assignments and constrained resources. Size should increase only when pilots show ceiling effects or missing congestion/propagation, and independent-world count should follow precision planning rather than node count.",
+      "challenge": "Calibrate away both trivial success and capability-floor failure. Demonstrate stage-specific competence, useful specialization crossovers and a solvable recovery path. Difficulty must arise from relevant dependencies, timing or information uncertainty, not gratuitous prompt length or instructions that models cannot follow.",
+      "complexity": "The shared interface is suitably lean. Each design should initially manipulate its named mechanism with a small fixed architecture. Topology, model combinations, memory and workload should not all change simultaneously; a complete factorial across the programme would waste budget.",
+      "realism": "Synthetic worlds offer exact truth and interventions but presently assume outages, delays, erroneous reports and service costs. These can establish conditional mechanism results. Later transfer should use measured latency/error distributions and a second task family; synthetic family-correlated outages alone cannot establish real provider resilience.",
+      "definition": "Prospective status and launch gates are clear. Remaining specification work includes executable task success, workload sampling, informative observations, adaptation overhead, evaluator independence, exact initial capability and action opportunities. Role names, model labels and actual capabilities need separate fields and displays."
+    },
+    "scenarios": [
+      {
+        "name": "HX-02 — Adaptive division of labor after a capability shock",
+        "assessment": "A good first study if workers demonstrably differ in stage competence and reassignment can change outcomes. Tool withdrawal supplies an interpretable capability intervention; injected error-distribution changes are useful simulations but not observations about natural model deterioration. B versus the tuned progress rule is the right primary comparison. Honest progress alone tests ordinary allocation, while the stated novelty specifically concerns stale or unreliable reports.",
+        "improvement": "Freeze a development capability matrix, graph bottlenecks, shock severity and recovery opportunity; include matched no-shock worlds to expose switching overhead. Give allocators identical observable histories and charge context transfer, compilation and reassignment time. Retain same-model differentiated-tool teams to separate role/capability partitioning from model diversity. After qualification, make one prespecified stale-report contrast mandatory if claiming unreliable-progress novelty; misleading-report stress and additional shock types can follow."
+      },
+      {
+        "name": "HX-01 — Reflexes and deliberation",
+        "assessment": "The version/expiry intervention is well defined and practically useful, but may primarily rediscover validity checking and delay compensation. Its protection-plus-fallback arm bundles two mechanisms. Counting feasible actions can reward harmless low-value actions, so apparent protection need not improve delivered service. A useful world needs demands and route changes where stale plans matter and safe fallback has a measurable opportunity cost.",
+        "improvement": "Use objectively served demand or completed routing work by deadline, with constraint violations reported separately, or define a useful-action criterion that excludes no-ops. Match state, memory and action opportunities. First compare the full protection policy against unprotected control; add one diagnostic checks-only/fallback-only ablation if claiming which component works. Freeze one delay relative to environmental change timescale; the delay-by-refresh map is later exploration. Report exogenous injected delay separately from actual model latency."
+      },
+      {
+        "name": "HX-03 — Diversity as a firebreak",
+        "assessment": "The most compelling conceptual question is whether evidence dependence changes the value of a different-model monitor. The proposed two-by-two contrast is appropriate, but a difference-in-differences alone does not isolate error covariance: monitor competence, marginal evidence quality and response thresholds can also interact with evidence sharing. Synthetic false reports must be difficult enough to require judgment while some correct minority reports remain worth preserving.",
+        "improvement": "Hold marginal sensor quality, observation budget, topology and permissible actions fixed while randomizing whether sources are shared or independent. Measure sensitivity/specificity and conditional co-failure on held-out items and disclose residual capability imbalance; family labels are not independence measurements. Include useful correct commitments and false quarantine alongside false commitments to defeat universal abstention. Keep the existing deterministic-check and extra-solving controls. Placement/topology stress comes later; monitor composition by evidence dependence is the mandatory interaction."
+      },
+      {
+        "name": "HX-05 — Diverse reserves for recovery",
+        "assessment": "The insurance tradeoff is interesting, but this overlaps existing recovery studies and risks constructing the answer through a family-targeted outage. Equal damage and identical dependency events answer different questions: equal lost capacity estimates recovery conditional on damage, whereas the same outage may legitimately damage diversified teams less. These should not be silently mixed. Local surviving memory makes state restoration a substantive additional mechanism.",
+        "improvement": "Declare the primary estimand as conditional recovery or total insurance value. For the former, match lost qualified capacity and report coverage restoration; for the latter, use identical exogenous dependency events and count exposure reduction as part of the policy. Charge idle capacity, model loading, storage and checkpoint availability, include clean opportunity-cost worlds, and forbid reserves from receiving unavailable state. Independently parameterize family exposure and task competence. Real shared-provider resilience requires observed dependencies, not only simulated family labels."
+      },
+      {
+        "name": "HX-09 — Verification queues and the cost of saying no",
+        "assessment": "A useful operations study if revisions feed back into the queue and verification has real semantic errors. Pure replay can isolate this feedback but cannot establish native-model error rates. The planned backpressure-plus-reserved-budget treatment is a policy package, so a win cannot yet be attributed to admission alone. Near-capacity must refer to measured service capacity, not a nominal proposal rate.",
+        "improvement": "Freeze an assigned workload with task difficulty and deadlines; count dropped, rejected and unfinished tasks in that denominator. Measure service-time tails, proposal validity and retry transitions, then set offered load relative to calibrated capacity. Test the policy package first; use a targeted admission-only or reserve-only contrast if mechanism attribution is needed. Keep false acceptance, useful throughput and starvation visible. Retry amplification across low and high load is the essential stress axis; multiple verifiers and provider correlation can follow once the single-queue mechanism is understood."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Tuned deterministic coordination and exact invariant checks; strong single-agent and same-model capability/role comparisons where they answer the current mechanism.",
+        "Paired worlds, equal permissible information, protected truth, assigned denominators, failed qualifications and prespecified useful-effect margins.",
+        "Separate dollar, deadline, call, communication and storage constraints; realized overhead including retries and preparation."
+      ],
+      "missing": [
+        "Development capability matrix and held-out semantic qualification for every occupied role, including the allocator/verifier.",
+        "Explicit useful-work endpoints and no-shock/clean controls where policies can sacrifice productive capacity for apparent safety or resilience.",
+        "Executable workload/difficulty distribution and treatment-specific exposure invariants before launch."
+      ],
+      "confounds": [
+        "Model identity bundles skill, instruction following, latency, price, context and interface; randomized role placement does not remove those differences.",
+        "An adapter can provide hidden planning or correction; report what ordinary code computes and what the model decides.",
+        "Equal dollars, calls and elapsed time cannot all guarantee equal proprietary compute. State the practical resource estimand and use sensitivity analyses.",
+        "Do not require every listed baseline in the initial feasibility pilot: choose the closest rule and the key attribution control, then expand only for the claim being made."
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Actual capability versus role/model identity",
+        "current": "Jev typed decisions and Haiku/Qwen generative roles are proposed; exact qualified models are unpinned.",
+        "priority": "Mandatory before any scientific model comparison",
+        "proposed_variation": "Measure stage competence on development worlds; compare the proposed mixture with a capability-partitioned same-model configuration.",
+        "reason": "Distinguishes complementary ability from naming different roles or giving one arm better tools."
+      },
+      {
+        "parameter": "Task structure and difficulty",
+        "current": "Bounded graphs/queues described without a generator distribution.",
+        "priority": "Mandatory",
+        "proposed_variation": "Freeze representative dependency depth, bottlenecks, alternative solutions and task mix using pilot feasibility and outcome spread.",
+        "reason": "Worlds must admit both failure and useful recovery; adding arbitrary nodes does not establish challenge."
+      },
+      {
+        "parameter": "HX-02 shock and observation reliability",
+        "current": "One tool withdrawal or error-rate shock; delayed/misleading progress deferred.",
+        "priority": "Shock qualification mandatory; stale signal required for the stated unreliable-progress claim",
+        "proposed_variation": "Start with one matched capacity loss and no-shock control, then one fixed stale-report contrast.",
+        "reason": "Separates generic adaptive allocation from the proposed semantic-report contribution."
+      },
+      {
+        "parameter": "HX-01 information age",
+        "current": "One frozen delay with exploratory delay/refresh map.",
+        "priority": "One consequential delay mandatory; broad map later",
+        "proposed_variation": "Choose delay relative to route/load change timescale and report validity checks and fallback use.",
+        "reason": "Absolute delay is uninterpretable without environment dynamics and useful-action opportunities."
+      },
+      {
+        "parameter": "HX-03 composition × evidence dependence",
+        "current": "Proposed homogeneous/mixed by independent/copied evidence crossing.",
+        "priority": "Mandatory interaction",
+        "proposed_variation": "Keep marginal evidence quality and count fixed; randomize source sharing and monitor assignment.",
+        "reason": "This is the design’s identifying contrast; extra model families/topologies are later transfer tests."
+      },
+      {
+        "parameter": "HX-05 failure exposure and reserve state",
+        "current": "Correlated/independent outages, cold/warm reserves and partial local memory.",
+        "priority": "Primary estimand and accessible state mandatory; reserve fraction sweep later",
+        "proposed_variation": "Choose one outage model and recovery target; predeclare surviving records, lost capacity and idle opportunity cost.",
+        "reason": "Avoids mistaking lighter damage or privileged restored context for superior recovery."
+      },
+      {
+        "parameter": "HX-09 offered load and rejection feedback",
+        "current": "Near-capacity arrival regime, bounded retries, injected false rejection in replay.",
+        "priority": "Capacity calibration and retry cap mandatory; low/high-load stress targeted next",
+        "proposed_variation": "Express load relative to measured verification capacity; track rejection-to-revision-to-return transitions.",
+        "reason": "Distinguishes ordinary overload from the additional feedback caused by semantic verification."
+      },
+      {
+        "parameter": "Replication and resource limits",
+        "current": "12 development worlds/family suggested; no authorized run budget or confirmatory allocation.",
+        "priority": "Mandatory before held-out claims",
+        "proposed_variation": "Use pilot world-level variability and a useful-effect margin to set allocation or precision target; freeze separate resource caps and report overruns.",
+        "reason": "Avoids arbitrary sample minima and noisy comparisons bought by unequal resources."
+      }
+    ],
+    "next_study": {
+      "question": "On qualified incident graphs, does typed allocation restore more verified work after a tool withdrawal than a tuned progress rule?",
+      "primary_contrast": "HX-02 B versus C; retain fixed roles and a same-model differentiated-tool comparison as development/attribution checks, with exact confirmatory contrasts declared in advance.",
+      "endpoint": "Verified post-shock task completion within a fixed window at declared resource caps; report no-shock throughput and reassignment overhead alongside it.",
+      "unit": "Independent paired task graph/world, blocked by development-calibrated difficulty.",
+      "design": "Qualify each stage on held-out development tasks; freeze graph generator, one capacity shock, permissible histories, role/capability assignments and adapters. Pilot variability and failure modes, then register allocation and a useful-effect margin before held-out runs. Treat honest-progress results as allocation feasibility; add a separately declared stale-report contrast before claiming the proposed novelty.",
+      "go_no_go": "Proceed only if all occupied roles are semantically capable, the shock leaves a feasible recovery route, scoring is independent and meaningful variation exists. Prefer the simple rule if the interval rules out a useful gain; if uncertainty remains, report it instead of declaring equivalence. Do not expand to all five studies to compensate for a null result."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/README.md",
+        "detail": "Fully read pinned source at f027940fcb5b892057e65306f8e7550456ed2945: prospective status, owner preference ranking, incomplete formal prior-art review; no experiment results."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources/researchers/vishesh/notes/heterogeneous-swarms/DESIGNS.md",
+        "detail": "Fully read all 108 lines: shared integration/evaluation contract and complete HX-02/01/03/05/09 sketches. This assessment evaluates these supplied designs and does not independently verify every linked background source."
+      }
+    ]
+  },
+  {
+    "id": "SCI-HX-FRONTIERS",
+    "name": "Research Heterogenous Swarms — biological-frontier revision HX-31 through HX-38",
+    "evidence_class": "Prospective hypotheses only. Bounded late read of five local documents frozen 2026-10-04T03:23:55.191217+00:00 at a515aed7a85a6387564a8fe883586e87d254a794, with no uncommitted changes in that directory. The task was active; later changes are outside this cutoff. No new experimental results.",
+    "decision": "In this reviewer’s editorial judgment, this revision substantially improves conceptual interest and supersedes the older shortlist as the author’s recommended research focus. Retain all eight as questions, prioritize methods review of HX-31 and HX-32, and use HX-37 as a comparatively direct first mechanism pilot. Do not mistake a compelling biological label for established novelty or a measured evolutionary transition.",
+    "interest": {
+      "judgment": "Editorial assessment: Stronger scientific agenda than the operational HX shortlist: each leading idea proposes a causal intervention on dependence, compatibility, inherited environment or artifact supply.",
+      "why": "Helper removal/rescue, reciprocal partner swaps, habitat transplants and translated module recombination are informative even when the biological analogy fails. The new designs identify nulls worth publishing and explicitly separate fixed base models from mutable policies.",
+      "novelty_boundary": "The documents acknowledge close predecessors and abstract-level reading limits. This pass assesses the new designs, not an independently completed novelty search. Co-inheritance selected by a harness, information reuse and model-family differences alone do not demonstrate new levels of individuality, biological speciation or ecological coexistence."
+    },
+    "robustness": {
+      "supported": "Strong prospective controls: fixed model weights, finite copying, population caps, held-out evaluation, retained failed lineages, counterbalanced initial capabilities, homogeneous comparators, rescue tests and charged overhead.",
+      "unsupported": "No capability-loss mechanism, successful adaptation, stable pair dependence, habitat feedback, procedural incompatibility or consumer niche has yet been observed. Exact selection, mutation, inheritance and information-access rules remain unspecified.",
+      "unit": "Independent adapted population, pair lineage, island or built habitat according to the study. Frozen descendants can have independent evaluation episodes conditional on that ancestor, but those episodes do not add independent adaptation histories.",
+      "independent_variation": "Replicate independent starting lineages and construction histories; pair held-out tasks across frozen descendants. Within-lineage generations and offspring are dependent. Use multiple independent donor artifact pools for salvage transfer.",
+      "assessment": "Specify a primary joint signature or contrast and a useful-effect margin before confirmation. Size pilots by feasibility and variance of independent lineages; generations, islands, task families and model realizations answer different uncertainty questions. There is no justified universal minimum population size."
+    },
+    "scenario_quality": {
+      "size": "Small finite populations are appropriate for the first interventions. They must support alternative helpers, partner swaps or reciprocal habitats as relevant. Sustained coexistence needs longitudinal resource-share evidence and invasion tests; one successful trajectory cannot substitute for that stronger claim.",
+      "challenge": "Choose tasks with verified subskills and useful intermediate artifacts. Avoid both trivial answer copying and models incapable of solo/component tasks. Capability loss must change executable ability, not merely delete a label while the base model can still perform the operation.",
+      "complexity": "The strongest designs have several stages. Separate qualification, bounded adaptation, frozen evaluation and one causal intervention; add population feedback only after the simpler interaction is established. A full cross-product of models, selection rules and environments is unnecessary.",
+      "realism": "Compute, context, tool access and interface costs can ground the analogies. Unused skill files may have no maintenance cost; text is non-rival; the harness controls reproduction. Artificial cost schedules and selection incentives support conditional simulations, not direct claims about naturally evolving agent ecologies.",
+      "definition": "The documents are clear about prospective status and operational analogy. They now need an exact mutable representation, allowed mutation/copy operations, local versus group selection objective, exposure history, resource price, intervention semantics and evaluator-visible versus actor-visible labels."
+    },
+    "scenarios": [
+      {
+        "name": "HX-31 — Black Queen capability loss",
+        "assessment": "Most conceptually compelling if deletion saves an actual recurring cost and creates experimentally verified dependence. The pruning/public-access crossing and helper-rescue tests are strong. Selecting policies by group reward could intentionally engineer efficient division of labor, which is a narrower result than individual-level selection causing dependence.",
+        "improvement": "Declare whose utility controls selection; verify capability loss using matched solo tests and actual denied tool access. Measure retained-skill context/tool overhead and include the proposed zero-cost and optimized fixed-specialist controls. Require selective helper withdrawal, matched ordinary removal and capability-equivalent rescue. Treat the four-part signature as joint evidence rather than selecting its most favorable component."
+      },
+      {
+        "name": "HX-32 — Symbiotic pairs and escape from lock-in",
+        "assessment": "Partner-specific interface adaptation is valuable research on upgrade fragility. Pair copying imposed by the harness establishes an experimental inheritance rule, not emergence of a higher-level individual. A Jev selector may never solve the complete generative task alone, making whole-task solo failure uninformative.",
+        "improvement": "Qualify each component on its own legitimate task and start with an interoperable, replaceable partner. Evaluate a reciprocal partner matrix to separate component quality from compatibility. Prespecify task shift and normalization semantics, charge translation calls and test its competence. First show pair-specific interaction; adaptation/escape is the next stage, and any transition claim needs additional evidence beyond enforced joint copying."
+      },
+      {
+        "name": "HX-33 — Habitat inheritance and model-family feedback",
+        "assessment": "Reciprocal builder/newcomer effects improve substantially on generic persistent-memory studies. A family interaction can still reflect interface familiarity or training-style overlap; it is not necessarily a self-reinforcing population process. Equal-information controls and fixed-composition arms are therefore essential.",
+        "improvement": "Freeze independent builder habitats, use held-out tasks disjoint from stored complete solutions, and audit actual retrieval/context exposure. Compare portable normalized artifacts without giving one model extra evidence. Establish the relative-performance interaction before applying the fixed recruitment rule. Report recruitment as a consequence under that rule; test reintroduction from rarity before claiming exclusion or stable feedback."
+      },
+      {
+        "name": "HX-35 — Cultural speciation through procedural incompatibility",
+        "assessment": "Procedural hybrid failure after translation is interesting, but translator failure cannot by itself prove deep incompatibility. Arbitrary shuffled modules may already be broken, weakening the proposed reference distribution. Migration can prevent fragmentation through ordinary information transfer without any speciation mechanism.",
+        "improvement": "Demonstrate initial cross-island compatibility and test translators on known alignable procedures. Use linkage-breaking controls that preserve valid component interfaces and evaluate native/hybrid matrices at fixed adaptation milestones. Report residual incompatibility under tested translators, not impossibility of translation. Freeze migration doses and match communication cost; broader migration curves follow the first credible co-adaptation interaction."
+      },
+      {
+        "name": "HX-37 — Cross-feeding on failed artifacts",
+        "assessment": "The clearest bounded first pilot. A failed complete attempt can contain valuable subresults, but oracle selection of verified useful fragments can supply an uncharged verifier or leak evaluator knowledge. A one-shot salvage gain is weaker than a consumer earning a persistent resource niche.",
+        "improvement": "Define an actor-available fragment selection procedure, charge validation/filtering, and hide evaluator-only validity labels. Freeze donor attempts before exposure assignment. Compare consumer transformation with identical-donor continuation, direct reuse and fresh attempts at equal total cost. Establish useful salvage first; then test withdrawal/rescue and resource-share dynamics under a fixed general allocation rule without consumer quotas."
+      },
+      {
+        "name": "HX-34 — Selfish skills (reserve question)",
+        "assessment": "Separating skill spread from host task value is interesting; copying according to adoption mechanically rewards spread, so prevalence alone is tautological evidence. Benign format/readability differences can mimic a replication advantage.",
+        "improvement": "Measure transmission choices under matched exposure before applying selection, compare independently verified host utility, and keep copy opportunities and length controlled. Restrict claims to a replication–utility conflict under the declared rule; preserve the benign scope."
+      },
+      {
+        "name": "HX-36 — Kill the winner (reserve question)",
+        "assessment": "Useful minority persistence under behavior-targeted pressure is plausible, but a challenge generator can manufacture whichever niche it targets. Positive minority share over a short run is not stable coexistence.",
+        "improvement": "Freeze an independent utility evaluation set, target behavioral strategy rather than provider, and match challenge difficulty. Test rare-policy growth across starting frequencies and retain no-feedback/random-challenge controls. Report finite-horizon coexistence under the chosen environment before any broader ecological claim."
+      },
+      {
+        "name": "HX-38 — Swarm embryos (close alternate)",
+        "assessment": "Transient induction followed by repair could expose organizational memory, but persistent prompt text or shared labels can trivially preserve apparent roles. Symmetry breaking requires initially exchangeable opportunities, which model heterogeneity can violate.",
+        "improvement": "Cross-foster and blind names, record capabilities separately from emergent functions, and include same-model initial populations. Cross erasure of individual history and shared artifacts without changing task access. Validate role labels against task contributions and test actual recovery after turnover; persistence alone is insufficient."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Homogeneous specialists, deterministic typed gate, fixed optimized specialization, held-out tasks, independent truth and exact intervention/rescue traces.",
+        "Failed lineages, fixed population/resource caps and creation/retrieval/selection costs.",
+        "Zero-maintenance, equal-information, fixed-composition and direct-reuse controls already proposed where relevant."
+      ],
+      "missing": [
+        "Exact selection unit/objective and auditable inheritance representation before using evolutionary terminology.",
+        "Qualified semantic translators and actor-available fragment filters before claiming deep incompatibility or salvage value.",
+        "Independent construction/adaptation histories, not only multiple tests of one winning lineage."
+      ],
+      "confounds": [
+        "Automatic role assignment, reproduction or quotas can build the desired biological phenomenon into the rules.",
+        "Base-model capability, accessible tools, context and model identity remain distinct; changing a file inventory need not remove an ability.",
+        "Normalized interfaces or filtered artifacts can accidentally add new information or extra inference.",
+        "Frozen-ancestor task replication supports conditional performance estimates; it does not estimate between-lineage adaptation variability."
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Mutable unit and selection pressure",
+        "current": "Policies, skills, pairs or artifacts selected by future controlled copying.",
+        "priority": "Mandatory",
+        "proposed_variation": "Specify one representation, mutation budget and individual/group utility rule per first study; compare another rule only for its claim.",
+        "reason": "Prevents biological outcomes being awarded by construction."
+      },
+      {
+        "parameter": "Real capability maintenance cost",
+        "current": "HX-31 proposes actual costs and a zero-cost arm.",
+        "priority": "Mandatory for capability-loss interpretation",
+        "proposed_variation": "Measure context/loading/tool overhead and freeze a cost schedule; retain zero-cost and optimized static allocation.",
+        "reason": "An invented penalty for unused files can manufacture selection for deletion."
+      },
+      {
+        "parameter": "Interface translation and compatibility",
+        "current": "HX-32 normalization; HX-35 lexical and semantic translators.",
+        "priority": "Mandatory qualification",
+        "proposed_variation": "Freeze what each translator preserves, qualify on known compatible cases and charge its actual compute.",
+        "reason": "Distinguishes co-adaptation from poor adapters or extra inference."
+      },
+      {
+        "parameter": "Information and artifact provenance",
+        "current": "HX-33 equal-information habitats; HX-37 locally valid failed fragments.",
+        "priority": "Mandatory",
+        "proposed_variation": "Track actual exposed bytes/sources and evaluator-only labels; freeze donor/build histories before assignment.",
+        "reason": "Prevents hidden-answer storage and oracle filtering from explaining the result."
+      },
+      {
+        "parameter": "Duration, population size and coexistence",
+        "current": "Bounded finite populations; no allocation specified.",
+        "priority": "Pilot-informed for mechanism; longitudinal tests only for population claims",
+        "proposed_variation": "Use independent-history variance to plan precision; add rare-entry and withdrawal tests when claiming sustained niches.",
+        "reason": "A larger agent count or more generations alone does not establish independent evidence or equilibrium."
+      },
+      {
+        "parameter": "Model heterogeneity",
+        "current": "Jev/Haiku/Qwen interfaces proposed, exact versions unqualified.",
+        "priority": "Mandatory capability calibration; more families later",
+        "proposed_variation": "Pin versions and compare matched-tool same-model specialists before additional family combinations.",
+        "reason": "Identifies functional complementarity rather than vendor labels."
+      }
+    ],
+    "next_study": {
+      "question": "Does a qualified cheap consumer recover useful output from failed donor work beyond direct reuse, another donor continuation or an equally budgeted fresh attempt?",
+      "primary_contrast": "HX-37 consumer transformation versus the strongest development-selected cost-matched continuation/fresh-attempt comparator on frozen failed donor attempts.",
+      "endpoint": "Incremental independently verified task value at a fixed total resource budget, charging donor failures, filtering and all transformations.",
+      "unit": "Independent donor task/artifact history, paired across exposure/continuation arms; cluster descendants and repeated calls within that history.",
+      "design": "First qualify task/subtask competence and the public fragment filter, freeze artifact pools, and pilot world-level variation. Register one primary contrast, useful-effect margin and allocation before held-out testing. Only after a credible salvage effect, add withdrawal/rescue and a population-allocation phase for the stronger niche claim.",
+      "go_no_go": "Stop the biological extension if utility is fully explained by direct reuse, extra attempts, oracle filtering or donor continuation. A precise salvage-only result remains useful. HX-31/HX-32 should proceed after the closest full-methods papers and actual capability/interface mechanisms have been resolved."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/README.md",
+        "detail": "Fully read frozen late-revision source; design assessment only, linked external literature not independently re-audited in this bounded delta."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/DESIGNS.md",
+        "detail": "Fully read frozen late-revision source; design assessment only, linked external literature not independently re-audited in this bounded delta."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/REVIEW.md",
+        "detail": "Fully read frozen late-revision source; design assessment only, linked external literature not independently re-audited in this bounded delta."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/QUESTION-BANK.md",
+        "detail": "Fully read frozen late-revision source; design assessment only, linked external literature not independently re-audited in this bounded delta."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/researchers/vishesh/notes/heterogeneous-swarms/frontiers/LITERATURE.md",
+        "detail": "Fully read frozen late-revision source; design assessment only, linked external literature not independently re-audited in this bounded delta."
+      },
+      {
+        "path": "review-2026-10-04/scientific-sources-live/heterogeneous-frontiers-cutoff.json",
+        "detail": "UTC cutoff, source HEAD, clean selected directory and SHA-256 hashes for all five frozen sources. Recent task title is Research Heterogenous Swarms; active task 01a104ab-7f68-7840-b1e3-865b25b4689d."
+      }
+    ]
+  }
+]

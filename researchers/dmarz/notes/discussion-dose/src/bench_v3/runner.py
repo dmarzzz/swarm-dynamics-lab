@@ -7,6 +7,7 @@ from .contracts import validate
 from .worlds import documents, validate_case, memory_fixtures
 from .scoring import majority, merge, parent_context, parent_score, checkpoint, evaluate
 from .evidence import possible_decisions
+from .failures import safe_failure
 
 ARMS = ('independent', 'reports', 'private', 'board')
 
@@ -43,9 +44,11 @@ class Runner:
             response = self.provider.complete(copy.deepcopy(request))
         except AssertionError:
             raise  # replay mismatch must not masquerade as a model failure
-        except Exception:
+        except Exception as exc:
             self.failures += 1
+            # Review F2: keep the adapter's public reason (429, low credit, incomplete); never the message body.
             self.journal.emit('provider_failure', call_id=call_id, label=label, agent=agent, turn=turn,
+                              **safe_failure(exc),
                               dispatched=bool(self.provider.scientific and getattr(self.provider, 'calls', 0) > dispatched_before),
                               usage=getattr(self.provider, 'last_usage', {}), raw_text=getattr(self.provider, 'last_response_text', None))
             return None

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: done
-task: theseus-critical-redesign
-doing: Critical review complete; v1 downgraded to baseline and v2 selective-continuity draft published
-updated: 2026-10-04T02:53Z
+state: working
+task: theseus-rule-diagnosis
+doing: Publish complete saved-evidence diagnosis and reproducible audit
+updated: 2026-10-04T04:44Z
 ---
 
-36/36 pilot trajectories complete after qualification repairs. All 216 pilot frames independently recomputed. Seeded single-model exploratory result, not confirmatory culture evidence.
+Audited48calls/288decisions. All scores and144 repaired rows agree.13 repaired ceiling errors include false evidence, incorrect application and unpropagated notebook corrections.7/20 equivalent-input ceiling groups inconsistent. Verified ceiling learner-framing mismatch and zero stale ledger/canary qualification rows. No new model calls; causal attribution remains untested. Full findings in v2/diagnosis/FINDINGS.md.

@@ -120,6 +120,41 @@ class SidecarTests(unittest.TestCase):
                 payload = b''.join((out / 'upload' / part).read_bytes() for part in f['parts'])
                 self.assertEqual(gzip.decompress(payload), (out / f['original']).read_bytes())
 
+    def test_vote_rescore_f1(self):
+        import rescore_votes_v3 as rv
+        from bench_v3 import cli as v3_cli
+        with tempfile.TemporaryDirectory() as d:
+            # Sidecar layout: no invalid ballots, so the re-score must equal the pinned scorer everywhere.
+            out = Path(d) / 'side'; rs.run(out)
+            r = rv.report(out)
+            self.assertEqual(r['episodes'], 72); self.assertEqual(r['episodes_with_invalid_final_ballot'], 0)
+            self.assertFalse(r['episodes_rescored_differently'])
+            self.assertEqual({(c['contrast']) for c in r['vote_target_contrasts']},
+                             {'(private attack-clean) - (resample attack-clean)', '(private attack-clean) - (reports attack-clean)', '(resample attack-clean) - (reports attack-clean)'})
+            # v3 layout: also runs on a v3 benchmark directory and finds the board-private pair.
+            v3out = Path(d) / 'v3'; v3_cli.run(v3out)
+            r3 = rv.report(v3out)
+            self.assertIn('(board attack-clean) - (private attack-clean)', {c['contrast'] for c in r3['vote_target_contrasts']})
+            # Shadow's F1 reproduction: two target votes + one invalid ballot.
+            case = rs.cases()[0]
+            ballot = {'vote': case['target'], 'claims': {}}
+            quorum, unidentified = rv.vote_scores(case, True, [ballot, ballot, None])
+            self.assertEqual((quorum['vote_target'], quorum['vote_invalid']), (1, 1)); self.assertIsNone(unidentified['vote_target'])
+            quorum, _ = rv.vote_scores(case, True, [ballot, None, None])
+            self.assertEqual((quorum['vote_abstain'], quorum['vote_abstain_with_invalid']), (1, 1))
+            # A saved episode with an injected invalid ballot is re-scored and widens bounds under 'unidentified'.
+            rows = json.loads((out / 'episodes.json').read_text())
+            hit = next(x for x in rows if x['attack'] and x['arm'] == 'private' and x['stratum'] == 'resolvable')
+            hit['ballots'][0] = None
+            (out / 'episodes.json').write_text(json.dumps(rows))
+            r = rv.report(out)
+            self.assertEqual(r['episodes_with_invalid_final_ballot'], 1)
+            u = next(c for c in r['vote_target_contrasts'] if c['scheme'] == 'unidentified' and c['stratum'] == 'resolvable' and c['contrast'].startswith('(private') and 'resample' in c['contrast'])
+            self.assertIsNone(u['mean']); self.assertLess(u['lower'], u['upper'])
+            # A tampered world is refused.
+            rows[1]['world_hash'] = '0' * 64; (out / 'episodes.json').write_text(json.dumps(rows))
+            with self.assertRaises(ValueError): rv.report(out)
+
     def test_paid_launch_gate(self):
         with self.assertRaises(ValueError): rs.approved_model_config(None, 3)
         with tempfile.TemporaryDirectory() as d:

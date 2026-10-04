@@ -1,0 +1,191 @@
+{
+  "independent_unit": "receipt; vendor/layout independence not established",
+  "assigned": 20,
+  "scorable": 20,
+  "pipelines": {
+    "A": {
+      "correct": 1,
+      "scorable": 20,
+      "missing": 17,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 22.894110957997327,
+      "wall_s_median": 0.5957850429995233,
+      "wall_s_p90": 4.679803400998935
+    },
+    "B": {
+      "correct": 4,
+      "scorable": 20,
+      "missing": 15,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 35.7618039420031,
+      "wall_s_median": 1.201769980500103,
+      "wall_s_p90": 6.167969874000846
+    },
+    "C": {
+      "correct": 3,
+      "scorable": 20,
+      "missing": 16,
+      "ambiguous": 1,
+      "failed": 0,
+      "wall_s_total": 32.91130662999967,
+      "wall_s_median": 0.9007571120000648,
+      "wall_s_p90": 4.402084429999377
+    },
+    "D": {
+      "correct": 2,
+      "scorable": 20,
+      "missing": 16,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 104.12579679400187,
+      "wall_s_median": 2.609414732500227,
+      "wall_s_p90": 19.127616867001052
+    },
+    "E": {
+      "correct": 2,
+      "scorable": 20,
+      "missing": 16,
+      "ambiguous": 2,
+      "failed": 0,
+      "wall_s_total": 85.59595890599667,
+      "wall_s_median": 2.3556466629997885,
+      "wall_s_p90": 15.162659519000954
+    }
+  },
+  "paired": {
+    "selective-check minus agreement": {
+      "correct": {
+        "difference": 0.05,
+        "bootstrap_95": [
+          0.0,
+          0.15
+        ]
+      },
+      "wrong": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": -0.05,
+        "bootstrap_95": [
+          -0.15,
+          0.0
+        ]
+      }
+    },
+    "selective-check minus always-check": {
+      "correct": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": 0.0,
+        "bootstrap_95": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    "agreement minus confidence": {
+      "correct": {
+        "difference": -0.05,
+        "bootstrap_95": [
+          -0.15,
+          0.0
+        ]
+      },
+      "wrong": {
+        "difference": -0.05,
+        "bootstrap_95": [
+          -0.15,
+          0.0
+        ]
+      },
+      "refer": {
+        "difference": 0.1,
+        "bootstrap_95": [
+          0.0,
+          0.25
+        ]
+      }
+    }
+  },
+  "uncertain_reference_bounds": {
+    "fixed-B": {
+      "accepted": 5,
+      "unknown_accepted": 0,
+      "scorable_accepted_error_wilson_95": [
+        0.03622410863243014,
+        0.6244653702374747
+      ],
+      "error_rate_bounds": [
+        0.2,
+        0.2
+      ]
+    },
+    "confidence": {
+      "accepted": 5,
+      "unknown_accepted": 0,
+      "scorable_accepted_error_wilson_95": [
+        0.03622410863243014,
+        0.6244653702374747
+      ],
+      "error_rate_bounds": [
+        0.2,
+        0.2
+      ]
+    },
+    "agreement": {
+      "accepted": 3,
+      "unknown_accepted": 0,
+      "scorable_accepted_error_wilson_95": [
+        5.551115123125783e-17,
+        0.5614970317550454
+      ],
+      "error_rate_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "always-check": {
+      "accepted": 4,
+      "unknown_accepted": 0,
+      "scorable_accepted_error_wilson_95": [
+        0,
+        0.4898908364545973
+      ],
+      "error_rate_bounds": [
+        0.0,
+        0.0
+      ]
+    },
+    "selective-check": {
+      "accepted": 4,
+      "unknown_accepted": 0,
+      "scorable_accepted_error_wilson_95": [
+        0,
+        0.4898908364545973
+      ],
+      "error_rate_bounds": [
+        0.0,
+        0.0
+      ]
+    }
+  },
+  "checker_introduced_errors": []
+}

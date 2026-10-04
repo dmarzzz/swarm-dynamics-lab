@@ -84,11 +84,17 @@
     "model": null,
     "runtime": null,
     "absolute_deadlines": null,
-    "budget_caps": null,
+    "budget_caps": {
+      "attempt_total_usd": 20,
+      "screening_episode_usd": 2,
+      "shared_between_stages": true,
+      "authorization_id": "optimal-swarm-size-q1-usd20"
+    },
     "hardware": null,
     "immutable_public_plan_url": null,
     "independent_review": null,
-    "machine_claim": null
+    "machine_claim": null,
+    "user_requested_launch": true
   },
   "limits": [
     "Counts are planning maxima, not spending authorization.",
@@ -166,5 +172,18 @@
       "primary_checker": "permitted repair sequence reaches healthy simulated state and preserves safety invariants",
       "quality": "restored service fraction; forbidden sequence scores zero"
     }
-  ]
+  ],
+  "implementation": {
+    "status": "offline-tested; launch not ready",
+    "public_items_per_task": 16,
+    "actor_input": "complete public fixture per context, replication charged",
+    "repository_scope": "bounded arithmetic Python expression grammar",
+    "dispatcher": "least-used idle actor, tie by actor ID",
+    "qa_runner": "src/run_qualification.py",
+    "review_task": "review-swarm-size-qualification",
+    "build_status": "BUILD-STATUS.md",
+    "model_runs": 0,
+    "offline_test_methods": 21,
+    "independent_review_status": "requested; no verdict"
+  }
 }

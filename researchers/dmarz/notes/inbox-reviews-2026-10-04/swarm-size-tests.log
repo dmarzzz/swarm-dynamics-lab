@@ -1,0 +1,63 @@
+test_race_persistence_and_unknown_charges (test_budget.Reservations) ... ok
+test_shared_stage_cap_and_overrun (test_budget.Reservations) ... ok
+test_twenty_dollars_shared_across_stages (test_budget.Reservations) ... ok
+test_invalid_plan_repaired_once (test_engine.Engine) ... ok
+test_plan_validation (test_engine.Engine) ... ok
+test_provider_error_preserved (test_engine.Engine) ... ok
+test_scripted_transport_all_sizes (test_engine.Engine) ... ok
+test_transport_value_error_is_not_retried (test_engine.Engine) ... ok
+test_admission_failure_reconciles_all (test_failures.Failures) ... ok
+test_allowlisted_codes_and_no_plan_retries (test_failures.Failures) ... ok
+test_fatal_transport_stops_batch (test_failures.Failures) ... ok
+test_fatal_work_error_stops_integration (test_failures.Failures) ... ok
+test_progress_fault_does_not_abort_model (test_failures.Failures) ... ok
+test_upload_fault_preserves_outcome_stops_batch (test_failures.Failures) ... ok
+test_cap_cannot_exceed_authorization (test_launch.Launch) ... ok
+test_config_cannot_raise_recorded_allowance (test_launch.Launch) ... ok
+test_draft_cannot_launch (test_launch.Launch) ... ok
+test_http_timeout_and_missing_credential_are_safe (test_provider.ChildBoundary) ... ERROR
+test_conservative_rounding (test_provider.Money) ... ok
+test_recorded_intervals_missing_ends_and_escaping (test_replay.Replay) ... ok
+test_public_tldr_verified_before_execution (test_reporting.Reporting) ... ok
+test_unacknowledged_publication_is_retained (test_reporting.Reporting) ... ok
+test_wrong_public_tldr_fails_closed (test_reporting.Reporting) ... ok
+test_equivalent_repair_and_constant_cheat (test_tasks.Fixtures) ... ok
+test_every_reference_and_broken_repository (test_tasks.Fixtures) ... ok
+test_evidence_mutations (test_tasks.Fixtures) ... ok
+test_forbidden_python (test_tasks.Fixtures) ... ok
+test_matched_coefficients_and_graph (test_tasks.Fixtures) ... ok
+test_outcome_boundaries (test_tasks.Fixtures) ... ok
+test_roots_and_sizes (test_tasks.Fixtures) ... ok
+test_strict_json (test_tasks.Fixtures) ... ok
+
+======================================================================
+ERROR: test_http_timeout_and_missing_credential_are_safe (test_provider.ChildBoundary)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/halcyon/swarm-lab-lanes/review-all/swarm-lab/researchers/vishesh/notes/optimal-swarm-size/src/provider.py", line 28, in request_child
+    with urllib.request.urlopen(request,timeout=timeout) as response:
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1093, in __call__
+    return self._mock_call(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1097, in _mock_call
+    return self._execute_mock_call(*args, **kwargs)
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/unittest/mock.py", line 1152, in _execute_mock_call
+    raise effect
+urllib.error.HTTPError: HTTP Error 429: private body
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/halcyon/swarm-lab-lanes/review-all/swarm-lab/researchers/vishesh/notes/optimal-swarm-size/src/test_provider.py", line 21, in test_http_timeout_and_missing_credential_are_safe
+    request_child(connection,{},1)
+  File "/Users/halcyon/swarm-lab-lanes/review-all/swarm-lab/researchers/vishesh/notes/optimal-swarm-size/src/provider.py", line 38, in request_child
+    code=exc.code;exc.close()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 500, in close
+    self._closer.close()
+  File "/Library/Developer/CommandLineTools/Library/Frameworks/Python3.framework/Versions/3.9/lib/python3.9/tempfile.py", line 468, in __getattr__
+    file = self.__dict__['file']
+KeyError: 'file'
+
+----------------------------------------------------------------------
+Ran 31 tests in 0.564s
+
+FAILED (errors=1)

@@ -1,0 +1,10 @@
+{
+  "claim": "vishesh-quorum-mirrors-s0",
+  "host": "sim-shadow",
+  "status": "released",
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/94",
+  "hub_release_mirrored": true,
+  "worker_complete": true,
+  "relay_stopped": true,
+  "tunnel_stopped": true
+}

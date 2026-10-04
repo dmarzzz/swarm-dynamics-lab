@@ -1,0 +1,75 @@
+{
+  "assigned": 42,
+  "terminal": 42,
+  "correct": 35,
+  "valid": 42,
+  "by_instruction": {
+    "generic": {
+      "bridge": {
+        "correct": 5,
+        "valid": 6,
+        "assigned": 6
+      },
+      "build": {
+        "correct": 3,
+        "valid": 6,
+        "assigned": 6
+      },
+      "alarm": {
+        "correct": 3,
+        "valid": 6,
+        "assigned": 6
+      }
+    },
+    "clarified": {
+      "bridge": {
+        "correct": 6,
+        "valid": 6,
+        "assigned": 6
+      },
+      "build": {
+        "correct": 6,
+        "valid": 6,
+        "assigned": 6
+      },
+      "alarm": {
+        "correct": 6,
+        "valid": 6,
+        "assigned": 6
+      }
+    },
+    "uncertainty": {
+      "bridge": {
+        "correct": 2,
+        "valid": 2,
+        "assigned": 2
+      },
+      "build": {
+        "correct": 2,
+        "valid": 2,
+        "assigned": 2
+      },
+      "alarm": {
+        "correct": 2,
+        "valid": 2,
+        "assigned": 2
+      }
+    }
+  },
+  "qualification_passed": true,
+  "paired_changes": {
+    "improved": 7,
+    "worsened": 0,
+    "both_correct": 11,
+    "both_wrong": 0
+  },
+  "stage": "Q1",
+  "served_model": "typesafe/jev-1.13-20260917",
+  "unique_requests": 42,
+  "completed_calls": 42,
+  "logical_calls": 42,
+  "cost_usd": 0.001060458,
+  "input_tokens": 25249,
+  "elapsed_seconds": 21.11315724999986,
+  "missing": 0
+}

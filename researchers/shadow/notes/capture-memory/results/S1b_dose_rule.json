@@ -1,0 +1,19 @@
+{
+  "horizon": 200,
+  "capture_target": 0.8,
+  "takeover_cap": 400,
+  "dose_by_world_memory": {
+    "W1_INSIDE": {
+      "1": 0.42,
+      "5": 0.42,
+      "20": 0.42,
+      "full": 0.54
+    },
+    "W2_OUTSIDE": {
+      "1": 0.42,
+      "5": 0.46,
+      "20": 0.54,
+      "full": 0.83
+    }
+  }
+}

@@ -1,0 +1,373 @@
+{
+  "scope": "Bounded Theseus delta only; 33 file versions in frozen addendum at2026-10-04T02:58:11.098785+00:00. No later workspace exports followed.",
+  "snapshot_path": "/tmp/grove-review-2026-10-04-addendum",
+  "findings": [
+    {
+      "id": "ADD-T-01",
+      "severity": "P2",
+      "title": "Action-domain validation permits illegal labels while successful reports hardcode invalid=0",
+      "project": "swarm-of-theseus",
+      "evidence": [
+        {
+          "path": "swarm-of-theseus/src/study.py",
+          "line": 62,
+          "detail": "validate_solve checks label is a string and case IDs are correct, but never requires label in dax/wug; evidence/result are also not validated locally."
+        },
+        {
+          "path": "swarm-of-theseus/src/provider.py",
+          "line": 99,
+          "detail": "The generated output schema treats label as a generic string, so provider structured output does not enforce the legal action set."
+        },
+        {
+          "path": "swarm-of-theseus/src/runner.py",
+          "line": 70,
+          "detail": "Completed reports always publish invalid=0."
+        },
+        {
+          "path": "swarm-of-theseus/README.md",
+          "line": 49,
+          "detail": "Invalid responses are promised as a secondary endpoint; qualification requires zero invalid records."
+        }
+      ],
+      "impact": "A future model can emit an out-of-domain action that is treated only as incorrect rather than counted as invalid, and its run may still satisfy aggregate competence thresholds. This did not corrupt S1: all 2,592 archived S1 labels independently checked here are legal.",
+      "recommendation": "Enforce the legal label enum at both schema and local validation; distinguish invalid action from valid-but-wrong action and report actual invalid counts. Validate any work evidence fields only to the declared contract; do not silently correct reasoning. Add a direct validator unit test, no live inference required.",
+      "confidence": "high",
+      "verification": "Isolated extraction/execution of validate_solve accepted four not-a-legal-label strings with valid case IDs; no world/model execution."
+    },
+    {
+      "id": "ADD-T-02",
+      "severity": "P2",
+      "title": "Prospective archive-sufficiency claims need an equivalence criterion",
+      "project": "swarm-of-theseus/redesign",
+      "evidence": [
+        {
+          "path": "swarm-of-theseus/redesign/DESIGN.md",
+          "line": 60,
+          "detail": "If transplant matches continuation, report archive sufficiency; if single controller matches swarm, drop a special swarm advantage claim."
+        },
+        {
+          "path": "swarm-of-theseus/redesign/DESIGN.md",
+          "line": 56,
+          "detail": "Noninferiority margins are required for stable reward and unaffected-component retention, but matching for portability/single-controller comparisons has no explicit margin or uncertainty criterion."
+        }
+      ],
+      "impact": "A small or imprecise pilot can show no detected gap without establishing portable-archive sufficiency or equivalent performance. The draft is unrun and candid about remaining launch blockers, so this is a prospective design clarification rather than a false reported result.",
+      "recommendation": "Before qualification specify a practically meaningful equivalence/noninferiority margin and interval decision rule for portability/controller comparisons, or label their gaps descriptive and any null result inconclusive. Failure to establish a swarm advantage is already enough to withhold that claim; it does not prove equivalence.",
+      "confidence": "high"
+    }
+  ],
+  "coverage": [
+    {
+      "path": "swarm-of-theseus/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/DEPLOYMENT.md",
+      "bytes": 6201,
+      "sha256": "2385e5ef374ee38e9098575a10fe38f6da12d46842389f485d5510aa0afec0f6",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/README.md",
+      "bytes": 15085,
+      "sha256": "2e0bc3af7a46e5f719f45a076a7c374b484703cf5eeaea4835f1da458d94cf48",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/RESULTS.md",
+      "bytes": 8202,
+      "sha256": "5af038d90fb9da83d6ae749da0a36d2613fe8ee2da783ceab44361a168644508",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/design.yaml",
+      "bytes": 625,
+      "sha256": "f9b2c293775a375ee23892c7083e08e72b0fb70e6908e65f7e1c6df832aecedc",
+      "review_mode": "full config/declarative review; source identity checked against S1 manifest when applicable"
+    },
+    {
+      "path": "swarm-of-theseus/evidence.tar.gz",
+      "bytes": 372168,
+      "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+      "review_mode": "every archive member/index hash checked; every outcome parsed; S1 event records read programmatically to independently recompute structural claims and label-domain check; raw traces not printed"
+    },
+    {
+      "path": "swarm-of-theseus/experiment.yaml",
+      "bytes": 767,
+      "sha256": "6144b32a8c4657f6e77e4ec77fb264737900645f123c30eb95b020c1435d5edb",
+      "review_mode": "full config/declarative review; source identity checked against S1 manifest when applicable"
+    },
+    {
+      "path": "swarm-of-theseus/model-config.json",
+      "bytes": 335,
+      "sha256": "4b36fd0932680b861f11711321121fc17639c1033286f0ae2b703273bbc53bf0",
+      "review_mode": "full config/declarative review; source identity checked against S1 manifest when applicable"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/DESIGN.md",
+      "bytes": 14071,
+      "sha256": "4e1c7058e0fc2707fbb556b0677653e2c056e5b60cdbcf294dcb8eda70d6dcab",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/REVIEW-PLAN.md",
+      "bytes": 1366,
+      "sha256": "d466e946a8db0d5ccf08b46063217580566632dff19609f2868c79e6dae74461",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/REVIEW.md",
+      "bytes": 7893,
+      "sha256": "7f24a8b782f52b62d21c8b86da7c4d9219e72d73bd4f20a2e184711b28f40e68",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/audit_structure.py",
+      "bytes": 2247,
+      "sha256": "94e5ae4c410425955d0d2bdccb40597524c53b161e89d265274be6dd457bad25",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/redesign/structural-audit.json",
+      "bytes": 772,
+      "sha256": "f46b0d22daa4848db0dc89e32139d3134563060212431bd86cb91a72c2476391",
+      "review_mode": "every field checked against independent recomputation of archived S1 evidence"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a1-post.md",
+      "bytes": 2262,
+      "sha256": "bc8c03db97927a886c84fb57c4d81c3922aa17e98be4d4b23b0c71d02e01c39f",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a1-pre.md",
+      "bytes": 5767,
+      "sha256": "6e75ac9f6655cd526fa6ffb89741a35909a71de02b6212797c1708fb82449c57",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a2-post.md",
+      "bytes": 4372,
+      "sha256": "e2af7b1a87a3484ca90417d1eee0ef82992d1efc812d0dbe7629a2873d85b1b1",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a2-pre.md",
+      "bytes": 6072,
+      "sha256": "8ed197b5770e5dfb99ea621c98333550e15ba6f3888cc33e46baf40f58315a20",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a3-post.md",
+      "bytes": 3309,
+      "sha256": "ace8e4aa86a06933b26c43193a54e8527bcf95a94afbfd335756ad420a9e859f",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a3-pre.md",
+      "bytes": 6637,
+      "sha256": "87daa9c11c59a0701ec676b4294670110f17bfe6cd0300beea0a7ffdf9bbb1c8",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a4-post.md",
+      "bytes": 2843,
+      "sha256": "f9721246c556ed48368bae5752630386b71bb11dae5e9b3b9c4f2a4ea8b42aab",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S0-a4-pre.md",
+      "bytes": 7280,
+      "sha256": "47d0f9d211f01a6ac1e5d975df1e3c54697b4061cf1f2dad8a4daf31621e6dc6",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S1-a1-post.md",
+      "bytes": 4014,
+      "sha256": "bee085f1bf7321d6f5c82804a4f124170f8630b35030aeae539789cb4f5b27e5",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/reviews/S1-a1-pre.md",
+      "bytes": 4967,
+      "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/analyze.py",
+      "bytes": 3019,
+      "sha256": "0ca0740ba06634bc760a10084f7e36288d93b4b05db7451de34113eab9e70e76",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/audit.py",
+      "bytes": 3555,
+      "sha256": "9302d85a22f5933acd60bac3f1df16dc471cdebe652877fa98781f133e8a98f2",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/package_evidence.py",
+      "bytes": 1522,
+      "sha256": "ef2bb29867c2bcf9a0e6b71158cbd7c1ccdbaabb489e7ef4691b376098ffce61",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/provider.py",
+      "bytes": 8066,
+      "sha256": "8c81e139784f6c42a24962ac156bbcbe99115d895bb94ed142c867065da65510",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/public_plan.py",
+      "bytes": 2547,
+      "sha256": "12ec7225603e928124e4c7f2db94fe923852d41ccebbf4512985de18313a7934",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/render.py",
+      "bytes": 3731,
+      "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/runner.py",
+      "bytes": 7114,
+      "sha256": "59b84e493aa3bec2a428f5f8362db390eb13ea3c0bd6ba47329960d94605f49d",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/study.py",
+      "bytes": 8350,
+      "sha256": "950b8d9c5b0d230f4657f625b15da57ac30352a0fbce0142c7da2f4403ad0e9b",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/src/summary_figure.py",
+      "bytes": 2420,
+      "sha256": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3",
+      "review_mode": "full substantive source/document review"
+    },
+    {
+      "path": "swarm-of-theseus/tests/test_study.py",
+      "bytes": 5306,
+      "sha256": "ea2bffbcf690581cd5a375f5d96844ba0aee8359a4ac6e72651c0f3059ca2413",
+      "review_mode": "full substantive source/document review"
+    }
+  ],
+  "coverage_count": 33,
+  "updates_to_prior_findings": [
+    {
+      "finding_id": "EP-02",
+      "status": "open; independently confirmed in newly available local source",
+      "detail": "Provider still consumes SWARM_MODEL_CONFIG_FILE without binding its canonical resolved configuration to the qualified hash; nominal model is still hardcoded in manifest."
+    },
+    {
+      "finding_id": "EP-03",
+      "status": "open; independently confirmed",
+      "detail": "Rendering and hub operations remain on the numerical execution path. Current runner differs from executed a773 runner only in two reporting-message strings, so the original finding remains valid."
+    },
+    {
+      "finding_id": "EP-06",
+      "status": "substantially resolved for Theseus local export, not closed cross-project",
+      "detail": "README, deployment, reviews, configs and implementation source are now local. Archive contains 305 indexed evidence files plus index, all hashes verified. It contains zero Python source files; DEPLOYMENT uses source files to mean evidence ingredients. Executed runner/audit bytes still require the immutable source link/cached pinned version because current copies have documented post-run changes."
+    },
+    {
+      "finding_id": "EP-07",
+      "status": "open for v1 interval labeling; interpretation improved",
+      "detail": "Latest RESULTS adds a prominent critical-review link and retains all six paired effects. The same 95% bootstrap label persists; the narrow two-mapping design is not transformed into calibrated generality by new prose."
+    },
+    {
+      "finding_id": "EP-08",
+      "status": "v1 remains limited; v2 addresses the mechanism prospectively",
+      "detail": "New draft explicitly defers mentors until an information/budget-controlled comparison; rolling/frozen archive, transplantation and same-evidence probes prevent a simple more-information contrast from being called cultural emergence. No v2 data exist."
+    },
+    {
+      "finding_id": "EP-11",
+      "status": "documentation ambiguity resolved; mechanical binding issue remains",
+      "detail": "DEPLOYMENT explicitly explains that receipts retain 586c4768 while implementation is a773ff54, with only qualification status added to README. The preflight still does not bind intended plan/implementation automatically."
+    },
+    {
+      "finding_id": "EP-12",
+      "status": "open for static PNG",
+      "detail": "Newly exported render.py still draws only recorded frame slots. HTML explicitly marks missing slots; PNG still lacks the promised grey missing markers."
+    }
+  ],
+  "verified_statistics": {
+    "archive_sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+    "archive_members": 306,
+    "indexed_members": 305,
+    "all_index_hashes_match": true,
+    "outcome_counts": {
+      "('S0-a2', 'failed')": 4,
+      "('S0-a2', 'completed')": 8,
+      "('S0-a3', 'completed')": 12,
+      "('S0-a4', 'completed')": 12,
+      "('S1-a1', 'completed')": 36
+    },
+    "source_code_archive_members": 0,
+    "source_files_match_S1_manifest": {
+      "design.yaml": true,
+      "DEPLOYMENT.md": false,
+      "README.md": false,
+      "experiment.yaml": true,
+      "model-config.json": true,
+      "reviews/S0-a4-pre.md": true,
+      "reviews/S0-a1-pre.md": true,
+      "reviews/S0-a3-pre.md": true,
+      "reviews/S0-a1-post.md": true,
+      "reviews/S0-a3-post.md": true,
+      "reviews/S0-a4-post.md": true,
+      "reviews/S0-a2-post.md": true,
+      "reviews/S1-a1-pre.md": true,
+      "reviews/S0-a2-pre.md": true,
+      "src/summary_figure.py": true,
+      "src/study.py": true,
+      "src/provider.py": true,
+      "src/audit.py": false,
+      "src/public_plan.py": true,
+      "src/analyze.py": true,
+      "src/render.py": true,
+      "src/runner.py": false,
+      "tests/test_study.py": true
+    },
+    "structural_audit_recomputed": true,
+    "total_calls": 1697,
+    "s1_solve_requests": 648,
+    "s1_mentor_parent_edges": 36,
+    "s1_descendant_mentor_edges": 0,
+    "s1_repair_post_bulletins": 72,
+    "s1_feature_vectors": 4,
+    "s1_label_domain": {
+      "labels": 2592,
+      "invalid": 0
+    },
+    "isolated_validator_accepts_illegal_label": true,
+    "executed_runner_and_audit_cached_hashes_match_S1_manifest": true,
+    "post_run_source_deltas": {
+      "src/runner.py": "Two report-message strings now include condition TLDR; numerical execution unchanged.",
+      "src/audit.py": "Audits retained frames in failed attempts rather than skipping all failed rows; completed S1 scoring logic unchanged."
+    }
+  },
+  "updated_conclusions": [
+    "The addendum materially improves both completeness and conceptual honesty. Current README/RESULTS explicitly retain v1 as supplied-procedure transmission and link a same-author critical review; no emergence, novelty or multi-generation mentoring claim is defended.",
+    "Independent archive recomputation confirms the new mechanistic critique:36 mentoring edges all originate in founders, none in descendants; all72 repair-post solve requests explicitly disclose the new mapping; seed-bank/repair reuse exactly4 binary vectors;648 total S1 solve requests.",
+    "There were72 started trajectories:68 completed and4 failed, plus a separate zero-call setup failure. Calls total1697; usage totals1305403 input and425511 output tokens match the results. All306 archive members have a305-entry consistent hash index plus the index file itself.",
+    "The v2 selective-continuity proposal is substantially stronger: one flagship scheduling task, acquired payoff-equivalent functional conventions, two replacement waves, stable/partially changed branches, rolling/frozen/transplanted archives, retained-members and single-controller controls, intention-to-treat acquisition failures, and a paired lineage/world estimand. Two further tasks are explicitly deferred extensions.",
+    "The draft is not launch-ready and does not pretend to be: transition table, horizon, budgets, schemas, utility weights, margins, sample counts, splits and model versions are named launch blockers. Preserve those blockers and public registration requirements; do not turn the improved story into new evidence.",
+    "The dominant remaining implementation risks are unchanged runtime-config binding and reporting failures contaminating execution. The bounded addendum adds an action-domain validation defect and a prospective equivalence-claim clarification; it does not invalidate the archived main-pilot numeric results."
+  ],
+  "positive_features": [
+    "The new critical review separates process quality from scientific novelty and labels its own reviewer independence/read depth accurately.",
+    "Redesign measures utility and component-specific adaptability rather than irrelevant phrase survival, and explicitly falsifies stronger swarm/culture interpretations.",
+    "Actor ancestry and archive ancestry are separated, departed private contexts must disappear, and every surviving byte needs an access receipt; this is directly responsive to reproducible agent lifecycle concerns.",
+    "Evidence archive integrity and preserved failure accounting withstand independent read-only checks."
+  ],
+  "limits": [
+    "No new model calls, world trajectories, scientific experiments, public writes, or source/evidence edits. Only reading, archive verification, retrospective recomputation and an isolated parser-validation example occurred.",
+    "The new literature section reports honest targeted reading levels; those papers were not independently re-read in this bounded addendum.",
+    "The v2 proposal has no executable environment and therefore no implementation validity or feasibility outcome; its hypothetical discrimination must be checked only after a separately registered implementation/qualification plan.",
+    "No image assets were new in this delta; rendering code was reviewed, not a fresh UI/image run."
+  ]
+}

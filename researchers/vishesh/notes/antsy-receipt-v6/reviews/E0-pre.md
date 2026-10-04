@@ -1,0 +1,11 @@
+# E0 development measurement pre-run
+
+Ready for bounded application measurement; no model calls. Parent v5 identified ideal QA, regional scoring mismatch, unmeasured cost and reused evaluation. This run measures new pixel-only tools on20 CORD train receipts, keeping the official test unopened. It is not a formal reviewed hypothesis.
+
+Freeze: README protocol and src contract/measurement/policy code in the pre-run commit. First20 train IDs; all five pipelines on every image; hash-disjoint from old validation. Actor candidate schema excludes evaluator records. Exact normalized total, wrong acceptances, referrals, invalid/unscorable denominators and real checker wall time. Locale convention and correlated Tesseract errors remain explicit. No fabricated human-review costs. No dropping difficult/missing cases.
+
+One newly exclusively allocated sim-vishesh host, claim vishesh-antsy-receipt-v6. Confirm merged claim and idle state before installation/execution. One CPU worker; OMP_THREAD_LIMIT1;100 OCR calls maximum,30s each,15-minute outer cap; no model/API charge. Dedicated environment and checkout. Retain raw receipt files in private run directory; upload only numeric records/metrics, hashes, manifests and figures. No automatic outcome retries.
+
+Required checks: parser/evaluator/decision regressions and six deliberate-mutation detections; image hash disjointness before OCR; complete task assignment, scored/unscorable/failure reconciliation. Post-run audit independently tallies accept-correct/accept-wrong/refer and reproduces policy actions. Review development mismatches before freeze; any repair gets a dated pre-run and new attempt directory. Real zero tool headroom is retained as a negative finding.
+
+Visualization mapping:1800px overview of exact field decisions and measured checker seconds; first3 assigned selective-check GIFs show actual candidate values, check outputs, terminal action then evaluator reveal. Start/progress per receipt plus retained events. No ground truth in the actor trace before commitment. Decode every frame and compare plotted counts to summary. Independent external scorer review remains pending; any subsequent fresh run is exploratory instrument evidence only, with model escalation and confirmatory claims closed.

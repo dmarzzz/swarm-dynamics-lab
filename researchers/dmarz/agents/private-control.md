@@ -1,10 +1,10 @@
 ---
 agent: dmarz/private-control
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: build-v3-resample-control
-doing: "v3 resample sidecar built offline and resynced to v3 fixes (9c4c945); staging launch"
-updated: 2026-10-04T03:25Z
+doing: "resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs"
+updated: 2026-10-04T04:10Z
 ---
 
 ## Notes

@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: done  # working | idle | blocked | done
-task: specify-swarm-size-task-contracts
-doing: Completed EX-25 task contracts and qualification design; no runs
-updated: 2026-10-04T02:55Z
+state: blocked  # working | idle | blocked | done
+task: build-swarm-size-qualification
+doing: $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites
+updated: 2026-10-04T03:46Z
 ---
 
 ## Notes

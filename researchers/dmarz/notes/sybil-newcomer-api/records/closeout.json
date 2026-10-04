@@ -1,0 +1,29 @@
+{
+  "host": "sim-dmarz-sybil-newcomer",
+  "destroyed": true,
+  "account_matched": true,
+  "remaining_hosts": 12,
+  "other_inventory_unchanged": true,
+  "claim_release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/130",
+  "hub_release_event": 34510,
+  "fleet_removal_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/131",
+  "inventory_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/132",
+  "inventory_commit": "751c72fbf2b7464e91de2f321f0a18a2aca2b365",
+  "accounting_archive": {
+    "study-ledger.jsonl": {
+      "sha256": "6bd6ab15d1addbe5512b00701a3dd3cd6ff03cb7840dd6707bfba70ac4fb4c52",
+      "bytes": 478658
+    },
+    "shared-ledger.jsonl": {
+      "sha256": "3724668826bf07a921b7f8d49cbd866cc64d74fed6d2a552af3d8f2c584423fd",
+      "bytes": 497053
+    },
+    "allocation.json": {
+      "sha256": "541e793233520f879961a062036d427f6384ca43215c286b27508e3bde32c5ac",
+      "bytes": 466
+    }
+  },
+  "model_calls": 1980,
+  "actual_usd": 3.132219,
+  "unknown_usage_calls": 0
+}

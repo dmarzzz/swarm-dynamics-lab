@@ -1,0 +1,9 @@
+{
+  "saved_evidence_audit": "passed",
+  "fault_checks": {
+    "score_tamper": "rejected",
+    "render_tamper": "rejected",
+    "request_tamper": "rejected"
+  },
+  "new_model_calls": 0
+}

@@ -1,5 +1,7 @@
 # Five shortlisted experimental designs
 
+**2026-10-04 biological revision:** see [current differentiation design and historical sketches](frontiers/DESIGNS.md) and [the revised shortlist](frontiers/README.md). The material below preserves the original 30-question scan.
+
 **Status: prospective design sketches, not preregistrations, accepted hypotheses or runnable configurations.** No experimental implementation or model call was started. Each sketch needs a completed prior-art survey, independent review and a fully specified protocol. Before each actual run, publish and verify an immutable public plan URL, register its condition-specific TLDR and enforce the public-plan preflight. Keep execution outcomes separate from process compliance. A retrospective plan never repairs a missing preregistration.
 
 ## Shared integration and evaluation contract

@@ -13,3 +13,25 @@ After merging concurrent changes, 29 exporter tests passed again. A newly arrive
 Compared four Phantom variants and four Quorum variants after the owner selected these two. Recommended The Island No One Visits and One Witness, a Hundred Votes; the simpler Two Swarms, One World comparison comes before a closed observation loop. Reframed the remaining three with concrete stories and retained only Stop-Signal as a core recovery treatment. Preserved original scores rather than retrofitting them to the preference. Added two verified-primary reading records, abstract depth. Proposed diagram is explicitly conceptual. No experiment code or model calls.
 
 Validation for the second pass: 8 paper records checked against arXiv/Crossref, zero problems; lab check zero errors with five existing missing-reference warnings; nine memo citation IDs resolved; git diff whitespace check passed. Formal survey remains in progress.
+
+## Right Dissenter area and prototype
+
+Expanded the existing dissent brief into a research area and added a canonical literature topic. Tagged DM-03 and DM-14 under decision-models and dissent without duplicating IDs. Revised DM-03 content; original score remains visibly stale. Wrote and committed RD-1 before implementation at 5fd034c9af6613a9e8180874ab559312186b465c, then fetched the immutable public text and matched its hash. No hub run registration is claimed.
+
+Built three scenario contracts: Missing Bridge, Passing Build and Alarm That Became True. The offline prototype includes evidence validation, bounded checks, closure/reopening, strict Jev wire/tape contracts, private evidence views, assignment reconciliation and a saved-event replay. Forty-one software checks and 29 dashboard exporter checks pass. Nine owned paper records passed metadata verification; lab check has zero errors and five existing missing-reference warnings. Browser verified three scenario states, optional evaluator truth, timed playback and explicit model failure. The local preview is scripted, not native evidence.
+
+Created copy-ready Phantom Coast and Quorum handoff briefs; no new Codex tasks created. Added an independent repository review task. Native transport, formal research readiness, registration, allocation and study-specific budget remain unresolved; no model calls, machine claim or spending occurred. This is user-authorized exploratory implementation under owned notes, not a hypothesis created around the survey gate.
+
+## Standalone Right Dissenter live setup
+
+Published RD-2 and a prospective correction to remove condition-order confounding in the random control. Added research/X source mapping without duplicate catalogue entries; direct X refresh returned 403. Implemented strict frozen-request relay, one transactional budget ledger, remote worker, response caching with paired-policy interpretation, all-assigned accounting and measured PNG/GIF outputs. Forty-nine offline checks pass, including fake-provider integration; no native calls. Registered right-dissenter on Swarm Live, verified the immutable plan via public_plan.py and browser. Dedicated sim-right-dissenter quote is USD 0.03571/hour; original owner infrastructure state and safe helper are available.
+
+Launch is pending the asynchronous USD 2 cap question (USD 1 API plus USD 1 infrastructure, six-hour bound). No machine was created or claimed and no paid call occurred. Authorization receipt /private/tmp/right-dissenter-authorization.json remains approved=false. Do not infer approval from elapsed time. Next: after explicit answer, provision from /private/tmp/swarm-actual-agentops using the guarded /private/tmp/right-dissenter-provision.py, merge exclusive claim, deploy frozen source, verify on-host tests/public plan, run Q0-A1, write its post-mortem, and advance to S1 only if qualification passes. All source and setup records are in researchers/vishesh/notes/dissent/. Formal review remains pending and S2 closed.
+
+## Right Dissenter native Q0 and allocation correction
+
+Cap approved USD2. Q0 completed18/18valid,12correct; all six errors were DEFER on positive build/alarm reports. No S1 result. Published paired sufficient-evidence Q1 design before implementation;51software checks pass. Q1 has zero native calls.
+
+Provisioning incorrectly used the local default cloud account without proving Dmarz billing identity. Account comparison confirmed the mismatch. Paused before Q1, preserved all outcomes and budget, hash-verified seven hub artifacts, verified public PNG, released claim and deleted only this host's resources; other droplets unchanged. Missing original SETUP index documented retrospectively.
+
+Q0 API cost$0.00042966; estimatedcompute$0.011643 pendinginvoice. The cap remains approved. Await only a verified Dmarz-account provisioner or dedicated host, then rebind Q1 and continue its prospective gate; S2 remains closed.

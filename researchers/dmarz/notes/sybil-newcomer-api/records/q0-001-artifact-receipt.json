@@ -1,0 +1,76 @@
+{
+  "run": "sybil-newcomer-api/f7b78b41",
+  "status": "done",
+  "attempts": 1,
+  "params": {
+    "stage": "Q0",
+    "backend": "anthropic",
+    "batch": "q0-001",
+    "source_hash": "f38a9658dcb5e403e9dfaeccfd201c603b84d947ed085779374b278ceb4ef943",
+    "code": "996a4af01ebfff3071b88c60914472b171798053"
+  },
+  "metrics": {
+    "episodes": 36,
+    "invalid": 0,
+    "model_calls": 36,
+    "cost_usd": 0.04356,
+    "qualification_passed": 1
+  },
+  "progress": {
+    "completed": 36,
+    "failed": 0,
+    "errors": []
+  },
+  "verified_artifacts": [
+    "assignments.jsonl.gz",
+    "episodes.jsonl.gz",
+    "worlds.jsonl.gz",
+    "history.jsonl.gz",
+    "summary.json",
+    "analysis.json",
+    "final_frame.png",
+    "replay.gif",
+    "replay_start.png",
+    "progress.png",
+    "initial_frame.png"
+  ],
+  "verified_images": {
+    "initial_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "final_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "replay.gif": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 9
+    }
+  },
+  "worker_active": false,
+  "shared_bundle_at_verification": {
+    "actual_usd": 0.366548,
+    "held_usd": 0.0,
+    "committed_usd": 0.366548,
+    "reservations": 52,
+    "settled": 52,
+    "cap_usd": 60.0
+  },
+  "public_playback": {
+    "verified_by": "parent operator",
+    "observed_progress": [
+      0,
+      14
+    ],
+    "assigned": 36,
+    "dimensions": [
+      1800,
+      1200
+    ]
+  },
+  "display_limitation": "Q0 replay elapsed label defaults to zero; actual collection time is summary.elapsed_seconds."
+}

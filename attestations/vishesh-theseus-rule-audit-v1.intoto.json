@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "Okay then, diagnose and dive into the rule application errors. You already identified that as the next useful step. Why are you not just doing it and telling me?"
+   },
+   "internalParameters": {
+    "commit": "063f8ce933809fca994a8ef8e51b8d7712ed3347-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "45ff0337c6aec2114890281e058674fdc363180aabe64f25d96a7d590a36d8e6"
+     },
+     "uri": "artifacts/vishesh-theseus-v2-initial-evidence/vishesh-theseus-v2-initial-evidence-v1.gz"
+    },
+    {
+     "digest": {
+      "sha256": "c96cd6876c1f9e1826be5b1a33953f64f4830365d4bc5a0247b3a2d45022dcf0"
+     },
+     "uri": "artifacts/vishesh-theseus-v2-repair-evidence/vishesh-theseus-v2-repair-evidence-v1.gz"
+    },
+    {
+     "digest": {
+      "sha256": "4d6e3c39b6f232714e2bbdcbc96e5126215001f253a0e30438faf555a09c0c66"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/audit.py"
+    },
+    {
+     "digest": {
+      "sha256": "ac7b1c9059f5f64f62458120a492ac02f0bdd780639f0ed96f9675bac4df7dc7"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/ceiling-error-annotations.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "063f8ce933809fca994a8ef8e51b8d7712ed3347"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:38:50Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T04:38:50Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "14c5ff17eb8c8c2d32e2145b71b1a542af07c66bb0c16b0f72b63fab06d09c2a"
+   },
+   "name": "artifacts/vishesh-theseus-rule-audit/vishesh-theseus-rule-audit-v1.json"
+  }
+ ]
+}

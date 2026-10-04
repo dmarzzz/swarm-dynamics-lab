@@ -1,0 +1,138 @@
+{
+  "schema": "poietic-contracts-v0.1",
+  "status": "intended-design-not-initialization-receipt",
+  "initial_agent": {
+    "identity": "neutral_id_permuted_by_root",
+    "model_role": "generalist",
+    "same_policy_for_all": true,
+    "same_tools_for_all": [
+      "inventory",
+      "supplier_terms",
+      "delivery_status",
+      "peer_message",
+      "service_directory",
+      "propose_change"
+    ],
+    "same_skill_bundles_for_all": [
+      "retrieve",
+      "normalize",
+      "join_aggregate",
+      "validate_format"
+    ],
+    "providers_at_start": [],
+    "memory": "verified_empty_per_agent",
+    "network": "fully_addressable_no_forced_broadcast"
+  },
+  "model_resolution": {
+    "generalist": {
+      "requested_model_id": null,
+      "observed_model_id": null,
+      "backend_revision": null,
+      "settings": null,
+      "price_snapshot": null,
+      "qualification_receipt": null
+    },
+    "cheap_generative": {
+      "requested_model_id": null,
+      "observed_model_id": null,
+      "backend_revision": null,
+      "settings": null,
+      "price_snapshot": null,
+      "qualification_receipt": null
+    },
+    "typed_choice": {
+      "requested_model_id": null,
+      "observed_model_id": null,
+      "backend_revision": null,
+      "settings": null,
+      "price_snapshot": null,
+      "qualification_receipt": null
+    }
+  },
+  "model_boundaries": {
+    "generalist": "task interpretation, tool choice and configuration proposals",
+    "cheap_generative": "only separately qualified generative subsets",
+    "typed_choice": "finite supplied choices only; no free-form generator or undeclared fallback"
+  },
+  "context_order": [
+    "fixed_operational_policy",
+    "effective_tool_schemas_and_loaded_skills",
+    "current_job_and_public_constraints",
+    "own_recent_observations_with_source_receipts",
+    "permitted_memory_and_service_advertisements",
+    "delivered_peer_messages",
+    "action_schema"
+  ],
+  "truncation": {
+    "rule": "evict_oldest_optional_history_first",
+    "never_truncate": [
+      "current_job",
+      "action_schema",
+      "permissions",
+      "freshness_requirements"
+    ],
+    "overflow_action": "explicit_context_capacity_failure",
+    "record_actual_tokens_and_omissions": true
+  },
+  "actor_visible": [
+    "current_job",
+    "retrieved_current_source_bytes",
+    "public_schema_version_notices",
+    "own_trace",
+    "delivered_peer_messages",
+    "service_advertisements",
+    "observed_failures",
+    "metered_costs"
+  ],
+  "evaluator_only": [
+    "answer_labels",
+    "future_jobs",
+    "future_source_tape",
+    "shock_schedule",
+    "holdout",
+    "other_arms_mutable_state"
+  ],
+  "memory": {
+    "namespace_key": [
+      "study",
+      "split",
+      "root",
+      "replicate",
+      "arm",
+      "agent_id"
+    ],
+    "retention": "within_lineage_only",
+    "aggregate_private_capacity_bytes_per_s1_arm": 1572864,
+    "shared_cache_counts_against_same_aggregate_capacity": true,
+    "S2_reset": "fresh_all_mutable_state",
+    "A5": "explicit_snapshot_fork_with_parent_hash"
+  },
+  "effective_mutations_require": [
+    "new_definition_hash",
+    "actual_model_receipt_if_switched",
+    "effective_tool_allowlist",
+    "context_manifest",
+    "cost_receipt",
+    "proposal_transaction_id",
+    "effective_epoch"
+  ],
+  "initialization_receipt_requires": [
+    "public_plan_receipt",
+    "condition_tldr",
+    "source_commit",
+    "design_hash",
+    "model_settings_and_versions",
+    "tariff_hash",
+    "prompt_and_context_hashes",
+    "effective_tool_schemas",
+    "empty_memory_checks",
+    "arm_diff",
+    "assignment_manifest",
+    "stream_ids",
+    "budget_reservation",
+    "exclusive_host_claim",
+    "visualization_version"
+  ],
+  "external_effects": "local_fictional_read_only_APIs_and_approved_model_endpoint_only",
+  "secret_policy": "credential aliases consumed locally; values never enter prompts, receipts, hashes or public output"
+}

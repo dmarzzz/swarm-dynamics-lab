@@ -1,0 +1,144 @@
+{
+  "independent_unit": "receipt; vendor/layout independence not established",
+  "assigned": 20,
+  "scorable": 0,
+  "pipelines": {
+    "A": {
+      "correct": 0,
+      "scorable": 0,
+      "missing": 17,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 23.146386980000898,
+      "wall_s_median": 0.6823825279998346,
+      "wall_s_p90": 4.3700498469988815
+    },
+    "B": {
+      "correct": 0,
+      "scorable": 0,
+      "missing": 15,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 35.906491945004746,
+      "wall_s_median": 1.1927257375009503,
+      "wall_s_p90": 6.040909483999712
+    },
+    "C": {
+      "correct": 0,
+      "scorable": 0,
+      "missing": 16,
+      "ambiguous": 1,
+      "failed": 0,
+      "wall_s_total": 32.88566160099799,
+      "wall_s_median": 1.0056061209988911,
+      "wall_s_p90": 4.16900490199987
+    },
+    "D": {
+      "correct": 0,
+      "scorable": 0,
+      "missing": 16,
+      "ambiguous": 0,
+      "failed": 0,
+      "wall_s_total": 101.9200786759975,
+      "wall_s_median": 2.635331395999856,
+      "wall_s_p90": 19.004831360000026
+    },
+    "E": {
+      "correct": 0,
+      "scorable": 0,
+      "missing": 16,
+      "ambiguous": 2,
+      "failed": 0,
+      "wall_s_total": 82.9539256980006,
+      "wall_s_median": 2.3875702004997947,
+      "wall_s_p90": 15.376695281000138
+    }
+  },
+  "paired": {
+    "selective-check minus agreement": {
+      "correct": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "wrong": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "refer": {
+        "difference": null,
+        "bootstrap_95": null
+      }
+    },
+    "selective-check minus always-check": {
+      "correct": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "wrong": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "refer": {
+        "difference": null,
+        "bootstrap_95": null
+      }
+    },
+    "agreement minus confidence": {
+      "correct": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "wrong": {
+        "difference": null,
+        "bootstrap_95": null
+      },
+      "refer": {
+        "difference": null,
+        "bootstrap_95": null
+      }
+    }
+  },
+  "uncertain_reference_bounds": {
+    "fixed-B": {
+      "accepted": 5,
+      "unknown_accepted": 5,
+      "error_rate_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "confidence": {
+      "accepted": 5,
+      "unknown_accepted": 5,
+      "error_rate_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "agreement": {
+      "accepted": 3,
+      "unknown_accepted": 3,
+      "error_rate_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "always-check": {
+      "accepted": 4,
+      "unknown_accepted": 4,
+      "error_rate_bounds": [
+        0.0,
+        1.0
+      ]
+    },
+    "selective-check": {
+      "accepted": 4,
+      "unknown_accepted": 4,
+      "error_rate_bounds": [
+        0.0,
+        1.0
+      ]
+    }
+  },
+  "checker_introduced_errors": []
+}

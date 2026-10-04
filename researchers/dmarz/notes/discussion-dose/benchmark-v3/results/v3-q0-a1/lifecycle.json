@@ -1,0 +1,22 @@
+{
+  "attempt": "v3-q0-a1",
+  "server": "sim-discussion-v3",
+  "claim": "dmarz-discussion-v3",
+  "claim_status": "done",
+  "dedicated_server_retired": true,
+  "provider_verified_absent": true,
+  "other_owner_droplets_unchanged": true,
+  "new_model_calls_during_analysis": 0,
+  "report_hub_uploads": [
+    {
+      "name": "analysis-q0.md",
+      "sha256": "3f514a2f9e8a3d1d938027a8c869145bcea4e0626d7d06be90b4a821a5666155"
+    },
+    {
+      "name": "post-mortem-q0.md",
+      "sha256": "c4cac44506e51463471da3e452ff30363bfe9e49077c07f9f6d5b8b5fd8f21cb"
+    }
+  ],
+  "verified_utc": "2026-10-04T03:49:21.622165+00:00",
+  "monitor_status": "PAUSED"
+}

@@ -1,5 +1,14 @@
 # Can one owner’s many firms defeat a concentration-based regulator?
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Changing firm identities can alter regulatory accounting while total ownership resources remain fixed. Basis: Programmed splitting and optimization validate the mechanism in six related markets but cannot establish spontaneous model discovery. Resource conservation and paired accounting are explicit; external economic realism and independent rivals remain untested.
+- **sample_size_summary:** 6 S1 market clusters × 2 seeds × 12 conditions × 3 policies = 432 scripted episodes; 18 S0; 0 model calls.
+<!-- experiment-evidence:end -->
+
 **Exploratory hunch, MKT-03 + MKT-11.** We want to learn whether an agent with an ordinary profit objective independently creates additional firms while retaining their ownership. The initial deployment uses **scripted policies, zero model calls**. It validates the environment, accounting and UI; it cannot answer the discovery question.
 
 ## Question

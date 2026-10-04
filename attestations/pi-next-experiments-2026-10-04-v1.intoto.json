@@ -1,0 +1,221 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "okay so can u use this to suggest the next set of experiments on top of our existing ones to progress as u mentioned here; make sure to push this to github"
+   },
+   "internalParameters": {
+    "commit": "afad8f0829b3ac550036061b7cb10da3c3f3e02b-dirty",
+    "session": "codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5"
+   },
+   "resolvedDependencies": [
+    {
+     "uri": "https://arxiv.org/abs/1810.08240"
+    },
+    {
+     "uri": "https://arxiv.org/abs/2403.08882"
+    },
+    {
+     "uri": "https://arxiv.org/abs/2410.08948"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
+    },
+    {
+     "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
+    },
+    {
+     "digest": {
+      "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3"
+     },
+     "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "b36325a1cac3dfbd57937b27049456878345c3670b06303d2329af0f00421305"
+     },
+     "uri": "researchers/dmarz/notes/compositional-safety/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+    },
+    {
+     "digest": {
+      "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+    },
+    {
+     "digest": {
+      "sha256": "9907c6afdac1fa94792e88c5df2d6d980d7e2f4b694aaa621fcf2c82ea6763de"
+     },
+     "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4"
+     },
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
+    },
+    {
+     "digest": {
+      "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b"
+     },
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
+    },
+    {
+     "digest": {
+      "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b"
+     },
+     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "e2d2e7ed3d291dd9730e6d27df3814d4a484813f2911b76a2fe9e728bcc09c8e"
+     },
+     "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10"
+     },
+     "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
+    },
+    {
+     "digest": {
+      "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2"
+     },
+     "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b"
+     },
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c"
+     },
+     "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082"
+     },
+     "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07"
+     },
+     "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4"
+     },
+     "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+    },
+    {
+     "digest": {
+      "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda"
+     },
+     "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "19f1e8ae336016a278feedf5fbba9b4e981842eba7e5607f2b9e3bf669afd920"
+     },
+     "uri": "templates/experiment-worker/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "4965c271bf12c33a6e3e18de9f74a506d703c55ccb0d636cc7a3d1cabc6f1664"
+     },
+     "uri": "tooling/agent-experiments/GUIDE.md"
+    },
+    {
+     "digest": {
+      "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd"
+     },
+     "uri": "tooling/agent-experiments/RUN-REVIEW.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "afad8f0829b3ac550036061b7cb10da3c3f3e02b"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T03:00:57Z",
+    "invocationId": "codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5",
+    "startedOn": "2026-10-04T03:00:57Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343"
+   },
+   "name": "artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md"
+  }
+ ]
+}
