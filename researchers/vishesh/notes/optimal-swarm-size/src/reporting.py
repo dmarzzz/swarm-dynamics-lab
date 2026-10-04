@@ -55,6 +55,8 @@ def deliver(operation,experiment,run,payload):
 class Reporter:
     def __init__(self,experiment,row,tldr):
         self.experiment=experiment;self.id=experiment+'/'+hashlib.sha256(row['id'].encode()).hexdigest()[:16]
+        self.total=row.get('width',16)
+        if type(self.total) is not int or self.total<1:raise ValueError('invalid_progress_total')
         self.last_progress=0
         result=deliver('start',experiment,self.id,{'params':row|{'tldr':tldr},'message':tldr})
         if not result['acknowledged']:raise SafeFailure('hub_registration_failed')
@@ -69,9 +71,9 @@ class Reporter:
     def progress(self,completed):
         # Coalesce frequent item completions; suppressed updates are not delivery failures.
         now=time.monotonic()
-        if now-self.last_progress<2 and completed!=16:return {'acknowledged':False,'coalesced':True,'code':None}
+        if now-self.last_progress<2 and completed!=self.total:return {'acknowledged':False,'coalesced':True,'code':None}
         self.last_progress=now
-        return deliver('progress',self.experiment,self.id,{'step':completed,'total':16,'message':'Measured qualification work-item completion','metrics':{'completed_items':completed}})
+        return deliver('progress',self.experiment,self.id,{'step':completed,'total':self.total,'message':'Measured qualification work-item completion','metrics':{'completed_items':completed}})
 
     def finish(self,target,record):
         target=Path(target);receipt={'run':self.id,'complete':False,'artifacts':{},'terminal':None}

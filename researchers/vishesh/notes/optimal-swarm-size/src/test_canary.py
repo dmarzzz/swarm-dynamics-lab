@@ -63,3 +63,16 @@ class Canary(unittest.TestCase):
             self.assertEqual((r['assigned'],r['terminal'],r['unstarted']),(4,1,3))
             self.assertEqual(r['stop_reason'],'schema_output_invalid')
             self.assertTrue(r['executed_publication_complete']);self.assertFalse(r['execution_complete'])
+
+    def test_full_width_identity_and_balanced_order(self):
+        cfg=self.config();cfg.update(stage='full-width',attempt_id='q-a4',attempt_cap_microdollars=8000000,episode_cap_microdollars=2000000)
+        rows=assignments_for(cfg)
+        self.assertEqual(len(rows),16)
+        self.assertEqual(len(set(r['id'] for r in rows)),16)
+        self.assertTrue(all(r['width']==16 and '/width16/' in r['id'] for r in rows))
+        for root in range(4):
+            block=rows[root*4:(root+1)*4]
+            self.assertEqual([r['root'] for r in block],[root]*4)
+            self.assertEqual(len(set((r['family'],r['structure']) for r in block)),4)
+        cfg['attempt_cap_microdollars']=9000000
+        with self.assertRaisesRegex(ValueError,'invalid_full_width_config'):assignments_for(cfg)

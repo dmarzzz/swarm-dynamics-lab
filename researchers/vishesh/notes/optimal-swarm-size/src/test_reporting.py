@@ -29,3 +29,14 @@ class Reporting(unittest.TestCase):
                 receipt=reporter.finish(target,{'failure':None,'evaluation':{'quality':1},'operational_success':True,'elapsed_s':1,'exposure_microdollars':0})
             self.assertFalse(receipt['complete']);self.assertEqual(len(receipt['artifacts']),4)
             self.assertEqual(receipt,json.loads((target/'publication.json').read_text()))
+
+    def test_progress_uses_assignment_width_and_sends_terminal_count(self):
+        for width in (2,16):
+            tldr='TLDR: width-aware offline progress test.'
+            with patch('reporting.deliver',return_value={'acknowledged':True}) as deliver,patch('reporting.urllib.request.urlopen',return_value=io.BytesIO(json.dumps({'params':{'tldr':tldr}}).encode())),patch('reporting.time.monotonic',return_value=10):
+                reporter=Reporter('test',{'id':'width-test','width':width},tldr)
+                reporter.last_progress=9.9
+                reporter.progress(width)
+                self.assertEqual(deliver.call_args.args[0],'progress')
+                self.assertEqual(deliver.call_args.args[3]['total'],width)
+                self.assertEqual(deliver.call_args.args[3]['step'],width)

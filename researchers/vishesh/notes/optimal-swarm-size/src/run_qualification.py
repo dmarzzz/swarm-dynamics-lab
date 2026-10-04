@@ -73,6 +73,14 @@ def assignments_for(config):
             identity=config['attempt_id']+'/'+task.public['id']+'/width2/n1'
             rows.append(dict(id=identity,parent_id=task.public['id'],root_id=task.public['id']+'/width2',root=0,n=1,stage='canary',family=family,structure=structure,width=2,attempt_id=config['attempt_id'],public_task_sha256=digest(task.public)))
         return rows
+    if config.get('stage')=='full-width':
+        if config.get('attempt_id')!='q-a4' or config.get('attempt_cap_microdollars')!=8000000 or config.get('episode_cap_microdollars')!=2000000 or config.get('response_contract')!=VERSION:raise ValueError('invalid_full_width_config')
+        rows=[]
+        for root in range(4):
+            for family,structure in [('evidence','parallel'),('repository','chain'),('evidence','chain'),('repository','parallel')]:
+                task=generate(family,structure,root,width=16)
+                rows.append(dict(id='q-a4/'+task.public['id']+'/width16/n1',parent_id=task.public['id'],root_id=task.public['id']+'/width16',root=root,n=1,stage='full-width',family=family,structure=structure,width=16,attempt_id='q-a4',public_task_sha256=digest(task.public)))
+        return rows
     rows=[row for row in qualification_manifest() if row['stage']=='Q-A']
     attempt=config.get('attempt_id')
     if attempt is not None:
@@ -117,7 +125,7 @@ def run_batch(config,commit,output,ledger,assignments):
         save_json(target/'assignment.json',row|{'commit':commit,'run_tldr':tldr,'status':'assigned'})
         states.append({'episode':row['id'],'directory':target.name,'execution':'not_started','reason':None,'exposure_microdollars':0,'publication':'not_started'})
     try:
-        bank=Budget(ledger,config['stage_cap_microdollars'],config['attempt_id'] if config.get('stage')=='canary' else None,config.get('attempt_cap_microdollars') if config.get('stage')=='canary' else None)
+        bank=Budget(ledger,config['stage_cap_microdollars'],config['attempt_id'] if config.get('stage') in ('canary','full-width') else None,config.get('attempt_cap_microdollars') if config.get('stage') in ('canary','full-width') else None)
         for row,state in zip(assignments,states):
             target=output/state['directory'];lock=threading.Lock();completed=0
             def journal(event):
@@ -150,7 +158,7 @@ def run_batch(config,commit,output,ledger,assignments):
                 if row.get('public_task_sha256') and digest(task.public)!=row['public_task_sha256']:raise ValueError('task_hash_mismatch')
                 runtime=Provider(config,bank,row['id'],journal,task.public)
                 try:
-                    record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event,strict_contract=config.get('stage')=='canary')
+                    record=execute(task.public,1,config['slots'],config['screening_deadline_s'],config['integration_reserve_s'],runtime,measured_event,strict_contract=config.get('stage') in ('canary','full-width'))
                 finally:
                     progress_pool.shutdown(wait=True,cancel_futures=True)
                 result=evaluate(task,record['artifact'] or '{}');exposure=bank.exposure(row['id'])
@@ -167,7 +175,7 @@ def run_batch(config,commit,output,ledger,assignments):
                 print(json.dumps({'episode':row['id'],'terminal':True,'success':record['operational_success'],'publication':state['publication']}),flush=True)
                 if not acknowledged:stop_reason='publication_incomplete';break
                 if record.get('fatal'):stop_reason=record['failure'];break
-                if config.get('stage')=='canary' and (record['failure'] or record['work_failures']):
+                if config.get('stage') in ('canary','full-width') and (record['failure'] or record['work_failures']):
                     stop_reason=record['failure'] or 'work_contract_failed';break
                 consecutive_malformed=consecutive_malformed+1 if record['failure']=='malformed_output' else 0
                 if config.get('attempt_id') and consecutive_malformed>=2:
