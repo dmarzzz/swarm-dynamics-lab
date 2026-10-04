@@ -45,7 +45,6 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-pc12-wide](tasks/phantom-coast-pc12-wide.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T20:35Z | Wide sourced-evidence diagnostic for Phantom Coast |
 | [refresh-review-action-guidance](tasks/refresh-review-action-guidance.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T20:33Z | Refresh review actions against latest experiment evidence |
-| [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:14Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -256,6 +255,7 @@
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Review Right Dissenter RD-1 design and offline prototype |
 | [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | done | p1 | review | dmarz/inbox-design-feedback | dmarz | 2026-10-04T04:17Z | Independently review the optimal swarm-size qualification package |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T03:13Z | Build the Right Dissenter exploratory design and scenario harness |
+| [right-dissenter-freshness-diagnostic](tasks/right-dissenter-freshness-diagnostic.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T20:36Z | Diagnose expired evidence and implement a strong eligibility baseline |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:54Z | Deploy and assess the Right Dissenter exploratory live study |
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | done | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T06:28Z | Repair and evaluate the Right Dissenter recovery protocol |
 | [right-dissenter-rd5-build](tasks/right-dissenter-rd5-build.md) | done | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T08:16Z | Build and prepare Right Dissenter RD5 |
