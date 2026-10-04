@@ -40,7 +40,7 @@
 | [antsy-verification-v4](tasks/antsy-verification-v4.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:57Z | Ground Antsy in measured OCR errors and budgeted verification |
 | [build-discussion-benchmark-v3](tasks/build-discussion-benchmark-v3.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T01:51Z | Ship a validated offline discussion and memory benchmark v3 |
 | [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:49Z | Build and deploy an exploratory owner-splitting market pilot |
-| [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:26Z | Review and rebuild Healing Helping Hands as an evidence atlas |
+| [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:57Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:48Z | Audit and improve How to win agents and influence swarms |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -52,7 +52,7 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [score-research-ideas](tasks/score-research-ideas.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T01:49Z | Score all research ideas and expose optional researcher ratings |
-| [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T01:30Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T01:57Z | Build and qualify Swarm of Theseus (SOC-24) |
 | [sybil-specialists-api](tasks/sybil-specialists-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:54Z | Qualify and deploy the model-backed Sybil specialist pilot |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
