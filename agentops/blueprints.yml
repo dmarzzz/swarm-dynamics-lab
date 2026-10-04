@@ -1,0 +1,36 @@
+# blueprints.yml: what a server is for decides what gets installed on it.
+# A server in fleet.yml picks one with `blueprint:`. Tofu reads `size` and
+# `ports`; Ansible runs the roles named in `install` (after base/access/security,
+# which every server gets).
+#
+# Roles: docker, python (python3 + uv), node (Node 22), agents (Claude Code +
+# Codex CLIs), hub (the team dashboard/API, see docs/REPORTING.md). Every server
+# also gets `reporter` (swarm-report CLI + heartbeat). Add a blueprint (and a role under ansible/roles/) when a
+# simulation needs more, e.g. a database or a GPU toolchain.
+
+blueprints:
+  # General-purpose simulation box: run experiments, agents, notebooks.
+  sim:
+    size: s-4vcpu-8gb
+    ports: []
+    install: [docker, python, node, agents]
+
+  # The team hub: reporting API, run queue, artifacts, dashboard (hub/). One per team.
+  # 80 is only for the Let's Encrypt challenge + redirect; everything is HTTPS.
+  hub:
+    size: s-2vcpu-4gb
+    ports: [80, 443]
+    install: [python, hub]
+
+  # Bigger boxes. Cloud accounts cap the number of droplets, so scale up per box before scaling out.
+  # Model-API-bound experiments rarely need these: run more workers per box instead (e.g. 4-8x the
+  # cores); they wait on the network, not the CPU.
+  sim-large:            # 8 vCPU / 16 GB, ~$96/month (~$3.20/day)
+    size: s-8vcpu-16gb
+    ports: []
+    install: [docker, python, node, agents]
+
+  sim-cpu:              # 16 dedicated vCPU / 32 GB, ~$336/month (~$11/day): CPU-bound simulations
+    size: c-16
+    ports: []
+    install: [docker, python, node, agents]

@@ -1,0 +1,4 @@
+---
+hub_litestream_version: "0.3.13"
+# Optional: a DNS name for the read-only public path (see templates/Caddyfile.j2). Empty = not served.
+hub_public_read_host: ""

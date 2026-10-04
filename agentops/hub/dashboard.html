@@ -1,0 +1,236 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>swarm hub</title>
+<style>
+  :root {
+    --bg: #fbfbf9; --fg: #1d1d1b; --mute: #8a8a84; --rule: #e4e3de; --bar: #d9d8d2; --panel: #f3f2ee;
+    --run: #2f6fdf; --done: #3f8f5a; --fail: #c4442f; --stale: #b7862a; --plan: #8a8a84;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #121211; --fg: #e8e7e2; --mute: #85847e; --rule: #2a2a27; --bar: #34342f; --panel: #1b1b19;
+      --run: #6f9cf0; --done: #6dbb85; --fail: #e2705c; --stale: #d6a64a; --plan: #85847e; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--bg); color: var(--fg);
+    font: 13px/1.45 ui-monospace, "SF Mono", Menlo, "JetBrains Mono", monospace; }
+  main { max-width: 1280px; margin: 0 auto; padding: 28px 16px 60px; }
+  header { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; flex-wrap: wrap; }
+  h1 { font-size: 15px; font-weight: 600; margin: 0; letter-spacing: .02em; }
+  h1 a { text-decoration: none; }
+  h2 { font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: .08em; color: var(--mute); margin: 34px 0 8px; }
+  h3 { font-size: 13px; font-weight: 600; margin: 26px 0 2px; }
+  p.desc { margin: 0 0 6px; color: var(--mute); max-width: 860px; }
+  .mute { color: var(--mute); }
+  table { width: 100%; border-collapse: collapse; }
+  th { text-align: left; font-weight: 400; color: var(--mute); padding: 4px 12px 4px 0; white-space: nowrap; }
+  th.p { color: var(--fg); opacity: .65; }
+  td { padding: 5px 12px 5px 0; border-top: 1px solid var(--rule); vertical-align: middle; }
+  td.num, th.num { text-align: right; font-variant-numeric: tabular-nums; }
+  tr.click { cursor: pointer; } tr.click:hover td { background: var(--panel); }
+  .scroll { overflow-x: auto; }
+  .st { white-space: nowrap; }
+  .st::before { content: "●"; margin-right: 6px; font-size: 9px; vertical-align: 1px; }
+  .s-running::before, .s-assigned::before { color: var(--run); } .s-done::before { color: var(--done); }
+  .s-failed::before { color: var(--fail); } .s-stale::before { color: var(--stale); }
+  .s-planned::before, .s-offline::before, .s-cancelled::before { color: var(--plan); } .s-online::before { color: var(--done); }
+  .prog { display: inline-block; width: 80px; height: 3px; background: var(--bar); vertical-align: middle; margin-right: 8px; }
+  .prog i { display: block; height: 100%; background: var(--run); }
+  .s-done .prog i { background: var(--done); } .s-failed .prog i { background: var(--fail); }
+  svg.spark { width: 100px; height: 18px; vertical-align: middle; }
+  svg path.l { fill: none; stroke: var(--fg); stroke-width: 1.2; vector-effect: non-scaling-stroke; }
+  .metrics span { margin-right: 12px; white-space: nowrap; }
+  .metrics b, .kv b { font-weight: 400; color: var(--mute); }
+  .feed td { border-top: none; padding: 2px 12px 2px 0; }
+  .msg { max-width: 460px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+  tr.note td { border-top: none; padding-top: 0; }
+  a { color: inherit; }
+  .empty { color: var(--mute); padding: 6px 0; }
+  .counts span { margin-right: 10px; }
+  .thumbs img { height: 22px; vertical-align: middle; margin-right: 4px; border: 1px solid var(--rule); }
+  /* run detail */
+  .kv span { margin-right: 18px; white-space: nowrap; display: inline-block; }
+  .charts { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 18px 28px; margin-top: 8px; }
+  .chart .t { display: flex; justify-content: space-between; } .chart svg { width: 100%; height: 90px; display: block; }
+  .chart line { stroke: var(--rule); }
+  .art { margin: 14px 0 22px; } .art .t { margin-bottom: 6px; }
+  .art img, .art video { max-width: 100%; max-height: 560px; display: block; border: 1px solid var(--rule); }
+  .art pre { background: var(--panel); padding: 10px; overflow: auto; max-height: 360px; margin: 0; font-size: 12px; }
+  .art table { width: auto; } .art table td, .art table th { padding: 2px 18px 2px 0; }
+  #gate { margin-top: 80px; max-width: 420px; }
+  #gate input { font: inherit; width: 100%; padding: 8px; margin: 8px 0; background: transparent; color: var(--fg); border: 1px solid var(--rule); }
+  #gate button { font: inherit; padding: 6px 12px; background: var(--fg); color: var(--bg); border: 0; cursor: pointer; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1><a href="#">swarm hub</a></h1>
+    <span class="mute" id="meta">loading</span>
+  </header>
+  <div id="gate" hidden>
+    <p>Team token. It is in <code>/etc/swarm/report.env</code> on any server, and in <code>secrets/hub.sops.env</code>.</p>
+    <input id="tok" type="password" autocomplete="off" placeholder="token">
+    <button id="save">open</button>
+  </div>
+  <div id="app"></div>
+</main>
+<script>
+const $ = (s) => document.querySelector(s);
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { return null; } },
+  set(k, v) { try { v == null ? localStorage.removeItem(k) : localStorage.setItem(k, v); } catch (e) {} } };
+let token = store.get("swarm-hub-token") || "";
+const h0 = new URLSearchParams(location.hash.slice(1));
+if (h0.get("token")) { token = h0.get("token"); store.set("swarm-hub-token", token); h0.delete("token");
+  history.replaceState(null, "", location.pathname + (h0.toString() ? "#" + h0.toString() : "")); }
+const setCookie = () => { document.cookie = `swarm_token=${encodeURIComponent(token)}; path=/; SameSite=Strict${location.protocol === "https:" ? "; Secure" : ""}`; };
+if (token) setCookie();
+
+const ago = (ts, now) => { if (!ts) return ""; const s = Math.max(0, Math.round(now - ts));
+  return s < 60 ? s + "s" : s < 3600 ? Math.round(s / 60) + "m" : s < 86400 ? Math.round(s / 3600) + "h" : Math.round(s / 86400) + "d"; };
+const num = (v) => { if (typeof v !== "number") return esc(v); const a = Math.abs(v);
+  return a !== 0 && (a < 0.001 || a >= 1e6) ? v.toExponential(2) : String(+v.toFixed(a < 1 ? 4 : a < 100 ? 3 : 1)); };
+const fmtP = (v) => typeof v === "number" ? num(v) : esc(typeof v === "object" ? JSON.stringify(v) : v);
+const bytes = (n) => n < 1024 ? n + " B" : n < 1048576 ? (n / 1024).toFixed(1) + " KB" : (n / 1048576).toFixed(1) + " MB";
+const status = (r) => r.stale ? "stale" : r.status;
+
+function path(vals, w, h) {
+  if (!vals || vals.length < 2) return "";
+  const lo = Math.min(...vals), hi = Math.max(...vals), span = hi - lo || 1;
+  return vals.map((v, i) => (i ? "L" : "M") + (i / (vals.length - 1) * w).toFixed(1) + "," + (h - 1 - (v - lo) / span * (h - 2)).toFixed(1)).join("");
+}
+const spark = (vals) => vals && vals.length > 1 ? `<svg class="spark" viewBox="0 0 100 18" preserveAspectRatio="none"><path class="l" d="${path(vals, 100, 18)}"/></svg>` : "";
+function prog(r) {
+  if (r.progress == null) return "";
+  const p = Math.max(0, Math.min(1, r.progress)), lbl = r.total ? `${num(r.step)}/${num(r.total)}` : Math.round(p * 100) + "%";
+  return `<span class="prog"><i style="width:${(p * 100).toFixed(1)}%"></i></span><span class="mute">${lbl}</span>`;
+}
+async function api(p) {
+  const r = await fetch(p, { headers: { Authorization: "Bearer " + token } });
+  if (r.status === 401) { token = ""; store.set("swarm-hub-token", null); throw new Error("auth"); }
+  return r.json();
+}
+
+// ---------------------------------------------------------------- overview
+function renderState(s) {
+  const now = s.now, all = s.experiments.flatMap((e) => e.runs);
+  const c = (st) => s.experiments.reduce((n, e) => n + (e.counts[st] || 0), 0);
+  $("#meta").textContent = `${s.hosts.filter((h) => h.online).length}/${s.hosts.length} hosts · ${c("running") + c("assigned")} running · ${c("planned")} queued · ${c("done")} done · ${c("failed")} failed · ${new Date().toLocaleTimeString()}`;
+
+  const exps = s.experiments.length ? s.experiments.map((e) => {
+    const pkeys = [...new Set([...Object.keys(e.params || {}), ...e.runs.flatMap((r) => Object.keys(r.params || {}))])].slice(0, 6);
+    const counts = Object.entries(e.counts).map(([k, v]) => `<span class="st s-${esc(k)}">${v} ${esc(k)}</span>`).join("");
+    const rows = e.runs.map((r) => { const st = status(r); return `<tr class="click" data-run="${esc(r.run)}">
+        <td>${esc(r.run.startsWith(e.id + "/") ? r.run.slice(e.id.length + 1) : r.run)}</td>
+        ${pkeys.map((k) => `<td class="num">${k in (r.params || {}) ? fmtP(r.params[k]) : ""}</td>`).join("")}
+        <td class="st s-${esc(st)}">${esc(st)}</td>
+        <td class="s-${esc(st)}">${prog(r)}</td>
+        <td>${spark(r.series)}</td>
+        <td class="metrics">${Object.entries(r.metrics || {}).slice(0, 4).map(([k, v]) => `<span><b>${esc(k)}</b> ${num(v)}</span>`).join("")}</td>
+        <td class="thumbs">${(r.artifacts || []).filter((a) => (a.content_type || "").startsWith("image/") && !a.content_type.includes("svg")).slice(0, 3).map((a) => `<img src="${esc(a.url)}" alt="" loading="lazy">`).join("")}${r.artifacts && r.artifacts.length ? `<span class="mute">${r.artifacts.length}</span>` : ""}</td>
+        <td><span>${esc(r.host || "")}</span> <span class="mute">${esc(r.source || "")}</span></td>
+        <td class="num mute">${ago(r.updated, now)}</td></tr>
+        ${r.message && st !== "planned" ? `<tr class="note"><td></td><td colspan="${pkeys.length + 7}" class="mute msg">${esc(r.message)}</td></tr>` : ""}`; }).join("");
+    return `<h3>${esc(e.title || e.id)} <span class="mute">${e.title && e.title !== e.id ? esc(e.id) + " · " : ""}${e.owner ? esc(e.owner) + " · " : ""}${ago(e.updated, now)} ago</span></h3>
+      ${e.description ? `<p class="desc">${esc(e.description)}</p>` : ""}
+      <div class="counts">${counts || '<span class="mute">no runs yet</span>'}</div>
+      ${e.runs.length ? `<div class="scroll"><table><tr><th>run</th>${pkeys.map((k) => `<th class="num p">${esc(k)}</th>`).join("")}<th>status</th><th>progress</th><th>${esc(e.runs[0].series_metric || "trend")}</th><th>metrics</th><th>artifacts</th><th>where / who</th><th class="num">updated</th></tr>${rows}</table></div>` : ""}`;
+  }).join("") : `<div class="empty">No experiments yet. Register one: <code>swarm-report register experiment.yaml</code> (docs/REPORTING.md).</div>`;
+
+  const hosts = s.hosts.length ? `<div class="scroll"><table>
+    <tr><th>host</th><th>status</th><th class="num">load</th><th class="num">mem GB</th><th class="num">disk GB</th><th class="num">gpu %</th><th class="num">containers</th><th>logged in</th><th>running</th><th>claimed by</th><th class="num">seen</th></tr>
+    ${s.hosts.map((h) => {
+      const cl = s.claims.filter((c) => c.servers.includes(h.host)).map((c) => `${esc(c.by)} <span class="mute">${esc(c.id)}</span>`).join("<br>");
+      const running = all.filter((r) => r.host === h.host && ["running", "assigned"].includes(r.status) && !r.stale).length;
+      return `<tr><td>${esc(h.host)}</td><td class="st s-${h.online ? "online" : "offline"}">${h.online ? "online" : "offline"}</td>
+      <td class="num">${h.load ? h.load[0] + (h.cpus ? `<span class="mute">/${h.cpus}</span>` : "") : ""}</td>
+      <td class="num">${h.mem_gb != null ? `${h.mem_used_gb}<span class="mute">/${h.mem_gb}</span>` : ""}</td>
+      <td class="num">${h.disk_gb != null ? `${h.disk_used_gb}<span class="mute">/${h.disk_gb}</span>` : ""}</td>
+      <td class="num">${h.gpus ? h.gpus.map((g) => g[0]).join(" ") : ""}</td>
+      <td class="num">${h.containers ?? ""}</td><td>${esc((h.users || []).join(" "))}</td><td class="num">${running || ""}</td>
+      <td>${cl || '<span class="mute">free</span>'}</td><td class="num mute">${ago(h.updated, now)}</td></tr>`; }).join("")}
+  </table></div>` : `<div class="empty">No heartbeats yet.</div>`;
+
+  const claims = s.claims.length ? `<table><tr><th>claim</th><th>servers</th><th>by</th><th>status</th><th>experiment</th><th>until</th><th>note</th></tr>
+    ${s.claims.map((c) => `<tr><td>${esc(c.id)}</td><td>${esc(c.servers.join(", "))}</td><td>${esc(c.by)}</td>
+      <td class="st s-${esc(c.status)}">${esc(c.status)}</td><td>${esc(c.experiment || "")}</td><td class="mute">${esc(c.until || "")}</td><td class="msg">${esc(c.note || "")}</td></tr>`).join("")}</table>`
+    : `<div class="empty">No active claims.</div>`;
+
+  const feed = `<table class="feed">${s.events.slice(0, 25).map((ev) => `<tr>
+      <td class="mute num">${ago(ev.received, now)}</td><td>${esc(ev.kind)}</td>
+      <td>${esc(ev.run || ev.host || "")}</td><td class="mute">${esc(ev.source || "")}</td>
+      <td class="msg">${esc(ev.message || "")}${ev.metrics ? ` <span class="mute">${Object.entries(ev.metrics).slice(0, 3).map(([k, v]) => `${esc(k)}=${num(v)}`).join(" ")}</span>` : ""}</td></tr>`).join("")}</table>`;
+
+  const paused = (s.paused || []).map((x) => `${x.scope === "*" ? "ALL experiments" : esc(x.scope)}${x.reason ? " (" + esc(x.reason) + ")" : ""}`);
+  $("#app").innerHTML = (paused.length ? `<h2 style="color:var(--fail)">Paused: ${paused.join(", ")}. No new runs are handed out; resume with <code>swarm-report resume</code></h2>` : "") + `<h2>Experiments</h2>${exps}<h2>Fleet</h2>${hosts}<h2>Claims</h2>${claims}<h2>Recent events</h2>${feed}`;
+  document.querySelectorAll("tr[data-run]").forEach((tr) => tr.onclick = () => { location.hash = "run=" + encodeURIComponent(tr.dataset.run); });
+}
+
+// ---------------------------------------------------------------- run detail
+function chart(name, pts) {
+  const vals = pts.map((p) => p[2]), w = 300, h = 90;
+  const lo = Math.min(...vals), hi = Math.max(...vals);
+  return `<div class="chart"><div class="t"><span>${esc(name)}</span><span class="mute">${num(vals[vals.length - 1])} <span>(${num(lo)}..${num(hi)})</span></span></div>
+    <svg viewBox="0 0 ${w} ${h}" preserveAspectRatio="none"><line x1="0" y1="${h - 0.5}" x2="${w}" y2="${h - 0.5}"/>${vals.length > 1 ? `<path class="l" d="${path(vals, w, h)}"/>` : ""}</svg>
+    <div class="t mute"><span>${pts[0][1] != null ? "step " + num(pts[0][1]) : ""}</span><span>${pts.length} pts${pts[pts.length - 1][1] != null ? " · step " + num(pts[pts.length - 1][1]) : ""}</span></div></div>`;
+}
+async function preview(a) {
+  const ct = a.content_type || "", url = esc(a.url);
+  const head = `<div class="t"><a href="${url}" download>${esc(a.name)}</a> <span class="mute">${esc(ct)} · ${bytes(a.size)}</span></div>`;
+  if (ct.startsWith("image/") && !ct.includes("svg")) return head + `<img src="${url}" alt="${esc(a.name)}" loading="lazy">`;
+  if (ct.startsWith("video/")) return head + `<video src="${url}" controls preload="metadata"></video>`;
+  const texty = ct.startsWith("text/") || /json|csv|yaml|xml|javascript/.test(ct) || /\.(log|md|txt|csv|tsv|json|jsonl|yaml|yml)$/.test(a.name);
+  if (!texty || a.size > 2e6 || ct.includes("html") || ct.includes("svg")) return head;
+  const txt = await (await fetch(a.url, { headers: { Authorization: "Bearer " + token } })).text();
+  if (/csv|tsv/.test(ct) || /\.(csv|tsv)$/.test(a.name)) {
+    const sep = /\.tsv$/.test(a.name) ? "\t" : ",";
+    const lines = txt.trim().split("\n").slice(0, 51).map((l) => l.split(sep));
+    return head + `<div class="scroll"><table>${lines.map((c, i) => `<tr>${c.map((x) => i ? `<td class="num">${esc(x)}</td>` : `<th class="num">${esc(x)}</th>`).join("")}</tr>`).join("")}</table></div>${txt.split("\n").length > 52 ? '<span class="mute">first 50 rows</span>' : ""}`;
+  }
+  let shown = txt;
+  if (/json/.test(ct) && !/jsonl/.test(a.name)) { try { shown = JSON.stringify(JSON.parse(txt), null, 2); } catch (e) {} }
+  return head + `<pre>${esc(shown.slice(0, 20000))}</pre>`;
+}
+async function renderRun(id) {
+  const r = await api("api/v1/runs/" + encodeURI(id));
+  if (r.error) { $("#app").innerHTML = `<div class="empty">${esc(r.error)}</div>`; return; }
+  const now = Date.now() / 1000, st = status(r);
+  $("#meta").textContent = `run · ${new Date().toLocaleTimeString()}`;
+  const series = Object.entries(r.series || {});
+  $("#app").innerHTML = `<h2><a href="#">experiments</a> / ${esc(r.experiment)}</h2>
+    <h3>${esc(r.run)} <span class="st s-${esc(st)}" style="font-weight:400">${esc(st)}</span></h3>
+    <p class="desc">${esc(r.message || "")}</p>
+    <div class="kv"><span class="s-${esc(st)}">${prog(r)}</span><span><b>host</b> ${esc(r.host || "")}</span><span><b>by</b> ${esc(r.source || "")}</span>
+      <span><b>created</b> ${ago(r.created, now)} ago</span>${r.started ? `<span><b>started</b> ${ago(r.started, now)} ago</span>` : ""}${r.ended ? `<span><b>took</b> ${ago(r.started || r.created, r.ended)}</span>` : ""}<span><b>updated</b> ${ago(r.updated, now)} ago</span></div>
+    <h2>Parameters</h2><div class="kv">${Object.entries(r.params || {}).map(([k, v]) => `<span><b>${esc(k)}</b> ${fmtP(v)}</span>`).join("") || '<span class="mute">none</span>'}</div>
+    <h2>Metrics</h2><div class="kv">${Object.entries(r.metrics || {}).map(([k, v]) => `<span><b>${esc(k)}</b> ${num(v)}</span>`).join("") || '<span class="mute">none</span>'}</div>
+    ${series.length ? `<div class="charts">${series.map(([k, pts]) => chart(k, pts)).join("")}</div>` : ""}
+    <h2>Artifacts</h2><div id="arts">${(r.artifacts || []).length ? "" : '<div class="empty">none</div>'}</div>
+    <h2>Events</h2><table class="feed">${(r.events || []).map((ev) => `<tr><td class="mute num">${ago(ev.received, now)}</td><td>${esc(ev.kind)}</td><td class="mute">${esc(ev.source || "")}</td>
+      <td class="msg">${esc(ev.message || "")}${ev.metrics ? ` <span class="mute">${Object.entries(ev.metrics).map(([k, v]) => `${esc(k)}=${num(v)}`).join(" ")}</span>` : ""}</td></tr>`).join("")}</table>`;
+  const box = $("#arts");
+  for (const a of r.artifacts || []) { const d = document.createElement("div"); d.className = "art"; d.innerHTML = await preview(a); box.appendChild(d); }
+}
+
+// ---------------------------------------------------------------- loop
+let busy = false, lastView = "";
+async function tick(force) {
+  if (!token) { $("#gate").hidden = false; $("#app").innerHTML = ""; $("#meta").textContent = "token needed"; return; }
+  const run = new URLSearchParams(location.hash.slice(1)).get("run");
+  const view = run ? "run:" + run : "home";
+  if (busy || (run && view === lastView && !force)) return;   // run pages refresh on demand, not every tick (artifacts)
+  busy = true;
+  try { $("#gate").hidden = true; run ? await renderRun(run) : renderState(await api("api/v1/state")); lastView = view; }
+  catch (e) { if (e.message === "auth") { busy = false; return tick(); } $("#meta").textContent = "hub unreachable, retrying"; }
+  busy = false;
+}
+window.addEventListener("hashchange", () => { lastView = ""; window.scrollTo(0, 0); tick(true); });
+$("#save").onclick = () => { token = $("#tok").value.trim(); store.set("swarm-hub-token", token); setCookie(); tick(true); };
+$("#tok").addEventListener("keydown", (e) => { if (e.key === "Enter") $("#save").click(); });
+tick(true); setInterval(() => tick(false), 5000);
+</script>
+</body>
+</html>

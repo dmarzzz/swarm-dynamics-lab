@@ -1,0 +1,168 @@
+version: '3'
+
+# Everything runs from the repo root. Copy .env.example to .env first.
+dotenv: ['.env']
+
+vars:
+  ANSIBLE_DIR: ./ansible
+  TOFU_DIR: ./tofu
+
+tasks:
+  setup:
+    desc: Install local tools (ansible, opentofu, sops, age, pyyaml)
+    cmds:
+      - pip3 install --user ansible pyyaml
+      - ansible-galaxy collection install -r {{.ANSIBLE_DIR}}/requirements.yml
+      - cmd: brew install opentofu sops age
+        platforms: [darwin]
+      - cmd: echo "Install opentofu, sops and age with your package manager"
+        platforms: [linux]
+
+  check:
+    desc: Validate people/, fleet.yml, blueprints.yml
+    cmds:
+      - python3 scripts/agentops.py check
+
+  list:
+    desc: List every server, its owner, address and who has access
+    cmds:
+      - python3 scripts/agentops.py list
+
+  ssh-config:
+    desc: Print Host blocks for ~/.ssh/config (paste them in, then `ssh <server>`)
+    cmds:
+      - python3 scripts/agentops.py ssh-config
+
+  # --- DigitalOcean (your own servers only) ---
+  tofu:init:
+    desc: Initialise OpenTofu with your own local state (workspace = your handle)
+    dir: "{{.TOFU_DIR}}"
+    preconditions:
+      - sh: test -n "$AGENTOPS_ME"
+        msg: "Set AGENTOPS_ME=<your handle> in .env"
+    cmds:
+      - tofu init -input=false
+      - tofu workspace select -or-create "$AGENTOPS_ME"
+
+  plan:
+    desc: Show what `task up` would change on your DigitalOcean account
+    dir: "{{.TOFU_DIR}}"
+    deps: [check]
+    cmds:
+      - task: tofu:init
+      - python3 ../scripts/agentops.py preflight
+      - tofu plan -var "owner=$AGENTOPS_ME"
+
+  up:
+    desc: Create/update your fleet.yml servers on DigitalOcean, then commit generated/<you>.json
+    dir: "{{.TOFU_DIR}}"
+    deps: [check]
+    preconditions:
+      - sh: test -n "$DIGITALOCEAN_TOKEN"
+        msg: "Set DIGITALOCEAN_TOKEN in .env"
+    cmds:
+      - task: tofu:init
+      - python3 ../scripts/agentops.py preflight
+      - tofu apply -var "owner=$AGENTOPS_ME"
+      - echo "Next - commit generated/$AGENTOPS_ME.json and push, then task provision HOST=<server> once ssh answers (about a minute)"
+
+  down:
+    desc: "Destroy one of your servers: remove it from fleet.yml first, then task down (or task down -- -target='digitalocean_droplet.this[\"name\"]')"
+    dir: "{{.TOFU_DIR}}"
+    cmds:
+      - task: tofu:init
+      - tofu apply -var "owner=$AGENTOPS_ME" {{.CLI_ARGS}}
+      - ../scripts/hub-forget-gone.sh || echo "note - could not tell the hub; run task hub:forget-gone"
+
+  hub:forget-gone:
+    desc: Make the hub forget servers no longer in fleet.yml (stops false 'silent host' alerts after a teardown)
+    cmds:
+      - scripts/hub-forget-gone.sh
+
+  # --- Ansible ---
+  provision:
+    desc: "Install everything the server's blueprint needs: task provision HOST=<server>"
+    dir: "{{.ANSIBLE_DIR}}"
+    cmds:
+      - ansible-playbook playbooks/provision.yml -e "target_hosts={{.HOST | default "swarm"}}" {{.CLI_ARGS}}
+
+  access:
+    desc: "Sync accounts and keys from people/ to servers (all, or HOST=<server>)"
+    dir: "{{.ANSIBLE_DIR}}"
+    cmds:
+      - ansible-playbook playbooks/access.yml -e "target_hosts={{.HOST | default "swarm"}}" {{.CLI_ARGS}}
+
+  bootstrap:
+    desc: "Manual (non-DO) box, first time, as root or its existing admin: task bootstrap HOST=<server> [BOOT_USER=root]"
+    dir: "{{.ANSIBLE_DIR}}"
+    cmds:
+      - ansible-playbook playbooks/bootstrap.yml -e "target_hosts={{.HOST}}" -e "ansible_user={{.BOOT_USER | default "root"}}" {{.CLI_ARGS}}
+
+  ping:
+    desc: Check you can reach every server
+    dir: "{{.ANSIBLE_DIR}}"
+    cmds:
+      - ansible swarm -m ping {{.CLI_ARGS}}
+
+  # --- Front ends (Cloudflare Pages) ---
+  pages:
+    desc: "Deploy a static site: task pages -- <dir> <name>  (-> https://swarm-<name>.pages.dev)"
+    cmds:
+      - scripts/deploy-pages.sh {{.CLI_ARGS}}
+
+  # --- Hub ---
+  hub:open:
+    desc: Open the hub dashboard (logs you in with the team token)
+    cmds:
+      - |
+        URL=$(python3 -c "import sys;sys.path.insert(0,'scripts');import agentops as a;print(a.inventory()['all']['vars']['agentops_hub_url'])")
+        TOKEN=$(SOPS_AGE_KEY_FILE=${SOPS_AGE_KEY_FILE:-$PWD/keys.txt} sops -d secrets/hub.sops.env | sed -n 's/^SWARM_HUB_TOKEN=//p')
+        open "$URL/#token=$TOKEN" 2>/dev/null || echo "$URL  (token: ssh any server, cat /etc/swarm/report.env)"
+
+  hub:safe-deploy:
+    desc: "Deploy hub changes once no run is active (task hub:safe-deploy -- --wait 120 | --now)"
+    cmds:
+      - scripts/safe-deploy.sh hub {{.CLI_ARGS}}
+
+  reporter:deploy:
+    desc: Roll the swarm-report client + heartbeat/flush timer to every server (no restarts)
+    cmds:
+      - scripts/safe-deploy.sh reporter
+
+  hub:env:
+    desc: Print SWARM_HUB_URL/TOKEN exports for using swarm-report from your laptop
+    cmds:
+      - |
+        URL=$(python3 -c "import sys;sys.path.insert(0,'scripts');import agentops as a;print(a.inventory()['all']['vars']['agentops_hub_url'])")
+        TOKEN=$(SOPS_AGE_KEY_FILE=${SOPS_AGE_KEY_FILE:-$PWD/keys.txt} sops -d secrets/hub.sops.env | sed -n 's/^SWARM_HUB_TOKEN=//p')
+        echo "export SWARM_HUB_URL=$URL SWARM_HUB_TOKEN=$TOKEN"
+
+  claims:
+    desc: Who holds which servers right now
+    cmds:
+      - git pull -q --ff-only || true
+      - python3 scripts/agentops.py claims
+
+  # --- Shared secrets (SOPS + age) ---
+  secrets:keygen:
+    desc: Make your age key (keys.txt, gitignored); put the public key in your people/ file
+    status:
+      - test -f keys.txt
+    cmds:
+      - age-keygen -o keys.txt
+      - chmod 600 keys.txt
+
+  secrets:sync:
+    desc: Regenerate .sops.yaml from everyone's age keys and re-key every file in secrets/
+    cmds:
+      - python3 scripts/agentops.py sops-sync
+      - task: secrets:updatekeys
+
+  secrets:updatekeys:
+    cmds:
+      - for f in secrets/*.sops.*; do [ -e "$f" ] && sops updatekeys -y "$f"; done; true
+
+  secrets:edit:
+    desc: "Edit (or create) an encrypted file: task secrets:edit -- secrets/sim.sops.env"
+    cmds:
+      - sops {{.CLI_ARGS}}

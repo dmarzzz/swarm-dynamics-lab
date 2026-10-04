@@ -1,0 +1,6 @@
+# Copy to .sops.yaml, or let `task secrets:sync` generate it from the `age:` fields in people/*.yml.
+# After it changes, re-key existing files: task secrets:updatekeys
+creation_rules:
+  - path_regex: (^|/)secrets/.*
+    age: >-
+      age1REPLACE_ME_alice,age1REPLACE_ME_bob

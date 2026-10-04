@@ -1,0 +1,7 @@
+# EXAMPLE person. Replace with your own file (or delete it): `task check` rejects these placeholders.
+github: alice-example
+name: Alice Example
+active: true
+ssh_keys:
+  - "ssh-ed25519 AAAA...REPLACE_ME alice@laptop"
+age: age1REPLACE_ME            # public key from `task secrets:keygen`; lets alice decrypt secrets/

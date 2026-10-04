@@ -1,0 +1,17 @@
+---
+- name: Restart swarm-hub
+  ansible.builtin.systemd:
+    name: swarm-hub
+    state: restarted
+    daemon_reload: true
+
+- name: Reload caddy
+  ansible.builtin.systemd:
+    name: caddy
+    state: reloaded
+
+- name: Restart litestream
+  ansible.builtin.systemd:
+    name: litestream
+    state: restarted
+    daemon_reload: true

@@ -1,0 +1,26 @@
+# Your own credentials
+.env
+keys.txt
+*.age
+
+# OpenTofu: state holds each droplet's root private key; it stays on the owner's machine
+**/.terraform/
+*.tfstate
+*.tfstate.*
+terraform.tfstate.d/
+*.tfvars
+crash.log
+
+# Never plaintext secrets or private keys
+secrets/*
+!secrets/*.sops.*
+!secrets/README.md
+*_ed25519
+*.pem
+
+*.retry
+__pycache__/
+.DS_Store
+
+# wrangler cache from `task pages`
+.wrangler/

@@ -1,0 +1,36 @@
+# Managed by Ansible - do not edit manually
+Port {{ security_ssh_port }}
+Protocol 2
+
+# Authentication
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+MaxAuthTries 3
+LoginGraceTime 30
+
+# Only the people with access to this box (fleet.yml access, people/*.yml)
+AllowUsers {{ (agentops_access + security_ssh_extra_users) | join(" ") }}
+
+# Disable unused auth methods
+ChallengeResponseAuthentication no
+GSSAPIAuthentication no
+KerberosAuthentication no
+UsePAM yes
+
+# Security
+X11Forwarding no
+X11UseLocalhost yes
+PrintMotd no
+PermitEmptyPasswords no
+MaxStartups 10:30:60
+ClientAliveInterval 300
+ClientAliveCountMax 2
+
+# Logging
+SyslogFacility AUTH
+LogLevel VERBOSE
+
+AcceptEnv LANG LC_* TERM
+Subsystem sftp /usr/lib/openssh/sftp-server

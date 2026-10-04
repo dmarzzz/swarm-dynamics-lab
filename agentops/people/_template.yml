@@ -1,0 +1,11 @@
+# Copy to people/<handle>.yml, where <handle> is your short lowercase name.
+# The handle becomes your Linux username on every server you have access to,
+# so use the same one you use in the research repo.
+#
+# Or let the script do it: python3 scripts/agentops.py add-person <handle> --github <login>
+github: your-github-login      # CI checks that only you edit this file
+name: Your Name
+active: true                   # false = locked out of every server on the next `task access`
+ssh_keys:                      # public keys only; one per machine you ssh from
+  - "ssh-ed25519 AAAA... you@laptop"
+age: ""                        # optional: age public key (age-keygen) to decrypt secrets/

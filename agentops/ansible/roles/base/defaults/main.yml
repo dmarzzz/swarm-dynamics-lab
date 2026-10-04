@@ -1,0 +1,26 @@
+---
+base_timezone: "UTC"
+base_locale: "en_US.UTF-8"
+base_swap_size_mb: 2048
+base_packages:
+  - curl
+  - wget
+  - git
+  - build-essential
+  - htop
+  - tmux
+  - jq
+  - unzip
+  - zip
+  - software-properties-common
+  - apt-transport-https
+  - ca-certificates
+  - gnupg
+  - lsb-release
+  - tree
+  - ncdu
+  - ripgrep
+  - fd-find
+  - zsh
+  - xauth
+base_extra_packages: []

@@ -1,0 +1,8 @@
+---
+# Shared group for everyone with access; /srv/swarm is group-writable so runs,
+# datasets and checkouts can be shared between people on the same box.
+access_shared_group: swarm
+access_shared_dir: /srv/swarm
+# Everyone with access gets passwordless sudo. These are disposable simulation
+# boxes; set false per host if a box should only be root for its owner.
+access_sudo: true

@@ -1,0 +1,11 @@
+---
+# Coding-agent CLIs, installed globally. Each person signs in to their own
+# account after ssh-ing in (`claude`, `codex`); nothing is shared.
+- name: Install Claude Code and Codex
+  community.general.npm:
+    name: "{{ item }}"
+    global: true
+    state: present
+  loop:
+    - "@anthropic-ai/claude-code"
+    - "@openai/codex"

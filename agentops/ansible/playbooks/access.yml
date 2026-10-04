@@ -1,0 +1,15 @@
+---
+# Sync accounts + keys + sshd AllowUsers from people/ and fleet.yml: task access
+# Run it after anyone joins, rotates a key, or is deactivated.
+
+- name: Sync access
+  hosts: "{{ target_hosts | default('swarm') }}"
+  gather_facts: true
+  become: true
+  roles:
+    - access
+  tasks:
+    - name: Update sshd AllowUsers
+      ansible.builtin.include_role:
+        name: security
+        tasks_from: sshd

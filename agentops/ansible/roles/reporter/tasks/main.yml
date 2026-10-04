@@ -1,0 +1,72 @@
+---
+# Every server: the swarm-report CLI + Python module, the hub address/token, and a
+# heartbeat every minute so the dashboard shows the host and what is running on it.
+- name: Create swarm dirs
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+    mode: "0755"
+  loop: [/usr/local/lib/swarm, /etc/swarm]
+
+- name: Install swarm_report module
+  ansible.builtin.copy:
+    src: "{{ agentops_repo_root }}/hub/swarm_report.py"
+    dest: /usr/local/lib/swarm/swarm_report.py
+    mode: "0755"
+
+- name: Install swarm-report command
+  ansible.builtin.file:
+    src: /usr/local/lib/swarm/swarm_report.py
+    dest: /usr/local/bin/swarm-report
+    state: link
+
+- name: Make `import swarm_report` work in every login shell
+  ansible.builtin.copy:
+    dest: /etc/profile.d/swarm.sh
+    mode: "0644"
+    content: |
+      # Managed by Ansible (agentops reporter role)
+      export PYTHONPATH="/usr/local/lib/swarm${PYTHONPATH:+:$PYTHONPATH}"
+
+- name: Write hub address and team token (readable by the swarm group)
+  ansible.builtin.template:
+    src: report.env.j2
+    dest: /etc/swarm/report.env
+    owner: root
+    group: swarm
+    mode: "0640"
+  when: agentops_hub_url | default('') | length > 0 and hub_token | length > 0
+
+- name: Heartbeat service and timer
+  ansible.builtin.copy:
+    dest: "/etc/systemd/system/{{ item.name }}"
+    mode: "0644"
+    content: "{{ item.content }}"
+  loop:
+    - name: swarm-heartbeat.service
+      content: |
+        [Unit]
+        Description=Report this host to the swarm hub
+        ConditionPathExists=/etc/swarm/report.env
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/bin/python3 /usr/local/lib/swarm/swarm_report.py heartbeat --server
+        # Replay anything any user's workers spooled while the hub was down (order preserved).
+        ExecStartPost=-/usr/bin/python3 /usr/local/lib/swarm/swarm_report.py flush --all
+    - name: swarm-heartbeat.timer
+      content: |
+        [Unit]
+        Description=Swarm hub heartbeat every minute
+        [Timer]
+        OnBootSec=30
+        OnUnitActiveSec=60
+        AccuracySec=5
+        [Install]
+        WantedBy=timers.target
+
+- name: Enable heartbeat timer
+  ansible.builtin.systemd:
+    name: swarm-heartbeat.timer
+    enabled: true
+    state: started
+    daemon_reload: true

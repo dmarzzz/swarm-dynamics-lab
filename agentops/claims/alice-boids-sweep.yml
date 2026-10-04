@@ -1,0 +1,14 @@
+# EXAMPLE claim, as written by:
+#   python3 scripts/agentops.py claim alice-boids-sweep --servers sim-01 --by alice/claude-1 \
+#       --until 6h --experiment boids-noise --note "eta sweep, 33 runs"
+#   python3 scripts/agentops.py release alice-boids-sweep --note "done; results on the hub"
+servers:
+- sim-01
+by: alice/claude-1
+status: done
+shared: false
+since: '2030-01-10T14:00:00Z'
+until: '2030-01-10T20:00:00Z'
+experiment: boids-noise
+note: done; results on the hub
+ended: '2030-01-10T17:42:00Z'

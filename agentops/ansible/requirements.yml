@@ -1,0 +1,9 @@
+---
+collections:
+  - name: community.general
+    # <12: 12.x and later need ansible-core >= 2.17; Ubuntu 24.04 ships 2.16
+    version: ">=9.0.0,<12.0.0"
+  - name: ansible.posix
+    version: ">=1.5.0"
+  - name: community.sops
+    version: ">=1.6.0"

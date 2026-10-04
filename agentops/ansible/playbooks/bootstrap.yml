@@ -1,0 +1,13 @@
+---
+# Only for provider: manual boxes that you reach as root (or another sudo user)
+# before your own account exists: task bootstrap HOST=<server> [BOOT_USER=root]
+# DigitalOcean boxes skip this; cloud-init creates every account at first boot.
+
+- name: Bootstrap a manual server
+  hosts: "{{ target_hosts | default('none') }}"
+  gather_facts: true
+  become: true
+  roles:
+    - base
+    - access
+    - security

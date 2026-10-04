@@ -1,0 +1,21 @@
+---
+# Full provision, idempotent: task provision HOST=<server>
+# Runs as you (AGENTOPS_ME). New DO boxes already have your account from cloud-init.
+
+- name: Provision simulation server
+  hosts: "{{ target_hosts | default('swarm') }}"
+  gather_facts: true
+  become: true
+
+  # Every role carries a tag so a run can be surgical: task provision HOST=x -- -t docker
+  roles:
+    - { role: base, tags: [base] }
+    - { role: access, tags: [access] }
+    - { role: security, tags: [security] }
+    - { role: docker, tags: [docker], when: "'docker' in agentops_install" }
+    - { role: python, tags: [python], when: "'python' in agentops_install" }
+    - { role: node, tags: [node], when: "'node' in agentops_install" }
+    - { role: agents, tags: [agents], when: "'agents' in agentops_install" }
+    - { role: hub, tags: [hub], when: "'hub' in agentops_install" }
+    # Every server reports to the hub (heartbeat + swarm-report CLI).
+    - { role: reporter, tags: [reporter] }

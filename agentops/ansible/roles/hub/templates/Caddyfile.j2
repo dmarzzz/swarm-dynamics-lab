@@ -1,0 +1,37 @@
+# Managed by Ansible (agentops hub role)
+{{ ansible_host }} {
+	tls {
+		issuer acme {
+			profile shortlived
+		}
+	}
+	encode gzip
+	# Artifact uploads may be as large as the hub allows (512 MB, MAX_ARTIFACT in hub.py);
+	# every other request stays small. A body over the limit is cut off mid-upload, which
+	# the client sees as an SSL EOF, so keep these two numbers in step.
+	@upload path /api/v1/artifacts
+	request_body @upload {
+		max_size 512MB
+	}
+	@small not path /api/v1/artifacts
+	request_body @small {
+		max_size 2MB
+	}
+	reverse_proxy 127.0.0.1:8700
+}
+
+{% if hub_public_read_host | default('') | length > 0 %}
+# Optional public read path for a proxy that cannot fetch a bare IP (set hub_public_read_host to a DNS
+# name that points at this server). Only the reads a public page needs are routed here; the hub still
+# checks the read token (GET only, image + frame.json artifacts, rate limited).
+{{ hub_public_read_host }} {
+	@read {
+		method GET HEAD
+		path /api/v1/public/state /api/v1/state /api/v1/events /api/v1/runs/* /a/*
+	}
+	handle @read {
+		reverse_proxy 127.0.0.1:8700
+	}
+	respond 404
+}
+{% endif %}

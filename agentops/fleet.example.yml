@@ -1,0 +1,52 @@
+# Copy to fleet.yml. It lists every server anyone on the team runs for simulations.
+#
+# One entry per server. Whoever pays for it is the `owner`; they create it with
+# `task up` (DigitalOcean) or add an existing box as `provider: manual`.
+# Everyone listed in `access` gets their own Linux account with their own keys
+# from people/<handle>.yml. `access: all` (the default) means every active person.
+#
+# Fields
+#   owner      handle from people/ (required)
+#   provider   digitalocean | manual
+#   blueprint  sim | hub | sim-large | sim-cpu   (what gets installed; see blueprints.yml)
+#   region     DO region slug (digitalocean only), default nyc3
+#   size       DO size slug (digitalocean only), default from the blueprint
+#   ip         public IP (manual only; DO IPs land in generated/<owner>.json)
+#   ssh_port   default 22
+#   access     all | [handle, ...]
+#   purpose    one line: what runs here
+#   expires    YYYY-MM-DD: when the owner plans to destroy it. `check` warns after.
+#   ports      extra inbound TCP ports to open, e.g. [8080]
+#   backups    true = weekly DigitalOcean droplet backups (+20% cost)
+
+servers:
+  # One hub per team: experiments, run queue, events, artifacts, dashboard.
+  hub-01:
+    owner: alice
+    provider: digitalocean
+    blueprint: hub
+    region: nyc3
+    access: all
+    purpose: run hub (hub/, docs/REPORTING.md)
+    expires: 2030-01-31
+    backups: true
+
+  # One box per run keeps runs from sharing a machine.
+  sim-01:
+    owner: alice
+    provider: digitalocean
+    blueprint: sim
+    region: nyc3
+    size: s-4vcpu-8gb
+    access: all
+    purpose: simulation runs
+    expires: 2030-01-31
+
+  # A machine that is not on DigitalOcean: give its address, then `task bootstrap HOST=bob-box`.
+  bob-box:
+    owner: bob
+    provider: manual
+    blueprint: sim
+    ip: 203.0.113.10
+    access: [alice, bob]
+    purpose: simulations on a machine bob already has

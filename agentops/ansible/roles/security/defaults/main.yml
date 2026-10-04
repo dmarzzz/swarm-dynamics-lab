@@ -1,0 +1,9 @@
+---
+security_ssh_port: "{{ ansible_port | default(22) }}"
+# Extra accounts allowed through sshd besides the people with access
+# (e.g. the existing admin user on a manual host).
+security_ssh_extra_users: []
+security_ufw_allowed_ports:
+  - { port: "{{ security_ssh_port }}", proto: tcp }
+security_fail2ban_maxretry: 5
+security_fail2ban_bantime: 3600

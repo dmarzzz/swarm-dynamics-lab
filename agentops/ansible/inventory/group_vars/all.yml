@@ -1,0 +1,14 @@
+---
+# Hub (agentops/hub): the reporting API + dashboard. Its URL comes from
+# whichever fleet.yml server uses the `hub` blueprint (agentops_hub_url, set by the
+# inventory). Team secrets come from secrets/hub.sops.env, decrypted with your age
+# key. Without one, the hub_secrets lookup is empty: token/backup tasks are skipped
+# and servers keep what they already have.
+agentops_repo_root: "{{ inventory_dir }}/../.."
+hub_secrets_file: "{{ agentops_repo_root }}/secrets/hub.sops.env"
+# a relative SOPS_AGE_KEY_FILE (./keys.txt, as in .env.example) means the repo root, not ansible/
+agentops_age_keyfile_env: "{{ lookup('env', 'SOPS_AGE_KEY_FILE') | default('keys.txt', true) }}"
+agentops_age_keyfile: "{{ agentops_age_keyfile_env if agentops_age_keyfile_env.startswith('/') else (agentops_repo_root ~ '/' ~ agentops_age_keyfile_env) }}"
+hub_secrets_raw: "{{ lookup('community.sops.sops', hub_secrets_file, age_keyfile=agentops_age_keyfile, errors='ignore') | default('', true) }}"
+hub_secrets: "{{ dict(hub_secrets_raw | regex_findall('(?m)^([A-Z_]+)=(.*)$')) }}"
+hub_token: "{{ hub_secrets.SWARM_HUB_TOKEN | default('') }}"

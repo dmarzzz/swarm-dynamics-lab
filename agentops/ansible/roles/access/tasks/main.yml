@@ -1,0 +1,135 @@
+---
+# One Linux account per person with access (fleet.yml `access`), authorized with
+# exactly the keys in their people/<handle>.yml. Re-run `task access` after
+# anyone adds, rotates or removes a key.
+
+- name: Refuse to lock out the person running Ansible
+  ansible.builtin.assert:
+    that: ansible_user == 'root' or ansible_user in agentops_access
+    fail_msg: >-
+      You are connecting as '{{ ansible_user }}' but fleet.yml does not give you access to
+      {{ inventory_hostname }}. Ask its owner ({{ agentops_owner }}) to add you, or set AGENTOPS_ME.
+
+- name: Create shared group
+  ansible.builtin.group:
+    name: "{{ access_shared_group }}"
+    state: present
+
+- name: Create shared work dir (setgid, group-writable)
+  ansible.builtin.file:
+    path: "{{ access_shared_dir }}"
+    state: directory
+    owner: root
+    group: "{{ access_shared_group }}"
+    mode: "2775"
+
+- name: Read existing groups and accounts
+  ansible.builtin.getent:
+    database: "{{ item }}"
+  loop: [group, passwd]
+  changed_when: false
+
+# A handle that is already a system group (e.g. `shadow`) cannot get its own group,
+# so that user's primary group is the shared one instead.
+- name: Create accounts
+  ansible.builtin.user:
+    name: "{{ item }}"
+    group: "{{ access_shared_group if (item in ansible_facts.getent_group and item not in ansible_facts.getent_passwd) else omit }}"
+    shell: /bin/bash
+    groups: "{{ [access_shared_group] + (['sudo'] if access_sudo else []) }}"
+    append: true
+    create_home: true
+    password_lock: false
+    state: present
+  loop: "{{ agentops_access }}"
+
+- name: Authorize exactly the keys in people/<handle>.yml
+  ansible.posix.authorized_key:
+    user: "{{ item }}"
+    key: "{{ agentops_people[item].ssh_keys | join('\n') }}"
+    exclusive: true
+    state: present
+  loop: "{{ agentops_access }}"
+
+- name: Passwordless sudo
+  ansible.builtin.copy:
+    dest: "/etc/sudoers.d/90-agentops-{{ item }}"
+    content: "{{ item }} ALL=(ALL) NOPASSWD:ALL\n"
+    mode: "0440"
+    validate: "visudo -cf %s"
+  loop: "{{ agentops_access }}"
+  when: access_sudo
+
+- name: Shared umask so files in /srv/swarm stay group-writable
+  ansible.builtin.lineinfile:
+    path: "/home/{{ item }}/.bashrc"
+    line: "umask 002"
+    create: true
+    owner: "{{ item }}"
+    group: "{{ item }}"
+    mode: "0644"
+  loop: "{{ agentops_access }}"
+
+- name: Look up groups
+  ansible.builtin.getent:
+    database: group
+  changed_when: false
+
+- name: Add everyone with access to docker (when Docker is installed)
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: docker
+    append: true
+  loop: "{{ agentops_access }}"
+  when: "'docker' in ansible_facts.getent_group"
+
+# Anyone with an account here who should not have access: inactive people,
+# people dropped from this box's `access`, and members of the shared group whose
+# people/ file was deleted. Take away their keys, sudo and groups, and lock the
+# account. Home dirs stay so nothing they left in them is lost.
+- name: Read accounts and groups
+  ansible.builtin.getent:
+    database: "{{ item }}"
+  loop: [passwd, group]
+  changed_when: false
+
+- name: Work out who to revoke
+  ansible.builtin.set_fact:
+    access_revoke: >-
+      {{ (agentops_people.keys() | list
+          + (ansible_facts.getent_group[access_shared_group][2] | default('')).split(',') | select | list)
+         | unique | difference(agentops_access) | intersect(ansible_facts.getent_passwd.keys()) }}
+
+- name: Remove keys of people without access
+  ansible.builtin.file:
+    path: "/home/{{ item }}/.ssh/authorized_keys"
+    state: absent
+  loop: "{{ access_revoke }}"
+
+- name: Remove sudo of people without access
+  ansible.builtin.file:
+    path: "/etc/sudoers.d/90-agentops-{{ item }}"
+    state: absent
+  loop: "{{ access_revoke }}"
+
+- name: Lock accounts of people without access and drop their groups (sudo, docker, swarm)
+  ansible.builtin.user:
+    name: "{{ item }}"
+    groups: []
+    append: false
+    password_lock: true
+    expires: 1
+  loop: "{{ access_revoke }}"
+
+# cloud-init writes its own NOPASSWD grant for every first-boot account. This
+# role manages sudo per person (above), so that file would outlive a revocation.
+- name: Remove cloud-init's first-boot sudo grant
+  ansible.builtin.file:
+    path: /etc/sudoers.d/90-cloud-init-users
+    state: absent
+
+- name: Unexpire accounts of people with access (undo an earlier lock)
+  ansible.builtin.user:
+    name: "{{ item }}"
+    expires: -1
+  loop: "{{ agentops_access }}"

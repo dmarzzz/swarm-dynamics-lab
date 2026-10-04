@@ -1,0 +1,8 @@
+# EXAMPLE person without an age key: bob can ssh in but cannot decrypt secrets/.
+github: bob-example
+name: Bob Example
+active: true
+ssh_keys:
+  - "ssh-ed25519 AAAA...REPLACE_ME bob@laptop"
+  - "ssh-ed25519 AAAA...REPLACE_ME bob@run-orchestrator"   # one key per machine bob (or his agent) connects from
+age: ""

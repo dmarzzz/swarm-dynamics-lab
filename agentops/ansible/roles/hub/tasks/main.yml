@@ -1,0 +1,300 @@
+---
+# The hub: hub.py (stdlib Python + SQLite) on 127.0.0.1:8700 behind Caddy, which
+# gets a real certificate for the bare IP (Let's Encrypt shortlived profile).
+- name: Refuse without the team token
+  ansible.builtin.assert:
+    that: hub_token | length >= 16
+    fail_msg: "No hub token. Create it: task secrets:edit -- secrets/hub.sops.env, with SWARM_HUB_TOKEN=<long random string> (needs your age key in keys.txt)."
+
+- name: Hub service user
+  ansible.builtin.user:
+    name: swarm-hub
+    system: true
+    shell: /usr/sbin/nologin
+    home: /var/lib/swarm-hub
+    create_home: true
+
+- name: Hub code dir
+  ansible.builtin.file:
+    path: /opt/swarm-hub
+    state: directory
+    mode: "0755"
+
+- name: Install hub code
+  ansible.builtin.copy:
+    src: "{{ agentops_repo_root }}/hub/{{ item }}"
+    dest: "/opt/swarm-hub/{{ item }}"
+    mode: "0644"
+  loop: [hub.py, dashboard.html]
+  notify: Restart swarm-hub
+
+- name: Hub token
+  ansible.builtin.copy:
+    dest: /etc/swarm-hub.env
+    owner: root
+    group: swarm-hub
+    mode: "0640"
+    content: |
+      SWARM_HUB_TOKEN={{ hub_token }}
+      {% if hub_secrets.SWARM_HUB_READ_TOKEN is defined %}
+      SWARM_HUB_READ_TOKEN={{ hub_secrets.SWARM_HUB_READ_TOKEN }}
+      {% endif %}
+  no_log: true
+  notify: Restart swarm-hub
+
+- name: Hub systemd unit
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/swarm-hub.service
+    mode: "0644"
+    content: |
+      [Unit]
+      Description=swarm hub (reporting API + dashboard)
+      After=network-online.target
+      [Service]
+      User=swarm-hub
+      EnvironmentFile=/etc/swarm-hub.env
+      ExecStart=/usr/bin/python3 /opt/swarm-hub/hub.py --data /var/lib/swarm-hub --bind 127.0.0.1 --port 8700
+      Restart=always
+      RestartSec=2
+      NoNewPrivileges=true
+      ProtectSystem=strict
+      ProtectHome=true
+      ReadWritePaths=/var/lib/swarm-hub
+      PrivateTmp=true
+      [Install]
+      WantedBy=multi-user.target
+  notify: Restart swarm-hub
+
+- name: Enable hub
+  ansible.builtin.systemd:
+    name: swarm-hub
+    enabled: true
+    state: started
+    daemon_reload: true
+
+# --- Backups: every 15 minutes, off the box, to the team's DigitalOcean Spaces bucket ---
+# A consistent SQLite snapshot + every artifact. `rclone copy` never deletes in the
+# bucket, so an artifact removed (or lost) on the hub survives there. Hourly DB
+# snapshots older than 14 days are pruned; restore steps are in docs/REPORTING.md.
+- name: Backup tools
+  ansible.builtin.apt:
+    name: [sqlite3, rclone]
+    state: present
+
+- name: Backup credentials (bucket-scoped Spaces key)
+  ansible.builtin.copy:
+    dest: /etc/swarm-hub-rclone.conf
+    owner: root
+    group: root
+    mode: "0600"
+    content: |
+      [spaces]
+      type = s3
+      provider = DigitalOcean
+      access_key_id = {{ hub_secrets.SPACES_ACCESS_KEY }}
+      secret_access_key = {{ hub_secrets.SPACES_SECRET_KEY }}
+      endpoint = {{ hub_secrets.SPACES_ENDPOINT }}
+      acl = private
+  no_log: true
+  when: hub_secrets.SPACES_ACCESS_KEY is defined
+
+- name: Backup script
+  ansible.builtin.copy:
+    dest: /usr/local/bin/swarm-hub-backup
+    mode: "0755"
+    content: |
+      #!/bin/bash
+      # Managed by Ansible (hub role). Snapshot the hub DB, copy it and all artifacts to Spaces.
+      set -euo pipefail
+      B="spaces:{{ hub_secrets.SPACES_BUCKET | default('') }}"
+      D=/var/lib/swarm-hub
+      SNAP="$D/backup/hub-$(date -u +%Y%m%dT%H%M).db"
+      mkdir -p "$D/backup"
+      sqlite3 "$D/hub.db" ".backup '$SNAP'"
+      R="rclone --config /etc/swarm-hub-rclone.conf --s3-no-check-bucket"
+      $R copy "$SNAP" "$B/db/"
+      $R copyto "$SNAP" "$B/db/latest.db"
+      $R copy "$D/artifacts" "$B/artifacts/" --exclude '*.part'
+      $R delete "$B/db/" --min-age 14d --include 'hub-*.db'
+      ls -1t "$D"/backup/hub-*.db | tail -n +3 | xargs -r rm -f
+      touch "$D/backup/last_backup_ok"          # read by /healthz: a stalled backup fails the uptime check
+      echo "backup ok: $(basename "$SNAP")"
+
+- name: Backup service and timer
+  ansible.builtin.copy:
+    dest: "/etc/systemd/system/{{ item.name }}"
+    mode: "0644"
+    content: "{{ item.content }}"
+  loop:
+    - name: swarm-hub-backup.service
+      content: |
+        [Unit]
+        Description=Back up the swarm hub to Spaces
+        ConditionPathExists=/etc/swarm-hub-rclone.conf
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/local/bin/swarm-hub-backup
+    - name: swarm-hub-backup.timer
+      content: |
+        [Unit]
+        Description=Back up the swarm hub every 15 minutes
+        [Timer]
+        OnCalendar=*:0/15
+        RandomizedDelaySec=30
+        Persistent=true
+        [Install]
+        WantedBy=timers.target
+
+- name: Enable backup timer
+  ansible.builtin.systemd:
+    name: swarm-hub-backup.timer
+    enabled: true
+    state: started
+    daemon_reload: true
+
+# --- Litestream streams every DB change to Spaces within ~1 s (the 15-min snapshots stay as a
+# second, independent copy). Restore: litestream restore -config /etc/litestream.yml -o out.db /var/lib/swarm-hub/hub.db
+- name: Litestream package
+  ansible.builtin.apt:
+    deb: "https://github.com/benbjohnson/litestream/releases/download/v{{ hub_litestream_version }}/litestream-v{{ hub_litestream_version }}-linux-amd64.deb"
+    state: present
+
+- name: Litestream config (bucket-scoped Spaces key)
+  ansible.builtin.copy:
+    dest: /etc/litestream.yml
+    owner: root
+    group: swarm-hub
+    mode: "0640"
+    content: |
+      # Managed by Ansible (hub role)
+      dbs:
+        - path: /var/lib/swarm-hub/hub.db
+          replicas:
+            - type: s3
+              bucket: {{ hub_secrets.SPACES_BUCKET }}
+              path: litestream/hub.db
+              endpoint: https://{{ hub_secrets.SPACES_ENDPOINT }}
+              region: {{ hub_secrets.SPACES_ENDPOINT.split('.')[0] }}
+              access-key-id: {{ hub_secrets.SPACES_ACCESS_KEY }}
+              secret-access-key: {{ hub_secrets.SPACES_SECRET_KEY }}
+              sync-interval: 1s
+              snapshot-interval: 6h
+              retention: 72h
+  no_log: true
+  when: hub_secrets.SPACES_ACCESS_KEY is defined
+  notify: Restart litestream
+
+- name: Litestream service (as the hub user, after the hub)
+  ansible.builtin.copy:
+    dest: /etc/systemd/system/litestream.service
+    mode: "0644"
+    content: |
+      [Unit]
+      Description=Litestream: stream the swarm hub DB to Spaces
+      After=swarm-hub.service
+      ConditionPathExists=/etc/litestream.yml
+      [Service]
+      User=swarm-hub
+      ExecStart=/usr/bin/litestream replicate -config /etc/litestream.yml
+      Restart=always
+      RestartSec=5
+      [Install]
+      WantedBy=multi-user.target
+  notify: Restart litestream
+
+- name: Enable Litestream
+  ansible.builtin.systemd:
+    name: litestream
+    enabled: true
+    state: started
+    daemon_reload: true
+
+# --- Daily restore check. Restores from BOTH copies into a temp dir, checks integrity, and compares
+# with the live DB. Writes the timestamp /healthz reads, so a broken backup path fails the uptime check.
+- name: Restore-check script
+  ansible.builtin.copy:
+    dest: /usr/local/bin/swarm-hub-restore-check
+    mode: "0755"
+    content: |
+      #!/bin/bash
+      # Managed by Ansible (hub role)
+      set -euo pipefail
+      D=/var/lib/swarm-hub
+      T=$(mktemp -d); trap 'rm -rf "$T"' EXIT
+      litestream restore -config /etc/litestream.yml -o "$T/stream.db" "$D/hub.db"
+      rclone --config /etc/swarm-hub-rclone.conf --s3-no-check-bucket copyto \
+        "spaces:{{ hub_secrets.SPACES_BUCKET | default('') }}/db/latest.db" "$T/snap.db"
+      live=$(sqlite3 "file:$D/hub.db?mode=ro" "select count(*) from runs")
+      for f in stream snap; do
+        [ "$(sqlite3 "$T/$f.db" "pragma integrity_check")" = ok ] || { echo "$f: integrity check FAILED"; exit 1; }
+        n=$(sqlite3 "$T/$f.db" "select count(*) from runs")
+        echo "$f copy: $n runs (live $live)"
+        [ "$n" -gt 0 ] || [ "$live" -eq 0 ] || { echo "$f: restored copy is empty"; exit 1; }
+      done
+      s=$(sqlite3 "$T/stream.db" "select count(*) from runs")
+      [ "$s" -ge $(( live - 5 )) ] || { echo "stream copy is behind live by more than 5 runs"; exit 1; }
+      mkdir -p "$D/backup"; touch "$D/backup/last_restore_check_ok"
+      echo "restore check ok"
+
+- name: Restore-check service and timer
+  ansible.builtin.copy:
+    dest: "/etc/systemd/system/{{ item.name }}"
+    mode: "0644"
+    content: "{{ item.content }}"
+  loop:
+    - name: swarm-hub-restore-check.service
+      content: |
+        [Unit]
+        Description=Restore the swarm hub backups to a temp dir and verify them
+        ConditionPathExists=/etc/litestream.yml
+        [Service]
+        Type=oneshot
+        ExecStart=/usr/local/bin/swarm-hub-restore-check
+    - name: swarm-hub-restore-check.timer
+      content: |
+        [Unit]
+        Description=Daily swarm hub restore check
+        [Timer]
+        OnCalendar=*-*-* 09:00:00
+        Persistent=true
+        [Install]
+        WantedBy=timers.target
+
+- name: Enable restore-check timer
+  ansible.builtin.systemd:
+    name: swarm-hub-restore-check.timer
+    enabled: true
+    state: started
+    daemon_reload: true
+
+# Caddy from its own apt repo: Ubuntu's package is too old for ACME profiles.
+- name: Caddy apt key
+  ansible.builtin.get_url:
+    url: https://dl.cloudsmith.io/public/caddy/stable/gpg.key
+    dest: /etc/apt/keyrings/caddy.asc
+    mode: "0644"
+
+- name: Caddy apt repo
+  ansible.builtin.apt_repository:
+    repo: "deb [signed-by=/etc/apt/keyrings/caddy.asc] https://dl.cloudsmith.io/public/caddy/stable/deb/debian any-version main"
+    filename: caddy-stable
+    state: present
+
+- name: Install Caddy
+  ansible.builtin.apt:
+    name: caddy
+    state: present
+    update_cache: true
+
+- name: Caddyfile
+  ansible.builtin.template:
+    src: Caddyfile.j2
+    dest: /etc/caddy/Caddyfile
+    mode: "0644"
+  notify: Reload caddy
+
+- name: Enable Caddy
+  ansible.builtin.systemd:
+    name: caddy
+    enabled: true
+    state: started
