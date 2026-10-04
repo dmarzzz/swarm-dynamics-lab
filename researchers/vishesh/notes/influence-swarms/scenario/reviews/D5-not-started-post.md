@@ -1,0 +1,15 @@
+# D5 dispatch-request closeout: not started
+
+2026-10-04. **Execution: blocked before dispatch. Scientific outcome: unavailable. New provider calls and spend: zero.** This is the operational closeout of a prepared dispatch request, not a model result or a replacement for native-D5-01. [Sanitized reconciliation](D5-not-started-reconciliation.json), [eleven-dimension assessment](D5-not-started-quality.json), [resume handoff](../RUN-HANDOFF.md), [frozen scientific plan](../ITERATION-05.md).
+
+The current readback found no native output directory, preflight/start journal, credential-acceptance journal, matching worker, or D5 hub run. The bounded credential handoff expired without delivery. The prior allocation expired and was released after verification; no idle claim is retained. The central dispatch request was not taken up. The separate direct-dispatch exception remains unresolved and is not supplied by the portfolio's general iteration approval.
+
+Planning assigned24 decision slots across six development cases; none entered native collection. Thus started0, native terminal0, valid **not observed**. Do not report0/24 valid as a model failure rate, or pool fixture success into native outcomes. The experiment's frozen packet, prepared files and journal evidence remain intact. No attempt was deleted or rerolled.
+
+Resources: the existing subledger remains USD8 cap, USD3.178320 conservative reservations and198 historical calls, leaving USD4.821680. Q4, D1, D2 and D3 report USD0.779101 actual usage across those198 calls; this actual-usage subtotal is scoped to the current allocation lineage, not the entire earlier research program. Reservations are not refunded. D5's unchanged conservative envelope is USD4.669440; historical capacity alone is not current admission.
+
+No scientific interpretation of D5 is possible. D3's valid negative result and failed D4/S1 gate remain in force. Preparation passed59 scenario tests, a24-decision scripted rehearsal and a no-call deployment preflight at its recorded time; those do not establish present model/schema acceptance or native competence. Current runtime receipts are stale.
+
+Resume only after a current authorized central dispatch window is available, or the specific direct-dispatch exception is actually granted. Then verify duplicate absence again, obtain/renew exclusive idle capacity, preserve the same spending authority, refresh public-plan/source/budget/runtime receipts, arm the bounded exact-alias handoff and dispatch unchanged D5 once. Do not renew a machine merely to wait for an unavailable operator. Keep detailed infrastructure and credential-routing records private.
+
+The shared offline finalize hook records `d5-dispatch-request-217` as blocked, separately from the reserved native-D5-01 identity. Its automatic scaffold does not claim a scientific review of absent data. This completed owning-agent closeout establishes the operational blocker and the limits of the evidence; it does not mark the live-run request fulfilled.

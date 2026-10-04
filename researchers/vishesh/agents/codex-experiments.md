@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: working
+state: blocked
 task: influence-native-rerun
-doing: D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result
-updated: 2026-10-04T08:56Z
+doing: D5 confirmed not started; expired allocation released; authorized central dispatch unavailable and direct exception unresolved; D3 scientific review complete
+updated: 2026-10-04T15:28Z
 ---
 
-See notes/influence-swarms/scenario/RUN-D5.md and reviews/D5-readiness.json. D3 remains the latest native evidence. D5 source 528c4f70, zero model calls during preparation. Next: fresh dedicated-host, preserved-budget and secure-dispatch admission when launch is requested. Researcher review is optional under the current owner directive.
+See notes/influence-swarms/scenario/RUN-HANDOFF.md. D5 source and scope remain frozen; no new calls or spending. No idle resource held. The one-cycle independent analysis and readiness work is complete; actual run requires current authorized dispatch and fresh runtime admission, not generic reapproval or another researcher review.

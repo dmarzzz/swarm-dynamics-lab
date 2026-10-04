@@ -101,9 +101,9 @@
       "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D3-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T14:31:29.036365+00:00",
-      "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "Assess prepared D5; park new attack harness. Read researchers/vishesh/notes/influence-swarms/scenario/DESIGN-TRANSFER.md (PI decision for the next session), the latest native closeout and authoritative SETUP. Registry status is not live admission; preserve existing exact-scope approvals and original cumulative authority.",
+      "checked_at": "2026-10-04T15:28:45.033280+00:00",
+      "checked_commit": "ad201b0303bdd3e27a727957128bab754922a6fb",
+      "next_action": "D5 verified not started; read scenario/RUN-HANDOFF.md and D5-not-started-post.md. Coordinate authorized central dispatch before fresh allocation/admission; direct exception unresolved. D3 scientific review complete; frozen D5 unchanged, no new attack harness.",
       "next_run_approval": "owner"
     },
     {
