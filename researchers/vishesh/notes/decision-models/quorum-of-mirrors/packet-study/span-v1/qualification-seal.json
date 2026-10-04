@@ -1,0 +1,11 @@
+{
+  "corpus_sha256": "50c15127ff4acddeafbb2c9d40a19ccd4caa3bee5e1542ed85a1cf89b3030518",
+  "roots": 20,
+  "calls": 40,
+  "qualification_calls": 40,
+  "evaluation_calls": 0,
+  "qa": "40/40 exact selections and derived facts against typed labels using same-input parser; fresh qualification seed, reused grammar",
+  "operator_individual_case_access_before_run": false,
+  "templates_known": true,
+  "old_evaluation_opened": false
+}

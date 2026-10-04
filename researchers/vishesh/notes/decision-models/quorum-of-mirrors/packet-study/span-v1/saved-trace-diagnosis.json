@@ -1,0 +1,224 @@
+{
+  "evidence_type": "RETROSPECTIVE SOFTWARE PROJECTION, NOT NATIVE REPAIR QUALIFICATION",
+  "transformation": "Retain old literal quotations; explicitly map previously returned unknown source status to null selection; decode only selected clauses. Do not overwrite historical outcomes.",
+  "responses": 35,
+  "original_fully_exact": 33,
+  "projected_fully_exact": 35,
+  "observed_failures": {
+    "QM-R1-01-032": "quoted operating but predicted value0; selected quote deterministically decodes1",
+    "QM-R1-01-034": "unknown status with value0; explicit projection maps unknown status to null selection"
+  },
+  "cause_limit": "Observed output divergences are reproduced. No causal claim about repetition, attention or what a new native model will select.",
+  "rows": [
+    {
+      "id": "QM-R1-01-000",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-001",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-002",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-003",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-004",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-005",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-006",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-007",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-008",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-009",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-010",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-011",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-012",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-013",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-014",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-015",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-016",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-017",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-018",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-019",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-020",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-021",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-022",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-023",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-024",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-025",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-026",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-027",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-028",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-029",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-030",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-031",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-032",
+      "original_valid": true,
+      "original_fully_exact": false,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-033",
+      "original_valid": true,
+      "original_fully_exact": true,
+      "projected_fully_exact": true
+    },
+    {
+      "id": "QM-R1-01-034",
+      "original_valid": false,
+      "original_fully_exact": false,
+      "projected_fully_exact": true
+    }
+  ]
+}

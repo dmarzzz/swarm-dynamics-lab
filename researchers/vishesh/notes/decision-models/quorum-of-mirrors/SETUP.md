@@ -1,3 +1,7 @@
+## Current: SP-01 evidence-selection repair prepared
+
+**RUN after admission.** Owner approved native repair qualification. [Plan](packet-study/span-v1/PLAN.md), [pre-run assessment](reviews/SP-01-pre.md), [saved trace diagnosis](packet-study/span-v1/saved-trace-diagnosis.json). Model selects literal clauses; code normalizes values and status, preserving wrong selections as failures. Forty fresh balanced qualification calls, USD1.92 ceiling, no evaluation.21 offline checks pass. Original142-call ledger and cumulativeUSD9 authority retained; no new addition.
+
 ## Latest: R1 stopped and reviewed
 
 **FINISH attempt; HOLD native expansion.** R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation calls: 24 valid, one unknown/value contract failure, 15 unstarted. All 24 scored decisions were correct, but one concealed a source-value error; 23/24 scored packets were fully exact. New API cost USD0.458142. The larger test did not establish robustness; original failures and missing cases remain intact. [Post-mortem](reviews/R1-01-post.md), [scientific review](results/QM-R1-01/scientific-review.json), [offline repair](packet-study/r1-repair/PLAN.md). Original ledger and both uncertain holds retained; cumulative cap USD8 API + USD1 infrastructure after owner addition. Worker stopped, artifacts reconciled, claim released. Next: concrete repaired extraction/normalization plan and fresh balanced qualification, not an automatic retry.

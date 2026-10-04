@@ -1,0 +1,17 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-SP-01",
+  "authority": "Owner authorized analyzing the failed R1 traces, making the next repair and running native qualification on 2026-10-04. Existing cumulative budget retained.",
+  "additional_usd": 0,
+  "prior_additions_usd": [
+    2,
+    5
+  ],
+  "cumulative_api_cap_usd": 8,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 9,
+  "max_new_calls": 40,
+  "max_new_reserved_usd": 1.92,
+  "retains_original_calls_and_uncertainty": true,
+  "automatic_retry_or_evaluation": false
+}

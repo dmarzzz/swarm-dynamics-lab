@@ -1,0 +1,610 @@
+{
+  "attempt": "QM-SP-01",
+  "stage": "repair_qualification_only",
+  "corpus_sha256": "50c15127ff4acddeafbb2c9d40a19ccd4caa3bee5e1542ed85a1cf89b3030518",
+  "assignments": [
+    {
+      "id": "QM-SP-01-000",
+      "case_id": "bdc6fa91051bfd75-3",
+      "root": "bdc6fa91051bfd75",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "5af0ff02cf7b99700ccd030596baabf56044ef213bdeef1712f6d7d213193605",
+      "input_token_upper_bound": 4630,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-001",
+      "case_id": "026a7454736d1489-3",
+      "root": "026a7454736d1489",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "40808030b447e4847b9fd1fec4a2bd845e9150d8d0557dcf24a4a59b1b47e387",
+      "input_token_upper_bound": 4532,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-002",
+      "case_id": "2a38abf41abbb6a9-1",
+      "root": "2a38abf41abbb6a9",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "c1f55c211373670ba048d0d56dc54a96fccc9dad54b8c5548b712d1ae61d4068",
+      "input_token_upper_bound": 4457,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-003",
+      "case_id": "e633f60a9ed6ee05-3",
+      "root": "e633f60a9ed6ee05",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "73d6053fed767c6958054b4d9c4d04423e8f751f1be197106c4c03ba32982f79",
+      "input_token_upper_bound": 4515,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-004",
+      "case_id": "45ea62e16f979564-1",
+      "root": "45ea62e16f979564",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "2570cb8869d1c50250c1e8e678e32942755b92f5b7ff785644c08f12824e267d",
+      "input_token_upper_bound": 4453,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-005",
+      "case_id": "ea7446224b8137a4-3",
+      "root": "ea7446224b8137a4",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "58c3825b2aaa843c3d25e11f465eb674c5d4028c693a16b8b7d796e3e8e6e555",
+      "input_token_upper_bound": 4568,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-006",
+      "case_id": "7b0e93593b4cf67c-3",
+      "root": "7b0e93593b4cf67c",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "27cb28c8840abb2dce2b929b983fdc813fb0d86f404582d6bac77ef79cc0312b",
+      "input_token_upper_bound": 4570,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-007",
+      "case_id": "45ea62e16f979564-3",
+      "root": "45ea62e16f979564",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "75c3546950bb3a152bbfbf457419d61cf9cca2adebe0ab181f2a2ce84a1eb971",
+      "input_token_upper_bound": 4727,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-008",
+      "case_id": "42bcdea94ece8b71-3",
+      "root": "42bcdea94ece8b71",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "725d0111b5921cb075a9ea41f728ba61a05458263ac69ce9c2496f52f12563cc",
+      "input_token_upper_bound": 4511,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-009",
+      "case_id": "7cefb1c65da85002-3",
+      "root": "7cefb1c65da85002",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "c7b846f2b039a04d3513de93750fdde6861d3bc2c48df1b74a710f596483552e",
+      "input_token_upper_bound": 4568,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-010",
+      "case_id": "bdc6fa91051bfd75-1",
+      "root": "bdc6fa91051bfd75",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "97275493029c76ce7ef707d1eeae5b45d20332fcad9a1a3aff883fd63d1928ad",
+      "input_token_upper_bound": 4424,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-011",
+      "case_id": "2a38abf41abbb6a9-3",
+      "root": "2a38abf41abbb6a9",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "2e30049fa7a7b30cb7942bf7628a5f8ea810e835540d415cfa5ce4f541fa9c46",
+      "input_token_upper_bound": 4731,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-012",
+      "case_id": "24f39f5197bf190e-3",
+      "root": "24f39f5197bf190e",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "7d942708b5d342903b911b9bf777d94c338e0b48e7de722e525aad000001aa13",
+      "input_token_upper_bound": 4536,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-013",
+      "case_id": "b53057a6db032c5a-3",
+      "root": "b53057a6db032c5a",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "043c9c383af168eac52a8f4bf3e60cece0e7a4b25f7a28e59bb8b9730f0fb3a6",
+      "input_token_upper_bound": 4483,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-014",
+      "case_id": "ca22d036d345e0cc-3",
+      "root": "ca22d036d345e0cc",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "022c99df172cc1886a4044b533ead6a81cf9f39cd48df2bc575cb23b1dbb5727",
+      "input_token_upper_bound": 4483,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-015",
+      "case_id": "2e8d9e2af59bd26a-3",
+      "root": "2e8d9e2af59bd26a",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "f4b95fea4edecd39f15f1969e5f50e23da6321eb66d7566e98a81ca2b97088f9",
+      "input_token_upper_bound": 4693,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-016",
+      "case_id": "24f39f5197bf190e-1",
+      "root": "24f39f5197bf190e",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "dcdcbde037840515baf87eedd973fd4b4ce47d5886cd33d9d8bf804bb54fdfaf",
+      "input_token_upper_bound": 4346,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-017",
+      "case_id": "4a2f11337404dd6e-3",
+      "root": "4a2f11337404dd6e",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "8da846c2968908f4350ccea23d1fc3e412bf6249ef111dc2eef212b2ac2747c7",
+      "input_token_upper_bound": 4561,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-018",
+      "case_id": "369c2fb241d646d7-1",
+      "root": "369c2fb241d646d7",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "c5b682173d943edadd388e364154661920007be748a2f351541880140dfb3728",
+      "input_token_upper_bound": 4291,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-019",
+      "case_id": "ea7446224b8137a4-1",
+      "root": "ea7446224b8137a4",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "3cd4c920be6aa630745004c5ba2945325b1cc177cce4379f18c5471dae40afe9",
+      "input_token_upper_bound": 4362,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-020",
+      "case_id": "5a0d35103ecf506c-3",
+      "root": "5a0d35103ecf506c",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "b0ba3dd31f3cf27dfe4e448a94450ec7c72ebdbadc0bb2744dea00aeb8ef5318",
+      "input_token_upper_bound": 4481,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-021",
+      "case_id": "a2e14aea7936be37-1",
+      "root": "a2e14aea7936be37",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "1e42560ead349a6d56ba33391f816abb5a6e39c9ac6c7b7915836a6c1a624c76",
+      "input_token_upper_bound": 4426,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-022",
+      "case_id": "ca22d036d345e0cc-1",
+      "root": "ca22d036d345e0cc",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "e5cdfc993069e512b3f0ef317c1b63e8f244929905bb0b9c496539f7bd739075",
+      "input_token_upper_bound": 4293,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-023",
+      "case_id": "42bcdea94ece8b71-1",
+      "root": "42bcdea94ece8b71",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "ce98d89ddbfc472e4e048b6e8fd55eea85f3af6741e7806b0b6a3fa4d2c4c70a",
+      "input_token_upper_bound": 4321,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-024",
+      "case_id": "88616607c8ba6e80-1",
+      "root": "88616607c8ba6e80",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "a78e511d09256aedcdd2ba42bb1125c8582e9f02d6528f75e5eb4a263e828150",
+      "input_token_upper_bound": 4359,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-025",
+      "case_id": "a2e14aea7936be37-3",
+      "root": "a2e14aea7936be37",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "f882e8baafde87c1cc3a0b964f84cde026c5b2a7490372b39d194d8c8f0814a5",
+      "input_token_upper_bound": 4632,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-026",
+      "case_id": "7cefb1c65da85002-1",
+      "root": "7cefb1c65da85002",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "0ddb735508a73f8a0b8a4da44322dca3447cefef432ea8ac1b75952964b155a2",
+      "input_token_upper_bound": 4362,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-027",
+      "case_id": "287408767912fe2b-3",
+      "root": "287408767912fe2b",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "0767631a1f2cd27cf8a55d3899f42ab734d97d955b64ef206b3e68da22a900a2",
+      "input_token_upper_bound": 4570,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-028",
+      "case_id": "3f06a23fe2bfffa5-3",
+      "root": "3f06a23fe2bfffa5",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "16f23777dea42f8b5fb96b45efac52a367b38d050d742e7aa943f68037744546",
+      "input_token_upper_bound": 4691,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-029",
+      "case_id": "287408767912fe2b-1",
+      "root": "287408767912fe2b",
+      "stage": "qualification",
+      "family": "plans",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "1d4bd1449f0c8145228a1f6d69f6193f4466bd287e13d98a1d0c10d8fe30f1c7",
+      "input_token_upper_bound": 4364,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: plans, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-030",
+      "case_id": "2e8d9e2af59bd26a-1",
+      "root": "2e8d9e2af59bd26a",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "a01b8b7bf3c815c5350a40a84286de3c4690b0d799093e96e09b642e00acfbc4",
+      "input_token_upper_bound": 4419,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-031",
+      "case_id": "e633f60a9ed6ee05-1",
+      "root": "e633f60a9ed6ee05",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "03d898c4b31a8f92118c7129bd3bec8ca6f14d7afd89f594db68ccafc7e444f6",
+      "input_token_upper_bound": 4325,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-032",
+      "case_id": "026a7454736d1489-1",
+      "root": "026a7454736d1489",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "959317bc4e59c792afc22db71b2650e3aaed4108c356cbb0ce43f1f151d53440",
+      "input_token_upper_bound": 4342,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-033",
+      "case_id": "3f06a23fe2bfffa5-1",
+      "root": "3f06a23fe2bfffa5",
+      "stage": "qualification",
+      "family": "entities",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "ce205dc6bca98d34a760eb29ae7610fbe32bf8bc769e0a3ac9f55e20f06b248a",
+      "input_token_upper_bound": 4417,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: entities, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-034",
+      "case_id": "b53057a6db032c5a-1",
+      "root": "b53057a6db032c5a",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "1f68a04b5d0236b0b158f45a77f83b2ebe4110cdfab5424b4410239efef32a05",
+      "input_token_upper_bound": 4293,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-035",
+      "case_id": "7b0e93593b4cf67c-1",
+      "root": "7b0e93593b4cf67c",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "dabd0cf2f3b323e97b5c1b2448b0cfb0dc4da93a73ce32be7aa19564cfb44692",
+      "input_token_upper_bound": 4364,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-036",
+      "case_id": "5a0d35103ecf506c-1",
+      "root": "5a0d35103ecf506c",
+      "stage": "qualification",
+      "family": "corrections",
+      "condition": {
+        "copies": 1,
+        "source_observed": false
+      },
+      "request_sha256": "c80e1e4358eba1907e4f80e250b9b3fcebd4bfe5cad6b5b1ebfbb31005b8b37a",
+      "input_token_upper_bound": 4291,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: corrections, contradictory-claim copies=1, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-037",
+      "case_id": "4a2f11337404dd6e-1",
+      "root": "4a2f11337404dd6e",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 1,
+        "source_observed": true
+      },
+      "request_sha256": "39dfb9a6bd7ded0cfafb9953f38142280e3375244ff00aa870d2f7f3c36770fe",
+      "input_token_upper_bound": 4355,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=1, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-038",
+      "case_id": "369c2fb241d646d7-3",
+      "root": "369c2fb241d646d7",
+      "stage": "qualification",
+      "family": "timelines",
+      "condition": {
+        "copies": 3,
+        "source_observed": false
+      },
+      "request_sha256": "56a61568b6b5bcbff87e0e9446ff7c55d0fba9df9060878970fbf69fcc9f0e17",
+      "input_token_upper_bound": 4481,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: timelines, contradictory-claim copies=3, focal evidence observed=False; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    },
+    {
+      "id": "QM-SP-01-039",
+      "case_id": "88616607c8ba6e80-3",
+      "root": "88616607c8ba6e80",
+      "stage": "qualification",
+      "family": "decimal_units",
+      "condition": {
+        "copies": 3,
+        "source_observed": true
+      },
+      "request_sha256": "df3cbeffdb4c6da5912fd8845ac8060d779ada234d68655e91a11645a6874cd8",
+      "input_token_upper_bound": 4565,
+      "reserve_usd": 0.048,
+      "tldr": "SP-01 literal span selection + code normalization qualification: decimal_units, contradictory-claim copies=3, focal evidence observed=True; compare exact facts/modes/labels/decisions to typed truth and same-input parser, paired authored robustness only."
+    }
+  ],
+  "max_calls": 40,
+  "max_reserved_usd": 1.92,
+  "evaluation_dispatch": false
+}

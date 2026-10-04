@@ -1,0 +1,17 @@
+# SP-01 pre-run assessment
+
+**Ready for native repair qualification after current operational admission.** Owning operator, 2026-10-04. Owner explicitly authorized trace analysis, repair and native qualification; no new budget or researcher sign-off requested.
+
+Preceding [R1 post-mortem](R1-01-post.md) and both failed responses were reviewed. R1-032 supplied the correct operating quote with the wrong numeric value. R1-034 supplied unknown status with a non-null value. Neither was HTTP400. The old decision-level metric could hide the first error; component checks retained it. The transport/contract stop preserved the second and fifteen unstarted assignments.
+
+The [prospective plan](../packet-study/span-v1/PLAN.md) was written before implementation. The new model output is literal clause selection only; software derives facts. The decoder never searches for a replacement correct clause when the model selects the wrong clause. Missing observation is selected as null, and is explicitly distinct from a report's planned/asserted value. An exact grammar parser remains the strongest baseline and already solves this authored task.
+
+Twenty fresh roots/five families × two repetition conditions = forty qualification calls. Every family covers observed-positive, observed-negative, absent-positive claim and absent-negative claim. This repairs R1's incomplete qualification direction coverage. The shared grammar/values remain development mechanisms, not independently sampled field events or semantic holdout novelty. Historical96-case evaluation remains unused.
+
+21 offline checks pass:1,000 packets across ten seeds, typed truth/parser/decoder agreement; old-time/entity/initial-entry selections; false null and plan-as-evidence; cropped uncertainty/negation; output IDs/fields; deterministic pair ordering; reservation envelope/duplicate prevention; source/scope/manifest/account/allocation admission refusals. Saved35-response projection is documented as retrospective software evidence only:33 old exact packets,35 exact after explicit quote/status projection. It neither reruns the old model nor erases the two original failures.
+
+The forty-call frozen corpus passes automated label/parser/decoder checks without individual pre-run operator inspection. Input upper bound4,731 versus7,000 ceiling. Strict all-component acceptance requires40 valid calls,120 source selections/facts,280 report selections/facts,40 decisions/label vectors and20 exact paired roots. Invalid output or transport/accounting failure stops; valid wrong outputs remain scored. No evaluation/retry is authorized by this attempt manifest.
+
+Budget: maximumUSD1.92 new API reservation under unchangedUSD8 API/USD1 infrastructure cap. Original142-call digest andUSD0.99334896 effective exposure pinned; both uncertain calls retained. ExistingUSD2 andUSD5 extension receipts must match; this attempt adds no funds. Exclusive approved-account host/workload, original single-writer ledger custody, deployed hashes, public registration/readback and live provider prices remain final launch checks. The old host is currently claimed by another study; only an unclaimed verified host may execute SP-01, with byte-identical ledger transfer and old-path fencing.
+
+The known realism/precision limitations are not launch failures for this bounded engineering question. Pass supports only the span-selection interface in the declared grammar. Every native result gets full replay, manual miss review, cost/resource reconciliation and an authored scientific closeout.
