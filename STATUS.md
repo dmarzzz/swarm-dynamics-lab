@@ -392,7 +392,7 @@
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:07:47.728732+00:00 | RD6 Q0-A2 reviewed and published: 15/18 qualification, D0 unrun; no worker or allocation held. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:06:15.346937+00:00 | R1 stopped and reviewed; offline guard validated; repaired native design next |
 | vishesh/codex-methods | blocked |  | 2026-10-04 19:55:18.488784+00:00 | Comparison prepared and pushed; awaiting concrete Q0/conditional E0 scope decision; no allocation or native calls |
-| vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK |
+| vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc11-sol | 2026-10-04 19:38:27.157070+00:00 | Preparing owner-requested GPT-6 Sol qualification and ten-agent conditional pilot |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
