@@ -41,10 +41,8 @@
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:53Z | Ship the compositional safety benchmark and qualification |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
-| [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:51Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T03:40Z | Compare Healing evidence repair with practical central baselines |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:52Z | Launch bounded Phantom Coast native pilot |
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:55Z | Plan the next discussion benchmark diagnostic and offline orchestration |
 | [quorum-mirrors-s0](tasks/quorum-mirrors-s0.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:46Z | Prepare and qualify Quorum of Mirrors S0 |
 | [reconcile-dmarz-pi-review-2026-10-04](tasks/reconcile-dmarz-pi-review-2026-10-04.md) | claimed | p1 | admin | vishesh/codex-pi-review | vishesh | 2026-10-04T03:54Z | Incorporate and respond to Dmarz PI recommendations |
@@ -66,8 +64,10 @@
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | open | p1 | experiment |  | dmarz |  | Diagnose v3 Q0 constraint failures before fresh model qualification |
+| [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T03:43Z | Run the revised procurement influence experiment |
+| [phantom-coast-live](tasks/phantom-coast-live.md) | open | p1 | build |  | vishesh | 2026-10-04T03:59Z | Launch bounded Phantom Coast native pilot |
 | [review-influence-q4-dossiers](tasks/review-influence-q4-dossiers.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the four fresh influence qualification dossiers |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Review Right Dissenter RD-1 design and offline prototype |
 | [review-swarm-size-qualification](tasks/review-swarm-size-qualification.md) | open | p1 | review |  | dmarz | 2026-10-04T03:56Z | Independently review the optimal swarm-size qualification package |
@@ -210,6 +210,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
+| dmarz/discussion-bench-v3 | working | plan-discussion-v3-successor | 2026-10-04T03:57Z | Planning a 120-call model diagnostic and laptop-independent cloud supervision |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment stopped and backed up; awaiting scoped deletion approval and correct Dmarz provisioning path |
 | vishesh/codex-theseus | blocked | theseus-v2-iteration | 2026-10-04T03:56Z | V2 built and validated; awaiting explicit additional USD15 API authorization before allocation and qualification |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
@@ -220,7 +221,6 @@
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T03:51Z | Both fleet scripted qualifications verified; committing API qualification launch checkpoint |
 | vishesh/codex-methods | done | antsy-verification-v5 | 2026-10-04T03:51Z | Completed Antsy v5 numerical repair and cost-aware diagnostics; practical successor gated |
 | vishesh/codex-decision-models | blocked | right-dissenter-live-study | 2026-10-04T03:51:21Z | Standalone study registered and implemented; awaiting the pending USD 2 cap approval before dedicated provisioning and native Q0 |
-| dmarz/discussion-bench-v3 | idle |  | 2026-10-04T03:50Z | Q0 results committed; qualification failed, host retired and monitor stopped; stronger-model diagnostic follow-up documented |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:49Z | Finishing frozen qualification and dashboard recovery; next model connection requested after provider refusals |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T03:46Z | Running qualified Sonnet discovery and launching the independently qualified Haiku comparison. |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
@@ -233,7 +233,7 @@
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-quorum-mirrors | blocked | quorum-mirrors-s0 | 2026-10-04 03:48:53.029072+00:00 | S0 plan publicly verified; 32-request package and 23 checks prepared; awaiting separate budget before allocation and native setup |
-| vishesh/codex-phantom-coast | working | phantom-coast-live | 2026-10-04 03:45:59+00:00 | Preparing native pilot; checking budget and dedicated allocation |
+| vishesh/codex-phantom-coast | blocked | phantom-coast-live | 2026-10-04 03:45:59+00:00 | Public plan registered and native worker tested; awaiting study cap and verified dedicated allocation |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
