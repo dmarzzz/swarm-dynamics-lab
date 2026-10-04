@@ -259,6 +259,19 @@ Statuses: `draft`, `proposed` (ready for review), `accepted`, `testing`, `suppor
 - Report every run, including failures. Separate measured results from interpretation.
 - When results land, update the hypothesis status (`supported`, `refuted`) and log it.
 
+### Required pre-run and post-run review
+
+For every experiment attempt (including exploratory S0/S1 work), follow
+[`tooling/agent-experiments/RUN-REVIEW.md`](tooling/agent-experiments/RUN-REVIEW.md).
+Commit a pre-run planning/design assessment, then write a post-mortem covering results, experiment
+quality, failures, causes and the next run. Read the previous post-mortem before launching again.
+Continue diagnosing, repairing and rerunning material execution, design and qualification failures
+within the authorized budget until acceptance checks pass; do not stop at publishing a failed pilot.
+A failed qualification blocks escalation, not bounded repair diagnostics. Preserve each attempt and
+never rerun merely to obtain a favorable scientific result. If access, budget or required input blocks
+repair, record that blocker and the exact next step. Valid null or adverse findings are results, not bugs.
+Use the linked pre-run and post-mortem templates; existing survey/hypothesis gates remain in force.
+
 ## Machine allocation for vishesh's experiments
 
 Owner directive, 2026-10-04 UTC: before every new experiment launch, obtain a fresh, dedicated

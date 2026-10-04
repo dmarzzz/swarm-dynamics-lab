@@ -45,3 +45,7 @@ See [protocol.md](protocol.md). S0 is complete and failed the numerical model-co
 ## Metrics
 
 All-assigned correct selection, loss, constraint violations, abstentions, false NONE, invalid outputs, physical calls, estimated input tokens and episode wall time. Verification correction/corruption counts are [reported separately](results/verification-flips.json). Denominators include repeated measurements of six task clusters.
+
+## Run review and repair status
+
+[Retrospective S0 post-mortem](reviews/S0-attempt-1-post.md) tracks unresolved capability and design issues. Publication completed; qualification remains failed. Future attempts follow the shared pre-run/post-run repair cycle and preserve this attempt.

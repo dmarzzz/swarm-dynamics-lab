@@ -1,5 +1,14 @@
 # Analysis, reporting and replication checklists
 
+## Every attempt, including pilots
+
+- [ ] Read the preceding post-mortem and unresolved repair ledger.
+- [ ] Complete and commit the [pre-run assessment](templates/pre-run.md).
+- [ ] After execution, reconcile all assignments and write the [post-mortem](templates/post-mortem.md).
+- [ ] Diagnose, repair and rerun defects under the [run-review cycle](RUN-REVIEW.md); link acceptance evidence.
+- [ ] Preserve failed attempts and valid negative results; do not advance with unresolved qualification failures.
+- [ ] Record blockers and resumable next actions when existing authorization or resources are insufficient.
+
 ## Before collecting confirmatory data
 
 - [ ] The research question, target population, estimand and smallest useful effect are explicit.

@@ -24,6 +24,17 @@ run-workers.sh        one worker per core in tmux on a server
 results/              local outputs (episodes/, pulled/, <stage>.md, <stage>_cells.csv, <stage>_tradeoff.png)
 ```
 
+## Review and repair every attempt
+
+Follow the shared [run-review cycle](../../tooling/agent-experiments/RUN-REVIEW.md).
+Before each launch, complete and commit a [pre-run assessment](../../tooling/agent-experiments/templates/pre-run.md)
+in `reviews/<attempt>-pre.md` under the experiment (or owned exploratory notes). After every attempt,
+including a failure, complete a [post-mortem](../../tooling/agent-experiments/templates/post-mortem.md).
+Turn its repair ledger into the next pre-run assessment. Continue bounded diagnosis and repair until
+material defects are resolved; do not advance scientific stages with failed qualification gates.
+Keep all attempts, and distinguish valid negative findings from implementation or design faults.
+This is a required operator workflow; existing coordinator scripts do not mechanically enforce the forms.
+
 ## The steps, in order
 
 **0. Read.** This file, the design guide's *Experimental design* section, and `docs/REPORTING.md` in
@@ -86,7 +97,8 @@ python3 src/coordinator.py stage S0          # clean-task validation
                                              # add --at-boot to bring them back after a reboot
 ```
 Watch the hub dashboard. S0 must show the clean task done (both arms commit and are mostly right). If
-not, fix the simulator before going on.
+not, diagnose the simulator, model, adapter, fixtures and evaluator in the post-mortem. Repair the
+responsible component and run a new recorded qualification; do not assume the simulator is the cause.
 
 **7. S1 development.** `python3 src/coordinator.py stage S1`, then `python3 src/analyze.py --stage S1`.
 Use S1 to debug, and to estimate the discordant-pair rate and the variance of the per-task difference.

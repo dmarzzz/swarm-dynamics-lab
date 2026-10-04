@@ -6,6 +6,7 @@ Start with [the main guide](GUIDE.md), copy [the preregistration template](templ
 
 | Artifact | Purpose |
 | --- | --- |
+| [RUN-REVIEW.md](RUN-REVIEW.md) | Required pre-run assessment, post-mortem and repair/rerun cycle |
 | [GUIDE.md](GUIDE.md) | Definitions, study lifecycle, statistical design, reliability, and replication |
 | [HARNESS.md](HARNESS.md) | Framework choices, architecture, isolation, deterministic startup, execution and replay |
 | [LITERATURE.md](LITERATURE.md) | Evidence synthesis and annotated bibliography |

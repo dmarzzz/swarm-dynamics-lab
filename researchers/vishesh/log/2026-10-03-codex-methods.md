@@ -121,3 +121,7 @@ Adaptive-quorum qualification completed at code c9dc5be: 144 Laya and 144 script
 ## Factual API quorum v2
 
 Researched primary ant, debate/vote and stable-tool methods; built 5/9-agent factual API procurement with constraints, mock invoice scoring, seven controls and variable evidence arrival. Seven invariant checks pass. Frozen local S0: 168 outcomes, 828 calls, zero schema invalid, clean competence FAILED. Published all counts and setup boundaries including unbalanced target labels and evidence-round (not wall-clock) deadline. Fixed/adaptive each 16/24; central 12/24; targeted post-test 0/24. Six task clusters only. No S1 launch; next is atomic extraction/tool-output diagnosis on disjoint balanced fixtures, not a quorum efficacy claim. Manual scoped sync and secret audit retained.
+
+## Shared run-review standard
+
+At the human’s explicit request, updated protected AGENTS.md and the worker README to require pre-run design assessment, post-mortem and continued bounded repair/rerun. Added reusable forms and failure taxonomy; distinguished negative findings from defects, and stage gating from repair diagnostics. Added retrospective API v2 post-mortem; its qualification issues remain open, not fixed by documentation. Manual scoped checked publication.
