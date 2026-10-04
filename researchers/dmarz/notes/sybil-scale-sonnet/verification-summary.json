@@ -1,0 +1,174 @@
+{
+  "runs": [
+    {
+      "run": "sybil-scale-sonnet/5fe6c41a",
+      "status": "done",
+      "params": {
+        "stage": "Q0",
+        "backend": "anthropic",
+        "batch": "q0-001",
+        "source_hash": "a1a619f7e39bb608ba48871766e8d1366d923db2df0cb00524dd5a65faffb230",
+        "code": "f18f66da9de3fe82eebebc0f8113710cca3ab1c1"
+      },
+      "metrics": {
+        "episodes": 64,
+        "invalid": 0,
+        "model_calls": 64,
+        "cost_usd": 1.983438,
+        "qualification_passed": 1
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      }
+    },
+    {
+      "run": "sybil-scale-sonnet/55c86cfa",
+      "status": "done",
+      "params": {
+        "stage": "S0",
+        "backend": "scripted",
+        "batch": "s0-001",
+        "source_hash": "a1a619f7e39bb608ba48871766e8d1366d923db2df0cb00524dd5a65faffb230",
+        "code": "f18f66da9de3fe82eebebc0f8113710cca3ab1c1"
+      },
+      "metrics": {
+        "episodes": 264,
+        "invalid": 0,
+        "model_calls": 0,
+        "cost_usd": 0,
+        "qualification_passed": 1
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      }
+    },
+    {
+      "run": "sybil-scale-sonnet/afd8d5b9",
+      "status": "done",
+      "params": {
+        "stage": "S1",
+        "backend": "anthropic",
+        "batch": "s1-001",
+        "source_hash": "a1a619f7e39bb608ba48871766e8d1366d923db2df0cb00524dd5a65faffb230",
+        "code": "f18f66da9de3fe82eebebc0f8113710cca3ab1c1"
+      },
+      "metrics": {
+        "episodes": 2400,
+        "invalid": 0,
+        "model_calls": 2400,
+        "cost_usd": 56.271264,
+        "qualification_passed": 0,
+        "rare_accuracy": 0.47111111111111115
+      },
+      "verified_artifacts": [
+        "assignments.jsonl.gz",
+        "episodes.jsonl.gz",
+        "worlds.jsonl.gz",
+        "summary.json",
+        "analysis.json",
+        "final_frame.png",
+        "replay.gif",
+        "badges_hidden.png",
+        "progress.png",
+        "initial_frame.png"
+      ],
+      "verified_images": {
+        "initial_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "final_frame.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        },
+        "replay.gif": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 33
+        },
+        "badges_hidden.png": {
+          "width": 1800,
+          "height": 1200,
+          "frames": 1
+        }
+      }
+    }
+  ],
+  "budget": {
+    "attempted_calls": 2464,
+    "reserved_usd": 204.840948,
+    "actual_usd": 58.254702,
+    "usage_reported_calls": 2464
+  },
+  "reconciliation": {
+    "assigned": 2400,
+    "rows": 2400,
+    "recomputed": 2400,
+    "source_hash": "a1a619f7e39bb608ba48871766e8d1366d923db2df0cb00524dd5a65faffb230",
+    "analysis_matches": true
+  }
+}

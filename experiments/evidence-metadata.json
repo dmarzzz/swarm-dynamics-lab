@@ -928,17 +928,28 @@
       "assessor": "dmarz/scale-sonnet",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Whether the Haiku sybil-scale-api budget-scaling findings hold with claude-sonnet-4-6 on identical worlds and packets.",
-        "rationale": "Unrun replication: only offline scripted S0 has executed. It does not inherit the Haiku study's score or sample count."
+        "score": 2,
+        "claim": "In the repeated-fact synthetic environment, the Haiku population-scaling result replicates with claude-sonnet-4-6 on identical assignments: proportional strong checks raise N972 specialist accuracy by +52.8 pp (Haiku +51.4 pp); Sonnet is more accurate than Haiku in 73 of 100 cells, mainly where fabrications are admitted.",
+        "rationale": "Same-owner audit of 24 paired world roots with all 2,400 outcomes valid and an exact local recomputation; assignments verified identical to the Haiku cohort. One synthetic task family and graph, scripted identities and checks, admission independent of the model, descriptive unadjusted intervals across 100 cells, and an owner waiver in place of independent review limit generalization."
       },
-      "sample_size_summary": "Observed: none (offline scripted S0 264/264 only). Planned: 24 paired worlds \u00d7 100 conditions = 2,400 S1 calls plus 64 Q0 calls; 36\u2013972 simulated identities feeding one synthesizer.",
+      "sample_size_summary": "Observed: 24 paired world roots from one synthetic task family; 2,400/2,400 S1 outcomes analyzed, zero missing; 100 conditions at 36-972 simulated identities feeding one synthesizer model. Q0 separately 64/64. Cross-model comparison pairs the same 24 roots with the separate Haiku cohort (sybil-scale-api/56defc84); cohorts not pooled.",
       "sources": [
-        "researchers/dmarz/notes/sybil-scale-sonnet/README.md",
-        "researchers/dmarz/notes/sybil-scale-sonnet/preregistration.md",
-        "researchers/dmarz/notes/sybil-scale-sonnet/experiment.yaml"
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "complete_valid_replication_result_claim_released",
+      "source_sha256": {
+        "researchers/dmarz/notes/sybil-scale-sonnet/RESULTS.md": "319f503cea4feaf401e8ee410be8a54c62a66ed173b9e7d6e1c5c1a3a6c067e7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/verification-summary.json": "31f9824e0c6a82f07385049d6448086c6964aed459598b0dec18fd03b0edddc2",
+        "researchers/dmarz/notes/sybil-scale-sonnet/results-summary.json": "ecebc1b42bbf46884c8506690b78f3f3f30143d23faa0619e7b219b6a75b9eb7",
+        "researchers/dmarz/notes/sybil-scale-sonnet/model-comparison-cells.csv": "cf7224929877138cbc673480beb2013c8a98a64b9600278efd53b98e78c0be60",
+        "researchers/dmarz/notes/sybil-scale-sonnet/reviews/s1-001-post.md": "e284741a4975be8c67e576d8c4e0b667629439fba262bb4ef7f67e77eaed4b1c",
+        "researchers/dmarz/notes/sybil-scale-sonnet/design.yaml": "4429931b65ec4333069bac2d1ea3e1fbca90808158df5b82a863c6f391407278"
+      }
     },
     {
       "id": "sybil-budget-api",

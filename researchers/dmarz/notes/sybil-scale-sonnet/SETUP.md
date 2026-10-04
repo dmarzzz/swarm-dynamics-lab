@@ -14,12 +14,12 @@ Status: exploratory model replication; setup record maintained per [the setup ru
 
 | Gate | Status | Evidence, timestamp and assessor | Blocker / next action |
 |---|---|---|---|
-| G0 Question and applicable research gates | pass (exploratory scope) | README, preregistration; 2026-10-04 dmarz/scale-sonnet | none for exploratory S0/Q0/S1; S2 stays disabled |
+| G0 Question and applicable research gates | pass (exploratory scope); cross-researcher review waived by owner | README, preregistration; 2026-10-04 dmarz/scale-sonnet. Waiver: in the operating session at about 05:40Z the operator proposed "I waive cross-researcher review for sybil-newcomer-sonnet, sybil-scale-sonnet and sybil-budget-sonnet ..." and dmarz replied "Yes I approved go for it". S1 launched at 05:40:14Z, before this waiver was recorded here; recorded at close-out. Owner waiver only: no independent review was performed. | none; S2 stays disabled |
 | G1 Plan written before implementation | pass | README/preregistration/reviews committed before any fleet stage | — |
 | G2 Instrument and offline checks | pass | 9/9 selftests; local S0 264/264; assignment/packet/prompt equivalence with Haiku study ([local-s0-001-post](reviews/local-s0-001-post.md)) | — |
 | G3 Current attempt admission | pass (S0, Q0, S1) | claim dmarz-sybil-scale-sonnet (agentops PR 164); revision f18f66da; runtime a1a619f7 for all stages; pre-run files in reviews/ | re-check for any new attempt |
 | G4 Qualification before scientific escalation | pass | Q0 run 5fe6c41a 64/64, every size 1.0 ([post](reviews/q0-001-post.md)) | — |
-| G5 Reconciliation and closeout | pending | S1 run afd8d5b9 running since 05:40Z | verify, results, post-mortem, release claim |
+| G5 Reconciliation and closeout | pass | S1 run afd8d5b9 2400/2400 valid; publish+verify passed; local Python 3.12 recomputation matches ([s1-001-post](reviews/s1-001-post.md), [RESULTS](RESULTS.md)); 2026-10-04 dmarz/scale-sonnet | claim released |
 
 ## Design and instrument index
 
