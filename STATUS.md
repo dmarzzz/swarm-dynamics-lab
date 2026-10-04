@@ -246,6 +246,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split-opus | working |  | 2026-10-04T08:20Z | Phase 1 of market-split-opus (Opus replication of the Sonnet market-splitting pilot on fresh markets); plan, offline checks and scripted rehearsal only, no model call before the reviewer's go |
 | dmarz/scale-xl | working |  | 2026-10-04T08:00Z | sybil-scale-xl amendment A1 (Opus 5.5, trimmed, est. USD 186-270, chosen by dmarz): S0-a1 next |
 | dmarz/d1-opus | working |  | 2026-10-04T07:40Z | D1-Opus (discussion-v3-d1-opus) prepared; zero-model rehearsal on sim-dmarz-9, then stop before any paid call for dmarz go-ahead |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
