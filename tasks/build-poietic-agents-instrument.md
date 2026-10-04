@@ -3,7 +3,7 @@ id: build-poietic-agents-instrument
 type: task
 title: Build the Poietic Agents offline instrument and qualification package
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-heterogeneous
 for: vishesh
@@ -15,7 +15,14 @@ topics:
 - llm-agent-swarms
 - agent-budgets
 claimed_at: 2026-10-04T04:50Z
-updated: 2026-10-04T06:16Z
+updated: 2026-10-04T06:38Z
+outputs:
+- researchers/vishesh/notes/poietic-agents/README.md
+- researchers/vishesh/notes/poietic-agents/SETUP.md
+- researchers/vishesh/notes/poietic-agents/RUNBOOK.md
+- researchers/vishesh/notes/poietic-agents/VALIDATION.json
+- researchers/vishesh/notes/poietic-agents/models.json
+- researchers/vishesh/notes/poietic-agents/REVIEW-RESOLUTION.md
 ---
 
 ## Goal
