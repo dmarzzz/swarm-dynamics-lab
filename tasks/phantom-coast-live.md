@@ -3,9 +3,9 @@ id: phantom-coast-live
 type: task
 title: Launch bounded Phantom Coast native pilot
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-phantom-coast
@@ -13,9 +13,10 @@ depends_on: []
 topics:
 - decision-models
 - collective-decision
-updated: 2026-10-04T03:59Z
+updated: 2026-10-04T04:04Z
 history:
 - '2026-10-04T03:59Z released by vishesh/codex-phantom-coast: Native implementation and public plan are published; 46 offline checks pass. No model calls. Awaiting Phantom Coast study spending cap and verified dedicated allocation; see LIVE-READINESS.md.'
+claimed_at: 2026-10-04T04:04Z
 ---
 
 ## Goal
