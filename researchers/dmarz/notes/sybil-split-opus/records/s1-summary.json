@@ -1,0 +1,70 @@
+{
+  "analyzed": 2688,
+  "cost_usd": 44.310604,
+  "elapsed_seconds": 2126.4045946530005,
+  "episodes": 2688,
+  "errors": [],
+  "experiment": "sybil-split-opus",
+  "failed": 0,
+  "graded": 2688,
+  "initial_study_accounting": {
+    "actual_usd": 1.075316,
+    "attempted_calls": 61,
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 60
+    },
+    "committed_usd": 1.075316,
+    "input_tokens": 255419,
+    "output_tokens": 2682,
+    "reserved_usd": 10.81762,
+    "transport_attempts": 61,
+    "usage_reported_calls": 61
+  },
+  "input_tokens": 10108086,
+  "invalid": 0,
+  "invariant_violations": [],
+  "model_calls": 2688,
+  "not_started": 0,
+  "output_tokens": 193913,
+  "params": {
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "code": "75d516952ab847aa90fe14cc30569a83f6b9d5e7",
+    "source_hash": "95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089",
+    "stage": "S1"
+  },
+  "passed": true,
+  "planned": 2688,
+  "primary_contrast": 0.4097222222222222,
+  "probe": null,
+  "qualification": null,
+  "qualification_passed": null,
+  "rare_accuracy": 0.5208333333333334,
+  "rare_wrong": 0.2873263888888889,
+  "reason": null,
+  "reporting_errors": [],
+  "request_bytes_mean": 6390.916666666667,
+  "started": 2688,
+  "study_accounting": {
+    "actual_usd": 45.38592,
+    "attempted_calls": 2749,
+    "calls_by_stage": {
+      "P0": 1,
+      "Q0": 60,
+      "S1": 2688
+    },
+    "committed_usd": 45.38592,
+    "input_tokens": 10363505,
+    "output_tokens": 196595,
+    "reserved_usd": 482.821564,
+    "transport_attempts": 2749,
+    "usage_reported_calls": 2749
+  },
+  "terminal": 2688,
+  "transport_attempts": 2688,
+  "visualization": {
+    "frames": 33,
+    "mapping": "v1"
+  }
+}

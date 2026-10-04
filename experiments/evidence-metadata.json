@@ -2027,7 +2027,8 @@
       "id": "sybil-split-opus",
       "title": "Identity splitting with fixed attacker resources (Opus 5.5)",
       "documents": [
-        "researchers/dmarz/notes/sybil-split-opus/README.md"
+        "researchers/dmarz/notes/sybil-split-opus/README.md",
+        "researchers/dmarz/notes/sybil-split-opus/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-split-opus"
@@ -2035,22 +2036,25 @@
       "registration_paths": [
         "researchers/dmarz/notes/sybil-split-opus/experiment.yaml"
       ],
-      "assessor": "dmarz/pipeline-split",
+      "assessor": "dmarz/orchestrator-2",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
+        "score": 2,
         "claim": "Splitting one attacker's fixed 27 report rows, 27 attachment edges and 27 verification attempts from 1 to 27 identities raises rare-skill wrong answers of an Opus 5.5 synthesizer more under degree-based than under coverage-based admission checks.",
-        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made."
+        "rationale": "One complete exploratory run: 24 paired synthetic roots in each of two graph families, all 2,688 S1 outcomes valid and verified; primary (degree minus coverage change in rare-skill wrong answers from 1 to 27 identities, informative checks, 12 checks) +41.0 pp (descriptive 95% interval +27.8 to +54.9), positive in both families. Exploratory, one population size, one fabrication type, one attachment rule, attacker-internal links free, no published-defense comparator, one model configuration, not independently reviewed."
       },
-      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic roots in each of two graph families \u00d7 56 conditions = 2,688 S1 calls at 108 honest simulated identities and one synthesizer; separate Q0 of 60 calls on 10 roots and a one-call probe. Roots are the independent units, not calls or identities.",
+      "sample_size_summary": "Observed: 48 independent roots (24 ring + 24 community) x 56 conditions = 2,688 valid S1 outcomes (1,901 distinct packets; 767 packets seen more than once, 727 of them answered identically); Q0 60/60 on 10 roots; P0 1/1. Roots are the independent units; calls, identities and rows are not.",
       "sources": [
         "researchers/dmarz/notes/sybil-split-opus/README.md",
-        "researchers/dmarz/notes/sybil-split-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-split-opus/RESULTS.md",
         "researchers/dmarz/notes/sybil-split-opus/design.yaml",
         "researchers/dmarz/notes/sybil-split-opus/experiment.yaml",
+        "researchers/dmarz/notes/sybil-split-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-split-opus/records/s1-analysis.json",
+        "researchers/dmarz/notes/sybil-split-opus/reviews/chain-001-post.md",
         "researchers/dmarz/notes/sybil-split-opus/reviews/chain-001-pre.md"
       ],
-      "status_at_assessment": "prepared_unrun"
+      "status_at_assessment": "complete_exploratory"
     },
     {
       "id": "poietic-agents",

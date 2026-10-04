@@ -1,0 +1,112 @@
+{
+  "analyzed": 1853,
+  "cost_usd": 0,
+  "elapsed_seconds": 96.77827247299956,
+  "episodes": 1853,
+  "errors": [],
+  "experiment": "sybil-split-opus",
+  "failed": 0,
+  "graded": 1853,
+  "initial_study_accounting": {},
+  "input_tokens": 0,
+  "invalid": 0,
+  "invariant_violations": [],
+  "model_calls": 0,
+  "not_started": 0,
+  "output_tokens": 0,
+  "params": {
+    "backend": "scripted",
+    "batch": "s0-001",
+    "code": "75d516952ab847aa90fe14cc30569a83f6b9d5e7",
+    "source_hash": "95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089",
+    "stage": "S0"
+  },
+  "passed": true,
+  "planned": 1853,
+  "primary_contrast": 0.40625,
+  "probe": {
+    "count": 1,
+    "input_tokens": null,
+    "output_tokens": null,
+    "passed": true
+  },
+  "qualification": {
+    "cells": [
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "full",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "common_only",
+        "withheld_fields": 30
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "sparse",
+        "withheld_fields": 10
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow1",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow3",
+        "withheld_fields": 0
+      },
+      {
+        "count": 10,
+        "exact_packet_rate": 1.0,
+        "expected": 10,
+        "fact_accuracy": 1.0,
+        "missing_abstention": 1.0,
+        "passed": true,
+        "shape": "multirow9",
+        "withheld_fields": 0
+      }
+    ],
+    "passed": true
+  },
+  "qualification_passed": 1,
+  "rare_accuracy": 0.252046130952381,
+  "rare_wrong": 0.5796130952380952,
+  "reason": null,
+  "reporting_errors": [],
+  "request_bytes_mean": 6398.830545062062,
+  "started": 1853,
+  "study_accounting": {},
+  "terminal": 1853,
+  "transport_attempts": 0,
+  "visualization": {
+    "frames": 33,
+    "mapping": "v1"
+  }
+}
