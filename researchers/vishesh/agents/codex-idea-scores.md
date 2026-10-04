@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: specify-swarm-size-task-contracts
-doing: Specifying EX-25 correctness contracts and qualification calibration
+doing: Completed EX-25 task contracts and qualification design; no runs
 updated: 2026-10-04T02:55Z
 ---
 
