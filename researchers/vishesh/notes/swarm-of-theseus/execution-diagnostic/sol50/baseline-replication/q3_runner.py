@@ -52,7 +52,11 @@ class Calls:
   except Exception as error:
    result={'error':type(error).__name__,'actual_usd':None};write_new(self.root/(ident+'-response.json'),result);self.ledger.settle(ident,None);raise ValueError('ambiguous_transport') from None
   write_new(self.root/(ident+'-response.json'),result);cost=result.get('actual_usd')
-  if type(cost) not in (int,float) or cost<0 or cost>float(c.PER_CALL):self.ledger.settle(ident,None);raise ValueError('unknown_or_excess_cost')
+  if type(cost) not in (int,float) or cost<0 or cost>float(c.PER_CALL):
+   self.ledger.settle(ident,None)
+   error=result.get('error')
+   if isinstance(error,str) and error in {'http_'+str(n) for n in range(400,600)}:raise ValueError(error+'_uncertain_cost')
+   raise ValueError('unknown_or_excess_cost')
   self.ledger.settle(ident,cost)
   if result.get('error'):raise ValueError('provider_error')
   return parse(result)

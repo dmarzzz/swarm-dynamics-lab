@@ -78,4 +78,16 @@ class Q3Tests(unittest.TestCase):
    with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(reply).encode())):
     with self.assertRaises(ValueError):caller('release','question',{'position':'p'},'handover')
    self.assertEqual(float(caller.ledger.exposure()),.001);self.assertEqual(caller.count,1);self.assertTrue((root/(a.ATTEMPT+'-0000-response.json')).exists());caller.ledger.db.close()
+ def test_http_failure_preserves_status_and_unknown_cost_without_retry(self):
+  class Reporter:
+   def report(self,*args,**kwargs):return True
+  p=packet();r,g=evidence(p)
+  with tempfile.TemporaryDirectory() as tmp,patch.dict(os.environ,{'THESEUS_R3_CAPABILITY':'synthetic-test-only'}):
+   root=Path(tmp);caller=runner.Calls(root,r,g,root/'ledger.sqlite',Reporter())
+   reply={'error':'http_400','actual_usd':None,'diagnostic':{'http_status':400,'category':'unclassified'}}
+   with patch('urllib.request.urlopen',return_value=io.BytesIO(json.dumps(reply).encode())) as dispatch:
+    with self.assertRaisesRegex(ValueError,'http_400_uncertain_cost'):caller('release','question',{'position':'p'},'handover')
+    dispatch.assert_called_once()
+   self.assertEqual(caller.ledger.exposure(),c.PER_CALL);self.assertEqual(caller.count,1)
+   self.assertEqual(caller.ledger.db.execute('SELECT status FROM r3_calls').fetchone()[0],'ambiguous');caller.ledger.db.close()
 if __name__=='__main__':unittest.main()

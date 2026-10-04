@@ -1,0 +1,24 @@
+{
+  "evidence_type": "scripted full worker-caller custody/replay fixture; no provider calls",
+  "scripted_calls": 104,
+  "families_passed": 3,
+  "phases": {
+    "learn": 18,
+    "select": 24,
+    "attest": 29,
+    "decide": 24,
+    "question": 3,
+    "teach": 3,
+    "commit": 3
+  },
+  "maximum_request_bytes": 5908,
+  "exact_replayed_requests": 104,
+  "replay_disagreements": 0,
+  "native_calls": 0,
+  "tests_passed": 23,
+  "legacy_actual_request_exact_reconstruction": true,
+  "legacy_actual_request_rejected_locally": true,
+  "repaired_actual_request_validates": true,
+  "actual_saved_request_sha256": "754b2c12e6c758d835c09670a46a795b03bd5ced6898956e5c1931689a013c1f",
+  "native_repair_calls": 0
+}

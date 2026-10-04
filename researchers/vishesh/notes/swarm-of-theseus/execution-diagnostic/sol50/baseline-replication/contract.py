@@ -17,12 +17,15 @@ def wire(phase,family,packet):
  'teach':'Return {"note":{"witnesses":[two positions]},"explanation":string} within1200serialized characters. Use only your own note and observations. Answer a question only if delivered.',
  'commit':'Return {"note":{"witnesses":[two positions]}}. Use only delivered inheritance/current observations. No inherited information means an uninformed provisional choice, not access to history.'}
  if phase not in contracts:raise ValueError('phase')
- body={'model':'openai/gpt-6-sol','messages':[{'role':'system','content':COMMON+' '+RULES[family]+' '+contracts[phase]},{'role':'user','content':json.dumps(packet,separators=(',',':'))}],'max_tokens':512,'reasoning':{'effort':'none'},'provider':{'order':['OpenAI'],'allow_fallbacks':False,'require_parameters':True},'response_format':{'type':'json_object'},'stream':False}
+ body={'model':'openai/gpt-6-sol','messages':[{'role':'system','content':'Return exactly one JSON object and no surrounding prose. '+COMMON+' '+RULES[family]+' '+contracts[phase]},{'role':'user','content':json.dumps(packet,separators=(',',':'))}],'max_tokens':512,'reasoning':{'effort':'none'},'provider':{'order':['OpenAI'],'allow_fallbacks':False,'require_parameters':True},'response_format':{'type':'json_object'},'stream':False}
  validate_wire(body);return body
 
 def validate_wire(body):
  expected={'model':'openai/gpt-6-sol','max_tokens':512,'reasoning':{'effort':'none'},'provider':{'order':['OpenAI'],'allow_fallbacks':False,'require_parameters':True},'response_format':{'type':'json_object'},'stream':False}
  if any(body.get(k)!=v for k,v in expected.items()):raise ValueError('route_or_output_contract')
+ messages=body.get('messages')
+ if not isinstance(messages,list) or not messages or any(not isinstance(m,dict) or not isinstance(m.get('content'),str) for m in messages):raise ValueError('message_contract')
+ if not any(m.get('role')=='system' and 'JSON' in m['content'] for m in messages):raise ValueError('json_instruction_missing')
  if len(json.dumps(body,separators=(',',':')).encode())>MAX_INPUT_BYTES:raise ValueError('oversized_no_truncation')
  return True
 

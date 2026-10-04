@@ -1,11 +1,29 @@
 """Local credential consumer; funded Q3 authority required before key access. No retries."""
-import argparse,hmac,json,time,urllib.request,urllib.error
+import argparse,hashlib,hmac,json,time,urllib.request,urllib.error
 from pathlib import Path
 from http.server import BaseHTTPRequestHandler,HTTPServer
 import admission as a,contract as c
 from q3_runner import verify_original_ledger
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):raise ValueError('redirect_refused')
+
+def safe_http_error(error):
+ """Bounded metadata only: never return provider text, headers or request content."""
+ status=error.code if type(error.code) is int and 400<=error.code<=599 else 0
+ result={'http_status':status,'category':'unclassified','body_prefix_sha256':None,'body_truncated':None}
+ try:
+  raw=error.read(8193)
+  result['body_truncated']=len(raw)>8192
+  result['body_prefix_sha256']=hashlib.sha256(raw[:8192]).hexdigest()
+  if len(raw)<=8192:
+   try:value=json.loads(raw)
+   except (ValueError,UnicodeError):value=None
+   code=value.get('error',{}).get('code') if isinstance(value,dict) and isinstance(value.get('error'),dict) else None
+   allowed={'invalid_request_error','unsupported_parameter','invalid_json_schema','rate_limit_exceeded','model_not_found','insufficient_quota'}
+   if isinstance(code,str) and code in allowed:result['category']=code
+ except Exception:result['category']='diagnostic_read_failed'
+ finally:error.close()
+ return result
 
 def payload_body(payload,receipt,next_index):
  if payload.get('id')!=a.ATTEMPT+'-'+str(next_index).zfill(4) or payload.get('attempt')!=a.ATTEMPT:raise ValueError('call_sequence')
@@ -46,7 +64,7 @@ def serve(receipt_path,grant_path,packet_path,ledger_path,credential,capability)
      if type(cost) not in (int,float) or cost<0 or cost>float(c.PER_CALL):raise ValueError('cost_contract')
      ledger.settle(ident,cost);result={'error':None,'actual_usd':cost,'response':value,'finished_epoch':time.time()}
     except urllib.error.HTTPError as error:
-     result={'error':'http_'+str(error.code),'actual_usd':None,'finished_epoch':time.time()};error.close();ledger.settle(ident,None);stopped=True
+     diagnostic=safe_http_error(error);result={'error':'http_'+str(diagnostic['http_status']),'actual_usd':None,'finished_epoch':time.time(),'diagnostic':diagnostic};ledger.settle(ident,None);stopped=True
    except Exception as error:
     result={'error':type(error).__name__,'actual_usd':None,'finished_epoch':time.time()};stopped=True
     if started:
