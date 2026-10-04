@@ -54,6 +54,17 @@ class Tests(unittest.TestCase):
             self.assertEqual(len({ins.digest(a['world']) for a in cells}),1)
             self.assertEqual(len({a['prompt'] for a in cells if a['arm']=='dedup'}),1)
 
+    def test_historical_main_unchanged_fresh_gate_and_full_cost_envelope(self):
+        historical=d.read(r.ROOT.parent/'results/assignments.json')['openrouter']
+        self.assertEqual(historical[6:],self.aa[6:])
+        self.assertNotEqual(historical[0]['world']['seed'],self.aa[0]['world']['seed'])
+        bounds=[]
+        for a in self.aa:
+            size=len(ins.canonical(r.body_for('openrouter',a)))
+            self.assertLessEqual(size,16000)
+            bounds.append(((size+2048)*6+128*15)/1e6)
+        self.assertLessEqual(sum(bounds[:149]),9)
+
     def test_wire_body_subset_and_fail_closed_unknown_keywords(self):
         for route in ('pool','openrouter'):
             body=r.body_for(route,self.aa[0])
@@ -145,6 +156,26 @@ class Tests(unittest.TestCase):
             terminal=r.execute_cohort('openrouter');op.assert_not_called()
         self.assertEqual(terminal['failed'],1)
         self.assertEqual(d.read(self.base/'openrouter/outcomes'/f'{a["id"]}.json')['status'],'interrupted_unknown')
+
+    def test_full_mock_success_stops_at_remaining149_and_keeps150_denominator(self):
+        seq=iter(self.aa)
+        with patch('urllib.request.build_opener') as op,patch('sys.stdout',new=io.StringIO()):
+            op.return_value.open.side_effect=lambda *args,**kwargs:self.response(next(seq))
+            r.run();self.assertEqual(op.return_value.open.call_count,149)
+        terminal=d.read(self.base/'openrouter/terminal.json')
+        self.assertEqual((terminal['completed'],terminal['not_run']),(149,1))
+        self.assertTrue(terminal['qualification_passed'])
+        self.assertEqual(terminal['reason'],'remaining_cumulative_http_cap')
+        self.assertAlmostEqual(r.PAID.liability(r.SPEC_ID),.149)
+
+    def test_interrupted_reservation_carried_into_numeric_closeout(self):
+        a=self.aa[0]
+        d.immutable(self.base/'openrouter/init'/f'{a["id"]}.json',{'partial':'fixture'})
+        r.PAID.reserve(r.SPEC_ID,'openrouter/'+a['id'],.04)
+        r.close_cohort('openrouter','interrupted')
+        row=d.read(self.base/'openrouter/outcomes'/f'{a["id"]}.json')
+        self.assertEqual(row['status'],'interrupted_unknown')
+        self.assertEqual(row['paid_usd'],.04);self.assertTrue(row['cost_unknown'])
 
     def test_nine_dollar_cap_parallel_and_unknown_carry(self):
         ledger=d.PaidLedger(self.base/'cap.jsonl');ledger.reserve('historical','old',1.851345)

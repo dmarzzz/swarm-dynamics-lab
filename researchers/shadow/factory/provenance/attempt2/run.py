@@ -239,7 +239,9 @@ def close_cohort(route,reason):
         row={'study':SPEC_ID,'cohort':route,'id':a['id'],'stage':a['stage'],'arm':a['arm'],
              'copies':a['copies'],'root':a['world']['root'],'status':'interrupted_unknown' if init.exists() else 'not_run',
              'reason':reason,'served_model':None,'ended':d.now(),'network_attempted':None if init.exists() else False}
-        if init.exists():row['init_sha256']=d.sha(init)
+        if init.exists():
+            row['init_sha256']=d.sha(init)
+            row.update(PAID.receipt(SPEC_ID,route+'/'+a['id']))
         d.immutable(path,row)
     rows=[d.read(out/'outcomes'/f'{a["id"]}.json') for a in aa]
     terminal={'cohort':route,'reason':reason,'ended':d.now(),'assigned':len(aa),

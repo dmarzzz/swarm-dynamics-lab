@@ -86,6 +86,14 @@ class PaidLedger:
             append_locked(h,dict(kind='settle',spec=spec,call=call,usd=usd,time=now()))
             if usd>rs[key]+1e-10:raise BudgetStop('liability_envelope_breached')
 
+    def receipt(self,spec,call):
+        """Recover accounting only, never a model answer, after interruption."""
+        if not self.path.exists():return {}
+        with locked(self.path) as h:
+            rs,ss=self._state(h);key=(spec,call)
+            if key not in rs:return {}
+            return {'reserved_paid_usd':rs[key],'paid_usd':ss.get(key,rs[key]),'cost_unknown':key not in ss}
+
     def liability(self,spec=None):
         if not self.path.exists():return 0
         with locked(self.path) as h:

@@ -27,6 +27,7 @@ def check(base=None):
     need(len(reservations)<=149,'request cap');need(len({r['call'] for r in reservations})==len(reservations),'request uniqueness')
     reserved={r['call']:r for r in reservations}
     started=valid=0
+    paid_outcomes={}
     for route in ('openrouter',):
         aa=assigned[route];need(len(aa)==150,'assigned count');need(dig(aa)==admission['assignment_digest'][route],'assigned digest')
         terminal=read(base/route/'terminal.json');recorded={};q=[];main={}
@@ -36,6 +37,7 @@ def check(base=None):
             p=base/route/'outcomes'/f'{a["id"]}.json';r=read(p);recorded[a['id']]=r
             need(sha(p)==terminal['outcome_sha256'][a['id']],'outcome digest')
             need(r['id']==a['id'] and r['arm']==a['arm'] and r['copies']==a['copies'] and r['root']==a['world']['root'],'outcome binding')
+            paid_outcomes[(admission['study'],route+'/'+a['id'])]=r
             xs=a['world']['values'];need(len(xs)==5 and len(set(xs))==5 and all(type(v)==int and v!=0 for v in xs),'root values')
             total=sum(xs);expected='A' if total>0 else 'B'
             need(total!=0 and expected==a['world']['target'],'truth recompute')
@@ -47,12 +49,17 @@ def check(base=None):
                 need(i['assignment_sha256']==dig(a),'init assignment')
                 need(i['request_sha256']==dig(i['request_body']),'effective request')
                 need(i['resolved_requested_model']==i['request_body']['model'],'resolved model')
+                messages=i['request_body']['messages']
+                need(messages[1]['content']==a['prompt'],'delivered user context')
+                need(dig({'system':messages[0]['content'],'user':messages[1]['content']})==a['context_hash']==i['context_sha256'],'context binding')
                 need(i['memory']['reset'] and i['memory']['inherited_context'] is False,'fresh context')
                 if r.get('network_attempted'):
                     need(route+'/'+a['id'] in reserved,'reservation before network')
                     need(reserved[route+'/'+a['id']]['init_sha256']==sha(init),'reservation init binding')
             if r['status']=='completed':
                 valid+=1;answer=r['answer'];need(set(answer)=={'decision','confidence'},'answer schema')
+                need(json.loads(r['response']['choices'][0]['message']['content'])==answer,'raw response answer')
+                need(r['response']['provider']=='Anthropic','actual provider')
                 need(answer['decision'] in ('A','B') and type(answer['confidence']) in (int,float) and 0<=answer['confidence']<=1,'answer domain')
                 accuracy=int(answer['decision']==expected);false=int(not accuracy and answer['confidence']>=.8)
                 need(r['metrics']=={'accuracy':accuracy,'false_confidence':false},'numeric scoring')
@@ -95,6 +102,18 @@ def check(base=None):
         else:need(k in rs and k not in ss,'settlement lineage');ss[k]=e['usd']
     liability=sum(ss.get(k,v) for k,v in rs.items())
     own=sum(ss.get(k,v) for k,v in rs.items() if k[0]=='shadow-factory-provenance-attempt2')
+    for key,row in paid_outcomes.items():
+        if row.get('network_attempted'):need(key in rs,'paid reservation exists for each HTTP attempt')
+        if key in rs:
+            need(row.get('reserved_paid_usd')==rs[key],'outcome maximum reservation')
+            need(row.get('paid_usd')==ss.get(key,rs[key]),'outcome accounted liability')
+            need(row.get('cost_unknown')==(key not in ss),'unknown reservation retained')
+        if key in ss:
+            if 'response' in row:need(row['response']['usage']['cost']==ss[key],'provider usage settlement')
+            else:need(row['status']=='interrupted_unknown','missing response only after interrupted persistence')
+            need(ss[key]<=rs[key]+1e-10,'actual below reserved envelope')
+    need(abs(own-sum(row.get('paid_usd',0) for row in paid_outcomes.values()))<1e-9,'all new liability reconciles')
+    need(abs((liability-own)-1.851345)<1e-9,'historical liability carried unchanged')
     need(liability<=10.851345+1e-9,'cumulative factory budget');need(own<=9+1e-9,'new spec budget')
     result={'status':'pass','checks':checks,'initialized':started,'valid':valid,'factory_paid_liability':liability,
             'spec_paid_liability':own,'source_revision':admission['source_revision'],
