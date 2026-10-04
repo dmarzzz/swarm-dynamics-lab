@@ -1,0 +1,8 @@
+{
+  "offline_tests": 48,
+  "passed": true,
+  "native_calls": 0,
+  "development_roots": "600-607 only",
+  "plan_published_before_source": "a1162ca49d12ed7e699cec8c4fdf06db6a001aa4",
+  "scope": "Operator validation, not independent review"
+}
