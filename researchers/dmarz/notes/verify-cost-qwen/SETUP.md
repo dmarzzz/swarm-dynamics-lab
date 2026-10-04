@@ -1,6 +1,6 @@
 # Experiment setup record: verify-cost-qwen, attempts 001 and 002
 
-Status, 2026-10-04: attempts 001 and 002 on Qwen ran and stopped at the qualification gate (see the attempt table); chain 003 on gpt-6-luna is prepared and not launched. The rest of this paragraph describes how a run starts. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
+Status, 2026-10-04: all three chains have run (see the attempt table and [RESULTS.md](RESULTS.md)); the line is closed. The rest of this paragraph describes how a run starts. This record follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and is not launch authorization. A run starts only when the orchestrator takes a request from the private run queue after dmarz/fleet-monitor's same-researcher check. Nothing has run on a server and no model call has been made.
 
 ## Ownership and question
 
@@ -21,8 +21,8 @@ Status, 2026-10-04: attempts 001 and 002 on Qwen ran and stopped at the qualific
 | G2 for attempt 002 | pass (offline, builder's own checks) | 2026-10-04, dmarz/pipeline-verify, at code commit `35404c24` (source hash `ef40246d…`): selftest 87 tests OK; offline S0 144 of 144, 0 violations; manifest current (digest `a1543730…`); rehearsal 37 of 37 checks over six chains, including a full chain on mixed tolerated answer variants. Numbers in [reviews/chain-002-pre.md](reviews/chain-002-pre.md) | Python 3.12 not tested locally |
 | G3 Current attempt admission (attempt 002) | pending | [reviews/chain-002-pre.md](reviews/chain-002-pre.md), named by `review:` in READY.yaml | dmarz/fleet-monitor's same-researcher check; run-queue request; fresh server and ledger; launcher `setup` |
 | G3 attempt 001 (historical) | passed and run | [reviews/chain-001-pre.md](reviews/chain-001-pre.md) with the code commit and the source hash; the launch commit is the one named in the run request (first commit on main containing the review, same source hash) | dmarz/fleet-monitor's same-researcher check; run-queue request; exclusive server claim `dmarz-verify-cost-qwen`; launcher `setup` on the server |
-| G4 Qualification before scientific escalation | attempt 001: fail (prose 10 of 12, table 8 of 12; threshold 11 of 12 each); attempt 002: pending | [post-mortem](reviews/chain-001-post.md); the software gate stopped the chain before S1 | attempt 002's Q0 on set b; a failed repeat ends the line |
-| G5 Reconciliation and closeout | pending | none | run |
+| G4 Qualification before scientific escalation | attempt 001: fail (prose 10 of 12, table 8 of 12; threshold 11 of 12 each); attempt 002: fail (6 of 12, 4 of 12); chain 003 on gpt-6-luna: pass (12 of 12, 12 of 12) | post-mortems [001](reviews/chain-001-post.md), [002](reviews/chain-002-post.md), [003](reviews/chain-003-post.md); the software gate stopped the two Qwen chains before S1 and admitted S1 for gpt-6-luna | none |
+| G5 Reconciliation and closeout | pass for the three chains (builder's and lead's own assessments) | post-mortems chain-001, chain-002 (dmarz/pipeline) and chain-003 (dmarz/pipeline-verify); records under `records/`; offline re-verification of chain 003 passes; RESULTS.md, 2026-10-04 | the hub comparisons of `verify` for chain 003 were not re-run (the launcher ran it without the model set) |
 
 ## Design and instrument index
 
@@ -59,7 +59,7 @@ Not admitted. Operations entry: manual, through the private generic launcher des
 |---|---|---|---|---|
 | 001 / none | S0, P0, Q0 run; S1 not queued | [reviews/chain-001-pre.md](reviews/chain-001-pre.md); launch commit `ec0f1883`, source hash `72895482…` | S0 144 / 144 / 144 / 144 / 144; P0 1 / 1 / 1 / 1; Q0 23 / 23 / 23 / 23, gate over 24 rows failed; S1 576 assigned, 0 started | [reviews/chain-001-post.md](reviews/chain-001-post.md): stopped at the qualification gate; capability failure of the answer-only configuration; repair-and-rerun once |
 | 002 / 001 | S0, P0, Q0 run; S1 not queued | [reviews/chain-002-pre.md](reviews/chain-002-pre.md); code commit `35404c24`, source hash `ef40246d…`, launch commit `7e043086` | S0 144 valid; P0 1 valid; Q0 23 valid, gate over 24 rows failed (prose 6 of 12, table 4 of 12); S1 576 assigned, 0 started | [reviews/chain-002-post.md](reviews/chain-002-post.md): the Qwen route has ended |
-| chain 003 (gpt-6-luna) / none on this model | S0, P0, Q0, S1 planned | [reviews/chain-003-pre.md](reviews/chain-003-pre.md); code commit `c74da5bc`, source hash `b1b15d25…`; offline at that commit: selftest 123 OK, S0 144 of 144 for both models, manifest current, rehearsal 41 of 41 checks | nothing has run | none |
+| chain 003 (gpt-6-luna) / none on this model | S0, P0, Q0, S1 run | [reviews/chain-003-pre.md](reviews/chain-003-pre.md); code commit `c74da5bc`, source hash `b1b15d25…`, launch commit `61a7269f` | S0 144 / 144; P0 1 / 1; Q0 23 / 23, gate over 24 rows passed (12 of 12 and 12 of 12); S1 576 assigned, 576 started, 576 terminal, 576 graded, 576 analyzed, 0 failed | [reviews/chain-003-post.md](reviews/chain-003-post.md): complete valid result, both renderings at ceiling; line closed |
 
 | Issue / type | Evidence and cause confidence | Repair and owner | Acceptance check | Verified closure or blocker |
 |---|---|---|---|---|

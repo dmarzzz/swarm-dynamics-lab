@@ -2419,7 +2419,7 @@
     },
     {
       "id": "verify-cost-qwen",
-      "title": "When is verification worth its cost? (Qwen3.7 Flash, program v5 line V)",
+      "title": "When is verification worth its cost? (program v5 line V; Qwen3.7 Flash and gpt-6-luna)",
       "documents": [
         "researchers/dmarz/notes/verify-cost-qwen/README.md"
       ],
@@ -2432,18 +2432,22 @@
       "assessor": "dmarz/pipeline-verify",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
-        "claim": "A structured action-consequence table changes the expected regret of a Qwen3.7 Flash agent's one-step choice between checking a report and exploring an unknown cell, relative to explicit prose carrying the same objective, facts and consequences, across twelve reliability and cost cases.",
-        "rationale": "Unrun. Prospective plan only; no stage has run and no model call has been made."
+        "score": 1,
+        "claim": "In a one-step choice between checking a report and exploring an unknown cell, with the outcome, probability and cost of each action stated and no expected loss printed, gpt-6-luna at low reasoning effort chooses the minimum-loss action in both an explicit-prose and an action-consequence-table rendering (575 of 576), so the table-minus-prose expected regret is +0.00087 (95% interval -0.00093 to +0.00266): no measurable effect of the table, at ceiling.",
+        "rationale": "Exploratory. The format contrast was measurable only where both arms were at ceiling, so it does not show whether a table helps a model that struggles; qwen3.7-flash with reasoning disabled failed qualification twice (18 of 24 and 10 of 24 optimal) and its comparison never ran. One model in the main stage, twelve authored cases on synthetic layouts, scripted consequences; the three chains differ in model, provider and reasoning setting and are not pooled. Builder's own assessment; hub comparisons of verify not re-run; not independently reviewed or replicated."
       },
-      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic layouts \u00d7 12 authored risk and cost cases \u00d7 2 representations = 576 single stateless calls; separate qualification of 24 calls (12 clear-dominance fixtures \u00d7 2 representations, the first of them as a one-call probe). Layouts are the independent units, not calls or cases.",
+      "sample_size_summary": "Observed: 24 paired synthetic layouts \u00d7 12 authored cases \u00d7 2 renderings = 576/576 valid gpt-6-luna choices, 0 failed; separate qualification 24/24 valid and optimal. Qwen3.7 Flash: two qualification-only attempts, 24/24 valid each, 18 and 10 optimal, main stage not run. Layouts are the units, not calls.",
       "sources": [
         "researchers/dmarz/notes/verify-cost-qwen/README.md",
+        "researchers/dmarz/notes/verify-cost-qwen/RESULTS.md",
         "researchers/dmarz/notes/verify-cost-qwen/preregistration.md",
         "researchers/dmarz/notes/verify-cost-qwen/design.yaml",
-        "researchers/dmarz/notes/verify-cost-qwen/experiment.yaml"
+        "researchers/dmarz/notes/verify-cost-qwen/experiment.yaml",
+        "researchers/dmarz/notes/verify-cost-qwen/reviews/chain-001-post.md",
+        "researchers/dmarz/notes/verify-cost-qwen/reviews/chain-002-post.md",
+        "researchers/dmarz/notes/verify-cost-qwen/reviews/chain-003-post.md"
       ],
-      "status_at_assessment": "planned_unrun"
+      "status_at_assessment": "completed_reported_at_ceiling"
     },
     {
       "id": "trust-credit-qwen",
