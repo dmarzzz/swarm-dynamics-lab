@@ -4,7 +4,7 @@ Owner/operator/assessor: shadow/sol-audit-gap. No independent reviewer is claime
 
 ## Ownership and question
 
-Question and claim boundary: [PLAN](PLAN.md), a fixed-export forensic coverage census. No experimental agents, prompts, model provider, paid calls, new data collection or fleet allocation. Owner explicitly assigned the audit and an unowned analysis in Wave 4 item 15. Previous attempt/post-mortem: none, initial instrument. Known source limitations were read before planning. Next action: publish plan and ranking, implement hand-authored fixture checks, then analyze the supplied saved export.
+Question and claim boundary: [PLAN](PLAN.md), a fixed-export forensic coverage census. No experimental agents, prompts, model provider, paid calls, new data collection or fleet allocation. Owner explicitly assigned the audit and an unowned analysis in Wave 4 item 15. Previous attempt/post-mortem: none, initial instrument. Known source limitations were read before planning. Initial next action was to publish the plan and ranking, implement fixture checks, then analyze the saved export. Current stage: A1 complete. Next action: publish and integrate the descriptive result; no further run needed.
 
 ## Gate evidence
 
@@ -30,8 +30,8 @@ Question and claim boundary: [PLAN](PLAN.md), a fixed-export forensic coverage c
 
 ## Attempt and repair history
 
-Initial attempt not yet run. Record actual results and any deviations in POST-MORTEM.md without rewriting PLAN.
+A1 completed all 189,579 source rows; no failures or exclusions. Fifteen fixtures, ten separately recomputed metrics and deterministic rerun passed. See [POST-MORTEM](POST-MORTEM.md) for source/version, command, limitations and clarification history. The gate table above preserves the plan-publication state; G2 and G5 are now complete for the saved-data analysis only.
 
 ## Closeout and successor handoff
 
-Pending census. This record is not a claim of independent research review or automatic launcher admission. Finish the saved-data analysis and report limits; do not convert it to an unreviewed causal experiment or acquire machines.
+Census, response-link validation, static reporting and scientific scope review complete. Execution successful; model qualification not applicable; causal/success inference unsupported; process records preserved. USD 0, no workers or claims remain. This record is not independent research review or automatic launcher admission. Deliver FINDING.md with its missingness and selection limits; do not convert it to an unreviewed causal experiment or acquire machines.

@@ -1,0 +1,247 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>SwarmTraces evidence depth</title><style>body{background:#10161e;color:#edf3f7;font:18px/1.6 monospace;max-width:1100px;margin:40px auto;padding:24px}img{width:100%}pre{overflow:auto;font-size:13px}a{color:#77d9b5}</style><h1>What does this incident export actually let us observe?</h1><p><strong>7,733/91,037 payload artifacts (8.49%)</strong> have a direct response child. This is artifact linkage, not an attack-success rate.</p><img src="coverage.svg" alt="Payload response and reconstruction coverage with full denominators"><p>Parent links are reconstruction provenance, not conversation turns. Exact equal redacted texts do not prove shared origin. No payload is executed, decoded or sent to a model. Null timestamps are left null.</p><p>Source: <a href="https://swarmtraces.org/">SwarmTraces</a>. <a href="summary.json">Aggregate JSON and fingerprints</a>.</p><details><summary>All derived counts</summary><pre>{
+  &quot;schema_version&quot;: 1,
+  &quot;scope&quot;: &quot;Census of one selected released artifact corpus; no independent-event, actor, execution or success estimate.&quot;,
+  &quot;rows&quot;: 189579,
+  &quot;kinds&quot;: {
+    &quot;payload&quot;: {
+      &quot;rows&quot;: 91037,
+      &quot;nonempty_text_rows&quot;: 91037,
+      &quot;empty_text_rows&quot;: 0,
+      &quot;null_text_rows&quot;: 0,
+      &quot;unique_nonempty_released_texts&quot;: 88672,
+      &quot;redundant_text_rows&quot;: 2365,
+      &quot;rows_in_repeated_text_groups&quot;: 2865,
+      &quot;max_text_multiplicity&quot;: 392,
+      &quot;nonnull_timestamp_rows&quot;: 0,
+      &quot;no_parent_rows&quot;: 91037,
+      &quot;orphan_parent_rows&quot;: 0
+    },
+    &quot;recovered_text&quot;: {
+      &quot;rows&quot;: 75534,
+      &quot;nonempty_text_rows&quot;: 75534,
+      &quot;empty_text_rows&quot;: 0,
+      &quot;null_text_rows&quot;: 0,
+      &quot;unique_nonempty_released_texts&quot;: 72603,
+      &quot;redundant_text_rows&quot;: 2931,
+      &quot;rows_in_repeated_text_groups&quot;: 3305,
+      &quot;max_text_multiplicity&quot;: 804,
+      &quot;nonnull_timestamp_rows&quot;: 0,
+      &quot;no_parent_rows&quot;: 32826,
+      &quot;orphan_parent_rows&quot;: 0
+    },
+    &quot;response&quot;: {
+      &quot;rows&quot;: 23008,
+      &quot;nonempty_text_rows&quot;: 23008,
+      &quot;empty_text_rows&quot;: 0,
+      &quot;null_text_rows&quot;: 0,
+      &quot;unique_nonempty_released_texts&quot;: 22721,
+      &quot;redundant_text_rows&quot;: 287,
+      &quot;rows_in_repeated_text_groups&quot;: 372,
+      &quot;max_text_multiplicity&quot;: 96,
+      &quot;nonnull_timestamp_rows&quot;: 0,
+      &quot;no_parent_rows&quot;: 4591,
+      &quot;orphan_parent_rows&quot;: 0
+    }
+  },
+  &quot;payload_direct_response_coverage&quot;: {
+    &quot;numerator&quot;: 7733,
+    &quot;denominator&quot;: 91037,
+    &quot;fraction&quot;: 0.08494348451728419
+  },
+  &quot;payload_response_descendant_coverage&quot;: {
+    &quot;numerator&quot;: 7733,
+    &quot;denominator&quot;: 91037,
+    &quot;fraction&quot;: 0.08494348451728419
+  },
+  &quot;payload_descendant_categories&quot;: {
+    &quot;response_descendant&quot;: 7733,
+    &quot;recovered_without_response&quot;: 18514,
+    &quot;other_descendants_only&quot;: 0,
+    &quot;no_descendants&quot;: 64790
+  },
+  &quot;response_rows_with_direct_payload_parent&quot;: {
+    &quot;numerator&quot;: 18417,
+    &quot;denominator&quot;: 23008,
+    &quot;fraction&quot;: 0.8004607093184979
+  },
+  &quot;graph&quot;: {
+    &quot;valid_parent_edges&quot;: 61125,
+    &quot;orphan_parent_rows&quot;: 0,
+    &quot;no_parent_rows&quot;: 128454,
+    &quot;components&quot;: 128454,
+    &quot;singleton_components&quot;: 102206,
+    &quot;max_component_rows&quot;: 859,
+    &quot;component_size_histogram&quot;: {
+      &quot;1&quot;: 102206,
+      &quot;2&quot;: 16291,
+      &quot;3&quot;: 4926,
+      &quot;4&quot;: 1052,
+      &quot;5&quot;: 1444,
+      &quot;6&quot;: 170,
+      &quot;7&quot;: 352,
+      &quot;8&quot;: 138,
+      &quot;9&quot;: 431,
+      &quot;10&quot;: 276,
+      &quot;11&quot;: 256,
+      &quot;12&quot;: 418,
+      &quot;13&quot;: 314,
+      &quot;14&quot;: 33,
+      &quot;15&quot;: 23,
+      &quot;16&quot;: 16,
+      &quot;17&quot;: 30,
+      &quot;18&quot;: 6,
+      &quot;19&quot;: 8,
+      &quot;20&quot;: 8,
+      &quot;21&quot;: 4,
+      &quot;22&quot;: 2,
+      &quot;23&quot;: 5,
+      &quot;24&quot;: 1,
+      &quot;25&quot;: 4,
+      &quot;26&quot;: 2,
+      &quot;27&quot;: 5,
+      &quot;28&quot;: 1,
+      &quot;29&quot;: 4,
+      &quot;32&quot;: 1,
+      &quot;33&quot;: 1,
+      &quot;35&quot;: 2,
+      &quot;37&quot;: 1,
+      &quot;38&quot;: 1,
+      &quot;44&quot;: 1,
+      &quot;45&quot;: 3,
+      &quot;47&quot;: 1,
+      &quot;53&quot;: 1,
+      &quot;55&quot;: 1,
+      &quot;57&quot;: 1,
+      &quot;71&quot;: 7,
+      &quot;85&quot;: 1,
+      &quot;91&quot;: 1,
+      &quot;105&quot;: 1,
+      &quot;109&quot;: 1,
+      &quot;135&quot;: 1,
+      &quot;271&quot;: 1,
+      &quot;859&quot;: 1
+    },
+    &quot;child_parent_kind_edges&quot;: [
+      {
+        &quot;child_kind&quot;: &quot;recovered_text&quot;,
+        &quot;parent_kind&quot;: &quot;payload&quot;,
+        &quot;count&quot;: 42707
+      },
+      {
+        &quot;child_kind&quot;: &quot;recovered_text&quot;,
+        &quot;parent_kind&quot;: &quot;recovered_text&quot;,
+        &quot;count&quot;: 1
+      },
+      {
+        &quot;child_kind&quot;: &quot;response&quot;,
+        &quot;parent_kind&quot;: &quot;payload&quot;,
+        &quot;count&quot;: 18417
+      }
+    ]
+  },
+  &quot;text_sensitivity&quot;: {
+    &quot;nonempty_rows&quot;: 189579,
+    &quot;distinct_nonempty_released_texts&quot;: 163851,
+    &quot;redundant_rows&quot;: 25728,
+    &quot;rows_in_repeated_text_groups&quot;: 44763,
+    &quot;max_multiplicity&quot;: 1094,
+    &quot;multiplicity_histogram&quot;: {
+      &quot;1&quot;: 144816,
+      &quot;2&quot;: 16827,
+      &quot;3&quot;: 1898,
+      &quot;4&quot;: 106,
+      &quot;5&quot;: 42,
+      &quot;6&quot;: 31,
+      &quot;7&quot;: 15,
+      &quot;8&quot;: 18,
+      &quot;9&quot;: 6,
+      &quot;10&quot;: 13,
+      &quot;11&quot;: 8,
+      &quot;12&quot;: 8,
+      &quot;13&quot;: 5,
+      &quot;14&quot;: 7,
+      &quot;15&quot;: 2,
+      &quot;16&quot;: 3,
+      &quot;17&quot;: 3,
+      &quot;18&quot;: 4,
+      &quot;19&quot;: 1,
+      &quot;20&quot;: 3,
+      &quot;21&quot;: 2,
+      &quot;22&quot;: 1,
+      &quot;24&quot;: 1,
+      &quot;25&quot;: 1,
+      &quot;26&quot;: 5,
+      &quot;27&quot;: 2,
+      &quot;29&quot;: 1,
+      &quot;30&quot;: 1,
+      &quot;32&quot;: 1,
+      &quot;34&quot;: 2,
+      &quot;36&quot;: 1,
+      &quot;37&quot;: 1,
+      &quot;38&quot;: 1,
+      &quot;39&quot;: 1,
+      &quot;43&quot;: 1,
+      &quot;45&quot;: 1,
+      &quot;51&quot;: 1,
+      &quot;54&quot;: 1,
+      &quot;55&quot;: 1,
+      &quot;59&quot;: 1,
+      &quot;65&quot;: 1,
+      &quot;83&quot;: 1,
+      &quot;86&quot;: 1,
+      &quot;103&quot;: 1,
+      &quot;120&quot;: 1,
+      &quot;174&quot;: 1,
+      &quot;897&quot;: 1,
+      &quot;1094&quot;: 1
+    },
+    &quot;cross_kind_shared_text_hashes&quot;: {
+      &quot;payload__recovered_text&quot;: 2635,
+      &quot;payload__response&quot;: 1931,
+      &quot;recovered_text__response&quot;: 17396
+    },
+    &quot;warning&quot;: &quot;Equal redacted strings can arise from redaction or reconstruction; neither text hashes nor parent components certify independent events.&quot;
+  },
+  &quot;payload_length_strata_characters&quot;: {
+    &quot;0&quot;: {
+      &quot;payloads&quot;: 0,
+      &quot;with_direct_response&quot;: 0,
+      &quot;with_response_descendant&quot;: 0,
+      &quot;direct_response_fraction&quot;: null
+    },
+    &quot;1-255&quot;: {
+      &quot;payloads&quot;: 59341,
+      &quot;with_direct_response&quot;: 1343,
+      &quot;with_response_descendant&quot;: 1343,
+      &quot;direct_response_fraction&quot;: 0.02263190711312583
+    },
+    &quot;256-1023&quot;: {
+      &quot;payloads&quot;: 23880,
+      &quot;with_direct_response&quot;: 4331,
+      &quot;with_response_descendant&quot;: 4331,
+      &quot;direct_response_fraction&quot;: 0.18136515912897822
+    },
+    &quot;1024-4095&quot;: {
+      &quot;payloads&quot;: 6748,
+      &quot;with_direct_response&quot;: 1632,
+      &quot;with_response_descendant&quot;: 1632,
+      &quot;direct_response_fraction&quot;: 0.24184943687018376
+    },
+    &quot;4096+&quot;: {
+      &quot;payloads&quot;: 1068,
+      &quot;with_direct_response&quot;: 427,
+      &quot;with_response_descendant&quot;: 427,
+      &quot;direct_response_fraction&quot;: 0.399812734082397
+    }
+  },
+  &quot;nonnull_timestamp_rows&quot;: 0,
+  &quot;cost_usd&quot;: 0,
+  &quot;model_calls&quot;: 0,
+  &quot;provenance&quot;: {
+    &quot;source_filename&quot;: &quot;redacted.jsonl.gz&quot;,
+    &quot;compressed_input_sha256&quot;: &quot;7b66ab21674de52fcd3f557652f68b1801170c998e2f266862124e6edf283488&quot;,
+    &quot;analyzer_sha256&quot;: &quot;28efb5d3db0ed46cc7f2588b81e8a2ac8ec834986481abaa38235060a3608a24&quot;,
+    &quot;python&quot;: &quot;3.12.3&quot;,
+    &quot;source_url&quot;: &quot;https://swarmtraces.org/data/final/redacted.jsonl.gz&quot;
+  }
+}</pre></details></html>

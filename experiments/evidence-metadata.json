@@ -2556,6 +2556,36 @@
         "researchers/dmarz/notes/sybil-scarcity-xmodel/SETUP.md"
       ],
       "status_at_assessment": "prepared_not_launched"
+    },
+    {
+      "id": "wild-evidence-depth",
+      "title": "SwarmTraces evidence depth: fixed-export census",
+      "documents": [
+        "researchers/shadow/notes/wild-evidence-depth/README.md",
+        "researchers/shadow/notes/wild-evidence-depth/FINDING.md"
+      ],
+      "experiment_ids": [
+        "wild-evidence-depth"
+      ],
+      "registration_paths": [
+        "researchers/shadow/notes/wild-evidence-depth/experiment.json"
+      ],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In this selected release, 7,733/91,037 payload artifacts have a direct response child; response-link coverage varies with artifact length.",
+        "rationale": "Complete corpus census, graph fixtures and separate same-author arithmetic agree. Selection, response semantics and original event independence are unknown; no success rate or causal inference is supported."
+      },
+      "sample_size_summary": "Observed: one selected incident corpus; 189,579/189,579 rows analyzed, 91,037 payloads, 7,733 response-linked payloads; zero parse failures/exclusions. Rows are dependent artifacts, not independent trials. Zero model calls.",
+      "sources": [
+        "researchers/shadow/notes/wild-evidence-depth/PLAN.md",
+        "researchers/shadow/notes/wild-evidence-depth/results/summary.json",
+        "researchers/shadow/notes/wild-evidence-depth/results/reference-check.json",
+        "researchers/shadow/notes/wild-evidence-depth/POST-MORTEM.md"
+      ],
+      "status_at_assessment": "complete_descriptive_census_no_execution_or_success_inference",
+      "assessor": "shadow/sol-audit-gap",
+      "assessed_at": "2026-10-04",
+      "source_commit": "833e3d3fadb48f306ec1d4bb6911934462ca1ee2"
     }
   ],
   "source_sha256": {

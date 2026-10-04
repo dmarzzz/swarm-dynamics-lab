@@ -1,0 +1,23 @@
+{
+  "status": "pass",
+  "author": "shadow/sol-audit-gap",
+  "independence": "Separate implementation, same author; not peer review",
+  "checked_metrics": {
+    "rows": 189579,
+    "payloads": 91037,
+    "payloads_with_direct_response": 7733,
+    "response_rows_with_direct_payload_parent": 18417,
+    "valid_parent_edges": 61125,
+    "orphan_parent_rows": 0,
+    "nonnull_timestamp_rows": 0,
+    "distinct_nonempty_released_texts": 163851,
+    "nonempty_text_rows": 189579,
+    "components_if_forest": 128454
+  },
+  "kinds": {
+    "payload": 91037,
+    "response": 23008,
+    "recovered_text": 75534
+  },
+  "reference_source_sha256": "afd8f80c9f3a067ab2fe209851b68ff2332c77aa9712db8e85ae1334c228b10a"
+}

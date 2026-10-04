@@ -1,0 +1,10 @@
+{
+  "id": "wild-evidence-depth",
+  "title": "SwarmTraces evidence depth: saved-data forensic census",
+  "description": "One selected public incident export, not a new model experiment. Counts parent-linked responses, reconstruction-only payloads, missing clocks and released-text duplication. Linked response does not imply execution or success. Prospective Git plan b9eb6c8e; any hub upload is retrospective reporting of saved aggregates. Zero model calls and zero API spend.",
+  "owner": "shadow",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/wild-evidence-depth",
+  "params": {"stage": {"type": "str", "role": "stage", "description": "A1 fixed-export census"}},
+  "metrics": ["payload_response_coverage", "rows", "payloads", "response_linked_payloads", "cost_usd", "model_calls"],
+  "primary_metric": "payload_response_coverage"
+}

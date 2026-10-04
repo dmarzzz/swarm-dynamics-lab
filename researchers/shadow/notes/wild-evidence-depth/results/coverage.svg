@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="830" viewBox="0 0 1600 830">
+<rect width="1600" height="830" fill="#10161e"/>
+<g font-family="monospace" fill="#edf3f7">
+<text x="60" y="75" font-size="32">SwarmTraces: evidence depth, not attack success</text>
+<text x="60" y="120" font-size="22">91,037 payload artifacts; 189,579 released rows</text>
+<text x="60" y="180" font-size="19">Direct response child (primary): 7,733/91,037 (8.49%)</text>
+<rect x="60" y="194" width="1480" height="30" fill="#28323e"/>
+<rect x="60" y="194" width="125.716" height="30" fill="#77d9b5"/>
+<text x="60" y="259" font-size="17">Below: mutually exclusive descendant categories (not additional samples)</text>
+<text x="60" y="285" font-size="19">response descendant: 7,733/91,037 (8.49%)</text>
+<rect x="60" y="299" width="1480" height="30" fill="#28323e"/>
+<rect x="60" y="299" width="125.716" height="30" fill="#77d9b5"/>
+<text x="60" y="390" font-size="19">recovered without response: 18,514/91,037 (20.34%)</text>
+<rect x="60" y="404" width="1480" height="30" fill="#28323e"/>
+<rect x="60" y="404" width="300.984" height="30" fill="#c4b5fd"/>
+<text x="60" y="495" font-size="19">other descendants only: 0/91,037 (0.00%)</text>
+<rect x="60" y="509" width="1480" height="30" fill="#28323e"/>
+<rect x="60" y="509" width="0.000" height="30" fill="#f0bf70"/>
+<text x="60" y="600" font-size="19">no descendants: 64,790/91,037 (71.17%)</text>
+<rect x="60" y="614" width="1480" height="30" fill="#28323e"/>
+<rect x="60" y="614" width="1053.299" height="30" fill="#8999aa"/>
+<text x="60" y="750" font-size="20">Response artifact != successful execution. Missing response != failed execution.</text>
+<text x="60" y="790" font-size="18">One selected corpus; no IID uncertainty or temporal ordering inferred.</text></g></svg>

@@ -1,0 +1,21 @@
+{
+  "status": "pass",
+  "scope": "offline instrument and saved-data accounting, not independent peer review",
+  "fixture_tests_passed": 15,
+  "fixture_tests_failed": 0,
+  "browser_visual_check": "PASS: local HTML loads; 1600px SVG renders; screenshot inspected, no clipping",
+  "reference_metrics_matched": 10,
+  "kind_counts_matched": 3,
+  "deterministic_summary_rerun": "byte-identical",
+  "primary_run_elapsed_seconds": 2.56,
+  "primary_run_max_rss_kb": 181320,
+  "primary_run_cpu_processes": 1,
+  "api_cost_usd": 0,
+  "model_calls": 0,
+  "raw_dataset_rows_committed": 0,
+  "hub_publication": "blocked: URL/token not configured; no network write attempted",
+  "public_plan_http_status": 200,
+  "public_plan_checked_at": "2026-10-04T15:06:03Z",
+  "public_plan_revision": "b9eb6c8e",
+  "instrument_commit_before_census": "833e3d3fadb48f306ec1d4bb6911934462ca1ee2"
+}
