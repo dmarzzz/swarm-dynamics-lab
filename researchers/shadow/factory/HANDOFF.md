@@ -1,5 +1,7 @@
 # Operator handoff
 
+**Launch hold (PI review follow-up):** the legacy execution boundary is disabled in the accompanying containment patch, pending janitor review/merge. It lacks the full required registration, per-transport reservation, initialization-receipt and immutable-outcome contract. Do not use the historical resume commands below or refresh old source pins. Read [PI review response](PI-REVIEW-RESPONSE.md). Analysis of saved data is unaffected.
+
 Tool shipped. Scientific queue **blocked on provider availability**, not completed. No factory process is still making model calls at this handoff.
 
 - Anthropic pool: initial8 HTTP429 +12 HTTP503, then native-schema recovery4 HTTP503. No pool credential, account or quota changed.

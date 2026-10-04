@@ -72,6 +72,7 @@ def key():
     return (Path.home()/'.moltbot/secrets/openrouter.key').read_text().strip()
 
 def call(s,a,key):
+    f.enforce_launch_hold()
     study,sim,provider=f.load_parent()
     system=provider.SYSTEM+'\nReturn exactly {"values":{"0":integer_or_null,"1":integer_or_null,"2":integer_or_null,"3":integer_or_null,"4":integer_or_null,"5":integer_or_null}}.'
     body=dict(model=s['model'],max_tokens=500,temperature=0,reasoning={'enabled':False},

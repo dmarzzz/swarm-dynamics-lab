@@ -16,7 +16,7 @@ class NativeTests(unittest.TestCase):
             with tempfile.TemporaryDirectory() as d,patch.object(n.f,'ROOT',Path(d)):
                 (Path(d)/'results/test').mkdir(parents=True)
                 error=urllib.error.HTTPError('http://local',status,'refused',{},None)
-                with patch('pool_structured.urllib.request.urlopen',side_effect=error) as request,patch('pool_structured.time.sleep') as sleep:
+                with patch.object(n.f,'enforce_launch_hold'), patch('pool_structured.urllib.request.urlopen',side_effect=error) as request,patch('pool_structured.time.sleep') as sleep:
                     r=n.call(spec,a,'test-key')
                 self.assertEqual(request.call_count,attempts)
                 self.assertEqual(len(r['transport_attempts']),attempts)

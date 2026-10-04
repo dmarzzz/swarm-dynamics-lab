@@ -1,0 +1,569 @@
+{
+  "checked_at": "2026-10-04T16:40:44.540573+00:00",
+  "source_commit": "0394bf9b4850f692e35e04c0ee6ca51fdb281bc6",
+  "query_limit": 2000,
+  "received": 2000,
+  "scope": "read-only latest run list; task and owner records remain authoritative; not admission",
+  "runs": [
+    {
+      "run": "phantom-coast-pc5/s1-a1",
+      "experiment": "phantom-coast-pc5",
+      "status": "done",
+      "created": 1791104442.3388517,
+      "updated": 1791104560.207584
+    },
+    {
+      "run": "phantom-coast-pc5/q0-a1",
+      "experiment": "phantom-coast-pc5",
+      "status": "done",
+      "created": 1791104395.4248514,
+      "updated": 1791104398.5073807
+    },
+    {
+      "run": "optimal-swarm-size-q1/0ca4694cfc9ac4a4",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103910.6116173,
+      "updated": 1791104283.3462236
+    },
+    {
+      "run": "optimal-swarm-size-q1/7cdc83a1503e33b6",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103963.7786741,
+      "updated": 1791104282.5368176
+    },
+    {
+      "run": "optimal-swarm-size-q1/5d6d86912fc0ec4f",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791104071.871684,
+      "updated": 1791104281.8165393
+    },
+    {
+      "run": "optimal-swarm-size-q1/5bacfa9e9d0f833b",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103944.0521035,
+      "updated": 1791104281.044824
+    },
+    {
+      "run": "optimal-swarm-size-q1/b5680a8f80e1ceb6",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791104138.4461193,
+      "updated": 1791104280.3201103
+    },
+    {
+      "run": "optimal-swarm-size-q1/02b708e40b901df8",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791104101.0091462,
+      "updated": 1791104279.5884259
+    },
+    {
+      "run": "optimal-swarm-size-q1/7e5e06c13b609610",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791104051.246806,
+      "updated": 1791104278.7375298
+    },
+    {
+      "run": "optimal-swarm-size-q1/3e7979f7b2f4bb68",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791104006.4907172,
+      "updated": 1791104278.0212264
+    },
+    {
+      "run": "phantom-coast-pc4/s1-a1",
+      "experiment": "phantom-coast-pc4",
+      "status": "done",
+      "created": 1791103535.424336,
+      "updated": 1791103940.4896643
+    },
+    {
+      "run": "optimal-swarm-size-q1/3556918cf431fe00",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103506.9578898,
+      "updated": 1791103541.5821168
+    },
+    {
+      "run": "optimal-swarm-size-q1/ef99af14c4d5a04a",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103473.89887,
+      "updated": 1791103506.313117
+    },
+    {
+      "run": "phantom-coast-pc4/q0-a1",
+      "experiment": "phantom-coast-pc4",
+      "status": "done",
+      "created": 1791103484.8889463,
+      "updated": 1791103491.6503024
+    },
+    {
+      "run": "optimal-swarm-size-q1/008c1b3c82fdb642",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103426.517385,
+      "updated": 1791103473.3642316
+    },
+    {
+      "run": "optimal-swarm-size-q1/e50f95edfa43a59d",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103395.1591544,
+      "updated": 1791103425.9846792
+    },
+    {
+      "run": "optimal-swarm-size-q1/db748df99b49452f",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103361.787617,
+      "updated": 1791103394.6277149
+    },
+    {
+      "run": "optimal-swarm-size-q1/be449c9383128b97",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103335.8911567,
+      "updated": 1791103361.1676288
+    },
+    {
+      "run": "optimal-swarm-size-q1/2afa620740e7ff95",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103293.5962532,
+      "updated": 1791103335.341238
+    },
+    {
+      "run": "optimal-swarm-size-q1/6b9fd79a5f7cc219",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791103257.7447634,
+      "updated": 1791103293.017778
+    },
+    {
+      "run": "phantom-coast-pc3/s1-a1",
+      "experiment": "phantom-coast-pc3",
+      "status": "done",
+      "created": 1791101271.0155482,
+      "updated": 1791101964.5923994
+    },
+    {
+      "run": "optimal-swarm-size-q1/99b169734e887f9c",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101265.0308537,
+      "updated": 1791101289.5098255
+    },
+    {
+      "run": "optimal-swarm-size-q1/1c5fc3f03a955f9f",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101232.3224418,
+      "updated": 1791101264.535956
+    },
+    {
+      "run": "optimal-swarm-size-q1/08aa88f22ed1c54b",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101196.3119595,
+      "updated": 1791101231.7981951
+    },
+    {
+      "run": "optimal-swarm-size-q1/262bcceff03769af",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101164.700246,
+      "updated": 1791101195.7745676
+    },
+    {
+      "run": "optimal-swarm-size-q1/a4858ad1bdf34ba5",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101134.0814095,
+      "updated": 1791101164.1635711
+    },
+    {
+      "run": "phantom-coast-pc3/q0-a1",
+      "experiment": "phantom-coast-pc3",
+      "status": "done",
+      "created": 1791101156.1890008,
+      "updated": 1791101163.3513775
+    },
+    {
+      "run": "optimal-swarm-size-q1/f581a1989a7ed5eb",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101088.2916312,
+      "updated": 1791101133.5614111
+    },
+    {
+      "run": "optimal-swarm-size-q1/88d311e28eddc0b0",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101061.462485,
+      "updated": 1791101087.77603
+    },
+    {
+      "run": "optimal-swarm-size-q1/6ef757463a918e76",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101028.4923992,
+      "updated": 1791101060.960977
+    },
+    {
+      "run": "optimal-swarm-size-q1/b86070323bf1a0aa",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791101002.5253496,
+      "updated": 1791101027.8219438
+    },
+    {
+      "run": "optimal-swarm-size-q1/dd5e3a722bfdf9f2",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100967.7157276,
+      "updated": 1791101001.9580557
+    },
+    {
+      "run": "optimal-swarm-size-q1/52f252925d4852a9",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100940.3969145,
+      "updated": 1791100967.2082465
+    },
+    {
+      "run": "optimal-swarm-size-q1/c0c0f51529f5c9d3",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100914.002398,
+      "updated": 1791100939.873856
+    },
+    {
+      "run": "optimal-swarm-size-q1/c08bdf256de80b88",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100884.0470824,
+      "updated": 1791100913.5266378
+    },
+    {
+      "run": "optimal-swarm-size-q1/fc38a672cdb9e9ad",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100827.7676437,
+      "updated": 1791100883.4985023
+    },
+    {
+      "run": "optimal-swarm-size-q1/1ded3a962708bcde",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100784.4340537,
+      "updated": 1791100827.245001
+    },
+    {
+      "run": "optimal-swarm-size-q1/179544a84c0c0786",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100738.3065107,
+      "updated": 1791100783.9174469
+    },
+    {
+      "run": "QM-Q1-02",
+      "experiment": "quorum-of-mirrors",
+      "status": "failed",
+      "created": 1791100687.2133527,
+      "updated": 1791100776.407506
+    },
+    {
+      "run": "optimal-swarm-size-q1/bb5c6e654d04f8ea",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100430.8102844,
+      "updated": 1791100439.1655052
+    },
+    {
+      "run": "optimal-swarm-size-q1/7c860223a1f1eec7",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100422.4477262,
+      "updated": 1791100430.2884572
+    },
+    {
+      "run": "optimal-swarm-size-q1/7bd7f127497eeca5",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100411.5742884,
+      "updated": 1791100421.9724758
+    },
+    {
+      "run": "optimal-swarm-size-q1/4d77f67b46fc9f9b",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791100398.760013,
+      "updated": 1791100411.0505147
+    },
+    {
+      "run": "phantom-coast-pc2/s1-a1",
+      "experiment": "phantom-coast-pc2",
+      "status": "done",
+      "created": 1791096134.309255,
+      "updated": 1791099978.2403295
+    },
+    {
+      "run": "QM-Q1-01",
+      "experiment": "quorum-of-mirrors",
+      "status": "failed",
+      "created": 1791096824.877854,
+      "updated": 1791096984.2356505
+    },
+    {
+      "run": "phantom-coast-pc2/q0-a1",
+      "experiment": "phantom-coast-pc2",
+      "status": "done",
+      "created": 1791095995.303033,
+      "updated": 1791096003.2948751
+    },
+    {
+      "run": "right-dissenter-rd4/s4-c2",
+      "experiment": "right-dissenter-rd4",
+      "status": "done",
+      "created": 1791094575.1876118,
+      "updated": 1791094638.2351341
+    },
+    {
+      "run": "right-dissenter-rd4/s4-c1",
+      "experiment": "right-dissenter-rd4",
+      "status": "failed",
+      "created": 1791094217.4368684,
+      "updated": 1791094314.750379
+    },
+    {
+      "run": "right-dissenter-rd4/s4-a1",
+      "experiment": "right-dissenter-rd4",
+      "status": "failed",
+      "created": 1791093378.3743234,
+      "updated": 1791093527.19512
+    },
+    {
+      "run": "optimal-swarm-size-q1/e276f17e7891e195",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791093487.0994003,
+      "updated": 1791093494.060503
+    },
+    {
+      "run": "optimal-swarm-size-q1/524ce8a206c34891",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791093479.9522164,
+      "updated": 1791093486.586953
+    },
+    {
+      "run": "right-dissenter-rd4/q4-a1",
+      "experiment": "right-dissenter-rd4",
+      "status": "done",
+      "created": 1791093174.3383765,
+      "updated": 1791093194.9173172
+    },
+    {
+      "run": "optimal-swarm-size-q1/ad55e895c8baf348",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791090036.265082,
+      "updated": 1791090049.5072951
+    },
+    {
+      "run": "optimal-swarm-size-q1/37dc4ab15fa83244",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791090023.185886,
+      "updated": 1791090035.7388449
+    },
+    {
+      "run": "optimal-swarm-size-q1/dcd705eee4d16c28",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791090009.9681613,
+      "updated": 1791090022.5849943
+    },
+    {
+      "run": "optimal-swarm-size-q1/932c791a2c924d9c",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089998.3012505,
+      "updated": 1791090009.3677647
+    },
+    {
+      "run": "optimal-swarm-size-q1/bbbc398c0c106bdc",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089986.615315,
+      "updated": 1791089997.8238087
+    },
+    {
+      "run": "optimal-swarm-size-q1/db3020434a83d8d8",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089978.9935112,
+      "updated": 1791089986.1178267
+    },
+    {
+      "run": "optimal-swarm-size-q1/d0711b221559bd7e",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089970.5763946,
+      "updated": 1791089978.4940262
+    },
+    {
+      "run": "optimal-swarm-size-q1/5c9031651ff93ab8",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089962.0350974,
+      "updated": 1791089970.0208957
+    },
+    {
+      "run": "optimal-swarm-size-q1/ad0ec85212ca39cc",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089954.734795,
+      "updated": 1791089961.565353
+    },
+    {
+      "run": "optimal-swarm-size-q1/3e49085b9813762b",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089947.9737139,
+      "updated": 1791089954.2148888
+    },
+    {
+      "run": "optimal-swarm-size-q1/49afdfdc5fcd2b43",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089941.278712,
+      "updated": 1791089947.496848
+    },
+    {
+      "run": "optimal-swarm-size-q1/ba9fa76a255eb91a",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089934.0557287,
+      "updated": 1791089940.7500992
+    },
+    {
+      "run": "optimal-swarm-size-q1/d36e1896766bb9d4",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089927.5883589,
+      "updated": 1791089933.5584853
+    },
+    {
+      "run": "optimal-swarm-size-q1/399b451e73c290dd",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089921.762004,
+      "updated": 1791089927.0827706
+    },
+    {
+      "run": "optimal-swarm-size-q1/b0ba60a6bacbca59",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089915.637137,
+      "updated": 1791089921.2737849
+    },
+    {
+      "run": "optimal-swarm-size-q1/b5fc6334c9dbbb57",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089909.4278862,
+      "updated": 1791089915.0805569
+    },
+    {
+      "run": "optimal-swarm-size-q1/5d5401657c57f5fe",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "done",
+      "created": 1791089807.8882482,
+      "updated": 1791089811.4541216
+    },
+    {
+      "run": "optimal-swarm-size-q1/e0e32c04c1bc5e69",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089610.92425,
+      "updated": 1791089614.6542897
+    },
+    {
+      "run": "optimal-swarm-size-q1/fbf46788a6cdcaf9",
+      "experiment": "optimal-swarm-size-q1",
+      "status": "failed",
+      "created": 1791089376.584841,
+      "updated": 1791089379.5998
+    },
+    {
+      "run": "right-dissenter/d1-a1",
+      "experiment": "right-dissenter",
+      "status": "done",
+      "created": 1791089079.9676342,
+      "updated": 1791089084.8875127
+    },
+    {
+      "run": "right-dissenter/s1-a1",
+      "experiment": "right-dissenter",
+      "status": "done",
+      "created": 1791088638.9406645,
+      "updated": 1791088731.0081372
+    },
+    {
+      "run": "right-dissenter/q1-a1",
+      "experiment": "right-dissenter",
+      "status": "done",
+      "created": 1791088487.9834352,
+      "updated": 1791088509.7116244
+    },
+    {
+      "run": "phantom-coast/s0-a1",
+      "experiment": "phantom-coast",
+      "status": "done",
+      "created": 1791087273.577815,
+      "updated": 1791088047.0390286
+    },
+    {
+      "run": "right-dissenter/q0-a1",
+      "experiment": "right-dissenter",
+      "status": "done",
+      "created": 1791087269.3958287,
+      "updated": 1791087812.766315
+    },
+    {
+      "run": "phantom-coast/q0-a1",
+      "experiment": "phantom-coast",
+      "status": "done",
+      "created": 1791087103.0560336,
+      "updated": 1791087114.8649216
+    },
+    {
+      "run": "optimal-swarm-size-reporting-q0/92cb8f74bd7cffc1",
+      "experiment": "optimal-swarm-size-reporting-q0",
+      "status": "done",
+      "created": 1791087059.7758243,
+      "updated": 1791087061.4722369
+    },
+    {
+      "run": "quorum-of-mirrors/qm-s0-01",
+      "experiment": "quorum-of-mirrors",
+      "status": "failed",
+      "created": 1791086033.6179564,
+      "updated": 1791086394.4938533
+    },
+    {
+      "run": "quorum-of-mirrors/qm-s0-02",
+      "experiment": "quorum-of-mirrors",
+      "status": "done",
+      "created": 1791086159.3504589,
+      "updated": 1791086394.3778038
+    }
+  ]
+}
