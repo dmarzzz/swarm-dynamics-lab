@@ -389,9 +389,9 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Forty-agent Haiku panel authorized under USD20 total; native admission preparation |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:07:47.728732+00:00 | RD6 Q0-A2 reviewed and published: 15/18 qualification, D0 unrun; no worker or allocation held. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:06:15.346937+00:00 | R1 stopped and reviewed; offline guard validated; repaired native design next |
-| vishesh/codex-methods | blocked |  | 2026-10-04 19:55:18.488784+00:00 | Comparison prepared and pushed; awaiting concrete Q0/conditional E0 scope decision; no allocation or native calls |
 | vishesh/codex-regrowth-docs | working | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | Preparing owner-approved C6 Jev–Haiku qualification and automatic evaluation; original ledger, USD50 cumulative ceiling, USD2 attempt bound |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc11-sol | 2026-10-04 19:38:27.157070+00:00 | Preparing owner-requested GPT-6 Sol qualification and ten-agent conditional pilot |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
