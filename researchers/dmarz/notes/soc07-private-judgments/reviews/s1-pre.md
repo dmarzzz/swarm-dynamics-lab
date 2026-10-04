@@ -13,7 +13,7 @@ This section governs attempts s1q.1-a1, s1r-a1 and s1l-a1 under manifest m2. The
 - Expected spend (estimate: m1's estimate times three for the price change, not a measurement): S1-Q.1 about USD 0.04, S1-R about USD 3, S1-L about USD 18; about USD 21 in total, under the unchanged USD 40 cap. The m1 ledger (USD 0.010669 for s1q) is carried forward on the new host, so the cap covers both manifests.
 - Server and claim: a fresh one-run box, sim-dmarz-8 (agentops fleet, created for this run because sim-dmarz-3 now holds another experiment), exclusive claim `dmarz-soc07-private` by dmarz/orbital-orchestrator. The study ledger is copied from sim-dmarz-3 before any m2 call and the sim-dmarz-3 copy is retired.
 - Visualization mapping: v1, unchanged.
-- S0 under m2 (s0-a3): result recorded here after it runs and before the approval is written.
+- S0 under m2 (s0-a3): hub run `soc07-private-judgments/eed24e49` on sim-dmarz-8 at revision 45f9c48d07b9be865c8e1e1ba5a1f341706ba1bc, fingerprint 475140d4…: done, 69 of 69 checks on 60 fixtures, 4 policies and the fault injections; 0 model calls. Server self-test 58 run, OK with 2 skipped. The carried ledger on sim-dmarz-8 is byte-identical to the sim-dmarz-3 copy (SHA-256 471a7635…, 12 calls, USD 0.010669); sim-dmarz-8 holds the live ledger from here on and the sim-dmarz-3 file is retired.
 
 - Experiment / owner / stages: soc07-private-judgments / dmarz (agent dmarz/soc07-private) / S1-Q qualification, S1-R controlled replay, S1-L live teams. Written 2026-10-04 UTC, before any model output.
 - Parent attempts: s0-a1 and s0-a2 (scripted, fleet), see [s0-post.md](s0-post.md). No earlier paid attempt exists.
