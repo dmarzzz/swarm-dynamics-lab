@@ -14,7 +14,7 @@
 | sync-consensus | 255 | 25 | 11 | 17 | 1 | 28 | 337 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 161 | 60 | 1 | 33 | 2 | 13 | 270 |
-| llm-agent-swarms | 597 | 128 | 115 | 199 | 47 | 14 | 1100 |
+| llm-agent-swarms | 601 | 128 | 117 | 199 | 47 | 14 | 1106 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
@@ -53,7 +53,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
-| [telephone-design-package](tasks/telephone-design-package.md) | claimed | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:25Z | Develop Telephone exploratory design and resource guide |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -278,6 +277,7 @@
 | [synthesis-pre-experiment-research](tasks/synthesis-pre-experiment-research.md) | done | p1 | synthesis | dmarz/preflight |  | 2026-10-03T20:24Z | Research prerequisites for selecting swarm experiments |
 | [synthesis-question-atlas](tasks/synthesis-question-atlas.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T20:46Z | Broad research questions, candidate hypotheses and test sketches for human review |
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
+| [telephone-design-package](tasks/telephone-design-package.md) | done | p1 | question | vishesh/codex-village-fit | vishesh | 2026-10-04T18:31Z | Develop Telephone exploratory design and resource guide |
 | [theseus-a1-acquisition](tasks/theseus-a1-acquisition.md) | done | p1 | experiment | vishesh/codex-theseus | vishesh | 2026-10-04T16:56Z | Theseus A1 withheld-policy acquisition screen |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
