@@ -25,6 +25,6 @@ Design and build successor 3 of [the next-experiments note](../researchers/dmarz
 
 - [x] Prospective plan and frozen design committed before implementation.
 - [x] Code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
+- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
 - [x] Chained launcher (interface probe, qualification, main stage; stops by itself at a failed gate) with the server as a parameter.
 - [ ] Run request filed in the private run queue after the fleet monitor's go.

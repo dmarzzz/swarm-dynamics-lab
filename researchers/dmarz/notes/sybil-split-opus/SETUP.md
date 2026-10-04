@@ -16,9 +16,9 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 | Gate | Status | Evidence, timestamp and assessor | Blocker / next action |
 |---|---|---|---|
 | G0 Question and applicable research gates | pass (exploratory scope only) | README and preregistration, 2026-10-04T08:35Z, dmarz/pipeline-split | Formal survey and hypothesis gates not met; S2 stays disabled |
-| G1 Plan written before implementation | pass | README, preregistration, design.yaml, experiment.yaml and this record committed before the study code; the simulator existed only as uncommitted working files used for the calibration below | none |
-| G2 Instrument and offline checks | pending | to be filled when selftest, offline S0, rehearsal and the manifest check have run | implement and test |
-| G3 Current attempt admission | pending | pre-run review `reviews/chain-001-pre.md` to be written after the code is pinned | pinned commit, fleet-monitor check, run-queue request, server claim |
+| G1 Plan written before implementation | pass | README, preregistration, design.yaml, experiment.yaml and this record committed (f3e294c5) before the study code (88fcf92a, 0b8a444a); the simulator existed only as uncommitted working files used for the calibration below. One plan change after that and before any run: qualification fixtures corroborate every present fact with two single-row honest identities (88fcf92a); the retry rule and the dollar-cap arithmetic were in the first plan commit | none |
+| G2 Instrument and offline checks | pass (offline, builder's own checks) | 2026-10-04T09:18Z, dmarz/pipeline-split, on commit 0b8a444a (source hash 95889bea...): selftest 55 tests OK; offline S0 1,853/1,853 valid, 0 violations, 0 calls; manifest check current (digest 2a4b2166...); rehearsal against a throwaway local hub with a stubbed model endpoint passes both chains; simulator output identical under Python 3.9, 3.12 and 3.14; details in [the pre-run review](reviews/chain-001-pre.md) | the full suite has not run under Python 3.12 with numpy and Pillow; the launcher's setup step does that on the server |
+| G3 Current attempt admission | pending | [reviews/chain-001-pre.md](reviews/chain-001-pre.md) committed 2026-10-04T09:18Z with status ready, pinned commit 0b8a444af0b08dfd80c06bc577ae30547ed35343 and source hash 95889beafbd40142ea68c52b4a00e2b1dbbbc10794f967cba3e00ca1767f3089 | dmarz/fleet-monitor's same-researcher check, run-queue request, exclusive server claim, launcher setup on the server |
 | G4 Qualification before scientific escalation | pending | P0 and Q0 are stages of the chain; the software gate admits S1 only after Q0 passes at the same source hash | run |
 | G5 Reconciliation and closeout | pending | none | run |
 
@@ -30,7 +30,9 @@ Status: prepared, not launched. This record follows [the setup runbook](../../..
 - Splits: engineering ring 4919-4934, community 4821-4836; qualification ring 5139-5143, community 5144-5148; comparison ring 8233-8256, community 8351-8374; probe: engineering root 4919. Holdout 10000-19999 unopened.
 - Agent definition: one stateless synthesizer call per assignment; prompt and schema in `src/provider.py`.
 - Versions: `claude-opus-5-5`, effort low; requirements.txt pinned; the runtime source hash covers design.yaml, experiment.yaml, requirements.txt and `src/*.py`.
-- Visualization: VISUALIZATION.md (written with the code).
+- Visualization: [VISUALIZATION.md](VISUALIZATION.md), mapping v1.
+- Offline checks: `src/selftest.py` (55 tests: graph generators and parent equality, structural invariants at every identity allocation and a tampered-world control, blind packets and policies, fixtures and gates, request shape, thinking blocks, refusal, transport retry rule, ledger caps, worker failure accounting, coordinator gates, chain stop and projection gate, analysis sign, weighting and missing-outcome bounds, frames and replay).
+- Launcher gate integration: `coordinator.check` and `coordinator.enqueue` are the only way a stage is queued; `worker.py` has no hub entry point of its own (its command line runs the scripted stage offline only); `chain.py` executes only the run it queued itself, at attempt 1.
 
 ### Root-range scan (2026-10-04T08:20Z)
 
@@ -39,7 +41,7 @@ Every text file under `researchers/`, `experiments/`, `hypotheses/`, `tooling/`,
 - The draft ranges were rejected. 8200-8223 collides with seeds of `researchers/vishesh/notes/adaptive-quorum-v2/repair-v3` (8200-8212) and `healing-helping-hands` (8201-8203); 5100-5104 and 4950-4965 contain numbers that occur in other studies' records.
 - Chosen ranges, zero occurrences each: 4821-4836, 4919-4934, 5139-5148, 8233-8256, 8351-8374.
 - Ranges used by the dmarz Sybil family, for reference: 4900-4901, 5000-5003, 6000-6023 (scale), 6800-6801, 6900-6903, 7000-7023 (budget), 6900-6901, 7000-7005, 7100-7123 (newcomer), 7790-7791, 7800-7823, 7900-7907 (scarcity). No overlap.
-- The scan is repeated before the pre-run review and its result recorded there.
+- The scan was repeated at 09:05Z and at the pinned commit after pulling `main`: still no occurrence outside this directory.
 
 ### Engineering calibration of the fixed resources (2026-10-04, no model call)
 
@@ -94,18 +96,19 @@ Under plurality the model cannot change who is admitted. What S1 adds is what th
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository (commands in RUN.md, written with the code). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher `scripts/run-ready-chain.py` in the agentops repository (commands in [RUN.md](RUN.md)). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
 
 | Operation | Exact command or unsupported reason | Evidence and last checked revision |
 |---|---|---|
-| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | pending (code not yet committed) |
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all pass on 0b8a444a (builder, offline) |
 | Prepare named stage | `python3 scripts/run-ready-chain.py sybil-split-opus <commit> setup --host <server>` | pending |
 | Dispatch named stage | `python3 scripts/run-ready-chain.py sybil-split-opus <commit> chain --host <server> --confirm-paid` | pending |
 | Resume interrupted execution | unsupported by design: a batch name cannot be queued twice; a repair is a new attempt with its own pre-run review | not applicable |
 | Analyze saved evidence and rebuild visuals | `... status --host <server>`, `... verify --host <server>`; `python3 src/analyze.py rows <episodes.jsonl.gz>` | pending |
 | Stop this study and close out | stop the chain process, verify uploads, release claim `dmarz-sybil-split-opus` | pending |
 
-- Attempt: chain-001 (S0, P0, Q0, S1); no parent attempt; pre-run assessment pending.
+- Attempt: chain-001 (S0, P0, Q0, S1); no parent attempt; pre-run assessment [reviews/chain-001-pre.md](reviews/chain-001-pre.md), status ready, not launched.
+- Frozen assigned manifest: [manifest.json](manifest.json), digest 2a4b21669c9301a440c3f59d0c1cbe8439a981507e2649203b1c1a0275fc6b75; execution command in the runbook.
 - Budget authority: dmarz via dmarz/fleet-monitor, 2026-10-04: cost is not a gate; hard call caps P0 1, Q0 60, S1 2,688, total 2,749; ledger cap USD 190 on settled cost plus open reservations.
 - Allocation: none yet. The operator takes the exclusive claim `dmarz-sybil-split-opus` at launch.
 - Credentials: `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID` supplied in memory by the launcher; never written to a file, an argument or a log. No credential was used to prepare this package.
