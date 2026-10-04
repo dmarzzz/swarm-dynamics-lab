@@ -20,7 +20,11 @@ python3 scripts/run-ready-chain.py false-alarm-cascade <commit> setup --host <se
 python3 scripts/run-ready-chain.py false-alarm-cascade <commit> chain --host <server> --confirm-paid
 python3 scripts/run-ready-chain.py false-alarm-cascade <commit> status --host <server>
 python3 scripts/run-ready-chain.py false-alarm-cascade <commit> verify --host <server>
+python3 scripts/run-ready-chain.py false-alarm-cascade <commit> resume --host <server>          # only after provider_credit_balance_low
+python3 scripts/run-ready-chain.py false-alarm-cascade <commit> chain --host <server> --confirm-paid --model claude-opus-5 --stages P0,Q0,S1 --source <agent id>
 ```
+
+Pass `--source <agent id>` on every action. `setup` takes about 5 minutes (the suite is 41 tests, about 4 minutes).
 
 - `setup` checks out `<commit>`, installs the pinned requirements, runs `python3 src/selftest.py` and compares the number of tests and `study.source_hash()` with `READY.yaml`.
 - `chain` starts one detached process, `python src/chain.py run --stages S0,P0,Q0,S1`, with `SWARM_MODEL_API_KEY`, `SWARM_MODEL_WORKSPACE_ID`, `STUDY_BUDGET_LEDGER`, `STUDY_RESULTS_DIR` and `SWARM_SOURCE` in its environment and the hub client on `PYTHONPATH`. `--confirm-paid` is required because P0, Q0 and S1 make model calls: 1, 24 and 3,600.
@@ -37,14 +41,18 @@ python3 scripts/run-ready-chain.py false-alarm-cascade <commit> verify --host <s
 
 Exit code 0: all requested stages done. Exit code 3: stopped at a failed stage or a refused gate; `chain-status.json` has `state: stopped_at_gate`, the stage and the reason. Any other non-zero code: internal error. There are no answer retries and no agent is needed between stages. A request rejected with HTTP 429 or 529 is resent at most twice inside its 300 s budget.
 
-S1 runs 120 team episodes, two at a time. Inside an episode the six rounds run in order and the five agent calls of a round are sent together. If any call fails, its episode ends there, no new episode and no new round starts anywhere, calls in flight finish, and every remaining call is recorded as not started. The hub run then ends `failed` with its usage reported; the completed rows stay valid data.
+S1 runs 120 team episodes, two at a time. Inside an episode the six rounds run in order and the five agent calls of a round are sent together. If a call fails, its episode ends there and its later rounds are recorded as not started; dispatch continues. When more than 3 episodes have failed (`max_failed`), or at once on an integrity failure (ledger refusal, reservation breach, model mismatch, source or batch mismatch, deadline), no new episode or round starts, calls in flight finish, and every remaining call is recorded as not started; the hub run ends `failed`. Within the limit S1 ends `done` and reports its failed episodes. A failed request keeps its HTTP status, body excerpt and request id in the row.
 
-Limits in the hashed design: 10 requests in flight; 300 s per request; 28,800 s per stage; 32,400 s for the chain; 3,625 calls; 4,000 transport attempts; USD 360 of settled cost plus open reservations. Expected: about USD 120 and about 1.5 to 4.5 hours (see the pre-run review).
+**Credit outage.** An HTTP 400, 402 or 403 whose body names the credit balance pauses all dispatch; the same call is re-sent every 60 s for up to 20 minutes. If it clears, the stage continues by itself. If not, S1 stops with reason `provider_credit_balance_low`. Then, and only then, run `resume`: it queues continuation batch `s1-001-r1` with exactly the not-started rows (interrupted episodes continue from the round where they stopped) under the same ledger and caps. `resume` refuses after any other stop. A billing stop in P0 or Q0 needs a new attempt.
+
+**Second model.** Use `--model claude-opus-5 --stages P0,Q0,S1` only after a stage was refused on a limit or credit error that did not clear in 20 minutes (a `provider_credit_balance_low` stop, or repeated 429 past the retry rule), as a dated amendment noted on the run request. S0 has already passed and serves both models. The launcher points the ledger at `accounting/ledger-opus-5.jsonl` and results at `results-opus-5`; batches are `p0-001-opus-5`, `q0-001-opus-5`, `s1-001-opus-5`; Opus 5 needs its own P0 and Q0; its results are never pooled with Opus 5.5's.
+
+Limits in the hashed design: 10 requests in flight; 300 s per request; 28,800 s per stage; 32,400 s for the chain; 3,625 calls per model; 4,000 transport attempts; 3 failed S1 episodes; USD 450 of settled cost plus open reservations per model ledger. Expected: about USD 120 on Opus 5.5 (about USD 150 on Opus 5) and about 1.3 to 4.2 hours (see the pre-run review).
 
 ## After the chain
 
 1. `status`, then `verify`. Keep both outputs.
-2. Do not rerun a stage. A batch name is refused the second time. A repair is a new attempt number in `design.yaml`, which changes the source hash, and needs its own pre-run review. After a failed Q0 the first step is to read the failing answers with their packets (they are in `episodes.jsonl.gz`); a repaired attempt uses fresh qualification roots.
+2. Do not rerun a stage. A batch name is refused the second time. The only continuation is `resume` after a credit stop. Any other repair is a new attempt number in `design.yaml`, which changes the source hash, and needs its own pre-run review. After a failed Q0 the first step is to read the failing answers with their packets (they are in `episodes.jsonl.gz`); a repaired attempt uses fresh qualification roots.
 3. Write the post-mortem per [RUN-REVIEW.md](../../../../tooling/agent-experiments/RUN-REVIEW.md): reconcile assigned, started, terminal, graded and analyzed rows; compare the frames with the saved analysis; report actual calls, tokens and dollars.
 4. Confirm the chain process has exited and uploads are verified, then release the claim. Do not destroy the server.
 

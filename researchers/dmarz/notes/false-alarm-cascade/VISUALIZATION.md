@@ -1,7 +1,7 @@
 # Visualization mapping v1: false-alarm-cascade
 
 - Mapping version: v1, bound to the source hash in [READY.yaml](READY.yaml). Renderer: `src/render.py` (Pillow only). No parent mapping; the layout is specific to this study.
-- Run bindings: each stage is one hub run of experiment `false-alarm-cascade` with params `stage`, `batch` (`s0-001`, `p0-001`, `q0-001`, `s1-001`), `source_hash` and `code`. Each row binds root, condition, member, round and, in S0, the scripted actor.
+- Run bindings: each stage is one hub run of experiment `false-alarm-cascade` with params `stage`, `batch` (`s0-001`, `p0-001`, `q0-001`, `s1-001`; on the second model `p0-001-opus-5`, `q0-001-opus-5`, `s1-001-opus-5`; continuations `-r1`), `model`, `source_hash` and `code`. Each row binds model, root, condition, member, round and, in S0, the scripted actor. Frames, tables and the replay are per model; models are never drawn on one axis or pooled.
 - Behaviour to show: whether use of the falsely accused real resource X falls after the alarm, and whether it comes back after the correction; the same for the truly accused honeypot H; whether avoidance spreads to other real resources; and whether the agents get better at telling honeypots from real resources or only skip more.
 - Status: the renderer is implemented and tested offline on scripted rows. No frame of a paid stage exists, because nothing has run.
 

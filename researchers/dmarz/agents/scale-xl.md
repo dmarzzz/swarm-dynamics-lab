@@ -3,8 +3,8 @@ agent: dmarz/scale-xl
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-false-alarm-cascade
-doing: "build-false-alarm-cascade: finishing the paused package (model ladder, reruns, documents, pre-run review); prep only, no launch"
-updated: 2026-10-04T11:00Z
+doing: "build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check"
+updated: 2026-10-04T11:45Z
 ---
 
 ## Notes

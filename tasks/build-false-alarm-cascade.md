@@ -27,6 +27,6 @@ Design and build hunch V4 of [the honeypot-vigilance note](../researchers/dmarz/
 
 - [x] Prospective plan and frozen design committed before implementation.
 - [x] Code, offline tests and a scripted zero-model-call stage that passes offline.
-- [ ] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit.
-- [ ] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter.
+- [x] Pre-run review per tooling/agent-experiments/RUN-REVIEW.md on main with assignment manifest, call counts, gates, model settings, hard max_calls and the pinned commit (code commit af115c44, source hash 7803e3b8; reviews/chain-001-pre.md).
+- [x] Chained launch per researchers/dmarz/notes/pipeline/READY-CHAIN.md with the server as a parameter (READY.yaml with model_ladder; RUN.md; rehearsal 57/57).
 - [ ] Run request filed in the private run queue after the fleet monitor's go.
