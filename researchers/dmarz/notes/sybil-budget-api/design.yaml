@@ -1,0 +1,124 @@
+version: 1
+experiment: sybil-budget-api
+status: exploratory
+questions:
+- SEC-19
+- SEC-43
+model: claude-haiku-4-5-20251001
+arms:
+- random
+- coverage
+visibility:
+- visible
+cfg:
+  core: 18
+  community: 9
+  trusted_seeds: 2
+  admission_seats: 18
+  pagerank_restart: 0.2
+  pagerank_iterations: 120
+  honest_check_pass: 0.9
+  skills: 6
+stages:
+  S0:
+    backend: scripted
+  Q0:
+    backend: anthropic
+  S1:
+    backend: anthropic
+  S2:
+    enabled: false
+    reserved_task_range:
+    - 10000
+    - 19999
+pilot:
+  attacker_pass:
+  - 0.1
+  - 0.3
+  - 0.5
+  - 0.7
+  - 0.9
+budget:
+  aggregate_usd: 110
+  max_attempted_calls: 3200
+  max_output_tokens: 500
+  max_input_bytes: 240000
+  request_timeout_seconds: 120
+  stage_timeout_seconds: 14400
+  retries: 0
+  workers: 4
+  input_usd_per_million: 1
+  output_usd_per_million: 5
+qualification:
+  structural_valid_rate: 1.0
+  fact_accuracy: 0.95
+  exact_packet_rate: 0.9
+  missing_abstention: 1.0
+primary_contrast:
+  metric: rare_accuracy
+  arm: coverage
+  visibility: visible
+  attacker_pass: 0.1
+  n: 972
+  contrast: 108 minus 4 checks, fresh-world endpoint replication
+  status: exploratory
+secondary_contrast:
+  contrast: coverage minus random at equal checks for every size and attacker pass
+    rate
+  metrics:
+  - rare_accuracy
+  - bad_seat_share
+  - specialist_retention
+sizes:
+- 324
+- 972
+worlds:
+- 7000
+- 7001
+- 7002
+- 7003
+- 7004
+- 7005
+- 7006
+- 7007
+- 7008
+- 7009
+- 7010
+- 7011
+- 7012
+- 7013
+- 7014
+- 7015
+- 7016
+- 7017
+- 7018
+- 7019
+- 7020
+- 7021
+- 7022
+- 7023
+qualification_worlds:
+- 6900
+- 6901
+- 6902
+- 6903
+engineering_worlds:
+- 6800
+- 6801
+checks:
+- 4
+- 8
+- 16
+- 32
+- 64
+- 108
+joint_target:
+  rare_accuracy_min: 0.9
+  bad_seat_share_max: 0.05
+  interpretation: Engineering target on measured cell means, not a safety guarantee;
+    all cells and uncertainty reported without monotonic interpolation.
+review_waiver:
+  date: '2026-10-04'
+  scope: Owner explicitly waived independent review and authorized both follow-up
+    experiments in parallel. Own pre/post engineering assessments retained. Exploratory
+    notes only; formal S2 remains disabled.
