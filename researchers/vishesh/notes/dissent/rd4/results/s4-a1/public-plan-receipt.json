@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter-rd4",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/88feac7ea6218c2712914fb5462ab5d66814a50a/researchers/vishesh/notes/dissent/rd4/PLAN.md",
+  "commit": "88feac7ea6218c2712914fb5462ab5d66814a50a",
+  "plan_sha256": "1dc78d048283a50c50ee711a50be068deabb0be2c10cdf29a8be10a4da1b129b",
+  "registered_tldr": "TLDR: Can repaired evidence memory preserve a correct stop and reopen when facts improve? Compare original and symmetric Jev admission on identical repaired mechanics with always-check, majority, pooled evidence and an exact rule. Measure all 576 assigned decisions, recovery, false reversals, duplicate-check waste and calls/checks. Scripted votes and 24 fixed template roots limit inference; exploratory RD-4 successor.",
+  "run_tldr": "TLDR: S4-A1 compares original and symmetric learned admission on identical repaired memory with majority, always-check, pooled and exact rules. Evaluate 24 fixed roots times four epochs times six policies: 576 decisions, including duplicates, favorable recovery and deterioration. Report all failures and calls/checks; scripted votes and repeated authored templates limit inference.",
+  "checked_utc": "2026-10-04T05:56:14.188841+00:00"
+}
