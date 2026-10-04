@@ -4096,6 +4096,56 @@
       "assessor": "vishesh/codex-methods",
       "assessed_at": "2026-10-04",
       "source_commit": "b3e139e7"
+    },
+    {
+      "id": "influence-scale-sol",
+      "title": "Influence procurement: Sol ten-agent pilot",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/scale-up/README.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "source_commit": "790f8ce9f9bc9ededa3afa052cad814e2f873fcb",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The final evidence-based decision was correct while universal adviser deferral prevented an informative test of peer influence.",
+        "rationale": "One synthetic world, dependent calls, no competent adviser baseline or matched private reconsideration. Model and team-size cohorts are separate; a correct chair does not establish influence resistance."
+      },
+      "sample_size_summary": "One authored world,2 conditions;36/36 valid calls;8 advisers plus auditor/chair. All16 initial and16 revised adviser outputs DEFER;2/2 correct chairs.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/SP-SOL-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/scale-up/saved-audit.json"
+      ],
+      "status_at_assessment": "completed_exploratory_baseline_gap_parked"
+    },
+    {
+      "id": "influence-scale-luna",
+      "title": "Influence procurement: Luna fifty-agent pilot and recovery",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/scale-up/README.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "source_commit": "790f8ce9f9bc9ededa3afa052cad814e2f873fcb",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "The final evidence-based decision was correct while universal adviser deferral prevented an informative test of peer influence.",
+        "rationale": "One synthetic world, dependent calls, no competent adviser baseline or matched private reconsideration. Model and team-size cohorts are separate; a correct chair does not establish influence resistance."
+      },
+      "sample_size_summary": "Same one authored world,2 conditions;196 logical outputs across197 physical requests:67 valid parent,1 malformed,129 valid recovery.48 advisers plus auditor/chair;2/2 correct chairs. Mid-run verbosity change.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/SC-LUNA-post.md",
+        "researchers/vishesh/notes/influence-swarms/scenario/scale-up/saved-audit.json"
+      ],
+      "status_at_assessment": "completed_exploratory_baseline_gap_parked"
     }
   ],
   "source_sha256": {

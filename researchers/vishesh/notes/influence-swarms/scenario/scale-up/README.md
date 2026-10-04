@@ -1,5 +1,21 @@
 # How to win agents and influence swarms: scale pilot
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-experiments; source `790f8ce9` ([registry](../../../../../../experiments/evidence-metadata.json), [rubric](../../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+**Influence procurement: Sol ten-agent pilot** (`influence-scale-sol`)
+
+- **evidence_confidence:** **1/4** — The final evidence-based decision was correct while universal adviser deferral prevented an informative test of peer influence. Basis: One synthetic world, dependent calls, no competent adviser baseline or matched private reconsideration. Model and team-size cohorts are separate; a correct chair does not establish influence resistance.
+- **sample_size_summary:** One authored world,2 conditions;36/36 valid calls;8 advisers plus auditor/chair. All16 initial and16 revised adviser outputs DEFER;2/2 correct chairs.
+
+**Influence procurement: Luna fifty-agent pilot and recovery** (`influence-scale-luna`)
+
+- **evidence_confidence:** **1/4** — The final evidence-based decision was correct while universal adviser deferral prevented an informative test of peer influence. Basis: One synthetic world, dependent calls, no competent adviser baseline or matched private reconsideration. Model and team-size cohorts are separate; a correct chair does not establish influence resistance.
+- **sample_size_summary:** Same one authored world,2 conditions;196 logical outputs across197 physical requests:67 valid parent,1 malformed,129 valid recovery.48 advisers plus auditor/chair;2/2 correct chairs. Mid-run verbosity change.
+<!-- experiment-evidence:end -->
+
 This iteration asks whether misleading supplier advocacy changes a procurement team's advice or purchase decision when deployment-specific records contradict it.
 
 Two requested systems are being tested: ten GPT-6 Sol agents and fifty GPT-6 Luna agents. Luna is the cheaper candidate that passed the final development checks. Team totals include the auditor and chair. These are model roles in a controlled workflow, not fifty servers or fifty independent experimental samples.

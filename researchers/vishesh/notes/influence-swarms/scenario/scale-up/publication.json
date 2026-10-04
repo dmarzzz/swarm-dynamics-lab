@@ -1,0 +1,27 @@
+{
+  "sha256": "a8d2ff255d13ed179628db2e301fdc5cd0dd9c4d588c2702a4b972f8f46b7c3f",
+  "bytes": 378116,
+  "receipts": [
+    {
+      "stage": "SP-SOL",
+      "run": "influence-swarms/1004-203432-80f0d1",
+      "status_unchanged": true,
+      "replay_attached": true,
+      "artifact_count": 6
+    },
+    {
+      "stage": "SP-LUNA",
+      "run": "influence-swarms/1004-204111-119eeb",
+      "status_unchanged": true,
+      "replay_attached": true,
+      "artifact_count": 6
+    },
+    {
+      "stage": "SC-LUNA",
+      "run": "influence-swarms/1004-205024-a31ec3",
+      "status_unchanged": true,
+      "replay_attached": true,
+      "artifact_count": 7
+    }
+  ]
+}

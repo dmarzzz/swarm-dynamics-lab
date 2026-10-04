@@ -99,12 +99,13 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/influence-swarms/scenario",
       "setup_path": "researchers/vishesh/notes/influence-swarms/scenario/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+      "postmortem_path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/SC-LUNA-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:14:12.562058+00:00",
-      "checked_commit": "682429057a8d77f527d88b10d02bcac5610152f4",
-      "next_action": "D8closed:matrixvalid,typedHTTP400,2calls0retries. Schema delivery repaired; typedfailurecauseunknown.99offline tests including safe OpenRouter envelope classifier; no successor admitted. Original8cap/5.063392reserved/250calls,2.936608unreserved; worker/relayclosed and allocationreleased. See D8-post.md and POST-D8-REPAIR.md.",
-      "next_run_approval": "owner"
+      "checked_at": "2026-10-04T21:03:29.760130+00:00",
+      "checked_commit": "790f8ce9f9bc9ededa3afa052cad814e2f873fcb",
+      "next_action": "FINISH / PARK: Sol10 completed36/36; Luna50 recovered196logical outputs from197requests across separate failed parent/recovery. All chairs correct; all advisers deferred, so influence baseline GAP. One synthetic root; no size/model causal claim. Saved audit and scientific closeouts complete, allocation released; original8cap/7.961696reserved/530calls, historical hosting unknown. Offline next-design draft only; no funded successor.",
+      "next_run_approval": "owner",
+      "operational_state": "requested scale workflows completed with explicit recovery; scientific baseline gap; no active allocation"
     },
     {
       "id": "healing-helping-hands",

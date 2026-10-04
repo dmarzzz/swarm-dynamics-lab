@@ -1,0 +1,43 @@
+[
+  {
+    "stage": "SP-SOL",
+    "physical_requests": 36,
+    "validated_new_outputs": 36,
+    "reused_outputs": 0,
+    "all_artifact_hashes_match": true,
+    "all_wires_reconstructed": true,
+    "assessment_reproduced": true,
+    "usage_reconciled": true,
+    "failed_response_preserved": [],
+    "model_calls": 0
+  },
+  {
+    "stage": "SP-LUNA",
+    "physical_requests": 68,
+    "validated_new_outputs": 67,
+    "reused_outputs": 0,
+    "all_artifact_hashes_match": true,
+    "all_wires_reconstructed": true,
+    "assessment_reproduced": true,
+    "usage_reconciled": true,
+    "failed_response_preserved": [
+      {
+        "physical_request": 68,
+        "classification": "JSONDecodeError"
+      }
+    ],
+    "model_calls": 0
+  },
+  {
+    "stage": "SC-LUNA",
+    "physical_requests": 129,
+    "validated_new_outputs": 129,
+    "reused_outputs": 67,
+    "all_artifact_hashes_match": true,
+    "all_wires_reconstructed": true,
+    "assessment_reproduced": true,
+    "usage_reconciled": true,
+    "failed_response_preserved": [],
+    "model_calls": 0
+  }
+]

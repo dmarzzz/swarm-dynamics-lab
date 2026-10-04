@@ -1,0 +1,646 @@
+{"kind": "session", "maximum_attempts": 129, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 6524, "sha256": "51acc8acf6d25b843bffec423656c15e38d4c7b4ff8e88c22507fae4d33b11e1"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 6524, "sha256": "51acc8acf6d25b843bffec423656c15e38d4c7b4ff8e88c22507fae4d33b11e1"}}
+{"kind": "response_artifact", "attempt": 1, "name": "01-response.bin", "bytes": 1424, "sha256": "6fe5929de345a2b96c12282bd50e3a4bc352b2176f64607a0dccfde22b447eb9"}
+{"kind": "usage", "attempt": 1, "usage_known": true, "tokens": {"input_tokens": 1334, "output_tokens": 143}, "reported_usd": 0.000238175}
+{"kind": "response_validated", "attempt": 1, "usage_known": true, "actual_usd": 0.000238175}
+{"kind": "request_artifact", "attempt": 2, "name": "02-request.bin", "bytes": 6954, "sha256": "240e335b883dd7965b10db837e5974e969a9957bc641870ea65cad2769d639ef"}
+{"kind": "attempt_start", "attempt": 2, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "02-request.bin", "bytes": 6954, "sha256": "240e335b883dd7965b10db837e5974e969a9957bc641870ea65cad2769d639ef"}}
+{"kind": "response_artifact", "attempt": 2, "name": "02-response.bin", "bytes": 1580, "sha256": "7992647ab1a5421cd88856181b0126d332da5944e5797621da9ed02080556972"}
+{"kind": "usage", "attempt": 2, "usage_known": true, "tokens": {"input_tokens": 1440, "output_tokens": 181}, "reported_usd": 0.000270425}
+{"kind": "response_validated", "attempt": 2, "usage_known": true, "actual_usd": 0.000270425}
+{"kind": "request_artifact", "attempt": 3, "name": "03-request.bin", "bytes": 6300, "sha256": "1ac0760396112bd4533e5863fcb4405259897af4a3ebf54cf246f1e120cade43"}
+{"kind": "attempt_start", "attempt": 3, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "03-request.bin", "bytes": 6300, "sha256": "1ac0760396112bd4533e5863fcb4405259897af4a3ebf54cf246f1e120cade43"}}
+{"kind": "response_artifact", "attempt": 3, "name": "03-response.bin", "bytes": 1374, "sha256": "fc94f41254fee44ab2365a7999afc9168af1db269022fe354d11cdf877119856"}
+{"kind": "usage", "attempt": 3, "usage_known": true, "tokens": {"input_tokens": 1263, "output_tokens": 123}, "reported_usd": 0.0002193}
+{"kind": "response_validated", "attempt": 3, "usage_known": true, "actual_usd": 0.0002193}
+{"kind": "request_artifact", "attempt": 4, "name": "04-request.bin", "bytes": 5981, "sha256": "257d06aafa5d5fb6d447c4f7e2d93d654d54e368609e1658b4ed7ae47a001eee"}
+{"kind": "attempt_start", "attempt": 4, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "04-request.bin", "bytes": 5981, "sha256": "257d06aafa5d5fb6d447c4f7e2d93d654d54e368609e1658b4ed7ae47a001eee"}}
+{"kind": "response_artifact", "attempt": 4, "name": "04-response.bin", "bytes": 1419, "sha256": "91f65c00030f78d016f82aa4ad69e827484b1f09be58fdc5ee4dfe8f0220a9b8"}
+{"kind": "usage", "attempt": 4, "usage_known": true, "tokens": {"input_tokens": 1212, "output_tokens": 131}, "reported_usd": 0.000216925}
+{"kind": "response_validated", "attempt": 4, "usage_known": true, "actual_usd": 0.000216925}
+{"kind": "request_artifact", "attempt": 5, "name": "05-request.bin", "bytes": 6226, "sha256": "7c78c320981659340cddf000d263398c911777575d6ca07758b8ae4f420e8748"}
+{"kind": "attempt_start", "attempt": 5, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "05-request.bin", "bytes": 6226, "sha256": "7c78c320981659340cddf000d263398c911777575d6ca07758b8ae4f420e8748"}}
+{"kind": "response_artifact", "attempt": 5, "name": "05-response.bin", "bytes": 1289, "sha256": "491b3a1b8ebda886434916ac151889e5dcce8155a133758956ad232ec4d415e7"}
+{"kind": "usage", "attempt": 5, "usage_known": true, "tokens": {"input_tokens": 1268, "output_tokens": 120}, "reported_usd": 0.000218425}
+{"kind": "response_validated", "attempt": 5, "usage_known": true, "actual_usd": 0.000218425}
+{"kind": "request_artifact", "attempt": 6, "name": "06-request.bin", "bytes": 6726, "sha256": "63c7bff19ac526dfc1b534666bb307b25c0f731546396eaa280b3b4331980fd7"}
+{"kind": "attempt_start", "attempt": 6, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "06-request.bin", "bytes": 6726, "sha256": "63c7bff19ac526dfc1b534666bb307b25c0f731546396eaa280b3b4331980fd7"}}
+{"kind": "response_artifact", "attempt": 6, "name": "06-response.bin", "bytes": 1482, "sha256": "3be75f8799cece42be63294a72679b32ae094cb6d43b499bfc28b97fb41bd9d0"}
+{"kind": "usage", "attempt": 6, "usage_known": true, "tokens": {"input_tokens": 1384, "output_tokens": 146}, "reported_usd": 0.000245925}
+{"kind": "response_validated", "attempt": 6, "usage_known": true, "actual_usd": 0.000245925}
+{"kind": "request_artifact", "attempt": 7, "name": "07-request.bin", "bytes": 6486, "sha256": "73546583bcb1eddeeeb184c6773756ea94b6e27e4a99fc2d5a72f788050149ef"}
+{"kind": "attempt_start", "attempt": 7, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "07-request.bin", "bytes": 6486, "sha256": "73546583bcb1eddeeeb184c6773756ea94b6e27e4a99fc2d5a72f788050149ef"}}
+{"kind": "response_artifact", "attempt": 7, "name": "07-response.bin", "bytes": 1306, "sha256": "575adc2d8681c739502ba80dd73123fed68f15f6cc103c286c6bf467592cb21e"}
+{"kind": "usage", "attempt": 7, "usage_known": true, "tokens": {"input_tokens": 1295, "output_tokens": 113}, "reported_usd": 0.0002183}
+{"kind": "response_validated", "attempt": 7, "usage_known": true, "actual_usd": 0.0002183}
+{"kind": "request_artifact", "attempt": 8, "name": "08-request.bin", "bytes": 6208, "sha256": "2f33bc7408e1ead858a1a31d688b1ed980657dde0342475a7712eb01b2ac2741"}
+{"kind": "attempt_start", "attempt": 8, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "08-request.bin", "bytes": 6208, "sha256": "2f33bc7408e1ead858a1a31d688b1ed980657dde0342475a7712eb01b2ac2741"}}
+{"kind": "response_artifact", "attempt": 8, "name": "08-response.bin", "bytes": 1493, "sha256": "f1fc13b6577564bfc7b9a4ed997445eb5ae40610e6407c7969b6f2c094ef6305"}
+{"kind": "usage", "attempt": 8, "usage_known": true, "tokens": {"input_tokens": 1262, "output_tokens": 164}, "reported_usd": 0.000239675}
+{"kind": "response_validated", "attempt": 8, "usage_known": true, "actual_usd": 0.000239675}
+{"kind": "request_artifact", "attempt": 9, "name": "09-request.bin", "bytes": 6339, "sha256": "2cc8a756705cffd6205894ad9bba039d247214455efb8b603de35a55d97d021b"}
+{"kind": "attempt_start", "attempt": 9, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "09-request.bin", "bytes": 6339, "sha256": "2cc8a756705cffd6205894ad9bba039d247214455efb8b603de35a55d97d021b"}}
+{"kind": "response_artifact", "attempt": 9, "name": "09-response.bin", "bytes": 1510, "sha256": "75cf0f89ff7666a767f3fd0e7e9a0f4a636f5cfa875efae228c8e8f34ba56ca5"}
+{"kind": "usage", "attempt": 9, "usage_known": true, "tokens": {"input_tokens": 1299, "output_tokens": 169}, "reported_usd": 0.0002468}
+{"kind": "response_validated", "attempt": 9, "usage_known": true, "actual_usd": 0.0002468}
+{"kind": "request_artifact", "attempt": 10, "name": "10-request.bin", "bytes": 6596, "sha256": "10775b518558c5fbda313d1af034e47499faa9d23397b457acb50027e0292740"}
+{"kind": "attempt_start", "attempt": 10, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "10-request.bin", "bytes": 6596, "sha256": "10775b518558c5fbda313d1af034e47499faa9d23397b457acb50027e0292740"}}
+{"kind": "response_artifact", "attempt": 10, "name": "10-response.bin", "bytes": 1439, "sha256": "b94be0e286c29ba34d6ea1e50fc4c4a1c69f53ac89adf5a844698e25db1c7be5"}
+{"kind": "usage", "attempt": 10, "usage_known": true, "tokens": {"input_tokens": 1363, "output_tokens": 157}, "reported_usd": 0.0002488}
+{"kind": "response_validated", "attempt": 10, "usage_known": true, "actual_usd": 0.0002488}
+{"kind": "request_artifact", "attempt": 11, "name": "11-request.bin", "bytes": 6110, "sha256": "56aa454b517ddcafba9239a76c19ec1ca0638bd17466f190bbb5f919d11a52b0"}
+{"kind": "attempt_start", "attempt": 11, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "11-request.bin", "bytes": 6110, "sha256": "56aa454b517ddcafba9239a76c19ec1ca0638bd17466f190bbb5f919d11a52b0"}}
+{"kind": "response_artifact", "attempt": 11, "name": "11-response.bin", "bytes": 1298, "sha256": "47039e8840f7942f2cbbce0c7f908ebed0c668cdfea029e8d8a5289f7bb83db4"}
+{"kind": "usage", "attempt": 11, "usage_known": true, "tokens": {"input_tokens": 1216, "output_tokens": 112}, "reported_usd": 0.000207925}
+{"kind": "response_validated", "attempt": 11, "usage_known": true, "actual_usd": 0.000207925}
+{"kind": "request_artifact", "attempt": 12, "name": "12-request.bin", "bytes": 5962, "sha256": "1e55af79e9e5d9c4ceee592b08ad6d30edb6c51e5e2317ca5bf2ddc4da70ad2a"}
+{"kind": "attempt_start", "attempt": 12, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "12-request.bin", "bytes": 5962, "sha256": "1e55af79e9e5d9c4ceee592b08ad6d30edb6c51e5e2317ca5bf2ddc4da70ad2a"}}
+{"kind": "response_artifact", "attempt": 12, "name": "12-response.bin", "bytes": 1424, "sha256": "4c4b8a2e21ceb46f44230bdc22342cc7a7ad039700e05dac549b8ebe0e91e701"}
+{"kind": "usage", "attempt": 12, "usage_known": true, "tokens": {"input_tokens": 1206, "output_tokens": 143}, "reported_usd": 0.000222175}
+{"kind": "response_validated", "attempt": 12, "usage_known": true, "actual_usd": 0.000222175}
+{"kind": "request_artifact", "attempt": 13, "name": "13-request.bin", "bytes": 6256, "sha256": "84f6818e6618695430e9d32f630e126fba3fa9d87c90302019b6d193b0fae4af"}
+{"kind": "attempt_start", "attempt": 13, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "13-request.bin", "bytes": 6256, "sha256": "84f6818e6618695430e9d32f630e126fba3fa9d87c90302019b6d193b0fae4af"}}
+{"kind": "response_artifact", "attempt": 13, "name": "13-response.bin", "bytes": 1304, "sha256": "6267187537358683d4541603e21452d27887bbac1ba161d7f9ac5c8746fa1dfb"}
+{"kind": "usage", "attempt": 13, "usage_known": true, "tokens": {"input_tokens": 1276, "output_tokens": 120}, "reported_usd": 0.000219425}
+{"kind": "response_validated", "attempt": 13, "usage_known": true, "actual_usd": 0.000219425}
+{"kind": "request_artifact", "attempt": 14, "name": "14-request.bin", "bytes": 6775, "sha256": "69bc8d0e855b034692bf1a6a6f8657434ad428519ef69e46ca4fad0cd6940eab"}
+{"kind": "attempt_start", "attempt": 14, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "14-request.bin", "bytes": 6775, "sha256": "69bc8d0e855b034692bf1a6a6f8657434ad428519ef69e46ca4fad0cd6940eab"}}
+{"kind": "response_artifact", "attempt": 14, "name": "14-response.bin", "bytes": 1554, "sha256": "08a92991a175abaeed52deabd5a6a73c93c440f5c052b7d5d582ffba34bdd5ac"}
+{"kind": "usage", "attempt": 14, "usage_known": true, "tokens": {"input_tokens": 1407, "output_tokens": 179}, "reported_usd": 0.0002653}
+{"kind": "response_validated", "attempt": 14, "usage_known": true, "actual_usd": 0.0002653}
+{"kind": "request_artifact", "attempt": 15, "name": "15-request.bin", "bytes": 6295, "sha256": "754b0927dd568e0b4bc8188625a7b2a654173583f59d40e43e7d30509de1ab57"}
+{"kind": "attempt_start", "attempt": 15, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "15-request.bin", "bytes": 6295, "sha256": "754b0927dd568e0b4bc8188625a7b2a654173583f59d40e43e7d30509de1ab57"}}
+{"kind": "response_artifact", "attempt": 15, "name": "15-response.bin", "bytes": 1490, "sha256": "bd686a7fe0a020e1bfd3e7b70ecae418a40a0aa90f5bd885ff73d419c4a471fb"}
+{"kind": "usage", "attempt": 15, "usage_known": true, "tokens": {"input_tokens": 1246, "output_tokens": 150}, "reported_usd": 0.000230675}
+{"kind": "response_validated", "attempt": 15, "usage_known": true, "actual_usd": 0.000230675}
+{"kind": "request_artifact", "attempt": 16, "name": "16-request.bin", "bytes": 5982, "sha256": "9b11f7e0de0ecae89d7e1e0ff0eb25fafd268a49d67a9ecb4268dc519bc82d69"}
+{"kind": "attempt_start", "attempt": 16, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "16-request.bin", "bytes": 5982, "sha256": "9b11f7e0de0ecae89d7e1e0ff0eb25fafd268a49d67a9ecb4268dc519bc82d69"}}
+{"kind": "response_artifact", "attempt": 16, "name": "16-response.bin", "bytes": 1281, "sha256": "e48e502dca1e5223c96dfe7c7b63673dc07e89b45ec84c2d050e120674a2314b"}
+{"kind": "usage", "attempt": 16, "usage_known": true, "tokens": {"input_tokens": 1211, "output_tokens": 110}, "reported_usd": 0.0002063}
+{"kind": "response_validated", "attempt": 16, "usage_known": true, "actual_usd": 0.0002063}
+{"kind": "request_artifact", "attempt": 17, "name": "17-request.bin", "bytes": 6209, "sha256": "08f977ed46c38b4c2276305f8c5b9cfcdae58a4a720bd5800576fbda834cc922"}
+{"kind": "attempt_start", "attempt": 17, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "17-request.bin", "bytes": 6209, "sha256": "08f977ed46c38b4c2276305f8c5b9cfcdae58a4a720bd5800576fbda834cc922"}}
+{"kind": "response_artifact", "attempt": 17, "name": "17-response.bin", "bytes": 1536, "sha256": "b1089a19301d2e3d0b1d7c3ad60c33b0aba3340c1b6d4d9e15a7f405f943ade4"}
+{"kind": "usage", "attempt": 17, "usage_known": true, "tokens": {"input_tokens": 1262, "output_tokens": 178}, "reported_usd": 0.000246675}
+{"kind": "response_validated", "attempt": 17, "usage_known": true, "actual_usd": 0.000246675}
+{"kind": "request_artifact", "attempt": 18, "name": "18-request.bin", "bytes": 6662, "sha256": "59f267b6233df8333de8124393bbc889d6cdc129dda9b45cee76900ee52c3cfb"}
+{"kind": "attempt_start", "attempt": 18, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "18-request.bin", "bytes": 6662, "sha256": "59f267b6233df8333de8124393bbc889d6cdc129dda9b45cee76900ee52c3cfb"}}
+{"kind": "response_artifact", "attempt": 18, "name": "18-response.bin", "bytes": 1539, "sha256": "874fa3b7a5a1bb84a130381d3f05af1a6b325a8ade43be195896d20c3528e80f"}
+{"kind": "usage", "attempt": 18, "usage_known": true, "tokens": {"input_tokens": 1390, "output_tokens": 176}, "reported_usd": 0.000261675}
+{"kind": "response_validated", "attempt": 18, "usage_known": true, "actual_usd": 0.000261675}
+{"kind": "request_artifact", "attempt": 19, "name": "19-request.bin", "bytes": 6210, "sha256": "e2c56ddcbe0464fe8f989e6d84c76be4e9ebccd6e7aff2c1c314ff4174b65a53"}
+{"kind": "attempt_start", "attempt": 19, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "19-request.bin", "bytes": 6210, "sha256": "e2c56ddcbe0464fe8f989e6d84c76be4e9ebccd6e7aff2c1c314ff4174b65a53"}}
+{"kind": "response_artifact", "attempt": 19, "name": "19-response.bin", "bytes": 1292, "sha256": "2dd624cef0a79ca3b50d639dcfead499af9c6a90d4cdd538657042c5c8bbc9e5"}
+{"kind": "usage", "attempt": 19, "usage_known": true, "tokens": {"input_tokens": 1233, "output_tokens": 113}, "reported_usd": 0.00021055}
+{"kind": "response_validated", "attempt": 19, "usage_known": true, "actual_usd": 0.00021055}
+{"kind": "request_artifact", "attempt": 20, "name": "20-request.bin", "bytes": 5965, "sha256": "6ad15945ab8d6da09aafc83b890f32d866015e6ce21433947064c9429285cfe9"}
+{"kind": "attempt_start", "attempt": 20, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "20-request.bin", "bytes": 5965, "sha256": "6ad15945ab8d6da09aafc83b890f32d866015e6ce21433947064c9429285cfe9"}}
+{"kind": "response_artifact", "attempt": 20, "name": "20-response.bin", "bytes": 1444, "sha256": "2749ef0beae54f180e262f8ccdc1a6939dee392a7dc3d111f0228443f212fbe9"}
+{"kind": "usage", "attempt": 20, "usage_known": true, "tokens": {"input_tokens": 1200, "output_tokens": 135}, "reported_usd": 0.000217425}
+{"kind": "response_validated", "attempt": 20, "usage_known": true, "actual_usd": 0.000217425}
+{"kind": "request_artifact", "attempt": 21, "name": "21-request.bin", "bytes": 6214, "sha256": "1610d5130ab361a3f9c62435fce9b9292d98a2f6f4886c9382186702d20cc82a"}
+{"kind": "attempt_start", "attempt": 21, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "21-request.bin", "bytes": 6214, "sha256": "1610d5130ab361a3f9c62435fce9b9292d98a2f6f4886c9382186702d20cc82a"}}
+{"kind": "response_artifact", "attempt": 21, "name": "21-response.bin", "bytes": 1318, "sha256": "c41942fe0f4bf122ada9d191a89f1716a426025776c249f0f3691802513c7ff5"}
+{"kind": "usage", "attempt": 21, "usage_known": true, "tokens": {"input_tokens": 1251, "output_tokens": 121}, "reported_usd": 0.0002168}
+{"kind": "response_validated", "attempt": 21, "usage_known": true, "actual_usd": 0.0002168}
+{"kind": "request_artifact", "attempt": 22, "name": "22-request.bin", "bytes": 6723, "sha256": "78088cf3e914816fd1846ef02b75a1d41888ae4fa11a299741a27c1a2fdd6e95"}
+{"kind": "attempt_start", "attempt": 22, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "22-request.bin", "bytes": 6723, "sha256": "78088cf3e914816fd1846ef02b75a1d41888ae4fa11a299741a27c1a2fdd6e95"}}
+{"kind": "response_artifact", "attempt": 22, "name": "22-response.bin", "bytes": 1490, "sha256": "2a86184fc18bad71b091af87a8e975009ca00bdea463d29cbf122afc07a30357"}
+{"kind": "usage", "attempt": 22, "usage_known": true, "tokens": {"input_tokens": 1392, "output_tokens": 157}, "reported_usd": 0.000252425}
+{"kind": "response_validated", "attempt": 22, "usage_known": true, "actual_usd": 0.000252425}
+{"kind": "request_artifact", "attempt": 23, "name": "23-request.bin", "bytes": 6291, "sha256": "9737d27902b4baa1ccc32f6385b72cc34edb093ed6b86eb9f57356809e123eea"}
+{"kind": "attempt_start", "attempt": 23, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "23-request.bin", "bytes": 6291, "sha256": "9737d27902b4baa1ccc32f6385b72cc34edb093ed6b86eb9f57356809e123eea"}}
+{"kind": "response_artifact", "attempt": 23, "name": "23-response.bin", "bytes": 1302, "sha256": "9812880dec807cde7ab462dfbc32be93a76430f43d8d20b5f09df4420a718974"}
+{"kind": "usage", "attempt": 23, "usage_known": true, "tokens": {"input_tokens": 1257, "output_tokens": 119}, "reported_usd": 0.00021655}
+{"kind": "response_validated", "attempt": 23, "usage_known": true, "actual_usd": 0.00021655}
+{"kind": "request_artifact", "attempt": 24, "name": "24-request.bin", "bytes": 6020, "sha256": "211b98b1020f7e29e3daf1c608e3d27e11c1025bf25b8a815b1108e73abdb329"}
+{"kind": "attempt_start", "attempt": 24, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "24-request.bin", "bytes": 6020, "sha256": "211b98b1020f7e29e3daf1c608e3d27e11c1025bf25b8a815b1108e73abdb329"}}
+{"kind": "response_artifact", "attempt": 24, "name": "24-response.bin", "bytes": 1505, "sha256": "df7ab687a58f57a62ca0eec99e75f5445f435899059224a2140a4843fc353ed1"}
+{"kind": "usage", "attempt": 24, "usage_known": true, "tokens": {"input_tokens": 1225, "output_tokens": 174}, "reported_usd": 0.00024005}
+{"kind": "response_validated", "attempt": 24, "usage_known": true, "actual_usd": 0.00024005}
+{"kind": "request_artifact", "attempt": 25, "name": "25-request.bin", "bytes": 6214, "sha256": "2156d5c6d84f1a579bb9ab8644d2192624cf660e12295b45d5d01be0cd73d00a"}
+{"kind": "attempt_start", "attempt": 25, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "25-request.bin", "bytes": 6214, "sha256": "2156d5c6d84f1a579bb9ab8644d2192624cf660e12295b45d5d01be0cd73d00a"}}
+{"kind": "response_artifact", "attempt": 25, "name": "25-response.bin", "bytes": 1281, "sha256": "679a1ecd142894fd9f52bd5936d35df67122518aa1cbb3a823f30a0c19329f82"}
+{"kind": "usage", "attempt": 25, "usage_known": true, "tokens": {"input_tokens": 1267, "output_tokens": 119}, "reported_usd": 0.0002178}
+{"kind": "response_validated", "attempt": 25, "usage_known": true, "actual_usd": 0.0002178}
+{"kind": "request_artifact", "attempt": 26, "name": "26-request.bin", "bytes": 6672, "sha256": "bf80de4a3136e2ec8e222880cf4a882a57f51fc88d5157aee8a7aac7d4eadefc"}
+{"kind": "attempt_start", "attempt": 26, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "26-request.bin", "bytes": 6672, "sha256": "bf80de4a3136e2ec8e222880cf4a882a57f51fc88d5157aee8a7aac7d4eadefc"}}
+{"kind": "response_artifact", "attempt": 26, "name": "26-response.bin", "bytes": 1518, "sha256": "03fd9cdbdac463c826ff9af3e86b0315f21daf3b583acd4af2588770f6f9f78f"}
+{"kind": "usage", "attempt": 26, "usage_known": true, "tokens": {"input_tokens": 1380, "output_tokens": 151}, "reported_usd": 0.000247925}
+{"kind": "response_validated", "attempt": 26, "usage_known": true, "actual_usd": 0.000247925}
+{"kind": "request_artifact", "attempt": 27, "name": "27-request.bin", "bytes": 6392, "sha256": "cc0a1cae19f7571a93f92c7a4f9334da7fd3dc77871bb381b9fefa752a4b25cd"}
+{"kind": "attempt_start", "attempt": 27, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "27-request.bin", "bytes": 6392, "sha256": "cc0a1cae19f7571a93f92c7a4f9334da7fd3dc77871bb381b9fefa752a4b25cd"}}
+{"kind": "response_artifact", "attempt": 27, "name": "27-response.bin", "bytes": 1311, "sha256": "cebddf30b8c9b6023c28002dd024649aabbd68de737348d1e1d2d75c26d7e381"}
+{"kind": "usage", "attempt": 27, "usage_known": true, "tokens": {"input_tokens": 1278, "output_tokens": 115}, "reported_usd": 0.000217175}
+{"kind": "response_validated", "attempt": 27, "usage_known": true, "actual_usd": 0.000217175}
+{"kind": "request_artifact", "attempt": 28, "name": "28-request.bin", "bytes": 6189, "sha256": "173f0704a7e70097dc3084f0f78a7bf1ede6f93fe194dd7e518a5d869708f8d0"}
+{"kind": "attempt_start", "attempt": 28, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "28-request.bin", "bytes": 6189, "sha256": "173f0704a7e70097dc3084f0f78a7bf1ede6f93fe194dd7e518a5d869708f8d0"}}
+{"kind": "response_artifact", "attempt": 28, "name": "28-response.bin", "bytes": 1415, "sha256": "6dd98d4300ce7823a6df81862a55f6c994f0e6300928110bd2076d7cf049aecd"}
+{"kind": "usage", "attempt": 28, "usage_known": true, "tokens": {"input_tokens": 1257, "output_tokens": 142}, "reported_usd": 0.00022805}
+{"kind": "response_validated", "attempt": 28, "usage_known": true, "actual_usd": 0.00022805}
+{"kind": "request_artifact", "attempt": 29, "name": "29-request.bin", "bytes": 6413, "sha256": "f3b8aad33328a3c9755af8da7ec0910fb1d96990f63dbf84f794ef721d277081"}
+{"kind": "attempt_start", "attempt": 29, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "29-request.bin", "bytes": 6413, "sha256": "f3b8aad33328a3c9755af8da7ec0910fb1d96990f63dbf84f794ef721d277081"}}
+{"kind": "response_artifact", "attempt": 29, "name": "29-response.bin", "bytes": 1467, "sha256": "09171a8711aac8228ded7047467e9dbcc4e897c909b759984ac36328c568753b"}
+{"kind": "usage", "attempt": 29, "usage_known": true, "tokens": {"input_tokens": 1311, "output_tokens": 152}, "reported_usd": 0.0002398}
+{"kind": "response_validated", "attempt": 29, "usage_known": true, "actual_usd": 0.0002398}
+{"kind": "request_artifact", "attempt": 30, "name": "30-request.bin", "bytes": 11749, "sha256": "33f3941ea7d146bcbb0f064208579d2b4b23bd5353a5d9de8f1b7770da4d6449"}
+{"kind": "attempt_start", "attempt": 30, "reserved_usd": 0.004864, "retry_permitted": false, "request": {"name": "30-request.bin", "bytes": 11749, "sha256": "33f3941ea7d146bcbb0f064208579d2b4b23bd5353a5d9de8f1b7770da4d6449"}}
+{"kind": "response_artifact", "attempt": 30, "name": "30-response.bin", "bytes": 5154, "sha256": "5bec1d211750f12f1821296024ede7d76b88ba2f590de1ef0c47464fb6f89e4c"}
+{"kind": "usage", "attempt": 30, "usage_known": true, "tokens": {"input_tokens": 2378, "output_tokens": 964}, "reported_usd": 0.000779175}
+{"kind": "response_validated", "attempt": 30, "usage_known": true, "actual_usd": 0.000779175}
+{"kind": "request_artifact", "attempt": 31, "name": "31-request.bin", "bytes": 9550, "sha256": "9c8acb1f80e6eda2d54c05cd83bd6e67270922c308a41cc6357c9b19434c79bf"}
+{"kind": "attempt_start", "attempt": 31, "reserved_usd": 0.0027136, "retry_permitted": false, "request": {"name": "31-request.bin", "bytes": 9550, "sha256": "9c8acb1f80e6eda2d54c05cd83bd6e67270922c308a41cc6357c9b19434c79bf"}}
+{"kind": "response_artifact", "attempt": 31, "name": "31-response.bin", "bytes": 4002, "sha256": "41d33641fe5f97195b15d12fdc74396edd40a9fdbdd836b4e22b43939fea3297"}
+{"kind": "usage", "attempt": 31, "usage_known": true, "tokens": {"input_tokens": 1940, "output_tokens": 322}, "reported_usd": 0.000403425}
+{"kind": "response_validated", "attempt": 31, "usage_known": true, "actual_usd": 0.000403425}
+{"kind": "request_artifact", "attempt": 32, "name": "32-request.bin", "bytes": 4976, "sha256": "503ce15394470c0ae252c3d3c29525c6b66dc53a239c607fd1533b235b8cc2da"}
+{"kind": "attempt_start", "attempt": 32, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "32-request.bin", "bytes": 4976, "sha256": "503ce15394470c0ae252c3d3c29525c6b66dc53a239c607fd1533b235b8cc2da"}}
+{"kind": "response_artifact", "attempt": 32, "name": "32-response.bin", "bytes": 1503, "sha256": "24adb1cded1c18518f1a9513928075701ae801c568888c9d33d234f31cefe76d"}
+{"kind": "usage", "attempt": 32, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 171}, "reported_usd": 0.0001822}
+{"kind": "response_validated", "attempt": 32, "usage_known": true, "actual_usd": 0.0001822}
+{"kind": "request_artifact", "attempt": 33, "name": "33-request.bin", "bytes": 4437, "sha256": "4bbcc2a530e5d385caf74283900d34e0fc618e66baa1edc852cb4cf7905b0e06"}
+{"kind": "attempt_start", "attempt": 33, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "33-request.bin", "bytes": 4437, "sha256": "4bbcc2a530e5d385caf74283900d34e0fc618e66baa1edc852cb4cf7905b0e06"}}
+{"kind": "response_artifact", "attempt": 33, "name": "33-response.bin", "bytes": 1277, "sha256": "795096eb8dcc413519359a250804263d4e464a83586d4ac1a3a5d7a127ab5bf9"}
+{"kind": "usage", "attempt": 33, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 108}, "reported_usd": 0.0001362}
+{"kind": "response_validated", "attempt": 33, "usage_known": true, "actual_usd": 0.0001362}
+{"kind": "request_artifact", "attempt": 34, "name": "34-request.bin", "bytes": 4397, "sha256": "fd26083d6cd71ec328e27d15a01229391549e3c2c5780e68185c0414a8b0a5db"}
+{"kind": "attempt_start", "attempt": 34, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "34-request.bin", "bytes": 4397, "sha256": "fd26083d6cd71ec328e27d15a01229391549e3c2c5780e68185c0414a8b0a5db"}}
+{"kind": "response_artifact", "attempt": 34, "name": "34-response.bin", "bytes": 1251, "sha256": "69172b201238cfe27900cae85521c712bbfdbe96cfe62d0a3de4e35fdec6fca2"}
+{"kind": "usage", "attempt": 34, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 105}, "reported_usd": 0.0001356}
+{"kind": "response_validated", "attempt": 34, "usage_known": true, "actual_usd": 0.0001356}
+{"kind": "request_artifact", "attempt": 35, "name": "35-request.bin", "bytes": 4417, "sha256": "a1c027a0ca3f89afd548f566679883b2a7afa9bc17492c38e2806fc8620453bb"}
+{"kind": "attempt_start", "attempt": 35, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "35-request.bin", "bytes": 4417, "sha256": "a1c027a0ca3f89afd548f566679883b2a7afa9bc17492c38e2806fc8620453bb"}}
+{"kind": "response_artifact", "attempt": 35, "name": "35-response.bin", "bytes": 1453, "sha256": "cb13b47684f89594e3fe238a002c8353e667cfcf39c106d9e101dff4f35c8860"}
+{"kind": "usage", "attempt": 35, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 149}, "reported_usd": 0.000158}
+{"kind": "response_validated", "attempt": 35, "usage_known": true, "actual_usd": 0.000158}
+{"kind": "request_artifact", "attempt": 36, "name": "36-request.bin", "bytes": 4976, "sha256": "81ec784087eb976b1adc9c4d2e5527535b4f75860eb31aa6882483e750c93f11"}
+{"kind": "attempt_start", "attempt": 36, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "36-request.bin", "bytes": 4976, "sha256": "81ec784087eb976b1adc9c4d2e5527535b4f75860eb31aa6882483e750c93f11"}}
+{"kind": "response_artifact", "attempt": 36, "name": "36-response.bin", "bytes": 1474, "sha256": "98d5aa6963db4b972a1ff19e15b991c5df447b3c037c3bf42b9734593b1e0cea"}
+{"kind": "usage", "attempt": 36, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 160}, "reported_usd": 0.0001767}
+{"kind": "response_validated", "attempt": 36, "usage_known": true, "actual_usd": 0.0001767}
+{"kind": "request_artifact", "attempt": 37, "name": "37-request.bin", "bytes": 4437, "sha256": "4a61c46731f2cf4d13eda28072d6dc2b4eaf1d2a9cbc77817d6fa8db851b8028"}
+{"kind": "attempt_start", "attempt": 37, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "37-request.bin", "bytes": 4437, "sha256": "4a61c46731f2cf4d13eda28072d6dc2b4eaf1d2a9cbc77817d6fa8db851b8028"}}
+{"kind": "response_artifact", "attempt": 37, "name": "37-response.bin", "bytes": 1299, "sha256": "b5c6938d5b51ac6a7cf94168f69262034fd2951481c0176f35b1699fea0af08d"}
+{"kind": "usage", "attempt": 37, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 114}, "reported_usd": 0.0001392}
+{"kind": "response_validated", "attempt": 37, "usage_known": true, "actual_usd": 0.0001392}
+{"kind": "request_artifact", "attempt": 38, "name": "38-request.bin", "bytes": 4397, "sha256": "43dd0436b82d6c5503c92e60a9814c581578e8c96384d578febd392abda08967"}
+{"kind": "attempt_start", "attempt": 38, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "38-request.bin", "bytes": 4397, "sha256": "43dd0436b82d6c5503c92e60a9814c581578e8c96384d578febd392abda08967"}}
+{"kind": "response_artifact", "attempt": 38, "name": "38-response.bin", "bytes": 1425, "sha256": "15467afeb39476b94bf619ca0378c554612a945f801ae63d4c6a558de25f9a56"}
+{"kind": "usage", "attempt": 38, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 154}, "reported_usd": 0.0001601}
+{"kind": "response_validated", "attempt": 38, "usage_known": true, "actual_usd": 0.0001601}
+{"kind": "request_artifact", "attempt": 39, "name": "39-request.bin", "bytes": 4417, "sha256": "f9d5e90229f9e87f4b244fee92257e5966403ffc71c6ce18b594f04e1968189a"}
+{"kind": "attempt_start", "attempt": 39, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "39-request.bin", "bytes": 4417, "sha256": "f9d5e90229f9e87f4b244fee92257e5966403ffc71c6ce18b594f04e1968189a"}}
+{"kind": "response_artifact", "attempt": 39, "name": "39-response.bin", "bytes": 1302, "sha256": "f24090cf902259ff325cb14d55e9875ccfd3f76c6a77cd744b8b1c8296ae31f1"}
+{"kind": "usage", "attempt": 39, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 126}, "reported_usd": 0.0001465}
+{"kind": "response_validated", "attempt": 39, "usage_known": true, "actual_usd": 0.0001465}
+{"kind": "request_artifact", "attempt": 40, "name": "40-request.bin", "bytes": 4976, "sha256": "23a75532d4c56c64deb9176c2b9a9ea74735030ae657d5e5d5e92e146a6aa67e"}
+{"kind": "attempt_start", "attempt": 40, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "40-request.bin", "bytes": 4976, "sha256": "23a75532d4c56c64deb9176c2b9a9ea74735030ae657d5e5d5e92e146a6aa67e"}}
+{"kind": "response_artifact", "attempt": 40, "name": "40-response.bin", "bytes": 1455, "sha256": "41818225c5cedb69c2efcd48cad14a6fbd60551d124eed4a5af76eee5dee1d75"}
+{"kind": "usage", "attempt": 40, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 146}, "reported_usd": 0.0001697}
+{"kind": "response_validated", "attempt": 40, "usage_known": true, "actual_usd": 0.0001697}
+{"kind": "request_artifact", "attempt": 41, "name": "41-request.bin", "bytes": 4437, "sha256": "61e3d2bd435b28fc3f9e8d14d5bf8186b76c39f9422b583b89781e0032c32d5d"}
+{"kind": "attempt_start", "attempt": 41, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "41-request.bin", "bytes": 4437, "sha256": "61e3d2bd435b28fc3f9e8d14d5bf8186b76c39f9422b583b89781e0032c32d5d"}}
+{"kind": "response_artifact", "attempt": 41, "name": "41-response.bin", "bytes": 1280, "sha256": "943eefb063f186777ea3b85df9ebde132247f3b55b25542349021d44b2fdb3e4"}
+{"kind": "usage", "attempt": 41, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 111}, "reported_usd": 0.0001377}
+{"kind": "response_validated", "attempt": 41, "usage_known": true, "actual_usd": 0.0001377}
+{"kind": "request_artifact", "attempt": 42, "name": "42-request.bin", "bytes": 4397, "sha256": "e7b6920bf2a021e946cfb88292284f28d4d0bce56ee2890f2899403cad34cde7"}
+{"kind": "attempt_start", "attempt": 42, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "42-request.bin", "bytes": 4397, "sha256": "e7b6920bf2a021e946cfb88292284f28d4d0bce56ee2890f2899403cad34cde7"}}
+{"kind": "response_artifact", "attempt": 42, "name": "42-response.bin", "bytes": 1517, "sha256": "603d5bc37674864eea09c2e92ed9744943c108b36e39cf2942f2b2a6f1be3f62"}
+{"kind": "usage", "attempt": 42, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 182}, "reported_usd": 0.0001741}
+{"kind": "response_validated", "attempt": 42, "usage_known": true, "actual_usd": 0.0001741}
+{"kind": "request_artifact", "attempt": 43, "name": "43-request.bin", "bytes": 4417, "sha256": "500b023cf14b88865f0c22f531d01cbe445771e0522d8518489f97b324f115d7"}
+{"kind": "attempt_start", "attempt": 43, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "43-request.bin", "bytes": 4417, "sha256": "500b023cf14b88865f0c22f531d01cbe445771e0522d8518489f97b324f115d7"}}
+{"kind": "response_artifact", "attempt": 43, "name": "43-response.bin", "bytes": 1299, "sha256": "5bd6c112e6cb9e1aae9f892672a6a33a21391f6a8cd43c54a2b9e513ecfda810"}
+{"kind": "usage", "attempt": 43, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 124}, "reported_usd": 0.0001455}
+{"kind": "response_validated", "attempt": 43, "usage_known": true, "actual_usd": 0.0001455}
+{"kind": "request_artifact", "attempt": 44, "name": "44-request.bin", "bytes": 4976, "sha256": "8422163ac24110b2ba6d40b04a5213deeb0ad5061eb88c7d0da525d4152472db"}
+{"kind": "attempt_start", "attempt": 44, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "44-request.bin", "bytes": 4976, "sha256": "8422163ac24110b2ba6d40b04a5213deeb0ad5061eb88c7d0da525d4152472db"}}
+{"kind": "response_artifact", "attempt": 44, "name": "44-response.bin", "bytes": 1480, "sha256": "c2f159e39833185b75d04e45e33bdb1177bb369ac554a51efff0082e626b1078"}
+{"kind": "usage", "attempt": 44, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 155}, "reported_usd": 0.0001742}
+{"kind": "response_validated", "attempt": 44, "usage_known": true, "actual_usd": 0.0001742}
+{"kind": "request_artifact", "attempt": 45, "name": "45-request.bin", "bytes": 4437, "sha256": "3577c124e9cdc2bf467ec27e4cab0bd22b33669339485b9ea43ef1b3e89294c6"}
+{"kind": "attempt_start", "attempt": 45, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "45-request.bin", "bytes": 4437, "sha256": "3577c124e9cdc2bf467ec27e4cab0bd22b33669339485b9ea43ef1b3e89294c6"}}
+{"kind": "response_artifact", "attempt": 45, "name": "45-response.bin", "bytes": 1267, "sha256": "8e6f487eb03964cbfa4b71e13194312484fbcc617f3f83cf4c70bd1dfcb210bc"}
+{"kind": "usage", "attempt": 45, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 110}, "reported_usd": 0.0001372}
+{"kind": "response_validated", "attempt": 45, "usage_known": true, "actual_usd": 0.0001372}
+{"kind": "request_artifact", "attempt": 46, "name": "46-request.bin", "bytes": 4397, "sha256": "7d02649f95b2dbfa0367f9a6bd040ad553a4f5cd06361b299179140569a84030"}
+{"kind": "attempt_start", "attempt": 46, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "46-request.bin", "bytes": 4397, "sha256": "7d02649f95b2dbfa0367f9a6bd040ad553a4f5cd06361b299179140569a84030"}}
+{"kind": "response_artifact", "attempt": 46, "name": "46-response.bin", "bytes": 1229, "sha256": "3f5e75a08f8b6c90acd30ce44158330ce05963d5fe891cdba5fcfb3fb802b2a1"}
+{"kind": "usage", "attempt": 46, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 102}, "reported_usd": 0.0001341}
+{"kind": "response_validated", "attempt": 46, "usage_known": true, "actual_usd": 0.0001341}
+{"kind": "request_artifact", "attempt": 47, "name": "47-request.bin", "bytes": 4417, "sha256": "108c150b1a425f040f70d81c96a6b052b54d76e7ba54dd4c5884be2c0c2b536f"}
+{"kind": "attempt_start", "attempt": 47, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "47-request.bin", "bytes": 4417, "sha256": "108c150b1a425f040f70d81c96a6b052b54d76e7ba54dd4c5884be2c0c2b536f"}}
+{"kind": "response_artifact", "attempt": 47, "name": "47-response.bin", "bytes": 1331, "sha256": "c119c128999c852565a2743f53424377a217c884a6de838108e3623ff991e31f"}
+{"kind": "usage", "attempt": 47, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 139}, "reported_usd": 0.000153}
+{"kind": "response_validated", "attempt": 47, "usage_known": true, "actual_usd": 0.000153}
+{"kind": "request_artifact", "attempt": 48, "name": "48-request.bin", "bytes": 4976, "sha256": "00befc7e3bac44cd9bb4524725e84a57c4b91643d2a560c30eefa4c1df2df86b"}
+{"kind": "attempt_start", "attempt": 48, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "48-request.bin", "bytes": 4976, "sha256": "00befc7e3bac44cd9bb4524725e84a57c4b91643d2a560c30eefa4c1df2df86b"}}
+{"kind": "response_artifact", "attempt": 48, "name": "48-response.bin", "bytes": 1436, "sha256": "85d93742246d4c3390addaae02e51518a73562c1dd1a40c15aed910e475431ad"}
+{"kind": "usage", "attempt": 48, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 152}, "reported_usd": 0.0001727}
+{"kind": "response_validated", "attempt": 48, "usage_known": true, "actual_usd": 0.0001727}
+{"kind": "request_artifact", "attempt": 49, "name": "49-request.bin", "bytes": 4437, "sha256": "9966efa1fd742e9baa4b1e5f1c7b9a070ca02733cd0eec58da1b93ae1b38f3d0"}
+{"kind": "attempt_start", "attempt": 49, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "49-request.bin", "bytes": 4437, "sha256": "9966efa1fd742e9baa4b1e5f1c7b9a070ca02733cd0eec58da1b93ae1b38f3d0"}}
+{"kind": "response_artifact", "attempt": 49, "name": "49-response.bin", "bytes": 1305, "sha256": "ab3cf19006f4b3f31840381ee25ca1c2cd820504a3c1a4bff440b246085152b6"}
+{"kind": "usage", "attempt": 49, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 115}, "reported_usd": 0.0001397}
+{"kind": "response_validated", "attempt": 49, "usage_known": true, "actual_usd": 0.0001397}
+{"kind": "request_artifact", "attempt": 50, "name": "50-request.bin", "bytes": 4397, "sha256": "f5c19316fa211a942509f375f92f2084364aae2b52b006236d0f6e73b3b73dc9"}
+{"kind": "attempt_start", "attempt": 50, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "50-request.bin", "bytes": 4397, "sha256": "f5c19316fa211a942509f375f92f2084364aae2b52b006236d0f6e73b3b73dc9"}}
+{"kind": "response_artifact", "attempt": 50, "name": "50-response.bin", "bytes": 1334, "sha256": "391e8d58338d133ef13600e457a15811a6a333941bb64e4c9c0050a851934620"}
+{"kind": "usage", "attempt": 50, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 130}, "reported_usd": 0.0001481}
+{"kind": "response_validated", "attempt": 50, "usage_known": true, "actual_usd": 0.0001481}
+{"kind": "request_artifact", "attempt": 51, "name": "51-request.bin", "bytes": 4417, "sha256": "e2f4b1d96201bb17d67a28e9f5059df0a8b06c61d8c2e61ff940d111ee740a94"}
+{"kind": "attempt_start", "attempt": 51, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "51-request.bin", "bytes": 4417, "sha256": "e2f4b1d96201bb17d67a28e9f5059df0a8b06c61d8c2e61ff940d111ee740a94"}}
+{"kind": "response_artifact", "attempt": 51, "name": "51-response.bin", "bytes": 1337, "sha256": "ff6234257e898e94a926f036d0abb969995a7fe17db82abc743592f520377362"}
+{"kind": "usage", "attempt": 51, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 140}, "reported_usd": 0.0001535}
+{"kind": "response_validated", "attempt": 51, "usage_known": true, "actual_usd": 0.0001535}
+{"kind": "request_artifact", "attempt": 52, "name": "52-request.bin", "bytes": 4976, "sha256": "f310b1bbce9b4922348c51d2f049281b4eb57914643e193e24cc829673e11048"}
+{"kind": "attempt_start", "attempt": 52, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "52-request.bin", "bytes": 4976, "sha256": "f310b1bbce9b4922348c51d2f049281b4eb57914643e193e24cc829673e11048"}}
+{"kind": "response_artifact", "attempt": 52, "name": "52-response.bin", "bytes": 1462, "sha256": "7e526020f4f0cc2151590ac8ed2e65c7565759aed30afc7c21fcb4979b567053"}
+{"kind": "usage", "attempt": 52, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 154}, "reported_usd": 0.0001737}
+{"kind": "response_validated", "attempt": 52, "usage_known": true, "actual_usd": 0.0001737}
+{"kind": "request_artifact", "attempt": 53, "name": "53-request.bin", "bytes": 4437, "sha256": "ae3885e9bda1dd7c54612d79dc707bfeea91c80fa7965d15ad9649357f14e5b1"}
+{"kind": "attempt_start", "attempt": 53, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "53-request.bin", "bytes": 4437, "sha256": "ae3885e9bda1dd7c54612d79dc707bfeea91c80fa7965d15ad9649357f14e5b1"}}
+{"kind": "response_artifact", "attempt": 53, "name": "53-response.bin", "bytes": 1292, "sha256": "f837be311109315b869c1fda4ee52e6ad7a85b833fe062b0e7bf029266b37d82"}
+{"kind": "usage", "attempt": 53, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 113}, "reported_usd": 0.0001387}
+{"kind": "response_validated", "attempt": 53, "usage_known": true, "actual_usd": 0.0001387}
+{"kind": "request_artifact", "attempt": 54, "name": "54-request.bin", "bytes": 4397, "sha256": "5ea3aa7fafe742c9fea996798f686b169ce42b1c531ce668d665657b269479a4"}
+{"kind": "attempt_start", "attempt": 54, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "54-request.bin", "bytes": 4397, "sha256": "5ea3aa7fafe742c9fea996798f686b169ce42b1c531ce668d665657b269479a4"}}
+{"kind": "response_artifact", "attempt": 54, "name": "54-response.bin", "bytes": 1269, "sha256": "6b44f34ac31cbe3877f7d3f126e8701adebce7c8638857c5371acaa73acdc00c"}
+{"kind": "usage", "attempt": 54, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 119}, "reported_usd": 0.0001426}
+{"kind": "response_validated", "attempt": 54, "usage_known": true, "actual_usd": 0.0001426}
+{"kind": "request_artifact", "attempt": 55, "name": "55-request.bin", "bytes": 4417, "sha256": "d1585d7b380bd4c786e729819e870de89aaa35f6fe03f3a69a9206efcf79c58b"}
+{"kind": "attempt_start", "attempt": 55, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "55-request.bin", "bytes": 4417, "sha256": "d1585d7b380bd4c786e729819e870de89aaa35f6fe03f3a69a9206efcf79c58b"}}
+{"kind": "response_artifact", "attempt": 55, "name": "55-response.bin", "bytes": 1320, "sha256": "0bcba04c024b4981772bac6686d38e2c3e11267a923dbe1c5c5e331963e06976"}
+{"kind": "usage", "attempt": 55, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 129}, "reported_usd": 0.000148}
+{"kind": "response_validated", "attempt": 55, "usage_known": true, "actual_usd": 0.000148}
+{"kind": "request_artifact", "attempt": 56, "name": "56-request.bin", "bytes": 4976, "sha256": "7650f3a4771e94ea30f8c267c19280ab8dc5f64a45b22ab91df7c464b95a86c3"}
+{"kind": "attempt_start", "attempt": 56, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "56-request.bin", "bytes": 4976, "sha256": "7650f3a4771e94ea30f8c267c19280ab8dc5f64a45b22ab91df7c464b95a86c3"}}
+{"kind": "response_artifact", "attempt": 56, "name": "56-response.bin", "bytes": 1499, "sha256": "7e5408b46142f9ac5f311b4749c00e5713f637a321d245fe4665818ccdf05a37"}
+{"kind": "usage", "attempt": 56, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 157}, "reported_usd": 0.0001752}
+{"kind": "response_validated", "attempt": 56, "usage_known": true, "actual_usd": 0.0001752}
+{"kind": "request_artifact", "attempt": 57, "name": "57-request.bin", "bytes": 4437, "sha256": "48e1fd3b34d2cc263e5744d8431ca943c6dc836d460f5353f1f7126712cf3147"}
+{"kind": "attempt_start", "attempt": 57, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "57-request.bin", "bytes": 4437, "sha256": "48e1fd3b34d2cc263e5744d8431ca943c6dc836d460f5353f1f7126712cf3147"}}
+{"kind": "response_artifact", "attempt": 57, "name": "57-response.bin", "bytes": 1282, "sha256": "ee293033efd601e5fd6db4ea5b588bb03d1c03d54d966f4a8aa90b356720182a"}
+{"kind": "usage", "attempt": 57, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 112}, "reported_usd": 0.0001382}
+{"kind": "response_validated", "attempt": 57, "usage_known": true, "actual_usd": 0.0001382}
+{"kind": "request_artifact", "attempt": 58, "name": "58-request.bin", "bytes": 4397, "sha256": "091f43da52c785f2b5f5940524fca49fa070ae3abaab2ddd4541f9063318f86d"}
+{"kind": "attempt_start", "attempt": 58, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "58-request.bin", "bytes": 4397, "sha256": "091f43da52c785f2b5f5940524fca49fa070ae3abaab2ddd4541f9063318f86d"}}
+{"kind": "response_artifact", "attempt": 58, "name": "58-response.bin", "bytes": 1225, "sha256": "032fd04034162e9a63e823a612367e17c9f7f1bba4b2ef61cf96e1edb9b64ed8"}
+{"kind": "usage", "attempt": 58, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 113}, "reported_usd": 0.0001396}
+{"kind": "response_validated", "attempt": 58, "usage_known": true, "actual_usd": 0.0001396}
+{"kind": "request_artifact", "attempt": 59, "name": "59-request.bin", "bytes": 4417, "sha256": "497490f8828454585198c22ca116fbbd6225bbbeb458c48bc908433e0cac288e"}
+{"kind": "attempt_start", "attempt": 59, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "59-request.bin", "bytes": 4417, "sha256": "497490f8828454585198c22ca116fbbd6225bbbeb458c48bc908433e0cac288e"}}
+{"kind": "response_artifact", "attempt": 59, "name": "59-response.bin", "bytes": 1279, "sha256": "9bbc24760d0d709eae76703e06c3feb4fb434e3e5e54acd9742e9e2bb31196e5"}
+{"kind": "usage", "attempt": 59, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 118}, "reported_usd": 0.0001425}
+{"kind": "response_validated", "attempt": 59, "usage_known": true, "actual_usd": 0.0001425}
+{"kind": "request_artifact", "attempt": 60, "name": "60-request.bin", "bytes": 4976, "sha256": "27392bf2538fa3184485c6967e205f729ccc9b2dd88dbf374bfc9d65b68e263b"}
+{"kind": "attempt_start", "attempt": 60, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "60-request.bin", "bytes": 4976, "sha256": "27392bf2538fa3184485c6967e205f729ccc9b2dd88dbf374bfc9d65b68e263b"}}
+{"kind": "response_artifact", "attempt": 60, "name": "60-response.bin", "bytes": 1484, "sha256": "cbbab29e62b32b65804eb16d0bae0439d9c58a49ce3db5f10897a10e364f2ce2"}
+{"kind": "usage", "attempt": 60, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 173}, "reported_usd": 0.0001832}
+{"kind": "response_validated", "attempt": 60, "usage_known": true, "actual_usd": 0.0001832}
+{"kind": "request_artifact", "attempt": 61, "name": "61-request.bin", "bytes": 4437, "sha256": "0673580c4fb1d773cb62d851e3e9ea354b5d0eea974296c4f6ec08bdf585c30e"}
+{"kind": "attempt_start", "attempt": 61, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "61-request.bin", "bytes": 4437, "sha256": "0673580c4fb1d773cb62d851e3e9ea354b5d0eea974296c4f6ec08bdf585c30e"}}
+{"kind": "response_artifact", "attempt": 61, "name": "61-response.bin", "bytes": 1310, "sha256": "0ac682ff131d97d2db2b75f649e0d95c4d6e5f9548e2508717f0410e80f6771d"}
+{"kind": "usage", "attempt": 61, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 115}, "reported_usd": 0.0001397}
+{"kind": "response_validated", "attempt": 61, "usage_known": true, "actual_usd": 0.0001397}
+{"kind": "request_artifact", "attempt": 62, "name": "62-request.bin", "bytes": 4397, "sha256": "d6be8d7b657b1b897bd633cdf56948559984d8cdb72b944e8f4c38be10505ede"}
+{"kind": "attempt_start", "attempt": 62, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "62-request.bin", "bytes": 4397, "sha256": "d6be8d7b657b1b897bd633cdf56948559984d8cdb72b944e8f4c38be10505ede"}}
+{"kind": "response_artifact", "attempt": 62, "name": "62-response.bin", "bytes": 1430, "sha256": "214cad86dab328ee2ab24c696bd1ba6b3861044f8a5b26dea5558882e71563c4"}
+{"kind": "usage", "attempt": 62, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 149}, "reported_usd": 0.0001576}
+{"kind": "response_validated", "attempt": 62, "usage_known": true, "actual_usd": 0.0001576}
+{"kind": "request_artifact", "attempt": 63, "name": "63-request.bin", "bytes": 4417, "sha256": "d79caf395c13264ee354a53d7e6f1d75cda2144059078eec36db81925eab9afd"}
+{"kind": "attempt_start", "attempt": 63, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "63-request.bin", "bytes": 4417, "sha256": "d79caf395c13264ee354a53d7e6f1d75cda2144059078eec36db81925eab9afd"}}
+{"kind": "response_artifact", "attempt": 63, "name": "63-response.bin", "bytes": 1287, "sha256": "b9ee55c4da7bf7ee817c0d53ce70b0038779196acdc5745501d49a5f5cb648bd"}
+{"kind": "usage", "attempt": 63, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 120}, "reported_usd": 0.0001435}
+{"kind": "response_validated", "attempt": 63, "usage_known": true, "actual_usd": 0.0001435}
+{"kind": "request_artifact", "attempt": 64, "name": "64-request.bin", "bytes": 4976, "sha256": "a9a5811536bcd9b2747fe541a7be1bb6f88c4924e49954e778f3c37ddb7bccf2"}
+{"kind": "attempt_start", "attempt": 64, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "64-request.bin", "bytes": 4976, "sha256": "a9a5811536bcd9b2747fe541a7be1bb6f88c4924e49954e778f3c37ddb7bccf2"}}
+{"kind": "response_artifact", "attempt": 64, "name": "64-response.bin", "bytes": 1437, "sha256": "0b83beef6d946cae01bc614be607f7c7ebe845b76d35532c94934793a144d6f4"}
+{"kind": "usage", "attempt": 64, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 142}, "reported_usd": 0.0001677}
+{"kind": "response_validated", "attempt": 64, "usage_known": true, "actual_usd": 0.0001677}
+{"kind": "request_artifact", "attempt": 65, "name": "65-request.bin", "bytes": 4437, "sha256": "c91202be243d98743c404ddf52046a11860698d5fb3da45464d87b69d03c2180"}
+{"kind": "attempt_start", "attempt": 65, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "65-request.bin", "bytes": 4437, "sha256": "c91202be243d98743c404ddf52046a11860698d5fb3da45464d87b69d03c2180"}}
+{"kind": "response_artifact", "attempt": 65, "name": "65-response.bin", "bytes": 1299, "sha256": "e91270b7bb52871b98aca9445d3f3512d2e9ec5c4695c9a046d332faeeb7db60"}
+{"kind": "usage", "attempt": 65, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 113}, "reported_usd": 0.0001387}
+{"kind": "response_validated", "attempt": 65, "usage_known": true, "actual_usd": 0.0001387}
+{"kind": "request_artifact", "attempt": 66, "name": "66-request.bin", "bytes": 4397, "sha256": "91181e291d4e5ba4ae22d38fbfca0580cf6276a9cf2d2a8d7eeda341963d0d69"}
+{"kind": "attempt_start", "attempt": 66, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "66-request.bin", "bytes": 4397, "sha256": "91181e291d4e5ba4ae22d38fbfca0580cf6276a9cf2d2a8d7eeda341963d0d69"}}
+{"kind": "response_artifact", "attempt": 66, "name": "66-response.bin", "bytes": 1314, "sha256": "b8a29669df5d613b62ebdd5376bf7302d1fe9960a80526f2fddca5673fe325c4"}
+{"kind": "usage", "attempt": 66, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 131}, "reported_usd": 0.0001486}
+{"kind": "response_validated", "attempt": 66, "usage_known": true, "actual_usd": 0.0001486}
+{"kind": "request_artifact", "attempt": 67, "name": "67-request.bin", "bytes": 4417, "sha256": "19b1b0f55ba0e4fd8ca0cdd0f25be37a138f86d84ac3c2741d5b2a2c9222c8ab"}
+{"kind": "attempt_start", "attempt": 67, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "67-request.bin", "bytes": 4417, "sha256": "19b1b0f55ba0e4fd8ca0cdd0f25be37a138f86d84ac3c2741d5b2a2c9222c8ab"}}
+{"kind": "response_artifact", "attempt": 67, "name": "67-response.bin", "bytes": 1336, "sha256": "34f9dc3bc7659d5f12a944e067194a0b25c2d316eeeea0adfe3ef561bcab4edd"}
+{"kind": "usage", "attempt": 67, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 131}, "reported_usd": 0.000149}
+{"kind": "response_validated", "attempt": 67, "usage_known": true, "actual_usd": 0.000149}
+{"kind": "request_artifact", "attempt": 68, "name": "68-request.bin", "bytes": 4976, "sha256": "81b61c526971b2484b6182e075f1db7fee83cfd6dac3e1b0cd7dc629eefaafb8"}
+{"kind": "attempt_start", "attempt": 68, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "68-request.bin", "bytes": 4976, "sha256": "81b61c526971b2484b6182e075f1db7fee83cfd6dac3e1b0cd7dc629eefaafb8"}}
+{"kind": "response_artifact", "attempt": 68, "name": "68-response.bin", "bytes": 1492, "sha256": "bab95e5a09721948b36201d79395552519e387547feb80679ecbb002a932c4dd"}
+{"kind": "usage", "attempt": 68, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 165}, "reported_usd": 0.0001792}
+{"kind": "response_validated", "attempt": 68, "usage_known": true, "actual_usd": 0.0001792}
+{"kind": "request_artifact", "attempt": 69, "name": "69-request.bin", "bytes": 4437, "sha256": "948d7fc10ff35f5549fe55a475b43fcdc9d1272f675d56c3b7870dda6d5dba88"}
+{"kind": "attempt_start", "attempt": 69, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "69-request.bin", "bytes": 4437, "sha256": "948d7fc10ff35f5549fe55a475b43fcdc9d1272f675d56c3b7870dda6d5dba88"}}
+{"kind": "response_artifact", "attempt": 69, "name": "69-response.bin", "bytes": 1278, "sha256": "c1876a2200452ce6bc4b16c50c82f50863889f26d2b02825a510ff26369300fe"}
+{"kind": "usage", "attempt": 69, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 112}, "reported_usd": 0.0001382}
+{"kind": "response_validated", "attempt": 69, "usage_known": true, "actual_usd": 0.0001382}
+{"kind": "request_artifact", "attempt": 70, "name": "70-request.bin", "bytes": 4397, "sha256": "1a7a62ec9414f024d019830c4fb447e4fda08f890f2a6f08b24d3e68b5ab9087"}
+{"kind": "attempt_start", "attempt": 70, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "70-request.bin", "bytes": 4397, "sha256": "1a7a62ec9414f024d019830c4fb447e4fda08f890f2a6f08b24d3e68b5ab9087"}}
+{"kind": "response_artifact", "attempt": 70, "name": "70-response.bin", "bytes": 1461, "sha256": "d2b87a2415520f0d52f0b1a6403750ac2ac1783b8f64cdd6bd8651b0967804e5"}
+{"kind": "usage", "attempt": 70, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 164}, "reported_usd": 0.0001651}
+{"kind": "response_validated", "attempt": 70, "usage_known": true, "actual_usd": 0.0001651}
+{"kind": "request_artifact", "attempt": 71, "name": "71-request.bin", "bytes": 4417, "sha256": "ba7da404b5c52c055a29d1fbe3de409a4e8470a1fad5f4d43a3b55afae023bcf"}
+{"kind": "attempt_start", "attempt": 71, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "71-request.bin", "bytes": 4417, "sha256": "ba7da404b5c52c055a29d1fbe3de409a4e8470a1fad5f4d43a3b55afae023bcf"}}
+{"kind": "response_artifact", "attempt": 71, "name": "71-response.bin", "bytes": 1259, "sha256": "ead9bbacca30463b5e6d0b6e5666a4b44328e53d9231cc51803a4096bc0f40a8"}
+{"kind": "usage", "attempt": 71, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 118}, "reported_usd": 0.0001425}
+{"kind": "response_validated", "attempt": 71, "usage_known": true, "actual_usd": 0.0001425}
+{"kind": "request_artifact", "attempt": 72, "name": "72-request.bin", "bytes": 4976, "sha256": "498b02befaa9a72ef8c3f5dce850cf508f4f065d6d71abdd35199b58f7ddbbcf"}
+{"kind": "attempt_start", "attempt": 72, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "72-request.bin", "bytes": 4976, "sha256": "498b02befaa9a72ef8c3f5dce850cf508f4f065d6d71abdd35199b58f7ddbbcf"}}
+{"kind": "response_artifact", "attempt": 72, "name": "72-response.bin", "bytes": 1448, "sha256": "46ee311a9628f81998daf095e5ab1896011ee889dbedf83bc5511886dd668419"}
+{"kind": "usage", "attempt": 72, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 148}, "reported_usd": 0.0001707}
+{"kind": "response_validated", "attempt": 72, "usage_known": true, "actual_usd": 0.0001707}
+{"kind": "request_artifact", "attempt": 73, "name": "73-request.bin", "bytes": 4437, "sha256": "87fe29484f53b46c1744e4c77a5d581840eff6e2f99a0ede1afc6dd9e65c20dd"}
+{"kind": "attempt_start", "attempt": 73, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "73-request.bin", "bytes": 4437, "sha256": "87fe29484f53b46c1744e4c77a5d581840eff6e2f99a0ede1afc6dd9e65c20dd"}}
+{"kind": "response_artifact", "attempt": 73, "name": "73-response.bin", "bytes": 1268, "sha256": "73b1c198ef6e27e43319e6b6d0cbe7976d7187bd70489e0c585f03a915cb0ea3"}
+{"kind": "usage", "attempt": 73, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 112}, "reported_usd": 0.0001382}
+{"kind": "response_validated", "attempt": 73, "usage_known": true, "actual_usd": 0.0001382}
+{"kind": "request_artifact", "attempt": 74, "name": "74-request.bin", "bytes": 4397, "sha256": "7f0fb3be92a2eb4f5383fc40b357f2b92a660da5928b3abf785468fcad443477"}
+{"kind": "attempt_start", "attempt": 74, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "74-request.bin", "bytes": 4397, "sha256": "7f0fb3be92a2eb4f5383fc40b357f2b92a660da5928b3abf785468fcad443477"}}
+{"kind": "response_artifact", "attempt": 74, "name": "74-response.bin", "bytes": 1224, "sha256": "885b7829dadae6e19d9969807253752e2795cc84ffc067b2d5f1555e77d2ec86"}
+{"kind": "usage", "attempt": 74, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 110}, "reported_usd": 0.0001381}
+{"kind": "response_validated", "attempt": 74, "usage_known": true, "actual_usd": 0.0001381}
+{"kind": "request_artifact", "attempt": 75, "name": "75-request.bin", "bytes": 4417, "sha256": "697f78a7ffb85c578bfa7c9ac33c9e8ccaf636cae424bc3861eaffbd007452ce"}
+{"kind": "attempt_start", "attempt": 75, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "75-request.bin", "bytes": 4417, "sha256": "697f78a7ffb85c578bfa7c9ac33c9e8ccaf636cae424bc3861eaffbd007452ce"}}
+{"kind": "response_artifact", "attempt": 75, "name": "75-response.bin", "bytes": 1291, "sha256": "16dcf1b97b2aec6a2fa2f6dabbcdfa0a401434291cb13c4f875e869807fe958f"}
+{"kind": "usage", "attempt": 75, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 125}, "reported_usd": 0.000146}
+{"kind": "response_validated", "attempt": 75, "usage_known": true, "actual_usd": 0.000146}
+{"kind": "request_artifact", "attempt": 76, "name": "76-request.bin", "bytes": 4976, "sha256": "34bc5473c4bec2fad9564f28d4400885a61fde857427c2771c40b26b7dd510a4"}
+{"kind": "attempt_start", "attempt": 76, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "76-request.bin", "bytes": 4976, "sha256": "34bc5473c4bec2fad9564f28d4400885a61fde857427c2771c40b26b7dd510a4"}}
+{"kind": "response_artifact", "attempt": 76, "name": "76-response.bin", "bytes": 1446, "sha256": "77f83934910a692fdffebca00411f0a29a677d7c4cdd93e5ac9ec2d23e77af60"}
+{"kind": "usage", "attempt": 76, "usage_known": true, "tokens": {"input_tokens": 967, "output_tokens": 166}, "reported_usd": 0.0001797}
+{"kind": "response_validated", "attempt": 76, "usage_known": true, "actual_usd": 0.0001797}
+{"kind": "request_artifact", "attempt": 77, "name": "77-request.bin", "bytes": 4437, "sha256": "ab51f2fdd98b53801cb74f5e9b724ad6ad1a05aec6f63494eabfa004f11893fe"}
+{"kind": "attempt_start", "attempt": 77, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "77-request.bin", "bytes": 4437, "sha256": "ab51f2fdd98b53801cb74f5e9b724ad6ad1a05aec6f63494eabfa004f11893fe"}}
+{"kind": "response_artifact", "attempt": 77, "name": "77-response.bin", "bytes": 1285, "sha256": "88381565616019dc73b25eeff2a358c66822314c681501f35ab6efdc67a24ced"}
+{"kind": "usage", "attempt": 77, "usage_known": true, "tokens": {"input_tokens": 822, "output_tokens": 112}, "reported_usd": 0.0001382}
+{"kind": "response_validated", "attempt": 77, "usage_known": true, "actual_usd": 0.0001382}
+{"kind": "request_artifact", "attempt": 78, "name": "78-request.bin", "bytes": 4397, "sha256": "96d4a9e117cb634e25768ec728842eaec889c9b20bf9829de7d1252359c19f55"}
+{"kind": "attempt_start", "attempt": 78, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "78-request.bin", "bytes": 4397, "sha256": "96d4a9e117cb634e25768ec728842eaec889c9b20bf9829de7d1252359c19f55"}}
+{"kind": "response_artifact", "attempt": 78, "name": "78-response.bin", "bytes": 1267, "sha256": "4abf76e95f55575052b91f546d3fd4166e839bf25ed7a603692a84cf3feaf87d"}
+{"kind": "usage", "attempt": 78, "usage_known": true, "tokens": {"input_tokens": 831, "output_tokens": 116}, "reported_usd": 0.0001411}
+{"kind": "response_validated", "attempt": 78, "usage_known": true, "actual_usd": 0.0001411}
+{"kind": "request_artifact", "attempt": 79, "name": "79-request.bin", "bytes": 4417, "sha256": "e5a30a53a95c27b4b81a06e3c12ec1e76446c81758091544cf487ac07642b381"}
+{"kind": "attempt_start", "attempt": 79, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "79-request.bin", "bytes": 4417, "sha256": "e5a30a53a95c27b4b81a06e3c12ec1e76446c81758091544cf487ac07642b381"}}
+{"kind": "response_artifact", "attempt": 79, "name": "79-response.bin", "bytes": 1301, "sha256": "39a9f60b1ff481c85f4c59cfedc2cd89ef348021b3954db0162c05cd27cff512"}
+{"kind": "usage", "attempt": 79, "usage_known": true, "tokens": {"input_tokens": 835, "output_tokens": 122}, "reported_usd": 0.0001445}
+{"kind": "response_validated", "attempt": 79, "usage_known": true, "actual_usd": 0.0001445}
+{"kind": "request_artifact", "attempt": 80, "name": "80-request.bin", "bytes": 6828, "sha256": "f1811e5a9f8ac25d9702ab834e5c2f84c3b49c3696cc04d3bf280ae3569a3522"}
+{"kind": "attempt_start", "attempt": 80, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "80-request.bin", "bytes": 6828, "sha256": "f1811e5a9f8ac25d9702ab834e5c2f84c3b49c3696cc04d3bf280ae3569a3522"}}
+{"kind": "response_artifact", "attempt": 80, "name": "80-response.bin", "bytes": 1538, "sha256": "8d9d01945135ac4bf5151ee2820edf9a1bfe63d936d28a66d922a106ac6f54a3"}
+{"kind": "usage", "attempt": 80, "usage_known": true, "tokens": {"input_tokens": 1405, "output_tokens": 179}, "reported_usd": 0.00026505}
+{"kind": "response_validated", "attempt": 80, "usage_known": true, "actual_usd": 0.00026505}
+{"kind": "request_artifact", "attempt": 81, "name": "81-request.bin", "bytes": 6215, "sha256": "a3903e2a66b1ae68b9b4048d58232867b49a310fb42e8d29547837ee60d6db3c"}
+{"kind": "attempt_start", "attempt": 81, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "81-request.bin", "bytes": 6215, "sha256": "a3903e2a66b1ae68b9b4048d58232867b49a310fb42e8d29547837ee60d6db3c"}}
+{"kind": "response_artifact", "attempt": 81, "name": "81-response.bin", "bytes": 1501, "sha256": "d3501ed09f4f464a255aa2087923c73405a752f261759da894834a245c1dddf9"}
+{"kind": "usage", "attempt": 81, "usage_known": true, "tokens": {"input_tokens": 1227, "output_tokens": 159}, "reported_usd": 0.0002328}
+{"kind": "response_validated", "attempt": 81, "usage_known": true, "actual_usd": 0.0002328}
+{"kind": "request_artifact", "attempt": 82, "name": "82-request.bin", "bytes": 6139, "sha256": "e3274bd9c09eba8c278b05c25a79ef82e9046602385fc287a882475f37c68e7b"}
+{"kind": "attempt_start", "attempt": 82, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "82-request.bin", "bytes": 6139, "sha256": "e3274bd9c09eba8c278b05c25a79ef82e9046602385fc287a882475f37c68e7b"}}
+{"kind": "response_artifact", "attempt": 82, "name": "82-response.bin", "bytes": 1290, "sha256": "f9286e493ebe39c4b8004a4e29c3bbcf9d56d4c8b88ce60db3a46bb7af5251cc"}
+{"kind": "usage", "attempt": 82, "usage_known": true, "tokens": {"input_tokens": 1221, "output_tokens": 111}, "reported_usd": 0.00020805}
+{"kind": "response_validated", "attempt": 82, "usage_known": true, "actual_usd": 0.00020805}
+{"kind": "request_artifact", "attempt": 83, "name": "83-request.bin", "bytes": 6357, "sha256": "9f332515f514598460d7b1ac117da0016871d6fceee1be6379b40ae965e241a2"}
+{"kind": "attempt_start", "attempt": 83, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "83-request.bin", "bytes": 6357, "sha256": "9f332515f514598460d7b1ac117da0016871d6fceee1be6379b40ae965e241a2"}}
+{"kind": "response_artifact", "attempt": 83, "name": "83-response.bin", "bytes": 1489, "sha256": "72ff38557aec3615542eea9092d8f9bd8f8e0edfe80faa8df72997561b14e7b0"}
+{"kind": "usage", "attempt": 83, "usage_known": true, "tokens": {"input_tokens": 1279, "output_tokens": 158}, "reported_usd": 0.0002388}
+{"kind": "response_validated", "attempt": 83, "usage_known": true, "actual_usd": 0.0002388}
+{"kind": "request_artifact", "attempt": 84, "name": "84-request.bin", "bytes": 6976, "sha256": "48069e62fde1f9ce67ebecb053149e465af44409f9a1ae564d8d5e5ad477f0f2"}
+{"kind": "attempt_start", "attempt": 84, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "84-request.bin", "bytes": 6976, "sha256": "48069e62fde1f9ce67ebecb053149e465af44409f9a1ae564d8d5e5ad477f0f2"}}
+{"kind": "response_artifact", "attempt": 84, "name": "84-response.bin", "bytes": 1453, "sha256": "1e31022219b23fdaf4c59597f318510b3401157209c0a52e8bd25154188c2a3d"}
+{"kind": "usage", "attempt": 84, "usage_known": true, "tokens": {"input_tokens": 1427, "output_tokens": 154}, "reported_usd": 0.0002553}
+{"kind": "response_validated", "attempt": 84, "usage_known": true, "actual_usd": 0.0002553}
+{"kind": "request_artifact", "attempt": 85, "name": "85-request.bin", "bytes": 6417, "sha256": "d019b01927766b299fb59e5b050a5c602ce6303baf4c3f1afeda4200437c463d"}
+{"kind": "attempt_start", "attempt": 85, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "85-request.bin", "bytes": 6417, "sha256": "d019b01927766b299fb59e5b050a5c602ce6303baf4c3f1afeda4200437c463d"}}
+{"kind": "response_artifact", "attempt": 85, "name": "85-response.bin", "bytes": 1297, "sha256": "755e40702aabc1ca90acf47039dd59db68609003d166e972ab7d5e8ce5e3fc78"}
+{"kind": "usage", "attempt": 85, "usage_known": true, "tokens": {"input_tokens": 1288, "output_tokens": 110}, "reported_usd": 0.000215925}
+{"kind": "response_validated", "attempt": 85, "usage_known": true, "actual_usd": 0.000215925}
+{"kind": "request_artifact", "attempt": 86, "name": "86-request.bin", "bytes": 6184, "sha256": "4da0e6e9a6388c7d2e0d5992a4dcdfdbbad0386288462ff7f6ad9507d4f4fdaf"}
+{"kind": "attempt_start", "attempt": 86, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "86-request.bin", "bytes": 6184, "sha256": "4da0e6e9a6388c7d2e0d5992a4dcdfdbbad0386288462ff7f6ad9507d4f4fdaf"}}
+{"kind": "response_artifact", "attempt": 86, "name": "86-response.bin", "bytes": 1414, "sha256": "994b1495f70289c11d8c525dc56a1cef6d4cba84688ba399ba62c53105f1510a"}
+{"kind": "usage", "attempt": 86, "usage_known": true, "tokens": {"input_tokens": 1253, "output_tokens": 148}, "reported_usd": 0.00023055}
+{"kind": "response_validated", "attempt": 86, "usage_known": true, "actual_usd": 0.00023055}
+{"kind": "request_artifact", "attempt": 87, "name": "87-request.bin", "bytes": 6368, "sha256": "5dde428a7ce224cdd66ca58c76e0f90c910b3704befe88dff530d940e37fe413"}
+{"kind": "attempt_start", "attempt": 87, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "87-request.bin", "bytes": 6368, "sha256": "5dde428a7ce224cdd66ca58c76e0f90c910b3704befe88dff530d940e37fe413"}}
+{"kind": "response_artifact", "attempt": 87, "name": "87-response.bin", "bytes": 1487, "sha256": "9026c004fe09a91d7c7a476c14aecbbfb608ec3d5f7da538cb2b2a48ca4b90d7"}
+{"kind": "usage", "attempt": 87, "usage_known": true, "tokens": {"input_tokens": 1290, "output_tokens": 156}, "reported_usd": 0.000239175}
+{"kind": "response_validated", "attempt": 87, "usage_known": true, "actual_usd": 0.000239175}
+{"kind": "request_artifact", "attempt": 88, "name": "88-request.bin", "bytes": 6772, "sha256": "00ae5cd022d47502d28795933c45e79f3a394c9c171341054b1576e5fd7ea76d"}
+{"kind": "attempt_start", "attempt": 88, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "88-request.bin", "bytes": 6772, "sha256": "00ae5cd022d47502d28795933c45e79f3a394c9c171341054b1576e5fd7ea76d"}}
+{"kind": "response_artifact", "attempt": 88, "name": "88-response.bin", "bytes": 1453, "sha256": "5838553e928ab8c397645fc52a49ce37189dc82f39cd170da342bc60171a32fe"}
+{"kind": "usage", "attempt": 88, "usage_known": true, "tokens": {"input_tokens": 1378, "output_tokens": 146}, "reported_usd": 0.000245175}
+{"kind": "response_validated", "attempt": 88, "usage_known": true, "actual_usd": 0.000245175}
+{"kind": "request_artifact", "attempt": 89, "name": "89-request.bin", "bytes": 6456, "sha256": "c20752c0bb8c8d450bf551692d050690425738faa3b79eff3b247695ed521543"}
+{"kind": "attempt_start", "attempt": 89, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "89-request.bin", "bytes": 6456, "sha256": "c20752c0bb8c8d450bf551692d050690425738faa3b79eff3b247695ed521543"}}
+{"kind": "response_artifact", "attempt": 89, "name": "89-response.bin", "bytes": 1508, "sha256": "c97176866157a5c10cbfb01ab3421e598c9b4aa07ae63b5c571b3261de552a16"}
+{"kind": "usage", "attempt": 89, "usage_known": true, "tokens": {"input_tokens": 1290, "output_tokens": 152}, "reported_usd": 0.000237175}
+{"kind": "response_validated", "attempt": 89, "usage_known": true, "actual_usd": 0.000237175}
+{"kind": "request_artifact", "attempt": 90, "name": "90-request.bin", "bytes": 6256, "sha256": "836745424775be3976287dc12ecda2fff4b730596c41aebe04a9f161d7ffa956"}
+{"kind": "attempt_start", "attempt": 90, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "90-request.bin", "bytes": 6256, "sha256": "836745424775be3976287dc12ecda2fff4b730596c41aebe04a9f161d7ffa956"}}
+{"kind": "response_artifact", "attempt": 90, "name": "90-response.bin", "bytes": 1508, "sha256": "6c6c042d32d60dee7e6833174511f232af4dd810298f0107947a38557aa23493"}
+{"kind": "usage", "attempt": 90, "usage_known": true, "tokens": {"input_tokens": 1279, "output_tokens": 169}, "reported_usd": 0.0002443}
+{"kind": "response_validated", "attempt": 90, "usage_known": true, "actual_usd": 0.0002443}
+{"kind": "request_artifact", "attempt": 91, "name": "91-request.bin", "bytes": 6488, "sha256": "2f43942a4e83614128ed83727a090b0c5eab4a0c43c7a540a3e18013b0d0aa04"}
+{"kind": "attempt_start", "attempt": 91, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "91-request.bin", "bytes": 6488, "sha256": "2f43942a4e83614128ed83727a090b0c5eab4a0c43c7a540a3e18013b0d0aa04"}}
+{"kind": "response_artifact", "attempt": 91, "name": "91-response.bin", "bytes": 1485, "sha256": "e312ffbeb038fc20b77df9fc9cdde834e273a125a20b837ee741e9066e62344e"}
+{"kind": "usage", "attempt": 91, "usage_known": true, "tokens": {"input_tokens": 1331, "output_tokens": 152}, "reported_usd": 0.0002423}
+{"kind": "response_validated", "attempt": 91, "usage_known": true, "actual_usd": 0.0002423}
+{"kind": "request_artifact", "attempt": 92, "name": "92-request.bin", "bytes": 6789, "sha256": "adeb1bdcb5c1a069a118904ccbea18d753eb764cbb4166f02cad662bb01ae4b2"}
+{"kind": "attempt_start", "attempt": 92, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "92-request.bin", "bytes": 6789, "sha256": "adeb1bdcb5c1a069a118904ccbea18d753eb764cbb4166f02cad662bb01ae4b2"}}
+{"kind": "response_artifact", "attempt": 92, "name": "92-response.bin", "bytes": 1489, "sha256": "4496accf8044ea7cc755edee16fcb7c986f3f15980bb05f28e894e4775541c54"}
+{"kind": "usage", "attempt": 92, "usage_known": true, "tokens": {"input_tokens": 1390, "output_tokens": 152}, "reported_usd": 0.000249675}
+{"kind": "response_validated", "attempt": 92, "usage_known": true, "actual_usd": 0.000249675}
+{"kind": "request_artifact", "attempt": 93, "name": "93-request.bin", "bytes": 6165, "sha256": "4661376a02c746519a032e85e4fc46129a70f577e5b4eaf66e931981c86e46b8"}
+{"kind": "attempt_start", "attempt": 93, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "93-request.bin", "bytes": 6165, "sha256": "4661376a02c746519a032e85e4fc46129a70f577e5b4eaf66e931981c86e46b8"}}
+{"kind": "response_artifact", "attempt": 93, "name": "93-response.bin", "bytes": 1305, "sha256": "68ccf5e9eaa477dd93fe3affc683224dc6bcd90d0a85382853c4dbe07df1c08d"}
+{"kind": "usage", "attempt": 93, "usage_known": true, "tokens": {"input_tokens": 1213, "output_tokens": 115}, "reported_usd": 0.00020905}
+{"kind": "response_validated", "attempt": 93, "usage_known": true, "actual_usd": 0.00020905}
+{"kind": "request_artifact", "attempt": 94, "name": "94-request.bin", "bytes": 5986, "sha256": "c7dc102d5fc969493e234b597685b910e9e23abce9640fd7f268d17c15226100"}
+{"kind": "attempt_start", "attempt": 94, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "94-request.bin", "bytes": 5986, "sha256": "c7dc102d5fc969493e234b597685b910e9e23abce9640fd7f268d17c15226100"}}
+{"kind": "response_artifact", "attempt": 94, "name": "94-response.bin", "bytes": 1438, "sha256": "7a19aac09acb6cad7b17bf056c367c806f33401cb4acbbf2b2c3f8264a10e69d"}
+{"kind": "usage", "attempt": 94, "usage_known": true, "tokens": {"input_tokens": 1210, "output_tokens": 142}, "reported_usd": 0.000222175}
+{"kind": "response_validated", "attempt": 94, "usage_known": true, "actual_usd": 0.000222175}
+{"kind": "request_artifact", "attempt": 95, "name": "95-request.bin", "bytes": 6167, "sha256": "389e8d6ddf7beba4466143cf1c6c90ec2cfee34a6d62ab14ba81b528f6e001ec"}
+{"kind": "attempt_start", "attempt": 95, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "95-request.bin", "bytes": 6167, "sha256": "389e8d6ddf7beba4466143cf1c6c90ec2cfee34a6d62ab14ba81b528f6e001ec"}}
+{"kind": "response_artifact", "attempt": 95, "name": "95-response.bin", "bytes": 1503, "sha256": "c3740a651abf42f09bf5a3575c20e848a526a4f9b1c3f46689194c4deb9dad71"}
+{"kind": "usage", "attempt": 95, "usage_known": true, "tokens": {"input_tokens": 1252, "output_tokens": 164}, "reported_usd": 0.000238425}
+{"kind": "response_validated", "attempt": 95, "usage_known": true, "actual_usd": 0.000238425}
+{"kind": "request_artifact", "attempt": 96, "name": "96-request.bin", "bytes": 6812, "sha256": "8c281e946cf76ea6c303916780b6c5be31011e40604c7b225850fc400c59cb09"}
+{"kind": "attempt_start", "attempt": 96, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "96-request.bin", "bytes": 6812, "sha256": "8c281e946cf76ea6c303916780b6c5be31011e40604c7b225850fc400c59cb09"}}
+{"kind": "response_artifact", "attempt": 96, "name": "96-response.bin", "bytes": 1519, "sha256": "c368de70c5ceb63a36c86a43fa68195ddc118576999ae1d55cabf6681a1bec73"}
+{"kind": "usage", "attempt": 96, "usage_known": true, "tokens": {"input_tokens": 1404, "output_tokens": 164}, "reported_usd": 0.000257425}
+{"kind": "response_validated", "attempt": 96, "usage_known": true, "actual_usd": 0.000257425}
+{"kind": "request_artifact", "attempt": 97, "name": "97-request.bin", "bytes": 6284, "sha256": "4aeb3b7410f7aad752fbde9567a2583dd66b5a7edc3c984112fa3bcb3247c71a"}
+{"kind": "attempt_start", "attempt": 97, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "97-request.bin", "bytes": 6284, "sha256": "4aeb3b7410f7aad752fbde9567a2583dd66b5a7edc3c984112fa3bcb3247c71a"}}
+{"kind": "response_artifact", "attempt": 97, "name": "97-response.bin", "bytes": 1306, "sha256": "66f194219fd4f66796af6ad4fdf0f4735cee0b59853b383aab734ef3e7ba3c7a"}
+{"kind": "usage", "attempt": 97, "usage_known": true, "tokens": {"input_tokens": 1251, "output_tokens": 113}, "reported_usd": 0.0002128}
+{"kind": "response_validated", "attempt": 97, "usage_known": true, "actual_usd": 0.0002128}
+{"kind": "request_artifact", "attempt": 98, "name": "98-request.bin", "bytes": 6134, "sha256": "5becc8d8fc6ce5ceb595b6365e6ba795e0436bea3c7f8baee5410e898b9cbe82"}
+{"kind": "attempt_start", "attempt": 98, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "98-request.bin", "bytes": 6134, "sha256": "5becc8d8fc6ce5ceb595b6365e6ba795e0436bea3c7f8baee5410e898b9cbe82"}}
+{"kind": "response_artifact", "attempt": 98, "name": "98-response.bin", "bytes": 1520, "sha256": "87e5b5b3ca676cea3a9ad5cf0b25f67d5ffb92b82776cac35a108b3629cdfd6d"}
+{"kind": "usage", "attempt": 98, "usage_known": true, "tokens": {"input_tokens": 1244, "output_tokens": 179}, "reported_usd": 0.000244925}
+{"kind": "response_validated", "attempt": 98, "usage_known": true, "actual_usd": 0.000244925}
+{"kind": "request_artifact", "attempt": 99, "name": "99-request.bin", "bytes": 6324, "sha256": "150e25f6a6651f05944f6da2dc910a36970132ac3cffca43952410cf91c3767b"}
+{"kind": "attempt_start", "attempt": 99, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "99-request.bin", "bytes": 6324, "sha256": "150e25f6a6651f05944f6da2dc910a36970132ac3cffca43952410cf91c3767b"}}
+{"kind": "response_artifact", "attempt": 99, "name": "99-response.bin", "bytes": 1311, "sha256": "27d42c2656c94b4c964ca875237f0b342668450735bed70fc32a8f40f55ebe12"}
+{"kind": "usage", "attempt": 99, "usage_known": true, "tokens": {"input_tokens": 1291, "output_tokens": 135}, "reported_usd": 0.0002288}
+{"kind": "response_validated", "attempt": 99, "usage_known": true, "actual_usd": 0.0002288}
+{"kind": "request_artifact", "attempt": 100, "name": "100-request.bin", "bytes": 6831, "sha256": "8485758e6bb7cae31412b2f1c160787527662079d0b5d7bceaa667b345afa246"}
+{"kind": "attempt_start", "attempt": 100, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "100-request.bin", "bytes": 6831, "sha256": "8485758e6bb7cae31412b2f1c160787527662079d0b5d7bceaa667b345afa246"}}
+{"kind": "response_artifact", "attempt": 100, "name": "100-response.bin", "bytes": 1497, "sha256": "9c6d38f88f45d4905b0b73c77c027e7e549e6578cb399051de4076e0be13fad0"}
+{"kind": "usage", "attempt": 100, "usage_known": true, "tokens": {"input_tokens": 1405, "output_tokens": 159}, "reported_usd": 0.00025505}
+{"kind": "response_validated", "attempt": 100, "usage_known": true, "actual_usd": 0.00025505}
+{"kind": "request_artifact", "attempt": 101, "name": "101-request.bin", "bytes": 6231, "sha256": "74b756aa010800182d0c31df1be9618ff0929fab70b3a90ad8802b71616cbe96"}
+{"kind": "attempt_start", "attempt": 101, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "101-request.bin", "bytes": 6231, "sha256": "74b756aa010800182d0c31df1be9618ff0929fab70b3a90ad8802b71616cbe96"}}
+{"kind": "response_artifact", "attempt": 101, "name": "101-response.bin", "bytes": 1298, "sha256": "b7c0c4f01e8091d873ceef184e5399d9dd383bb6d022b5779b921a2b6747a408"}
+{"kind": "usage", "attempt": 101, "usage_known": true, "tokens": {"input_tokens": 1240, "output_tokens": 114}, "reported_usd": 0.000211925}
+{"kind": "response_validated", "attempt": 101, "usage_known": true, "actual_usd": 0.000211925}
+{"kind": "request_artifact", "attempt": 102, "name": "102-request.bin", "bytes": 6038, "sha256": "82ae40776b04608130625360fc6b7b5292c38514dca751c84f8a675944bdf3ab"}
+{"kind": "attempt_start", "attempt": 102, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "102-request.bin", "bytes": 6038, "sha256": "82ae40776b04608130625360fc6b7b5292c38514dca751c84f8a675944bdf3ab"}}
+{"kind": "response_artifact", "attempt": 102, "name": "102-response.bin", "bytes": 1468, "sha256": "26305d89107a6060aa16a705b9da4649f61da400cec85c25efae9ff450583371"}
+{"kind": "usage", "attempt": 102, "usage_known": true, "tokens": {"input_tokens": 1220, "output_tokens": 158}, "reported_usd": 0.000231425}
+{"kind": "response_validated", "attempt": 102, "usage_known": true, "actual_usd": 0.000231425}
+{"kind": "request_artifact", "attempt": 103, "name": "103-request.bin", "bytes": 6273, "sha256": "6fa7b8b79f8f6be85e522b48dadc335f466708dbd126ce984ff31893809b2b04"}
+{"kind": "attempt_start", "attempt": 103, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "103-request.bin", "bytes": 6273, "sha256": "6fa7b8b79f8f6be85e522b48dadc335f466708dbd126ce984ff31893809b2b04"}}
+{"kind": "response_artifact", "attempt": 103, "name": "103-response.bin", "bytes": 1500, "sha256": "2157f170a2c9f9ef3378e3c42e5ab59f5e5db25a47b7d8687b76dc77e17a5c80"}
+{"kind": "usage", "attempt": 103, "usage_known": true, "tokens": {"input_tokens": 1269, "output_tokens": 164}, "reported_usd": 0.00024055}
+{"kind": "response_validated", "attempt": 103, "usage_known": true, "actual_usd": 0.00024055}
+{"kind": "request_artifact", "attempt": 104, "name": "104-request.bin", "bytes": 6837, "sha256": "eecb96385ffaa6c831c32ed7ef8682a7748ae606d8ef34a726ee174555909c13"}
+{"kind": "attempt_start", "attempt": 104, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "104-request.bin", "bytes": 6837, "sha256": "eecb96385ffaa6c831c32ed7ef8682a7748ae606d8ef34a726ee174555909c13"}}
+{"kind": "response_artifact", "attempt": 104, "name": "104-response.bin", "bytes": 1530, "sha256": "0d3d60ae1485c140431653e132a0c80aba2b8400b5ac53aadf305aae3e525522"}
+{"kind": "usage", "attempt": 104, "usage_known": true, "tokens": {"input_tokens": 1393, "output_tokens": 177}, "reported_usd": 0.00026255}
+{"kind": "response_validated", "attempt": 104, "usage_known": true, "actual_usd": 0.00026255}
+{"kind": "request_artifact", "attempt": 105, "name": "105-request.bin", "bytes": 6210, "sha256": "d4e2ce921f98962bccc1409611941efc4c5efcc8c8e0ac4956b9bb3fe01b1cfe"}
+{"kind": "attempt_start", "attempt": 105, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "105-request.bin", "bytes": 6210, "sha256": "d4e2ce921f98962bccc1409611941efc4c5efcc8c8e0ac4956b9bb3fe01b1cfe"}}
+{"kind": "response_artifact", "attempt": 105, "name": "105-response.bin", "bytes": 1442, "sha256": "01236b1839b8a93e4f2194791d90a17db668ee2adc452a96f357eabef664b02b"}
+{"kind": "usage", "attempt": 105, "usage_known": true, "tokens": {"input_tokens": 1233, "output_tokens": 138}, "reported_usd": 0.00022305}
+{"kind": "response_validated", "attempt": 105, "usage_known": true, "actual_usd": 0.00022305}
+{"kind": "request_artifact", "attempt": 106, "name": "106-request.bin", "bytes": 5943, "sha256": "352956eb8d0e4d113819c9d25674bf5562e17941f19b904a708ee4115a16c2d2"}
+{"kind": "attempt_start", "attempt": 106, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "106-request.bin", "bytes": 5943, "sha256": "352956eb8d0e4d113819c9d25674bf5562e17941f19b904a708ee4115a16c2d2"}}
+{"kind": "response_artifact", "attempt": 106, "name": "106-response.bin", "bytes": 1265, "sha256": "5d8aa3520efeb203188383d398ab49c18656452e48b44b19692ea95c8e42b7a8"}
+{"kind": "usage", "attempt": 106, "usage_known": true, "tokens": {"input_tokens": 1202, "output_tokens": 115}, "reported_usd": 0.000207675}
+{"kind": "response_validated", "attempt": 106, "usage_known": true, "actual_usd": 0.000207675}
+{"kind": "request_artifact", "attempt": 107, "name": "107-request.bin", "bytes": 6172, "sha256": "45f1e2fced4329b6cd856685a36a4b5e214d782ed527fba14c0638ec20db8216"}
+{"kind": "attempt_start", "attempt": 107, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "107-request.bin", "bytes": 6172, "sha256": "45f1e2fced4329b6cd856685a36a4b5e214d782ed527fba14c0638ec20db8216"}}
+{"kind": "response_artifact", "attempt": 107, "name": "107-response.bin", "bytes": 1544, "sha256": "15fe6ddc7e5b913db0086289750f9a3f1df0b945762b979010daadf1b35622ab"}
+{"kind": "usage", "attempt": 107, "usage_known": true, "tokens": {"input_tokens": 1268, "output_tokens": 177}, "reported_usd": 0.000246925}
+{"kind": "response_validated", "attempt": 107, "usage_known": true, "actual_usd": 0.000246925}
+{"kind": "request_artifact", "attempt": 108, "name": "108-request.bin", "bytes": 6811, "sha256": "f49baade9a307201b4b9c4867c22dcef932b48dc4297c33a87e7ea41056957bb"}
+{"kind": "attempt_start", "attempt": 108, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "108-request.bin", "bytes": 6811, "sha256": "f49baade9a307201b4b9c4867c22dcef932b48dc4297c33a87e7ea41056957bb"}}
+{"kind": "response_artifact", "attempt": 108, "name": "108-response.bin", "bytes": 1492, "sha256": "06a9160b316961191c8d8a7d02ccf31685f8e84b44e03f825c78c072bb2c700c"}
+{"kind": "usage", "attempt": 108, "usage_known": true, "tokens": {"input_tokens": 1404, "output_tokens": 161}, "reported_usd": 0.000255925}
+{"kind": "response_validated", "attempt": 108, "usage_known": true, "actual_usd": 0.000255925}
+{"kind": "request_artifact", "attempt": 109, "name": "109-request.bin", "bytes": 6431, "sha256": "9b020da96446f0250cffa0f10579ade34c659cb37a637df507d71e8ab7fc731c"}
+{"kind": "attempt_start", "attempt": 109, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "109-request.bin", "bytes": 6431, "sha256": "9b020da96446f0250cffa0f10579ade34c659cb37a637df507d71e8ab7fc731c"}}
+{"kind": "response_artifact", "attempt": 109, "name": "109-response.bin", "bytes": 1303, "sha256": "78b4188fbfa274932fc9a35382594559affcee97c78732bae235846d53921bdb"}
+{"kind": "usage", "attempt": 109, "usage_known": true, "tokens": {"input_tokens": 1291, "output_tokens": 110}, "reported_usd": 0.0002163}
+{"kind": "response_validated", "attempt": 109, "usage_known": true, "actual_usd": 0.0002163}
+{"kind": "request_artifact", "attempt": 110, "name": "110-request.bin", "bytes": 6188, "sha256": "5baf2f6961dccecfba772bda36572eedda6721833b4f3521387d7d2ff4369f94"}
+{"kind": "attempt_start", "attempt": 110, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "110-request.bin", "bytes": 6188, "sha256": "5baf2f6961dccecfba772bda36572eedda6721833b4f3521387d7d2ff4369f94"}}
+{"kind": "response_artifact", "attempt": 110, "name": "110-response.bin", "bytes": 1488, "sha256": "623a2d0f0b2eced5bcb0cf5cce141b75dfc015b0fec2839a25e8fb8159f368ea"}
+{"kind": "usage", "attempt": 110, "usage_known": true, "tokens": {"input_tokens": 1246, "output_tokens": 154}, "reported_usd": 0.000232675}
+{"kind": "response_validated", "attempt": 110, "usage_known": true, "actual_usd": 0.000232675}
+{"kind": "request_artifact", "attempt": 111, "name": "111-request.bin", "bytes": 6344, "sha256": "5cd8804f691ed478380d8c96e2fa84682cce4c0ea078b3eb071dd4ca91913bc9"}
+{"kind": "attempt_start", "attempt": 111, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "111-request.bin", "bytes": 6344, "sha256": "5cd8804f691ed478380d8c96e2fa84682cce4c0ea078b3eb071dd4ca91913bc9"}}
+{"kind": "response_artifact", "attempt": 111, "name": "111-response.bin", "bytes": 1491, "sha256": "05db212930482fd3d464dfcf2f41ad198552753e9fb2989f652ea1f4d49e7a72"}
+{"kind": "usage", "attempt": 111, "usage_known": true, "tokens": {"input_tokens": 1278, "output_tokens": 159}, "reported_usd": 0.000239175}
+{"kind": "response_validated", "attempt": 111, "usage_known": true, "actual_usd": 0.000239175}
+{"kind": "request_artifact", "attempt": 112, "name": "112-request.bin", "bytes": 6763, "sha256": "5d00776f7aaac5028679c699a5f57f2e4ae5d6b96f3d9cfe29cdb44a23b1031f"}
+{"kind": "attempt_start", "attempt": 112, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "112-request.bin", "bytes": 6763, "sha256": "5d00776f7aaac5028679c699a5f57f2e4ae5d6b96f3d9cfe29cdb44a23b1031f"}}
+{"kind": "response_artifact", "attempt": 112, "name": "112-response.bin", "bytes": 1555, "sha256": "7e0805f755a482f7563ad785cc62cd1373c69bc0822efcf7aa828399b54814eb"}
+{"kind": "usage", "attempt": 112, "usage_known": true, "tokens": {"input_tokens": 1373, "output_tokens": 167}, "reported_usd": 0.00025505}
+{"kind": "response_validated", "attempt": 112, "usage_known": true, "actual_usd": 0.00025505}
+{"kind": "request_artifact", "attempt": 113, "name": "113-request.bin", "bytes": 6258, "sha256": "a7616d3894e06d3ede5079c829292d89567d1d26996379ac85cd002f85279144"}
+{"kind": "attempt_start", "attempt": 113, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "113-request.bin", "bytes": 6258, "sha256": "a7616d3894e06d3ede5079c829292d89567d1d26996379ac85cd002f85279144"}}
+{"kind": "response_artifact", "attempt": 113, "name": "113-response.bin", "bytes": 1324, "sha256": "df55081d726137a8908eb26606e934c62e29fba6631c4e103637ee120a578bda"}
+{"kind": "usage", "attempt": 113, "usage_known": true, "tokens": {"input_tokens": 1240, "output_tokens": 118}, "reported_usd": 0.000213925}
+{"kind": "response_validated", "attempt": 113, "usage_known": true, "actual_usd": 0.000213925}
+{"kind": "request_artifact", "attempt": 114, "name": "114-request.bin", "bytes": 6106, "sha256": "fbc670865ec183d28601205c0d0e117d2cea448c90e2344a86f8d87702addb8c"}
+{"kind": "attempt_start", "attempt": 114, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "114-request.bin", "bytes": 6106, "sha256": "fbc670865ec183d28601205c0d0e117d2cea448c90e2344a86f8d87702addb8c"}}
+{"kind": "response_artifact", "attempt": 114, "name": "114-response.bin", "bytes": 1328, "sha256": "a6e5c9a613ca71bcd3fd168cda5aa93b1edeb89bfbd398848bffeaca3e904ea6"}
+{"kind": "usage", "attempt": 114, "usage_known": true, "tokens": {"input_tokens": 1234, "output_tokens": 127}, "reported_usd": 0.000217675}
+{"kind": "response_validated", "attempt": 114, "usage_known": true, "actual_usd": 0.000217675}
+{"kind": "request_artifact", "attempt": 115, "name": "115-request.bin", "bytes": 6327, "sha256": "6f549196ad6d25a865e3850dd7c41eaa0d3db77f99f68f4d6fbcfc822deb6607"}
+{"kind": "attempt_start", "attempt": 115, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "115-request.bin", "bytes": 6327, "sha256": "6f549196ad6d25a865e3850dd7c41eaa0d3db77f99f68f4d6fbcfc822deb6607"}}
+{"kind": "response_artifact", "attempt": 115, "name": "115-response.bin", "bytes": 1531, "sha256": "8f38fefd561ab634773113277e74fafb32a24de92d1f530fb940d56277b22703"}
+{"kind": "usage", "attempt": 115, "usage_known": true, "tokens": {"input_tokens": 1291, "output_tokens": 177}, "reported_usd": 0.0002498}
+{"kind": "response_validated", "attempt": 115, "usage_known": true, "actual_usd": 0.0002498}
+{"kind": "request_artifact", "attempt": 116, "name": "116-request.bin", "bytes": 6842, "sha256": "2c48f24245b375800edb966b4420f45b6f271f818a5f87da970cf38d44354de2"}
+{"kind": "attempt_start", "attempt": 116, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "116-request.bin", "bytes": 6842, "sha256": "2c48f24245b375800edb966b4420f45b6f271f818a5f87da970cf38d44354de2"}}
+{"kind": "response_artifact", "attempt": 116, "name": "116-response.bin", "bytes": 1463, "sha256": "5494ba261116857cbb64c36dc381c345cca276d0ca3084177270edd84da233ec"}
+{"kind": "usage", "attempt": 116, "usage_known": true, "tokens": {"input_tokens": 1403, "output_tokens": 151}, "reported_usd": 0.0002508}
+{"kind": "response_validated", "attempt": 116, "usage_known": true, "actual_usd": 0.0002508}
+{"kind": "request_artifact", "attempt": 117, "name": "117-request.bin", "bytes": 6436, "sha256": "61d8358eefd2a90eb10fd12d914ab20280bd143570a2bb8d4d58f45c696913f7"}
+{"kind": "attempt_start", "attempt": 117, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "117-request.bin", "bytes": 6436, "sha256": "61d8358eefd2a90eb10fd12d914ab20280bd143570a2bb8d4d58f45c696913f7"}}
+{"kind": "response_artifact", "attempt": 117, "name": "117-response.bin", "bytes": 1307, "sha256": "7f9ef36a88ff7c5f004fba6b01dfee4573d6784a2676a13b5ad41180d9fd41cb"}
+{"kind": "usage", "attempt": 117, "usage_known": true, "tokens": {"input_tokens": 1292, "output_tokens": 114}, "reported_usd": 0.000218425}
+{"kind": "response_validated", "attempt": 117, "usage_known": true, "actual_usd": 0.000218425}
+{"kind": "request_artifact", "attempt": 118, "name": "118-request.bin", "bytes": 6156, "sha256": "7577db9176b12a2e95e124eec8aac4724cd355db82c1e3036731a1ebe160b9bb"}
+{"kind": "attempt_start", "attempt": 118, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "118-request.bin", "bytes": 6156, "sha256": "7577db9176b12a2e95e124eec8aac4724cd355db82c1e3036731a1ebe160b9bb"}}
+{"kind": "response_artifact", "attempt": 118, "name": "118-response.bin", "bytes": 1535, "sha256": "21761c990307ef42d8671dd2c9325d90cf5e5465b928f62442fa6db9d61dd6ed"}
+{"kind": "usage", "attempt": 118, "usage_known": true, "tokens": {"input_tokens": 1253, "output_tokens": 182}, "reported_usd": 0.00024755}
+{"kind": "response_validated", "attempt": 118, "usage_known": true, "actual_usd": 0.00024755}
+{"kind": "request_artifact", "attempt": 119, "name": "119-request.bin", "bytes": 6362, "sha256": "9e56dcbe7a34d0381b52a51e16b9778b8d1b9aa88cba2b81b376ae9671e237f1"}
+{"kind": "attempt_start", "attempt": 119, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "119-request.bin", "bytes": 6362, "sha256": "9e56dcbe7a34d0381b52a51e16b9778b8d1b9aa88cba2b81b376ae9671e237f1"}}
+{"kind": "response_artifact", "attempt": 119, "name": "119-response.bin", "bytes": 1266, "sha256": "ce949f2803de4b6d63ccac1abec4b274fc6ebda8028da805dfcefad32e8fc753"}
+{"kind": "usage", "attempt": 119, "usage_known": true, "tokens": {"input_tokens": 1300, "output_tokens": 114}, "reported_usd": 0.000219425}
+{"kind": "response_validated", "attempt": 119, "usage_known": true, "actual_usd": 0.000219425}
+{"kind": "request_artifact", "attempt": 120, "name": "120-request.bin", "bytes": 6719, "sha256": "646cf1e6909edf742735abae0fdd146c3d60c1f9157c46fa4dc752db6f7a84a3"}
+{"kind": "attempt_start", "attempt": 120, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "120-request.bin", "bytes": 6719, "sha256": "646cf1e6909edf742735abae0fdd146c3d60c1f9157c46fa4dc752db6f7a84a3"}}
+{"kind": "response_artifact", "attempt": 120, "name": "120-response.bin", "bytes": 1433, "sha256": "b2ceacb0cbf7ada167138d927dc6051e95cb77d6d215b843a856fec1a3755f75"}
+{"kind": "usage", "attempt": 120, "usage_known": true, "tokens": {"input_tokens": 1379, "output_tokens": 137}, "reported_usd": 0.0002408}
+{"kind": "response_validated", "attempt": 120, "usage_known": true, "actual_usd": 0.0002408}
+{"kind": "request_artifact", "attempt": 121, "name": "121-request.bin", "bytes": 6154, "sha256": "f6802e35584df4ac32d755515b2979e6d92257b62f7474ee35de3e5f1117e693"}
+{"kind": "attempt_start", "attempt": 121, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "121-request.bin", "bytes": 6154, "sha256": "f6802e35584df4ac32d755515b2979e6d92257b62f7474ee35de3e5f1117e693"}}
+{"kind": "response_artifact", "attempt": 121, "name": "121-response.bin", "bytes": 1300, "sha256": "b197c3f908a08f6856f3fe8996d1a2498e022f7a9d13e4c466b895572d018402"}
+{"kind": "usage", "attempt": 121, "usage_known": true, "tokens": {"input_tokens": 1227, "output_tokens": 114}, "reported_usd": 0.0002103}
+{"kind": "response_validated", "attempt": 121, "usage_known": true, "actual_usd": 0.0002103}
+{"kind": "request_artifact", "attempt": 122, "name": "122-request.bin", "bytes": 5942, "sha256": "791cdf05d9d5faaea0e802e40188945658ef1dbae309b293ba29b3b22debf29b"}
+{"kind": "attempt_start", "attempt": 122, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "122-request.bin", "bytes": 5942, "sha256": "791cdf05d9d5faaea0e802e40188945658ef1dbae309b293ba29b3b22debf29b"}}
+{"kind": "response_artifact", "attempt": 122, "name": "122-response.bin", "bytes": 1526, "sha256": "950b73aae5655c5c6e0629e616b0190aea41ea4ff570c9b1cae574d52ab64b81"}
+{"kind": "usage", "attempt": 122, "usage_known": true, "tokens": {"input_tokens": 1206, "output_tokens": 167}, "reported_usd": 0.000234175}
+{"kind": "response_validated", "attempt": 122, "usage_known": true, "actual_usd": 0.000234175}
+{"kind": "request_artifact", "attempt": 123, "name": "123-request.bin", "bytes": 6148, "sha256": "b4150a701535ec032ab49f44142a8161f4fee6221c8584519ac5fa887b524a61"}
+{"kind": "attempt_start", "attempt": 123, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "123-request.bin", "bytes": 6148, "sha256": "b4150a701535ec032ab49f44142a8161f4fee6221c8584519ac5fa887b524a61"}}
+{"kind": "response_artifact", "attempt": 123, "name": "123-response.bin", "bytes": 1287, "sha256": "2067b6cce20d4700e8e4719695e4d718533b6c2af19b2b7b84acd0bed34cbc24"}
+{"kind": "usage", "attempt": 123, "usage_known": true, "tokens": {"input_tokens": 1265, "output_tokens": 122}, "reported_usd": 0.00021905}
+{"kind": "response_validated", "attempt": 123, "usage_known": true, "actual_usd": 0.00021905}
+{"kind": "request_artifact", "attempt": 124, "name": "124-request.bin", "bytes": 6759, "sha256": "eba8411ba66923db623c09f1022d7bad0cfbceb7902d74aef79e4a7d0b5d9dec"}
+{"kind": "attempt_start", "attempt": 124, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "124-request.bin", "bytes": 6759, "sha256": "eba8411ba66923db623c09f1022d7bad0cfbceb7902d74aef79e4a7d0b5d9dec"}}
+{"kind": "response_artifact", "attempt": 124, "name": "124-response.bin", "bytes": 1503, "sha256": "43ea8ee3c2100c8827465b1c5bb8430b8a53a749e848a796e827a37711d9bb89"}
+{"kind": "usage", "attempt": 124, "usage_known": true, "tokens": {"input_tokens": 1398, "output_tokens": 169}, "reported_usd": 0.000259175}
+{"kind": "response_validated", "attempt": 124, "usage_known": true, "actual_usd": 0.000259175}
+{"kind": "request_artifact", "attempt": 125, "name": "125-request.bin", "bytes": 6208, "sha256": "39a9a13957463840bfb626d2db49c80392dd2de86e4e69b276960a70af6497ea"}
+{"kind": "attempt_start", "attempt": 125, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "125-request.bin", "bytes": 6208, "sha256": "39a9a13957463840bfb626d2db49c80392dd2de86e4e69b276960a70af6497ea"}}
+{"kind": "response_artifact", "attempt": 125, "name": "125-response.bin", "bytes": 1460, "sha256": "79cb822f7d6b1d22e242708f8f8562111d1bba8b5c14837c17a54bd1a622bafe"}
+{"kind": "usage", "attempt": 125, "usage_known": true, "tokens": {"input_tokens": 1248, "output_tokens": 140}, "reported_usd": 0.000225925}
+{"kind": "response_validated", "attempt": 125, "usage_known": true, "actual_usd": 0.000225925}
+{"kind": "request_artifact", "attempt": 126, "name": "126-request.bin", "bytes": 6027, "sha256": "9f1d7e3ec53d3d79492ab1b64c85e1099533afcb3b5d7ff4399dea0c5b6e136e"}
+{"kind": "attempt_start", "attempt": 126, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "126-request.bin", "bytes": 6027, "sha256": "9f1d7e3ec53d3d79492ab1b64c85e1099533afcb3b5d7ff4399dea0c5b6e136e"}}
+{"kind": "response_artifact", "attempt": 126, "name": "126-response.bin", "bytes": 1455, "sha256": "1349e4864eb25273e38fcb681b5c20664b8a179e275a5bcb52888cb69a285212"}
+{"kind": "usage", "attempt": 126, "usage_known": true, "tokens": {"input_tokens": 1221, "output_tokens": 148}, "reported_usd": 0.00022655}
+{"kind": "response_validated", "attempt": 126, "usage_known": true, "actual_usd": 0.00022655}
+{"kind": "request_artifact", "attempt": 127, "name": "127-request.bin", "bytes": 6272, "sha256": "3b4229a023dced7257b4297c0abf7b2e129c2aab1c6981d20e650a657d30e453"}
+{"kind": "attempt_start", "attempt": 127, "reserved_usd": 0.0013568000000000002, "retry_permitted": false, "request": {"name": "127-request.bin", "bytes": 6272, "sha256": "3b4229a023dced7257b4297c0abf7b2e129c2aab1c6981d20e650a657d30e453"}}
+{"kind": "response_artifact", "attempt": 127, "name": "127-response.bin", "bytes": 1489, "sha256": "2c7e7b2bf60ea574e05aa3bdd7c09fcb551ee12bd5d9f856c3d7271344cd2436"}
+{"kind": "usage", "attempt": 127, "usage_known": true, "tokens": {"input_tokens": 1285, "output_tokens": 168}, "reported_usd": 0.00024455}
+{"kind": "response_validated", "attempt": 127, "usage_known": true, "actual_usd": 0.00024455}
+{"kind": "request_artifact", "attempt": 128, "name": "128-request.bin", "bytes": 11749, "sha256": "33f3941ea7d146bcbb0f064208579d2b4b23bd5353a5d9de8f1b7770da4d6449"}
+{"kind": "attempt_start", "attempt": 128, "reserved_usd": 0.004864, "retry_permitted": false, "request": {"name": "128-request.bin", "bytes": 11749, "sha256": "33f3941ea7d146bcbb0f064208579d2b4b23bd5353a5d9de8f1b7770da4d6449"}}
+{"kind": "response_artifact", "attempt": 128, "name": "128-response.bin", "bytes": 4879, "sha256": "26cd398817c3d04b85ba1098cf7d0192ee97d327aa5e371fedb3c9c07b167ee0"}
+{"kind": "usage", "attempt": 128, "usage_known": true, "tokens": {"input_tokens": 2378, "output_tokens": 911}, "reported_usd": 0.00047955}
+{"kind": "response_validated", "attempt": 128, "usage_known": true, "actual_usd": 0.00047955}
+{"kind": "request_artifact", "attempt": 129, "name": "129-request.bin", "bytes": 9529, "sha256": "390dbd68180ac3fe6df68425a274e40fb7c40780768b4ac78f2b4295a8bfa14f"}
+{"kind": "attempt_start", "attempt": 129, "reserved_usd": 0.0027136, "retry_permitted": false, "request": {"name": "129-request.bin", "bytes": 9529, "sha256": "390dbd68180ac3fe6df68425a274e40fb7c40780768b4ac78f2b4295a8bfa14f"}}
+{"kind": "response_artifact", "attempt": 129, "name": "129-response.bin", "bytes": 5055, "sha256": "2d605fb0452e034da019303c011a2d804f659fc1b075d503665db43fb80fbe61"}
+{"kind": "usage", "attempt": 129, "usage_known": true, "tokens": {"input_tokens": 1944, "output_tokens": 329}, "reported_usd": 0.000407425}
+{"kind": "response_validated", "attempt": 129, "usage_known": true, "actual_usd": 0.000407425}
