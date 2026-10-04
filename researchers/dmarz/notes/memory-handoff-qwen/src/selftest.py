@@ -509,8 +509,8 @@ class Instrument(unittest.TestCase):
     def test_ready_file_matches_the_design_and_the_source(self):
         import yaml
         path = study.ROOT / 'READY.yaml'
+        if not path.exists(): self.skipTest('READY.yaml is written when the code is pinned')
         r = yaml.safe_load(path.read_text()); g = study.budget(GPT)
-        if r['source_hash'] != study.source_hash(): self.skipTest('READY.yaml is rewritten when the code is pinned')
         self.assertEqual((r['contract'], r['study'], r['experiment'], r['stages']), ('ready-chain-v1', study.EXPERIMENT, study.EXPERIMENT, list(study.STAGES)))
         self.assertEqual((r['provider'], r['model'], r['effort']), ('openai', GPT, study.spec(GPT)['request_template']['reasoning_effort']))
         self.assertEqual(r['model'], study.model_ladder()[0]); self.assertNotIn('model_ladder', r)      # this revision launches the gpt-6-luna chain only
