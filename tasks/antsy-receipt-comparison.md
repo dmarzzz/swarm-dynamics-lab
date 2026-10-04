@@ -3,7 +3,7 @@ id: antsy-receipt-comparison
 type: task
 title: Build and validate receipt extraction comparison with standard traces
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:43Z
-updated: 2026-10-04T19:43Z
+updated: 2026-10-04T19:55Z
+outputs:
+- researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/README.md
+- researchers/vishesh/notes/antsy-targeted-v8/comparison-v3/validation.json
 ---
 
 ## Goal
