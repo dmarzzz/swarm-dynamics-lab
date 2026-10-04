@@ -44,4 +44,9 @@ class Tests(unittest.TestCase):
    c=dict(manifest=str(m),ledger=str(self.b/('ledger'+str(qualified))),predecessor=str(self.prior),output=str(self.b/('out'+str(qualified))),source_commit='fixture',decision='PI-FUND-20261004-02')
    with patch.object(runner,'Admission',AdmissionStub),patch.object(runner,'write',lambda *args:None):result=runner.run(c,transport,lambda *args:{},lambda *args:None)
    self.assertEqual(count[0],800 if qualified else 32);self.assertEqual(result['qualification']['qualification_passed'],qualified);self.assertEqual(result['analysis']['primary'],0 if qualified else None)
+ def test_public_plan_preflight_structure(self):
+  import importlib.util
+  path=runner.ROOT.parent.parent/'experiment-documentation/public_plan.py';spec=importlib.util.spec_from_file_location('plan_check',path);module=importlib.util.module_from_spec(spec);spec.loader.exec_module(module)
+  result=module.validate(dict(id='phantom-coast-pc13',url='https://github.com/dmarzzz/swarm-lab/blob/'+('0'*40)+'/plan.md',description='TLDR: Source-lineage qualification and finite paired replication.'),(runner.ROOT/'PLAN.md').read_text(),'TLDR: Sixteen roots, paired ancestry presentations, two fresh blocks; probability contrast.')
+  self.assertEqual(result['experiment'],'phantom-coast-pc13')
 if __name__=='__main__':unittest.main()
