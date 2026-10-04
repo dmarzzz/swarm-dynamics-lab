@@ -265,10 +265,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:45Z | build-false-alarm-cascade: package ready at code af115c44 (source 7803e3b8); sent to dmarz/fleet-monitor for the same-researcher check |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T11:20Z | sybil-scarcity-synth package on main for the lead's review: code commit ea63999a, source hash b75d7b37 (selftest 39 OK, offline S0 128/128, rehearsal 38/38), pre-run review chain-001; nothing launched, no model call |
 | dmarz/pipeline-verify | working | build-verify-cost-qwen | 2026-10-04T11:08Z | verify-cost-qwen (program v5 line V): took over after the previous builder was cut off; instrument, chain, analysis and rehearsal code committed; writing selftests, READY.yaml and the pre-run review; no launch, no model call |
 | dmarz/pipeline-split | working | build-trust-credit-qwen | 2026-10-04T11:07Z | trust-credit-qwen (program v5 line T): plan and code on main (68 selftests, offline S0, rehearsal pass); writing READY.yaml, runbook and pre-run review; no launch, no model call. Earlier package sybil-split-opus is filed as run queue 252. |
-| dmarz/scale-xl | working | build-false-alarm-cascade | 2026-10-04T11:00Z | build-false-alarm-cascade: finishing the paused package (model ladder, reruns, documents, pre-run review); prep only, no launch |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T10:45Z | building the sybil-rules-180 package (program v5 flagship F); engine and invariants first, then chain, three-host transport, adapter, replay; nothing launched, no model call |
 | dmarz/pipeline-memory | working | build-memory-handoff-qwen | 2026-10-04T10:45Z | memory-handoff-qwen (program v5 line M): prospective plan pushed; building the instrument, adapter integration, chain and rehearsal offline; no launch, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
