@@ -60,6 +60,7 @@ def main(root,attempt,out):
   d.text((50,891),'Green = correct local state · Rust = incorrect · Gold border = received withdrawal · + / − / ? = support / refute / uncertain',font=font(18),fill=muted);d.text((50,925),'White slash = erased scout at round 10. Full recorded curves; cursor selects the state. Logical time. Evaluator overlays are not model inputs.',font=font(17),fill=muted)
   frames.append(im)
  frames[0].save(out/'initial.png');frames[10].save(out/'event.png');frames[-1].save(out/'final.png');frames[0].save(out/'recovery.gif',save_all=True,append_images=frames[1:],duration=[600]*23+[2200],loop=0,optimize=True)
+ (out/'render-provenance.json').write_text(json.dumps({'mapping':'H2' if attempt=='pilot-03' else 'H1','executed_source':m['plan']['commit'],'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'template_sha256':hashlib.sha256(src.read_bytes()).hexdigest(),'illustrative_pair':{'seed':seed,'arm':illustrative,'scenario':'combined'}},indent=2))
  (out/'artifact-manifest.json').write_text(json.dumps({'attempt':attempt,'mapping':'H2' if attempt=='pilot-03' else 'H1-retrospective-recorded','illustrative_pair':{'seed':seed,'arm':illustrative,'scenario':'combined'},'rounds':list(range(24)),'files':{f.name:hashlib.sha256(f.read_bytes()).hexdigest() for f in out.iterdir() if f.is_file() and f.name not in ('artifact-manifest.json','replay.zip','archive-checksums.json')}},indent=2))
  print(json.dumps({'completed':completed,'assigned':len(assign),'effects':len(effects),'out':str(out)}))
 if __name__=='__main__':

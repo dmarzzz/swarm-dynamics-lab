@@ -21,7 +21,7 @@ Integrate current feedback, freeze a practical repair diagnostic, implement cont
 
 ## Done when
 
-- [ ] Publish prospective plan and feedback response.
-- [ ] Implement and validate central/peer controls and lineage/outage scenarios.
-- [ ] Execute on fresh exclusive allocation and reconcile every assignment.
-- [ ] Publish results against plan, measured visualizations and remaining limits.
+- [x] Publish prospective plan and feedback response.
+- [x] Implement and validate central/peer controls and lineage/outage scenarios.
+- [x] Execute on fresh exclusive allocation and reconcile every assignment.
+- [x] Publish results against plan, measured visualizations and remaining limits.

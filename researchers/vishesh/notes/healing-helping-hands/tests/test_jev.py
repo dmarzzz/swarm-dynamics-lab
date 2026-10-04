@@ -13,7 +13,7 @@ class JevTests(unittest.TestCase):
   self.assertEqual(validate(r)['label'],'SUPPORT');r['provider']='other'
   with self.assertRaises(ValueError):validate(r)
  def test_duplicate_or_overbudget_never_dispatches(self):
-  db=sqlite3.connect(':memory:');db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)');reserve(db,'one')
+  db=sqlite3.connect(':memory:');self.addCleanup(db.close);db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)');reserve(db,'one')
   with self.assertRaises(sqlite3.IntegrityError):reserve(db,'one')
   self.assertEqual(db.execute('SELECT count(*) FROM calls').fetchone()[0],1)
   for i in range(59):reserve(db,str(i))
@@ -26,7 +26,7 @@ class JevTests(unittest.TestCase):
   self.assertEqual(orders,[list(LABELS[i:]+LABELS[:i]) for i in range(3)])
   self.assertNotEqual(request(x,0,'seed-1')['session_id'],request(x,0,'seed-2')['session_id'])
  def test_budget_settlement_preserves_failed_reservations(self):
-  db=sqlite3.connect(':memory:');db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)')
+  db=sqlite3.connect(':memory:');self.addCleanup(db.close);db.execute('CREATE TABLE calls(hash TEXT PRIMARY KEY,reserved INTEGER,status TEXT,cost REAL)')
   for i in range(200):
    reserve(db,str(i),720,True);db.execute('UPDATE calls SET status=?,cost=? WHERE hash=?',('completed',.00002,str(i)));db.commit()
   for i in range(201,272):reserve(db,str(i),720,True)

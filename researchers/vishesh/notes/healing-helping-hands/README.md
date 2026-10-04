@@ -1,14 +1,63 @@
 # Healing Helping Hands
 
-A living evidence atlas with 200 document scouts. **Exploratory S0 reference pilot completed; Qwen-derived conditions remain unqualified.** [Full assessment](ASSESSMENT.md) · [Pilot-03 pre-run plan](reviews/pilot-03-pre.md) · [Pilot-03 post-mortem](reviews/pilot-03-post.md) · [Reproduction](DEPLOYMENT.md) · [Agent definitions](agent-definitions.json)
+A 200-curator evidence-repair experiment. **Latest cycle: practical central baselines and a bounded capacity sensitivity, completed as exploratory S0 diagnostics.** [Plan](practical/PLAN.md) · [Cap-4 assessment](practical/POST-01.md) · [Cap-16 assessment](practical/POST-02.md) · [Feedback response](practical/FEEDBACK-RESPONSE.md) · [Earlier reference pilot](PILOT-03-OVERVIEW.md)
 
 ## TLDR
 
-Can an evidence atlas recover when scouts lose memory and source reports are withdrawn? We compare sharing documents alone with sharing documents plus withdrawal notices, using the same reports and damage. The qualified Jev reference and exact controls completed 72 worlds across three synthetic corpora. Forwarding notices reduced mean post-event error by 28.1 percentage points and removed stale citations by the final frame. Qwen and Laya repairs failed competence gates; the 108 Qwen-derived assignments remain not-run. This validates a programmed evidence-repair mechanism with model-backed extraction, not autonomous scientific research or heterogeneous-head superiority.
+How should an evidence index learn new reports, remove withdrawn findings, and resist incorrect withdrawal notices? We compared five programmed central/peer policies on the same saved Jev extraction outputs, including temporary central disconnection and incomplete source lineage. Two prospectively registered attempts completed 360 worlds with no new model calls. Increasing peer packet capacity improved delivery, but the version-aware central index still had lower error in every scenario. Verification prevented false deletions; neither architecture could reliably remove a withdrawal whose target was missing. Qwen/Laya remain unqualified.
 
-[Watch the measured 200-scout replay](https://swarm-live.pages.dev/api/a/healing-helping-hands/pilot-03-review/recovery.gif) · [Outcome figure](https://swarm-live.pages.dev/api/a/healing-helping-hands/pilot-03-review/outcomes.png) · [Swarm Lab runs](https://swarm-live.pages.dev/#/x/healing-helping-hands)
+[Measured cap-16 replay](https://swarm-live.pages.dev/api/a/healing-helping-hands/practical-02-review/recovery.gif) · [Capacity, accuracy and traffic](https://swarm-live.pages.dev/api/a/healing-helping-hands/practical-02-review/capacity-outcomes.png) · [Preserved cap-4 replay](https://swarm-live.pages.dev/api/a/healing-helping-hands/practical-01-review/recovery.gif) · [Swarm Lab](https://swarm-live.pages.dev/#/x/healing-helping-hands)
 
-## PI follow-through — 2026-10-04 UTC
+## Question and prediction
+
+Do local curators add practical value over ordinary evidence indexes, and what are the costs and limits? Practical-01 predicted that authenticated withdrawals would improve repair but that strong central reconciliation might win. Its four-item mesh packet cap produced poor new-evidence retention. Practical-02 was explicitly planned after that adverse result and changed only capacity to 16 items per directed link per round. Both outcomes are preserved; the second is a sensitivity check, not independent confirmation or a selected winning run.
+
+## Setup
+
+200 stable curator identities on a 20×10 grid serve 20 claims. Three previously measured synthetic corpora contain 100 source roots, two report copies each, and frozen Jev labels. Each corpus has two seeded document-placement layouts. Models are not called during this cycle; curators execute deterministic communication, deduplication, verification and aggregation rules. This is not 200 autonomous language researchers.
+
+Actor observations contain source IDs, publisher metadata, saved semantic labels and received notices. Evaluation uses separate fixture labels and actual source validity. Supplied authentication is an assumed metadata boundary, not a deployed cryptographic system. Gold means surviving-source consensus, not scientific truth. UNCERTAIN is a legitimate class; missing evidence is measured separately.
+
+## Protocol
+
+Five policies: central append-only; central verified withdrawals with cached reads; peer append-only; peer blind withdrawals; peer verified withdrawals. Six scenarios: benign new learning, genuine withdrawals, forged notices, missing target lineage, central outage, and combined true/false notices plus outage. Every arm receives identical exogenous observations and update recipients.
+
+At round 10, release 40 previously withheld document copies; inject scenario-specific notices and disconnect 100 central clients where prescribed. Reconnect at 20. Retain pre-communication event snapshots and 30 post-communication frames. Central ingress/query reads are deliberately immediate and bulk. Peers send at most 4 or 16 unseen items per directed neighbor edge per round. Record actual traffic; do not claim equal latency, bytes or resource use.
+
+Practical-01 source/plan: [51ca83d4](https://github.com/dmarzzz/swarm-lab/blob/51ca83d4d087c686903de67bd6c784dcb375c084/researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md). Practical-02 source/plan: [f4b5b5d7](https://github.com/dmarzzz/swarm-lab/blob/f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf/researchers/vishesh/notes/healing-helping-hands/practical/PLAN.md). Both verified public immutable registration, executing source and input hashes before computation. Fresh exclusive allocation `vishesh-healing-practical-01` was held through both stages. No held-out seeds or model budget were consumed.
+
+## Metrics
+
+Primary: mean fraction of 200 curator queries that are incorrect or lack any retained source evidence over rounds 10–29. Main planned comparison is central append-only minus peer verified, separately by scenario. Mandatory stronger comparison: central verified. The utility rule is >=20% relative error reduction versus append-only with <=3 percentage points final new-evidence retention loss; relative gain is undefined against zero error.
+
+Report stale-citation counts/fractions, valid-root coverage, false invalidations, new-evidence retention, per-class confusion, traffic and recovery. Historical recovery offsets count from the first recorded post-event exchange; finite offset +1 gives exchanges. Never read zero offset as zero damage. Three reused semantic corpora are the cluster count; layouts/capacities/worlds/curators/rounds are not independent replications. Means average layouts within corpus; ranges are not confidence intervals.
+
+## Results
+
+Combined incident; mean across three corpora, two layouts within each:
+
+| Policy | Mean post-event query error | Final new-evidence retention | Traffic item copies |
+|---|---:|---:|---:|
+| Central append-only | 37.5% | 100% | 50,307 |
+| Central verified | **16.6%** | **100%** | **50,307** |
+| Peer verified, cap 4 | 39.3% | 36.2% | 60,394 |
+| Peer verified, cap 16 | 21.1% | 99.9% | 87,842 |
+
+Cap 16 reduces peer error by 18.1 percentage points and largely fixes delivery loss, at greater traffic. It meets the utility rule against append-only for withdrawal/outage/combined, but never beats central verified. In the combined scenario, blind invalidation ends at 30.4% query error versus 0.4% for verified peers. Verification causes zero false invalidations in the fixtures, but verified peers retain about 0.61% stale citations at the final round. Missing lineage leaves approximately one-third of final queries wrong in both architectures.
+
+360/360 worlds completed; compute runtimes 127.5 and 151.2 seconds. Zero new model calls, tokens or inference cost. Numerical replay, reporting acknowledgements, packaging and browser verification are recorded in the publication audit. A valid adverse result is retained rather than repaired into a positive claim.
+
+## Failures, feedback and limits
+
+The first attempt's live wrapper used an unsupported SDK host argument: all 14 live reports failed, while computation succeeded. The failure is preserved publicly; the next attempt uses a tested adapter with acknowledged start/progress and safe error logging. Publication is retrospective for the first attempt.
+
+Independent review also found a circular historical replay checksum, stale local renderer, ambiguous recovery indexing and an incorrect count of qualification method names. The [feedback response](practical/FEEDBACK-RESPONSE.md) records each repair/erratum. The [corrected pilot-03 bundle](https://swarm-live.pages.dev/#/r/healing-helping-hands%2Fpilot-03-artifact-repair) is separate from the original completed record.
+
+Practical takeaway for this instrument: use a version-aware index with explicit source identity; do not assume local sharing improves it. A distributed design needs a concrete availability requirement and an honest traffic/latency comparison. This does not prove central architectures universally dominate. Real paper quality, realistic extraction errors, cryptographic authentication, matched network-byte budgets and broader topology failures remain untested. Qwen/Laya qualification and mixed-head benefit remain blocked. Fresh corpora, controlled semantic-error tapes and independent review are the next research steps; no new sweep is queued.
+
+## Concurrent PI feedback — 2026-10-04 UTC
+
+This feedback arrived before the completed practical-02 results above and is retained here with its original scope.
 
 The [practical-01 post-mortem](practical/POST-01.md) reports all 180 assignments complete with zero new model calls. No scenario met the prospective utility rule for peer-verified versus central-append; central-verified was stronger still. The [practical plan](practical/PLAN.md) incorporates the [PI review's](https://github.com/dmarzzz/swarm-lab/blob/e0a3170/researchers/dmarz/notes/next-experiments-2026-10-04/README.md) central-index, legitimate-learning and unreliable-lineage comparisons. This adverse saved-tape architecture result is retained separately from the pilot-03 model-extraction results below. Historical live reporting failed; retrospective publication does not repair that process outcome.
 
@@ -18,67 +67,3 @@ The 180 assignments reuse three known semantic corpora with two placement layout
 
 The central-outage condition disconnects central clients while preserving the mesh. It is an explicit architecture stress test, not evidence that decentralization is universally more reliable. Keep no-outage comparisons and the strong central cache/recovery baseline visible; report actual transport and latency differences rather than claiming equal resources. The [practical-02 assessment](practical/PRE-02.md) prospectively changes only the mesh packet cap from 4 to 16. This is a paired capacity sensitivity on reused evidence, not an independent replication or a warrant for further cap tuning until an advantage appears. A later efficacy study needs independently authored corpora and measured failure regimes. Prior outcomes and unqualified Qwen/Laya conditions are unchanged.
 
-## Question and prediction
-
-Does propagating source-withdrawal notices reduce atlas error and stale citations compared with keeping the same notices local? We expect a benefit when sources are withdrawn, and no benefit when no withdrawal occurs. A separate erasure scenario tests whether neighboring memories restore missing records. Exact extraction distinguishes semantic mistakes from memory-propagation mistakes. The original Qwen/independent-head question remains blocked by qualification; Jev-only was added as a separately named reference, never substituted into a Qwen condition.
-
-## Setup
-
-Twenty fictional improvement claims each have five independent source roots and two copies per root: 100 roots, 200 reports, 200 scout identities on a 20 × 10 four-neighbor grid. Scout i curates claim i modulo 20, giving ten curators per claim. Each model reads one claim/report pair and emits SUPPORT, REFUTE or UNCERTAIN. Source IDs and authenticated withdrawal notices are supplied metadata. The evaluator alone knows fixture labels and which sources remain valid.
-
-Models perform semantic extraction once per report; all subsequent communication, deduplication, tombstones and aggregation are deterministic. These are separate memories and identities sharing model weights, not 200 independently loaded models or language agents reasoning every round. Source copies count once; contradictory copy labels become UNCERTAIN. A scout aggregates its local source-balanced evidence, and the atlas takes the majority of that claim's ten curators, with ties UNCERTAIN.
-
-Gold is the source-balanced consensus of surviving fictional reports, not scientific truth. More supporting than refuting roots yields SUPPORT; the reverse yields REFUTE; ties/no informative roots yield UNCERTAIN.
-
-## Protocol
-
-The executed pilot-03 source and prospective plan are frozen at [46678b2b99936383d01b268075e0ae2cf8b405fc](https://github.com/dmarzzz/swarm-lab/blob/46678b2b99936383d01b268075e0ae2cf8b405fc/researchers/vishesh/notes/healing-helping-hands/README.md). The launcher verified the registered public plan and exact tracked source before calls. Every subsequent attempt requires a new pre-run assessment; this result page is not an instruction to rerun failed conditions.
-
-Fresh qualification: 60 previously unexecuted reports, 20 per label, seed 8601; threshold >=85% overall, >=70% per label and no provider/schema errors. Jev uses `typesafe/jev-1.13`, TypeSafe-only routing, no fallbacks, and requires served snapshot `typesafe/jev-1.13-20260917`. Exact wire option order is preserved and audited. Jev passed 60/60 and classified all 600 pilot reports correctly.
-
-Pilot seeds 8701–8703 are paired across policies/scenarios; each seed reuses one frozen extraction tape. Policies: no sharing, evidence-only, evidence plus withdrawal notices. Scenarios: no event, withdrawal only, erasure only, combined. Five assigned extraction definitions (exact, Qwen, Qwen+Qwen, Qwen+Laya, Jev reference) × three policies × four scenarios × three seeds = 180 assignments: 72 completed, 108 Qwen-derived not-run. No statistical independence is claimed for agents, frames or paired worlds.
-
-All worlds have 24 synchronous rounds. Before round 10's exchange, withdrawal removes one seeded root per claim and delivers a notice to the original scout. Erasure clears memory/notices in a seeded contiguous 5 × 8 block of 40 scouts. Combined erases first, then delivers notices. A pre-exchange event snapshot verifies the damage; plotted round frames are measured after exchange. Both sharing policies propagate evidence; only the notice-sharing policy forwards withdrawal tombstones. No-sharing retains local information.
-
-The dedicated sim-vishesh allocation, fixed source, response pins, append-only call journal, terminal assignment records and no-retry policy are documented in [deployment](DEPLOYMENT.md). The pilot used 660 Jev calls in 274.1 seconds; cumulative Jev usage, including the earlier qualification, was 720 calls / $0.013004124 against a single unchanged $0.10 ledger cap. Credentials stayed in the local forwarding process. Held-out seeds 8301–8310 remain untouched.
-
-## Metrics
-
-Primary: mean atlas error over post-exchange rounds 10–23, compared as notice-sharing minus evidence-only within seed/arm. Negative differences favor sharing notices. Report three seed-level contrasts and their mean/range, not confidence intervals or hundreds of false replicates.
-
-Secondary: 200-scout local accuracy, 20-claim atlas accuracy, unique valid informative-source coverage, stale-citation fraction, abstention, false confident assertions, final accuracy and rounds to >=95% atlas accuracy for three rounds. A null recovery stays null. Interpret recovery with pre-event competence and actual initial damage. Calls, input tokens, costs, latency and failed/not-run denominators are retained. An always-uncertain baseline is a labeled post-hoc sanity check.
-
-| Combined scenario, Jev reference | Seed 8701 | Seed 8702 | Seed 8703 |
-|---|---:|---:|---:|
-| Post-event error reduction vs evidence-only | 28.9 pp | 30.4 pp | 25.0 pp |
-| Notice-sharing final accuracy | 100% | 100% | 100% |
-| Evidence-only final accuracy | 65% | 65% | 70% |
-| Notice-sharing final stale citations | 0% | 0% | 0% |
-| Evidence-only final stale citations | 18.4% | 18.4% | 23.1% |
-| Always-uncertain final accuracy | 75% | 65% | 50% |
-
-No-event and erasure-only differences between sharing policies are exactly zero. Erasure-only loses 40 memories and drops coverage to 84% before exchange; coverage returns fully at rounds 12, 11 and 13. Exact and Jev trajectories coincide because Jev made no extraction errors on these fixtures. [Machine-readable summary](results-summary.json).
-
-## Visualization and reliability
-
-Recorded replay includes the 200-scout grid, 20-claim atlas, evaluator-labeled source inspection, paired curves, event boundary and pre-exchange damage count. Seed/arm/scenario controls expose the design; unavailable Qwen worlds show not-run. The representative animation is the planned first seed + combined case, not a best-outcome selection. Animation time is logical time, not inference wall time.
-
-Public Swarm Lab supports the GIF and PNGs, plus per-world metric traces and final frames. The richer HTML player is available locally/private-download; standalone public HTML hosting has not been verified. Rendering uses saved data only. Keyboard/mobile/playback/missing-data checks passed. Twenty-two offline checks passed, all 144 completed worlds across the three pilots replayed exactly, and all 660 new API wire hashes reconciled with the budget ledger. This supports the bounded implementation; it does not guarantee no future failures.
-
-## Attempt history and preserved failures
-
-| Attempt | Outcome | Review |
-|---|---|---|
-| Routing v1 (`regrowth-200`) | Completed routing worlds, weak shortest paths; public plan missing at execution | [Original review](REVIEW.md); separate failed plan-registration audit retained |
-| Pilot-01 | Qwen 25/30 failed; Laya 27/30 passed; 36 exact worlds, 108 model worlds not-run | [Review](ATTEMPT-01-REVIEW.md) |
-| Pilot-02 | Typed Qwen interface 40/60 failed; Laya 51/60 failed per-class gate; 36 exact worlds, 108 not-run | [Review](reviews/pilot-02-post.md) |
-| Diagnostic-03 | Neutral/thinking Qwen and explicit Laya all failed development gates | [Pre-run](reviews/diagnostic-03-pre.md), [review](reviews/diagnostic-03-post.md) |
-| Diagnostic-04 | Report-only Qwen 12/18 and Laya 16/18 failed development gates | [Pre-run](reviews/diagnostic-04-pre.md), [review](reviews/diagnostic-04-post.md) |
-| Jev qualification-01 | 60/60 semantic pass; option-order transport defect retained as failed control | [Pre-run](reviews/jev-qualification-01-pre.md), [review](reviews/jev-qualification-01-post.md) |
-| Pilot-03 | Fresh ordered qualification 60/60; 72 reference worlds completed, 108 Qwen-derived not-run | [Pre-run](reviews/pilot-03-pre.md), [review](reviews/pilot-03-post.md) |
-
-## Research basis and interpretation limits
-
-[FEVER](https://fever.ai/dataset/fever.html) motivates three-way claim/evidence classification; [ALCE](https://arxiv.org/abs/2305.14627) motivates citation-support measurement; [FActScore](https://arxiv.org/abs/2305.14251) motivates atomic claim checks. These were inspected at abstract/task-description depth; this is neither their benchmark nor a gate-passed prior-art survey.
-
-The study teaches that restoring missing documents and invalidating obsolete evidence need different messages, and that correct transport cannot replace semantic competence. It demonstrates a programmed mechanism with a qualified reference extractor on engineered fixtures. It does not establish successful Qwen heterogeneity, autonomous research, robustness to forged metadata/partitions, or performance on real scientific literature. [The assessment](ASSESSMENT.md) specifies those remaining gates.

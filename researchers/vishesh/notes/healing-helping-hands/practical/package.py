@@ -1,12 +1,13 @@
 """Noncircular reproducible replay archive with an external checksum receipt."""
 import argparse,hashlib,json,zipfile
 from pathlib import Path
-NAMES=('index.html','data.js','recovery.gif','outcomes.png','initial.png','event.png','final.png','round-00.png','round-10.png','round-20.png','round-29.png','paired-effects.json','effects.json','render-provenance.json')
+NAMES=('index.html','data.js','recovery.gif','outcomes.png','initial.png','event.png','final.png','round-00.png','round-10.png','round-20.png','round-29.png','paired-effects.json','effects.json','render-provenance.json','capacity-outcomes.png','capacity-results.json')
 def sha(b):return hashlib.sha256(b).hexdigest()
 def package(site,mapping):
  files={n:sha((site/n).read_bytes()) for n in NAMES if (site/n).is_file()}
  if not {'index.html','data.js','recovery.gif','outcomes.png'}<=files.keys():raise ValueError('incomplete_replay')
- inner={'mapping':mapping,'files':files,'archive_checksum':'See archive-checksums.json outside replay.zip; no circular archive digest.'}
+ prior=json.loads((site/'artifact-manifest.json').read_text()) if (site/'artifact-manifest.json').exists() else {}
+ inner={**{k:v for k,v in prior.items() if k not in ('files','archive_checksum')},'mapping':mapping,'files':files,'archive_checksum':'See archive-checksums.json outside replay.zip; no circular archive digest.'}
  (site/'artifact-manifest.json').write_text(json.dumps(inner,indent=2)+'\n')
  with zipfile.ZipFile(site/'replay.zip','w',compression=zipfile.ZIP_DEFLATED) as z:
   for n in sorted([*files,'artifact-manifest.json']):

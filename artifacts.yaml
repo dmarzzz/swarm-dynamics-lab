@@ -976,4 +976,44 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/src/domain.py
           - researchers/vishesh/notes/swarm-of-theseus/v2/tests/test_instrument.py
         commit: addecbcd43ee6f07993db2f3f4578ef2aab356e1-dirty
+  - id: healing-practical-capacity-results
+    category: content
+    type: figure
+    title: 'Healing Helping Hands: capacity, verification and central baselines'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-practical-capacity-results/healing-practical-capacity-results-v1.png
+        built_at: '2026-10-04T04:01:51Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Improve the design, evaluate against the plan, and make the results more practical, robust, compelling, and
+          interesting.
+        ingredients:
+          - researchers/vishesh/notes/healing-helping-hands/practical/compare.py
+          - data/healing-practical/recorded-inputs.tar.gz
+          - data/healing-practical/capacity-results.json
+        commit: f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty
+  - id: healing-practical-repair-film
+    category: content
+    type: film
+    title: 'Healing Helping Hands: measured cap-16 repair replay'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/healing-practical-repair-film/healing-practical-repair-film-v1.mp4
+        built_at: '2026-10-04T04:01:51Z'
+        note: First corpus and layout, combined scenario, prospectively selected; cap 16. Recorded logical rounds. H.264 conversion
+          of measured GIF with silent AAC track.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10454-dfe7-7793-87de-f7edb762ee6e
+        prompt: Make the results more practical, robust, compelling, and interesting with visually compelling results and
+          animations.
+        ingredients:
+          - data/healing-practical/recovery.gif
+          - researchers/vishesh/notes/healing-helping-hands/practical/render.py
+          - data/healing-practical/recorded-inputs.tar.gz
+        commit: f4b5b5d7bf2fe5e4d559ed4cbe0fce84eaf5becf-dirty
 requires: '1.2'

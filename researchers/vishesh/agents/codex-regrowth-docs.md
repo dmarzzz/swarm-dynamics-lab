@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: idle
 task: healing-practical-repair
-doing: Build the prospective practical repair comparison using saved extraction tapes
-updated: 2026-10-04T02:51Z
+doing: Practical capacity comparison published; strong central control wins, model qualification remains blocked
+updated: 2026-10-04T04:05Z
 ---
 
 ## Notes

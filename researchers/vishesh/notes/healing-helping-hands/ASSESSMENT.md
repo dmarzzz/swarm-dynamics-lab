@@ -25,7 +25,7 @@ For withdrawal and combined scenarios, sharing withdrawal notices reduced mean p
 
 No-event and erasure-only comparisons between the two sharing policies showed exactly zero difference. That is the intended specificity control: withdrawal notices add no benefit when no source is withdrawn. In erasure-only worlds, 40 memories were empty before exchange, valid-source coverage fell to 84%, and the first post-exchange coverage was 93–94%; full coverage returned at rounds 12, 11 and 13. Atlas accuracy was already 95% immediately after that first exchange, so a reported threshold-recovery value of zero does not mean memory was never lost.
 
-The always-uncertain final baseline was 75%, 65%, 50% across the three combined seeds. These class imbalances matter. In the first seed, stale document sharing was worse than abstaining. More shared information helps only if obsolete evidence can also be removed. This baseline was added after execution as a descriptive sanity check, not a substituted primary endpoint.
+The always-uncertain final baseline was 75%, 65%, 50% across the three combined seeds. These class imbalances matter. In the first seed, stale document sharing was worse than always predicting the UNCERTAIN class. More shared information helps only if obsolete evidence can also be removed. This baseline was added after execution as a descriptive sanity check, not a substituted primary endpoint.
 
 New pilot runtime was 274.1 seconds, with 283,626 input tokens and $0.011912292 in Jev charges. Including the earlier Jev qualification, cumulative spending was $0.013004124 across 720 calls, below the unchanged $0.10 cap. Runtime comparisons with earlier local-machine diagnostics are not controlled speed benchmarks.
 

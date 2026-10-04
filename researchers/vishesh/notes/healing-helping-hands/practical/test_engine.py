@@ -41,7 +41,6 @@ class Checks(unittest.TestCase):
  def test_invalid_tape_and_condition(self):
   with self.assertRaises(ValueError):build(make(3),[],17,'benign')
   with self.assertRaises(ValueError):rollout({},[],1,'unlisted','benign')
-if __name__=='__main__':unittest.main()
 
 class RunnerChecks(unittest.TestCase):
  def test_failure_denominator_and_no_overwrite(self):
@@ -84,3 +83,17 @@ class ReportingChecks(unittest.TestCase):
    p=Path(d)/'events'
    with self.assertRaises(ReportingFailure):Reporter(SDK(),'e','r',p).emit('start')
    self.assertNotIn('sensitive-diagnostic-placeholder',p.read_text());self.assertIn('RuntimeError',p.read_text())
+
+class PackageChecks(unittest.TestCase):
+ def test_archive_is_reproducible_and_noncircular(self):
+  import tempfile,json,zipfile,contextlib,io
+  from package import package,sha
+  with tempfile.TemporaryDirectory() as d,contextlib.redirect_stdout(io.StringIO()):
+   p=Path(d)
+   for n in ('index.html','data.js','recovery.gif','outcomes.png'):(p/n).write_bytes(b'fixture-'+n.encode())
+   (p/'private-extra.txt').write_text('excluded fixture')
+   package(p,'H3');first=(p/'replay.zip').read_bytes();package(p,'H3');self.assertEqual(first,(p/'replay.zip').read_bytes())
+   inner=json.loads((p/'artifact-manifest.json').read_text());outer=json.loads((p/'archive-checksums.json').read_text());self.assertNotIn('replay.zip',inner['files']);self.assertEqual(outer['replay.zip'],sha(first))
+   with zipfile.ZipFile(p/'replay.zip') as z:self.assertNotIn('archive-checksums.json',z.namelist());self.assertNotIn('private-extra.txt',z.namelist())
+
+if __name__=='__main__':unittest.main()

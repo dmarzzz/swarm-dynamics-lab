@@ -177,6 +177,69 @@
    "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7",
    "size_bytes": 364541
   },
+  "healing-practical-capacity-results@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791086386,
+     "sha256": "1e295089d68270cefc4469061de057de98770b406404d882d7dc5947b974b0cf",
+     "size": 6233,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/practical/compare.py"
+    },
+    {
+     "mtime": 1791086511,
+     "sha256": "558e059c8487c709ea5a23ded16566c70ba8737e916faf35482ca3d26964540b",
+     "size": 4300120,
+     "uri": "data/healing-practical/recorded-inputs.tar.gz"
+    },
+    {
+     "mtime": 1791086509,
+     "sha256": "ceb67c7849a92927c7e016c9e7f7b49a194c13acfb52bfbca538cbdbdad2310e",
+     "size": 124305,
+     "uri": "data/healing-practical/capacity-results.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791086386,
+   "path": "artifacts/healing-practical-capacity-results/healing-practical-capacity-results-v1.png",
+   "prompt_sha256": "bc5653a213e0e7580a303a1b6f2c369fd8dfd5a8e6bafd9dbd078a0be845d537",
+   "sha256": "8f3ca72589b5a503f5460c05c50d178e3265eddede269f43ec8f67704b332410",
+   "size_bytes": 120344
+  },
+  "healing-practical-repair-film@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791086509,
+     "sha256": "a7e8ccee62fd13c362a8350405de30df5630e6a98c15c5f1d21f997556ed7e8b",
+     "size": 1265224,
+     "uri": "data/healing-practical/recovery.gif"
+    },
+    {
+     "mtime": 1791086033,
+     "sha256": "8d0066fe0665d96b8a33dde80a49e8fc7ea896e48de7caab664c6a25ec194a2e",
+     "size": 6716,
+     "uri": "researchers/vishesh/notes/healing-helping-hands/practical/render.py"
+    },
+    {
+     "mtime": 1791086511,
+     "sha256": "558e059c8487c709ea5a23ded16566c70ba8737e916faf35482ca3d26964540b",
+     "size": 4300120,
+     "uri": "data/healing-practical/recorded-inputs.tar.gz"
+    }
+   ],
+   "media": {
+    "duration_s": 13.5,
+    "height": 1050,
+    "width": 1600
+   },
+   "mime": "video/mp4",
+   "mtime": 1791086484,
+   "path": "artifacts/healing-practical-repair-film/healing-practical-repair-film-v1.mp4",
+   "prompt_sha256": "c4b21ec4e4709dba9c7e0d9688379ead83edc38d276a5adfe7567b99745fbd3f",
+   "sha256": "f438ec2bc51c6726eba73ab2b2843cc9c873801b11703d4d9646ff46baddaeb3",
+   "size_bytes": 263097
+  },
   "influence-native-q2-film@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
