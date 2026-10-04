@@ -48,3 +48,7 @@ Only after this passes, invoke the same entry point with `--out` pointing to a n
 6. Preserve all receipts, summary, budget state, artifacts and any upload failure; reconcile the hub and terminal outcomes before releasing the allocation. Passing Q1 does not launch M1 automatically. Qualification-source binding and M1/C1 execution/registration remain future stage work. Campaign cap stays 672 cumulative calls and $0.903168 reserved at the verified historical tariff, inside existing $1 API authority; infrastructure remains $1 and ≤6 hours.
 
 The blockers are documented evidence and remaining research, not missing spending permission. This handoff distinguishes prepared software, actual model qualification and admitted execution.
+
+## Publication status
+
+The code, plan and condition manifests are published. [Publication record](Q1-PUBLICATION.json) retains their immutable URLs. Updating the public experiment registration was attempted but did not complete; the public page still points to the historical S0 plan. Registration remains an explicit operator prerequisite. No run was queued, no credentials were exposed and no model call was sent.
