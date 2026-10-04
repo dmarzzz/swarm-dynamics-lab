@@ -8,16 +8,17 @@ sys.path.insert(0,str(study.ROOT.parent.parent/'experiment-documentation'))
 from public_plan import check
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);a=p.parse_args();out=Path(a.out)
+ p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);p.add_argument('--solo',action='store_true');a=p.parse_args();out=Path(a.out)
  if out.exists():raise ValueError('output_exists')
- receipt=allocation(a.receipt)
+ receipt=allocation(a.receipt);expected=4 if a.solo else 12
  tldr='Native scenario qualification: three reviewers and one commander recover a dependency-constrained deployment under retained, reset or revision-checked memory; 12 episodes, at most 108 calls.'
+ if a.solo:tldr='Single-commander retain-memory control: four matched deployment cases, no initial reviewers, six actions each; at most 24 calls.'
  public=check('immune-response-v3',tldr)
  import swarm_report as sr
- job=sr.start('immune-response-v3',params={'stage':'scenario-native-a2','backend':'anthropic','episodes':12,'max_calls':108,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
+ job=sr.start('immune-response-v3',params={'stage':'scenario-solo-a1' if a.solo else 'scenario-native-a2','backend':'anthropic','episodes':expected,'max_calls':24 if a.solo else 108,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
  print(json.dumps({'run':job.id}),flush=True)
  try:
-  p=subprocess.Popen([sys.executable,str(study.ROOT/'study.py'),'--backend','anthropic','--out',str(out)],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
+  p=subprocess.Popen([sys.executable,str(study.ROOT/'study.py'),'--backend','anthropic','--out',str(out)]+(['--solo'] if a.solo else []),stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
   for line in p.stdout:
    progress=json.loads(line);print(json.dumps(progress),flush=True)
    try:
@@ -26,8 +27,8 @@ def main():
   if p.wait()!=0:raise RuntimeError('study_process_failed')
   (out/'allocation-receipt.json').write_text(json.dumps(receipt,indent=2));(out/'public-plan-receipt.json').write_text(json.dumps(public,indent=2))
   render.render(out);summary=json.loads((out/'summary.json').read_text());upload(job,out)
-  clean=all(x['healthy_ticks']==6 for x in summary['means']['false_alarm'].values());qualified=summary['recorded']==12 and summary['invalid']==0 and summary['usage_missing']==0 and clean
-  metrics={'episodes':summary['recorded'],'invalid':summary['invalid'],'execution_qualified':int(summary['invalid']==0 and summary['recorded']==12),'clean_qualified':int(clean),'model_backed':1,'actual_usd':summary['actual_usd']}
+  clean=all(x['healthy_ticks']==6 for x in summary['means']['false_alarm'].values());qualified=summary['recorded']==expected and summary['invalid']==0 and summary['usage_missing']==0 and clean
+  metrics={'episodes':summary['recorded'],'invalid':summary['invalid'],'execution_qualified':int(summary['invalid']==0 and summary['recorded']==expected),'clean_qualified':int(clean),'model_backed':1,'actual_usd':summary['actual_usd']}
   if qualified:job.done(message='Scenario qualification complete; interpret per-case effects and nulls, not population robustness',**metrics)
   else:job.fail('Qualification gate failed; outcomes retained for diagnosis',**metrics)
   print(json.dumps({'completed':True,'qualified':qualified,'actual_usd':summary['actual_usd']}),flush=True)
