@@ -3,14 +3,16 @@ id: plan-discussion-v3-successor
 type: task
 title: Plan the next discussion benchmark diagnostic and offline orchestration
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-bench-v3
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T03:55Z
+updated: 2026-10-04T03:55Z
 ---
 
 ## Goal
