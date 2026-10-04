@@ -49,6 +49,7 @@
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:17Z | Run the revised procurement influence experiment |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:08Z | Design Poietic Agents from the self-differentiating swarm research |
+| [quorum-mirrors-iteration-3](tasks/quorum-mirrors-iteration-3.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:20Z | Clarify Quorum utility and prepare a controlled successor |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T04:15Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -220,13 +221,13 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| vishesh/codex-pi-review | done | add-experiment-evidence-metadata | 2026-10-04T04:20Z | Published 45 evidence assessments in 41 documents, templates and CI metadata checks. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:18Z | Published four scoped reviews, author feedback, and unchanged v3 vote rescore. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:12Z | Paired diagnostic of missing execution/history semantics on saved stalls; same approved model before fresh qualification |
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | dmarz/cloud-discussion-d1 | working |  | 2026-10-04T04:09Z | Assess cloud access and prepare bounded D1; no model calls dispatched. |
 | dmarz/sybil-specialists | working | sybil-followups | 2026-10-04T04:08Z | Launching both frozen S1 studies on separate servers after exact API qualification and verified budget partition |
-| vishesh/codex-pi-review | working | add-experiment-evidence-metadata | 2026-10-04T04:07Z | Add evidence-confidence scores and sample-size metadata across current study documents. |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:06Z | Resuming frozen Sonnet cases serially; diagnosing Haiku output truncation and moving repair qualification to its dedicated host. |
 | vishesh/codex-regrowth-docs | idle | healing-practical-repair | 2026-10-04T04:05Z | Practical capacity comparison published; strong central control wins, model qualification remains blocked |
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04T04:04:19.842414+00:00 | Approved USD 2 study; allocating dedicated fleet machine and launching Q0 |
@@ -244,8 +245,8 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-quorum-mirrors | working |  | 2026-10-04 04:20:40.105511+00:00 | Clarify practical value, audit S0 and prepare successor under current setup gates |
 | vishesh/codex-phantom-coast | working | phantom-coast-live | 2026-10-04 04:19:00+00:00 | Q0 passed; S0 pilot running on exclusive sim-dmarz-5; auditing saved outcomes |
-| vishesh/codex-quorum-mirrors | done | quorum-mirrors-s0 | 2026-10-04 04:00:42.508828+00:00 | S0 complete and qualified: 29/32 correct, 32 valid; artifacts preserved and worker released |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
