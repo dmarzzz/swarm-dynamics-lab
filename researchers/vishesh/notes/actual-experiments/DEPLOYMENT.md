@@ -1,5 +1,15 @@
 # Deployment record and live qualification handoff
 
+## Dedicated-machine update
+
+After the owner requested separation from dmarz’s active experiment machine, the shared claim was released and no further jobs were launched on sim-test-01. Both workers are now deployed at revision `e65f8de89d611bfeade1c6452a380ee86ca4f65b` on **research-01**, exclusively claimed as **vishesh-dedicated-experiments**. All 13 tests passed there. The owner reports dmarz supplied this machine; no new infrastructure was created by this task.
+
+The owner supplied the Anthropic credential through macOS Keychain (service `swarm-lab-anthropic`, account `vishesh`). It is read only by a local process and passed to the worker through SSH stdin and process memory. It is never shown in tool output or written into the repository. The stored entry has surrounding pasted text; extract only a unique valid API-key token, or fail closed if ambiguous. The read-only API check requires a workspace ID. **Live qualification remains unqueued pending that nonsecret ID.**
+
+The earlier records below are historical deployment evidence. Resume on research-01, not sim-test-01. The USD 50 total authorization and shared USD 45 API ledger cap still apply.
+
+## Initial engineering deployment
+
 Deployed public source: `ef4a0d44d8b4ce2b5cbebce54939fe0627588925`. Shared existing server `sim-test-01`; dedicated checkout `/srv/swarm/vishesh-actual-experiments`; worker identity `vishesh/codex-experiments`. Fleet claim `vishesh-developed-experiments` was published through the private agentops claim workflow. No server was provisioned, no ports were opened and no existing worker was stopped.
 
 ## Completed hub runs
