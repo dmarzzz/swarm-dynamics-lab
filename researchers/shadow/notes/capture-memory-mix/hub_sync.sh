@@ -9,6 +9,6 @@ export SWARM_SOURCE=shadow/sol-goal
 case "${1:-all}" in
   register) python3 src/hub_push.py register ;;
   M0|M1|M2) python3 src/hub_push.py stage "$1" "results/local-$(echo $1 | tr A-Z a-z)" ;;
-  pilot) python3 src/hub_push.py pilot results/pilot-mp ;;
-  all) python3 src/hub_push.py register; for s in M0 M1 M2; do python3 src/hub_push.py stage $s results/local-$(echo $s | tr A-Z a-z); done; python3 src/hub_push.py pilot results/pilot-mp ;;
+  pilot) python3 src/hub_push.py pilot results/pilot-mp MP gpt-4o-mini; python3 src/hub_push.py pilot results/pilot-mp2 MP2 gemma-3-27b-it; python3 src/hub_push.py pilot results/pilot-mp3 MP3 qwen3-235b ;;
+  all) python3 src/hub_push.py register; for s in M0 M1 M2; do python3 src/hub_push.py stage $s results/local-$(echo $s | tr A-Z a-z); done; python3 src/hub_push.py pilot results/pilot-mp MP gpt-4o-mini; python3 src/hub_push.py pilot results/pilot-mp2 MP2 gemma-3-27b-it; python3 src/hub_push.py pilot results/pilot-mp3 MP3 qwen3-235b ;;
 esac

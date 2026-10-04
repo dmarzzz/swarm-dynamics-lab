@@ -75,3 +75,5 @@ G3 passed for the named repair at sourcef0be4c82; G4 **failed** the unchanged pe
 | Next action |Develop/qualify competent perception controls under a new plan; leave test50–99 unopened |
 
 [Final assessment](RESULTS.md) and [post-mortem](reviews/S0-repair-post.md) distinguish repaired execution from failed competence. Raw OCR and receipt images remain private. No credential values were read or published. Fleet release is recorded below after final upload.
+
+Closeout verified2026-10-04T06:28:39Z: final assessment and audits uploaded;0 experiment worker processes remained. Dedicated allocation released and agentops release PR187 merged. Existing server retained under owner lifecycle control; no teardown or replacement provisioning. Public RESULTS page rendered correctly in the browser at commit5114250e. This iteration is closed with failed qualification and no S1 launch.

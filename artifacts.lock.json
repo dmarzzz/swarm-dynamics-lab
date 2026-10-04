@@ -5230,9 +5230,811 @@
    "prompt_sha256": "6872cb407834d8a9d6ad298d6435ad9eb89c1fc29b24839b99ced5c52508dc0e",
    "sha256": "ea4ec1019cee0eabd0176e6326993c227d797117492198050c5c619e4d7e9587",
    "size_bytes": 1542505
+  },
+  "market-split-sonnet-s1-002-records@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791089893,
+     "sha256": "c0a6a74ec361b40f144c7547059c8c1950462042a684178138f40116a0c89cbf",
+     "size": 7089,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/archive.py"
+    },
+    {
+     "mtime": 1791095794,
+     "sha256": "127077f69d48f6c9d437cbf3dc1907200ab8a0d0a1bdf9d3d2f626ddb928eb2b",
+     "size": 36759,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/s1-002-verified.json"
+    },
+    {
+     "mtime": 1791094974,
+     "sha256": "2cabe58a930fdbc1332fcd1ab605c0a741a85770371b27b82234140fc1cccc2d",
+     "size": 116883,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/progress.png"
+    },
+    {
+     "mtime": 1791094975,
+     "sha256": "b0bf6bd73895af2b3858e3a723e04b7e0bc59b0e3b0e1e20e8991d9f2b50dc5c",
+     "size": 115283,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/final_frame.png"
+    },
+    {
+     "mtime": 1791094990,
+     "sha256": "7efabcda48a9d04a6ac2b43ada227d6e707dbadd478dc9545eb98351c444175f",
+     "size": 769384,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/replay.gif"
+    },
+    {
+     "mtime": 1791094974,
+     "sha256": "5cfe6532fcad154e03b4337cd9b416ebdcb3e8fae0d826abb43451172c6197bd",
+     "size": 54514,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/episodes.jsonl"
+    },
+    {
+     "mtime": 1791094974,
+     "sha256": "918f9676ac43010e619b91dd4101bf6540d1baaa0961bb8e7f1d3da0bd3152d3",
+     "size": 141927,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/calls.jsonl"
+    },
+    {
+     "mtime": 1791094990,
+     "sha256": "78f436dac92bde8b6e5ab85c153318538f768ca2e86ad4a45f4efafd70a8aa6c",
+     "size": 1130,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/summary.json"
+    },
+    {
+     "mtime": 1791094990,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__052adb4bd4eb/visualization-errors.json"
+    },
+    {
+     "mtime": 1791085813,
+     "sha256": "5b7eefd387645e3bc93e10ef7cc09a38ff639e5d9fff2b3fc5c1bf915ead91c6",
+     "size": 116010,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/progress.png"
+    },
+    {
+     "mtime": 1791085814,
+     "sha256": "4765db83de69fca9fc0e3b46989d63264f5fab724f28055d0b364aab0b2e92ac",
+     "size": 114498,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/final_frame.png"
+    },
+    {
+     "mtime": 1791085829,
+     "sha256": "5cb58dc3a0e6b33471a39c1d7e722e827b0cf63d7e3c2584932f45eff3df3a64",
+     "size": 773884,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/replay.gif"
+    },
+    {
+     "mtime": 1791085813,
+     "sha256": "a0905310d6c14da3eab942c5ab7a512ba8aec0c339a774b088047101ee7a16b5",
+     "size": 56917,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/episodes.jsonl"
+    },
+    {
+     "mtime": 1791085812,
+     "sha256": "f1e7ddb0ee94f703c344dbd92a7f60066be5d55a776ac63875159b48db7de631",
+     "size": 146094,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/calls.jsonl"
+    },
+    {
+     "mtime": 1791085829,
+     "sha256": "16c1cad0efe0273411e2a465e217352317e5b5b4448e5950d0d3e78bbc494c4f",
+     "size": 1127,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/summary.json"
+    },
+    {
+     "mtime": 1791085829,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__139d8f744ae9/visualization-errors.json"
+    },
+    {
+     "mtime": 1791095548,
+     "sha256": "88ad3e065a58532bb12822c13b7e4182f9055012182db5ed75165076fbd8888a",
+     "size": 111244,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/progress.png"
+    },
+    {
+     "mtime": 1791095557,
+     "sha256": "ea993b8b9e1d5ff38256c1158ae692a90b05f4ef999af0848d0d4be1e31372dd",
+     "size": 108865,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/final_frame.png"
+    },
+    {
+     "mtime": 1791095572,
+     "sha256": "38c039a0e4948770a6245e717c39067999d06467d9920bb0bf734bc820756a1f",
+     "size": 747185,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/replay.gif"
+    },
+    {
+     "mtime": 1791095556,
+     "sha256": "4c430b50fdb3e4f112906918b5c2f3e280b39a9020a98ea6ccbda701752e2802",
+     "size": 57106,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/episodes.jsonl"
+    },
+    {
+     "mtime": 1791095556,
+     "sha256": "2c5c43bba2bbd8ae80b8c5e8044e19e37d66a5a63f116e7fb407bbeae9bb144b",
+     "size": 130659,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/calls.jsonl"
+    },
+    {
+     "mtime": 1791095572,
+     "sha256": "7649d5cda4c4624587519ba3dd007e0fa642991dfbe7dc599bfbf9fe55bc4dab",
+     "size": 1129,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/summary.json"
+    },
+    {
+     "mtime": 1791095572,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__14e391bcb150/visualization-errors.json"
+    },
+    {
+     "mtime": 1791089455,
+     "sha256": "6881cd8c56141218b6341fdf7d99b8e75f05a0c983c1fdd6c7bfcc083310032e",
+     "size": 109520,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/progress.png"
+    },
+    {
+     "mtime": 1791089456,
+     "sha256": "f651180c73d02ce5415f49610698e198bd43a6bda4ca75111dce2e3eda781bd0",
+     "size": 108048,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/final_frame.png"
+    },
+    {
+     "mtime": 1791089470,
+     "sha256": "17b9ddf5f781bae8184cc7b76cd2a8767ab3a5db6d74117d9899cdff29c9f316",
+     "size": 749938,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/replay.gif"
+    },
+    {
+     "mtime": 1791089455,
+     "sha256": "fb14f817582fdee65de64731b07a769eafb1569a6008e43fda38b6c70e78013e",
+     "size": 56813,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/episodes.jsonl"
+    },
+    {
+     "mtime": 1791089454,
+     "sha256": "029f6a9aeffca5feb7c59c571cce008be99d05f2ef9bda1b60e01e049c330e25",
+     "size": 130546,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/calls.jsonl"
+    },
+    {
+     "mtime": 1791089470,
+     "sha256": "45cf2dd077e6587ea2dc43a91f9e25dd047acc753c6ac7ef54bc10a332931215",
+     "size": 1130,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/summary.json"
+    },
+    {
+     "mtime": 1791089470,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__214ddb2c63ff/visualization-errors.json"
+    },
+    {
+     "mtime": 1791088041,
+     "sha256": "2c31216e2c3663ef4c29eceb477ddce02101fad0912c2c2421d895777ccace56",
+     "size": 113289,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/progress.png"
+    },
+    {
+     "mtime": 1791088052,
+     "sha256": "de359a420306fce91382818cccc7ef2f3aa5913ee0febc6f2655f13dbf4cade0",
+     "size": 111466,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/final_frame.png"
+    },
+    {
+     "mtime": 1791088067,
+     "sha256": "b581a9529834976d63afad696234aab60b6f794a92be4fcfcb552df6ff347e0e",
+     "size": 750116,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/replay.gif"
+    },
+    {
+     "mtime": 1791088052,
+     "sha256": "116ceadfda17fb8c54ae9213b18cc24da5bb6b60f5d7a15d59beb59f2055431d",
+     "size": 56995,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/episodes.jsonl"
+    },
+    {
+     "mtime": 1791088051,
+     "sha256": "1825debea143289836dae33fcdd38b660553c59921c32f72a25716647adb416e",
+     "size": 130632,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/calls.jsonl"
+    },
+    {
+     "mtime": 1791088067,
+     "sha256": "c9c2bbee1ef8633c4a0a9f6c7ea9068c0537cbfe844dc230efc1332b1e92b18c",
+     "size": 1126,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/summary.json"
+    },
+    {
+     "mtime": 1791088067,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__2cfe243853d5/visualization-errors.json"
+    },
+    {
+     "mtime": 1791088897,
+     "sha256": "5a80652e6851bdf03ca803f2752326cdfff47e90675b469cc71c09cf755d918a",
+     "size": 112861,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/progress.png"
+    },
+    {
+     "mtime": 1791088898,
+     "sha256": "7ae03c760f62f93455ad6fb2bd9f6c594991db471a2e6cc6b091bfdf0df78337",
+     "size": 111258,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/final_frame.png"
+    },
+    {
+     "mtime": 1791088912,
+     "sha256": "1c99e6fb9ad6241e4eb5207b77f8a2a310a30be2b631fe0864f610b8c70d4e9e",
+     "size": 745578,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/replay.gif"
+    },
+    {
+     "mtime": 1791088897,
+     "sha256": "4fdb9bccc46ef3c8a2ea09b18f1b204e295cdff0ed3ea8a61a1d755dc18c6da3",
+     "size": 55204,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/episodes.jsonl"
+    },
+    {
+     "mtime": 1791088896,
+     "sha256": "a5d4de809fdec168f8fbbe3e83c1dbf82e89df55ae417ced310f1b44e5f5fabb",
+     "size": 140717,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/calls.jsonl"
+    },
+    {
+     "mtime": 1791088912,
+     "sha256": "0985221ace37c7ca36d182b0b311137bb12d8c834489e55c9cb3d529ffc5a021",
+     "size": 1127,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/summary.json"
+    },
+    {
+     "mtime": 1791088912,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__41af51ef9e73/visualization-errors.json"
+    },
+    {
+     "mtime": 1791084957,
+     "sha256": "6038676c46cb3438abbb8b5fd57372e745be6c9719623bc3ddc89e6cf00ec61f",
+     "size": 112598,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/progress.png"
+    },
+    {
+     "mtime": 1791084958,
+     "sha256": "0dbef91718852ba1587d2835b44ad858cb70ba3456b770287bff6f3b50614bac",
+     "size": 111142,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/final_frame.png"
+    },
+    {
+     "mtime": 1791084973,
+     "sha256": "3931226030b9eb859a2845242b071e819f830a3a5082510c3a2fb3d09e7da51d",
+     "size": 744401,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/replay.gif"
+    },
+    {
+     "mtime": 1791084957,
+     "sha256": "5f51c1031fcf5fd2f4667190bfa91f07c38beaa15e4727d9464067a09fb7e87c",
+     "size": 53401,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/episodes.jsonl"
+    },
+    {
+     "mtime": 1791084956,
+     "sha256": "8d248fd08dfaeac94cca8f906550b567a5b047cf9967b42d201e2ed53a25a6c3",
+     "size": 137819,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/calls.jsonl"
+    },
+    {
+     "mtime": 1791084973,
+     "sha256": "bd251b8046bd62855c7074191c0894e9756c87c3338a0bdd8fa06ae2cd7414b5",
+     "size": 1128,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/summary.json"
+    },
+    {
+     "mtime": 1791084973,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__49fdb6c1419b/visualization-errors.json"
+    },
+    {
+     "mtime": 1791087467,
+     "sha256": "f85542d71a4d90a1b0a56ef433cd6f3440137ad784df3fdbf292eefff1bb825d",
+     "size": 115131,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/progress.png"
+    },
+    {
+     "mtime": 1791087468,
+     "sha256": "271c0b360392123cd7f61e95b6a457e7212b82bad085f82e36bfc7c116b06612",
+     "size": 113623,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/final_frame.png"
+    },
+    {
+     "mtime": 1791087482,
+     "sha256": "cee47a1af4042a0ea8e59abb94b2640e9dabc2409104bfc29652ced9c06a6fba",
+     "size": 775794,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/replay.gif"
+    },
+    {
+     "mtime": 1791087467,
+     "sha256": "cbea4564240738cca8813c7440fd01f2bc80458560b304d24ac64f30fe416718",
+     "size": 56121,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/episodes.jsonl"
+    },
+    {
+     "mtime": 1791087466,
+     "sha256": "576b970d918a83f071babf61aab6e9107034a7efe9ae5a57a5cd6e4060791ff7",
+     "size": 145808,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/calls.jsonl"
+    },
+    {
+     "mtime": 1791087482,
+     "sha256": "e0f9484ddae871b7e390a17078425905e2fed86dd1694a76551b248e749a462f",
+     "size": 1127,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/summary.json"
+    },
+    {
+     "mtime": 1791087482,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6a07845f757c/visualization-errors.json"
+    },
+    {
+     "mtime": 1791094152,
+     "sha256": "1cff6450887fe4b3ebbcd7552e6d2f843de1167c49d54b8dbbbc3d6a349b4d8c",
+     "size": 115727,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/progress.png"
+    },
+    {
+     "mtime": 1791094152,
+     "sha256": "67f39a16772f31fa90e6416d3b9b71909474f9dece954bfec856b90e018b063e",
+     "size": 114218,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/final_frame.png"
+    },
+    {
+     "mtime": 1791094167,
+     "sha256": "0d3cfa998371b0d1bc98c3cbf9711a5c727ecebbbb5112b7ba2d9adcc696eac5",
+     "size": 743776,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/replay.gif"
+    },
+    {
+     "mtime": 1791094152,
+     "sha256": "aea7ff711b5281e131b7d3e12ce007f1ba5f7a4d0aed1797e1dd29eefc3b0616",
+     "size": 52779,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/episodes.jsonl"
+    },
+    {
+     "mtime": 1791094151,
+     "sha256": "bb06e7df620be6760de9166f5284b58c46a3f153d4a3f95b08b6218c910bb0dc",
+     "size": 136140,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/calls.jsonl"
+    },
+    {
+     "mtime": 1791094167,
+     "sha256": "08bcadc6a9cbccb816261330467eb795dc4cbfc054f27930e8fda342bf73b120",
+     "size": 1140,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/summary.json"
+    },
+    {
+     "mtime": 1791094167,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__6f83498ebaf1/visualization-errors.json"
+    },
+    {
+     "mtime": 1791086353,
+     "sha256": "603fa6bf3ed69193abeb86e49a3df8a3b3f5231b981e9f288b61128868d181d1",
+     "size": 109474,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/progress.png"
+    },
+    {
+     "mtime": 1791086353,
+     "sha256": "2473cab0adf56cd36d2af940eff40100291a54a9ef8d302096c33f807c32e933",
+     "size": 107846,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/final_frame.png"
+    },
+    {
+     "mtime": 1791086367,
+     "sha256": "403d23c6793557208b1128dd34300f18f522bba49e8e994d8662871d45172e9e",
+     "size": 748117,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/replay.gif"
+    },
+    {
+     "mtime": 1791086353,
+     "sha256": "41b57360228e346a3da0135828c28ad99cea2118f0baa953ec0f2edbe162594e",
+     "size": 57463,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/episodes.jsonl"
+    },
+    {
+     "mtime": 1791086352,
+     "sha256": "4b83321087263bb0156e1d272362c940803b99cb9e018338bde9167e99ff78e3",
+     "size": 131823,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/calls.jsonl"
+    },
+    {
+     "mtime": 1791086367,
+     "sha256": "4ee0c048aef79157299fbd13a9d057a69c9c0bac0ff0d4dc08f9fdf58c0c5f68",
+     "size": 1129,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/summary.json"
+    },
+    {
+     "mtime": 1791086367,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__86e333d8d66c/visualization-errors.json"
+    },
+    {
+     "mtime": 1791092268,
+     "sha256": "4ffe78b99791c34ba99eb03f0f9085da3fb6060b4a09ba67c3ab2737bdc10a5d",
+     "size": 114092,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/progress.png"
+    },
+    {
+     "mtime": 1791092269,
+     "sha256": "735d5df717948a07df5227f8a7913921e84638f163722cc78e83fd113371f3a0",
+     "size": 112630,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/final_frame.png"
+    },
+    {
+     "mtime": 1791092283,
+     "sha256": "20c0296b44f20fe9176772d87363081dfada2116fe9a84b356a07075c6bff339",
+     "size": 775343,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/replay.gif"
+    },
+    {
+     "mtime": 1791092269,
+     "sha256": "5cd6c0ae95a850dde3da8e2b548fe7a5efcb3ff2b2d12b936392bcf9517f7933",
+     "size": 55258,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/episodes.jsonl"
+    },
+    {
+     "mtime": 1791092268,
+     "sha256": "bd9478f1f8be875f81772611412a20eaf5fa04025ea75c805b998e47269c4d02",
+     "size": 144038,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/calls.jsonl"
+    },
+    {
+     "mtime": 1791092283,
+     "sha256": "0527ba48defc008f7037b6cc57c0fe6446b01846bdf7680d990f8720294faaa9",
+     "size": 1131,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/summary.json"
+    },
+    {
+     "mtime": 1791092283,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adc67900191c/visualization-errors.json"
+    },
+    {
+     "mtime": 1791090258,
+     "sha256": "1c5fd1e8833d4b69822f0e01c81b0be722483735b91b09b442039530b4efbfa0",
+     "size": 120075,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/progress.png"
+    },
+    {
+     "mtime": 1791090258,
+     "sha256": "fe121cd16a8051e03bf7e47e1ed0de3ed9955c41b29c7acfed1cb377112e6b1c",
+     "size": 118431,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/final_frame.png"
+    },
+    {
+     "mtime": 1791090273,
+     "sha256": "e69d90fd7355362f2e0e48da54eea2d25bc28cb166c3f6585250a73f920afb94",
+     "size": 803518,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/replay.gif"
+    },
+    {
+     "mtime": 1791090258,
+     "sha256": "22f9e0a45372e1f31d5b7905e7d3accfc61aef7282de76dfe76c03acb3de408d",
+     "size": 55462,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/episodes.jsonl"
+    },
+    {
+     "mtime": 1791090257,
+     "sha256": "5efcfcb3708ea6ad2615c5c67e06990ea0dd0e393c1484c0ef52387aac5c3b6c",
+     "size": 144138,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/calls.jsonl"
+    },
+    {
+     "mtime": 1791090273,
+     "sha256": "1b0cc994511e78c313afbf1747c4530144a2da3fceab812100b6f7deec95f621",
+     "size": 1132,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/summary.json"
+    },
+    {
+     "mtime": 1791090273,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__adf0bac61698/visualization-errors.json"
+    },
+    {
+     "mtime": 1791086379,
+     "sha256": "53eb0d46485fa2ff994fa9139f6e980f6eb379f548802b8201a59c7dcd4281cf",
+     "size": 109392,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/progress.png"
+    },
+    {
+     "mtime": 1791086380,
+     "sha256": "0930fc7ecae2e9dfafbe340e04fe831327c072c10ee469f8b38cbb6275a049b2",
+     "size": 107911,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/final_frame.png"
+    },
+    {
+     "mtime": 1791086393,
+     "sha256": "2f6fabe1f12cfdf79c769bc4e5b47ea734205b075a97098fe51fda0f74163eb0",
+     "size": 748236,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/replay.gif"
+    },
+    {
+     "mtime": 1791086379,
+     "sha256": "11a6b81cb2959332cc4782475e536f403bfcddb2159ee0b33dda037218b86065",
+     "size": 57197,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/episodes.jsonl"
+    },
+    {
+     "mtime": 1791086378,
+     "sha256": "f746fe4c5897240503445e21f2c752bf6c71f9510997abe2b89ab6b73e1091da",
+     "size": 131484,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/calls.jsonl"
+    },
+    {
+     "mtime": 1791086393,
+     "sha256": "2168625614bf8c4411bb761d6818e8f7edb7714da055c1cd18a2e18bb6f81aba",
+     "size": 1127,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/summary.json"
+    },
+    {
+     "mtime": 1791086393,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__b17d46ffec99/visualization-errors.json"
+    },
+    {
+     "mtime": 1791085786,
+     "sha256": "03ed584a9809621c8067c100f041adb176bcdee97acaa8ec0732abd1a5829a55",
+     "size": 112877,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/progress.png"
+    },
+    {
+     "mtime": 1791085798,
+     "sha256": "99b528dc00574d9ef73154f47e49f3fb8f19357891c9c2d48ce704e49834d51b",
+     "size": 110304,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/final_frame.png"
+    },
+    {
+     "mtime": 1791085813,
+     "sha256": "6b4195d358d3dee22d69cb1e2dbd447a8f3922061e6ec464da7727ecf93937f8",
+     "size": 736290,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/replay.gif"
+    },
+    {
+     "mtime": 1791085798,
+     "sha256": "4dab4c3c9d22a8b21461491e8ffe9dfd8cfde82ed0e68a0a96dee833e35f53ba",
+     "size": 54019,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/episodes.jsonl"
+    },
+    {
+     "mtime": 1791085798,
+     "sha256": "9fec40a393b91de501d8eeb7c7798a45c7c27b8a9142866614389f2e046a0e5c",
+     "size": 139789,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/calls.jsonl"
+    },
+    {
+     "mtime": 1791085813,
+     "sha256": "d33a8af4584fb06b81dfcfd92c149ae8b6c54e8b95ef5d13016d69df035cf65c",
+     "size": 1129,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/summary.json"
+    },
+    {
+     "mtime": 1791085813,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__baed9e455a1b/visualization-errors.json"
+    },
+    {
+     "mtime": 1791091555,
+     "sha256": "817efe8bf7d07c74cac18af0e582dff4350541ea87d37707d0e18a6deec5d79b",
+     "size": 113542,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/progress.png"
+    },
+    {
+     "mtime": 1791091567,
+     "sha256": "4d9efb6fe87bceb08cdfd9996c4142ad38d24cb1e2d7287dcec0d7fa0db7b15e",
+     "size": 110947,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/final_frame.png"
+    },
+    {
+     "mtime": 1791091579,
+     "sha256": "ae8c10be9edb60bf4f3a97542e747ab607cbeb95d9ddc541e1324472f2a1c092",
+     "size": 746326,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/replay.gif"
+    },
+    {
+     "mtime": 1791091566,
+     "sha256": "6aea0ba2c619f460f7875c581eb46cd5e5c659634ebadc428e5e68a1fb978562",
+     "size": 55800,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/episodes.jsonl"
+    },
+    {
+     "mtime": 1791091566,
+     "sha256": "212e3f7d87d8e7c2828e0a8e4b071a0886907422482e909c87340da69f7771a1",
+     "size": 131237,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/calls.jsonl"
+    },
+    {
+     "mtime": 1791091579,
+     "sha256": "23768e68fd0e5e15ebcaa062035d8f1241ad07b9ef4ff318c6c29fff52c1c6de",
+     "size": 1130,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/summary.json"
+    },
+    {
+     "mtime": 1791091579,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__bcc227c116d6/visualization-errors.json"
+    },
+    {
+     "mtime": 1791085047,
+     "sha256": "5845246fbcb67312b8670eed3cc03b2ff6a4d90d6ba53fcac5c4af8b7fd5f935",
+     "size": 113796,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/progress.png"
+    },
+    {
+     "mtime": 1791085048,
+     "sha256": "0316efc1d96c0026eb38fd1bffb1304d2420a7dc18227dd5f358325e87c12e26",
+     "size": 112205,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/final_frame.png"
+    },
+    {
+     "mtime": 1791085062,
+     "sha256": "59f18baf0e5f5ee86a9cee550a6ea3e10c392e9eba5f1dfc4e301c99860af959",
+     "size": 741383,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/replay.gif"
+    },
+    {
+     "mtime": 1791085047,
+     "sha256": "39a51bf29626b6ea66d1a83e89c4eede50ca8e2e355737defcb4af26b20d8986",
+     "size": 53428,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/episodes.jsonl"
+    },
+    {
+     "mtime": 1791085047,
+     "sha256": "4ab16c0638bf0f0ec4d8ab2fc57c5e35cc244ce4ad23d9cb42d7ea66d9f910c1",
+     "size": 137545,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/calls.jsonl"
+    },
+    {
+     "mtime": 1791085062,
+     "sha256": "6290d13d9f3837e5194c0fb093ebd8a13a4374f446807de9f3ef958f65f49ccf",
+     "size": 1128,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/summary.json"
+    },
+    {
+     "mtime": 1791085062,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__d76629444e2e/visualization-errors.json"
+    },
+    {
+     "mtime": 1791091019,
+     "sha256": "d9930fa766c4bcf760230ae212291cf68b16061751fc9e7cbda9d3b737b8ded9",
+     "size": 120717,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/progress.png"
+    },
+    {
+     "mtime": 1791091020,
+     "sha256": "763729607778ac0dbdfc843de7ab669618d80af31ca82166ee33b3c6a074b5e9",
+     "size": 119072,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/final_frame.png"
+    },
+    {
+     "mtime": 1791091035,
+     "sha256": "6e09f456f1ded5ceffc242cbe05f2417cc3d7e5fd10ccb610e00a0e081f005f9",
+     "size": 794333,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/replay.gif"
+    },
+    {
+     "mtime": 1791091020,
+     "sha256": "5bb444a6df2cbaf6161c74b92d8adf9a56d2954cc8049856bf82ea62d9df4f14",
+     "size": 56020,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/episodes.jsonl"
+    },
+    {
+     "mtime": 1791091019,
+     "sha256": "4732dade7830fab462ef75501bf198b1d2fbc933f83eaf162c875e0f81278581",
+     "size": 145058,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/calls.jsonl"
+    },
+    {
+     "mtime": 1791091035,
+     "sha256": "402363f9ae611bac92ac479c799aae90467aa3998f704a96e29e1f1b4b2acde3",
+     "size": 1130,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/summary.json"
+    },
+    {
+     "mtime": 1791091035,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__e3ec6e9152d3/visualization-errors.json"
+    },
+    {
+     "mtime": 1791093102,
+     "sha256": "19eb1795721985414cea303e7a40095bb924b1c2fd799a5cd11ba7073663d6df",
+     "size": 119353,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/progress.png"
+    },
+    {
+     "mtime": 1791093103,
+     "sha256": "254a4276e07bb76e2bf66e33a670c70bfc8ac4a9542731a4971ae4720e98123e",
+     "size": 117875,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/final_frame.png"
+    },
+    {
+     "mtime": 1791093117,
+     "sha256": "8fdd06181d42a5e724f353e7abbc10592a486df18a98a39a8100c2d89403882c",
+     "size": 752210,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/replay.gif"
+    },
+    {
+     "mtime": 1791093102,
+     "sha256": "4cd4085492b248c0f839a83a7cc2c0a5e5b6891204436982c166400a5586557f",
+     "size": 53379,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/episodes.jsonl"
+    },
+    {
+     "mtime": 1791093101,
+     "sha256": "c30d38eecbf607ee4caa10fad6235e6477cc2e6b7d43830990b446412d9d55de",
+     "size": 135548,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/calls.jsonl"
+    },
+    {
+     "mtime": 1791093117,
+     "sha256": "9e873fe33e7fd3cbf420ed0b53160a7f32e73bf3c86e50fc86b90b640138aaab",
+     "size": 1131,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/summary.json"
+    },
+    {
+     "mtime": 1791093117,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-api/results/fleet-recovery/hub/market-split-api__f9f9437784f2/visualization-errors.json"
+    }
+   ],
+   "mime": "application/zip",
+   "mtime": 1791095873,
+   "path": "artifacts/market-split-sonnet-s1-002-records/market-split-sonnet-s1-002-records-v1.zip",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "23b5e7583fcac54e748e4e8b3525f6c11f39cb0e0bbc37f87db22baf8b3e8dbd",
+   "size_bytes": 262653
+  },
+  "market-split-sonnet-s1-002@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791096010,
+     "sha256": "3903a2af617a814826c645bf9fb274750993f4cafd4cf8463b406e0bb40d77ba",
+     "size": 6183,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/plot.py"
+    },
+    {
+     "mtime": 1791095873,
+     "sha256": "4bc13ac7419b0c7a4ca568c50715a9614809348d0236907413bb4f091d7b8971",
+     "size": 997876,
+     "uri": "researchers/dmarz/notes/market-split-api/results/s1-002-collected/episodes.jsonl"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791096011,
+   "path": "artifacts/market-split-sonnet-s1-002/market-split-sonnet-s1-002-v1.png",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "c7470d3bce6e8112b530f00792de18726d5b2d6d5b928cf92a324e9246d56293",
+   "size_bytes": 156799
   }
  },
- "generated": "2026-10-03T23:25:15-0700",
+ "generated": "2026-10-03T23:42:28-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

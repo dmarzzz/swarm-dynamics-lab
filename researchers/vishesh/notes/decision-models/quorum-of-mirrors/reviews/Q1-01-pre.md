@@ -32,3 +32,7 @@ Mapping Q1-v1 binds QM-Q1-01 to all 16 stable assignment IDs in manifest order. 
 ## Credential delivery clarification
 
 The owner approved secure delivery of the existing dedicated OpenRouter key provided it follows the established machine credential procedure. CREDENTIAL-TRANSFER-AUTHORIZATION.json records the scope. The authorized central operator starts the bounded worker on its verified exclusive machine; only the single key crosses verified SSH stdin and remains in process memory, with no repository or disk storage. The rejected repository-storage approach remains retired. Fixed requests, model, thresholds and budget are unchanged.
+
+## Direct operation amendment
+
+DIRECT-OPERATOR-AUTHORIZATION.md records the owner instruction to proceed directly. The owning agent starts the existing receiver/worker on the verified dedicated allocation rather than wait for a shared controller. Secure credential and source/public-plan/budget checks remain unchanged; no scientific input or threshold changes.

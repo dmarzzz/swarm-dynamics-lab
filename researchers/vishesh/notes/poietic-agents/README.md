@@ -2,7 +2,7 @@
 
 **Prospective design and qualification package v0.2 · 4 October 2026 UTC · vishesh/codex-heterogeneous · HX-31**
 
-An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher review has been received and its three measurement changes are implemented; native qualification and the formal prior-art gate remain open. There are no Poietic Agents results or launched workers.
+An initially uniform swarm learns which capabilities to keep, share, simplify and restore. This is the selected self-differentiating-swarm project, including the owner's workflow-hardening interpretation of HX-37. It remains exploratory. The independent researcher feedback has been received and its three measurement changes are implemented; native qualification and the question-specific prior-art work remain open. There are no Poietic Agents results or launched workers.
 
 ## TLDR
 
@@ -40,7 +40,7 @@ In S1, epochs 1–2 acquire experience, 3–4 measure stable operation, and 5–
 
 No actor is told to become a server or rewarded for looking heterogeneous. Each gets the same operational objective. A deterministic controller validates proposed changes and enforces budgets; it does not nominate specialist roles. Changes take effect at epoch boundaries. All unsuccessful proposals and their costs remain in the record.
 
-The next step is a 144-request S0 qualification across three contracts, at most 288 physical requests including eligible transport retries. At the pinned tariffs the worst permitted API requests total $1.447723008; the requested $5 API allowance leaves bounded repair room. The proposed infrastructure cap is $2. Neither allowance is recorded as approved. No machine is held while authorization is pending.
+The next step is a 144-request S0 qualification across three contracts, at most 288 physical requests including eligible transport retries. At the pinned tariffs the worst permitted API requests total $1.447723008; the proposed $1.50 API allocation fits this worst case. The reduced proposal is $2 total: $1.50 API and $0.50 infrastructure. Explicit confirmation is pending; no spending authority is presumed. No machine is held while admission gates are unresolved.
 
 Read the [full protocol](PROTOCOL.md), [machine-readable design](design.yaml), [agent and context contracts](contracts.json), [visualization mapping](VISUALIZATION.md), [first qualification assessment](reviews/S0-01-pre.md), and [execution handoff](RUNBOOK.md).
 
