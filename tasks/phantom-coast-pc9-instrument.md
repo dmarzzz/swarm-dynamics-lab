@@ -3,14 +3,16 @@ id: phantom-coast-pc9-instrument
 type: task
 title: Build Phantom population exploration instrument
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T18:33Z
+updated: 2026-10-04T18:33Z
 ---
 
 ## Goal
