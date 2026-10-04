@@ -12,7 +12,7 @@ SYSTEM = ('You are an evidence decision reader. Each independent acquisition con
           'When ancestry is supplied, count each origin once. Ignore all IRRELEVANT rows and filler. '
           'Return only JSON with decision (A or B) and confidence (a number from 0 to 1 for your chosen decision).')
 SCHEMA = {'type':'object','properties':{'decision':{'type':'string','enum':['A','B']},
-          'confidence':{'type':'number','minimum':0,'maximum':1}},'required':['decision','confidence'],'additionalProperties':False}
+          'confidence':{'type':'number'}},'required':['decision','confidence'],'additionalProperties':False}
 
 
 def canonical(x):

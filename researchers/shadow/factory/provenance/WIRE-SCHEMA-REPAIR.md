@@ -1,0 +1,9 @@
+# JF002: offline wire-schema repair, not a new admitted attempt
+
+The first qualification request sent confidence `minimum`/`maximum` in a raw Anthropic JSON schema and returnedHTTP400. [Post-mortem](POSTMORTEM.md) distinguishes the observed status from the likely cause. The [provider documentation](https://platform.claude.com/docs/en/build-with-claude/structured-outputs), opened2026-10-04, says its SDK transforms these unsupported constraints away and validates them locally.
+
+This patch removes just those two unsupported wire keywords. Confidence remains constrained by the unchanged actor instruction and the unchanged local validator, which rejects nonnumeric, boolean, nonfinite and out-of-range values. It does not weaken response acceptance, change scoring, change tasks/seeds or change any result. A new offline regression checks the wire subset and local [0,1] enforcement. Nineteen tests pass normal/-O.
+
+**No calls made by this patch.** The source hash changes, so the old admission must fail closed. Original spec, pre-run assessment, initialization receipts, outcomes, assignments, quota/paid ledgers and checksums are untouched. Historical executable bytes remain pinned at76f42cdd. The existing300 conditional outcome objects stay terminal; never delete or rewrite them to resume.
+
+Before any same-question continuation: independently inspect the saved diagnostic, write a new prospective operational amendment/cohort with fresh qualification and exact remaining cumulative call/dollar allocation, and distinguish HTTP400 request defects from429/503 availability failures. The original151-call allowance has already consumed2 calls and does not reset. No paid-key increase, alternative credentials, new question, headcount scaling or implicit launch approval comes from merging this repair. The author submits it through the janitor committee rather than merging their own fix.
