@@ -1,0 +1,11 @@
+# S4 A1 pre-run assessment
+
+Status: ready after current source/claim/public checks at dispatch. Parent Q4-A1 passed 24/24 on the pinned instrument; its post-mortem was read. The prior S1 adverse finding and RD-R1/R2/R3 review motivate the prospectively fixed RD-4 protocol.
+
+Question: does symmetric stop/resume admission improve both recovery directions versus original learned admission on identical repaired memory, and is either worth its extra inference compared with always-check? Use the published 24 roots, three domains, four regimes, balanced initial actions and four epochs, six policies, 576 assigned decisions. No native S4 responses inspected. Identical requests share saved responses/failures; report raw paired changes and per-arm counterfactual cost separately from actual unique spend. Fixed finite-template and scripted-vote limits remain.
+
+The source and model must match Q4 instrument digest bc0a79cd2f90fb13262a2b625a2e029fc0c01e7b7e51d7870c7550e0fb3dea72. Bind the exact Q4 summary hash in configuration. No code, prompt, task, threshold, policy, assignment or evaluator change after Q4. Remaining iteration allowance: at most 256 new calls, enforced with the cumulative ledger ceiling of 481 lifetime calls (225 already charged/reserved). Original 500-call/$1 API/$2 total authority remains. Budget exhaustion, missing results and five consecutive transport errors cannot silently disappear; no automatic extra batch. One worker, 45 minutes, same fresh exclusive sim-shadow allocation while valid.
+
+RD-V4 mapping: final policy table, fixed supported-objection traces in each domain and both directions, four epochs, original gate/symmetric gate/always-check side by side. Show current memory versus frozen vote, repeats/aliases versus new facts, costs and evaluator truth. Retain all other traces in records. Qualification is static; S4 must have measured temporal replay. Verify final numerical totals and a replay's first/repeat/new-state frames. Offline same-author replay must reproduce saved records without API calls.
+
+Interpretation guard: exact-rule or always-check dominance is useful evidence against unnecessary learned admission. Valid adverse results end this comparison; they are not an excuse to tune for a favorable outcome. Independent semantic corpus and formal research promotion remain unresolved.

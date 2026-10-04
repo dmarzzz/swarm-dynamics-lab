@@ -1,0 +1,5 @@
+# RD4 allocation and admission
+
+Fresh exclusive claim vishesh-right-dissenter-rd4 on existing sim-shadow, owned by dmarz in the established DigitalOcean fleet. Private fleet PR152 merged; actual hostname, no unexpected model/experiment workers and no containers verified. No new host purchase or personal-account provisioning. All 69 software checks passed on the allocated host. Cumulative ledger and original authorization were reused, never reset.
+
+Q4 source f50181cc1026fd638bf9f5c6db26208b999c4a84; plan revision 88feac7ea6218c2712914fb5462ab5d66814a50a, SHA256 1dc78d048283a50c50ee711a50be068deabb0be2c10cdf29a8be10a4da1b129b. Server public preflight and readable GitHub page verified before calls. The laptop dashboard browser experienced DNS failure; remote public registration verification succeeded. API keys remained local in the approved credential store; the remote worker used a loopback relay through SSH. Q4 transport stopped after output copy. Claim remains running for the gated S4 attempt and must be released after verified closeout.
