@@ -47,6 +47,17 @@ class Checks(unittest.TestCase):
             x=thinking(req,timeout).data;x['content'].insert(0,{'type':'tool_use','name':'unexpected'})
             return MockResponse(x)
         with self.assertRaises(provider.CallFailure):self.client(mixed).call(observation(),'unexpected')
+    def test_probe_objective_is_isolated(self):
+        bodies=[]
+        def capture(req,timeout):
+            bodies.append(json.loads(req.data));return mock_opener(req,timeout)
+        client=self.client(capture);client.call(observation(),'ordinary')
+        obs=observation();obs['interface_check_operation']='register';client.call(obs,'mechanics')
+        self.assertEqual(bodies[0]['system'],provider.SYSTEM)
+        self.assertIn('execute register with legal quantities',bodies[1]['system'])
+        self.assertIn('suspended for this mechanics check only',bodies[1]['system'])
+        self.assertEqual(bodies[0]['output_config'],bodies[1]['output_config'])
+        self.assertNotIn('interface_check_operation',bodies[0]['messages'][0]['content'])
     def test_failures_spend_reservation_no_retry(self):
         n=[]
         def fail(req,timeout):n.append(1);raise urllib.error.HTTPError(req.full_url,429,'SECRET-MARKER',{},None)

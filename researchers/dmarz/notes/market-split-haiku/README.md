@@ -14,7 +14,7 @@ Use the same deterministic two-product economy,one model-controlled owner,two sc
 
 Haiku claude-haiku-4-5-20251001,native reasoning2048,total output3072,no temperature override,no retries. Independent source/design hashes,hub queue,output directories and durable1000-attempt ledger. All model output retains strict action validation;private reasoning is discarded while billable usage is retained.
 
-First pass15network-blocked tests and12mock episodes on tasks62/63,seed31,three regulations,two arms,eight rounds. Then pass six isolated mechanics fixtures64–69. Then Q0 requires four valid,positive-profit eight-round episodes on62/63 with every profit/reference>=75%. A failed gate blocks the main run. Main S1: markets36–41,seed41,three regulations,two arms,24rounds,36episodes/864calls;intentionally paired with Sonnet. No change to model or market after seeing discovery outcomes. Holdout1000–1999 remains untouched.
+First pass16network-blocked tests and12mock episodes on tasks62/63,seed31,three regulations,two arms,eight rounds. Then pass six isolated mechanics fixtures70–75. Then Q0 requires four valid,positive-profit eight-round episodes on62/63 with every profit/reference>=75%. A failed gate blocks the main run. Main S1: markets36–41,seed41,three regulations,two arms,24rounds,36episodes/864calls;intentionally paired with Sonnet. No change to model or market after seeing discovery outcomes. Holdout1000–1999 remains untouched.
 
 ## Metrics
 
@@ -29,3 +29,5 @@ The same measured firm-output/HHI/profit replay retains all24rounds per main epi
 The owner shared$500 directive remains one pool. Planned902calls (6mechanics+32qualification+864discovery),at most1000including diagnostics. Published Haiku prices$1/Minput,$5/Moutput;conservative whole-comparison reserve$39.456. Sonnet's earlier1600cap and ledger remain unchanged;combined upper reservation ceilings$228.8448. An incomplete hub usage snapshot on2026-10-04 counted251dmarz non-analysis rows and$46.808388 across reported cost fields;this may overlap cumulative reports and is not an invoice. Keep actual ledger totals separate and reconcile both studies.
 
 Use at most two finite workers for this model,four total including Sonnet,on a verified exclusive owner allocation. Request90s and worker2h caps;no automatic retry/restart. Credentials arrive only via approved encrypted aliases in process environment. Do not claim readiness until all gates pass. Release the host only after both studies stop and artifact recovery completes.
+
+Current repair: I0-001 attempted2of6checks;one selected consolidation instead of requested registration. Both actions were legal,one mandate failed. V2 clarifies the primary objective for mechanics-only prompts;ordinary model prompts remain unchanged. Main remains blocked pending fresh I0 and Q0. See reviews/i0-001-post.md.
