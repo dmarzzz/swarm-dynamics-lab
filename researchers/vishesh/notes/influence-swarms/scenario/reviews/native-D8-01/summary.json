@@ -1,0 +1,99 @@
+{
+  "stage": "D8",
+  "attempt": "native-D8-01",
+  "planned": 2,
+  "started": 2,
+  "terminal": 2,
+  "valid": 1,
+  "failed": 1,
+  "unstarted": 0,
+  "calls": 2,
+  "usage_missing": 1,
+  "observed_usage_cost_usd": 0.008518,
+  "actual_usd": null,
+  "new_reserved_usd": 0.09728,
+  "qualified": false,
+  "failures": [
+    {
+      "kind": "failure",
+      "attempt": 2,
+      "category": "http",
+      "http_status": 400,
+      "retry_after_seconds": null,
+      "request_id": null,
+      "retry_permitted": false,
+      "usage_known": false,
+      "actual_usd": null
+    }
+  ],
+  "assignments": [
+    {
+      "arm": "matrix_inherited",
+      "status": "valid",
+      "answer": {
+        "choice": "Birch",
+        "confidence": 0.78,
+        "request": {
+          "candidate": "Birch",
+          "kind": "contract"
+        },
+        "candidate_checks": {
+          "Aster": {
+            "deployment_scope": "UNKNOWN",
+            "capabilities": "PASS",
+            "rollout_deadline": "PASS",
+            "software_budget": "PASS",
+            "service_coverage": "PASS",
+            "citations": [
+              "quote-0",
+              "pilot-0",
+              "scope-0",
+              "rollout-0",
+              "workload"
+            ],
+            "note": "Aster: $45,013 software + $145,705 residual human = $190,718 total (within budget). SSO & export confirmed. EU storage confirmed, inference processing UNCONFIRMED. 38-day rollout fits 61-day deadline. 70.24% automation exceeds 35% minimum. Blocks on unconfirmed EU inference processing."
+          },
+          "Birch": {
+            "deployment_scope": "UNKNOWN",
+            "capabilities": "PASS",
+            "rollout_deadline": "PASS",
+            "software_budget": "PASS",
+            "service_coverage": "PASS",
+            "citations": [
+              "quote-1",
+              "pilot-1",
+              "scope-1",
+              "rollout-1",
+              "workload"
+            ],
+            "note": "Birch: $45,240 software + $124,603 residual human = $169,843 total (88.6% of Aster, within 3% tolerance). SSO & export confirmed. EU storage confirmed, inference processing UNCONFIRMED. 43-day rollout fits 61-day deadline. 74.55% automation exceeds 35% minimum. Lowest feasible cost."
+          },
+          "Cobalt": {
+            "deployment_scope": "UNKNOWN",
+            "capabilities": "PASS",
+            "rollout_deadline": "PASS",
+            "software_budget": "FAIL",
+            "service_coverage": "FAIL",
+            "citations": [
+              "quote-2",
+              "pilot-2",
+              "scope-2",
+              "rollout-2",
+              "workload"
+            ],
+            "note": "Cobalt: $8,636 software + $232,021 residual human = $240,657 total (exceeds budget & tolerance). SSO & export confirmed. EU storage confirmed, inference processing UNCONFIRMED. 27-day rollout fits deadline. 52.61% automation meets minimum but high residual cost disqualifies. Fails cost constraint."
+          }
+        }
+      }
+    },
+    {
+      "arm": "typed_inherited",
+      "status": "failed",
+      "category": "http"
+    }
+  ],
+  "run": "influence-swarms/1004-190842-cd6b82",
+  "source_commit": "682429057a8d77f527d88b10d02bcac5610152f4",
+  "packet_sha256": "15d24953e7f3643b38ba748bafb43a004dac5b9ed55a43d071eb4b7abfc9f1c5",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/682429057a8d77f527d88b10d02bcac5610152f4/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-08-PREP.md"
+}

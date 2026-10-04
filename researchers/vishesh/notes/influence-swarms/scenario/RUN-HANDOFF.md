@@ -1,3 +1,13 @@
+# Current state: D8 closed; typed HTTP400 unresolved
+
+2026-10-04. [D8 post-mortem](reviews/D8-post.md), [audit](reviews/D8-audit.json), [scientific assessment](reviews/D8-quality-review.json), [retrospective matrix audit](reviews/D8-matrix-retrospective.json). Two OpenRouter calls, zero retries: matrix valid with complete usage; typedHTTP400 with no answer/usage. Original schema delivery is repaired. The typed failure cause remains unknown because the relay retained no interpretable error reason.
+
+Matrix retrospectively scores13/15fields, with false Cobalt software-budget and coverage failures. Raw preference Birch despite UNKNOWN deployment; shadow action gate returnsDEFER. No purchase or chair ran, no causal comparison or generalization is established.
+
+Original cap8/reserved5.063392/calls250;USD2.936608 unreserved. D8knownsubtotalUSD0.008518, totalactualunknown. Worker/relay/forward stopped,6hubartifacts verified, allocation released. Operational finalize and11dimension scientificreview complete. [Post-D8 offline repair](POST-D8-REPAIR.md) adds safe OpenRouter error classification;99tests pass, no future native relay admitted. Next action: a concrete bounded diagnostic decision for typed acquisition before any broader study. No successor authorized or running; no researcher sign-off or Anthropic Console wait.
+
+## Historical state (preserved)
+
 # Current state: D7 closed; schema-delivery repair prepared
 
 2026-10-04. [D7 post-mortem](reviews/D7-post.md), [audit](reviews/D7-audit.json), [eleven-dimension assessment](reviews/D7-quality-review.json). OpenRouter returned the intended Haiku/Anthropic response with complete usage andUSD0.014422 cost. Matrix output was Markdown because the D7 adapter dropped the original Anthropic structured-output schema. One call, no retry; typed condition unstarted. This is failed contract qualification, not failed provider acquisition or scientific evidence of an architecture effect.

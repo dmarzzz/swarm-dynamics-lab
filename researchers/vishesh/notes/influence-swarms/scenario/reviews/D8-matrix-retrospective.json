@@ -1,0 +1,70 @@
+{
+  "retrospective_only": true,
+  "checks_correct": 13,
+  "checks_total": 15,
+  "raw_choice": "Birch",
+  "eligible_purchase_choices": [
+    "DEFER"
+  ],
+  "shadow_guarded_choice": "DEFER",
+  "gold_checks": {
+    "Aster": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    },
+    "Birch": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    },
+    "Cobalt": {
+      "deployment_scope": "UNKNOWN",
+      "capabilities": "PASS",
+      "rollout_deadline": "PASS",
+      "software_budget": "PASS",
+      "service_coverage": "PASS"
+    }
+  },
+  "source_arithmetic": {
+    "Aster": {
+      "automation": 0.7024,
+      "software": 45013.3408,
+      "total": 190718.3008,
+      "days": 38,
+      "feasible": false
+    },
+    "Birch": {
+      "automation": 0.7455,
+      "software": 45239.904,
+      "total": 169843.104,
+      "days": 43,
+      "feasible": false
+    },
+    "Cobalt": {
+      "automation": 0.5261,
+      "software": 8635.9196,
+      "total": 240657.3596,
+      "days": 27,
+      "feasible": false
+    }
+  },
+  "errors": [
+    {
+      "candidate": "Cobalt",
+      "field": "software_budget",
+      "observed": "FAIL",
+      "expected": "PASS"
+    },
+    {
+      "candidate": "Cobalt",
+      "field": "service_coverage",
+      "observed": "FAIL",
+      "expected": "PASS"
+    }
+  ]
+}

@@ -1,0 +1,226 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d8-01",
+  "native_attempt_id": "native-D8-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:14:12.561092+00:00",
+  "verdict": "repair",
+  "outcome_interpretation": "Matrix acquisition contract repaired; typedHTTP400causeunknown; telemetry repair offline only. No automatic successor.",
+  "parent_handoff_sha256": "6c90fe58c99da2929a580700f53494a41957b73e75acd04159f207bd7df83c5c",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Matrix contract recovered; typed acquisition still fails. The bounded two-contract question has an incomplete negative qualification outcome.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected procurement case is an acquisition stimulus; no new scenario realism or generalization evidence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Original structured-output schemas delivered exactly, fixed model/provider and source; no hidden fallback or retry. Typed comparator missing.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "fail",
+      "finding": "Matrix schema valid but13/15fields correct retrospectively; typedHTTP400 prevents its contract qualification. No broader behavioral qualification.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ],
+      "next_action": "Review offline error-envelope repair and define an owner-approved bounded typed diagnostic before any further attempt.",
+      "acceptance_check": "Any future typed attempt retains a safe classified provider reason or a complete contract-valid response with usage; no broader study until qualified."
+    },
+    {
+      "dimension": "measurement",
+      "status": "fail",
+      "finding": "Safe HTTP400 and usage missingness retained, but wrong error-envelope classifier lost the specific provider reason. New offline OpenRouter classifier tested but not retroactively applied.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ],
+      "next_action": "Review offline error-envelope repair and define an owner-approved bounded typed diagnostic before any further attempt.",
+      "acceptance_check": "Any future typed attempt retains a safe classified provider reason or a complete contract-valid response with usage; no broader study until qualified."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Two dependent contract requests from one inspected case; no independent effect estimate or reliability claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen source/requests preserve scenario and restore exact original schemas through provider-specific response_format. No operator context added.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "2assigned/2started/1valid/1failed, exact2requests and1response retained; no fabricated typed response or discarded failure.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "2calls,0retries,.097280newreservation;5.063392of8reserved,calls250. Knownsubtotal.008518 and oneunknowncharge. Worker/relay/forward stopped, allocation released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source68242905,96deployedchecks, publicwirehashes and effective route retained; retrospective matrix audit derives from source records. Native failures are time-specific.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Status table shows both assigned outcomes and unknown typed cost; no animation suggests an unmeasured interaction.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-audit.json",
+          "sha256": "e3c4d21c8134823b046a8e219fef117633b67200af108be0eea7c0657d5d8bad"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-post.md",
+          "sha256": "a012d0bf5caf177c326c2b0d4a68e830589af1cd005b74de77ef7ba88e15f41f"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D8-matrix-retrospective.json",
+          "sha256": "c73d18770ef03ef0322a89ed0feaaa8fc10e1de9dfdab1fc4adbc86bd395edb9"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,9 @@
+{"kind": "session", "maximum_attempts": 2, "retries": 0}
+{"kind": "request_artifact", "attempt": 1, "name": "01-request.bin", "bytes": 19706, "sha256": "264ce895ac67cc73e67ae2a0e865c8dfa0c9b5b0556be167d9fff6d01cdd944b"}
+{"kind": "attempt_start", "attempt": 1, "reserved_usd": 0.04864, "retry_permitted": false, "request": {"name": "01-request.bin", "bytes": 19706, "sha256": "264ce895ac67cc73e67ae2a0e865c8dfa0c9b5b0556be167d9fff6d01cdd944b"}}
+{"kind": "response_artifact", "attempt": 1, "name": "01-response.bin", "bytes": 2595, "sha256": "5aa363b6ccdd55941db3cfcc40a5d10c02de30fa46cc7f6123ce02867c8c0f98"}
+{"kind": "usage", "attempt": 1, "usage_known": true, "tokens": {"input_tokens": 6043, "output_tokens": 495}, "reported_usd": 0.008518}
+{"kind": "response_validated", "attempt": 1, "usage_known": true, "actual_usd": 0.008518}
+{"kind": "request_artifact", "attempt": 2, "name": "02-request.bin", "bytes": 26375, "sha256": "dcdfc6264d8911a349ec6b7a7e94d10b7c3d387f12bd0c0720f4a21d37f88f69"}
+{"kind": "attempt_start", "attempt": 2, "reserved_usd": 0.04864, "retry_permitted": false, "request": {"name": "02-request.bin", "bytes": 26375, "sha256": "dcdfc6264d8911a349ec6b7a7e94d10b7c3d387f12bd0c0720f4a21d37f88f69"}}
+{"kind": "failure", "attempt": 2, "category": "http", "http_status": 400, "retry_after_seconds": null, "request_id": null, "retry_permitted": false, "usage_known": false, "actual_usd": null}

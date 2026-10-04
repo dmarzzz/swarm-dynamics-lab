@@ -1,0 +1,41 @@
+{
+  "attempt": "native-D8-01",
+  "assigned": 2,
+  "started": 2,
+  "valid": 1,
+  "failed": 1,
+  "unstarted": 0,
+  "physical_attempts": 2,
+  "retries": 0,
+  "responses": 1,
+  "source_commit": "682429057a8d77f527d88b10d02bcac5610152f4",
+  "request_hashes_match": true,
+  "matrix_returned_model": "anthropic/claude-haiku-4.5",
+  "matrix_returned_provider": "Anthropic",
+  "matrix_finish_reason": "stop",
+  "matrix_tokens": {
+    "prompt_tokens": 6043,
+    "completion_tokens": 495
+  },
+  "observed_usage_cost_usd": 0.008518,
+  "actual_usd": null,
+  "usage_missing": 1,
+  "new_reserved_usd": 0.09728,
+  "cumulative_reserved_usd": 5.063392,
+  "remaining_usd": 2.936608,
+  "typed_failure_http_status": 400,
+  "typed_failure_cause": "unknown; provider error envelope not classified and raw body deliberately discarded",
+  "worker_stopped": true,
+  "relay_and_forward_closed": true,
+  "hub_artifacts": 6,
+  "hub_status": "failed",
+  "public_input_hash_proof": true,
+  "evidence_hashes": {
+    "summary.json": "3eebd1ab5e1e4fd62b4dc900c355aab1ad3f69a09310651afe26fb1e36caaad6",
+    "02-request.bin": "dcdfc6264d8911a349ec6b7a7e94d10b7c3d387f12bd0c0720f4a21d37f88f69",
+    "state.json": "eec741108cf83eddb8e3694ffc422daf374fcd217d06bb956b71dd72d34a2695",
+    "01-response.bin": "5aa363b6ccdd55941db3cfcc40a5d10c02de30fa46cc7f6123ce02867c8c0f98",
+    "01-request.bin": "264ce895ac67cc73e67ae2a0e865c8dfa0c9b5b0556be167d9fff6d01cdd944b",
+    "events.jsonl": "1470ad824a3f0708dee46d6b1907b98627c3dd181fd2fb1d7c38df04c8aa2bc5"
+  }
+}
