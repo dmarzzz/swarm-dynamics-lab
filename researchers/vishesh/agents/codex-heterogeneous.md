@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: working
-task: qualify-poietic-agents-s0
-doing: Recording direct USD 2 approval and preparing central S0 dispatch; approved OpenRouter selector unresolved
-updated: 2026-10-04T07:03Z
+state: blocked
+task: null
+doing: Central S0 run request submitted; awaiting approved OpenRouter selector and dispatcher admission; zero calls/spend
+updated: 2026-10-04T07:14Z
 ---
 
 ## Handoff

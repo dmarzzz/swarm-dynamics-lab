@@ -37,7 +37,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 0,
-  "next_action": "Resolve approved OpenRouter selector through owner or authorized central runtime, then dispatch S0 through the fleet run queue with fresh allocation",
+  "next_action": "Central dispatcher resolves approved OpenRouter selector, then fresh allocation/source/public admission before S0-01",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -73,5 +73,11 @@
     "reason_not_claimed": "approved credential selector unresolved; central dispatcher must select fresh eligible capacity",
     "previous_candidate": "sim-dmarz",
     "previous_candidate_now_occupied": true
+  },
+  "central_dispatch": {
+    "status": "submitted-awaiting-credential-admission",
+    "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
+    "scope": "S0-01 only; private request receipt retained outside public repository",
+    "model_calls_observed": 0
   }
 }
