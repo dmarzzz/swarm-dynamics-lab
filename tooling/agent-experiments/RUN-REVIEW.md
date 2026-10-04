@@ -65,6 +65,8 @@ Maintain an issue ledger with evidence, cause confidence, owner, change and acce
 
 ## Choose whether another run is useful
 
+Use [DIAGNOSIS.md](DIAGNOSIS.md) to connect trace findings to task informativeness, credible baselines and resource-controlled comparisons. A ceiling, weak comparator or easily batched task requires an explicit usefulness decision before increasing scale.
+
 Before selecting a successor, choose **finish/report**, **analyze saved data**, **one bounded discriminator**, or **park**. These are planning dispositions, not new runner verdicts or commands. Finish required closeout in every case; preserve currently approved work within its exact scope. The [study-by-study PI decisions](../../researchers/vishesh/notes/pi-next-decisions-2026-10-04/README.md) show examples reconciled with a pinned evidence cutoff.
 
 A new run should name what is empirically unknown, how support/null/adverse/inconclusive outcomes change a decision, and why existing traces or a simpler method cannot resolve it. Distinguish collective interaction from independent re-evaluation or resampling; compare the strongest relevant simple controller under the resources appropriate to the question. Programmed mechanisms are useful tests when labelled, but do not demonstrate model behavior by themselves.

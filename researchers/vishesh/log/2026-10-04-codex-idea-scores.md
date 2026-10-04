@@ -35,3 +35,7 @@ Metadata: updates limited to our cohorts. Automatic approval review rejected unr
 ## Question-quality design refresh
 
 Researched primary scaling/spawning/concurrency work and indexed X discussion. Generic conditional sizing is crowded; proposed exploratory contraction-versus-synchronization contrast, with precise definitions, eight task families, twelve concrete case sketches, strong baselines and root-level precision limits. Two new closest-work records verified against arXiv. Design only; Q-A7 remains held, no new calls, allocation or spend. Next: offline task/checker prototypes and priced proposal; no novelty or efficacy claim.
+
+## Standard diagnosis before scaling
+
+Added DIAGNOSIS.md and an embedded worksheet, linked from agent instructions, iteration, setup, native review and pre/post planning templates. O2 supplies the worked example: ownership fixes a weak comparator, but equal recovery at higher cost does not justify simply increasing roster size. Added a prospective incident-investigation application, without changing historical runs or dispatching a new experiment. Documentation links and lab validation checked before publication.

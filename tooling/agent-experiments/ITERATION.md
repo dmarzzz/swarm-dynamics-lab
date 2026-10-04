@@ -12,6 +12,8 @@ Review [native traces](RUN-REVIEW.md#review-the-native-traces-before-choosing-a-
 
 ## 2. Diagnose all applicable issues
 
+Apply [the shared diagnosis step](DIAGNOSIS.md) here: identify the bottleneck and practical need, qualify strong baselines, improve informative cases, and justify the smallest useful contrast before scaling. Embed its [worksheet](templates/diagnosis.md) in the existing review; do not create another approval layer.
+
 These rows are cumulative, not competing choices. A run can contain execution errors, design gaps and interpretable results at once.
 
 | Finding | Required action | Evidence of progress |

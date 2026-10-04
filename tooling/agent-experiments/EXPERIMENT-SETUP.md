@@ -26,6 +26,8 @@ Shared experiment setup workflow for Swarm Lab, established 2026-10-04 UTC from 
 
 ## Start a setup record
 
+Before selecting scale or preparing a material revision, apply [the shared diagnosis step](DIAGNOSIS.md). Link its findings in this same setup record and prospective plan; case readiness, model qualification and live admission remain separate.
+
 Copy [the setup record](templates/experiment-setup.md) into the study's owned directory as `SETUP.md`. Assign a study owner, stable study ID, version and intended decision. Record evidence links and a named next action at every gate. A blank, unknown, stale or failed required check blocks the corresponding transition; a checked box alone is not evidence.
 
 For formal work in the shared repository, follow its [agent protocol](../../AGENTS.md), ownership rules and task tools. Formal experiments belong under `experiments/<id>/`; exploratory hunches stay in the owner's notes with their status explicit. Exploratory status does not waive public registration, review, qualification, budget or resource rules. It also does not confer an exemption from formal survey/hypothesis gates. Local documentation and offline unit fixtures can be prepared without provisioning a host or launching an experiment.

@@ -12,6 +12,8 @@ Status: **draft; classify authority before launch**. For Vishesh-owned necessary
 
 ## Why this run
 
+Include the [diagnosis worksheet](diagnosis.md) findings here or link the existing completed review: bottleneck, competing explanations, strongest simple baseline, case informativeness and the resource contrast. Record what was implemented and checked before proposing scale.
+
 - Question, intended decision, primary contrast, comparator and supported claim if successful:
 - What the last run established; **empirically unknown** after existing evidence and exact/simpler analysis:
 - Earlier suggestions accepted, revised or rejected, with reasons/evidence:

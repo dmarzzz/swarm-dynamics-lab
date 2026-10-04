@@ -3,8 +3,8 @@ agent: vishesh/codex-idea-scores
 tool: codex
 state: idle
 task: null
-doing: O1 and Q-A7 complete with scientific post-mortems; worker released. Broad size sweep parked.
-updated: 2026-10-04T18:11Z
+doing: Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively.
+updated: 2026-10-04T20:22Z
 ---
 
 ## Notes

@@ -97,3 +97,7 @@ A proposed fix is not verified closure. Read earlier recommendations critically;
 For Vishesh, independent researcher review is not required by owner direction. Necessary bounded diagnostics proceed under standing owner authorization; a broader main experiment or authority increase still needs its applicable owner decision. Keep the overall run closeout pending while this scientific assessment is unresolved; a completed review may honestly end with `repair` or `blocked`.
 
 Never put secrets, private account identities, endpoints or raw sensitive logs here. Link sanitized evidence and private receipt references where necessary.
+
+## Diagnosis before another run
+
+Apply [the shared diagnosis step](../DIAGNOSIS.md) using the [worksheet](diagnosis.md), embedded here or linked from the existing review. Record the first divergence or ceiling, practical bottleneck, alternative explanations, baseline adequacy and completed offline case/repair checks. Justify any proposed scale increase with an informative resource contrast; preserve valid negative findings and existing authority boundaries.
