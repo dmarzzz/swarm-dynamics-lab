@@ -3,7 +3,7 @@ id: immune-response-v3-native-repair
 type: task
 title: Qualify the repaired immune-response contract on a dedicated host
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-immune
 for: vishesh
@@ -13,7 +13,10 @@ depends_on:
 - immune-response-v2
 topics: []
 claimed_at: 2026-10-04T02:05Z
-updated: 2026-10-04T02:41Z
+updated: 2026-10-04T02:54Z
+outputs:
+- researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md
+- researchers/vishesh/notes/immune-response-v3/scenario-study/EXECUTION.md
 ---
 
 ## Goal
