@@ -45,6 +45,7 @@
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:56Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:56Z | Run the revised procurement influence experiment |
+| [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:50Z | Remove mandatory researcher review from owner experiment process |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | claimed | p1 | survey | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T04:47Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [right-dissenter-rd4](tasks/right-dissenter-rd4.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:59Z | Repair and evaluate the Right Dissenter recovery protocol |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T05:46Z | Ship the neutral-agent market-splitting pilot |
