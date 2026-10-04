@@ -1,0 +1,59 @@
+{
+  "contracts": {
+    "generalist": {
+      "assigned": 48,
+      "terminal": 48,
+      "started": 36,
+      "schema_valid": 0,
+      "correct": 0,
+      "protected_access_violations": 0,
+      "passed": false
+    },
+    "cheap_generative": {
+      "assigned": 48,
+      "terminal": 48,
+      "started": 0,
+      "schema_valid": 0,
+      "correct": 0,
+      "protected_access_violations": 0,
+      "passed": false
+    },
+    "typed_choice": {
+      "assigned": 48,
+      "terminal": 48,
+      "started": 0,
+      "schema_valid": 0,
+      "correct": 0,
+      "protected_access_violations": 0,
+      "passed": false
+    }
+  },
+  "qualification_passed": false,
+  "assigned": 144,
+  "started": 36,
+  "terminal": 144,
+  "scientific_result": false,
+  "independent_units": "12 dependent four-step cases per contract; no swarm efficacy roots",
+  "attempt": "S0-01",
+  "execution": "interrupted-and-reconciled",
+  "cause": "systemic relay HTTP 502; underlying provider/parsing cause was not retained by original relay",
+  "instrument_validity": "failed-observability-and-systemic-stop",
+  "scientific_conclusion": "No model-competence or swarm-effect conclusion",
+  "physical_calls": 36,
+  "known_api_usd": 0.0,
+  "api_exposure_upper_usd": 0.479232,
+  "unresolved_calls": 36,
+  "remaining_api_headroom_usd": 1.020768,
+  "not_started": 108,
+  "recorded_response_failures": 35,
+  "interrupted_inflight": 1,
+  "process_compliance": {
+    "public_plan_before_calls": true,
+    "deployed_tests_passed": 54,
+    "launch_path": "owner-approved-direct",
+    "direct_launch_exception_approved": true,
+    "budget_preserved": true,
+    "classification": "admitted attempt with instrument failure; all assigned statuses reconstructed after interruption"
+  },
+  "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044"
+}
