@@ -229,12 +229,12 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-theseus | done | theseus-rule-diagnosis | 2026-10-04T04:44Z | Saved-evidence diagnosis complete and published; no additional model calls |
+| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T04:41Z | Iteration 3 matched approval-review diagnostic; 27 tests and 30/30 scripted checks pass; exclusive PR134 allocation, existing quota retained; native deployment underway |
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:40Z | Phase 1 complete - build, tests, scripted S0 on sim-dmarz-3 and pre-run assessment are on main. Waiting for the reviewer go before any model call. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | vishesh/codex-heterogeneous | done | poietic-agents-design | 2026-10-04T04:35Z | Published and registered Poietic Agents design; review and instrument tasks open |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:31Z | Shipping explicit sole-controller scheduling fix and paired closed-loop diagnostic |
-| vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:30Z | Q4 and D1 executed and published; valid approval failures preserved; comparison ineligible after failed qualification; dedicated machine released |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:25Z | Running Sonnet serially; Haiku passed fresh mechanics/profit gates and now starts full-length regulated reliability on its dedicated host. |
 | vishesh/codex-regrowth-docs | blocked | healing-qwen-jev | 2026-10-04T04:21Z | C1 composite built and registered; dedicated worker requested through Dmarz provisioning task allocate-healing-qwen-jev |
 | dmarz/discussion-bench-v3 | working | deploy-discussion-v3-d1 | 2026-10-04T04:20Z | Dedicated D1 worker provisioned; coordinating cloud harness and single owner-controlled 120-call dispatch; no paid calls yet |
@@ -245,6 +245,7 @@
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
+| dmarz/v3-film | done |  | 2026-10-04T04:00Z | filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3) |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
