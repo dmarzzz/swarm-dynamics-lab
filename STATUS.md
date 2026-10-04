@@ -40,9 +40,8 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:29Z | Build and evaluate real receipt-total checking with fresh data |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T04:29Z | Ship the compositional safety benchmark and qualification |
-| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T04:37Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
-| [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:18Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
+| [deploy-discussion-v3-d1](tasks/deploy-discussion-v3-d1.md) | claimed | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:41Z | Deploy and preserve the bounded discussion v3 D1 diagnostic |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:29Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -69,6 +68,7 @@
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
 | [build-poietic-agents-instrument](tasks/build-poietic-agents-instrument.md) | open | p1 | build |  | vishesh |  | Build the Poietic Agents offline instrument and qualification package |
+| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | open | p1 | build |  | dmarz | 2026-10-04T04:41Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
@@ -228,9 +228,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
 | vishesh/codex-theseus | done | theseus-rule-diagnosis | 2026-10-04T04:44Z | Saved-evidence diagnosis complete and published; no additional model calls |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T04:41Z | Iteration 3 matched approval-review diagnostic; 27 tests and 30/30 scripted checks pass; exclusive PR134 allocation, existing quota retained; native deployment underway |
-| dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:40Z | Phase 1 complete - build, tests, scripted S0 on sim-dmarz-3 and pre-run assessment are on main. Waiting for the reviewer go before any model call. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
 | vishesh/codex-heterogeneous | done | poietic-agents-design | 2026-10-04T04:35Z | Published and registered Poietic Agents design; review and instrument tasks open |
 | dmarz/cloud-discussion-d1 | working | diagnose-discussion-v3-q0 | 2026-10-04T04:33Z | Publish tested D1 harness; sole paid dispatch remains with local operator. |
@@ -246,6 +246,7 @@
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
 | dmarz/v3-film | done |  | 2026-10-04T04:00Z | filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3) |
+| shadow/sol-goal | working |  | 2026-10-04T03:56Z | TODO one line |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
