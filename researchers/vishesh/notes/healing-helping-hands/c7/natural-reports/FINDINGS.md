@@ -44,3 +44,7 @@ Candidate bounded design: use the18current development queries once per model as
 Proposed total additional ceiling **USD1**, not reserved or granted. At C6 observed tariffs and4096input/64outputtokenbounds,126Haikucalls≤USD0.556416 and126Jevcalls≤USD0.021676032, totalAPI≤USD0.578092032. Allow up toUSD0.25incremental existing-host cost plusUSD0.171907968headroom. Revalidate endpoint prices, encoded-byte bounds, source/runtime and exclusive allocation at admission; stop if the concrete packet cannot fit. No VM creation. The USD200project ceiling and original study spending/reservations remain cumulative. Models remain uncalled; corpus expansion/adjudication and PI-funded packet decision are the next gates.
 
 [Case/source inspector](inspector.html) exposes all18queries, gold rationales and attributed source excerpts for human audit; it must never enter experimental actor context.
+
+## Background continuation
+
+The12newincidentcollection is now complete: the frozen parser scores36/36, source windows and all audit evidence are in[evaluation/ASSESSMENT.md](evaluation/ASSESSMENT.md). This does not prove general extraction coverage; newly observed headline wording is missed outside the queried target clauses. The C7N comparison is a concrete unfunded proposal, not an authorized launch.

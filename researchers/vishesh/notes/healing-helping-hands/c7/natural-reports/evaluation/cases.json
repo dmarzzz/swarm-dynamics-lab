@@ -1,0 +1,614 @@
+[
+  {
+    "id": "eval-bea-2022-q3-current",
+    "incident_family": "eval-bea-2022-q3",
+    "source_ids": [
+      "eval-bea-2022-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2022-Q3",
+      "geography": "US",
+      "cutoff": "2022-11-30",
+      "value": 2.9,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2022-q3-previous",
+    "incident_family": "eval-bea-2022-q3",
+    "source_ids": [
+      "eval-bea-2022-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2022-Q3",
+      "geography": "US",
+      "cutoff": "2022-11-30",
+      "value": 2.6,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2022-q3-missing",
+    "incident_family": "eval-bea-2022-q3",
+    "source_ids": [
+      "eval-bea-2022-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2022-11-30",
+      "value": 2.9,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bea-2022-q4-current",
+    "incident_family": "eval-bea-2022-q4",
+    "source_ids": [
+      "eval-bea-2022-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2022-Q4",
+      "geography": "US",
+      "cutoff": "2023-02-23",
+      "value": 2.7,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2022-q4-previous",
+    "incident_family": "eval-bea-2022-q4",
+    "source_ids": [
+      "eval-bea-2022-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2022-Q4",
+      "geography": "US",
+      "cutoff": "2023-02-23",
+      "value": 2.9,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2022-q4-missing",
+    "incident_family": "eval-bea-2022-q4",
+    "source_ids": [
+      "eval-bea-2022-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2023-02-23",
+      "value": 2.7,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bea-2023-q1-current",
+    "incident_family": "eval-bea-2023-q1",
+    "source_ids": [
+      "eval-bea-2023-q1"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q1",
+      "geography": "US",
+      "cutoff": "2023-05-25",
+      "value": 1.3,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2023-q1-previous",
+    "incident_family": "eval-bea-2023-q1",
+    "source_ids": [
+      "eval-bea-2023-q1"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q1",
+      "geography": "US",
+      "cutoff": "2023-05-25",
+      "value": 1.1,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2023-q1-missing",
+    "incident_family": "eval-bea-2023-q1",
+    "source_ids": [
+      "eval-bea-2023-q1"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2023-05-25",
+      "value": 1.3,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bea-2023-q2-current",
+    "incident_family": "eval-bea-2023-q2",
+    "source_ids": [
+      "eval-bea-2023-q2"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q2",
+      "geography": "US",
+      "cutoff": "2023-08-30",
+      "value": 2.1,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2023-q2-previous",
+    "incident_family": "eval-bea-2023-q2",
+    "source_ids": [
+      "eval-bea-2023-q2"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q2",
+      "geography": "US",
+      "cutoff": "2023-08-30",
+      "value": 2.4,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2023-q2-missing",
+    "incident_family": "eval-bea-2023-q2",
+    "source_ids": [
+      "eval-bea-2023-q2"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2023-08-30",
+      "value": 2.1,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bea-2023-q3-current",
+    "incident_family": "eval-bea-2023-q3",
+    "source_ids": [
+      "eval-bea-2023-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q3",
+      "geography": "US",
+      "cutoff": "2023-11-29",
+      "value": 5.2,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2023-q3-previous",
+    "incident_family": "eval-bea-2023-q3",
+    "source_ids": [
+      "eval-bea-2023-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q3",
+      "geography": "US",
+      "cutoff": "2023-11-29",
+      "value": 4.9,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2023-q3-missing",
+    "incident_family": "eval-bea-2023-q3",
+    "source_ids": [
+      "eval-bea-2023-q3"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2023-11-29",
+      "value": 5.2,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bea-2023-q4-current",
+    "incident_family": "eval-bea-2023-q4",
+    "source_ids": [
+      "eval-bea-2023-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q4",
+      "geography": "US",
+      "cutoff": "2024-02-28",
+      "value": 3.2,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bea-2023-q4-previous",
+    "incident_family": "eval-bea-2023-q4",
+    "source_ids": [
+      "eval-bea-2023-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2023-Q4",
+      "geography": "US",
+      "cutoff": "2024-02-28",
+      "value": 3.3,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bea-2023-q4-missing",
+    "incident_family": "eval-bea-2023-q4",
+    "source_ids": [
+      "eval-bea-2023-q4"
+    ],
+    "query": {
+      "publisher": "BEA",
+      "metric": "real_gdp_qoq_annualized_percent",
+      "period": "2025-Q1",
+      "geography": "US",
+      "cutoff": "2024-02-28",
+      "value": 3.2,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-03-current",
+    "incident_family": "eval-bls-2024-03",
+    "source_ids": [
+      "eval-bls-2024-03"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-03",
+      "geography": "US",
+      "cutoff": "2024-05-03",
+      "value": 315000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-03-previous",
+    "incident_family": "eval-bls-2024-03",
+    "source_ids": [
+      "eval-bls-2024-03"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-03",
+      "geography": "US",
+      "cutoff": "2024-05-03",
+      "value": 303000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-03-missing",
+    "incident_family": "eval-bls-2024-03",
+    "source_ids": [
+      "eval-bls-2024-03"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-05-03",
+      "value": 315000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-04-current",
+    "incident_family": "eval-bls-2024-04",
+    "source_ids": [
+      "eval-bls-2024-04"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-04",
+      "geography": "US",
+      "cutoff": "2024-06-07",
+      "value": 165000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-04-previous",
+    "incident_family": "eval-bls-2024-04",
+    "source_ids": [
+      "eval-bls-2024-04"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-04",
+      "geography": "US",
+      "cutoff": "2024-06-07",
+      "value": 175000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-04-missing",
+    "incident_family": "eval-bls-2024-04",
+    "source_ids": [
+      "eval-bls-2024-04"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-06-07",
+      "value": 165000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-05-current",
+    "incident_family": "eval-bls-2024-05",
+    "source_ids": [
+      "eval-bls-2024-05"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-05",
+      "geography": "US",
+      "cutoff": "2024-07-05",
+      "value": 218000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-05-previous",
+    "incident_family": "eval-bls-2024-05",
+    "source_ids": [
+      "eval-bls-2024-05"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-05",
+      "geography": "US",
+      "cutoff": "2024-07-05",
+      "value": 272000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-05-missing",
+    "incident_family": "eval-bls-2024-05",
+    "source_ids": [
+      "eval-bls-2024-05"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-07-05",
+      "value": 218000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-06-current",
+    "incident_family": "eval-bls-2024-06",
+    "source_ids": [
+      "eval-bls-2024-06"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-06",
+      "geography": "US",
+      "cutoff": "2024-08-02",
+      "value": 179000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-06-previous",
+    "incident_family": "eval-bls-2024-06",
+    "source_ids": [
+      "eval-bls-2024-06"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-06",
+      "geography": "US",
+      "cutoff": "2024-08-02",
+      "value": 206000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-06-missing",
+    "incident_family": "eval-bls-2024-06",
+    "source_ids": [
+      "eval-bls-2024-06"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-08-02",
+      "value": 179000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-07-current",
+    "incident_family": "eval-bls-2024-07",
+    "source_ids": [
+      "eval-bls-2024-07"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-07",
+      "geography": "US",
+      "cutoff": "2024-09-06",
+      "value": 89000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-07-previous",
+    "incident_family": "eval-bls-2024-07",
+    "source_ids": [
+      "eval-bls-2024-07"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-07",
+      "geography": "US",
+      "cutoff": "2024-09-06",
+      "value": 114000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-07-missing",
+    "incident_family": "eval-bls-2024-07",
+    "source_ids": [
+      "eval-bls-2024-07"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-09-06",
+      "value": 89000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  },
+  {
+    "id": "eval-bls-2024-08-current",
+    "incident_family": "eval-bls-2024-08",
+    "source_ids": [
+      "eval-bls-2024-08"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-08",
+      "geography": "US",
+      "cutoff": "2024-10-04",
+      "value": 159000,
+      "vintage": "latest supplied"
+    },
+    "expected": "SUPPORT"
+  },
+  {
+    "id": "eval-bls-2024-08-previous",
+    "incident_family": "eval-bls-2024-08",
+    "source_ids": [
+      "eval-bls-2024-08"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2024-08",
+      "geography": "US",
+      "cutoff": "2024-10-04",
+      "value": 142000,
+      "vintage": "latest supplied"
+    },
+    "expected": "REFUTE"
+  },
+  {
+    "id": "eval-bls-2024-08-missing",
+    "incident_family": "eval-bls-2024-08",
+    "source_ids": [
+      "eval-bls-2024-08"
+    ],
+    "query": {
+      "publisher": "BLS",
+      "metric": "nonfarm_payroll_monthly_change_jobs",
+      "period": "2025-01",
+      "geography": "US",
+      "cutoff": "2024-10-04",
+      "value": 159000,
+      "vintage": "latest supplied"
+    },
+    "expected": "UNCERTAIN"
+  }
+]

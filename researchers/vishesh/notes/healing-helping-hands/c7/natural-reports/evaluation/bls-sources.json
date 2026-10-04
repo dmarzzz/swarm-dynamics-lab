@@ -1,0 +1,146 @@
+[
+  {
+    "id": "eval-bls-2024-03",
+    "publisher": "BLS",
+    "published": "2024-05-03",
+    "url": "https://www.bls.gov/news.release/archives/empsit_05032024.htm",
+    "target_period": "2024-03",
+    "excerpt": "Total nonfarm payroll employment increased by 175,000 in April, and the unemployment rate changed little at 3.9 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for February was revised down by 34,000, from +270,000 to +236,000, and the change for March was revised up by 12,000, from +303,000 to +315,000.",
+    "excerpt_sha256": "9a29a06f382283924d40de361027fd32e5f2be1730e0c82fcfa519e94fa1fcfc",
+    "raw_sha256": null,
+    "web_capture_sha256": "e59dc412974cf3bb9f4248ddefedc1b28ea5c5ec253f7b383b7400dc69a02b14",
+    "retrieved_utc": "2026-10-04T21:31:10.641295+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        287,
+        295
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  },
+  {
+    "id": "eval-bls-2024-04",
+    "publisher": "BLS",
+    "published": "2024-06-07",
+    "url": "https://www.bls.gov/news.release/archives/empsit_06072024.htm",
+    "target_period": "2024-04",
+    "excerpt": "Total nonfarm payroll employment increased by 272,000 in May, and the unemployment rate changed little at 4.0 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for March was revised down by 5,000, from +315,000 to +310,000, and the change for April was revised down by 10,000, from +175,000 to +165,000.",
+    "excerpt_sha256": "32a1e0f0985aac1a67dd75141ca4786510bf8435a68120352ffdfbd7dcf394e1",
+    "raw_sha256": null,
+    "web_capture_sha256": "20adf6c01cba17c6bc4f84020100a35849c241c7eaad0924c81a66c4b332ca96",
+    "retrieved_utc": "2026-10-04T21:31:10.641918+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        283,
+        291
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  },
+  {
+    "id": "eval-bls-2024-05",
+    "publisher": "BLS",
+    "published": "2024-07-05",
+    "url": "https://www.bls.gov/news.release/archives/empsit_07052024.htm",
+    "target_period": "2024-05",
+    "excerpt": "Total nonfarm payroll employment increased by 206,000 in June, and the unemployment rate changed little at 4.1 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for April was revised down by 57,000, from +165,000 to +108,000, and the change for May was revised down by 54,000, from +272,000 to +218,000.",
+    "excerpt_sha256": "24ba0791b09224e1719b9af087c1f654fed43a22ac3dca5ba56029c515318e21",
+    "raw_sha256": null,
+    "web_capture_sha256": "30556336809e4104f9bed720922f55379fa0a33102e9bd40150dde1fd8c7635f",
+    "retrieved_utc": "2026-10-04T21:31:10.642468+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        286,
+        294
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  },
+  {
+    "id": "eval-bls-2024-06",
+    "publisher": "BLS",
+    "published": "2024-08-02",
+    "url": "https://www.bls.gov/news.release/archives/empsit_08022024.htm",
+    "target_period": "2024-06",
+    "excerpt": "The unemployment rate rose to 4.3 percent in July, and nonfarm payroll employment edged up by 114,000, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for May was revised down by 2,000, from +218,000 to +216,000, and the change for June was revised down by 27,000, from +206,000 to +179,000.",
+    "excerpt_sha256": "9ea0d775488c1a5128d3031e39e60a286cfc3c2e9e31a3984a78892ef4b8b7ee",
+    "raw_sha256": null,
+    "web_capture_sha256": "ece53c936f537ef722de6a848ada6aee0b63cc79cad985b8f801da2d20ee9fc8",
+    "retrieved_utc": "2026-10-04T21:31:10.643055+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        303,
+        311
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  },
+  {
+    "id": "eval-bls-2024-07",
+    "publisher": "BLS",
+    "published": "2024-09-06",
+    "url": "https://www.bls.gov/news.release/archives/empsit_09062024.htm",
+    "target_period": "2024-07",
+    "excerpt": "Total nonfarm payroll employment increased by 142,000 in August, and the unemployment rate changed little at 4.2 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for June was revised down by 61,000, from +179,000 to +118,000, and the change for July was revised down by 25,000, from +114,000 to +89,000.",
+    "excerpt_sha256": "b25e6bc8a9b0f02529f2fe5b403965b39ceb1fd15a7768ae8eba59648b4835ab",
+    "raw_sha256": null,
+    "web_capture_sha256": "c0522ca775146db6dbd96063242897338537cc08bfee75efe8b56c72ec8948b1",
+    "retrieved_utc": "2026-10-04T21:31:10.643635+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        283,
+        291
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  },
+  {
+    "id": "eval-bls-2024-08",
+    "publisher": "BLS",
+    "published": "2024-10-04",
+    "url": "https://www.bls.gov/news.release/archives/empsit_10042024.htm",
+    "target_period": "2024-08",
+    "excerpt": "Total nonfarm payroll employment increased by 254,000 in September, and the unemployment rate changed little at 4.1 percent, the U.S. Bureau of Labor Statistics reported today.\n\nThe change in total nonfarm payroll employment for July was revised up by 55,000, from +89,000 to +144,000, and the change for August was revised up by 17,000, from +142,000 to +159,000.",
+    "excerpt_sha256": "02308666181aa3bb20e52c4a05f9bc3113c074b007797899b7e8efb452a73d68",
+    "raw_sha256": null,
+    "web_capture_sha256": "ee860042e1906e571e36e6cf1534b1ad3e68c29991f3a6ec81f08c96804d9219",
+    "retrieved_utc": "2026-10-04T21:31:10.644201+00:00",
+    "capture": "public web-rendered lines; no direct HTML receipt",
+    "line_spans": [
+      [
+        196,
+        201
+      ],
+      [
+        298,
+        306
+      ]
+    ],
+    "reuse_policy": "https://www.bls.gov/opub/copyright-information.htm"
+  }
+]

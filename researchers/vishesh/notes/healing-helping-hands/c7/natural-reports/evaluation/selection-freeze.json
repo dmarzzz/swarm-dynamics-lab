@@ -1,0 +1,17 @@
+{
+  "frozen_at_utc": "2026-10-04T21:29:37.899770+00:00",
+  "baseline_sha256": "e4ac1f26a927c6f122a65dc501970d175e5c4c10e5d4ccb2cba1c8264457cc18",
+  "baseline_source_commit": "073624162c63793853816fd4321dfca3cb7b36e8",
+  "selection_before_source_inspection": {
+    "BEA": "Second-estimate GDP releases for six consecutive quarters2022Q3 through2023Q4.",
+    "BLS": "First monthly revisions for six consecutive payroll monthsMarch throughAugust2024, in releasesMay throughOctober2024."
+  },
+  "roots": 12,
+  "queries_per_root": 3,
+  "query_construction": "Current value, explicitly revised older value asserted as current, absent future period. If old=current retain the duplicate semantic value and label SUPPORT; do not force REFUTE or substitute an incident.",
+  "baseline_tuning_allowed": false,
+  "labels": "Apply unchanged source-only criteria; hand-audit before executing frozen comparator.",
+  "holdout_scope": "New incident windows relative to development, same known publisher/style families; author reads sources for adjudication, no model outputs used.",
+  "unresolved_contradictions": "Only if source evidence actually contains them; never manufactured.",
+  "model_calls_authorized": 0
+}
