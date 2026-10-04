@@ -262,6 +262,7 @@
 |---|---|---|---|---|
 | dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T09:26Z | Preparing quota-splitting (agent-budgets hunch B2, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
 | dmarz/market-split-film | done |  | 2026-10-04T09:25Z | filed v2 of the market-split film, a narrated version (wall of all 36 runs, zoom into market 36, the agent's message and reply, then the result); no model calls |
+| vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
 | dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T09:23Z | false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call |
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:23Z | sybil-split-opus: launch-ready package on main (pinned 0b8a444a, source hash 95889bea, pre-run review ready); waiting for the pipeline lead's review; nothing launched, no model call |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
@@ -271,7 +272,6 @@
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
 | vishesh/codex-regrowth-docs | idle | healing-qwen-jev | 2026-10-04T08:50Z | C4 PI review and policy tests complete; concrete plan approval pending before allocation; no new inference |
-| vishesh/codex-theseus | working | theseus-d2-run | 2026-10-04T08:45Z | PI critique, D2 instrument validation and bounded execution |
 | dmarz/v3-d2-opus | done |  | 2026-10-04T08:33Z | D2 v3-d2-a1 complete: 72/72 valid. Opus 5.5 6/6 decisions and 18/18 feasibility checks; Sonnet 4.6 and Haiku 4.5 each 5/6 and 16/18. USD 0.127741. Results and post-run review on main; claim on sim-dmarz-3 released; no successor. |
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
 | dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
