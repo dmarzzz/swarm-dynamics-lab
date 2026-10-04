@@ -3,7 +3,7 @@ id: antsy-targeted-v8
 type: task
 title: Repair Antsy extraction and design targeted verification
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T06:54Z
-updated: 2026-10-04T06:54Z
+updated: 2026-10-04T07:03Z
+outputs:
+- researchers/vishesh/notes/antsy-targeted-v8/README.md
 ---
 
 ## Goal
