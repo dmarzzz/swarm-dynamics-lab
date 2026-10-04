@@ -1,0 +1,82 @@
+{
+  "id": "soc07-private-judgments-v2",
+  "title": "Private first judgments, harder three-option task (SOC-07 v2)",
+  "description": "Five agents choose among three fictional suppliers from eleven records with superseded estimates and conflicting audits. Each forms a first answer alone; the team then either keeps those answers private or publishes them before one discussion round. Successor to soc07-private-judgments, whose replay stage hit a ceiling on Opus 5.5. Exploratory; Opus 5.5 throughout.",
+  "owner": "dmarz",
+  "params": {
+    "stage": {
+      "type": "str",
+      "role": "stage",
+      "label": "stage",
+      "value_labels": {
+        "s0": "S0 scripted fixtures",
+        "p0": "P0 one-call interface probe",
+        "s1q": "S1-Q single-solver qualification",
+        "s1r": "S1-R scripted-peer replay",
+        "s1l": "S1-L live five-agent teams"
+      }
+    },
+    "backend": {
+      "type": "str",
+      "role": "fixed",
+      "label": "who answers",
+      "value_labels": {
+        "scripted": "scripted policies, no model",
+        "anthropic": "Opus 5.5 through the API"
+      }
+    },
+    "model": {
+      "type": "str",
+      "role": "fixed",
+      "label": "model"
+    },
+    "batch": {
+      "type": "str",
+      "role": "replicate",
+      "label": "attempt"
+    },
+    "source_hash": {
+      "type": "str",
+      "role": "fixed",
+      "label": "runtime fingerprint"
+    },
+    "code": {
+      "type": "str",
+      "role": "fixed",
+      "label": "swarm-lab commit"
+    },
+    "reasoning_tokens": {
+      "type": "int",
+      "role": "fixed",
+      "label": "reasoning allowance (tokens per call, 0 = off)"
+    },
+    "output_caps": {
+      "type": "str",
+      "role": "fixed",
+      "label": "output caps: first / discussion / public final / private final / qualification"
+    },
+    "launch_manifest": {
+      "type": "str",
+      "role": "fixed",
+      "label": "launch manifest version"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "team_success_private",
+    "team_success_public",
+    "private_minus_public",
+    "valid_rate",
+    "failures",
+    "model_calls",
+    "cost_usd",
+    "solver_accuracy",
+    "gate_passed",
+    "input_tokens",
+    "output_tokens",
+    "first_answer_split_share",
+    "at_ceiling"
+  ],
+  "primary_metric": "private_minus_public",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/soc07-private-judgments-v2"
+}
