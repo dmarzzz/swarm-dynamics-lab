@@ -6,10 +6,12 @@ provider: openrouter
 model: qwen/qwen3.7-flash
 model_ladder: [qwen/qwen3.7-flash, gpt-6-sol]
 providers: {qwen/qwen3.7-flash: openrouter, gpt-6-sol: openai}
+replications: [r1]
+ledger: fresh
 effort: low
 max_calls: {S0: 0, P0: 1, Q0: 60, S1: 2688}
 max_calls_total: 2749
 usd_cap: 90
 chain_timeout_seconds: 14400
-selftests: 97
-source_hash: ebfb2bc3703cbb5ac882641ca0f71dfb9dfda0ee5436dd1a8b4879dcef97c2cd
+selftests: 100
+source_hash: 5ce08e7d0e09232f610b28f63ef57f1d48dda04ebbf1e72aac40c0da48af3d1b

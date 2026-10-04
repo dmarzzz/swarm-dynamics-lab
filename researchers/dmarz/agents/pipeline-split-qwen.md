@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-split-qwen
 tool: claude-code
-state: done  # working | idle | blocked | done
+state: working  # working | idle | blocked | done
 task: build-sybil-split-xmodel
-doing: "sybil-split-xmodel package ready (code 0ca09f04, source hash ebfb2bc3); pre-run review on main; rehearsals passed for both models; awaiting the fleet monitor's same-researcher check; nothing launched"
-updated: 2026-10-04T12:37Z
+doing: "sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent"
+updated: 2026-10-04T18:24Z
 ---
 
 ## Notes

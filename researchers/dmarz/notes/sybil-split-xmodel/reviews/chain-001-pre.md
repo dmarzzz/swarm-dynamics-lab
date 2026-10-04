@@ -147,3 +147,30 @@ Mapping v1 in [VISUALIZATION.md](../VISUALIZATION.md) is the parent's mapping, w
 - `initial_frame.png`, `progress.png`, `final_frame.png` and `replay.gif`.
 
 The selftest renders empty, partial, failed and complete frames and decodes the GIF frame by frame. After the run, the operator compares the final frame with `analysis.json`.
+
+## Amendment A1 pre-run assessment: gpt-6-sol at reasoning effort none (2026-10-04)
+
+- **Status:** **ready** for dmarz/fleet-monitor's same-researcher check. Approved by the fleet monitor exactly as proposed in [chain-001-sol-post.md](chain-001-sol-post.md). Not independently reviewed. dmarz did not name this configuration.
+- **Order:** the pre-registration (item 13, amendment A1) was committed in `a02c488f` before any of its code. The code commit is `52139693`.
+- **What changes:**
+  - **Model setting.** Only `reasoning_effort`, from low to none, for model `gpt-6-sol`. The request body is exactly `model: gpt-6-sol`, `reasoning_effort: none`, `max_completion_tokens: 2000`, `response_format {type: json_object}` and `messages`. With effort none the adapter would accept `temperature` and `top_p`; none is sent, and a selftest asserts it. A response that reports reasoning tokens is a failed call (`unexpected_reasoning_tokens`, the reference adapter's rule for effort none).
+  - **Code.** A configuration name (`gpt-6-sol/r1`), selected by `STUDY_MODEL=gpt-6-sol` with `STUDY_REPLICATION=r1`. These variables are set by the launcher's `--model gpt-6-sol --replication r1`.
+  - **Separation from earlier chains.** Gates, batches (`s0-001-solnone`, `p0-001-solnone`, `q0-001-solnone`, `s1-001-solnone`), rows and chain status carry that name. The effort-low runs therefore never admit or mix with this chain.
+  - **Selftests.** They now clear `STUDY_MODEL`, `STUDY_PROVIDER` and `STUDY_REPLICATION` at import and set each configuration explicitly. The suite gives the same result under any launch environment (the cause of the scarcity package's setup failure).
+- **What does not change:** packets (byte identity re-proved in S0), system prompt, validation, fixtures, thresholds, analysis and every cap except the configuration's own ledger.
+- **Frozen plan:**
+  - Code commit `52139693`. Source hash `5ce08e7d0e09232f610b28f63ef57f1d48dda04ebbf1e72aac40c0da48af3d1b`.
+  - `READY.yaml`: `selftests: 100`, `replications: [r1]`, `ledger: fresh`.
+  - **Fresh ledger:** this configuration starts its own ledger file (launcher tag `-gpt-6-sol-r1`). The study's earlier paid runs are at source hash `ebfb2bc3…` and keep their own ledgers.
+  - Command: `run-ready-chain.py sybil-split-xmodel <launch commit> chain --host <server> --confirm-paid --model gpt-6-sol --replication r1 --stages S0,P0,Q0,S1`, after `setup` with the same `--model` and `--replication`.
+  - Caps: P0 1, Q0 60, S1 2,688; 2,749 calls; USD 90 settled plus open reservations. Expected: P0 and Q0 about USD 0.5 (the effort-low pair cost USD 0.53); S1, only if Q0 passes, about USD 25 to 45.
+  - Gates as in item 9. A second Q0 stop ends the gpt-6-sol route.
+- **Offline checks on `52139693`:**
+  - `python3 src/selftest.py`: 100 tests OK with no launch variables (186 s; one run hit a transient full-disk error on this Mac, the failed test passed on rerun). Also 100 tests OK under `STUDY_MODEL=gpt-6-sol STUDY_REPLICATION=r1 STUDY_PROVIDER=openai` (163 s).
+  - Rehearsal with `STUDY_MODEL=gpt-6-sol STUDY_REPLICATION=r1`: results in the line below.
+- **Not tested:** the live route at effort none, the launcher's `--replication` path for this study, and the server's Python.
+- **Rehearsal results** for `gpt-6-sol/r1` on `52139693`: throwaway hub on 127.0.0.1, with a stub in the OpenAI response shape that rejects any body that is not exactly the effort-none template plus messages.
+  - (a) The full chain completed (`s0-001-solnone` … `s1-001-solnone` all done), and `chain verify` passed.
+  - (c) A billing stop came from a 429 `insufficient_quota`, giving `provider_billing_stopped`. Resume then completed S1 with every unit answered once, and verify passed.
+  - (d) Two failed S1 calls plus harmless-variant answers: S1 was done with 2 failed, and verify passed.
+  - (b) In the full rehearsal run, chain (b) ended with `internal_OSError` at P0. This Mac's disk was full during that run (3.3 GB free, other agents writing; the same error appeared once in the selftests). I re-ran chain (b) alone with the never-abstaining stub: exit 3, `stopped_at_gate` at Q0 with `gate_failed`, 61 stub answers, and no S1 run on the hub. The checks of (a), (c) and (d) all passed in the full run.
