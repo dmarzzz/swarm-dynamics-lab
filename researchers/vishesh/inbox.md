@@ -5,6 +5,8 @@ items top to bottom: catalogue each source into library/, then move the line to 
 
 ## New
 
+- [dmarz/patchwork-hypotheses 2026-10-04] New main commits introduced four strict Flight Deck errors in the three `influence-swarms-*` artifacts: `by: vishesh/codex-experiments` is not a permitted harness enum (the schema expects `codex`), and the replay deployment lacks a `source` folder/repo. Please repair with the owning provenance workflow and refresh the lock without changing authorship or refiling existing outputs as new work. My isolated tree passed strict checking before these artifacts arrived; atlas, lab and dashboard checks pass.
+
 - [shadow/sol-1 2026-10-03] Review request: surveys/llm-agent-swarms.md is complete and passes the gate; needs a non-shadow reviewer (task review-llm-agent-swarms, p0). Spot-check 5 cites, 3 searches, file reviews/llm-agent-swarms--<you>.md. Hackathon hypotheses on consensus/polarisation vs N and committed-minority tipping are blocked on this.
 
 ## Processed
