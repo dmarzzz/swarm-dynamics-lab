@@ -1,4 +1,4 @@
-# Twenty four experimental questions for bounded agent workflows
+# Experimental questions for bounded agent workflows
 
 These are proposed comparisons, not registered hypotheses or claims of unoccupied research gaps. Each includes its closest existing questions and the specific new variable or outcome. Related library records are catalogue leads reused from the source atlas; they were not newly read in full in this batch.
 
@@ -577,3 +577,27 @@ Can repeated observations identify persistent or caller-specific corruption with
 **Feasibility:** Small synthetic fixture and deterministic scoring first; LLM comparison only after research gates and budget authorization.
 
 **Catalogue leads:** [[shalizi-2011-homophily]] [[aronow-2013-estimating]] [[pante-2025-beyond]]
+
+## EX-25 — What swarm size is best for this problem under these constraints?
+
+For a specified problem and solution approach, what number of agents yields the best verified outcome under different urgency, cost, memory and hardware constraints, and can that size be predicted before solving a new instance?
+
+**Tentative prediction:** The best tested size will depend on useful task parallelism, evidence complementarity and coordination overhead: added workers may help decomposable urgent tasks until shared compute, memory or tool capacity saturates, while tightly coupled tasks may favor one or a few agents.
+
+**Comparison:** Specify a problem-solution pair as a task family plus a fixed model, tool set, solution method, coordination topology and answer-integration rule. Sweep fixed rosters including N=1 and a bounded geometric size grid. Cross task decomposition, dependency depth, difficulty, evidence overlap and communication needs with deadline urgency, total dollar/token budget, per-agent context limits, shared-memory policy, physical RAM/VRAM capacity, worker slots, inference throughput and tool/API concurrency. Use a staged factorial design, then refine near apparent optima. Randomize independent task instances and seeds; hold the hardware and total resource envelope fixed within each comparison, charge orchestration and communication, and separately label any fixed-per-agent-resource sensitivity. Train a size selector only on development task families and evaluate on held-out families and hardware conditions. Compare its chosen fixed size with N=1, the best single fixed size from development, a simple capacity-aware heuristic and an evaluator-only best tested size. Treat dynamic resizing as a separate follow-up with spawn and memory-transfer costs.
+
+**Measures:** Verified task quality and success probability before deadline; End-to-end latency including setup, queues and integration; Total dollars, tokens, tool calls and compute time; Peak RAM/VRAM and per-agent context use; Communication, duplicated work, coordination and idle time; Feasible quality-cost-latency frontier and uncertainty in best tested N; Held-out selector regret relative to the evaluator-only best tested size
+
+**Falsifier / decision rule:** The conditional-size predictor is not useful if it fails to beat the best development-selected fixed size or simple capacity heuristic on held-out cases after charging selection overhead. Report a flat or uncertain optimum as a range; report no feasible size if all tested rosters violate the constraints.
+
+**Controls and confounds:** Agent roster size is distinct from simultaneously runnable processes and independent evidence sources. Increasing N must not silently increase total compute, memory, evidence, model quality or test-time budget. Hardware speed, API throttling, cache warmth, context replication, batching, topology and integration policy can confound size. Do not tune N on test outcomes or count workers/messages as independent replicates. Define utility and hard constraints before evaluation; a finite tested grid cannot establish a universal global optimum.
+
+**Nearest atlas items:** SOC-02; PHY-09; BUD-06; BUD-08
+
+**Difference:** Existing cards test effective evidence size, correlated cues or quota-induced spawning. This question instead selects an operational roster size for a specified problem-solution pair across jointly stated task and resource constraints, then tests prediction on new cases.
+
+**Decision value:** Choose how many workers to launch for an actual job and when added parallelism is not worth its resource or coordination cost. Define the optimum as maximum expected verified quality subject to deadline, cost and memory/hardware limits, or report the nondominated quality-cost-latency choices when priorities are not scalarized.
+
+**Feasibility:** Start with an explicit design and offline scheduling/queue fixtures; qualify bounded model tasks only after the lab review, public-plan registration, machine allocation and budget gates. No experiment is launched by this question.
+
+**Theory and animation:** Catalogue leads inherited from related atlas cards; no new full-methods review or claim that optimal swarm sizing is an unoccupied research gap. Proposed theory connections are finite-group information aggregation, queueing and parallel speedup with coordination overhead. Visual concept: animate workers, dependency queues and memory pressure while a phase map shows the best tested size as deadlines and resources change.
