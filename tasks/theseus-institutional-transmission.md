@@ -3,7 +3,7 @@ id: theseus-institutional-transmission
 type: task
 title: Institutional transmission revision
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-theseus
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-theseus
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:23Z
-updated: 2026-10-04T19:23Z
+updated: 2026-10-04T19:29Z
+outputs:
+- researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/transmission/PLAN.md
 ---
 
 ## Goal
