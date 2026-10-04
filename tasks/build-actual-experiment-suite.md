@@ -3,16 +3,17 @@ id: build-actual-experiment-suite
 type: task
 title: Implement and deploy developed exploratory experiment designs
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-experiments
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-claimed_at: 2026-10-03T23:41Z
-updated: 2026-10-03T23:41Z
+updated: 2026-10-04T00:11Z
+history:
+- '2026-10-04T00:11Z released by vishesh/codex-experiments: Two studies deployed; 3162 scripted outcomes verified. Live qualification waits for encrypted model credential access; USD 0 spent. See actual-experiments/DEPLOYMENT.md.'
 ---
 
 ## Goal
