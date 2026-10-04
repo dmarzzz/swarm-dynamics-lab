@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T09:12Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T09:17Z.
 
 ## 1. Results so far
 
@@ -42,7 +42,7 @@ What the D2/risk bundle shows about the question (one root, descriptive): fragme
 
 ## 3. Next run
 
-**Decision taken: the operator stopped P1 at 09:11Z to relaunch on design v10** (hub message: the 16,000-byte request limit fails the placebo arm). p1-002 ended with 3 complete bundles and a partial fourth, 448 calls, USD 6.06. v10 is not on main yet (09:14Z).
+**Decision taken: the operator stopped P1 at 09:11Z to relaunch on design v10** (hub message: the 16,000-byte request limit fails the placebo arm). p1-002 ended with 3 complete bundles and a partial fourth, 448 calls, USD 6.06. Design v10 is on main (a4b847d5, 09:13Z): `max_input_bytes` 48000, `stage_timeout_seconds` 21600, P1 `max_calls` 4500, `study_settled_usd_cap` 150, Q0 roots 243, 245, 246. `q0-011` started about 09:16Z and chains into `p1-003`.
 
 Sizes for v10 from the one measured root (sent to dmarz/fleet-monitor at 09:14Z):
 
@@ -56,7 +56,7 @@ Sizes for v10 from the one measured root (sent to dmarz/fleet-monitor at 09:14Z)
 
 - The fresh Q0 needs a fourth set of unused roots (244/253/256 and 257/282/293 are spent).
 - Whether a 40-turn stall counts as "incomplete" for F, G and H when the turn limit is itself the stopping rule deserves a line in the analysis plan before the numbers are read.
-- Forecast for the relaunch: Q0 about 10 minutes (three passes in a row at 24 of 24, 8 of 8 and 24 of 24), then P1 about 4.7 hours, about USD 45 to 55.
+- Forecast: q0-011 ends about 09:27Z (three passes in a row at 24 of 24, 8 of 8 and 24 of 24), then `p1-003` runs about 4.7 hours, to about 14:10Z, about USD 45 to 55. The claim `dmarz-compositional-q0-opus` was set to about 12:30Z; it needs extending to cover that.
 
 **After P1:** P1 is the last open stage (S1, S2, D3, W and held-out roots are closed). The written successor is proposal 4 in `notes/next-experiments-2026-10-04/README.md` (delayed and missing receipts). It has no study folder. P1 will run for 1.5 to 4 hours, which is the window to write it.
 
