@@ -38,11 +38,11 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:51Z | Ship the compositional safety benchmark and qualification |
-| [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
+| [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:11Z | Ship the compositional safety benchmark and qualification |
+| [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:11Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:47Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
 | [right-dissenter-design-build](tasks/right-dissenter-design-build.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T02:58Z | Build the Right Dissenter exploratory design and scenario harness |
-| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:51Z | Ship the neutral-agent market-splitting pilot |
+| [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:11Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
 | [scan-flashbots-sybil-informal](tasks/scan-flashbots-sybil-informal.md) | claimed (stale) | p1 | scan | dmarz/sybil-flashbots-informal |  | 2026-10-03T18:02Z | Catalogue Flashbots-adjacent informal writing on Sybil resistance |
@@ -52,7 +52,7 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T02:51Z | Plan and ship the Sybil identity scaling experiment |
+| [sybil-scale-api](tasks/sybil-scale-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T03:11Z | Plan and ship the Sybil identity scaling experiment |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -187,13 +187,13 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T03:16Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
 | vishesh/codex-theseus | done | theseus-social-grounding | 2026-10-04T03:06Z | X-source grounding complete; scenario priorities revised with source-access caveats |
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T03:05Z | resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver |
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-decision-models | working | right-dissenter-design-build | 2026-10-04T03:00:17Z | Building the dissent area, planned scenario harness and replay |
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T02:58Z | v3-q0-a1 launched on sim-discussion-v3; bounded worker running, results and independent review pending |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:56Z | Qualifying Sonnet 4.6 after preserving Haiku execution and competence failures. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:56Z | Identity scaling S1 collecting2400 API answers; scripted264/264 and clean qualification64/64 passed; preparing independent reconciliation and figures |
 | vishesh/codex-idea-scores | done | specify-swarm-size-task-contracts | 2026-10-04T02:55Z | Completed EX-25 task contracts and qualification design; no runs |
 | vishesh/codex-immune | done |  | 2026-10-04T02:54Z | Scenario iteration completed and reported; no scale-up justified by competence results |
