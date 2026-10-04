@@ -35,8 +35,8 @@
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T18:56:17.685039+00:00",
-      "checked_commit": "0c00781507b9477bfa2347504ed0bade43a7ae4b",
+      "checked_at": "2026-10-04T19:01:01.937803+00:00",
+      "checked_commit": "f7ef9048b7d4073a7f0e4f97222e19154d370770",
       "next_action": "RD5 complete/reviewed; no workers or allocation retained. RD6 reopening manual native integration and 73 offline checks are complete; see reopening/OPERATOR.md and the authoritative rd5/SETUP.md. Owner decision remains for 18 Q0 plus conditional 144 D0, lifetime 650 under unchanged USD 2 split cap. After approval refresh actual public/source/route/ledger/account/allocation evidence and qualify Q0; no automatic launch or RD5 relaunch.",
       "next_run_approval": "owner"
     },
