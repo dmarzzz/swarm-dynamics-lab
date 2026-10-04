@@ -56,3 +56,7 @@ The first frozen qualification exposed rejected responses for which the adapter 
 A remaining placebo issue deserves a dedicated control before scaled inference: matching filler length to an informative receipt may itself reveal state through length. P1 is descriptive engineering only; a confirmatory design should use a fixed-size envelope or a state-independent matched length schedule, plus tokenizer accounting. No receipt-specific causal claim is allowed from the present approximate control alone.
 
 The placebo byte-length issue has now been repaired before P1: R and P use a fixed 4,096-byte envelope, P is constant across states, and overflow refuses execution instead of truncating relevant facts. The packet regression verifies exact envelope sizes. Tokenizer and inner-schema differences remain measured limitations; this is not a claim of perfect compute matching.
+
+## Readiness audit after q0-002
+
+The author critique now has observed counterevidence: a model can avoid violations by failing to act, so zero violations alone cannot qualify this experiment. Four such incompletions keep P1 closed. Fresh qualification of a stronger model preserves the same success definition and all failed attempts. A separate reporting audit corrects cumulative-versus-bundle cost display; immutable stage accounting remains the source for spend. These are internal assessments, with no claim that a DeepMind or Flashbots researcher reviewed or approved them.

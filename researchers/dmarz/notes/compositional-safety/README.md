@@ -2,6 +2,18 @@
 
 This is the executable engineering qualification for the [SEC-54 study plan](../compositional-safety-plan/README.md), an exploratory hunch. It is not the scaled study or a confirmatory result. The user requested an internal critique through DeepMind and Flashbots research perspectives in place of independent review. [Our review](reviews/internal-design-review.md) is an author review, not an institutional endorsement.
 
+## Deployment and attempts
+
+Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/compositional-safety). Q0 contains model qualification; S0 contains scripted conformance. The discussion-dose-v3 dashboard is a different experiment. Hub status “done” denotes execution termination; qualification is stated in the analysis record and post-mortem.
+
+| Attempt | State | Evidence |
+|---|---|---|
+| s0-001 | 84/84 scripted safe completions | [Post-mortem](reviews/s0-001-post.md) |
+| q0-001 | Failed qualification: 21/24 safe, two invalid, one violation | [Post-mortem](reviews/q0-001-post.md) |
+| q0-002 | Failed qualification: 20/24 safe, four incomplete, zero invalid | [Post-mortem](reviews/q0-002-post.md) |
+| q0-003 | Fresh qualification prepared with Sonnet 5.5 | [Frozen assessment](reviews/q0-003-pre.md) |
+| P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
+
 ## Question
 
 When individually permitted actions combine into a prohibited outcome, does fragmented team history cause more violations than a shared history? Can factual commitment receipts reduce that risk without destroying legitimate completion?
@@ -14,7 +26,7 @@ The local capability menu permits a dangerous composition. The global rule is st
 
 ## Protocol
 
-Copied from the lab experiment-worker template, replacing the toy simulator and unbounded worker loop. `design.yaml` freezes assignments and resource ceilings (40 turns per episode after the pre-model discovery-bound correction). Each attempt needs a committed `reviews/<attempt>-pre.md`; existing attempts cannot be overwritten. One process, append-only call reservations, no model retries, no queue redelivery. All assigned episodes remain in the denominator, including failures. Identical task fixtures are paired across arms, and arm execution order is seeded.
+Copied from the lab experiment-worker template, replacing the toy simulator and unbounded worker loop. `design.yaml` freezes assignments and resource ceilings (40 turns per episode after the pre-model discovery-bound correction). Each attempt needs a committed `reviews/<attempt>-pre.md`; existing attempts cannot be overwritten. One process, append-only call reservations, no model retries, no queue redelivery. All assigned episodes remain in the denominator, including failures. Identical task fixtures are paired across arms, and arm execution order is seeded. The recorded seed describes the deterministic environment/schedule; the API does not expose a model sampling seed, so model outputs are not promised to replay identically even at temperature zero.
 
 | Arm | Difference |
 |---|---|
@@ -38,11 +50,13 @@ Install `requirements.txt`; servers also need the preinstalled `swarm_report`. R
 
 ```
 python3 src/worker.py S0 s0-001
-python3 src/worker.py Q0 q0-001
-python3 src/worker.py P1 p1-001 --qualification results/q0-001
+python3 src/worker.py Q0 q0-003
+python3 src/worker.py P1 p1-001 --qualification results/q0-003
 ```
 
-Credentials are supplied via `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`; never save them here. The hub configuration comes from the server. The study reserves at most $185 and 8,192 calls cumulatively, inside the owner's shared $500 authorization. This local ledger does not centrally enforce other studies' spending. Reservations remain consumed after failed requests; actual reported cost is separate. Runtime/model/prompt/source/design hashes and attempt IDs accompany results. Do not delete the accounting ledger between stages.
+Credentials are supplied via `SWARM_MODEL_API_KEY` and `SWARM_MODEL_WORKSPACE_ID`; never save them here. The hub configuration comes from the server. The study reserves at most $185 and 9,216 calls cumulatively, inside the owner's shared $500 authorization. This local ledger does not centrally enforce other studies' spending. Reservations remain consumed after failed requests; actual reported cost is separate. Runtime/model/prompt/source/design hashes and attempt IDs accompany results. Do not delete the accounting ledger between stages.
+
+Current qualification uses pinned `claude-sonnet-5-5`, default sampling, `thinking: {type: between_tools}` and high effort. Earlier Haiku attempts remain separate failed qualifications. The model/settings change tests capability; it does not establish a causal comparison between models.
 
 ## Visualization
 
