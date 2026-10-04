@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T10:19Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T10:29Z.
 
 ## 1. Results so far
 
@@ -71,7 +71,7 @@ The four invalid episodes are rate-limit rejections between about 10:06Z and 10:
 
 Across both P1 attempts the D2/risk bundle of root 300 gives the same picture: single controller and shared history complete, receipts complete (23 and 35 turns), fragmented history and its variants stall at the turn limit, no violations.
 
-- Forecast: q0-013 about 10 minutes; P1 after it about 4.7 hours and USD 45 to 55, inside the v10 limits.
+- q0-013 passed and P1 `p1-005` (design v12, with billing-outage handling) started from the chain at about 10:28Z. Forecast: about 4.7 hours, to about 15:10Z, USD 45 to 55, inside the limits (6-hour stage, 4,500 calls, USD 150).
 - **Exposure:** unless the relaunch adds a retry on 429 and 529, P1 will take invalid episodes whenever another lane pushes the workspace to its rate limit (the scale-xl repair, any stage with 100k-token packets) and on any credit dip. P1 runs for nearly five hours, so it will overlap whatever else is launched.
 
 **After P1:** P1 is the last open stage (S1, S2, D3, W and held-out roots are closed). The written successor is proposal 4 in `notes/next-experiments-2026-10-04/README.md` (delayed and missing receipts). It has no study folder. P1 will run for 1.5 to 4 hours, which is the window to write it.
