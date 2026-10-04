@@ -7,7 +7,7 @@ from readiness_contract import compile_item
 from source_bound_policy import compile_source
 from candidate_checks import source_checks
 from study import ANALYST,CHAIR,cost_worksheet,validate,scripted
-from dossier import evaluate
+from dossier import evaluate,build as build_case,digest
 from openrouter_d7 import normalize
 from output_contract_d8 import JSON_ONLY
 MODELS={'SQ-LUNA':('openai/gpt-6-luna',.1,.5),'SQ-SOL':('openai/gpt-6-sol',2.,10.)}
@@ -57,7 +57,12 @@ def validator(item):
     return check
 
 def grade(packet,summary):
-    cases={i['case']['case_id']:i['case'] for i in json.loads((ROOT/'data/influence-native/D5-packet.json').read_text())['cases']};rows=[]
+    spec=json.loads((BASE/'diagnostic-v3.json').read_text());cases={}
+    hashes=json.loads((BASE/'d3-parent-hashes.json').read_text())
+    for i,c in enumerate(spec['cases']):
+        case=build_case(c['family'],i,c['world'],seed=spec['seed'],dossier_spec=c)
+        assert digest(case)==hashes[str(i)]['case'],'original_case_mismatch'
+        cases[case['case_id']]=case;rows=[]
     for item,row in zip(packet['requests'],summary['assignments']):
         r={k:item[k] for k in ('case_id','role')};r['status']=row['status']
         if row['status']=='valid':
