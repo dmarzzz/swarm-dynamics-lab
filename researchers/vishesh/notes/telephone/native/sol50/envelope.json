@@ -5,7 +5,7 @@
   "per_call_reserve_nano": 31744001,
   "model_reserve_nano": 1650688052,
   "infrastructure_reserve_nano": 250000000,
-  "prior_cumulative_nano": 113744701,
-  "total_upper_nano": 2014432753,
+  "prior_cumulative_nano": 450886510,
+  "total_upper_nano": 2351574562,
   "cap_nano": 5000000000
 }

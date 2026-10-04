@@ -36,7 +36,7 @@ class Preparation(unittest.TestCase):
   a=contract.assignments();self.assertEqual(len(a),50);self.assertEqual(len({x['agent_id'] for x in a}),50)
   for i,x in enumerate(a):self.assertEqual(x['parent'],None if i==0 else a[i-1]['agent_id'])
  def test_bounded_envelope_preserves_prior_cost(self):
-  e=contract.envelope();self.assertEqual(e['max_calls'],52);self.assertEqual(e['prior_cumulative_nano'],113744701);self.assertLess(e['total_upper_nano'],e['cap_nano'])
+  e=contract.envelope();self.assertEqual(e['max_calls'],52);self.assertEqual(e['prior_cumulative_nano'],450886510);self.assertLess(e['total_upper_nano'],e['cap_nano'])
  def test_json_fence_only_no_prose_repair(self):
   t=contract.canonical({'handoff':'Evidence as reported; approval unknown.','decision':'HOLD'})
   self.assertEqual(contract.parse(t),contract.parse('```json\n'+t+'\n```'))

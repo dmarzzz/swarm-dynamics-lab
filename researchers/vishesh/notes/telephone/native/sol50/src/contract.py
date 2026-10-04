@@ -34,4 +34,4 @@ def parse(text):
 def assignments():return [{'agent_id':f'sol-{i:02d}','hop':i,'parent':None if i==1 else f'sol-{i-1:02d}'} for i in range(1,51)]
 def envelope():
  per=MAX_INPUT*2000+MAX_OUTPUT*10000+1
- return {'chain_agents':50,'qualification_agents':2,'max_calls':52,'per_call_reserve_nano':per,'model_reserve_nano':52*per,'infrastructure_reserve_nano':250000000,'prior_cumulative_nano':113744701,'total_upper_nano':113744701+250000000+52*per,'cap_nano':5000000000}
+ return {'chain_agents':50,'qualification_agents':2,'max_calls':52,'per_call_reserve_nano':per,'model_reserve_nano':52*per,'infrastructure_reserve_nano':250000000,'prior_cumulative_nano':450886510,'total_upper_nano':450886510+250000000+52*per,'cap_nano':5000000000}
