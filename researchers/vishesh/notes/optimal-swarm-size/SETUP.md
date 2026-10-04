@@ -72,3 +72,10 @@ Current native reconciliation confirms Q-A6 remains latest, 631 original-ledger 
 G3 blocked: the former host is now exclusively allocated to autoresearch-lab. Current policy requires orbital-one queue dispatch. The allowed dedicated owner credential is local-only; delivery to an approved queue worker is unresolved, as is original single-writer ledger continuity if the host changes. No other key, copied spending authority, personal account or claimed host may substitute. G4 native Q-A7 evidence absent. [Preparation status](results/q-a7-preparation/status.json) preserves planned8 / assigned0 / started0 / valid0, zero new cost. No machine claimed or provisioned, no model called. Current owner direction authorizes this one bounded cycle once those exact gates are resolved; it does not waive them.
 
 Private queue request294 records the blocked Q-A7 admission and final execution revision b01fa92999aa8018e41bdcce57c190f477ab3ccf. Queued/blocked is not running. No current study allocation is held.
+
+
+## Q-A7 direct-path amendment, 2026-10-04 UTC
+
+The owner-authorized current-cycle direct path supersedes central-only waiting. The existing central request is closed with a no-dispatch fence, verified before preparation. [Operational amendment](reviews/q-a7-operational-amendment.md) preserves scientific messages, arms, roots, stopping and cumulative budget; exact native experimental requests and visible outputs are now retained alongside scheduler actions. The bounded origin exception requires the specific fenced request and actual owner decision reference. 64 offline tests pass; repository validation has zero errors and five pre-existing citation warnings.
+
+No Q-A7 model calls or allocation yet. All reachable current workers are claimed; the only unclaimed fleet entry has no address in the inspected generated inventory. Coordinate eligible capacity rather than contend with another study. Original ledger migration still needs a verified single-writer transfer; historical source remains authoritative until that transfer. The earlier preparation record remains historical, not current launch evidence.
