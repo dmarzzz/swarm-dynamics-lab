@@ -69,3 +69,7 @@ The owner authorized live D5 execution. Current fleet policy now requires orbita
 The previous host is occupied by another experiment. The central operator must allocate a different idle dedicated machine and migrate the original budget with verified single-writer fencing; never spend from duplicate ledger copies. A read-only check of the existing subledger confirmed cap USD8, reserved USD3.178320, calls198 and remaining USD4.821680. Pricing is unchanged at the pinned rates. No new grant or top-up was created.
 
 The originating session supplies the already-authorized dedicated Keychain credential only after central receiver readiness and fresh claim/source/budget/host verification. The API key remains in process memory and verified SSH stdin. Central readiness, credential acceptance, first native dispatch and terminal result must be recorded separately; queued is not running. No new researcher approval is required.
+
+## Readiness update — 2026-10-04
+
+The owner renewed the live-run request. Deployment now passes all59 scenario tests and the no-model-call preflight against the frozen source and public plan. The original cumulative budget is preserved. Detailed allocation and migration evidence remains in the private fleet record. No D5 model call has started. The central dispatch request remains pending; an owner decision on a direct-dispatch exception is awaited. This changes no experiment input, treatment, endpoint or scientific source pin.
