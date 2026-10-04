@@ -36,25 +36,23 @@ models:
       input_usd_per_million: 0.03
       output_usd_per_million: 0.13
   gpt-6-sol:
-    tag: sol
+    # Follow-up configuration F1 (preregistration.md, "Follow-up configuration F1"): reasoning_effort none.
+    # The pre-registered effort-low configuration ran at source hash f3ffc908 (batches *-002-sol) and
+    # stopped at Q0; its values were: tag sol, attempt 002, reasoning_effort low, otherwise as below.
+    # F1 has its own tag, hence its own batches, hub experiment, ledger file and results directory.
+    tag: solnone
     api: openai
-    # Added in the second code commit with the reference OpenAI adapter (main 8290d7ad). The values
-    # pre-registered in the first commit are unchanged: reasoning_effort low (recorded in every row),
-    # max_completion_tokens 2000, JSON-object mode, 2 requests in flight, cap USD 150.
     canonical_model: gpt-6-sol
-    # Fresh batch names: attempt 001 of this model (code 9461ba1c) failed the launcher's setup because the
-    # selftests read STUDY_MODEL; the operator stopped its chain during S0, before any model call.
-    attempt: '002'
     request_template:              # the reference OpenAI adapter's body: exactly these keys plus messages
       model: gpt-6-sol
-      reasoning_effort: low
+      reasoning_effort: none
       max_completion_tokens: 2000
       response_format:
         type: json_object
     budget:
-      aggregate_usd: 150           # set by dmarz/fleet-monitor (about 1.6x the expected cost)
-      max_output_tokens: 2000      # visible plus reasoning tokens
-      max_input_tokens: 50000      # sanity ceiling (0.87 tokens per byte of the largest request); Opus measured 23,373 tokens per packet
+      aggregate_usd: 150           # F1's own cap, set by dmarz/fleet-monitor
+      max_output_tokens: 2000
+      max_input_tokens: 50000      # sanity ceiling (0.87 tokens per byte of the largest request); measured 0.32 at effort low
       reservation_margin: 2        # cost is computed from the pinned prices, so the byte bound already holds
       retry:
         transport_retries: 2

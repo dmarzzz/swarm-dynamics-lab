@@ -280,9 +280,9 @@ class Models(unittest.TestCase):
         with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5-5'}), self.assertRaises(ValueError) as ctx: study.model()
         self.assertEqual(str(ctx.exception), 'model_not_in_ladder')
         with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol', 'STUDY_RESULTS_DIR': '/r'}):
-            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-002-sol', 'p0-002-sol', 'q0-002-sol', 's1-002-sol'])
+            self.assertEqual([study.batch(s) for s in study.STAGES], ['s0-001-solnone', 'p0-001-solnone', 'q0-001-solnone', 's1-001-solnone'])
             self.assertEqual((study.hub_experiment(), study.params('P0')['backend'], study.route(), study.ledger_path('/l/ledger.jsonl'), str(study.results_dir())),
-                             ('sybil-scarcity-xmodel-sol', 'openai', openai_provider, '/l/ledger-sol.jsonl', '/r/sol'))
+                             ('sybil-scarcity-xmodel-solnone', 'openai', openai_provider, '/l/ledger-solnone.jsonl', '/r/solnone'))
 
     def test_qwen_configuration_is_unchanged_from_the_first_code_commit(self):
         # the Qwen chain launched at code commit 2753b03d; its request, caps and prices must not move
@@ -293,7 +293,7 @@ class Models(unittest.TestCase):
         with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}):
             c = study.adapter_config(); b = c['budget']
             self.assertIs(openai_provider.check_config(c), c)
-            self.assertEqual(c['request_template'], {'model': 'gpt-6-sol', 'reasoning_effort': 'low', 'max_completion_tokens': 2000,
+            self.assertEqual(c['request_template'], {'model': 'gpt-6-sol', 'reasoning_effort': 'none', 'max_completion_tokens': 2000,
                                                      'response_format': {'type': 'json_object'}})
             self.assertEqual(dict(b['prices']), openai_provider.PRICES['gpt-6-sol']); self.assertEqual((b['aggregate_usd'], b['workers']), (150, 2))
             self.assertEqual(b['retry']['retryable_http_status'], [429, 500, 502, 503, 504])
@@ -424,20 +424,20 @@ class WorkerRules(unittest.TestCase):
             stub = rehearse.Stub('reference', credit_after=10)
             with tempfile.TemporaryDirectory() as shared:
                 run, summary, rows, analysis, leaked, ledgers = self.run_s1(stub, clock=clock, expect_fail='provider_billing_stopped', ledger_dir=shared, config=config)
-                self.assertEqual((summary['failed'], summary['resumable'], summary['model_calls'], ledgers), (0, 1, 10, ['ledger-sol.jsonl']))
+                self.assertEqual((summary['failed'], summary['resumable'], summary['model_calls'], ledgers), (0, 1, 10, ['ledger-solnone.jsonl']))
                 self.assertTrue(all(r['model'] == 'gpt-6-sol' for r in rows)); self.assertFalse(leaked)
                 done = [r for r in rows if r['status'] == 'completed']
-                self.assertTrue(all(r['accounting']['reasoning_tokens'] == 300 and r['accounting']['cost_source'] == 'computed_from_pinned_prices' for r in done))
+                self.assertTrue(all(r['accounting']['reasoning_tokens'] == 0 and r['accounting']['cost_source'] == 'computed_from_pinned_prices' for r in done))
                 stub.restore(); units = [r['id'] for r in rows if r['status'] == 'not_started']
-                p = dict(study.params('S1'), batch='s1-002-sol-r1', continuation=1)
+                p = dict(study.params('S1'), batch='s1-001-solnone-r1', continuation=1)
                 run2, summary2, rows2, _, _, _ = self.run_s1(stub, units=units, prior=rows, params=p, ledger_dir=shared, config=config)
                 self.assertEqual((summary2['graded'], summary2['passed']), (14, True))
-                end = openai_provider.Ledger(Path(shared) / 'ledger-sol.jsonl', config['budget']).transact()
-                self.assertEqual((end['calls_by_batch']['s1-002-sol'], end['usage_reported_calls']), (24, 24))
+                end = openai_provider.Ledger(Path(shared) / 'ledger-solnone.jsonl', config['budget']).transact()
+                self.assertEqual((end['calls_by_batch']['s1-001-solnone'], end['usage_reported_calls']), (24, 24))
         hub = FakeHub()
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, {'STUDY_RESULTS_DIR': td, 'STUDY_MODEL': 'gpt-6-sol'}):
             chain.write_status({'source_hash': study.source_hash(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1',
-                                'reason': 'provider_billing_stopped', 'stages': {'S1': {'batch': 's1-002-sol'}}})
+                                'reason': 'provider_billing_stopped', 'stages': {'S1': {'batch': 's1-001-solnone'}}})
             out = io.StringIO()
             with patch('sys.stdout', out): code = chain.resume(sr=hub)
         self.assertNotEqual(json.loads(out.getvalue().strip().splitlines()[-1]).get('reason'), 'last_stop_was_not_a_billing_stop_of_S1')

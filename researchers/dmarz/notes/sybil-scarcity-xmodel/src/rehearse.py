@@ -88,12 +88,13 @@ class Stub:
                 'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer)}}],
                 'usage': {'prompt_tokens': tokens, 'completion_tokens': 40, 'total_tokens': tokens + 40,
                           'completion_tokens_details': {'reasoning_tokens': 0}}}).encode())
-        # OpenAI Chat Completions shape; reasoning at effort low is billed as output (stub: 300 of 340)
+        # OpenAI Chat Completions shape; reasoning tokens (billed as output) only when effort is not none
+        thinking = 0 if d['request_template'].get('reasoning_effort') == 'none' else 300
         return Response(json.dumps({
             'id': 'chatcmpl-rehearsal', 'model': d['canonical_model'], 'object': 'chat.completion',
             'choices': [{'index': 0, 'finish_reason': 'stop', 'message': {'role': 'assistant', 'content': json.dumps(answer), 'refusal': None}}],
-            'usage': {'prompt_tokens': tokens, 'completion_tokens': 340, 'total_tokens': tokens + 340,
-                      'completion_tokens_details': {'reasoning_tokens': 300}, 'prompt_tokens_details': {'cached_tokens': 0}}}).encode())
+            'usage': {'prompt_tokens': tokens, 'completion_tokens': 40 + thinking, 'total_tokens': tokens + 40 + thinking,
+                      'completion_tokens_details': {'reasoning_tokens': thinking}, 'prompt_tokens_details': {'cached_tokens': 0}}}).encode())
 
 
 class FakeClock:
