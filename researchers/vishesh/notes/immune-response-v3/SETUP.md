@@ -66,3 +66,9 @@ This supersedes all earlier prepared/unstarted/allocation blockers above. A4 lau
 ## A5 bounded comparison — approved, readiness pending
 
 Owner approved completing the bounded comparison after reading the A4 findings. The [A5 prospective amendment](freshness-study/README.md#approved-bounded-continuation-a5--prospective) keeps six paired worlds,seed9401,12 episodes and60 calls; no automatic retry/successor or route switch. Preserves388 prior calls andUSD3.185495reserved ofUSD8; extra maximumUSD1.14432. [Offline validation](freshness-study/reviews/a5-offline.json):13tests and complete12-episode scripted audit pass. No native A5 call yet. Current hold: direct-provider readiness unverified; coordinate existing authorized diagnostics and Poietic's normal sim-vishesh release before fresh admission. This is not another owner-approval wait.
+
+### A5 provider hold — fresh external evidence
+
+The [pinned Influence D6 closeout](https://github.com/dmarzzz/swarm-lab/blob/bd5bafd20db01b93d60ddce4c99685f2ce822160/researchers/vishesh/notes/influence-swarms/scenario/reviews/D6-post.md) records a new direct-Anthropic HTTP429 at18:06UTC, no usable Retry-After/usage and immediate stop. It establishes fresh rejection, not billing exhaustion, model incapacity or recovery. Its separate spending ledger is not Immune's.
+
+Disposition: HOLD A5 pending authorized account/provider-side evidence resolving or characterizing the restriction and establishing readiness for the unchanged scope. Preserve current owner approval, sourcec13caa2f, after-A4 ledger and offline tests. A5 calls/reservations remain zero. No machine allocated merely to wait; no undeclared probe, provider/key switch or automatic retry. On readiness, refresh exclusive allocation, runtime/public-plan and budget admission before dispatch.
