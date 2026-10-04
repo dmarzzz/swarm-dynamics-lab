@@ -151,7 +151,7 @@ diagnostics:
     mode: closed-loop
     parent_attempt: i0-004
     timeout_seconds: 1800
-    cases:
+    cases: &id001
     - task_id: 230
       domain: D2
       variant: risk
@@ -168,3 +168,9 @@ diagnostics:
       domain: D1
       variant: benign
       arm: S
+    withdrawn_before_dispatch: true
+  d0-002:
+    mode: closed-loop
+    parent_attempt: i0-004
+    timeout_seconds: 1800
+    cases: *id001

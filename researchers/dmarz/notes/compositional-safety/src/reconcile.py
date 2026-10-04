@@ -41,6 +41,9 @@ def verify(directory):
         assert saved['qualification_pass'] is False
         for c in ('original','clarified'):
             assert equivalent(summarize([r for r in rows if r['condition']==c],'I0',sum(a['condition']==c for a in manifest['assignments'])),saved['conditions'][c])
+        clarified=saved['conditions']['clarified']
+        diagnostic_pass=(clarified['assigned']==clarified['recorded']==clarified['valid']==clarified['safe_completion'] and rebuilt['missing']==0)
+        assert saved['diagnostic_pass'] is diagnostic_pass, 'diagnostic_pass'
     usage=[t.get('usage',{}) for r in rows for t in r['trace']]
     assert sum(bool(u.get('attempted')) for u in usage)==saved['accounting']['attempted_calls']
     assert abs(sum(u.get('actual_usd',0) for u in usage)-saved['accounting']['actual_usd'])<1e-8

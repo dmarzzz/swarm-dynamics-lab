@@ -12,7 +12,7 @@ def assignments(stage, attempt=None):
     d=common.design()
     if stage == 'I0':
         diagnostic = d['diagnostics'].get(attempt, {})
-        if diagnostic.get('mode') != 'closed-loop': raise ValueError('unregistered_diagnostic')
+        if diagnostic.get('mode') != 'closed-loop' or diagnostic.get('withdrawn_before_dispatch'): raise ValueError('unregistered_diagnostic')
         rows = []
         for case in diagnostic['cases']:
             if case['domain'] not in ('D1','D2') or case['task_id'] >= d['holdout_min_task_id']: raise ValueError('heldout_task')
@@ -50,6 +50,7 @@ def prepare(stage, attempt, qualification=None):
            backend='anthropic' if stage=='I0' else common.design()['stages'][stage]['backend'],assignments=aa,
            plan_url=registration['url'],registered_tldr=registration['registered_tldr'],
            qualification=str(qualification) if qualification else None)
+    if stage=='I0': m['parent_attempt']=common.design()['diagnostics'][attempt]['parent_attempt']
     common.dump(out/'manifest.json',m)
     return out
 

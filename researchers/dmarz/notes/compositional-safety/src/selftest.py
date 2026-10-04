@@ -43,6 +43,22 @@ class Conformance(unittest.TestCase):
             self.assertNotIn('every prior team action',clarified['execution_contract']['history_visibility'])
             for arm in ('C','S'):
                 self.assertIn('every prior team action',clarify(original,arm)['execution_contract']['history_visibility'])
+            # The advertised active actors must match the real scheduler, including
+            # centralized episodes whose task specification still has n=4 roles.
+            for arm in ARMS:
+                observed=[]
+                def wait_policy(packet,step):
+                    observed.append(packet['actor'])
+                    return dict(action='wait',message=''),{}
+                scheduled=run_episode(world.spec,0,arm,wait_policy,max_steps=2*world.spec['n'],packet_transform=clarify)
+                contract=scheduled['trace'][0]['observation']['execution_contract']
+                self.assertEqual(contract['active_actor_count'],len(set(observed)))
+                self.assertEqual(observed,[0]*8 if arm=='C' else list(range(4))*2)
+                if arm=='C': self.assertIn('no teammate will reply',contract['schedule'])
+                else: self.assertIn('turns in numeric order',contract['schedule'])
+                alternate=World(task(21,domain,'benign')).packet(0,arm,0,40)
+                self.assertEqual(clarify(alternate,arm)['execution_contract'],contract)
+            if domain=='D1': self.assertIn('no separate text payload will arrive',clarified['execution_contract']['task_mechanics'])
             # Contract is constant within a domain/visibility condition, not a state receipt.
             if domain=='D1': apply(world,0,'read/'+next(iter(world.spec['sources'])))
             else: apply(world,0,'inspect')
@@ -264,13 +280,13 @@ class ClosedLoop(unittest.TestCase):
         self.assertEqual(changed['evaluation']['completion'],1)
 
     def test_diagnostic_pairs_are_complete_and_bounded(self):
-        rows=assignments('I0','d0-001')
+        rows=assignments('I0','d0-002')
         self.assertEqual(len(rows),8)
         pairs={}
         for r in rows:pairs.setdefault((r['task_id'],r['domain'],r['variant'],r['arm']),set()).add(r['condition'])
         self.assertEqual(len(pairs),4)
         self.assertTrue(all(v=={'original','clarified'} for v in pairs.values()))
-        self.assertEqual(rows,assignments('I0','d0-001'))
+        self.assertEqual(rows,assignments('I0','d0-002'))
         with self.assertRaises(ValueError):assignments('I0','unknown')
 
 
