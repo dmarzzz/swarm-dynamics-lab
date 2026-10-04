@@ -1,5 +1,5 @@
 {
-  "assessed_at": "2026-10-04T17:13:09.809322+00:00",
+  "assessed_at": "2026-10-04T17:17:15.731511+00:00",
   "status_kind": "in-progress snapshot; not a terminal cycle verdict",
   "sources": "Published scientific records plus owning-task operational reports. Related revisions may identify an execution, review or repair; exact native execution sources remain in each study record. None is a live admission receipt.",
   "studies": [
@@ -58,22 +58,22 @@
     },
     {
       "study": "Poietic",
-      "status": "native_failed_repair_underway",
-      "scientific_evidence": "poietic-agents/reviews/S0-02-launch-loop.md",
-      "evidence_sha256_at_snapshot": "28daedb361c0841a6e1a9095603a2beacea05503d89d32b4100ada2b0bece3e9",
+      "status": "reviewed_failed_interface",
+      "scientific_evidence": "poietic-agents/reviews/S0-02-post.md",
+      "evidence_sha256_at_snapshot": "6f7fd89edf8485a0191e47da25f96dca3d060f3035f626b00012b8813e1dad21",
       "observed_or_last_reported": "One returned HTTP200 answer failed strict JSON/action parsing;143 unstarted. Twelve artifact hashes verified; original ledger reconciled and allocation released.",
-      "next_action": "Concrete36-decision/3-fresh-root diagnostic, strict contract prompt and billing-before-parsing repair implemented;106 offline tests reported. Sanitized public publication underway, raw evidence retained privately. No successor dispatched.",
+      "next_action": "Strict prompt/billing repair and complete36-decision diagnostic runner prepared;106 offline checks reported. Public sanitized review published, full native payloads preserved privately. Total cumulative exposure USD0.562186183 of USD2. Changed diagnostic requires owner decision; no dispatch.",
       "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
       "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
-      "reported_related_revision": "f3621c649311f4e7a6c110c1b56f97b818927f9e"
+      "reported_related_revision": "23241915924ebe09ad68c4b9b868c647cd08fc36"
     },
     {
       "study": "Right Dissenter",
-      "status": "q5_passed_h5_admission_pending",
+      "status": "q5_reviewed_pass_h5_running",
       "scientific_evidence": "dissent/rd5/DIRECT-ACTIVATION.md",
       "evidence_sha256_at_snapshot": "f967b76e1f3478915c3905bc0fcf424aaecb2b06c9cce6fa3ceec62f9086cb26",
       "observed_or_last_reported": "Q5-A2:24 assigned/started/terminal/valid/graded; raw and card12/12 correct, including6 uncertainty cards. All24 requests/outputs audited; artifact readback matched. Worker and relay stopped. H5 not started yet.",
-      "next_action": "Complete Q5 scientific closeout and fresh conditional H5 admission on the still-valid exclusive allocation. Q5 is qualification at a ceiling, not evidence of card benefit. New USD0.000726138 measured; original452-call ledger and USD0.021378589 exposure retained.",
+      "next_action": "H5 started after scientific Q5 closeout and fresh conditional admission. First reported ledger progress:2 completed calls and1 inflight; maximum36. Owning task monitors and completes post-mortem; no new scope/retries.",
       "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
       "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
       "reported_related_revision": "94fcd006"
@@ -91,14 +91,14 @@
     },
     {
       "study": "Healing",
-      "status": "native_completed_instrument_invalid",
-      "scientific_evidence": "healing-helping-hands/c4/ADMISSION-POST.md",
-      "evidence_sha256_at_snapshot": "a5f7570ab6bf37e11fa58fe157c9f6c1c341091aa9ad571e90d9ae351524024e",
+      "status": "reviewed_invalid_qualification",
+      "scientific_evidence": "healing-helping-hands/c4/S0-POST.md",
+      "evidence_sha256_at_snapshot": "1099a451ca2c65305a77d277bb960464561b533de9c281a6b552491698a0f9cb",
       "observed_or_last_reported": "60 reports and180 model calls completed without transport/schema failure. Jev60/60 and each Qwen40/60; trace audit found expected-label/family leakage in method names.",
-      "next_action": "S1 stopped despite numerical gate; allocation released after archive readback and ledger reconciliation. Complete scientific post-mortem and metadata-blind repair/validation. Original2179 entries unchanged;2239 total, USD0.042017472 paid plus0.001344 held. New qualification requires a changed-plan decision.",
+      "next_action": "C5 metadata-blind fixture repair implemented;5 context tests independently rerun. Proposed60 instances/12 templates,180 calls, qualification only; original ledger retained and allocation released. Await changed-plan decision; no C5 dispatch.",
       "observation_provenance": "Published owning-study evidence and latest owning-task report; coordinator readback scope recorded separately.",
       "evidence_hash_scope": "Named file in coordinator checkout; may precede latest owning-task operational report.",
-      "reported_related_revision": "1adeb586"
+      "reported_related_revision": "98efa0ed"
     },
     {
       "study": "Immune",

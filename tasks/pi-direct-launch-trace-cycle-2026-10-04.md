@@ -24,4 +24,8 @@ Coordinate direct execution of existing admitted study scopes, revise stopped de
 - [x] Record direct-launch authority without exposing owner prompts or private resources.
 - [x] Incorporate Dmarz trace-review lessons in the shared workflow.
 - [x] Obtain evidence-based Quorum and Phantom revisions.
-- [ ] Reconcile actual launch/results or remaining admission blockers for eight prepared scopes.
+- [x] Reconcile actual launch/results or remaining admission blockers for eight prepared scopes.
+
+## Coverage note
+
+Seven studies reached native execution through exclusive direct allocations; Optimal Size is held on actual repeated direct-provider HTTP429 evidence, not central approval. Six native attempts are reviewed and closed (Healing is instrument-invalid despite its numerical score); Right Dissenter's Q5 passed and its already-approved conditional H5 is running in the owning task. The timestamped cycle report preserves that live handoff rather than declaring H5 complete. Quorum/Phantom revisions and all six failure-driven offline repairs are linked. No material successor was launched, budget reset, unrelated claim removed or quota-exceeding machine created.

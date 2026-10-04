@@ -23,17 +23,17 @@ Private operator-session transcript collection is a separate workflow. It is not
 
 Direct dispatch has been exercised. Seven studies reached native execution. Right Dissenter passed its bounded Q5 qualification; the other six attempts did not establish uncontaminated qualification. Released machines have been assigned sequentially. The approved account is at its current droplet quota, so a working credential alone cannot create another machine. No other researcher's claim was released or worker deleted to make room.
 
-Snapshot: **2026-10-04 17:13 UTC**. Counts below are observed, not planned. See [structured status](status.json) for provenance and source-file hashes; an operational report can be newer than its published scientific review.
+Snapshot: **2026-10-04 17:17 UTC**. Counts below are observed, not planned. See [structured status](status.json) for provenance and source-file hashes; an operational report can be newer than its published scientific review.
 
 | Study | Execution / sample observed | Assessment | Next action |
 |---|---|---|---|
 | Antsy | 5 valid OCR outputs, 1 timeout, 34 unstarted; 2 complete pairs | Reviewed; qualification incomplete | Timing/timeout retention repair tested; bounded latency plan prepared |
 | Theseus | 1 HTTP429, 203 unstarted; no valid learner or executor outcome | Reviewed; transport failure, cause unresolved | Error observability repaired; retain unresolved reservation |
 | Influence | 24 failed logical requests / 48 transport attempts; no returned answers | Reviewed; transport failure, exact codes lost | Tested error retention/circuit breaker; bounded two-contract proposal |
-| Poietic | 1 returned answer rejected by parser, 143 unstarted | Action-contract failure before environment execution | Explicit prompt, billing retention and diagnostic runner repaired;106 offline tests reported |
-| Healing | 60 reports / 180 calls; Jev60/60, Qwen40/60 each | Instrument invalid: method names leaked evaluator labels/families | S1 stopped; metadata-blind repair and new qualification plan underway |
+| Poietic | 1 returned answer rejected by parser, 143 unstarted | Reviewed; action-contract failure before environment execution | Explicit prompt, billing retention and diagnostic runner repaired;106 offline tests reported |
+| Healing | 60 reports / 180 calls; Jev60/60, Qwen40/60 each | Reviewed; instrument invalid: expected labels leaked in names | S1 stopped; metadata-blind repair tested and qualification plan prepared |
 | Immune | 1 HTTP429; no response or completed controller episode | Reviewed; transport failure, cause unresolved | Error observability repaired; no repeated probe or A5 |
-| Right Dissenter | Q5:24 valid responses; raw and card12/12 correct | Qualification passed; no card advantage at ceiling | Complete Q5 review and fresh conditional H5 admission |
+| Right Dissenter | Q5:24 valid responses; raw and card12/12 correct | Qualification reviewed and passed; no card advantage at ceiling | H5 has started under the unchanged conditional scope; result pending |
 | Optimal Size | No Q-A7 calls or claim; original ledger preserved | Operational hold: repeated direct-route failures | Resume on relevant recovery evidence; first-failure handling fixed offline |
 | Quorum | 48 retained valid historical answers; all 11 graded misses inspected | Old context comparison confounded; simple control solves development set | Acquire a defensible residual task before proposing native evaluation |
 | Phantom | 140 retained request/output pairs; 6 manually inspected S1 cases | Revised decision problem solved by exact Bayes | Define an application-specific model role before spending |
@@ -67,6 +67,8 @@ These are implemented scenario/baseline improvements and revised conditional pla
 | Antsy | [Post-mortem](../antsy-targeted-v8/reviews/Q0-attempt-1-post.md) · [versioned repair and D1 plan](../antsy-targeted-v8/execution-repair-v1/README.md) |13 fault tests rerun here; proposed6 cold calls on3 reused receipts. Native latency remains unknown. |
 | Theseus | [Actual trace review](../swarm-of-theseus/execution-diagnostic/results/A1/TRACE-REVIEW.md) · [safe error diagnostics](../swarm-of-theseus/execution-diagnostic/A1-DIAGNOSTICS-REPAIR-PLAN.md) |23 checks rerun here with resource warnings treated as errors; no new provider request. |
 | Influence | [D5 post-mortem](../influence-swarms/scenario/reviews/D5-post.md) · [D6 preparation](../influence-swarms/scenario/ITERATION-06-PREP.md) |10 acquisition tests rerun here; exact rejected response bodies now survive validation. Proposed two-contract maximum USD0.097280, no dispatch. |
+| Poietic | [S0-02 post-mortem](../poietic-agents/reviews/S0-02-post.md) · [D0-01 diagnostic](../poietic-agents/reviews/S0-02-repair-plan.md) |106 offline checks reported, including full worker fault rehearsals. Proposed36 decisions on3 paired generator roots; no diagnostic dispatch. |
+| Healing | [C4 post-mortem](../healing-helping-hands/c4/S0-POST.md) · [C5 proposal](../healing-helping-hands/c5/PLAN.md) |5 complete-context checks rerun here. Proposed60 instances from12 authored templates,180 calls; no claim of60 independent semantic problems or automatic main stage. |
 | Immune | [A4 post-mortem](../immune-response-v3/freshness-study/reviews/a4-post.md) · [diagnostic checks](../immune-response-v3/freshness-study/reviews/http-diagnostics-validation.json) |13 checks reported; full new USD0.006006 reservation retained because actual charge is unknown. |
 | Optimal Size | [Route assessment and repair](../optimal-swarm-size/reviews/q-a7-route-assessment.md) |65 checks reported; HTTP failure during work now stops scheduling as promised. No Q-A7 model call. |
 
