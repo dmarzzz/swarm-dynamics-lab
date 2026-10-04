@@ -2,8 +2,8 @@
 #   python3 .flightdeck/fd.py check --strict .
 manifest: 1
 project: Swarm Dynamics Lab
-summary: Shared research workspace where a hackathon team's agents catalogue prior work on swarm dynamics, gate hypotheses
-  behind reviewed surveys, and run experiments.
+summary: Research lab run by the swarm it studies, where three researchers ran their own AI agents against one repo on 3-4
+  October 2026 to study how swarms of LLM agents get attacked, captured and repaired.
 artifacts:
   - id: repo
     category: codebase

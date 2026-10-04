@@ -44,7 +44,7 @@ export default function App() {
   useEffect(() => { window.scrollTo({ top: 0 }); }, [route.path]);
   useEffect(() => {
     const cur = NAV.find((n) => n.path === route.path);
-    document.title = cur && cur.path !== '/' ? `${cur.label} | Swarm Lab` : 'Swarm Lab, a research observatory';
+    document.title = cur && cur.path !== '/' ? `${cur.label} | Swarm Dynamics Lab` : 'Swarm Dynamics Lab, a research observatory';
   }, [route.path]);
 
   const gen = state.status === 'ready' ? parseT(state.data.summary.generated_at) : null;
@@ -54,9 +54,9 @@ export default function App() {
       <a className="skip" href="#main">Skip to content</a>
       <header className="masthead">
         <div className="wrap">
-          <a className="brand" href="#/" aria-label="Swarm Lab overview">
+          <a className="brand" href="#/" aria-label="Swarm Dynamics Lab overview">
             <Mark className="brand-mark" />
-            <span className="brand-name">Swarm Lab</span>
+            <span className="brand-name">Swarm Dynamics Lab</span>
             <span className="brand-sub">research observatory</span>
           </a>
           <nav className="nav" aria-label="Views">

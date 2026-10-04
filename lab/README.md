@@ -1,14 +1,20 @@
 # lab: coordination
 
-This folder is the machinery that ran the swarm of research agents. Three researchers each ran several
-agents against this repository at the same time, and everything those agents needed to divide the work and
-stay out of each other's way is here. The research itself is in the numbered folders at the repository root
-(`1-library/` to `5-experiments/`).
+The coordination machinery of [Swarm Dynamics Lab](../README.md). This folder holds the task board, each
+researcher's directives and inbox, the agents' status files and the source intake. Its one rule is that an
+agent writes only to files it owns, plus new files.
 
-The rules for all of it are in [AGENTS.md](../AGENTS.md). The servers the agents ran on are described in
-`agentops/` at the repository root.
+## What this is
 
-## What is here
+The lab folder is how many agents share one repo without overwriting each other. Three researchers each ran
+several agents against this repository at the same time, and everything those agents needed to divide the
+work is here. The research itself is in the numbered folders at the repository root (`1-library/` to
+`5-experiments/`). The rules for all of it are in [AGENTS.md](../AGENTS.md).
+
+## What is in here
+
+On 4 October 2026 the board held 290 tasks (216 done, 27 claimed, 47 open), and 159 agents had registered a
+status file under the three researchers dmarz, shadow and vishesh.
 
 | Path | What it is |
 |---|---|
@@ -19,7 +25,7 @@ The rules for all of it are in [AGENTS.md](../AGENTS.md). The servers the agents
 | [`templates/`](templates/) | The templates `scripts/lab.py new ...` fills for library entries, surveys, hypotheses, experiments, reviews, tasks, agents and researchers. |
 | [`STATUS.md`](STATUS.md) | Generated dashboard of library counts, tasks, surveys, hypotheses, experiments and agents. CI regenerates it on every push. Do not edit it. |
 
-## The task board and claiming
+### The task board and claiming
 
 A task is a file in `tasks/`. Anyone may create one with `python3 scripts/lab.py new task <id> --agent <id>`.
 Tasks are the only broadcast channel between agents.
@@ -34,7 +40,7 @@ status file says `state: working`. A claim with no heartbeat for 3 hours is stal
 over. An agent finishes with `lab.py done <task-id> --output <paths>` or hands the task back with
 `lab.py release <task-id> --note "..."`.
 
-## Researcher folders
+### Researcher folders
 
 - `README.md`: the human's directives. Agents read it at the start of every session, and it overrides the
   task board. Agents do not edit the directives.
@@ -48,10 +54,24 @@ over. An agent finishes with `lab.py done <task-id> --output <paths>` or hands t
 A researcher's studies and working notes are in `5-experiments/studies/<name>/`. Only that researcher's
 agents write to either folder.
 
-## Source intake
+### Source intake
 
 Finding sources is split from cataloguing them. Collectors (`scripts/collect.py`) pull candidate sources
 from X, blogs, feeds and seed lists. The batcher drops anything already in the library, groups the rest by
 source and topic, and writes small batches to `candidates/`. `scripts/batches.py publish` opens one GitHub
 issue per batch. An agent claims an issue, writes a library entry for each item, and closes the issue.
 [PIPELINE.md](PIPELINE.md) has the commands and the 90-minute stale rule for batch claims.
+
+## How to add to it
+
+- A new agent registers with `python3 scripts/lab.py new agent --agent <researcher>/<tool>-<n>` and starts
+  the sync timer described in [AGENTS.md](../AGENTS.md#the-sync-timer).
+- A new task is `python3 scripts/lab.py new task <id> --agent <id>`. To reach another researcher's agents,
+  add a line to their `inbox.md` or open a task with `for: <them>`.
+- `python3 scripts/lab.py check` validates the whole repo. CI runs it on every push.
+
+## Where it goes next
+
+The work the board hands out lands in the numbered folders, starting with
+[`1-library/`](../1-library/README.md). The fleet the experiments ran on is described by the template in
+[`agentops/`](../agentops/README.md).

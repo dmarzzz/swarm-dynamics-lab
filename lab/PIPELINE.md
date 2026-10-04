@@ -1,13 +1,17 @@
 # PIPELINE.md: collectors -> batches -> claimable issues
 
-The problem this solves: every researcher's agents were re-discovering the same sources, and only some of us
-can read X at all. This pipeline splits **finding** sources from **cataloguing** them. Anyone with an API key
-runs a collector; the raw hits are deduplicated against the library and cut into small single-topic batches;
-each batch becomes a GitHub issue; any agent on the team claims an issue and turns its items into library
-entries to the normal AGENTS.md quality bar.
+The source intake of [Swarm Dynamics Lab](../README.md). The pipeline feeds phase 1, the library in
+[`1-library/`](../1-library/README.md), and every entry it produces has to meet the same bar as any other
+library entry in [`AGENTS.md`](../AGENTS.md).
+
+The problem the pipeline solves: every researcher's agents were re-discovering the same sources, and only
+some of us can read X at all. The pipeline splits **finding** sources from **cataloguing** them. Anyone with
+an API key runs a collector; the raw hits are deduplicated against the library and cut into small
+single-topic batches; each batch becomes a GitHub issue; any agent on the team claims an issue and turns its
+items into library entries to the normal AGENTS.md quality bar.
 
 It feeds the `scan` phase. It does not replace the task board, the survey gate or anything else in
-[`AGENTS.md`](../AGENTS.md). A batch issue is a unit of scan work, nothing more.
+[`AGENTS.md`](../AGENTS.md). A batch issue is a unit of scan work.
 
 ```
 collect.py x-search / apify / seed      ->  data/candidates-raw/*.jsonl      (local, git-ignored)

@@ -1,8 +1,12 @@
 # agentops (template)
 
-This folder is a template of the fleet setup that ran the lab's multi-agent experiments. The original
-lives in a private repo; this copy keeps the structure and the code and replaces every identifier with
-a placeholder.
+This folder is a template of the fleet that ran the experiments of [Swarm Dynamics Lab](../README.md), a
+research lab run by the swarm it studies. It comes third in the repo, after the research in the numbered
+folders and the coordination machinery in [`lab/`](../lab/README.md). The original lives in a private
+repo. This copy was lifted from that working setup and scrubbed: it keeps the structure and the code and
+replaces every identifier with a placeholder. The lab will not run the template end to end, so it needs
+some fixing up before it runs. [Bringing it up](#bringing-it-up) lists what to fill in, what to run first
+and what is known to be rough.
 
 What it gave the team:
 
@@ -49,8 +53,68 @@ What it gave the team:
 - The CI workflow that ran `agentops.py check` on every pull request and rejected edits to another
   person's file. `agentops.py check --author` still has that logic.
 
-All names, addresses, domains, account ids and keys were replaced with placeholders. This copy has not
-been run end to end after scrubbing, so expect to fix small things.
+All names, addresses, domains, account ids and keys were replaced with placeholders.
+[Bringing it up](#bringing-it-up) lists each placeholder and what else needs fixing before the template
+runs.
+
+## Bringing it up
+
+This section is written for an agent that has been handed this folder and asked to make it run. The
+scrubbed copy has not been run end to end. Treat the steps in
+[Recreate it](#recreate-it) as the intended path and this section as the list of things to fix on the way.
+
+### What was replaced and must be filled in
+
+| Placeholder | Where | What to put there |
+|---|---|---|
+| Example people | `people/alice.yml`, `people/bob.yml` (shape in `people/_template.yml`) | Delete both and add real people with `python3 scripts/agentops.py add-person <handle> --github <login>`. Their ssh keys and age keys contain `REPLACE_ME`. |
+| Example claim | `claims/alice-boids-sweep.yml` | Delete it. |
+| Fleet file | `fleet.example.yml` | Copy to `fleet.yml` and describe real servers. The example owners are `alice` and `bob`, and the manual server's address `203.0.113.10` is a documentation address. |
+| Your handle and cloud token | `.env.example` | Copy to `.env`, set `AGENTOPS_ME` and `DIGITALOCEAN_TOKEN`. |
+| Age recipients | `.sops.yaml.example` | The recipients are `age1REPLACE_ME_alice,age1REPLACE_ME_bob`. Put each person's age public key in the `age:` field of their people file and run `task secrets:sync`, which writes `.sops.yaml`. |
+| Hub token | `secrets/hub.sops.env` (not in the template) | Create it with `task secrets:edit -- secrets/hub.sops.env` and a line `SWARM_HUB_TOKEN=<long random string>`. Without the file, the token and backup tasks in the hub role are skipped. |
+| Backup bucket | the same `secrets/hub.sops.env` | `SPACES_ACCESS_KEY`, `SPACES_SECRET_KEY`, `SPACES_ENDPOINT` and `SPACES_BUCKET` for an S3-compatible bucket. Optional. |
+| Public read host | `hub_public_read_host` in `ansible/roles/hub/defaults/main.yml` | Empty by default, which serves nothing publicly. Set it to a DNS name that points at the hub only if a public page needs to read the hub. The hub role takes the matching read token from `SWARM_HUB_READ_TOKEN` in `secrets/hub.sops.env`. |
+| Pages project prefix | `scripts/deploy-pages.sh` | Every Cloudflare Pages project name is forced to start with `swarm-`. Change the prefix if you want another, and create `secrets/cloudflare.sops.env` with `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. Only needed for `task pages`. |
+| Research repo slug | `docs/REPORTING.md` | Replace `<your-org>/swarm-dynamics-lab` with the repo your experiments live in. |
+| Research repo checkout | `scripts/example-launcher.py` | Set `REPO_DIR` (now `/srv/swarm/swarm-dynamics-lab`), `WORKER_CMD`, `SECRETS_FILE` and `SECRET_KEYS` for your experiment. |
+
+### What to run first to find breakage
+
+Run these before creating any server. None of them spends money.
+
+```bash
+cp fleet.example.yml fleet.yml
+task check                                  # the same as: python3 scripts/agentops.py check
+(cd tofu && tofu init -input=false && tofu validate)
+(cd ansible && ansible-playbook --syntax-check playbooks/provision.yml playbooks/access.yml playbooks/bootstrap.yml)
+```
+
+`task plan` is the next step once those pass. It shows what `task up` would create and still spends
+nothing.
+
+### Known rough edges
+
+- `python3 scripts/agentops.py check` stops with a `FileNotFoundError` traceback until `fleet.yml` exists.
+  Copy `fleet.example.yml` first.
+- With the example files in place, `check` reports 4 errors, all from the placeholder ssh and age keys in
+  `people/alice.yml` and `people/bob.yml`. The errors go away when those files are replaced.
+- `tofu/` has no `.terraform.lock.hcl`, because the lock file was dropped. `tofu validate` fails until
+  `tofu init` has run, and `tofu init` picks the newest providers that `tofu/versions.tf` allows
+  (digitalocean `~> 2.40`, tls `~> 4.0`, local `~> 2.5`), which may be newer than the ones the original ran.
+- The three playbooks pass `ansible-playbook --syntax-check` once `fleet.yml` exists and the collections in
+  `ansible/requirements.yml` are installed. A syntax check does not run a role, so the roles are untested
+  after scrubbing.
+- `task setup` installs Ansible, the collections, OpenTofu, sops and age on macOS. On Linux it only prints
+  a reminder for the last three. It does not install Task itself, which the `Taskfile.yml` needs.
+- `docs/REPORTING.md` describes experiment folders as `experiments/<id>/` in the research repo. In this
+  repo the studies live under `5-experiments/studies/<researcher>/<study>/`, and the worker template it
+  mentions is `lab/templates/experiment-worker/`.
+- The hub's Caddyfile (`ansible/roles/hub/templates/Caddyfile.j2`) asks for a short-lived certificate for
+  the server's bare IP address. Certificate issuance was not re-tested after scrubbing.
+- The CI workflow that ran the check on pull requests was left out. `python3 scripts/agentops.py check
+  --author <login>` holds the logic if you want to wire it back in.
+- `task hub:open` uses the macOS `open` command and prints the address instead on other systems.
 
 ## Recreate it
 

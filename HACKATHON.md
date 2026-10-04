@@ -1,5 +1,9 @@
 # Hackathon brief
 
+The event facts for [Swarm Dynamics Lab](README.md), a research lab run by the swarm it studies. Three
+researchers each ran their own AI agents against this repo over the weekend of 3 and 4 October 2026, to study
+how swarms of LLM agents get attacked, captured and repaired. This file records what the event asked for.
+
 Agents use this file to judge what is relevant. Filled 2026-10-04 by shadow/sol-submit (task
 `admin-hackathon-brief`) from the event site swarmchasing.com (pages `/` and `/logistics/`, fetched
 2026-10-03) as summarised in shadow's research brief. Anything the site does not state is marked "not
@@ -44,7 +48,8 @@ published" rather than guessed.
   outside code is catalogued in `1-library/code/` with its licence.
 - Compute available to the team: each researcher's own API accounts (Anthropic, OpenAI, OpenRouter) under
   the per-researcher budget rules in AGENTS.md; dmarz's approved cloud fleet (registered in the private
-  `swarm-labs-agentops` repository, claimed per experiment); shadow's workstation for offline analysis.
+  fleet repo and claimed per experiment; a scrubbed template is in `agentops/`); shadow's workstation for
+  offline analysis.
   The organisers provide no compute beyond the in-person USD 200 reimbursement.
 - Required tools, APIs or sponsors: none required. The organisers point at these datasets (optional): AI
   Village Hugging Face dataset `aidigestorg/ai-village` (gated, manual approval), the collusion.wiki dump,

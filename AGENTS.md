@@ -10,9 +10,10 @@ lives under `lab/`. See [Layout](#layout).
 
 ## What this repo is
 
-swarm-dynamics-lab is a shared research workspace for a team working on swarm dynamics at a hackathon. Several humans
-each run several agents, and all of those agents read and write here at the same time. The repo holds
-everything: the catalogue of prior work, the surveys built from it, hypotheses, experiments, results, and
+Swarm Dynamics Lab is a research lab run by the swarm it studies. Three researchers each run their own AI
+agents against this one repo to study how swarms of LLM agents get attacked, captured and repaired, and all
+of those agents read and write here at the same time. The repo is the research record and the machinery that
+produced it: the catalogue of prior work, the surveys built from it, hypotheses, experiments, results, and
 the task board that coordinates who does what.
 
 The work runs in phases, and the order is enforced:
@@ -357,7 +358,7 @@ merely because this instruction was added.
 ## Machine allocation for vishesh's experiments
 
 Owner directive, 2026-10-04 UTC: before every new experiment launch, obtain a fresh, dedicated
-machine allocation from Dmarz's machine list in the private `swarm-labs-agentops` fleet. This applies
+machine allocation from Dmarz's machine list in the private fleet repo. This applies
 to exploratory/model qualification as well as formal experiments, and to new versions launched as
 separate experiments. A new checkout, container or process on another experiment's host does not
 satisfy this requirement. Offline local unit tests do not need a fleet allocation.
@@ -388,8 +389,8 @@ Before any create/apply, match the credential's actual account/team to an explic
 from the established Swarm Lab provisioner, verify the infrastructure state/project and exact resource
 plan, and fail closed if identity or authorized access is unavailable. A fleet owner field, host name,
 working credential or local default context is not account authorization. Record verification privately;
-never publish account identifiers or secrets. Do not relaunch the mistaken deployment. The original
-unused sim-dmarz-3 claim and the mistaken sim-immune-response deployment remain historical records.
+never publish account identifiers or secrets. Do not relaunch the mistaken deployment. The
+unused claim on the originally claimed machine and the mistaken deployment remain historical records.
 
 The detailed launch checklist is
 [5-experiments/studies/vishesh/experiment-machine-workflow.md](5-experiments/studies/vishesh/experiment-machine-workflow.md).
