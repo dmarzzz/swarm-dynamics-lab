@@ -1,6 +1,6 @@
 # Experiment setup record: sybil-newcomer-sonnet v1
 
-Status: S0 passed on the fleet; Q0 and S1 BLOCKED on review (see G0). Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
+Status: S0 passed on the fleet; cross-researcher review waived by dmarz 2026-10-04 (see G0); Q0 admitted. Follows [the setup runbook](../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Historical receipts and attempts are preserved below.
 
 ## Ownership and question
 
@@ -15,10 +15,10 @@ Status: S0 passed on the fleet; Q0 and S1 BLOCKED on review (see G0). Follows [t
 
 | Gate | Status | Evidence, timestamp and assessor | Blocker / next action |
 |---|---|---|---|
-| G0 Question and applicable research gates | blocked | 2026-10-04 dmarz/newcomer-sonnet: question and claim boundary written; review neither performed nor waived | dmarz waiver or cross-researcher review before Q0 |
+| G0 Question and applicable research gates | waived by owner | 2026-10-04 ~05:40Z, in the operating session (dmarz/orchestrator-2): proposed text "I waive cross-researcher review for sybil-newcomer-sonnet, sybil-scale-sonnet and sybil-budget-sonnet ..."; dmarz replied "Yes I approved go for it", then ~06:00Z "Go go go". Owner waiver only: no independent review was performed. | none |
 | G1 Plan written before implementation | pass | README (public plan sections), preregistration.md, design.yaml committed before any fleet stage | — |
 | G2 Instrument and offline checks | pass | 8/8 selftests; local S0 198/198 valid, qualification passed; Q0/S1 assignment IDs, packet hashes, expected answers and dispatch order equal to sybil-newcomer-api (digests Q0 3618407e334e40da, S1 036295a938cf8235) | — |
-| G3 Current attempt admission | S0 only | [fleet-s0-001-pre](reviews/fleet-s0-001-pre.md); launcher checked exclusive claim and immutable public plan (README sha256 7eeb4c0d…) at 5ad4d252 | Q0 admission blocked by G0 |
+| G3 Current attempt admission | S0 only | [fleet-s0-001-pre](reviews/fleet-s0-001-pre.md); launcher checked exclusive claim and immutable public plan (README sha256 7eeb4c0d…) at 5ad4d252 | Q0 admitted after G0 owner waiver |
 | G4 Qualification before scientific escalation | pending | | Q0 must pass unchanged thresholds |
 | G5 Reconciliation and closeout | pending | | |
 
