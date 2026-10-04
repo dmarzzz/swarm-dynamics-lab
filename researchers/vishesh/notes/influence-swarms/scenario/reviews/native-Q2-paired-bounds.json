@@ -15,6 +15,7 @@
   "per_arm": {
     "team_ballots": {
       "assigned": 3,
+      "observed_terminal": 3,
       "valid": 3,
       "acceptable": 2,
       "avoidable_deferrals": 0,
@@ -22,6 +23,7 @@
     },
     "team_evidence": {
       "assigned": 3,
+      "observed_terminal": 3,
       "valid": 3,
       "acceptable": 2,
       "avoidable_deferrals": 0,
@@ -29,6 +31,7 @@
     },
     "solo": {
       "assigned": 3,
+      "observed_terminal": 3,
       "valid": 3,
       "acceptable": 3,
       "avoidable_deferrals": 0,

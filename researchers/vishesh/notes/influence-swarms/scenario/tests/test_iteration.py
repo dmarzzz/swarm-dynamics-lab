@@ -42,6 +42,11 @@ class IterationTests(unittest.TestCase):
         broken=copy.deepcopy(rows);broken[0]['valid']=False;broken[0]['evaluation']=None
         self.assertFalse(analyze(broken)['pairs'][0]['identified'])
         with self.assertRaises(ValueError):analyze(rows+rows[:1])
+    def test_absent_case_keeps_manifest_denominator(self):
+        report=analyze([], [('usage_cliff',0,'clean'),('usage_cliff',0,'omission')])
+        self.assertEqual(report['pairs'][0]['contrast_bounds'],[-2,2])
+        self.assertEqual(report['per_arm']['solo']['assigned'],2)
+        self.assertEqual(report['per_arm']['solo']['observed_terminal'],0)
     def test_gate_rejects_targeted_or_incomplete_qualification(self):
         from native import qualification_gate
         q=dict(stage='Q4',qualified=True,source_signature='frozen',planned=12,terminal=12,valid=12,acceptable=12,invalid=0)

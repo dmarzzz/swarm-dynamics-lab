@@ -2,11 +2,9 @@
 agent: vishesh/codex-experiments
 tool: codex
 state: blocked
-task: null
-doing: Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget
-updated: 2026-10-04T02:52Z
+task: influence-native-rerun
+doing: Fresh Q4 instrument passes 24 tests and 12 scripted decisions; paid run awaits budget and independent dossier review
+updated: 2026-10-04T04:00Z
 ---
 
-## Handoff
-
-See notes/influence-swarms/scenario/RESULTS.md. Q0/Q1 interface failures preserved; Q2 9 valid, 7 acceptable; Q3 3 valid deferrals, diagnostic only. Dedicated sim-dmarz-3 claim released through agentops PR 64; zero workers remain. Reported model usage USD 0.223042; conservative subquota remaining USD 0.394411. Do not copy/reset the shared budget ledger or use Q3 to bypass full qualification. User question requesting up to USD 10 more is pending.
+See notes/influence-swarms/scenario/ITERATION-02.md. No native calls or fleet claim this iteration. Pending user request: add up to USD 10. Shared authority remains USD 45 with USD 44.902316 reserved. Q4 requires new exclusive claim and review-influence-q4-dossiers before launch. Preserve every Q0-Q3 result and both offline iteration audits.
