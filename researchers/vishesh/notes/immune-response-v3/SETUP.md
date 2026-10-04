@@ -104,3 +104,7 @@ Owner-requested failure diagnostics completed3/3fixed variants after a preserved
 ## Controller schema repaired offline after A7
 
 [Repair](freshness-study/CONTROLLER-SCHEMA-REPAIR.md) implements legal-action-id-v1: flat enum plus reason, strict lossless decoding, raw/decoded evidence and contract hashes.34tests pass and6/6scripted qualification episodes reconcile. No native acceptance claim or fresh spending; original411calls/USD3.352050reserved remains. Next: admit bounded native qualification of this new response contract.
+
+## A8 reviewed — interface passes, capability fails
+
+[Post-mortem](freshness-study/reviews/a8-post.md), [rubric](freshness-study/reviews/a8-quality.json), [reconciliation](freshness-study/reviews/a8-reconciliation.json).18/18responses,6/6episodes,12valid decoded actions,1/6capability gates. Bothcrash arms fail useful restart;3of4healthy episodes damaged. All18visibleanswers inspected,allstatesreplayed,9hubhashesverified. NativeGIF/frame/replay retained. Executioncompleted;capabilityfailed;scientificowningreviewcomplete. Original8cap:429calls/USD3.492196reserved,knownnewactualUSD0.030345. Workers/relay/tunnelclosed,claimreleased,noautonextattempt. Nextoffline evidence-grounding andadvisor-isolation design before owner-admitted nativecollection;largercomparison HOLD.

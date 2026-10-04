@@ -1,0 +1,179 @@
+{
+  "attempt": "freshness-a8",
+  "date": "2026-10-04",
+  "assessor": "vishesh/codex-immune",
+  "independent_review": false,
+  "decision": "repair",
+  "evidence_revision": "9bf9815aae5fc6ed65e1f6a9ecfdc4763ed03698",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Small action-ID hosted acceptance and three-case capability question tested with explicit boundaries.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Answerable familiar worlds expose a capability floor, especially useful repair; not ready for broader treatment inference.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ],
+      "next_action": "Prepare evidence-grounding/advisor-isolation revision offline, preserving adverse results and original gates.",
+      "acceptance_check": "Prospective controlled capability test with unchanged outcome standards, explicit information/compute controls and separate owner-approved admission; no automatic rerun."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Three complete paired roots share advice and source observations; visible reference passes same gates. Contrast remains descriptive.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Interface12/12accepted but capability1/6;zero useful restart and3healthy episodes damaged.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ],
+      "next_action": "Prepare evidence-grounding/advisor-isolation revision offline, preserving adverse results and original gates.",
+      "acceptance_check": "Prospective controlled capability test with unchanged outcome standards, explicit information/compute controls and separate owner-approved admission; no automatic rerun."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All12raw actions decoded and replayed;health/state and prespecified gates recomputed;wrong actions not excluded.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Three development roots with paired trajectories and shared advice; no population estimate or calls-as-replications.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All18request/answerpairs inspected;declaredrouteverified;newaction-IDcontract explicitlyversioned;nooperatorcontext.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "18/18responses/usage,6/6episodes,9hubhashes;fullraw/decoded local retention, no retries.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Knownnewactual.030345;429cumulativecalls/3.492196reserved within8;exclusive machine released.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source+modulehashes,exactrequest/response receipts and allstate replay support observed scope;hostedanswers not promised deterministic.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Six native trajectories,three-frame animation and complete denominators;no scripted substitution.",
+      "evidence": [
+        {
+          "path": "a8-post.md",
+          "sha256": "e210ce561c0a4c9a7c2510da3aad5f1bd4721ba66eb343bc5e10eef29cfbd8e7"
+        },
+        {
+          "path": "a8-reconciliation.json",
+          "sha256": "f37090357619b17f9ad07340fbbe789253070082c4ee6aeaa0c1a78808279fa6"
+        }
+      ]
+    }
+  ]
+}
