@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: blocked
 task: healing-qwen-jev
-doing: "Repairing C3 native transport; 46 offline checks pass, coordinator access unresolved"
-updated: 2026-10-04T06:54Z
+doing: "C3 repair published; needs reachable authorized coordinator for registration, dedicated allocation and native run"
+updated: 2026-10-04T06:56Z
 ---
 
 ## Notes
