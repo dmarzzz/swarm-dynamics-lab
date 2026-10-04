@@ -31,3 +31,7 @@ Apply the owner direction removing researcher-review launch gates; publish and r
 ## Progress
 
 Owner no-review direction is implemented and pinned at e1de51faffd8debbcff45b4125b6ad15c00e9c9d; 54 tests pass. Private launch package and original-ledger migration prepared. Platform review blocked credential publication; that file was removed before publication. The run request is held pending narrow direct memory-only OpenRouter transfer permission, not research review or spending approval. No Q1 calls or machine claim. See NEXT-RUN-READINESS.md.
+
+## Credential authorization resolved
+
+The owner approved the verified-SSH, memory-only OpenRouter procedure; public authority a7743f0d4e780d71b3e0de2872ee0265f8ea9426. Checked credential-free transfer code is published in the private operational package. The remaining external dependency is the central operator owner authorizing Vishesh-owned execution or identifying its permitted route; that routing decision was requested. No further experiment-owner permission is needed. No allocation, key transfer or native Q1 calls.
