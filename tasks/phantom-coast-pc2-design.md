@@ -3,14 +3,16 @@ id: phantom-coast-pc2-design
 type: task
 title: Iterate Phantom Coast after the native ceiling result
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-phantom-coast
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-phantom-coast
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T04:38Z
+updated: 2026-10-04T04:38Z
 ---
 
 ## Goal
