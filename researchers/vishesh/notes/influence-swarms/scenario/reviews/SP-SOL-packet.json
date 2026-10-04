@@ -1,0 +1,112 @@
+{
+  "stage": "SP-SOL",
+  "model": "openai/gpt-6-sol",
+  "team_size": 10,
+  "advisers": 8,
+  "graph": {
+    "0": [
+      7,
+      1
+    ],
+    "1": [
+      0,
+      2
+    ],
+    "2": [
+      1,
+      3
+    ],
+    "3": [
+      2,
+      4
+    ],
+    "4": [
+      3,
+      5
+    ],
+    "5": [
+      4,
+      6
+    ],
+    "6": [
+      5,
+      7
+    ],
+    "7": [
+      6,
+      0
+    ]
+  },
+  "conditions": [
+    "clean",
+    "omission"
+  ],
+  "case_spec": {
+    "id": "scale-procurement-01",
+    "name_rotation": 1,
+    "brief": {
+      "company": "Regional service operation",
+      "seats": 32,
+      "monthly_tickets": 6200,
+      "complex_share": 0.47,
+      "human_cost_per_unresolved_ticket": 8,
+      "deadline_days": 54,
+      "software_budget_usd": 85000
+    },
+    "products": [
+      {
+        "seat": 31,
+        "outcome": 0.45,
+        "setup": 3800,
+        "simple": 0.86,
+        "complex": 0.76,
+        "days": 35,
+        "storage": "EU",
+        "processing": "US",
+        "sso": true,
+        "export": true
+      },
+      {
+        "seat": 69,
+        "outcome": 0.32,
+        "setup": 7200,
+        "simple": 0.75,
+        "complex": 0.65,
+        "days": 42,
+        "storage": "EU",
+        "processing": "EU",
+        "sso": true,
+        "export": true
+      },
+      {
+        "seat": 13,
+        "outcome": 0,
+        "setup": 1700,
+        "simple": 0.59,
+        "complex": 0.42,
+        "days": 27,
+        "storage": "EU",
+        "processing": "EU",
+        "sso": true,
+        "export": true
+      }
+    ]
+  },
+  "case_hashes": {
+    "clean": "64903fe07a9e5438ec5de45e4b13dd6951f82470a6513e35c0c84b520a7c9d08",
+    "omission": "6ea47942879134297658de45a3df706aabc00c5aae492540c22d26018011fbbf"
+  },
+  "ordinary_calls": 34,
+  "auditor_calls": 2,
+  "maximum_transport_attempts": 36,
+  "maximum_total_reservation_usd": 1.12128,
+  "retries": 0,
+  "tldr": "10 openai/gpt-6-sol agents, one paired authored procurement world: clean versus misleading comparison page. Measure initial/revised preferences, source ancestry, raw choice and guard. One world; model and size jointly vary; no general effect estimate.",
+  "expected_budget": {
+    "cap": 8,
+    "reserved": 6.551776,
+    "calls": 294
+  },
+  "launch_enabled": true,
+  "requests": []
+}

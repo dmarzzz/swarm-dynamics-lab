@@ -38,3 +38,22 @@ class PilotTests(unittest.TestCase):
   p=sp.Protocol('SP-SOL')
   for _ in range(p.n):i=p.next();p.accept(i,fixture(p,i))
   i=p.next();o=json.loads(i['wire_body']['messages'][1]['content']);self.assertEqual(['adviser-07','adviser-01'],[v['agent'] for v in o['peers']]);self.assertEqual('revision',o['round'])
+ def test_complete_native_collector_and_budget(self):
+  import tempfile,sqlite3,datetime
+  from contextlib import closing
+  import scale_pilot_run as run
+  with tempfile.TemporaryDirectory() as d:
+   db=Path(d)/'b';p=run.build('SP-SOL');mirror=sp.Protocol('SP-SOL')
+   with closing(sqlite3.connect(db)) as c,c:c.execute('CREATE TABLE budget(id,cap,reserved,calls)');c.execute('INSERT INTO budget VALUES(1,8,6.551776,294)')
+   def transport(raw):
+    i=mirror.next();self.assertEqual(raw,sp.encode(i['wire_body']));a=fixture(mirror,i);mirror.accept(i,a)
+    return json.dumps({'model':i['wire_body']['model'],'provider':'OpenAI','usage':{'prompt_tokens':1,'completion_tokens':1,'cost':.00001},'choices':[{'finish_reason':'stop','message':{'content':json.dumps(a)}}]}).encode()
+   s=run.collect(p,Path(d)/'out',db,transport,(datetime.datetime.now(datetime.timezone.utc)+datetime.timedelta(hours=1)).isoformat());self.assertTrue(s['complete']);self.assertEqual((36,36,0),(s['calls'],s['valid'],s['usage_missing']))
+   with closing(sqlite3.connect(db)) as c:r=c.execute('SELECT reserved,calls FROM budget').fetchone()
+   self.assertAlmostEqual(7.673056,r[0]);self.assertEqual(330,r[1]);self.assertTrue(json.loads((Path(d)/'out/assessment.json').read_text())['complete'])
+ def test_dynamic_relay_refuses_modified_wire(self):
+  import tempfile
+  with tempfile.TemporaryDirectory() as d:
+   relay=sp.DynamicRelay('SP-SOL',Path(d)/'relay');i=relay.protocol.next();w=copy.deepcopy(i['wire_body']);w['messages'][0]['content']='changed'
+   with self.assertRaises(ValueError):relay.send(sp.encode(w),lambda _:self.fail('no dispatch'))
+   self.assertEqual(0,relay.count);self.assertTrue(relay.stopped)

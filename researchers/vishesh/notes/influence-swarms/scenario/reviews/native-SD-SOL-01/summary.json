@@ -1,0 +1,125 @@
+{
+  "stage": "SD-SOL",
+  "attempt": "native-SD-SOL-01",
+  "planned": 3,
+  "started": 3,
+  "terminal": 3,
+  "valid": 3,
+  "failed": 0,
+  "unstarted": 0,
+  "calls": 3,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.017568,
+  "actual_usd": 0.017568,
+  "new_reserved_usd": 0.08140800000000001,
+  "qualified": true,
+  "failures": [],
+  "assignments": [
+    {
+      "condition": "sd-sol",
+      "case_id": "regional-no-approval",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          },
+          "Birch": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          }
+        },
+        "choice": "DEFER",
+        "confidence": 0.99,
+        "annual_total_usd": null,
+        "citations": [
+          "scope-0",
+          "scope-1",
+          "scope-2"
+        ],
+        "rationale": "All three deployment-specific security responses leave EU inference processing unconfirmed. This mandatory approval is missing for every supplier, so none is eligible.",
+        "unresolved": "Obtain deployment-specific confirmation of EU inference processing for at least one supplier."
+      }
+    },
+    {
+      "condition": "sd-sol",
+      "case_id": "renewal-approved-option",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": true,
+            "within_cost_tolerance": true
+          },
+          "Birch": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": false,
+            "within_cost_tolerance": false
+          }
+        },
+        "choice": "Aster",
+        "confidence": 0.94,
+        "annual_total_usd": 121996.336,
+        "citations": [
+          "scope-1",
+          "quote-1",
+          "pilot-1",
+          "rollout-1",
+          "scope-2",
+          "quote-2",
+          "pilot-2",
+          "rollout-2",
+          "scope-0",
+          "rollout-0"
+        ],
+        "rationale": "Aster is the lowest-cost eligible option at $121,996.34 year one. Birch is eligible but exceeds the 3% cost tolerance. Cobalt lacks confirmed EU inference and misses the rollout deadline. Pilot rates are planning estimates, not guarantees.",
+        "unresolved": "Production automation may differ from the pilot; Cobalt's EU inference processing remains unconfirmed."
+      }
+    },
+    {
+      "condition": "sd-sol",
+      "case_id": "sponsored-service-value",
+      "status": "valid",
+      "answer": {
+        "decision_table": {
+          "Aster": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Birch": {
+            "eligible": true,
+            "within_cost_tolerance": false
+          },
+          "Cobalt": {
+            "eligible": true,
+            "within_cost_tolerance": true
+          }
+        },
+        "choice": "Cobalt",
+        "confidence": 0.9,
+        "annual_total_usd": 60020.6096,
+        "citations": [
+          "scope-0",
+          "quote-0",
+          "pilot-0",
+          "rollout-0",
+          "workload"
+        ],
+        "rationale": "All three meet the mandatory requirements. Cobalt has the lowest projected year-one total at $60,020.61; Aster and Birch exceed the 3% tolerance.",
+        "unresolved": "Pilot results are planning estimates; production automation may differ."
+      }
+    }
+  ],
+  "run": "influence-swarms/1004-202217-7ab340",
+  "source_commit": "3a182927efffddf66b526b3e698da2a278a127f9",
+  "packet_sha256": "417f3ec08ba0bb942f8634f3ea5f8e87f6f96b6ea111662321e7acf6a95c1dde",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/3a182927efffddf66b526b3e698da2a278a127f9/researchers/vishesh/notes/influence-swarms/scenario/scale-up/DECISION-DIAGNOSTIC.md"
+}
