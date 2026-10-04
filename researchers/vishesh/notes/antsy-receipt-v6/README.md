@@ -11,6 +11,8 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `b51e3f1f` ([registry](..
 
 Exploratory instrument and application pilot, not an accepted hypothesis or production payment system. Plan written before implementation, 2026-10-04 UTC. Parent: [v5 issue ledger](../antsy-verification-v5/ISSUES.md). Repository refresh:3ccbfd02a6d54713103732867cd43f6d4b2f0d6b.
 
+Current result: [completed pilot and post-mortem](RESULTS.md). Final50-receipt test has47 scorable references; selective9 correct /1 wrong /37 refer,80 checks versus100 always. Three instrument defects were preserved and repaired; zero execution failures in the final measurement,46 tests pass, zero model calls.
+
 ## Why this experiment
 
 A receipt pipeline should not automatically accept a plausible but wrong total. Extra computation is worthwhile only if it reduces wrong acceptances or manual referrals enough to justify its measured latency. V4/v5 scored regional token recall and used annotation-perfect QA; neither tested this operational choice. V6 extracts one annotated field from pixels and lets real, fallible tools challenge the initial result.
@@ -51,7 +53,7 @@ Show candidate agreement and disagreements, actual checker invocations and elaps
 
 ## Scope and outstanding review
 
-See [issue closure](ISSUES.md) and [test adequacy](TESTING.md). V6 measures selective tool use, not a manipulated urgency effect or biological replication. The penalty sensitivity is an assumed decision cost, not a learned deadline response.
+See [issue closure](ISSUES.md), [test adequacy](TESTING.md) and [reproduction instructions](REPRODUCE.md). V6 measures selective tool use, not a manipulated urgency effect or biological replication. The penalty sensitivity is an assumed decision cost, not a learned deadline response.
 
 ## Sources checked this session
 

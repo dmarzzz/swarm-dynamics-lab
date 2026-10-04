@@ -1,0 +1,106 @@
+{
+  "assigned": 50,
+  "scorable": 47,
+  "unscorable": 3,
+  "invalid_ocr": 0,
+  "arms": {
+    "fixed-B": {
+      "assigned": 50,
+      "scorable": 47,
+      "correct": 8,
+      "wrong": 1,
+      "refer": 38,
+      "unscorable_accept": 1,
+      "conditional_error": 0.1111111111111111,
+      "coverage": 0.19148936170212766,
+      "checks": 0,
+      "initial_ocr_calls": 50,
+      "total_pipeline_wall_s": 71.05393348301004,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.10212765957446808,
+        "0.25": 0.22340425531914893,
+        "0.5": 0.425531914893617
+      }
+    },
+    "confidence": {
+      "assigned": 50,
+      "scorable": 47,
+      "correct": 9,
+      "wrong": 3,
+      "refer": 35,
+      "unscorable_accept": 1,
+      "conditional_error": 0.25,
+      "coverage": 0.2553191489361702,
+      "checks": 0,
+      "initial_ocr_calls": 150,
+      "total_pipeline_wall_s": 170.35138987600658,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.13829787234042554,
+        "0.25": 0.25,
+        "0.5": 0.43617021276595747
+      }
+    },
+    "agreement": {
+      "assigned": 50,
+      "scorable": 47,
+      "correct": 7,
+      "wrong": 1,
+      "refer": 39,
+      "unscorable_accept": 1,
+      "conditional_error": 0.125,
+      "coverage": 0.1702127659574468,
+      "checks": 0,
+      "initial_ocr_calls": 150,
+      "total_pipeline_wall_s": 170.35138987600658,
+      "checker_wall_s": 0,
+      "assumed_loss": {
+        "0.1": 0.10425531914893618,
+        "0.25": 0.22872340425531915,
+        "0.5": 0.43617021276595747
+      }
+    },
+    "always-check": {
+      "assigned": 50,
+      "scorable": 47,
+      "correct": 9,
+      "wrong": 1,
+      "refer": 37,
+      "unscorable_accept": 1,
+      "conditional_error": 0.1,
+      "coverage": 0.2127659574468085,
+      "checks": 100,
+      "initial_ocr_calls": 150,
+      "total_pipeline_wall_s": 533.9250614660086,
+      "checker_wall_s": 363.57367159000205,
+      "assumed_loss": {
+        "0.1": 0.1,
+        "0.25": 0.21808510638297873,
+        "0.5": 0.4148936170212766
+      }
+    },
+    "selective-check": {
+      "assigned": 50,
+      "scorable": 47,
+      "correct": 9,
+      "wrong": 1,
+      "refer": 37,
+      "unscorable_accept": 1,
+      "conditional_error": 0.1,
+      "coverage": 0.2127659574468085,
+      "checks": 80,
+      "initial_ocr_calls": 150,
+      "total_pipeline_wall_s": 461.1565063640137,
+      "checker_wall_s": 290.8051164880071,
+      "assumed_loss": {
+        "0.1": 0.1,
+        "0.25": 0.21808510638297873,
+        "0.5": 0.4148936170212766
+      }
+    }
+  },
+  "candidate_oracle_correct": 13,
+  "checker_new_correct": 1,
+  "exact_header_fingerprint_overlap": 0
+}
