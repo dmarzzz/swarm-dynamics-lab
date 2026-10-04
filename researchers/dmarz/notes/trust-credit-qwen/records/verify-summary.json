@@ -1,0 +1,217 @@
+{
+ "chain_active": false,
+ "exit": 0,
+ "result": {
+  "S1": {
+   "calls_within_cap": true,
+   "completed": 504,
+   "every_unit_exactly_once": true,
+   "failed": 0,
+   "model_bounds": [
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.1,
+     "bounds_all_assigned": [
+      0.36111111111111116,
+      0.36111111111111116
+     ],
+     "checks": 32,
+     "estimate": 0.36111111111111116,
+     "field": "rare_correct",
+     "roots": 24
+    },
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.1,
+     "bounds_all_assigned": [
+      0.06944444444444446,
+      0.06944444444444446
+     ],
+     "checks": 64,
+     "estimate": 0.06944444444444446,
+     "field": "rare_correct",
+     "roots": 24
+    },
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.1,
+     "bounds_all_assigned": [
+      0.02777777777777778,
+      0.02777777777777778
+     ],
+     "checks": 108,
+     "estimate": 0.02777777777777778,
+     "field": "rare_correct",
+     "roots": 24
+    },
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.9,
+     "bounds_all_assigned": [
+      0.08333333333333333,
+      0.08333333333333333
+     ],
+     "checks": 32,
+     "estimate": 0.08333333333333333,
+     "field": "rare_correct",
+     "roots": 24
+    },
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.9,
+     "bounds_all_assigned": [
+      -0.055555555555555546,
+      -0.055555555555555546
+     ],
+     "checks": 64,
+     "estimate": -0.055555555555555546,
+     "field": "rare_correct",
+     "roots": 24
+    },
+    {
+     "assigned_roots": 24,
+     "attacker_pass": 0.9,
+     "bounds_all_assigned": [
+      -0.09722222222222221,
+      -0.09722222222222221
+     ],
+     "checks": 108,
+     "estimate": -0.09722222222222221,
+     "field": "rare_correct",
+     "roots": 24
+    }
+   ],
+   "model_calls_all_runs": 504,
+   "not_started": 0,
+   "primary": {
+    "estimate": 20.75,
+    "interval": [
+     17.333333333333332,
+     24.209374999999984
+    ],
+    "positive_roots": 24,
+    "roots": 24
+   }
+  },
+  "manifest_digest": "e09119d1f0fcad81876d7b87cf94cf639725f026aa20007f8eea9be4a0129f50",
+  "ok": true,
+  "stages": {
+   "P0": {
+    "assigned": 1,
+    "batch": "p0-001",
+    "checks": {
+     "analysis_recomputed": true,
+     "artifact_checksums": true,
+     "call_cap_respected": true,
+     "every_assignment_has_one_row": true,
+     "failed_rows_keep_evidence": true,
+     "gate_recomputed": true,
+     "grades_recomputed": true,
+     "hub_has_every_artifact": true,
+     "hub_metrics_match": true,
+     "hub_status_matches": true,
+     "manifest_matches": true,
+     "outcome_recomputed": true,
+     "packet_hashes": true,
+     "source_hash_current": true,
+     "totals_recomputed": true
+    },
+    "completed": 1,
+    "cost_usd": 0.0001,
+    "failed": 0,
+    "model_calls": 1,
+    "ok": true,
+    "run": "trust-credit-qwen/135ea6a1",
+    "status": "done"
+   },
+   "Q0": {
+    "assigned": 23,
+    "batch": "q0-001",
+    "checks": {
+     "analysis_recomputed": true,
+     "artifact_checksums": true,
+     "call_cap_respected": true,
+     "every_assignment_has_one_row": true,
+     "failed_rows_keep_evidence": true,
+     "gate_recomputed": true,
+     "grades_recomputed": true,
+     "hub_has_every_artifact": true,
+     "hub_metrics_match": true,
+     "hub_status_matches": true,
+     "manifest_matches": true,
+     "outcome_recomputed": true,
+     "packet_hashes": true,
+     "source_hash_current": true,
+     "totals_recomputed": true
+    },
+    "completed": 23,
+    "cost_usd": 0.002298,
+    "failed": 0,
+    "model_calls": 23,
+    "ok": true,
+    "run": "trust-credit-qwen/f65a2ee6",
+    "status": "done"
+   },
+   "S0": {
+    "assigned": 216,
+    "batch": "s0-001",
+    "checks": {
+     "analysis_recomputed": true,
+     "artifact_checksums": true,
+     "call_cap_respected": true,
+     "every_assignment_has_one_row": true,
+     "failed_rows_keep_evidence": true,
+     "gate_recomputed": true,
+     "grades_recomputed": true,
+     "hub_has_every_artifact": true,
+     "hub_metrics_match": true,
+     "hub_status_matches": true,
+     "manifest_matches": true,
+     "outcome_recomputed": true,
+     "packet_hashes": true,
+     "source_hash_current": true,
+     "totals_recomputed": true
+    },
+    "completed": 216,
+    "cost_usd": 0,
+    "failed": 0,
+    "model_calls": 0,
+    "ok": true,
+    "run": "trust-credit-qwen/81f7ffe1",
+    "status": "done"
+   },
+   "S1": {
+    "assigned": 504,
+    "batch": "s1-001",
+    "checks": {
+     "analysis_recomputed": true,
+     "artifact_checksums": true,
+     "call_cap_respected": true,
+     "every_assignment_has_one_row": true,
+     "failed_rows_keep_evidence": true,
+     "gate_recomputed": true,
+     "grades_recomputed": true,
+     "hub_has_every_artifact": true,
+     "hub_metrics_match": true,
+     "hub_status_matches": true,
+     "manifest_matches": true,
+     "outcome_recomputed": true,
+     "packet_hashes": true,
+     "source_hash_current": true,
+     "totals_recomputed": true
+    },
+    "completed": 504,
+    "cost_usd": 0.049649,
+    "failed": 0,
+    "model_calls": 504,
+    "ok": true,
+    "run": "trust-credit-qwen/d9c433dd",
+    "status": "done"
+   }
+  },
+  "state": "completed"
+ },
+ "revision": "e5f34521799e147fe4a77ed2d86bf2bdcc1a8eb1",
+ "server": "sim-dmarz-8",
+ "worker_active": false
+}

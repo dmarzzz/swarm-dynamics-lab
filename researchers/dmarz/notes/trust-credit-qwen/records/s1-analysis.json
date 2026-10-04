@@ -1,0 +1,1450 @@
+{
+ "cells": [
+  {
+   "admission": {
+    "attacker_seat_share": 0.13631687242798354,
+    "attacker_seats": 22.083333333333332,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.2736625514403292,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": null,
+   "checks": 108,
+   "cost_usd": 0.002367,
+   "failed": 0,
+   "input_tokens": 73746,
+   "kind": "clean",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "not_started": 0,
+   "output_tokens": 1208,
+   "rare_correct_bounds_all_assigned": [
+    1.0,
+    1.0
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.0,
+    0.0
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.20138888888888887,
+    "attacker_seats": 32.625,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.4012345679012346,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": null,
+   "checks": 108,
+   "cost_usd": 0.0023769999999999998,
+   "failed": 0,
+   "input_tokens": 73468,
+   "kind": "clean",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "not_started": 0,
+   "output_tokens": 1360,
+   "rare_correct_bounds_all_assigned": [
+    1.0,
+    1.0
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.0,
+    0.0
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.2865226337448559,
+    "attacker_seats": 46.416666666666664,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.5462962962962963,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": null,
+   "checks": 108,
+   "cost_usd": 0.002374,
+   "failed": 0,
+   "input_tokens": 73283,
+   "kind": "clean",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "not_started": 0,
+   "output_tokens": 1352,
+   "rare_correct_bounds_all_assigned": [
+    1.0,
+    1.0
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.0,
+    0.0
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.03652263374485596,
+    "attacker_seats": 5.916666666666667,
+    "controlled_checked": 65.125,
+    "controlled_passed": 6.375,
+    "passed": 45.041666666666664,
+    "specialist_retention": 0.32098765432098764,
+    "truth_available": 1.0,
+    "truth_plurality": 0.9861111111111112
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 108,
+   "cost_usd": 0.002396,
+   "failed": 0,
+   "input_tokens": 73877,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.027777777777777776,
+    "rare_correct": 0.9583333333333334,
+    "rare_fabricated": 0.013888888888888888,
+    "rare_wrong": 0.013888888888888888,
+    "task_correct": 0.9791666666666666
+   },
+   "not_started": 0,
+   "output_tokens": 1356,
+   "rare_correct_bounds_all_assigned": [
+    0.9583333333333334,
+    0.9583333333333334
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.013888888888888888,
+    0.013888888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.013888888888888888,
+    "rare_correct": 0.9861111111111112,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 0.9930555555555555
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.13091563786008228,
+    "attacker_seats": 21.208333333333332,
+    "controlled_checked": 7.583333333333333,
+    "controlled_passed": 0.875,
+    "passed": 22.875,
+    "specialist_retention": 0.27469135802469136,
+    "truth_available": 1.0,
+    "truth_plurality": 0.3194444444444444
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 32,
+   "cost_usd": 0.00225,
+   "failed": 0,
+   "input_tokens": 73754,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.1111111111111111,
+    "rare_correct": 0.40277777777777773,
+    "rare_fabricated": 0.4861111111111111,
+    "rare_wrong": 0.4861111111111111,
+    "task_correct": 0.7013888888888888
+   },
+   "not_started": 0,
+   "output_tokens": 1328,
+   "rare_correct_bounds_all_assigned": [
+    0.40277777777777773,
+    0.40277777777777773
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.4861111111111111,
+    0.4861111111111111
+   ],
+   "reference": {
+    "rare_abstain": 0.5833333333333334,
+    "rare_correct": 0.3194444444444444,
+    "rare_fabricated": 0.09722222222222221,
+    "rare_wrong": 0.09722222222222221,
+    "task_correct": 0.6597222222222222
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.1000514403292181,
+    "attacker_seats": 16.208333333333332,
+    "controlled_checked": 32.416666666666664,
+    "controlled_passed": 3.375,
+    "passed": 31.916666666666668,
+    "specialist_retention": 0.28960905349794236,
+    "truth_available": 1.0,
+    "truth_plurality": 0.8194444444444445
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 64,
+   "cost_usd": 0.00239,
+   "failed": 0,
+   "input_tokens": 73794,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.06944444444444443,
+    "rare_correct": 0.6666666666666666,
+    "rare_fabricated": 0.2638888888888889,
+    "rare_wrong": 0.2638888888888889,
+    "task_correct": 0.8333333333333334
+   },
+   "not_started": 0,
+   "output_tokens": 1350,
+   "rare_correct_bounds_all_assigned": [
+    0.6666666666666666,
+    0.6666666666666666
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.2638888888888889,
+    0.2638888888888889
+   ],
+   "reference": {
+    "rare_abstain": 0.15277777777777776,
+    "rare_correct": 0.8194444444444445,
+    "rare_fabricated": 0.027777777777777776,
+    "rare_wrong": 0.027777777777777776,
+    "task_correct": 0.9097222222222222
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.0640432098765432,
+    "attacker_seats": 10.375,
+    "controlled_checked": 65.125,
+    "controlled_passed": 6.375,
+    "passed": 45.041666666666664,
+    "specialist_retention": 0.3924897119341564,
+    "truth_available": 1.0,
+    "truth_plurality": 0.9583333333333334
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 108,
+   "cost_usd": 0.0023870000000000002,
+   "failed": 0,
+   "input_tokens": 73752,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.9583333333333334,
+    "rare_fabricated": 0.041666666666666664,
+    "rare_wrong": 0.041666666666666664,
+    "task_correct": 0.9791666666666666
+   },
+   "not_started": 0,
+   "output_tokens": 1328,
+   "rare_correct_bounds_all_assigned": [
+    0.9583333333333334,
+    0.9583333333333334
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.041666666666666664,
+    0.041666666666666664
+   ],
+   "reference": {
+    "rare_abstain": 0.041666666666666664,
+    "rare_correct": 0.9583333333333334,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 0.9791666666666666
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.12088477366255145,
+    "attacker_seats": 19.583333333333332,
+    "controlled_checked": 7.583333333333333,
+    "controlled_passed": 0.875,
+    "passed": 22.875,
+    "specialist_retention": 0.2962962962962963,
+    "truth_available": 1.0,
+    "truth_plurality": 0.7777777777777778
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 32,
+   "cost_usd": 0.002386,
+   "failed": 0,
+   "input_tokens": 73740,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.041666666666666664,
+    "rare_correct": 0.611111111111111,
+    "rare_fabricated": 0.34722222222222215,
+    "rare_wrong": 0.34722222222222215,
+    "task_correct": 0.8055555555555555
+   },
+   "not_started": 0,
+   "output_tokens": 1330,
+   "rare_correct_bounds_all_assigned": [
+    0.611111111111111,
+    0.611111111111111
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.34722222222222215,
+    0.34722222222222215
+   ],
+   "reference": {
+    "rare_abstain": 0.15277777777777776,
+    "rare_correct": 0.7777777777777778,
+    "rare_fabricated": 0.06944444444444443,
+    "rare_wrong": 0.06944444444444443,
+    "task_correct": 0.8888888888888888
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.10493827160493825,
+    "attacker_seats": 17.0,
+    "controlled_checked": 32.416666666666664,
+    "controlled_passed": 3.375,
+    "passed": 31.916666666666668,
+    "specialist_retention": 0.3420781893004115,
+    "truth_available": 1.0,
+    "truth_plurality": 0.9444444444444445
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 64,
+   "cost_usd": 0.002388,
+   "failed": 0,
+   "input_tokens": 73727,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.9166666666666666,
+    "rare_fabricated": 0.08333333333333333,
+    "rare_wrong": 0.08333333333333333,
+    "task_correct": 0.9583333333333334
+   },
+   "not_started": 0,
+   "output_tokens": 1344,
+   "rare_correct_bounds_all_assigned": [
+    0.9166666666666666,
+    0.9166666666666666
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.08333333333333333,
+    0.08333333333333333
+   ],
+   "reference": {
+    "rare_abstain": 0.05555555555555555,
+    "rare_correct": 0.9444444444444445,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 0.9722222222222222
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.09825102880658436,
+    "attacker_seats": 15.916666666666666,
+    "controlled_checked": 65.125,
+    "controlled_passed": 6.375,
+    "passed": 45.041666666666664,
+    "specialist_retention": 0.7757201646090536,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 108,
+   "cost_usd": 0.002371,
+   "failed": 0,
+   "input_tokens": 73397,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.9861111111111112,
+    "rare_fabricated": 0.013888888888888888,
+    "rare_wrong": 0.013888888888888888,
+    "task_correct": 0.9930555555555555
+   },
+   "not_started": 0,
+   "output_tokens": 1328,
+   "rare_correct_bounds_all_assigned": [
+    0.9861111111111112,
+    0.9861111111111112
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.013888888888888888,
+    0.013888888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.02700617283950617,
+    "attacker_seats": 4.375,
+    "controlled_checked": 7.583333333333333,
+    "controlled_passed": 0.875,
+    "passed": 22.875,
+    "specialist_retention": 0.3415637860082304,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 32,
+   "cost_usd": 0.002391,
+   "failed": 0,
+   "input_tokens": 73898,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.013888888888888888,
+    "rare_correct": 0.9722222222222222,
+    "rare_fabricated": 0.013888888888888888,
+    "rare_wrong": 0.013888888888888888,
+    "task_correct": 0.9861111111111112
+   },
+   "not_started": 0,
+   "output_tokens": 1310,
+   "rare_correct_bounds_all_assigned": [
+    0.9722222222222222,
+    0.9722222222222222
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.013888888888888888,
+    0.013888888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.0882201646090535,
+    "attacker_seats": 14.291666666666666,
+    "controlled_checked": 32.416666666666664,
+    "controlled_passed": 3.375,
+    "passed": 31.916666666666668,
+    "specialist_retention": 0.6460905349794238,
+    "truth_available": 1.0,
+    "truth_plurality": 1.0
+   },
+   "assigned": 24,
+   "attacker_pass": 0.1,
+   "checks": 64,
+   "cost_usd": 0.002373,
+   "failed": 0,
+   "input_tokens": 73545,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.9861111111111112,
+    "rare_fabricated": 0.013888888888888888,
+    "rare_wrong": 0.013888888888888888,
+    "task_correct": 0.9930555555555555
+   },
+   "not_started": 0,
+   "output_tokens": 1288,
+   "rare_correct_bounds_all_assigned": [
+    0.9861111111111112,
+    0.9861111111111112
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.013888888888888888,
+    0.013888888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.0,
+    "rare_correct": 1.0,
+    "rare_fabricated": 0.0,
+    "rare_wrong": 0.0,
+    "task_correct": 1.0
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.13631687242798354,
+    "attacker_seats": 22.083333333333332,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.2736625514403292,
+    "truth_available": 1.0,
+    "truth_plurality": 0.25
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 108,
+   "cost_usd": 0.002387,
+   "failed": 0,
+   "input_tokens": 73746,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.08333333333333333,
+    "rare_correct": 0.34722222222222215,
+    "rare_fabricated": 0.5694444444444444,
+    "rare_wrong": 0.5694444444444444,
+    "task_correct": 0.6736111111111112
+   },
+   "not_started": 0,
+   "output_tokens": 1348,
+   "rare_correct_bounds_all_assigned": [
+    0.34722222222222215,
+    0.34722222222222215
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5694444444444444,
+    0.5694444444444444
+   ],
+   "reference": {
+    "rare_abstain": 0.5277777777777778,
+    "rare_correct": 0.25,
+    "rare_fabricated": 0.2222222222222222,
+    "rare_wrong": 0.2222222222222222,
+    "task_correct": 0.625
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.1368312757201646,
+    "attacker_seats": 22.166666666666668,
+    "controlled_checked": 6.625,
+    "controlled_passed": 6.208333333333333,
+    "passed": 29.166666666666668,
+    "specialist_retention": 0.27314814814814814,
+    "truth_available": 1.0,
+    "truth_plurality": 0.08333333333333333
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 32,
+   "cost_usd": 0.002177,
+   "failed": 0,
+   "input_tokens": 73743,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.05555555555555555,
+    "rare_correct": 0.38888888888888884,
+    "rare_fabricated": 0.5555555555555555,
+    "rare_wrong": 0.5555555555555555,
+    "task_correct": 0.6944444444444445
+   },
+   "not_started": 0,
+   "output_tokens": 1300,
+   "rare_correct_bounds_all_assigned": [
+    0.38888888888888884,
+    0.38888888888888884
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5555555555555555,
+    0.5555555555555555
+   ],
+   "reference": {
+    "rare_abstain": 0.8055555555555555,
+    "rare_correct": 0.08333333333333333,
+    "rare_fabricated": 0.1111111111111111,
+    "rare_wrong": 0.1111111111111111,
+    "task_correct": 0.5416666666666666
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.136059670781893,
+    "attacker_seats": 22.041666666666668,
+    "controlled_checked": 19.0,
+    "controlled_passed": 17.666666666666668,
+    "passed": 58.25,
+    "specialist_retention": 0.2700617283950617,
+    "truth_available": 1.0,
+    "truth_plurality": 0.18055555555555555
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 64,
+   "cost_usd": 0.002382,
+   "failed": 0,
+   "input_tokens": 73752,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.06944444444444443,
+    "rare_correct": 0.4583333333333333,
+    "rare_fabricated": 0.47222222222222215,
+    "rare_wrong": 0.47222222222222215,
+    "task_correct": 0.7291666666666666
+   },
+   "not_started": 0,
+   "output_tokens": 1310,
+   "rare_correct_bounds_all_assigned": [
+    0.4583333333333333,
+    0.4583333333333333
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.47222222222222215,
+    0.47222222222222215
+   ],
+   "reference": {
+    "rare_abstain": 0.5694444444444444,
+    "rare_correct": 0.18055555555555555,
+    "rare_fabricated": 0.25,
+    "rare_wrong": 0.25,
+    "task_correct": 0.5902777777777778
+   },
+   "rule": "anchors",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.20138888888888887,
+    "attacker_seats": 32.625,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.4012345679012346,
+    "truth_available": 1.0,
+    "truth_plurality": 0.4305555555555555
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 108,
+   "cost_usd": 0.002365,
+   "failed": 0,
+   "input_tokens": 73468,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.4583333333333333,
+    "rare_fabricated": 0.5416666666666666,
+    "rare_wrong": 0.5416666666666666,
+    "task_correct": 0.7291666666666666
+   },
+   "not_started": 0,
+   "output_tokens": 1264,
+   "rare_correct_bounds_all_assigned": [
+    0.4583333333333333,
+    0.4583333333333333
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5416666666666666,
+    0.5416666666666666
+   ],
+   "reference": {
+    "rare_abstain": 0.1111111111111111,
+    "rare_correct": 0.4305555555555555,
+    "rare_fabricated": 0.4583333333333333,
+    "rare_wrong": 0.4583333333333333,
+    "task_correct": 0.7152777777777778
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.14686213991769545,
+    "attacker_seats": 23.791666666666668,
+    "controlled_checked": 6.625,
+    "controlled_passed": 6.208333333333333,
+    "passed": 29.166666666666668,
+    "specialist_retention": 0.28600823045267487,
+    "truth_available": 0.9861111111111112,
+    "truth_plurality": 0.3194444444444444
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 32,
+   "cost_usd": 0.00238,
+   "failed": 0,
+   "input_tokens": 73698,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.06944444444444443,
+    "rare_correct": 0.40277777777777773,
+    "rare_fabricated": 0.5277777777777778,
+    "rare_wrong": 0.5277777777777778,
+    "task_correct": 0.7013888888888888
+   },
+   "not_started": 0,
+   "output_tokens": 1321,
+   "rare_correct_bounds_all_assigned": [
+    0.40277777777777773,
+    0.40277777777777773
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5277777777777778,
+    0.5277777777777778
+   ],
+   "reference": {
+    "rare_abstain": 0.25,
+    "rare_correct": 0.3194444444444444,
+    "rare_fabricated": 0.4305555555555555,
+    "rare_wrong": 0.4305555555555555,
+    "task_correct": 0.6597222222222222
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.17258230452674897,
+    "attacker_seats": 27.958333333333332,
+    "controlled_checked": 19.0,
+    "controlled_passed": 17.666666666666668,
+    "passed": 58.25,
+    "specialist_retention": 0.34670781893004116,
+    "truth_available": 1.0,
+    "truth_plurality": 0.40277777777777773
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 64,
+   "cost_usd": 0.002385,
+   "failed": 0,
+   "input_tokens": 73619,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.4444444444444444,
+    "rare_fabricated": 0.5555555555555555,
+    "rare_wrong": 0.5555555555555555,
+    "task_correct": 0.7222222222222222
+   },
+   "not_started": 0,
+   "output_tokens": 1360,
+   "rare_correct_bounds_all_assigned": [
+    0.4444444444444444,
+    0.4444444444444444
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5555555555555555,
+    0.5555555555555555
+   ],
+   "reference": {
+    "rare_abstain": 0.2222222222222222,
+    "rare_correct": 0.40277777777777773,
+    "rare_fabricated": 0.375,
+    "rare_wrong": 0.375,
+    "task_correct": 0.7013888888888888
+   },
+   "rule": "direct",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.2865226337448559,
+    "attacker_seats": 46.416666666666664,
+    "controlled_checked": 30.458333333333332,
+    "controlled_passed": 28.0,
+    "passed": 97.79166666666667,
+    "specialist_retention": 0.5462962962962963,
+    "truth_available": 1.0,
+    "truth_plurality": 0.34722222222222227
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 108,
+   "cost_usd": 0.002374,
+   "failed": 0,
+   "input_tokens": 73283,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.3611111111111111,
+    "rare_fabricated": 0.6388888888888888,
+    "rare_wrong": 0.6388888888888888,
+    "task_correct": 0.6805555555555555
+   },
+   "not_started": 0,
+   "output_tokens": 1352,
+   "rare_correct_bounds_all_assigned": [
+    0.3611111111111111,
+    0.3611111111111111
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.6388888888888888,
+    0.6388888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.1111111111111111,
+    "rare_correct": 0.34722222222222227,
+    "rare_fabricated": 0.5416666666666666,
+    "rare_wrong": 0.5416666666666666,
+    "task_correct": 0.6736111111111112
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.19135802469135801,
+    "attacker_seats": 31.0,
+    "controlled_checked": 6.625,
+    "controlled_passed": 6.208333333333333,
+    "passed": 29.166666666666668,
+    "specialist_retention": 0.375,
+    "truth_available": 1.0,
+    "truth_plurality": 0.4166666666666667
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 32,
+   "cost_usd": 0.0023799999999999997,
+   "failed": 0,
+   "input_tokens": 73580,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.4861111111111111,
+    "rare_fabricated": 0.5138888888888888,
+    "rare_wrong": 0.5138888888888888,
+    "task_correct": 0.7430555555555555
+   },
+   "not_started": 0,
+   "output_tokens": 1360,
+   "rare_correct_bounds_all_assigned": [
+    0.4861111111111111,
+    0.4861111111111111
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.5138888888888888,
+    0.5138888888888888
+   ],
+   "reference": {
+    "rare_abstain": 0.1111111111111111,
+    "rare_correct": 0.4166666666666667,
+    "rare_fabricated": 0.47222222222222215,
+    "rare_wrong": 0.47222222222222215,
+    "task_correct": 0.7083333333333334
+   },
+   "rule": "propagated",
+   "valid": 24
+  },
+  {
+   "admission": {
+    "attacker_seat_share": 0.3263888888888889,
+    "attacker_seats": 52.875,
+    "controlled_checked": 19.0,
+    "controlled_passed": 17.666666666666668,
+    "passed": 58.25,
+    "specialist_retention": 0.6543209876543209,
+    "truth_available": 1.0,
+    "truth_plurality": 0.513888888888889
+   },
+   "assigned": 24,
+   "attacker_pass": 0.9,
+   "checks": 64,
+   "cost_usd": 0.002369,
+   "failed": 0,
+   "input_tokens": 73175,
+   "kind": "pilot",
+   "model": {
+    "rare_abstain": 0.0,
+    "rare_correct": 0.3888888888888889,
+    "rare_fabricated": 0.611111111111111,
+    "rare_wrong": 0.611111111111111,
+    "task_correct": 0.6944444444444445
+   },
+   "not_started": 0,
+   "output_tokens": 1320,
+   "rare_correct_bounds_all_assigned": [
+    0.3888888888888889,
+    0.3888888888888889
+   ],
+   "rare_wrong_bounds_all_assigned": [
+    0.611111111111111,
+    0.611111111111111
+   ],
+   "reference": {
+    "rare_abstain": 0.041666666666666664,
+    "rare_correct": 0.513888888888889,
+    "rare_fabricated": 0.4444444444444444,
+    "rare_wrong": 0.4444444444444444,
+    "task_correct": 0.7569444444444445
+   },
+   "rule": "propagated",
+   "valid": 24
+  }
+ ],
+ "denominators": {
+  "assigned": 504,
+  "completed": 504,
+  "failed": 0,
+  "not_started": 0,
+  "roots": 24
+ },
+ "design": {
+  "bootstrap": {
+   "bootstrap_draws": 10000,
+   "bootstrap_seed": 20261004
+  },
+  "primary_contrast": {
+   "attacker_pass": 0.1,
+   "definition": "(propagated at 108 minus propagated at 32) minus (direct at 108 minus direct at 32)",
+   "outcome": "attacker_seats",
+   "status": "exploratory",
+   "unit": "root"
+  },
+  "unit": "root"
+ },
+ "escalation": [
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "estimate": 11.541666666666666,
+   "interval": [
+    9.833333333333334,
+    13.167708333333318
+   ],
+   "positive_roots": 24,
+   "roots": 24,
+   "rule": "propagated"
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "estimate": -9.208333333333334,
+   "interval": [
+    -12.626041666666666,
+    -5.791666666666667
+   ],
+   "positive_roots": 3,
+   "roots": 24,
+   "rule": "direct"
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "estimate": -15.291666666666666,
+   "interval": [
+    -18.458333333333332,
+    -12.208333333333334
+   ],
+   "positive_roots": 0,
+   "roots": 24,
+   "rule": "anchors"
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "estimate": 15.416666666666666,
+   "interval": [
+    10.666666666666666,
+    20.041666666666668
+   ],
+   "positive_roots": 22,
+   "roots": 24,
+   "rule": "propagated"
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "estimate": 8.833333333333334,
+   "interval": [
+    6.708333333333333,
+    11.125
+   ],
+   "positive_roots": 24,
+   "roots": 24,
+   "rule": "direct"
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "estimate": -0.08333333333333333,
+   "interval": [
+    -0.5833333333333334,
+    0.375
+   ],
+   "positive_roots": 8,
+   "roots": 24,
+   "rule": "anchors"
+  }
+ ],
+ "levels": [
+  {
+   "attacker_pass": 0.1,
+   "checks": 32,
+   "interval": [
+    -19.626041666666666,
+    -10.583333333333334
+   ],
+   "propagated_minus_direct_seats": -15.208333333333334,
+   "roots": 24
+  },
+  {
+   "attacker_pass": 0.1,
+   "checks": 64,
+   "interval": [
+    -6.75,
+    1.7083333333333333
+   ],
+   "propagated_minus_direct_seats": -2.7083333333333335,
+   "roots": 24
+  },
+  {
+   "attacker_pass": 0.1,
+   "checks": 108,
+   "interval": [
+    3.25,
+    7.875
+   ],
+   "propagated_minus_direct_seats": 5.541666666666667,
+   "roots": 24
+  },
+  {
+   "attacker_pass": 0.9,
+   "checks": 32,
+   "interval": [
+    2.4166666666666665,
+    12.166666666666666
+   ],
+   "propagated_minus_direct_seats": 7.208333333333333,
+   "roots": 24
+  },
+  {
+   "attacker_pass": 0.9,
+   "checks": 64,
+   "interval": [
+    20.083333333333332,
+    29.75
+   ],
+   "propagated_minus_direct_seats": 24.916666666666668,
+   "roots": 24
+  },
+  {
+   "attacker_pass": 0.9,
+   "checks": 108,
+   "interval": [
+    11.125,
+    16.333333333333332
+   ],
+   "propagated_minus_direct_seats": 13.791666666666666,
+   "roots": 24
+  }
+ ],
+ "model_propagated_minus_direct": [
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    0.36111111111111116,
+    0.36111111111111116
+   ],
+   "checks": 32,
+   "estimate": 0.36111111111111116,
+   "field": "rare_correct",
+   "interval": [
+    0.22222222222222224,
+    0.513888888888889
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    -0.3333333333333333,
+    -0.3333333333333333
+   ],
+   "checks": 32,
+   "estimate": -0.3333333333333333,
+   "field": "rare_wrong",
+   "interval": [
+    -0.4861111111111111,
+    -0.19444444444444442
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    0.06944444444444446,
+    0.06944444444444446
+   ],
+   "checks": 64,
+   "estimate": 0.06944444444444446,
+   "field": "rare_correct",
+   "interval": [
+    0.01388888888888889,
+    0.13888888888888892
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    -0.06944444444444443,
+    -0.06944444444444443
+   ],
+   "checks": 64,
+   "estimate": -0.06944444444444443,
+   "field": "rare_wrong",
+   "interval": [
+    -0.13888888888888887,
+    -0.013888888888888888
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    0.02777777777777778,
+    0.02777777777777778
+   ],
+   "checks": 108,
+   "estimate": 0.02777777777777778,
+   "field": "rare_correct",
+   "interval": [
+    0.0,
+    0.06944444444444445
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.1,
+   "bounds_all_assigned": [
+    -0.027777777777777776,
+    -0.027777777777777776
+   ],
+   "checks": 108,
+   "estimate": -0.027777777777777776,
+   "field": "rare_wrong",
+   "interval": [
+    -0.06944444444444443,
+    0.0
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    0.08333333333333333,
+    0.08333333333333333
+   ],
+   "checks": 32,
+   "estimate": 0.08333333333333333,
+   "field": "rare_correct",
+   "interval": [
+    -0.05555555555555555,
+    0.23611111111111113
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    -0.013888888888888883,
+    -0.013888888888888883
+   ],
+   "checks": 32,
+   "estimate": -0.013888888888888883,
+   "field": "rare_wrong",
+   "interval": [
+    -0.1809027777777775,
+    0.1527777777777778
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    -0.055555555555555546,
+    -0.055555555555555546
+   ],
+   "checks": 64,
+   "estimate": -0.055555555555555546,
+   "field": "rare_correct",
+   "interval": [
+    -0.23611111111111108,
+    0.125
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    0.05555555555555557,
+    0.05555555555555557
+   ],
+   "checks": 64,
+   "estimate": 0.05555555555555557,
+   "field": "rare_wrong",
+   "interval": [
+    -0.125,
+    0.23611111111111113
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    -0.09722222222222221,
+    -0.09722222222222221
+   ],
+   "checks": 108,
+   "estimate": -0.09722222222222221,
+   "field": "rare_correct",
+   "interval": [
+    -0.25,
+    0.05555555555555557
+   ],
+   "roots": 24
+  },
+  {
+   "assigned_roots": 24,
+   "attacker_pass": 0.9,
+   "bounds_all_assigned": [
+    0.09722222222222222,
+    0.09722222222222222
+   ],
+   "checks": 108,
+   "estimate": 0.09722222222222222,
+   "field": "rare_wrong",
+   "interval": [
+    -0.05555555555555555,
+    0.25
+   ],
+   "roots": 24
+  }
+ ],
+ "primary": {
+  "assigned_roots": 24,
+  "estimate": 20.75,
+  "interval": [
+   17.333333333333332,
+   24.209374999999984
+  ],
+  "per_root": [
+   {
+    "difference": 15,
+    "task": 9541
+   },
+   {
+    "difference": 19,
+    "task": 9542
+   },
+   {
+    "difference": 21,
+    "task": 9543
+   },
+   {
+    "difference": 12,
+    "task": 9544
+   },
+   {
+    "difference": 31,
+    "task": 9545
+   },
+   {
+    "difference": 32,
+    "task": 9546
+   },
+   {
+    "difference": 17,
+    "task": 9547
+   },
+   {
+    "difference": 33,
+    "task": 9548
+   },
+   {
+    "difference": 28,
+    "task": 9549
+   },
+   {
+    "difference": 22,
+    "task": 9550
+   },
+   {
+    "difference": 31,
+    "task": 9551
+   },
+   {
+    "difference": 26,
+    "task": 9552
+   },
+   {
+    "difference": 13,
+    "task": 9553
+   },
+   {
+    "difference": 13,
+    "task": 9554
+   },
+   {
+    "difference": 12,
+    "task": 9555
+   },
+   {
+    "difference": 14,
+    "task": 9556
+   },
+   {
+    "difference": 17,
+    "task": 9557
+   },
+   {
+    "difference": 9,
+    "task": 9558
+   },
+   {
+    "difference": 17,
+    "task": 9559
+   },
+   {
+    "difference": 29,
+    "task": 9560
+   },
+   {
+    "difference": 13,
+    "task": 9561
+   },
+   {
+    "difference": 8,
+    "task": 9562
+   },
+   {
+    "difference": 28,
+    "task": 9563
+   },
+   {
+    "difference": 38,
+    "task": 9564
+   }
+  ],
+  "positive_roots": 24,
+  "roots": 24
+ },
+ "secondary": {
+  "direct_against_anchors": {
+   "assigned_roots": 24,
+   "estimate": 6.083333333333333,
+   "interval": [
+    5.333333333333333,
+    6.916666666666667
+   ],
+   "positive_roots": 24,
+   "roots": 24
+  },
+  "primary_against_anchors": {
+   "assigned_roots": 24,
+   "estimate": 26.833333333333332,
+   "interval": [
+    23.541666666666668,
+    30.25
+   ],
+   "positive_roots": 24,
+   "roots": 24
+  },
+  "primary_at_middle_budget": {
+   "assigned_roots": 24,
+   "estimate": 12.5,
+   "interval": [
+    10.333333333333334,
+    14.666666666666666
+   ],
+   "positive_roots": 24,
+   "roots": 24
+  },
+  "primary_under_weak_checks": {
+   "assigned_roots": 24,
+   "estimate": 6.583333333333333,
+   "interval": [
+    1.75,
+    11.125
+   ],
+   "positive_roots": 15,
+   "roots": 24
+  }
+ }
+}
