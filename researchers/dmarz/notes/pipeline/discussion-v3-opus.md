@@ -25,7 +25,7 @@ Q0 gate (unchanged from `bench_v3.analysis`): execution complete, at least 5 of 
 
 ## 4. Design notes for later runs
 
-- The Q0 gate is decided by the clean arms, a small part of the 636 calls. If the dispatch order puts the clean full-evidence diagnostics and clean reports-only swarms first, a failing gate is known in about 10 minutes instead of 65. Worth checking in the launch record before the chain starts; reordering after launch is not possible.
+- The frozen runner works world by world (`src/bench_v3/runner.py` lines 181-207: exposure order and arm order are shuffled inside each world). The gate therefore becomes certain only at the sixth world, about 65 minutes in, unless two clean misses arrive earlier: two misses in either clean gate make a pass impossible. The hub run reports `clean_accuracy` as it goes; I will read it during Q0 and say so as soon as the gate is decided either way. Putting the clean cases of all six worlds first would decide the gate in about 10 minutes, but that is a change to the frozen runner and belongs in a later version, not this attempt.
 - Q0 and S1 run one call at a time. S1's 2,436 calls are 24 independent worlds; two or three workers on the same server would cut four hours to under two without changing any request. That is a launcher change and would need its own rehearsal.
 
 ## 5. Cross-lane
