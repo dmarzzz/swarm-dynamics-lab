@@ -43,3 +43,9 @@ class StopRules(unittest.TestCase):
     else:
      with self.assertRaises(ValueError):diagnostic_a7.execute(out)
     self.assertEqual(json.loads((out/'summary.json').read_text())['api_calls'],expected)
+
+class ImportCheck(unittest.TestCase):
+ def test_worker_import_in_fresh_process(self):
+  import subprocess,sys
+  r=subprocess.run([sys.executable,'-c','import diagnostic_worker'],cwd=Path(__file__).parent,capture_output=True)
+  self.assertEqual(r.returncode,0)

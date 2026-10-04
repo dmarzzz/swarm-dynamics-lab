@@ -23,9 +23,9 @@ def main():
  sys.path.insert(0,str(BASE.parent.parent/'experiment-documentation'));from public_plan import check
  receipt=check('immune-response-v3','A7 HTTP400 diagnostic: exact original, complete branches, flat control;3calls,no actions,no efficacy inference.')
  assert receipt['commit']==a.commit and receipt['plan_sha256']==hashlib.sha256((BASE/'DIAGNOSTIC-A7.md').read_bytes()).hexdigest()
- out=root/a.attempt;assert not out.exists();fd=os.open(str(out)+'.dispatch',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.close(fd)
+ out=root/a.attempt;assert not out.exists();fd=os.open(str(out)+'.dispatch-import-repair',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.close(fd)
  env={k:os.environ[k] for k in ['PATH','HOME','USER','LANG'] if k in os.environ};env.update(PYTHONPATH='/usr/local/lib/swarm',SWARM_SOURCE='vishesh/codex-immune',SWARM_MODEL_BASE_URL='http://127.0.0.1:18765',SWARM_MODEL_CONFIG_FILE=str(BASE/'model-config.json'),SWARM_BUDGET_LEDGER=str(ledger))
- with (root/(a.attempt+'.log')).open('xb') as log:
+ with (root/(a.attempt+'-import-repair.log')).open('xb') as log:
   os.chmod(log.name,0o600);proc=subprocess.Popen([str(root/'.venv/bin/python'),str(BASE/'diagnostic_worker.py'),'--out',str(out),'--receipt',str(root/'receipt-allocation.json'),'--attempt',a.attempt,'--seed','9401'],env=env,cwd=root,stdout=log,stderr=log,start_new_session=True)
   env.clear()
   try:code=proc.wait(timeout=600)

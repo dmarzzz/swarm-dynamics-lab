@@ -23,3 +23,7 @@ Interpretation: repeated400 plus explicit provider schema diagnostics establishe
 Maximum3 requests,512outputtokens,16000inputbytes each, maximum additional reservation USD0.057216. Preserve original USD8 ledger:408 prior requests,USD3.329282reserved including unknowns. No new allowance; no budget increase needed. Reuse an exclusively allocated eligible Dmarz-account researcher host after fresh claim, actual workload/account/source verification. No default-account provisioning. Hard stop10minutes, exclusive claim at least30minutes; localhost-only key relay and verified SSH. Immutable public plan registration before dispatch. Offline checks compare old/new schema languages exhaustively and test safe diagnostic handling. One-time dispatch marker; no automatic successor.
 
 Visualization mapping: three-row status/diagnostic/cost table, with missingness explicit. No animation: these are request validation variants without service transitions. Retain full local evidence and publish aggregate findings, scientific review and operations closeout; release allocation and stop tunnel/relay. New scientific collection remains on hold.
+
+## Zero-request startup repair
+
+Initial worker import failed before hub start or model dispatch. Retain the original launch marker/log and unchanged ledger. Correct module initialization and add a fresh-process worker-import test, then resume the same three unstarted assignments under a separate import-repair dispatch marker. No request is retried or new allowance created.
