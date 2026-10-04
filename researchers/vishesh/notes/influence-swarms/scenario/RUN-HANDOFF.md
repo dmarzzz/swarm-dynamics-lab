@@ -1,3 +1,9 @@
+# Current handoff: 429 classifier repaired; account-side resolution pending
+
+The owner requested diagnosis and continuation on2026-10-04. Read [429 repair plan](429-REPAIR.md).81 offline tests pass; the classifier is explicitly opt-in, no raw HTTP error bodies are retained and automatic retries remain disabled. D6 source and traces are preserved. No fresh calls or allocations. Console is logged out; the account operator must establish the actual limit/billing cause before a recovery run can be admitted. Do not infer a spend cap merely from absent Retry-After. Original cap8/reserved4.917472/calls247 remains.
+
+## Previous handoff (historical)
+
 # Current handoff: D6 diagnostic complete; HOLD native collection
 
 Read [D6 post-mortem](reviews/D6-post.md), [eleven-dimension review](reviews/D6-quality-review.json) and [audit](reviews/D6-audit.json). One first-callHTTP429; no retries, no response; second condition unstarted. The direct route has not recovered. Do not reinterpret the refusal as a model reasoning or schema failure.

@@ -1,3 +1,13 @@
+# Current setup: direct-route 429 repair, account evidence required
+
+2026-10-04. D5 and D6 are completed failed acquisition attempts; historical sections below are preserved. See [D6 closeout](reviews/D6-post.md) and [prospective operational repair](429-REPAIR.md).
+
+The owner requested diagnosis, correction and continuation. The offline opt-in error classifier now passes81 scenario tests, including six new diagnostic/privacy/circuit fixtures. Historical D6 defaults and deployed source are unchanged. No new model request or machine allocation occurred. Cause remains unconfirmed: authorized Console is logged out and coordinating tasks have no account-side explanation. Next action is authorized account limit/billing inspection, followed by a source-bound registered recovery attempt only after fresh admission. No second researcher review is required.
+
+Original capUSD8, cumulative reservationUSD4.917472/calls247; USD3.082528 unreserved. Missing usage remains unknown. G2 offline repair passes; G3 account resolution, recovery-source binding, public registration and exclusive allocation remain pending; G4 native contract qualification remains failed/unassessed. D6 G5 closeout is complete. This is an operational repair, not new scientific evidence.
+
+## Historical setup (superseded)
+
 # Current setup: D5 not started; dispatch blocked
 
 [Runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) · [D5 plan](ITERATION-05.md) · [pre-assessment](reviews/native-D5-01-pre.md) · [operator handoff](RUN-D5.md) · [previous post-mortem](reviews/native-D3-01-post.md).

@@ -49,3 +49,5 @@ D5 native attempt executed under later direct-launch owner scope.24terminal/0val
 
 
 Owner-approved D6 ran at c0f3d096 after75 deployedoffline tests. FirstHTTP429 recorded;onecall,noretry,secondconditionunstarted. Newreservation0.048640,actualunknown;originalledger8/4.917472/247. Fullrequesthash/circuit/accounting audit and11-dimension review complete. Workerexited,dedicatedallocationreleased;HOLD pendingaccount-side routeevidence. No behavioralconclusion or automaticnextattempt.
+
+429 repair: owner requested diagnosis and continuation. Console logged out; PI has no confirmed account-side explanation. Prepared plan before opt-in bounded error classifier;81 offline tests pass. Raw errors never retained, no retry or provider switch. No paid request or allocation; original8cap/4.917472reserved preserved. Account evidence is the next blocker, not researcher approval.

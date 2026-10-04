@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: done
+state: blocked
 task: influence-native-rerun
-doing: D6 diagnostic complete;firstHTTP429 and circuitstop,secondconditionunstarted;closeout complete and native collection on hold
-updated: 2026-10-04T18:09Z
+doing: Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls
+updated: 2026-10-04T18:39Z
 ---
 
-See notes/influence-swarms/scenario/reviews/D6-post.md. No automatic successor; original ledger preserved.
+See notes/influence-swarms/scenario/429-REPAIR.md. Original ledger and D6 evidence preserved.

@@ -12,12 +12,49 @@ MAX_RESERVATION=.048640
 SAFE_ID=re.compile(r'(?:req|request)_[A-Za-z0-9]{8,64}\Z')
 class AcquisitionStopped(Exception):pass
 
-def safe_http(exc):
+def classified_error(exc):
+    """Discard bounded provider text; return only fixed labels, never raw diagnostics.
+
+    This is opt-in for future admitted sources. Historical D6 never reads a body.
+    A label is a provider-reported reason, not independent account verification.
+    """
+    result={'error_body_status':'unreadable','provider_error_type':'unknown','reported_limit':'unknown'}
+    try:raw=exc.read(8193)
+    except Exception:return result
+    if not isinstance(raw,bytes):return result
+    if len(raw)>8192:return {**result,'error_body_status':'oversized'}
+    try:body=json.loads(raw)
+    except (ValueError,UnicodeError,RecursionError):return {**result,'error_body_status':'malformed'}
+    error=body.get('error') if isinstance(body,dict) and body.get('type')=='error' else None
+    if not isinstance(error,dict):return {**result,'error_body_status':'malformed'}
+    result['error_body_status']='parsed'
+    kind=error.get('type')
+    if kind in ('rate_limit_error','invalid_request_error','authentication_error','permission_error','overloaded_error','api_error'):
+        result['provider_error_type']=kind
+    message=error.get('message')
+    # A different HTTP/type pair must not be promoted to a quota diagnosis.
+    if exc.code!=429 or kind!='rate_limit_error' or not isinstance(message,str):return result
+    message=' '.join(message.lower().split())
+    patterns={
+        'spend_limit':r'(?:spend(?:ing)? (?:limit|cap)|monthly (?:usage|credit|cost) limit)',
+        'input_token_rate':r'input tokens? per minute',
+        'output_token_rate':r'output tokens? per minute',
+        'request_rate':r'requests? per minute',
+        'acceleration':r'acceleration limit',
+    }
+    matches=[name for name,pattern in patterns.items() if re.search(pattern,message)]
+    if len(matches)==1:result['reported_limit']=matches[0]
+    elif len(matches)>1:result['reported_limit']='ambiguous'
+    return result
+
+def safe_http(exc,*,classify_body=False):
     h=exc.headers or {};value=h.get('retry-after','');rid=h.get('request-id','')
     retry_after=int(value) if isinstance(value,str) and value.isascii() and value.isdigit() and len(value)<=5 and int(value)<=86400 else None
-    return {'category':'http','http_status':exc.code if type(exc.code) is int and 100<=exc.code<=599 else None,
+    result={'category':'http','http_status':exc.code if type(exc.code) is int and 100<=exc.code<=599 else None,
             'retry_after_seconds':retry_after,'request_id':rid if isinstance(rid,str) and SAFE_ID.fullmatch(rid) else None,
             'retry_permitted':False}
+    if classify_body:result.update(classified_error(exc))
+    return result
 
 def usage(result):
     u=result.get('usage') if isinstance(result,dict) else None
@@ -25,8 +62,9 @@ def usage(result):
     return {k:u[k] for k in ('input_tokens','output_tokens')}
 
 class Session:
-    def __init__(self,directory,ledger):
+    def __init__(self,directory,ledger,*,classify_http_body=False):
         self.directory=Path(directory);self.ledger=Path(ledger)
+        self.classify_http_body=classify_http_body
         if not self.ledger.is_file():raise AcquisitionStopped('existing_ledger_required')
         # mkdir is the exclusive session claim. Existing/inflight journals cannot reopen.
         try:self.directory.mkdir(mode=0o700)
@@ -80,7 +118,7 @@ class Session:
         request_ref=self._artifact('request',encoded)
         self._event({'kind':'attempt_start','attempt':self.count,'reserved_usd':reservation,'retry_permitted':False,'request':request_ref})
         try:raw=transport(encoded)
-        except urllib.error.HTTPError as e:self._stop(safe_http(e))
+        except urllib.error.HTTPError as e:self._stop(safe_http(e,classify_body=self.classify_http_body))
         except TimeoutError:self._stop({'category':'timeout'})
         except Exception:self._stop({'category':'transport'})
         if not isinstance(raw,bytes) or len(raw)>1_000_000:self._stop({'category':'response_bound'})
