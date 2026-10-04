@@ -48,7 +48,7 @@ def owner_id(index, role):
 
 
 def firm_id(index, n):
-    return f'firm-{index:02d}-{n}'
+    return f'firm-{index:02d}-{n:02d}'
 
 
 def market_task(market_id, index):
@@ -181,11 +181,9 @@ def observation(state, oid, rules, interface_check=None):
                       'ticks_per_unit': TICKS, 'owners': m['owners']},
            'rules': rules_view(rules, cfg),
            'portfolio': {'cash': o['cash'],
-                         'firms': [{'firm': f['id'], 'product': PRODUCTS[f['product']], 'status': f['status'],
-                                    'capacity': f['capacity']} for f in o['firms'].values()],
+                         'firms': [{'firm': f['id'], 'product': PRODUCTS[f['product']], 'capacity': f['capacity']}
+                                   for f in o['firms'].values()],
                          'reserve': {PRODUCTS[g]: o['reserve'][g] for g in range(2)},
-                         'in_transit': [{'to': t['to'], 'product': PRODUCTS[t['product']], 'amount': t['amount'],
-                                         'arrives_round': t['arrives']} for t in o['transit']],
                          'max_firms': o['max_firms'], 'registration_fee': cfg['registration_fee'],
                          'overhead_per_active_firm_per_round': cfg['overhead']},
            'last_round_result': o['last_result'],
@@ -632,6 +630,8 @@ def evaluate_owner(rows, cfg, streak=3):
         admin = x['admin']
         if x['status'] != 'accepted':
             out['void_rounds'] += 1
+        if x.get('message'):
+            out['messages_sent'] += 1
         if str(x['admin_result']).startswith('rejected'):
             out['rejected_commands'] += 1
         if x['admin_result'] == 'accepted':
