@@ -1,0 +1,1796 @@
+{
+  "pairs": 1944,
+  "assignments": 1944,
+  "cells": [
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.06944444444444443,
+        "interval": [
+          0.0,
+          0.18055555555555555
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.06944444444444443,
+        "interval": [
+          0.0,
+          0.16666666666666666
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.1111111111111111,
+        "interval": [
+          0.0,
+          0.25
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.11111111111111112
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.08333333333333333,
+        "interval": [
+          0.0,
+          0.20833333333333334
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.08333333333333333,
+        "interval": [
+          -0.013888888888888888,
+          0.20833333333333334
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.1388888888888889,
+        "interval": [
+          0.01388888888888889,
+          0.2916666666666667
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.05555555555555555,
+        "interval": [
+          -0.02777777777777778,
+          0.16666666666666666
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.09722222222222221,
+        "interval": [
+          -0.013888888888888902,
+          0.23611111111111108
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.13888888888888887,
+        "interval": [
+          0.013888888888888886,
+          0.2916666666666667
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.08333333333333333,
+        "interval": [
+          -0.013888888888888888,
+          0.20833333333333334
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.027777777777777776,
+        "interval": [
+          -0.06944444444444443,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.1527777777777778,
+        "interval": [
+          0.02777777777777778,
+          0.3055555555555556
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.125
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.09722222222222221,
+        "interval": [
+          -0.013888888888888895,
+          0.23611111111111108
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.09722222222222221
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -4.625929269271485e-18,
+        "interval": [
+          -0.05555555555555556,
+          0.05555555555555555
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.125,
+        "interval": [
+          0.027777777777777776,
+          0.25
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.027777777777777776,
+        "interval": [
+          -0.06944444444444443,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.125,
+        "interval": [
+          0.05555555555555555,
+          0.20833333333333334
+        ]
+      }
+    },
+    {
+      "identities": 1,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          -0.027777777777777776,
+          0.09722222222222221
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.1388888888888889,
+        "interval": [
+          0.01388888888888889,
+          0.2916666666666667
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          -0.05555555555555555,
+          0.11111111111111112
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.05555555555555556,
+        "interval": [
+          -0.11111111111111112,
+          -0.013888888888888888
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.05555555555555555,
+          0.027777777777777776
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.013888888888888886,
+        "interval": [
+          -0.02777777777777778,
+          0.05555555555555555
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888893,
+        "interval": [
+          -0.06944444444444446,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.02777777777777778,
+        "interval": [
+          -0.09722222222222221,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.013888888888888893,
+        "interval": [
+          -0.041666666666666664,
+          0.06944444444444446
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.06944444444444443,
+        "interval": [
+          -0.01388888888888889,
+          0.18055555555555555
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.06944444444444445
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          -0.041666666666666664,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.125,
+        "interval": [
+          0.02777777777777778,
+          0.23611111111111108
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.05555555555555555,
+        "interval": [
+          0.013888888888888888,
+          0.1111111111111111
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.06944444444444445,
+        "interval": [
+          -0.125,
+          -0.01388888888888889
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.041666666666666664,
+        "interval": [
+          -0.08333333333333333,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          0.0,
+          0.06944444444444443
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888893,
+        "interval": [
+          -0.06944444444444446,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          -0.041666666666666664,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          -0.027777777777777776,
+          0.05555555555555556
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.041666666666666664,
+        "interval": [
+          -0.11111111111111112,
+          0.027777777777777776
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          -0.027777777777777773,
+          0.11111111111111112
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.06944444444444443,
+        "interval": [
+          -0.013888888888888893,
+          0.18055555555555555
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.1388888888888889,
+        "interval": [
+          0.05555555555555556,
+          0.22222222222222224
+        ]
+      }
+    },
+    {
+      "identities": 4,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          -0.0142361111111108,
+          0.1111111111111111
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          -0.06944444444444445,
+          0.1527777777777778
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.06944444444444445
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.06944444444444445
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "clean",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.06944444444444445,
+        "interval": [
+          0.0,
+          0.1527777777777778
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          -0.041666666666666664,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          -0.05555555555555555,
+          0.05555555555555555
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -4.625929269271485e-18,
+        "interval": [
+          -0.05555555555555556,
+          0.05555555555555555
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.041666666666666664,
+        "interval": [
+          0.0,
+          0.1111111111111111
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.05555555555555555,
+          0.027777777777777776
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.05555555555555556,
+          0.027777777777777776
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.06944444444444445
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "relapse",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.11111111111111112,
+        "interval": [
+          0.0,
+          0.23611111111111108
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          0.0,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.01388888888888889,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "random",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.0,
+        "interval": [
+          -0.041666666666666664,
+          0.041666666666666664
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -4.625929269271485e-18,
+        "interval": [
+          -0.05555555555555556,
+          0.05555555555555555
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          0.0,
+          0.041666666666666664
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.02777777777777778,
+        "interval": [
+          0.0,
+          0.08333333333333333
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "renewal",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.027777777777777776,
+        "interval": [
+          -0.06944444444444443,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.08333333333333333,
+        "interval": [
+          0.027777777777777776,
+          0.1527777777777778
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 4,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.027777777777777776,
+        "interval": [
+          -0.06944444444444443,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.05555555555555555,
+          0.027777777777777776
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 5,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": 0.013888888888888888,
+        "interval": [
+          -0.027777777777777776,
+          0.05555555555555555
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.027777777777777776,
+        "interval": [
+          -0.041666666666666664,
+          0.09722222222222221
+        ]
+      }
+    },
+    {
+      "identities": 16,
+      "strategy": "sleeper",
+      "arm": "reputation",
+      "round": 8,
+      "rare_accuracy": {
+        "clusters": 24,
+        "mean": -0.013888888888888888,
+        "interval": [
+          -0.041666666666666664,
+          0.0
+        ]
+      },
+      "wrong_specialist": {
+        "clusters": 24,
+        "mean": 0.1111111111111111,
+        "interval": [
+          0.027777777777777776,
+          0.22222222222222224
+        ]
+      }
+    }
+  ],
+  "primary_difference_in_differences": {
+    "clusters": 24,
+    "mean": -0.013888888888888888,
+    "interval": [
+      -0.041666666666666664,
+      0.0
+    ]
+  }
+}

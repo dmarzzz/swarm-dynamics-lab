@@ -1,0 +1,55 @@
+{
+  "run": "sybil-newcomer-opus/14ea6e6b",
+  "status": "done",
+  "attempts": 1,
+  "params": {
+    "stage": "S1",
+    "backend": "anthropic",
+    "batch": "s1-001",
+    "source_hash": "a21290e41d93c2634dd6824245cf9a8ce0900c9c00f1b9cb0c08640310206322",
+    "code": "d289769aede95922dd69318087f1e27f7a304d12"
+  },
+  "metrics": {
+    "episodes": 1944,
+    "invalid": 0,
+    "model_calls": 1944,
+    "cost_usd": 14.478336,
+    "qualification_passed": 0,
+    "rare_accuracy": 0.4506172839506173
+  },
+  "progress": {
+    "completed": 1944,
+    "failed": 0,
+    "errors": []
+  },
+  "verified_artifacts": [
+    "assignments.jsonl.gz",
+    "episodes.jsonl.gz",
+    "worlds.jsonl.gz",
+    "history.jsonl.gz",
+    "summary.json",
+    "analysis.json",
+    "final_frame.png",
+    "replay.gif",
+    "replay_start.png",
+    "progress.png",
+    "initial_frame.png"
+  ],
+  "verified_images": {
+    "initial_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "final_frame.png": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 1
+    },
+    "replay.gif": {
+      "width": 1800,
+      "height": 1200,
+      "frames": 8
+    }
+  }
+}

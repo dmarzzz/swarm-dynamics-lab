@@ -18,8 +18,8 @@ Status: offline checks pass; fleet S0 → P0 probe → Q0 → S1 admitted stage 
 | G1 Plan written before implementation | pass | README, preregistration.md, design.yaml committed before any fleet stage or model call | — |
 | G2 Instrument and offline checks | pass | 10/10 selftests (adds Opus request-contract and response-handling tests: thinking-block filtering, refusal, output cap, extra text block); local S0 198/198 valid, qualification passed; Q0 and S1 assignment IDs and packet hashes equal to sybil-newcomer-api (1,944 S1 rows) | — |
 | G3 Current attempt admission | pass for s0-001, p0-001, q0-001, s1-001 (each after its predecessor's gate) | reviews/fleet-s0-001-pre.md, q0-001-pre.md, s1-001-pre.md; exclusive claim checked by the launcher | — |
-| G4 Qualification before scientific escalation | pending | software gates: probe parsed and valid; Q0 thresholds unchanged | a failed gate stops the next launch |
-| G5 Reconciliation and closeout | pending | | |
+| G4 Qualification before scientific escalation | pass | P0 probe valid (claude-opus-5-5, exact packet); Q0 `sybil-newcomer-opus/39421582` 36/36 valid, qualification_passed 1 | — |
+| G5 Reconciliation and closeout | pass | S1 `sybil-newcomer-opus/14ea6e6b` 1,944/1,944 valid; publish + verify passed; local Python 3.12 recomputation matches all assignments, worlds, history, packets, grades and analysis; RESULTS.md, reviews/s1-001-post.md; claim released 2026-10-04 09:00Z (agentops #246); dmarz/newcomer-opus 2026-10-04 | — |
 
 ## Design and instrument index
 
