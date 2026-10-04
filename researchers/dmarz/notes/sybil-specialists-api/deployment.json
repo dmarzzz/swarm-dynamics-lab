@@ -32,6 +32,31 @@
         "progress.png",
         "initial_frame.png"
       ]
+    },
+    {
+      "run": "sybil-specialists-api/08338820",
+      "stage": "Q0",
+      "status": "done",
+      "planned": 24,
+      "valid": 24,
+      "model_calls": 24,
+      "cost_usd": 0.041316,
+      "source": "7257d107fda42a6860b8448f75df8d90908fcc01",
+      "verified_artifacts": [
+        "final_frame.png",
+        "replay.gif",
+        "assignment.json",
+        "episodes.jsonl",
+        "summary.json",
+        "progress.png",
+        "initial_frame.png"
+      ]
     }
-  ]
+  ],
+  "budget": {
+    "attempted_calls": 24,
+    "reserved_usd": 0.25566,
+    "actual_usd": 0.041316,
+    "usage_reported_calls": 24
+  }
 }
