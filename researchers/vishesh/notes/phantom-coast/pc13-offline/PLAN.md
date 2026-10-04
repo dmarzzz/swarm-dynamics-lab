@@ -1,6 +1,6 @@
 # PC13 prospective preparation: recoverable ancestry and fresh execution
 
-OFFLINE ONLY. No allocation, paid call, public registration or disclosure authorization. This supersedes the unimplemented sixteen-root proposal in PC12P by pairing representations within roots and including independent corroboration in main collection. The API slice must be reconsidered by PI; do not infer launch permission from the project ceiling.
+Prospective protocol. Named scientific scope and amended funding were conditionally approved in PI-FUND-20261004-02 (recorded below); execution requires all admission checks and native qualification. No blocked-artifact disclosure authorization. This supersedes the unimplemented sixteen-root proposal in PC12P by pairing representations within roots and including independent corroboration in main collection. The API slice must be reconsidered by PI; do not infer launch permission from the project ceiling.
 
 Question: does resolving source ancestry through citation links, rather than reading a supplied equivalent origin index, change discrimination between repeated and independent evidence? The target is expressed probability, not planning, hidden belief, autonomous diffusion or an LLM advantage over deterministic software.
 
