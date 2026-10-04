@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-decision-models; source `88feac7e` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `b4429145` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested successor: symmetric stop/resume admission on repaired persistent closure mechanics. Basis: Offline regression checks establish software behavior only; no native successor outcomes observed. Fixed authored templates and scripted votes limit any later claim.
-- **sample_size_summary:** Observed: no native RD4 outcomes. Planned Q4: 24 clean/uncertainty decisions. Planned S4: 24 fixed roots with reused grammar, 6 policies, 4 epochs = 576 dependent decisions. Prior cohort remains separate.
+- **evidence_confidence:** **1/4** — On this fixed synthetic cohort, symmetric stop/resume wording tied original admission at 87/96 correct; always-check reached 88/96 with fewer logical model calls. Resolved closure retention worked in the observed cases. Basis: Twenty-four authored roots reuse templates and scripted votes; shared responses and retained transport failures limit inference. Failure sensitivity ranges overlap. Same-author replay reproduces every record; no independent semantic validation or deployment claim.
+- **sample_size_summary:** Observed: 24 fixed roots with reused authored grammar; 576/576 dependent decisions across 6 policies and 4 epochs. S4: 203 valid provider responses, 11 retained worker transport/stop records. Separate Q4: 24/24 correct. No independent replication.
 <!-- experiment-evidence:end -->
 
 RD-4 is a separate exploratory cohort. It repairs the reviewed identity/closure defects and compares symmetric stop/resume admission with the original admission rule on matched repaired mechanics. [Prospective plan](PLAN.md), [review response](FEEDBACK.md), [setup record](SETUP.md). Prior outcomes remain in the [RD-2 report](../REPORT.md).

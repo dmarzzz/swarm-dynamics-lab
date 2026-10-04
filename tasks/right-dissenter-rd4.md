@@ -23,7 +23,11 @@ Incorporate Dmarz RD-R1/R2/R3 feedback, repair closure invariants, and evaluate 
 
 ## Done when
 
-- Publish a prospective plan and feedback response before implementation.
-- Repair and regression-check duplicate identity, persistent closure and qualification separation.
-- Qualify and run the bounded successor if admission checks pass; retain all outcomes.
-- Publish analysis, replay, post-mortems and allocation closeout.
+- [x] Publish a prospective plan and feedback response before implementation.
+- [x] Repair and regression-check duplicate identity, persistent closure and qualification separation.
+- [x] Qualify and run the bounded successor if admission checks pass; retain all outcomes.
+- [x] Publish analysis, replay, post-mortems and allocation closeout.
+
+## Coverage note
+
+Completed qualification24/24 and all576fixed S4decisions. Two interrupted segments retained, final continuation completed only unstarted trajectories. Exact saved-data replay, native closure assertions and conservative failure sensitivity published. No net symmetric-gate benefit; independent semantic corpus and explicit native version/expiry/late-verifier strata remain future work. Dmarz allocation released after all artifact hashes matched.
