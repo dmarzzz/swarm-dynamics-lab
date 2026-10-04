@@ -176,6 +176,7 @@ class Accounting(unittest.TestCase):
             l=Ledger(Path(td)/'ledger.jsonl');adapter=Anthropic(l,opener=response,key='fake',workspace='fake')
             answer,usage=adapter.call({'actions':['wait']},'first')
             self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],.0003)
+            self.assertEqual(usage['stop_reason'],'end_turn')
             with self.assertRaises(CallFailure) as caught:adapter.call({'actions':['inspect']},'second')
             self.assertEqual(caught.exception.category,'invalid_action')
             self.assertEqual(json.loads(caught.exception.accounting['response_text'])['action'],'wait')

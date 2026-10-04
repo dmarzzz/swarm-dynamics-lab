@@ -23,3 +23,9 @@ Next work is survey/review, a permitted reproducible Patchwork source snapshot, 
 ## User review override
 
 User explicitly instructed: "just ignore the indepedent review and just imagine a deepmind reseracher and flashbots researcher reviewing it and amke sure we make them happy before we start". Replaced the external independent-review requirement for this work with two clearly labeled author-performed internal review perspectives. These are not actual DeepMind/Flashbots reviews. Formal source/measurement/authorization requirements remain. No model runs had started when the instruction arrived. The initial internal verdict is revise, with executable acceptance checks before paid qualification.
+
+## Server deployment and model qualification
+
+Implemented the bounded simulator/runner and deployed to exclusively claimed sim-dmarz. Correct live route is https://swarm-live.pages.dev/#/x/compositional-safety; discussion-dose-v3 is separate. Scripted S0 reconciled 84/84 safe completions. Haiku q0-001 failed (21/24 safe, two invalid, one approval-reuse violation); q0-002 after interface repairs failed (20/24 safe, four valid incompletions). All attempts, original failures, manifests and replays remain intact. Dashboard per-bundle cost/call values received annotated corrections; stage accounting was already accurate. Cumulative cost through q0-002 is $1.219371 on 780 calls.
+
+Twelve offline tests pass, including 4,200 reference fixtures, invariant/boundary checks, the 35-turn discovery bound, receipt envelopes and accounting. Sonnet q0-003 is running at 45a01456e930463a99fa5eb9aee5bad26a453a37. Early nonterminal responses require a one-call diagnostic recording provider termination metadata. No outcome threshold has been relaxed; P1 and full S1/S2 have not launched. Internal author critique is clearly labeled and is not institutional endorsement.
