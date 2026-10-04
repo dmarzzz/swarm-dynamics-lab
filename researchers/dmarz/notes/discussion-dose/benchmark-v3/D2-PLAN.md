@@ -72,7 +72,11 @@ stateless agent call: one LLM, its supplied private task context, no tools, no
 shared memory and no public board. No model sees another request or answer.
 This minimal architecture isolates baseline decisions before adding swarm state.
 
-If authorized later, use one dedicated server and exclusive claim, one permanent
+If authorized later, submit a complete run request to the owner-controlled always-on
+queue in agentops; the current fleet contract routes new launches through that
+executor, not a laptop. **Do not file a run-queue issue now:** this proposal is
+explicitly unstarted and lacks dispatch authorization. Use one dedicated server
+and exclusive claim, one permanent
 dispatch ledger, an fsynced raw-response journal, native provider adapter, independent
 watchdog, hub counters and hash-indexed artifact uploads. Reuse the D1 infrastructure
 pattern without introducing a large orchestration library. Do not reuse the D1

@@ -74,6 +74,21 @@ model-only diagnostic, not a swarm animation. The ordered journal and call laten
 are retained. Q0 replay delivery is separate and cannot be relabeled as verified
 by this run's successful counters.
 
+## Deployment-policy timing discovered at closeout
+
+A new agentops run-queue instruction landed at 04:47:40 UTC, roughly 30 seconds
+before the operator dispatched D1 at 04:48:10. The operator checkout/preflight used
+the previously documented owner-initiated mode and did not pick up that new queue
+rule before launch. This is a process miss, not an experimental-condition change.
+It was discovered on the closeout refresh. The worker completed once, with no
+retry or second coordinator. Future proposals explicitly require the current
+always-on queue; no queue issue is filed for D2.
+
+Closeout also discovered that owner infrastructure state had been transferred
+to the always-on executor. The local copy must not be used for retirement or
+new provisioning. Verify the current owner workflow and preserve all other servers.
+This change does not retroactively establish cloud raw-artifact access for D1.
+
 ## Next action and closeout
 
 Publish this report, the result tables and [D2 plan](../benchmark-v3/D2-PLAN.md).
