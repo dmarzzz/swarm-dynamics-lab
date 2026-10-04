@@ -1,0 +1,1890 @@
+[
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 56,
+      "id": "repair-sonnet-160-full-removal",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 160
+    },
+    "delta": 0.5,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 6,
+        "switched": 3
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      }
+    ],
+    "trace": [
+      0.0,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.0,
+      0.5,
+      0.6666666666666666,
+      0.6666666666666666,
+      0.5,
+      0.5,
+      0.3333333333333333,
+      0.5,
+      0.5,
+      0.3333333333333333,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 56,
+      "id": "repair-sonnet-160-1-removal",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 160
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 56,
+      "id": "repair-sonnet-160-full-wipe",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 160
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 56,
+      "id": "repair-sonnet-160-1-wipe",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 160
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 60,
+      "id": "repair-sonnet-161-1-removal",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 161
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 60,
+      "id": "repair-sonnet-161-full-wipe",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 161
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 60,
+      "id": "repair-sonnet-161-1-wipe",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 161
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 6,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 60,
+      "id": "repair-sonnet-161-full-removal",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 161
+    },
+    "delta": 0.16666666666666666,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 6,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      }
+    ],
+    "trace": [
+      0.0,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.6666666666666666,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5,
+      0.3333333333333333,
+      0.0,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.0,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 50,
+      "id": "repair-sonnet-162-full-wipe",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 162
+    },
+    "delta": -0.16666666666666666,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 50,
+      "id": "repair-sonnet-162-1-wipe",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 162
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 50,
+      "id": "repair-sonnet-162-full-removal",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 162
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.3333333333333333,
+      0.5,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.5,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5,
+      0.3333333333333333,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 50,
+      "id": "repair-sonnet-162-1-removal",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 162
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 0,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 62,
+      "id": "repair-sonnet-163-1-wipe",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 163
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 62,
+      "id": "repair-sonnet-163-full-removal",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 163
+    },
+    "delta": 0.33333333333333337,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 3
+      },
+      {
+        "decisions": 4,
+        "switched": 4
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.0,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.0,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.5,
+      0.3333333333333333,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.3333333333333333,
+      0.5,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.3333333333333333,
+      0.5,
+      0.5
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "removal",
+      "calls": 62,
+      "id": "repair-sonnet-163-1-removal",
+      "memory": "1",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 163
+    },
+    "delta": 0.0,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 2
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666,
+      0.16666666666666666
+    ]
+  },
+  {
+    "assignment": {
+      "arm": "wipe",
+      "calls": 62,
+      "id": "repair-sonnet-163-full-wipe",
+      "memory": "full",
+      "model": "sonnet",
+      "rounds": 20,
+      "stage": "repair",
+      "task_id": 163
+    },
+    "delta": -0.16666666666666666,
+    "switches": [
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 1
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      },
+      {
+        "decisions": 4,
+        "switched": 0
+      },
+      {
+        "decisions": 2,
+        "switched": 0
+      }
+    ],
+    "trace": [
+      0.16666666666666666,
+      0.16666666666666666,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ]
+  }
+]
