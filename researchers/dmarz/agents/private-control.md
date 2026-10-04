@@ -1,10 +1,10 @@
 ---
 agent: dmarz/private-control
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: build-v3-resample-control
-doing: "resample-v3-a1 running on sim-dmarz-5 (hub discussion-v3-resample/1004-030243-d6fa86), launched at 658a81a under review waiver"
-updated: 2026-10-04T03:05Z
+doing: "resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs"
+updated: 2026-10-04T04:10Z
 ---
 
 ## Notes
