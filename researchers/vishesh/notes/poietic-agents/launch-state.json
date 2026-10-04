@@ -1,13 +1,13 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T08:45:21.828890+00:00",
+  "updated_utc": "2026-10-04T08:55:00.061980+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
   "execution_status": "S0-01-interrupted-and-reconciled",
   "qualification_status": "not-qualified-instrument-failure",
   "scientific_conclusion": "none",
-  "process_compliance": "no-run-to-assess",
+  "process_compliance": "S0-01 admitted; instrument failed; post-hoc outcome reconciliation retained",
   "publication": {
     "immutable_url": "https://github.com/dmarzzz/swarm-lab/blob/f502b05a062925bdaa419d822e1e75f912bb4be4/researchers/vishesh/notes/poietic-agents/README.md",
     "public_page": "https://swarm-live.pages.dev/#/x/poietic-agents",
@@ -25,8 +25,8 @@
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
     "exact_runtime_and_assignments": "frozen S0 deployment passed 54 checks; details retained privately",
-    "offline_instrument_checks": "59 passed for S0-02 repair",
-    "model_qualification": "not-run",
+    "offline_instrument_checks": "63 passed for S0-02 repair (including loopback HTTP boundary and successor approval guards)",
+    "model_qualification": "failed S0-01 instrument; no models qualified",
     "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
     "dedicated_machine_allocation": "current verification retained in private runtime admission",
     "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending",
@@ -37,8 +37,8 @@
   "authorized_api_usd": 1.5,
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
-  "started_run_count": 0,
-  "next_action": "admit fresh S0-02 instrument repair under original remaining authority",
+  "started_run_count": 3,
+  "next_action": "finish S0-01 closeout; present concrete S0-02 repair for owner approval before new allocation or launch",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -50,9 +50,11 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
+    "owner approval of concrete S0-02 update",
     "publish and verify S0-02 immutable plan",
-    "deploy and verify repaired source with original authority/ledgers",
-    "execute fresh qualification and reconcile before S1"
+    "current exclusive allocation and frozen deployment",
+    "original budget and deadline verification",
+    "fresh qualification before any S1"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
@@ -60,23 +62,20 @@
     "S1 budget and stage admission"
   ],
   "observed_model_calls": 36,
-  "actual_poietic_api_spend_usd": 0,
+  "actual_poietic_api_spend_usd": null,
   "host_claimed": false,
   "authorized_total_cumulative_usd": 2,
   "allocation_preparation": {
-    "candidate": null,
     "claimed": false,
-    "read_only_workload_check": "no active containers or recognized experiment workers; only sshd/systemd above 1% CPU",
-    "must_recheck_current_claims_and_workload_before_claim": true,
-    "reason_not_claimed": "approved credential selector unresolved; central dispatcher must select fresh eligible capacity",
-    "previous_candidate": "sim-dmarz",
-    "previous_candidate_now_occupied": true
+    "status": "released after artifact readback; refresh only after successor approval"
   },
   "central_dispatch": {
-    "status": "owner-approved-direct-launch; first attempt stopped; bounded repair",
+    "status": "S0-01 stopped; repair proposal awaiting owner approval",
     "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
     "scope": "S0-01 only; private request receipt retained outside public repository",
-    "model_calls_observed": 0
+    "model_calls_observed": 36
   },
-  "unresolved_api_exposure_usd": 0.479232
+  "unresolved_api_exposure_usd": 0.479232,
+  "allocated_infrastructure_usd": 0.07722376666666667,
+  "cumulative_cost_upper_usd": 0.5564557666666666
 }

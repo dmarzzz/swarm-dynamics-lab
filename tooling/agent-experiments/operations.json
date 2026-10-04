@@ -156,6 +156,18 @@
       "checked_commit": "a3919814c9b6ed6cec4b7d4b6fb801d190620ba1",
       "next_action": "Native Q0 packet submitted through orbital queue. Follow DISPATCH.md; host/runtime/public-page admission and fresh qualification remain pending. No automatic S1.",
       "next_run_approval": "owner"
+    },
+    {
+      "id": "poietic-agents",
+      "title": "Poietic Agents",
+      "owner": "vishesh",
+      "study_path": "researchers/vishesh/notes/poietic-agents",
+      "setup_path": "researchers/vishesh/notes/poietic-agents/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
+      "adapter": null,
+      "checked_at": "2026-10-04T08:59:46.907094+00:00",
+      "checked_commit": "a61a004c8db5bb69c7fb804b0a558fef102d6c25",
+      "next_action": "G6: owner decision on concrete S0-02 repair; then fresh G3 admission with original cumulative ledger/deadline. S0-01 closed after instrument failure; no model qualifies."
     }
   ]
 }

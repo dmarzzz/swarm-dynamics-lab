@@ -24,6 +24,11 @@ def verify(config, now=None, base=BASE, actual_host=None):
     if config.get('file_hashes') != inventory(base): raise ValueError('frozen_source_mismatch')
     if config.get('assignment_sha256') != digest(assignments()): raise ValueError('assignment_manifest')
     if config.get('prior_budget')!={'physical_calls':36,'exposure_nano':479232000}: raise ValueError('prior_budget_evidence')
+    update=config.get('owner_update_approval',{})
+    if (update.get('approved') is not True or update.get('attempt')!=config['attempt'] or
+        not update.get('decision_reference') or update.get('assignment_sha256')!=config['assignment_sha256'] or
+        update.get('instrument_sha256')!=digest(config['file_hashes'])):
+        raise ValueError('owner_update_approval_missing_or_mismatched')
     if config.get('review_resolution') != 'P1-P3-v0.2-tested': raise ValueError('review_resolution_missing')
     auth=config.get('authorization',{})
     if auth.get('owner_approved') is not True or not auth.get('reference') or auth.get('study')!='poietic-agents' or auth.get('stage')!='S0':

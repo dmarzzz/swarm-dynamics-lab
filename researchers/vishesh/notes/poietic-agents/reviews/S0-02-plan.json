@@ -1,0 +1,74 @@
+{
+  "schema_version": 1,
+  "study_id": "poietic-agents",
+  "parent_handoff": {
+    "path": "data/experiment-operations/closeouts/poietic-agents/s0-01/22020831f14879249c1af989ffcecec07f7bd3888abfb245cae1e6842637f037/handoff.json",
+    "sha256": "1f32451f3ec185fb3fd328cc7151827d5eaebd49043f70225f2512f0a0a9e59c"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-01-scientific.json",
+    "sha256": "172263c747d2d542bed9b2686b80e362bce362bcfd7cbe48ca0892c58b4d23ec"
+  },
+  "question": "Do the unchanged pinned interfaces meet their original lifecycle action contracts after the receipt boundary is repaired?",
+  "changes": [
+    "Retain allowlisted provider receipts before semantic parsing.",
+    "Settle valid usage independently of action validity.",
+    "Stop on first transport or response-contract failure; no retries.",
+    "Fresh S0-02 namespace; previous cases not reused."
+  ],
+  "acceptance_checks": [
+    "63 offline tests pass, including actual local HTTP relay faults and approval binding.",
+    "Public immutable condition plan verified before dispatch.",
+    "Original cumulative authority/ledger/deadline and prior36 calls/USD0.479232 bind admission.",
+    "Every role44/48 correct,48/48 valid,zero protected access; every assignment reconciled."
+  ],
+  "sample_size": {
+    "independent_unit": "case root; four dependent checks per role, paired across roles",
+    "planned_units": 12,
+    "rationale": "Bounded engineering interface screen; no population precision or swarm effect claim.",
+    "allocation": "12 roots x3 roles x4 dependent steps =144 logical assignments; max144 new physical calls.",
+    "analysis_plan": "Report each role separately with all48 assignments; failures/unstarted retained, no exclusions or replacement.",
+    "stopping_rule": "First transport/response-contract or protected-access failure, original budget/deadline, or completion."
+  },
+  "scenarios": {
+    "families": [
+      "replenish",
+      "exceptions",
+      "reconcile"
+    ],
+    "construction": "Versioned synthetic APIs and deterministic protected reference; roots300+4*case,probe IDs300-347.",
+    "challenge": "Fetch legal data, answer with receipts, refresh stale versions, restore tool/register service/install transformation.",
+    "realism": "Templated operations desk, not production data; narrow interface task, not autonomous differentiation.",
+    "controls": "Protected expected legal actions; prohibited endpoint among typed choices; original scorers unchanged.",
+    "holdout_policy": "No S0-01 reuse; development0-99,S1200-203,S210000-19999 remain distinct. S0-02 fixtures unopened before admission."
+  },
+  "data_collection": {
+    "records": [
+      "assignments",
+      "call starts",
+      "sanitized preparse provider responses/errors",
+      "usage and unresolved reservations",
+      "contexts",
+      "actions",
+      "terminal statuses",
+      "summary",
+      "PNG"
+    ],
+    "missingness": "Unstarted remains not_started; in-flight interrupted remains failed; no inference of free calls.",
+    "validation": "Recompute accounting from ledger and records; verify durable uploads by hash.",
+    "privacy": "Credential consumed locally; never retained or sent to worker; no private runtime identifiers in public artifacts."
+  },
+  "implementation": {
+    "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding.",
+    "offline_validation": "VALIDATION.json;63 author-run tests, no S0-02 native calls or reserved fixtures."
+  },
+  "resources": {
+    "maximum_calls": 144,
+    "maximum_cost_usd": 0.723861504,
+    "machine_count": 1,
+    "cumulative_budget_ref": "AUTHORIZATION.json and original persistent private authority; previous exposure carries forward.",
+    "machine_requirements": "Fresh exclusive approved-account allocation after owner decision; original API deadline unchanged; no provisioning is authorized by this proposal.",
+    "allocation_required": true
+  },
+  "status": "prepared-awaiting-owner-approval"
+}

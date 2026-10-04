@@ -36,4 +36,4 @@ Finish gate G3 and bounded S0 qualification using researchers/vishesh/notes/poie
 
 ## Coverage note
 
-2026-10-04: direct owner launch/budget authority recorded. All 54 offline checks pass. Approved OpenRouter selector unresolved; no secret values inspected. Fresh private fleet instructions require central run-queue dispatch; earlier sim-dmarz candidate is occupied. No host held, no attempt or model call started, zero spend. Follow the study DISPATCH.md; do not treat task claim as runtime admission.
+2026-10-04: Credential and original budget resolved; owner-approved direct S0-01 launch actually made36 calls. The relay hid underlying failures; worker stopped and all 144 outcomes reconciled,including108 unstarted. All 9 final artifacts passed hash readback and the allocation is released. S0-02 is repaired offline with 63 checks, unchanged models/thresholds, fresh cases,no retries and first-interface-failure stop. Current owner runbook requires approval of this concrete revised contract before new allocation or launch. Existing budget and original deadline/ledgers persist. See SETUP.md,reviews/S0-01-post.md and reviews/S0-02-pre.md.

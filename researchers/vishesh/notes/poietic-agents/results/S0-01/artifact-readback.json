@@ -1,0 +1,70 @@
+{
+  "verified": true,
+  "worker_stopped": true,
+  "checks": [
+    {
+      "role": "generalist",
+      "name": "records.json",
+      "sha256": "2a3c254520e33245997c9122e989393d2e330360cd71900de4b97159e1c4a712",
+      "hash_matches": true,
+      "bytes": 144259
+    },
+    {
+      "role": "generalist",
+      "name": "summary.json",
+      "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7",
+      "hash_matches": true,
+      "bytes": 1804
+    },
+    {
+      "role": "generalist",
+      "name": "final_frame.png",
+      "sha256": "2f1a28fd48d8e50b294fad68f2672a3d65f16464eb0e4684d0059223d47e6114",
+      "hash_matches": true,
+      "bytes": 50317
+    },
+    {
+      "role": "cheap_generative",
+      "name": "records.json",
+      "sha256": "2a3c254520e33245997c9122e989393d2e330360cd71900de4b97159e1c4a712",
+      "hash_matches": true,
+      "bytes": 144259
+    },
+    {
+      "role": "cheap_generative",
+      "name": "summary.json",
+      "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7",
+      "hash_matches": true,
+      "bytes": 1804
+    },
+    {
+      "role": "cheap_generative",
+      "name": "final_frame.png",
+      "sha256": "2f1a28fd48d8e50b294fad68f2672a3d65f16464eb0e4684d0059223d47e6114",
+      "hash_matches": true,
+      "bytes": 50317
+    },
+    {
+      "role": "typed_choice",
+      "name": "records.json",
+      "sha256": "2a3c254520e33245997c9122e989393d2e330360cd71900de4b97159e1c4a712",
+      "hash_matches": true,
+      "bytes": 144259
+    },
+    {
+      "role": "typed_choice",
+      "name": "summary.json",
+      "sha256": "c6cf14f46d068276ea89b11e010c9e00d4e0e51296f4e8ca9a9ff42f542e33b7",
+      "hash_matches": true,
+      "bytes": 1804
+    },
+    {
+      "role": "typed_choice",
+      "name": "final_frame.png",
+      "sha256": "2f1a28fd48d8e50b294fad68f2672a3d65f16464eb0e4684d0059223d47e6114",
+      "hash_matches": true,
+      "bytes": 50317
+    }
+  ],
+  "checked_utc": "2026-10-04T08:54:17.866403+00:00"
+}
