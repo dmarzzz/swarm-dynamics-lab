@@ -17,17 +17,20 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
-        "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
+        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy."
       },
-      "sample_size_summary": "S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.",
+      "sample_size_summary": "S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.",
       "sources": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/audit.json"
       ],
-      "status_at_assessment": "s0_passed_q1_interface_failed_no_swarm_efficacy",
+      "status_at_assessment": "interface_repaired_q1_reasoning_failed_no_swarm_efficacy",
       "assessor": "vishesh/codex-quorum-mirrors",
-      "assessed_at": "2026-10-04"
+      "assessed_at": "2026-10-04",
+      "source_commit": "be37f8b40a5a07fba4f2b55c61766d441fba1cb8"
     },
     {
       "id": "phantom-coast",

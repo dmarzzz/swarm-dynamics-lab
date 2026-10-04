@@ -21,3 +21,7 @@ Owner approved the exact secure-transfer scope with the established machine proc
 ## Direct Q1 run and closeout
 
 Owner directed direct execution, overriding the shared-controller queue wait. Verified approved account and idle host, merged exclusive allocation, deployed frozen revision, passed 54+7 checks, registered and browser-verified public plan, delivered key to memory only and launched. First response failed zero-output-token contract; 15 untouched. Preserved artifacts, verified hub readback, closed receiver and released claim. Exact failed-call usage discarded by current error path; reservation retained. Next: safe failed-response receipt repair and authoritative accounting/contract reconciliation before any bounded repair. No approval wait.
+
+## Q1 interface repair and valid negative result
+
+Found operator assumption error: official Decisions docs show positive output counts despite free output. Published prospective repair, fixed validation and pre-validation billing receipt preservation; 59+7 checks passed. Fenced original ledger, migrated by SCP to exclusive sim-shadow, retained full original failed reservation as explicit unknown-actual upper bound. QM-Q1-02: 16 valid, 0/8 root-MAP correct, all16 report-majority choices; actual $0.00068544. Independent root grouping and billing audit confirm result. Six artifact readbacks pass; browser table verified, receiver exited and allocation released. Interface fixed; no favorable retry of valid adverse outcomes or M1/C1 launch.
