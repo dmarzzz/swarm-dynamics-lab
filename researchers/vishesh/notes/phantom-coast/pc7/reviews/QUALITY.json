@@ -1,0 +1,272 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "pc7-offline-trace-review-no-native-attempt",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T16:42:28.362134+00:00",
+  "verdict": "complete_valid_result",
+  "independent_review": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "gap",
+      "finding": "Useful information-value mechanism exists, but no empirical model role beyond exact Bayes is established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ],
+      "next_action": "Retain historical gaps; establish a useful application-specific native question before qualification. Use proposed safe raw-field trace contract only on a future admitted instrument.",
+      "acceptance_check": "Evidence-linked decision value, prospective model/scenario qualification and current admission; never relabel historical missing fields as recovered."
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Finite-history two-decision fixture is a new synthetic contract, not an application-validated environment.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ],
+      "next_action": "Retain historical gaps; establish a useful application-specific native question before qualification. Use proposed safe raw-field trace contract only on a future admitted instrument.",
+      "acceptance_check": "Evidence-linked decision value, prospective model/scenario qualification and current admission; never relabel historical missing fields as recovered."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact dynamic program checked against exhaustive deterministic policies and true-regime ceiling; simpler baselines identified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No new native qualification; PC5 interface-only Q0 cannot establish PC7 competence.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ],
+      "next_action": "Retain historical gaps; establish a useful application-specific native question before qualification. Use proposed safe raw-field trace contract only on a future admitted instrument.",
+      "acceptance_check": "Evidence-linked decision value, prospective model/scenario qualification and current admission; never relabel historical missing fields as recovered."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "PC5 full assigned denominator audited; PC7 expected values are labelled mathematical fixture outcomes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "140 prior choices/32 S1 roots plus4 Q0 roots;24 new development fixtures are software checks,48 proposed roots unobserved.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All140 original requests reconstructed;128 scientific requests paired with only task difference. No operator transcript in export.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "gap",
+      "finding": "Checked outputs retained; historical raw provider bodies/confidence absent, cannot be reconstructed from hashes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ],
+      "next_action": "Retain historical gaps; establish a useful application-specific native question before qualification. Use proposed safe raw-field trace contract only on a future admitted instrument.",
+      "acceptance_check": "Evidence-linked decision value, prospective model/scenario qualification and current admission; never relabel historical missing fields as recovered."
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "No model/API/infrastructure spend, allocation, credential transfer or ledger reset.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source-hashed original audit, compressed complete export, portable hash readback and eight offline checks.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Readable140-record viewer exposes exact saved prompts and checked outputs, missing raw bodies prominently labelled; no fabricated trajectories.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/PLAN.md",
+          "sha256": "e95c167263643fe7ba7331ff61d1d79fe5c768306fd0405b78bf08c3f9605e77"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
+          "sha256": "72f9f53d2f4f52b8fbd9f665ec1ec199c57ff3390cd955cf8250596efaf0b048"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/trace-audit.json",
+          "sha256": "a016a2f686c9a3fe832d85aff013d1b7fcbc5a0b8075275bcf7345a41ea0a5c0"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc7/results/offline-validation.json",
+          "sha256": "580cc22c74fac2d235ab7750436abc6f6bda304bba3a0deea84003df80855256"
+        }
+      ]
+    }
+  ]
+}

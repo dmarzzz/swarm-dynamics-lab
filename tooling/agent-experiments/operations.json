@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/pc6/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc6/reviews/PI-POST.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc7/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc7/reviews/TRACE-REVIEW.md",
       "adapter": null,
       "checked_at": "2026-10-04T14:31:29.036358+00:00",
       "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "PC6 parked before native dispatch for insufficient decision value. Saved-data PI review complete; latest native cohort remains PC5. Read pc6/SETUP.md and PI-POST.md; no automatic successor or768-choice grid. Original cumulative exposure .857148138 retained.",
+      "next_action": "PC7 offline trace audit and finite-history exact controller complete. No native successor recommended until an application-specific empirical role survives the exact Bayes baseline. Read pc7/SETUP.md; latest native cohort remains PC5; original exposure .857148138 retained.",
       "next_run_approval": "owner"
     },
     {

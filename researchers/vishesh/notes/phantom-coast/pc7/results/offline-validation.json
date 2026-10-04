@@ -1,0 +1,30 @@
+{
+  "kind": "hand_calculated_software_fixture_not_model_evidence",
+  "visible": {
+    "calibration": [
+      true,
+      true,
+      false
+    ],
+    "noise": 0.1,
+    "shift_probability": 0.4,
+    "check_cost": 0.4,
+    "feedback": [],
+    "remaining": 2,
+    "legal_actions": [
+      "trust",
+      "check"
+    ]
+  },
+  "posterior_good": 0.5226708829968377,
+  "predictive_correct": 0.6136025297981026,
+  "posterior_greedy": "trust",
+  "exact_lookahead": "check",
+  "expected_two_step_values": {
+    "trust": 0.7727949404037948,
+    "check": 0.7018384821211385
+  },
+  "native_calls": 0,
+  "holdout_opened": false,
+  "tests_passed": 8
+}
