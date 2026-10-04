@@ -1,0 +1,12 @@
+{
+  "qualified": true,
+  "complete_valid": true,
+  "jev_correct": {
+    "SUPPORT": 20,
+    "REFUTE": 20,
+    "UNCERTAIN": 20
+  },
+  "overall_correct": 60,
+  "required_overall": 51,
+  "required_per_class": 14
+}

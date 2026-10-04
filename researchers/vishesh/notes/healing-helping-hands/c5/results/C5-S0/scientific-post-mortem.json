@@ -1,0 +1,133 @@
+{
+  "schema_version": 1,
+  "study_id": "healing-helping-hands",
+  "attempt": "c5-s0",
+  "parent_handoff_sha256": "1cf58bcb3717c2458621b99e0d8649d8281c908b37606ac9ca7b35690fa5310d",
+  "verdict": "advance",
+  "outcome_interpretation": "Valid qualification with adverse Qwen routing signal; proceed only to already-approved unchanged S1. No broad capability or swarm claim.",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "assessed_at": "2026-10-04T19:19:00.294987+00:00",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Tests whether option-order disagreement locates errors requiring Jev; qualification only, main contrast not inferred.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md",
+          "sha256": "2e0daf39e9ec6f1895d225be26589777ecc0473d2177f140c85dd971ef38fac1"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four qualification forms per class cover explicit improvement, refutation and absent evidence. Authored templates are appropriate only for the declared qualification scope.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/observations.json",
+          "sha256": "25421da89a3310bc405bbdf372a018313cf13f1c5e5e6410c0e9c33ebad0d2a7"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Both stateless Qwen requests differ only by enum order; Jev sees claim/report without Qwen answers. Wrong agreements are explicitly counted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/scientific-review.json",
+          "sha256": "040b5e52da8e06031883b069bea3b69aada350ab8ac2076badd3b7023f045c2b"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Jev60/60 exceeds frozen51/60 and14/class floor; all180 responses valid. Qwen A37/B36 is poor capability, not an endorsement or main gate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/qualification.json",
+          "sha256": "533c5c2ec8aec8a9572ac118d6db67bfddba81d82f1ed9f88eb304fdc2d90e32"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All payloads and scores reconstructed; all24 miss instances inspected. Twenty-three incorrect agreements retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/audit.json",
+          "sha256": "ddf44e410e79f24a5638fe5c06ce82f3f1939fd094961a4aba8f94e85348f7f1"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "60 finite qualification instances nested in12 class-form templates, not60 independent task draws. No noninferiority or external population inference.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/PLAN.md",
+          "sha256": "2e0daf39e9ec6f1895d225be26589777ecc0473d2177f140c85dd971ef38fac1"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Opaque identifiers; no expected labels/families in effective payloads; Qwen120 normal stops and pinned Jev snapshot60/60.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/calls.jsonl",
+          "sha256": "c9154465ed37a3fc5c54c6c26d6f03651bae03d7e10b3158c70854c5adc151fb"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "60assigned/60complete;180start/180terminal; zero failed or missing calls; same-author audit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/audit.json",
+          "sha256": "ddf44e410e79f24a5638fe5c06ce82f3f1939fd094961a4aba8f94e85348f7f1"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.00113043 recorded plus141.33 Qwen seconds; prior exposure retained. Conservative S1 projection0.017622192 fits both caps. Original ledger remains sole remote authority.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/S0-POST.md",
+          "sha256": "0b1bc197fd06906324055bdf87b1099ce33c4dbc3b7a15e055a03fe8b4e41823"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source179b1cca and exact saved payloads/responses support replay; hosted regeneration is not guaranteed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/manifest.json",
+          "sha256": "5c75642241a143ccb72cb7d9102913c29060d387ee81d2c2463519d90cb445f3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured plot visually inspected; labels retain assigned denominator and counterfactual consultation warning. Interactive tiles contain recorded outcomes.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c5/results/C5-S0/figures/outcomes.png",
+          "sha256": "c6d5faf6b88d23de960f13a8f5e693b11b4fdfb02cb8329715294e540ae7c1fc"
+        }
+      ]
+    }
+  ]
+}
