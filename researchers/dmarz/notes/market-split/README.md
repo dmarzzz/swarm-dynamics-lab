@@ -65,4 +65,4 @@ Commit a pre-run review; exclusively claim an available owner-authorized server 
 
 ## Results
 
-Initial local qualification passed 18/18 scripted episodes. A pre-fleet measurement audit separated regulator-independent fragmentation from actual evasion; requalification is required under that evaluator revision. No agent-discovery finding exists yet.
+Corrected local and fleet S0 both passed 18/18 scripted episodes with zero invalid outputs and zero model calls. The public dashboard loads the final PNG and animated replay; playback was verified. Scripted S1 is running its predeclared 432 episodes. These runs validate the mechanism and implementation. No agent-discovery finding exists yet.
