@@ -102,3 +102,7 @@ separate [frozen-history reading-rule diagnostic](reading-rule/README.md), OpenR
 That plan and its source were published before dispatch; the first S0 request returned HTTP403, so the run
 stopped without a valid model output. No scientific reading-rule result exists. Residual README wording that
 called the post-hoc moderator a finding or causal transfer rule has also been corrected.
+
+## Dated follow-up: reading-rule R2, 2026-10-04
+
+The v1 blocked status described above is historical. After owner-authorized access restoration and a prospective amendment, [R2 completed](reading-rule/FINDING.md): 24 paired synthetic histories, 144/144 valid scientific calls, raw reversal effect 0.000183 versus a prespecified 0.10 threshold. Every raw response chose the explicitly disclosed true last event. Cumulative diagnostic calls: 157, 156 valid including qualification, one old HTTP403; USD0.01704420 reported spend plus USD0.05 unknown allowance, USD7.85 retained reservations under USD8. These new diagnostic calls are separate from the corrected 327-attempt swarm pilot and do not establish its causal reading-rule explanation.

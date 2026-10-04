@@ -1,0 +1,110 @@
+{
+  "scope": "reading-rule diagnostic only; historical swarm pilots remain separate",
+  "totals": {
+    "assigned": 312,
+    "started": 157,
+    "terminal": 157,
+    "valid": 156,
+    "invalid_terminal": 1,
+    "unstarted": 155,
+    "ambiguous_started": 0,
+    "cost_unknown_started": 1
+  },
+  "stages": [
+    {
+      "attempt": "v1",
+      "stage": "S0",
+      "assigned": 12,
+      "started": 1,
+      "terminal": 1,
+      "valid": 0,
+      "invalid_terminal": 1,
+      "unstarted": 11,
+      "ambiguous_started": 0,
+      "cost_unknown_started": 1
+    },
+    {
+      "attempt": "v1",
+      "stage": "S1",
+      "assigned": 144,
+      "started": 0,
+      "terminal": 0,
+      "valid": 0,
+      "invalid_terminal": 0,
+      "unstarted": 144,
+      "ambiguous_started": 0
+    },
+    {
+      "attempt": "R2",
+      "stage": "S0",
+      "assigned": 12,
+      "started": 12,
+      "terminal": 12,
+      "valid": 12,
+      "invalid_terminal": 0,
+      "unstarted": 0,
+      "ambiguous_started": 0
+    },
+    {
+      "attempt": "R2",
+      "stage": "S1",
+      "assigned": 144,
+      "started": 144,
+      "terminal": 144,
+      "valid": 144,
+      "invalid_terminal": 0,
+      "unstarted": 0,
+      "ambiguous_started": 0
+    }
+  ],
+  "cap_usd": 8,
+  "actual_reported_usd": "0.01704420",
+  "unknown_cost_reserved_usd": "0.05",
+  "conservative_actual_cost_upper_bound_usd": "0.06704420",
+  "actual_total_usd": null,
+  "retained_reservations_usd": "7.85",
+  "r2_valid_providers": {
+    "Azure": 72,
+    "OpenAI": 84
+  },
+  "scientific_histories": 24,
+  "contrasts": {
+    "primary_abs_raw_reverse_minus_chrono": {
+      "n_histories": 24,
+      "mean": 0.00018272683221835258,
+      "ci95": [
+        2.246870177036412e-06,
+        0.0005320530743330602
+      ],
+      "all_assigned_missingness_bounds": [
+        0.0001827268322183526,
+        0.0001827268322183526
+      ]
+    },
+    "abs_raw_shuffle_minus_chrono": {
+      "n_histories": 24,
+      "mean": 0.0002390926083079832,
+      "ci95": [
+        6.955017539896709e-06,
+        0.0006387322131596155
+      ],
+      "all_assigned_missingness_bounds": [
+        0.0002390926083079832,
+        0.0002390926083079832
+      ]
+    },
+    "signed_summary_chrono_minus_raw_chrono": {
+      "n_histories": 24,
+      "mean": 0.06944620523357492,
+      "ci95": [
+        -0.0003391615141723925,
+        0.17805624247026997
+      ]
+    }
+  },
+  "checker": "same-author independent stdlib implementation; no runner imports",
+  "journal_sha256": {
+    "results": "78f7f3c1be4beed6fba65428ae1003ef006664e0db7f7f2d8c134619378b67ae",
+    "results-r2": "4fc4d936d644e548abd0590cf2f8111ff7206aa292dea0806c47b4f7031b599b"
+  }
+}

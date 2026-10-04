@@ -1,13 +1,21 @@
-# Frozen-history reading-rule diagnostic: blocked at qualification
+# Frozen-history reading-rule diagnostic
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by shadow/sol-cm2; source `cf36e30f` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by shadow/sol-cm2; source `d648e0f7` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — The frozen-history presentation effect is untested: the first qualification request returned HTTP403. Basis: No valid model output or scientific history observed. Offline lossless-history, scoring and budget guards pass, but software tests and an access failure do not establish an empirical reading-rule effect.
-- **sample_size_summary:** Observed: 0 scientific histories. S0 1/12 requests started, 1 HTTP403, 0 valid; S1 0/144 started. Planned: 24 synthetic histories, 6 paired presentations each; two separate unanimous qualification histories. USD0.05 retained reservation, actual charge unknown.
+- **evidence_confidence:** **2/4** — Reversing these indexed raw histories changed majority-name probability by far less than the prespecified 0.10 practical threshold. Basis: All 24 paired synthetic histories and 12 unanimous controls are complete; mean absolute effect 0.000183, 95% history-bootstrap interval [0.000002,0.000532]. Explicit last-event metadata, mixed upstream providers and no independent replication limit generalization.
+- **sample_size_summary:** Observed: 24 synthetic history units; 144/144 scientific calls valid across six paired presentations. R2 controls: 12/12 valid and correct on two separate histories. All attempts: 157 calls, 156 valid, one old HTTP403; 155 v1 assignments unstarted. Calls are not independent histories.
 <!-- experiment-evidence:end -->
+
+**Latest result, R2 (2026-10-04): complete.** [FINDING.md](FINDING.md) reports all 24 paired synthetic histories and 144/144 valid scientific calls. Reversing raw indexed histories had mean absolute probability effect 0.000183, far below the prespecified 0.10 threshold. All 72 raw choices followed the true last event, explicitly disclosed in each prompt. This does not establish a mechanism for prior swarm recovery.
+
+R2 used the unchanged frozen requests after a prospective [access-restoration amendment](AMENDMENT-R2.md). Cumulative: 157 attempts, 156 valid including qualification, one historical HTTP403; USD0.01704420 reported cost plus USD0.05 unknown-cost allowance, USD7.85 retained reservations under USD8. [Root accounting](accounting.json), [all attempt assignments](all-attempts.csv), [R2 post-mortem](POSTMORTEM-R2.md).
+
+## Historical v1 closeout (superseded operational status, retained evidence)
+
+The following describes only v1. Its blocked result is preserved; R2 did not rewrite or silently retry it.
 
 **Status: access-blocked, no scientific result.** On 2026-10-04 at 15:50:40Z the first OpenRouter qualification request for `openai/gpt-4o-mini` returned HTTP 403. The runner stopped immediately as preregistered. No valid model response was obtained; the reason for the provider's denial is not established by the saved status code. No Anthropic pool was used.
 

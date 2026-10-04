@@ -60,6 +60,7 @@ class SuccessorTests(unittest.TestCase):
                      patch.object(s, 'preflight', return_value=self.data), \
                      patch.object(s, 'historical', return_value=[{'event': 'start', 'id': 'v1/old', 'reservation_usd': .05}]), \
                      patch.object(Path, 'home', return_value=root), \
+                     patch.object(r, 'now', return_value='2026-10-04T20:00:00+00:00'), \
                      patch.object(s.urllib.request, 'urlopen', side_effect=fail) as native:
                     s.run('S0', 'a' * 40)
                     self.assertEqual(native.call_count, 1)

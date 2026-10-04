@@ -36,3 +36,7 @@ Execution stopped on access denial; validity 0; qualification blocked; scientifi
 ## Completion and successor handoff
 
 Next action: retain blocked v1; owner must resolve authorized OpenRouter access and declare a fresh qualification attempt before further calls. Carry USD0.05 reserved exposure forward. No scientific null was observed. No automatic expansion or new run is implied by remaining funds.
+
+## R2 continuation and final gate update, 2026-10-04
+
+This dated section supersedes the v1-only operational stop above, not its evidence. Owner authorized an access-restored qualification with cumulative USD8. [AMENDMENT-R2.md](AMENDMENT-R2.md) was committed before implementation and requests. G2: 8 frozen tests plus 3 successor tests pass. G3: public/source admissions saved under results-r2/. G4: R2 12/12 unanimous controls valid and correct; [S1-R2-PRE.md](S1-R2-PRE.md) published before S1. G5: complete-valid-result, 144/144 scientific cells, 24/24 primary pairs. [FINDING.md](FINDING.md), [POSTMORTEM-R2.md](POSTMORTEM-R2.md) and root [accounting.json](accounting.json) reconcile every historical and current attempt. USD7.85 retained reservation under USD8, reported cost USD0.01704420 and USD0.05 historical uncertainty. Next action: FINISH; only saved-data checks are needed. New scientific scope requires a new prospective authority. No worker or provisioned resource remains.

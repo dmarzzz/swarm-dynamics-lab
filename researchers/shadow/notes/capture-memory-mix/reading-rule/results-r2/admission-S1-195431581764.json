@@ -1,0 +1,40 @@
+{
+  "assessment": "diagnostic-only; same-author; AMENDMENT-R2.md",
+  "attempt": "R2",
+  "cap_usd": 8.0,
+  "endpoint": "https://openrouter.ai/api/v1/chat/completions",
+  "hashes": {
+    "AMENDMENT-R2.md": "45c0975161e7f9d632a59238b2eb88eaadbb80a24ebae43a84b885767ec88e28",
+    "PLAN.md": "38469297ce7f86dccaf57bb9a42f11ecc093373958bff4420ef514196eaa1f6f",
+    "S1-R2-PRE.md": "5975ebd80c5140eac173027fe91d0ab89f0fdf6062e546bee26da05a561347f7",
+    "input.json": "c9d24c92ff32abbdd3c961bb4446f07edf60ba9aff330417b5436b4cc71f2639",
+    "reading_rule.py": "6a84a4dbcc4186191f7f5c19375164cb9798c3e03f5e75813fcf6674e982e340",
+    "successor_run.py": "92977998b648aacf2591abcb9a6cb8d91108c3083c9a2c7e0e82a46c61e8565b",
+    "test_successor.py": "9d03afe691541fcaaf107e1e786b49cb32de7589d025b8d7f8c751654afc7efb"
+  },
+  "historical_journal_sha256": "78f7f3c1be4beed6fba65428ae1003ef006664e0db7f7f2d8c134619378b67ae",
+  "historical_reserved_usd": 0.05,
+  "hub_registered": true,
+  "model": "openai/gpt-4o-mini",
+  "public_documents": [
+    {
+      "sha256": "38469297ce7f86dccaf57bb9a42f11ecc093373958bff4420ef514196eaa1f6f",
+      "url": "https://raw.githubusercontent.com/dmarzzz/swarm-lab/d648e0f785dc85c4d77060453ca66563e40675ed/researchers/shadow/notes/capture-memory-mix/reading-rule/PLAN.md"
+    },
+    {
+      "sha256": "45c0975161e7f9d632a59238b2eb88eaadbb80a24ebae43a84b885767ec88e28",
+      "url": "https://raw.githubusercontent.com/dmarzzz/swarm-lab/d648e0f785dc85c4d77060453ca66563e40675ed/researchers/shadow/notes/capture-memory-mix/reading-rule/AMENDMENT-R2.md"
+    }
+  ],
+  "python": "3.12.3 (main, Aug 31 2026, 10:18:26) [GCC 13.3.0]",
+  "qualification": {
+    "assigned": 12,
+    "correct": 12,
+    "pass": true,
+    "valid": 12
+  },
+  "reserve_usd": 0.05,
+  "revision": "d648e0f785dc85c4d77060453ca66563e40675ed",
+  "stage": "S1",
+  "time": "2026-10-04T19:54:31.581719+00:00"
+}

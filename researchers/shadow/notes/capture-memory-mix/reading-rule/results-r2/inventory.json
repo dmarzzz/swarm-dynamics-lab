@@ -1,0 +1,133 @@
+{
+  "scope": "R2 release and retained v1 evidence; excludes this inventory, locks and caches",
+  "files": {
+    "AMENDMENT-R2.md": {
+      "bytes": 5119,
+      "sha256": "45c0975161e7f9d632a59238b2eb88eaadbb80a24ebae43a84b885767ec88e28"
+    },
+    "FINDING.md": {
+      "bytes": 10434,
+      "sha256": "c4450fe4c5380a73589e089bd1029dc53e2ab96017f1497edf12393f2c29adb7"
+    },
+    "PLAN.md": {
+      "bytes": 8200,
+      "sha256": "38469297ce7f86dccaf57bb9a42f11ecc093373958bff4420ef514196eaa1f6f"
+    },
+    "POSTMORTEM-R2.md": {
+      "bytes": 6432,
+      "sha256": "498e2a4518cad5b2c2b9791628fac85058de6d6078a7791be64b91543136704c"
+    },
+    "POSTMORTEM.md": {
+      "bytes": 5037,
+      "sha256": "323c589e4521bae043972e52b703bc82f163863586f277cafca587d66a507e1a"
+    },
+    "README.md": {
+      "bytes": 5397,
+      "sha256": "b27cb0ca94320ee1f977eb1fc413764d33bd4a3be82f7e0c303513cc38cbb349"
+    },
+    "S0-PRE.md": {
+      "bytes": 2152,
+      "sha256": "971f0f258f2dbc05e4f75bb60a21ba8c717410d88aa0c8e3ca1e9fb8f5e1c1a3"
+    },
+    "S1-R2-PRE.md": {
+      "bytes": 3126,
+      "sha256": "5975ebd80c5140eac173027fe91d0ab89f0fdf6062e546bee26da05a561347f7"
+    },
+    "SETUP.md": {
+      "bytes": 5143,
+      "sha256": "0a7dbfb86f751b64cc6fc0e2e2b232383f9867e28bf67015727f8c20b744094d"
+    },
+    "accounting.json": {
+      "bytes": 2661,
+      "sha256": "ad226185ba27868b48372b7eb2e4d00db52ff8903ad4c8c39d342398b26096f9"
+    },
+    "all-attempts.csv": {
+      "bytes": 16296,
+      "sha256": "6f099938ef207f61679aae78ceb5b5a2c5068a6392c078de762d1e83eb9e61f2"
+    },
+    "analyze.py": {
+      "bytes": 7076,
+      "sha256": "67a98659f1494959b73ea915c93e252c0c07157844621ea3f42fd118f864bcd7"
+    },
+    "analyze_r2.py": {
+      "bytes": 8280,
+      "sha256": "121e5f91ff72b5a6304998d75d05586f6d2c4b37a27fafb19e66e0d5cbbca324"
+    },
+    "check_saved.py": {
+      "bytes": 10279,
+      "sha256": "ec3c4ea7d7d8148dbdfcbcfb97957c965230ea3e5b1b52289bb435f96cfbdc03"
+    },
+    "input.json": {
+      "bytes": 585707,
+      "sha256": "c9d24c92ff32abbdd3c961bb4446f07edf60ba9aff330417b5436b4cc71f2639"
+    },
+    "reading_rule.py": {
+      "bytes": 13903,
+      "sha256": "6a84a4dbcc4186191f7f5c19375164cb9798c3e03f5e75813fcf6674e982e340"
+    },
+    "results/admission-S0-155040161364.json": {
+      "bytes": 942,
+      "sha256": "64b6d0187b6c1c2a2c977f50d48c869a9815a295efcf7c18910a30b173d9d84d"
+    },
+    "results/inventory.json": {
+      "bytes": 1347,
+      "sha256": "251e1d566e1d84864f63f1f75b3a750f0bafbffcbdf84cf6b3d413d31ad2ee79"
+    },
+    "results/journal.jsonl": {
+      "bytes": 427,
+      "sha256": "78f7f3c1be4beed6fba65428ae1003ef006664e0db7f7f2d8c134619378b67ae"
+    },
+    "results/paired-history.svg": {
+      "bytes": 17762,
+      "sha256": "a85f62264e67d8991143b59d5d37420fae5ccbcdfaf02e992034d46a45e89a56"
+    },
+    "results/scored.csv": {
+      "bytes": 19605,
+      "sha256": "fd8fc72e867c671a6259dbbc2d707175e9a28213a84c6f7e717f335d5e29b40c"
+    },
+    "results/summary.json": {
+      "bytes": 2621,
+      "sha256": "bc3d5a787f20b040e2cbd86e2484f35372d43d4e5c7b08ad528977dca4039c52"
+    },
+    "results-r2/admission-S0-195104683568.json": {
+      "bytes": 1798,
+      "sha256": "ac128056e00aaab66137d2a419345d823369ef235d2bbcf0fc89cead0380950e"
+    },
+    "results-r2/admission-S1-195431581764.json": {
+      "bytes": 1887,
+      "sha256": "0e4f4f28c754c52fa62ddeac257faebfa68a5926068885beed964eefcdcd5b04"
+    },
+    "results-r2/check-receipt.txt": {
+      "bytes": 2757,
+      "sha256": "5a320caca9b177988e007f41111fe31d4a38a5e753c8032050bd88246a6f22ff"
+    },
+    "results-r2/journal.jsonl": {
+      "bytes": 652737,
+      "sha256": "4fc4d936d644e548abd0590cf2f8111ff7206aa292dea0806c47b4f7031b599b"
+    },
+    "results-r2/paired-history.svg": {
+      "bytes": 27084,
+      "sha256": "258f91c96fdce2f5e42d4ce603bf37ea3132211458077f5130e8a4bc2a10ec34"
+    },
+    "results-r2/scored.csv": {
+      "bytes": 22913,
+      "sha256": "2ae2f67061716abbc73c72d9fb9cc6ac39c56c07a60e44a2abea7c2337e60ee0"
+    },
+    "results-r2/summary.json": {
+      "bytes": 14706,
+      "sha256": "6a207d7dd40e3f4033d9698d1450a092ebe82fc9d3b4c44b814df349599a0690"
+    },
+    "successor_run.py": {
+      "bytes": 8729,
+      "sha256": "92977998b648aacf2591abcb9a6cb8d91108c3083c9a2c7e0e82a46c61e8565b"
+    },
+    "test_reading_rule.py": {
+      "bytes": 4182,
+      "sha256": "eec3a59853dbfa4d80ece131b8631b5c283038008a0c966aa488d213dd18c2ab"
+    },
+    "test_successor.py": {
+      "bytes": 3850,
+      "sha256": "0317900c67a85bde973bf607a4b8de3bbd0b0601f15da7b02d237932f20f4d06"
+    }
+  }
+}

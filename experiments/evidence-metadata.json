@@ -3332,30 +3332,33 @@
     },
     {
       "id": "capture-memory-reading-rule",
-      "title": "Frozen-history reading-rule diagnostic (access blocked)",
+      "title": "Frozen-history reading-rule diagnostic (complete R2)",
       "documents": [
-        "researchers/shadow/notes/capture-memory-mix/reading-rule/README.md"
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/README.md",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/FINDING.md"
       ],
       "experiment_ids": [
         "capture-memory-reading-rule"
       ],
       "registration_paths": [],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "The frozen-history presentation effect is untested: the first qualification request returned HTTP403.",
-        "rationale": "No valid model output or scientific history observed. Offline lossless-history, scoring and budget guards pass, but software tests and an access failure do not establish an empirical reading-rule effect."
+        "score": 2,
+        "claim": "Reversing these indexed raw histories changed majority-name probability by far less than the prespecified 0.10 practical threshold.",
+        "rationale": "All 24 paired synthetic histories and 12 unanimous controls are complete; mean absolute effect 0.000183, 95% history-bootstrap interval [0.000002,0.000532]. Explicit last-event metadata, mixed upstream providers and no independent replication limit generalization."
       },
-      "sample_size_summary": "Observed: 0 scientific histories. S0 1/12 requests started, 1 HTTP403, 0 valid; S1 0/144 started. Planned: 24 synthetic histories, 6 paired presentations each; two separate unanimous qualification histories. USD0.05 retained reservation, actual charge unknown.",
+      "sample_size_summary": "Observed: 24 synthetic history units; 144/144 scientific calls valid across six paired presentations. R2 controls: 12/12 valid and correct on two separate histories. All attempts: 157 calls, 156 valid, one old HTTP403; 155 v1 assignments unstarted. Calls are not independent histories.",
       "sources": [
         "researchers/shadow/notes/capture-memory-mix/reading-rule/PLAN.md",
-        "researchers/shadow/notes/capture-memory-mix/reading-rule/POSTMORTEM.md",
-        "researchers/shadow/notes/capture-memory-mix/reading-rule/results/summary.json",
-        "researchers/shadow/notes/capture-memory-mix/reading-rule/reading_rule.py"
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/AMENDMENT-R2.md",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/POSTMORTEM-R2.md",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/results-r2/summary.json",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/accounting.json",
+        "researchers/shadow/notes/capture-memory-mix/reading-rule/check_saved.py"
       ],
-      "status_at_assessment": "blocked_no_model_observations",
+      "status_at_assessment": "complete_narrow_diagnostic",
       "assessor": "shadow/sol-cm2",
       "assessed_at": "2026-10-04",
-      "source_commit": "cf36e30fd72c53147afa37f6418b94f6870e0fb2"
+      "source_commit": "d648e0f785dc85c4d77060453ca66563e40675ed"
     },
     {
       "id": "phantom-coast-pc7",
