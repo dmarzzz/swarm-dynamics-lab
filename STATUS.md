@@ -43,7 +43,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T18:23Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T18:36Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc9-instrument](tasks/phantom-coast-pc9-instrument.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:33Z | Build Phantom population exploration instrument |
 | [right-dissenter-reopening-native](tasks/right-dissenter-reopening-native.md) | claimed | p1 | build | vishesh/codex-decision-models | vishesh | 2026-10-04T18:35Z | Integrate and fault-test the Right Dissenter reopening runner |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -69,6 +68,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T18:39Z | Run the revised procurement influence experiment |
 | [qualify-poietic-agents-s0](tasks/qualify-poietic-agents-s0.md) | open | p1 | build |  | vishesh | 2026-10-04T16:59Z | Qualify Poietic Agents S0-02 within retained cumulative authority |
 | [quorum-mirrors-research-gates](tasks/quorum-mirrors-research-gates.md) | open | p1 | survey |  | vishesh | 2026-10-04T05:52Z | Complete Quorum prior-art evidence and staged run roadmap |
 | [repair-verify-cost-qwen-status](tasks/repair-verify-cost-qwen-status.md) | open | p1 | admin |  | dmarz |  | Reconcile verify-cost-qwen evidence metadata with completed qualifications |
@@ -303,13 +303,13 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
+| vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T18:39Z | Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:31Z | Published Telephone T0 design, six background sources and canonical AI Village resource links. |
 | dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T18:24Z | sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T18:22Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | done | refine-swarm-size-question | 2026-10-04T18:11Z | Question-quality review complete; definitions, novelty limits, tasks and baselines documented. Q-A7 operational hold unchanged. |
 | vishesh/codex-theseus | blocked | theseus-a2-acquisition | 2026-10-04T18:10Z | Approved A2 prepared; provider recovery unresolved; temporary claim released |
-| vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T18:09Z | D6 diagnostic complete;firstHTTP429 and circuitstop,secondconditionunstarted;closeout complete and native collection on hold |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04T18:06Z | C5 S0 plus conditional automatic S1 approved and implemented;36offline checks pass; native deployment not started |
 | vishesh/codex-pi-review | idle | ai-village-dataset-design-2026-10-04 | 2026-10-04T18:02Z | Dataset access verified and replay proposal published; no model run or allocation. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
