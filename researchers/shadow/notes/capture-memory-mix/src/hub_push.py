@@ -63,11 +63,12 @@ def main():
         push_analysis(stage, [])
         print(f"{stage}: {n} cell runs + analysis")
     elif cmd == "pilot":
-        d = Path(sys.argv[2])
-        n = push_cells("MP", d, "gpt-4o-mini")
-        extra = [f"results/pilot-mp/{f.name}" for f in sorted(d.glob("calls-*.jsonl"))] + ["results/pilot-mp/cells.json", "results/spend-ledger.json", "results/priors-4omini.json", "results/calib-llama8b.json"]
-        push_analysis("MP", extra)
-        print(f"MP: {n} cell runs + analysis")
+        # usage: pilot <dir> <stage-name> <model-tag>   e.g. pilot results/pilot-mp MP gpt-4o-mini
+        d, stage, tag = Path(sys.argv[2]), sys.argv[3], sys.argv[4]
+        n = push_cells(stage, d, tag)
+        extra = [f"{d}/{f.name}" for f in sorted(d.glob("calls-*.jsonl"))] + [f"{d}/cells.json", "results/spend-ledger.json", "results/priors-4omini.json", "results/calib-llama8b.json", "results/rescue-vs-f.svg"]
+        push_analysis(stage, extra)
+        print(f"{stage}: {n} cell runs + analysis")
 
 
 if __name__ == "__main__":
