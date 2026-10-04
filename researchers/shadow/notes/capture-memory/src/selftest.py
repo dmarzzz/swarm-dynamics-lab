@@ -15,6 +15,8 @@
 9. Splits and plan: dev and holdout do not overlap; every stage has a fixed seed list; the primary contrast
    names an existing arm, memory pair, world, dose and stage; runs_for_stage covers each cell once.
 10. Model adapter: refuses to build without a dollar cap (so a stray --backend http cannot spend).
+11. S1b and the dose rule: the stage only lengthens the takeover cap, its grid covers the rule's grid, the rule's
+    horizon fits inside the cap, the plan covers each cell once, and s2_pilot_draft is not a queueable stage.
 """
 from __future__ import annotations
 
@@ -27,7 +29,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import model  # noqa: E402
 import sim  # noqa: E402
-from common import load, runs_for_stage  # noqa: E402
+from common import SCRIPTED_STAGES, load, runs_for_stage, stage_cfg  # noqa: E402
 
 d = load("design.yaml")
 cfg, arms, mems = d["cfg"], d["arms"], d["memories"]
@@ -121,11 +123,14 @@ pc = d["primary_contrast"]
 check(pc["arm"] in arms and pc["world"] in sim.WORLDS and pc["stage"] in d["stages"]
       and pc["dose"] in d["stages"][pc["stage"]]["doses"] and all(m in mems for m in pc["compare_memory"]),
       "primary contrast: names an existing stage, world, dose, arm and memory pair")
-plan = runs_for_stage(d, "S1", "scripted")
-cells_planned = {(p["world"], p["dose"], p["memory"], p["tasks"]) for p in plan}
-check(len(cells_planned) == len(plan), "plan: each S1 cell block is queued once")
-check(len(plan) == len(d["stages"]["S1"]["worlds"]) * len(d["stages"]["S1"]["doses"]) * len(mems)
-      * -(-d["stages"]["S1"]["tasks"] // d["block"]), f"plan: S1 has {len(plan)} runs = worlds x doses x memories x blocks")
+for stage in SCRIPTED_STAGES:
+    st = d["stages"][stage]
+    plan = runs_for_stage(d, stage, "scripted")
+    cells_planned = {(p["world"], p["dose"], p["memory"], p["tasks"]) for p in plan}
+    check(len(cells_planned) == len(plan), f"plan: each {stage} cell block is queued once")
+    want = (len(st["worlds"]) * len(st["doses"]) * len(st.get("memories", mems)) * -(-st["tasks"] // st.get("block", d["block"])))
+    check(len(plan) == want, f"plan: {stage} has {len(plan)} runs = worlds x doses x memories x blocks")
+check(set(d["stages"]) == set(SCRIPTED_STAGES), f"stages: design stages {sorted(d['stages'])} are exactly the scripted ones")
 check(set(arms) <= set(sim.ARMS), f"arms in design.yaml exist in sim.ARMS {sorted(sim.ARMS)}")
 
 # 10 model adapter refuses without a cap
@@ -136,6 +141,27 @@ try:
     check(False, "model adapter: refuses to build without a dollar cap")
 except model.ModelFailure:
     check(True, "model adapter: refuses to build without a dollar cap")
+
+# 11 S1b and the dose rule
+s1b, rule = d["stages"]["S1b"], d["dose_rule"]
+check(set(s1b["cfg_overrides"]) == {"takeover_max_rounds"}, "S1b: overrides the takeover cap and nothing else")
+cfg_b = stage_cfg(d, "S1b")
+check(cfg_b["takeover_max_rounds"] >= 2 * rule["horizon"] and cfg_b["takeover_max_rounds"] >= 100,
+      f"S1b: takeover cap {cfg_b['takeover_max_rounds']} >= 2 x rule horizon {rule['horizon']}")
+check({k: v for k, v in cfg_b.items() if k != "takeover_max_rounds"} == {k: v for k, v in cfg.items() if k != "takeover_max_rounds"},
+      "S1b: every other constant equals the frozen S1 cfg")
+check(set(rule["grid"]) <= set(s1b["doses"]) and set(d["stages"]["S1"]["doses"]) <= set(s1b["doses"]),
+      "S1b: dose grid covers the rule grid and the S1 doses")
+check(0 < rule["capture_target"] <= 1 and all(0 < x <= 1 for x in rule["grid"]) and rule["grid"] == sorted(rule["grid"]),
+      "dose rule: target in (0, 1], grid sorted and in (0, 1]")
+check(all(round(x * cfg["n_agents"]) < cfg["n_agents"] for x in s1b["doses"]), "S1b: every dose leaves at least one honest agent")
+check("s2_pilot_draft" not in d["stages"] and d["s2_pilot_draft"]["max_cost_usd"] is None,
+      "S2 draft: not a stage, dollar cap still a placeholder")
+r400 = sim.run_episode(0, 1, "W1_INSIDE", 0.42, ["A1_purge"], cfg_b, memory=5)[0]
+r100 = sim.run_episode(0, 1, "W1_INSIDE", 0.42, ["A1_purge"], cfg, memory=5)[0]
+check(r400["trajectory"]["capture_round"] == r100["trajectory"]["capture_round"]
+      and r400["evaluation"]["frac_original_T"] == r100["evaluation"]["frac_original_T"],
+      "S1b: a longer cap changes nothing for an episode that captures inside the old cap")
 
 print("\nselftest", "FAILED" if fails else "passed")
 sys.exit(1 if fails else 0)

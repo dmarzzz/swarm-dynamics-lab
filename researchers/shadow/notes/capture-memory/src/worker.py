@@ -25,7 +25,7 @@ HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
 import sim  # noqa: E402
 import model  # noqa: E402
-from common import ROOT, load, memory_value, runs_for_stage, task_range  # noqa: E402
+from common import ROOT, SCRIPTED_STAGES, load, memory_value, runs_for_stage, task_range  # noqa: E402
 
 
 def code_commit() -> str | None:
@@ -38,6 +38,9 @@ def metrics(stats: dict) -> dict:
     n_cap = sum(a["captured"] for a in stats.values()) / max(1, len(stats))
     tot = next(iter(stats.values()))["n"] if stats else 0
     m["captured"] = round(n_cap / tot, 4) if tot else None
+    for H in (100, 200):
+        c = sum(a.get(f"cap{H}", 0) for a in stats.values()) / max(1, len(stats))
+        m[f"captured_{H}"] = round(c / tot, 4) if tot else None
     for arm, a in stats.items():
         if a["n"]:
             m[f"frac_T_{arm}"] = round(a["frac_T"] / a["n"], 4)
@@ -54,7 +57,7 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
     memory = memory_value(p["memory"])
     out.parent.mkdir(parents=True, exist_ok=True)
     code = code_commit()
-    stats = {a: {"n": 0, "captured": 0, "frac_T": 0.0, "rec": 0, "invalid": 0} for a in arms}
+    stats = {a: {"n": 0, "captured": 0, "cap100": 0, "cap200": 0, "frac_T": 0.0, "rec": 0, "invalid": 0} for a in arms}
     total, done = len(tasks) * len(seeds), 0
     with out.open("a") as f:
         for t in tasks:
@@ -70,6 +73,9 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
                         e = rec["evaluation"]
                         a["n"] += 1
                         a["captured"] += e["captured"]
+                        lat = e["capture_latency"]
+                        a["cap100"] += lat is not None and lat <= 100
+                        a["cap200"] += lat is not None and lat <= 200
                         a["frac_T"] += e["frac_original_T"]
                         a["rec"] += e["recovered"]
                     else:
@@ -86,7 +92,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--hub", action="store_true", help="take queued runs from the hub (needs swarm_report)")
     ap.add_argument("--forever", action="store_true")
-    ap.add_argument("--stage", choices=["S0", "S1"], default="S0")
+    ap.add_argument("--stage", choices=list(SCRIPTED_STAGES), default="S0")
     ap.add_argument("--backend", choices=["scripted", "http"], default="scripted")
     ap.add_argument("--out", help="local mode: output directory (must not exist)")
     ap.add_argument("--limit", type=int, help="local mode: run only the first N cells")
@@ -105,8 +111,8 @@ def main():
 
         def work(run):
             p = run.params
-            if p.get("stage") not in ("S0", "S1"):
-                raise ValueError("only S0/S1 exist before hypothesis acceptance")
+            if p.get("stage") not in SCRIPTED_STAGES:
+                raise ValueError("only S0/S1/S1b exist before hypothesis acceptance")
             if p.get("backend", "scripted") != a.backend:
                 raise ValueError("worker backend mismatch")
             out = ROOT / "results" / "episodes" / (run.id.replace("/", "__") + ".jsonl")

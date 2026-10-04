@@ -128,6 +128,53 @@ def main():
                      f"{r['captured']:.2f} | {r['capture_latency_med']} | {r['frac_original_T']:.3f} / {r['frac_original_T_captured']:.3f} | "
                      f"{r['recovered']:.3f} / {r['recovered_captured']:.3f} | {r['half_time_med']} |")
 
+    # ---- capture curves and the dose rule (any stage; the S1b sweep is what this is for)
+    rule = d.get("dose_rule", {})
+    H, target = rule.get("horizon", 200), rule.get("capture_target", 0.8)
+    cap_T = max({int(e["cfg"]["takeover_max_rounds"]) for e in eps})
+    horizons = sorted({h for h in (100, 200, 400) if h <= cap_T} | {cap_T})
+    lines += ["", f"## Capture rate by dose and memory (within 100 / 200 / {cap_T} takeover rounds; 95% CI at H = {H} is a cluster bootstrap over tasks)", "",
+              "Capture is decided before the intervention and is shared by the arms, so one row per cell (read from A1_purge). "
+              f"Dose rule (design.yaml): per memory and world, the smallest grid dose with >= {target:.0%} captured within H = {H}.", "",
+              "| world | memory | dose | k | n | " + " | ".join(f"cap<={h}" for h in horizons) + f" | 95% CI (H={H}) | median latency |",
+              "|---|---|---|---|---|" + "---|" * len(horizons) + "---|---|"]
+    curve = {}
+    for (world, dose, memory), by_arm in sorted(cells.items(), key=lambda kv: (kv[0][0], mkey(kv[0][2]), kv[0][1])):
+        if world == "W0_CLEAN":
+            continue
+        xs = by_arm.get(arms[1] if len(arms) > 1 else arms[0], []) or next(iter(by_arm.values()), [])
+        if not xs:
+            continue
+        lat = [x["evaluation"]["capture_latency"] for x in xs]
+        within = {h: mean([l is not None and l <= h for l in lat]) for h in horizons}
+        by_task = defaultdict(list)
+        for x in xs:
+            l = x["evaluation"]["capture_latency"]
+            by_task[x["task_id"]].append(1.0 if (l is not None and l <= H) else 0.0)
+        lo, hi = boot_ci({t: mean(v) for t, v in by_task.items()})
+        curve[(world, memory, dose)] = (within.get(H, float("nan")), lo, hi)
+        lines.append(f"| {world} | {memory} | {dose} | {xs[0]['trajectory']['k']} | {len(xs)} | "
+                     + " | ".join(f"{within[h]:.2f}" for h in horizons)
+                     + f" | [{lo:.2f}, {hi:.2f}] | {_median([l for l in lat if l is not None])} |")
+    lines += ["", f"### Dose rule applied: smallest dose with >= {target:.0%} captured within {H} rounds", "",
+              "| world | memory | dose* | captured within H at dose* | 95% CI | note |", "|---|---|---|---|---|---|"]
+    dose_table = {}
+    for world in sorted({w for w, _, _ in curve}):
+        for memory in sorted({m for w, m, _ in curve if w == world}, key=mkey):
+            doses = sorted(dd for w, m, dd in curve if (w, m) == (world, memory))
+            pick = next((dd for dd in doses if curve[(world, memory, dd)][0] >= target), None)
+            dose_table.setdefault(world, {})[memory] = pick
+            if pick is None:
+                best = max(doses, key=lambda dd: curve[(world, memory, dd)][0]) if doses else None
+                lines.append(f"| {world} | {memory} | none on grid | {curve[(world, memory, best)][0]:.2f} at {best} | "
+                             f"[{curve[(world, memory, best)][1]:.2f}, {curve[(world, memory, best)][2]:.2f}] | not capturable at this horizon; excluded from removal contrasts |")
+            else:
+                p, lo, hi = curve[(world, memory, pick)]
+                note = "CI lower bound also >= target" if lo >= target else "point estimate clears target, CI lower bound does not"
+                lines.append(f"| {world} | {memory} | {pick} | {p:.2f} | [{lo:.2f}, {hi:.2f}] | {note} |")
+    (out / f"{a.stage}_dose_rule.json").write_text(json.dumps({"horizon": H, "capture_target": target,
+                                                              "takeover_cap": cap_T, "dose_by_world_memory": dose_table}, indent=2))
+
     # ---- primary contrast: memory a vs memory b, same arm, same world/dose, captured under both
     pc = d["primary_contrast"]
     m_hi, m_lo = (str(m) for m in pc["compare_memory"])
@@ -166,6 +213,33 @@ def main():
                     if is_primary:
                         primary_line = line
 
+    # ---- per-memory-dose contrast: each memory at its own dose* (dose_rule), vs memory 1 at its dose*, same draws
+    lines += ["", "## Memory contrasts at the per-memory dose (dose rule applied; exploratory, doses differ across the pair)", "",
+              "| world | arm | metric | memory a @ dose* | memory b @ dose* | mean a | mean b | diff | 95% CI | tasks | n pairs |",
+              "|---|---|---|---|---|---|---|---|---|---|---|"]
+    for world, per_mem in sorted(dose_table.items()):
+        base_m = "1"
+        if per_mem.get(base_m) is None:
+            continue
+        for ma in [m for m in sorted(per_mem, key=mkey) if m != base_m and per_mem[m] is not None]:
+            da, db = per_mem[ma], per_mem[base_m]
+            for arm in arms:
+                for metric in [pc["metric"]] + pc["secondary"]:
+                    A = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells[(world, da, ma)].get(arm, [])}
+                    B = {(e["task_id"], e["seed"]): e["evaluation"] for e in cells[(world, db, base_m)].get(arm, [])}
+                    common = [k for k in A if k in B and A[k]["captured"] and B[k]["captured"]
+                              and A[k][metric] is not None and B[k][metric] is not None]
+                    if not common:
+                        continue
+                    by_task = defaultdict(list)
+                    for k in common:
+                        by_task[k[0]].append(float(A[k][metric]) - float(B[k][metric]))
+                    by_task = {t: mean(v) for t, v in by_task.items()}
+                    lo, hi = boot_ci(by_task)
+                    lines.append(f"| {world} | {arm} | {metric} | {ma} @ {da} | {base_m} @ {db} | "
+                                 f"{mean([A[k][metric] for k in common]):.3f} | {mean([B[k][metric] for k in common]):.3f} | "
+                                 f"{mean(list(by_task.values())):+.3f} | [{lo:+.3f}, {hi:+.3f}] | {len(by_task)} | {len(common)} |")
+
     # ---- bridge: A2 wipe minus A1 purge, per memory (same draws)
     br = pc["bridge"]
     t_arm, c_arm = br["arms"]
@@ -198,7 +272,7 @@ def main():
         import swarm_report as sr
         run = sr.start(exp, run=f"{exp}/analysis-{a.stage}", params={"stage": a.stage, "kind": "analysis"},
                        message=f"analysis of {len(eps)} episode records")
-        for f in [f"{a.stage}.md", f"{a.stage}_cells.csv"]:
+        for f in [f"{a.stage}.md", f"{a.stage}_cells.csv", f"{a.stage}_dose_rule.json"]:
             run.artifact(out / f, f)
         run.done(message=(primary_line or "exploratory stage").replace("|", " ").strip())
         print(f"attached to hub run {exp}/analysis-{a.stage}")

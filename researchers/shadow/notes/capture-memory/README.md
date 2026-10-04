@@ -1,6 +1,6 @@
 # Capture and memory: does a purged swarm return?
 
-Exploratory build and scripted S0/S1, owned by **shadow/sol-capture**, 3 October 2026. Attribution: Sol.
+Exploratory build and scripted S0/S1/S1b, owned by **shadow/sol-capture**, 3 to 4 October 2026. Attribution: Sol.
 
 **Status: labelled hunch, not an accepted hypothesis.** The hypothesis text is
 [shadow-capture-memory, PR 82](https://github.com/dmarzzz/swarm-lab/pull/82), status `proposed`, which rests on
@@ -117,7 +117,8 @@ removal-phase simulation was inspected per memory length; the capture and recove
 | selftest | 30-task probes per check, 32 checks | determinism, pairing across arms and memory, blindness, totality, splits, plan, adapter refuses without a cap |
 | S0 | 50 dev tasks x 1 seed x 4 memories x 3 arms = 600 episodes | clean world holds the convention at every memory length |
 | S1 | 100 dev tasks x 2 seeds x 2 worlds x 2 doses x 4 memories x 3 arms = 9,600 episodes | capture rates, the declared contrast, variance for a later sample size |
-| S2 | none | needs an accepted hypothesis; holdout tasks 1000 to 1999 are never opened here |
+| S1b | 100 dev tasks x 2 seeds x 2 worlds x 8 doses x 4 memories x 3 arms = 38,400 episodes, takeover cap 400 | dose sweep: the capture threshold per memory length, fixes the dose rule (below) before any later stage |
+| S2 | none | needs an accepted hypothesis; holdout tasks 1000 to 1999 are never opened here. A costed pilot *draft* is in design.yaml `s2_pilot_draft` and below; it is not a stage |
 
 ## Run and deploy
 
@@ -127,6 +128,8 @@ python3 src/coordinator.py stage S1 --dry-run
 python3 src/worker.py --stage S0 --out results/local-s0        # local, scripted, about 2 s
 python3 src/worker.py --stage S1 --out results/local-s1        # about 50 s on one core
 python3 src/analyze.py --stage S1 --local results/local-s1
+python3 src/worker.py --stage S1b --out results/local-s1b      # about 5 min on one core (400-round cap)
+python3 src/analyze.py --stage S1b --local results/local-s1b
 ```
 
 Fleet (sim-shadow, claim `shadow-capture-memory` in swarm-labs-agentops; addresses and tokens stay there):
@@ -137,6 +140,8 @@ python3 src/coordinator.py register
 python3 src/coordinator.py stage S0 && SWARM_SOURCE=shadow/sol-capture python3 src/worker.py --hub
 python3 src/coordinator.py stage S1 && SWARM_SOURCE=shadow/sol-capture python3 src/worker.py --hub
 python3 src/analyze.py --stage S1
+python3 src/coordinator.py stage S1b && SWARM_SOURCE=shadow/sol-capture python3 src/worker.py --hub
+python3 src/analyze.py --stage S1b                              # writes results/S1b.md + S1b_dose_rule.json
 ```
 
 The coordinator refuses to queue a non-scripted backend and skips cells already on the hub. The worker refuses a
@@ -177,6 +182,83 @@ insufficient inside it, which reproduces the [[de-marzo-2026-conformity]] split 
 **S0 (W0_CLEAN):** every memory length holds the convention; `frac_original_T` 0.80 at memory 1 (noise floor of
 the one-slot rule), 1.00 at 5, 20 and full. Arms are identical, nothing to remove.
 
+## S1b: dose sweep and the dose rule (scripted, 38,400 episodes, 0 invalid)
+
+Full tables: [results/S1b.md](results/S1b.md), [results/S1b_cells.csv](results/S1b_cells.csv), machine-readable rule output
+[results/S1b_dose_rule.json](results/S1b_dose_rule.json). Hub run `capture-memory/analysis-S1b`.
+
+S1 left the full-memory arm unmeasurable: no capture at dose 0.42 or 0.5 within 100 rounds. S1b reruns the
+same design with the takeover cap at 400 rounds and 8 doses (0.42 to 0.83, k = 10 to 20 of 24), every memory
+length, both worlds. Nothing else changed (selftest checks that). The question is where the capture threshold
+sits per memory length, and how long capture takes near it.
+
+**Capture within 100 / 200 / 400 takeover rounds, W1_INSIDE, full memory** (200 episodes per cell, CI at
+H = 200 is a cluster bootstrap over tasks):
+
+| dose | k | <=100 | <=200 | <=400 | 95% CI at 200 | median latency |
+|---|---|---|---|---|---|---|
+| 0.42 | 10 | 0.00 | 0.00 | 0.18 | [0.00, 0.00] | 370 |
+| 0.46 | 11 | 0.00 | 0.03 | 0.99 | [0.01, 0.05] | 276 |
+| 0.50 | 12 | 0.00 | 0.72 | 1.00 | [0.65, 0.79] | 186 |
+| 0.54 | 13 | 0.01 | **0.90** | 1.00 | [0.85, 0.94] | 162 |
+| 0.58 | 14 | 0.09 | 1.00 | 1.00 | [1.00, 1.00] | 125 |
+| 0.67 | 16 | 0.99 | 1.00 | 1.00 | [1.00, 1.00] | 77 |
+
+So full memory is capturable at every dose from 0.46 up; it is just slow. An unbounded running mean moves by
+1/t per round, so the time to tip scales with how much history is already banked (20 entrench rounds here),
+and the 100-round cap in S1 was simply too short. Bounded memories 1, 5, 20 capture 100% at every dose in
+W1_INSIDE (median latency 2 to 35 rounds). In W2_OUTSIDE the threshold climbs with memory: memory 5 needs
+0.46, memory 20 needs 0.54, full needs 0.83 (and even then takes 113 rounds).
+
+**Dose rule (design.yaml `dose_rule`, fixed before the sweep ran):** per memory length and world, the dose for
+the removal question is the smallest grid dose at which at least 80% of episodes are captured within
+H = 200 takeover rounds, with the cap at 2H = 400 so latency near the threshold is observed rather than
+censored. If no grid dose reaches 80%, that memory length is "not capturable at this horizon" and is excluded
+from the removal contrast rather than dosed above 0.83. Applied to the scripted sweep:
+
+| world | memory 1 | memory 5 | memory 20 | memory full |
+|---|---|---|---|---|
+| W1_INSIDE | 0.42 | 0.42 | 0.42 | **0.54** (0.90 [0.85, 0.94] captured within 200) |
+| W2_OUTSIDE | 0.42 | 0.46 (0.81 [0.74, 0.86], CI lower bound below target) | 0.54 (0.98 [0.96, 1.00]) | 0.83, but only 4 honest agents remain: excluded |
+
+**Amendment after seeing S1b** (labelled as such in design.yaml): dose* must also leave at least 10 honest
+agents (dose <= 0.58 at N = 24). A "population" of 4 is not the object the hypothesis is about. This rules out
+W2_OUTSIDE/full, which is fine: the regime control only needs one bounded memory that captures, and it has
+three.
+
+A memory contrast across different doses is not a same-dose comparison, so the rule also says: report any
+contrast involving full memory twice, at the per-memory doses and at the smallest common dose where every
+memory in the pair captures. For W1_INSIDE that common dose is 0.54 (full at 0.90) or 0.58 (full at 1.00).
+
+**What the full-memory arm does once it is captured (W1_INSIDE, A1_purge, `frac_original_T`):**
+
+- Per-memory dose: full @ 0.54 = 0.245, memory 1 @ 0.42 = 0.312, diff **-0.067 [-0.090, -0.043]**.
+- Common dose 0.54: full = 0.245, memory 1 = 0.241, diff **+0.004 [-0.022, +0.029]**; memory 20 vs 1 at the
+  same dose = -0.221 [-0.242, -0.202].
+- Common dose 0.58: full vs 1 = +0.024 [-0.002, +0.048]; 20 vs 1 = -0.200 [-0.218, -0.181].
+
+So on this metric full memory looks like memory 1, not like memory 20, and the reason is not a return. The
+mean trace after purge is flat: 0.20 at round 1, 0.27 at round 5, 0.25 at round 50, 0.25 at round 80. A
+running mean over 180 heard words moves by less than 1% per round, so every honest agent is frozen where
+capture left it: the ~25% who were still on the original (capture is declared at 75% attack) stay there, the
+rest stay on the attack word. `recovered` is 0.000, `frac_original_at_removal` is about the same 0.25. Memory 1
+reaches 0.31 by drifting *up* from 0.07; full memory sits at 0.25 because it never moves. Unbounded memory is
+inertia in both directions, which is the third regime next to "returns slowly" (memory 1) and "stays captured"
+(memory 5 and 20). For a model run this means `frac_original_T` alone cannot separate "came back" from "never
+left": the change from removal to round 50 has to be reported alongside it, and design.yaml should add it as a
+secondary before any S2.
+
+**Bridge, full memory (A2 wipe minus A1 purge):** **-0.193 [-0.215, -0.167]** at dose 0.54, -0.201
+[-0.225, -0.176] at 0.58. For bounded memory a private wipe helps a little (+0.01 to +0.03); for unbounded
+memory it is harmful, because the banked history of the original convention is the one thing holding the
+uncaptured quarter in place, and emptying it exposes them to a majority that still says the attack word. That
+is a sharper version of the S1 message for vishesh's lane: a private reset is not monotone in how much the
+agent remembered, and "wipe everything" can be the worst arm.
+
+**Regime control at the per-memory doses (W2_OUTSIDE, A1_purge, captured episodes):** memory 1 @ 0.42 =
+0.897 on the original at round 50, memory 5 @ 0.46 = 1.000, memory 20 @ 0.54 = 0.771 (`recovered` 0.17,
+half-time 25). Outside the spinodal removal still works at every bounded memory, more slowly as memory grows.
+
 ## Analysis
 
 In the simplest model that has both the de-marzo response curve and the magistrali FIFO memory, memory length
@@ -188,9 +270,10 @@ this means:
 1. It is a property of a tanh rule over a memory window. An LLM's response curve over a prompt of remembered
    words has not been measured here; [[magistrali-2026-aligned]] measured one (g(d) over 5 remembered
    dismissals) and it was benign-regime. The adapter exists; the (beta, h) pre-step does not.
-2. "Full" memory did not capture. Either the dose has to scale with entrench length for unbounded memory, or
-   the full-memory arm should start the committed phase earlier. Either choice must be made before a model run
-   and written into design.yaml; it was not tuned after the fact here.
+2. "Full" memory did not capture in S1. S1b settles this: it captures from dose 0.46 up given 200 to 400
+   rounds, and the dose rule in design.yaml now fixes its dose (0.54 inside, 0.90 captured within 200) before
+   any model run. Once captured it freezes rather than returns (see S1b), so the memory 20 versus 1 contrast
+   is the right primary and full memory is its own regime, not the long end of the same axis.
 3. Recovery within 50 rounds did not happen at any bounded memory. The `recovered` metric as written in the
    hypothesis file would call every cell "persisting"; `frac_original_T` and half-time carry the signal. A
    model run should keep both and decide the primary before S2, which is what design.yaml now does.
@@ -205,9 +288,56 @@ measures with a shared store.
 
 Not done, deliberately. Needs a human GO and these steps first: pick a small open model and endpoint; fit
 (beta, h) per word pair with the [[de-marzo-2026-conformity]] protocol on about 20 pairs; choose one inside and
-one outside pair; decide how the full-memory arm is dosed; set `SWARM_MODEL_CONFIG` with model id, call cap,
-dollar cap and token prices through the private agentops secret path; pilot memory {1, full} with 3 seeds.
-About 80 populations x 24 agents x 160 rounds is roughly 300K short calls at full scale.
+one outside pair; rerun an S1b-style sweep on the model to get its own per-memory doses (the scripted doses
+are a starting grid, not a result that transfers); set `SWARM_MODEL_CONFIG` with model id, call cap, dollar
+cap and token prices through the private agentops secret path. About 80 populations x 24 agents x 160 rounds
+is roughly 300K short calls at full scale; the pilot below is 50x smaller.
+
+## S2 pilot draft (costed, NOT run, not a stage)
+
+`design.yaml -> s2_pilot_draft`. The coordinator cannot queue it (`runs_for_stage` only reads `stages`, and the
+non-scripted backend is refused), and `max_cost_usd` / `max_calls` are `null` placeholders that a human fills
+in through `SWARM_MODEL_CONFIG`. The adapter in `src/model.py` refuses to start until they are positive.
+
+Smallest configuration that can still show the memory 1 versus full contrast on a model:
+
+- One open instruct model, 7B to 9B class, OpenAI-compatible HTTPS endpoint (or loopback vLLM). Temperature
+  0.7, 8 output tokens, reply must be one of the two words or the episode is recorded invalid.
+- N = 12, entrench 10 rounds, takeover cap 120, recovery 50, scored at round 50.
+- W1_INSIDE only (the fitted inside pair), memories {1, full}, arms {A0_no_purge, A1_purge}, 6 dev tasks x
+  1 seed. Doses per memory from the model's own mini-sweep; the scripted result (0.42 / 0.54 at N = 24) is
+  where that sweep starts.
+
+**Call count per pilot run.** A call is one honest agent deciding in one round. Entrench: 12 x 10 = 120.
+Takeover: (12 - k) honest per round until capture; memory 1 captures in a few rounds (~35 calls), full memory
+in tens of rounds (~360 calls at 60 rounds), worst case 7 x 120 = 840 per arm if it never captures. Recovery:
+at most 7 x 50 = 350 per arm (fewer, since partners of removed agents idle). Per episode, both arms:
+memory 1 about 850 calls, full about 1,600 (2,100 if takeover runs to the cap). Six tasks each: **about 10K
+calls if the two arms share the pre-removal prefix** (a fork pre-step the worker does not have yet; today each
+arm reruns it), **about 15K as written**, **about 26K worst case** if every takeover runs to the cap.
+
+**Tokens.** System prompt ~45 tokens. Memory-1 user prompt ~35 tokens, so ~80 in per call. Full-memory prompts
+grow with the episode, to ~300 tokens by the end (every word heard so far), averaging ~200. Output 4 tokens.
+Typical run: ~0.4M input tokens for the memory-1 half, ~1.8M for the full half, **about 2.2M input tokens**,
+up to ~4.5M worst case; output under 0.1M.
+
+**Estimated cost per pilot run** (list prices for open models on a broker such as OpenRouter, October 2026,
+which move; recheck before filling the cap):
+
+| model class (input price per M tokens) | typical run (2.2M in) | worst case (4.5M in) |
+|---|---|---|
+| 7B to 9B instruct (0.02 to 0.20 USD) | **0.05 to 0.45 USD** | 0.10 to 0.90 USD |
+| 70B class (0.30 to 0.90 USD) | 0.65 to 2.00 USD | 1.35 to 4.00 USD |
+
+Suggested placeholder once a model is chosen: `max_cost_usd` = 5x the worst-case figure for that model's list
+price (so about 5 USD for a 7B model), `max_calls` = 30,000. Wall time at one call every 0.3 to 0.5 s,
+sequential as the adapter is today: 1.5 to 4 hours per pilot run; the per-round decisions are simultaneous
+by design, so a parallel adapter would cut that by about the number of honest agents.
+
+What the pilot can and cannot say: 6 tasks is enough to see whether the model's capture curve and post-purge
+trace look like any of the three scripted regimes (return, persist, freeze), and to measure the actual
+tokens per call for the real S2 budget. It is not enough for a CI on the contrast; that is what the S1 variance
+is for once a model's own variance is known.
 
 ## Fleet record
 
@@ -216,3 +346,11 @@ scripted. Hub experiment `capture-memory`: S0 8 runs done (one duplicate analysi
 episode records, 0 invalid. `capture-memory/analysis-S0` and `capture-memory/analysis-S1` carry the tables as
 artifacts. The fleet S1 primary contrast is identical to the local one (-0.294 [-0.311, -0.277]), as it must be
 for a deterministic policy on fixed seeds. Claim `shadow-capture-memory` released. No model calls, no spend.
+
+2026-10-04 (S1b): sim-shadow was under vishesh's exclusive claim `vishesh-swarm-theseus` when S1b was ready
+(the re-claim was refused by `agentops.py check`, correctly), so the 128 S1b runs were taken from the hub
+queue by six scripted workers on shadow's own box (host `shad0wbot`, Python 3.12, worker ids
+`shadow/sol-capture-w1..w6`, code commit `65f23b8` plus the uncommitted S1b changes that this commit lands,
+about 4 minutes wall). 38,400 episode records, 0 invalid. `capture-memory/analysis-S1b` carries `S1b.md`,
+`S1b_cells.csv` and `S1b_dose_rule.json`. A full local rerun (`results/local-s1b`, single core, 5 min)
+matches the hub tables exactly. No fleet server was used, no claim was held, no model calls, no spend.

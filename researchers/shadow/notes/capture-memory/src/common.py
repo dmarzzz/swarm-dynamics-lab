@@ -17,21 +17,32 @@ def task_range(spec: str) -> list:
     return list(range(lo, hi + 1))
 
 
+def stage_cfg(d: dict, stage: str) -> dict:
+    """Design cfg with the stage's declared overrides applied (S1b lengthens the takeover cap only)."""
+    return {**d["cfg"], **d["stages"][stage].get("cfg_overrides", {})}
+
+
 def runs_for_stage(d: dict, stage: str, backend: str) -> list:
-    """One hub run = one block of tasks in one cell (stage x world x dose x memory). All arms run inside."""
+    """One hub run = one block of tasks in one cell (stage x world x dose x memory). All arms run inside.
+    A stage may narrow `memories`, change `block`, or override cfg keys; everything else is the frozen design."""
     st = d["stages"][stage]
     lo, hi = d["splits"][st["split"]]
     last = min(hi, lo + st["tasks"] - 1)
+    block = st.get("block", d["block"])
+    cfg = stage_cfg(d, stage)
     out = []
     for world in st["worlds"]:
         for dose in st["doses"]:
-            for memory in d["memories"]:
-                for b in range(lo, last + 1, d["block"]):
-                    e = min(b + d["block"] - 1, last)
+            for memory in st.get("memories", d["memories"]):
+                for b in range(lo, last + 1, block):
+                    e = min(b + block - 1, last)
                     out.append({"stage": stage, "split": st["split"], "world": world, "dose": dose,
                                 "memory": str(memory), "tasks": f"{b}-{e}", "seeds": st["seeds"],
-                                "arms": d["arms"], "cfg": d["cfg"], "backend": backend})
+                                "arms": d["arms"], "cfg": cfg, "backend": backend})
     return out
+
+
+SCRIPTED_STAGES = ("S0", "S1", "S1b")      # the only stages this coordinator/worker will run; no S2 here
 
 
 def memory_value(s):

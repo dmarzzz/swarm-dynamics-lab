@@ -2,7 +2,7 @@
 """Coordinator: register the exploratory experiment on the hub and queue S0 or S1.
 
     python3 src/coordinator.py register
-    python3 src/coordinator.py stage S0 [--dry-run] [--backend scripted]
+    python3 src/coordinator.py stage S0|S1|S1b [--dry-run] [--backend scripted]
     python3 src/coordinator.py status
 
 There is no S2 here. The hypothesis behind this build (PR 82) is not accepted, so the holdout split in
@@ -17,7 +17,7 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 sys.path.insert(0, str(HERE))
-from common import load, runs_for_stage  # noqa: E402
+from common import SCRIPTED_STAGES, load, runs_for_stage  # noqa: E402
 
 
 def main():
@@ -25,7 +25,7 @@ def main():
     sub = ap.add_subparsers(dest="cmd", required=True)
     sub.add_parser("register")
     s = sub.add_parser("stage")
-    s.add_argument("stage", choices=["S0", "S1"])
+    s.add_argument("stage", choices=list(SCRIPTED_STAGES))
     s.add_argument("--dry-run", action="store_true")
     s.add_argument("--backend", choices=["scripted", "http"], default="scripted")
     sub.add_parser("status")
@@ -57,7 +57,7 @@ def main():
     else:
         if a.backend != "scripted":
             sys.exit("refusing: a paid backend needs an explicit human GO and a model pre-step (see README)")
-        if a.stage == "S1" and not any(r["params"].get("stage") == "S0" and r["status"] == "done"
+        if a.stage != "S0" and not any(r["params"].get("stage") == "S0" and r["status"] == "done"
                                        for r in sr.runs(exp, limit=5000)):
             print("warning: no finished S0 runs yet; validate the clean world first")
         plist = runs_for_stage(d, a.stage, a.backend)

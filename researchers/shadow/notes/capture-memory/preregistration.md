@@ -97,6 +97,36 @@ memory, memory length alone moves a captured population between return and persi
 removal, and whether a memory wipe closes that gap. It says nothing about detection, quarantine, selective
 repair, shared stores or returning children: those are vishesh's immune-response lane.
 
+## 10. Dose rule for later stages (added 2026-10-04, before any model run)
+
+S1 showed that the full-memory arm cannot be dosed like the bounded arms: at dose 0.42 and 0.5 it never
+captured within 100 rounds, so the removal question could not be asked of it. The rule below was written into
+`design.yaml -> dose_rule` before the S1b sweep ran; the per-memory doses were then read off the sweep.
+
+- **Rule.** Per memory length and world, the dose used for the removal contrast is the smallest dose on the
+  S1b grid {0.42, 0.46, 0.5, 0.54, 0.58, 0.67, 0.75, 0.83} at which at least 80% of episodes are captured
+  within H = 200 takeover rounds (capture as in section 5). The takeover cap is 2H = 400 so that latency
+  near the threshold is observed rather than censored.
+- **Not capturable.** If no grid dose reaches 80% within H, that memory length is reported as not capturable
+  at this horizon and excluded from the removal contrast. It is not dosed above 0.83.
+- **Reporting.** A contrast across memory lengths at different doses is not a same-dose comparison. Any
+  contrast that includes the full-memory arm is reported twice: at the per-memory doses, and at the smallest
+  common dose at which every memory in the pair clears 80% within H.
+- **For a model backend.** The same rule is applied to the model's own S1b-style sweep. The scripted doses are
+  the starting grid, not a result that transfers.
+
+Scripted result (results/S1b.md): W1_INSIDE 0.42 / 0.42 / 0.42 / **0.54** for memory 1 / 5 / 20 / full
+(full: 0.90 [0.85, 0.94] captured within 200); W2_OUTSIDE 0.42 / 0.46 / 0.54 / 0.83 (memory 5 at 0.46 is
+0.81 [0.74, 0.86], CI lower bound below the target; full at 0.83 leaves 4 honest agents).
+
 ## Amendments
 
-None.
+- **2026-10-04, after S1b was inspected.** Honest floor: dose* must leave at least 10 honest agents
+  (dose <= 0.58 at N = 24). This was not part of the rule as pre-set; it was added when the W2_OUTSIDE full-memory
+  cell came out at 0.83 (4 honest agents), which is not the population the hypothesis is about. It excludes
+  that one cell and changes nothing else. Labelled as post hoc in `design.yaml -> dose_rule.scripted_result`.
+- **2026-10-04, after S1b was inspected.** Add `delta_original` = `frac_original_T` minus
+  `frac_original_at_removal` as a secondary for any stage after S1b. Reason: the full-memory arm freezes at
+  removal (about 0.25 on the original before and after), so `frac_original_T` alone cannot tell "came back"
+  from "never moved". Both diagnostics already exist per episode; this only promotes the difference. The
+  primary (H2) is unchanged.

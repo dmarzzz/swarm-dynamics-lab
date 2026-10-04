@@ -4,7 +4,7 @@
   "description": "Binary convention, N=24, random pairwise encounters. A committed minority above the tipping dose captures the population; it is then removed perfectly. Swept factor: agent memory window (1, 5, 20, full). Arms: no purge, purge, purge plus memory wipe. Scripted tanh policy (de-marzo-2026-conformity form over a FIFO memory as in magistrali-2026-aligned); no LLM has run. Hunch under researchers/shadow/notes, not an accepted hypothesis (PR 82).",
   "owner": "shadow",
   "params": {
-    "stage": {"type": "str", "description": "S0 clean validation | S1 development (no S2 before acceptance)", "role": "stage"},
+    "stage": {"type": "str", "description": "S0 clean validation | S1 development | S1b dose sweep, 400-round takeover cap (no S2 before acceptance)", "role": "stage"},
     "world": {"type": "str", "description": "W0_CLEAN | W1_INSIDE (metastable pair) | W2_OUTSIDE (regime control)", "role": "condition"},
     "dose": {"type": "float", "description": "committed fraction of N replaced at the end of entrench", "role": "condition"},
     "memory": {"type": "str", "description": "agent memory window: 1 | 5 | 20 | full", "role": "condition", "label": "memory window"},
@@ -12,7 +12,7 @@
     "seeds": {"type": "list", "description": "fixed seed list from design.yaml", "role": "replicate"},
     "backend": {"type": "str", "description": "scripted | http (http never run yet)", "role": "fixed"}
   },
-  "metrics": ["captured", "frac_T_A0_no_purge", "frac_T_A1_purge", "frac_T_A2_purge_wipe", "rec_A1_purge", "rec_A2_purge_wipe", "wipe_minus_purge", "episodes", "invalid"],
+  "metrics": ["captured", "captured_100", "captured_200", "frac_T_A0_no_purge", "frac_T_A1_purge", "frac_T_A2_purge_wipe", "rec_A1_purge", "rec_A2_purge_wipe", "wipe_minus_purge", "episodes", "invalid"],
   "primary_metric": "frac_T_A1_purge",
   "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/shadow/notes/capture-memory"
 }

@@ -1,6 +1,6 @@
 {
-  "_comment": "JSON inside .yaml so the runner needs no YAML library (same convention as researchers/dmarz/notes/discussion-dose). Frozen design for S0/S1. S2 does not exist in this coordinator: the hypothesis (PR 82) is not accepted.",
-  "version": "capture-memory-v1",
+  "_comment": "JSON inside .yaml so the runner needs no YAML library (same convention as researchers/dmarz/notes/discussion-dose). Frozen design for S0/S1; S1b (dose sweep, longer takeover cap) added 2026-10-04 after S1 showed full memory never captures at dose 0.42 in 100 rounds. S2 does not exist in this coordinator: the hypothesis (PR 82) is not accepted. s2_pilot_draft is a cost sketch, not a stage.",
+  "version": "capture-memory-v1.1",
   "status": "exploratory-unreviewed hunch; scripted backend only",
 
   "arms": ["A0_no_purge", "A1_purge", "A2_purge_wipe"],
@@ -37,7 +37,49 @@
     "S1": {
       "purpose": "development: capture rates per memory, recovery contrasts, variance for a later sample size",
       "split": "dev", "tasks": 100, "worlds": ["W1_INSIDE", "W2_OUTSIDE"], "doses": [0.42, 0.5], "seeds": [1, 2]
+    },
+    "S1b": {
+      "purpose": "dose sweep with a 400-round takeover cap: per memory length and world, the capture rate within 100/200/400 rounds at each dose, to fix the per-memory dose (dose_rule) before any later stage. Exploratory; no new primary.",
+      "split": "dev", "tasks": 100, "worlds": ["W1_INSIDE", "W2_OUTSIDE"],
+      "doses": [0.42, 0.46, 0.5, 0.54, 0.58, 0.67, 0.75, 0.83], "seeds": [1, 2],
+      "memories": [1, 5, 20, "full"], "block": 50,
+      "cfg_overrides": {"takeover_max_rounds": 400}
     }
+  },
+
+  "dose_rule": {
+    "_comment": "Rule fixed 2026-10-04 before the S1b run; scripted_result filled in from S1b afterwards (results/S1b.md). Applies to every later stage. A model backend gets its own S1b-style sweep and the same rule; the scripted numbers are not carried over.",
+    "rule": "Per memory length and world, the dose for the removal question is the smallest dose on the S1b grid at which at least 80% of episodes are captured within H = 200 takeover rounds (capture = honest fraction on the attack word >= 0.75 for 3 consecutive rounds). The takeover cap is 2H = 400 so latency near the threshold is observed, not censored. If no grid dose reaches 80% within H, that memory length is reported as 'not capturable at this horizon' and excluded from the removal contrast; it is not run at a dose above 0.83.",
+    "horizon": 200,
+    "capture_target": 0.8,
+    "grid": [0.42, 0.46, 0.5, 0.54, 0.58, 0.67, 0.75, 0.83],
+    "scripted_result": {
+      "_from": "results/S1b.md, 38,400 episode records, 2026-10-04; capture within 200 rounds at dose* with 95% cluster-bootstrap CI",
+      "W1_INSIDE": {"1": 0.42, "5": 0.42, "20": 0.42, "full": 0.54},
+      "W2_OUTSIDE": {"1": 0.42, "5": 0.46, "20": 0.54, "full": 0.83},
+      "captured_at_dose_star": {"W1_INSIDE/full": "0.90 [0.85, 0.94]", "W2_OUTSIDE/5": "0.81 [0.74, 0.86] (CI lower bound below target)", "W2_OUTSIDE/20": "0.98 [0.96, 1.00]", "W2_OUTSIDE/full": "1.00 [1.00, 1.00] but only 4 honest agents remain"},
+      "honest_floor_note": "Added after seeing S1b, so it is an amendment, not part of the pre-set rule: any later stage also requires dose* to leave at least 10 honest agents (dose <= 0.58 at N = 24). W2_OUTSIDE/full fails this and is reported as not capturable for the removal contrast."
+    },
+    "paired_contrast_note": "A contrast across memory lengths at different per-memory doses is not a same-dose comparison. Any contrast that includes the full-memory arm is reported twice: at the per-memory doses, and at the smallest common dose where every memory in the contrast captures >= 80% within H."
+  },
+
+  "s2_pilot_draft": {
+    "_comment": "NOT A STAGE. runs_for_stage never sees it and the coordinator refuses any non-scripted backend. Smallest real-model pilot that can still show the memory 1 vs full contrast; one open model through src/model.py; the dollar cap is a placeholder a human fills in. Costed in README 'S2 pilot draft'.",
+    "status": "draft, not runnable; needs human GO, a fitted (beta, h) pre-step, and a model-side S1b sweep",
+    "backend": "http",
+    "model": "one open instruct model (7B to 9B class) behind an OpenAI-compatible HTTPS endpoint; id, prices and caps go in SWARM_MODEL_CONFIG, never here",
+    "split": "dev", "tasks": 6, "seeds": [1],
+    "worlds": ["W1_INSIDE"],
+    "memories": [1, "full"],
+    "doses_by_memory": "from dose_rule.scripted_result as a starting point, re-derived on the model",
+    "arms": ["A0_no_purge", "A1_purge"],
+    "cfg_overrides": {"n_agents": 12, "entrench_rounds": 10, "takeover_max_rounds": 120, "recovery_rounds": 50, "eval_round": 50},
+    "max_cost_usd": null,
+    "max_calls": null,
+    "estimated_calls": "about 10,000 if the two arms share the pre-removal prefix (needs a fork pre-step the worker lacks), 15,000 as written, 26,000 worst case with every takeover at the cap; README 'S2 pilot draft'",
+    "estimated_input_tokens": "about 2.2M typical, 4.5M worst case (full-memory prompts grow to ~300 tokens by the end of an episode; memory-1 prompts stay ~80)",
+    "estimated_cost_usd": "0.05 to 0.45 typical, up to 0.90 worst case, on a 7B-9B open model at 0.02 to 0.20 USD per M input; 0.65 to 4.00 on a 70B-class open model; README has the table",
+    "suggested_cap_rule": "max_cost_usd = 5x the worst-case figure at the chosen model's list price (about 5 USD for a 7B model), max_calls = 30000, both set by a human in SWARM_MODEL_CONFIG"
   },
 
   "primary_contrast": {
@@ -50,6 +92,7 @@
     "compare_memory": [20, 1],
     "population": "episodes captured under both memory lengths of the contrast (capture is decided before removal and is shared by all arms)",
     "secondary": ["recovered", "half_time"],
+    "secondary_after_S1b": ["delta_original: frac_original_T minus frac_original_at_removal (amendment 2026-10-04, preregistration.md; separates 'came back' from 'never moved' in the full-memory arm)"],
     "bridge": {"arms": ["A2_purge_wipe", "A1_purge"], "metric": "frac_original_T", "per": "memory"}
   }
 }
