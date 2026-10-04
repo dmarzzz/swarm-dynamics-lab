@@ -1,0 +1,3090 @@
+[
+  {
+    "assignment": {
+      "id": "QM-PQ-04-000",
+      "case_id": "c2ab5b690518-observed",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "7772191d5cf12335210bac26d261328402bc1072a2a2f4c07245171a2f57f0dd",
+      "input_token_upper_bound": 4609,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-positive, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "c2ab5b690518-observed",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-62768",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, asset-62768 will be stopped.\nObservation: At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, asset-62768 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r863099",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768-unseen was running."
+          },
+          {
+            "id": "r860a48",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was running."
+          },
+          {
+            "id": "r58c53d",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "r1b73f5",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          "s1": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          "s2": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was not running."
+          }
+        },
+        "reports": {
+          "r860a48": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was running."
+          },
+          "r58c53d": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          "r1b73f5": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was stopped."
+          },
+          "r863099": {
+            "entity": "asset-62768-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768-unseen was running."
+          }
+        },
+        "labels": {
+          "r860a48": "SUPPORTED",
+          "r58c53d": "SUPPORTED",
+          "r1b73f5": "CONTRADICTED",
+          "r863099": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-000",
+      "case_id": "c2ab5b690518-observed",
+      "condition": {
+        "source_observed": true
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"s1\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, asset-62768 was not running.\"}],\"reports\":[{\"id\":\"r863099\",\"entity\":\"asset-62768-unseen\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768-unseen was running.\"},{\"id\":\"r860a48\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768 was running.\"},{\"id\":\"r58c53d\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"r1b73f5\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 11:00, asset-62768 was stopped.\"}]}",
+      "usage": {
+        "prompt_tokens": 1191,
+        "completion_tokens": 349,
+        "total_tokens": 1540,
+        "cost": 0.008808
+      },
+      "generation_id": "gen-1791142903-Hz743xYjv8GGSZj2v7XF",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r863099",
+            "entity": "asset-62768-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768-unseen was running."
+          },
+          {
+            "id": "r860a48",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768 was running."
+          },
+          {
+            "id": "r58c53d",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "r1b73f5",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 11:00, asset-62768 was stopped."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r863099": "NOT_ESTABLISHED",
+          "r860a48": "SUPPORTED",
+          "r58c53d": "SUPPORTED",
+          "r1b73f5": "CONTRADICTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "ONE",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 7.804468393325806
+    },
+    "request": {
+      "id": "QM-PQ-04-000",
+      "case_id": "c2ab5b690518-observed",
+      "dispatch_intent_at": 1791142903.091465,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 11:00, asset-62768 will be stopped.\\nObservation: At 11:00, asset-62768 was operating.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 11:00, asset-62768 was not running.\"}],\"reports\":[{\"id\":\"r863099\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768-unseen was running.\"},{\"id\":\"r860a48\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was running.\"},{\"id\":\"r58c53d\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"r1b73f5\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was stopped.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "7772191d5cf12335210bac26d261328402bc1072a2a2f4c07245171a2f57f0dd"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-001",
+      "case_id": "ad30816de86c-observed",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "4228b82f1c36558af837a6fb0acf6cc8bbb428a092f4e7b345d1d7f29a1622d8",
+      "input_token_upper_bound": 4669,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-negative, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "ad30816de86c-observed",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-72942",
+          "time": "11:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, asset-72942 will measure 4000 grams.\nObservation: At 11:00, asset-72942 measured 3 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r720bce",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          {
+            "id": "r745d91",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942-unseen measured 3000 grams."
+          },
+          {
+            "id": "r927e4f",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          {
+            "id": "r9321dc",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 3 kilograms."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 3 kilograms."
+          },
+          "s1": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          "s2": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "r927e4f": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          "r9321dc": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 3 kilograms."
+          },
+          "r720bce": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          "r745d91": {
+            "entity": "asset-72942-unseen",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942-unseen measured 3000 grams."
+          }
+        },
+        "labels": {
+          "r927e4f": "SUPPORTED",
+          "r9321dc": "SUPPORTED",
+          "r720bce": "CONTRADICTED",
+          "r745d91": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-001",
+      "case_id": "ad30816de86c-observed",
+      "condition": {
+        "source_observed": true
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"status\":\"observed\",\"quote\":\"Observation: At 11:00, asset-72942 measured 3 kilograms.\"},{\"id\":\"s1\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":7000,\"status\":\"observed\",\"quote\":\"At 11:00, asset-72942 measured 7 kilograms.\"},{\"id\":\"s2\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":2000,\"status\":\"observed\",\"quote\":\"At 11:00, asset-72942 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"r720bce\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":4000,\"quote\":\"At 11:00, asset-72942 measured 4000 grams.\"},{\"id\":\"r745d91\",\"entity\":\"asset-72942-unseen\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942-unseen measured 3000 grams.\"},{\"id\":\"r927e4f\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942 measured 3000 grams.\"},{\"id\":\"r9321dc\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942 measured 3 kilograms.\"}]}",
+      "usage": {
+        "prompt_tokens": 1232,
+        "completion_tokens": 406,
+        "total_tokens": 1638,
+        "cost": 0.009786
+      },
+      "generation_id": "gen-1791142910-RP19OZV6TBxFdl6DKPLF",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "Observation: At 11:00, asset-72942 measured 3 kilograms."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r720bce",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 4000,
+            "quote": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          {
+            "id": "r745d91",
+            "entity": "asset-72942-unseen",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942-unseen measured 3000 grams."
+          },
+          {
+            "id": "r927e4f",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          {
+            "id": "r9321dc",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942 measured 3 kilograms."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r720bce": "CONTRADICTED",
+          "r745d91": "NOT_ESTABLISHED",
+          "r927e4f": "SUPPORTED",
+          "r9321dc": "SUPPORTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "ZERO",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 8.21639633178711
+    },
+    "request": {
+      "id": "QM-PQ-04-001",
+      "case_id": "ad30816de86c-observed",
+      "dispatch_intent_at": 1791142910.917269,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"threshold\":5000},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 11:00, asset-72942 will measure 4000 grams.\\nObservation: At 11:00, asset-72942 measured 3 kilograms.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 11:00, asset-72942 measured 7 kilograms.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 11:00, asset-72942 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"r720bce\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 4000 grams.\"},{\"id\":\"r745d91\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942-unseen measured 3000 grams.\"},{\"id\":\"r927e4f\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 3000 grams.\"},{\"id\":\"r9321dc\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 3 kilograms.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "4228b82f1c36558af837a6fb0acf6cc8bbb428a092f4e7b345d1d7f29a1622d8"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-002",
+      "case_id": "f5d9fcd12f2e-observed",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "2efeae16fdcf393848a4e2ac27629a3b09c1897e421f0f35f8df43af9ef61d90",
+      "input_token_upper_bound": 4613,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-negative, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "f5d9fcd12f2e-observed",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": true
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-22495",
+          "time": "16:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 16:00, asset-22495 will be running.\nObservation: At 16:00, asset-22495 was not running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 16:00, asset-22495 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 16:00, asset-22495 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r870b82",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was running."
+          },
+          {
+            "id": "r5f785a",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was stopped."
+          },
+          {
+            "id": "r7fd901",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495-unseen was stopped."
+          },
+          {
+            "id": "r006976",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          },
+          "s1": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was operating."
+          },
+          "s2": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        },
+        "reports": {
+          "r5f785a": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was stopped."
+          },
+          "r006976": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          },
+          "r870b82": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was running."
+          },
+          "r7fd901": {
+            "entity": "asset-22495-unseen",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r5f785a": "SUPPORTED",
+          "r006976": "SUPPORTED",
+          "r870b82": "CONTRADICTED",
+          "r7fd901": "NOT_ESTABLISHED"
+        },
+        "decision": "ZERO"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-002",
+      "case_id": "f5d9fcd12f2e-observed",
+      "condition": {
+        "source_observed": true
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"Observation: At 16:00, asset-22495 was not running.\"},{\"id\":\"s1\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 16:00, asset-22495 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 16:00, asset-22495 was not running.\"}],\"reports\":[{\"id\":\"r870b82\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:00, asset-22495 was running.\"},{\"id\":\"r5f785a\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495 was stopped.\"},{\"id\":\"r7fd901\",\"entity\":\"asset-22495-unseen\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495-unseen was stopped.\"},{\"id\":\"r006976\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495 was not running.\"}]}",
+      "usage": {
+        "prompt_tokens": 1191,
+        "completion_tokens": 352,
+        "total_tokens": 1543,
+        "cost": 0.008853
+      },
+      "generation_id": "gen-1791142919-9EIEMQVcxTYO2CgXiJYv",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "Observation: At 16:00, asset-22495 was not running."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r870b82",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:00, asset-22495 was running."
+          },
+          {
+            "id": "r5f785a",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495 was stopped."
+          },
+          {
+            "id": "r7fd901",
+            "entity": "asset-22495-unseen",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495-unseen was stopped."
+          },
+          {
+            "id": "r006976",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r870b82": "CONTRADICTED",
+          "r5f785a": "SUPPORTED",
+          "r7fd901": "NOT_ESTABLISHED",
+          "r006976": "SUPPORTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "ZERO",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 4.147616624832153
+    },
+    "request": {
+      "id": "QM-PQ-04-002",
+      "case_id": "f5d9fcd12f2e-observed",
+      "dispatch_intent_at": 1791142919.1519268,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 16:00, asset-22495 will be running.\\nObservation: At 16:00, asset-22495 was not running.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 16:00, asset-22495 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 16:00, asset-22495 was not running.\"}],\"reports\":[{\"id\":\"r870b82\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was running.\"},{\"id\":\"r5f785a\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was stopped.\"},{\"id\":\"r7fd901\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495-unseen was stopped.\"},{\"id\":\"r006976\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was not running.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "2efeae16fdcf393848a4e2ac27629a3b09c1897e421f0f35f8df43af9ef61d90"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-003",
+      "case_id": "420608251e14-observed",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "request_sha256": "b78028cbfa005ff0cfda6296824e81214e9eac8abd97a8dc55ca778f14819a70",
+      "input_token_upper_bound": 4669,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-positive, focal source observed=True; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "420608251e14-observed",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": true
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-57453",
+          "time": "12:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 12:00, asset-57453 will measure 7000 grams.\nObservation: At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rae59b9",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "rce0e56",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          {
+            "id": "r581808",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453-unseen measured 6000 grams."
+          },
+          {
+            "id": "r474075",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 6000 grams."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          "s1": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          "s2": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "r474075": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6000 grams."
+          },
+          "rae59b9": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          "rce0e56": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          "r581808": {
+            "entity": "asset-57453-unseen",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453-unseen measured 6000 grams."
+          }
+        },
+        "labels": {
+          "r474075": "SUPPORTED",
+          "rae59b9": "SUPPORTED",
+          "rce0e56": "CONTRADICTED",
+          "r581808": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-003",
+      "case_id": "420608251e14-observed",
+      "condition": {
+        "source_observed": true
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"status\":\"observed\",\"quote\":\"At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"s1\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":7000,\"status\":\"observed\",\"quote\":\"At 12:00, asset-57453 measured 7 kilograms.\"},{\"id\":\"s2\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":2000,\"status\":\"observed\",\"quote\":\"At 12:00, asset-57453 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"rae59b9\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"rce0e56\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":7000,\"quote\":\"At 12:00, asset-57453 measured 7000 grams.\"},{\"id\":\"r581808\",\"entity\":\"asset-57453-unseen\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453-unseen measured 6000 grams.\"},{\"id\":\"r474075\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453 measured 6000 grams.\"}]}",
+      "usage": {
+        "prompt_tokens": 1231,
+        "completion_tokens": 402,
+        "total_tokens": 1633,
+        "cost": 0.009723
+      },
+      "generation_id": "gen-1791142923-nFwJ4AvVoVfKTUu6qx42",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rae59b9",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "rce0e56",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "quote": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          {
+            "id": "r581808",
+            "entity": "asset-57453-unseen",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453-unseen measured 6000 grams."
+          },
+          {
+            "id": "r474075",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453 measured 6000 grams."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "rae59b9": "SUPPORTED",
+          "rce0e56": "CONTRADICTED",
+          "r581808": "NOT_ESTABLISHED",
+          "r474075": "SUPPORTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "ONE",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 4.481870651245117
+    },
+    "request": {
+      "id": "QM-PQ-04-003",
+      "case_id": "420608251e14-observed",
+      "dispatch_intent_at": 1791142923.3250604,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"threshold\":5000},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 12:00, asset-57453 will measure 7000 grams.\\nObservation: At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 12:00, asset-57453 measured 7 kilograms.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 12:00, asset-57453 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"rae59b9\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"rce0e56\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 7000 grams.\"},{\"id\":\"r581808\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453-unseen measured 6000 grams.\"},{\"id\":\"r474075\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 6000 grams.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "b78028cbfa005ff0cfda6296824e81214e9eac8abd97a8dc55ca778f14819a70"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-004",
+      "case_id": "ad30816de86c-plan",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "429bb5b88296331f1b2135309aebedad61299eebc018ecdf5bd63b95d30722a0",
+      "input_token_upper_bound": 4610,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-negative, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "ad30816de86c-plan",
+      "root": "ad30816de86c",
+      "family": "mass_g-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-72942",
+          "time": "11:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, asset-72942 will measure 4000 grams."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r720bce",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          {
+            "id": "r745d91",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942-unseen measured 3000 grams."
+          },
+          {
+            "id": "r927e4f",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          {
+            "id": "r9321dc",
+            "source_id": "s0",
+            "text": "At 11:00, asset-72942 measured 3 kilograms."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 11:00, asset-72942 will measure 4000 grams."
+          },
+          "s1": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          "s2": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "r927e4f": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          "r9321dc": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 3 kilograms."
+          },
+          "r720bce": {
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 4000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          "r745d91": {
+            "entity": "asset-72942-unseen",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942-unseen measured 3000 grams."
+          }
+        },
+        "labels": {
+          "r927e4f": "NOT_ESTABLISHED",
+          "r9321dc": "NOT_ESTABLISHED",
+          "r720bce": "NOT_ESTABLISHED",
+          "r745d91": "NOT_ESTABLISHED"
+        },
+        "decision": "DEFER"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-004",
+      "case_id": "ad30816de86c-plan",
+      "condition": {
+        "source_observed": false
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":null,\"status\":\"unknown\",\"quote\":\"Plan: at 11:00, asset-72942 will measure 4000 grams.\"},{\"id\":\"s1\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":7000,\"status\":\"observed\",\"quote\":\"At 11:00, asset-72942 measured 7 kilograms.\"},{\"id\":\"s2\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":2000,\"status\":\"observed\",\"quote\":\"At 11:00, asset-72942 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"r720bce\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":4000,\"quote\":\"At 11:00, asset-72942 measured 4000 grams.\"},{\"id\":\"r745d91\",\"entity\":\"asset-72942-unseen\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942-unseen measured 3000 grams.\"},{\"id\":\"r927e4f\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942 measured 3000 grams.\"},{\"id\":\"r9321dc\",\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"value\":3000,\"quote\":\"At 11:00, asset-72942 measured 3 kilograms.\"}]}",
+      "usage": {
+        "prompt_tokens": 1208,
+        "completion_tokens": 405,
+        "total_tokens": 1613,
+        "cost": 0.009699
+      },
+      "generation_id": "gen-1791142927-3vsYyRXzB7fY0QihUc9C",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 11:00, asset-72942 will measure 4000 grams."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 11:00, asset-72942 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r720bce",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 4000,
+            "quote": "At 11:00, asset-72942 measured 4000 grams."
+          },
+          {
+            "id": "r745d91",
+            "entity": "asset-72942-unseen",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942-unseen measured 3000 grams."
+          },
+          {
+            "id": "r927e4f",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942 measured 3000 grams."
+          },
+          {
+            "id": "r9321dc",
+            "entity": "asset-72942",
+            "time": "11:00",
+            "property": "mass_g",
+            "value": 3000,
+            "quote": "At 11:00, asset-72942 measured 3 kilograms."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r720bce": "NOT_ESTABLISHED",
+          "r745d91": "NOT_ESTABLISHED",
+          "r927e4f": "NOT_ESTABLISHED",
+          "r9321dc": "NOT_ESTABLISHED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "DEFER",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 4
+        }
+      },
+      "wall_s": 4.825340986251831
+    },
+    "request": {
+      "id": "QM-PQ-04-004",
+      "case_id": "ad30816de86c-plan",
+      "dispatch_intent_at": 1791142927.843632,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-72942\",\"time\":\"11:00\",\"property\":\"mass_g\",\"threshold\":5000},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 11:00, asset-72942 will measure 4000 grams.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 11:00, asset-72942 measured 7 kilograms.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 11:00, asset-72942 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"r720bce\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 4000 grams.\"},{\"id\":\"r745d91\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942-unseen measured 3000 grams.\"},{\"id\":\"r927e4f\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 3000 grams.\"},{\"id\":\"r9321dc\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-72942 measured 3 kilograms.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "429bb5b88296331f1b2135309aebedad61299eebc018ecdf5bd63b95d30722a0"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-005",
+      "case_id": "c2ab5b690518-plan",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "d4e8b79ee2fa20efef1e3da8ec15e1e2607ed59e4cf97301fe124c1dd7c85fb2",
+      "input_token_upper_bound": 4557,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-positive, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "c2ab5b690518-plan",
+      "root": "c2ab5b690518",
+      "family": "running-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-62768",
+          "time": "11:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 11:00, asset-62768 will be stopped."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 11:00, asset-62768 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r863099",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768-unseen was running."
+          },
+          {
+            "id": "r860a48",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was running."
+          },
+          {
+            "id": "r58c53d",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "r1b73f5",
+            "source_id": "s0",
+            "text": "At 11:00, asset-62768 was stopped."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 11:00, asset-62768 will be stopped."
+          },
+          "s1": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          "s2": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was not running."
+          }
+        },
+        "reports": {
+          "r860a48": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was running."
+          },
+          "r58c53d": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          "r1b73f5": {
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was stopped."
+          },
+          "r863099": {
+            "entity": "asset-62768-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768-unseen was running."
+          }
+        },
+        "labels": {
+          "r860a48": "NOT_ESTABLISHED",
+          "r58c53d": "NOT_ESTABLISHED",
+          "r1b73f5": "NOT_ESTABLISHED",
+          "r863099": "NOT_ESTABLISHED"
+        },
+        "decision": "DEFER"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-005",
+      "case_id": "c2ab5b690518-plan",
+      "condition": {
+        "source_observed": false
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":null,\"status\":\"unknown\",\"quote\":\"Plan: at 11:00, asset-62768 will be stopped.\"},{\"id\":\"s1\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 11:00, asset-62768 was not running.\"}],\"reports\":[{\"id\":\"r863099\",\"entity\":\"asset-62768-unseen\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768-unseen was running.\"},{\"id\":\"r860a48\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768 was running.\"},{\"id\":\"r58c53d\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"r1b73f5\",\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 11:00, asset-62768 was stopped.\"}]}",
+      "usage": {
+        "prompt_tokens": 1172,
+        "completion_tokens": 352,
+        "total_tokens": 1524,
+        "cost": 0.008796
+      },
+      "generation_id": "gen-1791142932-3tcM6HO8iBfuxEKgvEok",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 11:00, asset-62768 will be stopped."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 11:00, asset-62768 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r863099",
+            "entity": "asset-62768-unseen",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768-unseen was running."
+          },
+          {
+            "id": "r860a48",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768 was running."
+          },
+          {
+            "id": "r58c53d",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 11:00, asset-62768 was operating."
+          },
+          {
+            "id": "r1b73f5",
+            "entity": "asset-62768",
+            "time": "11:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 11:00, asset-62768 was stopped."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r863099": "NOT_ESTABLISHED",
+          "r860a48": "NOT_ESTABLISHED",
+          "r58c53d": "NOT_ESTABLISHED",
+          "r1b73f5": "NOT_ESTABLISHED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "DEFER",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 4
+        }
+      },
+      "wall_s": 4.082141160964966
+    },
+    "request": {
+      "id": "QM-PQ-04-005",
+      "case_id": "c2ab5b690518-plan",
+      "dispatch_intent_at": 1791142932.6919246,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-62768\",\"time\":\"11:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 11:00, asset-62768 will be stopped.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 11:00, asset-62768 was not running.\"}],\"reports\":[{\"id\":\"r863099\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768-unseen was running.\"},{\"id\":\"r860a48\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was running.\"},{\"id\":\"r58c53d\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was operating.\"},{\"id\":\"r1b73f5\",\"source_id\":\"s0\",\"text\":\"At 11:00, asset-62768 was stopped.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "d4e8b79ee2fa20efef1e3da8ec15e1e2607ed59e4cf97301fe124c1dd7c85fb2"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-006",
+      "case_id": "f5d9fcd12f2e-plan",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "dc2669ba912728ab3104491d579be12711908407acef2f0297c7610a1ccbc3b7",
+      "input_token_upper_bound": 4559,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; running-negative, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "f5d9fcd12f2e-plan",
+      "root": "f5d9fcd12f2e",
+      "family": "running-negative",
+      "condition": {
+        "source_observed": false
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-22495",
+          "time": "16:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 16:00, asset-22495 will be running."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 16:00, asset-22495 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 16:00, asset-22495 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r870b82",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was running."
+          },
+          {
+            "id": "r5f785a",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was stopped."
+          },
+          {
+            "id": "r7fd901",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495-unseen was stopped."
+          },
+          {
+            "id": "r006976",
+            "source_id": "s0",
+            "text": "At 16:00, asset-22495 was not running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 16:00, asset-22495 will be running."
+          },
+          "s1": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was operating."
+          },
+          "s2": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        },
+        "reports": {
+          "r5f785a": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was stopped."
+          },
+          "r006976": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          },
+          "r870b82": {
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was running."
+          },
+          "r7fd901": {
+            "entity": "asset-22495-unseen",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495-unseen was stopped."
+          }
+        },
+        "labels": {
+          "r5f785a": "NOT_ESTABLISHED",
+          "r006976": "NOT_ESTABLISHED",
+          "r870b82": "NOT_ESTABLISHED",
+          "r7fd901": "NOT_ESTABLISHED"
+        },
+        "decision": "DEFER"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-006",
+      "case_id": "f5d9fcd12f2e-plan",
+      "condition": {
+        "source_observed": false
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":null,\"status\":\"unknown\",\"quote\":\"Plan: at 16:00, asset-22495 will be running.\"},{\"id\":\"s1\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 16:00, asset-22495 was operating.\"},{\"id\":\"s2\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 16:00, asset-22495 was not running.\"}],\"reports\":[{\"id\":\"r870b82\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":1,\"quote\":\"At 16:00, asset-22495 was running.\"},{\"id\":\"r5f785a\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495 was stopped.\"},{\"id\":\"r7fd901\",\"entity\":\"asset-22495-unseen\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495-unseen was stopped.\"},{\"id\":\"r006976\",\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"value\":0,\"quote\":\"At 16:00, asset-22495 was not running.\"}]}",
+      "usage": {
+        "prompt_tokens": 1171,
+        "completion_tokens": 351,
+        "total_tokens": 1522,
+        "cost": 0.008778
+      },
+      "generation_id": "gen-1791142936-pxA8Ai5IVUjVIZCRKdPy",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 16:00, asset-22495 will be running."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "r870b82",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 1,
+            "quote": "At 16:00, asset-22495 was running."
+          },
+          {
+            "id": "r5f785a",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495 was stopped."
+          },
+          {
+            "id": "r7fd901",
+            "entity": "asset-22495-unseen",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495-unseen was stopped."
+          },
+          {
+            "id": "r006976",
+            "entity": "asset-22495",
+            "time": "16:00",
+            "property": "running",
+            "value": 0,
+            "quote": "At 16:00, asset-22495 was not running."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "r870b82": "NOT_ESTABLISHED",
+          "r5f785a": "NOT_ESTABLISHED",
+          "r7fd901": "NOT_ESTABLISHED",
+          "r006976": "NOT_ESTABLISHED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "DEFER",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 4
+        }
+      },
+      "wall_s": 3.9539589881896973
+    },
+    "request": {
+      "id": "QM-PQ-04-006",
+      "case_id": "f5d9fcd12f2e-plan",
+      "dispatch_intent_at": 1791142936.798315,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-22495\",\"time\":\"16:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 16:00, asset-22495 will be running.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 16:00, asset-22495 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 16:00, asset-22495 was not running.\"}],\"reports\":[{\"id\":\"r870b82\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was running.\"},{\"id\":\"r5f785a\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was stopped.\"},{\"id\":\"r7fd901\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495-unseen was stopped.\"},{\"id\":\"r006976\",\"source_id\":\"s0\",\"text\":\"At 16:00, asset-22495 was not running.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "dc2669ba912728ab3104491d579be12711908407acef2f0297c7610a1ccbc3b7"
+    }
+  },
+  {
+    "assignment": {
+      "id": "QM-PQ-04-007",
+      "case_id": "420608251e14-plan",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "request_sha256": "0d964a0ed2495ec184e447ed330fd3f172289d7b7339920f9f83612bb6d3df43",
+      "input_token_upper_bound": 4610,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-04 separate report assertions and source evidence; mass_g-positive, focal source observed=False; compare exact facts/labels/decision to typed truth and parser; paired synthetic diagnostic."
+    },
+    "case": {
+      "id": "420608251e14-plan",
+      "root": "420608251e14",
+      "family": "mass_g-positive",
+      "condition": {
+        "source_observed": false
+      },
+      "actor": {
+        "contract": "Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.",
+        "query": {
+          "entity": "asset-57453",
+          "time": "12:00",
+          "property": "mass_g",
+          "threshold": 5000
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 12:00, asset-57453 will measure 7000 grams."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rae59b9",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "rce0e56",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          {
+            "id": "r581808",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453-unseen measured 6000 grams."
+          },
+          {
+            "id": "r474075",
+            "source_id": "s0",
+            "text": "At 12:00, asset-57453 measured 6000 grams."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 12:00, asset-57453 will measure 7000 grams."
+          },
+          "s1": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          "s2": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        },
+        "reports": {
+          "r474075": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6000 grams."
+          },
+          "rae59b9": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          "rce0e56": {
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          "r581808": {
+            "entity": "asset-57453-unseen",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453-unseen measured 6000 grams."
+          }
+        },
+        "labels": {
+          "r474075": "NOT_ESTABLISHED",
+          "rae59b9": "NOT_ESTABLISHED",
+          "rce0e56": "NOT_ESTABLISHED",
+          "r581808": "NOT_ESTABLISHED"
+        },
+        "decision": "DEFER"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-04-007",
+      "case_id": "420608251e14-plan",
+      "condition": {
+        "source_observed": false
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":null,\"status\":\"unknown\",\"quote\":\"Plan: at 12:00, asset-57453 will measure 7000 grams.\"},{\"id\":\"s1\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":7000,\"status\":\"observed\",\"quote\":\"At 12:00, asset-57453 measured 7 kilograms.\"},{\"id\":\"s2\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":2000,\"status\":\"observed\",\"quote\":\"At 12:00, asset-57453 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"rae59b9\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"rce0e56\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":7000,\"quote\":\"At 12:00, asset-57453 measured 7000 grams.\"},{\"id\":\"r581808\",\"entity\":\"asset-57453-unseen\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453-unseen measured 6000 grams.\"},{\"id\":\"r474075\",\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"value\":6000,\"quote\":\"At 12:00, asset-57453 measured 6000 grams.\"}]}",
+      "usage": {
+        "prompt_tokens": 1207,
+        "completion_tokens": 404,
+        "total_tokens": 1611,
+        "cost": 0.009681
+      },
+      "generation_id": "gen-1791142940-bBbCq5cmqg6LPpvsos4Z",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 12:00, asset-57453 will measure 7000 grams."
+          },
+          {
+            "id": "s1",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 7 kilograms."
+          },
+          {
+            "id": "s2",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 2000,
+            "status": "observed",
+            "quote": "At 12:00, asset-57453 measured 2 kilograms."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rae59b9",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453 measured 6 kilograms."
+          },
+          {
+            "id": "rce0e56",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 7000,
+            "quote": "At 12:00, asset-57453 measured 7000 grams."
+          },
+          {
+            "id": "r581808",
+            "entity": "asset-57453-unseen",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453-unseen measured 6000 grams."
+          },
+          {
+            "id": "r474075",
+            "entity": "asset-57453",
+            "time": "12:00",
+            "property": "mass_g",
+            "value": 6000,
+            "quote": "At 12:00, asset-57453 measured 6000 grams."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 4,
+        "reports_total": 4,
+        "labels": {
+          "rae59b9": "NOT_ESTABLISHED",
+          "rce0e56": "NOT_ESTABLISHED",
+          "r581808": "NOT_ESTABLISHED",
+          "r474075": "NOT_ESTABLISHED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "grounded_quotes_valid": true,
+        "decision": "DEFER",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 4
+        }
+      },
+      "wall_s": 4.497377634048462
+    },
+    "request": {
+      "id": "QM-PQ-04-007",
+      "case_id": "420608251e14-plan",
+      "dispatch_intent_at": 1791142940.7877781,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here asserts one definite observation. Extract what the REPORT SAYS even when its source is unknown or contradictory. Report values must never become unknown because source support is absent. Report claims are separate from source evidence. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Sources are authenticated and independent across supplied groups. Plans are not observations. Operating=running and not running=stopped. Each report asserts a definite observation: extract what it claims separately from whether its bound source supports it. Count only observed sources, once each. Without two agreeing observed sources, decision is DEFER.\",\"query\":{\"entity\":\"asset-57453\",\"time\":\"12:00\",\"property\":\"mass_g\",\"threshold\":5000},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 12:00, asset-57453 will measure 7000 grams.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"At 12:00, asset-57453 measured 7 kilograms.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"At 12:00, asset-57453 measured 2 kilograms.\"}],\"reports\":[{\"id\":\"rae59b9\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 6 kilograms.\"},{\"id\":\"rce0e56\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 7000 grams.\"},{\"id\":\"r581808\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453-unseen measured 6000 grams.\"},{\"id\":\"r474075\",\"source_id\":\"s0\",\"text\":\"At 12:00, asset-57453 measured 6000 grams.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": "integer"
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "0d964a0ed2495ec184e447ed330fd3f172289d7b7339920f9f83612bb6d3df43"
+    }
+  }
+]

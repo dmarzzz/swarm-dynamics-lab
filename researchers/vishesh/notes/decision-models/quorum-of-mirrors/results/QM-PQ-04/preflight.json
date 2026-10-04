@@ -1,0 +1,45 @@
+{
+  "source_sha256": {
+    "PLAN.md": "eea1b9d725f65eeadd5bb8110f30437e0090828859c95dff1eb76a4207302df3",
+    "contract.py": "ae87c69c4413589608700f6bb3a938de7c96860ec6d6834c881ae27b7c520a70",
+    "runtime.py": "09e8dfdb1104942d992f1273f5314df3437abcdcf666f661d3ed75974b4b2221",
+    "manifest.json": "5c61e8ec4c83b6a7d82536f0731c67f70195c048f7381d236b9cedf3a8e9c116",
+    "cases.py": "7374b80b722aafcfca6e1ba7c46012a6aa9cbf993ab69647e29ae5bee3defca3",
+    "baseline.py": "b7bfd43245c3a5c26bd09ea2e4ed716e1f9fdd23542190e41c42a423e17f9e69",
+    "qualification-seal.json": "a10fb5215c72e459b3672c4a35351adee885e8ba1b122242bde7c1999c947230",
+    "AUTHORIZATION.json": "ca1e92722af68ab8f5bdb91ab0335b4de3b8a82cdac9c3cbe2accdc69f551638",
+    "HISTORY.json": "b49d8e21d85cb21b7d49d109d07bc5f9cdc04b76decbe4ec46b0f33a8ed15013",
+    "diagnostics.py": "e713622bdeb520a6066df567189cf9e34e4b289bfab867e5438eadd26179c74d",
+    "../native-v2/AUTHORIZATION.json": "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d",
+    "../../next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "../../qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "../../next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "../../reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "../../public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "727feaa7b0b24281d1a0c38228556b7b842531ad556f90e5021fabd8fbd0962f",
+  "public_plan": {
+    "experiment": "quorum-of-mirrors",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/7489e37ef377d7bf45428d5fdcadb7560bd72d8e/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/native-v4/PLAN.md",
+    "commit": "7489e37ef377d7bf45428d5fdcadb7560bd72d8e",
+    "plan_sha256": "eea1b9d725f65eeadd5bb8110f30437e0090828859c95dff1eb76a4207302df3",
+    "registered_tldr": "TLDR: QM-PQ-04 tests separate report assertions and source evidence on8 synthetic packets/four paired roots: observed versus plan-only source, fixed reports. Compare exact facts, labels, quote consistency and DEFER decisions to typed truth/strong parser. Targeted qualification only; no generalization or swarm claim.",
+    "run_tldr": "TLDR: QM-PQ-04 tests separate report assertions and source evidence on8 synthetic packets/four paired roots: observed versus plan-only source, fixed reports. Compare exact facts, labels, quote consistency and DEFER decisions to typed truth/strong parser. Targeted qualification only; no generalization or swarm claim.",
+    "checked_utc": "2026-10-04T19:41:42.969265+00:00"
+  },
+  "route": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": "Anthropic",
+    "snapshot": "20260217",
+    "pricing_verified": true,
+    "checked_at": 1791142903.0095565
+  },
+  "budget": {
+    "calls": 99,
+    "reserved_usd": 2.345856,
+    "prior_unknown_bound_usd": 0.061344
+  },
+  "checked_at": 1791142902.714263,
+  "host": "sim-dmarz-5",
+  "claim_id": "vishesh-quorum-pq-04"
+}

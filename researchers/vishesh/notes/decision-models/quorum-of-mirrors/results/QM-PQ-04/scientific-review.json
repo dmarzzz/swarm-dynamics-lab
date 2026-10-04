@@ -1,0 +1,23 @@
+{
+  "attempt": "QM-PQ-04",
+  "execution": "complete8/8",
+  "qualification": "passed_stricter_component_and_pair_gates",
+  "scientific_interpretation": "Report assertions preserved under loss of source evidence; all four source-majority decisions changed to DEFER as required. Four authored roots only; no model superiority or swarm claim.",
+  "reporting": "All8 native traces manually inspected and replayed;7 remote artifacts hash verified;hub done verified",
+  "cost": "newactual0.074124;original ledger and unknown reservations retained",
+  "reviewer": "owning agent; independent review waived",
+  "dimensions": {
+    "question": "pass targeted",
+    "scenarios": "limited authored grammar",
+    "controls": "pass fixed reports and strong parser; evidence/content changes intentionally",
+    "capability": "pass stricter fact/quote/decision conjunction",
+    "measurement": "pass regression detects masked errors",
+    "sample_size": "limited4 paired roots",
+    "agent_context": "pass stateless actor only",
+    "data_integrity": "pass8/8 fully retained",
+    "resources": "pass cumulative unchanged authority",
+    "reproducibility": "pass manifests/hashes and full replay",
+    "visualization": "all8 actual cases plus4 paired rows structurally checked"
+  },
+  "decision": "FINISH targeted repair; no automatic successor"
+}

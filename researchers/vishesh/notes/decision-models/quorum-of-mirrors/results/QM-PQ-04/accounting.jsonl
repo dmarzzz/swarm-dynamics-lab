@@ -1,0 +1,8 @@
+{"id": "QM-PQ-04-000", "usage": {"prompt_tokens": 1191, "completion_tokens": 349, "total_tokens": 1540, "cost": 0.008808}, "generation_id": "gen-1791142903-Hz743xYjv8GGSZj2v7XF", "received_at": 1791142910.8740008}
+{"id": "QM-PQ-04-001", "usage": {"prompt_tokens": 1232, "completion_tokens": 406, "total_tokens": 1638, "cost": 0.009786}, "generation_id": "gen-1791142910-RP19OZV6TBxFdl6DKPLF", "received_at": 1791142919.1130407}
+{"id": "QM-PQ-04-002", "usage": {"prompt_tokens": 1191, "completion_tokens": 352, "total_tokens": 1543, "cost": 0.008853}, "generation_id": "gen-1791142919-9EIEMQVcxTYO2CgXiJYv", "received_at": 1791142923.2874393}
+{"id": "QM-PQ-04-003", "usage": {"prompt_tokens": 1231, "completion_tokens": 402, "total_tokens": 1633, "cost": 0.009723}, "generation_id": "gen-1791142923-nFwJ4AvVoVfKTUu6qx42", "received_at": 1791142927.7873363}
+{"id": "QM-PQ-04-004", "usage": {"prompt_tokens": 1208, "completion_tokens": 405, "total_tokens": 1613, "cost": 0.009699}, "generation_id": "gen-1791142927-3vsYyRXzB7fY0QihUc9C", "received_at": 1791142932.6196585}
+{"id": "QM-PQ-04-005", "usage": {"prompt_tokens": 1172, "completion_tokens": 352, "total_tokens": 1524, "cost": 0.008796}, "generation_id": "gen-1791142932-3tcM6HO8iBfuxEKgvEok", "received_at": 1791142936.7555}
+{"id": "QM-PQ-04-006", "usage": {"prompt_tokens": 1171, "completion_tokens": 351, "total_tokens": 1522, "cost": 0.008778}, "generation_id": "gen-1791142936-pxA8Ai5IVUjVIZCRKdPy", "received_at": 1791142940.7211936}
+{"id": "QM-PQ-04-007", "usage": {"prompt_tokens": 1207, "completion_tokens": 404, "total_tokens": 1611, "cost": 0.009681}, "generation_id": "gen-1791142940-bBbCq5cmqg6LPpvsos4Z", "received_at": 1791142945.269015}

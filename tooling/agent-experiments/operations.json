@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-03-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-04-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:34:55.805887+00:00",
-      "checked_commit": "ba2a74afaf34a36b39474d1062ab6fea14b28077",
-      "next_action": "FINISH PQ-03 repair qualification:24/24 valid, all decisions/labels correct,119/120 reportfacts; noHTTPerrors. Read PQ-03-post.md. No automatic evaluation; old holdout unchanged. Preserve one component error and all prior failures/reservations. Future evaluation needs compatible concrete design.",
+      "checked_at": "2026-10-04T19:44:55.270163+00:00",
+      "checked_commit": "7489e37ef377d7bf45428d5fdcadb7560bd72d8e",
+      "next_action": "FINISH PQ-04 targeted repair:8/8 valid;all facts/quotes/labels/decisions correct,4 paired assertion invariances and intended DEFER transitions. Read PQ-04-post.md. No automatic next run; broader evaluation needs compatible cases and concrete scope. Preserve original107call ledger and prior unknowns.",
       "next_run_approval": "owner"
     },
     {
