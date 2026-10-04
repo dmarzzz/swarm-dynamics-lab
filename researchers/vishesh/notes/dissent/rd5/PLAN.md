@@ -18,6 +18,8 @@ Predictions, before new outcomes: suppressing repeat checks should help when the
 
 The candidate separates three decisions: whether an observation is eligible for checking, how to interpret an acquired observation, and how to allocate scarce checks over time. All policies share the same scope/version/expiry rules, interpretation packet and explicit unresolved state. Source identities and acquisition receipts are supplied by the synthetic environment; their authenticity is an assumption, not something Jev establishes.
 
+Each policy has one Jev resolver with its own state. Five initial ballots are supplied by the fixture (four supporting the initial action, one dissenting); no native peer generation or additional judge is hidden in the budget. The same ballots, task requirements and event stream are paired across policies.
+
 The small native study has six authored event streams: three scenario mechanisms, each with a stop-direction and a resume-direction version. Each stream has four decision opportunities at ticks 0, 2, 4 and 6; a dispatched check returns one tick later and each opportunity's deadline is its tick plus one. The horizon is eight ticks. Each policy gets at most two checks and two native resolution calls per stream, not two per epoch. Exact assignments, task texts, result availability and input hashes must be frozen before qualification. Fresh IDs alone do not create independent semantics.
 
 | Scenario | Events and practical use | Contrast it must expose |

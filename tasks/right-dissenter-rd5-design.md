@@ -23,7 +23,11 @@ Use the RD4 post-mortem and saved decision records to explain the observed accur
 
 ## Done when
 
-- Reconcile every noncorrect checking-arm outcome and each paired difference.
-- Publish repair contracts and acceptance criteria without claiming fixes are verified.
-- Develop three contrasting scenarios, strong comparators, metrics and a feasible next-stage envelope.
-- Link the existing research source map and catalogue any newly read primary sources without duplication.
+- [x] Reconcile every noncorrect checking-arm outcome and each paired difference.
+- [x] Publish repair contracts and acceptance criteria without claiming fixes are verified.
+- [x] Develop three contrasting scenarios, strong comparators, metrics and a feasible next-stage envelope.
+- [x] Link the existing research source map and catalogue any newly read primary sources without duplication.
+
+## Coverage note
+
+Retrospective arithmetic reconciles 288 checking-arm decisions, 26 noncorrect outcomes and every paired correctness difference. Proposed contracts, three-policy design, negative controls, budget envelope and research questions are published under dissent/rd5. Two newly read primary sources were deduplicated and verified against arXiv/Crossref with zero problems. Zero new native calls, no successor experimental implementation and no machine claim.

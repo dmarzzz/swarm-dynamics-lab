@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-rd5-design
-doing: Reconciling RD4 failure mechanisms and drafting RD5 repair contracts and the right-to-reopen research plan; no native run.
-updated: 2026-10-04T06:40:18.903745+00:00
+doing: RD5 planning complete; failure decomposition and repair/research design published; no new native run.
+updated: 2026-10-04T06:50:05.636200+00:00
 ---
 
 ## Notes

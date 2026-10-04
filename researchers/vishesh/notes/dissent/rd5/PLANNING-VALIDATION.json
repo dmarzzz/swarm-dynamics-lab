@@ -22,5 +22,14 @@
     "fresh qualification",
     "public attempt registration and runtime receipts",
     "exclusive fleet allocation before any native run"
-  ]
+  ],
+  "new_primary_sources_verified": {
+    "papers": 2,
+    "arxiv_crossref_problems": 0
+  },
+  "repository_validation": {
+    "errors": 0,
+    "existing_unresolved_library_link_warnings": 5,
+    "historical_evidence_metadata_current": true
+  }
 }
