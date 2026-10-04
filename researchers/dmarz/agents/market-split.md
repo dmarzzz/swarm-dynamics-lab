@@ -3,8 +3,8 @@ agent: dmarz/market-split
 tool: codex
 state: working
 task: build-market-split
-doing: Building an exploratory MKT-03/MKT-11 scripted-first pilot and run visualization.
-updated: 2026-10-04T01:25Z
+doing: Fleet S0 passed and replay verified; running the frozen 432-episode scripted S1, API budget zero.
+updated: 2026-10-04T01:48Z
 ---
 
 ## Notes
