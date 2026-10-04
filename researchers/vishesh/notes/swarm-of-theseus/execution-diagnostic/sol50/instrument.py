@@ -79,7 +79,7 @@ class Institution:
         self.events.append({'kind':'replace','position':p,'retired':old,'successor':self.identity(p)})
     def actor(self,p,current=None,inherited=None):
         # Whitelist, never serialize Institution/world into actor context.
-        packet={'identity':self.identity(p),'position':p,'roster':[self.identity(x) for x in self.world['members']],
+        packet={'identity':self.identity(p),'position':p,'roster':[{'position':x,'identity':self.identity(x)} for x in self.world['members']],
                 'private_note':copy.deepcopy(self.notes.get(p)),'current_observations':copy.deepcopy(current or [])}
         if inherited is not None:
             if self.arm=='broken':raise ValueError('broken_inheritance_leak')

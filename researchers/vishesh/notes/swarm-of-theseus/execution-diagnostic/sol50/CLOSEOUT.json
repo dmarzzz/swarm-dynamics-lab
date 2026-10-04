@@ -1,0 +1,26 @@
+{
+  "attempts": [
+    "SOL50-Q1",
+    "SOL50-Q1C"
+  ],
+  "execution": "complete",
+  "qualification": "failed_instrument_confounded",
+  "scientific_review": "complete_owning_agent",
+  "native_calls": 17,
+  "native_50_member_run": false,
+  "new_actual_usd": 0.0443915,
+  "new_unknown_usd": 0,
+  "historical_unknown_usd": 0.010452,
+  "cumulative_exposure_usd": 1.0852835437,
+  "cumulative_cap_usd": 60,
+  "incremental_infrastructure_usd": 0,
+  "unused_allocation_released_usd": 54.1012085,
+  "remaining_unallocated_usd": 58.9147164563,
+  "worker_exited": true,
+  "local_transport_stopped": true,
+  "claim_release": "https://github.com/dmarzzz/swarm-labs-agentops/pull/416",
+  "aggregate_artifact_readback": "5 artifacts SHA-256 verified",
+  "raw_trace_publication": false,
+  "next_action": "DECISION NEEDED: fresh Q2 qualification, at most30 calls/USD0.80 within existing cap; no automatic expansion",
+  "upload_snapshot_note": "Uploaded closeout preceded release; UPLOAD-RECEIPTS records that immutable snapshot. This source closeout includes final release."
+}

@@ -72,11 +72,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/swarm-of-theseus/v2",
       "setup_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A1-SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/RESULTS-A2.md",
+      "postmortem_path": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md",
       "adapter": "theseus-v2",
-      "checked_at": "2026-10-04T16:51:19.347559+00:00",
-      "checked_commit": "b5484ca0d9c7f199bf70c5412dcd5d363a8aefd7",
-      "next_action": "DECISION NEEDED: T1 direct institutional apprenticeship proposal; read execution-diagnostic/transmission/PLAN.md. 31 offline checks, zero native T1 calls. Proposed Q0 six roots/72calls/USD1.80 within originalUSD5; native integration and admission pending. A2 negative acquisition result and cumulativeUSD0.9793100437 remain unchanged. No automatic turnover study.",
+      "checked_at": "2026-10-04T20:26:28.401636+00:00",
+      "checked_commit": "3a8f5616e25e90c6c1891008a01d7dd8edf08b78",
+      "next_action": "DECISION NEEDED: SOL50 Q1/Q1C closed with address-contract defect,17 native calls; no handover or50-member pilot.39 offline repair checks. Fresh Q2 proposal: execution-diagnostic/sol50/address-repair/PLAN.md,30calls/USD0.80 within cumulativeUSD60; exposureUSD1.0852835437. Raw traces private, aggregate reports verified. Legacy adapter is not the SOL50 launcher.",
       "next_run_approval": "owner"
     },
     {

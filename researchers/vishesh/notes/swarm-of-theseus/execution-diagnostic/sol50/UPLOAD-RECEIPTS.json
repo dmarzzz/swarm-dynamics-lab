@@ -1,0 +1,31 @@
+{
+  "worker_exited": true,
+  "allocation_settled": true,
+  "receipts": [
+    {
+      "name": "RESULTS-SOL50.md",
+      "sha256": "48781720e732ac2b3f8b4fcd8bf64ca21be5af2184c4ec069671b691f8db8288",
+      "readback_verified": true
+    },
+    {
+      "name": "QUALIFICATION-AUDIT.json",
+      "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150",
+      "readback_verified": true
+    },
+    {
+      "name": "QUALIFICATION-QUALITY.json",
+      "sha256": "304bd25eb04c94201c2ae90de237b77a373d30d888218db94447a81ff06eb7b0",
+      "readback_verified": true
+    },
+    {
+      "name": "CLOSEOUT.json",
+      "sha256": "f8ff3d1f3e3da91d336c6f749f128ed428647f71ca565ecbd24366a4c66a50f6",
+      "readback_verified": true
+    },
+    {
+      "name": "qualification.png",
+      "sha256": "55d7a22d73b9429903636bacd37052b87ad3fdf53871d48c1a96f5f05c955564",
+      "readback_verified": true
+    }
+  ]
+}

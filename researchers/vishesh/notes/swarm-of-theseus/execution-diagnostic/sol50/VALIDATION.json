@@ -1,7 +1,7 @@
 {
-  "status": "offline_repair_validated_qualification_continuation_pending",
-  "tests_passed": 33,
-  "native_calls": 5,
+  "status": "address_repair_offline_validated_native_unqualified",
+  "tests_passed": 39,
+  "native_calls": 17,
   "evidence_type": "software_and_scripted_fixtures_not_model_results",
   "members": 50,
   "qualification_fixture_calls": 27,
@@ -18,20 +18,22 @@
   "reasoning_effort": "none",
   "source_files": {
     "test_instrument.py": "232d9e0af95969b987070ba6b911b141e273ce8f6aa6d945b8d5a4d53157deb0",
-    "coordinator.py": "feee485504a28ea7b2abf627c313dfa4ab446d1cb1c58a3fb411c08a06cab4e1",
+    "coordinator.py": "65b94a2e4ee0ef61a25eb5a672e121d6ae0b56379a0f5f53390944c6c417d1ca",
+    "test_addressing.py": "d0959d157f1f573a9500cfe6624e397f1d9cc5ea8fb95839c2f57f764618288d",
     "test_relay.py": "136a5fd4ce895803c7c3770c889807f652347d98b1e1c4556b56d1bfa486253b",
     "runner.py": "0c1a20e21fc09d0b1d10737c1e468799cffcbca3182a4f351d405493b1f59a70",
     "test_coordinator.py": "fcfbe44c4e12a84ed6397a7d761b72f2c5f8799ccef09f38965aa307bd6d7b21",
-    "native.py": "ff57aab0a1f4a76a297f4b2ae7ae85ad93c09d98301cdd9b09849f41d9973f81",
+    "native.py": "ca28380bf2ce31514dbb75c43923c8cd8af45ccc44f9c8288d2f8ec27d985545",
     "test_runner.py": "68a224324288def893ea858cb7cce8815d9e2b2166ccd442fc1cd0fa98a33425",
     "relay.py": "c12a9a68acc1d24a87c5658a10569e015670764e14e56631b5bb0e4bd5c57fc1",
-    "instrument.py": "bf8b2750443a676a93a2d19ec81a318d75356906a3d03140cd6edb69bbab9d52",
+    "addressing.py": "361d0089580e859fcc0979f266157f7e9023b730654a8bb46ae52ce2283d2ae6",
+    "instrument.py": "7545e752ef94d0cdc066b1990d66802900b2abafb98d911b198f6603e951bc3d",
     "test_native.py": "78a5bc226f0746c9410e715289247c7b4be59637d24f6a3362dbf554f0c555a9"
   },
   "outstanding": [
-    "Immutable public plan registration and page verification",
-    "Exclusive approved-account allocation and current runtime",
-    "Native route/semantic qualification and authored review",
-    "Conditional main-stage admission"
+    "Owner decision for material Q2 address contract",
+    "Fresh Q2 immutable registration and current admission",
+    "Native Q2 qualification and authored review",
+    "Conditional50-member main admission"
   ]
 }

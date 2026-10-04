@@ -1,0 +1,137 @@
+{
+  "attempt": "SOL50-Q1C with parent SOL50-Q1",
+  "assessor": "owning Codex agent; not independent",
+  "date": "2026-10-04",
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Qualification of acquired routes and coordination; claims limited to observations.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Native joint interface supplied incompatible address vocabularies; no turnover or drift observed.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ],
+      "next_action": "Use the implemented explicit-roster/current-alias repair in a separately approved fresh Q2 qualification.",
+      "acceptance_check": "All current aliases route correctly; stale identities fail; complete native acquisition/coordination/handover passes unchanged gates with full request and cost audit."
+    },
+    {
+      "dimension": "controls",
+      "status": "not_applicable",
+      "finding": "Comparative main arms were never launched.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "Acquisition correct; only one complete joint consultation observed, no handover.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ],
+      "next_action": "Use the implemented explicit-roster/current-alias repair in a separately approved fresh Q2 qualification.",
+      "acceptance_check": "All current aliases route correctly; stale identities fail; complete native acquisition/coordination/handover passes unchanged gates with full request and cost audit."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Historical note-order defect and current-address routing defect are reproduced; preserved original outputs.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ],
+      "next_action": "Use the implemented explicit-roster/current-alias repair in a separately approved fresh Q2 qualification.",
+      "acceptance_check": "All current aliases route correctly; stale identities fail; complete native acquisition/coordination/handover passes unchanged gates with full request and cost audit."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One five-member qualification world, no population inference or agent-count pseudoreplication.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "gap",
+      "finding": "Actor-visible roster identities differed from accepted router position strings.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ],
+      "next_action": "Use the implemented explicit-roster/current-alias repair in a separately approved fresh Q2 qualification.",
+      "acceptance_check": "All current aliases route correctly; stale identities fail; complete native acquisition/coordination/handover passes unchanged gates with full request and cost audit."
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "17 starts/terminal records,10 dependency-unstarted nominal calls; saved founder replay is not redispatch.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Newactual0.0443915, zero new unknown, cumulative1.0852835437/60; caches included, no new machine cost.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "All17 effective requests and scores reproduce using frozen source; raw evidence remains private.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Aggregate flow exposes distinct denominators and explicitly labels no50-member run.",
+      "evidence": [
+        {
+          "path": "QUALIFICATION-AUDIT.json",
+          "sha256": "b62785c5577cfd9972042f30b2321f7234fa146f0d5d2cd77e449f36a135a150"
+        }
+      ]
+    }
+  ]
+}

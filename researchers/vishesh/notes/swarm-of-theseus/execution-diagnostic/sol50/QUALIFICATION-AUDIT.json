@@ -1,0 +1,52 @@
+{
+  "attempts": [
+    "SOL50-Q1",
+    "SOL50-Q1C"
+  ],
+  "source_commits": [
+    "74de0a0dd7bea613e5c1c79d600c3bd485a44d74",
+    "3a8f5616e25e90c6c1891008a01d7dd8edf08b78"
+  ],
+  "assigned_nominal_calls": 27,
+  "native_started_calls": 17,
+  "native_terminal_calls": 17,
+  "dependency_unstarted_calls": 10,
+  "replayed_founder_calls": 5,
+  "founder_redispatches": 0,
+  "provider_errors": 0,
+  "retries": 0,
+  "original_requests_reproduced": 17,
+  "scoring_replay_disagreements": 0,
+  "founders_semantically_qualified": 5,
+  "founders_assigned": 5,
+  "founder_correct_actions": 30,
+  "founder_assigned_actions": 30,
+  "selected_pairs_semantically_correct": 5,
+  "selected_pairs_router_accepted": 1,
+  "consultation_edges_intended": 10,
+  "consultation_edges_delivered": 2,
+  "witness_calls_complete": 2,
+  "witness_reports_exact": 2,
+  "joint_correct_task_actions": 18,
+  "joint_assigned_actions": 30,
+  "joint_decisions_correct_given_delivered_evidence": 30,
+  "joint_decisions_observed": 30,
+  "joint_harmful_approvals": 0,
+  "joint_useful_approvals": 2,
+  "joint_eligible_approvals": 10,
+  "native_handovers": 0,
+  "native_main_50_members": 0,
+  "new_actual_usd": 0.0443915,
+  "new_unknown_usd": 0,
+  "historical_unknown_usd": 0.010452,
+  "cumulative_exposure_usd": 1.0852835437,
+  "cumulative_cap_usd": 60,
+  "served_routes": [
+    {
+      "model": "openai/gpt-6-sol",
+      "provider": "OpenAI",
+      "calls": 17
+    }
+  ],
+  "raw_traces_public": false
+}

@@ -4844,4 +4844,42 @@ artifacts:
           - https://github.com/dmarzzz/swarm-lab/blob/a5144a2a241c55085d95762afdbf3e3735b76198/researchers/vishesh/notes/telephone/t1/POST-MORTEM.md
           - https://github.com/dmarzzz/swarm-lab/blob/a5144a2a241c55085d95762afdbf3e3735b76198/researchers/vishesh/notes/telephone/t1/README.md
         commit: 117cdf2e525d611cc75412cd574bbddf433d652c-dirty
+  - id: theseus-sol50-qualification
+    category: content
+    type: figure
+    title: Theseus SOL50 qualification routing audit
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-sol50-qualification/theseus-sol50-qualification-v1.png
+        built_at: '2026-10-04T20:29:47Z'
+        note: Aggregate diagnostic only; one five-member world, no fifty-member run.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:44b6362b5a63b6a8529629d914650639a98cde2b5233a96b671aa1ff857cf978
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/plot.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-AUDIT.json
+        commit: a1bcae2e1835224e91af8520c298e5f0a31afa76-dirty
+        public: true
+  - id: theseus-sol50-postmortem
+    category: content
+    type: doc
+    title: Theseus SOL50 qualification post-mortem
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-sol50-postmortem/theseus-sol50-postmortem-v1.md
+        built_at: '2026-10-04T20:30:04Z'
+        note: Reviewed qualification, instrument defects, and bounded repair plan; no main-run claim.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:823b9950795098f42fbad8d823c413ae30163bb4ae4e3576fd5fdcc13c37776d
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-AUDIT.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json
+        commit: a1bcae2e1835224e91af8520c298e5f0a31afa76-dirty
+        public: true
 requires: '1.2'

@@ -3950,6 +3950,32 @@
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
       "source_commit": "edcd77579cf1644864bd2cb9e6f20381e5c5a9d7"
+    },
+    {
+      "id": "theseus-sol50-qualification",
+      "title": "Theseus SOL50: qualification exposed routing-contract failure",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "3a8f5616e25e90c6c1891008a01d7dd8edf08b78",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/README.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-sol50"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "In one five-member qualification world, correct intended peer selections were dropped by an address mismatch; cultural survival remains untested.",
+        "rationale": "17 native calls, exact saved-request replay, no provider errors. Founder5/5 notes and30/30 actions; router accepted1/5 correct peer pairs. Joint18/30 task decisions; all30 matched the evidence actually delivered. No handover or50-member expansion."
+      },
+      "sample_size_summary": "One five-member qualification world;17 native calls,60 nested observed decisions,10 nominal downstream calls unstarted; five founders replayed without recollection. Not17 independent samples.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/RESULTS-SOL50.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-AUDIT.json",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/sol50/QUALIFICATION-QUALITY.json"
+      ],
+      "status_at_assessment": "completed_reviewed_instrument_confounded"
     }
   ],
   "source_sha256": {

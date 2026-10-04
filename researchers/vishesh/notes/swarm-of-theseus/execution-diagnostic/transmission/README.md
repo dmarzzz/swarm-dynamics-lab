@@ -30,3 +30,7 @@ The original cumulative exposure remainsUSD0.9793100437; no budget reset. The ow
 ## Approved Q0 execution and collective expansion
 
 [Owner-approved Q0 contract](Q0-AUTHORIZED.md) supersedes the earlier decision-pending status. [Six-member collective study](COLLECTIVE-STUDY.md) introduces complementary evidence and native consultation, twelve replacements and twelve paired roots.44 offline checks pass; no native Q0 result yet. USD20 top-up raises cumulative cap to25; the Q0 stage remains<=1.80.
+
+## Latest local closeout
+
+[Q0-A1 post-mortem](RESULTS-Q0-A1.md): qualification failed with an underspecified interface. [Typed repair](typed-repair/PLAN.md) is implemented and tested offline. The six-member collective comparison is prospective, not evaluated. Result publication awaits explicit confirmation after platform review rejection.

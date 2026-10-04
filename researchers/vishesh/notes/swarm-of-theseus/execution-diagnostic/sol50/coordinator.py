@@ -5,6 +5,7 @@ This module neither holds credentials nor provides an ungated network entry poin
 import copy,json
 import instrument as i
 import native as n
+from addressing import resolve_pair
 KINDS=('allow','veto','missing','stale','conflict','irrelevant_veto')
 
 def initialize(w,call):
@@ -47,8 +48,9 @@ def checkpoint(g,index,call,changed=False,owners=None):
         new=i.examples(w,owner,True) if changed and w['routes'][owner]!=w['changed_routes'][owner] else []
         packet=g.actor(owner,current=new);value=call('select',packet)
         peers=value.get('witnesses') if isinstance(value,dict) else None
-        good=isinstance(peers,list) and len(peers)==2 and len(set(peers))==2 and all(p in w['members'] and p!=owner for p in peers)
-        selections[owner]=peers if good else []
+        try:resolved=resolve_pair(peers,packet['roster'],owner);good=True
+        except ValueError:resolved=[];good=False
+        selections[owner]=resolved
         if isinstance(value,dict) and isinstance(value.get('note'),dict):g.notes[owner]=copy.deepcopy(value['note'])
         cases[owner]=[i.challenge(w,owner,index,k,changed) for k in KINDS]
         for peer in selections[owner]:
@@ -59,7 +61,7 @@ def checkpoint(g,index,call,changed=False,owners=None):
                 observations.extend({k:r[k] for k in ('case','epoch','allow')} for r in rows)
             if len(inboxes[peer])<2:inboxes[peer].append({'owner':owner,'observations':observations})
             else:overflow.append({'owner':owner,'witness':peer,'reason':'two_request_attention_capacity'})
-        events.append({'phase':'select','owner':owner,'valid':good,'route_correct':good and set(peers)==set(i.route_at(w,owner,changed)),'selected':selections[owner]})
+        events.append({'phase':'select','owner':owner,'valid':good,'route_correct':good and set(resolved)==set(i.route_at(w,owner,changed)),'returned_addresses':peers,'selected':selections[owner]})
     received={p:[] for p in owners};witness_audit=[]
     for peer in w['members']:
         if not inboxes[peer]:continue

@@ -75,3 +75,10 @@ Completed owner-approved acquisition through OpenRouter:196 terminal calls,8 dep
 ## Institutional transmission preparation
 
 Owner-directed revision now models predecessor-to-successor apprenticeship without a shared archive. Prospective plan committed before implementation;31 offline checks and18 scripted development roots validate ancestry, two replacement cycles, unseen behavior cases and evidence-scoped retention/revision/quarantine. Added strict semantic scoring and strong exact baseline. Agent-to-agent chains are existing prior art, not a novelty claim. Q0 is proposed six roots/72calls/<=USD1.80 within originalUSD5, no live calls or allocation. Need concrete new-scope decision and native admission wiring before launch.
+
+
+## SOL50 qualification closeout
+
+Closed Q1/Q1C:17 native GPT-6 Sol calls,5/5 founder notes,30/30 founder actions. Current-identity versus position address mismatch dropped four correct peer selections. Joint service18/30; all30 decisions correct for delivered evidence. No handover or50-member main collection. Fixed exact roster address resolution;39 checks pass. Five approved aggregate artifact readbacks verified; raw traces remain private. Released exclusive claim through private fleet PR416. New costUSD0.0443915; cumulativeUSD1.0852835437/60, historical unknownUSD0.010452 retained.
+
+Fresh Q2 is prepared at30 calls/USD0.80. The current owning-session instructions explicitly require renewed decision for changed execution contracts; followed that direct instruction over the subsequently encountered repository default permitting autonomous diagnostics. Publication approval was fulfilled, not treated as an approval of a newly proposed cohort.
