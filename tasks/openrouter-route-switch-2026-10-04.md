@@ -3,14 +3,16 @@ id: openrouter-route-switch-2026-10-04
 type: task
 title: Apply the owner directed OpenRouter migration to affected studies
 kind: admin
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T18:43Z
+updated: 2026-10-04T18:43Z
 ---
 
 ## Goal
