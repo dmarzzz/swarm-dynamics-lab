@@ -1,80 +1,40 @@
-# Pre-registration: template-quorum
+# Frozen exploratory protocol v1
 
-Committed before the first S2 run. `coordinator.py stage S2` refuses to queue while this file or
-`design.yaml` has uncommitted edits or still holds a placeholder marker, and it stamps their commit on
-every S2 run. Later changes go under **Amendments** with a date, and a changed design gets a new experiment id.
+## Question and prediction
 
-This file is filled in for the toy so you can see what "complete" looks like. Replace every section for
-your experiment. The section numbers follow vishesh's design guide (`researchers/vishesh/notes/seo-poisoning/experimental-design.md`,
-*Experimental design* §0–§8), and the headings map onto `templates/hypothesis.md` and `templates/experiment.md`.
+Can continuing to check established reputations while investigating little-audited identities preserve rare truthful information after a coordinated sleeper attack? The directional prediction is that renewal improves round-8 specialist accuracy over reputation auditing by at least 10 percentage points in the 16-identity sleeper condition. Zero, negative, or uncertain effects are valid outcomes. An apparently strong result accompanied by high harmful-report admission or honest-specialist rejection must be reported with that tradeoff.
 
-## 1. Hypotheses, with directions
+## Assignment and information
 
-- **H1 (manipulation check).** With a wrong shared source in the evidence (W2_FALSE), plurality quorum
-  (A0) commits to a wrong option more often than in the clean world (W0_CLEAN).
-- **H2 (primary).** In W2_FALSE at dose 0.4, the provenance-aware quorum (A1) has a lower false-commit
-  rate than plurality quorum (A0), paired per task.
-- **H3 (cost).** A1 pays for H2 with higher delay. We report how much, rather than predicting a size.
+See `design.yaml` and README for the complete fixed matrix. Tasks 7100–7123 are 24 paired world clusters. Engineering tasks 6900–6901 and qualification tasks 7000–7005 are separate. Formal S2 tasks 12000–12999 remain unused. World truth depends on task and round, not policy or strategy. Common random numbers determine report labels/order, audits, tie breaking, and truth across paired policies/strategies. Identity-count comparisons share truth but not an identical set of identities or audit opportunities.
 
-Kill criterion: if A1's false-commit rate in the primary cell is not lower than A0's (the CI on A1 − A0
-includes 0 or is above it), counting roots does not help under this exposure model, and we stop.
+The comparison policies are deterministic functions of observable reports and selected audit history. No policy receives world truth or ownership. The model sees a current-round packet only. Before the switch, all controller and honest messages are true and external audit accuracy is role-independent. Half the controller identities are new in round 4 at 4/16 identities. The same 16 controller messages are redistributed over active identities every round. All arms have four checks and twelve report slots. All methods use the same post-check admission rule.
 
-## 2. Contrasts declared in advance
+## Outcome definitions
 
-- **Primary:** `design.yaml → primary_contrast`. Stage S2, world W2_FALSE, dose 0.4, false_commit, A1 − A0.
-- **Secondary:** delay and regret in the same cell.
-- Everything else (other cells, other metrics) is exploratory and labelled that way in the results.
+- Specialist accuracy: number of exactly correct outputs for current skills 3, 4, and 5 divided by three. Wrong values and null both count as incorrect.
+- Task accuracy: exactly correct outputs over all six skills.
+- Wrong specialist output share: non-null incorrect specialist values divided by three.
+- Harmful seat share: admitted reports with a false current claim divided by twelve.
+- Controller/attacker seat share: admitted reports owned by the common controller divided by twelve, even when it tells the truth. Ownership share is not itself harm in clean rounds.
+- Honest specialist newcomer retention: admitted rare honest messages divided by three after round 4; unavailable before round 4.
+- Available-truth diagnostic: fraction of rare fields whose true value appears at least once in the admitted packet, evaluated with hidden truth. Not fed to the model; not a strict bound on guessing.
+- Unique contributors, cumulative audits per active controller identity, newcomer/veteran audit split, and round-3 reputation show the identity/reputation mechanism.
 
-## 3. Minimum meaningful effect and non-inferiority
+## Analysis and sample size
 
-- Minimum meaningful improvement: A1 − A0 ≤ −0.10 on false_commit in the primary cell.
-- Clean-task non-inferiority: in S0 (W0_CLEAN), the arms' false-commit rates may differ by at most
-  0.02. (They are identical by construction in the toy. A real experiment must check this.)
-- Cost ceiling: mean delay for A1 ≤ n_agents (it must commit before the deadline on average).
+Primary: the paired world difference renewal minus reputation, sleeper strategy, sixteen controller identities, round eight, specialist accuracy. Report its mean and 95% descriptive bootstrap interval, resampling whole worlds 10,000 times with seed 20261004. This is an exploratory 24-world study, not power-qualified or confirmatory. All 81 cells (identity × strategy × arm × sampled round) and renewal-minus-random contrasts are secondary. Multiple comparisons are exploratory without significance claims. No individual actor or round is an independent replicate. Failures remain in planned denominators; valid-completion means and assigned-denominator accuracy are both reported. Any paired contrast reports its actual number of complete world pairs.
 
-## 4. Sample size from S1
+Prespecified secondary identity contrasts compare 16 minus 1 controller identities within each policy, strategy, and sampled round for specialist accuracy, harmful seat share, and newcomer retention. Also report the paired world interaction (renewal minus reputation at 16) minus (renewal minus reputation at 1). Duplicate assignment IDs are rejected. Assigned-denominator accuracy bounds put missing outcomes at zero and one, while complete-case paired contrasts retain their actual pair count.
 
-S1 gives the discordant-pair rate ψ and the standard deviation σ_d of the per-task difference. For the toy,
-S1 (W2_FALSE, dose 0.4) gave ψ ≈ 0.8, which makes the primary contrast trivially powered, so we keep the
-default 300 holdout tasks × 3 seeds. In a real experiment, write the McNemar sample-size arithmetic here
-from S1's numbers before S2, and set `stages.S2.tasks` to match.
+Noattack/clean controls have the same controller identities and messages, so only attack behavior is removed. A plurality synthesizer on the exact same packets is diagnostic. Relapse is defined before execution as a stress test; its code may be structurally self-tested, so it is not described as unknown to the design team or a formal holdout. There is no tuning on S1 outcomes.
 
-## 5. Units and metrics, with denominators
+## Qualification and runtime
 
-- **Unit of assignment:** the task × seed draw. Every arm sees the same draw (common random numbers),
-  so assignment to arms is within-draw and complete.
-- **Unit of analysis:** the episode (one arm on one draw). **Cluster:** the task. Seeds within a task
-  are not independent examples.
-- **Metrics** (per episode; rates over all valid episodes of the arm in the cell):
-  - `committed`: the arm committed before the deadline.
-  - `false_commit`: committed to a wrong option.
-  - `correct`: committed to the right option.
-  - `delay`: reports received until commit, or n_agents if no commitment.
-  - `regret`: 0 if correct, 1 if wrong, abstain_cost if no commitment.
+Model `claude-haiku-4-5-20251001`, temperature zero, native structured JSON, six fields, max output 500 tokens, no tools, no thinking, no caching, no retries. Q0: 36 packets, full/common-only/sparse coverage, with one or two agreeing reports per present field; each shape requires at least 95% field accuracy, 90% exact packets, and 100% absent-field abstention. S0: 198 scripted observations, all structurally valid and qualification thresholds passed. A failed Q0 blocks S1 pending a preserved diagnostic/repair attempt using fresh competence fixtures.
 
-## 6. Parse-failure and retry policy (identical across arms)
+Every assignment is saved before calls; every terminal record includes packet hash, source hash, code commit, actual usage when provided, evaluation, completion time, and failure status. Any invalid API observation stops new dispatch and drains at most two in-flight calls, marking undispatched rows not_started. A fresh attempt never silently replaces a failed result. Provider reservations are durable and nonrefundable in the study ledger. Budget: 2,050 attempted calls, $75 local conservative ceiling, plus the parent's shared $60 bundle actual-plus-outstanding limit for both experiments. The owner-wide total remains $500; parent launch reconciliation is required. Q0+S1 plan is 1,980 calls. Two concurrent workers per study run alongside the other study; stage timeout is four hours. No secrets enter packets, reports, artifacts, or Git.
 
-An episode that raises is recorded with `validity.ok = false`, counted per arm (`invalid`), and never
-retried or dropped. A hub run that fails is visible as `failed`, and its tasks are re-queued only by
-adding a dated amendment here.
+## Visualization and provenance
 
-## 7. Agent-population validity checks
-
-The toy agents are not LLMs, so the guide's unawareness probe and minimal-control audit (§3.4) do not
-apply. For LLM agents, name the probe and threshold here.
-
-## 8. Seeds and splits
-
-- Dev tasks 0–199 (S0, S1). Holdout tasks 1000–1999 (S2), never touched before S2.
-- Seeds: S0 [1], S1 [1, 2], S2 [11, 12, 13]. Fixed in `design.yaml` before any run, and never chosen after
-  looking at results.
-
-## 9. What we may claim
-
-A result here is about this exposure model: the shared source's identity is supplied by the environment
-(`root`), not inferred from text. It does not show that provenance can be recovered in deployment
-(guide §0, gate 5).
-
-## Amendments
-
-None.
+`VISUALIZATION.md` v1 maps saved logical history to an eight-frame replay, current-completion progress PNG, and final tradeoff image. The renderer has no effect on scientific random draws. The runtime source hash includes configuration, requirements, and every Python module under src. Runtime changes invalidate exact-source qualification gates; documentation-only post-mortems do not.

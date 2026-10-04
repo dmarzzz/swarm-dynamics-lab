@@ -32,7 +32,7 @@ budget:
   request_timeout_seconds: 120
   stage_timeout_seconds: 14400
   retries: 0
-  workers: 4
+  workers: 2
   input_usd_per_million: 1
   output_usd_per_million: 5
 primary_contrast:

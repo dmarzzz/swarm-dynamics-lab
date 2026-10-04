@@ -59,7 +59,7 @@ class Tests(unittest.TestCase):
     self.assertEqual(render.frame([],2880,'S1').size,(1920,1440))
     self.assertEqual(render.frame([{'status':'failed','kind':'pilot','n':324}],2880,'S1').size,(1920,1440))
     rows=[dict(status='completed',kind='pilot',n=972,arm='coverage',checks=108,attacker_pass=.1,evaluation={'rare_accuracy':v}) for v in (1,2/3)]
-    self.assertEqual(render.cell_values(rows,972,'coverage',108,.1,'rare_accuracy'),(5/6,2))
+    value,count=render.cell_values(rows,972,'coverage',108,.1,'rare_accuracy');self.assertAlmostEqual(value,5/6);self.assertEqual(count,2)
  def test_splits_grid_and_disabled_holdout(self):
     d=study.design();groups=[set(d[k]) for k in ('worlds','qualification_worlds','engineering_worlds')]
     self.assertTrue(all(not a&b for i,a in enumerate(groups) for b in groups[i+1:]));self.assertTrue(max(set.union(*groups))<10000)
@@ -80,6 +80,6 @@ class Tests(unittest.TestCase):
      with patch.object(study,'assignments',return_value=assignments),patch.object(render,'replay',return_value=0),patch.object(analyze,'analyze',return_value={}),patch.dict(os.environ,{'SYBIL_API_BUDGET_LEDGER':str(Path(td)/'ledger')}):
       with self.assertRaises(RuntimeError):worker.execute(study.params('S1'),path,backend=Broken())
      summary=json.loads((path/'summary.json').read_text());self.assertEqual(summary['terminal'],20);self.assertEqual(summary['invalid'],20)
-     self.assertLessEqual(summary['started'],4);self.assertGreaterEqual(summary['not_started'],16)
+     self.assertLessEqual(summary['started'],study.design()['budget']['workers']);self.assertGreaterEqual(summary['not_started'],20-study.design()['budget']['workers'])
      self.assertEqual(len({json.loads(line)['id'] for line in (path/'episodes.jsonl').read_text().splitlines()}),20)
 if __name__=='__main__':unittest.main()

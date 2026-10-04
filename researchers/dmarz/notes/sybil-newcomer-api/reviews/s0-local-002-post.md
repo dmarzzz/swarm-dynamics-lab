@@ -1,0 +1,5 @@
+# Post-mortem: s0-local-002
+
+Uncommitted local engineering preparation, 2026-10-04 UTC; source hash `953baba062319f0e74ef8d671ee7d9fa4649f557a7890cc9f354dfce5026b6ac`. Eight regression tests passed, including the corrected duplicate guard test and numerical identity-interaction/missing-data analysis check. S0 reconciled 198 planned/started/terminal/graded/analyzed, zero invalid/missing/API calls/tokens/spend. All 36 clean packets exactly correct. Logical collection time 4.04 seconds; eight GIF frames delivered with no reporting error.
+
+N-01 and N-02 from the previous ledger are closed by those passing tests. Visual inspection of final_frame.png found a labeling defect: despite its SCRIPTED heading, the S0 footer and table used generic API/model language. Corrected renderer labels to say scripted snapshots during S0; no simulator, treatment, model prompt or measurement changes. Preserve this attempt. Next is s0-local-003, a zero-key rerun to verify that reporting-only correction. Deployed playback remains a parent verification step.

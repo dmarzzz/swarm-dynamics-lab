@@ -1,0 +1,10 @@
+# Post-mortem: s0-local-001
+
+Local attempts are uncommitted engineering validation, not a precommitted scientific freeze. Root commits the final source, design and fleet pre-run before fleet S0 or any API stage.
+Disposition: engineering qualification passed, rerun after integration and display repair. Offline only; zero API calls/cost. Runtime `bc8d0dab5556d00e378a8f2e1f642f14132c5fe91048fecb61edcfac03515bb2`. This attempt is retained in its original local output directory and is not the final deployment qualification.
+
+256 assigned →256 started →256 terminal →256 graded →256 analyzed, zero failures/not-started/duplicates. Both clean-size screens returned8/8 exact packets,100% fact correctness and100% missing-fact abstention. Collection/preparation29.81seconds. All packet hashes, grades, graph metrics, check counts and complete analysis independently recomputed from stored assignments/worlds. All25GIFframes decoded.
+
+Nine regression tests passed after correcting a test-only exact float comparison (`5/6` versus averaging1and2/3 differed at the last binary bit). The scientific implementation did not change for that fix. Image inspection found repeated axis captions overlapping the following panel titles. Those captions moved to one global legend, percentages gained one decimal to distinguish values near5%, and observed per-cell cluster counts now appear explicitly. The corrected saved-data preview was inspected and is legible. Original images are preserved.
+
+During/after this local attempt, root integrated the joint spending ledger and reduced each study to two concurrent calls, so this runtime does not match the final launch hash. Exact S1 request preflight subsequently found$129.735877nonrefundable reservations plus$1.018967Q0; the authorized per-study cap increases to$140 while the parent enforces a shared$60actual-plus-unsettled cap across both follow-ups. No paid call occurred. Scientific grid and expected outcomes are unchanged. Next action: s0-local-002 on the final hash, then root's committed exact-runtime fleetS0/Q0. Valid scripted null/adverse cells are instrument outputs, not grounds for retuning science.

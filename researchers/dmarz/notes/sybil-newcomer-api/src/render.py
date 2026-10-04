@@ -13,7 +13,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,history=None,round_cursor=8
     def txt(x,y,s,size=24,color=INK):d.text((x,y),str(s),font=font(size),fill=color)
     good=[r for r in rows if r['status']=='completed'];failed=sum(r['status']=='failed' for r in rows)
     txt(60,30,'Can earned trust survive a coordinated lie?',42)
-    txt(60,90,f'{stage} | '+('SCRIPTED' if stage=='S0' else 'HAIKU 4.5')+' | exploratory | simulated identities, API synthesis',25,COLORS['renewal'])
+    txt(60,90,f'{stage} | '+('SCRIPTED' if stage=='S0' else 'HAIKU 4.5')+' | exploratory | simulated identities, '+('scripted synthesis' if stage=='S0' else 'API synthesis'),25,COLORS['renewal'])
     txt(60,135,f'Completed {len(good)}/{total} | failed {failed} | not started {sum(r["status"]=="not_started" for r in rows)} | elapsed {elapsed:.0f}s')
     if stage=='Q0':
         q=study.qualification(rows)
@@ -39,7 +39,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,history=None,round_cursor=8
                     pt=(x+(t-1)*w/7,y+h*(1-sim.mean(rr)))
                     if prev:d.line((*prev,*pt),fill=color,width=4)
                     d.ellipse((pt[0]-5,pt[1]-5,pt[0]+5,pt[1]+5),fill=color);prev=pt
-            txt(x,y+h+43,f'Logical round 1–8 | cursor {round_cursor} | 16 identities, sleeper',19,MUTED)
+            txt(x,y+h+43,f'Round {round_cursor}/8 | 16 identities, sleeper',19,MUTED)
         txt(80,737,'Final-round tradeoff | sleeper | marker label = attacker identities',26)
         x=150;y=814;w=640;h=205
         for tick in (0,.5,1):
@@ -53,16 +53,16 @@ def frame(rows,total,stage,elapsed=0,accounting=None,history=None,round_cursor=8
                     rr=[r for r in good if r['kind']=='pilot' and r['arm']==arm and r['identities']==n and r['strategy']=='sleeper' and r['round']==8]
                     if rr:
                         px=x+w*sim.mean([r['evaluation']['bad_seat_share'] for r in rr]);py=y+h*(1-sim.mean([r['evaluation']['rare_accuracy'] for r in rr]));d.ellipse((px-7,py-7,px+7,py+7),fill=color);txt(px+10,py-14,n,18,color)
-        txt(965,738,'Model measurements | 16 identities, sleeper',26)
+        txt(965,738,('Scripted measurements' if stage=='S0' else 'Model measurements')+' | 16 identities, sleeper',26)
         for i,t in enumerate((4,5,8)):
             txt(975,796+i*70,f'Round {t}',24)
             for j,(arm,color) in enumerate(COLORS.items()):
                 rr=[r for r in good if r['kind']=='pilot' and r['round']==t and r['arm']==arm and r['identities']==16 and r['strategy']=='sleeper'] if t<=round_cursor else []
                 value=f'{sim.mean([r["evaluation"]["rare_accuracy"] for r in rr]):.1%} ({len(rr)})' if rr else 'pending'
                 txt(1110+j*200,797+i*70,value,23,color)
-        txt(970,1010,'No model calls in other rounds; no inferred model memory.',19,MUTED)
+        txt(970,1010,(('Scripted snapshot this round' if stage=='S0' else 'Model sampled this round') if round_cursor in (4,5,8) else 'Model not sampled this round')+'; no model memory.',19,MUTED)
     a=accounting or {};txt(62,1110,f'Stage cost ${sum(r.get("accounting",{}).get("actual_usd",0) for r in rows):.4f} | study ${a.get("actual_usd",0):.4f} | reserved ${a.get("reserved_usd",0):.2f}',23,COLORS['renewal'])
-    txt(62,1151,'Lines: recorded simulated histories. Dots/table: completed API snapshots. Missing observations never become zero.',20,MUTED)
+    txt(62,1151,'Lines: recorded simulated histories. Dots/table: completed '+('scripted' if stage=='S0' else 'API')+' snapshots. Missing observations never become zero.',20,MUTED)
     return im
 
 def replay(rows,out,stage,total,initial_accounting=None,history=None):

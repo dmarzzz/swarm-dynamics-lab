@@ -31,6 +31,7 @@ def frame(rows,total,stage,elapsed=0,accounting=None,view='main'):
             text(90,y+62,f'Fields {c["fact_accuracy"]:.1%} | exact packets {c["exact_packet_rate"]:.1%} | missing-fact abstention {c["missing_abstention"]:.1%}',28)
     else:
         metrics=('rare_accuracy','bad_seat_share') if view=='main' else ('specialist_retention','rare_accuracy')
+        text(60,163,'Columns: number of checks     Rows: attacker check-pass probability',18,MUTED)
         labels={'rare_accuracy':'Specialist accuracy','bad_seat_share':'Attacker share of admitted seats','specialist_retention':'Honest specialist retention'}
         budgets=study.design()['checks'];rates=study.design()['pilot']['attacker_pass']
         for row,(n,metric) in enumerate((n,m) for n in study.design()['sizes'] for m in metrics):
@@ -43,13 +44,13 @@ def frame(rows,total,stage,elapsed=0,accounting=None,view='main'):
                     for j,b in enumerate(budgets):
                         value,count=cell_values(rows,n,arm,b,rate,metric);xx=x+j*cw;yy=y+28+i*ch
                         draw.rectangle((xx,yy,xx+cw-5,yy+ch-3),fill=color(value,metric) if value is not None else '#293b50')
-                        text(xx+12,yy+4,f'{value:.0%}' if value is not None else 'pending',18)
+                        text(xx+12,yy+4,f'{value:.1%}' if value is not None else 'pending',18)
                         if count:
                             acc,_=cell_values(rows,n,arm,b,rate,'rare_accuracy');bad,_=cell_values(rows,n,arm,b,rate,'bad_seat_share')
                             if count==len(study.design()['worlds']) and acc>=.9 and bad<=.05:
                                 draw.rectangle((xx,yy,xx+cw-5,yy+ch-3),outline='#fff2a8',width=3)
-                text(x,y+205,'Checks →     Attacker check-pass probability ↓',18,MUTED)
-        text(60,1267,'Cells: means; 24 paired worlds when complete. Yellow outline: accuracy ≥90% AND attacker seats ≤5%.',21)
+        counts=[cell_values(rows,n,arm,b,rate,'rare_accuracy')[1] for n in study.design()['sizes'] for arm in study.design()['arms'] for b in budgets for rate in rates]
+        text(60,1267,f'Cells: means; observed counts {min(counts)}–{max(counts)} paired worlds. Yellow outline: accuracy ≥90% AND attacker seats ≤5%.',21)
         text(60,1300,'Engineering target, not a guarantee. Uncertainty in analysis tables. Missing cells are pending, never zero.',21,MUTED)
     a=accounting or {};stagecost=sum(r.get('accounting',{}).get('actual_usd',0) for r in rows)
     text(60,1350,f'Stage cost ${stagecost:.4f} | study cost ${a.get("actual_usd",0):.4f} | reserved ${a.get("reserved_usd",0):.2f}',23,'#66d6c5')

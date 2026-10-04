@@ -1,5 +1,6 @@
 # Pre-run assessment: s0-local-001
 
+Local attempts are uncommitted engineering validation, not a precommitted scientific freeze. Root commits the final source, design and fleet pre-run before fleet S0 or any API stage.
 - Experiment/owner/stage: sybil-budget-api, dmarz, offline scripted S0. Parent: sybil-scale-api/s1-001 [post-mortem](../../sybil-scale-api/reviews/s1-001-post.md).
 - Status: ready for bounded offline engineering qualification; paid stages remain gated.
 - Question: Can the unchanged population fixture and model adapter support the intermediate budget/reliability grid without changed endpoint semantics, leakage, incorrect denominators or misleading visualization?
