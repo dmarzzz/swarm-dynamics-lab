@@ -8,7 +8,7 @@ The owner requested implementation and readiness, not launch. Cited typed facts,
 |---|---|
 | G0 | Diagnostic only; external-influence claim remains unqualified. |
 | G1 | Prospective ITERATION-05.md written before implementation. |
-| G2 | Unit and failure checks pass; published-source readiness fixture recorded in RUN-D5.md when complete. |
+| G2 | Pass: 59 scenario tests; published-source scripted rehearsal 24/24 valid, 48 scripted calls, zero model calls. See RUN-D5.md and reviews/D5-readiness.json. |
 | G3 | Intentionally not admitted: no current host claim or runtime receipt. Refresh source/public plan, remaining existing quota and secure fleet admission immediately before a requested run. |
 | G4 | D3 failed; D4 unrun; D5 does not automatically qualify S1. |
 | G5 | Preparation closeout only; no new native outcomes. |

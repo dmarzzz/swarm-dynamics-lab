@@ -1,6 +1,6 @@
 # D5-01 pre-run assessment — preparation only
 
-2026-10-04 · vishesh/codex-experiments. Read D3 post-mortem. [Prospective plan](../ITERATION-05.md) written before implementation. Current status: diagnostic code/offline checks being finalized; no native admission or launch. Owner asked to make improvements and get ready. Current runbook makes researcher review optional; no new review is pending.
+2026-10-04 · vishesh/codex-experiments. Read D3 post-mortem. [Prospective plan](../ITERATION-05.md) written before implementation. Current status: preparation complete; 59 tests and published-source scripted rehearsal pass. No native admission or launch. Owner asked to make improvements and get ready. Current runbook makes researcher review optional; no new review is pending.
 
 Question: can cited typed facts with source-excerpt alignment and fixed policy comparisons repair the false blockers seen in D3, and does removing inherited interpretation change that? Six known frozen D2 cases ×four workflows; same-evidence architecture pairs and same-architecture context pairs.48 nominal calls,24 decisions. This deliberately diagnoses inspected failures; do not describe it as fresh replication or external-influence evidence.
 
@@ -8,10 +8,10 @@ The parser/validator rejects unsupported model values into UNKNOWN and never fil
 
 Regression checks cover D3 budget, coverage and deadline mistakes, unsupported and wrong-candidate citations, exact non-entailing excerpts, clipped numeric tokens, forged confirmation, NaN/invalid booleans/fractional counts, duplicate JSON fields, pair matching, no truth leakage and deadline failure retaining24 invalid assignments with zero calls. Admission faults reject stale/future/unverified/mismatched receipts and uncommitted/mismatched packets. Fixture success is not model competence.
 
-The first local development fixture preceded public registration and is retained as engineering-only evidence in scripted-D5-development-01. It must not be described as preregistered. A separate published-source readiness fixture will be retained before native admission. No credential was selected or paid model call made.
+The first local development fixture preceded public registration and is retained as engineering-only evidence in scripted-D5-development-01. It must not be described as preregistered. The separate published-source readiness fixture scripted-D5-01 is retained: 24/24 valid, 48 scripted calls, zero model calls; see D5-readiness.json. No credential was selected or paid model call made.
 
 Planned ceiling4.669440USD conservative reservation; last observed remaining existing grant4.821680USD. Exact quota, price and fresh exclusive approved-fleet allocation checks remain launch-time requirements. No machine held during preparation. No retired D3 receipt reuse, no grant reset. D5 source-bound packet, exact public-plan bytes, five-minute operator receipt and preserved cumulative ledger are enforced by the native entrypoint. Actual live-fleet/SSH/idle checks belong to the secure dispatcher, not merely the receipt booleans. Model output3072tokens for both arms; input32768bytes;24-minute dispatch deadline; existing transient retry only.
 
-Finish preparation by publishing frozen source, verifying actual request envelopes and report controls, recording the readiness fixture and leaving native execution unstarted.
+Preparation is complete on source 528c4f70260f6c3fcda55633a06458cd1e9027b1; request envelopes and report controls checked, readiness recorded, native execution unstarted.
 
 Wire-contract audit before native execution: official provider documentation limits nullable/union parameters and array bounds. Revised to zero-union concrete types plus explicit unknown-field masks; exact three-stage length checked locally. Unknown placeholders cannot become evidence. Both D5 contracts pass the offline provider-subset guard; actual API schema compilation has not been probed. See the prospective amendment and source link in ITERATION-05.md.

@@ -4,11 +4,11 @@ D5 implements the concrete repair suggested by [D3](RESULTS-D3.md). It is a new,
 
 ## Implemented behavior
 
-- Require all three candidates, four primary-record groups and36 typed fields per extraction response. Explicit unknown-field masks normalize to null; typed wire placeholders never count as facts. Reject duplicate JSON fields, invalid types, nonfinite values, invalid pilot denominators and unsupported fields.
+- Require all three candidates, four primary-record groups and 36 typed fields per extraction response. Explicit unknown-field masks normalize to null; typed wire placeholders never count as facts. Reject duplicate JSON fields, invalid types, nonfinite values, invalid pilot denominators and unsupported fields.
 - Preserve the original extraction. Verify candidate-specific citation, exact supporting excerpt and value alignment with labelled source fields. An unsupported number is rejected into unknown evidence; the correct source number is not silently supplied to the agent.
 - Compile five mandatory checks using one buyer-policy version and Decimal arithmetic. Each receipt shows its policy clause, observed value, operator/threshold, source IDs, result and reason. Future mitigation and qualitative concerns cannot modify policy.
 - Keep raw choice and separate purchase authority distinct. Refuse an unsupported or excessively expensive purchase; list eligible alternatives on an unnecessary deferral without silently selecting one.
-- Cross matrix versus typed-fact review with inherited interpretations versus primary records only. Same reviewer evidence within each context, same standard chair prompt, same model/caps,48 nominal calls,24 decisions on six frozen D2 cases.
+- Cross matrix versus typed-fact review with inherited interpretations versus primary records only. Same reviewer evidence within each context, same standard chair prompt, same model/caps, 48 nominal calls, 24 decisions on six frozen D2 cases.
 
 The excerpt verifier is a synthetic-template parser. It does not prove general language understanding or validate arbitrary vendor contracts. The paired matrix comparison tests this complete application architecture, not a pure formatting change. Existing flawed reports remain a candidate cause until D5 actually runs.
 
@@ -51,3 +51,13 @@ Raw extraction accuracy is scored against evaluator facts after responses only; 
 Live/final PNGs show six case rows ×four workflows; pending and invalid states are explicit. Saved events retain elapsed time. The HTML report switches raw/authorized actions and exposes original extraction, evidence alignment, policy receipts and actual events. Fixture labels are mandatory. Native report failures are recorded separately from scientific outcomes and repaired from saved data without recollection.
 
 D5 has no automatic successor. Even6/6 correct typed decisions are only a development signal on inspected cases. Fresh qualification and independent scenario authorship remain necessary before an external-influence claim.
+
+## Preparation closeout — 2026-10-04 UTC
+
+Prepared, not launched. Frozen published source: `528c4f70260f6c3fcda55633a06458cd1e9027b1`. Packet: `d0fe44becee7386e667b84f727317d91e3cbd68be2b28a89f33d24b7419efe44`, with clean source. The immutable public plan was fetched and byte-verified. Subsequent documentation commits do not change this deployment pin.
+
+All 59 scenario tests pass, including deadline failure accounting and admission rejection checks. The published-source `scripted-D5-01` rehearsal completed 24/24 valid decisions using 48 scripted calls: zero model calls and USD 0 spend. Independent reconciliation passes. Both typed arms produced 216/216 correct and aligned fixture facts; all four arms produced 90/90 correct fixture statuses. These scripted outputs validate plumbing and arithmetic, not agent competence.
+
+The largest encoded fixture request was 28,941 bytes against the 32,768-byte input cap. The interactive report was inspected for fixture labeling, case/arm selection, raw versus authorized outcomes, and source-linked policy receipts. Provider schema acceptance remains untested by a live API call. Readiness metadata: [D5-readiness.json](reviews/D5-readiness.json). Local preview: `http://127.0.0.1:8766/D5-readiness.html`.
+
+The next run is 24 decisions / 48 nominal calls, with a conservative reservation ceiling of USD 4.669440 from the existing cumulative budget. Fresh dedicated-host, remaining-budget and secure-dispatch checks above are required immediately before launch. No researcher review is pending or required. D3 remains the latest measured model result; D4 and S1 remain unrun.
