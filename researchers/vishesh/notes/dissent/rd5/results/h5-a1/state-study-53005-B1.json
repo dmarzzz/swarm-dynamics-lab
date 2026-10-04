@@ -1,0 +1,202 @@
+{
+  "current": "PROCEED",
+  "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+  "attempted": [
+    "7ec69b46e019e8acdc2e7e92e200ea84bb0d93c7919320f276a3d80dc8d4c101",
+    "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6"
+  ],
+  "checks": 2,
+  "inference_attempts": 2,
+  "receipts": [
+    {
+      "identity": "study-53005-B1-0",
+      "frontier": "7ec69b46e019e8acdc2e7e92e200ea84bb0d93c7919320f276a3d80dc8d4c101",
+      "received_at": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53005-inspection-0",
+          "root": "study-53005-inspection-0",
+          "scope": "study-53005",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "identity": "study-53005-B1-1",
+      "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+      "received_at": 3,
+      "records": [
+        {
+          "acquisition_id": "study-53005-inspection-2",
+          "root": "study-53005-inspection-2",
+          "scope": "study-53005",
+          "revision": "v1",
+          "observed_at": 2,
+          "text": "The reading is not outside the allowed interval: it is 20."
+        }
+      ]
+    }
+  ],
+  "last_verified": {
+    "action": "PROCEED",
+    "scope": "study-53005",
+    "revision": "v1",
+    "observed_at": 2,
+    "expires_at": 9,
+    "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6"
+  },
+  "events": [
+    {
+      "kind": "physical_check",
+      "identity": "study-53005-B1-0",
+      "tick": 0,
+      "frontier": "7ec69b46e019e8acdc2e7e92e200ea84bb0d93c7919320f276a3d80dc8d4c101",
+      "available": true,
+      "return_tick": 1
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53005-B1-0",
+      "tick": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53005-inspection-0",
+          "root": "study-53005-inspection-0",
+          "scope": "study-53005",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53005-B1-0",
+      "request_sha256": "e67aca63cbae6bdada724be685cb9b39373add65b4b471139631a3f074cd08e9"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53005-B1-0",
+      "choice": "DEFER",
+      "tick": 1
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53005-B1-0",
+      "tick": 0,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "7ec69b46e019e8acdc2e7e92e200ea84bb0d93c7919320f276a3d80dc8d4c101",
+      "checks_before": 0,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 1,
+      "request_sha256": "e67aca63cbae6bdada724be685cb9b39373add65b4b471139631a3f074cd08e9",
+      "action": "DEFER",
+      "checks_after": 1,
+      "inference_attempts": 1,
+      "receipts": 1,
+      "historical_action": "HOLD",
+      "justified": false,
+      "available_checks": 1
+    },
+    {
+      "kind": "physical_check",
+      "identity": "study-53005-B1-1",
+      "tick": 2,
+      "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+      "available": true,
+      "return_tick": 3
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53005-B1-1",
+      "tick": 3,
+      "records": [
+        {
+          "acquisition_id": "study-53005-inspection-2",
+          "root": "study-53005-inspection-2",
+          "scope": "study-53005",
+          "revision": "v1",
+          "observed_at": 2,
+          "text": "The reading is not outside the allowed interval: it is 20."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53005-B1-1",
+      "request_sha256": "78ea98529ac625db3aa2cabc07b0cff0b2cb6e9121be89d1b0f06edd7d96c491"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53005-B1-1",
+      "choice": "PROCEED",
+      "tick": 3
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53005-B1-1",
+      "tick": 2,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+      "checks_before": 1,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 3,
+      "request_sha256": "78ea98529ac625db3aa2cabc07b0cff0b2cb6e9121be89d1b0f06edd7d96c491",
+      "action": "PROCEED",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": true,
+      "available_checks": 0
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53005-B1-2",
+      "tick": 4,
+      "status": "completed",
+      "reason": "resolved_reuse",
+      "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+      "checks_before": 2,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "PROCEED",
+      "decision_at": 4,
+      "action": "PROCEED",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": true,
+      "available_checks": 0
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53005-B1-3",
+      "tick": 6,
+      "status": "completed",
+      "reason": "resolved_reuse",
+      "frontier": "1245075b19b78df723cd9be54890507b930d8e8b11f8eae10dd5655c19a272c6",
+      "checks_before": 2,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "PROCEED",
+      "decision_at": 6,
+      "action": "PROCEED",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": true,
+      "available_checks": 0
+    }
+  ]
+}

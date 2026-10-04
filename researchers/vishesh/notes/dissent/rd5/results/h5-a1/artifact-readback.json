@@ -1,0 +1,139 @@
+{
+  "hub_status": "done",
+  "downloaded": [
+    {
+      "name": "admission-reference.json",
+      "sha256": "2464ffc73f84c779f7e5adeb2cab9413a8de3f0de5575eab1b47f83e66ccbdf5",
+      "hash_matches": true
+    },
+    {
+      "name": "calls.json",
+      "sha256": "025cc317aad578c8e08c90c870317355e7f5710d2fff38cb0a8dfadeaa50f042",
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "a27eec337d8c0b5bb2f799b99635c29559773e9b1667be239967eab32bba5414",
+      "hash_matches": true
+    },
+    {
+      "name": "packet.json",
+      "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f",
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan-receipt.json",
+      "sha256": "f0f6bd37a1251c19ac0397156b1544afdefdb7ccd90eae888d7a198cd4aee0f1",
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "cf1cab34246061d7f04051319d84b60c6af310c0a35a2c0c79debf93c9413579",
+      "hash_matches": true
+    },
+    {
+      "name": "replay.html",
+      "sha256": "3a7e98c2980baefe5ccaf72bbd4d26189428e18327b8edbbc81b0fb48590df30",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53000-B0.json",
+      "sha256": "6e3a1ed693f7a1499e29c5af56dc306ca1311f7572ca8ecf39e58639b4217516",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53000-B1.json",
+      "sha256": "d1b9641187a76c964806eb461c299f9a46a7199b416d13a2f37753ff2a01dfc4",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53000-B2.json",
+      "sha256": "93bdc3730979663ac49ec6b9d5448a8787ada0fef8a889160e1f70c3f74aab0a",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53001-B0.json",
+      "sha256": "bdc3db31a8ee6e2d8995064c3c528ec59bd52ef70eafddc3914abe1f71bc13db",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53001-B1.json",
+      "sha256": "87875a4fd60743dee40d3a19547a5399eab8b98bca71ec13b8612775bfeb294e",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53001-B2.json",
+      "sha256": "d368304d6a220bdc3591c0aacc31739eea9a16fefca4f624b9afcb74473e48ad",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53002-B0.json",
+      "sha256": "33279c2f8015acef44b5a7f0adb50d643c01f18ebf7815d2f78ceea9e0d8491a",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53002-B1.json",
+      "sha256": "73d1d32f14370add17dd02a4af548fb1fab3395deeb4859b303817a82343e135",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53002-B2.json",
+      "sha256": "02ed63075135ca739ba313b52cbaf2f8ca826e8f4498e6ac87b18d4d0fb0efa4",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53003-B0.json",
+      "sha256": "43245f98b6b1a43487e791fba5586d6806334d2266716542fe7e820fdbe7d876",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53003-B1.json",
+      "sha256": "ac180b4ef2a0cebfecda109c173871d77dabf1759be980e30cb63708bf11e784",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53003-B2.json",
+      "sha256": "fc1ffe9261f7ba82d1c6314e0dec2cb2f9d64c438808fb8ac1497920e7803e2b",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53004-B0.json",
+      "sha256": "3c9909ce527f2faa60bcb0b916b175dc3ca6f8be62f84cda9ed3841479e83f26",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53004-B1.json",
+      "sha256": "27bc6de3aad1f4bc4ec789a356d4d7e52c5e91709252d14ef1899c8dc4e13866",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53004-B2.json",
+      "sha256": "8cea356dd90cef357f074b7bec491935608882a3264e3ec199b125d53c633b24",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53005-B0.json",
+      "sha256": "2f09fa852ec7dd5d4bae8fbb26cef35681ad824a19d81cd919c36dcd20d288f7",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53005-B1.json",
+      "sha256": "337f6e32d6152f17efbbeb27e937871318369493a6d83bb9a7d747bb5aa28ded",
+      "hash_matches": true
+    },
+    {
+      "name": "state-study-53005-B2.json",
+      "sha256": "7d940e1e3e2e01f9022a9851600d5d1863c9e7db70322404ff1b6f7ccfd6c2bf",
+      "hash_matches": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "9a744637d7a07b4b3187731c6026aa76ad8216c905829f0f431554592ac216db",
+      "hash_matches": true
+    }
+  ],
+  "complete": true,
+  "missing": [],
+  "hash_mismatches": [],
+  "local_required_missing": []
+}

@@ -1,0 +1,9 @@
+{
+  "experiment": "right-dissenter-rd5",
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/10e6b4d775c8409c1a9817ad633f0f6f84ae3c40/researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+  "commit": "10e6b4d775c8409c1a9817ad633f0f6f84ae3c40",
+  "plan_sha256": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa",
+  "registered_tldr": "TLDR: Test whether remembering unresolved inspections and reserving one future check improve timely correct decisions under two checks. Primary reserve versus memory; secondary memory versus always-check. Six authored process streams yield 72 dependent decisions after a separate 24-call interpretation screen. Known timing, scripted ballots and one domain limit generalization; no native results yet.",
+  "run_tldr": "TLDR: H5-A1 compares attempt memory plus a release-at-4 reserve with attempt memory and bounded always-check. Six authored process streams, three policies and four epochs yield72dependent decisions under two checks and two calls per trajectory. Score all assigned actions, urgent delay, late recovery and resource use. Known timing, scripted votes and one domain limit generalization.",
+  "checked_utc": "2026-10-04T17:15:55.487897+00:00"
+}

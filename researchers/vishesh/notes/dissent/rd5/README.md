@@ -1,6 +1,6 @@
 # Right Dissenter RD5: the right to reopen
 
-Current execution status: [owner-approved RD5 launch](RUN-STATUS.md).
+Current execution status: [completed native cycle](RUN-STATUS.md).
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
@@ -11,9 +11,11 @@ Assessed 2026-10-04 by vishesh/codex-decision-models; source `15c01808` ([regist
 - **sample_size_summary:** Observed native: zero. Q5-A1: 24 frozen requests, 0 started, 0 valid, 24 unstarted. Renewed Q5-A2 retains 12 authored packets in paired raw/card forms. Conditional H5: 6 authored roots × 3 policies × 4 epochs = 72 dependent decisions, at most 36 calls; no population precision claim.
 <!-- experiment-evidence:end -->
 
-**Implemented and checked offline; no new native results.** Areas: dissent and decision models. This successor to [RD4](../rd4/REPORT.md) tests evidence memory and check reservation separately; it does not inherit RD4's qualification.
+**Completed: Q5 passed; H5 returned an adverse result for the fixed reserve.** Areas: dissent and decision models. This successor to [RD4](../rd4/REPORT.md) tests evidence memory and check reservation separately; it does not inherit RD4's qualification.
 
-The question is: **when does protecting a future verification check help, and when does it delay an urgent decision?** Six authored streams share one process-control task, separating the three mechanisms from domain differences. Compare always-check, remember-unresolved, and memory plus a protected late check under the same two-check budget.
+Read the [full report](REPORT.md), [native H5 replay](results/h5-a1/replay.html) and [candidate next question](NEXT-QUESTION.md). Memory scored8/24correct versus6/24for memory-plus-reserve and always-check. All72decisions and36H5calls completed; four contextual resume misses limit allocation-only attribution.
+
+The question was: **when does protecting a future verification check help, and when does it delay an urgent decision?** Six authored streams share one process-control task, separating the three mechanisms from domain differences. Compare always-check, remember-unresolved, and memory plus a protected late check under the same two-check budget.
 
 - [Ready package](READY.md): repairs, checks, startup workflow and remaining runtime evidence.
 - [Prospective plan](PLAN.md) and [amendment 01](AMENDMENT-01.md): written before implementation.
@@ -22,4 +24,4 @@ The question is: **when does protecting a future verification check help, and wh
 - [Setup record](SETUP.md), [validation](validation/VALIDATION.json), [preparation manifest](spec/preparation-manifest.json).
 - [Visualization mapping](VISUALIZATION.md) and [scripted unit preview](validation/scripted-preview/replay.html).
 
-Q5 permits at most 24 calls; H5 at most 36 after Q5 passes. The preserved ledger is still 428/500 calls. Preparation used none. No machine is held; fresh operational admission is required before dispatch.
+Q5 used24calls; H5 used36after its gate passed. The preserved ledger is488lifetime calls, at the approved RD5stop. Workers and relays stopped, artifacts were verified and the allocation was released. No additional run is scheduled.

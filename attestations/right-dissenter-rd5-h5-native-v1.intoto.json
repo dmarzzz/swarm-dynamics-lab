@@ -1,0 +1,80 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "sha256:c9d8b5d9088580229cec95bd3b2b6724c6889601def9acbde4736afb4eda563a"
+   },
+   "internalParameters": {
+    "commit": "9461ba1c7ecafad7ccaa609bb53a8145b414a233-dirty",
+    "session": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "821e17e02e634d40d8b12b14fd13092f402a84ddc17c9103b625dc1fcd2037e0"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/study.png"
+    },
+    {
+     "digest": {
+      "sha256": "c0f72f8cf1adb266794814a87bc7d8fe8c93d82414827ce7ae8ee8e8d2d5d06d"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/publication_figure.py"
+    },
+    {
+     "digest": {
+      "sha256": "11f431a8fa0d67254faaa57dc7e2555d68c31b08d01ab77c57a983fde8e990b4"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/render_study.py"
+    },
+    {
+     "digest": {
+      "sha256": "cf1cab34246061d7f04051319d84b60c6af310c0a35a2c0c79debf93c9413579"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json"
+    },
+    {
+     "digest": {
+      "sha256": "9a744637d7a07b4b3187731c6026aa76ad8216c905829f0f431554592ac216db"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f"
+     },
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "9461ba1c7ecafad7ccaa609bb53a8145b414a233"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T17:39:08Z",
+    "invocationId": "codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8",
+    "startedOn": "2026-10-04T17:39:08Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "c7cd515f02e448e050526982b044749e27f82069a9f1cb5453594fc8965ca942"
+   },
+   "name": "artifacts/right-dissenter-rd5-h5-native/right-dissenter-rd5-h5-native-v1.png"
+  }
+ ]
+}

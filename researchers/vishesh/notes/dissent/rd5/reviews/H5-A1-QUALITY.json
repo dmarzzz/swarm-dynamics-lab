@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd5-h5-a1",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T17:28:25.147381+00:00",
+  "parent_handoff_sha256": "66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "Completed adverse end-to-end result; reserve benefit screen failed, with a contextual interpretation gap limiting allocation-only inference. No further run is authorized or scheduled.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Primary B2\u2212B1 is negative (\u22122/24); secondary B1\u2212B0 is +2/24. End-to-end utility is distinguished from a pure allocation mechanism.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+          "sha256": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "All six authored stop/resume roots and the urgent counterexample ran unchanged. One numeric domain, fixed arrivals and no population representativeness are explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json",
+          "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Each policy consumed12checks and12calls; all72assigned decisions retained. Native timing/interpretation interaction limits allocation-only attribution. Retrospective numeric reference is distinctly scripted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json",
+          "sha256": "9a744637d7a07b4b3187731c6026aa76ad8216c905829f0f431554592ac216db"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json",
+          "sha256": "68bfaf8774270da2190459695b7ae2279f1e732cb6cd1e77339e069a562060ec"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Q5passed its prespecified isolated gate, but H5 interpreted only8/12decisive readings correctly: four late resume calls deferred on20. The qualification lacks H5history/ballots.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A2-POST.md",
+          "sha256": "c556dfb3b5ab15cc385a355e2a7b156e7e5f59163c8d071ba88d0d7f9a504c19"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json",
+          "sha256": "68bfaf8774270da2190459695b7ae2279f1e732cb6cd1e77339e069a562060ec"
+        }
+      ],
+      "next_action": "Finish this adverse result; any future proposal first qualifies full context and separates time/history/ballots using new controlled inputs.",
+      "acceptance_check": "Prospective complete-context qualification, matched controls and explicit owner approval before any additional paid scope; no retroactive threshold change."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved responses replay all72rows exactly; separate action/truth arithmetic verifies6/8/6. Zero wrong commitments and extensive noncompletion are reported separately; no pseudo-independent interval.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json",
+          "sha256": "68bfaf8774270da2190459695b7ae2279f1e732cb6cd1e77339e069a562060ec"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json",
+          "sha256": "cf1cab34246061d7f04051319d84b60c6af310c0a35a2c0c79debf93c9413579"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six fixed authored roots,18policy trajectories,72dependent decisions and36native interpretations; Q5is a separate12paired-packet qualification. Descriptive scope only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/manifest.json",
+          "sha256": "a27eec337d8c0b5bb2f799b99635c29559773e9b1667be239967eab32bba5414"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All36actual request states and visible outputs inspected and hash-bound. One native interpreter receives scripted ballots/history; no evaluator truth or operating-session context. Same urgent-resume input differs only in now/deadline.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/calls.json",
+          "sha256": "025cc317aad578c8e08c90c870317355e7f5710d2fff38cb0a8dfadeaa50f042"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/urgent-resume-context-diff.json",
+          "sha256": "d1d1036dfeff2a283daed36a92c5894a81e0fcd59308ccadcd0a2144ddfbc988"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/trace-coverage.json",
+          "sha256": "6967853284f619872d873d4ef380cb3d830043a7b5774edcb7702653141d72f1"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "72assigned=terminal=analyzed;36calls valid, no failure/missing/retry. Full required artifacts and supplemental figures/audit hash-read back. Old interrupted/unstarted attempts remain separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/manifest.json",
+          "sha256": "a27eec337d8c0b5bb2f799b99635c29559773e9b1667be239967eab32bba5414"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/artifact-readback.json",
+          "sha256": "96867a8aa682222c396a9671108c2cf6aa469c7674d7895bc47b16b1013f4f0c"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/visual-readback.json",
+          "sha256": "526e13a96bf9ba469d8c8a06f4cf2184d5120ad72e0c52979178565e9ef8c050"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "60newcalls exhaust approved RD5 scope; lifetime488, original ledger/caps retained. Provider charges, one-nanodollar Q5rounding, historical unresolved reservations and conservative compute estimates are explicit. Claim released after verified stop/readback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/resources.json",
+          "sha256": "f058c9e11ce01669e26c4889822ee54e5a003f6f32a376bdb5ebe954d7bbb80c"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/worker-closeout.json",
+          "sha256": "d82c5a8cda00d4719dc07c8714effd3a085896513ffb4ff86ecfbb2f60843b6d"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/packets/route retained; saved-input and response replay exact. Numeric reference shares state machinery and is retrospective; it does not establish a native repair or independent replication.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json",
+          "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/extended-audit.json",
+          "sha256": "68bfaf8774270da2190459695b7ae2279f1e732cb6cd1e77339e069a562060ec"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/analysis/audit_study.py",
+          "sha256": "6bfb55abeb4fa218c69f725daf32177f2ffc9def7d68ad45c16b99780b5b1125"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Inspected all72cells against actual records; final figure and temporal replay retain all statuses. The report distinguishes scheduled epochs from one-tick check return. Supplementary figure bytes verified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/study.png",
+          "sha256": "821e17e02e634d40d8b12b14fd13092f402a84ddc17c9103b625dc1fcd2037e0"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/replay.html",
+          "sha256": "3a7e98c2980baefe5ccaf72bbd4d26189428e18327b8edbbc81b0fb48590df30"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/visual-readback.json",
+          "sha256": "526e13a96bf9ba469d8c8a06f4cf2184d5120ad72e0c52979178565e9ef8c050"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/REPORT.md",
+          "sha256": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+{
+  "artifacts": [
+    {
+      "attempt": "q5-a2",
+      "name": "qualification.png",
+      "sha256": "d2164b8a0ab71d61b00c28dd36de4d868d95689c16d3e8f4aea376d8ab52ddf9",
+      "uploaded_and_hash_verified": true
+    },
+    {
+      "attempt": "h5-a1",
+      "name": "study.png",
+      "sha256": "821e17e02e634d40d8b12b14fd13092f402a84ddc17c9103b625dc1fcd2037e0",
+      "uploaded_and_hash_verified": true
+    },
+    {
+      "attempt": "h5-a1",
+      "name": "saved-audit.json",
+      "sha256": "e435cf9d9831ce80e7773906e69b5d9e738954d0be8a3ad0b983447d9189f9bf",
+      "uploaded_and_hash_verified": true
+    }
+  ],
+  "rd5_workers": 0,
+  "worker_stopped": true,
+  "model_calls": 0
+}

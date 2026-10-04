@@ -1,0 +1,21 @@
+{
+  "assigned_decisions": 72,
+  "decisions_replayed_exactly": 72,
+  "native_calls": 36,
+  "saved_requests_verified_against_packet": 36,
+  "request_states_reviewed": 36,
+  "visible_outputs_reviewed": 36,
+  "decisive_interpretations": 12,
+  "decisive_misses_fully_inspected": 4,
+  "native_model_roles": 1,
+  "programmed_allocation_policies": 3,
+  "scripted_ballots_per_frame": 5,
+  "independent_population_sample": false,
+  "authored_roots": 6,
+  "state_files": "18 final trajectory snapshots, overwritten during execution; event rows and exact delivered requests retain history",
+  "missing_trace_fields": [
+    "arbitrary raw provider response bodies",
+    "hidden reasoning"
+  ],
+  "native_artifact_readback": "complete and hash verified"
+}

@@ -1,0 +1,32 @@
+{
+  "progress_failures": 0,
+  "artifacts": {
+    "admission-reference.json": "uploaded_unverified",
+    "calls.json": "uploaded_unverified",
+    "manifest.json": "uploaded_unverified",
+    "packet.json": "uploaded_unverified",
+    "public-plan-receipt.json": "uploaded_unverified",
+    "records.json": "uploaded_unverified",
+    "replay.html": "uploaded_unverified",
+    "state-study-53000-B0.json": "uploaded_unverified",
+    "state-study-53000-B1.json": "uploaded_unverified",
+    "state-study-53000-B2.json": "uploaded_unverified",
+    "state-study-53001-B0.json": "uploaded_unverified",
+    "state-study-53001-B1.json": "uploaded_unverified",
+    "state-study-53001-B2.json": "uploaded_unverified",
+    "state-study-53002-B0.json": "uploaded_unverified",
+    "state-study-53002-B1.json": "uploaded_unverified",
+    "state-study-53002-B2.json": "uploaded_unverified",
+    "state-study-53003-B0.json": "uploaded_unverified",
+    "state-study-53003-B1.json": "uploaded_unverified",
+    "state-study-53003-B2.json": "uploaded_unverified",
+    "state-study-53004-B0.json": "uploaded_unverified",
+    "state-study-53004-B1.json": "uploaded_unverified",
+    "state-study-53004-B2.json": "uploaded_unverified",
+    "state-study-53005-B0.json": "uploaded_unverified",
+    "state-study-53005-B1.json": "uploaded_unverified",
+    "state-study-53005-B2.json": "uploaded_unverified",
+    "summary.json": "uploaded_unverified"
+  },
+  "status_reported": true
+}

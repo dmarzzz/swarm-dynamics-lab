@@ -1,0 +1,31 @@
+{
+  "analysis": "retrospective observed request comparison; not a controlled causal ablation",
+  "earlier_calls": [
+    "study-53005-B0-1",
+    "study-53005-B1-1"
+  ],
+  "later_call": "study-53005-B2-2",
+  "differences": [
+    {
+      "path": "/state/task/deadline",
+      "early": 3,
+      "late": 5
+    },
+    {
+      "path": "/state/task/now",
+      "early": 3,
+      "late": 5
+    }
+  ],
+  "earlier_actions": [
+    "PROCEED",
+    "PROCEED"
+  ],
+  "later_action": "DEFER",
+  "alternative_explanations": [
+    "time/age interaction with history or ballots",
+    "clock/deadline sensitivity",
+    "hosted response variability"
+  ],
+  "no_extra_model_calls": true
+}

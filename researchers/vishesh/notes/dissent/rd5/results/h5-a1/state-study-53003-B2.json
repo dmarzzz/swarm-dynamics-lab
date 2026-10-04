@@ -1,0 +1,202 @@
+{
+  "current": "DEFER",
+  "frontier": "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56",
+  "attempted": [
+    "1aa80c1116222dadc148b358d43fcd5718a3d8053248b9c52c13b68a89c35de9",
+    "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56"
+  ],
+  "checks": 2,
+  "inference_attempts": 2,
+  "receipts": [
+    {
+      "identity": "study-53003-B2-0",
+      "frontier": "1aa80c1116222dadc148b358d43fcd5718a3d8053248b9c52c13b68a89c35de9",
+      "received_at": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53003-inspection-0",
+          "root": "study-53003-inspection-0",
+          "scope": "study-53003",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "identity": "study-53003-B2-2",
+      "frontier": "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56",
+      "received_at": 5,
+      "records": [
+        {
+          "acquisition_id": "study-53003-inspection-4",
+          "root": "study-53003-inspection-4",
+          "scope": "study-53003",
+          "revision": "v1",
+          "observed_at": 4,
+          "text": "The reading is not outside the allowed interval: it is 20."
+        }
+      ]
+    }
+  ],
+  "last_verified": {
+    "action": "HOLD",
+    "scope": "study-53003",
+    "revision": "v1",
+    "observed_at": -1,
+    "expires_at": 7,
+    "frontier": null
+  },
+  "events": [
+    {
+      "kind": "physical_check",
+      "identity": "study-53003-B2-0",
+      "tick": 0,
+      "frontier": "1aa80c1116222dadc148b358d43fcd5718a3d8053248b9c52c13b68a89c35de9",
+      "available": true,
+      "return_tick": 1
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53003-B2-0",
+      "tick": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53003-inspection-0",
+          "root": "study-53003-inspection-0",
+          "scope": "study-53003",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53003-B2-0",
+      "request_sha256": "4058b1c90194b70b574a3a71650daa03c70f8e6dcb301e1d3c6c3309697c0b1d"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53003-B2-0",
+      "choice": "DEFER",
+      "tick": 1
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53003-B2-0",
+      "tick": 0,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "1aa80c1116222dadc148b358d43fcd5718a3d8053248b9c52c13b68a89c35de9",
+      "checks_before": 0,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 1,
+      "request_sha256": "4058b1c90194b70b574a3a71650daa03c70f8e6dcb301e1d3c6c3309697c0b1d",
+      "action": "DEFER",
+      "checks_after": 1,
+      "inference_attempts": 1,
+      "receipts": 1,
+      "historical_action": "HOLD",
+      "justified": false,
+      "available_checks": 1
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53003-B2-1",
+      "tick": 2,
+      "status": "completed",
+      "reason": "reserved_until_4",
+      "frontier": "af4bcc054c8cdbcaf5e541786ae2051cb2e41027df480ac4a1564833ec23e303",
+      "checks_before": 1,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "DEFER",
+      "decision_at": 2,
+      "action": "DEFER",
+      "checks_after": 1,
+      "inference_attempts": 1,
+      "receipts": 1,
+      "historical_action": "HOLD",
+      "justified": false,
+      "available_checks": 1
+    },
+    {
+      "kind": "physical_check",
+      "identity": "study-53003-B2-2",
+      "tick": 4,
+      "frontier": "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56",
+      "available": true,
+      "return_tick": 5
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53003-B2-2",
+      "tick": 5,
+      "records": [
+        {
+          "acquisition_id": "study-53003-inspection-4",
+          "root": "study-53003-inspection-4",
+          "scope": "study-53003",
+          "revision": "v1",
+          "observed_at": 4,
+          "text": "The reading is not outside the allowed interval: it is 20."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53003-B2-2",
+      "request_sha256": "5c09068818b431457840977423cf2ba5e51482487177381435e7aea375f78e37"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53003-B2-2",
+      "choice": "DEFER",
+      "tick": 5
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53003-B2-2",
+      "tick": 4,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56",
+      "checks_before": 1,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 5,
+      "request_sha256": "5c09068818b431457840977423cf2ba5e51482487177381435e7aea375f78e37",
+      "action": "DEFER",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "HOLD",
+      "justified": false,
+      "available_checks": 0
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53003-B2-3",
+      "tick": 6,
+      "status": "completed",
+      "reason": "budget_exhausted",
+      "frontier": "244781c0228b1afc6ece2912e5a594495b6784324aaf654dd436c8cc6891bc56",
+      "checks_before": 2,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "DEFER",
+      "decision_at": 6,
+      "action": "DEFER",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "HOLD",
+      "justified": false,
+      "available_checks": 0
+    }
+  ]
+}

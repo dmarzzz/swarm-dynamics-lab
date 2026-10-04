@@ -22,11 +22,15 @@ claimed_at: 2026-10-04T16:56Z
 
 ## Goal
 
-Launch the owner-approved frozen Q5-A1 qualification and, only on its gate passing, H5-A1 pilot within the original cumulative cap. Follow the current fleet dispatch workflow and retain the original budget authority.
+Launch the owner-approved frozen Q5 qualification through renewed Q5-A2 after preserved A1 non-dispatch and, only on its gate passing, H5-A1 pilot within the original cumulative cap. Follow the current fleet dispatch workflow and retain the original budget authority.
 
 ## Done when
 
-- [ ] Fresh dedicated approved-account allocation, source, public plan and admission checks recorded.
-- [ ] Q5 completes and is audited; H5 runs only if qualified.
-- [ ] All assigned outcomes and charges reconciled; artifacts verified and scientific post-mortems published.
-- [ ] Workers stopped and allocation released, or an exact external blocker recorded.
+- [x] Fresh dedicated approved-account allocation, source, public plan and admission checks recorded.
+- [x] Q5 completes and is audited; H5 runs only if qualified.
+- [x] All assigned outcomes and charges reconciled; artifacts verified and scientific post-mortems published.
+- [x] Workers stopped and allocation released, or an exact external blocker recorded.
+
+## Completion
+
+Q5-A2passed24/24valid,12/12cards; H5-A1completed72/72decisions and36valid calls with B0/B1/B2correct6/8/6. Retained adverse screen, context-transfer limitation, exact replay, full artifact verification and both scientific reviews. Original488lifetime calls/cumulativecap preserved; workers/relays stopped and allocation released. No next run. See researchers/vishesh/notes/dissent/rd5/REPORT.md.

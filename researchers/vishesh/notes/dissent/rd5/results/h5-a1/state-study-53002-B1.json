@@ -1,0 +1,202 @@
+{
+  "current": "DEFER",
+  "frontier": "14320a0525a2ab0975eafc5c144fe72a1325f16f792a413b93523d4514f2d521",
+  "attempted": [
+    "1d0af85473a7b82fc8f9e2cdbdf95caa700fac19bfe0d0068083b790d3af5b7c",
+    "f63f33a891f404353570bfb81541ea8145d08774aac6e190b57b4f956c05d084"
+  ],
+  "checks": 2,
+  "inference_attempts": 2,
+  "receipts": [
+    {
+      "identity": "study-53002-B1-0",
+      "frontier": "1d0af85473a7b82fc8f9e2cdbdf95caa700fac19bfe0d0068083b790d3af5b7c",
+      "received_at": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53002-inspection-0",
+          "root": "study-53002-inspection-0",
+          "scope": "study-53002",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "identity": "study-53002-B1-1",
+      "frontier": "f63f33a891f404353570bfb81541ea8145d08774aac6e190b57b4f956c05d084",
+      "received_at": 3,
+      "records": [
+        {
+          "acquisition_id": "study-53002-inspection-2",
+          "root": "study-53002-inspection-2",
+          "scope": "study-53002",
+          "revision": "v1",
+          "observed_at": 2,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    }
+  ],
+  "last_verified": {
+    "action": "PROCEED",
+    "scope": "study-53002",
+    "revision": "v1",
+    "observed_at": -1,
+    "expires_at": 7,
+    "frontier": null
+  },
+  "events": [
+    {
+      "kind": "physical_check",
+      "identity": "study-53002-B1-0",
+      "tick": 0,
+      "frontier": "1d0af85473a7b82fc8f9e2cdbdf95caa700fac19bfe0d0068083b790d3af5b7c",
+      "available": true,
+      "return_tick": 1
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53002-B1-0",
+      "tick": 1,
+      "records": [
+        {
+          "acquisition_id": "study-53002-inspection-0",
+          "root": "study-53002-inspection-0",
+          "scope": "study-53002",
+          "revision": "v1",
+          "observed_at": 0,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53002-B1-0",
+      "request_sha256": "9310ea6e05ec8a6fb68250264f4908a36776837af615881b2227209e53701f32"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53002-B1-0",
+      "choice": "DEFER",
+      "tick": 1
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53002-B1-0",
+      "tick": 0,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "1d0af85473a7b82fc8f9e2cdbdf95caa700fac19bfe0d0068083b790d3af5b7c",
+      "checks_before": 0,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 1,
+      "request_sha256": "9310ea6e05ec8a6fb68250264f4908a36776837af615881b2227209e53701f32",
+      "action": "DEFER",
+      "checks_after": 1,
+      "inference_attempts": 1,
+      "receipts": 1,
+      "historical_action": "PROCEED",
+      "justified": false,
+      "available_checks": 1
+    },
+    {
+      "kind": "physical_check",
+      "identity": "study-53002-B1-1",
+      "tick": 2,
+      "frontier": "f63f33a891f404353570bfb81541ea8145d08774aac6e190b57b4f956c05d084",
+      "available": true,
+      "return_tick": 3
+    },
+    {
+      "kind": "receipt",
+      "identity": "study-53002-B1-1",
+      "tick": 3,
+      "records": [
+        {
+          "acquisition_id": "study-53002-inspection-2",
+          "root": "study-53002-inspection-2",
+          "scope": "study-53002",
+          "revision": "v1",
+          "observed_at": 2,
+          "text": "The inspection is incomplete; no current measurement is available."
+        }
+      ]
+    },
+    {
+      "kind": "inference_attempt",
+      "identity": "study-53002-B1-1",
+      "request_sha256": "83af459f43e375cdf53fb37b16dea199df3c88038cd3f51e67e465a1c6d0f1d1"
+    },
+    {
+      "kind": "interpretation",
+      "identity": "study-53002-B1-1",
+      "choice": "DEFER",
+      "tick": 3
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53002-B1-1",
+      "tick": 2,
+      "status": "completed",
+      "reason": "check",
+      "frontier": "f63f33a891f404353570bfb81541ea8145d08774aac6e190b57b4f956c05d084",
+      "checks_before": 1,
+      "acquired": true,
+      "inference_attempted": true,
+      "pending_action": "DEFER",
+      "decision_at": 3,
+      "request_sha256": "83af459f43e375cdf53fb37b16dea199df3c88038cd3f51e67e465a1c6d0f1d1",
+      "action": "DEFER",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": false,
+      "available_checks": 0
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53002-B1-2",
+      "tick": 4,
+      "status": "completed",
+      "reason": "budget_exhausted",
+      "frontier": "14320a0525a2ab0975eafc5c144fe72a1325f16f792a413b93523d4514f2d521",
+      "checks_before": 2,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "DEFER",
+      "decision_at": 4,
+      "action": "DEFER",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": false,
+      "available_checks": 0
+    },
+    {
+      "kind": "decision",
+      "identity": "study-53002-B1-3",
+      "tick": 6,
+      "status": "completed",
+      "reason": "budget_exhausted",
+      "frontier": "14320a0525a2ab0975eafc5c144fe72a1325f16f792a413b93523d4514f2d521",
+      "checks_before": 2,
+      "acquired": false,
+      "inference_attempted": false,
+      "pending_action": "DEFER",
+      "decision_at": 6,
+      "action": "DEFER",
+      "checks_after": 2,
+      "inference_attempts": 2,
+      "receipts": 2,
+      "historical_action": "PROCEED",
+      "justified": false,
+      "available_checks": 0
+    }
+  ]
+}

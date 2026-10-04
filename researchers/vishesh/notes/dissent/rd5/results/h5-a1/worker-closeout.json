@@ -1,0 +1,9 @@
+{
+  "worker_exit": 0,
+  "worker_stopped": true,
+  "worker_elapsed_seconds": 68.82392391099711,
+  "relay_and_tunnel_stopped_utc": "2026-10-04T17:17:09.415119+00:00",
+  "independent_post_upload_worker_count": 0,
+  "exclusive_allocation_released": true,
+  "other_study_data_preserved": true
+}

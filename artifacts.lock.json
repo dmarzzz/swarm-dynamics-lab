@@ -8162,6 +8162,129 @@
    "sha256": "9dfa7e687e4a36bb07a04160a2193a2199900dd5a33823c5e46d6da1f06017bb",
    "size_bytes": 91571
   },
+  "right-dissenter-rd5-h5-native@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791135522,
+     "sha256": "821e17e02e634d40d8b12b14fd13092f402a84ddc17c9103b625dc1fcd2037e0",
+     "size": 127998,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/study.png"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "c0f72f8cf1adb266794814a87bc7d8fe8c93d82414827ce7ae8ee8e8d2d5d06d",
+     "size": 412,
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/publication_figure.py"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "11f431a8fa0d67254faaa57dc7e2555d68c31b08d01ab77c57a983fde8e990b4",
+     "size": 3967,
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/render_study.py"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "cf1cab34246061d7f04051319d84b60c6af310c0a35a2c0c79debf93c9413579",
+     "size": 60270,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "9a744637d7a07b4b3187731c6026aa76ad8216c905829f0f431554592ac216db",
+     "size": 10531,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f",
+     "size": 277761,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791135089,
+   "path": "artifacts/right-dissenter-rd5-h5-native/right-dissenter-rd5-h5-native-v1.png",
+   "prompt_sha256": "c9d8b5d9088580229cec95bd3b2b6724c6889601def9acbde4736afb4eda563a",
+   "sha256": "c7cd515f02e448e050526982b044749e27f82069a9f1cb5453594fc8965ca942",
+   "size_bytes": 128819
+  },
+  "right-dissenter-rd5-h5-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791135522,
+     "sha256": "cf1cab34246061d7f04051319d84b60c6af310c0a35a2c0c79debf93c9413579",
+     "size": 60270,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "cbf0336de7daea59f64560ddd3167e7f0e5e223b93fd1b8256beecddca0f3f1f",
+     "size": 277761,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json"
+    },
+    {
+     "mtime": 1791100909,
+     "sha256": "edbc1c68b06df7d16a59e3dceb2e090009f9debc570ef6a05cab66bf15761cb4",
+     "size": 3865,
+     "uri": "researchers/vishesh/notes/dissent/rd5/src/rd5_render.py"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791135522,
+   "path": "artifacts/right-dissenter-rd5-h5-replay/right-dissenter-rd5-h5-replay-v1.html",
+   "prompt_sha256": "fa1cf22bf58551138188d888864c6ddd90e6e3c508dc227c2e0d1e88f3530e0a",
+   "sha256": "3a7e98c2980baefe5ccaf72bbd4d26189428e18327b8edbbc81b0fb48590df30",
+   "size_bytes": 64475
+  },
+  "right-dissenter-rd5-q5-native@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791134023,
+     "sha256": "d2164b8a0ab71d61b00c28dd36de4d868d95689c16d3e8f4aea376d8ab52ddf9",
+     "size": 127538,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/qualification.png"
+    },
+    {
+     "mtime": 1791135522,
+     "sha256": "c0f72f8cf1adb266794814a87bc7d8fe8c93d82414827ce7ae8ee8e8d2d5d06d",
+     "size": 412,
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/publication_figure.py"
+    },
+    {
+     "mtime": 1791103829,
+     "sha256": "12924c0ac63ba6574391f12c3ed98452f83a28c3701264b082e87e1a25c10e3c",
+     "size": 3054,
+     "uri": "researchers/vishesh/notes/dissent/rd5/analysis/render_qualification.py"
+    },
+    {
+     "mtime": 1791134023,
+     "sha256": "5029ce76c52a3ff8793826bbe6e8a1255ff1af6e3b304f0eef51154dc5cc0df1",
+     "size": 6178,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/records.json"
+    },
+    {
+     "mtime": 1791134023,
+     "sha256": "953992dffc38b41f53203047d63b39ba877df820432517218b1aca6f0fc68df8",
+     "size": 672,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/summary.json"
+    },
+    {
+     "mtime": 1791134023,
+     "sha256": "c2467ee81948a93525c967bc7fad328d9bb907a1ac6086ba1a4a8c51550ef466",
+     "size": 126875,
+     "uri": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/packet.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791135089,
+   "path": "artifacts/right-dissenter-rd5-q5-native/right-dissenter-rd5-q5-native-v1.png",
+   "prompt_sha256": "c9d8b5d9088580229cec95bd3b2b6724c6889601def9acbde4736afb4eda563a",
+   "sha256": "ac13714b53235666946f092873910ef679cfed231ebc9ab466b88ab804b47907",
+   "size_bytes": 129283
+  },
   "right-dissenter-s1@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

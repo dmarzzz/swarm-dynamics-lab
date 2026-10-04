@@ -3640,4 +3640,67 @@ artifacts:
           - researchers/dmarz/notes/sybil-rules-180/records/gpt-6-sol/d1-002-gpt-6-sol/rounds.jsonl.gz
           - researchers/dmarz/notes/sybil-rules-180/src/render.py
         commit: cb5b63bf74f6e4e7c67ce544a4d606dc2bcff2b6-dirty
+  - id: right-dissenter-rd5-q5-native
+    category: content
+    type: figure
+    title: Right Dissenter RD5 native qualification
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/right-dissenter-rd5-q5-native/right-dissenter-rd5-q5-native-v1.png
+        built_at: '2026-10-04T17:39:08Z'
+        note: Produced by vishesh/codex-decision-models; padding preserves native data pixels.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: sha256:c9d8b5d9088580229cec95bd3b2b6724c6889601def9acbde4736afb4eda563a
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd5/results/q5-a2/qualification.png
+          - researchers/vishesh/notes/dissent/rd5/analysis/publication_figure.py
+          - researchers/vishesh/notes/dissent/rd5/analysis/render_qualification.py
+          - researchers/vishesh/notes/dissent/rd5/results/q5-a2/records.json
+          - researchers/vishesh/notes/dissent/rd5/results/q5-a2/summary.json
+          - researchers/vishesh/notes/dissent/rd5/results/q5-a2/packet.json
+        commit: 9461ba1c7ecafad7ccaa609bb53a8145b414a233-dirty
+  - id: right-dissenter-rd5-h5-native
+    category: content
+    type: figure
+    title: Right Dissenter RD5 adverse native result
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/right-dissenter-rd5-h5-native/right-dissenter-rd5-h5-native-v1.png
+        built_at: '2026-10-04T17:39:08Z'
+        note: Produced by vishesh/codex-decision-models; padding preserves native data pixels.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: sha256:c9d8b5d9088580229cec95bd3b2b6724c6889601def9acbde4736afb4eda563a
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/study.png
+          - researchers/vishesh/notes/dissent/rd5/analysis/publication_figure.py
+          - researchers/vishesh/notes/dissent/rd5/analysis/render_study.py
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/summary.json
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json
+        commit: 9461ba1c7ecafad7ccaa609bb53a8145b414a233-dirty
+  - id: right-dissenter-rd5-h5-replay
+    category: content
+    type: doc
+    title: Right Dissenter RD5 native temporal replay
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/right-dissenter-rd5-h5-replay/right-dissenter-rd5-h5-replay-v1.html
+        built_at: '2026-10-04T17:39:09Z'
+        note: Produced by vishesh/codex-decision-models.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: sha256:fa1cf22bf58551138188d888864c6ddd90e6e3c508dc227c2e0d1e88f3530e0a
+        ingredients:
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/records.json
+          - researchers/vishesh/notes/dissent/rd5/results/h5-a1/packet.json
+          - researchers/vishesh/notes/dissent/rd5/src/rd5_render.py
+        commit: 9461ba1c7ecafad7ccaa609bb53a8145b414a233-dirty
 requires: '1.2'

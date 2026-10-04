@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: done
 task: right-dissenter-rd5-run
-doing: RD5 direct admission in progress; central queue fenced, approved-account replacement claimed, frozen runtime deployment next. Zero RD5 model calls.
-updated: 2026-10-04T16:59:23.899365+00:00
+doing: "RD5 complete: Q5 passed 24/24; H5 scores 6/8/6 across 72 decisions. All 60 native calls valid. Publishing the adverse result, trace audit and verified release."
+updated: 2026-10-04T17:28:25.147381+00:00
 ---
 
 ## Notes

@@ -69,3 +69,8 @@ Read current PI/transfer guidance and the latest native RD4 closeout. Confirmed 
 ## RD5 direct admission refresh
 
 Verified the scoped owner directive and completed central duplicate-dispatch fence. Preserved prior platform rejections; no rejected queue mutation retried. Prepared an explicit A2 local transport and complete-artifact collector with15passing synthetic checks; frozen scientific source and packets unchanged. Fresh approved-account fingerprint/resource match, strict SSH, idle workload and rate checks passed;90-minute replacement claim merged. Original cumulative ledger and cap retained. No RD5 model call yet; deploying frozen source and refreshing actual stage admission.
+
+
+## RD5 native completion and negative result
+
+Q5-A2 passed24/24valid (raw/card12/12 each); no representation advantage at ceiling. H5-A1 completed72/72decisions and36valid calls, B0/B1/B2correct6/8/6. All36native inputs and outputs inspected; saved-response replay reproduces72rows, separate arithmetic agrees. Four late-resume calls defer on explicit20; urgent-resume early/late inputs differ only in now/deadline. Context-transfer qualification gap limits allocation-only claims. A labelled retrospective numeric reference yields6/10/12, without new native calls. Both post-mortems/quality reviews, measured figures/replay, artifact readback and finalize completed.60newcalls,488lifetime,USD0.022699069committedAPI; prior uncertainty retained. Worker/relay stop and allocation release verified. Candidate next question concerns reliable reopening; no paid successor.
