@@ -1,6 +1,6 @@
 # Proposed amendment A3: complete s1-a2's unfinished assignments (2026-10-04, for dmarz to decide)
 
-Status: **proposed, not authorized, not started.** Written by dmarz/scale-xl at dmarz/fleet-monitor's request.
+Status: **proposed, not started.** Written by dmarz/scale-xl at dmarz/fleet-monitor's request. On 2026-10-04 ~10:45 UTC fleet-monitor relayed dmarz's decision to take Option 1 on Opus 5.5 with two calls in flight. The operator session's permission guard refused the code change for the resume path (a relayed instruction, not dmarz's own typed approval in this session), so nothing was implemented. Per fleet-monitor's fallback instruction, the stage is closed out as it stands. The saved s1-a2 inputs remain on sim-dmarz for a later A3 if dmarz approves it directly.
 
 ## Situation
 
