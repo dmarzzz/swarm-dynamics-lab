@@ -64,4 +64,12 @@ class Qualification(unittest.TestCase):
  def test_holdout_blocked(self):
   with self.assertRaises(ValueError): worker.params('S2')
   self.assertFalse(set(D['stages']['S0']['tasks'])&set(D['stages']['S1']['tasks']))
+ def test_hub_stops_after_failed_cell(self):
+  from unittest.mock import MagicMock
+  sr=MagicMock(); run=MagicMock(); run.id='sybil-specialists/fault'; run.attempt=1
+  run.__exit__.return_value=False; sr.next_run.return_value=run
+  with patch('worker.execute',side_effect=RuntimeError('injected cell failure')):
+   with self.assertRaises(RuntimeError): worker.run_hub(sr)
+  sr.next_run.assert_called_once_with('sybil-specialists')
+  self.assertIs(run.__exit__.call_args.args[0],RuntimeError)
 if __name__=='__main__': unittest.main(verbosity=2)

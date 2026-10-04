@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: build-sybil-specialists
-doing: Plan SEC-19/43, implement scripted qualification and replay, deploy through agentops
-updated: 2026-10-04T01:21Z
+doing: Fleet S0 qualified; S1 running on sim-dmarz-4; validating summary chart and preparing reconciliation
+updated: 2026-10-04T01:40Z
 ---
 
 ## Notes

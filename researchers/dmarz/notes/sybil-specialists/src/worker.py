@@ -93,6 +93,17 @@ def require_upload(receipt):
     if not receipt or receipt.get('spooled'): raise RuntimeError('Artifact not durably acknowledged; keep outputs and repair upload')
 
 
+def run_hub(sr):
+    """Stop taking assignments after a failed cell; the Run context reports it."""
+    completed=0
+    while True:
+        run=sr.next_run('sybil-specialists')
+        if run is None: return completed
+        with run:
+            execute(run.params,ROOT/'results'/f'{run.id.replace("/","__")}-attempt-{run.attempt}',run)
+        completed+=1
+
+
 def main():
     ap=argparse.ArgumentParser(); ap.add_argument('--hub',action='store_true')
     ap.add_argument('--stage',choices=['S0','S1']); ap.add_argument('--attempt')
@@ -100,8 +111,7 @@ def main():
     if a.hub:
         if not os.environ.get('SWARM_SOURCE'): raise SystemExit('SWARM_SOURCE required')
         import swarm_report as sr
-        def work(run): execute(run.params,ROOT/'results'/f'{run.id.replace("/","__")}-attempt-{run.attempt}',run)
-        print('Completed runs:',sr.work('sybil-specialists',work,stop_when_empty=True))
+        print('Completed runs:',run_hub(sr))
     else:
         if not a.stage or not a.attempt or not a.attempt.replace('-','').isalnum(): raise SystemExit('Set --stage and a fresh alphanumeric --attempt')
         root=ROOT/'results'/a.attempt; root.mkdir(exist_ok=False)
