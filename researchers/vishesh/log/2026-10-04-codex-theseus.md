@@ -92,3 +92,8 @@ Frozen prospective amendment3a7895ff;39offline checks local/remote and public-pl
 ## Offline PI advisory response
 
 Audited full50member development schedule without native calls or sealed evaluation access. All50founder gate/retirement pass. Reproduced over-capacity teacher delivery; prospectively specified and fixed fail-closed capacity for both teaching arms,41tests pass, wrong within-capacity lessons preserved. Recorded unmatched broken/retained realized compute and44unchanged/6changed fixture strata. Recomputed2200call worst caseUSD60.2437270437 including current exposure andUSD1infra. Main decision remains pending; proposed7950-byte envelope fitsUSD59.9687270437 but requires separate stage-contract/reporting work. No PI launch authority inferred.
+
+
+## Baseline standard corrected
+
+Q2 is protocol competence, not fresh-run reproducibility. Baseline remains GAP; replaced premature park recommendation with provisional substantive R3 design. Prepared6independent worlds x2fresh repeats with strong simple baseline and all4controls, unique contrastive acquisition, explicit preservation/update strata and boundedUSD54.001additional proposal. Offline prototype caught and repaired excessive receipt repetition and absent unchanged-route controls;120unique policies,720permutation label checks,5762byte maximum now pass. Domain-family/nuisance/runtime validation remains; no inference, new allocation or portfolio spending.

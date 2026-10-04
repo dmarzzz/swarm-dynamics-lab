@@ -1,0 +1,23 @@
+{
+  "evidence_type": "offline development only",
+  "generated_development_worlds": 20,
+  "founder_contracts_checked": 120,
+  "unique_inferred_policies": 120,
+  "permutation_truth_checks": 720,
+  "maximum_founder_request_bytes": 7382,
+  "candidate6500byte_fit": false,
+  "changed_routes_per_world": [
+    6
+  ],
+  "unchanged_routes_per_world": [
+    0
+  ],
+  "native_calls": 0,
+  "sealed_inputs_opened": false,
+  "domain_families_validated": false,
+  "nuisance_joint_channel_implemented": false,
+  "qualification_max_calls": 36,
+  "evaluation_max_calls": 2304,
+  "maximum_additional_usd": 54.001,
+  "maximum_cumulative_usd": 55.1647270437
+}
