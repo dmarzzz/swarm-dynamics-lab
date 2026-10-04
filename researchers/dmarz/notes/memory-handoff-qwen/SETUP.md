@@ -16,8 +16,8 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 |---|---|---|---|
 | G0 Question and applicable research gates | pass for exploratory scope only | [README](README.md), [program v5](../overnight-program-2026-10-04/program.json); 2026-10-04, dmarz/pipeline-memory (same researcher) | Formal survey and hypothesis gates are not met; S2 stays disabled |
 | G1 Plan written before implementation | pass | README, [preregistration](preregistration.md), [design.yaml](design.yaml), `experiment.yaml` and this record were committed before any file under `src/`; 2026-10-04, dmarz/pipeline-memory | none |
-| G2 Instrument and offline checks | pending | not built yet | Build `src/`, pass selftest, offline S0, rehearsal and manifest check |
-| G3 Current attempt admission | pending | no pre-run review yet | Pre-run review with the pinned commit and source hash; then the fleet monitor's same-researcher check and a request in the private run queue |
+| G2 Instrument and offline checks | pass offline (builder's own checks; Python 3.9.6 on macOS) | 2026-10-04, dmarz/pipeline-memory, at code commit `b6990122`, source hash `b4ab9025…`: selftest 85 of 85 (53 study tests and the 32 reference adapter tests); offline S0 192 of 192 with 25 of 25 invariants; manifest check equal; rehearsal 35 of 35 checks in 73 s (full chain and verify; failed qualification stops at Q0 with exit 3 and no S1 run; billing pause and one failed call; failures over the limit; billing stop then resume). Details in the [pre-run review](reviews/chain-001-pre.md) | Not tested: Python 3.12, the real hub, the private launcher, a real model response. The launcher's `setup` reruns the selftests on the server |
+| G3 Current attempt admission | pending | [Pre-run review](reviews/chain-001-pre.md) on main, naming code commit `b6990122` and source hash `b4ab9025…`; 2026-10-04, dmarz/pipeline-memory | The fleet monitor's same-researcher check, a request in the private run queue, a server claim and the balance check |
 | G4 Qualification before scientific escalation | pending | nothing has run | S0, P0 and Q0 gates in the chain |
 | G5 Reconciliation and closeout | pending | nothing has run | `verify`, post-run review |
 
@@ -29,21 +29,35 @@ Status: preparation only. Nothing has run; this record is not launch authorizati
 - Splits: engineering 5301 to 5306; S1 5401 to 5424; qualification set a 5501 to 5506 (attempt 001); qualification set b 5601 to 5606 (reserved for the one permitted repair). All root ids are below 10000. The generator is seeded with this study's own version string.
 - Agent definition: one stateless successor call per assignment; one constant system message; model `qwen/qwen3.7-flash` through OpenRouter, provider Alibaba, reasoning disabled, JSON-object mode, 1,000 output tokens.
 - Versions: `requirements.txt` pinned; source hash from `study.source_hash()` over `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
-- Offline checks, launcher gate integration, visualization: filled in when the code exists.
+- **Root-range check, 2026-10-04, at main `b6990122`.** 3,850 text files (`.yaml`, `.yml`, `.md`, `.py`, `.toml`, `.sh`, `.txt`, and `.json` under 5 MB) under `researchers/`, `experiments/`, `tooling/`, `hypotheses/`, `tasks/`, `surveys/` and `synthesis/` were searched for 5301 to 5306, 5401 to 5424, 5501 to 5506 and 5601 to 5606 next to the words root, world, task or seed (in JSON: as values of those keys); this directory excluded. Result: 0 exact matches; the five-digit world ids 541xx of discussion-dose v3-opus share a prefix only. The scan covers this repository only and is not a reservation.
+- Offline checks: `src/selftest.py` (85 tests: textual identity of the copied resolver and decoder with bench_v3; the adapter copy equal to the reference; worlds; all 25 design invariants; reference against the hand-written table; counterfactual truth; false original and copies never show the truth; store-only retrieval; no labels in messages; structural validation; scorer known answers; control actors; counts, caps and splits; the no-miss qualification gate; the probe gate; manifest regeneration; READY consistency; no secret in the package; request body and sizes; duplicate keys and invalid answers; kept HTTP evidence; billing pause and stop; the scripted stage; invariant failure; probe metadata; missing provider; probe row for Q0; failed qualification; strict stop; S1 tolerance and limit; integrity stop; billing stop and continuation; short outage; refused starts; the full chain; the wire-level capture; verify tampering; status and resume refusal; no replay; saved analysis; coordinator and continuation gates; chain stop at a failed gate; projection gates; stage lists; another source version set aside; local-only rehearsal; analysis definition and bounds; combine; frames, GIF and page; journal tampering; and the 32 reference adapter tests).
+- Launcher gate integration: `coordinator.enqueue` is the only path that queues a stage and `coordinator.enqueue_continuation` the only path that queues a continuation; `chain.py` is the only path that executes a queued stage.
+- Visualization: [VISUALIZATION.md](VISUALIZATION.md).
 
 ## Current attempt admission
 
-Operations entry: manual, through the generic private launcher (commands will be in `RUN.md`). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
+Operations entry: manual, through the generic private launcher named in [RUN.md](RUN.md). [Operations guide](../../../../tooling/agent-experiments/OPERATIONS.md).
 
-- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1); the pre-run review is not written yet.
-- Budget: call caps P0 1, Q0 23, S1 576, total 600; 4 requests in flight; at most 800 transport attempts; ledger cap USD 2 on settled cost plus open reservations; expected spend about USD 0.03.
+| Operation | Exact command or unsupported reason | Evidence and last checked revision |
+|---|---|---|
+| Inspect and offline validation | `python3 src/selftest.py`; `python3 src/worker.py --stage S0 --attempt <name>`; `python3 src/rehearse.py --hub-dir <dir>`; `python3 src/manifest.py --check` | all four passed locally at code commit `b6990122` |
+| Prepare named stage | `python3 scripts/run-ready-chain.py memory-handoff-qwen <commit> setup --host <server>` (private launcher) | not run |
+| Dispatch named stage | `python3 scripts/run-ready-chain.py memory-handoff-qwen <commit> chain --host <server> --confirm-paid` | not run |
+| Resume interrupted execution | `... resume --host <server>`: only after S1 stopped with `provider_credit_balance_low`; refused after any other stop. No other re-execution: a repair is a new attempt number with its own pre-run review | rehearsed offline (scenario e) |
+| Analyze saved evidence and rebuild visuals | `... status --host <server>`, `... verify --host <server>` | rehearsed offline |
+| Stop this study and close out | operator: stop the chain process, verify uploads, release claim `dmarz-memory-handoff-qwen` | not run |
+
+- Attempt / stage / pre-run assessment: chain-001 (S0, P0, Q0, S1) / [reviews/chain-001-pre.md](reviews/chain-001-pre.md).
+- Budget: call caps P0 1, Q0 23, S1 576, 600 for this attempt (ledger study cap 624 including the one permitted repair's qualification); 4 requests in flight; at most 800 transport attempts; ledger cap USD 2 on settled cost plus open reservations; expected spend about USD 0.03.
 - Allocation: none. The server is a launcher parameter; the claim id will be `dmarz-memory-handoff-qwen`.
 - Credentials: environment alias `SWARM_OPENROUTER_API_KEY`, set by the launcher in memory only. Never in files, arguments or logs.
 - Go / no-go: not decided. This builder launches nothing.
 
 ## Attempt and repair history
 
-No attempt exists.
+No attempt exists. Offline checks on the build machine are software checks, not attempts: the offline S0 and the rehearsal wrote only to temporary directories, which were deleted, and reported to no real hub.
+
+History before the pin, all on 2026-10-04 and before any run: plan `bee94550`; instrument and chain `1896fb01` (committed under this agent id by a replacement session that the fleet monitor started and stopped; the files were this builder's); rehearsal and invariants `6231492d`; selftest `9a22ef21`; reference adapter revision `639e9501` taken and probe metadata added, code commit `b6990122`, source hash `b4ab9025…`, which is the pin.
 
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
