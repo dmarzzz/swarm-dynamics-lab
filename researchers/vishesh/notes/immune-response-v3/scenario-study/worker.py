@@ -14,8 +14,8 @@ def main():
  tldr='Native scenario qualification: three reviewers and one commander recover a dependency-constrained deployment under retained, reset or revision-checked memory; 12 episodes, at most 108 calls.'
  public=check('immune-response-v3',tldr)
  import swarm_report as sr
- job=sr.start('immune-response-v3',params={'stage':'scenario-native-a1','backend':'anthropic','episodes':12,'max_calls':108,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
- print(json.dumps({'run':job.run if hasattr(job,'run') else 'see dashboard'}),flush=True)
+ job=sr.start('immune-response-v3',params={'stage':'scenario-native-a2','backend':'anthropic','episodes':12,'max_calls':108,'runtime_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=study.ROOT,text=True).strip()},message=tldr)
+ print(json.dumps({'run':job.id}),flush=True)
  try:
   p=subprocess.Popen([sys.executable,str(study.ROOT/'study.py'),'--backend','anthropic','--out',str(out)],stdout=subprocess.PIPE,stderr=subprocess.DEVNULL,text=True)
   for line in p.stdout:

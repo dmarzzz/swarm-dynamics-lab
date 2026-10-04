@@ -1,0 +1,55 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "vishesh/codex-theseus",
+    "prompt": "Plan, design, build, run, deploy, and evaluate Swarm of Theseus — SOC-24: Can a swarm’s useful culture survive replacement of every member? Run three scenarios and repeat if necessary."
+   },
+   "internalParameters": {
+    "commit": "2c81f6acc2e051ee9b33aec61f8efdd1f1580663-dirty",
+    "session": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/src/render.py"
+    },
+    {
+     "digest": {
+      "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "2c81f6acc2e051ee9b33aec61f8efdd1f1580663"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/vishesh/codex-theseus"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T02:38:09Z",
+    "invocationId": "vishesh/codex-theseus:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T02:38:09Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "2505413a08c286f0669d520f938b234a97f8bbf0baeede5a7b70dcbc4290037a"
+   },
+   "name": "artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html"
+  }
+ ]
+}

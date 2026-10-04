@@ -1,0 +1,248 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "you're the PI of swarm labs, please review all of the research and results we have done in this project including the live experiment results from https://swarm-live.pages.dev/#/ and do a review of our research program. say where it's strong and where it's weak and give an honest assessment of our results right now"
+   },
+   "internalParameters": {
+    "commit": "96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15-dirty",
+    "session": "codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "df39289b7f883dca477fa6699dc1b9ea189c1c36e21e3233a92f6fa70ad918eb"
+     },
+     "uri": "/Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py"
+    },
+    {
+     "digest": {
+      "sha256": "6de42d704faf7b2165a9b2087a1f4397596177fbca3277eab647cd0377bb1843"
+     },
+     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json"
+    },
+    {
+     "digest": {
+      "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+    },
+    {
+     "digest": {
+      "sha256": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "a5254c25675c6fabca7fa4b37f1c9fa114050d66161451fa9acb754263163aee"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "2ef57d2c9af140fccf6db4f01a4aae7de03e8cf8fdd07ebeed666e268a97b778"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "bf6af2a573ea07688051101ea6f3a2a5e07731bac6747e4e8861aadce428c0d2"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "df44be98bee1912b8218c0e69572acc96ddb184c8c206282eb761599fc85062b"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "f240103197139813f43a428382825ae1e1c39223a7e9a0b304553677261084b0"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md"
+    },
+    {
+     "digest": {
+      "sha256": "05dbd1c4c6987ccfc55dfa160e110c5e2abb500e23f833f1f60a4bfa00b910a0"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "503a2c615a98005c6e485950a70d35aa43bee336dd2fab129fb7ab7b4ccb8c24"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+    },
+    {
+     "digest": {
+      "sha256": "8ded6af440a991e800a4cb53923891083891ee4ff373fc567191a94394f28200"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c"
+     },
+     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md"
+    },
+    {
+     "digest": {
+      "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872"
+     },
+     "uri": "/Users/halcyon/swarm-lab/templates/experiment-worker/README.md"
+    },
+    {
+     "digest": {
+      "sha256": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b"
+     },
+     "uri": "/Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
+    },
+    {
+     "digest": {
+      "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9"
+     },
+     "uri": "/Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+    },
+    {
+     "uri": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/capture-memory"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/healing-helping-hands"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/influence-swarms"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/market-split-api"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/regrowth-200"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/swarm-of-theseus"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/#/x/template-quorum"
+    },
+    {
+     "digest": {
+      "sha256": "fcfad69ebea756f86e45b02146fbf02b08e7dc0aa24f65448da1f36a5b8909fb"
+     },
+     "uri": "/Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md"
+    },
+    {
+     "digest": {
+      "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd"
+     },
+     "uri": "/Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md"
+    },
+    {
+     "digest": {
+      "sha256": "00935a22fd8da7a0236fecb15fdb33a7f1d8c4b77fe76eb5e2411afad9f220de"
+     },
+     "uri": "/Users/halcyon/swarm-lab/library/INDEX.md"
+    },
+    {
+     "digest": {
+      "sha256": "ea874f679c6f7450a25c7f17d14804569a3c17254da6a0870f7bc424afe5efcc"
+     },
+     "uri": "/Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md"
+    },
+    {
+     "digest": {
+      "sha256": "f3421eb8b92a8c5cdb5e8146ed67534b091dd91334d42fa5b3abbd9b08ca65d6"
+     },
+     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json"
+    },
+    {
+     "uri": "https://swarm-live.pages.dev/api/state"
+    },
+    {
+     "uri": "https://lamport.azurewebsites.net/pubs/byz.pdf"
+    },
+    {
+     "digest": {
+      "gitCommit": "96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T02:38:53Z",
+    "invocationId": "codex:01a104c0-ca47-76f3-a1c7-a1c64dcc17e5",
+    "startedOn": "2026-10-04T02:38:53Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc"
+   },
+   "name": "artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx"
+  }
+ ]
+}

@@ -102,6 +102,24 @@ class SidecarTests(unittest.TestCase):
         c = rs._contrast(rows, 'vote_target', 'resolvable', 'private', 'resample')
         self.assertIsNone(c['mean']); self.assertLess(c['missing_outcome_lower'], c['missing_outcome_upper'])
 
+    def test_hub_wrapper_offline(self):
+        import gzip, resample_v3_hub as hub
+        class FakeRun:
+            id = 'discussion-v3-resample/test'
+            def __init__(self): self.progressed = []; self.uploaded = []
+            def progress(self, *a, **k): self.progressed.append(a)
+            def artifact(self, path, name=None): self.uploaded.append(Path(path))
+        with tempfile.TemporaryDirectory() as d:
+            fake = FakeRun(); counted = hub.Counting(Scripted(), fake, 936)
+            out = Path(d) / 'run'; rs.run(out, 3, counted)
+            self.assertEqual(counted.n, 936); self.assertEqual(fake.progressed[-1][:2], (936, 936))
+            hub.publish_artifacts(fake, out)
+            index = json.loads((out / 'upload' / 'artifact-index.json').read_text())
+            self.assertEqual({f['original'] for f in index['files']}, set(hub.OUTPUTS))
+            for f in index['files']:
+                payload = b''.join((out / 'upload' / part).read_bytes() for part in f['parts'])
+                self.assertEqual(gzip.decompress(payload), (out / f['original']).read_bytes())
+
     def test_paid_launch_gate(self):
         with self.assertRaises(ValueError): rs.approved_model_config(None, 3)
         with tempfile.TemporaryDirectory() as d:

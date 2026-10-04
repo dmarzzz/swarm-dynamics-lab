@@ -1,0 +1,47 @@
+{
+  "stage": "S0",
+  "backend": "jev",
+  "complete": true,
+  "source": "cd04c38d1f33f8ba603a4f482058b1d962def613",
+  "corpus_sha256": "5803dc7635a05d9201b20258f9f2e61bb89e1700f3006497d69d761b71577d2b",
+  "ids": [
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29
+  ],
+  "arms": [
+    "best-fixed",
+    "confidence-only",
+    "random-checks",
+    "decision-focused",
+    "single-agent",
+    "swarm-fixed",
+    "swarm-adaptive"
+  ],
+  "physical_call_cap": 120,
+  "seed": 71,
+  "utc_start": "2026-10-04T02:35:57Z",
+  "runtime": {
+    "model": "typesafe/jev-1.13",
+    "checkpoint": "typesafe/jev-1.13-20260917",
+    "provider": "TypeSafe",
+    "endpoint": "OpenRouter Decisions API",
+    "route_fallbacks": false,
+    "probability_sum_rule": "half a 0.01 rounding unit per component when all values lie on that grid; otherwise 0.001; no normalization",
+    "input_usd_per_token": 4.2e-08,
+    "device": "hosted; worker on exclusive fleet allocation"
+  },
+  "completed": 10,
+  "physical_calls": 52,
+  "replayed_calls": 68,
+  "invocations": 120,
+  "invalid": 0,
+  "wall_s": 23.661055982996913
+}

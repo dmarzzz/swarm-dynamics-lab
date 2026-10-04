@@ -1,0 +1,9 @@
+# Jev S1 pre-run
+
+Parent: successful S0-jev-attempt-3-post.md; earlier attempts and D1 remain part of the audit. Run the same 70 evaluation receipts (IDs 30–99), seven paired arms and policy source as the passed instrument screen, cd04c38. No policy/prompt/threshold/metric change following either backend's screen. Laya S1 source c2dffda remains separate. The only substantive planned comparison is backend identity; do not pool their outcomes or treat shared deterministic controls as extra independent samples.
+
+Maximum 840 new hosted requests, 30-minute wall cap, two QA checks per receipt. The existing Antsy ledger has 137 prior reservations; cumulative maximum 977 is below its amended 1100-call cap and $5 ceiling. Preserve both failed/uncertain reservations. Use the same exclusive Antsy host and loopback credential relay; refresh claims and recheck public plan link before launch. No automatic retries, normalization or model/provider fallback.
+
+Use the prior measured visualization mapping: overview, headroom plot and role-labeled replays for IDs 30–32, regardless of outcome. Each run identifies its backend. Retain full numeric episodes and call receipts. Analyze receipt-paired quality differences, checks and utility sensitivity, and compare the two backends only after both runs finish. Primary decision value is whether verification or a committee beats cheap controls; a valid negative result is retained.
+
+Acceptance: 70 complete blocks, 490 arm outcomes, no missing/invalid call records, zero budget/route violations, validated images and a skeptical post-mortem. Source/corpus hashes and actual costs recorded. If execution fails, preserve the attempt and recover only missing invocations with a new pre-run record. Do not rerun successful decisions to obtain a favorable result.

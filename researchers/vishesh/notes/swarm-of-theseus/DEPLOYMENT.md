@@ -31,3 +31,11 @@ Offline unit tests do not require fleet allocation or credentials. They exercise
 The hub supports live/final images; custom HTML replay is a downloadable artifact, not a native spatial view. Public plan page: https://swarm-live.pages.dev/#/x/swarm-of-theseus . Per-run plan metadata preserves the original immutable source even after an experiment-level amendment.
 
 S1-a1 is frozen at source `a773ff5410442fcf351cfc817550b3fc92a88994`, exact model/study/provider hashes matched to S0-a4. It contains 36 prospective world-arm outcomes, maximum 864 calls. Terminal accounting is recorded in S1-a1-post.md after completion.
+
+## Final publication verification
+
+The public hub was visually verified after completion: 72 started runs, 68 done, 4 failed; S1 is 36/36 complete. The initial blocked setup is recorded separately and did not start a run. Original condition TLDRs and immutable plan receipts remain attached. The 36 S1 receipts reference `586c476892c442c29fc290358ce21a75cbcc07fe`, the already-published v3 plan containing the S1 design; source is `a773ff5410442fcf351cfc817550b3fc92a88994`. The later README revision only adds qualification status, not a changed S1 treatment or analysis. Plan revision and executed source revision are distinct.
+
+The public artifact proxy verified the final PNG byte-for-byte but returned HTTP errors for the Markdown, HTML, JSON and gzip downloads. All six uploads were reported to the hub. Repository Flight Deck artifacts provide durable report, replay, figure and evidence downloads instead. The evidence archive contains 305 source files and a hash index (306 entries), SHA256 `be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc`. Extracting it into `data/theseus-inputs` recreates the evidence ingredients referenced by Flight Deck.
+
+Flight Deck registration used `fd.py add`, with per-input provenance. Strict validation passed in a correctly named `swarm-lab` validation copy; the working clone's different directory name otherwise produces a naming warning. Its first refresh changed unrelated historical ingredient records; approval review rejected staging those changes. Restoring the exact historical input bytes and timestamps for the tool's refresh preserved every pre-existing lock entry and attestation unchanged. Only Theseus artifact additions are published.
