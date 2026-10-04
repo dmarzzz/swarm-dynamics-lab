@@ -1,0 +1,41 @@
+{
+  "unit": "world root",
+  "rows": 1,
+  "pilot_rows": 0,
+  "roots": [],
+  "cells": [],
+  "cell_count": 0,
+  "primary": null,
+  "carrier_contrasts": [],
+  "policy_contrasts": [],
+  "policy_by_rarity_interactions": [],
+  "invariance": {
+    "matched_cells": 0,
+    "violations": 0
+  },
+  "duplicate_packets": {
+    "distinct_packets": 0,
+    "assignments": 0,
+    "duplicate_groups": []
+  },
+  "qualification": null,
+  "resources": {
+    "completed": 1,
+    "model_calls": 1,
+    "input_tokens": 23537,
+    "output_tokens": 38,
+    "cost_usd": 0.094908,
+    "mean_latency_seconds": 2.7643028230013442
+  },
+  "bootstrap": {
+    "bootstrap_draws": 10000,
+    "bootstrap_seed": 20261004,
+    "cells": 60,
+    "roots_per_cell": 24,
+    "missing_outcome_bounds": [
+      0,
+      1
+    ],
+    "resample_unit": "world root"
+  }
+}

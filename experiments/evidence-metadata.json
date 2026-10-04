@@ -1866,7 +1866,8 @@
       "id": "sybil-scarcity-opus",
       "title": "Does Sybil-resistant accuracy depend on repeated knowledge? (Opus 5.5)",
       "documents": [
-        "researchers/dmarz/notes/sybil-scarcity-opus/README.md"
+        "researchers/dmarz/notes/sybil-scarcity-opus/README.md",
+        "researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md"
       ],
       "experiment_ids": [
         "sybil-scarcity-opus"
@@ -1874,22 +1875,24 @@
       "registration_paths": [
         "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml"
       ],
-      "assessor": "dmarz/pipeline-scarcity",
+      "assessor": "dmarz/orchestrator-2",
       "assessed_at": "2026-10-04",
       "evidence_confidence": {
-        "score": 0,
+        "score": 2,
         "claim": "Reducing the truthful carriers of each rare fact from 81 to 1, at fixed population, graph, audits and admission, lowers the specialist accuracy of an Opus 5.5 synthesizer.",
-        "rationale": "Unrun. The package is prepared and tested offline only; no stage has run on a server and no model call has been made."
+        "rationale": "One complete exploratory run: 24 paired synthetic roots, all 1,440 S1 outcomes valid and verified; primary one-minus-81-carrier contrast -95.8 pp (descriptive 95% interval -100.0 to -88.9). Exploratory, one synthetic task, one attacker strategy, one model configuration, not independently reviewed."
       },
-      "sample_size_summary": "Observed: none. Planned: 24 paired synthetic world roots \u00d7 60 conditions = 1,440 S1 calls at 972 simulated identities and one synthesizer; separate Q0 of 48 calls on 8 roots and a one-call probe. Roots are the independent units, not calls or identities.",
+      "sample_size_summary": "Observed: 24 independent world roots x 60 conditions = 1,440 valid S1 outcomes (1,207 distinct packets); Q0 48/48 on 8 roots; P0 1/1. Roots are the independent units; calls, identities and skills are not.",
       "sources": [
         "researchers/dmarz/notes/sybil-scarcity-opus/README.md",
         "researchers/dmarz/notes/sybil-scarcity-opus/preregistration.md",
         "researchers/dmarz/notes/sybil-scarcity-opus/design.yaml",
         "researchers/dmarz/notes/sybil-scarcity-opus/AMENDMENTS.md",
-        "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml"
+        "researchers/dmarz/notes/sybil-scarcity-opus/experiment.yaml",
+        "researchers/dmarz/notes/sybil-scarcity-opus/RESULTS.md",
+        "researchers/dmarz/notes/sybil-scarcity-opus/reviews/chain-001-post.md"
       ],
-      "status_at_assessment": "prepared_unrun"
+      "status_at_assessment": "completed_s1_verified"
     },
     {
       "id": "sybil-newcomer-opus",
