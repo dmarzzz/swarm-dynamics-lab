@@ -17,15 +17,15 @@ def digest(x):
     return hashlib.sha256(json.dumps(x, sort_keys=True).encode()).hexdigest()
 
 def build(family, profile=0, world='clean', seed=31):
-    if family not in FAMILIES or world not in WORLDS or profile not in range(6):
+    if family not in FAMILIES or world not in WORLDS or profile not in range(7):
         raise ValueError('unregistered assignment')
     names=list(NAMES); random.Random(seed+profile).shuffle(names)
     # Profile changes operating scale and ticket mix, not only names.
-    months=12; seats=(12,24,40,18,16,28)[profile]; volume=(2400,4800,7200,3600,3100,5400)[profile]
-    mix=(.2,.35,.5,.65,.42,.57)[profile]
-    brief={'company':('Field service startup','Subscription retailer','B2B software team','Multilingual marketplace','Equipment service operator','Subscription logistics team')[profile],
+    months=12; seats=(12,24,40,18,16,28,22)[profile]; volume=(2400,4800,7200,3600,3100,5400,4100)[profile]
+    mix=(.2,.35,.5,.65,.42,.57,.47)[profile]
+    brief={'company':('Field service startup','Subscription retailer','B2B software team','Multilingual marketplace','Equipment service operator','Subscription logistics team','Technical service distributor')[profile],
            'seats':seats,'monthly_tickets':volume,'complex_share':mix,'months':months,
-           'human_cost_per_unresolved_ticket':8,'deadline_days':(45,55,75,30,48,62)[profile],'software_budget_usd':int(volume*22+seats*1200),
+           'human_cost_per_unresolved_ticket':8,'deadline_days':(45,55,75,30,48,62,52)[profile],'software_budget_usd':int(volume*22+seats*1200),
            'minimum_automation':.35,'cost_tolerance_fraction':.03,
            'requirements':['EU ticket storage AND EU inference processing must be confirmed for this deployment',
                            'SSO and complete export required','migration finishes before deadline'],

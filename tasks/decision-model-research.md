@@ -15,7 +15,7 @@ topics:
 - collective-decision
 - criticality-measurement
 claimed_at: 2026-10-04T02:17Z
-updated: 2026-10-04T02:17Z
+updated: 2026-10-04T02:37Z
 ---
 
 ## Goal
