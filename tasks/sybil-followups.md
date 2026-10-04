@@ -23,8 +23,8 @@ Create, validate, deploy and analyze two exploratory API experiments building on
 
 ## Done when
 
-- [ ] Both plans and owner review waiver committed before paid runs.
-- [ ] Scripted validation and clean model qualification pass for both studies.
-- [ ] Both bounded comparisons deployed in parallel under the shared owner API budget.
+- [x] Both plans and owner review waiver committed before paid runs.
+- [x] Scripted validation and clean model qualification pass for both studies.
+- [x] Both bounded comparisons deployed in parallel under the shared owner API budget.
 - [ ] Recorded results, final images and measured replays published and reconciled.
 - [ ] Workers stopped, claim released, provenance and repository checks pass.

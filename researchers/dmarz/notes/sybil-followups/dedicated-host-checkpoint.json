@@ -1,0 +1,65 @@
+{
+  "migration": {
+    "migration": true,
+    "checkpoint_sha256": "56932c934c384a79061cd130957ee150e022b3b744f4439e905c67b6dd14aaa7"
+  },
+  "partitions": [
+    {
+      "host": "sim-dmarz-4",
+      "experiment": "sybil-budget-api",
+      "allocation": {
+        "experiment": "sybil-budget-api",
+        "host": "sim-dmarz-4",
+        "claim": "dmarz-sybil-followups",
+        "checkpoint_sha256": "56932c934c384a79061cd130957ee150e022b3b744f4439e905c67b6dd14aaa7",
+        "checkpoint_calls": 52,
+        "checkpoint_actual_usd": 0.366548,
+        "own_total_allocation_usd": 50,
+        "peer_reserved_micro_usd": 10000000,
+        "peer_allocation_id": "operator-peer-host-allocation-20261004",
+        "kind": "permanent_cross_host_allocation_not_api_charge"
+      },
+      "guard": {
+        "actual_usd": 0.366548,
+        "held_usd": 10.0,
+        "committed_usd": 10.366548,
+        "reservations": 53,
+        "settled": 52,
+        "cap_usd": 60.0
+      }
+    },
+    {
+      "host": "sim-dmarz-sybil-newcomer",
+      "experiment": "sybil-newcomer-api",
+      "allocation": {
+        "experiment": "sybil-newcomer-api",
+        "host": "sim-dmarz-sybil-newcomer",
+        "claim": "dmarz-sybil-newcomer",
+        "checkpoint_sha256": "56932c934c384a79061cd130957ee150e022b3b744f4439e905c67b6dd14aaa7",
+        "checkpoint_calls": 52,
+        "checkpoint_actual_usd": 0.366548,
+        "own_total_allocation_usd": 10,
+        "peer_reserved_micro_usd": 50000000,
+        "peer_allocation_id": "operator-peer-host-allocation-20261004",
+        "kind": "permanent_cross_host_allocation_not_api_charge"
+      },
+      "guard": {
+        "actual_usd": 0.366548,
+        "held_usd": 50.0,
+        "committed_usd": 50.366548,
+        "reservations": 53,
+        "settled": 52,
+        "cap_usd": 60.0
+      }
+    }
+  ],
+  "verified_at_utc": "2026-10-04T04:08:59.722032+00:00",
+  "source_revision": "e9db4c58a8847d2f54d60a8ff3cc70f81f58263e",
+  "both_historical_stages_reverified_on_s1_hosts": true,
+  "newcomer_provision_summary": {
+    "ok": 55,
+    "changed": 37,
+    "unreachable": 0,
+    "failed": 0
+  }
+}
