@@ -40,7 +40,6 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
-| [antsy-literal-v2](tasks/antsy-literal-v2.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:37Z | Antsy literal extraction and deterministic normalization native iteration |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T20:41Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -146,6 +145,7 @@
 | [analyze-discussion-v3-q0](tasks/analyze-discussion-v3-q0.md) | done | p1 | experiment | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T03:50Z | Audit and publish the completed discussion v3 qualification |
 | [antsy-diversity-v7](tasks/antsy-diversity-v7.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T06:29Z | Measure worker diversity and correlated errors in Antsy |
 | [antsy-haiku-panel](tasks/antsy-haiku-panel.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:32Z | Improve and run the forty-member Haiku receipt panel |
+| [antsy-literal-v2](tasks/antsy-literal-v2.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:55Z | Antsy literal extraction and deterministic normalization native iteration |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:47Z | Audit and repair Antsy experiment quality and reproducibility |
 | [antsy-receipt-comparison](tasks/antsy-receipt-comparison.md) | done | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T19:55Z | Build and validate receipt extraction comparison with standard traces |
 | [antsy-receipt-v6](tasks/antsy-receipt-v6.md) | done | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T04:48Z | Build and evaluate real receipt-total checking with fresh data |
@@ -396,11 +396,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-methods | working | antsy-literal-v2 | 2026-10-04 20:54:36.808713+00:00 | Q1/Q2 closed; qualification failed; four receipt units; evaluation unrun; worker released |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 20:43:34.476809+00:00 | C6 finished: Haiku–Jev main reviewed, finite negative result published, ledger restored and claim released; FINISH / PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:40:18.955603+00:00 | Prepared realistic R60 proposal and case audit; concrete plan decision pending |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 20:37:00.921478+00:00 | RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun. |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc12-wide | 2026-10-04 20:20:22.452084+00:00 | Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls |
-| vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
