@@ -3,14 +3,21 @@ id: survey-fork-merge-security
 type: task
 title: 'Survey: corruption on reintegration in fork-and-merge agents'
 kind: survey
-status: open
+status: claimed
 priority: p1
-owner: null
-for: null  # set to a researcher name to direct the task at them
+owner: shadow/sol-fm
+for: null
 created: 2026-10-03
 created_by: dmarz/fm
-depends_on: [scan-papers-fm-merge-poisoning, scan-papers-fm-bft-aggregation, scan-papers-fm-unlinkability, scan-papers-fm-identity-hijack]
-topics: [fork-merge-security]
+depends_on:
+- scan-papers-fm-merge-poisoning
+- scan-papers-fm-bft-aggregation
+- scan-papers-fm-unlinkability
+- scan-papers-fm-identity-hijack
+topics:
+- fork-merge-security
+claimed_at: 2026-10-04T14:21Z
+updated: 2026-10-04T14:21Z
 ---
 
 ## Goal
