@@ -40,7 +40,6 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:49Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
-| [healing-practical-repair](tasks/healing-practical-repair.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:05Z | Compare Healing evidence repair with practical central baselines |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:04Z | Launch bounded Phantom Coast native pilot |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:04Z | Deploy and assess the Right Dissenter exploratory live study |
@@ -146,6 +145,7 @@
 | [fix-dashboard-deploy-cancellation](tasks/fix-dashboard-deploy-cancellation.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:24Z | Let active dashboard deployments finish during frequent pushes |
 | [fix-discussion-review-findings](tasks/fix-discussion-review-findings.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:34Z | Address Vishesh's discussion-dose review in the v3 successor |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:52Z | Review and rebuild Healing Helping Hands as an evidence atlas |
+| [healing-practical-repair](tasks/healing-practical-repair.md) | done | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:07Z | Compare Healing evidence repair with practical central baselines |
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:41Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [heterogeneous-biological-frontiers](tasks/heterogeneous-biological-frontiers.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:22Z | Biological frontiers for heterogeneous swarms grounded in X discussions |
 | [heterogeneous-priority-revision](tasks/heterogeneous-priority-revision.md) | done | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T03:53Z | Revise heterogeneous-swarm priorities from owner feedback |
