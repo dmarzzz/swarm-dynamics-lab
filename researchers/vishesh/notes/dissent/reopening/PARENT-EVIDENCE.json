@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "kind": "sanitized public completion handoff",
+  "study_id": "right-dissenter",
+  "attempt": "rd5-h5-a1",
+  "execution": "completed",
+  "scientific_review": "complete_valid_result_with_context_transfer_gap",
+  "assigned_decisions": 72,
+  "valid_calls": 36,
+  "authored_roots": 6,
+  "correct_B0_B1_B2": [
+    6,
+    8,
+    6
+  ],
+  "claim": "Fixed reserve adverse in this finite cohort; allocation-only attribution limited by interpretation failure.",
+  "native_source": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+  "published_result_commit": "cad818c9ca88ac8cb6d25baf123c8cd9ba287c27",
+  "canonical_operations_handoff_sha256": "66775acf7ab12f7434f979685899a636da1f5b24701aeff093e3fed0712c5752",
+  "workers_stopped": true,
+  "allocation_released": true,
+  "lifetime_calls": 488,
+  "new_scope_approved": false,
+  "evidence": {
+    "researchers/vishesh/notes/dissent/rd5/REPORT.md": "c79fccd5fdd900d416d938db5a8d26b5bde4146993f4c64296635d02fb486a9d",
+    "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-POST.md": "5db4f5a6f71c91733b62b199f654c35bd6c53148c40304ce4d0f901094d0b69a",
+    "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-QUALITY.json": "29255a7125c2b6b477e948a1b90425e93c1031fdea7d9655686775c72e375c3d",
+    "researchers/vishesh/notes/dissent/rd5/results/h5-a1/resources.json": "f058c9e11ce01669e26c4889822ee54e5a003f6f32a376bdb5ebe954d7bbb80c"
+  }
+}

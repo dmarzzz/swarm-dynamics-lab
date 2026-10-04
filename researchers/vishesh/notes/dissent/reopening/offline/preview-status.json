@@ -1,0 +1,6 @@
+{
+  "generated": true,
+  "data_and_input_checks": "passed",
+  "visual_render_verified": false,
+  "reason": "Browser URL policy blocked opening the local file. No alternate browser or serving workaround was attempted."
+}

@@ -23,7 +23,7 @@ Apply the RD5 post-mortem to a prospective reopening diagnostic, construct and v
 
 ## Done when
 
-- [ ] Assess prior suggestions and preserve the RD5 result.
-- [ ] Write the prospective plan before implementation.
-- [ ] Build concrete development cases, controlled context variants and scoring checks.
-- [ ] Publish validation, resource bounds and the exact next decision.
+- [x] Assess prior suggestions and preserve the RD5 result.
+- [x] Write the prospective plan before implementation.
+- [x] Build concrete development cases, controlled context variants and scoring checks.
+- [x] Publish validation, resource bounds and the exact next decision.

@@ -1,0 +1,9 @@
+{
+  "checked_utc": "2026-10-04T18:20:56.800853+00:00",
+  "method": "Read-only original cumulative ledger; no allocation, reservation or dispatch.",
+  "lifetime_calls": 488,
+  "committed_api_usd": 0.022699069,
+  "new_calls_this_revision": 0,
+  "new_claim": false,
+  "native_dispatch_available": false
+}

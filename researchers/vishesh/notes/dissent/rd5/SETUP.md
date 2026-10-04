@@ -1,6 +1,6 @@
 # Right Dissenter RD5 setup record
 
-**Reviewed operational non-dispatch; approved scientific scope unchanged; Q5 passed; H5 adverse result completed and scientifically reviewed. See [current status](RUN-STATUS.md) and [renewal plan](ACTIVATION-02.md).** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
+**RD5 is complete and scientifically reviewed: Q5 passed; H5 returned a valid adverse result. See [current status](RUN-STATUS.md) and [report](REPORT.md). This remains the authoritative Right Dissenter setup record.** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
 
 Question: when does remembering unresolved evidence and protecting a future check help, and when does it delay an urgent decision? Primary B2 reserve versus B1 memory; secondary B1 versus B0 bounded always-check. [Plan](PLAN.md), [amendment](AMENDMENT-01.md), [ready package](READY.md), [previous cohort](../rd4/REPORT.md).
 
@@ -35,3 +35,14 @@ No next execution is scheduled. The approved Q5/H5 sequence is complete. Read [t
 Owner decision boundary: the refreshed [agent protocol](../../../../../AGENTS.md) requires approval of the updated next-run plan before allocation or launch. The concrete [proposal](spec/next-run-plan.json) and [evidence-linked RD4 quality review](reviews/RD4-QUALITY-REVIEW.json) are covered by the recorded approval in [RUN-STATUS.md](RUN-STATUS.md) for unchanged Q5/conditional H5. Do not request that approval again; materially different scope requires a new decision. Existing budget approval remains valid; the disabled template does not invent plan approval.
 
 Operator closeout hook after each stopped native attempt: `python3 scripts/experiment.py finalize right-dissenter --attempt <unique-rd5-attempt> --results <saved-results> --outcome <completed|failed|ambiguous> --worker-stopped`. This generates an operational handoff only; complete the scientific review separately and retain reporting/cost status.
+
+
+## Prospective reopening revision
+
+The completed RD5 plan/source/outcomes remain frozen. The owner's subsequent design-improvement request is addressed by the [reopening draft](../reopening/README.md), [prospective plan](../reopening/PLAN.md) and [structured proposal](../reopening/next-run-plan.json). The plan was published before implementation; [23 offline checks](../reopening/offline/validation.json) verify the authored cases, exact context transformations, action-order control, literal baseline and failure-aware scorer. There were zero new native calls.
+
+This revision keeps one setup record here. For the proposed RD6 diagnostic, G0 is scoped exploratory without a novelty/generalization claim; G1 is complete; G2 passes for the offline case/scoring package only, with native integration still unimplemented; G3/G4/G5 are not admitted/unrun; G6 owner decision is pending. Researcher review remains not required, never recorded as independent validation.
+
+The next decision is whether to collect 18 Q0 and conditional 144 D0 requests, increasing the lifetime call ceiling from 500 to 650 within the unchanged USD 2 split cap. No current machine allocation is held. No plan approval or native readiness is inferred from this draft. If approved, implement and fault-check the native integration, publish/register exact stage plans, verify fresh source/route/ledger/account/allocation evidence and admit only the named scope. A larger policy/swarm or held-out study is not included.
+
+The operations registry is navigation and may lag this native history. The latest completed scientific assessment remains [H5-A1](reviews/H5-A1-QUALITY.json); the draft does not replace it with a new result.

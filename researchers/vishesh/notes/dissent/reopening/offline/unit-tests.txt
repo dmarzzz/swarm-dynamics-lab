@@ -1,0 +1,28 @@
+test_absolute_clock_translation_preserves_every_duration (test_cases.CaseChecks.test_absolute_clock_translation_preserves_every_duration) ... ok
+test_action_orders_are_balanced_within_direction (test_cases.CaseChecks.test_action_orders_are_balanced_within_direction) ... ok
+test_actor_payload_has_no_evaluator_or_treatment_metadata (test_cases.CaseChecks.test_actor_payload_has_no_evaluator_or_treatment_metadata) ... ok
+test_age_changes_only_applicable_current_observation_times (test_cases.CaseChecks.test_age_changes_only_applicable_current_observation_times) ... ok
+test_boundary_and_optional_information_targets (test_cases.CaseChecks.test_boundary_and_optional_information_targets) ... ok
+test_every_condition_occurs_in_each_repeat_block (test_cases.CaseChecks.test_every_condition_occurs_in_each_repeat_block) ... ok
+test_exact_allocation_and_nested_units (test_cases.CaseChecks.test_exact_allocation_and_nested_units) ... ok
+test_exact_repeated_request_bytes_and_order (test_cases.CaseChecks.test_exact_repeated_request_bytes_and_order) ... ok
+test_extracted_spans_and_source_preservation (test_cases.CaseChecks.test_extracted_spans_and_source_preservation) ... ok
+test_freshness_scope_revision_and_conflicts_are_not_votes (test_cases.CaseChecks.test_freshness_scope_revision_and_conflicts_are_not_votes) ... ok
+test_hand_authored_targets_match_literal_public_reference (test_cases.CaseChecks.test_hand_authored_targets_match_literal_public_reference) ... ok
+test_manifest_reproduces_and_has_no_dispatch (test_cases.CaseChecks.test_manifest_reproduces_and_has_no_dispatch) ... ok
+test_only_declared_history_and_ballot_fields_change (test_cases.CaseChecks.test_only_declared_history_and_ballot_fields_change) ... ok
+test_qualification_and_main_full_requests_are_disjoint (test_cases.CaseChecks.test_qualification_and_main_full_requests_are_disjoint) ... ok
+test_unknown_condition_is_rejected (test_cases.CaseChecks.test_unknown_condition_is_rejected) ... ok
+test_all_missing_has_full_uncertainty (test_cases.ScoringChecks.test_all_missing_has_full_uncertainty) ... ok
+test_bad_or_duplicate_ids_and_changed_bindings_fail (test_cases.ScoringChecks.test_bad_or_duplicate_ids_and_changed_bindings_fail) ... ok
+test_invalid_and_failed_outcomes_remain_assigned (test_cases.ScoringChecks.test_invalid_and_failed_outcomes_remain_assigned) ... ok
+test_missing_is_unknown_not_agreement_or_native_defer (test_cases.ScoringChecks.test_missing_is_unknown_not_agreement_or_native_defer) ... ok
+test_one_missed_repeat_is_one_error_not_four_epochs (test_cases.ScoringChecks.test_one_missed_repeat_is_one_error_not_four_epochs) ... ok
+test_qualification_counts_all_controls (test_cases.ScoringChecks.test_qualification_counts_all_controls) ... ok
+test_reference_has_zero_paired_effect (test_cases.ScoringChecks.test_reference_has_zero_paired_effect) ... ok
+test_wrong_simple_policies_are_detectable (test_cases.ScoringChecks.test_wrong_simple_policies_are_detectable) ... ok
+
+----------------------------------------------------------------------
+Ran 23 tests in 0.053s
+
+OK

@@ -1,0 +1,24 @@
+{
+  "kind": "offline known-answer and fault fixtures; no native execution",
+  "native_calls": 0,
+  "tests_passed": 23,
+  "assignments": 162,
+  "Q0_requests": 18,
+  "D0_requests": 144,
+  "D0_cases": 12,
+  "D0_base_families": 6,
+  "semantic_grammars": 3,
+  "literal_reference_matches": 162,
+  "maximum_ordered_request_bytes": 2712,
+  "manifest_sha256": "b9f26a311391a5f11ca42756d2aa8d6a035591a04cdfa90015c854e28eb81b9f",
+  "dependencies": {
+    "researchers/vishesh/notes/dissent/reopening/PLAN.md": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582",
+    "researchers/vishesh/notes/dissent/reopening/cases.py": "e0f8cde22f962a436bc1ed7c29ca23d89ab3e87749397c9281cf56806f57cde8",
+    "researchers/vishesh/notes/dissent/reopening/prepare_offline.py": "ae8a0b0bff90a01021f93302a8e2fa3d3b3bcfb9b99dd3d37617e5af4a80f98c",
+    "researchers/vishesh/notes/dissent/reopening/tests/test_cases.py": "51356e1dcd6ec8b404f66f11ec784263936552c252c440de5b52743c41edab81",
+    "researchers/vishesh/notes/dissent/rd5/src/rd5_core.py": "aebd8afb934d3bbeac376d338e7987d7bbc73f0d38947d7592b0907339c75af6",
+    "researchers/vishesh/notes/dissent/rd5/src/common.py": "13580885955a4eb290553b0ceec9c65624411d76ab1c5bca8581ef55b5885248"
+  },
+  "review_boundary": "Owning-agent label/fixture checks; no independent audit, native qualification or untouched holdout.",
+  "native_integration": "not implemented; no dispatch or ledger mutation is available here"
+}

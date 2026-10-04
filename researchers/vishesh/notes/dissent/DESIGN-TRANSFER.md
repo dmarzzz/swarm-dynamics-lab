@@ -40,3 +40,10 @@ Source evidence: [M4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Exact remaining blocker | Central launch acknowledgment, refreshed exclusive allocation and original-ledger/time admission. No new researcher sign-off is needed; old activation delivered no Q5 samples. |
 
 Prior-art inputs: [[hao-2026-not]]. Transfers above are PI design inferences, not demonstrated effects in this study. Community failure reports in the linked review motivate test cases only. New scientific scopes require a prospective setup record and concrete owner decision; none is silently added to the queued run.
+
+
+## Completed RD5 and prospective reopening revision
+
+The dated central-wait snapshots above are historical. RD5 later completed Q5 and H5 under its scoped direct-launch authority: [report](rd5/REPORT.md), [scientific post-mortem](rd5/reviews/H5-A1-POST.md). The fixed reserve scored 6/24 against memory's 8/24; four late-resume interpretation misses limit allocation-only attribution. Workers stopped and the allocation was released.
+
+The requested next design revision is the [reopening diagnostic draft](reopening/README.md). It separates context effects from acquisition, tests clean competence separately from full-context behavior, preserves absolute service/harm metrics and keeps the literal baseline. All cases are inspected development fixtures, and six task families are distinguished from 144 nested responses. Native collection is pending a new scope/call-ceiling decision and implementation of current admission; this draft carries no new allowance or machine.

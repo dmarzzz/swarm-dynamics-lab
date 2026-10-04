@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "parent_handoff": {
+    "path": "researchers/vishesh/notes/dissent/reopening/PARENT-EVIDENCE.json",
+    "sha256": "6cfeca7aae9325d6dde703d6ca7bd5f9564908bf8a743718afae5d38d5435d5c"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/dissent/rd5/reviews/H5-A1-QUALITY.json",
+    "sha256": "29255a7125c2b6b477e948a1b90425e93c1031fdea7d9655686775c72e375c3d"
+  },
+  "question": "Does historical action and opposing ballot context reduce correct interpretation of current evidence, separately from absolute clock, evidence age and repeated-answer variability?",
+  "changes": [
+    "Evidence delivered directly; no acquisition-policy comparison.",
+    "Six controlled context variants with case-locked action order and identical-input repeats.",
+    "Separate clean/uncertainty Q0; D0 full-context competence is measured, not assumed.",
+    "Single terminal action per assignment; paired missingness bounds and repeat completeness."
+  ],
+  "acceptance_checks": [
+    "23 offline known-answer, context-difference, binding and scorer fault checks pass.",
+    "Q0 requires all 18 assigned valid and correct; failure blocks D0.",
+    "D0 reconciles all 144 assigned requests and their 12 authored cases/six shared families.",
+    "No native admission until updated scope/call-ceiling approval, native integration validation and fresh operational gates."
+  ],
+  "sample_size": {
+    "independent_unit": "Authored case nested within six shared semantic families; no sampled independent field population.",
+    "planned_units": 12,
+    "rationale": "Development diagnostic covers three domains, two base task rules per domain, reciprocal stop/resume and two identical-input repeats; no population precision or power claim.",
+    "allocation": "Q0 12 clean + six full-context uncertainty requests; D0 12 cases x six context conditions x two repeats = 144 requests; maximum162.",
+    "analysis_plan": "Primary mean paired C11 minus C00 correct fraction by case; six family summaries, directions/domains, secondary component contrasts, repeated-answer disagreement and missingness bounds.",
+    "stopping_rule": "Q0 nonpass stops D0. First ambiguous/route/schema/provider failure stops dispatch. No retries, automatic repair or population inference."
+  },
+  "scenarios": {
+    "families": [
+      "process interval",
+      "bridge capacity",
+      "required compatibility versus optional telemetry"
+    ],
+    "construction": "Six authored base specifications with stop/resume pairs; six history/ballot/clock/age variants per case.",
+    "challenge": "Contradictory historical decision and 4:1 scripted ballots face newer decisive source; separate translation and age transforms preserve ground truth.",
+    "realism": "Finite authored grammar, trusted noiseless sources within TTL and scripted group context; one native resolver.",
+    "controls": "Source-only, history-only, ballots-only, full context, translated clock, older still-valid evidence; separate stale/conflict Q0 and a deterministic literal reference.",
+    "holdout_policy": "All generated fixtures inspected development data. Distinct Q0 inputs share grammar; no untouched or independently sourced holdout. Future generalization needs a separate plan."
+  },
+  "data_collection": {
+    "records": [
+      "Frozen complete assignments and effective request bytes/order hashes",
+      "Full visible validated responses and safe diagnostic fields",
+      "Append-only dispatch/reservation/terminal records",
+      "Runtime/route/context hashes and source provenance",
+      "All-assigned scores, missingness bounds, per-cell repeat completeness",
+      "Input-linked grid and chronological cost/request strip"
+    ],
+    "missingness": "Keep every assigned request; invalid/missing is not DEFER or repeat agreement. Bound unknown correctness and preserve uncertain reservations.",
+    "validation": "Known-answer cases, deliberately wrong policies, exact condition masks, actor allowlists, scorer faults and artifact readback.",
+    "privacy": "No secrets, private account identifiers or operating-assistant prompts in public or experimental context."
+  },
+  "implementation": {
+    "change_summary": "Implemented offline fixture builder/reference/scorer/preview only. Native launch integration is deliberately absent; completed RD5 source untouched.",
+    "offline_validation": "researchers/vishesh/notes/dissent/reopening/offline/validation.json"
+  },
+  "resources": {
+    "maximum_calls": 162,
+    "maximum_cost_usd": 2,
+    "machine_count": 1,
+    "cumulative_budget_ref": "Original USD1 API/USD1 infrastructure cap, existing488calls and USD0.022699069 committed API. Proposed lifetime ceiling650 exceeds original500 by150; explicit decision pending.",
+    "machine_requirements": "One exclusive approved-account CPU host, no GPU, one inflight call, 90min<=USD0.107145; admission/route/cost/source/ledger verified after approval.",
+    "allocation_required": true,
+    "maximum_new_api_reservation_usd": 0.217728,
+    "maximum_proposed_cumulative_api_usd": 0.240427069,
+    "maximum_proposed_cumulative_infrastructure_estimate_usd": 0.827393442,
+    "maximum_proposed_combined_exposure_usd": 1.067820511,
+    "proposed_lifetime_call_stop": 650
+  },
+  "research_value": {
+    "empirically_unknown": "Actual Jev responses to matched context/clock/age counterfactuals and identical-input repeats; RD5 traces did not collect them.",
+    "decision_by_outcome": {
+      "support": "Draft one context/interface repair only if stable degradation appears across different base families with clean competence.",
+      "null": "Finish component study; do not enlarge grid to recreate RD5 errors; use the simple controller for these tasks.",
+      "adverse": "Retain competence/instability finding and rule-based fallback; no allocation-policy escalation.",
+      "inconclusive": "Publish missingness and alternative causes; do not claim a context mechanism."
+    },
+    "why_existing_data_or_simpler_method_is_insufficient": "The simple controller already solves the finite tasks. New native evidence is useful only if diagnosing Jev as a future component changes an interface decision; saved traces cannot supply counterfactual responses. If that component role is no longer needed, park this draft without spending.",
+    "collective_contribution": "Scripted opposing group context is tested as input to one resolver. No emergent peers, evidence generation or independent swarm claim."
+  },
+  "effort_estimate_hours": {
+    "preparation": 4,
+    "analysis_reporting": 2,
+    "operator": 1,
+    "assumptions": "Conservative planning upper estimates; no new service and no experiment infrastructure allocated."
+  },
+  "approval_state": "pending",
+  "native_dispatch_available": false,
+  "plan_publication_before_implementation": "0c00781507b9477bfa2347504ed0bade43a7ae4b",
+  "operations_binding": "Human-review draft using the shared content schema only. Its sanitized parent summary is not the private operations journal pointer; historical H5 completion remains complete_valid_result. Before native preparation, a new owning-session diagnostic assessment and the actual latest private closeout must be bound by the manual runtime. This draft cannot be passed as an admission or update-approval receipt."
+}

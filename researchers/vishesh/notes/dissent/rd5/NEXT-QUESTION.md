@@ -11,3 +11,6 @@ A future proposal should first hold the source and task fixed while separating a
 The primary outcome should be correct, evidence-justified reopening by the deadline, with wrong resumptions and unnecessary stops reported separately. The decision is conditional: if metadata/history drives avoidable deferral, test a narrowly separated current-evidence interface; if matched repeats dominate the difference, measure reliability before attributing a mechanism; if the simple controller is sufficient, use it and park the native-model research claim. A negative result should stop the line rather than trigger prompt fishing.
 
 Before any paid successor, specify independent units, sample counts and precision rationale, context construction, stopping, controls and the remaining cumulative resource envelope in a concrete plan. The completed RD5 scope allows no additional calls. Offline analysis can continue without new collection; a materially new plan needs the owner's corresponding decision. No machine is retained or run scheduled by this note.
+
+
+The subsequent owner-requested design revision is now a [concrete prospective draft](../reopening/README.md), with offline cases and scoring checks. It preserves this candidate's limits and the completed RD5 result; no native successor is authorized or scheduled.
