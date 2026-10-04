@@ -62,7 +62,6 @@
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [sybil-followups](tasks/sybil-followups.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T04:15Z | Ship parallel Sybil verification-budget and newcomer-trust follow-ups |
-| [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:04Z | Build and qualify a practical Theseus continuity iteration |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -210,6 +209,7 @@
 | [synthesis-question-atlas-update](tasks/synthesis-question-atlas-update.md) | done | p1 | synthesis | dmarz/question-atlas |  | 2026-10-03T21:43Z | Refresh research question atlas with new budget, security and dataset research |
 | [theseus-critical-redesign](tasks/theseus-critical-redesign.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T02:53Z | Critically review SOC-24 and redesign beyond memory availability |
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
+| [theseus-v2-iteration](tasks/theseus-v2-iteration.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:27Z | Build and qualify a practical Theseus continuity iteration |
 | [scan-honeypot-vigilance](tasks/scan-honeypot-vigilance.md) | done | p2 | scan | dmarz/honeypot-vigilance | dmarz | 2026-10-03T23:28Z | Prior-art pass: do agents (and swarms) update after discovering a honeypot? |
 
 ## Candidate batches
@@ -222,6 +222,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T04:45Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
+| vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T04:29Z | Publish reconciled failed qualification, measured evidence and host release |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T04:25Z | Running Sonnet serially; Haiku passed fresh mechanics/profit gates and now starts full-length regulated reliability on its dedicated host. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T04:21Z | Interface diagnostic partly improved D1 but failed approval tasks; testing same fixed cases with previously valid Haiku configuration |
 | vishesh/codex-heterogeneous | working | poietic-agents-design | 2026-10-04T04:21Z | Writing and publishing Poietic Agents prospective design and review gates |
@@ -237,7 +238,6 @@
 | vishesh/codex-decision-models | working | right-dissenter-live-study | 2026-10-04T04:04:19.842414+00:00 | Approved USD 2 study; allocating dedicated fleet machine and launching Q0 |
 | vishesh/codex-local-agents | working |  | 2026-10-04T04:02Z | Owner-authorized local Qwen variant of external influence v2; public plan registered, offline checks passed, preparing Q0 |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
-| vishesh/codex-theseus | working | theseus-v2-iteration | 2026-10-04T03:56Z | Execute approved v2 qualification and gated pilot on dedicated sim-shadow |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T03:43Z | Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains |
