@@ -46,7 +46,6 @@
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T19:22Z | Run the revised procurement influence experiment |
 | [outage-size-prototype](tasks/outage-size-prototype.md) | claimed | p1 | experiment | vishesh/codex-idea-scores |  | 2026-10-04T19:24Z | Build and qualify the bounded outage-response prototype |
-| [phantom-coast-pc9-native-preparation](tasks/phantom-coast-pc9-native-preparation.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:25Z | Prepare Phantom PC9 native qualification and added scenarios |
 | [right-dissenter-reopening-native-run](tasks/right-dissenter-reopening-native-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T19:08Z | Execute and review the approved RD6 Q0 and conditional D0 |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -59,7 +58,6 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed (stale) | p1 | survey | shadow/sol-budget |  | 2026-10-04T16:08Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [telephone-native-both](tasks/telephone-native-both.md) | claimed | p1 | experiment | vishesh/codex-village-fit | vishesh | 2026-10-04T19:27Z | Telephone authored and AI Village native scopes |
-| [theseus-institutional-transmission](tasks/theseus-institutional-transmission.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T19:23Z | Institutional transmission revision |
 | [wild-timeline](tasks/wild-timeline.md) | claimed (stale) | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:24Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
@@ -217,6 +215,7 @@
 | [phantom-coast-pc7-traces](tasks/phantom-coast-pc7-traces.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T16:44Z | Audit Phantom native traces and revise finite-history scenario |
 | [phantom-coast-pc8-live](tasks/phantom-coast-pc8-live.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:13Z | Run PC8 report interpretation qualification and conditional pilot |
 | [phantom-coast-pc9-instrument](tasks/phantom-coast-pc9-instrument.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T18:42Z | Build Phantom population exploration instrument |
+| [phantom-coast-pc9-native-preparation](tasks/phantom-coast-pc9-native-preparation.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T19:29Z | Prepare Phantom PC9 native qualification and added scenarios |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:37Z | Coordinate one evidence-led iteration across ten active studies |
 | [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T17:18Z | Apply direct-launch authorization and review native traces |
@@ -295,6 +294,7 @@
 | [theseus-d1-launch](tasks/theseus-d1-launch.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T07:04Z | Admit and run Theseus execution diagnostic D1 |
 | [theseus-d2-design](tasks/theseus-d2-design.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T08:04Z | Interpret Theseus D1 and plan a focused D2 confirmation |
 | [theseus-d2-run](tasks/theseus-d2-run.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T09:29Z | Review, implement and execute the Theseus D2 diagnostic |
+| [theseus-institutional-transmission](tasks/theseus-institutional-transmission.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T19:29Z | Institutional transmission revision |
 | [theseus-rule-diagnosis](tasks/theseus-rule-diagnosis.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T04:39Z | Diagnose Theseus rule application from saved evidence |
 | [theseus-social-grounding](tasks/theseus-social-grounding.md) | done | p1 | review | vishesh/codex-theseus | vishesh | 2026-10-04T03:06Z | Ground Theseus scenario selection in X discussions and practical failures |
 | [theseus-targeted-repairs](tasks/theseus-targeted-repairs.md) | done | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T04:55Z | Build targeted Theseus execution diagnostic repairs |
@@ -312,9 +312,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| vishesh/codex-theseus | working | theseus-institutional-transmission | 2026-10-04T19:28Z | publish validated institutional-transmission prototype and concrete T1-Q0 proposal |
 | vishesh/codex-pi-review | done | launch-ready-studies-2026-10-04 | 2026-10-04T19:26Z | Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
-| vishesh/codex-theseus | idle |  | 2026-10-04T19:06Z | A2 completed and published; acquisition failed; FINISH / PARK; host released PR354 |
 | shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
@@ -383,7 +383,7 @@
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:22:58.628494+00:00 | PQ-02 launched then stopped HTTP400; reviewed, no retry, qualification inconclusive |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:07:36.227052+00:00 | Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained. |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc9-instrument | 2026-10-04 18:42:42.878610+00:00 | PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 18:42:42.878610+00:00 | PC9 native Q0 preparation complete;47 tests and three added scenarios pass; concrete native decision next, no new spend |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
 | vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
