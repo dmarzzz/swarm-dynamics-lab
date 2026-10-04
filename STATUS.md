@@ -375,8 +375,8 @@
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 18:45:17.311481+00:00 | QM-PQ-01 completed; final decisions correct but fidelity qualification failed; reviewed and released |
 | vishesh/codex-phantom-coast | done | phantom-coast-pc9-instrument | 2026-10-04 18:42:42.878610+00:00 | PC9 offline population instrument complete;30 tests and replay pass; no native run or new spend |
+| vishesh/codex-decision-models | working | right-dissenter-reopening-native | 2026-10-04 18:36:39.797552+00:00 | Integrating RD6 native admission, exact delivery, original ledger and offline fault tests; no paid launch. |
 | vishesh/codex-heterogeneous | idle |  | 2026-10-04 18:32:55.072393+00:00 | D0 closed; formatting/error repair validated offline; Haiku replacement cost estimated |
-| vishesh/codex-decision-models | done | right-dissenter-reopening-design | 2026-10-04 18:24:17.580511+00:00 | Reopening design draft published; 23 offline tests pass, 162 prospective requests, zero native calls. RD5 remains complete. Changed scope/call-ceiling decision and native integration remain before launch. |
 | vishesh/codex-methods | idle |  | 2026-10-04 18:18:22.325483+00:00 | D1 diagnostic reviewed and published; three valid calls, slow-call stop, host released; qualification closed; no successor |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
