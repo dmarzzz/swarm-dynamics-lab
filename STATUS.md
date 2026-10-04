@@ -43,7 +43,6 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [wild-askswarm](tasks/wild-askswarm.md) | claimed | p0 | build | shadow/sol-askswarm | shadow | 2026-10-04T14:56Z | AskSwarm: reusable descriptive questions across three observed swarms |
 | [wild-halflife](tasks/wild-halflife.md) | claimed | p0 | build | shadow/sol-halflife | shadow | 2026-10-04T15:03Z | Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history |
-| [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | claimed (stale) | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T09:29Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-c4-selective](tasks/healing-c4-selective.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T15:19Z | Prepare and qualify C4 selective helping |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -65,6 +64,7 @@
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
+| [antsy-v8-native-qualification](tasks/antsy-v8-native-qualification.md) | open | p1 | experiment |  | vishesh | 2026-10-04T15:24Z | Prepare and launch fresh Antsy v8 OCR qualification |
 | [build-actual-experiment-suite](tasks/build-actual-experiment-suite.md) | open | p1 | build |  | vishesh | 2026-10-04T00:11Z | Implement and deploy developed exploratory experiment designs |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | open | p1 | build |  | dmarz | 2026-10-04T04:58Z | Ship the compositional safety benchmark and qualification |
 | [build-false-alarm-cascade](tasks/build-false-alarm-cascade.md) | open | p1 | build |  | dmarz | 2026-10-04T11:18Z | Prepare the false-alarm cascade experiment (honeypot-vigilance hunch V4) on Opus 5.5 to launch-ready |
