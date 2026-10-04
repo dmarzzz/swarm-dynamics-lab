@@ -65,7 +65,7 @@ def checkpoint(g,index,call,changed=False,owners=None):
         if not inboxes[peer]:continue
         packet=g.actor(peer);packet['private_inbox']=inboxes[peer]
         value=call('attest',packet);rows=value.get('reports',[]) if isinstance(value,dict) else []
-        exact=rows==inboxes[peer];witness_audit.append({'witness':peer,'copied_exactly':exact})
+        exact=i.same_reports(rows,inboxes[peer]);witness_audit.append({'witness':peer,'copied_exactly':exact})
         # Native output is delivered as returned; signer is established by transport.
         # Wrong values are scored, not replaced with true private observations.
         if not isinstance(rows,list):rows=[]

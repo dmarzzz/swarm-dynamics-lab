@@ -44,7 +44,9 @@ def examples(w,owner,changed=False):
 
 def note(owner,required):return {'owner':owner,'witnesses':sorted(required),'practice':PRACTICE}
 def valid_note(value,owner,required):
-    return isinstance(value,dict) and set(value)=={'owner','witnesses','practice'} and value==note(owner,required)
+    if not isinstance(value,dict) or set(value)!={'owner','witnesses','practice'} or value['owner']!=owner or value['practice']!=PRACTICE:return False
+    witnesses=value['witnesses']
+    return isinstance(witnesses,list) and len(witnesses)==2 and all(isinstance(p,str) for p in witnesses) and len(set(witnesses))==2 and set(witnesses)==set(required)
 
 def challenge(w,owner,checkpoint,kind,changed=False):
     required=route_at(w,owner,changed);epoch=int(changed)
@@ -105,3 +107,25 @@ def check_wire(body):
     if body.get('provider',{}).get('allow_fallbacks') is not False:raise ValueError('provider_fallback')
     if packet_bytes(body)>8000:raise ValueError('input_envelope')
     return True
+
+
+def reservation_usd(body):
+    # Include the observed cache-write rate, rather than assuming uncached input.
+    return round((packet_bytes(body)+512)*2.5/1e6+512*10/1e6,10)
+
+def same_reports(left,right):
+    # Order is not task meaning; preserve every row, duplicate and contradiction.
+    try:
+        def canonical(rows):
+            if not isinstance(rows,list):raise ValueError("reports")
+            result=[]
+            for row in rows:
+                if not isinstance(row,dict) or set(row)!={"owner","observations"} or not isinstance(row["owner"],str) or not isinstance(row["observations"],list):raise ValueError("row")
+                obs=[]
+                for x in row["observations"]:
+                    if not isinstance(x,dict) or set(x)!={"case","epoch","allow"} or not isinstance(x["case"],str) or type(x["epoch"]) is not int or type(x["allow"]) is not bool:raise ValueError("observation")
+                    obs.append((x["case"],x["epoch"],x["allow"]))
+                result.append((row["owner"],tuple(sorted(obs))))
+            return sorted(result)
+        return canonical(left)==canonical(right)
+    except (ValueError,TypeError,KeyError):return False

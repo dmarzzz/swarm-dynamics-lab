@@ -50,3 +50,11 @@ class InstrumentTests(unittest.TestCase):
   for patch in [{'model':'openai/gpt-6-sol-pro'},{'max_tokens':1024},{'provider':{'allow_fallbacks':True}},{'text':'a'*8001}]:
    with self.assertRaises(ValueError):i.check_wire(dict(body,**patch))
 if __name__=='__main__':unittest.main()
+
+class SemanticOrderRepair(unittest.TestCase):
+ def test_reversed_pair_is_same_note(self):
+  w=i.world(19);p=w["members"][0];n=i.note(p,w["routes"][p]);n["witnesses"].reverse();self.assertTrue(i.valid_note(n,p,w["routes"][p]));n["witnesses"]=[n["witnesses"][0]]*2;self.assertFalse(i.valid_note(n,p,w["routes"][p]))
+ def test_reordered_reports_preserve_conflicting_duplicates(self):
+  rows=[{"owner":"p","observations":[{"case":"c","epoch":1,"allow":True},{"case":"c","epoch":1,"allow":False}]}];other=copy.deepcopy(rows);other[0]["observations"].reverse();self.assertTrue(i.same_reports(rows,other));other[0]["observations"].pop();self.assertFalse(i.same_reports(rows,other))
+ def test_cache_write_reservation(self):
+  body={"text":"x"*1000};self.assertAlmostEqual(i.reservation_usd(body),(i.packet_bytes(body)+512)*2.5/1e6+.00512)

@@ -67,8 +67,8 @@ class NativeCalls:
     def __call__(self,phase,packet):
         body=n.request(phase,packet);encoded=json.dumps(body,separators=(',',':')).encode();i.check_wire(body)
         if time.time()>=self.deadline:raise ValueError('deadline')
-        if self.receipt['stage']=='qualification' and self.count>=30:raise ValueError('qualification_call_limit')
-        ident=self.receipt['attempt']+'-'+str(self.count).zfill(4);reserve=i.budget()['per_call_reserved_usd']
+        if self.receipt['stage']=='qualification' and self.count+self.receipt.get('prior_stage_calls',0)>=30:raise ValueError('qualification_call_limit')
+        ident=self.receipt['attempt']+'-'+str(self.count).zfill(4);reserve=i.reservation_usd(body)
         with sqlite3.connect(self.ledger) as db:
             db.execute('BEGIN IMMEDIATE')
             count,total=db.execute('SELECT count(*),coalesce(sum(reserved_usd),0) FROM sol50_calls').fetchone()
@@ -86,6 +86,28 @@ class NativeCalls:
         if result.get('error') or not isinstance(actual,(int,float)) or actual<0 or actual>reserve:raise ValueError('provider_or_cost_stop')
         with sqlite3.connect(self.ledger) as db:db.execute('UPDATE sol50_calls SET status=?,actual_usd=? WHERE id=?',('terminal',actual,ident))
         return n.parse(result['response'])
+
+class ReplayFounders:
+    """Return exactly five retained founder responses; never redispatch them."""
+    def __init__(self,parent,live):
+        self.parent=Path(parent);self.live=live;self.index=0
+        self.rows=sorted(self.parent.glob('*-request.json'))
+        if len(self.rows)!=5:raise ValueError('replay_parent_count')
+        terminal=json.loads((self.parent/'terminal.json').read_text())
+        if terminal.get('started_calls')!=5 or terminal.get('status')!='complete':raise ValueError('replay_parent_not_terminal')
+    def set_condition(self,condition):self.live.set_condition(condition)
+    def __call__(self,phase,packet):
+        if self.index>=5:return self.live(phase,packet)
+        path=self.rows[self.index];saved=json.loads(path.read_text())
+        if phase!='learn' or saved['phase']!='learn' or saved['request']!=n.request(phase,packet):raise ValueError('replay_request_mismatch')
+        response=json.loads(path.with_name(path.name.replace('-request','-response')).read_text())
+        if response.get('error'):raise ValueError('replay_response_error')
+        self.index+=1
+        return n.parse(response['response'])
+
+def parent_hash(root):
+    root=Path(root)
+    return i.digest({p.name:hashlib.sha256(p.read_bytes()).hexdigest() for p in sorted(root.iterdir()) if p.is_file() and p.name in ['manifest.json','results.json','terminal.json'] or p.is_file() and p.name.endswith(('-request.json','-response.json'))})
 
 def qualify(w,call):
     if len(w['members'])!=5:raise ValueError('qualification_population')
@@ -111,7 +133,12 @@ def run(admission,design,ledger,output):
     public=public_check(r);root.mkdir(parents=True);save(root/'manifest.json',{'admission':r,'design':d,'public_preflight':public})
     caller=NativeCalls(root,r,ledger);error=None
     try:
-        result=qualify(d['world'],caller) if r['stage']=='qualification' else c.evaluate_world(d['world'],caller)
+        effective=caller
+        if r.get('replay_parent_path'):
+            if r['stage']!='qualification' or r.get('prior_stage_calls')!=5 or parent_hash(r['replay_parent_path'])!=r.get('replay_parent_sha256'):raise ValueError('replay_admission')
+            effective=ReplayFounders(r['replay_parent_path'],caller)
+            save(root/'replay-receipt.json',{'parent_sha256':r['replay_parent_sha256'],'replayed_founder_calls':5,'new_founder_calls':0})
+        result=qualify(d['world'],effective) if r['stage']=='qualification' else c.evaluate_world(d['world'],caller)
         save(root/'results.json',result)
     except Exception as e:error=type(e).__name__
     finally:

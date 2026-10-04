@@ -1,7 +1,7 @@
 {
-  "status": "offline_checks_passed_native_unqualified",
-  "tests_passed": 29,
-  "native_calls": 0,
+  "status": "offline_repair_validated_qualification_continuation_pending",
+  "tests_passed": 33,
+  "native_calls": 5,
   "evidence_type": "software_and_scripted_fixtures_not_model_results",
   "members": 50,
   "qualification_fixture_calls": 27,
@@ -17,15 +17,15 @@
   "model": "openai/gpt-6-sol",
   "reasoning_effort": "none",
   "source_files": {
-    "test_instrument.py": "f6926422735185f583b7cf4ac9ecbb0f6efd7f6852089e909c7486244169f698",
-    "coordinator.py": "e9f1a45dddd57db2f770ff538211a9b8af9b7f963371fd81b592ece777bb8c51",
+    "test_instrument.py": "232d9e0af95969b987070ba6b911b141e273ce8f6aa6d945b8d5a4d53157deb0",
+    "coordinator.py": "feee485504a28ea7b2abf627c313dfa4ab446d1cb1c58a3fb411c08a06cab4e1",
     "test_relay.py": "136a5fd4ce895803c7c3770c889807f652347d98b1e1c4556b56d1bfa486253b",
-    "runner.py": "84899f5df82ceb021bcb4cecc052b0033d88aec99bab1752ad0edc6b10ab2ca3",
+    "runner.py": "0c1a20e21fc09d0b1d10737c1e468799cffcbca3182a4f351d405493b1f59a70",
     "test_coordinator.py": "fcfbe44c4e12a84ed6397a7d761b72f2c5f8799ccef09f38965aa307bd6d7b21",
     "native.py": "ff57aab0a1f4a76a297f4b2ae7ae85ad93c09d98301cdd9b09849f41d9973f81",
-    "test_runner.py": "da9c796c0956237d04e4ab4da6b7408f2d743b8f434c45016e3e830c697a8e57",
-    "relay.py": "c68f32e47917a518afe210f3afbf5fae744980734e64b4e802d74817db952c2d",
-    "instrument.py": "7d4e9b4598e35a58e6ff2953417fbd42875c52529f6984c56c2d6abe0634e5e6",
+    "test_runner.py": "68a224324288def893ea858cb7cce8815d9e2b2166ccd442fc1cd0fa98a33425",
+    "relay.py": "c12a9a68acc1d24a87c5658a10569e015670764e14e56631b5bb0e4bd5c57fc1",
+    "instrument.py": "bf8b2750443a676a93a2d19ec81a318d75356906a3d03140cd6edb69bbab9d52",
     "test_native.py": "78a5bc226f0746c9410e715289247c7b4be59637d24f6a3362dbf554f0c555a9"
   },
   "outstanding": [

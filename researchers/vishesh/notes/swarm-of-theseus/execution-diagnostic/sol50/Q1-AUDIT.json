@@ -1,0 +1,13 @@
+{
+  "native_calls": 5,
+  "requests_reproduced": 5,
+  "semantically_correct_notes": 5,
+  "correct_actions": 30,
+  "assigned_actions": 30,
+  "historical_note_grade": 3,
+  "new_actual_usd": 0.0230875,
+  "cumulative_exposure_usd": 1.0639795437,
+  "original_source": "74de0a0dd7bea613e5c1c79d600c3bd485a44d74",
+  "raw_traces_public": false,
+  "native_coordination_observed": false
+}

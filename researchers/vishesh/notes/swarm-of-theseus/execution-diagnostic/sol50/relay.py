@@ -6,9 +6,9 @@ import instrument as i
 import native as n
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):raise ValueError('redirect_refused')
-def reserve(db,ident):
+def reserve(db,ident,cost=None):
  with db:
-  db.execute('BEGIN IMMEDIATE');count,total=db.execute('SELECT count(*),coalesce(sum(reserved_usd),0) FROM calls').fetchone();cost=i.budget()['per_call_reserved_usd']
+  db.execute('BEGIN IMMEDIATE');count,total=db.execute('SELECT count(*),coalesce(sum(reserved_usd),0) FROM calls').fetchone();cost=i.budget()['per_call_reserved_usd'] if cost is None else cost
   if count>=2400 or total+cost>53.1456+1e-10:raise ValueError('allocation_exhausted')
   db.execute('INSERT INTO calls(id,reserved_usd,status) VALUES(?,?,?)',(ident,cost,'started'))
 def validate_payload(payload,allocation):
@@ -37,7 +37,7 @@ def serve(credential,capability,ledger,allocation_file,port=18563):
     if time.time()>=allocation['expires_epoch']:raise ValueError('deadline')
     length=int(self.headers.get('Content-Length','0'))
     if not 0<length<=25000:raise ValueError('request_bound')
-    payload=json.loads(self.rfile.read(length));body=validate_payload(payload,allocation);reserve(db,payload['id'])
+    payload=json.loads(self.rfile.read(length));body=validate_payload(payload,allocation);reserve(db,payload['id'],i.reservation_usd(body))
     req=urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',json.dumps(body,separators=(',',':')).encode(),{'Authorization':'Bearer '+key,'Content-Type':'application/json'})
     try:
      with opener.open(req,timeout=150) as response:raw=response.read(1_000_001)

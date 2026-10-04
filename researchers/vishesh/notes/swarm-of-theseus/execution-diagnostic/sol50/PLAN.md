@@ -61,3 +61,9 @@ Successor commitment receives no answer-bearing test panel: only its inherited m
 ## Publication decision before dispatch
 
 Owner approved publication of the new plan and aggregate results to the existing Swarm Live and shared Swarm Lab destinations. Raw traces, private configuration and exact owner prompts remain excluded. This decision does not waive native qualification or current admission.
+
+## Q1 continuation amendment
+
+See [CONTINUATION.md](CONTINUATION.md): five original founder responses were semantically correct, but an order-sensitive scorer stopped Q1. Correct the scorer and replay those saved requests/responses exactly; collect only the22 remaining scheduled qualification calls under a new immutable continuation output. Combined expected qualification remains27 calls, maximum30; no inference retry, new seed or relaxed semantic threshold. Original records remain unchanged. This is a continuation of the approved qualification, not an additional experiment.
+
+The observed provider charges cache writes atUSD2.50/M. Use a conservative byte-based reservation at that rate for each actual request, plus512 framing tokens and512 output tokens. The originalUSD53.1456 model cap and2400-call cap remain hard limits; the cost cap can bind first. The original blanket per-call estimate is superseded, not retroactively presented as accurate. Prior exposure after the five calls isUSD1.0639795437, including historical uncertainty. No main-stage reservation is treated as a fresh allowance.

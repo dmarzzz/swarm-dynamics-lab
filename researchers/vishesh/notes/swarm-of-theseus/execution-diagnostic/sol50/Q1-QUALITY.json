@@ -1,0 +1,137 @@
+{
+  "attempt": "SOL50-Q1",
+  "assessor": "owning Codex agent; not independent",
+  "date": "2026-10-04",
+  "decision": "repair",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Founder acquisition screen within approved collective-study qualification.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "Joint coordination, transmission and turnover were not reached.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ],
+      "next_action": "Apply tested semantic-order/cost repair and complete only the remaining scheduled qualification.",
+      "acceptance_check": "Unchanged actor requests replay byte-equivalently; no founder redispatch; all joint and handover gates pass with reconciled cache-write costs."
+    },
+    {
+      "dimension": "controls",
+      "status": "not_applicable",
+      "finding": "No treatment contrast was reached in founder acquisition.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "5/5 semantic notes and30/30 actions; joint and handover capability unobserved.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ],
+      "next_action": "Apply tested semantic-order/cost repair and complete only the remaining scheduled qualification.",
+      "acceptance_check": "Unchanged actor requests replay byte-equivalently; no founder redispatch; all joint and handover gates pass with reconciled cache-write costs."
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Frozen scorer spuriously required sorted witness order; semantic replay corrects3/5 to5/5.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ],
+      "next_action": "Apply tested semantic-order/cost repair and complete only the remaining scheduled qualification.",
+      "acceptance_check": "Unchanged actor requests replay byte-equivalently; no founder redispatch; all joint and handover gates pass with reconciled cache-write costs."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One five-member qualification world; no independent-n or population inference.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All five actual actor requests reproduce exactly; no operator or shared-history input.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Five started/terminal responses preserved;22 planned downstream calls unstarted, no retries.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Five calls cost0.0230875, no uncertainty; observed cache-write price requires higher prospective reservation.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ],
+      "next_action": "Apply tested semantic-order/cost repair and complete only the remaining scheduled qualification.",
+      "acceptance_check": "Unchanged actor requests replay byte-equivalently; no founder redispatch; all joint and handover gates pass with reconciled cache-write costs."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source and request/response hashes retained; saved-data replay documented.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Aggregate flow discloses five founders and no native turnover, not simulated successes.",
+      "evidence": [
+        {
+          "path": "Q1-AUDIT.json",
+          "sha256": "2f1ca068739c238a9feae788935f94e11f57584b643cdf277232e823e8888d5e"
+        }
+      ]
+    }
+  ]
+}
