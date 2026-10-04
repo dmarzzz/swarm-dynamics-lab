@@ -4,10 +4,10 @@ sys.path.insert(0,str(Path(__file__).resolve().parents[1]/'src'))
 from remote import check
 class AdmissionTests(unittest.TestCase):
  def setUp(self):
-  self.c={'study':'telephone','stage':'A0','host':'test-host','owner_scope_ref':'Telephone owner approval of both scopes, 2026-10-04','cap_nano':2000000000,'authority_ref':'Telephone cumulative default USD2; owner-directed launch 2026-10-04','deadline':1500,'central_origin':'orbital-one','central_start_receipt':'actual-operator-receipt','public_page_verified':True,'allocation':{'approved_account_match':True,'inventory_match':True,'merged_exclusive_claim':True,'workload_idle':True,'checked_at':1000,'expires_at':1800,'claim':'vishesh-telephone','operator':'vishesh/codex-village-fit','infrastructure_reserve_nano':100000000}}
+  self.c={'study':'telephone','stage':'A0','host':'test-host','owner_scope_ref':'Telephone owner approval of both scopes, 2026-10-04','cap_nano':5000000000,'authority_ref':'Telephone owner USD5 cumulative direct OpenRouter authorization, 2026-10-04','deadline':1500,'dispatch_authority':'owner-direct-2026-10-04','central_queue_fenced':True,'public_page_verified':True,'allocation':{'approved_account_match':True,'inventory_match':True,'merged_exclusive_claim':True,'workload_idle':True,'checked_at':1000,'expires_at':1800,'claim':'vishesh-telephone','operator':'vishesh/codex-village-fit','infrastructure_reserve_nano':100000000}}
  def test_scope_passes_only_exact_contract(self):self.assertTrue(check(self.c,1000,'test-host'))
  def test_no_host_or_budget_or_scope_substitution(self):
-  for k,v in [('host','other'),('cap_nano',10000000000),('stage','V0'),('owner_scope_ref','made-up'),('central_origin','laptop'),('public_page_verified',False)]:
+  for k,v in [('host','other'),('cap_nano',10000000000),('stage','V0'),('owner_scope_ref','made-up'),('central_queue_fenced',False),('public_page_verified',False)]:
    c=copy.deepcopy(self.c);c[k]=v
    with self.assertRaises(ValueError):check(c,1000,'test-host')
  def test_allocation_unknown_or_stale_refused(self):

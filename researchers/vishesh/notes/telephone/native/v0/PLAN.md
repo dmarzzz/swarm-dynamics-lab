@@ -47,3 +47,7 @@ Before any source excerpt reaches hosted inference, verify pinned research terms
 ## Current preparation result
 
 The eight selected full source statements and 25 critical targets are privately frozen. Source-copy critical retention is 1.0 for every case. This is a narrow source-meaning pilot and not a completed task-window or historical-chain corpus. The intended original held-out evaluation remains unprepared; V0 cannot substitute for it. Native V0 remains blocked until A0's actual semantic qualification, current registration/allocation and cumulative-budget admission exist. No claim of native execution is made by this preparation result.
+
+## Direct OpenRouter amendment before first native call
+
+The [prospective execution amendment](../DIRECT-OPENROUTER-PLAN.md) supersedes provider, origin and budget details above. The owner authorizes direct dispatch, USD5 cumulative including existing infrastructure, and Haiku via OpenRouter. Use anthropic/claude-haiku-4.5 with Anthropic-only routing, no fallback/data collection and conservative UTF8-byte input counting plus framing allowance. Preserve original cases,72-call stage cap,512-token output limit and all semantic gates. No native call used the earlier provider contract. This is not a new allowance per stage.

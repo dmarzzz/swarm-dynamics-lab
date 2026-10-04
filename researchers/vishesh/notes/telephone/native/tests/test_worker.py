@@ -24,7 +24,7 @@ class WorkerTests(unittest.TestCase):
   def fail(req):raise TimeoutError('suppressed')
   s=execute(self.packet,self.base/'out',self.l,lambda r:500,fail,time.time()+300)
   self.assertEqual((s['failed'],s['unstarted']),(1,71));self.assertEqual(s['budget']['unresolved_model_calls'],1)
-  self.assertEqual(s['budget']['model_upper_nano'],10752000)
+  self.assertEqual(s['budget']['model_upper_nano'],10752001)
  def test_count_refusal_makes_no_paid_call(self):
   def fail(req):self.fail('generation must not run')
   s=execute(self.packet,self.base/'out',self.l,lambda r:8193,fail,time.time()+300)

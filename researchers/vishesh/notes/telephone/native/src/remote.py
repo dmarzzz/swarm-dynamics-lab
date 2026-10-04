@@ -17,14 +17,14 @@ def check(config,now=None,host=None):
  if config.get('study')!='telephone' or config.get('stage') not in ('A0','V0') or config.get('host')!=host:raise ValueError('scope_host')
  if config.get('stage')=='V0' and config.get('private_transfer_review') is not True:raise ValueError('real_transfer_not_reviewed')
  if config.get('owner_scope_ref')!='Telephone owner approval of both scopes, 2026-10-04':raise ValueError('scope_authority')
- if config.get('cap_nano')!=2000000000 or config.get('authority_ref')!='Telephone cumulative default USD2; owner-directed launch 2026-10-04':raise ValueError('budget_authority')
+ if config.get('cap_nano')!=5000000000 or config.get('authority_ref')!='Telephone owner USD5 cumulative direct OpenRouter authorization, 2026-10-04':raise ValueError('budget_authority')
  if not now+90<config.get('deadline',0)<=now+7200:raise ValueError('deadline')
  alloc=config.get('allocation',{})
  if not all(alloc.get(k) is True for k in ('approved_account_match','inventory_match','merged_exclusive_claim','workload_idle')):raise ValueError('allocation')
  if not 0<=now-alloc.get('checked_at',0)<=300 or alloc.get('expires_at',0)<config['deadline']+120:raise ValueError('allocation_stale')
  if alloc.get('claim')!='vishesh-telephone' or alloc.get('operator')!='vishesh/codex-village-fit':raise ValueError('claim')
  if type(alloc.get('infrastructure_reserve_nano')) is not int or not 0<alloc['infrastructure_reserve_nano']<=500000000:raise ValueError('infrastructure_reserve')
- if config.get('central_origin')!='orbital-one' or not config.get('central_start_receipt'):raise ValueError('central_start')
+ if config.get('dispatch_authority')!='owner-direct-2026-10-04' or config.get('central_queue_fenced') is not True:raise ValueError('direct_dispatch')
  if config.get('public_page_verified') is not True:raise ValueError('public_page')
  return True
 
@@ -40,7 +40,7 @@ def prepare(config):
  else:
   packet=json.loads(Path('/srv/swarm/telephone-private/v0-packet.json').read_text())
   receipt=json.loads(Path('/srv/swarm/telephone-private/A0-QUALIFICATION.json').read_text())
-  if receipt.get('native_case_screen_passed') is not True or receipt.get('scored')!=72 or receipt.get('model')!=MODEL or receipt.get('source_commit')!='8c2350b4c19166116a0491b759e5d78b631efae8':raise ValueError('A0_not_semantically_qualified')
+  if receipt.get('native_case_screen_passed') is not True or receipt.get('scored')!=72 or receipt.get('model')!=MODEL or receipt.get('source_commit')!=config['source_commit'] or receipt.get('provider')!='openrouter-anthropic':raise ValueError('A0_not_semantically_qualified')
   review=Path('/srv/swarm/telephone-private/A0-semantic-review.json')
   if hashlib.sha256(review.read_bytes()).hexdigest()!=receipt.get('review_sha256'):raise ValueError('qualification_review_hash')
   cohort=json.loads((BASE/'v0/COHORT.json').read_text())
@@ -69,7 +69,6 @@ def main(config_path,private,check_only=False):
   sys.path[:0]=[str(ROOT/'tooling/agent-experiments'),'/usr/local/lib/swarm',str(ROOT/'researchers/vishesh/notes/experiment-documentation')]
   import swarm_report as sr
   from public_plan import check as check_plan
-  from swarm_lab_credentials import validate_payload
   with contextlib.redirect_stderr(open(os.devnull,'w')):
    tldr=TLDR if stage=='A0' else 'TLDR: Test three-hop preservation of reported meaning from eight AI Village development records; compare prose, structured handoffs and original-source lookup using critical retention and unsupported assertions. No historical transmission or world-truth claim.'
    sr.register('telephone',title='Telephone',description=tldr,owner='vishesh',url=config['plan_url'],params={'stage':{'type':'str'},'arm':{'type':'str'}},metrics=['valid_outputs','model_calls'],primary_metric='valid_outputs')
@@ -90,33 +89,35 @@ def main(config_path,private,check_only=False):
      data.extend(chunk)
     if not 0<len(data)<=4096:raise ValueError('credential_size')
     payload=json.loads(data);data[:]=b'\0'*len(data)
-    if set(payload)!={'secret','routing'}:raise ValueError('credential_fields')
-    validate_payload(payload['secret'])
-    import re
-    if set(payload['routing'])!={'workspace_id'} or not re.fullmatch(r'wrkspc_[A-Za-z0-9]+',payload['routing']['workspace_id']):raise ValueError('routing')
-    prepare(config);key=payload['secret']['SWARM_MODEL_API_KEY'];workspace=payload['routing']['workspace_id'];del payload
+    if set(payload)!={'openrouter_key'} or not isinstance(payload['openrouter_key'],str) or not 16<len(payload['openrouter_key'])<2048 or any(x.isspace() for x in payload['openrouter_key']):raise ValueError('credential_fields')
+    prepare(config);key=payload['openrouter_key'];del payload
     conn.sendall(b'accepted')
   path.unlink(missing_ok=True)
   ledger=Ledger(private/'budget.sqlite',config['cap_nano'],config['authority_ref'])
-  if ledger.summary()['total_upper_nano']+len(packet['assignments'])*10752000+config['allocation']['infrastructure_reserve_nano']>config['cap_nano']:raise ValueError('whole_stage_budget')
-  ledger.reserve(stage+'-infrastructure',stage,'infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
-  def api(endpoint,req):
-   call=urllib.request.Request('https://api.anthropic.com/v1/'+endpoint,data=json.dumps(req).encode(),headers={'x-api-key':key,'anthropic-workspace-id':workspace,'anthropic-version':'2023-06-01','content-type':'application/json'})
+  if ledger.summary()['total_upper_nano']+len(packet['assignments'])*10752001+config['allocation']['infrastructure_reserve_nano']>config['cap_nano']:raise ValueError('whole_stage_budget')
+  if not ledger.db.execute("SELECT 1 FROM charges WHERE id='claim-infrastructure'").fetchone():ledger.reserve('claim-infrastructure','claim','infrastructure',config['allocation']['infrastructure_reserve_nano'],sha(config['allocation']))
+  from openrouter_provider import generate,count_tokens
+  wire_count=0
+  def post_json(req):
+   nonlocal wire_count
+   wire_count+=1
+   call=urllib.request.Request('https://openrouter.ai/api/v1/chat/completions',data=json.dumps(req).encode(),headers={'Authorization':'Bearer '+key,'content-type':'application/json'})
    with urllib.request.urlopen(call,timeout=50) as response:raw=response.read(2*1024**2+1)
    if len(raw)>2*1024**2:raise ValueError('response_size')
-   return json.loads(raw)
-  def count(req):return api('messages/count_tokens',{k:v for k,v in req.items() if k not in ('temperature','max_tokens')})['input_tokens']
+   obj=json.loads(raw)
+   write(private/stage/('wire-response-%03d.json'%wire_count),obj)
+   return obj
   runs={}
   with contextlib.redirect_stderr(open(os.devnull,'w')):
    for arm in ('P','S','R'):runs[arm]=sr.start('telephone',run='telephone/'+stage+'-'+arm,params={'stage':stage,'arm':arm,'roots':8,'hops':3},message=CONDITION_TLDR[arm] if stage=='A0' else CONDITION_TLDR[arm].replace('authored','AI Village development').replace('original facts','reported claims'))
    def report(s):
     for run in runs.values():run.progress(s['valid'],s['assigned'],valid_outputs=s['valid'])
-   result=execute(packet,private/stage,ledger,count,lambda req:api('messages',req),config['deadline'],report)
+   result=execute(packet,private/stage,ledger,count_tokens,lambda req:generate(req,post_json),config['deadline'],report)
    for arm,run in runs.items():
     valid=sum(x['status']=='valid' and x['arm']==arm for x in result['assignments'])
     if result['stopped']:run.fail(message='Collection stopped; semantic review and cost reconciliation pending.',valid_outputs=valid)
     else:run.done(message='Collection complete; semantic review pending, no efficacy conclusion.',valid_outputs=valid)
-  del key,workspace
+  del key
   write(private/(stage+'-exit.json'),{'state':'collection_stopped' if result['stopped'] else 'collection_complete','valid':result['valid'],'budget':result['budget'],'semantic_review_complete':False})
   print(json.dumps({'valid':result['valid'],'stopped':result['stopped'],'budget':result['budget']}),flush=True)
 if __name__=='__main__':

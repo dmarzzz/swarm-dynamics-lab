@@ -46,7 +46,7 @@ class ContractTests(unittest.TestCase):
    with self.assertRaises(ValueError):c.response({**self.raw,'usage':usage},'P')
   with self.assertRaises(ValueError):c.response({**self.raw,'content':[{'type':'thinking','text':'not evidence'}]},'P')
  def test_envelope_preserves_total_cap(self):
-  e=c.envelope(72);self.assertEqual(e['maximum_token_cost_nano'],774144000)
-  self.assertEqual(e['api_cap_nano']+e['infrastructure_cap_nano'],2000000000)
+  e=c.envelope(72);self.assertEqual(e['maximum_token_cost_nano'],774144072)
+  self.assertEqual(e['api_cap_nano']+e['infrastructure_cap_nano'],5000000000)
   with self.assertRaises(ValueError):c.envelope(73)
 if __name__=='__main__': unittest.main()

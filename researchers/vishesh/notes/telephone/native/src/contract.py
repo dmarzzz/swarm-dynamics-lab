@@ -91,13 +91,18 @@ def response(raw,arm):
         for c in obj['claims']:
             if not isinstance(c,dict) or set(c)!={'claim','status','uncertainty','source_ids'} or any(not isinstance(c[k],str) for k in ('claim','status','uncertainty')) or not isinstance(c['source_ids'],list) or any(not isinstance(x,str) for x in c['source_ids']):
                 raise ValueError('structured_output')
+    cost=inp*1000+out*5000
+    if 'openrouter' in raw:
+        reported=raw['openrouter'].get('actual_cost_nano')
+        if type(reported) is not int or not 0<=reported<=cost+1:raise ValueError('router_cost')
+        cost=reported
     return {'text':text,'input_tokens':inp,'output_tokens':out,'model':MODEL,
-            'token_cost_nano':inp*1000+out*5000,'response_sha256':sha(raw)}
+            'token_cost_nano':cost,'response_sha256':sha(raw)}
 
 
 def envelope(calls):
     if type(calls) is not int or not 1<=calls<=72: raise ValueError('call_limit')
-    return {'calls':calls,'per_call_reserve_nano':MAX_INPUT*1000+MAX_OUTPUT*5000,
-            'maximum_token_cost_nano':calls*(MAX_INPUT*1000+MAX_OUTPUT*5000),
-            'api_cap_nano':1500000000,'infrastructure_cap_nano':500000000,
-            'total_cumulative_cap_nano':2000000000}
+    return {'calls':calls,'per_call_reserve_nano':MAX_INPUT*1000+MAX_OUTPUT*5000+1,
+            'maximum_token_cost_nano':calls*(MAX_INPUT*1000+MAX_OUTPUT*5000+1),
+            'api_cap_nano':4500000000,'infrastructure_cap_nano':500000000,
+            'total_cumulative_cap_nano':5000000000}
