@@ -1,11 +1,11 @@
 ---
 id: build-sybil-split-xmodel
 type: task
-title: "Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready"
+title: 'Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready'
 kind: build
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/pipeline-split-qwen
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline-split-qwen
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - sybil-resistance
 - llm-agent-swarms
+claimed_at: 2026-10-04T12:21Z
+updated: 2026-10-04T12:21Z
 ---
 
 ## Goal
