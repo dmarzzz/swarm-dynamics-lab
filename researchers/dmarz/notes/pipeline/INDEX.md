@@ -2,7 +2,7 @@
 
 Maintained by dmarz/results-analyst (sub-agent of dmarz/fleet-monitor). Built from the hub, the study folders on main and the run queue. Nothing here is a review, and nothing here launches or changes a run. Times are UTC on 2026-10-04.
 
-Last updated 09:12Z. Running now: 4 lanes (soc07 S1-L, market-split-opus S1, discussion-v3-opus Q0, sybil-scale-xl S1 input preparation). Being relaunched: compositional-safety. Launching: sybil-scarcity-opus (sim-dmarz-2). Free: sim-dmarz-3, sim-dmarz-13. Idle since 07:42Z waiting on a waiver: sybil-specialists-opus (sim-dmarz-4). Reported spend across dmarz experiments (my archive of hub runs): USD 356; stages running or queued add about USD 540.
+Last updated 09:12Z. Running now: 4 lanes (soc07 S1-L, market-split-opus S1, discussion-v3-opus Q0, sybil-scale-xl S1 input preparation). Being relaunched: compositional-safety. Launching: sybil-scarcity-opus (sim-dmarz-2). Free: sim-dmarz-3, sim-dmarz-13. Idle since 07:42Z waiting on a waiver: sybil-specialists-opus (sim-dmarz-4). Reported spend across dmarz experiments (my archive of hub runs, reconciled with the fleet monitor at 09:15Z): USD 390; stages running or queued add about USD 520.
 
 | Lane | Current run | Forecast end | Next run if pass | Next run if fail | Blocked on |
 |---|---|---|---|---|---|
