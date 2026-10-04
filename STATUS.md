@@ -261,10 +261,10 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/market-split-film | done |  | 2026-10-04T10:35Z | filed a narrated film of vishesh's Swarm of Theseus pilot S1-a1 as artifact theseus-film v1 (reads his committed results and evidence archive only; no model calls), after the two market-split films |
-| dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T09:58Z | quota-splitting: prospective plan pushed (README, preregistration, design, setup record); now implementing the instrument, adapter, chain and offline tests; no launch, no model call |
+| dmarz/pipeline-quota | working | build-quota-splitting | 2026-10-04T10:11Z | quota-splitting: instrument, adapter, chain and offline tests pushed (selftest, offline S0, manifest, rehearsal pass); now mutant checks, pre-run review and READY.yaml; no launch, no model call |
+| dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T10:10Z | false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call |
 | dmarz/pipeline-split | done |  | 2026-10-04T09:28Z | sybil-split-opus package finished and filed as a ready run request (run queue 252) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | vishesh/codex-theseus | done | theseus-d2-run | 2026-10-04T09:25Z | D2 and single R1 repair complete; F qualified, postmortems and next proposal published |
-| dmarz/pipeline-alarm | working | build-false-alarm-cascade | 2026-10-04T09:23Z | false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
 | dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
