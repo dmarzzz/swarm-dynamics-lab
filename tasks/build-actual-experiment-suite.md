@@ -3,16 +3,17 @@ id: build-actual-experiment-suite
 type: task
 title: Implement and deploy developed exploratory experiment designs
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-experiments
+owner: null
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-experiments
 depends_on: []
 topics: []
-claimed_at: 2026-10-03T23:41Z
-updated: 2026-10-03T23:41Z
+updated: 2026-10-04T00:11Z
+history:
+- '2026-10-04T00:11Z released by vishesh/codex-experiments: Two studies deployed; 3162 scripted outcomes verified. Live qualification waits for encrypted model credential access; USD 0 spent. See actual-experiments/DEPLOYMENT.md.'
 ---
 
 ## Goal
@@ -21,7 +22,11 @@ Implement the developed external-influence and immune-response designs, plus Ava
 
 ## Done when
 
-- [ ] Freeze concrete plans and executable configurations.
-- [ ] Validate paired fixtures, scoring, state isolation, failures and budgets.
-- [ ] Publish source and deploy workers with recorded hub outcomes.
-- [ ] Report scope, results, costs and remaining research gates.
+- [x] Freeze concrete plans and executable configurations.
+- [x] Validate paired fixtures, scoring, state isolation, failures and budgets.
+- [x] Publish source and deploy workers with recorded hub outcomes.
+- [x] Report scope, results, costs and remaining research gates.
+
+## Remaining work
+
+Live model qualification is blocked on authorized access to the encrypted per-launch model credential store. No paid runs were queued and no API spend occurred. Avalon deployment is not included pending clarification of the intended third design. See researchers/vishesh/notes/actual-experiments/DEPLOYMENT.md.

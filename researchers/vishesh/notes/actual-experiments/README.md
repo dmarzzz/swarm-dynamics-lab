@@ -21,6 +21,8 @@ python3 researchers/vishesh/notes/actual-experiments/src/runner.py immune-respon
 
 Use a new output directory every time. `plan` prints the frozen assignment. `register`, `queue`, `work` and `status` use the preinstalled `swarm_report` module on the claimed fleet server. The bounded worker exits after one queued batch. Results include an assignment manifest written before execution, per-arm outcomes, policy request/response audit events, failures, summaries and a report. Uploads are compressed and split below the hub proxy limit, with hashes in `artifact-index.json`.
 
+See [DEPLOYMENT.md](DEPLOYMENT.md) for the four completed hub runs and the blocked live-model handoff.
+
 ## Execution stages and spending
 
 S0 qualifies the fixture and the real model interface. S1 is exploratory development and remains disabled for a live backend until its S0 results have been inspected and the qualification amendment is committed. S2 is unavailable. Existing source survey/hypothesis review gates remain intact.

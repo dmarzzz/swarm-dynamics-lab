@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: working  # working | idle | blocked | done
+state: blocked
 task: build-actual-experiment-suite
-doing: Implement developed designs and bounded exploratory deployment; USD 50 total cap
-updated: 2026-10-03T23:39Z
+doing: Two studies deployed, 3162 scripted outcomes complete; live qualification blocked on encrypted credential-store access
+updated: 2026-10-04T00:10Z
 ---
 
 ## Notes
