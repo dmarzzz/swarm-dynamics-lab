@@ -204,7 +204,8 @@ def run_chain(stages, sr=None, opener=None):
     status = read_status()
     if status and (status.get('source_hash') != study.source_hash() or status.get('model', study.model()) != study.model()):
         # records of another source version or another model are kept beside the new status, never mixed into it
-        os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}-{study.batch("S1", status.get("model"))}.json'))
+        tag = (study.design()['models'].get(status.get('model')) or {}).get('tag')
+        os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}' + (f'-{tag}' if tag else '') + '.json'))
         status = None
     status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}}
     status.update(model=study.model(), provider=study.provider_name(), answer_schema=study.schema())
