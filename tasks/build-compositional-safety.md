@@ -14,7 +14,7 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 - swarm-detection
-updated: 2026-10-04T04:29Z
+updated: 2026-10-04T04:52Z
 history:
 - '2026-10-04T04:04Z released by dmarz/patchwork-hypotheses: Simulator, runner and live dashboard shipped; S0 and all four Q0 attempts reconciled. q0-004 failed: 10/24 safe, twelve incomplete, two provider refusals. Worker and uploads finished; sim-dmarz claim released. Resume after requested approved model connection, bounded diagnosis and fresh current-source qualification; P1/S1/S2 remain closed.'
 claimed_at: 2026-10-04T04:08Z
