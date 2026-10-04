@@ -3,14 +3,16 @@ id: plan-discussion-dose-v3
 type: task
 title: Plan a stronger discussion dose evaluation without launching it
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: dmarz/discussion-dose
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/discussion-dose
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T01:32Z
+updated: 2026-10-04T01:32Z
 ---
 
 ## Goal
