@@ -2,6 +2,7 @@
 import hashlib
 import json
 import random
+import re
 
 MODEL='claude-haiku-4-5-20251001'
 MAX_INPUT=8192
@@ -84,7 +85,10 @@ def response(raw,arm):
     inp=validate_count(usage.get('input_tokens')); out=usage.get('output_tokens')
     if type(out) is not int or not 0<out<=MAX_OUTPUT: raise ValueError('output_token_bound')
     if arm=='S':
-        try: obj=json.loads(text)
+        structured=text.strip()
+        fenced=re.fullmatch(r'```(?:json)?[ \t]*\n([\s\S]*?)\n```',structured)
+        if fenced:structured=fenced.group(1)
+        try: obj=json.loads(structured)
         except (ValueError,TypeError): raise ValueError('structured_output') from None
         if not isinstance(obj,dict) or set(obj)!={'claims'} or not isinstance(obj['claims'],list) or not obj['claims']:
             raise ValueError('structured_output')

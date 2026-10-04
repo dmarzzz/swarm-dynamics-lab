@@ -14,7 +14,7 @@ CONDITION_TLDR={
 
 def check(config,now=None,host=None):
  now=time.time() if now is None else now;host=socket.gethostname() if host is None else host
- if config.get('study')!='telephone' or config.get('stage') not in ('A0','V0') or config.get('host')!=host:raise ValueError('scope_host')
+ if config.get('study')!='telephone' or config.get('stage') not in ('A0','A1','V0') or config.get('host')!=host:raise ValueError('scope_host')
  if config.get('stage')=='V0' and config.get('private_transfer_review') is not True:raise ValueError('real_transfer_not_reviewed')
  if config.get('owner_scope_ref')!='Telephone owner approval of both scopes, 2026-10-04':raise ValueError('scope_authority')
  if config.get('cap_nano')!=5000000000 or config.get('authority_ref')!='Telephone owner USD5 cumulative direct OpenRouter authorization, 2026-10-04':raise ValueError('budget_authority')
@@ -36,12 +36,12 @@ def prepare(config):
   path=(ROOT/rel).resolve()
   if not path.is_relative_to(ROOT) or hashlib.sha256(path.read_bytes()).hexdigest()!=h:raise ValueError('source_hash')
  stage=config['stage']
- if stage=='A0':packet=json.loads((BASE/'a0/packet.json').read_text())
+ if stage in ('A0','A1'):packet=json.loads((BASE/stage.lower()/'packet.json').read_text())
  else:
   packet=json.loads(Path('/srv/swarm/telephone-private/v0-packet.json').read_text())
-  receipt=json.loads(Path('/srv/swarm/telephone-private/A0-QUALIFICATION.json').read_text())
-  if receipt.get('native_case_screen_passed') is not True or receipt.get('scored')!=72 or receipt.get('model')!=MODEL or receipt.get('source_commit')!=config['source_commit'] or receipt.get('provider')!='openrouter-anthropic':raise ValueError('A0_not_semantically_qualified')
-  review=Path('/srv/swarm/telephone-private/A0-semantic-review.json')
+  receipt=json.loads(Path('/srv/swarm/telephone-private/A1-QUALIFICATION.json').read_text())
+  if receipt.get('native_case_screen_passed') is not True or receipt.get('scored')!=72 or receipt.get('model')!=MODEL or receipt.get('source_commit')!=config['source_commit'] or receipt.get('provider')!='openrouter-anthropic':raise ValueError('A1_not_semantically_qualified')
+  review=Path('/srv/swarm/telephone-private/A1-semantic-review.json')
   if hashlib.sha256(review.read_bytes()).hexdigest()!=receipt.get('review_sha256'):raise ValueError('qualification_review_hash')
   cohort=json.loads((BASE/'v0/COHORT.json').read_text())
   if sha(packet)!=cohort['packet_sha256'] or config.get('private_transfer_review') is not True:raise ValueError('real_cohort_or_transfer')
@@ -70,7 +70,7 @@ def main(config_path,private,check_only=False):
   import swarm_report as sr
   from public_plan import check as check_plan
   with contextlib.redirect_stderr(open(os.devnull,'w')):
-   tldr=TLDR if stage=='A0' else 'TLDR: Test three-hop preservation of reported meaning from eight AI Village development records; compare prose, structured handoffs and original-source lookup using critical retention and unsupported assertions. No historical transmission or world-truth claim.'
+   tldr=TLDR if stage in ('A0','A1') else 'TLDR: Test three-hop preservation of reported meaning from eight AI Village development records; compare prose, structured handoffs and original-source lookup using critical retention and unsupported assertions. No historical transmission or world-truth claim.'
    sr.register('telephone',title='Telephone',description=tldr,owner='vishesh',url=config['plan_url'],params={'stage':{'type':'str'},'arm':{'type':'str'}},metrics=['valid_outputs','model_calls'],primary_metric='valid_outputs')
   check_plan('telephone',tldr)
   if any(r.get('params',{}).get('stage')==stage for r in sr.runs('telephone',limit=5000)):raise ValueError('prior_hub_attempt')
@@ -109,7 +109,7 @@ def main(config_path,private,check_only=False):
    return obj
   runs={}
   with contextlib.redirect_stderr(open(os.devnull,'w')):
-   for arm in ('P','S','R'):runs[arm]=sr.start('telephone',run='telephone/'+stage+'-'+arm,params={'stage':stage,'arm':arm,'roots':8,'hops':3},message=CONDITION_TLDR[arm] if stage=='A0' else CONDITION_TLDR[arm].replace('authored','AI Village development').replace('original facts','reported claims'))
+   for arm in ('P','S','R'):runs[arm]=sr.start('telephone',run='telephone/'+stage+'-'+arm,params={'stage':stage,'arm':arm,'roots':8,'hops':3},message=CONDITION_TLDR[arm] if stage in ('A0','A1') else CONDITION_TLDR[arm].replace('authored','AI Village development').replace('original facts','reported claims'))
    def report(s):
     for run in runs.values():run.progress(s['valid'],s['assigned'],valid_outputs=s['valid'])
    result=execute(packet,private/stage,ledger,count_tokens,lambda req:generate(req,post_json),config['deadline'],report)
