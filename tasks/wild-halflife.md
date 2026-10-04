@@ -3,9 +3,9 @@ id: wild-halflife
 type: task
 title: 'Idea half-life: adoption curves on collusion.wiki vs swarm-lab commit history'
 kind: build
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: shadow/sol-halflife
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-halflife
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - llm-agent-swarms
 - swarm-detection
+claimed_at: 2026-10-04T15:03Z
+updated: 2026-10-04T15:03Z
 ---
 
 ## Goal
