@@ -19,7 +19,7 @@ Status: exploratory scale-up; setup record maintained per [the setup runbook](..
 | G2 Instrument and offline checks | pass (selftests); S0 moves to fleet | 11/11 selftests incl. exact equality with the parent simulator at N=36–972; local S0 interrupted by host OOM ([post](reviews/local-s0-001-post.md)) | fleet S0 |
 | G3 Current attempt admission | pending | claim dmarz-sybil-scale-xl on sim-dmarz (agentops PR 176, merged 06:03Z, until ~20:03Z); launcher agentops cc3f862 | pin revision; setup; per-stage pre-run files |
 | G4 Qualification before scientific escalation | pending | Q0 per size | — |
-| G5 Reconciliation and closeout | partial | s1-a2 reconciled locally; [RESULTS.md](RESULTS.md); [post](reviews/s1-a2-post.md) | dmarz decides A3 (resume 95, ~USD 41) or stop; then hub hash verify with a run filter and claim release |
+| G5 Reconciliation and closeout | closed as it stands (481/576) | s1-a2 reconciled locally; [RESULTS.md](RESULTS.md); [post](reviews/s1-a2-post.md); claim released 2026-10-04 | A3 (resume 95, ~USD 41) needs dmarz's own approval in an operator session; hub hash verify needs a run filter in the launcher |
 
 ## Design and instrument index
 
@@ -65,4 +65,4 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 
 ## Closeout
 
-Pending.
+2026-10-04 ~10:50 UTC, dmarz/scale-xl. S1 closed at 481 valid of 576 after an account credit outage (inferred). Study spend USD 214.49 on the study ledger plus a USD 0.09 probe. Claim dmarz-sybil-scale-xl released; sim-dmarz keeps the saved inputs and records under /srv/swarm/sybil-scale-xl-lab. Resume option: AMENDMENT-A3-PROPOSED.md.
