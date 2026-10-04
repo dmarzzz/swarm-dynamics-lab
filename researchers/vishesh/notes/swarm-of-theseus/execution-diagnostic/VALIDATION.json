@@ -1,0 +1,27 @@
+{
+  "status": "OFFLINE SOFTWARE VALIDATION ONLY",
+  "tests_passed": 19,
+  "model_calls": 0,
+  "historical_errors_covered": 13,
+  "planned_calls": 144,
+  "planned_decisions": 480,
+  "independent_worlds": 3,
+  "planned_assignments_sha256": "c31e2d76f23856dcd4e6894b8693a0b39be5245541c8a4f84fc6f96e1a9050e9",
+  "instrument_sha256": "1d23e482d614e11a4a0256c149ae46d4ff7f5bb516cb73111d544054d989232c",
+  "all_call_conservative_reservations_usd": 1.229731,
+  "max_request_bytes": 3626,
+  "viewer_checks": [
+    "fixture label visible",
+    "valid output",
+    "invalid command visible",
+    "missing output visible"
+  ],
+  "native_provider_live_validation": "not run",
+  "review_status": "same-author; independent admission pending",
+  "shared_artifact_validation": {
+    "errors": 1,
+    "warnings": 0,
+    "preexisting_missing_artifact": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
+    "theseus_artifact_errors": 0
+  }
+}

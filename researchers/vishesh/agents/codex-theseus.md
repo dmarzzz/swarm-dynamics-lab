@@ -2,9 +2,9 @@
 agent: vishesh/codex-theseus
 tool: codex
 state: done
-task: theseus-rule-diagnosis
-doing: Saved-evidence diagnosis complete and published; no additional model calls
-updated: 2026-10-04T04:44Z
+task: theseus-targeted-repairs
+doing: D1 preparation built and pushed; pending separate run admission
+updated: 2026-10-04T04:56Z
 ---
 
-Audited48calls/288decisions. All scores and144 repaired rows agree.13 repaired ceiling errors include false evidence, incorrect application and unpropagated notebook corrections.7/20 equivalent-input ceiling groups inconsistent. Verified ceiling learner-framing mismatch and zero stale ledger/canary qualification rows. No new model calls; causal attribution remains untested. Full findings in v2/diagnosis/FINDINGS.md.
+D1 build complete: five matched interfaces, balanced coverage,13 retained historical regressions, gated native runner, independent analysis and fixture viewer.19 offline checks pass; zero new model calls.144-call/480-decision proposed diagnostic, USD5 ceiling pending admission. No automatic v2 pilot restart.

@@ -1,0 +1,93 @@
+{
+  "completed_utc": "2026-10-04T04:49:47.502932+00:00",
+  "study": "right-dissenter",
+  "scope": "bounded exploratory Q0/Q1/S1/D1 cycle",
+  "attempts": [
+    "q0-a1",
+    "q1-a1",
+    "s1-a1",
+    "d1-a1"
+  ],
+  "assigned_opportunities": 489,
+  "all_terminal": true,
+  "scientific_result": "Evidence gate24/60 correct versus always-check30/60; checks31 versus40. No efficacy gain established.",
+  "qualification": "Q0 failed; Q1 passed18/18clean and6/6controls",
+  "historical_validation_errors": "Three S1 subtype-unknown rejections retained; D1 did not reproduce them.",
+  "process_compliance": "Q0 allocation failed; Q1/S1/D1 used verified exclusive existing Dmarz fleet host. Original immutable plan receipts preserved.",
+  "artifact_readback": [
+    {
+      "run": "q1-a1",
+      "artifacts": [
+        "final_frame.png",
+        "calls.json",
+        "summary.json",
+        "manifest.json",
+        "configuration.json",
+        "public-plan-receipt.json",
+        "records.json"
+      ],
+      "all_hashes_match": true,
+      "status": "done",
+      "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md"
+    },
+    {
+      "run": "s1-a1",
+      "artifacts": [
+        "final_frame.png",
+        "calls.json",
+        "summary.json",
+        "manifest.json",
+        "measured_replay.gif",
+        "configuration.json",
+        "public-plan-receipt.json",
+        "records.json"
+      ],
+      "all_hashes_match": true,
+      "status": "done",
+      "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/3aaacaeb38c454c8140dba6cc82a7a2a7f677f14/researchers/vishesh/notes/dissent/Q1-PLAN.md"
+    },
+    {
+      "run": "d1-a1",
+      "artifacts": [
+        "final_frame.png",
+        "calls.json",
+        "summary.json",
+        "manifest.json",
+        "configuration.json",
+        "public-plan-receipt.json",
+        "records.json"
+      ],
+      "all_hashes_match": true,
+      "status": "done",
+      "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/7a2dc8ec9b692197556673ac641f143ac1d675c0/researchers/vishesh/notes/dissent/D1-PLAN.md"
+    }
+  ],
+  "public_visual_verification": [
+    "Q0 PNG",
+    "Q1 PNG",
+    "S1 23-frame GIF initial and final playback",
+    "D1 PNG"
+  ],
+  "offline_checks": 53,
+  "worker_processes": 0,
+  "relays_stopped": true,
+  "tunnel_stopped": true,
+  "borrowed_host": "sim-shadow",
+  "replacement_claim": "vishesh-right-dissenter-replacement",
+  "claim_released": true,
+  "release_pr": 139,
+  "hub_release_mirrored": true,
+  "borrowed_host_preserved": true,
+  "mistaken_initial_host_deleted": true,
+  "budget_receipt": "BUDGET-STATUS.json",
+  "backup_sha256": "f179e6a1aa6789b74c9f2d7c60f8b8056b7d2f934324bbade03d0332cd1e2c0b",
+  "formal_review_complete": false,
+  "S2_opened": false,
+  "scheduled_followup": false,
+  "artifact_validation": {
+    "right_dissenter_artifacts": 5,
+    "strict_errors": 0,
+    "strict_warnings": 0,
+    "full_repository_artifact_scan": "Pre-existing unrelated discussion-memory-v3-film manifest references a missing file; other study artifacts unchanged."
+  }
+}

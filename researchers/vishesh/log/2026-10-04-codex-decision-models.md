@@ -35,3 +35,9 @@ Cap approved USD2. Q0 completed18/18valid,12correct; all six errors were DEFER o
 Provisioning incorrectly used the local default cloud account without proving Dmarz billing identity. Account comparison confirmed the mismatch. Paused before Q1, preserved all outcomes and budget, hash-verified seven hub artifacts, verified public PNG, released claim and deleted only this host's resources; other droplets unchanged. Missing original SETUP index documented retrospectively.
 
 Q0 API cost$0.00042966; estimatedcompute$0.011643 pendinginvoice. The cap remains approved. Await only a verified Dmarz-account provisioner or dedicated host, then rebind Q1 and continue its prospective gate; S2 remains closed.
+
+## Completed native cycle after allocation recovery
+
+Borrowed idle, released sim-shadow from Dmarz fleet under exclusive claim129; released through139 after verified uploads. Q1 clarified18/18 plus6/6uncertainty controls; generic11/18. S1 all420opportunities: gate24/60 versus always-check30/60, checks31 versus40. Gate failed both favorable temporal reopenings. Three validation errors retained; D1 ninevalid replies did not reproduce them. Safe predicate diagnostics added without relaxing checks.
+
+201unique calls,198valid, settled API$0.00739767; committed including uncertain charges$0.01142967.53software checks pass; offline saved-response reconciliation exactly matches420rows. All PNG/GIF results hash-read back, public playback verified. Four attempt post-mortems, final report, figures and measured MP4 filed. Formal review incomplete; S2 unopened. Bounded exploratory cycle complete with adverse result; no follow-up scheduled.

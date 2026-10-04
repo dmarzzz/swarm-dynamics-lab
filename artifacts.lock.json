@@ -46,6 +46,76 @@
    "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59",
    "size_bytes": 456862
   },
+  "discussion-memory-v3-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791085322,
+     "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43",
+     "size": 8749,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
+    },
+    {
+     "mtime": 1791085345,
+     "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6",
+     "size": 5936,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
+    },
+    {
+     "mtime": 1791085825,
+     "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f",
+     "size": 34021,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
+    },
+    {
+     "mtime": 1791085999,
+     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
+     "size": 5194,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
+    },
+    {
+     "mtime": 1791085323,
+     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
+     "size": 1528,
+     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
+    },
+    {
+     "mtime": 1791084924,
+     "sha256": "19fa1d7bcdc611a1ddd28ae37038205a674decfc84f198b1584ae977b2e6c51a",
+     "size": 189983,
+     "uri": "data/discussion-v3/v3-q0-a1/summary.json"
+    },
+    {
+     "mtime": 1791084916,
+     "sha256": "f8736a1541279c9dc090e4d746976812b5ed3f327cd99aae3d637c295b8f715d",
+     "size": 852918,
+     "uri": "data/discussion-v3/v3-q0-a1/episodes.json"
+    },
+    {
+     "mtime": 1791084920,
+     "sha256": "a47f4ff76f5ae40c7bd9ffcb8bf30f2d2da4e5c24ada76dcda62cccafd512802",
+     "size": 7066557,
+     "uri": "data/discussion-v3/v3-q0-a1/events.jsonl"
+    },
+    {
+     "mtime": 1791084922,
+     "sha256": "e6b51f427b9cd1c8383814928935abb3c0ff955aaf517b41c7fc09ebe38253c0",
+     "size": 21715,
+     "uri": "data/discussion-v3/v3-q0-a1/manifest.json"
+    }
+   ],
+   "media": {
+    "duration_s": 119.4,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791086146,
+   "path": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
+   "prompt_sha256": "3e878320997c9eded8f35c66179ffb0d231ebc30a9d090af16d47b74823575d8",
+   "sha256": "729e647bd4acb103eee3dc78efd0eaf704ae44143c05dab076088c608b44556b",
+   "size_bytes": 22904669
+  },
   "fork-merge-setups@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -239,6 +309,136 @@
    "prompt_sha256": "c4b21ec4e4709dba9c7e0d9688379ead83edc38d276a5adfe7567b99745fbd3f",
    "sha256": "f438ec2bc51c6726eba73ab2b2843cc9c873801b11703d4d9646ff46baddaeb3",
    "size_bytes": 263097
+  },
+  "influence-approval-review-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791088981,
+     "sha256": "9a49e03fff88a080db943831b9bf2c1bae5625b47ecbe8468a3c2da30272bdf6",
+     "size": 6300,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
+    },
+    {
+     "mtime": 1791089310,
+     "sha256": "baa0d5905fbc37a0342f0eebd8adf8ad44e874fe9148e1594ae17ce0ee8f8208",
+     "size": 11215,
+     "uri": "data/influence-native/native-D2-01/manifest.json"
+    },
+    {
+     "mtime": 1791089309,
+     "sha256": "e4cbd9944a94dd9bd4e95ec9533624ee114d94f0c14dd0fb1eb8d76fe96463da",
+     "size": 1675,
+     "uri": "data/influence-native/native-D2-01/summary.json"
+    },
+    {
+     "mtime": 1791089309,
+     "sha256": "6c1de8f9483909620724ee8d9015673a8b54c5ea68fbbfe5b7b2f5625333fe23",
+     "size": 21002,
+     "uri": "data/influence-native/native-D2-01/case-0.json"
+    },
+    {
+     "mtime": 1791089309,
+     "sha256": "d93e5bf05514aeb06c93a643d5a6383db61b8ea46ff4e1c26c4c56ac1582eba2",
+     "size": 21014,
+     "uri": "data/influence-native/native-D2-01/case-1.json"
+    },
+    {
+     "mtime": 1791089307,
+     "sha256": "2a22104957b140f8535566f06bbe1273935601478b1a50f96837aa72945af7fc",
+     "size": 20953,
+     "uri": "data/influence-native/native-D2-01/case-2.json"
+    },
+    {
+     "mtime": 1791089311,
+     "sha256": "5031113fbc4b129f43140127ddc786afab0644019005ce6d524938f50d44b91f",
+     "size": 20933,
+     "uri": "data/influence-native/native-D2-01/case-3.json"
+    },
+    {
+     "mtime": 1791089313,
+     "sha256": "c957135c022fb431832115871023894d10b877b1e43b009eb4d62dcf037151a4",
+     "size": 21073,
+     "uri": "data/influence-native/native-D2-01/case-4.json"
+    },
+    {
+     "mtime": 1791089311,
+     "sha256": "f975340436adea2d810e8a6d8661876455f2128919a3d9db08ca6959bd87e6cf",
+     "size": 20943,
+     "uri": "data/influence-native/native-D2-01/case-5.json"
+    },
+    {
+     "mtime": 1791089307,
+     "sha256": "156df82b18a0c0403244ead473e7e7a2d05a204638c390f77e54f68125be1acc",
+     "size": 169756,
+     "uri": "data/influence-native/native-D2-01/events-0.jsonl"
+    },
+    {
+     "mtime": 1791089308,
+     "sha256": "b0270f9f6edea1d2750fa1d3bd53e318ea391b727b57420600c68cc350be5855",
+     "size": 175826,
+     "uri": "data/influence-native/native-D2-01/events-1.jsonl"
+    },
+    {
+     "mtime": 1791089310,
+     "sha256": "ccc92a717aa85f6a906985c31d5fc44c3d7701924f0e42fd91063a0aa64d9a45",
+     "size": 171169,
+     "uri": "data/influence-native/native-D2-01/events-2.jsonl"
+    },
+    {
+     "mtime": 1791089308,
+     "sha256": "b265797b7d682178fb8b3062ca5a1f6cf1c5f601e88457db8b8710f8430b9271",
+     "size": 173350,
+     "uri": "data/influence-native/native-D2-01/events-3.jsonl"
+    },
+    {
+     "mtime": 1791089311,
+     "sha256": "f45cb145f74efcdaa41e5dfd9b251855a0c63881609053ef583d0656c149b92e",
+     "size": 170649,
+     "uri": "data/influence-native/native-D2-01/events-4.jsonl"
+    },
+    {
+     "mtime": 1791089312,
+     "sha256": "3990df0e06751b1fb902a9aa22e2c0fb4017966fc631d590a8b969c71d9934e3",
+     "size": 173113,
+     "uri": "data/influence-native/native-D2-01/events-5.jsonl"
+    }
+   ],
+   "mime": "text/html",
+   "mtime": 1791089313,
+   "path": "artifacts/influence-approval-review-replay/influence-approval-review-replay-v1.html",
+   "prompt_sha256": "77df47e14eca8cb05fa469326850057b7535888d96873349b51127c77c5bc254",
+   "sha256": "9b14d3368cce3ca37c7a19a467947ac59dff955a416bd047a138ae87d9a6ca63",
+   "size_bytes": 1052940
+  },
+  "influence-approval-review-results@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089287,
+     "sha256": "cd1c5b973d1ad349e43f429e984433c32d2ecd30c13614577696c80fc91d0292",
+     "size": 12704,
+     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/approval_review.py"
+    },
+    {
+     "mtime": 1791089312,
+     "sha256": "e6ed29820a7c823ed07ad8d4fbcbbff219df908aaabe9f38d7431776c5c137cb",
+     "size": 67910,
+     "uri": "data/influence-native/native-D2-01/outcomes.json"
+    },
+    {
+     "mtime": 1791089309,
+     "sha256": "e4cbd9944a94dd9bd4e95ec9533624ee114d94f0c14dd0fb1eb8d76fe96463da",
+     "size": 1675,
+     "uri": "data/influence-native/native-D2-01/summary.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791089398,
+   "path": "artifacts/influence-approval-review-results/influence-approval-review-results-v1.png",
+   "prompt_sha256": "699a81fdad29a70e8fee2808defdee0b7a72bf82619f86cf8a5b151541eca69b",
+   "sha256": "d736430209f2ebabecb5e8d31ff3f91f34cd6a5df928957c0316bc54119831e4",
+   "size_bytes": 104316
   },
   "influence-native-d1-replay@1": {
    "host": "ultrons-macbook-pro",
@@ -1314,6 +1514,80 @@
    "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
    "size_bytes": 21631
   },
+  "right-dissenter-d1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791088970,
+     "sha256": "e27d504fad06876bc84662050629fdebf55c5bcfefb69ca5a9cc3b63cd6ff4f3",
+     "size": 4179,
+     "uri": "researchers/vishesh/notes/dissent/src/validation_worker.py"
+    },
+    {
+     "mtime": 1791089139,
+     "sha256": "0346364ceb6bd12b7a1ffda12188a804daff0f5e7dc4009309f5f7c4fd94d35c",
+     "size": 480,
+     "uri": "researchers/vishesh/notes/dissent/results/d1-a1/summary.json"
+    },
+    {
+     "mtime": 1791089140,
+     "sha256": "f6012bfae4ad25d2d54d628b8e6610f47694a9b1747150c499554c41ed8532cf",
+     "size": 1478,
+     "uri": "researchers/vishesh/notes/dissent/results/d1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791089138,
+   "path": "artifacts/right-dissenter-d1/right-dissenter-d1-v1.png",
+   "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
+   "sha256": "26e05761925af496476a79f0b722a07af9de3e5b62c789fe01c640d6c81b61b7",
+   "size_bytes": 55476
+  },
+  "right-dissenter-measured-replay@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089045,
+     "sha256": "89f4bf09d33c97bdecbb8124c30094ab0a48c150af7208185d8e03441727e574",
+     "size": 460,
+     "uri": "researchers/vishesh/notes/dissent/visualization/export_measured.py"
+    },
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e",
+     "size": 3837,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "137150cf649abd6820d705adc7e73eeb3245da4ed1aab74737c8eef330977249",
+     "size": 1560854,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/records.json"
+    },
+    {
+     "sha256": null,
+     "size": null,
+     "uri": "https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif"
+    }
+   ],
+   "media": {
+    "duration_s": 23.0,
+    "height": 1080,
+    "width": 1800
+   },
+   "mime": "video/mp4",
+   "mtime": 1791089045,
+   "path": "artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4",
+   "prompt_sha256": "91dcc4324eb5c1d058b34cd3932d62128bb576ee87e26a4d873dadc8976b52d1",
+   "sha256": "ab62128e911894c22033a24537ef2f8728676b2c5234e759e9d6255c2adf6a8b",
+   "size_bytes": 431493
+  },
   "right-dissenter-q0@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -1342,6 +1616,64 @@
    "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
    "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6",
    "size_bytes": 59552
+  },
+  "right-dissenter-q1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088576,
+     "sha256": "120cd353a7677673e34ab7b7358fb5cbce7f21d4b13c26be98b29786e33cb9dc",
+     "size": 1371,
+     "uri": "researchers/vishesh/notes/dissent/results/q1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088576,
+     "sha256": "4ee9a43d01c100ec4f447d24ee02d43d23a832a14a6738b81644f324f215cea9",
+     "size": 8463,
+     "uri": "researchers/vishesh/notes/dissent/results/q1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791088532,
+   "path": "artifacts/right-dissenter-q1/right-dissenter-q1-v1.png",
+   "prompt_sha256": "0f0b4968663961b4f5a5a5c67025af96ad1c7c0aa7cf6936d5b67603afba6044",
+   "sha256": "662971fa13e160840e8487e03055b5079d832a7183db61a6b5fda692a2cb03cd",
+   "size_bytes": 72903
+  },
+  "right-dissenter-s1@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791087645,
+     "sha256": "18d13ce27d60675d6d2c99735ea5f0efbcfc6467c75a17cabe9cb6473405a9a7",
+     "size": 7760,
+     "uri": "researchers/vishesh/notes/dissent/src/live_render.py"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e",
+     "size": 3837,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/summary.json"
+    },
+    {
+     "mtime": 1791088876,
+     "sha256": "137150cf649abd6820d705adc7e73eeb3245da4ed1aab74737c8eef330977249",
+     "size": 1560854,
+     "uri": "researchers/vishesh/notes/dissent/results/s1-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791088754,
+   "path": "artifacts/right-dissenter-s1/right-dissenter-s1-v1.png",
+   "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
+   "sha256": "22f536ab24826bf8dc63356b62ffb8cf20b10954cca0cef817f92fea9c715668",
+   "size_bytes": 90163
   },
   "swarm-completion-audit-2026-10-04@1": {
    "host": "halcyons-macbook-pro-4",
@@ -3999,6 +4331,76 @@
    "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
    "size_bytes": 7951
   },
+  "vishesh-theseus-d1-plan@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089655,
+     "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add",
+     "size": 10073,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+    },
+    {
+     "mtime": 1791089655,
+     "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1",
+     "size": 14954,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+    },
+    {
+     "mtime": 1791089603,
+     "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602",
+     "size": 7538,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+    },
+    {
+     "mtime": 1791089218,
+     "sha256": "ebc74096ce7820df2e25e8fa7413d22224f401ba778e57697188d312808e5359",
+     "size": 7830,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/PLAN.md"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791089218,
+   "path": "artifacts/vishesh-theseus-d1-plan/vishesh-theseus-d1-plan-v1.md",
+   "prompt_sha256": "9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0",
+   "sha256": "ebc74096ce7820df2e25e8fa7413d22224f401ba778e57697188d312808e5359",
+   "size_bytes": 7830
+  },
+  "vishesh-theseus-d1-repair-map@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791089655,
+     "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add",
+     "size": 10073,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+    },
+    {
+     "mtime": 1791089655,
+     "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1",
+     "size": 14954,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+    },
+    {
+     "mtime": 1791089603,
+     "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602",
+     "size": 7538,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+    },
+    {
+     "mtime": 1791089523,
+     "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747",
+     "size": 3022,
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md"
+    }
+   ],
+   "mime": "text/markdown",
+   "mtime": 1791089523,
+   "path": "artifacts/vishesh-theseus-d1-repair-map/vishesh-theseus-d1-repair-map-v1.md",
+   "prompt_sha256": "9236cd557032bd33064d5b5ed55041dbf209ae7e0674e0fec7879c86a4b8b9a0",
+   "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747",
+   "size_bytes": 3022
+  },
   "vishesh-theseus-rule-audit@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [
@@ -4342,78 +4744,150 @@
    "sha256": "ea4ec1019cee0eabd0176e6326993c227d797117492198050c5c619e4d7e9587",
    "size_bytes": 1542505
   },
-  "discussion-memory-v3-film@1": {
+  "market-split-haiku-r0-001@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
     {
-     "mtime": 1791085322,
-     "sha256": "695e1897fc17d248388787620fdceb75fc69f18628a2f143070a4f951f503e43",
-     "size": 8749,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build_data.py"
+     "mtime": 1791089635,
+     "sha256": "b7f940fe3708af9f9bdee89cc578c1331d3f5bfb32fdf14cfa3226e1acb02bef",
+     "size": 3242,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py"
     },
     {
-     "mtime": 1791085345,
-     "sha256": "97730117997fc2ba319004d2c62bcc6d0eb1e40d74769084063a76a7442c76b6",
-     "size": 5936,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/build.py"
+     "mtime": 1791089602,
+     "sha256": "1c220b4e126bcae589a14949b690bca59feb70b7903f9d99bf74da11c97b1a0c",
+     "size": 776,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv"
     },
     {
-     "mtime": 1791085825,
-     "sha256": "bba61083f64b40f6b722127562ca49b200a31bc133b7cc93aaba5c2dde9b4f0f",
-     "size": 34021,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/film.html"
+     "mtime": 1791089602,
+     "sha256": "b5d4abbd80ec5e1dbb285130915675cef6e7e248ba3e7c1f2de3a11b9ef3fdd9",
+     "size": 5625,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json"
     },
     {
-     "mtime": 1791085999,
-     "sha256": "d2918a162db27b19d7221eac8555d289b51431386997150b57c4d568ca9a8b89",
-     "size": 5194,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs"
-    },
-    {
-     "mtime": 1791085323,
-     "sha256": "d54ad2c3e80102faa3ed5b8fe9d5a80deb848a66c735304b7da201b33f2cafa2",
-     "size": 1528,
-     "uri": "researchers/dmarz/notes/discussion-dose/src/film_v3/qr-repo.svg"
-    },
-    {
-     "mtime": 1791084924,
-     "sha256": "19fa1d7bcdc611a1ddd28ae37038205a674decfc84f198b1584ae977b2e6c51a",
-     "size": 189983,
-     "uri": "data/discussion-v3/v3-q0-a1/summary.json"
-    },
-    {
-     "mtime": 1791084916,
-     "sha256": "f8736a1541279c9dc090e4d746976812b5ed3f327cd99aae3d637c295b8f715d",
-     "size": 852918,
-     "uri": "data/discussion-v3/v3-q0-a1/episodes.json"
-    },
-    {
-     "mtime": 1791084920,
-     "sha256": "a47f4ff76f5ae40c7bd9ffcb8bf30f2d2da4e5c24ada76dcda62cccafd512802",
-     "size": 7066557,
-     "uri": "data/discussion-v3/v3-q0-a1/events.jsonl"
-    },
-    {
-     "mtime": 1791084922,
-     "sha256": "e6b51f427b9cd1c8383814928935abb3c0ff955aaf517b41c7fc09ebe38253c0",
-     "size": 21715,
-     "uri": "data/discussion-v3/v3-q0-a1/manifest.json"
+     "mtime": 1791089602,
+     "sha256": "cc8292fd5cdc3c7c4d2f5faa9bfa75309f0c5fe28863d26daccad27c651558f8",
+     "size": 934,
+     "uri": "researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json"
     }
    ],
-   "media": {
-    "duration_s": 119.4,
-    "height": 1080,
-    "width": 1920
-   },
-   "mime": "video/mp4",
-   "mtime": 1791086146,
-   "path": "artifacts/discussion-memory-v3-film/discussion-memory-v3-film-v1.mp4",
-   "prompt_sha256": "3e878320997c9eded8f35c66179ffb0d231ebc30a9d090af16d47b74823575d8",
-   "sha256": "729e647bd4acb103eee3dc78efd0eaf704ae44143c05dab076088c608b44556b",
-   "size_bytes": 22904669
+   "mime": "image/png",
+   "mtime": 1791089636,
+   "path": "artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "f2921cea04b9a058f93966c8a6304b243fdae8eadf6362ad2ecac246e97a634c",
+   "size_bytes": 148661
+  },
+  "market-split-haiku-r0-001-records@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791089533,
+     "sha256": "c0a6a74ec361b40f144c7547059c8c1950462042a684178138f40116a0c89cbf",
+     "size": 7089,
+     "uri": "researchers/dmarz/notes/market-split-api/report/src/archive.py"
+    },
+    {
+     "mtime": 1791089480,
+     "sha256": "f12de067ad70379a36d937b825486c10c011b2968f88bb7c7d7a5bfa1607a748",
+     "size": 5625,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json"
+    },
+    {
+     "mtime": 1791089355,
+     "sha256": "b2b2f00cb038e53da29ca4b0f0b5d6bd89f3bea71713fdc46cbcf54775c54a1d",
+     "size": 118584,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "8d844da577e0fa28dfc9659f024a00395b9929f09b95dbb1bb4ef99c7529eda2",
+     "size": 121263,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "9f398eb73c9bbf83eb066e040b9b28821b8e33d6d9120902c683e52e9d25baab",
+     "size": 796223,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "77341ee8cdbace6b94abcdb3fc13ba96e98d4f411e5d1dc20d309a5b2d0ac220",
+     "size": 55518,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl"
+    },
+    {
+     "mtime": 1791089375,
+     "sha256": "f5bd096bafd6363cc144ec4b076f6a255039be17f8357100b449925a03b6de96",
+     "size": 141279,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "2b6b073b802fefe245d28c9d721c88d01949d40435c35db999499f91c67ca15a",
+     "size": 1166,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json"
+    },
+    {
+     "mtime": 1791089389,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "3f3a39532c7519daeec8e8a375b01f706e503e38ce1698622311cedcf0e08209",
+     "size": 120191,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png"
+    },
+    {
+     "mtime": 1791088716,
+     "sha256": "4d81e300193ae171a24d3abb86874bf2bf0e21d5282fa9d20eb411546eeb4999",
+     "size": 118538,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "3e4f4fbaed74b3c790d91dadd01454ec7eeb3c2bd1667bc3ad207d3fd140aee0",
+     "size": 759560,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "36fe3678d56b972dc4229e0517c5543fa88efd9fe1c62978a75089ba0f48eaf5",
+     "size": 53614,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl"
+    },
+    {
+     "mtime": 1791088715,
+     "sha256": "3f442be38b4965d9d34cf4695e8e09755439b5765dad88c03e82b6f86f0b6ac4",
+     "size": 138229,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "8149c6d8c9a1cbfcfa19be29fa218fb0d6250230ebb64e37d2b39e9dec193ee3",
+     "size": 1166,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json"
+    },
+    {
+     "mtime": 1791088731,
+     "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570",
+     "size": 3,
+     "uri": "researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json"
+    }
+   ],
+   "mime": "application/zip",
+   "mtime": 1791089602,
+   "path": "artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip",
+   "prompt_sha256": "a6ef1e2cb8a19f069f5925692829adab1804d6930fb433484952219a824d0594",
+   "sha256": "1951dda6a01eebf278617e07355f72cec55071d2bfcdb1542774a8f8c0060f01",
+   "size_bytes": 36558
   }
  },
- "generated": "2026-10-03T21:35:46-0700",
+ "generated": "2026-10-03T21:54:20-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }

@@ -1,0 +1,190 @@
+[
+  {
+    "artifacts": [],
+    "metrics": {},
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "r0-001",
+      "backend": "anthropic",
+      "code": "8bf90bfa934d886514d083c6b47ffcd288f6cd0b",
+      "design_sha256": "bdcbdbcf7d25d0de64e4187272b9bb50557180e281ad00f61b18b38bc3238530",
+      "engine_sha256": "8e355a187d212ece4c6469c5fdd949c06641e52c44d785382c834817e5b2a465",
+      "model": "claude-haiku-4-5-20251001",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 31,
+      "stage": "R0",
+      "task_id": 78,
+      "threshold": 0.38
+    },
+    "run": "market-split-haiku/40f5c970f307",
+    "status": "cancelled"
+  },
+  {
+    "artifacts": [],
+    "metrics": {},
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "r0-001",
+      "backend": "anthropic",
+      "code": "8bf90bfa934d886514d083c6b47ffcd288f6cd0b",
+      "design_sha256": "bdcbdbcf7d25d0de64e4187272b9bb50557180e281ad00f61b18b38bc3238530",
+      "engine_sha256": "8e355a187d212ece4c6469c5fdd949c06641e52c44d785382c834817e5b2a465",
+      "model": "claude-haiku-4-5-20251001",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 31,
+      "stage": "R0",
+      "task_id": 79,
+      "threshold": 0.38
+    },
+    "run": "market-split-haiku/a1705c187456",
+    "status": "cancelled"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "b2b2f00cb038e53da29ca4b0f0b5d6bd89f3bea71713fdc46cbcf54775c54a1d"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "8d844da577e0fa28dfc9659f024a00395b9929f09b95dbb1bb4ef99c7529eda2"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "9f398eb73c9bbf83eb066e040b9b28821b8e33d6d9120902c683e52e9d25baab"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "77341ee8cdbace6b94abcdb3fc13ba96e98d4f411e5d1dc20d309a5b2d0ac220"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "f5bd096bafd6363cc144ec4b076f6a255039be17f8357100b449925a03b6de96"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "2b6b073b802fefe245d28c9d721c88d01949d40435c35db999499f91c67ca15a"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.368213,
+      "episodes": 2,
+      "firms_dynamic": 2,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 1,
+      "model_calls": 46,
+      "profit_dynamic": 32896.29113342501,
+      "profit_locked": 28235.046018448968,
+      "qualification_pass": 0,
+      "round": 21,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_locked",
+        "neutral_dynamic"
+      ],
+      "attempt_id": "r0-001",
+      "backend": "anthropic",
+      "code": "8bf90bfa934d886514d083c6b47ffcd288f6cd0b",
+      "design_sha256": "bdcbdbcf7d25d0de64e4187272b9bb50557180e281ad00f61b18b38bc3238530",
+      "engine_sha256": "8e355a187d212ece4c6469c5fdd949c06641e52c44d785382c834817e5b2a465",
+      "model": "claude-haiku-4-5-20251001",
+      "registration_fee": 20,
+      "regulator": "firm",
+      "rounds": 24,
+      "seed": 31,
+      "stage": "R0",
+      "task_id": 78,
+      "threshold": 0.38
+    },
+    "run": "market-split-haiku/c5c09a7297b4",
+    "status": "failed"
+  },
+  {
+    "artifacts": [
+      {
+        "name": "progress.png",
+        "sha256": "3f3a39532c7519daeec8e8a375b01f706e503e38ce1698622311cedcf0e08209"
+      },
+      {
+        "name": "final_frame.png",
+        "sha256": "4d81e300193ae171a24d3abb86874bf2bf0e21d5282fa9d20eb411546eeb4999"
+      },
+      {
+        "name": "replay.gif",
+        "sha256": "3e4f4fbaed74b3c790d91dadd01454ec7eeb3c2bd1667bc3ad207d3fd140aee0"
+      },
+      {
+        "name": "episodes.jsonl",
+        "sha256": "36fe3678d56b972dc4229e0517c5543fa88efd9fe1c62978a75089ba0f48eaf5"
+      },
+      {
+        "name": "calls.jsonl",
+        "sha256": "3f442be38b4965d9d34cf4695e8e09755439b5765dad88c03e82b6f86f0b6ac4"
+      },
+      {
+        "name": "summary.json",
+        "sha256": "8149c6d8c9a1cbfcfa19be29fa218fb0d6250230ebb64e37d2b39e9dec193ee3"
+      },
+      {
+        "name": "visualization-errors.json",
+        "sha256": "37517e5f3dc66819f61f5a7bb8ace1921282415f10551d2defa5c3eb0985b570"
+      }
+    ],
+    "metrics": {
+      "api_cost_usd": 0.446755,
+      "episodes": 2,
+      "firms_dynamic": 1,
+      "firms_locked": 1,
+      "fragmentation_dynamic": 0,
+      "fragmentation_locked": 0,
+      "invalid": 0,
+      "model_calls": 48,
+      "profit_dynamic": 40143.503870591485,
+      "profit_locked": 39403.60520367333,
+      "qualification_pass": 1,
+      "round": 24,
+      "unpriced_calls": 0,
+      "visual_ok": 1
+    },
+    "params": {
+      "arms": [
+        "neutral_dynamic",
+        "neutral_locked"
+      ],
+      "attempt_id": "r0-001",
+      "backend": "anthropic",
+      "code": "8bf90bfa934d886514d083c6b47ffcd288f6cd0b",
+      "design_sha256": "bdcbdbcf7d25d0de64e4187272b9bb50557180e281ad00f61b18b38bc3238530",
+      "engine_sha256": "8e355a187d212ece4c6469c5fdd949c06641e52c44d785382c834817e5b2a465",
+      "model": "claude-haiku-4-5-20251001",
+      "registration_fee": 20,
+      "regulator": "owner",
+      "rounds": 24,
+      "seed": 31,
+      "stage": "R0",
+      "task_id": 79,
+      "threshold": 0.38
+    },
+    "run": "market-split-haiku/fa18e25800e8",
+    "status": "done"
+  }
+]

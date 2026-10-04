@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "model": "gpt-6-astra",
+    "prompt": "How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so we can get to the next useful experimental run."
+   },
+   "internalParameters": {
+    "commit": "d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "0d52c59733a8d7d8d6b087358c969e4e2d557b28c0edb710c9e1ba207db61add"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md"
+    },
+    {
+     "digest": {
+      "sha256": "60cf421d10c661d6670896514527d501ee79b6a3c47f8246cc256ac7a1d90fd1"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json"
+    },
+    {
+     "digest": {
+      "sha256": "a8839e9e46d4e4de4c686263ea5001d77aea9ed0279bd88e2e58c53ff38e1602"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py"
+    },
+    {
+     "digest": {
+      "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747"
+     },
+     "uri": "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "d202b7f2af5f3cd20c3e612e97befdddaa84bd46"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/ultrons-macbook-pro/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T04:54:16Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-04T04:54:16Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "01690d896f19968759b3419c386499357fffe9b089463125bffdc5b62c709747"
+   },
+   "name": "artifacts/vishesh-theseus-d1-repair-map/vishesh-theseus-d1-repair-map-v1.md"
+  }
+ ]
+}

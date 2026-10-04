@@ -31,3 +31,7 @@ Preserve every request, response, citation, usage delta and terminal event with 
 ## Feedback and limits
 
 Accepted Dmarz's independent Q4 arithmetic PASS and narrower ballot interpretation. Q4/D1 valid adverse outcomes remain unchanged. This version fixes the missing matched-compute repair comparator and tests practical decision compliance. It does not solve synthetic-task external validity, certify real procurement policy, or establish attacker influence. Review requirement remains one researcher; no new approval bottleneck.
+
+## Post-freeze accounting clarification
+
+The immutable D2-01 runtime plan is commit 518d4412bc566a388dd4dc022118ade8dd637fa3. During analysis preparation, the operator noticed the pessimistic estimate above omitted the adapter's 512-byte envelope allowance. The correct 216-attempt bound is USD6.082560. The verified USD7.226604 remaining at launch exceeded both bounds; the transactional per-attempt ledger continued enforcing the unchanged USD8 cap. Future entrypoints calculate this bound from config rather than using the old constant. This does not alter frozen observations or authorize additional calls. New dossiers have disjoint IDs and changed numeric configurations; some individual pilot rates and other values intentionally reuse the prior templates.

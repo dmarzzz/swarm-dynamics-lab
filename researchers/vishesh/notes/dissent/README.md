@@ -3,10 +3,10 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by vishesh/codex-pi-review; source `9781739c` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `ad0dbb81` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested efficacy question: whether bounded evidence-backed challenge improves decisions against wrong majority reports without needless disruption. Basis: Votes are scripted; repeated native adjudications may share saved responses. Seven policies, five source/vote roles and temporal events do not multiply independent case count.
-- **sample_size_summary:** No native results. Planned Q0: 18 clean decisions. S1: 52 roots × 7 policies = 364 trajectories containing 420 decision opportunities (48 static roots and 4 temporal roots with 3 steps each), across 3 scenarios.
+- **evidence_confidence:** **1/4** — On this fixed synthetic cohort, evidence-gated dissent saved nine checks but produced six fewer correct decisions than always-check, including two missed favorable recovery events. Basis: Scripted votes, repeated scenario grammar, shared saved responses and 52 fixed roots limit generalization. All outcomes and three rejected calls are retained; clean qualification passed after a prospective wording amendment. This is an owner assessment, not independent review.
+- **sample_size_summary:** Observed S1: 52 fixed roots with reused grammar; 420/420 decisions across 7 policies; 129/132 unique calls valid. Separate screens: Q0 12/18 correct; Q1 clarified 18/18 plus 6/6 uncertainty controls; D1 9/9 valid. No independent replication.
 <!-- experiment-evidence:end -->
 
 Research area connecting minority evidence, collective correction and typed decision models. Canonical question **DM-03**, jointly tagged **dissent** and **decision-models**. DM-14 is a related question. Tags are many-to-many; each idea keeps one ID and one assessment history.
@@ -15,7 +15,9 @@ The practical rule: a dissenter can earn a bounded independent check. Evidence d
 
 ## Current result
 
-Q0 completed: 12/18 correct, qualification failed. [Native report](REPORT.md) and [paired repair plan](Q1-PLAN.md). Q1 has no native calls and is blocked on a verified Dmarz-account allocation after an account mismatch. The $2 cap remains approved. The evidence metadata above is a historical external assessment; native qualification results now exist, but the policy efficacy question remains untested.
+The exploratory cycle is complete. Q1 qualified the clarified model; in S1 the evidence gate scored **24/60**, versus **30/60** for always-check, with **31 versus 40 checks**. It missed both favorable recovery events after correctly withdrawing earlier false alarms. [Read the result and limitations](REPORT.md) or [watch the measured replay](https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif).
+
+The evidence metadata above reflects the completed exploratory cohort and is assessed by the study owner. Native results do not support deploying the current gate. The initial allocation error was corrected and remains documented; the borrowed Dmarz fleet host is released.
 
 ## Start here
 
@@ -43,4 +45,4 @@ These briefs are ready for the owner to open in separate tasks. No new Codex tas
 
 ## Status
 
-Exploratory design and implementation work. Original numerical ratings are historical and become stale where the question content changes. No scientific effect or Jev qualification is established by software fixtures. Native execution requires the documented public-plan, research-review, budget and allocation gates.
+Exploratory Q0/Q1/S1/D1 cycle completed. The current evidence does not establish a benefit for the gate. Original idea ratings remain historical; the evidence block now reflects this cohort. Formal research review and confirmatory S2 remain closed; a redesigned protocol needs a new prospective assessment.

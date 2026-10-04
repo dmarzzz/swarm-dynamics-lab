@@ -3,9 +3,9 @@ id: build-compositional-safety
 type: task
 title: Ship the compositional safety benchmark and qualification
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/patchwork-hypotheses
+owner: null
 for: dmarz
 created: 2026-10-03
 created_by: dmarz/patchwork-hypotheses
@@ -14,10 +14,10 @@ topics:
 - fork-merge-security
 - llm-agent-swarms
 - swarm-detection
-updated: 2026-10-04T04:52Z
+updated: 2026-10-04T04:58Z
 history:
 - '2026-10-04T04:04Z released by dmarz/patchwork-hypotheses: Simulator, runner and live dashboard shipped; S0 and all four Q0 attempts reconciled. q0-004 failed: 10/24 safe, twelve incomplete, two provider refusals. Worker and uploads finished; sim-dmarz claim released. Resume after requested approved model connection, bounded diagnosis and fresh current-source qualification; P1/S1/S2 remain closed.'
-claimed_at: 2026-10-04T04:08Z
+- '2026-10-04T04:58Z released by dmarz/patchwork-hypotheses: q0-005 results, complete raw traces, analysis and post-mortem published. 24 valid,21 safe,2 violations,1 stall; qualification failed unchanged. d0-003 plan published only; user explicitly says DO NOT START. Worker exited, uploads verified, fleet claim released PR146. Resume only on later explicit user instruction; no automatic repair or launch.'
 ---
 
 ## Goal
@@ -30,8 +30,8 @@ User approved shipping the SEC-54 study plan. Implement the simulator, controls,
 - [x] Ship a frozen, bounded runner with source hashes, failures, accounting and replay.
 - [x] Run and reconcile offline qualification and available model qualification; model acceptance failed and remains unresolved.
 - [x] Publish results, review status and remaining scale prerequisites.
-- [ ] Pass current-source model qualification before the larger pilot; blocked on an approved alternative model connection.
+- [ ] Pass current-source model qualification before the larger pilot; q0-005 failed, and the user explicitly requested publishing the next plan without starting it.
 
 ## Coverage note
 
-Deployed to sim-dmarz; all workers stopped and the fleet claim was released after verified uploads. S0: 84/84 scripted completions. Four model qualification attempts and two atomic diagnostics are retained under researchers/dmarz/notes/compositional-safety. Latest q0-004: 10/24 safe, twelve incomplete, two provider refusals. Full post-mortem and summaries are published there; P1/S1/S2 remain closed. Agentops PR 79 fixes the live dashboard loading error. Resume only after reading q0-004-post.md, selecting the requested approved connection and obtaining a fresh server claim.
+The execution-v2 repair is shipped. Latest q0-005 completed 24/24 valid episodes with 21 safe, two approval-reuse violations and one stall; qualification failed under unchanged criteria. All original attempts are retained. Full compressed observations, events, per-episode CSV, summary, hashes, analysis and post-mortem are under researchers/dmarz/notes/compositional-safety/records/q0-005 and reviews/q0-005-post.md. The prospective d0-003 plan is publication only: the user explicitly instructed no next run. P1/S1/S2 remain closed. Worker exited and all 13 hub records/57 artifacts reconciled; exclusive repair claim released through agentops PR 146 at 2026-10-04T04:55:23Z. Resume only after a later explicit user instruction, reading the post-mortem and plan, implementing the proposed manifest with tests, and obtaining a fresh server allocation and admission evidence. Do not automatically resume this open task to launch experiments.

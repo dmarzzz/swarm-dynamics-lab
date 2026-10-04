@@ -1,10 +1,10 @@
 ---
 agent: dmarz/patchwork-hypotheses
 tool: codex
-state: working
+state: idle
 task: build-compositional-safety
-doing: Shipping explicit sole-controller scheduling fix and paired closed-loop diagnostic
-updated: 2026-10-04T04:31Z
+doing: q0-005 finished and failed qualification; publishing full results and next plan, which must not start without later user instruction
+updated: 2026-10-04T04:56Z
 ---
 
 ## Notes

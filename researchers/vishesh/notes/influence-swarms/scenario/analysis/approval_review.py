@@ -101,6 +101,9 @@ def collect(out,policy,config,hub=None,deadline_seconds=1500):
         (out/'summary.json').write_text(json.dumps(summary,indent=2));hub.artifact(out/'summary.json','summary.json')
     return summary
 
+def required_quota(config,attempts=216):
+    return attempts*((config['max_input_bytes']+512)*config['input_usd_per_million']+config['max_output_tokens']*config['output_usd_per_million'])/1e6
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--public-plan',required=True);a=p.parse_args();config=json.loads(Path(os.environ['SWARM_MODEL_CONFIG_FILE']).read_text());require(config)
     commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=BASE,text=True).strip();relative='researchers/vishesh/notes/influence-swarms/scenario/ITERATION-03.md'
@@ -110,7 +113,8 @@ def main():
     if published!=(BASE/'ITERATION-03.md').read_bytes():raise ValueError('plan content differs')
     import sqlite3
     with sqlite3.connect(os.environ['SWARM_BUDGET_LEDGER']) as db:cap,used=db.execute('SELECT cap,reserved FROM budget WHERE id=1').fetchone()
-    if cap-used<5.972:raise ValueError('insufficient remaining conservative quota')
+    required=required_quota(config)
+    if cap-used<required:raise ValueError('insufficient remaining conservative quota')
     receipt={'url':url,'sha256':hashlib.sha256(published).hexdigest(),'commit':commit,'verified_utc':datetime.datetime.now(datetime.timezone.utc).isoformat()}
     with Path(a.out+'.preflight.json').open('x') as f:json.dump(receipt,f)
     policy=ScenarioPolicy();import swarm_report as sr

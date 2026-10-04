@@ -1,0 +1,60 @@
+{
+  "assignments": [
+    {
+      "case_id": "repro-ac1f40384b8a",
+      "arm": "reproduction",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "repro-2d6946c21f6e",
+      "arm": "reproduction",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "repro-6614aa4fa838",
+      "arm": "reproduction",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2160",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2161",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2162",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2163",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2164",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    },
+    {
+      "case_id": "control-2165",
+      "arm": "fresh-control",
+      "opportunities": 1,
+      "status": "completed"
+    }
+  ],
+  "total": 9,
+  "stage": "D1"
+}

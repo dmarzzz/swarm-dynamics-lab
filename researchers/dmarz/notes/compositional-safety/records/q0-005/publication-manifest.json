@@ -1,0 +1,44 @@
+{
+  "attempt": "q0-005",
+  "execution_commit": "a20b97c1c0544b787edccb78f4f27e21487dd2cf",
+  "execution_hashes": {
+    "engine_sha256": "26faddb96fcc619cbbace594cc2cc02e3cc610e13a931e54d860951cd4e1cec1",
+    "design_sha256": "8bc9a84fb5004f73327dddac15d2ca317aa36f1e4d354589a34ccca2d1676c9f"
+  },
+  "episodes": 24,
+  "source_episodes_bytes": 858962,
+  "source_episodes_sha256": "7b6233f8b21d8122ff3dc84d596cea54ab14539a9461d23e893eb50cfd636613",
+  "compression": "gzip level 9, mtime 0; decompression preserves original bytes",
+  "exporter": "reporting/export_results.py",
+  "scope": "Working raw results; all assignments retained. Original artifact-hashes.json covers the full server bundle, not just this Git subset.",
+  "files": {
+    "summary.json": {
+      "bytes": 4820,
+      "sha256": "e37424ac5d2286b3284d1416e027cd30731d025bea2f049c3a5c9845eb061cba"
+    },
+    "manifest.json": {
+      "bytes": 3833,
+      "sha256": "45b524aadcdc703bba4323c6b14df2f7b3c2726cd40658e8f8c4ab1bb15c96c1"
+    },
+    "public-plan-receipt.json": {
+      "bytes": 1092,
+      "sha256": "d92838f0f0e62fe0d6c901c3c064129b163f27b2a4e6812d130c14f21a5e6a56"
+    },
+    "artifact-hashes.json": {
+      "bytes": 5263,
+      "sha256": "e5b20bfd680b6ed622884459c0f72c4864a252474c154ea6b9424f5ac721ac79"
+    },
+    "episodes.jsonl.gz": {
+      "bytes": 26434,
+      "sha256": "1c9ff9e25c8ce6f8871f256feb161dbac8922590f24b8f3e0cd7896745d90c2e"
+    },
+    "outcomes.csv": {
+      "bytes": 5535,
+      "sha256": "68883d3111e97db2c57ff6bf40d5916c1ee3467f77c682ee90dc8be16300049c"
+    },
+    "events.jsonl": {
+      "bytes": 36085,
+      "sha256": "c92afc163372059a95c1d47bcd9c1288b798279a78faf1bc95d6da7a1d5b6052"
+    }
+  }
+}

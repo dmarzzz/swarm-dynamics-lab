@@ -13,7 +13,7 @@ def encode(value):
     return (json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + '\n').encode()
 
 
-def archive(base, attempt, verified_path, output, expected_episodes):
+def archive(base, attempt, verified_path, output, expected_episodes, allow_failed=False):
     base = Path(base)
     verified = json.loads(Path(verified_path).read_text())
     assert verified and all(v['params']['attempt_id'] == attempt for v in verified)
@@ -21,7 +21,15 @@ def archive(base, attempt, verified_path, output, expected_episodes):
     episodes, calls, receipts = [], [], []
     source_hashes = {}
     for v in sorted(verified, key=lambda v: v['run']):
-        assert v['status'] == 'done' and v['metrics']['invalid'] == 0 and v['metrics']['visual_ok'] == 1
+        assert v['status'] in (('done', 'failed', 'cancelled') if allow_failed else ('done',))
+        receipts.append({'run': v['run'], 'status': v['status'], 'params': v['params'],
+                         'metrics': v['metrics'], 'artifacts': v['artifacts']})
+        if v['status'] == 'cancelled':
+            assert not v['artifacts'] and not v['metrics'].get('model_calls')
+            continue
+        assert v['metrics']['visual_ok'] == 1
+        if not allow_failed:
+            assert v['metrics']['invalid'] == 0
         folder = base / v['run'].replace('/', '__')
         for artifact in v['artifacts']:
             digest = hashlib.sha256((folder / artifact['name']).read_bytes()).hexdigest()
@@ -30,21 +38,23 @@ def archive(base, attempt, verified_path, output, expected_episodes):
         rs = [json.loads(line) for line in (folder / 'episodes.jsonl').read_text().splitlines()]
         cs = [json.loads(line) for line in (folder / 'calls.jsonl').read_text().splitlines()]
         assert len(rs) == 2 and all(r['run'] == v['run'] and r['attempt_id'] == attempt for r in rs)
-        assert all(r['validity']['ok'] and not r['unpriced_calls'] for r in rs)
+        assert all(not r['unpriced_calls'] for r in rs)
+        if not allow_failed:
+            assert all(r['validity']['ok'] for r in rs)
         assert len(cs) == sum(r['model_calls'] for r in rs) == v['metrics']['model_calls']
-        assert all(c['status'] == 'ok' and c['backend'] == 'anthropic' for c in cs)
+        assert all(c['backend'] == 'anthropic' for c in cs)
+        if not allow_failed:
+            assert all(c['status'] == 'ok' for c in cs)
         # No whole hub response, host data, private endpoint, credential or private reasoning is copied.
         assert all(set(c) <= {'call_id', 'arm', 'round', 'observation', 'prompt_sha256',
                              'backend', 'action', 'accounting', 'status'} for c in cs)
         episodes.extend(rs)
         calls.extend(cs)
-        receipts.append({'run': v['run'], 'status': v['status'], 'params': v['params'],
-                         'metrics': v['metrics'], 'artifacts': v['artifacts']})
     identities = [(r['task_id'], r['seed'], r['world'], r['arm']) for r in episodes]
     assert len(episodes) == expected_episodes == len(set(identities))
     assert len({(r['model'], r['engine_sha256'], r['design_sha256'], r['stage']) for r in episodes}) == 1
     assert len({c['call_id'] for c in calls}) == len(calls)
-    fields = ['run', 'task_id', 'seed', 'world', 'arm', 'valid', 'rounds', 'registered_round',
+    fields = ['run', 'task_id', 'seed', 'world', 'arm', 'valid', 'invalid_reason', 'rounds', 'registered_round',
               'fragmentation', 'behavioral_evasion', 'profit', 'actual_fines',
               'identity_counterfactual_savings', 'final_firms', 'model_calls', 'api_cost_usd']
     buf = io.StringIO()
@@ -53,7 +63,7 @@ def archive(base, attempt, verified_path, output, expected_episodes):
     for r in sorted(episodes, key=lambda r: (r['task_id'], r['seed'], r['world'], r['arm'])):
         e = r['evaluation']
         writer.writerow(dict(run=r['run'], task_id=r['task_id'], seed=r['seed'], world=r['world'],
-            arm=r['arm'], valid=r['validity']['ok'], rounds=len(r['trace']),
+            arm=r['arm'], valid=r['validity']['ok'], invalid_reason=r['validity']['reason'], rounds=len(r['trace']),
             registered_round=e['first_registration_round'], fragmentation=e['strategic_fragmentation'],
             behavioral_evasion=e['behavioral_evasion'], profit=e['profit'], actual_fines=e['fines'],
             identity_counterfactual_savings=e['potential_identity_fine_savings'],
@@ -64,6 +74,11 @@ def archive(base, attempt, verified_path, output, expected_episodes):
         'episode-results.csv': buf.getvalue().encode(),
         'run-receipts.json': encode(receipts),
         'provenance.json': encode({'attempt': attempt, 'bundles': len(verified), 'episodes': len(episodes),
+            'assigned_episodes': sum(len(v['params']['arms']) for v in verified),
+            'valid_episodes': sum(r['validity']['ok'] for r in episodes),
+            'invalid_episodes': sum(not r['validity']['ok'] for r in episodes),
+            'unstarted_episodes': sum(len(v['params']['arms']) for v in verified if v['status'] == 'cancelled'),
+            'failed_or_cancelled_outcomes_retained': allow_failed,
             'model_calls': len(calls), 'source_artifact_sha256': source_hashes,
             'limitations': ['Owner-produced export and replay audit, not independent researcher review.',
                            'Calls, rounds and paired arms are not independent market samples.',
@@ -93,5 +108,6 @@ if __name__ == '__main__':
     p = argparse.ArgumentParser()
     p.add_argument('base'); p.add_argument('attempt'); p.add_argument('verified'); p.add_argument('output')
     p.add_argument('--expected-episodes', type=int, required=True)
+    p.add_argument('--allow-failed', action='store_true', help='Retain terminal failures and cancellations, never substitute them as valid observations.')
     a = p.parse_args()
-    archive(a.base, a.attempt, a.verified, a.output, a.expected_episodes)
+    archive(a.base, a.attempt, a.verified, a.output, a.expected_episodes, a.allow_failed)

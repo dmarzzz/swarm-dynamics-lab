@@ -1,11 +1,15 @@
 import copy,json,sys,unittest
 from pathlib import Path
 BASE=Path(__file__).resolve().parents[1];sys.path.insert(0,str(BASE/'analysis'));sys.path.insert(0,str(BASE/'src'))
-from approval_review import review_request,chair_request
+from approval_review import review_request,chair_request,required_quota
 from dossier import build,evaluate
 from study import reference_decision,cost_worksheet
 
 class ApprovalReviewTests(unittest.TestCase):
+ def test_quota_includes_provider_envelope_and_retry(self):
+  config=json.loads((BASE/"model-config-native.json").read_text())
+  self.assertAlmostEqual(required_quota(config),6.08256)
+  self.assertAlmostEqual(required_quota(config,108)*2,required_quota(config))
  def test_only_review_instructions_differ(self):
   q={'instructions':'chair','observation':{'phase':'chair','reports':[{'choice':'Aster'}],'documents':[]}}
   a,b=review_request(q,'approval_review'),review_request(q,'general_review')

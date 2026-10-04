@@ -1402,4 +1402,223 @@ artifacts:
           - data/discussion-v3/v3-q0-a1/events.jsonl
           - data/discussion-v3/v3-q0-a1/manifest.json
         commit: 09b4b0cc5e3abd1de430c4055df7ba0cb38ba841-dirty
+  - id: influence-approval-review-results
+    category: content
+    type: figure
+    title: 'Matched approval review: measured decisions across six procurement dossiers'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-approval-review-results/influence-approval-review-results-v1.png
+        built_at: '2026-10-04T04:51:23Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Improve the design, evaluate against the plan, and resolve gaps or failures from previous experiment runs.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/approval_review.py
+          - data/influence-native/native-D2-01/outcomes.json
+          - data/influence-native/native-D2-01/summary.json
+        commit: 518d4412bc566a388dd4dc022118ade8dd637fa3-dirty
+  - id: influence-approval-review-replay
+    category: content
+    type: doc
+    title: 'Recorded approval-review diagnostic: requests, findings and final decisions'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/influence-approval-review-replay/influence-approval-review-replay-v1.html
+        built_at: '2026-10-04T04:51:24Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1041f-9bfc-7891-be03-69925e274e9f
+        prompt: Make the results more practical, robust, compelling, and interesting, with measured replays.
+        ingredients:
+          - researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py
+          - data/influence-native/native-D2-01/manifest.json
+          - data/influence-native/native-D2-01/summary.json
+          - data/influence-native/native-D2-01/case-0.json
+          - data/influence-native/native-D2-01/case-1.json
+          - data/influence-native/native-D2-01/case-2.json
+          - data/influence-native/native-D2-01/case-3.json
+          - data/influence-native/native-D2-01/case-4.json
+          - data/influence-native/native-D2-01/case-5.json
+          - data/influence-native/native-D2-01/events-0.jsonl
+          - data/influence-native/native-D2-01/events-1.jsonl
+          - data/influence-native/native-D2-01/events-2.jsonl
+          - data/influence-native/native-D2-01/events-3.jsonl
+          - data/influence-native/native-D2-01/events-4.jsonl
+          - data/influence-native/native-D2-01/events-5.jsonl
+        commit: 518d4412bc566a388dd4dc022118ade8dd637fa3-dirty
+  - id: right-dissenter-q1
+    category: content
+    type: figure
+    title: 'Right Dissenter Q1: sufficient-evidence diagnostic'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-q1/right-dissenter-q1-v1.png
+        built_at: '2026-10-04T04:49:00Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the write-up on the experiment.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/q1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/q1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-s1
+    category: content
+    type: figure
+    title: 'Right Dissenter S1: policy outcomes and checking cost'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-s1/right-dissenter-s1-v1.png
+        built_at: '2026-10-04T04:49:01Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/s1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/s1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-d1
+    category: content
+    type: figure
+    title: 'Right Dissenter D1: unreproduced response validation errors'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-d1/right-dissenter-d1-v1.png
+        built_at: '2026-10-04T04:49:02Z'
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/src/validation_worker.py
+          - researchers/vishesh/notes/dissent/results/d1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/d1-a1/records.json
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: right-dissenter-measured-replay
+    category: content
+    type: film
+    title: 'Right Dissenter: measured correction and recovery trajectories'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4
+        built_at: '2026-10-04T04:49:02Z'
+        note: 23 seconds of saved native events; scripted initial votes and evaluator-only overlays labelled. No invented
+          model reasoning.
+        by: codex
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Let us get started on the experimental design, plan, implementation, visualizations, write-ups, and so on
+          and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/visualization/export_measured.py
+          - researchers/vishesh/notes/dissent/src/live_render.py
+          - researchers/vishesh/notes/dissent/results/s1-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/s1-a1/records.json
+          - https://swarm-live.pages.dev/api/a/right-dissenter/s1-a1/measured_replay.gif
+        commit: dfd45d63ac21a610d04eff71942c78e1c71a9297-dirty
+  - id: vishesh-theseus-d1-plan
+    category: content
+    type: spec
+    title: Theseus targeted execution diagnostic plan
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-plan/vishesh-theseus-d1-plan-v1.md
+        built_at: '2026-10-04T04:54:16Z'
+        note: vishesh/codex-theseus; prospective D1 preparation, no new model results.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
+          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
+          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
+          we can get to the next useful experimental run.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/PLAN.md
+        commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
+  - id: vishesh-theseus-d1-repair-map
+    category: content
+    type: doc
+    title: Theseus thirteen-error targeted repair map
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/vishesh-theseus-d1-repair-map/vishesh-theseus-d1-repair-map-v1.md
+        built_at: '2026-10-04T04:54:16Z'
+        note: vishesh/codex-theseus; prospective D1 preparation, no new model results.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: How would you propose resolving the execution inconsistencies and instrument defects? Let's propose solutions
+          to shore up the designs and improve how we're doing this. Let's figure out how we're going to address those 13 errors
+          and let's make a plan for those targeted repairs. Get that all proposed and built. Get it committed and pushed so
+          we can get to the next useful experimental run.
+        ingredients:
+          - researchers/vishesh/notes/swarm-of-theseus/v2/diagnosis/FINDINGS.md
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/regressions.json
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/src/instrument.py
+          - researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/REPAIR-MAP.md
+        commit: d202b7f2af5f3cd20c3e612e97befdddaa84bd46-dirty
+  - id: market-split-haiku-r0-001
+    category: content
+    type: figure
+    title: 'Haiku full-length reliability: retained capacity failure'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001/market-split-haiku-r0-001-v1.png
+        built_at: '2026-10-04T04:54:08Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/qualification_plot.py
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/episode-results.csv
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/run-receipts.json
+          - researchers/dmarz/notes/market-split-haiku/report/r0-001/usage.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
+  - id: market-split-haiku-r0-001-records
+    category: content
+    type: dataset
+    title: Haiku R0-001 outcomes, actions and retained failure
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/market-split-haiku-r0-001-records/market-split-haiku-r0-001-records-v1.zip
+        built_at: '2026-10-04T04:54:20Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1047e-d018-7200-99d4-ef93e90cd5c4
+        prompt: when ur done with a run please push the results to github and a postmoterm and include analysis with the results
+          and let me know when u have also pushed another wxperiment plan but dont start
+        ingredients:
+          - researchers/dmarz/notes/market-split-api/report/src/archive.py
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/r0-001-verified.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__c5c09a7297b4/visualization-errors.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/progress.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/final_frame.png
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/replay.gif
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/episodes.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/calls.jsonl
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/summary.json
+          - researchers/dmarz/notes/market-split-haiku/results/fleet-recovery/hub/market-split-haiku__fa18e25800e8/visualization-errors.json
+        commit: 5a281b08afa25e4509eadd8df262baa8a08f74f3-dirty
 requires: '1.2'

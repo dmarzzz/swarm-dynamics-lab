@@ -1,3 +1,5 @@
+> Final closeout: the verified existing Dmarz fleet host sim-shadow was borrowed exclusively for Q1/S1/D1 and released after worker exit and artifact readback. No new replacement droplet was created. The earlier mistaken sim-right-dissenter host was deleted. Current evidence is in CLOSEOUT.json and REPORT.md; the historical admission notes below remain for audit.
+
 > Current allocation status, 2026-10-04: the default local credential used for Q0 was confirmed outside Dmarz's account. Shared fleet membership did not authorize that billing account. Q1 is blocked before any calls; the host is out of service and the scoped cleanup receipt records removal. Use only a verified Dmarz-account provisioner for the replacement. The $2 cap remains approved. Historical provisioning estimates below are not account-authorization evidence.
 
 # Right Dissenter deployment

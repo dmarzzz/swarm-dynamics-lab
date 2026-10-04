@@ -1,0 +1,74 @@
+[
+  {
+    "assignment": 2,
+    "candidate": "cedar-json",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 2,
+    "candidate": "finch-parse",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 2,
+    "candidate": "juniper-codec",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 2,
+    "candidate": "maple-data",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 3,
+    "candidate": "cedar-json",
+    "citation_count": 3,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 3,
+    "candidate": "finch-parse",
+    "citation_count": 3,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 3,
+    "candidate": "juniper-codec",
+    "citation_count": 3,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 3,
+    "candidate": "maple-data",
+    "citation_count": 3,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 4,
+    "candidate": "Cedar itinerary",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 4,
+    "candidate": "Finch itinerary",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 4,
+    "candidate": "Juniper itinerary",
+    "citation_count": 4,
+    "unobserved_ids": []
+  },
+  {
+    "assignment": 4,
+    "candidate": "Maple itinerary",
+    "citation_count": 4,
+    "unobserved_ids": []
+  }
+]
