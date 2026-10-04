@@ -25,4 +25,4 @@ def reconcile(query,sources):
 
 def actor_input(case,sources):
  allowed=('id','publisher','published','url','excerpt')
- return {'instruction':'Evaluate the query using only supplied excerpts. Interpret latest as latest applicable supplied vintage at or before cutoff. A revision supersedes an earlier estimate; different scope is not contradiction. Return SUPPORT, REFUTE or UNCERTAIN with source IDs and verbatim evidence span. Do not infer absent measurements.','query':dict(case['query']),'sources':[{k:s[k] for k in allowed} for s in sources if s['id'] in case['source_ids']]}
+ return {'instruction':'Evaluate the query using only supplied excerpts. Interpret latest as latest applicable supplied vintage at or before cutoff. A revision supersedes an earlier estimate; different scope is not contradiction. Return exactly one label: SUPPORT, REFUTE or UNCERTAIN. Do not infer absent measurements.','query':dict(case['query']),'sources':[{k:s[k] for k in allowed} for s in sources if s['id'] in case['source_ids']]}
