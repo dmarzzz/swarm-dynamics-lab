@@ -248,9 +248,9 @@ def gate(stage, rows, violations=()):
     if stage == 'S0':
         return qualification(rows)['passed'] and probe_gate(rows)['passed'] and not violations
     if stage == 'P0':
-        return probe_gate(rows)['passed']
+        return probe_gate(rows)['passed'] and not violations
     if stage == 'Q0':
-        return qualification(rows)['passed']
+        return qualification(rows)['passed'] and not violations
     return None
 
 
@@ -424,10 +424,19 @@ def check_names(split):
     return [] if 0.4 < mean < 0.6 and min(ranks) < 0.1 and max(ranks) > 0.9 else [f'{split}:attacker_names_sort_apart:{mean:.3f}']
 
 
-def check_invariants(split):
-    bad = check_names(split)
-    for family, task in roots(split): bad += check_root(family, task)
-    for family, task in roots('qualification'):
-        for shape in design()['qualification']['shapes']: bad += check_fixture(family, task, shape)
-    p = design()['probe']; bad += check_fixture(p['family'], p['task'], p['shape'])
+def check_invariants(stage):
+    """Structural checks of exactly the inputs a stage will use, run before anything is dispatched.
+    S0: engineering roots at every identity allocation, every qualification fixture and the probe
+    fixture. P0: the probe fixture. Q0: the qualification fixtures. S1: the comparison roots at
+    every identity allocation. They look at worlds and packets, never at answers."""
+    bad = []; p = design()['probe']
+    split = {'S0': 'engineering', 'S1': 'comparison'}.get(stage)
+    if split:
+        bad += check_names(split)
+        for family, task in roots(split): bad += check_root(family, task)
+    if stage in ('S0', 'Q0'):
+        for family, task in roots('qualification'):
+            for shape in design()['qualification']['shapes']: bad += check_fixture(family, task, shape)
+    if stage in ('S0', 'P0'):
+        bad += check_fixture(p['family'], p['task'], p['shape'])
     return bad

@@ -63,14 +63,15 @@ def run_stage(p, out, run, backend, deadline, state, opener=None):
     assigned = study.assignments(stage, out, preparing); total = len(assigned); state['total'] = total
     with gzip.open(out / 'assignments.jsonl.gz', 'wt') as f:
         for a in assigned: f.write(json.dumps(a, sort_keys=True) + '\n')
-    violations = study.check_invariants('engineering') if stage == 'S0' else []
+    violations = study.check_invariants(stage)
     ledger = None
     if p['backend'] == 'anthropic':
         path = os.environ.get('STUDY_BUDGET_LEDGER'); assert path, 'persistent_budget_required'
         assert total <= budget['max_calls'][stage], 'assignments_exceed_stage_call_cap'
         ledger = provider.Ledger(path); backend = backend or provider.Anthropic(ledger, opener=opener)
     initial = ledger.transact() if ledger else {}
-    rows = state['rows']; stopped = False; reporting_errors = []
+    rows = state['rows']; reporting_errors = []
+    stopped = bool(violations) and p['backend'] != 'scripted'      # structurally broken inputs: no call is made
     render.frame([], total, stage, accounting=initial).save(out / 'initial_frame.png')
     if run: upload(run, out / 'initial_frame.png')
 
@@ -133,7 +134,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None):
         render.frame(rows, total, stage, time.monotonic() - start, (rows[-1]['study_accounting'] if rows else None) or initial).save(out / 'progress.png')
         frames = render.replay(rows, out, stage, total, initial)
     except Exception as exc: reporting_errors.append('render_' + type(exc).__name__)
-    passed = t['invalid'] == 0 and passed_gate is not False
+    passed = t['invalid'] == 0 and passed_gate is not False and not violations
     summary = {'params': p, 'experiment': study.EXPERIMENT, 'planned': total,
                'started': sum(r['status'] != 'not_started' for r in rows), 'terminal': len(rows), 'graded': len(good),
                'analyzed': len(good), 'not_started': sum(r['status'] == 'not_started' for r in rows),
@@ -142,9 +143,9 @@ def run_stage(p, out, run, backend, deadline, state, opener=None):
                'elapsed_seconds': time.monotonic() - start,
                'qualification': study.qualification(rows) if stage in ('S0', 'Q0') else None,
                'probe': study.probe_gate(rows) if stage in ('S0', 'P0') else None,
-               'invariant_violations': violations if stage == 'S0' else None,
+               'invariant_violations': violations,
                'qualification_passed': None if passed_gate is None else int(passed_gate), 'passed': passed,
-               'reason': None if passed else 'invalid_rows' if t['invalid'] else 'invariant_violations' if violations else 'gate_failed',
+               'reason': None if passed else 'invariant_violations' if violations else 'invalid_rows' if t['invalid'] else 'gate_failed',
                'request_bytes_mean': (sum(len(json.dumps(a['packet'], sort_keys=True)) for a in assigned) / total) if total else 0,
                'primary_contrast': analysis.get('primary', {}).get('estimate') if pilot else None,
                'rare_wrong': analyze.mean(r['evaluation']['rare_wrong'] for r in good if r['kind'] == 'pilot'),
