@@ -46,3 +46,7 @@ Standard sim provisioning completed with exit 0. SSH configuration validates; th
 ## A3 completed — 2026-10-04 UTC
 
 Direct dispatch was explicitly authorized after orbital-one declined this researcher’s study; the queue request was withdrawn before launch. [Post-mortem](evidence-study/reviews/receipt-a3-post.md):16/16 episodes,120 calls,zero invalid or missing usage,USD0.311494 actual. Execution/reconciliation passed; qualification failed on redundant healthy-control deployments. All incident gates passed; all eight paired healthy-tick differences were zero. [Scientific review](evidence-study/reviews/receipt-a3-quality.json) records remaining gaps. Complete evidence and final cumulative ledger are preserved locally. No new attempt without an owner-approved updated plan.
+
+## PI-led freshness revision A4 — prepared, allocation blocked
+
+Current owner instruction authorizes a bounded review/implement/run/post-mortem cycle. [PI critique](freshness-study/PI-REVIEW.md), [prospective design](freshness-study/README.md), [pre-run assessment](freshness-study/PRE-A4.md), and [offline validation](freshness-study/offline-validation.json) are published. Nine tests and12 scripted feasibility episodes pass. A4 uses6 paired worlds,12 native episodes and60 calls; at most one subsequent justified60-call attempt within the original USD8 ledger. Current account quota is full; no new native attempt has started. Do not reuse another study’s active machine or a Dmarz-named machine without resolving the prior owner restriction.
