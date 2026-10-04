@@ -1,0 +1,55 @@
+{
+  "_comment": "JSON inside .yaml so the runner needs no YAML library (same convention as researchers/dmarz/notes/discussion-dose). Frozen design for S0/S1. S2 does not exist in this coordinator: the hypothesis (PR 82) is not accepted.",
+  "version": "capture-memory-v1",
+  "status": "exploratory-unreviewed hunch; scripted backend only",
+
+  "arms": ["A0_no_purge", "A1_purge", "A2_purge_wipe"],
+  "memories": [1, 5, 20, "full"],
+
+  "cfg": {
+    "n_agents": 24,
+    "beta": 2.5,
+    "h_inside": 0.1,
+    "h_outside": 0.5,
+    "entrench_rounds": 20,
+    "takeover_max_rounds": 100,
+    "clean_takeover_rounds": 20,
+    "recovery_rounds": 80,
+    "capture_frac": 0.75,
+    "capture_streak": 3,
+    "recover_frac": 0.75,
+    "recover_streak": 10,
+    "eval_round": 50
+  },
+
+  "block": 25,
+
+  "splits": {
+    "dev": [0, 199],
+    "holdout": [1000, 1999]
+  },
+
+  "stages": {
+    "S0": {
+      "purpose": "clean validation: no committed minority, every memory length must hold the convention",
+      "split": "dev", "tasks": 50, "worlds": ["W0_CLEAN"], "doses": [0.0], "seeds": [1]
+    },
+    "S1": {
+      "purpose": "development: capture rates per memory, recovery contrasts, variance for a later sample size",
+      "split": "dev", "tasks": 100, "worlds": ["W1_INSIDE", "W2_OUTSIDE"], "doses": [0.42, 0.5], "seeds": [1, 2]
+    }
+  },
+
+  "primary_contrast": {
+    "_comment": "Declared before any S1 run. Everything else in the results is exploratory.",
+    "stage": "S1",
+    "world": "W1_INSIDE",
+    "dose": 0.42,
+    "arm": "A1_purge",
+    "metric": "frac_original_T",
+    "compare_memory": [20, 1],
+    "population": "episodes captured under both memory lengths of the contrast (capture is decided before removal and is shared by all arms)",
+    "secondary": ["recovered", "half_time"],
+    "bridge": {"arms": ["A2_purge_wipe", "A1_purge"], "metric": "frac_original_T", "per": "memory"}
+  }
+}
