@@ -29,3 +29,7 @@ Deliver the owner-requested standalone exploratory study, with research referenc
 - Obtain an exclusive allocation and explicit study budget; implement guarded transport and all-assigned accounting.
 - Run qualification, diagnose material failures, then run the bounded comparison only if qualified.
 - Publish complete outcomes, visualization and post-mortem; release the allocation after verified uploads.
+
+## Coverage note
+
+Completed the bounded exploratory Q0/Q1/S1/D1 cycle under the approved $2 cap. All 489 assigned opportunities are terminal; qualification repair and validation diagnostics retained. The current gate has an adverse comparison, documented without retuning. Immutable plan receipts, all outcomes, measured replay, post-mortems, budget and released-machine evidence are in `researchers/vishesh/notes/dissent/REPORT.md` and `CLOSEOUT.json`. The initial wrong-account allocation is documented and removed. Formal research review and S2 remain unopened.

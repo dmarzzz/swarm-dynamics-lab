@@ -68,16 +68,27 @@
         "researchers/vishesh/notes/dissent/experiment.json"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested efficacy question: whether bounded evidence-backed challenge improves decisions against wrong majority reports without needless disruption.",
-        "rationale": "Votes are scripted; repeated native adjudications may share saved responses. Seven policies, five source/vote roles and temporal events do not multiply independent case count."
+        "score": 1,
+        "claim": "On this fixed synthetic cohort, evidence-gated dissent saved nine checks but produced six fewer correct decisions than always-check, including two missed favorable recovery events.",
+        "rationale": "Scripted votes, repeated scenario grammar, shared saved responses and 52 fixed roots limit generalization. All outcomes and three rejected calls are retained; clean qualification passed after a prospective wording amendment. This is an owner assessment, not independent review."
       },
-      "sample_size_summary": "No native results. Planned Q0: 18 clean decisions. S1: 52 roots \u00d7 7 policies = 364 trajectories containing 420 decision opportunities (48 static roots and 4 temporal roots with 3 steps each), across 3 scenarios.",
+      "sample_size_summary": "Observed S1: 52 fixed roots with reused grammar; 420/420 decisions across 7 policies; 129/132 unique calls valid. Separate screens: Q0 12/18 correct; Q1 clarified 18/18 plus 6/6 uncertainty controls; D1 9/9 valid. No independent replication.",
       "sources": [
-        "researchers/vishesh/notes/dissent/README.md",
-        "researchers/vishesh/notes/dissent/LIVE-PLAN.md"
+        "researchers/vishesh/notes/dissent/REPORT.md",
+        "researchers/vishesh/notes/dissent/results/s1-a1/analysis.json",
+        "researchers/vishesh/notes/dissent/results/s1-a1/summary.json",
+        "researchers/vishesh/notes/dissent/CLOSEOUT.json"
       ],
-      "status_at_assessment": "planned_not_run"
+      "status_at_assessment": "exploratory_complete_adverse_comparison",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "ad0dbb8151d5daf25b6d0fcfe127b8bc44e53ab2",
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/REPORT.md": "6a89889ea3de609e04178cce393548f4bc05f2991a944cb0db2398a00239e836",
+        "researchers/vishesh/notes/dissent/results/s1-a1/analysis.json": "f7ad329af1ecae63f4a07a4fae599483eda4232cd7b25076f5f076725feea2c3",
+        "researchers/vishesh/notes/dissent/results/s1-a1/summary.json": "1874e62ffc051e8ae9a674d2dd3ee455679687c25abec5cfc48ab832d06cd78e",
+        "researchers/vishesh/notes/dissent/CLOSEOUT.json": "041207c706070a724473e5ae2b5d2082073a63899c5f9ab1bae023745cbb6242"
+      }
     },
     {
       "id": "optimal-swarm-size",
