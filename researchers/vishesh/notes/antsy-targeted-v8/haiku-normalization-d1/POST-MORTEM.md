@@ -1,5 +1,14 @@
 # Antsy Haiku: role diversity did not fix shared normalization
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-methods; source `9781739c` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **1/4** — Forty Haiku readers shared a1000-fold normalization error on one qualifying receipt; role variation and a16-call locale diagnostic did not repair it. Basis: Two real receipts;96valid calls with full trace coverage, source-label review and original-ledger accounting. Same-author used-case diagnostic, not population evidence.
+- **sample_size_summary:** 2receipt units. Q0:40responses each,1receipt correct and1wrong for both panels. D1:same2receipts ×2conditions ×4repeats;no benefit. E0:0of18receipts collected.
+<!-- experiment-evidence:end -->
+
 **FINISH this diagnostic; keep the main evaluation closed.** Q0 completed80 valid calls; D1 completed16. No API, schema, route, accounting or trace execution errors occurred. All96 returned visible responses and known usage. Native Haiku qualification failed; the subsequent locale-guidance repair was not supported. These are two receipt units, not96 independent observations.
 
 ![Native qualification and diagnostic](results/comparison.png)
