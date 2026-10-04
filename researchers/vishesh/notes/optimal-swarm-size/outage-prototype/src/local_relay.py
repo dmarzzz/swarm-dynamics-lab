@@ -13,11 +13,24 @@ from openrouter_route import MODEL,ROUTE
 def allowed_calls():
     return {f"{r['id']}/{tick}/{actor}" for r in assignments() if r['arm']!='scheduled' for tick in range(8) for actor in range(1 if r['arm']=='single' else 4)}
 
+def contracts(scope):
+    if scope=='outage-o1':return {rid:payload([])['response_format'] for rid in allowed_calls()},512,12000
+    from tasks import generate
+    from response_contract import schema_for
+    rows=json.loads((Path(__file__).resolve().parents[2]/'results/q-a7-preparation/planned-manifest.json').read_text())['assignments']
+    result={}
+    for row in rows:
+        public=generate(row['family'],row['structure'],row['root'],width=16).public
+        for phase,item in [('plan',None),('plan_repair',None),('integrate',None)]+[('work',i) for i in public['items']]:
+            result[f"{row['id']}/0/{phase}/{item or '-'}"]={'type':'json_schema','json_schema':{'name':'swarm_response','strict':True,'schema':schema_for(public,phase,item)}}
+    if len(result)!=152:raise ValueError('q7_manifest_changed')
+    return result,4096,48000
+
 class NoRedirect(urllib.request.HTTPRedirectHandler):
     def redirect_request(self,*args,**kwargs):raise ValueError('redirect_rejected')
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--credential',type=Path,required=True);p.add_argument('--port-file',type=Path,required=True);p.add_argument('--dispatch-log',type=Path,required=True);p.add_argument('--expires',type=float,required=True);p.add_argument('--scope',choices=['outage-o1','q-a7'],default='outage-o1');a=p.parse_args()
     os.umask(0o077);resource.setrlimit(resource.RLIMIT_CORE,(0,0))
     if a.credential.is_symlink() or a.credential.stat().st_mode&0o077 or a.credential.stat().st_uid!=os.getuid():raise ValueError('credential_permissions')
     opener=urllib.request.build_opener(NoRedirect())
@@ -29,17 +42,17 @@ def main():
     key=a.credential.read_text().strip()
     if not key or '\n' in key:raise ValueError('credential_format')
     if a.dispatch_log.exists():raise ValueError('relay_already_started')
-    log=a.dispatch_log.open('x');allowed=allowed_calls();seen=set();lock=threading.Lock();stopped=threading.Event()
+    log=a.dispatch_log.open('x');allowed,max_tokens,max_bytes=contracts(a.scope);seen=set();lock=threading.Lock();stopped=threading.Event()
     class Handler(BaseHTTPRequestHandler):
         def log_message(self,*args):pass
         def do_POST(self):
             result={'ok':False,'failure':'transport_failed'}
             try:
                 size=int(self.headers.get('Content-Length','0'))
-                if self.path!='/invoke' or not 0<size<=12500 or time.time()+120>a.expires:raise ValueError('request_bound')
+                if self.path!='/invoke' or not 0<size<=max_bytes+500 or time.time()+120>a.expires:raise ValueError('request_bound')
                 data=json.loads(self.rfile.read(size));rid=data['id'];body=data['request']
                 if set(data)!={'id','request'} or rid not in allowed:raise ValueError('unassigned_call')
-                if set(body)!=set(payload([])) or body.get('model')!=MODEL or body.get('provider')!=ROUTE or body.get('max_tokens')!=512 or body.get('temperature')!=0 or body.get('stream') is not False or body.get('response_format')!=payload([])['response_format'] or len(json.dumps(body).encode())>12000:raise ValueError('payload_contract')
+                if set(body)!=set(payload([])) or body.get('model')!=MODEL or body.get('provider')!=ROUTE or body.get('max_tokens')!=max_tokens or body.get('temperature')!=0 or body.get('stream') is not False or body.get('response_format')!=allowed[rid] or len(json.dumps(body).encode())>max_bytes:raise ValueError('payload_contract')
                 with lock:
                     if rid in seen or stopped.is_set():raise ValueError('replay_or_stop')
                     seen.add(rid);log.write(json.dumps({'id':rid,'dispatched_epoch':time.time()})+'\n');log.flush();os.fsync(log.fileno())
@@ -55,7 +68,7 @@ def main():
             except Exception:stopped.set()
             raw=json.dumps(result).encode();self.send_response(200);self.send_header('Content-Length',str(len(raw)));self.end_headers();self.wfile.write(raw)
     server=ThreadingHTTPServer(('127.0.0.1',0),Handler);server.timeout=1
-    a.port_file.write_text(str(server.server_port));print('Local OpenRouter relay ready; finite O1 IDs; no worker credential.',flush=True)
+    a.port_file.write_text(str(server.server_port));print('Local OpenRouter relay ready; finite '+a.scope+' IDs; no worker credential.',flush=True)
     while time.time()<a.expires:server.handle_request()
     server.server_close();log.close()
 

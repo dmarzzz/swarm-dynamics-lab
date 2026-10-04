@@ -2,6 +2,8 @@
 
 2026-10-04 UTC. Owner-authorized single iteration within the original study and cumulative USD20 cap. Not dispatched. [Q-A6 post-mortem](q-a6-post.md), [design transfer](../DESIGN-TRANSFER.md) and portfolio PI decisions were reviewed before implementation. Researcher review is not required by owner direction; this is an author assessment, not independent validation.
 
+Current transport is superseded by the [prospective OpenRouter amendment](q-a7-openrouter-amendment.md), preserving the scientific design and original cumulative budget. Earlier direct-Anthropic transport text below is historical.
+
 ## TLDR
 
 At N=1, compare the unchanged work prompt with a prompt that repeats the requested rule, its public numeric operands and its declared prerequisite artifacts in an explicit binding object. Two fresh development roots, parallel/chain structures, two matched arms: eight assigned width-16 episodes. Measure final correctness, local arithmetic consistency, correct items/second, calls, tokens and dollars. Small competence discriminator, not a size or population-effect estimate.

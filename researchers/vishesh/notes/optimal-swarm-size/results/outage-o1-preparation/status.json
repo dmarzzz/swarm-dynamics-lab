@@ -1,0 +1,21 @@
+{
+  "attempt": "outage-o1-preparation",
+  "kind": "preparation_only",
+  "planned_o1": 12,
+  "planned_q_a7": 8,
+  "assigned": 0,
+  "started": 0,
+  "valid": 0,
+  "model_calls": 0,
+  "added_cost_microdollars": 0,
+  "original_exposure_microdollars": 2031320,
+  "original_settled_microdollars": 1810840,
+  "historical_hold_microdollars": 220480,
+  "ledger_migrated": false,
+  "source_commit": "2acfe6cfedf910f53e60807473027b7a0f7bde25",
+  "worker_offline_checks": 22,
+  "shared_tests_after_route_amendment": 68,
+  "public_registration_verified": true,
+  "launch_blocker": "Specific approval for canonical-ledger handoff pending after automatic platform review rejected the mutation. No bypass or new budget authority.",
+  "scope": "four qualification then conditional eight demonstration episodes; existing Q-A7 separate; no broad sweep"
+}

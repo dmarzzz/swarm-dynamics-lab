@@ -1,0 +1,13 @@
+# Q-A7 explicit OpenRouter route amendment
+
+Prospective, 2026-10-04; no Q-A7 calls have occurred. Owner direction relayed by the PI task authorizes the existing OpenRouter route and local credential consumer for the already-approved diagnostic. The local authorization receipt is private; no owner prompt or credential is published.
+
+Keep the original question, full/bound arms, roots6/7, parallel/chain cells, N1, dependency enforcement, phase schemas, memory, metrics and root6 futility. Change only the explicit transport: OpenRouter chat completions, model anthropic/claude-haiku-4.5, Anthropic-only, no fallback, required strict JSON schema. Public catalog binds that endpoint to anthropic/claude-4.5-haiku-20251001. Its alias-only served model is catalog-backed snapshot evidence, not proof of identical weights. Preserve historical direct-Anthropic cohorts separately.
+
+The existing local credential file is consumed only by a loopback relay. Verified encrypted SSH reverse forwarding exposes the relay only on worker loopback. No Anthropic key, OpenRouter key, general environment fallback or persistent model credential is placed on the host. Requests are finite-assignment/phase/item IDs, exact schema and token limits; duplicate physical dispatch is rejected. Exact actual OpenRouter payloads and visible response text are retained. First provider/accounting/route/publication fault stops further work with no retry.
+
+Original cumulative USD20, Q-A7 USD2 attempt and episode sublimits remain unchanged. O1 and all prior attempts/unknown holds count in that same ledger. Provider usage.cost is settled; a10% account-fee margin is held separately pending account reconciliation. Per-call reservation includes that margin. Calls may stop at remaining budget; the maximum152-call schedule is not a promise that all can be completed at worst-case context length.
+
+Before dispatch: complete O1's operational reconciliation; verify prior historical631calls/exposure2.031320 unchanged except admitted O1 rows, full canonical ledger hash and totals, old authority fenced, no Q-A7 rows, fresh exclusive claim and account evidence, exact clean source and public plan/TLDR registration. This diagnostic's first legitimate task call qualifies the transport within its existing scope; no stand-alone paid probe or broader experiment. Any O1 route fault holds Q-A7.
+
+Offline evidence:68 shared study tests pass, including phase-schema preservation, explicit OpenRouter routing, loopback-only transport, and settled provider cost versus retained fee uncertainty. Relay finite contracts cover152 Q-A7 call IDs and176 O1 call IDs in separate scopes; unknown/duplicate IDs and payload drift are refused. No native qualification is claimed.

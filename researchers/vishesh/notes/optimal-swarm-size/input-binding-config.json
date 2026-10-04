@@ -1,10 +1,10 @@
 {
-  "status": "blocked; queue allocation, credential delivery and canonical ledger continuity pending",
+  "status": "blocked until current source, public registration, reconciled original ledger and exclusive allocation pass",
   "experiment_id": "optimal-swarm-size-q1",
   "model": "claude-haiku-4-5-20251001",
   "provider_slug": "anthropic",
-  "expected_served_model": "claude-haiku-4-5-20251001",
-  "expected_served_provider": "anthropic",
+  "expected_served_model": "anthropic/claude-haiku-4.5",
+  "expected_served_provider": "Anthropic",
   "provider_context_tokens": 200000,
   "input_usd_per_token": 1e-06,
   "output_usd_per_token": 5e-06,
@@ -26,5 +26,6 @@
   "attempt_id": "q-a7",
   "attempt_cap_microdollars": 2000000,
   "researcher_review": "not_required_by_owner",
-  "max_calls": 152
+  "max_calls": 152,
+  "transport": "openrouter-local-relay"
 }

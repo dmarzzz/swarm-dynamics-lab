@@ -30,6 +30,9 @@ def native_payload(messages,cfg,phase=None,public=None,item=None):
         body['output_config']={'format':{'type':'json_schema','schema':schema_for(public,phase,item)}}
     elif mode!=LEGACY:
         raise ValueError('response_contract_unconfigured')
+    if cfg.get('transport')=='openrouter-local-relay':
+        from openrouter_route import convert
+        return convert(body)
     return body
 
 
@@ -81,12 +84,14 @@ class Provider:
         call_id=f'{self.episode}/{actor}/{phase}/{item or "-"}'
         bound=microdollars(Decimal(str(cfg['input_usd_per_token']))*cfg['provider_context_tokens']+
                            Decimal(str(cfg['output_usd_per_token']))*cfg['max_output_tokens'])
+        routed=cfg.get('transport')=='openrouter-local-relay'
+        if routed:bound=(bound*11+9)//10
         try:
             self.bank.reserve(call_id,self.episode,bound,cfg['episode_cap_microdollars'])
         except Exception as exc: raise SafeFailure(safe_code(exc)) from None
         self.journal({'kind':'reservation','call':call_id,'maximum_microdollars':bound,
                       'response_contract':cfg['response_contract'],
-                      'schema_sha256':hashlib.sha256(json.dumps(payload['output_config']['format']['schema'],sort_keys=True).encode()).hexdigest() if 'output_config' in payload else None})
+                      'schema_sha256':hashlib.sha256(json.dumps(payload['response_format']['json_schema']['schema'] if routed else payload['output_config']['format']['schema'],sort_keys=True).encode()).hexdigest() if ('output_config' in payload or 'response_format' in payload) else None})
         self.journal({'kind':'request_context','actor':actor,'phase':phase,'item':item,
                       'sha256':hashlib.sha256(json.dumps(payload).encode()).hexdigest(),
                       'bytes':len(json.dumps(payload).encode()),'call':call_id,
@@ -94,7 +99,11 @@ class Provider:
         remaining=deadline-time.monotonic()
         if remaining<=0:raise TimeoutError('deadline_before_dispatch')
         ctx=multiprocessing.get_context('spawn');parent,child=ctx.Pipe(duplex=False)
-        proc=ctx.Process(target=request_child,args=(child,payload,remaining),daemon=True)
+        target=request_child;dispatch=payload
+        if routed:
+            from openrouter_route import request_child as target
+            dispatch=payload|{'_call_id':call_id}
+        proc=ctx.Process(target=target,args=(child,dispatch,remaining),daemon=True)
         try:
             proc.start();child.close()
             if not parent.poll(max(0,deadline-time.monotonic())):raise TimeoutError('provider_deadline')
@@ -103,15 +112,21 @@ class Provider:
             self.journal({'kind':'model_response','call':call_id,'actor':actor,'phase':phase,'item':item,
                           'text':response['text'],'finish_reason':response['finish_reason']})
             usage=response['usage']
-            charge=usage_charge(usage,cfg)
-            self.bank.settle(call_id,charge)
+            if routed:
+                from openrouter_route import charge as route_charge,settle as route_settle
+                charge=route_charge(usage);route_settle(self.bank,call_id,charge)
+            else:
+                charge=usage_charge(usage,cfg)
+                self.bank.settle(call_id,charge)
             self.journal({'kind':'charge','call':call_id,'microdollars':charge,
-                          'prompt_tokens':usage.get('input_tokens'),'completion_tokens':usage.get('output_tokens'),
+                          'prompt_tokens':usage.get('prompt_tokens') if routed else usage.get('input_tokens'),'completion_tokens':usage.get('completion_tokens') if routed else usage.get('output_tokens'),
                           'model_matches':response['model']==cfg['expected_served_model'],
                           'provider_matches':response['provider']==cfg['expected_served_provider']})
             if response['model']!=cfg['expected_served_model'] or response['provider']!=cfg['expected_served_provider']:
                 raise ValueError('route_changed')
-            validate_finish(response['finish_reason'])
+            if routed:
+                if response['finish_reason']!='stop':raise SafeFailure('incomplete_response')
+            else:validate_finish(response['finish_reason'])
             if type(response['text']) is not str:raise ValueError('response_shape')
             return response['text']
         finally:

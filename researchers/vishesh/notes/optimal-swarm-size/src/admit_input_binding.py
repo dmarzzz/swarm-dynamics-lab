@@ -3,7 +3,7 @@
 Run on an admitted worker through orbital-one or the scoped Q-A7 owner-direct path. Receipt fields
 are private operator attestations; they are not an independent fleet audit.
 """
-import argparse,json,os,sqlite3,subprocess,time
+import argparse,hashlib,json,os,sqlite3,subprocess,time
 from pathlib import Path
 from run_qualification import assignments_for,preflight
 
@@ -19,7 +19,7 @@ def admission_errors(a,revision,now):
         if a.get('queue_state')!='CLOSED':errors.append('queue_state')
         if a.get('owner_decision_reference')!='https://github.com/dmarzzz/swarm-labs-agentops/issues/294#issuecomment-5982187383':errors.append('owner_decision_reference')
     elif a.get('dispatch_origin')!='orbital-one':errors.append('dispatch_origin')
-    if a.get('credential_alias')!='swarm-lab-anthropic/vishesh':errors.append('credential_alias')
+    if a.get('credential_alias') not in ('swarm-lab-anthropic/vishesh','local-openrouter-relay'):errors.append('credential_alias')
     if type(a.get('queue_issue')) is not int or a['queue_issue']<=0:errors.append('queue_issue')
     if not a.get('claim_id'):errors.append('claim_id')
     if not now-300<=a.get('verified_epoch',0)<=now:errors.append('stale_admission')
@@ -37,14 +37,18 @@ def main():
         count,held,actual=db.execute('SELECT COUNT(*),SUM(held),SUM(actual) FROM calls').fetchone()
         prior=db.execute('SELECT COUNT(*) FROM calls WHERE episode LIKE ?',('q-a7/%',)).fetchone()[0]
     if prior or a.output.exists():raise ValueError('attempt_already_present')
-    if (count,held,actual)!=(631,2031320,1810840):raise ValueError('prior_ledger_changed_reconcile_first')
+    with sqlite3.connect('file:'+str(a.ledger.resolve())+'?mode=ro',uri=True) as db:
+        original=db.execute("SELECT COUNT(*),SUM(held),SUM(actual) FROM calls WHERE episode NOT LIKE 'outage-o1/%'").fetchone()
+    if original!=(631,2031320,1810840):raise ValueError('historical_ledger_changed')
+    if receipt.get('reconciled_ledger_sha256')!=hashlib.sha256(a.ledger.read_bytes()).hexdigest() or receipt.get('reconciled_ledger_totals')!=[count,held,actual]:raise ValueError('prior_ledger_changed_reconcile_first')
+    if receipt.get('o1_operationally_healthy') is not True:raise ValueError('o1_sequence_held')
     cfg=json.loads((src.parent/'input-binding-config.json').read_text())
     cfg.update(status='ready',exclusive_machine_claim=receipt['claim_id'],claim_expiry_epoch=receipt['claim_expiry_epoch'],public_plan_receipt=str(a.public_receipt.resolve()),queue_admission=str(a.admission.resolve()))
     if preflight(cfg,repo)!=rev:raise ValueError('source_mismatch')
     if not a.run:
         print(json.dumps({'admitted_check_only':True,'assigned':len(assignments_for(cfg)),'calls':0,'prior_exposure_microdollars':held}));return 0
-    if not os.environ.get('SWARM_MODEL_API_KEY') or not os.environ.get('SWARM_MODEL_WORKSPACE_ID'):raise ValueError('dedicated_credential_delivery_missing')
-    if os.environ.get('ANTHROPIC_API_KEY') or os.environ.get('OPENROUTER_API_KEY'):raise ValueError('unrelated_credential_environment')
+    if receipt.get('credential_alias')!='local-openrouter-relay' or os.environ.get('SWARM_LOCAL_RELAY_URL')!='http://127.0.0.1:6197/invoke':raise ValueError('local_relay_missing')
+    if any(os.environ.get(k) for k in ('ANTHROPIC_API_KEY','OPENROUTER_API_KEY','SWARM_MODEL_API_KEY')):raise ValueError('unrelated_credential_environment')
     config_path=a.output.parent/'q-a7-runtime.json'
     with config_path.open('x') as f:json.dump(cfg,f,indent=2)
     native=subprocess.run(['python3',str(src/'run_qualification.py'),'--config',str(config_path),'--budget-ledger',str(a.ledger),'--output',str(a.output)],check=False)
