@@ -21,7 +21,7 @@ Carry the requested monitoring through completion: verify all saved records and 
 
 ## Done when
 
-- [ ] Verify local and hub artifact hashes and replay every saved request.
-- [ ] Explain clean qualification failures and summarize corruption, memory and utility with assigned denominators.
-- [ ] Commit analysis, result tables, post-mortem and remaining repair work.
+- [x] Verify local and hub artifact hashes and replay every saved request.
+- [x] Explain clean qualification failures and summarize corruption, memory and utility with assigned denominators.
+- [x] Commit analysis, result tables, post-mortem and remaining repair work.
 - [ ] Verify final artifacts, release the exclusive claim, retire only sim-discussion-v3 and stop the monitor.

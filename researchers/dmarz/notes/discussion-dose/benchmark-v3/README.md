@@ -2,13 +2,13 @@
 
 An implemented, local-first benchmark for **SEC-47: where does the fork-and-return chain fail?** It separates private evidence, report exchange, additional discussion, final voting, majority memory merge and a fresh parent's use of that memory. The [question links](../QUESTION-LINKS.md) state the narrower relationship to SOC-07 and the deferred SEC-52 extension.
 
-**Release scope:** executable benchmark and model adapter, with the [first bounded operator-authorized qualification running](DEPLOYMENT.md). Independent researcher review and real-model qualification remain pending. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
+**Release scope:** executable benchmark and model adapter. The [first real-model qualification is complete](RESULTS-Q0.md): 636 calls, 96 cases, $4.387237, zero invalid outputs, but failed clean competence (2/6 full-evidence and 1/6 reports-only). Independent instrument review subsequently passed; this model configuration is not qualified for expansion. [Authorization](OPERATOR-AUTHORIZATION.md) preserves that distinction; the confirmation holdout stays closed. This is a focused synthetic benchmark, not an exhaustive security benchmark or a validated real-world task suite. Formal hypothesis and S2 gates remain unchanged.
 
-**Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Current verification: 84 distinct checks and 636 requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record; independent approval remains pending.
+**Review repairs, 2026-10-04:** [Vishesh's findings are addressed in the successor](VISHESH-REVIEW-RESPONSE.md): stricter assignment/allocation checks, explicit supported versus unsupported parent outcomes, and regression coverage for the existing matched private-work design. Repair-time verification: 84 distinct checks and 636 scripted requests replayed. [Updated evidence](review-fixes-validation.json) supplements the original release record. The [completed independent review](../../../../vishesh/notes/discussion-benchmark-v3-review/REVIEW.md) matches all 15 runtime hashes; [Q0 results](RESULTS-Q0.md) separately report failed model qualification.
 
 ## Run it
 
-Python 3.10+ standard library only. From the repository root:
+Python 3.10+ standard library only. Use Python 3.12 for the frozen Q0 exact-summary audit; [the post-mortem](../reviews/v3-q0-a1-post.md) explains cross-version float aggregation differences. From the repository root:
 
 ```sh
 PYTHONPATH=researchers/dmarz/notes/discussion-dose/src python3 -m bench_v3.selftest
@@ -33,7 +33,7 @@ Known-behavior controls are selected with `--policy evidence`, `abstain`, `copy_
 | Memory | 36 fixtures: complete, omitted, conflicting, correlated copies, superseded, inherited false; two variants/family | Separates unsafe guessing, unsupported citations, safe abstention and grounded inherited errors |
 | Evaluation | Independent arithmetic reference, finite evidence solver, Cartesian cross-check, manual fixture keys | No model judge; wrong values are measured, not rejected by a truth-aware parser |
 | Faults | Duplicate keys/sources, unauthorized IDs, missing responses, bad allocations, altered scores/logs, interrupted writes | Failure denominators and replay cannot silently pass these defects |
-| Splits | Six development IDs, six reserved qualification IDs, 24 reserved holdout IDs; separate property-test worlds | No held-out outcomes were inspected; confirmation release is disabled |
+| Splits | Six development IDs, six reserved qualification IDs, 24 reserved holdout IDs; separate property-test worlds | Qualification 20001–20006 was opened in Q0; all confirmation worlds remain closed |
 
 See [coverage.json](coverage.json), the [review packet](REVIEW.md), and the [offline qualification report](OFFLINE-VALIDATION.md). The property suite also checks 60 additional unselected worlds and compares 72 bounded Cartesian decision spaces against an independently written solver.
 
@@ -88,7 +88,7 @@ The [v2 results](../RESULTS-V2.md) and [private-control post-mortem](../reviews/
 
 The six-world private-control run reported two attacked board target wins versus four private target wins, with one invalid board episode. Private reflection can drift; that is a useful comparator outcome, not a reason to require it to be inert. These small counts do not establish a protective discussion effect. We retain matched private work and use a shared post-report checkpoint to avoid attributing independently sampled starting ballots to subsequent discussion. A resampling-only arm would answer a separate mechanism question and remains deferred.
 
-This dated amendment changes the original [v3 draft](../V3-EVAL-PLAN.md)'s 708 calls to 636 by collecting the identical report checkpoint once. It changes neither the declared metric direction nor the six-world mixture in response to favorable model outcomes. The first qualification is now running; no completed v3 analysis or qualification verdict is claimed yet.
+This dated amendment changes the original [v3 draft](../V3-EVAL-PLAN.md)'s 708 calls to 636 by collecting the identical report checkpoint once. It changes neither the declared metric direction nor the six-world mixture in response to favorable model outcomes. The first qualification is now complete and failed its frozen clean competence gate; see [the results](RESULTS-Q0.md).
 
 ## Model adapter and launch boundary
 
@@ -100,4 +100,4 @@ Engineering model qualification requires complete accounting, zero malformed/pro
 
 ## Remaining scope limits
 
-Three agents, one merge, short numeric follow-ups and synthetic tasks are deliberate scope limits. There is no independently reviewed real-workflow adapter, adversarial instruction search, adaptive attacker, persistent retrieval, multi-generation inheritance, heterogeneous-model study, scaled-N implementation or exact-token-matched experiment. [V3-SOURCE-NOTES.md](../V3-SOURCE-NOTES.md) records online influences and what was actually inspected. [The new review task](../../../../../tasks/review-discussion-benchmark-v3.md) requests a different researcher's review; this release does not claim it has passed.
+Three agents, one merge, short numeric follow-ups and synthetic tasks are deliberate scope limits. There is no independently reviewed real-workflow adapter, adversarial instruction search, adaptive attacker, persistent retrieval, multi-generation inheritance, heterogeneous-model study, scaled-N implementation or exact-token-matched experiment. [V3-SOURCE-NOTES.md](../V3-SOURCE-NOTES.md) records online influences and what was actually inspected. [The review task](../../../../../tasks/review-discussion-benchmark-v3.md) is complete with a pass for the bounded instrument. It does not certify model competence or an expanded scientific sweep.
