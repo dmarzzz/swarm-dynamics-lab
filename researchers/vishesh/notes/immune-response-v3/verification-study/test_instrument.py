@@ -128,3 +128,12 @@ class PartialAccounting(unittest.TestCase):
             s=json.loads((out/'summary.json').read_text());self.assertEqual((s['assigned'],s['started'],s['completed'],s['incomplete'],s['unstarted']),(48,1,0,1,47))
             events=[json.loads(x) for x in (out/'events.jsonl').read_text().splitlines()]
             self.assertTrue(any(e.get('kind')=='frame' for e in events));self.assertEqual(s['api_calls'],3)
+
+class RuntimeWindow(unittest.TestCase):
+    def test_claim_boundaries_leave_shutdown_margin(self):
+        import datetime,native_run
+        now=datetime.datetime(2026,10,4,tzinfo=datetime.timezone.utc)
+        for minutes,expected in ((54.999,False),(55,True),(60,True),(60.001,False),(-1,False)):
+            self.assertEqual(native_run.allocation_time_valid((now+datetime.timedelta(minutes=minutes)).isoformat(),now),expected)
+        self.assertIn('timeout=3000',(i.BASE/'launch.py').read_text())
+        self.assertIn('deadline=time.time()+3000',(i.BASE/'relay.py').read_text())

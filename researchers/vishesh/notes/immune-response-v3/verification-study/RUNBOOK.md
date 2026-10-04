@@ -28,4 +28,4 @@ Also require current approved-account verification, exclusive allocation without
 
 Native launch command after admission: `python launch.py --out <new-directory> --admission <private-receipt>`. Sequential192calls on one host are proposed. C1 saved32provider timings: mean5.476s, median4.919s, maximum11.915s, total175.247s. At that observed mean collection projects17.52minutes; this is a forecast, not a latency guarantee. The50minute watchdog bounds stalled execution; no parallel-host allocation is required.
 
-Runtime amendment: a funded claim is at most60minutes; admission requires more than55minutes remaining, with50minute worker and relay limits. This leaves cleanup margin inside the claim.
+Runtime amendment: a funded claim is at most60minutes; admission requires 55to60minutes remaining, with50minute worker and relay limits. This leaves cleanup margin inside the claim.

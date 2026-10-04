@@ -6,6 +6,10 @@ import instrument as i
 BASE=Path(__file__).resolve().parent
 
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def allocation_time_valid(expires,now):
+    remaining=datetime.datetime.fromisoformat(expires.replace('Z','+00:00'))-now
+    return datetime.timedelta(minutes=55)<=remaining<=datetime.timedelta(minutes=60)
+
 def verify_admission(path):
     r=json.loads(Path(path).read_text());p=json.loads((BASE/'packet.json').read_text())
     assert r['stage']=='verification-v1' and r['funded'] is True and r['pi_decision_reference']
@@ -21,7 +25,7 @@ def verify_admission(path):
     assert r['model']==i.MODEL and r['input_rate']==5 and r['output_rate']==25
     a=r['allocation'];assert a['host']==socket.gethostname() and a['exclusive'] and a['approved_account_verified'] and a['claim_reference']
     now=datetime.datetime.now(datetime.timezone.utc)
-    assert datetime.datetime.fromisoformat(a['expires'].replace('Z','+00:00'))-now>datetime.timedelta(minutes=55)
+    assert allocation_time_valid(a['expires'],now)
     assert sha(os.environ['SWARM_BUDGET_LEDGER'])==r['ledger_sha256']
     with closing(sqlite3.connect('file:'+os.environ['SWARM_BUDGET_LEDGER']+'?mode=ro',uri=True)) as db:
         cap,reserved,calls=db.execute('select cap,reserved,calls from budget where id=1').fetchone()
