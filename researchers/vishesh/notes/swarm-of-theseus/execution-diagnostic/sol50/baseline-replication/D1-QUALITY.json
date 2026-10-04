@@ -1,0 +1,218 @@
+{
+  "attempt": "D1-A1",
+  "assessor": "vishesh/codex-theseus;owning agent",
+  "decision": "targeted_pass_full_qualification_required",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Targeted single-authority interface repair, explicitly not culture.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Changed failover plus preserved failover and changed release match diagnosed weakness; inspected development only.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Exact controller18/18; unchanged-context control passes; full four-arm comparison remains unstarted.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Three native choices and eighteen native decisions correct; witness delivery scripted and fullQ3 still required.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact request/result reconstruction and raw outputs agree,zero harmful approvals.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Three selected contexts do not estimate generalization or independent-world precision.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ],
+      "next_action": "Full Q3 then conditional frozen P1; report n=3worlds and nested repeats honestly.",
+      "acceptance_check": "Complete all qualification gates before fresh paired full-turnover trajectories; no broad cultural-survival inference."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "One native pair persisted verbatim; no gold override; operator context excluded.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All6raw requests/responses preserved,known usage,no retries,old failure retained.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Claim released; original ledger settled,prior uncertainty retained; see closeout.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Six local/remote tests and six-step replay; native repetition limited to these contexts.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Small observed condition table in audit; no fabricated full-turnover animation.",
+      "evidence": [
+        {
+          "path": "D1-AUDIT.json",
+          "sha256": "c731e3b455a4e55511ac375857c0728e7c16d01863d40d5f9cab01d63178f3bd"
+        },
+        {
+          "path": "D1-CLOSEOUT.json",
+          "sha256": "85b3c7a540a5254b3bcf1acd427d9639f6121c9d908e84b19cb657796611124e"
+        },
+        {
+          "path": "D1-POST-MORTEM.md",
+          "sha256": "c2fb97b2985432f38bb93960d43a31758a641ebd1b44d9c4e60f4100812f51f0"
+        }
+      ]
+    }
+  ]
+}

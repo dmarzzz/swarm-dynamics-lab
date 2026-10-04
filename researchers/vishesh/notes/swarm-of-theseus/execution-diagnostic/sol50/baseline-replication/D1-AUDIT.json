@@ -1,0 +1,46 @@
+{
+  "result": {
+    "contexts": [
+      {
+        "context": "changed-failover",
+        "family": "failover",
+        "selected_pair_correct": true,
+        "selection_equals_persisted_note": true,
+        "controller_correct": 6,
+        "assigned": 6,
+        "correct": 6,
+        "harmful": 0,
+        "useful": 2
+      },
+      {
+        "context": "preserved-failover",
+        "family": "failover",
+        "selected_pair_correct": true,
+        "selection_equals_persisted_note": true,
+        "controller_correct": 6,
+        "assigned": 6,
+        "correct": 6,
+        "harmful": 0,
+        "useful": 2
+      },
+      {
+        "context": "changed-release",
+        "family": "release",
+        "selected_pair_correct": true,
+        "selection_equals_persisted_note": true,
+        "controller_correct": 6,
+        "assigned": 6,
+        "correct": 6,
+        "harmful": 0,
+        "useful": 2
+      }
+    ],
+    "passed": true,
+    "scripted_record_delivery": true,
+    "full_native_qualification": false
+  },
+  "all_six_native_outputs_inspected": true,
+  "exact_request_result_replay_disagreements": 0,
+  "raw_trace_archive_sha256": "ab9b08985b85e65e67e31e300bf1e221300c747386083c7b333a1878c9ab8478",
+  "original_failure_not_rescored": true
+}

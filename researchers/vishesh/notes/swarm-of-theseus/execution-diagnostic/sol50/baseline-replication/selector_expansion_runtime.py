@@ -120,9 +120,10 @@ def serve(receipt,manifest,ledger,credential,capability):
   if db.execute("SELECT count(*) FROM r3_successor WHERE stage IN ('Q3-A3','P1')").fetchone()[0]:raise ValueError('already_started_no_resume')
   old=db.execute("SELECT count(*),sum(cast(actual AS real)) FROM r3_successor WHERE stage='Q3-A2' AND status='terminal'").fetchone()
   if old[0]!=69 or abs(old[1]-.169662)>1e-9:raise ValueError('predecessor_lineage')
- from d1_runtime import expected as diagnostic
+ from d1_runtime import expected as diagnostic,PACKET as D1_PACKET
  from selection_diagnostic import run as diagnostic_run
  packet_d1=json.loads(Path(r['D1_packet_path']).read_text())
+ if a.digest(packet_d1)!=D1_PACKET:raise ValueError('D1_packet_lineage')
  next_d1,result_d1=diagnostic(packet_d1,l.history('D1-A1'))
  if next_d1 is not None or not result_d1['passed']:raise ValueError('D1_native_gate')
  keypath=Path(credential)
