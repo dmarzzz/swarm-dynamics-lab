@@ -25,3 +25,11 @@ After that decision:
 ## Current integration, superseding historical pending status
 
 Owner direction now explicitly covers this bounded C4 scope and call-envelope increase; see owner-approval.json. Worker, worker-local relay, supervisor, original-plus-incremental transactional reservation, audit and measured renderer are implemented. Twenty offline tests pass, including original/incremental cap enforcement, duplicate dispatch, Qwen no-retry and Jev GET-only recovery. No future assignments or model responses were used in those tests. Native admission, deployed source/runtime checks, public registration and qualification remain mandatory before S1. DESIGN-TRANSFER advice is accepted without changing thresholds or adding a capacity sweep.
+
+
+## Dispatch boundary discovered and preserved
+
+Current fleet policy requires orbital-one launch via run queue. Direct dispatch was not attempted; no credential or ledger transfer occurred. Private PR296 supplies the orbital-only dispatcher. The current next action is central acknowledgement and approved credential/original ledger handoff, followed by fresh exclusive claim and operational receipts. [S0 pre-run assessment](S0-PRE.md) supersedes earlier generic approval-pending text. Do not interpret a deployed runtime or queued packet as experimental execution.
+
+
+Current closeout: [C4 admission blocked, no run](ADMISSION-POST.md). Queue297 and merged private dispatcher296 are the resume path. Native runtime stopped and claim released; original ledger unchanged. New model calls0, not a failed scientific result.

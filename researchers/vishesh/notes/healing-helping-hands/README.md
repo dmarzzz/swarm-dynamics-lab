@@ -1,6 +1,6 @@
 # Healing Helping Hands
 
-Next revision under preparation: [C4 PI critique](c4/PI-REVIEW.md) and [selective-helping plan](c4/PLAN.md). Owner update approval is pending; C4 has not run. [Readiness and remaining gates](c4/SETUP.md).
+Next revision under preparation: [C4 PI critique](c4/PI-REVIEW.md) and [selective-helping plan](c4/PLAN.md). The owner approved C4; native integration and20offline tests are complete. C4 has not run: central queue admission is pending. [Readiness and remaining gates](c4/SETUP.md).
 ## Current result: Qwen + Jev, C3 completed
 
 ### Historical practical-study TLDR

@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-regrowth-docs
 tool: codex
-state: working
+state: blocked
 task: healing-c4-selective
-doing: "C4 authorized integration complete; validating native admission for one bounded cycle"
+doing: "C4 ready integration; queue297 blocked on orbital-one and credential/original-ledger handoff; zero inference, runtime stopped"
 updated: 2026-10-04T15:23Z
 ---
 

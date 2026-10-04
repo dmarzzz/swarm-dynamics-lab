@@ -26,3 +26,8 @@ Source evidence: [M4](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Always-Jev and equal-count random referral already exist in C4. Distinguish paid collection of all controls from estimated deployed cascade savings. |
 | What the collective contributes | C4 is routing evidence, not a demonstration that 200 autonomous curators beat central indexing. C3 propagation is programmed. |
 | Boundaries and stopping | C4 approval is pending and native integration incomplete. Keep the original USD0.10 cap, +492-slot proposal and USD0.03 incremental ceiling; no new capacity sweep or automatic rerun of C3. |
+
+
+## Current owning-session update
+
+The owner subsequently authorized the bounded C4 scope and request envelope. Native integration is now implemented and20offline tests pass; do not retain historical approval-pending/integration-incomplete language as current status. Scientific thresholds/sample limits are unchanged. C3 reporting was already completed and published. C4 has not run: the remaining gate is orbital-one acknowledgement plus approved credential and original single-writer ledger handoff. See [current pre-run assessment](S0-PRE.md).

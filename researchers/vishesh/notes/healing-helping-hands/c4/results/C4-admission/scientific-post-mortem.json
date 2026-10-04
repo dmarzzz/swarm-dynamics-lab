@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "study_id": "healing-helping-hands",
+  "attempt": "C4-admission",
+  "verdict": "blocked_not_run",
+  "assessor": "vishesh/codex-regrowth-docs",
+  "assessed_at": "2026-10-04T15:34:07.664332+00:00",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Scoped referral-quality tradeoff; no repeat of the C3 null.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "12 authored synthetic families defined; no real-world transfer or fresh responses established.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ],
+      "next_action": "Resolve named admission handoff; run and assess only the approved stage; retain synthetic scope.",
+      "acceptance_check": "Current verified admission plus completed native qualification before any S1; natural-task generalization remains outside this cycle."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Always-Jev and exact same-count random referral, including analytic uniform-random expectation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "C4 native qualification has not started; C3 does not qualify the changed Qwen prompt.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ],
+      "next_action": "Resolve named admission handoff; run and assess only the approved stage; retain synthetic scope.",
+      "acceptance_check": "Current verified admission plus completed native qualification before any S1; natural-task generalization remains outside this cycle."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "20 offline checks include arithmetic, missingness, payload projection and correlated wrong agreement; fresh labels absent.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "432 nested reports in12authored strata, descriptive precision and no powered non-inferiority claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Claim and report only; Qwen variants differ in enum order only; Jev sees neither answer; no operator context.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "No run_start, response or assignment output; zero dispatch; original ledger hash unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "unknown",
+      "finding": "Owner-approved scope and verified existing capacity, but central dispatch/credential/single-writer handoff unresolved. Runtime stopped; idle allocation released.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ],
+      "next_action": "Resolve named admission handoff; run and assess only the approved stage; retain synthetic scope.",
+      "acceptance_check": "Current verified admission plus completed native qualification before any S1; natural-task generalization remains outside this cycle."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen deployed source, native20tests, pinned model digest and merged orbital-only dispatcher; no fresh-model reproducibility claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Scripted-only fixture inspected; overlap repaired before freeze. No fabricated measured C4 results published.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/healing-helping-hands/c4/results/C4-admission/manifest.json",
+          "sha256": "c5ae69511f3189ada43e9b67da3be15b5662c60a3cbdbfe72e0ceca01a53ae11"
+        }
+      ]
+    }
+  ]
+}
