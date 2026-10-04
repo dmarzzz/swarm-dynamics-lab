@@ -44,6 +44,7 @@
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:32Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [phantom-coast-pc1](tasks/phantom-coast-pc1.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T03:33Z | Develop Phantom Coast PC-1 plan and offline instrument |
 | [quorum-mirrors-design-v2](tasks/quorum-mirrors-design-v2.md) | claimed | p1 | build | vishesh/codex-quorum-mirrors | vishesh | 2026-10-04T03:31Z | Refine Quorum of Mirrors design and offline contracts |
+| [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T03:35Z | Deploy and assess the Right Dissenter exploratory live study |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:32Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -64,7 +65,6 @@
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T02:51Z | Run the revised procurement influence experiment |
 | [review-right-dissenter-rd1](tasks/review-right-dissenter-rd1.md) | open | p1 | review |  | shadow |  | Review Right Dissenter RD-1 design and offline prototype |
-| [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | open | p1 | experiment |  | vishesh |  | Deploy and assess the Right Dissenter exploratory live study |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
 | [scan-code-avalon-swarm](tasks/scan-code-avalon-swarm.md) | open | p1 | scan |  | dmarz |  | Catalogue and run Avalon / social-deduction environments we could extend to N seats |
 | [scan-datasets](tasks/scan-datasets.md) | open | p1 | scan |  |  |  | Catalogue trajectory and collective-behaviour datasets |
