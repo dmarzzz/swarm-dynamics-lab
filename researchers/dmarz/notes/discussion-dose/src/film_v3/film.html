@@ -87,12 +87,12 @@ html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden;
 /* end card */
 #end .by { left: 100px; top: 392px; }
 #end .name { left: 96px; top: 424px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 132px; line-height: 1; }
-#end .how { left: 100px; top: 590px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
+#end .how { left: 100px; top: 632px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
 #end .qr { left: 1290px; top: 330px; width: 330px; height: 330px; background: var(--bone); padding: 18px; }
 #end .qr svg { position: static; width: 100%; height: 100%; display: block; }
 #end .url { left: 1290px; top: 676px; width: 330px; text-align: center; font-size: 16px; color: var(--dim); white-space: nowrap; }
 #mark { position: absolute; left: 1700px; top: 910px; width: 134px; height: 134px; }
-#mark2 { position: absolute; left: 520px; top: 372px; width: 300px; height: 300px; opacity: 0; }
+#mark2 { position: absolute; left: 530px; top: 376px; width: 220px; height: 220px; opacity: 0; }
 body.record #mark, body.record #mark2, body.record #bar { display: none; }
 #bar { position: fixed; left: 0; right: 0; bottom: 0; height: 6px; background: rgba(127,136,150,.25); cursor: pointer; }
 #bar div { height: 100%; width: 0; background: var(--dim); }
@@ -140,25 +140,25 @@ const A = D.attacked, Q = D.qualification;
 const rightBoard = A.board.correct, rightPrivate = A.private.correct;
 const CAPS = [
   ['A1', 4.8, 'A swarm of AI agents splits a job, compares notes, and leaves a memory for whoever comes next.'],
-  ['A2', 5.6, `The job: pick the one site with power >= 16 and access <= 7. Each agent sees only its own records.`],
+  ['A2', 5.6, `The job: pick the one site with power >= 16 and access <= 7. Each agent sees only its records.`],
   ['A3', 5.6, `One agent also gets a planted record: ${W.key} = ${W.false}. The true value is ${W.true}. Believe it and ${W.target} wins.`],
   ['A4', 5.0, `Later a fresh parent sees only the merged memory and is asked for ${W.key} + ${W.delta}. The truth is ${W.truth_answer}.`],
   ['B1', 5.6, 'The experiment forks the same swarm four ways. Each fork merges into its own memory and parent.'],
   ['B2', 5.4, 'Private work and the public board get the same prompt and call count. Only the board hears peers.'],
   ['B3', 4.6, 'The hunch: more discussion changes how often the planted value reaches the parent.'],
-  ['B4', 5.6, 'If talk repairs, deliberation is a defence. If it amplifies, one poisoned agent steers the memory.'],
+  ['B4', 5.6, 'If talk repairs, deliberation is a defence. If it amplifies, one poisoned agent steers memory.'],
   ['B5', 5.2, 'If it changes nothing, the break is elsewhere in the chain: first reports, merge rule, or parent.'],
-  ['C1', 6.0, `The recorded run, world ${W.world}. Before sharing, one agent holds the planted ${W.false}, another the true ${W.true}.`],
+  ['C1', 6.0, `The recorded run, world ${W.world}. Before sharing, one agent holds the planted ${W.false}, one the true ${W.true}.`],
   ['C2', 5.4, `After one exchange of reports all three endorse ${W.false}. The agent with the primary record drops it.`],
   ['C3', 6.2, `Merge now and memory records ${W.false}: the parent answers ${W.arms.reports.parent.value}. With no sharing, it has nothing to go on.`],
-  ['C4', 6.6, `Three rounds alone: one agent recovers ${W.true}. No majority forms, the fact drops, the parent abstains.`],
+  ['C4', 6.6, `Three rounds alone: one agent recovers ${W.true}. No majority, so the fact drops; the parent abstains.`],
   ['C5', 7.0, `Three rounds together: that agent posts its primary record. By round 3 all hold ${W.true} and vote ${W.winner}.`],
   ['C6', 3.6, `Memory records ${W.true}. The parent answers ${W.arms.board.parent.value}.`],
-  ['D1', 5.4, `All six attacked worlds. Small dots are the agents' final beliefs, the ring is the parent's answer.`],
+  ['D1', 5.4, `All six attacked worlds. Small dots are final beliefs, the ring is the parent's answer.`],
   ['D2', 6.2, `Merging after one exchange misled ${of6(A.reports.wrong)} parents. Three more rounds: ${A.private.wrong} wrong alone, ${A.board.wrong} together.`],
-  ['D3', 6.0, `Board parents were right in ${rightBoard} worlds, private in ${rightPrivate}. On the frozen primary measure the difference is ${D.primary.mean}.`],
+  ['D3', 6.0, `Board parents were right in ${rightBoard} worlds, private in ${rightPrivate}. On the frozen primary measure the gap is ${D.primary.mean}.`],
   ['D4', 5.8, `A caveat: with no attack, reports-only agents voted right in ${of6(Q.clean_reports_correct)} worlds. The floor was ${Q.required_each}.`],
-  ['D5', 6.2, 'So far: merging early does the damage, more rounds repair it. Talk versus solo work is not settled.'],
+  ['D5', 6.2, 'So far: merging early does the damage, more rounds repair it. Talk versus solo work is unsettled.'],
   ['E', 5.0, ''],
 ];
 const T = {}; let acc = 2.6;
@@ -325,13 +325,13 @@ on(t => show(quote, vis(t, T.C5 + 1.0, T.C6 + 3.0)));
 
 /* column heads: what is merged, what the parent is asked */
 const hM = el('head inst', trunk, 'merged memory'), hP = el('head', trunk, `<span class="inst">fresh parent</span><span class="q">asked ${W.key} + ${W.delta}</span><span class="q t-zip">truth ${W.truth_answer}</span>`);
-on(t => { const u = io((t - tFork) / .9);
-  at(hM, XM - 150, lerp(YT + 44, 176, u)); show(hM, vis(t, T.A1 + 2.4));
-  at(hP, XP - 150, lerp(YT + 40, 132, u)); show(hP, vis(t, T.A1 + 3.6));
+on(t => { const up = t > tFork + .3, hop = 1 - vis(t, tFork, tFork + .9, .3, .5);   // out, jump to the column head, back in
+  at(hM, XM - 150, up ? 176 : YT + 44); show(hM, vis(t, T.A1 + 2.4) * hop);
+  at(hP, XP - 150, up ? 132 : YT + 40); show(hP, vis(t, T.A1 + 3.6) * hop);
   hP.querySelectorAll('.q').forEach((q, i) => q.style.opacity = vis(t, T.A4 + .5 + i * .9)); });
 
 /* the stage dims for the hunch and leaves for the six-world table */
-on(t => { const o = lerp(1, .05, io((t - T.B3) / .6) * (1 - io((t - (T.C1 - .5)) / .6))) * (1 - io((t - (T.D1 - .1)) / .5));
+on(t => { const o = lerp(1, 0, io((t - T.B3) / .6) * (1 - io((t - (T.C1 - .5)) / .6))) * (1 - io((t - (T.D1 - .1)) / .5));
   stage.style.opacity = o; wStage.style.opacity = o; });
 
 /* ------------------------------------------------------------------ the hunch and what each outcome would mean */
@@ -351,8 +351,9 @@ const grid = document.getElementById('grid'), wGrid = svg('g', {});
 const GX = i => 700 + i * 140, MINI = [[0, -11], [-12, 9], [12, 9]];
 const SUB = { independent: 'no sharing', reports: 'merge after one exchange', private: 'three more rounds alone', board: 'three more rounds together' };
 const heads = D.worlds.map((w, i) => at(el('inst', grid, w.id), GX(i) - 24, 180));
-const groups = [['resolvable // primary outranks planted', 0], ['ambiguous // planted has equal rank', 3]]
-  .map(([text, i]) => at(el('inst', grid, text), GX(i) - 46, 846));
+const groups = [['resolvable // planted is outranked', 0], ['ambiguous // planted has equal rank', 3]]
+  .map(([text, i]) => { const n = at(el('inst', grid, text), GX(i) - 46, 850);
+    n._rule = wire(`M${GX(i) - 46},834 H${GX(i + 2) + 52}`, wGrid); return n; });
 const tCol = i => T.D1 + .6 + i * .5;
 ARMS.forEach((arm, ai) => { const y = LY[arm];
   const name = at(el('rowname', grid, `${LANES[arm].name}<i>${SUB[arm]}</i>`), 100, y - 30);
@@ -372,7 +373,7 @@ const prim = at(el('inst', grid, `primary measure // wrong parent, board minus p
 const verdict = at(el('inst', grid, `six worlds // one model // one run // qualification not passed // a readout, not an effect size`), GX(0) - 46, 886);
 const gl = [['false', 'planted value'], ['true', 'true value'], ['none', 'no value / parent abstains']]
   .map(([s, text], i) => at(el('legend', grid, `<div class="dot" data-s="${s}"></div><span>${text}</span>`), 100, 846 + i * 30));
-on(t => { heads.forEach((n, i) => show(n, vis(t, tCol(i), 1e9, .5))); groups.forEach((n, i) => show(n, vis(t, tCol(i * 3) + .4)));
+on(t => { heads.forEach((n, i) => show(n, vis(t, tCol(i), 1e9, .5))); groups.forEach((n, i) => { show(n, vis(t, tCol(i * 3) + .4)); draw(n._rule, t, tCol(i * 3) + .2, .9); });
   gl.forEach((n, i) => show(n, vis(t, T.D1 + .9 + i * .1)));
   show(th1, vis(t, T.D2 + .2)); show(th2, vis(t, T.D4 + .2));
   show(prim, vis(t, T.D3 + .4, T.D5 - .1)); show(verdict, vis(t, T.D5 + .5));
@@ -390,7 +391,7 @@ on(t => { [eBy, eName, eHow, eQr, eUrl].forEach((n, i) => show(n, vis(t, T.E + .
 /* ------------------------------------------------------------------ playback */
 function seek(t) { t = clamp(t, 0, DURATION); for (const f of anims) f(t); window.__t = t; }
 window.__seek = seek;
-window.__meta = { duration: DURATION, fps: 30, end: T.E, times: T, mark: { x: 1700, y: 910, size: 134 }, mark2: { x: 520, y: 372, size: 300 } };
+window.__meta = { caps: CAPS.map(c => c[2].length), duration: DURATION, fps: 30, end: T.E, times: T, mark: { x: 1700, y: 910, size: 134 }, mark2: { x: 530, y: 376, size: 220 } };
 const params = new URLSearchParams(location.search), bar = document.getElementById('bar');
 if (params.has('record')) { document.body.classList.add('record'); seek(0); }
 else {
