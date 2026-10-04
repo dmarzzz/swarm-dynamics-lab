@@ -78,13 +78,13 @@ def projection_check(mean_cost_usd, committed_usd):
             'remaining_cap_usd': remaining, 'passed': bool(projected <= remaining)}
 
 
-def run_chain(stages, sr, results_root=None, ledger_path=None, allow_shared_host=False, poll=1.0):
+def run_chain(stages, sr, results_root=None, ledger_path=None, allow_shared_host=False, poll=None, transport_options=None):
     """Run the requested stages in order. Returns the process exit code."""
     root = Path(results_root) if results_root else study.results_root()
     root.mkdir(parents=True, exist_ok=True)
     holder = {}
     try:
-        return _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder)
+        return _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, transport_options)
     except Exception as exc:
         status = read_status(root) or {'experiment': study.EXPERIMENT, 'stages': {}}
         status.update(state='stopped_at_gate', stopped_stage=status.get('current_stage'),
@@ -97,7 +97,7 @@ def run_chain(stages, sr, results_root=None, ledger_path=None, allow_shared_host
             holder['dispatcher'].close()      # workers end their sessions and exit
 
 
-def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder):
+def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder, transport_options=None):
     d = study.design()
     budget = d['budget']
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
@@ -158,7 +158,7 @@ def _run_chain(stages, sr, root, ledger_path, allow_shared_host, poll, holder):
         if stage != 'S0' and dispatcher is None:
             dispatcher = transport.HubDispatcher(sr, transport.FastLedger(ledger_path, budget), study.provider_config(),
                                                  d['economy']['hosts'], root / 'transport', d['attempt'] + '-' + p['batch'],
-                                                 poll=poll, allow_shared_host=allow_shared_host)
+                                                 poll=poll, allow_shared_host=allow_shared_host, **(transport_options or {}))
             holder['dispatcher'] = dispatcher
             try:
                 status['worker_hosts'] = dispatcher.attach(budget['worker_attach_seconds'])
@@ -210,9 +210,10 @@ def _usage(summary):
            'input_tokens': summary['input_tokens'], 'output_tokens': summary['output_tokens'], 'cost_usd': summary['cost_usd'],
            'planned': summary['planned'], 'asked': summary['asked'], 'accepted': summary['accepted'], 'void': summary['void'],
            'rejected_commands': summary['rejected_commands'], 'gate_passed': summary['gate']['passed'],
-           'elapsed_seconds': summary['elapsed_seconds'], 'hosts': summary.get('hosts'), 'billing': summary.get('billing')}
+           'elapsed_seconds': summary['elapsed_seconds'], 'hosts': summary.get('hosts'), 'billing': summary.get('billing'),
+           'transport': {k: v for k, v in (summary.get('transport') or {}).items() if k != 'events'} or None}
     detail = summary.get('detail') or {}
-    for key in ('in_flight_selected', 'calls_per_second', 'projected_s1_seconds', 'planning_marker_met', 'max_prompt_tokens',
+    for key in ('in_flight_selected', 'calls_per_second', 'projected_s1_seconds', 'planning_marker_met', 'max_prompt_tokens', 'valid_actions',
                 'measurement', 'checkpoint_hash', 'branches', 'warmup'):
         if key in detail:
             out[key] = detail[key]
@@ -355,7 +356,8 @@ def verify(sr, results_root=None, ledger_path=None):
         calls = sum(s.get('model_calls', 0) for s in report['stages'].values())
         report['ledger'] = {'totals_agree': slow == fast, 'attempted_calls': slow['attempted_calls'],
                             'actual_usd': slow['actual_usd'], 'committed_usd': slow['committed_usd'],
-                            'calls_match_stage_records': slow['attempted_calls'] == calls}
+                            'reissued_calls': slow['calls_by_stage'].get('REISSUE', 0),
+                            'calls_match_stage_records': slow['attempted_calls'] - slow['calls_by_stage'].get('REISSUE', 0) == calls}
     report['ok'] = bool(report['stages']) and all(s['ok'] for s in report['stages'].values()) and \
         (report.get('ledger') or {'totals_agree': True}).get('totals_agree', True)
     return report
