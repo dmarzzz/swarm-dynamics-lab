@@ -3,7 +3,7 @@ id: openrouter-route-switch-2026-10-04
 type: task
 title: Apply the owner directed OpenRouter migration to affected studies
 kind: admin
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T18:43Z
-updated: 2026-10-04T18:43Z
+updated: 2026-10-04T18:44Z
+outputs:
+- tooling/agent-experiments/SWARM-LAB-CREDENTIALS.md
 ---
 
 ## Goal
