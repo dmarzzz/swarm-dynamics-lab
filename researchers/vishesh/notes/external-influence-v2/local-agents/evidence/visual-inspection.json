@@ -1,4 +1,27 @@
 {
-  "inspection": "Browser verification of Q1 replay: initial event0 all six pending; final event222 contains three invalid, two correct and one incorrect, matching summary and journals. PNG visually inspected for legible labels. GIF frame count verified; every response and terminal retained for qualification stages.",
-  "mapping": "local-influence-v1"
+  "mapping": "local-influence-v1",
+  "display_note": "S1 uses a compact condition-by-policy matrix to keep 50 episode states legible; data and logical event ordering are unchanged.",
+  "S1_initial": {
+    "event": 0,
+    "pending": 50
+  },
+  "S1_middle": {
+    "event": 1204,
+    "correct": 7,
+    "incorrect": 17,
+    "pending": 26
+  },
+  "S1_final": {
+    "event": 2409,
+    "correct": 11,
+    "incorrect": 37,
+    "invalid": 2
+  },
+  "browser_verified": true,
+  "images_visually_inspected": [
+    "comparison.png",
+    "results/S1/final.png"
+  ],
+  "gif_frames": 48,
+  "gif_downsampling_disclosed": true
 }

@@ -24,7 +24,7 @@ The [scenario redesign and candid assessment](../influence-swarms/scenario/READM
 
 ## TLDR
 
-**Completed pilot, audited:** 50/50 valid outcomes, 750 model calls, USD 2.002637. Verification evidence often failed to govern the final choice. This is an exploratory result with one fixture per domain, not a robustness estimate. See the [quality assessment](reviews/quality-post.md), [visualization mapping](reviews/visualization-mapping.md), and [prospective repair](../influence-swarms/README.md). The repaired architecture has not yet been qualified live.
+**Historical Haiku pilot, audited:** 50/50 valid outcomes, 750 model calls, USD 2.002637. Verification evidence often failed to govern the final choice. This is an exploratory result with one fixture per domain, not a robustness estimate. See the [quality assessment](reviews/quality-post.md), [visualization mapping](reviews/visualization-mapping.md), and [prospective repair](../influence-swarms/README.md). The repaired architecture has not yet been qualified live.
 
 
 Can nine agents choose correctly when an outsider edits the evidence they read? Compare private review, discussion, random checks, targeted checks and source-lineage handling at matched call slots. Procurement is primary; dependency selection and travel are transfer probes. Measure harmful choices, correctness and regret on fictional fixtures. Qualification and scripted runs do not establish attack resistance.
@@ -65,6 +65,18 @@ Report harmful target selection, correct legitimate choice, utility regret, inva
 
 ## Running a version with local agents
 
-A prospective local-model variant replaces historical Haiku calls with shared local Qwen3 0.6B weights while retaining the same nine-agent teams and task protocol. It starts with six clean/superior competence screens across all three domains; a passing model can repeat the original 50 assignments (450 episode-local identities). Qwen3 1.7B is a declared fallback if 0.6B fails qualification. Four simultaneous calls bound the desktop load. See the [local experimental plan](local-agents/PLAN.md) for qualification gates, historical comparators, metrics, diagnostics and limitations. No result is claimed yet; registration and competence gates precede inference.
+**Completed local comparison:** Qwen3 1.7B with a constrained output schema got **11/50 correct (22%)**, versus **19/50 (38%)** for the historical Haiku run on matching fixtures. Forty-eight local cases completed validly; two reached the preset 30-minute deadline and remain in the denominator. Even crediting both missing cases as correct would leave the local result lower overall. This is a model-plus-adapter comparison on three task roots, not a general model ranking.
 
-Local qualification update: the initial 0.6B configuration failed candidate coverage in all six teams. The 1.7B fallback produced three valid teams and two correct decisions out of six; three teams failed citation validation. A [prospective schema-repair plan](local-agents/PLAN-v2.md) now encodes only actor-visible output constraints before a fresh qualification. The repaired 1.7B configuration subsequently passed fresh Q2 qualification (6/6 valid, 5/6 correct), and the registered 50-case historical comparison is running. Original failed attempts remain unchanged. Qualification is a usability screen, not attack-resistance evidence. See the [qualification records and replays](local-agents/evidence/index.json).
+| Application | Local Qwen correct | Historical Haiku correct |
+|---|---:|---:|
+| Procurement | 0/20 | 11/20 |
+| Software dependency selection | 9/15 | 4/15 |
+| Travel | 2/15 | 4/15 |
+
+The experiment exercised 50 nine-agent teams (450 episode-local identities), shared model weights and four simultaneous requests maximum. The full comparison used 737 calls, approximately 30 minutes and **USD 0 inference API charges**. A during-run Ollama sample showed approximately 2.4 GB loaded on GPU; energy and peak system memory were not measured.
+
+The initial 0.6B configuration failed required candidate coverage. The first 1.7B configuration failed excessive-citation validation in three teams. A prospectively registered grammar repair, containing only actor-visible constraints, passed fresh qualification (6/6 valid, 5/6 correct) before the full comparison. Those failures and both original plan registrations are preserved.
+
+Read the [full local results and limitations](local-agents/RESULTS.md), [original local plan](local-agents/PLAN.md), [prospective repair plan](local-agents/PLAN-v2.md), [recorded animation](local-agents/evidence/S1/replay.gif), [downloadable interactive replay](local-agents/evidence/S1/replay.html), and [evidence index](local-agents/evidence/index.json). Lower known harmful-target selection (22 local, with two unknown, versus 28 historical) came alongside lower correctness and higher regret; it is not an overall robustness win.
+
+![Local and historical same-case comparison](local-agents/comparison.png)

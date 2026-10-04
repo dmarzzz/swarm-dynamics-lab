@@ -1,0 +1,557 @@
+{
+  "assignments": [
+    {
+      "arm": "discussion",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "random_check",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "private_review",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "discussion",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "random_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "private_review",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "discussion",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "private_review",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "random_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "private_review",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "random_check",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "discussion",
+      "domain": "dependency",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "random_check",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "private_review",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "discussion",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "discussion",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "random_check",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "private_review",
+      "domain": "dependency",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "discussion",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "random_check",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "private_review",
+      "domain": "travel",
+      "dose": 0,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "clean"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "discussion",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "private_review",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "random_check",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "misleading"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "private_review",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "discussion",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "random_check",
+      "domain": "travel",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "syndication"
+    },
+    {
+      "arm": "discussion",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "instruction"
+    },
+    {
+      "arm": "random_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "instruction"
+    },
+    {
+      "arm": "targeted_check",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "instruction"
+    },
+    {
+      "arm": "private_review",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "instruction"
+    },
+    {
+      "arm": "targeted_provenance",
+      "domain": "procurement",
+      "dose": 8,
+      "n_agents": 9,
+      "seed": 17,
+      "task_id": 7100,
+      "verification": "fresh",
+      "world": "instruction"
+    }
+  ],
+  "capabilities": [
+    "completion",
+    "tools",
+    "thinking"
+  ],
+  "git_commit": "739bfdb8a3a7fd5cf4742a11bf6ca42e01c289c4",
+  "hardware": {
+    "chip": "Apple M5 Max",
+    "memory_gb": 128
+  },
+  "inference_api_usd": 0,
+  "max_workers": 4,
+  "model": "qwen3:1.7b",
+  "model_details": {
+    "context_length": 40960,
+    "embedding_length": 2048,
+    "families": [
+      "qwen3"
+    ],
+    "family": "qwen3",
+    "format": "gguf",
+    "parameter_size": "2.0B",
+    "parent_model": "",
+    "quantization_level": "Q4_K_M"
+  },
+  "model_digest": "8f68893c685c3ddff2aa3fffce2aa60a30bb2da65ca488b61fff134a4d1730e7",
+  "model_size": 1359293444,
+  "ollama": {
+    "version": "0.30.5"
+  },
+  "options": {
+    "num_ctx": 8192,
+    "num_predict": 1024,
+    "seed": 17,
+    "temperature": 0
+  },
+  "plan_url": "https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md",
+  "receipt": {
+    "checked_utc": "2026-10-04T04:18:55.319152+00:00",
+    "commit": "d3432148e130b62ce2815333adc5fc187c1bac30",
+    "experiment": "external-influence-v2",
+    "local_plan_sha256": "16b394c8329045afa03ab092d15e5cb63c920a6fc3009578a07721cf9c8eb1f5",
+    "local_plan_url": "https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md",
+    "plan_sha256": "16b394c8329045afa03ab092d15e5cb63c920a6fc3009578a07721cf9c8eb1f5",
+    "process_compliance": "passed",
+    "registered_tldr": "TLDR: Local-agent variant of the nine-agent external-influence pilot. Qwen3 0.6B failed candidate coverage; 1.7B completed 3/6 teams and chose correctly in 2/6. A prospective 1.7B schema repair now enforces public candidate/citation constraints, measuring validity and correctness on six fresh clean/superior cases before any historical 50-case comparison. Zero API inference spend; exploratory development fixtures and backend differences limit conclusions.",
+    "run_tldr": "TLDR: S1 replaces Haiku with qualified local qwen3:1.7b on the same 50 nine-agent assignments. Compare correctness, harmful choices, invalidity, regret and compute. Three task roots and historical backend confounding prevent general superiority claims. Plan: https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/d3432148e130b62ce2815333adc5fc187c1bac30/researchers/vishesh/notes/external-influence-v2/local-agents/PLAN-v2.md"
+  },
+  "source_hash": "cb138cbb4b76c7929c1c56f40c0ad1428d8fcd33a01075d9c992800d93a75a49",
+  "stage": "S1",
+  "started_utc": "2026-10-04T04:18:55.388648+00:00",
+  "think": false
+}

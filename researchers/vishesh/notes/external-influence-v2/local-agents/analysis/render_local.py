@@ -54,6 +54,6 @@ def render(out):
     frames[-1].save(out/'final.png')
     frames[0].save(out/'replay.gif',save_all=True,append_images=frames[1:],duration=[400]*(len(frames)-1)+[1800],loop=0,optimize=True)
     assert sum(e['kind']=='terminal' for e in events)==len(rows)
-    return {'stage':summary['stage'],'frames':len(frames),'events':len(events),'all_terminals_included':True,'all_responses_included':len(selected)==all_selected,'sampled_frames':len(selected),'available_response_terminal_frames':all_selected,'final_valid':sum(r['validity']['ok'] for r in rows),'final_correct':sum(r['evaluation']['correct'] for r in rows),'gif_frames':Image.open(out/'replay.gif').n_frames}
+    return {'stage':summary['stage'],'frames':len(frames),'events':len(events),'all_terminals_included':len(selected)==all_selected,'final_contains_all_terminal_states':True,'all_responses_included':len(selected)==all_selected,'sampled_frames':len(selected),'available_response_terminal_frames':all_selected,'final_valid':sum(r['validity']['ok'] for r in rows),'final_correct':sum(r['evaluation']['correct'] for r in rows),'gif_frames':Image.open(out/'replay.gif').n_frames}
 if __name__=='__main__':
     p=argparse.ArgumentParser();p.add_argument('directory',type=Path);a=p.parse_args();v=render(a.directory);(a.directory/'image-validation.json').write_text(json.dumps(v,indent=2)+'\n');print(json.dumps(v))
