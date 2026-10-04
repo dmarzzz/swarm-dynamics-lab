@@ -14,6 +14,8 @@ The previous graph generator, initial trust, task, fabrication, check policy, mo
 
 Python 3.12 and pinned dependencies in `requirements.txt` match the prior deployed runtime. Operator deployment record supplies the source revision, host name, exclusive claim and output location. Credentials enter by alias through the private launcher only.
 
+**Allocation correction, 2026-10-04, before S1:** the owner now requires one active experiment per host. Both Q0 stages are complete and their workers stopped. The planned S1 allocation keeps this budget study alone on `sim-dmarz-4`, with `dmarz-sybil-followups` narrowed to this experiment. The newcomer study will move to dedicated `sim-dmarz-sybil-newcomer`. These are planned deployment actions, not a claim that S1 has started. The two studies can still run in parallel on separate hosts. A $50/$10 budget partition preserves the combined $60 allowance using identical settled ledger checkpoints and persistent peer-allocation holds; details are in [RUN.md](RUN.md) and [DEPLOYMENT.md](DEPLOYMENT.md). Scientific conditions and the frozen runtime are unchanged; the newcomer host receives setup selftests, with no new API qualification required solely for relocation.
+
 ## Protocol
 
 The full grid is 2 population sizes (324, 972) × 6 checking budgets (4, 8, 16, 32, 64, 108) × 5 attacker check-pass probabilities (10%, 30%, 50%, 70%, 90%) × 2 policies (random, topology coverage). Verification badges remain visible. There are 120 cells and 24 fresh paired worlds per cell: 2,880 scientific model calls.

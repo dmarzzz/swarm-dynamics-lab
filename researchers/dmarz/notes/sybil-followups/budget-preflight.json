@@ -34,5 +34,20 @@
     "unsettled_reservations_usd": 0,
     "both_model_qualification_gates_passed": true,
     "remaining_within_unchanged_60_usd_guard": true
+  },
+  "dedicated_host_partition": {
+    "state": "planned_before_S1",
+    "budget_host": "sim-dmarz-4",
+    "newcomer_host": "sim-dmarz-sybil-newcomer",
+    "budget_total_allocation_usd": 50,
+    "newcomer_total_allocation_usd": 10,
+    "retained_checkpoint_calls_each": 52,
+    "retained_checkpoint_actual_usd_each": 0.366548,
+    "permanent_peer_holds_usd": {
+      "budget": 10,
+      "newcomer": 50
+    },
+    "combined_conservative_actual_ceiling_usd": 59.633452,
+    "holds_are_not_model_calls_or_actual_charges": true
   }
 }
