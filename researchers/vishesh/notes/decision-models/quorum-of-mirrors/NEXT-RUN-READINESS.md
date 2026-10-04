@@ -52,3 +52,9 @@ The remaining work is operator registration, deployment and fresh operational ch
 ## Publication status
 
 The code, plan and condition manifests are published. [Publication record](Q1-PUBLICATION.json) retains their immutable URLs. Updating the public experiment registration was attempted but did not complete; the public page still points to the historical S0 plan. Registration remains an explicit operator prerequisite. No run was queued, no credentials were exposed and no model call was sent.
+
+## Owner-direction and dispatch update
+
+2026-10-04: the legacy researcher-review/accepted-hypothesis launch prerequisite has been removed for the bounded exploratory Q1 screen, under the explicit owner direction. The pinned authority record is part of source verification. All **54** offline checks pass, including refusal of missing/wrong authority and refusal of later-stage launch. No formal research pass is claimed. Public source revision: `e1de51faffd8debbcff45b4125b6ad15c00e9c9d`.
+
+A private operational launch request is prepared, including automatic public-page registration, fresh approved allocation, deployed checks and the preserved original ledger. The old local ledger path has been disabled for exclusive migration; all 32 historical calls and $0.043008 reservations are retained unchanged. The run is currently held only for a platform-enforced credential-delivery authorization, with no model key in either repository. The proposed delivery is verified SSH into process memory on the dedicated admitted machine, not repository storage. No machine is held and no Q1 call has been made. Researcher review and spending permission are not missing. The operator owns the remaining operational work.
