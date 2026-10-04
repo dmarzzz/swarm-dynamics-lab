@@ -3,8 +3,8 @@ agent: vishesh/codex-phantom-coast
 tool: codex
 state: working
 task: phantom-coast-live
-doing: Authorized USD5 launch; allocating dedicated host then native qualification
-updated: 2026-10-04T03:45:59Z
+doing: Q0 passed; S0 pilot running on exclusive sim-dmarz-5; auditing saved outcomes
+updated: 2026-10-04T04:19:00Z
 ---
 
 ## Notes
