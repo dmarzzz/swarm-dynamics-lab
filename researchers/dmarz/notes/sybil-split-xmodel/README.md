@@ -65,7 +65,7 @@ Per model, one chain on one server. A stage is queued only when exactly one run 
 | Q0 | `q0-001-qwen` | 60 | The parent's 60 clean fixtures and thresholds, unchanged | per shape over its 10 packets: all valid, field accuracy ≥ 0.95, exact packets ≥ 0.90, 100% null on withheld facts |
 | S1 | `s1-001-qwen` | 2,688 | 24 roots × 2 families × 2 check strengths × 4 identity counts × 7 policy cells | no gate of its own; failed calls within the limit |
 
-Before Q0 and before S1, each chain stops with `input_ceiling_projection` if the measured input tokens per message byte times the stage's largest request exceeds 31,000 tokens. The largest request is 13,746 bytes; at Qwen's measured rate on comparable JSON, about 0.5 tokens per byte, that is about 7,000 tokens. Before S1 the chain also stops with `projection_exceeds_cap` if 2,688 times Q0's measured cost per call does not fit in the remaining cap.
+Before Q0 and before S1, each chain stops with `input_ceiling_projection` if the measured input tokens per message byte times the stage's largest request exceeds 31,000 tokens. The largest request is 13,515 bytes; at Qwen's measured rate on comparable JSON, about 0.5 tokens per byte, that is about 7,000 tokens. Before S1 the chain also stops with `projection_exceeds_cap` if 2,688 times Q0's measured cost per call does not fit in the remaining cap.
 
 Failure handling, as in trust-credit-qwen and the reference adapter:
 
