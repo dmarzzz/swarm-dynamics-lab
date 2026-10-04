@@ -3,7 +3,7 @@ id: antsy-quality-repair
 type: task
 title: Audit and repair Antsy experiment quality and reproducibility
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-methods
 for: vishesh
@@ -12,7 +12,9 @@ created_by: vishesh/codex-methods
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T01:22Z
-updated: 2026-10-04T01:22Z
+updated: 2026-10-04T01:47Z
+outputs:
+- researchers/vishesh/notes/adaptive-quorum-v2/repair-v3
 ---
 
 ## Goal
@@ -21,7 +23,11 @@ Assess Antsy design, measurement, controls, agents, specifications, scenarios, v
 
 ## Done when
 
-- [ ] Publish seven-dimension audit, issue ledger and pre-run repair assessment.
-- [ ] Fix implementation and measurement defects with meaningful regression checks.
-- [ ] Diagnose model task failures and run a disjoint qualification on exclusive allocation.
-- [ ] Publish post-mortem, metrics, replay/animation and evidence-backed claims.
+- [x] Publish seven-dimension audit, issue ledger and pre-run repair assessment.
+- [x] Fix implementation and measurement defects with meaningful regression checks.
+- [x] Diagnose model task failures and run a disjoint qualification on exclusive allocation.
+- [x] Publish post-mortem, metrics, replay/animation and evidence-backed claims.
+
+## Coverage note
+
+Completed audit, bounded D0/Q1/Q2 repair cycle, Q2 22/22 qualification, 384-block recovered S1 with zero actor errors, nine regression tests, full post-mortem, raw outcome exports and eight public measured animations. Preserved all failures and exact 25-block prefix. Conditional mechanism demonstration only; no model increment or general adaptive superiority claimed. Public results and artifacts verified.
