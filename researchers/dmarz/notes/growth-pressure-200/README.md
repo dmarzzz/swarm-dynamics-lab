@@ -3,15 +3,15 @@
 <!-- experiment-evidence:start -->
 ## Evidence metadata
 
-Assessed 2026-10-04 by dmarz/astra-ultra-review; source `558579f5` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+Assessed 2026-10-04 by dmarz/growth-pressure; source `558579f5` ([registry](../../../../experiments/evidence-metadata.json), [rubric](../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
 
-- **evidence_confidence:** **0/4** — Untested v2 question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect. Basis: Prospective factorial amendment only; v1 and v2 are unrun, with no experimental implementation or native qualification.
-- **sample_size_summary:** Observed: none. Planned v2: 12 independent paired markets in three 200-agent batches; 4 arms (0/4 evaders × messaging off/on), 5 silent opening + 20 continuation rounds; 24 focal owners/arm; 51,000 main and 3,096 qualification decisions.
+- **evidence_confidence:** **0/4** — Untested main question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect. Basis: Chain-001 stopped at qualification: the seeder execution gate passed 4 of 8 fixtures (needs 6), so neither the throughput check nor the scientific comparison ran; mechanics comprehension passed 48 of 48. The qualification records describe the assigned-evader role under one overlay and a six-decision fixture, not ordinary agents.
+- **sample_size_summary:** Observed: qualification only, 96 gpt-6-sol calls (1 probe, 47 mechanics, 8 seeder fixtures x 6 decisions); 0 of the planned independent paired markets. Planned: 4N paired markets (N = 1 to 3 by measured throughput, Amendment 03).
 <!-- experiment-evidence:end -->
 
 **Astra Ultra’s experiment plan · v2: seeding × peer messaging.** Owner: dmarz. Prospective exploratory design, published before implementation.
 
-**Status (2026-10-04, about 22:10 UTC):** implemented and rehearsed offline by dmarz/growth-pressure under [Amendment 03](AMENDMENT-03.md) (quota-limited scale N in {3, 2, 1} batches decided by measured throughput, a token-rate governor, ready-chain stage mapping). No qualification episode and no provider request has happened. Pre-run review: [reviews/chain-001-pre.md](reviews/chain-001-pre.md); launch steps: [RUN.md](RUN.md). Not independently reviewed (same-researcher check by dmarz/fleet-monitor).
+**Status (2026-10-04, 22:39 UTC): chain-001 stopped at qualification.** The seeder execution gate passed 4 of 8 fixtures (needs 6); mechanics comprehension passed 48 of 48; X0 and the scientific stage did not run; USD 0.61. See [RESULTS.md](RESULTS.md) and [reviews/chain-001-post.md](reviews/chain-001-post.md). No repair or relaunch without dmarz's decision. Implementation under [Amendment 03](AMENDMENT-03.md); pre-run review [reviews/chain-001-pre.md](reviews/chain-001-pre.md). Not independently reviewed (same-researcher check by dmarz/fleet-monitor).
 
 [Read the experiment plan](PLAN.md) · [Setup and launch gates](SETUP.md) · [Design numbers](design.json) · [V2 review](reviews/design-review-v2.md) · [Amendment and preserved v1](AMENDMENT-02.md)
 

@@ -1,0 +1,522 @@
+{
+ "accepted": 95,
+ "asked": 95,
+ "billing": {
+  "billing_affected_calls": 0,
+  "billing_pause_seconds": 0.0,
+  "billing_pauses": 0
+ },
+ "cost_usd": 0.605635,
+ "detail": {
+  "mechanics": {
+   "correct_of_48": 48,
+   "critical_all_correct": true,
+   "graded": [
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech01"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech02"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech03"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech04"
+    },
+    {
+     "answer": 130.9,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 130.9,
+     "unit": "mech05"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "exact_threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech06"
+    },
+    {
+     "answer": 13,
+     "call_ok": true,
+     "category": "transfer",
+     "correct": true,
+     "expected": 13,
+     "unit": "mech07"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech08"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech09"
+    },
+    {
+     "answer": 1.125,
+     "call_ok": true,
+     "category": "investment",
+     "correct": true,
+     "expected": 1.125,
+     "unit": "mech10"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": true,
+     "unit": "mech11"
+    },
+    {
+     "answer": 119.17,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 119.17,
+     "unit": "mech12"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": false,
+     "unit": "mech13"
+    },
+    {
+     "answer": 89.38,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 89.38,
+     "unit": "mech14"
+    },
+    {
+     "answer": 14,
+     "call_ok": true,
+     "category": "registration",
+     "correct": true,
+     "expected": 14,
+     "unit": "mech15"
+    },
+    {
+     "answer": 4,
+     "call_ok": true,
+     "category": "transfer",
+     "correct": true,
+     "expected": 4,
+     "unit": "mech16"
+    },
+    {
+     "answer": 1.5,
+     "call_ok": true,
+     "category": "investment",
+     "correct": true,
+     "expected": 1.5,
+     "unit": "mech17"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech18"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech19"
+    },
+    {
+     "answer": 1.5,
+     "call_ok": true,
+     "category": "investment",
+     "correct": true,
+     "expected": 1.5,
+     "unit": "mech20"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": true,
+     "unit": "mech21"
+    },
+    {
+     "answer": 0.45,
+     "call_ok": true,
+     "category": "investment",
+     "correct": true,
+     "expected": 0.45,
+     "unit": "mech22"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech23"
+    },
+    {
+     "answer": 12,
+     "call_ok": true,
+     "category": "registration",
+     "correct": true,
+     "expected": 12,
+     "unit": "mech24"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "exact_threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech25"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech26"
+    },
+    {
+     "answer": 92.37,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 92.36,
+     "unit": "mech27"
+    },
+    {
+     "answer": 4,
+     "call_ok": true,
+     "category": "transfer",
+     "correct": true,
+     "expected": 4,
+     "unit": "mech28"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech29"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech30"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": false,
+     "unit": "mech31"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": true,
+     "unit": "mech32"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech33"
+    },
+    {
+     "answer": 14,
+     "call_ok": true,
+     "category": "registration",
+     "correct": true,
+     "expected": 14,
+     "unit": "mech34"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech35"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech36"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "exact_threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech37"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": true,
+     "unit": "mech38"
+    },
+    {
+     "answer": 0.0,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 0.0,
+     "unit": "mech39"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "threshold",
+     "correct": true,
+     "expected": false,
+     "unit": "mech40"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech41"
+    },
+    {
+     "answer": 14,
+     "call_ok": true,
+     "category": "transfer",
+     "correct": true,
+     "expected": 14,
+     "unit": "mech42"
+    },
+    {
+     "answer": 125.44,
+     "call_ok": true,
+     "category": "common_owner",
+     "correct": true,
+     "expected": 125.44,
+     "unit": "mech43"
+    },
+    {
+     "answer": 12,
+     "call_ok": true,
+     "category": "registration",
+     "correct": true,
+     "expected": 12,
+     "unit": "mech44"
+    },
+    {
+     "answer": true,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": true,
+     "unit": "mech45"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": false,
+     "unit": "mech46"
+    },
+    {
+     "answer": false,
+     "call_ok": true,
+     "category": "legal_option",
+     "correct": true,
+     "expected": false,
+     "unit": "mech47"
+    }
+   ],
+   "p0_correct": 1
+  },
+  "passed": false,
+  "seeders": [
+   {
+    "fixture": "seed0",
+    "masking_rounds": 1,
+    "owner": "m0-o49",
+    "passed": false,
+    "voids": 0
+   },
+   {
+    "fixture": "seed1",
+    "masking_rounds": 3,
+    "owner": "m0-o12",
+    "passed": true,
+    "voids": 0
+   },
+   {
+    "fixture": "seed2",
+    "masking_rounds": 3,
+    "owner": "m0-o36",
+    "passed": true,
+    "voids": 0
+   },
+   {
+    "fixture": "seed3",
+    "masking_rounds": 3,
+    "owner": "m0-o36",
+    "passed": true,
+    "voids": 0
+   },
+   {
+    "fixture": "seed4",
+    "masking_rounds": 0,
+    "owner": "m0-o43",
+    "passed": false,
+    "voids": 0
+   },
+   {
+    "fixture": "seed5",
+    "masking_rounds": 1,
+    "owner": "m0-o27",
+    "passed": false,
+    "voids": 0
+   },
+   {
+    "fixture": "seed6",
+    "masking_rounds": 1,
+    "owner": "m0-o16",
+    "passed": false,
+    "voids": 0
+   },
+   {
+    "fixture": "seed7",
+    "masking_rounds": 3,
+    "owner": "m0-o10",
+    "passed": true,
+    "voids": 0
+   }
+  ],
+  "seeders_passed": 4
+ },
+ "elapsed_seconds": 64.93576916599704,
+ "extra_metrics": {},
+ "failed_calls": 0,
+ "failure": "gate_failed",
+ "gate": {
+  "passed": false
+ },
+ "hosts": [
+  "sim-test-01",
+  "sim-dmarz-13",
+  "sim-dmarz-9",
+  "sim-dmarz-2",
+  "sim-dmarz-5",
+  "sim-dmarz-8",
+  "sim-dmarz-4",
+  "sim-dmarz-3"
+ ],
+ "input_tokens": 179975,
+ "internal_error": null,
+ "model_calls": 95,
+ "not_started": 0,
+ "output_tokens": 17297,
+ "params": {
+  "backend": "openai",
+  "batch": "q0-001",
+  "code": "b52eafa99ab9be900485eabcfdbd3b01c23387b8",
+  "model": "gpt-6-sol",
+  "source_hash": "0a3480c2e2fe4d637076af30749dd8900fbbd97e15e8e4c13c7729933e17e479",
+  "stage": "Q0"
+ },
+ "planned": 95,
+ "rejected_commands": 0,
+ "study_accounting": {
+  "actual_usd": 0.607183,
+  "attempted_calls": 96,
+  "calls_by_batch": {
+   "p0-001": 1,
+   "q0-001": 95
+  },
+  "calls_by_stage": {
+   "P0": 1,
+   "Q0": 95
+  },
+  "cap_calls": 55096,
+  "cap_transport_attempts": 56637,
+  "cap_usd": 600,
+  "committed_usd": 0.607183,
+  "input_tokens": 180694,
+  "output_tokens": 17308,
+  "reserved_usd": 2.475428,
+  "transport_attempts": 96,
+  "usage_reported_calls": 96,
+  "voided_calls": 0
+ },
+ "transport": {
+  "dead_slots": [],
+  "events": [],
+  "hub_errors": 0,
+  "lost_calls_after_reissue": 0,
+  "lost_tasks": 0,
+  "reissue_refused": null,
+  "reissued_calls": 0,
+  "rerouted_calls": 0,
+  "tasks": 57
+ },
+ "transport_attempts": 95,
+ "void": 0
+}

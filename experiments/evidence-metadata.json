@@ -4150,7 +4150,8 @@
       "id": "growth-pressure-200",
       "title": "Growth pressure and rule evasion: seeding \u00d7 peer messaging (v2)",
       "documents": [
-        "researchers/dmarz/notes/growth-pressure-200/README.md"
+        "researchers/dmarz/notes/growth-pressure-200/README.md",
+        "researchers/dmarz/notes/growth-pressure-200/RESULTS.md"
       ],
       "experiment_ids": [
         "growth-pressure-200"
@@ -4160,19 +4161,23 @@
       ],
       "evidence_confidence": {
         "score": 0,
-        "claim": "Untested v2 question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect.",
-        "rationale": "Prospective factorial amendment only; v1 and v2 are unrun, with no experimental implementation or native qualification."
+        "claim": "Untested main question: whether assigned rival evasion changes sustained levy avoidance by ordinary owners, and whether peer messaging changes that effect.",
+        "rationale": "Chain-001 stopped at qualification: the seeder execution gate passed 4 of 8 fixtures (needs 6), so neither the throughput check nor the scientific comparison ran; mechanics comprehension passed 48 of 48. The qualification records describe the assigned-evader role under one overlay and a six-decision fixture, not ordinary agents."
       },
-      "sample_size_summary": "Observed: none. Planned v2: 12 independent paired markets in three 200-agent batches; 4 arms (0/4 evaders \u00d7 messaging off/on), 5 silent opening + 20 continuation rounds; 24 focal owners/arm; 51,000 main and 3,096 qualification decisions.",
+      "sample_size_summary": "Observed: qualification only, 96 gpt-6-sol calls (1 probe, 47 mechanics, 8 seeder fixtures x 6 decisions); 0 of the planned independent paired markets. Planned: 4N paired markets (N = 1 to 3 by measured throughput, Amendment 03).",
       "sources": [
         "researchers/dmarz/notes/growth-pressure-200/PLAN.md",
         "researchers/dmarz/notes/growth-pressure-200/design.json",
         "researchers/dmarz/notes/growth-pressure-200/SETUP.md",
         "researchers/dmarz/notes/growth-pressure-200/AMENDMENT-02.md",
-        "researchers/dmarz/notes/growth-pressure-200/reviews/design-review-v2.md"
+        "researchers/dmarz/notes/growth-pressure-200/reviews/design-review-v2.md",
+        "researchers/dmarz/notes/growth-pressure-200/AMENDMENT-03.md",
+        "researchers/dmarz/notes/growth-pressure-200/reviews/chain-001-post.md",
+        "researchers/dmarz/notes/growth-pressure-200/RESULTS.md",
+        "researchers/dmarz/notes/growth-pressure-200/records/chain-001/q0-001/summary.json"
       ],
-      "status_at_assessment": "v2_plan_only_unrun_v1_superseded",
-      "assessor": "dmarz/astra-ultra-review",
+      "status_at_assessment": "qualification_failed_seeder_gate_no_main_stage",
+      "assessor": "dmarz/growth-pressure",
       "assessed_at": "2026-10-04",
       "source_commit": "558579f512b18e095a4b9619cf25c45c0b973311"
     },
