@@ -1,0 +1,47 @@
+{
+  "baseline": {
+    "participation": {},
+    "first_observed_cluster_count": {},
+    "reuse_credit": {},
+    "reuse_credit_per_record": {},
+    "observed_span_seconds": {},
+    "dissent_marker_count": {},
+    "revert_marker_count": {}
+  },
+  "exact_dedup": {
+    "participation": {},
+    "first_observed_cluster_count": {},
+    "reuse_credit": {},
+    "reuse_credit_per_record": {},
+    "observed_span_seconds": {},
+    "dissent_marker_count": {},
+    "revert_marker_count": {}
+  },
+  "root_aggregate": {
+    "participation": {},
+    "first_observed_cluster_count": {},
+    "reuse_credit": {},
+    "reuse_credit_per_record": {},
+    "observed_span_seconds": {},
+    "dissent_marker_count": {},
+    "revert_marker_count": {}
+  },
+  "exclude_imputed": {
+    "participation": {},
+    "first_observed_cluster_count": {},
+    "reuse_credit": {},
+    "reuse_credit_per_record": {},
+    "observed_span_seconds": {},
+    "dissent_marker_count": {},
+    "revert_marker_count": {}
+  },
+  "combined": {
+    "participation": {},
+    "first_observed_cluster_count": {},
+    "reuse_credit": {},
+    "reuse_credit_per_record": {},
+    "observed_span_seconds": {},
+    "dissent_marker_count": {},
+    "revert_marker_count": {}
+  }
+}

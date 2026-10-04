@@ -35,6 +35,10 @@ class RobustnessTests(unittest.TestCase):
                 row('d', root_basis='wiki_page', time_grade='rclog'), row('e', root_basis='wiki_page', time_grade='reqlog')]
         self.assertEqual([r.event_id for r in exclude_imputed(rows)], ['a', 'c', 'e'])
 
+    def test_missing_wiki_clock_not_a_fallback_timestamp(self):
+        event = row('missing', time=None, root_basis='wiki_page', time_grade=None)
+        self.assertEqual(exclude_imputed([event]), [event])
+
     def test_combined_resolves_roots_before_filtering(self):
         rows = [row('a', 'a'), row('b', 'b', parent_id='a', time_imputed=True), row('c', 'c', parent_id='b')]
         arms, receipts = variants(rows)

@@ -1,0 +1,16 @@
+{
+  "seed": 202610041114,
+  "populations": {
+    "wiki": 5668,
+    "git": 115,
+    "swarmtraces": 0
+  },
+  "sample_sizes": {
+    "wiki": 15,
+    "git": 15,
+    "swarmtraces": 0
+  },
+  "blind_packet_sha256": "ef039116c488050aae39e72f482f3b628add1ad54b63095b6ba4e9b92cb853ef",
+  "key_sha256": "eacbb7206d9111ba81330cb16a69c5b1026b96a662c753a8a04b8354cb7e4a96",
+  "unit": "directed prior-identity to first-later-identity lexical-credit link"
+}

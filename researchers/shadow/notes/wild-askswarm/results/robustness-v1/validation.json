@@ -1,0 +1,96 @@
+{
+  "reports_checked": 15,
+  "checks": [
+    {
+      "source": "wiki",
+      "arm": "baseline",
+      "records": 14591,
+      "status": "pass"
+    },
+    {
+      "source": "wiki",
+      "arm": "exact_dedup",
+      "records": 11943,
+      "status": "pass"
+    },
+    {
+      "source": "wiki",
+      "arm": "root_aggregate",
+      "records": 4579,
+      "status": "pass"
+    },
+    {
+      "source": "wiki",
+      "arm": "exclude_imputed",
+      "records": 14482,
+      "status": "pass"
+    },
+    {
+      "source": "wiki",
+      "arm": "combined",
+      "records": 3599,
+      "status": "pass"
+    },
+    {
+      "source": "git",
+      "arm": "baseline",
+      "records": 2673,
+      "status": "pass"
+    },
+    {
+      "source": "git",
+      "arm": "exact_dedup",
+      "records": 1736,
+      "status": "pass"
+    },
+    {
+      "source": "git",
+      "arm": "root_aggregate",
+      "records": 2673,
+      "status": "pass"
+    },
+    {
+      "source": "git",
+      "arm": "exclude_imputed",
+      "records": 2673,
+      "status": "pass"
+    },
+    {
+      "source": "git",
+      "arm": "combined",
+      "records": 1736,
+      "status": "pass"
+    },
+    {
+      "source": "swarmtraces",
+      "arm": "baseline",
+      "records": 189579,
+      "status": "pass"
+    },
+    {
+      "source": "swarmtraces",
+      "arm": "exact_dedup",
+      "records": 163851,
+      "status": "pass"
+    },
+    {
+      "source": "swarmtraces",
+      "arm": "root_aggregate",
+      "records": 128454,
+      "status": "pass"
+    },
+    {
+      "source": "swarmtraces",
+      "arm": "exclude_imputed",
+      "records": 189579,
+      "status": "pass"
+    },
+    {
+      "source": "swarmtraces",
+      "arm": "combined",
+      "records": 121405,
+      "status": "pass"
+    }
+  ],
+  "independence": "separate arithmetic implementation by same assistant, not independent researcher review"
+}

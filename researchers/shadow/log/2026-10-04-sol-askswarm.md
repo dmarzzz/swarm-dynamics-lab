@@ -21,3 +21,16 @@
   copies to /tmp/askswarm-flightdeck-generated, and retained the valid figure under notes/results.
   No other researcher's provenance changes are included. Final artifact registration needs a
   scoped Flight Deck fix/maintainer action; the figure and reports are already usable.
+
+## Priority robustness follow-up (Shadow, 2026-10-04)
+
+Shipped importable variants/root/dedup/clock/rank helpers at bba7e9e3. Recomputed all questions
+on 3 corpora x 5 arms in 383.768 sec, zero study API/model calls. Original outputs preserved.
+Wiki records 14591 -> 11943 exact-dedup / 4579 root / 14482 conservative fallback-clock;
+root credit top-10 overlap 1/10. Git 2673 -> 1736 exact-dedup, multi-identity clusters 34 -> 8,
+credit recipients 26 -> 3 (original top-10 overlap zero). SwarmTraces root rows 128454,
+all actor/time endpoints still unavailable. Partially blinded direct assistant review of
+30 links locked before key: 15/15 git sync boilerplate; wiki 10/15 cross-root task-specific
+repeats (66.7%, nominal Wilson 41.7-84.8%), 5 same-page snapshots. Semantic adoption/endorsement
+precision unavailable, not zero. 30 unit tests and 15 full-report arithmetic checks pass.
+See ROBUSTNESS.md, AUDIT.md, POSTMORTEM-ROBUSTNESS.md; helper ready for halflife/identity.

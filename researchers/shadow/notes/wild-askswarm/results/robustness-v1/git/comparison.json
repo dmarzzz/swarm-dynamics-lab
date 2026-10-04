@@ -1,0 +1,2282 @@
+{
+  "transformations": {
+    "baseline": {
+      "input_records": 2673,
+      "retained_records": 2673,
+      "removed_records": 0,
+      "retained_root_count": 2673,
+      "root_relation_known_records": 2673,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 2673
+      },
+      "retained_ids_sha256": "01b7bd7e785a4a45aefec5ef6b6e53f2f580d3e5fa1dd2513bcd41726122dc17"
+    },
+    "exact_dedup": {
+      "input_records": 2673,
+      "retained_records": 1736,
+      "removed_records": 937,
+      "retained_root_count": 1736,
+      "root_relation_known_records": 1736,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 1736
+      },
+      "retained_ids_sha256": "64944cceb6b1553ae29ac8a6bc0b140b5582dec6a4ac7386abc6ada1cf935459"
+    },
+    "root_aggregate": {
+      "input_records": 2673,
+      "retained_records": 2673,
+      "removed_records": 0,
+      "retained_root_count": 2673,
+      "root_relation_known_records": 2673,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 2673
+      },
+      "retained_ids_sha256": "01b7bd7e785a4a45aefec5ef6b6e53f2f580d3e5fa1dd2513bcd41726122dc17"
+    },
+    "exclude_imputed": {
+      "input_records": 2673,
+      "retained_records": 2673,
+      "removed_records": 0,
+      "retained_root_count": 2673,
+      "root_relation_known_records": 2673,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 2673
+      },
+      "retained_ids_sha256": "01b7bd7e785a4a45aefec5ef6b6e53f2f580d3e5fa1dd2513bcd41726122dc17"
+    },
+    "combined": {
+      "input_records": 2673,
+      "retained_records": 1736,
+      "removed_records": 937,
+      "retained_root_count": 1736,
+      "root_relation_known_records": 1736,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 1736
+      },
+      "retained_ids_sha256": "64944cceb6b1553ae29ac8a6bc0b140b5582dec6a4ac7386abc6ada1cf935459"
+    }
+  },
+  "comparisons": {
+    "exact_dedup": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": 21,
+          "after": 21,
+          "delta": 0
+        },
+        "identities": {
+          "before": 161,
+          "after": 160,
+          "delta": -1
+        },
+        "identity_and_time_records": {
+          "before": 1924,
+          "after": 1693,
+          "delta": -231
+        },
+        "dissent_marker_fraction": {
+          "before": 0.02356902356902357,
+          "after": 0.03513824884792627,
+          "delta": 0.011569225278902699
+        },
+        "revert_marker_fraction": {
+          "before": 0.0007482229704451926,
+          "after": 0.001152073732718894,
+          "delta": 0.0004038507622737014
+        },
+        "multi_identity_clusters": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "known_identity_records": {
+          "before": 1924,
+          "after": 1693,
+          "delta": -231
+        },
+        "dissent_marker_records": {
+          "before": 63,
+          "after": 61,
+          "delta": -2
+        },
+        "identity_coverage": {
+          "before": 0.7197904975682754,
+          "after": 0.9752304147465438,
+          "delta": 0.2554399171782684
+        },
+        "identity_span_seconds.max": {
+          "before": 41401.0,
+          "after": 41401.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.p90": {
+          "before": 18927.0,
+          "after": 17248.0,
+          "delta": -1679.0
+        },
+        "identity_span_seconds.median": {
+          "before": 2684.0,
+          "after": 2759.5,
+          "delta": 75.5
+        },
+        "identity_span_seconds.min": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.n": {
+          "before": 161,
+          "after": 160,
+          "delta": -1
+        },
+        "dated_records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "clusters": {
+          "before": 1725,
+          "after": 1725,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": 0.6423858162988598,
+          "after": 0.6193702008269344,
+          "delta": -0.023015615471925432
+        },
+        "multi_record_clusters": {
+          "before": 64,
+          "after": 10,
+          "delta": -54
+        },
+        "revert_marker_records": {
+          "before": 2,
+          "after": 2,
+          "delta": 0
+        },
+        "nonempty_text_records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "time_coverage": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 1648,
+          "after": 1674,
+          "delta": 26
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": 25678.0,
+          "after": 25678.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": 18544.0,
+          "after": 25678.0,
+          "delta": 7134.0
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": 4880.5,
+          "after": 3.0,
+          "delta": -4877.5
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 1668,
+          "after": 1682,
+          "delta": 14
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": 34544.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": 23312.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": 8379.5,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": 1776.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 14,
+          "after": 0,
+          "delta": -14
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 14,
+          "after": 0,
+          "delta": -14
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 1672,
+          "after": 1682,
+          "delta": 10
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": 37962.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": 26826.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": 16851.5,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": 7653.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 10,
+          "after": 0,
+          "delta": -10
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 10,
+          "after": 0,
+          "delta": -10
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 1678,
+          "after": 1682,
+          "delta": 4
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": 52075.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": 52075.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": 24911.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": 22620.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 4,
+          "after": 0,
+          "delta": -4
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 4,
+          "after": 0,
+          "delta": -4
+        }
+      },
+      "record_kind_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 165,
+          "delta": -1
+        },
+        "commit": {
+          "before": 2264,
+          "after": 1362,
+          "delta": -902
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 185,
+          "delta": -21
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 6,
+          "delta": -1
+        },
+        "task_release": {
+          "before": 30,
+          "after": 18,
+          "delta": -12
+        }
+      },
+      "task_event_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 165,
+          "delta": -1
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 185,
+          "delta": -21
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 6,
+          "delta": -1
+        },
+        "task_release": {
+          "before": 30,
+          "after": 18,
+          "delta": -12
+        }
+      },
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9912782770392841,
+          "mean_absolute_rank_shift": 2.80625,
+          "max_absolute_rank_shift": 40.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 9,
+          "top_jaccard": 0.8181818181818182
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 157,
+          "after_ranked": 157,
+          "common": 157,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit": {
+          "before_ranked": 26,
+          "after_ranked": 3,
+          "common": 3,
+          "exited": 23,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": 11.0,
+          "max_absolute_rank_shift": 11.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 3,
+          "top_overlap": 0,
+          "top_jaccard": 0.0
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 26,
+          "after_ranked": 3,
+          "common": 3,
+          "exited": 23,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 3,
+          "top_overlap": 3,
+          "top_jaccard": 0.3
+        },
+        "observed_span_seconds": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9955116287743597,
+          "mean_absolute_rank_shift": 1.3125,
+          "max_absolute_rank_shift": 46.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "dissent_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9999678396128673,
+          "mean_absolute_rank_shift": 0.490625,
+          "max_absolute_rank_shift": 1.5,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 160,
+          "top_overlap": 160,
+          "top_jaccard": 0.9937888198757764
+        },
+        "revert_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.49375,
+          "max_absolute_rank_shift": 0.5,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 160,
+          "top_overlap": 160,
+          "top_jaccard": 0.9937888198757764
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 1725,
+        "after_clusters": 1725,
+        "matched_clusters": 1725,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 1736,
+        "records_in_matched_correspondence": 1736,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.3851591244508399,
+            "mean_absolute_rank_shift": 52.40347826086956,
+            "max_absolute_rank_shift": 867.0,
+            "top_k": 10,
+            "before_top_including_ties": 13,
+            "after_top_including_ties": 10,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.8170577980811078,
+            "mean_absolute_rank_shift": 25.024927536231885,
+            "max_absolute_rank_shift": 844.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 1682,
+            "top_overlap": 10,
+            "top_jaccard": 0.005945303210463734
+          },
+          "dated_identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.8170577980811078,
+            "mean_absolute_rank_shift": 25.024927536231885,
+            "max_absolute_rank_shift": 844.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 1682,
+            "top_overlap": 10,
+            "top_jaccard": 0.005945303210463734
+          },
+          "time_to_2": {
+            "before_ranked": 34,
+            "after_ranked": 8,
+            "common": 8,
+            "exited": 26,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 6.5,
+            "max_absolute_rank_shift": 26.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 8,
+            "top_overlap": 6,
+            "top_jaccard": 0.5
+          },
+          "time_to_3": {
+            "before_ranked": 14,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 14,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "time_to_5": {
+            "before_ranked": 10,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 10,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "time_to_10": {
+            "before_ranked": 4,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 4,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 4,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          }
+        }
+      }
+    },
+    "root_aggregate": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": 21,
+          "after": 21,
+          "delta": 0
+        },
+        "identities": {
+          "before": 161,
+          "after": 161,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 1924,
+          "after": 1924,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.02356902356902357,
+          "after": 0.02356902356902357,
+          "delta": 0.0
+        },
+        "revert_marker_fraction": {
+          "before": 0.0007482229704451926,
+          "after": 0.0007482229704451926,
+          "delta": 0.0
+        },
+        "multi_identity_clusters": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "known_identity_records": {
+          "before": 1924,
+          "after": 1924,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 63,
+          "after": 63,
+          "delta": 0
+        },
+        "identity_coverage": {
+          "before": 0.7197904975682754,
+          "after": 0.7197904975682754,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": 41401.0,
+          "after": 41401.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.p90": {
+          "before": 18927.0,
+          "after": 18927.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.median": {
+          "before": 2684.0,
+          "after": 2684.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.min": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.n": {
+          "before": 161,
+          "after": 161,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 1725,
+          "after": 1725,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": 0.6423858162988598,
+          "after": 0.6423858162988598,
+          "delta": 0.0
+        },
+        "multi_record_clusters": {
+          "before": 64,
+          "after": 64,
+          "delta": 0
+        },
+        "revert_marker_records": {
+          "before": 2,
+          "after": 2,
+          "delta": 0
+        },
+        "nonempty_text_records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "time_coverage": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 1648,
+          "after": 1648,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": 25678.0,
+          "after": 25678.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": 18544.0,
+          "after": 18544.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": 4880.5,
+          "after": 4880.5,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 1668,
+          "after": 1668,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": 34544.0,
+          "after": 34544.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": 23312.0,
+          "after": 23312.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": 8379.5,
+          "after": 8379.5,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": 1776.0,
+          "after": 1776.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 14,
+          "after": 14,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 14,
+          "after": 14,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 1672,
+          "after": 1672,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": 37962.0,
+          "after": 37962.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": 26826.0,
+          "after": 26826.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": 16851.5,
+          "after": 16851.5,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": 7653.0,
+          "after": 7653.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 10,
+          "after": 10,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 10,
+          "after": 10,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 1678,
+          "after": 1678,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": 52075.0,
+          "after": 52075.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": 52075.0,
+          "after": 52075.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": 24911.0,
+          "after": 24911.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": 22620.0,
+          "after": 22620.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 4,
+          "after": 4,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 4,
+          "after": 4,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 166,
+          "delta": 0
+        },
+        "commit": {
+          "before": 2264,
+          "after": 2264,
+          "delta": 0
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 206,
+          "delta": 0
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 7,
+          "delta": 0
+        },
+        "task_release": {
+          "before": 30,
+          "after": 30,
+          "delta": 0
+        }
+      },
+      "task_event_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 166,
+          "delta": 0
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 206,
+          "delta": 0
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 7,
+          "delta": 0
+        },
+        "task_release": {
+          "before": 30,
+          "after": 30,
+          "delta": 0
+        }
+      },
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 157,
+          "after_ranked": 157,
+          "common": 157,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit": {
+          "before_ranked": 26,
+          "after_ranked": 26,
+          "common": 26,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 26,
+          "after_ranked": 26,
+          "common": 26,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "observed_span_seconds": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "dissent_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 161,
+          "top_overlap": 161,
+          "top_jaccard": 1.0
+        },
+        "revert_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 161,
+          "top_overlap": 161,
+          "top_jaccard": 1.0
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 1725,
+        "after_clusters": 1725,
+        "matched_clusters": 1725,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 2673,
+        "records_in_matched_correspondence": 2673,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 13,
+            "after_top_including_ties": 13,
+            "top_overlap": 13,
+            "top_jaccard": 1.0
+          },
+          "identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "dated_identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_2": {
+            "before_ranked": 34,
+            "after_ranked": 34,
+            "common": 34,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_3": {
+            "before_ranked": 14,
+            "after_ranked": 14,
+            "common": 14,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_5": {
+            "before_ranked": 10,
+            "after_ranked": 10,
+            "common": 10,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_10": {
+            "before_ranked": 4,
+            "after_ranked": 4,
+            "common": 4,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 4,
+            "after_top_including_ties": 4,
+            "top_overlap": 4,
+            "top_jaccard": 1.0
+          }
+        }
+      }
+    },
+    "exclude_imputed": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": 21,
+          "after": 21,
+          "delta": 0
+        },
+        "identities": {
+          "before": 161,
+          "after": 161,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 1924,
+          "after": 1924,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.02356902356902357,
+          "after": 0.02356902356902357,
+          "delta": 0.0
+        },
+        "revert_marker_fraction": {
+          "before": 0.0007482229704451926,
+          "after": 0.0007482229704451926,
+          "delta": 0.0
+        },
+        "multi_identity_clusters": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "known_identity_records": {
+          "before": 1924,
+          "after": 1924,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 63,
+          "after": 63,
+          "delta": 0
+        },
+        "identity_coverage": {
+          "before": 0.7197904975682754,
+          "after": 0.7197904975682754,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": 41401.0,
+          "after": 41401.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.p90": {
+          "before": 18927.0,
+          "after": 18927.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.median": {
+          "before": 2684.0,
+          "after": 2684.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.min": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.n": {
+          "before": 161,
+          "after": 161,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 1725,
+          "after": 1725,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": 0.6423858162988598,
+          "after": 0.6423858162988598,
+          "delta": 0.0
+        },
+        "multi_record_clusters": {
+          "before": 64,
+          "after": 64,
+          "delta": 0
+        },
+        "revert_marker_records": {
+          "before": 2,
+          "after": 2,
+          "delta": 0
+        },
+        "nonempty_text_records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "records": {
+          "before": 2673,
+          "after": 2673,
+          "delta": 0
+        },
+        "time_coverage": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 1648,
+          "after": 1648,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": 25678.0,
+          "after": 25678.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": 18544.0,
+          "after": 18544.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": 4880.5,
+          "after": 4880.5,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 34,
+          "after": 34,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 1668,
+          "after": 1668,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": 34544.0,
+          "after": 34544.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": 23312.0,
+          "after": 23312.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": 8379.5,
+          "after": 8379.5,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": 1776.0,
+          "after": 1776.0,
+          "delta": 0.0
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 14,
+          "after": 14,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 14,
+          "after": 14,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 1672,
+          "after": 1672,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": 37962.0,
+          "after": 37962.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": 26826.0,
+          "after": 26826.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": 16851.5,
+          "after": 16851.5,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": 7653.0,
+          "after": 7653.0,
+          "delta": 0.0
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 10,
+          "after": 10,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 10,
+          "after": 10,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 1678,
+          "after": 1678,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": 52075.0,
+          "after": 52075.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": 52075.0,
+          "after": 52075.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": 24911.0,
+          "after": 24911.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": 22620.0,
+          "after": 22620.0,
+          "delta": 0.0
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 4,
+          "after": 4,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 4,
+          "after": 4,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 166,
+          "delta": 0
+        },
+        "commit": {
+          "before": 2264,
+          "after": 2264,
+          "delta": 0
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 206,
+          "delta": 0
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 7,
+          "delta": 0
+        },
+        "task_release": {
+          "before": 30,
+          "after": 30,
+          "delta": 0
+        }
+      },
+      "task_event_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 166,
+          "delta": 0
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 206,
+          "delta": 0
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 7,
+          "delta": 0
+        },
+        "task_release": {
+          "before": 30,
+          "after": 30,
+          "delta": 0
+        }
+      },
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 157,
+          "after_ranked": 157,
+          "common": 157,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit": {
+          "before_ranked": 26,
+          "after_ranked": 26,
+          "common": 26,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 26,
+          "after_ranked": 26,
+          "common": 26,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "observed_span_seconds": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "dissent_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 161,
+          "top_overlap": 161,
+          "top_jaccard": 1.0
+        },
+        "revert_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 161,
+          "common": 161,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 161,
+          "top_overlap": 161,
+          "top_jaccard": 1.0
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 1725,
+        "after_clusters": 1725,
+        "matched_clusters": 1725,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 2673,
+        "records_in_matched_correspondence": 2673,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 13,
+            "after_top_including_ties": 13,
+            "top_overlap": 13,
+            "top_jaccard": 1.0
+          },
+          "identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "dated_identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_2": {
+            "before_ranked": 34,
+            "after_ranked": 34,
+            "common": 34,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_3": {
+            "before_ranked": 14,
+            "after_ranked": 14,
+            "common": 14,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_5": {
+            "before_ranked": 10,
+            "after_ranked": 10,
+            "common": 10,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "time_to_10": {
+            "before_ranked": 4,
+            "after_ranked": 4,
+            "common": 4,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 4,
+            "after_top_including_ties": 4,
+            "top_overlap": 4,
+            "top_jaccard": 1.0
+          }
+        }
+      }
+    },
+    "combined": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": 21,
+          "after": 21,
+          "delta": 0
+        },
+        "identities": {
+          "before": 161,
+          "after": 160,
+          "delta": -1
+        },
+        "identity_and_time_records": {
+          "before": 1924,
+          "after": 1693,
+          "delta": -231
+        },
+        "dissent_marker_fraction": {
+          "before": 0.02356902356902357,
+          "after": 0.03513824884792627,
+          "delta": 0.011569225278902699
+        },
+        "revert_marker_fraction": {
+          "before": 0.0007482229704451926,
+          "after": 0.001152073732718894,
+          "delta": 0.0004038507622737014
+        },
+        "multi_identity_clusters": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "known_identity_records": {
+          "before": 1924,
+          "after": 1693,
+          "delta": -231
+        },
+        "dissent_marker_records": {
+          "before": 63,
+          "after": 61,
+          "delta": -2
+        },
+        "identity_coverage": {
+          "before": 0.7197904975682754,
+          "after": 0.9752304147465438,
+          "delta": 0.2554399171782684
+        },
+        "identity_span_seconds.max": {
+          "before": 41401.0,
+          "after": 41401.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.p90": {
+          "before": 18927.0,
+          "after": 17248.0,
+          "delta": -1679.0
+        },
+        "identity_span_seconds.median": {
+          "before": 2684.0,
+          "after": 2759.5,
+          "delta": 75.5
+        },
+        "identity_span_seconds.min": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.n": {
+          "before": 161,
+          "after": 160,
+          "delta": -1
+        },
+        "dated_records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "clusters": {
+          "before": 1725,
+          "after": 1725,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": 0.6423858162988598,
+          "after": 0.6193702008269344,
+          "delta": -0.023015615471925432
+        },
+        "multi_record_clusters": {
+          "before": 64,
+          "after": 10,
+          "delta": -54
+        },
+        "revert_marker_records": {
+          "before": 2,
+          "after": 2,
+          "delta": 0
+        },
+        "nonempty_text_records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "records": {
+          "before": 2673,
+          "after": 1736,
+          "delta": -937
+        },
+        "time_coverage": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 1648,
+          "after": 1674,
+          "delta": 26
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": 25678.0,
+          "after": 25678.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": 18544.0,
+          "after": 25678.0,
+          "delta": 7134.0
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": 4880.5,
+          "after": 3.0,
+          "delta": -4877.5
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": 1.0,
+          "after": 1.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 34,
+          "after": 8,
+          "delta": -26
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 1668,
+          "after": 1682,
+          "delta": 14
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": 34544.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": 23312.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": 8379.5,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": 1776.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 14,
+          "after": 0,
+          "delta": -14
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 14,
+          "after": 0,
+          "delta": -14
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 1672,
+          "after": 1682,
+          "delta": 10
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": 37962.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": 26826.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": 16851.5,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": 7653.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 10,
+          "after": 0,
+          "delta": -10
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 10,
+          "after": 0,
+          "delta": -10
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 1678,
+          "after": 1682,
+          "delta": 4
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": 52075.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": 52075.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": 24911.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": 22620.0,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 4,
+          "after": 0,
+          "delta": -4
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 1682,
+          "after": 1682,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 4,
+          "after": 0,
+          "delta": -4
+        }
+      },
+      "record_kind_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 165,
+          "delta": -1
+        },
+        "commit": {
+          "before": 2264,
+          "after": 1362,
+          "delta": -902
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 185,
+          "delta": -21
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 6,
+          "delta": -1
+        },
+        "task_release": {
+          "before": 30,
+          "after": 18,
+          "delta": -12
+        }
+      },
+      "task_event_deltas": {
+        "task_done": {
+          "before": 166,
+          "after": 165,
+          "delta": -1
+        },
+        "task_claim": {
+          "before": 206,
+          "after": 185,
+          "delta": -21
+        },
+        "task_touch": {
+          "before": 7,
+          "after": 6,
+          "delta": -1
+        },
+        "task_release": {
+          "before": 30,
+          "after": 18,
+          "delta": -12
+        }
+      },
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9912782770392841,
+          "mean_absolute_rank_shift": 2.80625,
+          "max_absolute_rank_shift": 40.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 9,
+          "top_jaccard": 0.8181818181818182
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 157,
+          "after_ranked": 157,
+          "common": 157,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "reuse_credit": {
+          "before_ranked": 26,
+          "after_ranked": 3,
+          "common": 3,
+          "exited": 23,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": 11.0,
+          "max_absolute_rank_shift": 11.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 3,
+          "top_overlap": 0,
+          "top_jaccard": 0.0
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 26,
+          "after_ranked": 3,
+          "common": 3,
+          "exited": 23,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": 0.0,
+          "max_absolute_rank_shift": 0.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 3,
+          "top_overlap": 3,
+          "top_jaccard": 0.3
+        },
+        "observed_span_seconds": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9955116287743597,
+          "mean_absolute_rank_shift": 1.3125,
+          "max_absolute_rank_shift": 46.0,
+          "top_k": 10,
+          "before_top_including_ties": 10,
+          "after_top_including_ties": 10,
+          "top_overlap": 10,
+          "top_jaccard": 1.0
+        },
+        "dissent_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 0.9999678396128673,
+          "mean_absolute_rank_shift": 0.490625,
+          "max_absolute_rank_shift": 1.5,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 160,
+          "top_overlap": 160,
+          "top_jaccard": 0.9937888198757764
+        },
+        "revert_marker_count": {
+          "before_ranked": 161,
+          "after_ranked": 160,
+          "common": 160,
+          "exited": 1,
+          "entered": 0,
+          "common_spearman": 1.0,
+          "mean_absolute_rank_shift": 0.49375,
+          "max_absolute_rank_shift": 0.5,
+          "top_k": 10,
+          "before_top_including_ties": 161,
+          "after_top_including_ties": 160,
+          "top_overlap": 160,
+          "top_jaccard": 0.9937888198757764
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 1725,
+        "after_clusters": 1725,
+        "matched_clusters": 1725,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 1736,
+        "records_in_matched_correspondence": 1736,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.3851591244508399,
+            "mean_absolute_rank_shift": 52.40347826086956,
+            "max_absolute_rank_shift": 867.0,
+            "top_k": 10,
+            "before_top_including_ties": 13,
+            "after_top_including_ties": 10,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.8170577980811078,
+            "mean_absolute_rank_shift": 25.024927536231885,
+            "max_absolute_rank_shift": 844.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 1682,
+            "top_overlap": 10,
+            "top_jaccard": 0.005945303210463734
+          },
+          "dated_identities": {
+            "before_ranked": 1725,
+            "after_ranked": 1725,
+            "common": 1725,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.8170577980811078,
+            "mean_absolute_rank_shift": 25.024927536231885,
+            "max_absolute_rank_shift": 844.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 1682,
+            "top_overlap": 10,
+            "top_jaccard": 0.005945303210463734
+          },
+          "time_to_2": {
+            "before_ranked": 34,
+            "after_ranked": 8,
+            "common": 8,
+            "exited": 26,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 6.5,
+            "max_absolute_rank_shift": 26.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 8,
+            "top_overlap": 6,
+            "top_jaccard": 0.5
+          },
+          "time_to_3": {
+            "before_ranked": 14,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 14,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "time_to_5": {
+            "before_ranked": 10,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 10,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          },
+          "time_to_10": {
+            "before_ranked": 4,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 4,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 4,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": 0.0
+          }
+        }
+      }
+    }
+  }
+}

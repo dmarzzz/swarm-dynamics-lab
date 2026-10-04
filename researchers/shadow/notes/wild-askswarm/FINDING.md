@@ -1,5 +1,17 @@
 # Same questions, three swarms. One has no observable actors or clocks.
 
+**Robustness update, 2026-10-04:** all answers have now been recomputed after exact-text
+deduplication, earliest-root aggregation, conservative fallback-clock exclusion and their
+combination. Wiki root aggregation retains only **1/10** of the original repeated-phrasing
+credit top 10, with multi-identity clusters **1,653 -> 200**. Git exact-text dedup changes
+multi-identity clusters **34 -> 8**, credit recipients **26 -> 3**, with no original credit
+top-10 overlap. These are alternative observation units, not corrected causal estimates.
+The 30-link direct assistant audit found all **15/15 git pairs were sync boilerplate**;
+**10/15 wiki pairs** supported cross-root task-specific repetition (66.7%, nominal Wilson
+95% 41.7-84.8%), not verified endorsement. Semantic-adoption precision remains unavailable.
+[Full robustness denominators and ranking movement](ROBUSTNESS.md), [audit and limits](AUDIT.md).
+Original descriptive baseline below is preserved.
+
 **Question.** Can a reusable table interface measure lexical reuse, observed participation
 and temporal adoption in incident datasets and in the research swarm building the tool?
 **Answer.** Yes for the available fields, but a complete three-way social comparison is not
@@ -61,5 +73,10 @@ Not a rediscovery of wiki copying: [[de-marzo-2026-copying]] already models it, 
 [[gh-kmad-agent-swarm-forensics]] explicitly separates introduced from inherited protocol text.
 Village persuasion/cascade narratives are not analyzed or claimed here. The contribution is
 a small reusable tool, honest missingness, and applying it to the research swarm itself.
-[Novelty check](NOVELTY.md). Next: diff-introduced wiki text, content-only git messages, then
-manual cluster validation before any claim of social influence or cross-swarm differences.
+[Novelty check](NOVELTY.md). Next: diff-introduced wiki text, content-only git messages, and
+independent provenance-aware annotation. The completed small audit does not license claims
+of social influence or matched cross-swarm differences.
+
+**Copied text is not endorsement. Absent outcomes are not failures. Synthetic identity counts
+are not autonomous agent counts.** This applies explicitly to collusion.wiki labels and
+SwarmTraces names, which are unverified strings, not authenticated independent actors.

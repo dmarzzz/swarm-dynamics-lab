@@ -1,0 +1,722 @@
+{
+  "reviewer": "shadow/sol-askswarm operating assistant, direct close reading; NOT human or independent review",
+  "blinding": "Random A/B orientation; actor metadata, timestamps, scores, root IDs and source labels withheld. Selected pair handles masked in body. Genre, embedded third-party handles and non-ISO task clocks remain recognizable: partial blinding only.",
+  "judgments_locked_before_key_read": true,
+  "judgments_sha256": "d74aa2f870a25536546c144da3fda6da6edfc3f0fe78660e68763eee2e7cd3ae",
+  "results": {
+    "wiki": {
+      "population_directed_links": 5668,
+      "sample_links": 15,
+      "categories": {
+        "query_link_payload": 13,
+        "coordination_prose_snapshot": 2
+      },
+      "same_root_links": 5,
+      "endorsement_supported": 0,
+      "endorsement_unestablished": 15,
+      "semantic_adoption_precision": null,
+      "lexical_match": {
+        "positive": 15,
+        "denominator": 15,
+        "precision": 1.0,
+        "nominal_wilson_95": [
+          0.7961166989641515,
+          1
+        ]
+      },
+      "task_specific_content": {
+        "positive": 15,
+        "denominator": 15,
+        "precision": 1.0,
+        "nominal_wilson_95": [
+          0.7961166989641515,
+          1
+        ]
+      },
+      "cross_root_task_specific_repetition": {
+        "positive": 10,
+        "denominator": 15,
+        "precision": 0.6666666666666666,
+        "nominal_wilson_95": [
+          0.41713547738519774,
+          0.8482367556028526
+        ]
+      }
+    },
+    "git": {
+      "population_directed_links": 115,
+      "sample_links": 15,
+      "categories": {
+        "administrative_template": 15
+      },
+      "same_root_links": 0,
+      "endorsement_supported": 0,
+      "endorsement_unestablished": 15,
+      "semantic_adoption_precision": null,
+      "lexical_match": {
+        "positive": 15,
+        "denominator": 15,
+        "precision": 1.0,
+        "nominal_wilson_95": [
+          0.7961166989641515,
+          1
+        ]
+      },
+      "task_specific_content": {
+        "positive": 0,
+        "denominator": 15,
+        "precision": 0.0,
+        "nominal_wilson_95": [
+          0,
+          0.20388330103584862
+        ]
+      },
+      "cross_root_task_specific_repetition": {
+        "positive": 0,
+        "denominator": 15,
+        "precision": 0.0,
+        "nominal_wilson_95": [
+          0,
+          0.20388330103584862
+        ]
+      }
+    },
+    "swarmtraces": {
+      "population_directed_links": 0,
+      "sample_links": 0,
+      "categories": {},
+      "same_root_links": 0,
+      "endorsement_supported": 0,
+      "endorsement_unestablished": 0,
+      "semantic_adoption_precision": null,
+      "lexical_match": {
+        "positive": 0,
+        "denominator": 0,
+        "precision": null,
+        "nominal_wilson_95": null
+      },
+      "task_specific_content": {
+        "positive": 0,
+        "denominator": 0,
+        "precision": null,
+        "nominal_wilson_95": null
+      },
+      "cross_root_task_specific_repetition": {
+        "positive": 0,
+        "denominator": 0,
+        "precision": null,
+        "nominal_wilson_95": null
+      }
+    }
+  },
+  "links": [
+    {
+      "sample_id": "B01",
+      "source": "git",
+      "prior_event": "ec7ee8457797a25f36b414ea413a3e536ee5b990",
+      "later_event": "fa967eefe4476997ee17bae004d0f3dc959d3950",
+      "same_root": false,
+      "prior_time": 1791085748.0,
+      "later_time": 1791085922.0,
+      "flipped": true,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification, no research proposition.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B02",
+      "source": "wiki",
+      "prior_event": "dse~WillkommenImWiki@154",
+      "later_event": "dse~WillkommenImWiki@165",
+      "same_root": true,
+      "prior_time": 1781810310.0,
+      "later_time": 1781810501.0,
+      "flipped": true,
+      "text_sha256": [
+        "e6bed673dd26d963233f542ef2f253159af05eae1b3436cea8418f6b9d2c080b",
+        "e6bed673dd26d963233f542ef2f253159af05eae1b3436cea8418f6b9d2c080b"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Shared detailed SEC mirror/query variants and fit parameters. Duplicate content alone does not show a new user adopted it.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B03",
+      "source": "wiki",
+      "prior_event": "dse~AgentYahooQuery1DirectNewTt@2",
+      "later_event": "dse~AgentDataUSAHelper20250901@2",
+      "same_root": false,
+      "prior_time": 1782088019.0,
+      "later_time": 1782088137.0,
+      "flipped": true,
+      "text_sha256": [
+        "cffd02773fa54a2e5dadac3d93bad9246a0e61866e2f1bf5cb9c189001276893",
+        "29fa796ca1614c114b4be78c70ad40ccb9516e499c5dc26a699cd8331112304f"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Same occupation-specific DataUSA query and filters; capitalization/header differ. Could be common endpoint rather than communication.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B04",
+      "source": "git",
+      "prior_event": "30e3564574197ef3d1f0a23a4fab2c8d209e157c",
+      "later_event": "d6c99f7e5362f0fdf029e6d26c22eacd76cacc7e",
+      "same_root": false,
+      "prior_time": 1791085030.0,
+      "later_time": 1791085403.0,
+      "flipped": false,
+      "text_sha256": [
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9",
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical two-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B05",
+      "source": "git",
+      "prior_event": "9210d26982f536241a75761296d35e9c610a0b19",
+      "later_event": "8858c1b2d0b74206be96143542ab63ce093498b0",
+      "same_root": false,
+      "prior_time": 1791080964.0,
+      "later_time": 1791081943.0,
+      "flipped": true,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B06",
+      "source": "wiki",
+      "prior_event": "dse~WillkommenImWiki@578",
+      "later_event": "dse~WillkommenImWiki@600",
+      "same_root": true,
+      "prior_time": 1781813144.0,
+      "later_time": 1781813176.0,
+      "flipped": true,
+      "text_sha256": [
+        "4f691f8b55b4a2562ebc5c1ea953d64f3ce00cd36410a2c83cbe288b5d9eac19",
+        "4f691f8b55b4a2562ebc5c1ea953d64f3ce00cd36410a2c83cbe288b5d9eac19"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical task-specific external wiki, SEC and proxy link list plus token. No explicit adoption act.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B07",
+      "source": "git",
+      "prior_event": "3549fdb34f13e620b7d9a05f1072700cb90845dd",
+      "later_event": "98bf48c06e9aadce5932451cce09718b1fc30d8e",
+      "same_root": false,
+      "prior_time": 1791066491.0,
+      "later_time": 1791070471.0,
+      "flipped": false,
+      "text_sha256": [
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9",
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical two-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B08",
+      "source": "git",
+      "prior_event": "85dbab40957a2adb2fb5f050666e386c4c6b0888",
+      "later_event": "8faca1e51676d0124ab0b77645a8989d0bf66c48",
+      "same_root": false,
+      "prior_time": 1791057630.0,
+      "later_time": 1791058563.0,
+      "flipped": true,
+      "text_sha256": [
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3",
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical one-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B09",
+      "source": "git",
+      "prior_event": "5374af0dd884c1df8336b883a6757be73e22adc1",
+      "later_event": "b99efe9be7d95d2d4f56bcbb8b0bd96472e21762",
+      "same_root": false,
+      "prior_time": 1791079227.0,
+      "later_time": 1791080046.0,
+      "flipped": true,
+      "text_sha256": [
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3",
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical one-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B10",
+      "source": "wiki",
+      "prior_event": "dse~DataUSAMaidsSequenceLiveMay03@8",
+      "later_event": "dse~DataUSAMaidsSequenceLiveMay03@11",
+      "same_root": true,
+      "prior_time": 1781637657.0,
+      "later_time": 1781638036.0,
+      "flipped": true,
+      "text_sha256": [
+        "71d2ab4a047f3769a78f8669e2ebf3ec9072712b5a66bedbd48510dac86387c8",
+        "d89e34e6b927a4a0d31a3c8abba7aa769c42ead87ee8f0c48780deb21abf6705"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "coordination_prose_snapshot",
+      "endorsement": "unestablished",
+      "reason": "Shared wage numbers and timed-cohort discussion, with appended updates. Text resembles snapshots; directed adoption cannot be assigned to the sampled pair.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B11",
+      "source": "wiki",
+      "prior_event": "dse~AgentTBMortSliceLQ7@4",
+      "later_event": "dse~SandboxZXQ@2",
+      "same_root": false,
+      "prior_time": 1780093748.0,
+      "later_time": 1780095534.0,
+      "flipped": false,
+      "text_sha256": [
+        "3ce35b8fbc5ea88f328f932a38b2e32ac37cc86e66ceeb0b3bb45cdb58b28e76",
+        "3dfe75a6a8d8581e51141ddc6429a9a1deafdd8155635f8ec1d065437b18224c"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Same specific tuberculosis API/config endpoint via proxy, different short wrappers. Endpoint reuse is not endorsement.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B12",
+      "source": "wiki",
+      "prior_event": "dse~AgentTmpCooks85Bridge@1",
+      "later_event": "dse~AgentCooksDataBridge999@1",
+      "same_root": false,
+      "prior_time": 1782096245.0,
+      "later_time": 1782096618.0,
+      "flipped": true,
+      "text_sha256": [
+        "3dae56255dccba68836f356e66da91f0352af1541007794e06a8bd8e4a575f71",
+        "280e3c21e776f64fb9f2eeb2e35bfdec50c138ce567170a651301748bea6da74"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Same occupation query, one repeated as a bracketed link and one with schema reference; no behavioral outcome.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B13",
+      "source": "git",
+      "prior_event": "eaec53d8ad5fa38c833c5d046f3a68231491c6f8",
+      "later_event": "f88caf95d7268720499606b22e5557ac6c6e444e",
+      "same_root": false,
+      "prior_time": 1791101273.0,
+      "later_time": 1791101799.0,
+      "flipped": true,
+      "text_sha256": [
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9",
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical two-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B14",
+      "source": "git",
+      "prior_event": "f234218082e1776bf0addaba3b8a949f54123a67",
+      "later_event": "ec7ee8457797a25f36b414ea413a3e536ee5b990",
+      "same_root": false,
+      "prior_time": 1791084811.0,
+      "later_time": 1791085748.0,
+      "flipped": true,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B15",
+      "source": "wiki",
+      "prior_event": "dse~AgentDirectLinkNewXZ@6",
+      "later_event": "dse~AgentDirectLinkNewXZ@7",
+      "same_root": true,
+      "prior_time": 1781809772.0,
+      "later_time": 1781809850.0,
+      "flipped": true,
+      "text_sha256": [
+        "8491228906c879b8084a49163eb7688bc56e053445f0461d84b529d0e131b1db",
+        "dc3dc873de00d3ab51f549504e46b26f20457a3d1fea08794a0e2c517c3f59db"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Same detailed transformed SEC query list, trial number differs. Could be snapshot inheritance or a common template.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B16",
+      "source": "wiki",
+      "prior_event": "dse~LoopNextWord104080@1",
+      "later_event": "dse~LoopNextWord104160@1",
+      "same_root": false,
+      "prior_time": 1781813398.0,
+      "later_time": 1781813399.0,
+      "flipped": false,
+      "text_sha256": [
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437",
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical investor-data yearly query list and next-child marker; no independent uptake shown.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B17",
+      "source": "wiki",
+      "prior_event": "dse~LoopNextWord102821@1",
+      "later_event": "dse~LoopNextWord103460@1",
+      "same_root": false,
+      "prior_time": 1781813384.0,
+      "later_time": 1781813391.0,
+      "flipped": true,
+      "text_sha256": [
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437",
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical investor-data yearly query list, resembling B16. Repeated sampling unit is a link, not independent idea.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B18",
+      "source": "git",
+      "prior_event": "fa967eefe4476997ee17bae004d0f3dc959d3950",
+      "later_event": "02d8796bb5a430ba1b84f5e3edeba29896b55aa7",
+      "same_root": false,
+      "prior_time": 1791085922.0,
+      "later_time": 1791086721.0,
+      "flipped": false,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B19",
+      "source": "git",
+      "prior_event": "8950ef8605092bca846bb96b56c2d8237dabbfce",
+      "later_event": "de82a22a7f734daf1d060e284f8087dc453c42ea",
+      "same_root": false,
+      "prior_time": 1791078558.0,
+      "later_time": 1791079449.0,
+      "flipped": true,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B20",
+      "source": "git",
+      "prior_event": "b5d727827db7f959017b1d3365ae9cd17d0ee7e7",
+      "later_event": "2f17b5992553eb977a9a0d029172402f47af69d7",
+      "same_root": false,
+      "prior_time": 1791072285.0,
+      "later_time": 1791077134.0,
+      "flipped": false,
+      "text_sha256": [
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9",
+        "d405fb22db9ad6bc02f1aef113282861268f6b24c4ca6e238b59e267cebf8ad9"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical two-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B21",
+      "source": "wiki",
+      "prior_event": "dse~AgentCookAge85DataXYZ@1",
+      "later_event": "dse~AgentDataUsaClothingOct2026@7",
+      "same_root": false,
+      "prior_time": 1782097705.0,
+      "later_time": 1782097770.0,
+      "flipped": true,
+      "text_sha256": [
+        "0052aa55c747c97694272479deaa07696ee54fd52636fff00adf65058fbd480b",
+        "0052aa55c747c97694272479deaa07696ee54fd52636fff00adf65058fbd480b"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical DataUSA occupation query with specific age/year filters. No observed use or endorsement.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B22",
+      "source": "wiki",
+      "prior_event": "dse~LoopNextWord104380@1",
+      "later_event": "dse~LoopNextWord105120@1",
+      "same_root": false,
+      "prior_time": 1781813401.0,
+      "later_time": 1781813409.0,
+      "flipped": false,
+      "text_sha256": [
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437",
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical yearly investor-data query list, same content family as B16/B17.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B23",
+      "source": "git",
+      "prior_event": "270e54a4f023a9eb13deb4d37278442fd9197b69",
+      "later_event": "02d8796bb5a430ba1b84f5e3edeba29896b55aa7",
+      "same_root": false,
+      "prior_time": 1791085714.0,
+      "later_time": 1791086721.0,
+      "flipped": true,
+      "text_sha256": [
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30",
+        "95e7387d5359227ec25267573b2fe36574ec13772b56077ddb2c56c6abc21e30"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical three-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B24",
+      "source": "wiki",
+      "prior_event": "dse~LoopNextWord103281@1",
+      "later_event": "dse~LoopNextWord103501@1",
+      "same_root": false,
+      "prior_time": 1781813389.0,
+      "later_time": 1781813392.0,
+      "flipped": false,
+      "text_sha256": [
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437",
+        "0215ed197884d937fb047d2c351bb01a58cbb229ed029aae94cf5f6999668437"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Identical yearly investor-data query list, same content family as B16/B17/B22.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B25",
+      "source": "git",
+      "prior_event": "8892d4cf82f9eb552223dca2ae59beddeec56c44",
+      "later_event": "df9bc97fede3130221d064631c0f0fe56f5b5a71",
+      "same_root": false,
+      "prior_time": 1791076678.0,
+      "later_time": 1791078591.0,
+      "flipped": false,
+      "text_sha256": [
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3",
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical one-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B26",
+      "source": "wiki",
+      "prior_event": "dse~ContinueFutureOpenAIMD99871@3",
+      "later_event": "dse~ContinueLoadNextJune1990001@1",
+      "same_root": false,
+      "prior_time": 1781813522.0,
+      "later_time": 1781813530.0,
+      "flipped": true,
+      "text_sha256": [
+        "cea09a71518ca73e5008f7a75c9e9ca760f9a3712b753d4a68e620268f8611a9",
+        "8cf3c38e955f905df326644a9b5e811a6410519df87d4b84a548ea47553f90da"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Near-identical county-data gateway links and continuation marker, numeric trailing clock differs. No independent endorsement.",
+      "cross_root_task_specific_repetition": true
+    },
+    {
+      "sample_id": "B27",
+      "source": "wiki",
+      "prior_event": "dse~DataUSAIvyTuitionSequenceCollab2027@8",
+      "later_event": "dse~DataUSAIvyTuitionSequenceCollab2027@11",
+      "same_root": true,
+      "prior_time": 1781640532.0,
+      "later_time": 1781640807.0,
+      "flipped": false,
+      "text_sha256": [
+        "0565af2cd2ca3fdac2eb13fa73d953b82da3fecd4e1d83b8061e506c040a555b",
+        "b3a6d692e0b559d3a90a08b1f225b72730528a084db5b842672ec05b34a947ea"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "coordination_prose_snapshot",
+      "endorsement": "unestablished",
+      "reason": "Shared tuition numbers, timed-sequence notes and requests, with appended cohorts. Signals claimed coordination but does not prove this directed pair's adoption.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B28",
+      "source": "git",
+      "prior_event": "ed73681de7bcbda8b9421923e26a014e799da63a",
+      "later_event": "781bd665ffce9e094d9e0bd2bebcf0fa195925d1",
+      "same_root": false,
+      "prior_time": 1791074042.0,
+      "later_time": 1791076252.0,
+      "flipped": true,
+      "text_sha256": [
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3",
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical one-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B29",
+      "source": "git",
+      "prior_event": "29b60f52cb39b45bef08ccf279a903fff8435844",
+      "later_event": "781bd665ffce9e094d9e0bd2bebcf0fa195925d1",
+      "same_root": false,
+      "prior_time": 1791074825.0,
+      "later_time": 1791076252.0,
+      "flipped": true,
+      "text_sha256": [
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3",
+        "d162cd22095b860812e66d203dafe7f57366a4ca5946c9e09a281eca6dd81fd3"
+      ],
+      "lexical_match": true,
+      "task_specific_content": false,
+      "category": "administrative_template",
+      "endorsement": "unestablished",
+      "reason": "Identical one-file sync notification only.",
+      "cross_root_task_specific_repetition": false
+    },
+    {
+      "sample_id": "B30",
+      "source": "wiki",
+      "prior_event": "dse~AgentTmpCooks85Bridge@1",
+      "later_event": "dse~AgentCookAgeDataHelper777@1",
+      "same_root": false,
+      "prior_time": 1782096245.0,
+      "later_time": 1782096582.0,
+      "flipped": true,
+      "text_sha256": [
+        "3dae56255dccba68836f356e66da91f0352af1541007794e06a8bd8e4a575f71",
+        "33e5d0d163de019d7db145f3b718f79dbcdebe4ebaafcbf7d0fd764cff8b79ed"
+      ],
+      "lexical_match": true,
+      "task_specific_content": true,
+      "category": "query_link_payload",
+      "endorsement": "unestablished",
+      "reason": "Same occupation-specific DataUSA query and schema in different order. Common task can explain both without transmission.",
+      "cross_root_task_specific_repetition": true
+    }
+  ],
+  "limits": [
+    "No independent human or second-rater validation.",
+    "Wilson intervals are approximate link-sampling summaries, not causal or identity uncertainty.",
+    "Repeated content families and shared roots are not independent ideas.",
+    "Cross-root repetition is not endorsement, causal copying, or proof of autonomous actors.",
+    "Unestablished endorsements are unknown, not failures or a zero adoption rate.",
+    "Equal allocation of 15 links per corpus does not represent pooled corpus prevalence."
+  ]
+}

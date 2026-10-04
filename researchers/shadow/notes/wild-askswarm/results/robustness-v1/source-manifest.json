@@ -1,0 +1,68 @@
+{
+  "note": "Saved per-arm frozen_baseline locators are one parent short. These explicit paths, relative to this manifest, supersede those display-only locators. No scientific result was modified.",
+  "sources": {
+    "wiki": {
+      "baseline_metrics": "../wiki/metrics.json",
+      "baseline_metrics_sha256": "9b9e3852a3d8805689a8492a8c0ac181b2889d694bb11218c95d1d711a68693a",
+      "verified_original_provenance": {
+        "adapter": "wiki",
+        "python": "3.12.3",
+        "numpy": "2.4.3",
+        "code_sha256": {
+          "__init__.py": "1d2e99015ded05b5b32fe918b5aa71adef52efe53776566dd7cccf90478a59c9",
+          "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+          "adapters.py": "e4c174b0fb89f5ea493c83641050038b87de7b5c0743b1ac630cbfeb9ccf0c09",
+          "cli.py": "a71e0d2c32fca032ece2157cdcfaeedf50ff4c0e080e3b8619d01dfeca8e875b",
+          "core.py": "89c911a92d1ae72568ca15d87169375310723d573f97d483cf9abbd96e618e86",
+          "report.py": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef"
+        },
+        "file": "revisions.jsonl.gz",
+        "sha256": "9c2a4ef0ccbfb5b42be8422342a6bd3a389a4a047bc891e3148354dd65b63c96",
+        "bytes": 3226133,
+        "identity_basis": "label"
+      },
+      "local_source_matches": true
+    },
+    "swarmtraces": {
+      "baseline_metrics": "../swarmtraces/metrics.json",
+      "baseline_metrics_sha256": "1cf251e4fd2fe2f92470864cfcb3ccf78d160c5ac9539c2aa4bf4c5d65d2ca15",
+      "verified_original_provenance": {
+        "adapter": "swarmtraces",
+        "python": "3.12.3",
+        "numpy": "2.4.3",
+        "code_sha256": {
+          "__init__.py": "1d2e99015ded05b5b32fe918b5aa71adef52efe53776566dd7cccf90478a59c9",
+          "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+          "adapters.py": "e4c174b0fb89f5ea493c83641050038b87de7b5c0743b1ac630cbfeb9ccf0c09",
+          "cli.py": "a71e0d2c32fca032ece2157cdcfaeedf50ff4c0e080e3b8619d01dfeca8e875b",
+          "core.py": "89c911a92d1ae72568ca15d87169375310723d573f97d483cf9abbd96e618e86",
+          "report.py": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef"
+        },
+        "file": "redacted.jsonl.gz",
+        "sha256": "7b66ab21674de52fcd3f557652f68b1801170c998e2f266862124e6edf283488",
+        "bytes": 15214685
+      },
+      "local_source_matches": true
+    },
+    "git": {
+      "baseline_metrics": "../git/metrics.json",
+      "baseline_metrics_sha256": "3865ad3555b0ee8a45c16fe294f052bf3fa879a5ae9e29f8480a37db9f7f5c8e",
+      "verified_original_provenance": {
+        "adapter": "git",
+        "python": "3.12.3",
+        "numpy": "2.4.3",
+        "code_sha256": {
+          "__init__.py": "1d2e99015ded05b5b32fe918b5aa71adef52efe53776566dd7cccf90478a59c9",
+          "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+          "adapters.py": "e4c174b0fb89f5ea493c83641050038b87de7b5c0743b1ac630cbfeb9ccf0c09",
+          "cli.py": "a71e0d2c32fca032ece2157cdcfaeedf50ff4c0e080e3b8619d01dfeca8e875b",
+          "core.py": "89c911a92d1ae72568ca15d87169375310723d573f97d483cf9abbd96e618e86",
+          "report.py": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef"
+        },
+        "git_ref": "4959a80b2e48050066630c5d22ea5d1fa1b0beb2",
+        "time_basis": "git author timestamp, not validated real execution time"
+      },
+      "local_source_matches": true
+    }
+  }
+}

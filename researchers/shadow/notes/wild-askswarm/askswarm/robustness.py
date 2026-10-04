@@ -93,7 +93,7 @@ def time_exclusion_reason(event):
     grade = str(event.metadata.get('time_grade') or '').lower()
     if grade in ('imputed', 'inferred', 'interpolated', 'synthetic'):
         return 'explicitly_imputed_grade'
-    if event.metadata.get('root_basis') == 'wiki_page' and grade != 'reqlog':
+    if event.time is not None and event.metadata.get('root_basis') == 'wiki_page' and grade != 'reqlog':
         return 'wiki_fallback_or_unknown_clock_grade'
     return None
 

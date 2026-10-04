@@ -1,0 +1,1733 @@
+{
+  "schema_version": "0.2.0",
+  "name": "swarmtraces / exact_dedup",
+  "summary": {
+    "records": 163851,
+    "nonempty_text_records": 163827,
+    "identities": 0,
+    "identity_coverage": 0.0,
+    "time_coverage": 0.0,
+    "identity_and_time_records": 0,
+    "known_identity_records": 0,
+    "dated_records": 0,
+    "clusters": 114586,
+    "multi_identity_clusters": null,
+    "multi_record_clusters": 13299,
+    "participation_gini": null,
+    "identity_span_seconds": {
+      "n": 0,
+      "min": null,
+      "median": null,
+      "p90": null,
+      "max": null
+    },
+    "single_record_identities": null,
+    "dissent_marker_records": 11401,
+    "dissent_marker_fraction": 0.0695815100304545,
+    "revert_marker_records": 7,
+    "revert_marker_fraction": 4.272174109404276e-05,
+    "temporal_clusters": 0,
+    "time_to_k": {
+      "2": {
+        "reached": 0,
+        "at_risk_clusters": 0,
+        "not_observed_to_reach": 0,
+        "seconds_among_reached": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "3": {
+        "reached": 0,
+        "at_risk_clusters": 0,
+        "not_observed_to_reach": 0,
+        "seconds_among_reached": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "5": {
+        "reached": 0,
+        "at_risk_clusters": 0,
+        "not_observed_to_reach": 0,
+        "seconds_among_reached": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      },
+      "10": {
+        "reached": 0,
+        "at_risk_clusters": 0,
+        "not_observed_to_reach": 0,
+        "seconds_among_reached": {
+          "n": 0,
+          "min": null,
+          "median": null,
+          "p90": null,
+          "max": null
+        }
+      }
+    }
+  },
+  "parameters": {
+    "jaccard_threshold": 0.7,
+    "minhash_permutations": 64,
+    "lsh_bands": 16,
+    "shingle_cap": 512,
+    "seed": 20261004,
+    "influence_step_window": 100
+  },
+  "diagnostics": {
+    "long_unique_texts_sampled": 1980,
+    "candidate_comparisons": 18737620
+  },
+  "record_kinds": {
+    "payload": 88672,
+    "recovered_text": 54395,
+    "response": 20784
+  },
+  "task_events": {},
+  "participation_counts_descending": [],
+  "identity_spans_seconds_sorted": [],
+  "influence": [],
+  "clusters": [
+    {
+      "cluster": 44849,
+      "records": 9267,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1474,
+      "records": 3394,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 60035,
+      "records": 1224,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 10074,
+      "records": 1075,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 34404,
+      "records": 765,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 3509,
+      "records": 757,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 45065,
+      "records": 640,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 33372,
+      "records": 618,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 34664,
+      "records": 464,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 23,
+      "records": 367,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 60036,
+      "records": 252,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61721,
+      "records": 228,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 9846,
+      "records": 213,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 6684,
+      "records": 200,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61724,
+      "records": 198,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 3153,
+      "records": 187,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 40555,
+      "records": 184,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61736,
+      "records": 176,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 91,
+      "records": 113,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1003,
+      "records": 113,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 7846,
+      "records": 113,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 13781,
+      "records": 103,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 46852,
+      "records": 98,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 2,
+      "records": 97,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 30729,
+      "records": 85,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 10877,
+      "records": 84,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 93885,
+      "records": 83,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 26408,
+      "records": 82,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 46585,
+      "records": 82,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 4,
+      "records": 81,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1976,
+      "records": 77,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 38488,
+      "records": 75,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 102255,
+      "records": 73,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 12517,
+      "records": 72,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61742,
+      "records": 71,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 12076,
+      "records": 68,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 39091,
+      "records": 67,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 841,
+      "records": 61,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 9314,
+      "records": 61,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 59950,
+      "records": 55,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1981,
+      "records": 54,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 29401,
+      "records": 54,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 40772,
+      "records": 54,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 44997,
+      "records": 52,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36617,
+      "records": 51,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 39435,
+      "records": 51,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61796,
+      "records": 51,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 8383,
+      "records": 50,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 59126,
+      "records": 50,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61731,
+      "records": 50,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 61723,
+      "records": 48,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 5924,
+      "records": 47,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 8197,
+      "records": 46,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36623,
+      "records": 45,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 93960,
+      "records": 45,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 102111,
+      "records": 45,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47051,
+      "records": 44,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 62022,
+      "records": 42,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 8146,
+      "records": 39,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 22566,
+      "records": 38,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36382,
+      "records": 38,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 3356,
+      "records": 37,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36906,
+      "records": 37,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1973,
+      "records": 36,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 4964,
+      "records": 36,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47180,
+      "records": 36,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 89,
+      "records": 35,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 6994,
+      "records": 35,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36475,
+      "records": 35,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1518,
+      "records": 34,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 9729,
+      "records": 34,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 33112,
+      "records": 34,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 93983,
+      "records": 34,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 9215,
+      "records": 33,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36180,
+      "records": 33,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 1906,
+      "records": 32,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 23749,
+      "records": 32,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 39320,
+      "records": 32,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 45056,
+      "records": 32,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 39346,
+      "records": 31,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 44786,
+      "records": 31,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 46890,
+      "records": 31,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 34136,
+      "records": 29,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47125,
+      "records": 29,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 94345,
+      "records": 29,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 19797,
+      "records": 28,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 33582,
+      "records": 28,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47041,
+      "records": 28,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 67787,
+      "records": 28,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 92433,
+      "records": 28,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 15470,
+      "records": 27,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 40128,
+      "records": 27,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 93815,
+      "records": 27,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 11594,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 18290,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 22889,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 35291,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 36179,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47070,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    },
+    {
+      "cluster": 47663,
+      "records": 26,
+      "identities": 0,
+      "dated_identities": 0,
+      "first_time": null,
+      "first_movers": [],
+      "first_mover_tie": false,
+      "time_to_k_seconds": {
+        "2": null,
+        "3": null,
+        "5": null,
+        "10": null
+      }
+    }
+  ],
+  "adoption_events_by_elapsed_hour_and_rank": [],
+  "limits": [
+    "Lexical similarity, not semantic ideas or proof of copying.",
+    "First observed identity is not inventor; no causal influence is identified.",
+    "Missing clocks/identities are not imputed. Identity spans are observation-window censored.",
+    "Fixed-representative LSH can miss near duplicates; long texts use sampled shingles.",
+    "Dissent/revert are unvalidated English lexical markers, not behavioral outcomes.",
+    "Copied text is not endorsement. Absent outcomes are not failures.",
+    "Synthetic identity counts are not autonomous agent counts: collusion.wiki labels and SwarmTraces names are unverified handles, not verified actors.",
+    "Full-corpus descriptive statistics have no IID confidence interval."
+  ],
+  "source": {
+    "frozen_baseline": "../../swarmtraces/metrics.json",
+    "git_ref": null,
+    "transformation": "exact_dedup",
+    "receipt": {
+      "input_records": 189579,
+      "retained_records": 163851,
+      "removed_records": 25728,
+      "retained_root_count": 121405,
+      "root_relation_known_records": 163851,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 163851
+      },
+      "retained_ids_sha256": "4f0ef61d762f2d8fbb4d98042f9475b2e84cd780e072cc66aa294523d213aead"
+    },
+    "code_sha256": {
+      "__init__.py": "1d2e99015ded05b5b32fe918b5aa71adef52efe53776566dd7cccf90478a59c9",
+      "__main__.py": "cf7390a2508a0fcad4777a4a629fc5212ab655cb45845975995f835676a834e3",
+      "adapters.py": "7c0415eb1499ab1dab84c9fe9984a38d9d9a18ba32dcb86fb2d00c9c4335a1d8",
+      "cli.py": "a71e0d2c32fca032ece2157cdcfaeedf50ff4c0e080e3b8619d01dfeca8e875b",
+      "core.py": "43d2cfd2b64e2f6decd9df9e55f348327d6a2a57ac11d5524b1b798a3816b336",
+      "report.py": "4030d453d3fbbb681c16a9dbcb41508e4f9e5801d629e833c7702396f62f79ef",
+      "robustness.py": "c96004914d498195a564dc693c464e66dcbab924b9391cf2b507fc5cdba91a7b"
+    }
+  },
+  "cluster_table": {
+    "file": "clusters.json.gz",
+    "total_clusters": 114586,
+    "inline_top_clusters": 100,
+    "sha256": "b612471964c4d08f44a0a8d77ba163e1d7f0071d5fd5465c41e1137193d17d24"
+  },
+  "cluster_size_histogram": {
+    "1": 101287,
+    "2": 8978,
+    "3": 1980,
+    "4": 909,
+    "5": 394,
+    "6": 282,
+    "7": 160,
+    "8": 107,
+    "9": 85,
+    "10": 50,
+    "11": 36,
+    "12": 40,
+    "13": 29,
+    "14": 30,
+    "15": 30,
+    "16": 18,
+    "17": 11,
+    "18": 9,
+    "19": 9,
+    "20": 4,
+    "21": 8,
+    "22": 3,
+    "23": 12,
+    "24": 9,
+    "25": 5,
+    "26": 8,
+    "27": 3,
+    "28": 5,
+    "29": 3,
+    "31": 3,
+    "32": 4,
+    "33": 2,
+    "34": 4,
+    "35": 3,
+    "36": 3,
+    "37": 2,
+    "38": 2,
+    "39": 1,
+    "42": 1,
+    "44": 1,
+    "45": 3,
+    "46": 1,
+    "47": 1,
+    "48": 1,
+    "50": 3,
+    "51": 3,
+    "52": 1,
+    "54": 3,
+    "55": 1,
+    "61": 2,
+    "67": 1,
+    "68": 1,
+    "71": 1,
+    "72": 1,
+    "73": 1,
+    "75": 1,
+    "77": 1,
+    "81": 1,
+    "82": 2,
+    "83": 1,
+    "84": 1,
+    "85": 1,
+    "97": 1,
+    "98": 1,
+    "103": 1,
+    "113": 3,
+    "176": 1,
+    "184": 1,
+    "187": 1,
+    "198": 1,
+    "200": 1,
+    "213": 1,
+    "228": 1,
+    "252": 1,
+    "367": 1,
+    "464": 1,
+    "618": 1,
+    "640": 1,
+    "757": 1,
+    "765": 1,
+    "1075": 1,
+    "1224": 1,
+    "3394": 1,
+    "9267": 1
+  }
+}

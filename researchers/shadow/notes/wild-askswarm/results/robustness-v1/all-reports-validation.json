@@ -1,0 +1,160 @@
+{
+  "reports": [
+    {
+      "report": "results/git",
+      "records": 2673,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/git/baseline",
+      "records": 2673,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/git/combined",
+      "records": 1736,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/git/exact_dedup",
+      "records": 1736,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/git/exclude_imputed",
+      "records": 2673,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/git/root_aggregate",
+      "records": 2673,
+      "clusters": 1725,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/swarmtraces/baseline",
+      "records": 189579,
+      "clusters": 114586,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/robustness-v1/swarmtraces/combined",
+      "records": 121405,
+      "clusters": 83928,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/robustness-v1/swarmtraces/exact_dedup",
+      "records": 163851,
+      "clusters": 114586,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/robustness-v1/swarmtraces/exclude_imputed",
+      "records": 189579,
+      "clusters": 114586,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/robustness-v1/swarmtraces/root_aggregate",
+      "records": 128454,
+      "clusters": 83857,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/robustness-v1/wiki/baseline",
+      "records": 14591,
+      "clusters": 8024,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/wiki/combined",
+      "records": 3599,
+      "clusters": 3103,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/wiki/exact_dedup",
+      "records": 11943,
+      "clusters": 8024,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/wiki/exclude_imputed",
+      "records": 14482,
+      "clusters": 7969,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/robustness-v1/wiki/root_aggregate",
+      "records": 4579,
+      "clusters": 3018,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/git-0.5",
+      "records": 2673,
+      "clusters": 1685,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/git-0.9",
+      "records": 2673,
+      "clusters": 1736,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/wiki-0.5",
+      "records": 14591,
+      "clusters": 6041,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/sensitivity/wiki-0.9",
+      "records": 14591,
+      "clusters": 10408,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    },
+    {
+      "report": "results/swarmtraces",
+      "records": 189579,
+      "clusters": 114586,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "unavailable"
+    },
+    {
+      "report": "results/wiki",
+      "records": 14591,
+      "clusters": 8024,
+      "aggregate_checks": "passed",
+      "gini_pairwise_recomputation": "passed"
+    }
+  ],
+  "raw_source_rows_exported": false,
+  "scope": "Internal arithmetic and aggregate-export checks, not independent external review"
+}

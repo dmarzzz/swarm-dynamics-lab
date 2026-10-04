@@ -1,0 +1,2158 @@
+{
+  "transformations": {
+    "baseline": {
+      "input_records": 189579,
+      "retained_records": 189579,
+      "removed_records": 0,
+      "retained_root_count": 128454,
+      "root_relation_known_records": 189579,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 189579
+      },
+      "retained_ids_sha256": "fb17bff7c3aea90fd116d187e73fa9676bb400cc3c10f64b74116f428b24df27"
+    },
+    "exact_dedup": {
+      "input_records": 189579,
+      "retained_records": 163851,
+      "removed_records": 25728,
+      "retained_root_count": 121405,
+      "root_relation_known_records": 163851,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 163851
+      },
+      "retained_ids_sha256": "4f0ef61d762f2d8fbb4d98042f9475b2e84cd780e072cc66aa294523d213aead"
+    },
+    "root_aggregate": {
+      "input_records": 189579,
+      "retained_records": 128454,
+      "removed_records": 61125,
+      "retained_root_count": 128454,
+      "root_relation_known_records": 128454,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 128454
+      },
+      "retained_ids_sha256": "795387ff1ae56f452944f7381936c407926eb1129767739238187eab56767e57"
+    },
+    "exclude_imputed": {
+      "input_records": 189579,
+      "retained_records": 189579,
+      "removed_records": 0,
+      "retained_root_count": 128454,
+      "root_relation_known_records": 189579,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 189579
+      },
+      "retained_ids_sha256": "fb17bff7c3aea90fd116d187e73fa9676bb400cc3c10f64b74116f428b24df27"
+    },
+    "combined": {
+      "input_records": 189579,
+      "retained_records": 121405,
+      "removed_records": 68174,
+      "retained_root_count": 121405,
+      "root_relation_known_records": 121405,
+      "clock_exclusion_candidates": {},
+      "clock_grade_counts": {
+        "not_supplied": 121405
+      },
+      "retained_ids_sha256": "978b211089d3eec01bdc3f9da90c084258d1233117c4da9d6d5a7a36647d5612"
+    }
+  },
+  "comparisons": {
+    "exact_dedup": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identities": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.06708548942657151,
+          "after": 0.0695815100304545,
+          "delta": 0.002496020603882987
+        },
+        "revert_marker_fraction": {
+          "before": 4.2198766741041994e-05,
+          "after": 4.272174109404276e-05,
+          "delta": 5.229743530007678e-07
+        },
+        "multi_identity_clusters": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "known_identity_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 12718,
+          "after": 11401,
+          "delta": -1317
+        },
+        "identity_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 114586,
+          "after": 114586,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "multi_record_clusters": {
+          "before": 23938,
+          "after": 13299,
+          "delta": -10639
+        },
+        "revert_marker_records": {
+          "before": 8,
+          "after": 7,
+          "delta": -1
+        },
+        "nonempty_text_records": {
+          "before": 189539,
+          "after": 163827,
+          "delta": -25712
+        },
+        "records": {
+          "before": 189579,
+          "after": 163851,
+          "delta": -25728
+        },
+        "time_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "recovered_text": {
+          "before": 75534,
+          "after": 54395,
+          "delta": -21139
+        },
+        "response": {
+          "before": 23008,
+          "after": 20784,
+          "delta": -2224
+        },
+        "payload": {
+          "before": 91037,
+          "after": 88672,
+          "delta": -2365
+        }
+      },
+      "task_event_deltas": {},
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "observed_span_seconds": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "dissent_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "revert_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 114586,
+        "after_clusters": 114586,
+        "matched_clusters": 114586,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 163827,
+        "records_in_matched_correspondence": 163827,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 0.740115337152576,
+            "mean_absolute_rank_shift": 9296.625826889847,
+            "max_absolute_rank_shift": 63919.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 8,
+            "top_jaccard": 0.6666666666666666
+          },
+          "identities": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 114586,
+            "top_overlap": 114586,
+            "top_jaccard": 1.0
+          },
+          "dated_identities": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 114586,
+            "top_overlap": 114586,
+            "top_jaccard": 1.0
+          },
+          "time_to_2": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_3": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_5": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_10": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          }
+        }
+      }
+    },
+    "root_aggregate": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identities": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.06708548942657151,
+          "after": 0.08566490728198421,
+          "delta": 0.0185794178554127
+        },
+        "revert_marker_fraction": {
+          "before": 4.2198766741041994e-05,
+          "after": 3.113955190184813e-05,
+          "delta": -1.1059214839193863e-05
+        },
+        "multi_identity_clusters": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "known_identity_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 12718,
+          "after": 11004,
+          "delta": -1714
+        },
+        "identity_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 114586,
+          "after": 83857,
+          "delta": -30729
+        },
+        "participation_gini": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "multi_record_clusters": {
+          "before": 23938,
+          "after": 10656,
+          "delta": -13282
+        },
+        "revert_marker_records": {
+          "before": 8,
+          "after": 4,
+          "delta": -4
+        },
+        "nonempty_text_records": {
+          "before": 189539,
+          "after": 128442,
+          "delta": -61097
+        },
+        "records": {
+          "before": 189579,
+          "after": 128454,
+          "delta": -61125
+        },
+        "time_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "recovered_text": {
+          "before": 75534,
+          "after": 32826,
+          "delta": -42708
+        },
+        "response": {
+          "before": 23008,
+          "after": 4591,
+          "delta": -18417
+        },
+        "payload": {
+          "before": 91037,
+          "after": 91037,
+          "delta": 0
+        }
+      },
+      "task_event_deltas": {},
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "observed_span_seconds": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "dissent_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "revert_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 114586,
+        "after_clusters": 83857,
+        "matched_clusters": 83853,
+        "unmatched_before": 30733,
+        "unmatched_after": 4,
+        "common_text_records": 128442,
+        "records_in_matched_correspondence": 128408,
+        "matched_record_fraction": 0.999735289079896,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 114586,
+            "after_ranked": 83857,
+            "common": 83853,
+            "exited": 30733,
+            "entered": 4,
+            "common_spearman": 0.9100602300854274,
+            "mean_absolute_rank_shift": 20193.139833995207,
+            "max_absolute_rank_shift": 65808.5,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 6,
+            "top_jaccard": 0.42857142857142855
+          },
+          "identities": {
+            "before_ranked": 114586,
+            "after_ranked": 83857,
+            "common": 83853,
+            "exited": 30733,
+            "entered": 4,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 15364.5,
+            "max_absolute_rank_shift": 15364.5,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 83857,
+            "top_overlap": 83853,
+            "top_jaccard": 0.7317654245571167
+          },
+          "dated_identities": {
+            "before_ranked": 114586,
+            "after_ranked": 83857,
+            "common": 83853,
+            "exited": 30733,
+            "entered": 4,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 15364.5,
+            "max_absolute_rank_shift": 15364.5,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 83857,
+            "top_overlap": 83853,
+            "top_jaccard": 0.7317654245571167
+          },
+          "time_to_2": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_3": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_5": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_10": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          }
+        }
+      }
+    },
+    "exclude_imputed": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identities": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.06708548942657151,
+          "after": 0.06708548942657151,
+          "delta": 0.0
+        },
+        "revert_marker_fraction": {
+          "before": 4.2198766741041994e-05,
+          "after": 4.2198766741041994e-05,
+          "delta": 0.0
+        },
+        "multi_identity_clusters": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "known_identity_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 12718,
+          "after": 12718,
+          "delta": 0
+        },
+        "identity_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 114586,
+          "after": 114586,
+          "delta": 0
+        },
+        "participation_gini": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "multi_record_clusters": {
+          "before": 23938,
+          "after": 23938,
+          "delta": 0
+        },
+        "revert_marker_records": {
+          "before": 8,
+          "after": 8,
+          "delta": 0
+        },
+        "nonempty_text_records": {
+          "before": 189539,
+          "after": 189539,
+          "delta": 0
+        },
+        "records": {
+          "before": 189579,
+          "after": 189579,
+          "delta": 0
+        },
+        "time_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "recovered_text": {
+          "before": 75534,
+          "after": 75534,
+          "delta": 0
+        },
+        "response": {
+          "before": 23008,
+          "after": 23008,
+          "delta": 0
+        },
+        "payload": {
+          "before": 91037,
+          "after": 91037,
+          "delta": 0
+        }
+      },
+      "task_event_deltas": {},
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "observed_span_seconds": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "dissent_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "revert_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 114586,
+        "after_clusters": 114586,
+        "matched_clusters": 114586,
+        "unmatched_before": 0,
+        "unmatched_after": 0,
+        "common_text_records": 189539,
+        "records_in_matched_correspondence": 189539,
+        "matched_record_fraction": 1.0,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": 1.0,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 10,
+            "top_jaccard": 1.0
+          },
+          "identities": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 114586,
+            "top_overlap": 114586,
+            "top_jaccard": 1.0
+          },
+          "dated_identities": {
+            "before_ranked": 114586,
+            "after_ranked": 114586,
+            "common": 114586,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 0.0,
+            "max_absolute_rank_shift": 0.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 114586,
+            "top_overlap": 114586,
+            "top_jaccard": 1.0
+          },
+          "time_to_2": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_3": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_5": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_10": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          }
+        }
+      }
+    },
+    "combined": {
+      "summary_deltas": {
+        "temporal_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "single_record_identities": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identities": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "identity_and_time_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_fraction": {
+          "before": 0.06708548942657151,
+          "after": 0.08606729541616902,
+          "delta": 0.018981805989597506
+        },
+        "revert_marker_fraction": {
+          "before": 4.2198766741041994e-05,
+          "after": 3.2947572175775294e-05,
+          "delta": -9.2511945652667e-06
+        },
+        "multi_identity_clusters": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "known_identity_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dissent_marker_records": {
+          "before": 12718,
+          "after": 10449,
+          "delta": -2269
+        },
+        "identity_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "identity_span_seconds.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "identity_span_seconds.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "dated_records": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "clusters": {
+          "before": 114586,
+          "after": 83928,
+          "delta": -30658
+        },
+        "participation_gini": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "multi_record_clusters": {
+          "before": 23938,
+          "after": 9320,
+          "delta": -14618
+        },
+        "revert_marker_records": {
+          "before": 8,
+          "after": 4,
+          "delta": -4
+        },
+        "nonempty_text_records": {
+          "before": 189539,
+          "after": 121394,
+          "delta": -68145
+        },
+        "records": {
+          "before": 189579,
+          "after": 121405,
+          "delta": -68174
+        },
+        "time_coverage": {
+          "before": 0.0,
+          "after": 0.0,
+          "delta": 0.0
+        },
+        "time_to_k.2.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.2.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.2.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.3.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.3.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.5.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.5.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.not_observed_to_reach": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.seconds_among_reached.max": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.p90": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.median": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.min": {
+          "before": null,
+          "after": null,
+          "delta": null
+        },
+        "time_to_k.10.seconds_among_reached.n": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.at_risk_clusters": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        },
+        "time_to_k.10.reached": {
+          "before": 0,
+          "after": 0,
+          "delta": 0
+        }
+      },
+      "record_kind_deltas": {
+        "recovered_text": {
+          "before": 75534,
+          "after": 29454,
+          "delta": -46080
+        },
+        "response": {
+          "before": 23008,
+          "after": 3279,
+          "delta": -19729
+        },
+        "payload": {
+          "before": 91037,
+          "after": 88672,
+          "delta": -2365
+        }
+      },
+      "task_event_deltas": {},
+      "identity_rankings": {
+        "participation": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "first_observed_cluster_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "reuse_credit_per_record": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "observed_span_seconds": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "dissent_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        },
+        "revert_marker_count": {
+          "before_ranked": 0,
+          "after_ranked": 0,
+          "common": 0,
+          "exited": 0,
+          "entered": 0,
+          "common_spearman": null,
+          "mean_absolute_rank_shift": null,
+          "max_absolute_rank_shift": null,
+          "top_k": 10,
+          "before_top_including_ties": 0,
+          "after_top_including_ties": 0,
+          "top_overlap": 0,
+          "top_jaccard": null
+        }
+      },
+      "cluster_comparison": {
+        "matching": "greedy maximum shared-event overlap, one-to-one; not semantic identity",
+        "before_clusters": 114586,
+        "after_clusters": 83928,
+        "matched_clusters": 83924,
+        "unmatched_before": 30662,
+        "unmatched_after": 4,
+        "common_text_records": 121394,
+        "records_in_matched_correspondence": 121362,
+        "matched_record_fraction": 0.9997363955384945,
+        "first_observer_sets_changed": 0,
+        "rankings": {
+          "records": {
+            "before_ranked": 114586,
+            "after_ranked": 83928,
+            "common": 83924,
+            "exited": 30662,
+            "entered": 4,
+            "common_spearman": 0.8416277516593899,
+            "mean_absolute_rank_shift": 21306.14161026643,
+            "max_absolute_rank_shift": 66707.0,
+            "top_k": 10,
+            "before_top_including_ties": 10,
+            "after_top_including_ties": 10,
+            "top_overlap": 5,
+            "top_jaccard": 0.3333333333333333
+          },
+          "identities": {
+            "before_ranked": 114586,
+            "after_ranked": 83928,
+            "common": 83924,
+            "exited": 30662,
+            "entered": 4,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 15329.0,
+            "max_absolute_rank_shift": 15329.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 83928,
+            "top_overlap": 83924,
+            "top_jaccard": 0.7323850248712802
+          },
+          "dated_identities": {
+            "before_ranked": 114586,
+            "after_ranked": 83928,
+            "common": 83924,
+            "exited": 30662,
+            "entered": 4,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": 15329.0,
+            "max_absolute_rank_shift": 15329.0,
+            "top_k": 10,
+            "before_top_including_ties": 114586,
+            "after_top_including_ties": 83928,
+            "top_overlap": 83924,
+            "top_jaccard": 0.7323850248712802
+          },
+          "time_to_2": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_3": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_5": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          },
+          "time_to_10": {
+            "before_ranked": 0,
+            "after_ranked": 0,
+            "common": 0,
+            "exited": 0,
+            "entered": 0,
+            "common_spearman": null,
+            "mean_absolute_rank_shift": null,
+            "max_absolute_rank_shift": null,
+            "top_k": 10,
+            "before_top_including_ties": 0,
+            "after_top_including_ties": 0,
+            "top_overlap": 0,
+            "top_jaccard": null
+          }
+        }
+      }
+    }
+  }
+}

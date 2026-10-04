@@ -98,7 +98,7 @@ from another lane. Write your own analysis under your lane directory.
 - **Adopters/time to k:** unique identities, first identity included, elapsed seconds from first
   dated identity. Not reaching k is null and counted as censored. The hourly/rank adoption
   table is a derived curve of first identity appearances, not repeated records.
-- **Influence proxy:** at a new identity's first dated appearance in a cluster, give total
+- **Repeated-phrasing credit (legacy API key `influence`):** at a new identity's first dated appearance in a cluster, give total
   credit 1 split across distinct prior identities seen in that cluster within 100 globally
   dated-record steps. Strictly earlier clocks only. Timestamp ties share the first step index
   of that timestamp, so row-id tiebreaks cannot manufacture credit. No eligible prior actor
@@ -129,6 +129,21 @@ No new claim of wiki copying relative to arXiv 2609.09150 or village persuasion/
 The tool and explicit cross-corpus answerability map are the contribution.
 
 ## Robustness API (v0.2, for halflife and identity)
+
+**Results:** [all before/after answers, denominators and rank movement](ROBUSTNESS.md),
+[30-link direct-text audit](AUDIT.md), [15-arm HTML](results/robustness-v1/comparison.html),
+[rank tables](results/robustness-v1/rankings.html). Measured in 383.8 seconds, one process,
+zero API/model calls. 30 unit tests and separate-implementation arithmetic checks on all 15 reports pass.
+The word “adoption” in legacy field names means first appearance of an observed identity in
+a lexical cluster, not verified endorsement or autonomous-agent behavior.
+
+```bash
+nice -n 10 python3 run_robustness.py --data /path/to/data --repo /path/to/swarm-lab --out /new/output --audit-local /local/outside-repo/audit
+# Checks/render for the committed result namespace:
+python3 verify_robustness.py
+python3 render_robustness.py
+```
+
 
 ```python
 from askswarm.robustness import (
