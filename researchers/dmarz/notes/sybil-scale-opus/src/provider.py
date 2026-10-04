@@ -68,8 +68,9 @@ class Ledger:
 
 
 class Anthropic:
-    def __init__(self, ledger, opener=None):
+    def __init__(self, ledger, opener=None, sleep=None):
         self.ledger = ledger; self.opener = opener or urllib.request.urlopen
+        self.sleep = sleep or time.sleep
         self.d = study.design(); self.b = self.d['budget']
         self.key = os.environ.get('SWARM_MODEL_API_KEY')
         self.workspace = os.environ.get('SWARM_MODEL_WORKSPACE_ID')
@@ -89,20 +90,39 @@ class Anthropic:
             raise CallFailure('input_size_limit')
         # ASCII bytes upper-bound input tokens; 4096-token envelope covers protocol/schema.
         reserve = (len(encoded)+4096)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
-        account = {'reserved_usd':reserve/1e6, 'usage_reported':False, 'attempted':False}
-        self.ledger.transact({'type':'reserve','call_id':call_id,'micro_usd':reserve,'time':time.time()})
-        account['attempted'] = True
+        account = {'reserved_usd':0.0, 'usage_reported':False, 'attempted':False, 'transport_attempts':0}
         headers = {'Content-Type':'application/json','x-api-key':self.key,
                    'anthropic-version':'2023-06-01','anthropic-workspace-id':self.workspace}
-        request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=headers, method='POST')
+        # Transport retry (SOC-07 rule): at most `retries` extra attempts, only after HTTP 429/529
+        # (provider did not run the model), all inside one request timeout. Every attempt is a
+        # separate ledger reservation counted against max_attempted_calls. Answers are never retried.
         started = time.monotonic()
-        try:
-            with self.opener(request, timeout=self.b['request_timeout_seconds']) as response:
-                data = json.loads(response.read())
-        except urllib.error.HTTPError as exc:
-            raise CallFailure('http_'+str(exc.code), account) from None
-        except Exception as exc:
-            raise CallFailure('transport_'+type(exc).__name__, account) from None
+        deadline = started + self.b['request_timeout_seconds']
+        attempt = 0
+        while True:
+            attempt_id = call_id if attempt == 0 else f'{call_id}#retry{attempt}'
+            self.ledger.transact({'type':'reserve','call_id':attempt_id,'micro_usd':reserve,'time':time.time()})
+            account['attempted'] = True
+            account['transport_attempts'] = attempt + 1
+            account['reserved_usd'] += reserve/1e6
+            remaining = deadline - time.monotonic()
+            if remaining <= 0:
+                raise CallFailure('transport_timeout', account)
+            request = urllib.request.Request('https://api.anthropic.com/v1/messages', data=encoded, headers=headers, method='POST')
+            try:
+                with self.opener(request, timeout=remaining) as response:
+                    data = json.loads(response.read())
+                break
+            except urllib.error.HTTPError as exc:
+                retryable = exc.code in (429, 529)
+                wait = 2.0 * (attempt + 1)
+                if retryable and attempt < self.b.get('retries', 0) and time.monotonic() + wait < deadline:
+                    attempt += 1
+                    self.sleep(wait)
+                    continue
+                raise CallFailure('http_'+str(exc.code), account) from None
+            except Exception as exc:
+                raise CallFailure('transport_'+type(exc).__name__, account) from None
         account['latency_seconds'] = time.monotonic()-started
         usage = data.get('usage', {})
         if not all(type(usage.get(k)) is int and usage[k]>=0 for k in ('input_tokens','output_tokens')):
@@ -114,7 +134,7 @@ class Anthropic:
                               'input_tokens':usage['input_tokens'],'output_tokens':usage['output_tokens']})
         account.update(usage_reported=True, actual_usd=actual/1e6,
                        input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'])
-        if actual>reserve:
+        if actual>reserve:  # per-attempt bound; only the final attempt can bill
             raise CallFailure('reservation_bound_breached', account)
         if data.get('model') != self.d['model']:
             raise CallFailure('model_mismatch', account)

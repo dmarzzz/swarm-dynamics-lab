@@ -94,4 +94,36 @@ class Tests(unittest.TestCase):
                               ([{'type':'text','text':' '*3000}],'end_turn','invalid_structured_answer')):
       with self.assertRaises(provider.CallFailure) as e:provider.Anthropic(led,opener=reply(content,stop)).call({},'x'+cat+str(len(content)))
       self.assertEqual(e.exception.category,cat)
+ def test_transport_retry_429_529_only(self):
+    import io, urllib.error
+    from unittest.mock import patch
+    ok=json.dumps({'values':{str(s):None for s in range(6)}})
+    good={'model':study.design()['model'],'stop_reason':'end_turn','content':[{'type':'text','text':ok}],'usage':{'input_tokens':10,'output_tokens':5}}
+    class R(io.BytesIO):
+     def __enter__(self):return self
+     def __exit__(self,*a):return False
+    def seq(*codes):
+     calls=[]
+     def opener(req,timeout):
+      calls.append(timeout)
+      code=codes[len(calls)-1]
+      if code==200:return R(json.dumps(good).encode())
+      raise urllib.error.HTTPError(req.full_url,code,'x',{},None)
+     return opener,calls
+    with tempfile.TemporaryDirectory() as td,patch.dict(os.environ,{'SWARM_MODEL_API_KEY':'k','SWARM_MODEL_WORKSPACE_ID':'w'}):
+     led=provider.Ledger(Path(td)/'l')
+     op,calls=seq(429,200);ans,acc=provider.Anthropic(led,opener=op,sleep=lambda s:None).call({},'r1')
+     self.assertEqual(len(calls),2);self.assertEqual(acc['transport_attempts'],2)
+     op,calls=seq(529,529,529,200)
+     with self.assertRaises(provider.CallFailure) as e:provider.Anthropic(led,opener=op,sleep=lambda s:None).call({},'r2')
+     self.assertEqual(e.exception.category,'http_529');self.assertEqual(len(calls),3)
+     op,calls=seq(500,200)
+     with self.assertRaises(provider.CallFailure) as e:provider.Anthropic(led,opener=op,sleep=lambda s:None).call({},'r3')
+     self.assertEqual(e.exception.category,'http_500');self.assertEqual(len(calls),1)
+     bad=dict(good,stop_reason='refusal');n=[]
+     def op2(req,timeout):n.append(1);return R(json.dumps(bad).encode())
+     with self.assertRaises(provider.CallFailure):provider.Anthropic(led,opener=op2,sleep=lambda s:None).call({},'r4')
+     self.assertEqual(len(n),1)
+     # 2+3+1+1 attempts, each reserved separately and counted against the call cap
+     self.assertEqual(led.transact()['attempted_calls'],7)
 if __name__=='__main__':unittest.main()

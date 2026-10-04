@@ -47,7 +47,7 @@ budget:
   max_input_bytes: 240000
   request_timeout_seconds: 120
   stage_timeout_seconds: 14400
-  retries: 0
+  retries: 2
   workers: 4
   input_usd_per_million: 4
   output_usd_per_million: 20
