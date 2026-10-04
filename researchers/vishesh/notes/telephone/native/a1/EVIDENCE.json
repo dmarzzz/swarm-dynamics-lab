@@ -1,0 +1,41 @@
+{
+  "execution": "completed",
+  "qualification": "failed conservative no-unsupported-critical-commitment screen",
+  "scientific_interpretation": "Observed two chain-specific meaning/status drifts in authored development; no general superiority claim",
+  "source_roots": 8,
+  "nested_model_calls": 72,
+  "cost": {
+    "claim_released": true,
+    "worker_stopped": true,
+    "A1_infrastructure_nano": 5515984,
+    "basis": "exclusive claim lifetime at approved hourly rate; estimate not invoice",
+    "cumulative_nano": 113744701,
+    "model_nano": 59696000,
+    "unknown_charges": 0
+  },
+  "provider": "OpenRouter Anthropic Haiku4.5",
+  "confidence": "Descriptive only; all72 manually reviewed, judgment sensitivity explicit, no independent replication",
+  "decision": "FINISH / PARK; V0 not admitted",
+  "artifacts": [
+    {
+      "path": "RESULTS.json",
+      "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+    },
+    {
+      "path": "POST-MORTEM.md",
+      "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+    },
+    {
+      "path": "AUTHORED-TRACE-AUDIT.json",
+      "sha256": "bf22b72a62713921060e1134d1d5d48409bb7bd13bf5e29dae8d033530a4ad1e"
+    },
+    {
+      "path": "SEMANTIC-ANNOTATIONS.json",
+      "sha256": "bb7dbb110813bb9404c79de76823f19665252649051db182c290bfb38efafcee"
+    },
+    {
+      "path": "SEMANTIC-SCORES.json",
+      "sha256": "19ef5c0ac2a8df1aa3161c72f01419b398e3363ba555f53b8502cc0fe5034c35"
+    }
+  ]
+}

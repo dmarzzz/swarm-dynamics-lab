@@ -3,7 +3,7 @@ id: telephone-native-both
 type: task
 title: Telephone authored and AI Village native scopes
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-village-fit
 for: vishesh
@@ -21,8 +21,8 @@ Execute both owner-approved Telephone scopes when admitted; preserve distinct co
 
 ## Done when
 
-- [ ] Admit and run authored diagnostic, prepare and run eligible real-data scope, and close out actual outcomes or exact blockers.
+- [x] Admit and run authored diagnostic, prepare and run eligible real-data scope, and close out actual outcomes or exact blockers.
 
 ## Current handoff
 
-DECISION NEEDED. Owner authorized direct OpenRouter dispatch and USD5 cumulative; central queue was fenced. A0 executed one Haiku response and stopped on an enclosing JSON fence rejected by the strict parser:0 valid,71 unstarted. APIUSD0.001054 reconciled,0 unknown model charges, original ledger retained. Worker exited and idle claim release initiated. [A0 post-mortem](../researchers/vishesh/notes/telephone/native/a0/POST-MORTEM.md) and offline operational finalize exist. [A1](../researchers/vishesh/notes/telephone/native/a1/PLAN.md) implements and validates the narrow wrapper repair with35 tests and actual-response replay; awaits concrete owner execution-contract approval, then fresh allocation/admission and full semantic qualification before V0. Real-source V0 remains unstarted. No efficacy or qualification pass is claimed.
+FINISH / PARK. Owner approved the concrete repair, and A1 completed72/72 schema-valid native Haiku responses. All traces and semantic annotations reviewed; saved-data replay reproduces all scores. Conservative fidelity qualification fails on unsupported critical scope/status additions, so conditional V0 was not admitted or launched. [A1 post-mortem](../researchers/vishesh/notes/telephone/native/a1/POST-MORTEM.md) records outcome, sensitivity and limits. Original cumulativeUSD5 ledger retained; totalUSD0.113744701 including infrastructure,0 unknown. Worker stopped, claim released, operational and scientific closeout complete. No automatic successor or pending duplicate A1 approval.

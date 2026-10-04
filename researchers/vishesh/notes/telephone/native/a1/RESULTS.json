@@ -1,0 +1,90 @@
+{
+  "assigned": 72,
+  "returned": 72,
+  "schema_valid": 72,
+  "scored": 72,
+  "missing": 0,
+  "population_interval": null,
+  "mean_retention": {
+    "P": {
+      "1": 0.9583333333333334,
+      "2": 0.9166666666666666,
+      "3": 0.9166666666666666
+    },
+    "S": {
+      "1": 0.9583333333333334,
+      "2": 0.9583333333333334,
+      "3": 0.9583333333333334
+    },
+    "R": {
+      "1": 1.0,
+      "2": 1.0,
+      "3": 1.0
+    }
+  },
+  "terminal_retention_by_root": {
+    "P": {
+      "dev-00": 1.0,
+      "dev-01": 1.0,
+      "dev-02": 0.3333333333333333,
+      "dev-03": 1.0,
+      "dev-04": 1.0,
+      "dev-05": 1.0,
+      "dev-06": 1.0,
+      "dev-07": 1.0
+    },
+    "S": {
+      "dev-00": 0.6666666666666666,
+      "dev-01": 1.0,
+      "dev-02": 1.0,
+      "dev-03": 1.0,
+      "dev-04": 1.0,
+      "dev-05": 1.0,
+      "dev-06": 1.0,
+      "dev-07": 1.0
+    },
+    "R": {
+      "dev-00": 1.0,
+      "dev-01": 1.0,
+      "dev-02": 1.0,
+      "dev-03": 1.0,
+      "dev-04": 1.0,
+      "dev-05": 1.0,
+      "dev-06": 1.0,
+      "dev-07": 1.0
+    }
+  },
+  "paired_S_minus_P_hop3": {
+    "assigned_components": 8,
+    "complete_pairs": 8,
+    "unavailable_pairs": 0,
+    "complete_pair_mean": 0.041666666666666664,
+    "all_assigned_bounds": [
+      0.041666666666666664,
+      0.041666666666666664
+    ]
+  },
+  "unsupported_critical_addition_outputs": 6,
+  "unknown_support_assertions": 6,
+  "contradicted_assertions": 0,
+  "invalid_citations": 0,
+  "qualification": {
+    "hop1_aggregate_85pct": true,
+    "uncertainty_controls_preserved": true,
+    "no_unsupported_critical_commitments": false,
+    "passed": false,
+    "reason": "dev02 prose commits to a remaining-material review scope absent from the source; dev00 structured also adds unverified archive status. Conservative integrated-meaning scoring retained, with alternative-reading sensitivity, not used to waive added unsupported scope."
+  },
+  "sensitivity": {
+    "lenient_source_report_hop3": {
+      "P": 0.9583333333333334,
+      "S": 1,
+      "R": 1
+    },
+    "paired_S_minus_P_hop3": 0.041666666666666664,
+    "scope_addition_still_unsupported": true
+  },
+  "claim_limit": "Eight authored development roots with repeated background facts; no population, natural transmission or model necessity claim.",
+  "source_roots": 8,
+  "broader_independence_established": false
+}

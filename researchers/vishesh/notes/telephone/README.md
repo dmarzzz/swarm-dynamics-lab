@@ -48,3 +48,7 @@ Telephone measures claim fidelity and its change across hops. Quorum measures so
 [Implementation, cases and closeout](t1/README.md): 24 Telephone tests and 21 shared checks pass. Eight authored roots produce 72 scripted hop outputs. Fourteen private source joins yield zero validated complete episodes. Copy and exact lookup reach the fixture ceiling; model efficacy remains untested. **HOLD native collection** pending coherent development cases and a useful residual task. T0 remains the original prospective design, not a runnable admission packet.
 
 [Top-10 design additions](TOP10-NEXT-STEPS.md) distinguish current A0/V0 handoffs from a possible future sparse-network study.
+
+## Latest native result
+
+[A1 completed all72 native calls](native/a1/POST-MORTEM.md): JSON fence repair succeeded, but conservative semantic qualification failed on unsupported scope/status additions. Conditional AI Village V0 did not run. This authored development result is not natural transmission evidence. Full traces, annotations and saved-data replay are linked in the post-mortem; cumulative costUSD0.113744701, allocation released. Current disposition: FINISH / PARK.

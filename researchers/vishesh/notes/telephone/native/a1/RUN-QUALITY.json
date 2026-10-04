@@ -1,0 +1,178 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": "a1-openrouter-20261004",
+  "evidence_revision": "2a81210a591c0c3851802c802e2ad8e75dea973c",
+  "decision": "complete_valid_result",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed authored fidelity comparison and claim boundary; formatting repair tested under explicit approval.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Eight easy same-author roots repeat two background obligations; no untouched holdout or natural transmission.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ],
+      "next_action": "Park approved sequence; any successor must prospectively clarify gate purpose and status/scope interpretation, improve scenarios where useful, then obtain approval.",
+      "acceptance_check": "Concrete reviewed next-plan before new collection; no post-hoc gate weakening."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "P/S same evidence access schedule; R explicitly reopens sources and is an evidence-access control, not pure format.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "72 schema-valid outputs but unsupported critical scope/status additions fail conservative clean-fidelity qualification.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ],
+      "next_action": "Park approved sequence; any successor must prospectively clarify gate purpose and status/scope interpretation, improve scenarios where useful, then obtain approval.",
+      "acceptance_check": "Concrete reviewed next-plan before new collection; no post-hoc gate weakening."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All outputs fully annotated twice, hashes checked, strict and lenient sensitivity retained; replayed aggregation. Semantic judgments are not independently validated.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight source roots and72 nested requests; no population interval or72-independent-units claim; exploratory scope only.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Fresh one-message contexts; source/prior-output genealogy verified; exact returned text preserved; no operator/gold input or model fallback.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "72 assigned/started/returned/valid/reviewed with0 missing; prior A0 retained separately; all raw authored outputs publicly auditable.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "TotalUSD0.113744701 ofUSD5 including both claim lifetimes;0 unknown; worker stopped and claim released.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source, packet/gold, raw outputs and full annotations retained; offline script reproduces72 scores and parent/source bindings.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Complete condition/hop table, root-level values and sensitivity expose the two affected chains; no population confidence implied.",
+      "evidence": [
+        {
+          "path": "RESULTS.json",
+          "sha256": "aacf4f8ea651aecd3482ca3c33ff146f3b1b84fd11384b42005bca4652d520b6"
+        },
+        {
+          "path": "POST-MORTEM.md",
+          "sha256": "b3b0b64be8beba053b4b3740efad669793b66c3be46c4395d92d0ad718473c77"
+        }
+      ]
+    }
+  ]
+}

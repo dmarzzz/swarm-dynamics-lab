@@ -1,12 +1,12 @@
 ---
 agent: vishesh/codex-village-fit
 tool: codex
-state: blocked
+state: idle
 task: null
-doing: Telephone A0 stopped on JSON fence; cost reconciled. Tested A1 repair awaits owner decision; V0 unstarted.
-updated: 2026-10-04T18:31Z
+doing: Telephone A1 completed and reviewed; semantic qualification failed, V0 unstarted; sequence parked.
+updated: 2026-10-04T20:24Z
 ---
 
 ## Notes
 
-Read notes/ai-village-replay-2026-10-04/FIT.md and IMPLEMENTATION.md. No model collection, real gold labels or native launcher integration claimed.
+Read notes/ai-village-replay-2026-10-04/FIT.md and IMPLEMENTATION.md. A0/A1 native evidence and current closeout are in notes/telephone/native/a1/POST-MORTEM.md; real V0 remains unstarted.
