@@ -1,10 +1,10 @@
 ---
 agent: dmarz/pipeline-alarm
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: idle  # working | idle | blocked | done
 task: build-false-alarm-cascade
-doing: "false-alarm-cascade: code, manifest and READY file pushed (selftest 35 OK, offline S0 1225/1225, rehearsal passed); writing the pre-run review pinned to the code commit; no launch, no model call"
-updated: 2026-10-04T10:10Z
+doing: "PAUSED by dmarz/pipeline: false-alarm-cascade WIP pushed at source hash 0c639128 (failure-handling rule parts 1-4 in code and tests; selftest 38 OK; manifest check OK; rehearsal 51/51 passed just before two last small fixes and was not re-run after them). Remaining: re-run offline S0 and rehearsal at this hash, documents (README, preregistration amendment, RUN, SETUP, VISUALIZATION), new pre-run review naming the new code commit. Nothing launched, no model call."
+updated: 2026-10-04T10:32Z
 ---
 
 ## Notes
