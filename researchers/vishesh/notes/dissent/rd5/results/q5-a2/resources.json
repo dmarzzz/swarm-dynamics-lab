@@ -1,0 +1,14 @@
+{
+  "checked_utc": "2026-10-04T17:12:09.474824+00:00",
+  "q5_calls": 24,
+  "q5_ledger_settled_usd": 0.000726139,
+  "q5_provider_reported_usd": 0.000726138,
+  "lifetime_calls": 452,
+  "lifetime_committed_api_usd": 0.021378589,
+  "historical_unresolved_api_usd": 0.004032,
+  "infrastructure_conservative_envelope_usd": 0.797928567,
+  "infrastructure_invoice_status": "historical invoices unavailable; conservative allocation estimate includes complete current90minute slot",
+  "cap_api_usd": 1,
+  "cap_infrastructure_usd": 1,
+  "lifetime_stop": 488
+}

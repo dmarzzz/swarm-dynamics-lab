@@ -1,0 +1,194 @@
+[
+  {
+    "id": "qualification-52000-raw",
+    "root": "qualification-52000",
+    "domain": "alarm",
+    "condition": "PROCEED",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52000-card",
+    "root": "qualification-52000",
+    "domain": "alarm",
+    "condition": "PROCEED",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52001-raw",
+    "root": "qualification-52001",
+    "domain": "alarm",
+    "condition": "HOLD",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52001-card",
+    "root": "qualification-52001",
+    "domain": "alarm",
+    "condition": "HOLD",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52002-raw",
+    "root": "qualification-52002",
+    "domain": "alarm",
+    "condition": "missing",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52002-card",
+    "root": "qualification-52002",
+    "domain": "alarm",
+    "condition": "missing",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52003-raw",
+    "root": "qualification-52003",
+    "domain": "alarm",
+    "condition": "conflict",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52003-card",
+    "root": "qualification-52003",
+    "domain": "alarm",
+    "condition": "conflict",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52010-raw",
+    "root": "qualification-52010",
+    "domain": "bridge",
+    "condition": "PROCEED",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52010-card",
+    "root": "qualification-52010",
+    "domain": "bridge",
+    "condition": "PROCEED",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52011-raw",
+    "root": "qualification-52011",
+    "domain": "bridge",
+    "condition": "HOLD",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52011-card",
+    "root": "qualification-52011",
+    "domain": "bridge",
+    "condition": "HOLD",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52012-raw",
+    "root": "qualification-52012",
+    "domain": "bridge",
+    "condition": "missing",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52012-card",
+    "root": "qualification-52012",
+    "domain": "bridge",
+    "condition": "missing",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52013-raw",
+    "root": "qualification-52013",
+    "domain": "bridge",
+    "condition": "conflict",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52013-card",
+    "root": "qualification-52013",
+    "domain": "bridge",
+    "condition": "conflict",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52020-raw",
+    "root": "qualification-52020",
+    "domain": "build",
+    "condition": "PROCEED",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52020-card",
+    "root": "qualification-52020",
+    "domain": "build",
+    "condition": "PROCEED",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52021-raw",
+    "root": "qualification-52021",
+    "domain": "build",
+    "condition": "HOLD",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52021-card",
+    "root": "qualification-52021",
+    "domain": "build",
+    "condition": "HOLD",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52022-raw",
+    "root": "qualification-52022",
+    "domain": "build",
+    "condition": "missing",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52022-card",
+    "root": "qualification-52022",
+    "domain": "build",
+    "condition": "missing",
+    "representation": "card",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52023-raw",
+    "root": "qualification-52023",
+    "domain": "build",
+    "condition": "conflict",
+    "representation": "raw",
+    "status": "terminal"
+  },
+  {
+    "id": "qualification-52023-card",
+    "root": "qualification-52023",
+    "domain": "build",
+    "condition": "conflict",
+    "representation": "card",
+    "status": "terminal"
+  }
+]

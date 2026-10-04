@@ -1,0 +1,7 @@
+{
+  "worker_exit": 0,
+  "worker_stopped": true,
+  "worker_elapsed_seconds": 16.83957828200073,
+  "relay_and_tunnel_stopped": true,
+  "no_provider_retry": true
+}

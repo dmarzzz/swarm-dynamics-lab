@@ -1,6 +1,6 @@
 # Right Dissenter RD5 setup record
 
-**Reviewed operational non-dispatch; approved scientific scope unchanged; direct admission in progress. See [current status](RUN-STATUS.md) and [renewal plan](ACTIVATION-02.md).** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
+**Reviewed operational non-dispatch; approved scientific scope unchanged; Q5 qualification passed, conditional H5 admission next. See [current status](RUN-STATUS.md) and [renewal plan](ACTIVATION-02.md).** Owner/operator/assessor: vishesh/codex-decision-models. Exploratory scope, tagged dissent and decision models. Follow the [setup runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md) and [operations guide](../../../../../tooling/agent-experiments/OPERATIONS.md).
 
 Question: when does remembering unresolved evidence and protecting a future check help, and when does it delay an urgent decision? Primary B2 reserve versus B1 memory; secondary B1 versus B0 bounded always-check. [Plan](PLAN.md), [amendment](AMENDMENT-01.md), [ready package](READY.md), [previous cohort](../rd4/REPORT.md).
 
@@ -10,8 +10,8 @@ Question: when does remembering unresolved evidence and protecting a future chec
 | G1 design before code | complete | Amendment published at `10e6b4d775c8409c1a9817ad633f0f6f84ae3c40` before code. All H5 mechanisms now share one domain. |
 | G2 instrument | offline checks passed | 61 development tests; state/resource separation, frozen input adapter, policies, transport and replay. [Validation](validation/VALIDATION.json). |
 | G3 admission | refreshing before direct dispatch | Scoped owner directive and central fence verified; new exclusive approved-account allocation merged. Fresh source/runtime, public plan, route, receipts and normal platform launch review remain. See DIRECT-ACTIVATION.md. |
-| G4 qualification | not run | Q5 maximum 24 calls; 12/12 valid/correct cards and 24/24 valid completed requests required. Old Q4 does not qualify this source. |
-| G5 closeout | first activation reviewed, no native run | Zero new calls; stopped transport and no worker independently checked; old claim released. Operational finalize and eleven-dimension assessment recorded in reviews/Q5-A1-DISPATCH-POST.md. |
+| G4 qualification | native Q5-A2 passed | 24/24valid complete,12/12correct cards and all6uncertainty controls; source-bound seven-file audit and post-mortem complete. |
+| G5 closeout | Q5-A2 reviewed | Worker/relay stopped; expected artifacts read back; operational finalize plus scientific assessment complete. Current allocation retained for conditional H5. Historical A1 non-dispatch preserved. |
 
 ## Definitions and access
 

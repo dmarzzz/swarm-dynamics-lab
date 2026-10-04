@@ -1,0 +1,14 @@
+{
+  "progress_failures": 0,
+  "artifacts": {
+    "admission-reference.json": "uploaded_unverified",
+    "calls.json": "uploaded_unverified",
+    "manifest.json": "uploaded_unverified",
+    "packet.json": "uploaded_unverified",
+    "public-plan-receipt.json": "uploaded_unverified",
+    "records.json": "uploaded_unverified",
+    "replay.html": "uploaded_unverified",
+    "summary.json": "uploaded_unverified"
+  },
+  "status_reported": true
+}

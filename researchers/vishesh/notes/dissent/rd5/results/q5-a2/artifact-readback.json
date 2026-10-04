@@ -1,0 +1,49 @@
+{
+  "hub_status": "done",
+  "downloaded": [
+    {
+      "name": "admission-reference.json",
+      "sha256": "0deb7ee2eca19c8b458e39ea7e086ccbf9385bd9c9ec62cfdf96c4c35500ede9",
+      "hash_matches": true
+    },
+    {
+      "name": "calls.json",
+      "sha256": "176d83e4d3f777d38ea318bc0bc8f792297d6850b02557ce20580ae7e84d78b2",
+      "hash_matches": true
+    },
+    {
+      "name": "manifest.json",
+      "sha256": "e4f2c7f96ef047fbee151bb1fb1523b2d511e790bd0a9ba8331fee4557dad424",
+      "hash_matches": true
+    },
+    {
+      "name": "packet.json",
+      "sha256": "c2467ee81948a93525c967bc7fad328d9bb907a1ac6086ba1a4a8c51550ef466",
+      "hash_matches": true
+    },
+    {
+      "name": "public-plan-receipt.json",
+      "sha256": "98a9f7462b60ae6d52fee4f9cf9147c2247104ffee5568bf3c48ca33e46167bf",
+      "hash_matches": true
+    },
+    {
+      "name": "records.json",
+      "sha256": "5029ce76c52a3ff8793826bbe6e8a1255ff1af6e3b304f0eef51154dc5cc0df1",
+      "hash_matches": true
+    },
+    {
+      "name": "replay.html",
+      "sha256": "eaed9085a249e49ce1609f6746121c109011978ad556abdf30c64d46a1c0e995",
+      "hash_matches": true
+    },
+    {
+      "name": "summary.json",
+      "sha256": "953992dffc38b41f53203047d63b39ba877df820432517218b1aca6f0fc68df8",
+      "hash_matches": true
+    }
+  ],
+  "complete": true,
+  "missing": [],
+  "hash_mismatches": [],
+  "local_required_missing": []
+}

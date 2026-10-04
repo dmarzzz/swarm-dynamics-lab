@@ -11,3 +11,8 @@ Native Q5-A2 must pass with matching instrument hash, same snapshot/route, compl
 Visualization mapping: [v1](../VISUALIZATION.md), run H5-A1, all frozen root/policy/epoch IDs, current and historical action in separate tracks, truth only in the reader overlay. Live progress and replay update from saved rows; final replay includes failures/unstarted slots. Confirm trace/metric agreement and artifact readback before releasing resources.
 
 Status: **not admitted; depends on fresh Q5 and runtime evidence**. Researcher review is optional and not a blocking approval step. A null or adverse reserve result completes this bounded scientific test. A broader timing/domain/reliability study requires a new design and budget accounting.
+
+
+## Actual Q5-A2 review before H5, 2026-10-04
+
+Read [Q5-A2 post-mortem](Q5-A2-POST.md) and [eleven-dimension assessment](Q5-A2-QUALITY.json). All24native requests valid and inspected; card12/12correct, raw12/12correct, all6uncertainty cards DEFER. No representation advantage is inferred at ceiling. Seven-file bundle hash eae067847b3b206efcb7e4fb2340ddff6e44f202335494df184a67ba5db9735b. Worker/relay stopped; full expected artifact readback passed; original ledger now452calls and USD0.021378589committedAPI. The same current exclusive allocation may span H5. Original maximum36H5calls, lifetime stop488, scripted ballots and urgent-early counterexample remain unchanged. Fresh H5 receipt, route, public plan, source/runtime and actual relay health remain required; this preassessment does not claim H5 dispatch.

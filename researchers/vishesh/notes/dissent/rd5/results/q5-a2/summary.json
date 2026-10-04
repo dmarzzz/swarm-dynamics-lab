@@ -1,0 +1,29 @@
+{
+  "stage": "Q5",
+  "origin": "native-jev",
+  "assigned": 24,
+  "terminal": 24,
+  "unstarted": 0,
+  "started_incomplete": 0,
+  "failed": 0,
+  "recorded_inference_attempts": 24,
+  "valid_responses": 24,
+  "unreconciled_inference_attempts": 0,
+  "settled_valid_cost_usd": 0.000726138,
+  "input_tokens": 17289,
+  "instrument_sha256": "bbc48f9ca679397895b2c3a0def9aa9e9a969e923f31ab97341d383e261fffa4",
+  "served_model": "typesafe/jev-1.13-20260917",
+  "by_representation": {
+    "raw": {
+      "assigned": 12,
+      "valid": 12,
+      "correct": 12
+    },
+    "card": {
+      "assigned": 12,
+      "valid": 12,
+      "correct": 12
+    }
+  },
+  "qualification_passed": true
+}

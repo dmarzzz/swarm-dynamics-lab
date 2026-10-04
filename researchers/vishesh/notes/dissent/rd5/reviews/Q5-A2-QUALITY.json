@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "study_id": "right-dissenter",
+  "attempt": "rd5-q5-a2",
+  "assessor": "vishesh/codex-decision-models",
+  "assessed_at": "2026-10-04T17:13:35.939254+00:00",
+  "parent_handoff_sha256": "ff8975461d0a83e5ea76307777d7526f9af1d463e3128e0482e2a8a862f7d745",
+  "verdict": "advance",
+  "outcome_interpretation": "Native competence gate passed; no card advantage observed. Advance only to already approved H5 after its fresh admission. No broader qualification or independent audit claimed.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Qualification tests the fixed evidence-card interface before allocation-policy comparison; it does not test H5 efficacy.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+          "sha256": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A2-POST.md",
+          "sha256": "c556dfb3b5ab15cc385a355e2a7b156e7e5f59163c8d071ba88d0d7f9a504c19"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Twelve authored paired packets cover explicit positive/negative, missing and conflict cases in three domains. Both forms are at ceiling; narrow competence only, with no difficulty or population claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/packet.json",
+          "sha256": "c2467ee81948a93525c967bc7fad328d9bb907a1ac6086ba1a4a8c51550ef466"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A2-POST.md",
+          "sha256": "c556dfb3b5ab15cc385a355e2a7b156e7e5f59163c8d071ba88d0d7f9a504c19"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "All six uncertainty cards defer; raw and card share source text. Both score12/12, so no observed representation accuracy advantage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/calls.json",
+          "sha256": "176d83e4d3f777d38ea318bc0bc8f792297d6850b02557ce20580ae7e84d78b2"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/records.json",
+          "sha256": "5029ce76c52a3ff8793826bbe6e8a1255ff1af6e3b304f0eef51154dc5cc0df1"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "All24responses valid and all12cards correct under the preregistered native gate and exact source-bound bundle audit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/qualification-audit.json",
+          "sha256": "2a159cff40cd1225c3d4c756cf1a096998760dc8ec6ab0381a27b2178289d8ff"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/summary.json",
+          "sha256": "953992dffc38b41f53203047d63b39ba877df820432517218b1aca6f0fc68df8"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Every action independently checked against its visible task/observations; all24expected scores agree with native records, including deliberate DEFER controls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/calls.json",
+          "sha256": "176d83e4d3f777d38ea318bc0bc8f792297d6850b02557ce20580ae7e84d78b2"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/reviews/Q5-A2-POST.md",
+          "sha256": "c556dfb3b5ab15cc385a355e2a7b156e7e5f59163c8d071ba88d0d7f9a504c19"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "12fixed authored raw/card pairs;24dependent requests are a finite competence screen, not24independent tasks or an estimate of general reliability.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/manifest.json",
+          "sha256": "e4f2c7f96ef047fbee151bb1fb1523b2d511e790bd0a9ba8331fee4557dad424"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/AMENDMENT-01.md",
+          "sha256": "01c2c847c808a1ed74e86ecd3f717752bf01f081ce7ccd1116f3c34479b7b8aa"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact saved requests use fixed TypeSafe route/snapshot, declared task/source/cards, empty history/ballots; expected labels and operator conversation are absent. All24input states inspected.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/calls.json",
+          "sha256": "176d83e4d3f777d38ea318bc0bc8f792297d6850b02557ce20580ae7e84d78b2"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "24assigned=started=valid=terminal=graded; original ledger has24unique completedQ5calls with all historical exposure retained. Full expected artifact readback matches.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/ledger-reconciliation.json",
+          "sha256": "0b461d9f31cf1d32ac2a911101389e44a9a5b909b26f8206d10040c58eb974dc"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/artifact-readback.json",
+          "sha256": "6c480df9f0d4e35c4853dde142fbe93054ebdec1c8d00484c435d1703c60bd80"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "24calls,17,289inputtokens,0.000726138USDprovider cost;1nanodollar conservative ledger rounding. Original cumulative caps and uncertain historical exposure retained; compute is a conservative allocation estimate, not an invoice.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/resources.json",
+          "sha256": "86e9af698a09373c3fcf470d66689206d75716edd4cca6d1702ea75f8ca5b6bb"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/worker-closeout.json",
+          "sha256": "3d57abf0c003b347743143e14e0cc46cc4d76af5a8e5fff27081c8d1a9f57ba3"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Unchanged source27d, exact packets and request hashes, seven-file qualification audit, stopped worker and retained sanitized response diagnostics reconstruct the observed qualification. Hosted repeatability is not asserted.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/packet.json",
+          "sha256": "c2467ee81948a93525c967bc7fad328d9bb907a1ac6086ba1a4a8c51550ef466"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/qualification-audit.json",
+          "sha256": "2a159cff40cd1225c3d4c756cf1a096998760dc8ec6ab0381a27b2178289d8ff"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Inspected saved-data figure shows all12paired packets and24correct answers; controls and finite scope are visible. Action replay is accompanied by full requests for trace review.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/qualification.png",
+          "sha256": "d2164b8a0ab71d61b00c28dd36de4d868d95689c16d3e8f4aea376d8ab52ddf9"
+        },
+        {
+          "path": "researchers/vishesh/notes/dissent/rd5/results/q5-a2/replay.html",
+          "sha256": "eaed9085a249e49ce1609f6746121c109011978ad556abdf30c64d46a1c0e995"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "bundle_sha256": "eae067847b3b206efcb7e4fb2340ddff6e44f202335494df184a67ba5db9735b",
+  "native_bundle_audit_passed": true,
+  "source": "27d63232559a2b6ccd9e317b1af5786b32c383bc",
+  "assigned": 24,
+  "valid": 24,
+  "card_correct": 12,
+  "raw_correct": 12,
+  "question_variants": 1
+}
