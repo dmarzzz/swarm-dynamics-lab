@@ -44,7 +44,7 @@
 | [build-sybil-scarcity-opus](tasks/build-sybil-scarcity-opus.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T07:52Z | Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready |
 | [build-sybil-split-opus](tasks/build-sybil-split-opus.md) | claimed | p1 | build | dmarz/pipeline-split | dmarz | 2026-10-04T07:52Z | Prepare the identity-splitting experiment with fixed attacker resources on Opus 5.5 to launch-ready |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
-| [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
+| [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T08:16Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T07:56Z | Run the revised procurement influence experiment |
 | [phantom-coast-pc3-live](tasks/phantom-coast-pc3-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T08:10Z | Build and run Phantom Coast PC-3 coverage guard |
