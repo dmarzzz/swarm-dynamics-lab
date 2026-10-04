@@ -31,7 +31,8 @@ from bench_v3.worlds import make_case, documents, validate_case, SPLITS
 from bench_v3.journal import Journal, Replay, read_events
 from bench_v3.policies import Scripted, anthropic
 from bench_v3.contracts import SYSTEM, strict_json
-from bench_v3.analysis import summarize as v3_summarize
+from collections import defaultdict
+from bench_v3.analysis import reconcile
 from bench_v3.cli import source_hashes as v3_source_hashes
 
 VERSION = 'discussion-v3-resample-control-0.1'
@@ -132,9 +133,42 @@ def _contrast(rows, metric, stratum, a, b):
             'missing_outcome_upper': sum(r['upper'] for r in per_world) / n}
 
 
+def _cells(frozen, rows):
+    """Assigned-denominator cells per (stratum, attack, arm), as in v3's summarize."""
+    key = lambda a: ':'.join(str(a.get(k, '')) for k in ('kind', 'stratum', 'attack', 'arm'))
+    assigned = defaultdict(int); groups = defaultdict(list)
+    for a in frozen['assignments']: assigned[key(a)] += 1
+    for r in rows: groups[key(r)].append(r)
+    cells = {}
+    for name, n in assigned.items():
+        records = groups[name]
+        cells[name] = {'assigned': n, 'terminal': len(records), 'missing': n - len(records), 'metrics': {}}
+        for metric in sorted({m for r in records for m in r['evaluation']}):
+            values = [r['evaluation'][metric] for r in records if r['evaluation'].get(metric) is not None]
+            cells[name]['metrics'][metric] = {'sum': sum(values), 'observed': len(values), 'assigned': n,
+                                              'observed_mean': sum(values) / len(values) if values else None,
+                                              'assigned_observed_sum_over_n': sum(values) / n}
+    return cells
+
+
+def _resources(frozen, events):
+    costs = defaultdict(lambda: {'input_tokens': 0, 'output_tokens': 0, 'calls': 0, 'physical_model_calls': 0, 'missing_usage': 0})
+    for e in events:
+        if e['kind'] not in ('call_response', 'provider_failure'): continue
+        group = costs[e['label'].rsplit(':', 1)[-1]]
+        group['calls'] += 1; group['physical_model_calls'] += bool(e.get('dispatched'))
+        group['missing_usage'] += int(bool(e.get('dispatched')) and not all(k in e.get('usage', {}) for k in ('input_tokens', 'output_tokens')))
+        for token in ('input_tokens', 'output_tokens'): group[token] += e.get('usage', {}).get(token, 0)
+    for group in costs.values():
+        if not frozen['scientific']: group['input_tokens'] = group['output_tokens'] = group['estimated_cost_usd'] = None
+        else:
+            rates = frozen['model_config']
+            group['estimated_cost_usd'] = (group['input_tokens'] * rates['input_usd_per_million'] + group['output_tokens'] * rates['output_usd_per_million']) / 1e6
+    return dict(costs)
+
+
 def summarize(frozen, rows, events):
-    base = v3_summarize(frozen, rows, events)
-    accounting = base['reconciliation']
+    accounting = reconcile(frozen, rows, events)
     clean_reports = [r for r in rows if r['arm'] == 'reports' and not r['attack']]
     report_pass = sum(r['evaluation']['vote_correct'] for r in clean_reports)
     execution_ok = not (accounting['missing'] or accounting['unresolved_calls'] or accounting['provider_failures'] or
@@ -148,7 +182,7 @@ def summarize(frozen, rows, events):
                 'resample_drift': _contrast(rows, metric, stratum, 'resample', 'reports'),
                 'self_revision': _contrast(rows, metric, stratum, 'private', 'resample')}
     return {'schema': VERSION, 'scientific': frozen['scientific'], 'reconciliation': accounting,
-            'cells': base['cells'], 'resources': base['resources'],
+            'cells': _cells(frozen, rows), 'resources': _resources(frozen, events),
             'qualification': {'execution_complete': execution_ok, 'clean_reports_correct': report_pass,
                               'clean_reports_assigned': len(clean_reports), 'required': len(clean_reports) - 2,
                               'competence_screen_pass': competence,
