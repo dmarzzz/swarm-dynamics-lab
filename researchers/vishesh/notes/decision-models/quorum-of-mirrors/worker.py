@@ -19,6 +19,10 @@ def render(data,receipts,out):
     (out/'matrix.html').write_text(page)
 
 
+def create_output(out):
+    out.mkdir(parents=True,exist_ok=False)
+
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--relay',required=True);p.add_argument('--launch',type=Path,required=True)
     p.add_argument('--out',type=Path,required=True);a=p.parse_args()
@@ -33,11 +37,11 @@ def main():
     receipt=check('quorum-of-mirrors',launch['run_tldr'])
     if receipt['url']!=launch['public_plan_url'] or receipt['plan_sha256']!=launch['plan_sha256']:
         raise ValueError('public_plan_mismatch')
-    a.out.mkdir(exist_ok=False);data=manifest();validate_manifest(data)
+    create_output(a.out);data=manifest(launch['attempt']);validate_manifest(data)
     (a.out/'manifest.json').write_text(json.dumps(data,indent=2));(a.out/'public-plan-receipt.json').write_text(json.dumps(receipt,indent=2))
     receipts=[];render(data,receipts,a.out)
     import swarm_report as sr
-    run=sr.start('quorum-of-mirrors',run='quorum-of-mirrors/qm-s0-01',params={'stage':'S0','calls':32,'condition':'explicit-lineage-skewed-repeat'},message=launch['run_tldr'])
+    run=sr.start('quorum-of-mirrors',run=launch['run_id'],params={'stage':'S0','calls':32,'condition':'explicit-lineage-skewed-repeat'},message=launch['run_tldr'])
     for row in data['assignments']:
         if time.time()>min(launch['deadline'],launch['claim_until']):break
         record={'id':row['id'],'request_sha256':row['request_sha256'],'status':'failed'};start=time.monotonic()

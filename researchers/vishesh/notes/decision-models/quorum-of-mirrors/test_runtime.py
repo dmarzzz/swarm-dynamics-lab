@@ -1,10 +1,17 @@
 import json,sqlite3,tempfile,unittest
 from pathlib import Path
 from relay import Budget
-from worker import render
+from worker import render,create_output
 from qualification import manifest
 
 class RuntimeContracts(unittest.TestCase):
+    def test_output_parent_created_and_existing_attempt_preserved(self):
+        with tempfile.TemporaryDirectory() as d:
+            out=Path(d)/'results'/'QM-S0-02';create_output(out)
+            marker=out/'record';marker.write_text('preserved')
+            with self.assertRaises(FileExistsError):create_output(out)
+            self.assertEqual(marker.read_text(),'preserved')
+
     def test_reservation_is_durable_and_duplicate_fails(self):
         with tempfile.TemporaryDirectory() as d:
             p=Path(d)/'ledger.sqlite';b=Budget(p);b.reserve('first');b.finish('first','failed_or_uncertain')

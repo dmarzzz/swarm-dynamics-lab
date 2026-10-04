@@ -44,16 +44,18 @@ def assignments():
     return result
 
 
-def manifest():
+def manifest(attempt="QM-S0-01"):
+    if attempt not in ("QM-S0-01", "QM-S0-02"):
+        raise ValueError("unknown_attempt")
     rows = assignments()
-    return {'experiment': 'quorum-of-mirrors', 'attempt': 'QM-S0-01',
+    return {'experiment': 'quorum-of-mirrors', 'attempt': attempt,
             'stage': 'exploratory competence', 'assignments': rows,
             'assignments_sha256': digest(rows), 'max_calls': 32, 'max_reserved_usd': 32*RESERVE}
 
 
 def validate_manifest(data):
     # Exact frozen matrix: arbitrary payloads or target edits cannot ride along.
-    if data != manifest():
+    if data != manifest(data.get("attempt")):
         raise ValueError('manifest_mismatch')
 
 
