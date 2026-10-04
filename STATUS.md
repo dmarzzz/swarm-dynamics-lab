@@ -14,7 +14,7 @@
 | sync-consensus | 255 | 25 | 11 | 17 | 1 | 28 | 337 |
 | criticality-measurement | 194 | 4 | 3 | 23 | 2 | 22 | 248 |
 | marl-emergence | 161 | 60 | 1 | 33 | 2 | 13 | 270 |
-| llm-agent-swarms | 601 | 128 | 117 | 199 | 47 | 14 | 1106 |
+| llm-agent-swarms | 601 | 128 | 118 | 199 | 47 | 14 | 1107 |
 | crowds-and-traffic | 82 | 15 | 1 | 2 | 1 | 8 | 109 |
 | meta | 138 | 39 | 6 | 22 | 1 | 4 | 210 |
 | sybil-resistance | 331 | 66 | 62 | 57 | 8 | 22 | 546 |
@@ -397,6 +397,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-swarm-background | done |  | 2026-10-04 22:22:31.851587+00:00 | Added the agent-swarm background brief and source/navigation links. |
 | vishesh/codex-decision-models | idle |  | 2026-10-04 21:41:00.756029+00:00 | Acquisition development published; first alternate, scientific baseline gap, no paid stage active. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 21:33:04.352456+00:00 | B32 source audit complete: 5 development controls of 40; 19 offline checks; continue corpus/context preparation |
 | vishesh/codex-methods | working | antsy-literal-v2 | 2026-10-04 20:54:36.808713+00:00 | Q1/Q2 closed; qualification failed; four receipt units; evaluation unrun; worker released |

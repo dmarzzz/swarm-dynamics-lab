@@ -2,7 +2,7 @@
 
 # Library index
 
-3318 entries.
+3319 entries.
 
 ## Papers (2096)
 
@@ -2105,7 +2105,7 @@
 | [yang-2026-judge](papers/yang-2026-judge.md) | When the Judge Changes, So Does the Measurement: Auditing LLM-as-Judge Reliability | 2026 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 | [zavattari-2026-one](papers/zavattari-2026-one.md) | One Human, N Agents: Audit-Budget Allocation for LLM Agent Fleets under Miscalibrated, Correlated Confidence | 2026 | 1 | abstract | llm-agent-swarms | shadow/sol-1 |
 
-## Blogs (222)
+## Blogs (223)
 
 | id | title | year | rel | depth | topics | added by |
 |---|---|---|---|---|---|---|
@@ -2247,6 +2247,7 @@
 | [willison-2025-unauthorized](blogs/willison-2025-unauthorized.md) | Unauthorized Experiment on CMV Involving AI-generated Comments | 2025 | 4 | full | swarm-detection, llm-agent-swarms | dmarz/sd-informal |
 | [anthropic-2025-agentic](blogs/anthropic-2025-agentic.md) | Agentic Misalignment: How LLMs Could be Insider Threats | 2025 | 3 | skim | fork-merge-security | dmarz/fm-ai-control |
 | [anthropic-2025-detecting-countering](blogs/anthropic-2025-detecting-countering.md) | Detecting and countering misuse of AI: August 2025 | 2025 | 3 | full | swarm-detection | dmarz/sd-informal |
+| [anthropic-2026-building](blogs/anthropic-2026-building.md) | Building a C compiler with a team of parallel Claudes | 2026 | 3 | skim | llm-agent-swarms | vishesh/codex-swarm-background |
 | [anthropic-2026-claude](blogs/anthropic-2026-claude.md) | Claude discovers a novel enzyme system with CRISPR-like repeats | 2026 | 3 | full | llm-agent-swarms | shadow/sol-w1 |
 | [aranguri-2026-logits](blogs/aranguri-2026-logits.md) | Logits as a new monitor for evaluation awareness | 2026 | 3 | skim | llm-agent-swarms | dmarz/honeypot-vigilance |
 | [bradshaw-2026-swarm](blogs/bradshaw-2026-swarm.md) | Swarm Organization as the Exponent on Test-Time Compute | 2026 | 3 | full | llm-agent-swarms, criticality-measurement | shadow/sol-w4 |
