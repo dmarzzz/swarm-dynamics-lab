@@ -24,7 +24,7 @@ Follow the user-requested identity-size sweep through a frozen plan, scripted re
 
 ## Done when
 
-- [ ] Freeze matched 36/108/324/972 identity worlds, fixed and proportional checking, and visual mapping.
-- [ ] Validate the generalized graph and clean model competence at every size.
+- [x] Freeze matched 36/108/324/972 identity worlds, fixed and proportional checking, and visual mapping.
+- [x] Validate the generalized graph and clean model competence at every size.
 - [ ] Deploy and run the authorized API comparison; preserve every assigned outcome.
 - [ ] Publish reconciled results and replay, verify artifacts, stop workers and release the host.

@@ -33,6 +33,30 @@ def main():
         tasks=sorted(set(masked)&set(visible));diffs=[visible[t]['evaluation']['rare_accuracy']-masked[t]['evaluation']['rare_accuracy'] for t in tasks]
         badges.append(dict(zip(['n','arm','checks','attacker_pass'],key),clusters=len(tasks),mean=sum(diffs)/len(diffs),interval=analyze.interval(diffs)))
     result['badge_contrasts']=badges
+    # Descriptive paired comparisons use worlds, never individual skill answers.
+    # These supplements do not change the frozen primary analysis above.
+    cells=defaultdict(dict)
+    for row in rows:
+        if row['status']=='completed' and row['kind']=='pilot':
+            cells[tuple(row[k] for k in ('n','arm','checks','attacker_pass','visibility'))][row['task']]=row
+    def paired(left,right,metric):
+        tasks=sorted(set(left)&set(right))
+        values=[left[t]['evaluation'][metric]-right[t]['evaluation'][metric] for t in tasks]
+        return {'clusters':len(tasks),'mean':sum(values)/len(values) if values else None,'interval':analyze.interval(values)}
+    result['budget_security_contrasts']=[]
+    result['coverage_random_contrasts']=[]
+    result['model_plurality_contrasts']=[]
+    for key,cc in sorted(cells.items()):
+        n,arm,checks,rate,visibility=key
+        labels=dict(zip(('n','arm','checks','attacker_pass','visibility'),key))
+        values=[r['evaluation']['rare_accuracy']-r['scripted_evaluation']['rare_accuracy'] for _,r in sorted(cc.items())]
+        result['model_plurality_contrasts'].append({**labels,'clusters':len(values),'mean':sum(values)/len(values),'interval':analyze.interval(values)})
+        if arm!='no_verification' and checks==n//9:
+            fixed=cells.get((n,arm,4,rate,visibility),{})
+            result['budget_security_contrasts'].append({**labels,**paired(cc,fixed,'bad_seat_share')})
+        if arm=='coverage':
+            random=cells.get((n,'random',checks,rate,visibility),{})
+            result['coverage_random_contrasts'].append({**labels,'rare_accuracy':paired(cc,random,'rare_accuracy'),'bad_seat_share':paired(cc,random,'bad_seat_share')})
     result['failure_modes']=[]
     for cell in result['cells']:
         rr=[r for r in rows if r['status']=='completed' and all(r[k]==cell[k] for k in ('n','arm','checks','attacker_pass','visibility'))]
