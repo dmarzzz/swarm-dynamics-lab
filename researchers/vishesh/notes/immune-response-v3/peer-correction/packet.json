@@ -1,7 +1,7 @@
 {
-  "packet_revision": 2,
+  "packet_revision": 3,
   "stage": "peer-correction-Q-and-first-repeat",
-  "native_dispatch_enabled": false,
+  "native_dispatch_enabled": true,
   "contract": {
     "model": "anthropic/claude-opus-4.6",
     "provider": "anthropic",
@@ -23,12 +23,15 @@
       "peer-correction/peer_closeout.py": "2ec0300c2b1d705fa77cbf0522976806fcbc030be3b4a4fa476b5b4fe44ba5a6",
       "peer-correction/peer_collection.py": "7d3a6b14374cf4402982b1c1472e5b975aa57899921665574dd7032a8d402b0a",
       "peer-correction/peer_instrument.py": "ab3a00319a19b4f8bf4adf0fc87b6b516870ab2187a2a9d117f67fc3dbf600a9",
-      "peer-correction/peer_native.py": "879c06d458d1a1a682af178781b1c7597872426f3ac07d7892c312c27278bbf8",
+      "peer-correction/peer_launch.py": "f69364a95546503f7b3608b07ee72341cb967f3dd7af14430f764a934713f0be",
+      "peer-correction/peer_native.py": "2bcec1693c0e5ef9475134d0e9f2e8d887cbd5b843dd382ae92a7c8551e5f6e6",
       "peer-correction/peer_qualification.py": "47fb5691a769ace88f01e60c1dba1aed57c5d15771d7d7f5db04548df9421b77",
-      "peer-correction/peer_run.py": "1c216c997e6620f5180305b39f503d207ae37660d8d079c9761dd68beeacbd74",
-      "peer-correction/prepare.py": "8f1f5de108b012add1127934e7a94a0b8bd8a126f3acabfacda90cf112d09075",
-      "peer-correction/test_instrument.py": "93498adc6f7df9420529da9d98603b0a8b47040dcd637bbcc458085a749e15ce",
-      "peer-correction/test_native.py": "aa4760c2f0ecafff64b2c1347ac6e9e4dd683b642b45eb2d80a9f1fcdf1d17a3",
+      "peer-correction/peer_relay.py": "df84f6871814e85b0f3828a2bb95c21c7ded917e9a8cade76729fff85ba56f6e",
+      "peer-correction/peer_run.py": "347256dadf69c2662abd40fad2085a3fec829ef1ad0a220114a60bc19bcfdcc8",
+      "peer-correction/peer_worker.py": "4e216e3ec1906871f90a32605e11e0f8072365c105bb40dc381aa90762dd6da3",
+      "peer-correction/prepare.py": "ba2dc2a309174d7b79934989c90bd4f7f1020872dc35be548c4aaaaef745f2ce",
+      "peer-correction/test_instrument.py": "6dd3a1f634f11e400ab945c528f5dc22e9a78ecfa6d641b34af11ddc54ab5d7d",
+      "peer-correction/test_native.py": "6958b0cf98daa412590b649c8034ef64d186e918da9118b8c7a9725ed3686959",
       "scenario-study/study.py": "a2556967df07da7800996a5577b9771520ebba991b0f31186cfa6eed9b141083",
       "src/provider.py": "0a7e30efa5093de623afcc9e964adc22e3d1f608990976e8d24b7290c6c81e6f",
       "verification-loop/loop_instrument.py": "2dd20baaf49074358a61b57faa8b9cc4288756367d4dbdea0d14fe344d25f12f",
@@ -41,7 +44,7 @@
     "output_tokens": 512,
     "reason_max_characters": 240
   },
-  "contract_sha256": "4536141b210b3881d2541e92d8387abe8159f14b040fb2921682bddaccaaa90e",
+  "contract_sha256": "620a9c2d5c1f85db332b9280c73f82aa4cf881c4cf0fd66483ae6244df631f19",
   "worlds": [
     {
       "id": "runbook-False-22001",

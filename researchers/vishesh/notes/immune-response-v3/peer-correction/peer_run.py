@@ -10,7 +10,7 @@ import peer_qualification
 import peer_collection
 
 
-def execute(out,admission,ledger):
+def execute(out,admission,ledger,on_event=None):
     if not peer_native.DISPATCH_ENABLED:raise ValueError('native_dispatch_disabled_pending_grant')
     receipt=peer_admission.verify(admission,ledger)
     out=Path(out);out.mkdir(parents=True,exist_ok=False,mode=0o700)
@@ -25,6 +25,7 @@ def execute(out,admission,ledger):
             nonlocal final
             events.write(json.dumps(row)+'\n');events.flush();os.fsync(events.fileno())
             if row['kind']=='closeout':final=row
+            if on_event is not None:on_event(row)
         try:
             result=peer_qualification.collect(policy,emit) if receipt['stage']=='peer-correction-q1' else peer_collection.collect(policy,emit,repeats=1)
             (out/'episodes.json').write_text(json.dumps(result['episodes'],indent=2)+'\n')

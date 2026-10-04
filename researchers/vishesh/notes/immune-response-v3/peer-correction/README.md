@@ -1,12 +1,12 @@
 # Immune Response: peer correction qualification
 
-**Prepared offline; no native attempt yet.** The [prospective plan](PLAN.md) describes two incident families: an external runbook recommending a repair, and a report claiming an earlier repair succeeded. Each assertion is paired with worlds where it is true and false. The common current probe makes the disagreement resolvable from evidence rather than a hidden evaluator label.
+**Funded bounded scope; live admission pending, no native attempt yet.** The [prospective plan](PLAN.md) describes two incident families: an external runbook recommending a repair, and a report claiming an earlier repair succeeded. Each assertion is paired with worlds where it is true and false. The common current probe makes the disagreement resolvable from evidence rather than a hidden evaluator label.
 
 The experiment compares private reconsideration, ordinary discussion and structured evidence-linked peer notes. Initial responses are generated once per world/repeat and forked identically into all three branches. This pairs the starting mistakes without selecting only cases where contamination succeeded. Architecture-supplied probes, model-proposed inspections and actual voluntary inspection have distinct fields. The primary revision timepoint is both members' immediate post-note proposal before enforcement; later terminal actor decisions are separate.
 
 ## Offline evidence
 
-Twenty tests pass, with zero model calls:
+Twenty-one tests pass, with zero model calls:
 
 - Public-information comparator feasibility across 20 varied seeds/four worlds (80 scripted cases), plus full collection paths for one and two repeats.
 - Actual shared initial-response hashes across all three arms; exact184/368 main-call schedules and48-call solo qualification.
@@ -26,9 +26,9 @@ The fixture truth differences are observable and consequential, but these remain
 
 Substantive design review was completed, including source-truth crossover, identical initial forks, all-assignment denominators, immediate/terminal separation and fresh-evidence qualification. This is design review, not independent validation of all code or arithmetic.
 
-`peer_qualification.py` and `peer_collection.py` accept an injected policy and record requests, responses, actions, failures and denominators. **They are collection cores.** The prepared `peer_native.py`, `peer_admission.py` and `peer_run.py` add persistent original-ledger reservations, source/packet checks, inherited route/usage validation, exclusive approved-account receipt checks, actual public registration/readback, per-request deadlines and credential-free loopback transport. Native dispatch is hard-disabled. Live allocation/account evidence, verified relay, a finite grant and an operator closeout using offline finalize remain prerequisites; unit receipts are never live admission. `prepare.verify_qualification` checks scientific binding only; it does not grant money or machine authority. Qualification requires authored action/reason review; an automated comparator pass cannot issue native admission.
+`peer_qualification.py` and `peer_collection.py` accept an injected policy and record requests, responses, actions, failures and denominators. **They are collection cores.** The prepared `peer_native.py`, `peer_admission.py` and `peer_run.py` add persistent original-ledger reservations, source/packet checks, inherited route/usage validation, exclusive approved-account receipt checks, actual public registration/readback, per-request deadlines and credential-free loopback transport. The funded adapter is enabled only behind admission; no run is started by this setting. Live allocation/account evidence, verified relay, a finite grant and an operator closeout using offline finalize remain prerequisites; unit receipts are never live admission. `prepare.verify_qualification` checks scientific binding only; it does not grant money or machine authority. Qualification requires authored action/reason review; an automated comparator pass cannot issue native admission.
 
-Next: finite funding/admission decision, then enable only the funded stage, freeze its final runtime/packet, verify the bounded relay and refresh live admission evidence. No paid allocation, key transfer, model request or new machine occurred. No automatic main-stage launch or stronger-model sweep is authorized by offline success.
+Next: verify the final frozen runtime/packet, exact bounded relay, original ledger and live allocation/public-plan evidence, then launch Q48. The finite Q48 plus conditional first-repeat184 scope is approved; the optional second repeat remains excluded. No paid allocation, key transfer, model request or new machine occurred. No automatic main-stage launch or stronger-model sweep is authorized by offline success.
 
 **evidence_confidence:**0/4 for benefit of peer correction; assessed2026-10-04 by vishesh/codex-immune. No new native evidence exists.
 
@@ -38,8 +38,10 @@ Run `python -m unittest -v test_instrument test_native` here using the study's p
 
 Measurement review also separated diagnosis error from unsupported proposal at initial, immediate and terminal timepoints. The combined contract-failure field is supplemental; it is not the proposal-rate primary. Outcome and verification endpoints retain missed repairs, so safe inaction cannot pass the study.
 
-Adapter revision2 preserves the earlier published packet in commit216fe8d9; no run used that proposal. Persistent tests cover48+184calls without resetting709historical calls or$15.524695 exposure, zero-call duplicate claims, oversize requests, deadline expiry, missing grants/account checks and disabled network dispatch. The20tests include synthetic ledger operations only, not charges or reservations in the real ledger.
+Adapter revision2 preserves the earlier published packet in commit216fe8d9; no run used that proposal. Persistent tests cover48+184calls without resetting709historical calls or$15.524695 exposure, zero-call duplicate claims, oversize requests, deadline expiry, missing grants/account checks and disabled network dispatch. The21tests include synthetic ledger operations only, not charges or reservations in the real ledger.
 
 The [native runbook](RUNBOOK.md) includes a saved-data `peer_closeout.py` hook for the shared operations finalizer. It requires a verified worker-stop attestation and canonical ignored data directory; scientific assessment remains separate. No finalize or run was fabricated during adapter preparation.
 
 The main-stage qualifier parses the hashed scientific receipt and requires exact agreement with the declared passing receipt. It binds saved Q admission, source/packet/contract, original ledger claim and exact four-world trace hash; stale or unrelated hashed evidence and failed saved outcomes are rejected.
+
+Revision3 adds the exact stage-bounded credential-free relay/worker/watchdog and enables the approved scope behind admission. Public reporting publishes the aggregate summary only; raw events, transport, usage, episode responses and private receipts remain private. Source/contract binding is refreshed before the first native qualification.

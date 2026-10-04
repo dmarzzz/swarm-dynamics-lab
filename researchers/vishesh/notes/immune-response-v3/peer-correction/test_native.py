@@ -46,7 +46,7 @@ class LedgerTests(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'already_claimed'):n.Policy(db,root/'u2','peer-correction-q1','x',time.time()+100)
             with self.assertRaisesRegex(ValueError,'wire_limit'):q.reserve(b'x'*8001)
             with self.assertRaisesRegex(ValueError,'persistent_budget'):q.reserve(b'x'*8000)
-            with patch('urllib.request.urlopen',side_effect=AssertionError('network must not execute')):
+            with patch('urllib.request.urlopen',side_effect=AssertionError('network must not execute')), patch.object(n,'DISPATCH_ENABLED',False):
                 with self.assertRaisesRegex(ValueError,'dispatch_disabled'):q.complete({})
                 with self.assertRaisesRegex(ValueError,'dispatch_disabled'):peer_run.execute(root/'out','missing',db)
             self.assertFalse((root/'out').exists())
@@ -131,5 +131,26 @@ class QualificationEvidenceBinding(unittest.TestCase):
         episodes=json.loads(trace);episodes[0]['automated_pass']=False;bad=json.dumps(episodes).encode()
         science['trace_sha256']=hashlib.sha256(bad).hexdigest()
         with self.assertRaisesRegex(ValueError,'outcomes_failed'):a.verify_qualification_binding(r,p,science,q,'packet',bad)
+
+class RelayBounds(unittest.TestCase):
+    def test_exact_stage_counts_route_duplicate_and_spend(self):
+        import peer_relay as relay
+        import peer_instrument as i
+        case=i.roots()[0];o=i.observation(case,case['initial'],1,[])
+        _,body=i.request(case,o,'diagnosis')
+        for stage in n.STAGES:
+            limit,cap,seconds=relay.limits(stage)
+            self.assertEqual(n.STAGES[stage],(limit,cap))
+            seen=set();reserved=0
+            for count in range(limit):
+                data={'request_id':format(count,'032x'),'body':body}
+                rid,_,_,cost=relay.admit(data,seen,count,reserved,limit,cap)
+                seen.add(rid);reserved+=cost
+            with self.assertRaises(AssertionError):relay.admit({'request_id':'f'*32,'body':body},seen,limit,reserved,limit,cap)
+            with self.assertRaises(AssertionError):relay.admit(data,seen,0,0,limit,cap)
+            with self.assertRaises(AssertionError):relay.admit({'request_id':'f'*32,'body':body},set(),0,cap,limit,cap)
+        bad=copy.deepcopy(body);bad['model']='anthropic/claude-sonnet-4.6'
+        with self.assertRaises(AssertionError):relay.admit({'request_id':'a'*32,'body':bad},set(),0,0,48,2.657280)
+        with self.assertRaises(ValueError):relay.limits('second-repeat')
 
 if __name__=='__main__':unittest.main()

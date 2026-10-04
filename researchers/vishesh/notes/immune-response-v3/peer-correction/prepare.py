@@ -29,7 +29,7 @@ def contract():
 
 def packet():
     c=contract()
-    return {'packet_revision':2,'stage':'peer-correction-Q-and-first-repeat','native_dispatch_enabled':False,
+    return {'packet_revision':3,'stage':'peer-correction-Q-and-first-repeat','native_dispatch_enabled':True,
             'contract':c,'contract_sha256':digest(c),'worlds':i.roots(),
             'Q':{'worlds':4,'calls':48,'model_max_usd':2.657280,'external_source':False},
             'first_repeat':{'worlds':4,'arms':3,'shared_initial_calls':16,'branch_calls':168,'calls':184,'model_max_usd':10.186240},

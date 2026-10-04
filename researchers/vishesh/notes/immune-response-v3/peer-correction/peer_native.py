@@ -1,4 +1,4 @@
-"""Credential-free relay adapter. Native dispatch remains disabled pending grant."""
+"""Credential-free relay adapter. Funded stages still require fresh native admission."""
 import hashlib
 import json
 import os
@@ -10,7 +10,7 @@ from pathlib import Path
 import peer_instrument as i
 from native_provider import NativePolicy
 
-DISPATCH_ENABLED = False
+DISPATCH_ENABLED = True
 STAGES = {'peer-correction-q1':(48,2.657280), 'peer-correction-p1':(184,10.186240)}
 CAMPAIGN_MAX = 12.843520
 

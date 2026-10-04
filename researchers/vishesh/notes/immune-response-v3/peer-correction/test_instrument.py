@@ -154,7 +154,7 @@ class QualificationBinding(unittest.TestCase):
         for key,value in (('native',False),('manual_reason_review_pass',False),('contract_sha256','changed'),('api_calls',47)):
             bad=dict(receipt);bad[key]=value
             with self.assertRaises(ValueError):p.verify_qualification(bad,packet)
-        self.assertFalse(packet['native_dispatch_enabled'])
+        self.assertTrue(packet['native_dispatch_enabled'])
         self.assertEqual(232,packet['maximum_calls'])
         self.assertAlmostEqual(232*.055360,packet['model_max_usd'])
 
