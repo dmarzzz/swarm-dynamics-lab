@@ -3,7 +3,7 @@ id: inbox-followthrough-vishesh-oct04
 type: task
 title: Resolve Vishesh inbox evidence and review follow-ups
 kind: admin
-status: claimed
+status: done
 priority: p1
 owner: vishesh/fm-security-review
 for: vishesh
@@ -12,7 +12,10 @@ created_by: vishesh/fm-security-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T17:39Z
-updated: 2026-10-04T17:39Z
+updated: 2026-10-04T17:48Z
+outputs:
+- researchers/vishesh/notes/inbox-followthrough-2026-10-04/README.md
+- researchers/vishesh/notes/discussion-benchmark-v3-review/FOLLOWUP-2026-10-04.md
 ---
 
 ## Goal
