@@ -1114,4 +1114,23 @@ artifacts:
           - researchers/vishesh/notes/swarm-of-theseus/v2/PLAN.md
           - researchers/vishesh/notes/swarm-of-theseus/v2/RESULTS.md
         commit: 61c81e01c967b759d9cdb99853096beb745296e9-dirty
+  - id: right-dissenter-q0
+    category: content
+    type: figure
+    title: 'Right Dissenter Q0: failed native qualification'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/right-dissenter-q0/right-dissenter-q0-v1.png
+        built_at: '2026-10-04T04:29:22Z'
+        note: Measured native Q0 result. Qualification FAIL. Original renderer preserved from frozen source 16a22642691cf071db476211012ab0bf3ba50888.
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a1049f-de1a-77b3-aaa7-3f9d3a0e3bc8
+        prompt: Do the post-mortem, and so on and so forth.
+        ingredients:
+          - researchers/vishesh/notes/dissent/results/q0-a1/live_render.py
+          - researchers/vishesh/notes/dissent/results/q0-a1/summary.json
+          - researchers/vishesh/notes/dissent/results/q0-a1/records.json
+        commit: ac0e8122d4dfbc52bbc0cc4faaf34a2a735aa2ea-dirty
 requires: '1.2'

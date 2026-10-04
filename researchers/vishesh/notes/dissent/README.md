@@ -13,6 +13,10 @@ Research area connecting minority evidence, collective correction and typed deci
 
 The practical rule: a dissenter can earn a bounded independent check. Evidence determines whether the group changes its decision. A challenge must also be able to withdraw and reopen when facts change.
 
+## Current result
+
+Q0 completed: 12/18 correct, qualification failed. [Native report](REPORT.md) and [paired repair plan](Q1-PLAN.md). Q1 has no native calls and is blocked on a verified Dmarz-account allocation after an account mismatch. The $2 cap remains approved. The evidence metadata above is a historical external assessment; native qualification results now exist, but the policy efficacy question remains untested.
+
 ## Start here
 
 - [Standalone live study plan RD-2](LIVE-PLAN.md) and [research and X source map](SOURCES.md).
@@ -20,7 +24,7 @@ The practical rule: a dissenter can earn a bounded independent check. Evidence d
 - [Conditions and parameter ledger](PARAMETERS.md).
 - [Implementation and validation](IMPLEMENTATION.md).
 - [Readiness and research limits](READINESS.md).
-- [Report structure for future results](REPORT.md).
+- [Native results and limitations](REPORT.md).
 
 ## Three scenarios
 

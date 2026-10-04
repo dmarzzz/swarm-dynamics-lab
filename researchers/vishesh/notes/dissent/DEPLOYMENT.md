@@ -1,3 +1,5 @@
+> Current allocation status, 2026-10-04: the default local credential used for Q0 was confirmed outside Dmarz's account. Shared fleet membership did not authorize that billing account. Q1 is blocked before any calls; the host is out of service and the scoped cleanup receipt records removal. Use only a verified Dmarz-account provisioner for the replacement. The $2 cap remains approved. Historical provisioning estimates below are not account-authorization evidence.
+
 # Right Dissenter deployment
 
 The standalone study is registered at [Swarm Live](https://swarm-live.pages.dev/#/x/right-dissenter). Its immutable RD-2 plan passed the public preflight and the browser displayed the TLDR, plan link and protocol before any native execution. See LIVE-PUBLICATION.json. At this checkpoint there are zero native calls and zero allocated machines.

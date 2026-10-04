@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: working
+state: blocked
 task: right-dissenter-live-study
-doing: Approved USD 2 study; allocating dedicated fleet machine and launching Q0
-updated: '2026-10-04T04:04:19.842414+00:00'
+doing: Q0 failed 12/18; Q1 ready in software but blocked on verified Dmarz-account allocation. Wrong-account host deleted; cap remains approved.
+updated: 2026-10-04T04:27:46.239298+00:00
 ---
 
 ## Notes

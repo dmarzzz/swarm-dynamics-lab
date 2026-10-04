@@ -1226,6 +1226,35 @@
    "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
    "size_bytes": 21631
   },
+  "right-dissenter-q0@1": {
+   "host": "ultrons-macbook-pro",
+   "ingredients": [
+    {
+     "mtime": 1791088122,
+     "sha256": "ab69e34346cfae82d6fdbfa5b3662c1cc39a159b01354038258bd71af09e780f",
+     "size": 6645,
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/live_render.py"
+    },
+    {
+     "mtime": 1791087565,
+     "sha256": "8b233796994ba7f62f32085c1b20d7e4a6f31526432ff80ffe24775272327a8d",
+     "size": 612,
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/summary.json"
+    },
+    {
+     "mtime": 1791087565,
+     "sha256": "99aced866d39bb328cc432c2278a4b5bb054f4700cee76ed93c3587124e808fd",
+     "size": 3278,
+     "uri": "researchers/vishesh/notes/dissent/results/q0-a1/records.json"
+    }
+   ],
+   "mime": "image/png",
+   "mtime": 1791087316,
+   "path": "artifacts/right-dissenter-q0/right-dissenter-q0-v1.png",
+   "prompt_sha256": "ad034e1849404d894f5685d614cbcb0c87ed63ae5914f58737dee313cd9fd1cf",
+   "sha256": "9a3368a2485a94a354550689ca6c17a1a0aba42cab27b5698a8cd45ced086fc6",
+   "size_bytes": 59552
+  },
   "sybil-scale-api-hidden@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -3608,7 +3637,7 @@
    "size_bytes": 1542505
   }
  },
- "generated": "2026-10-03T21:26:15-0700",
+ "generated": "2026-10-03T21:29:22-0700",
  "lock": 1,
  "project": "Swarm Lab"
 }
