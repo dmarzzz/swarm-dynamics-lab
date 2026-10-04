@@ -19,4 +19,4 @@ This project follows [the worker template](../../../../templates/experiment-work
 
 The swarm lineage, not an individual job, is the episode. Persistent memory makes the root lineage the replication cluster. Agent count is a factor, not sample size. Exogenous API tapes remain paired despite different tool-call counts. Model calls are stochastic; deterministic environment seeds do not imply bit-identical native answers. A5 is a dependent fork, with separate physical-spend and hypothetical-deployment accounting.
 
-No `stage S2` command or generic worker copy is included while those gates are open. A future coordinator must reject unresolved launch fields mechanically; the current design validator is a documentation check only.
+No `stage S2` command or generic worker copy is included while those gates are open. A future coordinator must reject unresolved launch fields mechanically; the document checks performed for this package are not a launcher.

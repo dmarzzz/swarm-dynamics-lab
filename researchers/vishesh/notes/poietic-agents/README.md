@@ -33,7 +33,7 @@ Exact model IDs, backend revisions and measured tariffs must be pinned before na
 | A2 Static specialists | Roles, services, skill subsets and model routing chosen on development data and then frozen | Strong engineered comparison |
 | A3 Poietic | Agents propose costed capability, provider, model and connection changes within a fixed action grammar | Main adaptive treatment |
 | A4 Central adaptive | One costed optimizer has the same information and change grammar | Later control for the value of decentralized proposals |
-| A5 Learned and frozen | Copy A3 at the end of acquisition, then disable structural changes | Later paired recovery comparison; shares A3's parent history |
+| A5 Learned and frozen | Copy A3 immediately before the change, then disable structural changes | Later paired recovery comparison; shares A3's parent history |
 | A6 Single solver | One capable solver with cache, tools and the same total resource ceiling | Later control for whether a swarm helps at all |
 
 In S1, epochs 1–2 acquire experience, 3–4 measure stable operation, and 5–8 face a prescheduled change. Two roots change overlap from high to low; two introduce a documented API schema revision. Provider withdrawal is a later separate stress test, not mixed into those episodes. Every arm sees the same legal API access, workload stream and observable notices for its paired root.

@@ -83,6 +83,8 @@ One independently generated workload root and its persistent lineage is the repl
 
 Use separate named random streams for workload generation, job assignment, proposal arbitration, injected failures and policy sampling. Derive each from `(study, split, root, replicate, stream)` using a stable hash. A provider seed, if supported, is a recorded sampling parameter, not a promise of deterministic outputs across prompts.
 
+For S1, each job permits at most four model turns and twelve tool operations, 8,192 input tokens and 1,024 output tokens per model request, a 45-second request timeout and a 120-second job deadline from release, including queuing. Proposals use the same per-request token caps and have their own metered boundary slots. Any S0 evidence requiring different limits triggers an amendment before S1.
+
 A barrier scheduler freezes exogenous source state per epoch and applies accepted structural changes only between epochs. Within an epoch, process jobs in the paired seeded order, with at most two concurrent native calls in S1. Record queuing and service wait time. Exogenous source tapes prevent fast arms from receiving different facts solely because they run earlier in wall time. Counterbalance arm order within provider/time blocks; no cross-arm prompt cache with mutable content. Actual provider caching discounts remain in the ledger.
 
 ## Endpoints and cost accounting
