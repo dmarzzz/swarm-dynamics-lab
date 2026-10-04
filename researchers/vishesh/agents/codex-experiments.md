@@ -1,8 +1,8 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: idle
-task: null
+state: working
+task: influence-native-rerun
 doing: Fresh Q4 instrument passes 24 tests and 12 scripted decisions; USD 10 increase approved and recorded; Single researcher review satisfied; duplicate dossier gate retired; qualification launch preparation remains
 updated: 2026-10-04T03:43Z
 ---
