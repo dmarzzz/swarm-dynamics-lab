@@ -1,10 +1,10 @@
 ---
 agent: vishesh/fm-security-review
 tool: codex
-state: working
+state: done
 task: inbox-followthrough-vishesh-oct04
-doing: Resolving inbox evidence and review follow-ups; no paid runs.
-updated: 2026-10-04T14:38Z
+doing: Completed twelve inbox dispositions, film/data checks, benchmark repair addendum and three recovered sources; owner metadata follow-up routed.
+updated: 2026-10-04T17:48Z
 ---
 
 ## Notes
