@@ -11,7 +11,7 @@ def validate(value):
  return value
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a4','freshness-a5'],required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a4'],required=True);a=p.parse_args()
  root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],cwd=BASE,text=True).strip());resource.setrlimit(resource.RLIMIT_CORE,(0,0))
  assert re.fullmatch(r'[0-9a-f]{40}',a.commit) and subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()==a.commit
  assert not subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=root).strip()
@@ -26,7 +26,7 @@ def main():
  out=root/a.attempt;assert not out.exists();fd=os.open(str(out)+'.dispatch',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.close(fd)
  data=validate(json.loads(sys.stdin.buffer.read(8193)));env={k:os.environ[k] for k in ['PATH','HOME','USER','LANG'] if k in os.environ};env.update(PYTHONPATH='/usr/local/lib/swarm',SWARM_SOURCE='vishesh/codex-immune',SWARM_MODEL_BASE_URL='https://api.anthropic.com/v1',SWARM_MODEL_CONFIG_FILE=str(BASE/'model-config.json'),SWARM_BUDGET_LEDGER=str(ledger),SWARM_MODEL_API_KEY=data['key'],SWARM_MODEL_WORKSPACE_ID=data['workspace'])
  with (root/(a.attempt+'.log')).open('xb') as log:
-  os.chmod(log.name,0o600);proc=subprocess.Popen([str(root/'.venv/bin/python'),str(BASE/'worker.py'),'--out',str(out),'--receipt',str(root/'receipt-allocation.json'),'--attempt',a.attempt,'--seed','9401' if a.attempt=='freshness-a4' else '9402'],env=env,cwd=root,stdout=log,stderr=log,start_new_session=True)
+  os.chmod(log.name,0o600);proc=subprocess.Popen([str(root/'.venv/bin/python'),str(BASE/'worker.py'),'--out',str(out),'--receipt',str(root/'receipt-allocation.json'),'--attempt',a.attempt,'--seed','9401'],env=env,cwd=root,stdout=log,stderr=log,start_new_session=True)
   data.clear();env.clear()
   try:code=proc.wait(timeout=3600)
   except subprocess.TimeoutExpired:

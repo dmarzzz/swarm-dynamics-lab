@@ -6,7 +6,7 @@ def audit(out):
  out=Path(out);m=json.loads((out/'manifest.json').read_text());summary=json.loads((out/'summary.json').read_text());rows=[json.loads(x) for x in (out/'episodes.jsonl').read_text().splitlines()];events=[json.loads(x) for x in (out/'events.jsonl').read_text().splitlines()]
  key=lambda r:(r['case'],r['arm'],r['seed']);assert collections.Counter(map(key,rows))==collections.Counter(map(key,m['assigned'])) and len(rows)==12
  for r in rows:
-  f,initial=s.fixture(r['case'],r['seed']);assert r['initial']==initial;peer=next(q for q in rows if q['case']==r['case'] and q['arm']!=r['arm']);assert r['advice']==peer['advice'] and s.digest(r['advice'])==r['proposal_hash'];assert len(r['trace'])==4
+  f,initial=s.fixture(r['case'],r['seed']);assert r['initial']==initial;peer=next(q for q in rows if q['case']==r['case'] and q['arm']!=r['arm']);assert r['advice']==peer['advice'] and s.digest(r['advice'])==r['proposal_hash'];assert len(r['trace'])==4;assert r['reviewer_epoch_errors']==sum(a['observed_epoch']!=initial['probe']['epoch'] for a in r['advice'])
   state=initial
   for x in r['trace']:
    o=x['observation'];assert o['cached_probe']==state['probe'] and o['current_epoch']==state['epoch'];assert 'case' not in o and 'live' not in o and 'health_probe' not in o
