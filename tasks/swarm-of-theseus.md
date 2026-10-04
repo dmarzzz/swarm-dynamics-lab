@@ -3,14 +3,17 @@ id: swarm-of-theseus
 type: task
 title: Build and qualify Swarm of Theseus (SOC-24)
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-theseus
 for: vishesh
 created: 2026-10-03
 created_by: vishesh/codex-theseus
 depends_on: []
-topics: [llm-agent-swarms]
+topics:
+- llm-agent-swarms
+claimed_at: 2026-10-04T01:30Z
+updated: 2026-10-04T01:30Z
 ---
 
 ## Goal
