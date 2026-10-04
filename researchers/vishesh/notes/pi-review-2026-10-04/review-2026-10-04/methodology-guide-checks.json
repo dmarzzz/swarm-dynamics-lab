@@ -1,0 +1,82 @@
+{
+  "analytic_population_expected_accuracy": {
+    "naive_global": 0.7871928125000004,
+    "no_communication": 0.7250000000000001,
+    "provenance_global": 0.8421715625000004,
+    "provenance_ring": 0.8009375000000002
+  },
+  "analytic_population_expected_difference": 0.054978749999999965,
+  "counts": {
+    "agent_decisions": 4800,
+    "events": 12480,
+    "outcomes": 960,
+    "paired_worlds": 240,
+    "planned": 960,
+    "scenario_clusters": 60
+  },
+  "independent_all_record_semantic_audit": "pass: every planned unit, truth, agent ID, observation, routing, policy decision, endpoint and terminal count",
+  "json_files_parsed": 15,
+  "package_hashes": {
+    "listed": 30,
+    "mismatches": [],
+    "unlisted": []
+  },
+  "recomputed_results": {
+    "condition_means": {
+      "naive_global": 0.8041666666666667,
+      "no_communication": 0.7333333333333334,
+      "provenance_global": 0.8666666666666667,
+      "provenance_ring": 0.8108333333333333
+    },
+    "mean_paired_difference": 0.0625,
+    "planning_example_only": {
+      "independent_pairs_power": 50,
+      "independent_pairs_precision": 97,
+      "nested_approx_power": 0.8530160017623781,
+      "nested_half_width_95": 0.05210211991700749,
+      "nested_standard_error": 0.026583202716502514
+    },
+    "scenario_cluster_percentile_ci_95": [
+      0.0125,
+      0.1125
+    ]
+  },
+  "relative_links_missing": [],
+  "saved_verify_output": [
+    960,
+    12480
+  ],
+  "scope": "Retained-artifact recomputation and local validator fault probes only; no new experiments or model calls.",
+  "source_hash_mismatches": [],
+  "templates_structural_validation": "pass",
+  "validator_fault_probes": [
+    {
+      "name": "wrong_source_hash",
+      "result": "ACCEPTED_INVALID_COPY"
+    },
+    {
+      "name": "planned_condition_disagrees_with_outcome",
+      "result": "ACCEPTED_INVALID_COPY"
+    },
+    {
+      "name": "evaluation_truth_disagrees_with_initialized_world",
+      "result": "ACCEPTED_INVALID_COPY"
+    },
+    {
+      "name": "all_five_decisions_same_agent_id",
+      "result": "ACCEPTED_INVALID_COPY"
+    },
+    {
+      "name": "failed_outcome_with_wrong_decision_count",
+      "result": "ACCEPTED_INVALID_COPY"
+    }
+  ],
+  "one_resample_edge_probe": {
+    "accepted_config": true,
+    "reported_ci_95": [
+      0.058333333333333334,
+      0.058333333333333334
+    ],
+    "zero_width": true
+  }
+}

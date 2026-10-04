@@ -1,0 +1,575 @@
+{
+  "review_date_utc": "2026-10-04",
+  "scope": "Every original file in agent-experiment-guide; read-only saved-evidence recomputation plus disposable-copy validation probes; no new experimental execution, live model calls or public writes. Lifecycle conceptual documentation subsequently added at user request.",
+  "overall_assessment": "A strong methods scaffold with unusually candid claim boundaries, sound unit/pairing guidance and correctly reported scripted evidence. Highest-value improvements are enforceable registration, actual initialization/context/memory receipts, and semantic validation of retained artifacts, not a larger orchestration framework.",
+  "findings": [
+    {
+      "id": "GUIDE-001",
+      "severity": "P1",
+      "title": "Bring launch instructions and contracts into compliance with required public registration",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/GUIDE.md",
+          "line": 60,
+          "detail": "Original step 7 allowed a local immutable protocol or registry when authorized; no mandatory public-plan registration."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/toy_harness.py",
+          "line": 103,
+          "detail": "run() validates only toy configuration and immediately creates output and schedule; no public-plan/TLDR gate."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 101,
+          "detail": "Default validator launches two complete 960-world executions."
+        },
+        {
+          "path": "agent-experiment-guide/templates/run-config.json",
+          "line": 4,
+          "detail": "Only protocol_sha256 is present; no immutable public URL, condition-specific TLDR or verified registration receipt."
+        }
+      ],
+      "impact": "Following the original documented command would launch unregistered worlds under the current owner requirement. This is a present launch-process gap; the historical demonstration explicitly disclaims LLM preregistration, and the reviewed artifacts do not establish when the owner requirement applied to that execution.",
+      "recommendation": "Before any new Swarm Lab run, publish and verify the readable plan, register its immutable URL and condition-specific question/treatment/comparator/metrics/limitations TLDR, and fail closed through the existing project preflight or equivalent. Separate read-only validation from fresh execution. Keep historical compliance and execution results separate; do not retroactively call a plan preregistered.",
+      "confidence": "high",
+      "status": "documentation partially addressed in this review; executable gate remains absent"
+    },
+    {
+      "id": "GUIDE-002",
+      "severity": "P2",
+      "title": "The default validator does not audit the retained evidence or verify the package/source inventory",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 75,
+          "detail": "main() merely parses *.json files and only calls verify_output for freshly generated temporary directories at lines 103-105. Retained events.jsonl/outcomes.jsonl are not parsed here."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 26,
+          "detail": "verify_output only checks the output_sha256 entries supplied by the manifest; it never checks source_sha256 or requires a complete inventory."
+        },
+        {
+          "path": "agent-experiment-guide/VALIDATION.md",
+          "line": 17,
+          "detail": "Package manifest is described as local integrity checking, but the documented validation command never enforces it."
+        }
+      ],
+      "impact": "Saved evidence or code can diverge while the advertised command still passes its new-run tests. An audit-only command is also needed to avoid treating validation as an unregistered launch. All 30 original inventory entries and five source entries do match in this audit; this finding is a detection gap, not observed corruption.",
+      "recommendation": "Add a read-only mode that verifies retained output, exact manifest membership and every source/package hash, then performs semantic reconciliation. Keep rerun/reproducibility tests as a separate explicit registered execution mode. Disposable-copy probe changing source_sha256 to all zeroes was accepted by the current verifier.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "GUIDE-003",
+      "severity": "P2",
+      "title": "Reconcile the planned cell and terminal ledger against actual outcomes",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 29,
+          "detail": "Only the set of planned run IDs and total outcome count are compared; planned scenario/condition metadata are not joined field by field."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 65,
+          "detail": "Outcome provider usage is checked, but outcome status/decisions are not reconciled with run_end; all required condition cells are not enforced independently of summarize()."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/toy_harness.py",
+          "line": 91,
+          "detail": "completed_runs is len(outcomes), regardless of terminal status if externally supplied outcomes contain failures."
+        }
+      ],
+      "impact": "Ledger mismatches can survive validation and inflate completed denominators. Mutation tests accepted a planned condition changed to an unknown condition and an outcome marked failed with decisions=999 while run_end retained completed/5. Current saved outputs are consistent.",
+      "recommendation": "Construct the expected scenario \u00d7 replicate \u00d7 condition keys from the frozen config; require exactly one unit per key, join planned metadata to outcomes/events, and reconcile terminal status and counts. Count completions by status while keeping failed/unscored assigned units visible.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "GUIDE-004",
+      "severity": "P2",
+      "title": "Bind event semantics and scoring truth to the initialized world",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 55,
+          "detail": "Initialization is checked only by its hash; the reconstructed world truth is not compared with evaluation.truth."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 57,
+          "detail": "Actions are a value list, so five decisions with the same agent_id pass; binary domains, unique agent coverage, event alternation and observation-to-decision binding are not checked."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/validate.py",
+          "line": 66,
+          "detail": "Only no_communication source visibility is checked in saved traces; ring/global topology, source values and policy consistency are not independently validated."
+        },
+        {
+          "path": "agent-experiment-guide/schemas/event.schema.json",
+          "line": 52,
+          "detail": "Event payload is an unconstrained object; semantic invariants therefore need explicit validation."
+        }
+      ],
+      "impact": "A self-consistent but wrong evaluator truth or identity/routing bug can pass the hash and score checks. Rehashing a copy with swapped evaluation truth and coherent changed scores, or all decision agent IDs set to a0, was accepted. These probes target missing invariants, not cryptographic forgery; the retained original traces passed a stronger independent check.",
+      "recommendation": "Compare evaluator truth to the frozen initialized world; require each agent exactly once; validate observed source values and permitted topology; enforce binary actions and event order; independently recompute final endpoints. Keep event hash integrity and scientific semantic validity separate.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "GUIDE-005",
+      "severity": "P2",
+      "title": "A one-resample configuration can emit a zero-width 95 percent interval",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/schemas/toy-config.schema.json",
+          "line": 67,
+          "detail": "bootstrap_samples accepts every integer >=1."
+        },
+        {
+          "path": "agent-experiment-guide/scripts/toy_harness.py",
+          "line": 78,
+          "detail": "The percentile interval indexes one resampled vector without guarding statistical adequacy; at bootstrap_samples=1 both bounds equal the single bootstrap draw."
+        }
+      ],
+      "impact": "The advertised configurable toy can produce a falsely precise interval labeled 95 percent for a valid schema input. The saved 2000-resample configuration is unaffected.",
+      "recommendation": "Prespecify a sensible supported resample count and reject inadequate values for interval reporting, or explicitly disable CIs when too few resamples are requested. Freeze the quantile convention and describe Monte Carlo resolution separately from inferential coverage.",
+      "confidence": "high",
+      "status": "open"
+    },
+    {
+      "id": "GUIDE-006",
+      "severity": "P2",
+      "title": "Complete operational identity with an observed initialization receipt before live use",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/templates/agent-definition.json",
+          "line": 5,
+          "detail": "The template records requested model and policy but has no observed returned model/snapshot record or fully assembled per-agent context."
+        },
+        {
+          "path": "agent-experiment-guide/templates/context-access.json",
+          "line": 21,
+          "detail": "Visibility and retrieval manifests describe allowed access; delivered content, ordering, token truncation and actual permission checks are not recorded."
+        },
+        {
+          "path": "agent-experiment-guide/templates/run-config.json",
+          "line": 13,
+          "detail": "Fresh-world reset is prose; no run-level namespace proof, inherited state receipt or checkpoint/fork dependency record is represented."
+        }
+      ],
+      "impact": "The same template IDs do not establish that each instance received the same intended policy, inputs, tools and memory. This is an acknowledged extension gap in the illustrative package, rather than a claim that the toy already offers production identity guarantees.",
+      "recommendation": "Keep the existing three specifications, add a versioned initialization receipt and ledger extension with loaded hashes, requested/returned model metadata, context assembly, actual delivered observations, memory snapshot/namespace/reset facts, effective permissions, role/order assignments and lifecycle lineage. Distinguish frozen specification, fresh state and repeatable output.",
+      "confidence": "high",
+      "status": "conceptual remedy authored in AGENT-LIFECYCLE.md; implementation remains intentionally absent"
+    },
+    {
+      "id": "GUIDE-007",
+      "severity": "P3",
+      "title": "Correct Co-Scientist reading-depth pagination",
+      "project": "agent-experiment-guide",
+      "evidence": [
+        {
+          "path": "agent-experiment-guide/LITERATURE.md",
+          "line": 29,
+          "detail": "Consulted note calls the supplement 157 pages; the primary arXiv v2 record specifies 157 total pages: 42 main plus 115 supplementary."
+        }
+      ],
+      "impact": "Minor bibliography inaccuracy weakens otherwise good reading-depth transparency. It does not alter the scientific interpretation.",
+      "recommendation": "Replace full 157-page supplement with full paper and 115-page supplement. Supporting primary record: https://arxiv.org/abs/2502.18864v2 .",
+      "confidence": "high",
+      "status": "corrected in LITERATURE.md during the review; original snapshot preserved"
+    }
+  ],
+  "coverage": [
+    {
+      "path": "agent-experiment-guide/CHECKLISTS.md",
+      "review_depth": "fully read",
+      "original_sha256": "8a63dd88a6e584c0656e2884f35cb18e3fcc783ef9da2937f06bb4e3733af9f0",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/GUIDE.md",
+      "review_depth": "fully read",
+      "original_sha256": "04b79555255e71b2fa97bbabf410d3938bdbd4eda5f0564d9dde95948a5f2565",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/HARNESS.md",
+      "review_depth": "fully read",
+      "original_sha256": "e54e7d7555488fb01cc8c573836a54c994b92944d1aef859d9882083cc2ed0c0",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/LITERATURE.md",
+      "review_depth": "fully read",
+      "original_sha256": "043435bf0c4626933fee264a93104c0e0ca77ac1560c58add2d24ff11b09bb26",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/README.md",
+      "review_depth": "fully read",
+      "original_sha256": "d78dc4840196b52b6405d0dfac14dc77fcd941b3f897ec91127f550f43e439db",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/SEARCH-LOG.md",
+      "review_depth": "fully read",
+      "original_sha256": "4817134bb818f448be3f486fe40360b0d3b5f78112641a3551e4afef137f5f0e",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/VALIDATION.md",
+      "review_depth": "fully read",
+      "original_sha256": "6e82ee73ad7971ff4fd4410ce5e7bc4ea60917a4a92735cebb202a6a1b75b1f5",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/PROTOCOL.md",
+      "review_depth": "fully read",
+      "original_sha256": "09287eb40aeafbe4530fe325a0fe1ac984721747ea9daa18eb42eadb7af0862d",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/RESULTS.md",
+      "review_depth": "fully read",
+      "original_sha256": "8401d8effa2becb1b694cfa787e463c349064da60d679778f098f726f5a466cd",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/config.json",
+      "review_depth": "fully read",
+      "original_sha256": "38ba39e0a591631af552c9f6fff4a28cf41b73edbbc0e70fa0ceb3ee744528f1",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/config.resolved.json",
+      "review_depth": "fully parsed and inspected",
+      "original_sha256": "eae9e08fe2097b550596d22c3f48131ab3549b7a49b8c3e8e97b531c184f492d",
+      "note": "Every field parsed and reconciled with saved original config and the generator/analysis."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/events.jsonl",
+      "review_depth": "all records parsed and semantically recomputed",
+      "original_sha256": "7d34d1f1be57c90286f24555c65ec8b5ff392ead966b96c7d4978b03ed994e45",
+      "note": "All 12480 records: hash chains, agent identity coverage, routing, observation contents, policy decisions, true-world scoring and endpoints."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/manifest.json",
+      "review_depth": "fully read",
+      "original_sha256": "2f10e0a5de8345a4e04fd7f006deb02ff9b753a7ddbe6eea988778512ef8eec4",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/outcomes.jsonl",
+      "review_depth": "all records parsed and semantically recomputed",
+      "original_sha256": "958ae4c10222a34a016f38e4390e385270964a0d63f5bd1c8af2ee0e4a2f90de",
+      "note": "All 960 outcomes reconciled with plan, events, initialized truth, decisions, statuses, costs and reported aggregates."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/planned-runs.json",
+      "review_depth": "all records structurally and relationally parsed",
+      "original_sha256": "0a9e346635db1ce73830bfa4b67eb0d4ff5abb8a1c5548ca8f4a05bd39acd415",
+      "note": "All 960 planned cells, uniqueness, condition/scenario/replicate completeness and outcome joins."
+    },
+    {
+      "path": "agent-experiment-guide/examples/collective-sensing/output/summary.json",
+      "review_depth": "fully read",
+      "original_sha256": "bcbb23c3a5f55c98016f38e653a4f71e847711338e4a9fd0c3aaaa7ff775d6e4",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/README.md",
+      "review_depth": "fully read",
+      "original_sha256": "0aecbb8231afd5233fb2988f9af7ba4991268a24ff2267d498bd677e0f37634c",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/agent-definition.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "944bad6460cabb5d277ea12f757c4810e5fd96ba4a26d1fb226ab160864937e2",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/context-access.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "0b53f528f81d15a59611cdadfe641e7ba4242a636d8938cb6e689ddc199931ab",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/event.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "11c110cd16808385cf891d82c11867de2ef1a3456a36e09b07793a874e98c851",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/outcome.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "1d21f2506d16683f3a06d4702c96f1feae91c2a925da824e5f459a9ded5e2d0a",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/run-config.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "2af4bba87ad8df86d9b1c1163b6278cb070878d085563b7eda87492f1a435f22",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/schemas/toy-config.schema.json",
+      "review_depth": "fully read",
+      "original_sha256": "95d982e23ccafefabdb131811db577e0cab3a14c12be593b8901fef8cf9b99c0",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/scripts/contracts.py",
+      "review_depth": "fully read",
+      "original_sha256": "daf5e625d76324ce44bb3e78716f2b3085334e7325216ad3bb339c66f770a013",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/scripts/toy_harness.py",
+      "review_depth": "fully read",
+      "original_sha256": "cd8aac0b13e58c08866d6cfde0c06fc81c8147a1f4c1e2a3aea121050b79d932",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/scripts/validate.py",
+      "review_depth": "fully read",
+      "original_sha256": "e3774941d378d963fdf4cb033c240d60663cf4a56b106de4a588bf4f01edb44a",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/templates/agent-definition.json",
+      "review_depth": "fully read",
+      "original_sha256": "83f4db755d5fff38120c663038deb2cb144095629d428691b83e0fbf06303cf1",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/templates/context-access.json",
+      "review_depth": "fully read",
+      "original_sha256": "c087d769b2f4923202d98696edcb3628420b710fdd9d212825a3de03c2f517ce",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/templates/protocol.md",
+      "review_depth": "fully read",
+      "original_sha256": "5d0e0b4e085712ffe6ff8e4e6bec90063380f608928d657e23af9105e053a0aa",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/templates/run-config.json",
+      "review_depth": "fully read",
+      "original_sha256": "2f84632c577003a766bd688e2ca8863645e1a1f753f548f7e143491aa9e9dd35",
+      "note": "Read completely and assessed for consistency, accuracy and claim scope."
+    },
+    {
+      "path": "agent-experiment-guide/PACKAGE-MANIFEST.json",
+      "review_depth": "fully read and every inventory hash verified",
+      "note": "30 original file entries match; inventory complete; excludes itself and runtime caches as documented."
+    }
+  ],
+  "coverage_counts": {
+    "original_files": 31,
+    "original_manifest_files": 30,
+    "events_semantically_reconciled": 12480,
+    "outcomes_reconciled": 960,
+    "planned_units_reconciled": 960
+  },
+  "positives": [
+    "Clearly distinguishes instrument, subject, simulator and builder; toy, proposal and real LLM evidence are not conflated.",
+    "Correctly identifies 60 scenario clusters, 240 paired worlds, 960 condition executions and 4800 dependent decisions; pairing and nested planning arithmetic are sound.",
+    "Assumed variance components, power and CI illustration are explicitly not pilot measurements; avoids significance-as-equivalence and retrospective power claims.",
+    "Failure denominators, protected evaluators, baseline tuning, cost accounting, contamination and hosted-model nondeterminism are described responsibly.",
+    "Literature is version aware and separates proposals/case studies from causal findings; source reading depth is unusually transparent.",
+    "All 30 original file hashes and all saved source hashes matched; every saved observation/decision/score passed independent semantic reconciliation; original results are intact.",
+    "No third-party runtime or new infrastructure is needed to repair the identified audit gaps."
+  ],
+  "test_results": {
+    "analytic_population_expected_accuracy": {
+      "naive_global": 0.7871928125000004,
+      "no_communication": 0.7250000000000001,
+      "provenance_global": 0.8421715625000004,
+      "provenance_ring": 0.8009375000000002
+    },
+    "analytic_population_expected_difference": 0.054978749999999965,
+    "counts": {
+      "agent_decisions": 4800,
+      "events": 12480,
+      "outcomes": 960,
+      "paired_worlds": 240,
+      "planned": 960,
+      "scenario_clusters": 60
+    },
+    "independent_all_record_semantic_audit": "pass: every planned unit, truth, agent ID, observation, routing, policy decision, endpoint and terminal count",
+    "json_files_parsed": 15,
+    "package_hashes": {
+      "listed": 30,
+      "mismatches": [],
+      "unlisted": []
+    },
+    "recomputed_results": {
+      "condition_means": {
+        "naive_global": 0.8041666666666667,
+        "no_communication": 0.7333333333333334,
+        "provenance_global": 0.8666666666666667,
+        "provenance_ring": 0.8108333333333333
+      },
+      "mean_paired_difference": 0.0625,
+      "planning_example_only": {
+        "independent_pairs_power": 50,
+        "independent_pairs_precision": 97,
+        "nested_approx_power": 0.8530160017623781,
+        "nested_half_width_95": 0.05210211991700749,
+        "nested_standard_error": 0.026583202716502514
+      },
+      "scenario_cluster_percentile_ci_95": [
+        0.0125,
+        0.1125
+      ]
+    },
+    "relative_links_missing": [],
+    "saved_verify_output": [
+      960,
+      12480
+    ],
+    "scope": "Retained-artifact recomputation and local validator fault probes only; no new experiments or model calls.",
+    "source_hash_mismatches": [],
+    "templates_structural_validation": "pass",
+    "validator_fault_probes": [
+      {
+        "name": "wrong_source_hash",
+        "result": "ACCEPTED_INVALID_COPY"
+      },
+      {
+        "name": "planned_condition_disagrees_with_outcome",
+        "result": "ACCEPTED_INVALID_COPY"
+      },
+      {
+        "name": "evaluation_truth_disagrees_with_initialized_world",
+        "result": "ACCEPTED_INVALID_COPY"
+      },
+      {
+        "name": "all_five_decisions_same_agent_id",
+        "result": "ACCEPTED_INVALID_COPY"
+      },
+      {
+        "name": "failed_outcome_with_wrong_decision_count",
+        "result": "ACCEPTED_INVALID_COPY"
+      }
+    ],
+    "one_resample_edge_probe": {
+      "accepted_config": true,
+      "reported_ci_95": [
+        0.058333333333333334,
+        0.058333333333333334
+      ],
+      "zero_width": true
+    }
+  },
+  "external_source_checks": [
+    {
+      "source": "https://arxiv.org/abs/2512.08296v3",
+      "result": "Verified title/version/date and 260 configurations/six benchmarks; qualitative treatment-dependent coordination interpretation supported.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2602.16666v3",
+      "result": "Verified 15 models, 12 metrics/four dimensions and ICML acceptance; earlier-version distinction accurate.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2609.04170v1",
+      "result": "Verified 100-agent case-study and shared exploit/auditing interpretation; governance proposal appropriately not presented as proven causal remedy.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2606.12736v1",
+      "result": "Verified approximately 200 tasks and scope; no material mismatch.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2502.18864v2",
+      "result": "Scientific interpretation supported; supplement pagination wording corrected in finding GUIDE-007.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://www.nature.com/articles/s41586-025-09992-y",
+      "result": "Correction confirms 36 of 40 original successes, four inconclusive, and novelty relative to prediction platform. PDF route failed; publisher HTML succeeded.",
+      "depth": "correction text"
+    },
+    {
+      "source": "https://arxiv.org/abs/2609.11117v1",
+      "result": "150 papers and model-assisted rubric interpretation verified; distinction between correlation and agreement in guide is sound.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2606.01629v4",
+      "result": "Long-form evaluator limitations and EMNLP-main record supported.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://arxiv.org/abs/2604.23178v2",
+      "result": "TMLR journal reference and model-dependent bias/cost interpretation supported.",
+      "depth": "primary metadata and abstract"
+    },
+    {
+      "source": "https://proceedings.mlr.press/v306/puelma-touzel26a.html",
+      "result": "ICML2026/PMLR306 position-paper identity and validation-gap characterization supported.",
+      "depth": "primary proceedings metadata and abstract"
+    }
+  ],
+  "literature_limits": "All 29 local bibliography entries and their interpretations were read. Ten particularly consequential/updatable sources were freshly checked against primary pages; the remaining 19 primary papers and full supplements were not re-read in this audit. No external empirical result was independently reproduced. This is not a systematic literature review.",
+  "lean_research_improvements": [
+    {
+      "proposal": "Turn the scripted example into an oracle-calibrated unit of understanding",
+      "details": "The population effect can be computed analytically: for q uniform .55-.90, unique-source majority has expected accuracy .8421715625, weighted naive majority .7871928125, a difference .05497875. The observed .0625 and CI are consistent. Present this as a mathematical calibration of programmed rules, not an empirical discovery. No sampled experiment is necessary."
+    },
+    {
+      "proposal": "Use an interaction only where the question requires interaction",
+      "details": "Both global policies receive identical packets and all five scripted agents make the same decision, so those five outputs are redundant within an episode. For a prompt-only provenance question, one classifier per world plus a budget-matched baseline is leaner. To make a swarm claim, introduce prespecified private information and agent-generated bounded communication, then distinguish communication effects from evidence reach, output sampling and compute."
+    },
+    {
+      "proposal": "Add a duplicate-count interaction as the first mechanism test",
+      "details": "Use no duplicates as a negative control, duplicate evidence as treatment context, and provenance instruction as the manipulation. The instruction \u00d7 duplication interaction is stronger mechanism evidence than a main effect alone; control source identity/order and report label corruption as a separate robustness extension."
+    },
+    {
+      "proposal": "Treat scenario breadth as a claim boundary",
+      "details": "The current 60 scenarios vary one latent q; they do not span 60 different reasoning task families. Report sensor-quality clusters exactly, add correlated and unequal-quality sensors only as declared extensions, and reserve a genuinely held-out task family before claiming transfer to evidence synthesis."
+    },
+    {
+      "proposal": "Keep runbooks short by separating normative design from machine checks",
+      "details": "Reuse the three specs; attach one initialization receipt and one actual run ledger. AGENT-LIFECYCLE.md supplies the conceptual contract without a new framework. Add production code only for invariants needed by the next registered experiment."
+    },
+    {
+      "proposal": "Improve research communication with two figures and a decision table",
+      "details": "One source-flow diagram should show five unique sources, duplicated source 0 and condition visibility; one paired scenario-effect plot should show the distribution and interval. Label SCRIPTED TOY in the figure itself. Put mechanism hypothesis, falsifying observation and admissible conclusion in a compact table rather than adding more generic checklists."
+    }
+  ],
+  "deliverables": {
+    "audit_script": "review-2026-10-04/audit_methodology_guide.py",
+    "machine_check_results": "review-2026-10-04/methodology-guide-checks.json",
+    "conceptual_runbook": "agent-experiment-guide/AGENT-LIFECYCLE.md"
+  },
+  "amendments": "README/GUIDE/HARNESS crosslinks and public-plan wording were updated during this review; original hash inventory verified before edits. Parent will preserve original snapshot and refresh current package inventory. Historical run artifacts unchanged.",
+  "lifecycle_quality_pass": {
+    "date_utc": "2026-10-04",
+    "checks": [
+      "Hosted output determinism explicitly disclaimed; requested/returned identity and hidden-provider limitations stated.",
+      "Unused subsystems marked not applicable; one launcher and sidecar suffices; no mandatory distributed services.",
+      "Existing templates vs recommended receipts/event extensions explicitly separated; unsupported schema keys prohibited.",
+      "Corrected potential self-referential hash wording: definition ID stays in existing artifact; its hash belongs in manifest/receipt.",
+      "Clarified cloned instance identity does not imply independent initialization."
+    ],
+    "external_links_pending": [
+      "agent-experiment-guide/AGENT-LIFECYCLE-RESEARCH.md",
+      "agent-experiment-guide/research/agent-lifecycle-sources.json"
+    ]
+  }
+}

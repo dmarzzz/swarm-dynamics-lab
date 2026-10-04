@@ -3,8 +3,8 @@ agent: dmarz/sybil-specialists
 tool: codex
 state: working
 task: sybil-followups
-doing: "Building parallel verification-budget and newcomer-trust API studies; independent review waived by owner, engineering gates retained"
-updated: 2026-10-04T03:39Z
+doing: "Both fleet scripted qualifications verified; committing API qualification launch checkpoint"
+updated: 2026-10-04T03:51Z
 ---
 
 ## Notes

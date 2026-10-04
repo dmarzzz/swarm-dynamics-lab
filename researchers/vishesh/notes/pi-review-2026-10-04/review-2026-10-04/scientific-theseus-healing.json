@@ -1,0 +1,384 @@
+[
+  {
+    "id": "SCI-THESEUS-V1",
+    "name": "Swarm of Theseus v1: supplied-procedure transmission",
+    "evidence_class": "Completed exploratory model experiment; traces independently recomputed, without independent laboratory replication.",
+    "decision": "Retain as an instrument and boundary on stronger claims. Redirect scientific effort to selective continuity.",
+    "interest": {
+      "judgment": "Modest scientific interest; good engineering feasibility evidence.",
+      "why": "Procedure accuracy and arbitrary phrase retention are separated, and qualification failures preserved. However, founders receive the answer; copying a short record solves the task.",
+      "novelty_boundary": "This demonstrates neither spontaneous acquisition nor a swarm advantage. Memory usefulness, replacement and multigenerational transmission alone establish no novelty."
+    },
+    "robustness": {
+      "supported": "All 36 S1 trajectories completed. Both and notes each achieved 100% versus 52.08% without inheritance; both-minus-neither was +47.92 percentage points. All 216 main-study frames reconcile with recorded requests/responses. Mentoring alone averaged 91.67%; adding it to notes produced no observed task gain.",
+      "unsupported": "Generalization, emergence, beneficial turnover, mentoring superiority, cumulative improvement and identity preservation. The bootstrap interval is correctly computed but poorly calibrated by two worlds per scenario.",
+      "unit": "Six paired world IDs; agents, steps and cases are repeated measurements.",
+      "independent_variation": "One model snapshot and two seeds per scenario, largely counterbalancing two mappings. There are only two substantive task mechanisms because seed bank and repair dock share XOR structure.",
+      "assessment": "The numerical result is reproducible; inference is narrow. More traces from this construction would add precision without separating explanations."
+    },
+    "scenario_quality": {
+      "size": "Three agents are sufficient to test a handoff instrument; four binary cases per step are insufficient for structural transfer.",
+      "challenge": "Notes and verbatim arms are at ceiling; the correct rule is short and supplied.",
+      "complexity": "Hard-coded majority aggregation of independent answers provides little need for coordination or complementary roles.",
+      "realism": "Recognizable stories wrap highly artificial computations. The arbitrary receipt phrase has no operational consequence.",
+      "definition": "Actions and scoring are clear. Rename culture/identity outcomes to procedure/phrase retention."
+    },
+    "scenarios": [
+      {
+        "name": "Seed bank",
+        "assessment": "A valid memory-transmission positive control. Every solve repeats the four possible binary inputs; new IDs do not create new reasoning problems.",
+        "improvement": "Keep as a cheap regression fixture; use acquired multistep procedures and withheld combinations in the next scientific task."
+      },
+      {
+        "name": "Observatory",
+        "assessment": "Most interesting v1 mechanism: duplicated reports must not outweigh independent roots. Yet source IDs scaffold the solution, and two world seeds cannot characterize provenance reasoning.",
+        "improvement": "Vary duplicate concentration, conflicting root reports and incomplete provenance separately; retain an exact source-aware oracle."
+      },
+      {
+        "name": "Repair dock",
+        "assessment": "Measures obeying an explicit reversal bulletin despite old memory. It does not measure detecting change or selectively revising a practice.",
+        "improvement": "Replace the full new mapping with observations that identify one changed component while another remains valid."
+      },
+      {
+        "name": "Inheritance conditions",
+        "assessment": "Neither removes task-specific information; notes/both/verbatim reach ceiling; mentor-only underperforms on observatory. Retained founders lose phrases too. All 36 mentoring parent edges originate from founders, so mentoring lacks descendant-to-descendant transmission.",
+        "improvement": "Freeze common founder checkpoints; compare equal-information written and dialogic handoffs only after a second complete replacement wave becomes measurable."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "No inheritance, retained founders and verbatim competence controls",
+        "Disjoint qualification and complete failure accounting",
+        "Task accuracy separated from phrase retention"
+      ],
+      "missing": [
+        "Single controller with the same information and budget",
+        "Exact archive transplant and frozen-versus-updated archive",
+        "Identical-evidence probes and second-wave teaching"
+      ],
+      "confounds": [
+        "Information availability differs across inheritance conditions",
+        "Both receives more inherited bytes than either channel",
+        "Explicit adaptation bulletin supplies the answer",
+        "Temperature zero and fixed model name do not guarantee identical stochastic realizations"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Task information",
+        "current": "Founders receive a complete short rule",
+        "priority": "Essential redesign",
+        "proposed_variation": "Acquired versus supplied procedure, with held-out combinations",
+        "reason": "Separates learning/transmission from copying an answer."
+      },
+      {
+        "parameter": "Generational depth",
+        "current": "One full replacement wave",
+        "priority": "Essential redesign",
+        "proposed_variation": "Two complete waves with descendant teachers",
+        "reason": "Tests transmission of acquired corrections beyond direct founder handoff."
+      },
+      {
+        "parameter": "Memory and model",
+        "current": "600-character notebook, one model",
+        "priority": "Later stress tests",
+        "proposed_variation": "A small memory bottleneck sweep and separately qualified second model",
+        "reason": "Map failure boundaries after the new task discriminates mechanisms; avoid expanding the ceiling benchmark."
+      }
+    ],
+    "next_study": {
+      "question": "Does an updateable inherited practice preserve valid checks while retiring one obsolete check after all founders disappear?",
+      "primary_contrast": "Move to the v2 rolling-versus-frozen archive interaction; do not repeat the v1 both-versus-neither headline.",
+      "endpoint": "Post-second-wave task utility plus separate valid-check retention and obsolete-check retirement.",
+      "unit": "Independently acquired founder lineage in an independently generated world.",
+      "design": "Qualify one consequential task, then branch fixed founder checkpoints into stable/changed and rolling/frozen continuations. Add limited explanatory baselines from v2.",
+      "go_no_go": "Proceed only if copying, forgetting and selective updating produce distinguishable outcomes on disjoint development worlds. Stop if one supplied sentence or all qualified conditions saturate the task."
+    },
+    "sources": [
+      {
+        "path": "swarm-of-theseus/RESULTS.md",
+        "detail": "Current interpretation update, S1 results and qualification history; read 2026-10-04."
+      },
+      {
+        "path": "swarm-of-theseus/redesign/REVIEW.md",
+        "detail": "Latest mechanistic review, including founder-only mentoring and explicit bulletins."
+      },
+      {
+        "path": "review-2026-10-04/evidence-projects-checks.json",
+        "detail": "Audit recomputation of retained frames, calls, notebooks and outcomes."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py",
+        "detail": "Executed external source, inspected and saved under /tmp/evidence-projects-source."
+      },
+      {
+        "path": "codex://threads/01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+        "detail": "Second-source check, 2026-10-04: task title Experiment - Swarm of Theseus; read_thread returned all three completed turns. Recent final reports and selected document/publication records agree with the reviewed v1 results and v2 amendment. Task prose is corroboration, not independent empirical evidence; no new runs or material reversal found."
+      }
+    ]
+  },
+  {
+    "id": "SCI-THESEUS-V2",
+    "name": "Swarm of Theseus v2: selective continuity proposal",
+    "evidence_class": "Unrun, unqualified design proposal; latest SOCIAL-GROUNDING amendment explicitly inspected.",
+    "decision": "Develop one release-crew instrument. The stronger conceptual redesign needs an executable flagship specification before qualification.",
+    "interest": {
+      "judgment": "Potentially interesting and practically useful if it identifies a tradeoff or failure boundary beyond ordinary handoff benefits.",
+      "why": "Preserving valid precautions while discarding obsolete ones requires fidelity and adaptation. Archive transplantation, repeated turnover and independent scoring can separate explanations.",
+      "novelty_boundary": "The exact contribution remains unverified against close memory, succession, coding and cultural-evolution work. Practitioner/X discussions motivate problems and controls; they do not validate effects, prevalence or novelty."
+    },
+    "robustness": {
+      "supported": "The design declares falsification, intention-to-treat acquisition failures, lineage units, stable/changed branches and resource-matched baselines.",
+      "unsupported": "No task is qualified; no convention, selective continuity effect or swarm advantage has been observed.",
+      "unit": "Founder lineage/world. Branches remain paired; descendants/checkpoints are repeated measurements.",
+      "independent_variation": "Prospective only. Vary relevant failure mechanisms, not labels or repository names.",
+      "assessment": "Ready for specification review, not a paid sweep. DESIGN still specifies harbor actions and reward beneath an amendment promoting release crews; this is a launch-blocking specification gap, not an empirical failure."
+    },
+    "scenario_quality": {
+      "size": "A small repository and three complementary roles can be sufficient; complexity should come from dependencies and hidden acceptance failures, not agent count.",
+      "challenge": "Require superficial successes that violate an immutable contract, and sufficient feedback to discover the correction without revealing it.",
+      "complexity": "Log checkpoint production, retrieval and behavioral application separately. Code, tests and environment state are additional inheritance channels.",
+      "realism": "Release handoffs have the strongest practical grounding; the incident task adds delayed rare feedback. Both still require explicit synthetic scope.",
+      "definition": "Freeze transition/action rules, horizons, archive access, interrupted-session semantics, evaluator tests, utility weights and numeric noninferiority margins. The current draft intentionally leaves these open."
+    },
+    "scenarios": [
+      {
+        "name": "Release crew: revised flagship",
+        "assessment": "A strong candidate if planner, implementer and verifier must acquire a consequential checking practice. A coding task with a supplied checklist would largely retest ordinary context management.",
+        "improvement": "Use two separable contract checks: one remains necessary, one becomes obsolete. Freeze evaluator-only acceptance tests; transplant identical code/test snapshots when isolating archive effects."
+      },
+      {
+        "name": "Incident guild/night watch",
+        "assessment": "Scientifically distinct because prevention costs and long quiet intervals can select against a useful rare precaution. Raw success rate would hide the important failure.",
+        "improvement": "Predefine ordinary/rare event strata, fixed risk weights and false-alarm costs. Include both surviving and obsolete precautions; show stratum-specific losses."
+      },
+      {
+        "name": "Model/runtime migration",
+        "assessment": "Useful cross-cutting factor, not a third scenario. A receiving model's capability loss can masquerade as transmission failure.",
+        "improvement": "Defer until one task works; use A-to-A/B-to-B and reciprocal migration, separately qualify recipients, and change runtime in a later comparison holding model fixed."
+      },
+      {
+        "name": "Harbor extension",
+        "assessment": "Clear simultaneous coordination and equivalent conventions are useful controls, but it is no longer the flagship despite most executable detail remaining here.",
+        "improvement": "Keep as a later coordination control; verify multiple viable conventions and prevent deterministic environment logic from solving coordination for actors."
+      },
+      {
+        "name": "Glassmaking extension",
+        "assessment": "Withheld stage combinations and broken shortcuts can test causal transfer, but acquisition and experiment selection introduce additional mechanisms.",
+        "improvement": "Defer; specify observationally ambiguous recipes that can be resolved by budgeted interventions before claiming causal learning."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Rolling and frozen archive, retained members and no inheritance",
+        "Fresh-team archive transplant and single controller",
+        "Identical-evidence probes, stable continuation and independent evaluator"
+      ],
+      "missing": [
+        "Concrete release-task transition table and scoring implementation",
+        "Reference checklist ceiling for both models/tasks when applicable",
+        "Exact artifact-state matching and receipt of every accessible memory channel"
+      ],
+      "confounds": [
+        "Generated code/tests can transmit the solution outside notes",
+        "Live actions change later observations",
+        "Interruptions change archive availability, not only recipient ability",
+        "Budget equality does not imply equal information or model capability"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Archive updating × environmental change",
+        "current": "Proposed rolling/frozen and stable/changed branches",
+        "priority": "Essential primary axes",
+        "proposed_variation": "Two by two from each founder checkpoint",
+        "reason": "Identifies selective updating rather than simple memory benefit."
+      },
+      {
+        "parameter": "Turnover and task acquisition",
+        "current": "Two waves proposed; horizon unset",
+        "priority": "Essential fixed design choices",
+        "proposed_variation": "Fix acquisition exposure and two complete waves; retain failures",
+        "reason": "Prevents favorable-lineage selection and tests correction transmission."
+      },
+      {
+        "parameter": "Memory reliability, migration and scale",
+        "current": "Interrupted, contradictory and model-change ideas",
+        "priority": "Later sequential stress tests",
+        "proposed_variation": "One interruption or contradiction axis first; migration only after qualification",
+        "reason": "Avoid a large factorial whose failures cannot be interpreted."
+      }
+    ],
+    "next_study": {
+      "question": "Does rolling inheritance improve adaptation without sacrificing stable competence or the still-valid check?",
+      "primary_contrast": "(Rolling minus frozen in changed worlds) minus (rolling minus frozen in stable worlds), after wave two.",
+      "endpoint": "Frozen task utility, jointly constrained by preregistered stable-performance and valid-check noninferiority margins; report raw failure types.",
+      "unit": "Paired independent founder lineages/worlds.",
+      "design": "First validate the release-task scorer with copying, forgetting and selective-update reference policies. Then use a small fixed exploratory lineage batch with four primary branches and limited transplant/single-controller diagnostic branches; size a separate replication for a declared meaningful effect.",
+      "go_no_go": "Launch only after the release specification replaces the stale harbor-specific primary definitions and numeric gates are public. No special swarm claim if the single controller matches; no lineage-specific culture claim if acquisition yields only a common model default."
+    },
+    "sources": [
+      {
+        "path": "swarm-of-theseus/redesign/SOCIAL-GROUNDING.md",
+        "detail": "Latest release/incident amendment, migration controls and source caveats; read in full 2026-10-04."
+      },
+      {
+        "path": "swarm-of-theseus/redesign/DESIGN.md",
+        "detail": "Latest amendment, harbor protocol, estimand, controls and unresolved gates; read in full."
+      },
+      {
+        "path": "swarm-of-theseus/redesign/REVIEW-PLAN.md",
+        "detail": "Review/redesign scope; no new experiment or retrospective preregistration."
+      },
+      {
+        "path": "codex://threads/01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+        "detail": "Second-source check, 2026-10-04: task title Experiment - Swarm of Theseus; read_thread returned all three completed turns. Recent final reports and selected document/publication records agree with the reviewed v1 results and v2 amendment. Task prose is corroboration, not independent empirical evidence; no new runs or material reversal found."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/b655b4f72afddccfebc5457b11d45fd5bca97832/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md",
+        "detail": "Second-source checkout /private/tmp/swarm-theseus: file bytes match both this pinned commit and the previously reviewed local export. No newer task specification changes the assessment."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/b655b4f72afddccfebc5457b11d45fd5bca97832/researchers/vishesh/notes/swarm-of-theseus/redesign/SOCIAL-GROUNDING.md",
+        "detail": "Second-source checkout /private/tmp/swarm-theseus: file bytes match both this pinned commit and the previously reviewed local export. No newer task specification changes the assessment."
+      }
+    ]
+  },
+  {
+    "id": "SCI-HEALING",
+    "name": "Healing Helping Hands: extraction and evidence-repair pilots",
+    "evidence_class": "Completed deterministic mechanism experiments plus semantic model qualification and a successful Jev reference pilot; requested Qwen/heterogeneous arms remain unexecuted.",
+    "decision": "Retain as an audited systems demonstration. Advance toward constrained, error-bearing repair; increasing agent count is unnecessary.",
+    "interest": {
+      "judgment": "Useful mechanistic separation, but the positive withdrawal result is largely expected from programmed tombstone dissemination.",
+      "why": "Separating extraction, provenance, invalidation and memory repair makes failures diagnosable. The next interesting result is where repair fails or creates costs.",
+      "novelty_boundary": "Trusted invalidation propagation is not a newly learned swarm capability. Perfect template classification followed by deterministic set exchange cannot establish heterogeneous reasoning or real-paper evidence quality."
+    },
+    "robustness": {
+      "supported": "Pilot03 contains all 180 assignments: 72 complete and 108 explicitly not-run. All 72 completed worlds replay exactly, including 1,728 frames and event snapshots. Jev matched exact labels on all 600 pilot reports after fresh 60/60 qualification. Combined-event notice propagation reduced integrated atlas error by 28.095 percentage points on average, range 25.000–30.357 across three seeds.",
+      "unsupported": "Qwen competence, attachment benefit, heterogeneous-swarm benefit, robustness to realistic extraction errors, forged withdrawals or autonomous scientific judgment.",
+      "unit": "Three corpus seeds; policy/event branches share extraction tapes. Nodes, rounds, votes and model/exact duplicates are dependent.",
+      "independent_variation": "Three small corpora and narrow qualification phrases. Jev-exact equality means 72 trajectories are not 72 independent semantic realizations.",
+      "assessment": "Strong replay/provenance evidence for this mechanism, weak evidence for broader capability. Earlier scattered erasure was ineffective after redundant spreading; pilot03 repairs manipulation validity but damage still recovers quickly. A post-hoc always-UNCERTAIN predictor scores 75%, 65%, 50% on final combined worlds, versus evidence-only 65%, 65%, 70%; these values independently reconcile. Class imbalance makes accuracy alone misleading."
+    },
+    "scenario_quality": {
+      "size": "200 scouts look substantial, but they serve 20 claims with ten redundant curators each; there are 100 source roots and two copies per root.",
+      "challenge": "Unlimited deterministic exchange and trusted notices make long-run convergence easy. The contiguous erasure creates measurable damage, but first-exchange atlas accuracy is already 95%.",
+      "complexity": "Each scout makes one semantic call, then follows programmed dynamics for 24 rounds; no repeated deliberation, active reading or costly source selection.",
+      "realism": "Fictional reports omit evidence strength, methods and uncertain withdrawals. Gold means surviving-source consensus, not scientific truth.",
+      "definition": "Policies and paired counterfactuals are clear. Report event-before-exchange and recovery indexing separately: recovery_rounds=0 can mean the first exchange already crosses the threshold, not zero repair work."
+    },
+    "scenarios": [
+      {
+        "name": "No event",
+        "assessment": "Necessary competence/convergence baseline and cost control; it is not evidence of healing.",
+        "improvement": "Retain under every resource limit; expose communication cost and false confidence alongside accuracy."
+      },
+      {
+        "name": "Withdrawal only",
+        "assessment": "Cleanest primary mechanism contrast: identical trusted notices stay local or propagate. The causal effect is valid but designed into the protocol.",
+        "improvement": "Test bounded delivery and source loss before introducing uncertain or forged notices as a separate later study."
+      },
+      {
+        "name": "Erasure only",
+        "assessment": "Pilot03 erases a 5×8 block: 40 empty memories, event atlas accuracy 85%, coverage 84%; first exchange reaches 95% atlas accuracy. Mean integrated error increment is only 0.357 percentage points.",
+        "improvement": "Select a development damage/message regime with sustained measurable impairment; vary bottleneck geometry before simply increasing population."
+      },
+      {
+        "name": "Combined event",
+        "assessment": "Good composition test with common tapes, recipients and erased block. Its notice benefit matches withdrawal-only here, suggesting limited interaction at this damage level.",
+        "improvement": "Predefine a combined-minus-component interaction; test whether damage interrupts the only surviving notice path."
+      },
+      {
+        "name": "Model qualifications and diagnostics",
+        "assessment": "Qwen repeatedly failed class-specific gates; Laya passed the first screen then failed a revised one. Preserving these outcomes is good practice. Jev succeeds on a narrow template family, not a broad benchmark.",
+        "improvement": "Use disjoint semantic constructions with negation, absent measurements and outcome mismatch; score per-class errors and matched fixtures, not a model ranking across different screens."
+      },
+      {
+        "name": "Qwen+Qwen and Qwen+Laya attachments",
+        "assessment": "Unexecuted because the base Qwen failed. Blinding prevents seeing the first answer but does not make errors independent. Only 20/200 positions receive a second head; disagreement-to-UNCERTAIN changes a substantive three-class prediction, rather than providing a separate abstention action.",
+        "improvement": "Qualify each head separately, hold reports/positions fixed, then compare the full three-class confusion matrix, false confidence, error correlation and total cost. Define a distinct abstention rule before using selective-risk/coverage metrics."
+      }
+    ],
+    "controls": {
+      "retain": [
+        "Exact extraction, no sharing, evidence-only and evidence-plus-withdrawals",
+        "All four events with shared tapes and event recipients",
+        "Pre-exchange manipulation snapshot and failed/not-run assignments",
+        "Always-UNCERTAIN class-prediction baseline, labeled post-hoc; report class-specific accuracy. This is not an always-abstain policy."
+      ],
+      "missing": [
+        "Matched communication/memory budgets",
+        "Controlled semantic-error tapes",
+        "Centralized evidence ledger with comparable information access"
+      ],
+      "confounds": [
+        "Notice sharing adds information and traffic simultaneously",
+        "Nominal scout count overstates semantic independence",
+        "Converting disagreements to the valid UNCERTAIN class changes class prevalence; it must not be mislabeled as refusal or no-answer.",
+        "Changing erasure geometry across pilots prevents treating pilots as direct replications"
+      ]
+    },
+    "parameters": [
+      {
+        "parameter": "Communication bottleneck and damage",
+        "current": "Full neighbor exchange; 20% contiguous erasure",
+        "priority": "Essential next mechanism test",
+        "proposed_variation": "Fix a bounded per-edge record budget and choose one calibrated damaging block; later vary topology",
+        "reason": "Creates competition between fresh evidence and corrective notices."
+      },
+      {
+        "parameter": "Extraction errors",
+        "current": "Jev equals exact on 600 reports",
+        "priority": "Essential robustness axis",
+        "proposed_variation": "Exact versus a frozen, explicitly engineered confusion tape",
+        "reason": "Tests whether propagation amplifies error; engineered noise must not be presented as observed model behavior."
+      },
+      {
+        "parameter": "Notice trust, heterogeneity and scale",
+        "current": "Authenticated notices; no qualified mixed-head arm",
+        "priority": "Later separate studies",
+        "proposed_variation": "Uncertain invalidation, qualified head pairing, then network scale",
+        "reason": "Each changes the scientific question; a simultaneous sweep would be difficult to explain."
+      }
+    ],
+    "next_study": {
+      "question": "Under constrained communication, does prioritizing withdrawal information improve repair when some extracted evidence is wrong?",
+      "primary_contrast": "Evidence-plus-withdrawals versus evidence-only at the same transmitted-record budget in a fixed combined-event regime.",
+      "endpoint": "Integrated post-event atlas error; co-report stale citations, false confidence, per-class errors, evidence coverage and transmitted records. Report selective coverage only if a separate abstention rule is explicitly introduced.",
+      "unit": "Paired independently generated corpora with frozen extraction tapes.",
+      "design": "Four cells per corpus: two policies by exact/controlled-error tape, plus a matched no-event diagnostic. Calibrate impairment on development corpora, freeze the mechanism and use fresh corpora. This first study needs no repeated language calls; broader model extraction is a separate qualification problem.",
+      "go_no_go": "Proceed only when the event has a prespecified measurable impact and all policies obey equal budgets. If ordinary centralized reconciliation matches performance at lower cost, report that engineering result; do not infer an emergent swarm advantage."
+    },
+    "sources": [
+      {
+        "path": "review-2026-10-04/addendum-healing.json",
+        "detail": "Complete pilot03 audit supersedes the partial-export conclusion; packaging/renderer defects remain."
+      },
+      {
+        "path": "review-2026-10-04/addendum-healing-checks.json",
+        "detail": "Assignment accounting, calls, replay equality, exact/Jev equality and event/paired metrics."
+      },
+      {
+        "path": "review-2026-10-04/evidence-projects-review.json",
+        "detail": "Earlier qualification failures, diagnostics, weak scattered-erasure manipulation and lifecycle review."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/46678b2b99936383d01b268075e0ae2cf8b405fc/researchers/vishesh/notes/healing-helping-hands/reviews/pilot-03-pre.md",
+        "detail": "Pinned pilot03 protocol; saved under /tmp/healing-addendum-source and reread."
+      },
+      {
+        "path": "codex://threads/01a10454-dfe7-7793-87de-f7edb762ee6e",
+        "detail": "Second-source check, 2026-10-04: task title Experiment - Healing Helping Hands; reviewed four latest completed turns, with older turns still available and not paginated in this bounded check. Latest final report concerns the already audited pilot03, not a new experiment. Publication/test claims are author reports unless separately checked in the audit."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/3e242058d727b50d6bdcaedf3cd457a5554c6b2b/researchers/vishesh/notes/healing-helping-hands/ASSESSMENT.md",
+        "detail": "Read complete original assessment from /private/tmp/hhh-reviewed/swarm-lab and verified byte equality to this commit. It corroborates the completed pilot and adds a clearly post-hoc always-uncertain baseline, independently recomputed here from frozen final gold labels."
+      },
+      {
+        "path": "https://github.com/dmarzzz/swarm-lab/blob/c78b42e2ac35cfdac105cd5134d1695b7fdb01fd/researchers/vishesh/notes/healing-helping-hands/PUBLICATION-AUDIT.md",
+        "detail": "Read complete final publication audit in the original checkout. This records existing-world replay/publication and resource shutdown, not new scientific evidence; public deployment and 22-test claims were not independently rerun in this bounded check."
+      }
+    ]
+  }
+]

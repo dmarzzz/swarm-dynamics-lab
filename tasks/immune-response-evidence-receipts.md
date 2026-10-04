@@ -24,3 +24,7 @@ Freeze and run a bounded evidence-checking diagnostic on the dedicated Immune Re
 - Paired reviewer outputs and explicit factual claims are audited without hidden truth.
 - Both recovery and healthy preservation are assessed; all outcomes and visual replays are retained.
 - Report practical limits, issue dispositions and exact costs.
+
+## Coverage note
+
+Design and offline audit published. Native run interrupted after user identified wrong DigitalOcean account. Workers stopped, all evidence and persistent budget backed up; scoped deletion plan prepared. Resume requires Dmarz-account provisioning and durable per-call usage recording. See researchers/vishesh/notes/immune-response-v3/evidence-study/reviews/receipt-a2-post.md.

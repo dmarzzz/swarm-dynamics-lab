@@ -1,0 +1,444 @@
+{
+  "theseus": {
+    "S0-a2": {
+      "assigned": 12,
+      "completed": 8,
+      "frames_recomputed": 61,
+      "requests": 257,
+      "responses": 253,
+      "late_preflights": 0,
+      "usage": {
+        "calls": 257,
+        "actual_usd": 0.46082700000000004,
+        "input_tokens": 149887,
+        "output_tokens": 62188,
+        "usage_missing": 0
+      },
+      "qualification": false
+    },
+    "S0-a3": {
+      "assigned": 12,
+      "completed": 12,
+      "frames_recomputed": 72,
+      "requests": 288,
+      "responses": 288,
+      "late_preflights": 0,
+      "usage": {
+        "calls": 288,
+        "actual_usd": 0.456434,
+        "input_tokens": 213939,
+        "output_tokens": 48499,
+        "usage_missing": 0
+      },
+      "qualification": false
+    },
+    "S0-a4": {
+      "assigned": 12,
+      "completed": 12,
+      "frames_recomputed": 72,
+      "requests": 288,
+      "responses": 288,
+      "late_preflights": 0,
+      "usage": {
+        "calls": 288,
+        "actual_usd": 0.619466,
+        "input_tokens": 236081,
+        "output_tokens": 76677,
+        "usage_missing": 0
+      },
+      "qualification": true
+    },
+    "S1-a1": {
+      "assigned": 36,
+      "completed": 36,
+      "frames_recomputed": 216,
+      "requests": 864,
+      "responses": 864,
+      "late_preflights": 0,
+      "usage": {
+        "calls": 864,
+        "actual_usd": 1.896231,
+        "input_tokens": 705496,
+        "output_tokens": 238147,
+        "usage_missing": 0
+      },
+      "qualification": true
+    },
+    "all_individual_labels_checked": 5052
+  },
+  "healing": {
+    "diagnostic-03": {
+      "raw_world_files": 0,
+      "statuses": {},
+      "frames_checked": 0,
+      "completed_summary_missing_raw": [],
+      "calls_started": 54,
+      "calls_terminal": 54,
+      "qualification": {
+        "neutral": {
+          "correct": 16,
+          "assigned": 18,
+          "per_label_correct": {
+            "SUPPORT": 6,
+            "REFUTE": 4,
+            "UNCERTAIN": 6
+          },
+          "status": false
+        },
+        "thinking": {
+          "correct": 15,
+          "assigned": 18,
+          "per_label_correct": {
+            "SUPPORT": 6,
+            "REFUTE": 6,
+            "UNCERTAIN": 3
+          },
+          "status": false
+        },
+        "laya-explicit": {
+          "correct": 14,
+          "assigned": 18,
+          "per_label_correct": {
+            "SUPPORT": 6,
+            "REFUTE": 5,
+            "UNCERTAIN": 3
+          },
+          "status": false
+        }
+      },
+      "manifest_present": true,
+      "plan_receipt_present": true
+    },
+    "diagnostic-04": {
+      "raw_world_files": 0,
+      "statuses": {},
+      "frames_checked": 0,
+      "completed_summary_missing_raw": [],
+      "calls_started": 36,
+      "calls_terminal": 36,
+      "qualification": {
+        "report-only": {
+          "correct": 12,
+          "assigned": 18,
+          "per_label_correct": {
+            "SUPPORT": 4,
+            "REFUTE": 2,
+            "UNCERTAIN": 6
+          },
+          "status": false
+        },
+        "laya-report-only": {
+          "correct": 16,
+          "assigned": 18,
+          "per_label_correct": {
+            "SUPPORT": 6,
+            "REFUTE": 6,
+            "UNCERTAIN": 4
+          },
+          "status": false
+        }
+      },
+      "manifest_present": true,
+      "plan_receipt_present": true
+    },
+    "jev-qualification-01": {
+      "raw_world_files": 0,
+      "statuses": {},
+      "frames_checked": 0,
+      "completed_summary_missing_raw": [],
+      "calls_started": 60,
+      "calls_terminal": 60,
+      "qualification": {
+        "jev": {
+          "correct": 60,
+          "assigned": 60,
+          "per_label_correct": {
+            "REFUTE": 20,
+            "SUPPORT": 20,
+            "UNCERTAIN": 20
+          },
+          "status": "passed"
+        }
+      },
+      "manifest_present": true,
+      "plan_receipt_present": true
+    },
+    "pilot-01": {
+      "raw_world_files": 144,
+      "statuses": {
+        "not_run": 108,
+        "completed": 36
+      },
+      "frames_checked": 864,
+      "completed_summary_missing_raw": [],
+      "calls_started": 60,
+      "calls_terminal": 60,
+      "qualification": {},
+      "manifest_present": true,
+      "plan_receipt_present": true
+    },
+    "pilot-02": {
+      "raw_world_files": 144,
+      "statuses": {
+        "not_run": 108,
+        "completed": 36
+      },
+      "frames_checked": 864,
+      "completed_summary_missing_raw": [],
+      "calls_started": 120,
+      "calls_terminal": 120,
+      "qualification": {},
+      "manifest_present": true,
+      "plan_receipt_present": true
+    },
+    "pilot-03": {
+      "raw_world_files": 61,
+      "statuses": {
+        "not_run": 37,
+        "completed": 24
+      },
+      "frames_checked": 576,
+      "completed_summary_missing_raw": [
+        "8701-exact-none-none",
+        "8701-exact-none-withdrawal",
+        "8701-exact-none-combined",
+        "8701-exact-evidence-only-withdrawal",
+        "8701-exact-evidence-only-erasure",
+        "8701-exact-evidence-only-combined",
+        "8701-exact-evidence+withdrawals-none",
+        "8701-exact-evidence+withdrawals-erasure",
+        "8701-exact-evidence+withdrawals-combined",
+        "8701-jev-none-none",
+        "8701-jev-none-withdrawal",
+        "8701-jev-none-erasure",
+        "8701-jev-none-combined",
+        "8701-jev-evidence-only-withdrawal",
+        "8701-jev-evidence-only-erasure",
+        "8701-jev-evidence+withdrawals-none",
+        "8701-jev-evidence+withdrawals-combined",
+        "8702-exact-none-none",
+        "8702-exact-none-withdrawal",
+        "8702-exact-none-erasure",
+        "8702-exact-none-combined",
+        "8702-exact-evidence-only-erasure",
+        "8702-exact-evidence-only-combined",
+        "8702-exact-evidence+withdrawals-withdrawal",
+        "8702-exact-evidence+withdrawals-combined",
+        "8702-jev-none-none",
+        "8702-jev-none-erasure",
+        "8702-jev-none-combined",
+        "8702-jev-evidence-only-none",
+        "8702-jev-evidence-only-combined",
+        "8702-jev-evidence+withdrawals-none",
+        "8702-jev-evidence+withdrawals-withdrawal",
+        "8702-jev-evidence+withdrawals-combined",
+        "8703-exact-none-withdrawal",
+        "8703-exact-evidence-only-none",
+        "8703-exact-evidence-only-withdrawal",
+        "8703-exact-evidence-only-erasure",
+        "8703-exact-evidence-only-combined",
+        "8703-exact-evidence+withdrawals-none",
+        "8703-exact-evidence+withdrawals-erasure",
+        "8703-exact-evidence+withdrawals-combined",
+        "8703-jev-none-withdrawal",
+        "8703-jev-none-erasure",
+        "8703-jev-evidence-only-none",
+        "8703-jev-evidence-only-combined",
+        "8703-jev-evidence+withdrawals-none",
+        "8703-jev-evidence+withdrawals-withdrawal",
+        "8703-jev-evidence+withdrawals-combined"
+      ],
+      "calls_started": 0,
+      "calls_terminal": 0,
+      "qualification": {},
+      "manifest_present": false,
+      "plan_receipt_present": false
+    },
+    "site": {
+      "attempt": "pilot-02",
+      "worlds": 144,
+      "raw_mismatches": 0
+    },
+    "artifact_hashes": {
+      "final.png": true,
+      "event.png": true,
+      "index.html": true,
+      "outcomes.png": true,
+      "initial.png": true,
+      "recovery.gif": true,
+      "data.js": true,
+      "paired-effects.json": true
+    }
+  },
+  "immune": {
+    "native-v2": {
+      "rows": 8,
+      "valid": 7,
+      "frames": 192,
+      "source_hash": "7e850ad9993547af02292213d5850266707a849583b34d3d7693360680b6d673",
+      "model": "claude-haiku-4-5-20251001"
+    },
+    "engineering-v3": {
+      "rows": 720,
+      "valid": 720,
+      "frames": 17280,
+      "source_hash": "5409a091baebf14e716ad3c88be562fb821ba10764c06099d25dee59e799c8b9",
+      "model": "scripted-observation-policy-v1"
+    }
+  },
+  "file_counts": {
+    "healing-helping-hands": 414,
+    "swarm-of-theseus": 458,
+    "immune-response-review": 14
+  },
+  "issues": [
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-founders-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-both-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-notes-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-both-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-both-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-both-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-mentor-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-mentor-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-neither-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-founders-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-verbatim-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-notes-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-neither-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-verbatim-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-both-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-neither-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-verbatim-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-neither-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-mentor-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-notes-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-notes-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-neither-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-founders-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-notes-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-notes-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-mentor-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-founders-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-verbatim-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-mentor-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-verbatim-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-both-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/observatory-founders-201/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/seed-bank-founders-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-verbatim-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-neither-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "swarm-of-theseus/results/S1-a1/repair-dock-mentor-200/public-plan-receipt.json",
+      "detail": "public plan hash differs from source README hash"
+    },
+    {
+      "path": "healing-helping-hands/results/pilot-03/summary.json",
+      "detail": "48 completed summary outcomes missing raw world file"
+    }
+  ]
+}

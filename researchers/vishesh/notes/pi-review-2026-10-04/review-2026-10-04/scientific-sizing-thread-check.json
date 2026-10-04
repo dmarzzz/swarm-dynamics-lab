@@ -1,0 +1,30 @@
+{
+  "checked_utc": "2026-10-04T03:24:01.611145+00:00",
+  "thread_id": "01a1047b-d7bd-70e1-a717-04afc6e4808d",
+  "thread_title": "Experiment - Optimal Swarm Size",
+  "latest_scientific_turn_id": "01a104d5-68b5-7193-a034-be9b65154dcc",
+  "latest_scientific_turn_completed_unix": 1791082608,
+  "method": "Read latest five completed turns; compare current task-worktree documents against pinned review source copies; no thread messages, mutations, or new runs.",
+  "files": [
+    {
+      "name": "README.md",
+      "same_substantive_text": true,
+      "difference": "one extra terminal blank line in review copy",
+      "current_sha256": "1d5348b453929449c9a18a3ef92a2cc635db7e774ba7e8a4e38740eef14004e3"
+    },
+    {
+      "name": "PROTOCOL.md",
+      "same_substantive_text": true,
+      "difference": "one extra terminal blank line in review copy",
+      "current_sha256": "f8e7b3882d8863786bbbc68517598a96f88f794cfbe998e30995b4bb89130985"
+    },
+    {
+      "name": "TASK-CONTRACTS.md",
+      "same_substantive_text": true,
+      "difference": "one extra terminal blank line in review copy",
+      "current_sha256": "aa931e329495cdfc374754fcafbc3c4984732d0f123b9cd9452e609be9642762"
+    }
+  ],
+  "design_json": "Draft v3; launch authorized=false, model/runtime/resource caps unset; consistent with reviewed documents.",
+  "conclusion": "No material newer scientific design or empirical result beyond the pinned three-document review."
+}

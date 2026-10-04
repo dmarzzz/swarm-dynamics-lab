@@ -1,0 +1,1801 @@
+{
+  "regrowth": {
+    "attempts": [
+      {
+        "directory": "regrowth-200/results/pilot-v1",
+        "status": "failed",
+        "assignments": 6,
+        "statuses": {
+          "failed": 1,
+          "not_run": 5
+        },
+        "calls": {
+          "qwen_calls": 0,
+          "laya_calls": 0
+        },
+        "source_matches": {
+          "PROTOCOL.md": false,
+          "agent-definition.json": true,
+          "src/models.py": false,
+          "src/run.py": false,
+          "src/world.py": true
+        }
+      },
+      {
+        "directory": "regrowth-200/results/pilot-v1-attempt2",
+        "status": "failed",
+        "assignments": 6,
+        "statuses": {
+          "failed": 1,
+          "not_run": 5
+        },
+        "calls": {
+          "qwen_calls": 5,
+          "laya_calls": 5
+        },
+        "source_matches": {
+          "PROTOCOL.md": false,
+          "agent-definition.json": true,
+          "src/models.py": false,
+          "src/run.py": false,
+          "src/world.py": true
+        },
+        "qualification": {
+          "qwen": {
+            "strict": 3,
+            "any_shortest": 3
+          },
+          "laya": {
+            "strict": 4,
+            "any_shortest": 4
+          }
+        },
+        "stored_qualification": {
+          "qwen_correct": 3,
+          "laya_correct": 4,
+          "n": 5
+        }
+      },
+      {
+        "directory": "regrowth-200/results/pilot-v2",
+        "status": "failed",
+        "assignments": 6,
+        "statuses": {
+          "failed": 1,
+          "not_run": 5
+        },
+        "calls": {
+          "qwen_calls": 10,
+          "laya_calls": 10
+        },
+        "source_matches": {
+          "PROTOCOL.md": false,
+          "agent-definition.json": true,
+          "src/models.py": false,
+          "src/run.py": false,
+          "src/world.py": true
+        },
+        "qualification": {
+          "qwen": {
+            "strict": 5,
+            "any_shortest": 5
+          },
+          "laya": {
+            "strict": 6,
+            "any_shortest": 6
+          }
+        },
+        "stored_qualification": {
+          "qwen_correct": 5,
+          "laya_correct": 6,
+          "n": 10
+        }
+      },
+      {
+        "directory": "regrowth-200/results/pilot-v3",
+        "status": "failed",
+        "assignments": 6,
+        "statuses": {
+          "failed": 1,
+          "not_run": 5
+        },
+        "calls": {
+          "qwen_calls": 10,
+          "laya_calls": 10
+        },
+        "source_matches": {
+          "PROTOCOL.md": false,
+          "agent-definition.json": true,
+          "src/models.py": false,
+          "src/run.py": false,
+          "src/world.py": true
+        },
+        "qualification": {
+          "qwen": {
+            "strict": 6,
+            "any_shortest": 8
+          },
+          "laya": {
+            "strict": 6,
+            "any_shortest": 8
+          }
+        },
+        "stored_qualification": {
+          "qwen_correct": 6,
+          "laya_correct": 6,
+          "n": 10
+        }
+      },
+      {
+        "directory": "regrowth-200/results/pilot-v4",
+        "status": "completed",
+        "assignments": 6,
+        "statuses": {
+          "completed": 6
+        },
+        "calls": {
+          "qwen_calls": 9446,
+          "laya_calls": 486
+        },
+        "source_matches": {
+          "PROTOCOL.md": true,
+          "agent-definition.json": true,
+          "src/models.py": true,
+          "src/run.py": false,
+          "src/world.py": true
+        },
+        "qualification": {
+          "qwen": {
+            "strict": 6,
+            "any_shortest": 8
+          },
+          "laya": {
+            "strict": 6,
+            "any_shortest": 8
+          }
+        },
+        "stored_qualification": {
+          "qwen_correct": 8,
+          "laya_correct": 8,
+          "n": 10
+        }
+      }
+    ],
+    "reconstruction": [
+      {
+        "id": "algorithm-control",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 0,
+        "pre_update_damage_valid_fraction": null,
+        "qwen_nonminimal_new_decisions": 0,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [],
+        "next_hop_metric_disagreement_frames": 0,
+        "next_hop_disagreements": []
+      },
+      {
+        "id": "algorithm-damage",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 0,
+        "pre_update_damage_valid_fraction": 0.545,
+        "qwen_nonminimal_new_decisions": 0,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [],
+        "next_hop_metric_disagreement_frames": 15,
+        "next_hop_disagreements": [
+          {
+            "round": 47,
+            "advertised_valid_fraction": 0.64,
+            "next_hop_reach_fraction": 0.635,
+            "differing_cells": 1
+          },
+          {
+            "round": 48,
+            "advertised_valid_fraction": 0.67,
+            "next_hop_reach_fraction": 0.65,
+            "differing_cells": 4
+          },
+          {
+            "round": 49,
+            "advertised_valid_fraction": 0.705,
+            "next_hop_reach_fraction": 0.685,
+            "differing_cells": 4
+          },
+          {
+            "round": 50,
+            "advertised_valid_fraction": 0.735,
+            "next_hop_reach_fraction": 0.715,
+            "differing_cells": 4
+          },
+          {
+            "round": 51,
+            "advertised_valid_fraction": 0.765,
+            "next_hop_reach_fraction": 0.745,
+            "differing_cells": 4
+          },
+          {
+            "round": 52,
+            "advertised_valid_fraction": 0.79,
+            "next_hop_reach_fraction": 0.975,
+            "differing_cells": 37
+          },
+          {
+            "round": 53,
+            "advertised_valid_fraction": 0.81,
+            "next_hop_reach_fraction": 0.985,
+            "differing_cells": 35
+          },
+          {
+            "round": 54,
+            "advertised_valid_fraction": 0.835,
+            "next_hop_reach_fraction": 0.995,
+            "differing_cells": 32
+          },
+          {
+            "round": 55,
+            "advertised_valid_fraction": 0.865,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 27
+          },
+          {
+            "round": 56,
+            "advertised_valid_fraction": 0.895,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 21
+          },
+          {
+            "round": 57,
+            "advertised_valid_fraction": 0.925,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 15
+          },
+          {
+            "round": 58,
+            "advertised_valid_fraction": 0.95,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 10
+          },
+          {
+            "round": 59,
+            "advertised_valid_fraction": 0.97,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 6
+          },
+          {
+            "round": 60,
+            "advertised_valid_fraction": 0.985,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 3
+          },
+          {
+            "round": 61,
+            "advertised_valid_fraction": 0.995,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 1
+          }
+        ]
+      },
+      {
+        "id": "qwen-control",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 2322,
+        "pre_update_damage_valid_fraction": null,
+        "qwen_nonminimal_new_decisions": 288,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [],
+        "next_hop_metric_disagreement_frames": 0,
+        "next_hop_disagreements": []
+      },
+      {
+        "id": "qwen-damage",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 2432,
+        "pre_update_damage_valid_fraction": 0.8,
+        "qwen_nonminimal_new_decisions": 310,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [],
+        "next_hop_metric_disagreement_frames": 8,
+        "next_hop_disagreements": [
+          {
+            "round": 40,
+            "advertised_valid_fraction": 0.855,
+            "next_hop_reach_fraction": 0.97,
+            "differing_cells": 23
+          },
+          {
+            "round": 41,
+            "advertised_valid_fraction": 0.895,
+            "next_hop_reach_fraction": 0.97,
+            "differing_cells": 27
+          },
+          {
+            "round": 42,
+            "advertised_valid_fraction": 0.91,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 18
+          },
+          {
+            "round": 43,
+            "advertised_valid_fraction": 0.93,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 14
+          },
+          {
+            "round": 44,
+            "advertised_valid_fraction": 0.95,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 10
+          },
+          {
+            "round": 45,
+            "advertised_valid_fraction": 0.97,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 6
+          },
+          {
+            "round": 46,
+            "advertised_valid_fraction": 0.985,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 3
+          },
+          {
+            "round": 47,
+            "advertised_valid_fraction": 0.995,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 1
+          }
+        ]
+      },
+      {
+        "id": "hybrid-control",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 2286,
+        "pre_update_damage_valid_fraction": null,
+        "qwen_nonminimal_new_decisions": 268,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [
+          {
+            "round": 19,
+            "agent": 155,
+            "qwen": "S",
+            "laya": "W",
+            "routes": {
+              "N": 14,
+              "E": 10,
+              "S": 12,
+              "W": 12
+            }
+          },
+          {
+            "round": 32,
+            "agent": 165,
+            "qwen": "S",
+            "laya": "W",
+            "routes": {
+              "N": 33,
+              "E": 23,
+              "S": 25,
+              "W": 33
+            }
+          }
+        ],
+        "next_hop_metric_disagreement_frames": 0,
+        "next_hop_disagreements": []
+      },
+      {
+        "id": "hybrid-damage",
+        "frames_exactly_reconstructed": 81,
+        "model_event_count": 2396,
+        "pre_update_damage_valid_fraction": 0.8,
+        "qwen_nonminimal_new_decisions": 290,
+        "qwen_wait_with_available_route": 0,
+        "laya_overrides": [
+          {
+            "round": 19,
+            "agent": 155,
+            "qwen": "S",
+            "laya": "W",
+            "routes": {
+              "N": 14,
+              "E": 10,
+              "S": 12,
+              "W": 12
+            }
+          },
+          {
+            "round": 32,
+            "agent": 165,
+            "qwen": "S",
+            "laya": "W",
+            "routes": {
+              "N": 33,
+              "E": 23,
+              "S": 25,
+              "W": 33
+            }
+          }
+        ],
+        "next_hop_metric_disagreement_frames": 8,
+        "next_hop_disagreements": [
+          {
+            "round": 40,
+            "advertised_valid_fraction": 0.855,
+            "next_hop_reach_fraction": 0.97,
+            "differing_cells": 23
+          },
+          {
+            "round": 41,
+            "advertised_valid_fraction": 0.895,
+            "next_hop_reach_fraction": 0.97,
+            "differing_cells": 27
+          },
+          {
+            "round": 42,
+            "advertised_valid_fraction": 0.91,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 18
+          },
+          {
+            "round": 43,
+            "advertised_valid_fraction": 0.93,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 14
+          },
+          {
+            "round": 44,
+            "advertised_valid_fraction": 0.95,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 10
+          },
+          {
+            "round": 45,
+            "advertised_valid_fraction": 0.97,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 6
+          },
+          {
+            "round": 46,
+            "advertised_valid_fraction": 0.985,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 3
+          },
+          {
+            "round": 47,
+            "advertised_valid_fraction": 0.995,
+            "next_hop_reach_fraction": 1.0,
+            "differing_cells": 1
+          }
+        ]
+      }
+    ],
+    "accounting": {
+      "qwen_calls_recomputed": 9446,
+      "laya_calls_recomputed": 486,
+      "qwen_input_tokens_recomputed": 374435,
+      "qwen_output_tokens_recomputed": 82811,
+      "laya_input_tokens_estimate_recomputed": 50753
+    },
+    "replay_exact_match": true,
+    "archive": {
+      "checksum_valid": true,
+      "member_count": 71,
+      "members": [
+        {
+          "path": "regrowth-200/.gitignore",
+          "bytes": 19,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/DEVELOPMENT.md",
+          "bytes": 1871,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/PROTOCOL.md",
+          "bytes": 7694,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/README.md",
+          "bytes": 2902,
+          "matches_current": false
+        },
+        {
+          "path": "regrowth-200/RESULTS.md",
+          "bytes": 3688,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/agent-definition.json",
+          "bytes": 643,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/algorithm-control.json",
+          "bytes": 116,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/algorithm-damage.json",
+          "bytes": 115,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/hybrid-control.json",
+          "bytes": 111,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/hybrid-damage.json",
+          "bytes": 109,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/manifest.json",
+          "bytes": 1263,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/qwen-control.json",
+          "bytes": 107,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1/qwen-damage.json",
+          "bytes": 105,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-control.json",
+          "bytes": 121,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-damage.json",
+          "bytes": 120,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-control.json",
+          "bytes": 116,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-damage.json",
+          "bytes": 114,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/manifest.json",
+          "bytes": 1837,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/qualification.json",
+          "bytes": 1336,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/qwen-control.json",
+          "bytes": 112,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2/qwen-damage.json",
+          "bytes": 110,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1-attempt2.log",
+          "bytes": 425,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v1.log",
+          "bytes": 85,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/algorithm-control.json",
+          "bytes": 121,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/algorithm-damage.json",
+          "bytes": 120,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/hybrid-control.json",
+          "bytes": 116,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/hybrid-damage.json",
+          "bytes": 114,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/manifest.json",
+          "bytes": 1841,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/qualification.json",
+          "bytes": 2743,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/qwen-control.json",
+          "bytes": 112,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2/qwen-damage.json",
+          "bytes": 110,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v2.log",
+          "bytes": 425,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/algorithm-control.json",
+          "bytes": 121,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/algorithm-damage.json",
+          "bytes": 120,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/hybrid-control.json",
+          "bytes": 116,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/hybrid-damage.json",
+          "bytes": 114,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/manifest.json",
+          "bytes": 1840,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/qualification.json",
+          "bytes": 2724,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/qwen-control.json",
+          "bytes": 112,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3/qwen-damage.json",
+          "bytes": 110,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v3.log",
+          "bytes": 425,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/algorithm-control-events.jsonl",
+          "bytes": 0,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/algorithm-control.json",
+          "bytes": 285980,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/algorithm-damage-events.jsonl",
+          "bytes": 0,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/algorithm-damage.json",
+          "bytes": 289277,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/hub-publication.json",
+          "bytes": 517,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/hybrid-control-events.jsonl",
+          "bytes": 422372,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/hybrid-control.json",
+          "bytes": 303289,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/hybrid-damage-events.jsonl",
+          "bytes": 442071,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/hybrid-damage.json",
+          "bytes": 303525,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/manifest.json",
+          "bytes": 1789,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/outcomes.png",
+          "bytes": 129678,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/outcomes.svg",
+          "bytes": 72577,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/progress.json",
+          "bytes": 75,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/qualification.json",
+          "bytes": 2725,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/qwen-control-events.jsonl",
+          "bytes": 398060,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/qwen-control.json",
+          "bytes": 303281,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/qwen-damage-events.jsonl",
+          "bytes": 416952,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/qwen-damage.json",
+          "bytes": 303516,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4/summary.json",
+          "bytes": 1595,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/results/pilot-v4.log",
+          "bytes": 11463,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/analyze.py",
+          "bytes": 3736,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/archive_evidence.py",
+          "bytes": 998,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/build_replay.py",
+          "bytes": 508,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/check_replay.cjs",
+          "bytes": 1211,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/models.py",
+          "bytes": 3039,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/plot.py",
+          "bytes": 1140,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/publish_hub.py",
+          "bytes": 3444,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/src/run.py",
+          "bytes": 8203,
+          "matches_current": false
+        },
+        {
+          "path": "regrowth-200/src/world.py",
+          "bytes": 1918,
+          "matches_current": true
+        },
+        {
+          "path": "regrowth-200/tests/test_world.py",
+          "bytes": 1727,
+          "matches_current": true
+        }
+      ],
+      "manifest_hashes_missing_from_current_and_archive": {
+        "pilot-v1": [
+          "PROTOCOL.md",
+          "src/models.py",
+          "src/run.py"
+        ],
+        "pilot-v3": [
+          "PROTOCOL.md",
+          "src/models.py",
+          "src/run.py"
+        ],
+        "pilot-v4": [],
+        "pilot-v2": [
+          "PROTOCOL.md",
+          "src/models.py",
+          "src/run.py"
+        ],
+        "pilot-v1-attempt2": [
+          "PROTOCOL.md",
+          "src/models.py",
+          "src/run.py"
+        ]
+      }
+    }
+  },
+  "avalon": {
+    "validation": [
+      {
+        "name": "scale-final",
+        "outcomes": 15,
+        "source_hash_valid": true,
+        "all_assignments_present": true,
+        "event_traces": []
+      },
+      {
+        "name": "recovery-pilot",
+        "outcomes": 15,
+        "source_hash_valid": true,
+        "all_assignments_present": true,
+        "event_traces": [
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-repair-4.jsonl",
+            "events": 928,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-audit-3.jsonl",
+            "events": 1031,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-audit-1.jsonl",
+            "events": 1230,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-repair-2.jsonl",
+            "events": 1127,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-none-1.jsonl",
+            "events": 1019,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-none-3.jsonl",
+            "events": 1121,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-repair-0.jsonl",
+            "events": 825,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-audit-0.jsonl",
+            "events": 824,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-none-4.jsonl",
+            "events": 1234,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-audit-2.jsonl",
+            "events": 1128,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-none-2.jsonl",
+            "events": 1020,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-repair-1.jsonl",
+            "events": 1230,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-repair-3.jsonl",
+            "events": 1031,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-audit-4.jsonl",
+            "events": 927,
+            "valid_chain_and_terminal_outcome": true
+          },
+          {
+            "path": "avalon-swarm/results/recovery-pilot/events-none-0.jsonl",
+            "events": 718,
+            "valid_chain_and_terminal_outcome": true
+          }
+        ],
+        "means": {
+          "none": {
+            "post_audit_mission_success_fraction": 0.35333333333333333,
+            "good_council_fraction": 0.12000000000000001,
+            "ordinary_good_brier": 0.3085230222222222,
+            "post_audit_contradiction_exposures": 0,
+            "flagged_honest_origins": 0,
+            "flagged_evil_origins": 0
+          },
+          "audit": {
+            "post_audit_mission_success_fraction": 0.37333333333333335,
+            "good_council_fraction": 0.16,
+            "ordinary_good_brier": 0.2727157333333333,
+            "post_audit_contradiction_exposures": 79.6,
+            "flagged_honest_origins": 0.6,
+            "flagged_evil_origins": 4.2
+          },
+          "repair": {
+            "post_audit_mission_success_fraction": 0.38,
+            "good_council_fraction": 0.16,
+            "ordinary_good_brier": 0.2708058666666667,
+            "post_audit_contradiction_exposures": 54.8,
+            "flagged_honest_origins": 0.6,
+            "flagged_evil_origins": 4.2
+          }
+        },
+        "paired_repair_minus_audit": [
+          {
+            "seed": 0,
+            "post_audit_mission_success_fraction": 0.0,
+            "ordinary_good_brier": 0.0011039999999999939,
+            "post_audit_contradiction_exposures": -61
+          },
+          {
+            "seed": 1,
+            "post_audit_mission_success_fraction": 0.0,
+            "ordinary_good_brier": 0.0,
+            "post_audit_contradiction_exposures": 0
+          },
+          {
+            "seed": 2,
+            "post_audit_mission_success_fraction": 0.033333333333333326,
+            "ordinary_good_brier": -0.008572444444444438,
+            "post_audit_contradiction_exposures": -34
+          },
+          {
+            "seed": 3,
+            "post_audit_mission_success_fraction": 0.0,
+            "ordinary_good_brier": 0.0006426666666666248,
+            "post_audit_contradiction_exposures": -19
+          },
+          {
+            "seed": 4,
+            "post_audit_mission_success_fraction": 0.0,
+            "ordinary_good_brier": -0.0027235555555555346,
+            "post_audit_contradiction_exposures": -10
+          }
+        ]
+      },
+      {
+        "name": "consensus-v02",
+        "outcomes": 15,
+        "source_hash_valid": true,
+        "all_assignments_present": true,
+        "event_traces": [],
+        "passes": 0,
+        "failures": {
+          "signal_loss@5": 15
+        }
+      }
+    ]
+  },
+  "file_inventory": [
+    {
+      "path": "regrowth-200/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "regrowth-200/DEVELOPMENT.md",
+      "bytes": 1871,
+      "sha256": "ead9b670310eb0d639ce6fb200a8a3f143597667263079329bb39c64ec1b7533"
+    },
+    {
+      "path": "regrowth-200/PROTOCOL.md",
+      "bytes": 7694,
+      "sha256": "e6475b84c965f998176bb6bce3dd473e1fbaf2b6704baeba70df9006772a21e1"
+    },
+    {
+      "path": "regrowth-200/README.md",
+      "bytes": 3715,
+      "sha256": "d388ee15d685d003df0c77566ff6d9508d8ffee142ef051c83f4784eacbd43a4"
+    },
+    {
+      "path": "regrowth-200/REGISTRATION-FAILURE.md",
+      "bytes": 2313,
+      "sha256": "aee34e7b0f24a1ce8f0f2502139f8f0c523ea6f5de871a3452bbcb5973060529"
+    },
+    {
+      "path": "regrowth-200/RESULTS.md",
+      "bytes": 3688,
+      "sha256": "f4ba05fb9128cb2a305241e2d79e41c89be93572d234ad24d57856bed32617b1"
+    },
+    {
+      "path": "regrowth-200/agent-definition.json",
+      "bytes": 643,
+      "sha256": "917c5db812422627fec8fcdc52406ba19f1d23bd48d1a7b994c2c75754174756",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 10
+    },
+    {
+      "path": "regrowth-200/results/evidence-index.json",
+      "bytes": 2972,
+      "sha256": "e599c7b9468565b5738f470200749371b9b6b2374a0b85a2ae0ac2a770d40a04",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 4
+    },
+    {
+      "path": "regrowth-200/results/evidence.tar.gz",
+      "bytes": 308029,
+      "sha256": "7520e011a22162e76e1e07b6a85c57535f7892319e2a68d0350a545428daee85"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/algorithm-control.json",
+      "bytes": 116,
+      "sha256": "866a35e5d7d302ed787d2000fae288e137cf29874406758f93fe03e5b3be59c7",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/algorithm-damage.json",
+      "bytes": 115,
+      "sha256": "95ec6422e8340f41c16bf80519d773c188bce4aa6124fc70a06029ad1ed49879",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/hybrid-control.json",
+      "bytes": 111,
+      "sha256": "149dfab4108b5b5fdcd75756a904a8b2e946d3ee733768823cea241e981157c5",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/hybrid-damage.json",
+      "bytes": 109,
+      "sha256": "b55bb858ccf06818ffa60815c174f7eb5d33526bb5207869ad68280dbbb1c1e5",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/manifest.json",
+      "bytes": 1263,
+      "sha256": "bfed4bc431c4ae2ce708c013b3469923a449466fd3a358ee23c5b5e5fc8db4bb",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 20
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/qwen-control.json",
+      "bytes": 107,
+      "sha256": "9bac6bd268a764c56db010686eb0765608f3a918e26ad8addb0087ec215a047a",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1/qwen-damage.json",
+      "bytes": 105,
+      "sha256": "50a5b905bc336e6565dcaa34b0528f6128a08e7a6b10b51155757b6ddb1c2851",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/manifest.json",
+      "bytes": 1837,
+      "sha256": "e400664c90540904e9163be9bd85bcd038c716cd0552ec0c552f0d16111cc580",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qualification.json",
+      "bytes": 1336,
+      "sha256": "94f2a718effc607a6cee765f477a6ad942dd7aa71eea380442ffee3154051402",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 5
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1-attempt2.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "structural log check; no raw log printing"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v1.log",
+      "bytes": 85,
+      "sha256": "cdf144a80fbca7ed122d45438d7b95c94abc71d8a73eae573c9fd6b7dfd5b48a",
+      "lines": 1,
+      "json_entries": 1,
+      "other_lines": 0,
+      "review_mode": "structural log check; no raw log printing"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/manifest.json",
+      "bytes": 1841,
+      "sha256": "0601f393702077dfaaa5ae4267a4f686d3e844046c4db6f467477e9b72520587",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qualification.json",
+      "bytes": 2743,
+      "sha256": "34f3ac8490b44090011c2a5e10d352edbd3de9d0d6272cc878be44be0e6ac897",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v2.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "structural log check; no raw log printing"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/algorithm-control.json",
+      "bytes": 121,
+      "sha256": "d702ca3482ae80696528512c015364644f06cee64d2d7869e01fe449f1d09561",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/algorithm-damage.json",
+      "bytes": 120,
+      "sha256": "bbe8c7990e8ae0d98f314d4eab30fe0debd6526e6897eaef59726f132058c185",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/hybrid-control.json",
+      "bytes": 116,
+      "sha256": "ff32325c9a3c23f63a1be8f60d0692a7f3f4cffc31a2268e38f21f183a604356",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/hybrid-damage.json",
+      "bytes": 114,
+      "sha256": "96f5a6b912d8686c7f5809065015f26cdcaf1e2203e858cbdae16f169ddbccbf",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/manifest.json",
+      "bytes": 1840,
+      "sha256": "e0d11e6411c831efda6bf35d90ac01f55b82c9be6bef4f4429cbb992cd653b9c",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 23
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qualification.json",
+      "bytes": 2724,
+      "sha256": "de36bc86f3e0d96c9a2de04f8315096a46e2c4e654ff3ee925debc9b76c35d06",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qwen-control.json",
+      "bytes": 112,
+      "sha256": "6691cf29fb66edd8993fd5308e68babac7c7f6de154d5fb9fdfbc4251ebb7a71",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3/qwen-damage.json",
+      "bytes": 110,
+      "sha256": "d97da47777b39102497cc294a51e60d817da5e3fe61dd5c76dcaa97fde70edef",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v3.log",
+      "bytes": 425,
+      "sha256": "93ae13d8c59e8b08abaad8437615bb991372b9cc4278d675a12ba46fff3d29ff",
+      "lines": 3,
+      "json_entries": 1,
+      "other_lines": 2,
+      "review_mode": "structural log check; no raw log printing"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-control-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parsed": true,
+      "entries": 0
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-control.json",
+      "bytes": 285980,
+      "sha256": "692ad6ae91cfce941bee32c9acfd12a9bf358ace1f6d62f035e5047276e1413a",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-damage-events.jsonl",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "parsed": true,
+      "entries": 0
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/algorithm-damage.json",
+      "bytes": 289277,
+      "sha256": "1909a98ca6babbe5a5c9dd193896e36b3019593712061bd45d2f94fd8f2699a4",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hub-publication.json",
+      "bytes": 517,
+      "sha256": "e967ece58f216e2da198b185a86613b7045fd8a81630d1e547aa1a4792ca5950",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-control-events.jsonl",
+      "bytes": 422372,
+      "sha256": "8c563ef89ba5d29c201be476b43c5baf4104937891a850ce3b334f1a8efc9515",
+      "parsed": true,
+      "entries": 2286
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-control.json",
+      "bytes": 303289,
+      "sha256": "394d2a5190775ebcc356c1fcf67a32a2bd6a17ca7a886ce088e8b30cd75f7337",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-damage-events.jsonl",
+      "bytes": 442071,
+      "sha256": "8709545782ea275410aae0a3e11f122b9baad9425ac90c270cf4aa8707d19b0c",
+      "parsed": true,
+      "entries": 2396
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/hybrid-damage.json",
+      "bytes": 303525,
+      "sha256": "e850277809e5f353bb64c1d808b47b49c9df39cb572d91f7901154acbb57fb54",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/manifest.json",
+      "bytes": 1789,
+      "sha256": "3141f9395161cadf45ef3fd962676766f66455db5b4abfe632e4c00819516689",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 21
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/outcomes.png",
+      "bytes": 129678,
+      "sha256": "9ca2354608fcd0ddd96def3f316366827b0a5e3b7412a1454c03b278448029dc"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/outcomes.svg",
+      "bytes": 72577,
+      "sha256": "243ffe4078b6cffc841b6f60ddaa6d70f71aaa783a8b7266d835d5d31bfeed36"
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/progress.json",
+      "bytes": 75,
+      "sha256": "a5e95015811dcebbe39c3cff08eafdc11d8a8166ffd7c5c607c7a92a6edc8136",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 4
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qualification.json",
+      "bytes": 2725,
+      "sha256": "75454c874af3b928e85689df5d93c4012c98b8c37b150e0b442d566c22dcd15b",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 10
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-control-events.jsonl",
+      "bytes": 398060,
+      "sha256": "71402e786e968091473688287dc9e44e0ecc62d7e3104127fdd56520bd9ac30f",
+      "parsed": true,
+      "entries": 2322
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-control.json",
+      "bytes": 303281,
+      "sha256": "f3fce6cd27ce32149fb541e68618d956e66bed7ee9480985ee7078b7ffc39035",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-damage-events.jsonl",
+      "bytes": 416952,
+      "sha256": "8766c73f9eccfcbfff5eeeb1901320e1c0df35e27a341dfb832ebe237b000952",
+      "parsed": true,
+      "entries": 2432
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/qwen-damage.json",
+      "bytes": 303516,
+      "sha256": "71a94e3ccd032c82faf7c8185176df0665c5fc1698a03cf6f1886248bc0163c1",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 12
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4/summary.json",
+      "bytes": 1595,
+      "sha256": "0f9e4062af8f8395c5bc82162b11ad79ce49f057fafc2e15fc6a28b8854c5cc9",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 6
+    },
+    {
+      "path": "regrowth-200/results/pilot-v4.log",
+      "bytes": 11463,
+      "sha256": "865b30e2b94cf2c555efc5e2d884cfa24ba6a00a99ae0e10b974ce059648c658",
+      "lines": 104,
+      "json_entries": 102,
+      "other_lines": 2,
+      "review_mode": "structural log check; no raw log printing"
+    },
+    {
+      "path": "regrowth-200/results/registration-repair-receipt.json",
+      "bytes": 905,
+      "sha256": "83f3427ce68c7b3f98af380ef278e04a70c769c5ebdc6ba994538bd1d76e9cc6",
+      "parsed": true,
+      "top_level_type": "dict",
+      "entries": 7
+    },
+    {
+      "path": "regrowth-200/site/data.js",
+      "bytes": 1790705,
+      "sha256": "f536b9ef9748200a1655da06530a3534b637b4bde9abe7db92e4ebb2ac9a4bda"
+    },
+    {
+      "path": "regrowth-200/site/final_frame.png",
+      "bytes": 153190,
+      "sha256": "0009df9eb0820905388f9071708b433dee9574734dddf9c48959540b74324b2d"
+    },
+    {
+      "path": "regrowth-200/site/index.html",
+      "bytes": 10213,
+      "sha256": "5b0bd45e4a8b0416492f675f34ddbd2d5bb7b2ca7e5ec15a1ac709fef3bce460"
+    },
+    {
+      "path": "regrowth-200/src/analyze.py",
+      "bytes": 3736,
+      "sha256": "2a26ba2a3ab8277f9c2ff5a4142f7f3347ad805900f2f8dccc3022fa625daaaf"
+    },
+    {
+      "path": "regrowth-200/src/archive_evidence.py",
+      "bytes": 998,
+      "sha256": "2176d484963ea9d4ab2b14d74eb6bdda13f2cfec06106cdfaca66e685aa86ebf"
+    },
+    {
+      "path": "regrowth-200/src/build_replay.py",
+      "bytes": 508,
+      "sha256": "391401721bb4254ec700536fc08fa69430d176b05f3e7cde966bd1e90d75ebfe"
+    },
+    {
+      "path": "regrowth-200/src/check_replay.cjs",
+      "bytes": 1211,
+      "sha256": "7079e7fb5dc1d3106fbe344f26b4162352619be0eac8a261e40cf38cb95d3d31"
+    },
+    {
+      "path": "regrowth-200/src/models.py",
+      "bytes": 3039,
+      "sha256": "cfb63bb51790470a9e09fe6c8f67e64c4516b523289bf48762e1cd6011eb8f88"
+    },
+    {
+      "path": "regrowth-200/src/plot.py",
+      "bytes": 1140,
+      "sha256": "1cb2081ea32565337312c4426d210943c1798611350c79f2f070308055315e51"
+    },
+    {
+      "path": "regrowth-200/src/public_plan.py",
+      "bytes": 2505,
+      "sha256": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+    },
+    {
+      "path": "regrowth-200/src/publish_hub.py",
+      "bytes": 3444,
+      "sha256": "d142dc001a70bad4803e88d12f75b721620e44f8798c48ca3c270cb8d2de2517"
+    },
+    {
+      "path": "regrowth-200/src/run.py",
+      "bytes": 8441,
+      "sha256": "3a437fa2c87d200124795489a0b383ef64dea6a2555bd4f4cff310f0b71fef33"
+    },
+    {
+      "path": "regrowth-200/src/world.py",
+      "bytes": 1918,
+      "sha256": "e03f40e4cb5052b0611cd57df33d5d39e0f7dfd1626a307cedcf26c82dfff4de"
+    },
+    {
+      "path": "regrowth-200/tests/test_world.py",
+      "bytes": 1727,
+      "sha256": "ec936407b2dabe60a57b7f052c0f02cdb2d5b8ef968dfb6d8679b37599422986"
+    },
+    {
+      "path": "avalon-swarm/.gitignore",
+      "bytes": 19,
+      "sha256": "862263fa1f46c20f0d1e4dac5ffcc75abd55c08211b2c3864c5f8764b9d87793"
+    },
+    {
+      "path": "avalon-swarm/ADAPTER.md",
+      "bytes": 3667,
+      "sha256": "0fadc13778bf25d4389af2817c3111b74b832682b6e23e4d87b45298bbc33a76"
+    },
+    {
+      "path": "avalon-swarm/PROTOCOL.md",
+      "bytes": 18471,
+      "sha256": "784a07075fb76024f940bc55a3f45f1d09455fc232e9d9501b96182612b161f4"
+    },
+    {
+      "path": "avalon-swarm/README.md",
+      "bytes": 5933,
+      "sha256": "1bd7ac795046093a17f05e7f9727ac49385f8c24d861f0132f0377b3e922d785"
+    },
+    {
+      "path": "avalon-swarm/RESULTS.md",
+      "bytes": 5108,
+      "sha256": "55cb4f9bd50441f7dd4ac613ac45a199ed7dc298d7abd4e9da78e9691f3542a5"
+    },
+    {
+      "path": "avalon-swarm/benchmark.py",
+      "bytes": 25879,
+      "sha256": "5722f63f375612e4dc3e2dbab68df5900d9f1cd162c24954633d8366678209b1"
+    },
+    {
+      "path": "avalon-swarm/report.py",
+      "bytes": 7499,
+      "sha256": "df250e779deeec020ba44df2717260b24094503c08666a5fcdf4f806ae4d5513"
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/outcomes.jsonl",
+      "bytes": 77673,
+      "sha256": "2894fb85fb5e2f5e194087e420695a844e33db4d4eab0e8b7c2be3da374f2766",
+      "parsed": true,
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/plan.json",
+      "bytes": 4044,
+      "sha256": "4493857984e3854710887d2464cd4e7b15759f3e5714740b61765fc441eafba5",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/consensus-v02/source.sha256",
+      "bytes": 65,
+      "sha256": "ed3c3eac84b770ab578cc158b58f8bce85e4f418044c7b3e6eb50997adfbe6dd"
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-0.jsonl",
+      "bytes": 390243,
+      "sha256": "7c33606856a0fc6afd41b7ded0559b84e500b8f323195fea7f0728433290b878",
+      "parsed": true,
+      "entries": 824
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-1.jsonl",
+      "bytes": 608244,
+      "sha256": "fe7450eb91db6f2997a248bb9df97c9a6b22d68b6ac2814c562eb1b42fc027e3",
+      "parsed": true,
+      "entries": 1230
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-2.jsonl",
+      "bytes": 550694,
+      "sha256": "9342064862ddcfce515ca377ca5ee18052168b5193db4dbe0a519c478f07edc9",
+      "parsed": true,
+      "entries": 1128
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-3.jsonl",
+      "bytes": 499013,
+      "sha256": "d47979297e8282ed00fa48f94d0a2e416c4b88167c5e41c0567bc9a5cba82dcf",
+      "parsed": true,
+      "entries": 1031
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-audit-4.jsonl",
+      "bytes": 444896,
+      "sha256": "71f906a6cfa2cb0d4887d3a4630b3bc2601bc8cc971990d0d3d00903c23a7e5c",
+      "parsed": true,
+      "entries": 927
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-0.jsonl",
+      "bytes": 336807,
+      "sha256": "0dcbeaabf24c403e298cf41d598ae28604d1c5807e0c07209887efc0e87930fc",
+      "parsed": true,
+      "entries": 718
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-1.jsonl",
+      "bytes": 499076,
+      "sha256": "b5164435ed92fdf68bb01a00a2e291fcee533243f3ebd8e51fe4e35d12247605",
+      "parsed": true,
+      "entries": 1019
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-2.jsonl",
+      "bytes": 496480,
+      "sha256": "1bb76ad9b5e3e566ca1a9407b8ce58803a1b132e8c7f34c8cac66725601eda19",
+      "parsed": true,
+      "entries": 1020
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-3.jsonl",
+      "bytes": 549209,
+      "sha256": "d31799d1ee406269fa70f23172a5374351b68d3a269934e53cac637bfce64a33",
+      "parsed": true,
+      "entries": 1121
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-none-4.jsonl",
+      "bytes": 606582,
+      "sha256": "e7a3d6234b0accd26383c14b3b19c7976f421d3dce54705174ff0645158134c6",
+      "parsed": true,
+      "entries": 1234
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-0.jsonl",
+      "bytes": 390736,
+      "sha256": "7bc75bf44a26cb4c8389b6897d8e6327cceceed26ddb0f0b7d8785e893685848",
+      "parsed": true,
+      "entries": 825
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-1.jsonl",
+      "bytes": 608246,
+      "sha256": "576df8e036333df54c3811468239db082d41f6d331791dd21a1134929d8a0a7b",
+      "parsed": true,
+      "entries": 1230
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-2.jsonl",
+      "bytes": 549987,
+      "sha256": "6af41ad1710748857e371e3c4561cbeb8f7881686a74b455282cf9cb36a7bc03",
+      "parsed": true,
+      "entries": 1127
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-3.jsonl",
+      "bytes": 499498,
+      "sha256": "4e0aabe24d0646a3c7379550ca059ce9ee6ca2b0fb5dc2e2a2d46f56cc610333",
+      "parsed": true,
+      "entries": 1031
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/events-repair-4.jsonl",
+      "bytes": 445757,
+      "sha256": "36245cfb79c6b035fc47c393065bfa5f7e8b7c00ca8e3d88b283a888851befe0",
+      "parsed": true,
+      "entries": 928
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/outcomes.jsonl",
+      "bytes": 22914,
+      "sha256": "46ce600dc92de8add68256747ca7ffd4d5f13ee805d390ba0de67a8718dfe6ce",
+      "parsed": true,
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/plan.json",
+      "bytes": 1788,
+      "sha256": "5d7c15f600e1df0b8228fa65cc3b0144fa8d2604baec69552b0aa035127e7290",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/recovery-pilot/source.sha256",
+      "bytes": 65,
+      "sha256": "94ba8d0546223e7eac2ec47cb142aa61f4c0bb00880ffb661b727841b236d4e9"
+    },
+    {
+      "path": "avalon-swarm/results/reference-v01/benchmark.py",
+      "bytes": 20240,
+      "sha256": "5ff9feb92e66e2792fddd68ecd58b49729b2a425ca642fec9f36dc03b4f66a34"
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/outcomes.jsonl",
+      "bytes": 22958,
+      "sha256": "df2397727a3e00a300cf2ff83d06abc6175e71db8a4730b4d2936d2d1f6fe860",
+      "parsed": true,
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/plan.json",
+      "bytes": 1764,
+      "sha256": "1262043d379fd9a272d940fa98a91dbf191c3f02248de53b30633f187de1f7a6",
+      "parsed": true,
+      "top_level_type": "list",
+      "entries": 15
+    },
+    {
+      "path": "avalon-swarm/results/scale-final/source.sha256",
+      "bytes": 65,
+      "sha256": "94ba8d0546223e7eac2ec47cb142aa61f4c0bb00880ffb661b727841b236d4e9"
+    },
+    {
+      "path": "avalon-swarm/tests/test_benchmark.py",
+      "bytes": 7357,
+      "sha256": "c4f94fa61cd2634638e374ec14e90a8caccb8f5631cfe5fa58dbe50dcac3bc50"
+    }
+  ]
+}
