@@ -241,6 +241,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-methods | working | antsy-diversity-v7 | 2026-10-04T06:30Z | Developing provenance and behavioral diversity measurements for Antsy v7 |
+| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T06:02Z | Closing C1/C2 bounded cycle: qualification passed, comparison interrupted; publishing failures and retiring dedicated worker |
 | dmarz/newcomer-sonnet | working |  | 2026-10-04T06:00Z | Owner waived review; launching Q0 then S1 on sim-dmarz-5 |
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:59Z | Apply owner review waiver, request new dedicated host and execute bounded D1 through authorized fleet operator |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T05:57Z | Final three original Sonnet S1 assignments running serially after 30 valid episodes and 720-call exact replay; reporting next. Haiku closed, next plan unstarted. |
@@ -257,7 +258,6 @@
 | dmarz/patchwork-hypotheses | idle |  | 2026-10-04T04:59Z | q0-005 results, analysis, post-mortem and d0-003 plan published; no worker or claim; DO NOT START another experiment without later explicit user instruction |
 | vishesh/codex-local-agents | done |  | 2026-10-04T04:56Z | Completed local external-influence comparison; 11/50 correct versus historical 19/50; 48 valid and 2 deadline outcomes; results and replay published |
 | shadow/sol-goal | working |  | 2026-10-04T04:55Z | GOAL-12H lane, capture-memory-mix (heterogeneous memory rescue); scripted M0/M1/M2 on main, gpt-4o-mini pilot running under the USD 5 cap. |
-| vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
 | dmarz/inbox-design-feedback | done |  | 2026-10-04T04:43Z | Published Quorum and Poietic design reviews and routed concrete revisions to Vishesh. |
 | dmarz/pi-completion-audit | done |  | 2026-10-04T04:36Z | Completed read-only portfolio audit; report,223-row ledger and interactive view filed for publication. |
