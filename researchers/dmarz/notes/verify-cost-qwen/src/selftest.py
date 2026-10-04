@@ -194,6 +194,39 @@ class Instrument(unittest.TestCase):
         for e, u in ((0.25, 0.25), (0, 0.5), (1.0, 0.5), (0.123, 0.5), (1, 0.5)):
             with self.assertRaises(ValueError): sim.score(w, e, u, rc)
 
+    def test_minimum_loss_action_is_recomputed_independently_from_the_rendered_consequences(self):
+        """No use of sim.score or sim.optimal_action: the expected cost of each action is the sum of probability x cost
+        over the records parsed from the text the model is sent, in each representation."""
+        seen = 0
+        for stage in study.STAGES:
+            for a in study.assignments(stage):
+                _, block, _ = study.split_block(study.user_for(a)); records = study.PARSE[a['representation']](block)
+                cost = {}
+                for r in records:
+                    if r['action'] != 'either': cost[r['action']] = cost.get(r['action'], 0.0) + float(r['probability']) * float(r['cost'])
+                self.assertEqual(sorted(cost), sorted(a['legal_cells']))
+                best = min(cost, key=cost.get); worst = max(cost, key=cost.get); gap = round(cost[worst] - cost[best], 12)
+                self.assertGreater(gap, 0.04)                                        # never a tie
+                self.assertEqual(best, study.policy('optimal', a))
+                self.assertEqual(study.evaluate(a, best)['expected_regret'], 0); self.assertEqual(study.evaluate(a, worst)['expected_regret'], gap)
+                self.assertAlmostEqual(study.evaluate(a, worst)['expected_loss'], cost[worst]); self.assertEqual(study.evaluate(a, best)['margin'], gap)
+                w = study.layout(a['layout'])                                        # the cheaper action is to check exactly when e > U
+                self.assertEqual(best == w['report_cell'], a['error'] > a['unknown_cost']); seen += 1
+        self.assertEqual(seen, 744)
+
+    def test_reservation_leaves_a_wide_margin_over_the_expected_cost(self):
+        """Per call the adapter reserves request bytes as input tokens plus the full 1,000-token output limit. The
+        expected cost at the planning ratio (2.5 characters per token) and 20 output tokens is several times smaller,
+        so a price somewhat above the snapshot does not breach the reservation."""
+        for stage in ('P0', 'Q0', 'S1'):
+            for a in study.assignments(stage)[:48]:
+                body = dict(D['request_template'], messages=[{'role': 'system', 'content': study.SYSTEM}, {'role': 'user', 'content': study.user_for(a)}])
+                size = len(json.dumps(body).encode())
+                reserve = size * B['input_usd_per_million'] + B['max_output_tokens'] * B['output_usd_per_million']
+                expected = a['content_bytes'] / study.CHARS_PER_TOKEN_FLOOR * B['input_usd_per_million'] + 20 * B['output_usd_per_million']
+                self.assertGreater(reserve, 7 * expected); self.assertLess(reserve, 250)        # millionths of a dollar
+        self.assertLess(600 * 250 / 1e6, B['aggregate_usd'] / 10)                              # every call at its full reservation is under a tenth of the cap
+
     def test_report_truth_is_coupled_and_calibrated_across_error_probabilities(self):
         w = dict(sim.layout(ENG[0]))
         for draw, want in ((0.1, (False, False, False, True)), (0.3, (False, False, True, True)), (0.6, (False, False, True, True)),
