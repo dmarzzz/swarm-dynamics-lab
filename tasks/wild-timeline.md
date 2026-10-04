@@ -3,9 +3,9 @@ id: wild-timeline
 type: task
 title: Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets
 kind: build
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: shadow/sol-timeline
 for: shadow
 created: 2026-10-04
 created_by: shadow/sol-timeline
@@ -13,6 +13,8 @@ depends_on: []
 topics:
 - swarm-detection
 - llm-agent-swarms
+claimed_at: 2026-10-04T15:00Z
+updated: 2026-10-04T15:00Z
 ---
 
 ## Goal
