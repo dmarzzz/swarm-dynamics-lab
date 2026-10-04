@@ -55,7 +55,7 @@ Operations entry: manual (private launcher). [Operations guide](../../../../tool
 | Attempt / parent | Stage / version | Pre-review and receipts | Assigned / started / terminal / graded / analyzed | Post-mortem / disposition |
 |---|---|---|---|---|
 | local-s0-001 / — | S0 offline / v1 | (offline engineering check) | 216 assigned / 0 recorded (host out of memory) | [interrupted; repaired pool cap](reviews/local-s0-001-post.md) |
-| fleet-s0-001 / local-s0-001 | S0 fleet / v1 | [pre](reviews/fleet-s0-001-pre.md) | pending | pending |
+| fleet-s0-001 (33d602fe) / local-s0-001 | S0 fleet / v1 | [pre](reviews/fleet-s0-001-pre.md) | 216/216/216/216/216 | [pass](reviews/fleet-s0-001-post.md); Haiku Q0/S1 not launched (Opus directive) |
 
 ## Closeout
 

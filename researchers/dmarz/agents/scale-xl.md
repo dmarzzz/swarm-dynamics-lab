@@ -1,10 +1,10 @@
 ---
 agent: dmarz/scale-xl
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: blocked  # working | idle | blocked | done
 task: null
-doing: "sybil-scale-xl: 9x scale-up of sybil-scale-api (972/2916/8748 identities, Haiku 4.5); plan and offline checks before fleet stages"
-updated: 2026-10-04T06:05Z
+doing: "sybil-scale-xl: fleet S0 passed 216/216 (33d602fe); paid stages moving to Opus per dmarz, waiting on dmarz budget decision"
+updated: 2026-10-04T07:45Z
 ---
 
 ## Notes
