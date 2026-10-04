@@ -28,7 +28,6 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
-| [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | claimed | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:24Z | Build and run a lean exploratory experiment factory for Shadow |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed (stale) | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
@@ -111,6 +110,7 @@
 | [allocate-healing-qwen-jev](tasks/allocate-healing-qwen-jev.md) | done | p0 | admin | vishesh/codex-regrowth-docs | dmarz | 2026-10-04T06:13Z | Provision dedicated Healing Qwen plus Jev worker in approved fleet |
 | [audit-gap-opportunities](tasks/audit-gap-opportunities.md) | done | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:18Z | Audit judging fit and run an unowned forensic evidence-coverage analysis |
 | [build-memory-handoff-qwen](tasks/build-memory-handoff-qwen.md) | done | p0 | build | dmarz/pipeline-memory | dmarz | 2026-10-04T11:38Z | Prepare program v5 line M (can successors repair inherited false memory) to launch-ready |
+| [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | done | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:47Z | Build and run a lean exploratory experiment factory for Shadow |
 | [build-sybil-split-xmodel](tasks/build-sybil-split-xmodel.md) | done | p0 | build | dmarz/pipeline-split-qwen | dmarz | 2026-10-04T12:37Z | Prepare sybil-split-xmodel (cross-model replication of sybil-split-opus: Qwen3.7 Flash and GPT-6 Sol) to launch-ready |
 | [build-trust-credit-qwen](tasks/build-trust-credit-qwen.md) | done | p0 | build | dmarz/pipeline-split | dmarz | 2026-10-04T11:37Z | Prepare program v5 line T (trust credit, when verification amplifies capture) to launch-ready |
 | [build-verify-cost-qwen](tasks/build-verify-cost-qwen.md) | done | p0 | build | dmarz/pipeline-verify | dmarz | 2026-10-04T11:37Z | Prepare program v5 line V (when is verification worth its cost) to launch-ready |
