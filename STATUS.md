@@ -261,8 +261,8 @@
 |---|---|---|---|---|
 | dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T09:25Z | sybil-split-opus: code pushed (53 selftests, offline S0 1853/1853); running the local rehearsal, then runbook, READY.yaml and pre-run review; no launch, no model call |
 | dmarz/newcomer-opus | done |  | 2026-10-04T09:20Z | sybil-newcomer-opus S1 closed out: RESULTS.md and s1-001-post.md pushed; claim released |
+| dmarz/pipeline-scarcity | done |  | 2026-10-04T09:12Z | sybil-scarcity-opus package finished and filed as a ready run request (run queue 248) after the fleet monitor's same-researcher check; nothing launched by this agent |
 | dmarz/budget-sonnet | done |  | 2026-10-04T09:10Z | S1 done 2880/2880, USD 118.85 study total; results, post-mortem and paired Haiku comparison pushed; claim released |
-| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T09:10Z | sybil-scarcity-opus package on main after the fleet monitor's same-researcher check (go, 2 requests in flight): code commit 30e34577, source hash b37af997 (selftest 33 OK, offline S0 168/168, rehearsal passed), pre-run review chain-001; nothing launched by this agent, no model call |
 | vishesh/codex-idea-scores | idle | build-swarm-size-qualification | 2026-10-04T09:02Z | Q-A5/Q-A6 cycle closed; adverse matched pilot analyzed, allocation released; no successor queued |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04T08:59Z | S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision |
 | vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T08:56Z | D5 deployed and no-call preflight passed; central dispatch or owner exception pending; no native D5 result |
