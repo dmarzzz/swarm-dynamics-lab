@@ -46,3 +46,7 @@ Next action: prepare a separately identified bounded qualification of the native
 ## Latest iteration: Q-A4 full-width qualification
 
 [Prospective plan](reviews/q-a4-full-width-plan.md), source 69cb6a288d2993cd231f1954519810970dbe5104, 48 passing experiment tests. Sixteen width-16 N=1 cases interleaved across four family/structure cells; strict schema contracts, corrected progress totals, $8 attempt/$2 episode sublimits within the existing original $20 ledger. Fresh claim PR212 and exact immutable public registration verified. Starting exposure $0.343028; no budget reset. Results and promotion decision pending; no automatic larger-N launch.
+
+## PI-driven cycle: Q-A5
+
+Q-A4 closed: 11/16 substantive successes, all 16 schema-valid; all 64 artifact hashes verified. [PI-perspective self-review](reviews/q-a4-pi-review.md) localizes the weak evidence-chain stratum and distinguishes proven observations from integration/propagation hypotheses. This is author critique, not independent review. [Q-A5 plan](reviews/q-a5-evidence-audit-plan.md) published before implementation; source 9b11abb7, 52 offline tests. Eight evidence-only development repeats retain worker artifacts and evaluate stage transitions after termination, without extra calls or actor feedback. Claim PR231 extends the existing exclusive host; exact live plan/source admission verified. $4 attempt sublimit inside the original canonical $20 authority; starting exposure $1.178002. Post-mortem and any further intervention depend on observed stage diagnostics.
