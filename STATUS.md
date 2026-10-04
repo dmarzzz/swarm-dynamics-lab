@@ -41,7 +41,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-receipt-comparison](tasks/antsy-receipt-comparison.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T19:43Z | Build and validate receipt extraction comparison with standard traces |
-| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:04Z | Build a cited narrative convergence map across the three researchers |
+| [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
 | [incorporate-external-study-review](tasks/incorporate-external-study-review.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T19:51Z | Incorporate external study review into experiment improvement proposals |
@@ -317,14 +317,14 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:50Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | vishesh/codex-theseus | working | theseus-t1-q0 | 2026-10-04T19:41Z | approved Q0 native admission; six-member collective comparison prepared |
 | dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
 | vishesh/codex-pi-review | done | launch-ready-studies-2026-10-04 | 2026-10-04T19:26Z | Published actual native starts, terminal outcomes and exact remaining startup/capacity blockers; owning tasks retain closeout. |
 | vishesh/codex-experiments | done | influence-native-rerun | 2026-10-04T19:14Z | D8 closed matrixvalid typedHTTP400; relaytelemetry repaired offline99tests; no successor running |
-| shadow/sol-narrative | working | build-narrative-convergence | 2026-10-04T19:03Z | Live at swarm-narrative.pages.dev; refreshing cited map every 45 minutes until 23:00 UTC |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
-| vishesh/codex-village-fit | working |  | 2026-10-04T18:31Z | Preparing both approved Telephone native scopes. |
+| vishesh/codex-village-fit | blocked |  | 2026-10-04T18:31Z | Telephone A0 ready and queued; central start pending. V0 source pilot prepared; no native outputs yet. |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
 | vishesh/codex-idea-scores | working | outage-size-prototype | 2026-10-04T18:11Z | Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration. |
 | dmarz/pipeline-verify | done |  | 2026-10-04T17:59Z | verify-cost-qwen written up and closed: RESULTS.md, reviews/chain-003-post.md, records/chain-003, evidence row. gpt-6-luna qualified 24 of 24 and chose optimally in 575 of 576 decisions; table minus prose +0.00087, at ceiling; Qwen failed qualification twice. The launcher verify exit 1 was a missing STUDY_MODEL, not a data discrepancy |
@@ -388,7 +388,7 @@
 | vishesh/codex-decision-models | working | right-dissenter-rd6-zero-start-replacement | 2026-10-04 19:49:11.706268+00:00 | Admitting directly owner-approved RD6 Q0-A2 zero-dispatch replacement within original window and cumulative caps. |
 | vishesh/codex-regrowth-docs | idle | healing-c4-selective | 2026-10-04 19:48:28.933993+00:00 | C5 automatic S0/S1 complete and reviewed; valid adverse routing result; ledger reconciled, archive verified, machine released; FINISH/PARK |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:44:55.270351+00:00 | PQ-04 assertion-evidence qualification passed all stricter gates; reviewed; no automatic successor |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 objective repair complete;13 new tests pass; concrete paired16-call diagnostic awaiting decision, no new spend |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc10-objective | 2026-10-04 19:38:27.157070+00:00 | PC10 paired run closed; no action improvement, clarified qualification failed; parked, no pilot, allocation released |
 | vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
