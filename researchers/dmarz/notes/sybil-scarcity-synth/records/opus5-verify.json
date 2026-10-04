@@ -1,0 +1,51 @@
+{
+  "action": "verify",
+  "exit": 0,
+  "result": {
+    "experiment": "sybil-scarcity-synth",
+    "model": "claude-opus-5",
+    "ok": true,
+    "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725",
+    "stages": {
+      "P0": {
+        "batch": "p0-001-opus-5",
+        "checks": {
+          "analysis_recomputed": true,
+          "artifacts_complete": true,
+          "artifacts_match_hub": true,
+          "assignments_match_manifest": true,
+          "grades_recomputed": true,
+          "hub_metrics_match": true,
+          "hub_status_matches": true,
+          "no_unit_counted_twice": true,
+          "packet_hashes_recomputed": true,
+          "records_readable": true,
+          "rows_cover_assignments": true,
+          "source_hash_matches": true,
+          "summary_recomputed": true
+        },
+        "cost_usd": 0.0,
+        "failure": "invalid_rows:http_429",
+        "model_calls": 1,
+        "ok": true,
+        "parts": 1,
+        "rows": 1,
+        "run": "sybil-scarcity-synth/7c26a1c6",
+        "stage_failed": 1,
+        "stage_not_started": 0,
+        "stage_valid": 0
+      }
+    },
+    "state": "stopped_at_gate"
+  },
+  "chain_active": false,
+  "worker_active": false,
+  "role": "single",
+  "foreign_workers": 0,
+  "logs": {
+    "chain-opus-5-p0-q0-s1.log": "chain stopped at P0: invalid_rows:http_429",
+    "chain-s0-p0-q0-s1.log": "chain stopped at S1: failed_calls_exceed_limit:12"
+  },
+  "revision": "34c11486ca6c49d0c14d60fc5e20c4aca0317f32",
+  "host": "sim-test-01"
+}

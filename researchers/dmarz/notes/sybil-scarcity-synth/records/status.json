@@ -1,0 +1,196 @@
+{
+  "action": "status",
+  "exit": 0,
+  "result": {
+    "chain": {
+      "budget": {
+        "max_calls": {
+          "P0": 1,
+          "Q0": 48,
+          "S0": 0,
+          "S1": 960
+        },
+        "max_calls_total": 1009,
+        "usd_cap": 240
+      },
+      "code": "34c11486ca6c49d0c14d60fc5e20c4aca0317f32",
+      "current_stage": "S1",
+      "ended": "2026-10-04T11:44:48Z",
+      "experiment": "sybil-scarcity-synth",
+      "model": "claude-opus-5-5",
+      "reason": "failed_calls_exceed_limit:12",
+      "requested": [
+        "S0",
+        "P0",
+        "Q0",
+        "S1"
+      ],
+      "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725",
+      "stages": {
+        "P0": {
+          "batch": "p0-001",
+          "billing": {
+            "billing_affected_calls": 0,
+            "billing_pause_seconds": 0.0,
+            "billing_pauses": 0
+          },
+          "calls": 1,
+          "cost_usd": 0.094904,
+          "count_fallbacks": 0,
+          "elapsed_seconds": 3.1294308970027487,
+          "ended": "2026-10-04T11:30:08Z",
+          "failed": 0,
+          "gate_passed": true,
+          "input_tokens": 23536,
+          "invalid": 0,
+          "not_started": 0,
+          "output_tokens": 38,
+          "part_units": 1,
+          "planned": 1,
+          "results_dir": "<server-path>",
+          "run": "sybil-scarcity-synth/03aad727",
+          "stage_status": "done",
+          "started": "2026-10-04T11:30:02Z",
+          "status": "done",
+          "transport_attempts": 1,
+          "valid": 1
+        },
+        "Q0": {
+          "batch": "q0-001",
+          "billing": {
+            "billing_affected_calls": 0,
+            "billing_pause_seconds": 0.0,
+            "billing_pauses": 0
+          },
+          "calls": 48,
+          "cost_usd": 4.625896,
+          "count_fallbacks": 0,
+          "elapsed_seconds": 81.60797774800449,
+          "ended": "2026-10-04T11:31:50Z",
+          "failed": 0,
+          "gate_passed": true,
+          "input_tokens": 1133304,
+          "invalid": 0,
+          "not_started": 0,
+          "output_tokens": 4634,
+          "part_units": 48,
+          "planned": 48,
+          "results_dir": "<server-path>",
+          "run": "sybil-scarcity-synth/3e594c13",
+          "stage_status": "done",
+          "started": "2026-10-04T11:30:08Z",
+          "status": "done",
+          "transport_attempts": 48,
+          "valid": 48
+        },
+        "S0": {
+          "batch": "s0-001",
+          "billing": {
+            "billing_affected_calls": 0,
+            "billing_pause_seconds": 0.0,
+            "billing_pauses": 0
+          },
+          "calls": 0,
+          "cost_usd": 0.0,
+          "count_fallbacks": 0,
+          "elapsed_seconds": 53.39734277500247,
+          "ended": "2026-10-04T11:30:02Z",
+          "failed": 0,
+          "gate_passed": true,
+          "input_tokens": 0,
+          "invalid": 0,
+          "not_started": 0,
+          "output_tokens": 0,
+          "part_units": 128,
+          "planned": 128,
+          "results_dir": "<server-path>",
+          "run": "sybil-scarcity-synth/e1ada5ff",
+          "stage_status": "done",
+          "started": "2026-10-04T11:28:47Z",
+          "status": "done",
+          "transport_attempts": 0,
+          "valid": 128
+        },
+        "S1": {
+          "batch": "s1-001",
+          "billing": {
+            "billing_affected_calls": 0,
+            "billing_pause_seconds": 0.0,
+            "billing_pauses": 0
+          },
+          "calls": 304,
+          "cost_usd": 28.331772,
+          "count_fallbacks": 12,
+          "elapsed_seconds": 755.172165139993,
+          "ended": "2026-10-04T11:44:48Z",
+          "failed": 12,
+          "gate_passed": null,
+          "input_tokens": 6848903,
+          "invalid": 668,
+          "not_started": 656,
+          "output_tokens": 46808,
+          "part_units": 960,
+          "planned": 960,
+          "projection": {
+            "committed_usd": 4.7208,
+            "passed": true,
+            "projected_s1_usd": 92.51792,
+            "q0_mean_cost_usd": {
+              "high": 0.09754366666666665,
+              "low": 0.09520200000000001
+            },
+            "remaining_cap_usd": 235.2792,
+            "s1_calls_per_effort": 480
+          },
+          "reason": "failed_calls_exceed_limit:12",
+          "results_dir": "<server-path>",
+          "run": "sybil-scarcity-synth/d955e1b4",
+          "stage_status": "failed",
+          "started": "2026-10-04T11:31:50Z",
+          "status": "failed",
+          "transport_attempts": 328,
+          "valid": 292
+        }
+      },
+      "started": "2026-10-04T11:28:47Z",
+      "state": "stopped_at_gate",
+      "stopped_stage": "S1",
+      "updated": "2026-10-04T11:44:48Z"
+    },
+    "ledger": {
+      "actual_usd": 33.052572,
+      "attempted_calls": 353,
+      "calls_by_stage": {
+        "P0": 1,
+        "Q0": 48,
+        "S1": 304
+      },
+      "cap_calls": 1009,
+      "cap_transport_attempts": 1300,
+      "cap_usd": 240,
+      "committed_usd": 39.699576,
+      "input_tokens": 8005743,
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "output_tokens": 51480,
+      "released_calls": 0,
+      "reserved_usd": 148.516828,
+      "transport_attempts": 377,
+      "usage_reported_calls": 341
+    },
+    "model": "claude-opus-5-5",
+    "results_dir": "<server-path>",
+    "source_hash": "b75d7b372e7e9780d79ab7b358f175752225f881e1dba87b8d6024f0a8129725"
+  },
+  "chain_active": false,
+  "worker_active": false,
+  "role": "single",
+  "foreign_workers": 0,
+  "logs": {
+    "chain-opus-5-p0-q0-s1.log": "chain stopped at P0: invalid_rows:http_429",
+    "chain-s0-p0-q0-s1.log": "chain stopped at S1: failed_calls_exceed_limit:12"
+  },
+  "revision": "34c11486ca6c49d0c14d60fc5e20c4aca0317f32",
+  "host": "sim-test-01"
+}
