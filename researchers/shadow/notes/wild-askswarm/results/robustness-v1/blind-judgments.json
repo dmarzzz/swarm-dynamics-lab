@@ -1,0 +1,43 @@
+{
+  "reviewer": "shadow/sol-askswarm operating assistant, direct close reading; NOT human or independent review",
+  "review_phase": "Recorded before opening key.json or root/source assignments",
+  "blinding": "Random A/B orientation; actor metadata, timestamps, scores, root IDs and source labels withheld. Selected pair handles masked in body. Genre, embedded third-party handles and non-ISO task clocks remain recognizable: partial blinding only.",
+  "reading": "All 30 redacted pairs read. B02 was initially excerpted at 5000 characters; missing middle of both texts then read separately before judgment. No final text truncation.",
+  "criteria": {
+    "lexical_match": "Visible shared exact or near-exact wording, including boilerplate.",
+    "task_specific_content": "Shared task-specific payload, numerical facts, parameterized query or prose, not just an administrative sync template. This does NOT establish copying, endorsement or semantic adoption.",
+    "endorsement": "Evidence of the specific directed adoption/endorsement link, distinguishable from retained text or common-source exposure. Unknown is not a failure."
+  },
+  "judgments": [
+    {"sample_id":"B01","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification, no research proposition."},
+    {"sample_id":"B02","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Shared detailed SEC mirror/query variants and fit parameters. Duplicate content alone does not show a new user adopted it."},
+    {"sample_id":"B03","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Same occupation-specific DataUSA query and filters; capitalization/header differ. Could be common endpoint rather than communication."},
+    {"sample_id":"B04","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical two-file sync notification only."},
+    {"sample_id":"B05","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification only."},
+    {"sample_id":"B06","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical task-specific external wiki, SEC and proxy link list plus token. No explicit adoption act."},
+    {"sample_id":"B07","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical two-file sync notification only."},
+    {"sample_id":"B08","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical one-file sync notification only."},
+    {"sample_id":"B09","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical one-file sync notification only."},
+    {"sample_id":"B10","lexical_match":true,"task_specific_content":true,"category":"coordination_prose_snapshot","endorsement":"unestablished","reason":"Shared wage numbers and timed-cohort discussion, with appended updates. Text resembles snapshots; directed adoption cannot be assigned to the sampled pair."},
+    {"sample_id":"B11","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Same specific tuberculosis API/config endpoint via proxy, different short wrappers. Endpoint reuse is not endorsement."},
+    {"sample_id":"B12","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Same occupation query, one repeated as a bracketed link and one with schema reference; no behavioral outcome."},
+    {"sample_id":"B13","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical two-file sync notification only."},
+    {"sample_id":"B14","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification only."},
+    {"sample_id":"B15","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Same detailed transformed SEC query list, trial number differs. Could be snapshot inheritance or a common template."},
+    {"sample_id":"B16","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical investor-data yearly query list and next-child marker; no independent uptake shown."},
+    {"sample_id":"B17","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical investor-data yearly query list, resembling B16. Repeated sampling unit is a link, not independent idea."},
+    {"sample_id":"B18","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification only."},
+    {"sample_id":"B19","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification only."},
+    {"sample_id":"B20","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical two-file sync notification only."},
+    {"sample_id":"B21","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical DataUSA occupation query with specific age/year filters. No observed use or endorsement."},
+    {"sample_id":"B22","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical yearly investor-data query list, same content family as B16/B17."},
+    {"sample_id":"B23","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical three-file sync notification only."},
+    {"sample_id":"B24","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Identical yearly investor-data query list, same content family as B16/B17/B22."},
+    {"sample_id":"B25","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical one-file sync notification only."},
+    {"sample_id":"B26","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Near-identical county-data gateway links and continuation marker, numeric trailing clock differs. No independent endorsement."},
+    {"sample_id":"B27","lexical_match":true,"task_specific_content":true,"category":"coordination_prose_snapshot","endorsement":"unestablished","reason":"Shared tuition numbers, timed-sequence notes and requests, with appended cohorts. Signals claimed coordination but does not prove this directed pair's adoption."},
+    {"sample_id":"B28","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical one-file sync notification only."},
+    {"sample_id":"B29","lexical_match":true,"task_specific_content":false,"category":"administrative_template","endorsement":"unestablished","reason":"Identical one-file sync notification only."},
+    {"sample_id":"B30","lexical_match":true,"task_specific_content":true,"category":"query_link_payload","endorsement":"unestablished","reason":"Same occupation-specific DataUSA query and schema in different order. Common task can explain both without transmission."}
+  ]
+}
