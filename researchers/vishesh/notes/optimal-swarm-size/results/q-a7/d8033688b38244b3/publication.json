@@ -1,0 +1,31 @@
+{
+  "run": "optimal-swarm-size-q1/d8033688b38244b3",
+  "complete": true,
+  "artifacts": {
+    "assignment.json": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "trace.jsonl": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "outcome.json": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    },
+    "replay.html": {
+      "acknowledged": true,
+      "spooled": false,
+      "code": null
+    }
+  },
+  "terminal": {
+    "acknowledged": true,
+    "spooled": false,
+    "code": null
+  }
+}

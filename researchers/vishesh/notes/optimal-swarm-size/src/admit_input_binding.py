@@ -52,7 +52,9 @@ def main():
     config_path=a.output.parent/'q-a7-runtime.json'
     with config_path.open('x') as f:json.dump(cfg,f,indent=2)
     native=subprocess.run(['python3',str(src/'run_qualification.py'),'--config',str(config_path),'--budget-ledger',str(a.ledger),'--output',str(a.output)],check=False)
-    final=subprocess.run(['python3',str(repo/'scripts/experiment.py'),'finalize','optimal-swarm-size','--attempt','q-a7','--results',str(a.output),'--outcome','completed' if native.returncode==0 else 'failed'],check=False)
+    from finalize_native import import_evidence
+    imported=import_evidence(repo,a.output,'q-a7')
+    final=subprocess.run(['python3',str(repo/'scripts/experiment.py'),'finalize','optimal-swarm-size','--attempt','q-a7','--results',imported,'--outcome','completed' if native.returncode==0 else 'failed'],cwd=repo,check=False)
     return native.returncode or final.returncode
 if __name__=='__main__':
     try:raise SystemExit(main())

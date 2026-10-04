@@ -1,0 +1,200 @@
+{
+  "scope": "post-termination inspection of all144 effective requests and144 visible responses; no feedback to actors",
+  "episodes": [
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/6/width16/n1/bound",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": "item_14",
+      "first_proof_error": "item_00",
+      "first_wrong_value_artifact": {
+        "value": 808882,
+        "source_ids": [
+          "item_00",
+          "item_01",
+          "item_02",
+          "item_03",
+          "item_04",
+          "item_05",
+          "item_06",
+          "item_07",
+          "item_08",
+          "item_09",
+          "item_10",
+          "item_11",
+          "item_12",
+          "item_13"
+        ]
+      },
+      "first_wrong_proof_artifact": {
+        "value": 47,
+        "source_ids": []
+      },
+      "expected_source_ids_at_first_proof_error": [
+        "a_0",
+        "b_0",
+        "opening"
+      ],
+      "first_expected_value": 807882,
+      "local_mismatches": [
+        "item_14"
+      ],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/6/width16/n1/bound",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": null,
+      "first_proof_error": null,
+      "first_wrong_value_artifact": null,
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": null,
+      "local_mismatches": [],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/7/width16/n1/full",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": null,
+      "first_proof_error": null,
+      "first_wrong_value_artifact": null,
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": null,
+      "local_mismatches": [],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/bound",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": null,
+      "first_proof_error": null,
+      "first_wrong_value_artifact": null,
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": null,
+      "local_mismatches": [],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/6/width16/n1/full",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": "item_02",
+      "first_proof_error": null,
+      "first_wrong_value_artifact": {
+        "value": 48,
+        "source_ids": [
+          "opening",
+          "a_2",
+          "b_2"
+        ]
+      },
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": 46,
+      "local_mismatches": [
+        "item_02",
+        "item_09",
+        "item_10",
+        "item_11",
+        "item_15"
+      ],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/6/width16/n1/full",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": "item_00",
+      "first_proof_error": "item_00",
+      "first_wrong_value_artifact": {
+        "value": 52,
+        "source_ids": []
+      },
+      "first_wrong_proof_artifact": {
+        "value": 52,
+        "source_ids": []
+      },
+      "expected_source_ids_at_first_proof_error": [
+        "a_0",
+        "b_0",
+        "opening"
+      ],
+      "first_expected_value": 47,
+      "local_mismatches": [
+        "item_00",
+        "item_03",
+        "item_09",
+        "item_12",
+        "item_14"
+      ],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/full",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": "item_08",
+      "first_proof_error": null,
+      "first_wrong_value_artifact": {
+        "value": 31062,
+        "source_ids": [
+          "opening",
+          "a_0",
+          "b_0",
+          "a_1",
+          "b_1",
+          "a_2",
+          "b_2",
+          "a_3",
+          "b_3",
+          "a_4",
+          "b_4",
+          "a_5",
+          "b_5",
+          "a_6",
+          "b_6",
+          "a_7",
+          "b_7",
+          "a_8",
+          "b_8"
+        ]
+      },
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": 5182,
+      "local_mismatches": [
+        "item_08",
+        "item_12",
+        "item_14"
+      ],
+      "integration_correctness_transitions": 0
+    },
+    {
+      "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/7/width16/n1/bound",
+      "all_effective_requests_inspected": 18,
+      "all_visible_responses_retained": 18,
+      "public_task_route_and_binding_match": true,
+      "first_value_error": null,
+      "first_proof_error": null,
+      "first_wrong_value_artifact": null,
+      "first_wrong_proof_artifact": null,
+      "expected_source_ids_at_first_proof_error": null,
+      "first_expected_value": null,
+      "local_mismatches": [],
+      "integration_correctness_transitions": 0
+    }
+  ]
+}

@@ -1,0 +1,134 @@
+{
+  "assessor": "vishesh/codex-idea-scores (owning agent)",
+  "date": "2026-10-04",
+  "attempt": "q-a7",
+  "evidence_revision": "291581ff2140ca797e650d249fd6c13f0d3850ce execution; saved-data retrospective review",
+  "decision": "complete_valid_result",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Fixed-N public input-binding contrast and outcome-dependent screen were prospectively defined.",
+      "evidence": [
+        {
+          "path": "reviews/q-a7-input-binding-plan.md",
+          "sha256": "ba113c5588e5642c25bfc709655becb28ef502d1ccd7b17b4fe3d21e25dba462"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Two synthetic arithmetic roots include a provenance floor and ceilings; real incident competence is untested.",
+      "evidence": [
+        {
+          "path": "results/q-a7/analysis.json",
+          "sha256": "41fb434f82ed9ec8fd982e42ca3d9f464e1d7e23e382951c494b38d32de45445"
+        }
+      ],
+      "next_action": "Park escalation; draft a separate prospective design addressing this limitation before any new collection.",
+      "acceptance_check": "Owner-approved independent-case and semantic qualification plan with predefined outcomes, controls and reliability criteria."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Matched tasks and N1/one slot; extra public redundancy is the treatment, not equal token usage.",
+      "evidence": [
+        {
+          "path": "results/q-a7/native-trace-review.json",
+          "sha256": "10c471f0063bcdf2a8818e25b45d1ebd9acfd56c3d02495601ced5afce2244ed"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Bound joint quality0.75 misses the0.90 development requirement despite62/64 correct values.",
+      "evidence": [
+        {
+          "path": "results/q-a7/analysis.json",
+          "sha256": "41fb434f82ed9ec8fd982e42ca3d9f464e1d7e23e382951c494b38d32de45445"
+        }
+      ],
+      "next_action": "Park escalation; draft a separate prospective design addressing this limitation before any new collection.",
+      "acceptance_check": "Owner-approved independent-case and semantic qualification plan with predefined outcomes, controls and reliability criteria."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Saved grades and stage audits recomputed; value and source components remain separate.",
+      "evidence": [
+        {
+          "path": "results/q-a7/analysis.json",
+          "sha256": "41fb434f82ed9ec8fd982e42ca3d9f464e1d7e23e382951c494b38d32de45445"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Two development roots and four dependent pairs explicitly limit this to descriptive feasibility.",
+      "evidence": [
+        {
+          "path": "reviews/q-a7-input-binding-plan.md",
+          "sha256": "ba113c5588e5642c25bfc709655becb28ef502d1ccd7b17b4fe3d21e25dba462"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All144 effective requests and visible responses reconcile; public bindings checked without truth leakage.",
+      "evidence": [
+        {
+          "path": "results/q-a7/native-trace-review.json",
+          "sha256": "10c471f0063bcdf2a8818e25b45d1ebd9acfd56c3d02495601ced5afce2244ed"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Eight assignments reconcile through analysis;32 hub artifacts hash verified.",
+      "evidence": [
+        {
+          "path": "results/q-a7/verification.json",
+          "sha256": "3602ee04cec4f0b7b56209ef5857748de0d67f73cf01acc95ab33a93d3af7a9e"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original cumulative20 cap preserved; total exposure2.903680 includes unresolved holds.",
+      "evidence": [
+        {
+          "path": "reviews/q-a7-post.md",
+          "sha256": "24ecdf6732292e01da93044ccce3280ced1f12f6de5dbe38e0f38a9f9c0a0055"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen execution revision, raw traces and offline recomputation retained; hosted answers are not deterministic.",
+      "evidence": [
+        {
+          "path": "results/q-a7/analysis.json",
+          "sha256": "41fb434f82ed9ec8fd982e42ca3d9f464e1d7e23e382951c494b38d32de45445"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Evidence table preserves all pairs and joint/component distinction; saved replay artifacts verified.",
+      "evidence": [
+        {
+          "path": "reviews/q-a7-post.md",
+          "sha256": "24ecdf6732292e01da93044ccce3280ced1f12f6de5dbe38e0f38a9f9c0a0055"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/full",
+  "parent_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7",
+  "root_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7/width16",
+  "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7/width16",
+  "root": 7,
+  "n": 1,
+  "arm": "full",
+  "stage": "input-binding",
+  "family": "evidence",
+  "structure": "chain",
+  "width": 16,
+  "attempt_id": "q-a7",
+  "public_task_sha256": "eabb21090e4c741d97fc83b825c39a8880a9ebc641bc7ff3c8a24ba02c3c7c35",
+  "commit": "291581ff2140ca797e650d249fd6c13f0d3850ce",
+  "run_tldr": "TLDR: Q-A7 full public-input binding arm, evidence chain root 7, width16 N1; matched full versus redundant binding under equal caps. Metrics: correctness, correct items/second, local arithmetic consistency, cost. Tiny development diagnostic with root6 futility stop; no size-effect claim.",
+  "status": "assigned"
+}

@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-idea-scores
 tool: codex
-state: working
-task: outage-size-prototype
-doing: Building and qualifying bounded outage prototype, then existing input-binding diagnostic; explicit OpenRouter route migration.
+state: idle
+task: null
+doing: O1 and Q-A7 complete with scientific post-mortems; worker released. Broad size sweep parked.
 updated: 2026-10-04T18:11Z
 ---
 

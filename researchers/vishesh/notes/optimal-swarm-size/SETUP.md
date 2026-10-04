@@ -97,3 +97,9 @@ Current O1 preparation evidence: source2acfe6cf was pushed as Cytonomy and insta
 ## O1 completed and scientifically assessed
 
 The owner explicitly approved the previously blocked original-ledger handoff and prepared launches. Fresh claim PR352, account/idle/source checks, full backup/hash/fencing and public admission passed. [O1 post-mortem](reviews/outage-o1-post.md):12/12 completed,4/4 qualification,7/8 demonstration,140 calls,0unsafe commits; cumulative exposureUSD2.377404. Single agent and rule controller solve both demonstration worlds. Fixed-four duplicates work; contraction fires even in stable control, so no phase-transition/optimal-size claim. Complete the current O1 scope; separately approved Q-A7 may proceed after its own exact-source/public/ledger admission. Historical preparation hold records remain preserved.
+
+## Q-A7 completed and scientifically assessed
+
+[Q-A7 post-mortem](reviews/q-a7-post.md):8/8 terminal,144 calls, all32 artifacts verified. Binding improves joint correctness35/64 to48/64 and numerical correctness35/64 to62/64, but bound joint quality0.75 misses the0.90 screen. Two development roots; no optimal-N inference. Native execution succeeded; the subsequent absolute-path finalizer defect was repaired and offline closeout completed without more calls.70 shared checks pass. Both authorized O1/Q-A7 scopes are complete. Original ledger915 calls, settledUSD2.603778, exposureUSD2.903680 including retained uncertainties, remainingUSD17.096320. Prior hold/preparation paragraphs are historical. No successor queued; broad size sweep parked.
+
+Allocation closeout: agentops PR391 merged, releasing the completed study claim after worker/relay shutdown and forensic budget backup. Existing fleet machine retained. No successor allocated or queued.

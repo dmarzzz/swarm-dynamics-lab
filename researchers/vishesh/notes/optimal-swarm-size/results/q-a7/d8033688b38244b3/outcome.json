@@ -1,0 +1,743 @@
+{
+  "artifact": "{\"answers\": {\"item_00\": {\"value\": 28, \"source_ids\": [\"opening\", \"a_0\", \"b_0\"]}, \"item_01\": {\"value\": 93, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\"]}, \"item_02\": {\"value\": 281, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\"]}, \"item_03\": {\"value\": 569, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\"]}, \"item_04\": {\"value\": 574, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\"]}, \"item_05\": {\"value\": 1724, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\"]}, \"item_06\": {\"value\": 5174, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\"]}, \"item_07\": {\"value\": 5176, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\"]}, \"item_08\": {\"value\": 31062, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\"]}, \"item_09\": {\"value\": 31066, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\"]}, \"item_10\": {\"value\": 93203, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\"]}, \"item_11\": {\"value\": 93208, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\", \"a_11\", \"b_11\"]}, \"item_12\": {\"value\": 279627, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\", \"a_11\", \"b_11\", \"a_12\", \"b_12\"]}, \"item_13\": {\"value\": 279631, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\", \"a_11\", \"b_11\", \"a_12\", \"b_12\", \"a_13\", \"b_13\"]}, \"item_14\": {\"value\": 839497, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\", \"a_11\", \"b_11\", \"a_12\", \"b_12\", \"a_13\", \"b_13\", \"a_14\", \"b_14\"]}, \"item_15\": {\"value\": 839506, \"source_ids\": [\"opening\", \"a_0\", \"b_0\", \"a_1\", \"b_1\", \"a_2\", \"b_2\", \"a_3\", \"b_3\", \"a_4\", \"b_4\", \"a_5\", \"b_5\", \"a_6\", \"b_6\", \"a_7\", \"b_7\", \"a_8\", \"b_8\", \"a_9\", \"b_9\", \"a_10\", \"b_10\", \"a_11\", \"b_11\", \"a_12\", \"b_12\", \"a_13\", \"b_13\", \"a_14\", \"b_14\", \"a_15\", \"b_15\"]}}}",
+  "elapsed_s": 46.804980904998956,
+  "failure": null,
+  "fatal": false,
+  "work_failures": [],
+  "configured_n": 1,
+  "used_contexts": [
+    0
+  ],
+  "completed_items": 16,
+  "work_artifacts": {
+    "item_00": {
+      "value": 28,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0"
+      ]
+    },
+    "item_01": {
+      "value": 93,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1"
+      ]
+    },
+    "item_02": {
+      "value": 281,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2"
+      ]
+    },
+    "item_03": {
+      "value": 569,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3"
+      ]
+    },
+    "item_04": {
+      "value": 574,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4"
+      ]
+    },
+    "item_05": {
+      "value": 1724,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5"
+      ]
+    },
+    "item_06": {
+      "value": 5174,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6"
+      ]
+    },
+    "item_07": {
+      "value": 5176,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7"
+      ]
+    },
+    "item_08": {
+      "value": 31062,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8"
+      ]
+    },
+    "item_09": {
+      "value": 31066,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9"
+      ]
+    },
+    "item_10": {
+      "value": 93203,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10"
+      ]
+    },
+    "item_11": {
+      "value": 93208,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10",
+        "a_11",
+        "b_11"
+      ]
+    },
+    "item_12": {
+      "value": 279627,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10",
+        "a_11",
+        "b_11",
+        "a_12",
+        "b_12"
+      ]
+    },
+    "item_13": {
+      "value": 279631,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10",
+        "a_11",
+        "b_11",
+        "a_12",
+        "b_12",
+        "a_13",
+        "b_13"
+      ]
+    },
+    "item_14": {
+      "value": 839497,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10",
+        "a_11",
+        "b_11",
+        "a_12",
+        "b_12",
+        "a_13",
+        "b_13",
+        "a_14",
+        "b_14"
+      ]
+    },
+    "item_15": {
+      "value": 839506,
+      "source_ids": [
+        "opening",
+        "a_0",
+        "b_0",
+        "a_1",
+        "b_1",
+        "a_2",
+        "b_2",
+        "a_3",
+        "b_3",
+        "a_4",
+        "b_4",
+        "a_5",
+        "b_5",
+        "a_6",
+        "b_6",
+        "a_7",
+        "b_7",
+        "a_8",
+        "b_8",
+        "a_9",
+        "b_9",
+        "a_10",
+        "b_10",
+        "a_11",
+        "b_11",
+        "a_12",
+        "b_12",
+        "a_13",
+        "b_13",
+        "a_14",
+        "b_14",
+        "a_15",
+        "b_15"
+      ]
+    }
+  },
+  "plan_dependencies": {
+    "item_00": [],
+    "item_01": [
+      "item_00"
+    ],
+    "item_02": [
+      "item_01"
+    ],
+    "item_03": [
+      "item_02"
+    ],
+    "item_04": [
+      "item_03"
+    ],
+    "item_05": [
+      "item_04"
+    ],
+    "item_06": [
+      "item_05"
+    ],
+    "item_07": [
+      "item_06"
+    ],
+    "item_08": [
+      "item_07"
+    ],
+    "item_09": [
+      "item_08"
+    ],
+    "item_10": [
+      "item_09"
+    ],
+    "item_11": [
+      "item_10"
+    ],
+    "item_12": [
+      "item_11"
+    ],
+    "item_13": [
+      "item_12"
+    ],
+    "item_14": [
+      "item_13"
+    ],
+    "item_15": [
+      "item_14"
+    ]
+  },
+  "assignment": {
+    "id": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/full",
+    "parent_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7",
+    "root_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7/width16",
+    "pair_id": "swarm-size-fixtures-v1/qualification/evidence/chain/7/width16",
+    "root": 7,
+    "n": 1,
+    "arm": "full",
+    "stage": "input-binding",
+    "family": "evidence",
+    "structure": "chain",
+    "width": 16,
+    "attempt_id": "q-a7",
+    "public_task_sha256": "eabb21090e4c741d97fc83b825c39a8880a9ebc641bc7ff3c8a24ba02c3c7c35"
+  },
+  "commit": "291581ff2140ca797e650d249fd6c13f0d3850ce",
+  "evaluation": {
+    "valid": true,
+    "substantive_success": false,
+    "quality": 0.5,
+    "reason": "contract_failed",
+    "value_accuracy": 0.5,
+    "grounding_accuracy": 1.0
+  },
+  "exposure_microdollars": 82908,
+  "operational_success": false,
+  "stage_diagnostics": {
+    "kind": "post-termination evaluator-only diagnostic; not a separate executed arm",
+    "assembled_worker_evaluation": {
+      "valid": true,
+      "substantive_success": false,
+      "quality": 0.5,
+      "reason": "contract_failed",
+      "value_accuracy": 0.5,
+      "grounding_accuracy": 1.0
+    },
+    "items": [
+      {
+        "item": "item_00",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_01",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_02",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_03",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_04",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_05",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_06",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_07",
+        "worker": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "final": {
+          "value_correct": true,
+          "proof_correct": true,
+          "correct": true
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_08",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_09",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_10",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_11",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_12",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_13",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_14",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      },
+      {
+        "item": "item_15",
+        "worker": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "final": {
+          "value_correct": false,
+          "proof_correct": true,
+          "correct": false
+        },
+        "changed_at_integration": false,
+        "correct_to_wrong": false,
+        "wrong_to_correct": false
+      }
+    ],
+    "local_arithmetic_mismatches": [
+      "item_08",
+      "item_12",
+      "item_14"
+    ],
+    "local_arithmetic_unscorable": [],
+    "correct_to_wrong": 0,
+    "wrong_to_correct": 0,
+    "worker_wrong_values": 8,
+    "final_wrong_values": 8,
+    "worker_wrong_proofs": 0,
+    "final_wrong_proofs": 0,
+    "first_worker_value_error": "item_08",
+    "first_final_value_error": "item_08",
+    "extra_edges": 0,
+    "missing_required_edges": 0
+  },
+  "correct_items_per_second": 0.17092197978325782,
+  "correct_items_per_usd": 96.49249770830319
+}

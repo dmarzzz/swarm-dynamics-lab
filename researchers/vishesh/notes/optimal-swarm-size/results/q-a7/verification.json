@@ -1,0 +1,228 @@
+{
+  "artifact_access": "authenticated hub; raw synthetic evidence additionally published in study repository",
+  "checks": [
+    {
+      "run": "optimal-swarm-size-q1/00fc94acbff66a72",
+      "name": "assignment.json",
+      "sha256": "412de9cc7b09cc08d5300ff567e0c278d4de6ee65f0f7699436ab622d99e2edf",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/00fc94acbff66a72",
+      "name": "trace.jsonl",
+      "sha256": "8cd95e9f2b65bdf40843507034d4f97c2c771904185b5d96d44f9b55b4f9887e",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/00fc94acbff66a72",
+      "name": "outcome.json",
+      "sha256": "cbb794df0e06952542164e289ef9e89c15da0b8d6971dc04f61f7dd3581c9ae5",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/00fc94acbff66a72",
+      "name": "replay.html",
+      "sha256": "778e068c828397f918028433b9efc6280d2d2b6ad8b9bdfff04928de9afe1ad9",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/61680dbf39bbf053",
+      "name": "assignment.json",
+      "sha256": "8014099dcc5d0eb807570bcc36ae82cc8411709088e3f626866c4c5ea37a8db8",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/61680dbf39bbf053",
+      "name": "trace.jsonl",
+      "sha256": "71ece35821c237235a9abbf6bf2eed90095495f99b00459ebe0c4522922f687b",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/61680dbf39bbf053",
+      "name": "outcome.json",
+      "sha256": "150514af664a04b34b856706da4704eed35e73ec5571a3f26a04c1bf1bf37db7",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/61680dbf39bbf053",
+      "name": "replay.html",
+      "sha256": "f402a0376385892b8fa8d0715587660866e6e1b8997b4209f6753cbf849c2491",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/923aed46be80346d",
+      "name": "assignment.json",
+      "sha256": "330b1d3db8067f0decf9a0a24c0316391a44af36606a904bc63b78d2142e8377",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/923aed46be80346d",
+      "name": "trace.jsonl",
+      "sha256": "0c4bc8b2ae5cf19f62a6f9de898bec8b1f99a0676b41226ce51fc53ab7672f48",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/923aed46be80346d",
+      "name": "outcome.json",
+      "sha256": "65d24aa3e5f69373bae94bb5f6fd3bfb6178467e7b43ff8572e7397f4dcb3329",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/923aed46be80346d",
+      "name": "replay.html",
+      "sha256": "f4dfe5e489321d293285382b6c186a58ab0528cae9821c2a307caf4af9c80349",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/9b593f379c30873a",
+      "name": "assignment.json",
+      "sha256": "6b032cbcc3cc2a8c2c6e1d674378dad95fb6422d6e07886949a99474eb1124ed",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/9b593f379c30873a",
+      "name": "trace.jsonl",
+      "sha256": "f47c4dd14b3faa8e54519a50350fb73c1cc7d890078a71ef37bd5f1f38860065",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/9b593f379c30873a",
+      "name": "outcome.json",
+      "sha256": "8bd4ecb925cf7d87f59d33655452e4263daef88e67c967776b75890874dcd416",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/9b593f379c30873a",
+      "name": "replay.html",
+      "sha256": "c4310298656b49df6f312eba4f0d4963ee1c15f22b166cfa5bef3bf6d6ed3678",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/a675cd700959c311",
+      "name": "assignment.json",
+      "sha256": "b5463f80443d4f4540d1f1a666e2149d84312fb696c8b65d7e5d4e7990a9c45b",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/a675cd700959c311",
+      "name": "trace.jsonl",
+      "sha256": "ab379b78ea7d2ee449416e9597f2e95c554d78841295da72cd057ece0e0163ba",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/a675cd700959c311",
+      "name": "outcome.json",
+      "sha256": "20f8fd61a1927405f4a34f4b6a855cb190895133e2073ed5ce67d250c72488ff",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/a675cd700959c311",
+      "name": "replay.html",
+      "sha256": "bfebd64762aacf3d7b0aa976be99352115a5425bbeeb8c10bd16fd8f0d01b17d",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d5a68091b77c58b3",
+      "name": "assignment.json",
+      "sha256": "1975deef8d2e89b92134e437c64c2330e3874d5f6f3efd651ec62c0bc4759793",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d5a68091b77c58b3",
+      "name": "trace.jsonl",
+      "sha256": "1de475036ad088cb92f5857fff73f9046be4d11c156966efbc20a6504bc1452d",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d5a68091b77c58b3",
+      "name": "outcome.json",
+      "sha256": "bf914436a1346a2b3ae0a91e0481e50cc80b1988bcae673209ff5bbd0c1abdea",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d5a68091b77c58b3",
+      "name": "replay.html",
+      "sha256": "acf7da062c8ee4ceee34b5ca1d9c496e905a07e8d12722b5f9fa8e821c45512c",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d8033688b38244b3",
+      "name": "assignment.json",
+      "sha256": "bde7b098305b57c4dff9e3f4467a64f63ef51d06f0f4e90043a8c212dfde4dd1",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d8033688b38244b3",
+      "name": "trace.jsonl",
+      "sha256": "a54cd4800d1725e431065354899aaa83c8ee665cbe56e7df15dc75279de07393",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d8033688b38244b3",
+      "name": "outcome.json",
+      "sha256": "30dd797a8f594f4bde345085d77fc040d26be96286cf85865ec9fc0cc08b2ec7",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/d8033688b38244b3",
+      "name": "replay.html",
+      "sha256": "01c89feb3d0c2a778bbc754ca15affe32b1c2d1fda7d33acb769fdd46959699d",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/fb732402c4eb3c63",
+      "name": "assignment.json",
+      "sha256": "67faf4a73bd73e9aadfa30b67d525882121016da9ed903be8d184b04081a9965",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/fb732402c4eb3c63",
+      "name": "trace.jsonl",
+      "sha256": "551e54b9b199bdc7aa5e4ddd550b9b75b7cd7e1fadd9d5a1ac6b2f3adbb927fe",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/fb732402c4eb3c63",
+      "name": "outcome.json",
+      "sha256": "3220de07c8c15255f7acf28f25f4d623a04d61ec1e2a9cfdbd34cb88673adf94",
+      "match": true
+    },
+    {
+      "run": "optimal-swarm-size-q1/fb732402c4eb3c63",
+      "name": "replay.html",
+      "sha256": "81077642e6c928acbb117335765de3be44b26f172c7e089ff0e8fb53f9e40e82",
+      "match": true
+    }
+  ],
+  "all_matched": true,
+  "ledger_totals": [
+    915,
+    2903680,
+    2603778
+  ],
+  "q7_totals": [
+    144,
+    526276,
+    478373
+  ],
+  "ledger_states": [
+    [
+      "reserved",
+      1,
+      220480,
+      null
+    ],
+    [
+      "settled",
+      630,
+      1810840,
+      1810840
+    ],
+    [
+      "settled_with_fee_hold",
+      284,
+      872360,
+      792938
+    ]
+  ]
+}

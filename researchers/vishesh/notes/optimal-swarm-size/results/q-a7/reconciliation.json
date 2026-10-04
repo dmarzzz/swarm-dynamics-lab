@@ -1,0 +1,83 @@
+{
+  "assigned": 8,
+  "terminal": 8,
+  "execution_complete": true,
+  "publication_complete": true,
+  "stop_reason": null,
+  "episodes": [
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/6/width16/n1/full",
+      "directory": "a675cd700959c311",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 45478,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/6/width16/n1/bound",
+      "directory": "61680dbf39bbf053",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 55510,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/6/width16/n1/bound",
+      "directory": "00fc94acbff66a72",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 76933,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/6/width16/n1/full",
+      "directory": "d5a68091b77c58b3",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 62032,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/7/width16/n1/bound",
+      "directory": "fb732402c4eb3c63",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 55510,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/parallel/7/width16/n1/full",
+      "directory": "923aed46be80346d",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 45478,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/full",
+      "directory": "d8033688b38244b3",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 82908,
+      "publication": "acknowledged",
+      "outcome_present": true
+    },
+    {
+      "episode": "q-a7/swarm-size-fixtures-v1/qualification/evidence/chain/7/width16/n1/bound",
+      "directory": "9b593f379c30873a",
+      "execution": "terminal",
+      "reason": null,
+      "exposure_microdollars": 102427,
+      "publication": "acknowledged",
+      "outcome_present": true
+    }
+  ],
+  "executed_publication_complete": true,
+  "unstarted": 0
+}
