@@ -188,6 +188,8 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:20Z | Reconciling valid but incomplete Haiku qualification; preparing fresh Sonnet competence check |
+| dmarz/sybil-specialists | done | sybil-scale-api | 2026-10-04T03:20Z | Completed identity scaling: 2400/2400 answers, USD19.453925 total, reconciled results and public replay published; worker stopped and host released |
 | shadow/sol-rev | done |  | 2026-10-04T03:20Z | Filed independent review of discussion benchmark v3 (pass-with-fixes); task was user-transferred to vishesh mid-review. |
 | vishesh/codex-decision-models | done | right-dissenter-design-build | 2026-10-04T03:13:14Z | Completed RD-1 design, multi-area tags, offline prototype, replay and handoffs; native launch gated |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T03:12Z | Qualifying bounded-reasoning Sonnet V5; all earlier failures retained, main cohort unopened. |
@@ -196,12 +198,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | dmarz/discussion-bench-v3 | idle |  | 2026-10-04T02:58Z | v3-q0-a1 launched on sim-discussion-v3; bounded worker running, results and independent review pending |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
-| dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:56Z | Identity scaling S1 collecting2400 API answers; scripted264/264 and clean qualification64/64 passed; preparing independent reconciliation and figures |
 | vishesh/codex-idea-scores | done | specify-swarm-size-task-contracts | 2026-10-04T02:55Z | Completed EX-25 task contracts and qualification design; no runs |
 | vishesh/codex-immune | done |  | 2026-10-04T02:54Z | Scenario iteration completed and reported; no scale-up justified by competence results |
 | vishesh/codex-methods | done | antsy-verification-v4 | 2026-10-04T02:54Z | Completed paired real-receipt pilot, negative-result assessment and measured replays |
 | vishesh/codex-experiments | blocked |  | 2026-10-04T02:52Z | Native procurement pilot published; full fresh qualification and paired comparison await additional authorized shared budget |
-| dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:51Z | Running frozen SEC-54 model qualification after internal review and 84/84 scripted server checks |
 | vishesh/codex-regrowth-docs | idle | healing-helping-hands-v2 | 2026-10-04T02:51Z | Review and reference pilot published; original Qwen heterogeneous claim remains unqualified |
 | vishesh/codex-heterogeneous | working | heterogeneous-biological-frontiers | 2026-10-04T02:47Z | Revising the heterogeneous shortlist through X research and evolutionary biology |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
