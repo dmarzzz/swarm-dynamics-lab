@@ -1,0 +1,63 @@
+{
+  "evidence_type": "offline public development only; not model results",
+  "checks": {
+    "development_institutions": 18,
+    "unique_founder_policies": 108,
+    "declared_labels_checked": 1224,
+    "scope_negative_controls": 1224,
+    "witness_inboxes_checked": 216,
+    "controller_correct_actions": 1296,
+    "stale_policy_negative_controls": 72
+  },
+  "wire_max_bytes_by_phase": {
+    "learn": 3843,
+    "select": 3766,
+    "attest": 3930,
+    "decide": 5851,
+    "question": 1092,
+    "teach": 1331,
+    "commit": 1520
+  },
+  "wire_limit_bytes": 6500,
+  "maximum_exact_witness_response_bytes": 275,
+  "no_truncation": true,
+  "schedule_calls_per_execution": 138,
+  "schedule_calls_by_arm": {
+    "common": 24,
+    "interactive": 36,
+    "static": 36,
+    "broken": 24,
+    "retained": 18
+  },
+  "shared_founding_checkpoint_calls": 18,
+  "terminal_checkpoint_calls": 72,
+  "family_count": 3,
+  "fresh_native_replications": 0,
+  "native_calls": 0,
+  "sealed_worlds_opened": false,
+  "stage_caps": {
+    "Q3": {
+      "calls": 108,
+      "model_usd": 2.4462
+    },
+    "P1": {
+      "calls": 828,
+      "model_usd": 18.7542
+    },
+    "P2": {
+      "calls": 828,
+      "model_usd": 18.7542
+    }
+  },
+  "all_R3_infrastructure_cap_usd": 1,
+  "through_P1_additional_cap_usd": 22.2004,
+  "through_P2_additional_cap_usd": 40.9546,
+  "prior_exposure_usd": 1.1637270437,
+  "through_P2_study_cumulative_usd": 42.1183270437,
+  "remaining_runtime_work": [
+    "Integrate these pure contracts into a source-pinned native worker; old SOL50 launcher is incompatible",
+    "Validate actual portfolio reservation, stage admission, source/runtime and exclusive claim; no generic guard grants authority",
+    "Freeze uninspected qualification/evaluation worlds and native prompt snapshots after offline development",
+    "Record exact post-retirement identity resolution and per-world/repeat/stratum output in integrated runner"
+  ]
+}

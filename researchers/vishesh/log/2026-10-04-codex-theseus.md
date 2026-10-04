@@ -97,3 +97,8 @@ Audited full50member development schedule without native calls or sealed evaluat
 ## Baseline standard corrected
 
 Q2 is protocol competence, not fresh-run reproducibility. Baseline remains GAP; replaced premature park recommendation with provisional substantive R3 design. Prepared6independent worlds x2fresh repeats with strong simple baseline and all4controls, unique contrastive acquisition, explicit preservation/update strata and boundedUSD54.001additional proposal. Offline prototype caught and repaired excessive receipt repetition and absent unchanged-route controls;120unique policies,720permutation label checks,5762byte maximum now pass. Domain-family/nuisance/runtime validation remains; no inference, new allocation or portfolio spending.
+
+
+## R3 concrete cases and staged recommendation
+
+Implemented three family validity rules, matched/boundary labels, nuisance delivery to decision actors, plausible wrong-peer observations, immutable evidence-ID hydration, strict score denominators, wire/teaching/stage-cost guards.10targeted tests plus1224label checks pass; source-envelope error caught and fixed offline. Shared founding checkpoint preserves all four terminal arms and reduces192to138calls/execution. Q3/P1/P2 fixed staged proposalUSD2.4462/18.7542/18.7542models plusoneUSD1infra ceiling; no allocation or paid execution. Explicit ceiling/readiness/replication rules do not select favorable directions. Native integration and fresh input freeze remain before funded Q3.

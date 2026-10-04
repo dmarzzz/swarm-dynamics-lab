@@ -1,5 +1,7 @@
 # Prospective credible-baseline revision R3 — unfunded
 
+**Superseded allocation/schedule:** [STAGED-PLAN.md](STAGED-PLAN.md) and [CASE-ASSESSMENT.md](CASE-ASSESSMENT.md) retain the scientific intent while staging qualification/replication and sharing the common initial checkpoint. This historical proposal remains for provenance.
+
 This supersedes the earlier recommendation to park based on Q2 alone. Q2 is useful engineering evidence, not a scientifically reproducible baseline. No new paid stage is authorized, no sealed evaluation world is opened, and the existing50-member proposal remains unrun. PI selection remains provisional.
 
 ## Current baseline: GAP

@@ -1,0 +1,755 @@
+[
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "7b170f5bbe8f",
+      "family": "release",
+      "now": 10,
+      "artifact": "build-A",
+      "environment": "canary",
+      "revision": 3
+    },
+    "private_records": [
+      {
+        "id": "2dfbff7d1eff",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_02",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "aa2c6d5a36ce",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_03",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "7d58fd48f85a",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_01",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "b125d3da73f7",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_04",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "960d34763644",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_05",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "public_records": [
+      {
+        "id": "aeff9bab809b",
+        "owner": "position_00",
+        "case": "7b170f5bbe8f",
+        "source": "position_02",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "gold": "allow",
+    "kind": "allow",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "d33fdb33ec11",
+      "family": "release",
+      "now": 10,
+      "artifact": "build-A",
+      "environment": "canary",
+      "revision": 3
+    },
+    "private_records": [
+      {
+        "id": "deb17e35bf50",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_02",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "22e13ea1a03f",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_03",
+        "value": true,
+        "artifact": "other",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "aa25f851e3c0",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_01",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "af4623517882",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_04",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "72348b58d218",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_05",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "public_records": [
+      {
+        "id": "d15ad48efcf3",
+        "owner": "position_00",
+        "case": "d33fdb33ec11",
+        "source": "position_01",
+        "value": false,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "gold": "defer",
+    "kind": "invalid",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "587bdc5898e5",
+      "family": "release",
+      "now": 10,
+      "artifact": "build-A",
+      "environment": "canary",
+      "revision": 3
+    },
+    "private_records": [
+      {
+        "id": "9796dcaf205b",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_02",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "a25b0f6832b4",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_03",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "823ce7c83be4",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_01",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "f5223c8f22bb",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_04",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      },
+      {
+        "id": "0c3d2337fa9d",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_05",
+        "value": true,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "public_records": [
+      {
+        "id": "3e0a7064f2ab",
+        "owner": "position_00",
+        "case": "587bdc5898e5",
+        "source": "position_01",
+        "value": false,
+        "artifact": "build-A",
+        "environment": "canary",
+        "revision": 3
+      }
+    ],
+    "gold": "allow",
+    "kind": "irrelevant_veto",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "689f32e312f6",
+      "family": "failover",
+      "now": 10,
+      "service": "payments",
+      "region": "west",
+      "generation": 3
+    },
+    "private_records": [
+      {
+        "id": "a6ae41bf921c",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_02",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "dd62ac897caa",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_03",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "066c08b6937c",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_01",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "db4e95bc63d0",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_04",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "9d03c62cb275",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_05",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "public_records": [
+      {
+        "id": "7dd62813feac",
+        "owner": "position_00",
+        "case": "689f32e312f6",
+        "source": "position_02",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "gold": "allow",
+    "kind": "allow",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "e0d7b7ae7906",
+      "family": "failover",
+      "now": 10,
+      "service": "payments",
+      "region": "west",
+      "generation": 3
+    },
+    "private_records": [
+      {
+        "id": "06bbe2842700",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_02",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "b113d4746663",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_03",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 7
+      },
+      {
+        "id": "3ca712c95092",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_01",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "d59c9ea85f4c",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_04",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "44c0888c872a",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_05",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "public_records": [
+      {
+        "id": "8dd78bb50a53",
+        "owner": "position_00",
+        "case": "e0d7b7ae7906",
+        "source": "position_01",
+        "value": false,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "gold": "defer",
+    "kind": "invalid",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "646de35db151",
+      "family": "failover",
+      "now": 10,
+      "service": "payments",
+      "region": "west",
+      "generation": 3
+    },
+    "private_records": [
+      {
+        "id": "cf88871ea2b8",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_02",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "fa366aa53742",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_03",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "2402a22fd4bd",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_01",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "86cf742d97ff",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_04",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      },
+      {
+        "id": "a373e8cc6a69",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_05",
+        "value": true,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "public_records": [
+      {
+        "id": "fa8f35962ee0",
+        "owner": "position_00",
+        "case": "646de35db151",
+        "source": "position_01",
+        "value": false,
+        "service": "payments",
+        "region": "west",
+        "generation": 3,
+        "observed_at": 10
+      }
+    ],
+    "gold": "allow",
+    "kind": "irrelevant_veto",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "134444f2df41",
+      "family": "delegation",
+      "now": 10,
+      "resource": "dataset-A",
+      "action": "read"
+    },
+    "private_records": [
+      {
+        "id": "483310e50f11",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_02",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "42adc532496a",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_03",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "221a4cbd3b47",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_01",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "9bd900140846",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_04",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "594f8c47423b",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_05",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "public_records": [
+      {
+        "id": "35a7402ac822",
+        "owner": "position_00",
+        "case": "134444f2df41",
+        "source": "position_02",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "gold": "allow",
+    "kind": "allow",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "2c72c6a4e57f",
+      "family": "delegation",
+      "now": 10,
+      "resource": "dataset-A",
+      "action": "read"
+    },
+    "private_records": [
+      {
+        "id": "1a0320ec7dd9",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_02",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "abe081999058",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_03",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 10,
+        "revoked_at": null
+      },
+      {
+        "id": "097c169ffcdc",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_01",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "25c7fecfb941",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_04",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "e9a5cc92b519",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_05",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "public_records": [
+      {
+        "id": "28df5be13032",
+        "owner": "position_00",
+        "case": "2c72c6a4e57f",
+        "source": "position_01",
+        "value": false,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "gold": "defer",
+    "kind": "invalid",
+    "variant": null
+  },
+  {
+    "target": {
+      "owner": "position_00",
+      "case": "a39d5ca21025",
+      "family": "delegation",
+      "now": 10,
+      "resource": "dataset-A",
+      "action": "read"
+    },
+    "private_records": [
+      {
+        "id": "ce3db16ade79",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_02",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "12503f68e126",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_03",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "e5f464436aa0",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_01",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "5c9a3340f8db",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_04",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      },
+      {
+        "id": "60b673d427e4",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_05",
+        "value": true,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "public_records": [
+      {
+        "id": "cd979beef57c",
+        "owner": "position_00",
+        "case": "a39d5ca21025",
+        "source": "position_01",
+        "value": false,
+        "resource": "dataset-A",
+        "action": "read",
+        "starts": 9,
+        "ends": 11,
+        "revoked_at": null
+      }
+    ],
+    "gold": "allow",
+    "kind": "irrelevant_veto",
+    "variant": null
+  }
+]
