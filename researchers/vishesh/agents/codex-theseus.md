@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: working
+state: done
 task: theseus-d2-design
-doing: Reassess D1 saved evidence and freeze the focused D2 prospective protocol
+doing: Published saved-data interpretation and prospective D2 plan; execution not started
 updated: 2026-10-04T08:01Z
 ---
 
