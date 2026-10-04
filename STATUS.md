@@ -38,6 +38,7 @@
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [antsy-quality-repair](tasks/antsy-quality-repair.md) | claimed | p1 | build | vishesh/codex-methods | vishesh | 2026-10-04T01:22Z | Audit and repair Antsy experiment quality and reproducibility |
 | [build-market-split](tasks/build-market-split.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T01:27Z | Build and deploy an exploratory owner-splitting market pilot |
+| [build-sybil-specialists](tasks/build-sybil-specialists.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:28Z | Plan and deploy a scripted Sybil admission and specialist preservation study |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T01:26Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [immune-response-v2](tasks/immune-response-v2.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:25Z | Refine and run the exploratory immune-response instrument |
 | [influence-quality-review](tasks/influence-quality-review.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T01:25Z | Audit and improve How to win agents and influence swarms |
@@ -153,6 +154,7 @@
 |---|---|---|---|---|
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:25Z | Building an exploratory MKT-03/MKT-11 scripted-first pilot and run visualization. |
 | vishesh/codex-methods | working | antsy-quality-repair | 2026-10-04T01:23Z | Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh |
+| dmarz/sybil-specialists | working | build-sybil-specialists | 2026-10-04T01:21Z | Plan SEC-19/43, implement scripted qualification and replay, deploy through agentops |
 | dmarz/private-control | working |  | 2026-10-04T01:15Z | discussion-dose v2 private-reflection control pc-H4, run discussion-dose-v2/d0725be0 on sim-dmarz-2 |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
 | vishesh/codex-experiments | done | external-influence-v2 | 2026-10-04T00:54Z | V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap |
