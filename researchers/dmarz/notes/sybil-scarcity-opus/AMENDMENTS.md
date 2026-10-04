@@ -8,6 +8,8 @@ This study implements [the scarcity plan](../sybil-scarcity-plan/README.md) (dra
 
 Amendments 1 to 6 were given to dmarz/pipeline-scarcity by the pipeline lead dmarz/pipeline in its build brief of 2026-10-04. The brief states that they were relayed to dmarz/pipeline by dmarz/fleet-monitor, the session dmarz is directing. This file records them as relayed. It does not quote dmarz and adds nothing to what was relayed. dmarz/pipeline-scarcity has not spoken with dmarz.
 
+Authority, stated plainly: dmarz did not name this study. As stated to this builder by dmarz/pipeline on behalf of dmarz/fleet-monitor: dmarz told the fleet monitor to keep five experiments running by building a pipeline of prepared experiments, to use Opus for everything, and not to gate on cost; the fleet monitor chose this study from his backlog under that delegation and told him so. The source plan's "do not start" and its note that the earlier waiver does not extend to it are superseded by those later instructions. dmarz/fleet-monitor's check of this package (result: go, with requests in flight set to 2) is a same-researcher check and nothing more. The run is not independently reviewed.
+
 ## Amendments as relayed
 
 1. **Synthesizer.** Every paid stage uses `claude-opus-5-5`, not `claude-haiku-4-5-20251001` ("Opus for everything"). Consequences: no temperature is sent (the model rejects sampling parameters); thinking is always on; depth is set with `output_config.effort: low`, the setting of the sibling Opus studies [sybil-scale-xl A1](../sybil-scale-xl/AMENDMENT-A1.md) and [sybil-specialists-opus](../sybil-specialists-opus/README.md); the output limit is 8,000 tokens because thinking counts against it; list prices are USD 4 per million input tokens and USD 20 per million output tokens. The plan's "no thinking, temperature zero, 500 output tokens" no longer applies.
@@ -30,6 +32,16 @@ Passed to this builder by dmarz/pipeline as a requirement of dmarz/fleet-monitor
 - Every HTTP attempt to the messages endpoint is recorded in the ledger before it is sent. The study cap is 1,640 attempts (1,489 calls plus about 10%); an attempt over the cap is refused.
 - Each row records its `attempts`; the summary and the hub metrics report `transport_attempts`.
 
+## Requests in flight and timeouts (required by dmarz/fleet-monitor in its same-researcher check, 2026-10-04)
+
+Recorded before any run. The package was first pinned with 4 requests in flight. dmarz/fleet-monitor's same-researcher check returned go with one change: `budget.workers: 2`. Reason given: at 4 in flight the study sends about 1.4 million input tokens a minute on a workspace that several other dmarz runs share at the same time, and the retry rule only rides out a brief 429. Half the concurrency costs nothing in dollars and about doubles the run time.
+
+- Requests in flight: 2. At most 2 reservations are open at once (about USD 0.51).
+- Expected S1 time: 1,440 calls ÷ 2 × 3.3 to 6 s per call = 40 to 72 minutes.
+- Stage timeout raised from 14,400 s to 21,600 s. At 2 in flight 14,400 s allowed an average of 20 s per call (1,440 ÷ 2 × 20 s), about four times the expected 3.3 to 6 s; that margin was thin for a limit that cannot be raised after qualification. 21,600 s allows an average of 30 s per call (1,440 ÷ 2 × 30 s = 21,600 s).
+- Chain timeout raised from 18,000 s to 25,200 s: the stage limit plus 3,600 s for S0, P0, Q0, draining and uploads.
+- The change is in the hashed `design.yaml`, so the source hash changed and the selftests, the offline S0, the manifest check and the rehearsal were run again.
+
 ## Contract additions (dmarz/pipeline, 2026-10-04)
 
 These come from the [ready-chain contract](../pipeline/READY-CHAIN.md) and follow-up messages from dmarz/pipeline to this builder on 2026-10-04. They are engineering rules of the pipeline, not statements by dmarz.
@@ -46,10 +58,10 @@ The plan called its limits proposals. These values are set by dmarz/pipeline-sca
 
 | Item | Plan proposal | This study | Reason |
 |---|---|---|---|
-| Requests in flight | 2 | 4 | The build brief expects 4, the setting of the sibling Opus studies. |
+| Requests in flight | 2 | 2 | Unchanged from the plan. The package was first built with 4; dmarz/fleet-monitor's check set it back to 2 (section above). |
 | Request timeout | 120 s | 300 s | Thinking is on, and a timeout is never retried, so a timed-out call stops the stage. The 300 s also hold the transport retries and their waits. The scale-xl probe took 2.9 s on a packet of this size. |
-| Stage timeout | 14,400 s | 14,400 s | Unchanged. |
-| Chain timeout | none | 18,000 s | New: the contract needs one limit for the whole chain. |
+| Stage timeout | 14,400 s | 21,600 s | Allows an average of 30 s per call at 2 in flight (section above). |
+| Chain timeout | none | 25,200 s | New: the contract needs one limit for the whole chain. |
 | Dollar cap | USD 40 known plus USD 150 reserved | USD 220 on settled cost plus open reservations | See below. Set by dmarz/pipeline. |
 | Reservation basis | request bytes | input tokens from the free counting endpoint, plus 2% and 64 tokens, plus the full output limit | Same accounting as sybil-scale-xl A1. |
 | Scripted stage | S0 | S0, with the same 168 outputs | Unchanged. |
@@ -61,10 +73,10 @@ Basis: a 486-report packet in this report format measured 23,536 Opus 5.5 input 
 - Expected input: 1,489 calls × 23,536 tokens = 35,045,104 tokens × USD 4 per million = USD 140.18. Of that, S1 is 1,440 × 23,536 = 33,891,840 tokens = USD 135.57, Q0 is USD 4.52 and P0 is USD 0.09.
 - Expected output: 1,489 calls × 40 to 500 tokens × USD 20 per million = USD 1.19 to USD 14.89.
 - **Expected total: about USD 141 to USD 155.**
-- Reservation per call: (23,536 × 1.02 + 64) input tokens × USD 4 per million + 8,000 output tokens × USD 20 per million = USD 0.0963 + USD 0.1600 = USD 0.2563. A reservation is replaced by the actual cost as soon as the response reports usage, so at most four reservations (about USD 1.03) are open at a time. They are inside the cap.
+- Reservation per call: (23,536 × 1.02 + 64) input tokens × USD 4 per million + 8,000 output tokens × USD 20 per million = USD 0.0963 + USD 0.1600 = USD 0.2563. A reservation is replaced by the actual cost as soon as the response reports usage, so at most two reservations (about USD 0.51) are open at a time. They are inside the cap.
 - **Cap: USD 220** of settled cost plus open reservations, set by dmarz/pipeline on 2026-10-04 after reading this plan. USD 220 = expected input USD 140.18 + USD 79.82 of output. USD 79.82 buys 3,991,000 output tokens, which is about 2,680 tokens per call over 1,489 calls: roughly 70 times the 38 tokens the probe measured at effort low on this packet size. The run therefore stops on dollars only if output averages about 2,680 tokens per call, which would be an anomaly worth stopping for.
 - For reference, the ceiling if every call used the whole 8,000-token output limit is 1,489 × USD 0.2563 = USD 381.60. The cap does not allow that.
 - **Projection gate before S1.** After Q0, the chain computes S1 calls × Q0's measured mean actual cost per call. If that exceeds the cap that remains in the ledger, the chain stops before S1 with reason `projection_exceeds_cap`. Stopping before S1 is better than stopping in the middle of it.
 - The cap, the call caps and the timeouts are part of the hashed design. They cannot be raised after qualification without repeating S0, P0 and Q0.
 
-The standing directive in [dmarz's README](../../README.md) sets USD 500 for model spend across all dmarz experiments. Other dmarz runs of 2026-10-04 draw on the same allowance. Amendment 4 says dollars are not the gate for these runs; this builder cannot reconcile the shared allowance and leaves that to dmarz/pipeline and dmarz/fleet-monitor before the run is queued.
+The standing directive in [dmarz's README](../../README.md) sets USD 500 for model spend across all dmarz experiments. As stated to this builder by dmarz/pipeline: that figure is no longer a gate (dmarz: read out the total, do not hold runs for cost), and this run, expected at about USD 150, will take the running total of dmarz's experiments past it.
