@@ -59,7 +59,8 @@ class FrameTracker:
         self.flush()
 
     def snapshot(self):
-        self.history.append(self.frame())
+        f = self.frame(); f.pop('recent', None)  # the per-episode list is only needed live; keeps replays small
+        self.history.append(f)
         if len(self.history) > MAX_HISTORY: self.history = self.history[::2]; self.thinned += 1
 
     def replay(self):
