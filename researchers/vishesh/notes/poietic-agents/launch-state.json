@@ -1,6 +1,6 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T15:38:14.811777+00:00",
+  "updated_utc": "2026-10-04T16:20:24.253485+00:00",
   "study": "poietic-agents",
   "design_status": "reviewed-amended-offline-tested",
   "implementation_status": "S0-launcher-and-lineage-instrument-built",
@@ -25,13 +25,13 @@
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
     "exact_runtime_and_assignments": "frozen S0 deployment passed 54 checks; details retained privately",
-    "offline_instrument_checks": "79 passed; includes 12 synthetic renewal tests, expiry invariants and cumulative infrastructure admission",
+    "offline_instrument_checks": "81 passed, including two whole-worker failure rehearsals",
     "model_qualification": "failed S0-01 instrument; no models qualified",
     "budget_authorization": "direct owner launch instruction accepts preceding USD 2 proposal",
     "dedicated_machine_allocation": "none held; previous allocation released",
     "public_plan_and_run_tldr_preflight": "design-documentation-check-passed; native-run-admission-pending",
     "approved_credential": "resolved from established project access context; value never disclosed",
-    "execution_window": "expired; exact timing retained in private operator receipt"
+    "execution_window": "bounded replacement window authorized by new direct run instruction; not activated"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
@@ -39,7 +39,7 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 3,
-  "next_action": "Obtain explicit bounded time renewal and audit transition on original authority, then refresh all G3 conditions; no generic S0-02 plan reapproval.",
+  "next_action": "Complete current runtime admission and execute only the approved S0-02 scope; preserve all prior charges.",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
@@ -51,9 +51,9 @@
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "explicit renewal of expired original execution window; no ledger reset",
-    "current dispatch path and exclusive approved-account allocation",
-    "frozen deployment, current tariffs and final public-plan/page admission",
+    "current verified exclusive resource allocation",
+    "approved authority activation and complete accounting",
+    "frozen deployment, current tariffs and refreshed public-plan/page admission",
     "native qualification before any S1"
   ],
   "s1_not_yet_admitted": [
@@ -70,7 +70,7 @@
     "status": "released; no fresh allocation before explicit time renewal"
   },
   "central_dispatch": {
-    "status": "S0-01 closed; S0-02 not queued because original window expired",
+    "status": "S0-01 closed; preparing S0-02 central request",
     "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044",
     "scope": "S0-01 only; private request receipt retained outside public repository",
     "model_calls_observed": 36
@@ -79,5 +79,6 @@
   "allocated_infrastructure_usd": 0.07722376666666667,
   "cumulative_cost_upper_usd": 0.5564557666666666,
   "successor_scope_approved": true,
-  "deadline_renewal_approved": false
+  "deadline_renewal_approved": true,
+  "deadline_renewal_applied": false
 }

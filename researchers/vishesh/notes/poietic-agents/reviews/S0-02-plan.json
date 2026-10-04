@@ -17,9 +17,9 @@
     "Fresh S0-02 namespace; previous cases not reused."
   ],
   "acceptance_checks": [
-    "79 offline checks pass, including actual loopback HTTP faults, approval binding, immutable expiry and prior infrastructure accounting.",
+    "81 offline checks pass, including whole-worker failure closeout, loopback HTTP faults, approval binding, renewal invariants and prior infrastructure accounting.",
     "Public immutable condition plan verified before dispatch.",
-    "Original cumulative authority/ledger/deadline and prior36 calls/USD0.479232 bind admission.",
+    "Original cumulative authority and prior36 calls/USD0.479232 bind admission; replacement deadline requires audited approved transition on both original ledgers.",
     "Every role44/48 correct,48/48 valid,zero protected access; every assignment reconciled."
   ],
   "sample_size": {
@@ -59,8 +59,8 @@
     "privacy": "Credential consumed locally; never retained or sent to worker; no private runtime identifiers in public artifacts."
   },
   "implementation": {
-    "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding. Current cycle adds no new agent behavior; tests expiry invariants and enforces prior infrastructure cost in admission. A generic, receipt-gated renewal helper is prepared and tested on synthetic ledgers only; no real transition applied.",
-    "offline_validation": "VALIDATION.json and readiness/S0-02-cycle-2026-10-04.json; 79 author-run offline tests; no successor calls or reserved fixtures."
+    "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding. Current cycle adds no new agent behavior; tests expiry invariants and enforces prior infrastructure cost in admission. A generic, receipt-gated renewal helper is prepared and tested on synthetic ledgers only; no real transition applied. Added full-worker failure rehearsals and updated the private operational handoff; experimental behavior is unchanged.",
+    "offline_validation": "VALIDATION.json; 81 author-run software tests including two full-worker failure rehearsals with fake transport, temporary ledgers and development fixtures only."
   },
   "resources": {
     "maximum_calls": 144,
@@ -73,7 +73,7 @@
     "api_cap_usd": 1.5,
     "infrastructure_cap_usd": 0.5
   },
-  "status": "conditionally-approved-scope; blocked-expired-original-window",
+  "status": "owner-directed; pending renewal activation and current G3 admission",
   "research_value": {
     "empirically_unknown": "Whether each unchanged native route can execute the clean lifecycle contracts once provider receipts survive validation.",
     "decision_by_outcome": {
@@ -99,5 +99,9 @@
     "path": "researchers/vishesh/notes/poietic-agents/readiness/S0-02-cycle-2026-10-04.json",
     "sha256": "5e81c4a249828cfdddac41d0e90f7f2ec100853fd894d4f2d66cac426e0e7117"
   },
-  "runtime_status": "Original execution window expired; precise renewal proposal retained privately; no renewal applied or successor started."
+  "runtime_status": "Prepared bounded replacement window authorized by subsequent direct owner run instruction; no authority transition or successor model call yet.",
+  "current_assessment": {
+    "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-02-launch-loop.md",
+    "sha256": "28daedb361c0841a6e1a9095603a2beacea05503d89d32b4100ada2b0bece3e9"
+  }
 }

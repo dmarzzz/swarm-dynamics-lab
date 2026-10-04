@@ -1,17 +1,17 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T15:32:08.546026+00:00",
+  "checked_utc": "2026-10-04T16:20:51.469795+00:00",
   "assessor": "vishesh/codex-heterogeneous",
-  "scope": "S0-02 offline cycle reassessment; original execution deadline expired",
-  "tests_passed": 79,
+  "scope": "S0-02 launch-loop offline validation; no successor native calls",
+  "tests_passed": 81,
   "tests_failed": 0,
   "python": "3.13.13",
   "pillow": "11.3.0",
   "command": "python3 -m unittest discover -s researchers/vishesh/notes/poietic-agents/tests -v",
   "file_hashes": {
-    "AMENDMENTS.md": "44529c61de5a6b5368ce304f6f664ad66372bcbd503a06e56a5dbf4fdeb0e7a8",
+    "AMENDMENTS.md": "68cf33eadb834d56c8f97c239c0cbe74a42c74ca74b0d4b298ce50d7315caf3d",
     "PROTOCOL.md": "dbf08e0924e412b0029a0ef6c613bcc2e57fed420c6f8d8878cec2eaee42ce2e",
-    "README.md": "71cd0edc26847f5b9a8e8211c76652373491d7e71c2c30e51858a8da244a778a",
+    "README.md": "be7520fcd3d349b8be9b6ce7a08c1402073fc8d3dc9562e05a414f9a6c602c1f",
     "SCENARIOS.md": "6bdbf9bc45a68357808ef9313288794e495de3e4fb3ce3c1f282e3abcdc44bd5",
     "VISUALIZATION.md": "dd5f522bcf6d049e93073c9c082b1be8f97500372809f77f030055fd1491a8fe",
     "contracts.json": "b6abab79240b4df31a4944998f20f6212256be9441255f28c88dba47f6633f63",
@@ -35,7 +35,8 @@
     "src/world.py": "f8be5acb5260f5edb0bda93a354facde9d89a3fa340ec75f1bb217c90c26e1bb",
     "tests/test_instrument.py": "aa61c35b03971e1a8b38b7f376edd1df824ed564d050163bfe82712957a5012a",
     "tests/test_relay_boundary.py": "66a8dac91fa3547f8b8aa27f3f6d093083b16a37f8444217f98e671b3e3fe674",
-    "tests/test_renewal.py": "70b42588aa7af1ac3712883eb1c4ddaf45e66d30798a7a91e0e12e8c9784c3af"
+    "tests/test_renewal.py": "70b42588aa7af1ac3712883eb1c4ddaf45e66d30798a7a91e0e12e8c9784c3af",
+    "tests/test_worker_boundary.py": "6cfd5a782dddad829501bf4e5a7fbbe045b16da93c1fbe88c66c7ad433b2e8b8"
   },
   "assignment_count": 144,
   "assignment_sha256": "66c90c3ec5443ecd8ed0ef3e9836c0960e6a590442ea8ad114d2b17321f6ffd1",
@@ -56,10 +57,9 @@
   },
   "known_limits": [
     "No S0-02 native responses; S0-01 retained36 uncertain calls and no usable provider receipts.",
-    "Scope conditionally authorized, but original execution window expired. No renewal, allocation or successor dispatch.",
-    "79 offline tests are author-run software checks, not model qualification.",
-    "S1 efficacy remains closed; PI conserved-resource lessons are prospective only.",
-    "passed"
+    "One bounded S0-02 continuation now directed; current runtime admission and audited renewal activation pending. No new native calls.",
+    "81 offline tests are author-run software checks, not model qualification.",
+    "S1 efficacy remains closed; PI conserved-resource lessons are prospective only."
   ],
   "authorized_total_cumulative_usd": 2,
   "launch_smoke": "Candidate rejects missing concrete owner update decision, budget, source, public plan and allocation; no native calls.",
@@ -71,5 +71,12 @@
     "scope": "synthetic ledgers only",
     "real_ledger_unchanged": true,
     "real_receipt_private": true
+  },
+  "worker_failure_rehearsal": {
+    "tests": 2,
+    "data": "development fixtures only",
+    "external_traffic": false,
+    "one_dispatch_then_stop": true,
+    "all_assigned_outcomes_retained": true
   }
 }
