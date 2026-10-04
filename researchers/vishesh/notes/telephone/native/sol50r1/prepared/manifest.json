@@ -1,0 +1,19 @@
+{
+  "PLAN.md": "cc7503289e3ff5cc0c85f8405243dfb22215b067bced12ae2d6ce628e0160485",
+  "PRE-RUN.md": "bd61a11daedf2d3ade331ea0bba546ec230c294a0613d8498befae702f9461a5",
+  "SCORING.md": "df48fb446f5134b0315185527c1218d197d4b6add4ae74c6291e71c0dfbcb972",
+  "prepared/actors.json": "fddd8e02561daa87551fcd9994bd7818adbc5548d6efc2cf9279c03c185a02dd",
+  "prepared/assignments.json": "a1b71b78f8a84e4d3f1c67722bebbe90175add9518d7c245da53375847394aea",
+  "prepared/controls.json": "8984517ce88be4deb2e9dd23489e60af125c0c6c217fe8bc4bbe398a6f961c77",
+  "prepared/envelope.json": "be4c07ef5513241df27e2637793c1a937a445ffd5beefcf1c64eb38c3215a49c",
+  "prepared/gold.json": "c2dcc2e952c8a5cd6e97944a19f9d89d3603452874cdbbdd7164017bafd07e83",
+  "prepared/qualification-gold.json": "53f2ccf6aa7fb8c850a2b944f9d346b3d05e16003c6be0ce9df48460beb3e24a",
+  "prepared/qualification.json": "bf1d1100ec3d2784c39acefafc98a8be3ffe9ff909e543bf4b4f8768b6ad9a15",
+  "prepared/questions.json": "7a863bcf35d98fcfcdcce9db4b4ca2e15acff686a3064003f70567e0d2f0f922",
+  "prepared/validation.json": "06c8ecfeae4142834b96b2eaccbbb3b0d4b525d51170d8bc3021ad44c88cb17b",
+  "src/contract.py": "ea08052cb961fccd1534d0c2618015f7c9a110e73aa08e8bb0ac8e0139c7c17a",
+  "src/corpus.py": "db4a171d95364e1db69b5c6153133b9fa79ea3bba6c74c7c6dfcaeb17d21e068",
+  "src/native.py": "f91e6e85dec0e700e33941d0bce8f6a2631fe9959eeca1265b6f6eeacfb8b264",
+  "src/prepare.py": "467df1760f988447d0f2e026cfc784b7c43353a06dd8057ede5e9013b4bcb56b",
+  "tests/test_sol50r1.py": "79f59cc0016e4d83a11a1daa1398d9e3fd1b8d0154b302923da5c26deeda8edc"
+}

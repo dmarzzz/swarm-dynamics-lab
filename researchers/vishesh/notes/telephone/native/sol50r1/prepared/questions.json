@@ -1,0 +1,5 @@
+{
+  "Cedar": "Under the deployment policy, should v7 be deployed at Cedar now? Choose RELEASE, HOLD or INSUFFICIENT.",
+  "Bay": "Under the deployment policy, should v7 be deployed at Bay now? Choose RELEASE, HOLD or INSUFFICIENT.",
+  "Delta": "Under the deployment policy, should v7 be deployed at Delta now? Choose RELEASE, HOLD or INSUFFICIENT."
+}
