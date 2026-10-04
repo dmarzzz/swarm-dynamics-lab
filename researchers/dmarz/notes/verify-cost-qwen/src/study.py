@@ -266,7 +266,8 @@ def validate(obj, legal_cells):
     Valid: one JSON object whose `inspect` is a string naming one of the two legal cells after trimming
     whitespace and removing spaces around the comma. Everything about `cost_if_inspect` and any extra key is
     tolerated and recorded in `work`. (The adapter has already rejected text that is not JSON, and any
-    object that repeats a key.) Returns the choice, what was noted, and the object as returned."""
+    object that repeats a key.) Returns the choice, what was noted, and the object as returned, kept as JSON
+    text so that its key order survives storage."""
     if type(obj) is not dict or 'inspect' not in obj: raise ValueError('answer_object_or_inspect_missing')
     value = obj['inspect']
     if type(value) is not str or squeeze(value) not in legal_cells: raise ValueError('answer_value')
@@ -283,7 +284,7 @@ def validate(obj, legal_cells):
             'extra_keys': [str(k)[:40] for k in keys if k not in ('inspect', key)][:8],
             'cost_before_inspect': (keys.index(key) < keys.index('inspect')) if key in keys else None,
             'inspect_respaced': squeeze(value) != value}
-    return {'inspect': squeeze(value), 'work': work, 'raw': obj}
+    return {'inspect': squeeze(value), 'work': work, 'raw': json.dumps(obj)}
 
 
 def scripted_answer(name, a):

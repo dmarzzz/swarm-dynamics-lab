@@ -275,7 +275,7 @@ def close(a, b):
 def regrade(a, r):
     """True when the saved answer is valid for the assignment and scoring it again gives the saved evaluation."""
     if r['status'] != 'completed': return 'answer' not in r and 'evaluation' not in r
-    try: answer = study.validate(r['answer']['raw'], a['legal_cells'])       # the object as the model returned it, validated again
+    try: answer = study.validate(json.loads(r['answer']['raw']), a['legal_cells'])       # the object as the model returned it, validated again
     except (ValueError, KeyError, TypeError): return False
     return close(json.loads(json.dumps(answer)), r['answer']) and close(json.loads(json.dumps(study.evaluate(a, answer['inspect'], answer))), r['evaluation'])
 
