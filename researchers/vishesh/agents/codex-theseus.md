@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-theseus
 tool: codex
-state: idle
-task: theseus-a1-acquisition
-doing: A1 closed after first HTTP429; no responses or retry; host released PR309
-updated: 2026-10-04T16:55Z
+state: blocked
+task: theseus-a2-acquisition
+doing: Approved A2 prepared; provider recovery unresolved; temporary claim released
+updated: 2026-10-04T18:10Z
 ---
 
-204 assigned, 1 provider failure, 203 unstarted. Science inconclusive. Original USD5; prior plus unresolved exposure USD0.8226830437. Final publication and scientific closeout retained.
+No A2 model calls. Read A2-STATUS and A2-PRE; approval retained, original budget preserved.

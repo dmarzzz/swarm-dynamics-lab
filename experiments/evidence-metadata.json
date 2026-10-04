@@ -3484,6 +3484,32 @@
         "researchers/shadow/factory/provenance/results/numeric-inventory.json"
       ],
       "status_at_assessment": "blocked-unqualified"
+    },
+    {
+      "id": "theseus-acquisition-a2",
+      "title": "Swarm of Theseus A2 approved acquisition preparation",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-04",
+      "source_commit": "d4b6fed5186533b9fa3bd84f9991722e31326af3",
+      "documents": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-STATUS.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-acquisition-a2"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "A2 is approved and offline prepared; acquisition remains untested.",
+        "rationale": "Zero A2 generation calls. Thirty offline checks and scripted preservation cases establish software behavior only; fresh direct-provider rejection blocks native launch."
+      },
+      "sample_size_summary": "Planned: six fixed roots,12learners,96nested test case/family pairs,204calls. Observed:0A2native calls/answers/root outcomes; development fixtures are not empirical samples.",
+      "sources": [
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-PLAN.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/A2-PRE.md",
+        "researchers/vishesh/notes/swarm-of-theseus/execution-diagnostic/a2-validation.json"
+      ],
+      "status_at_assessment": "approved_prepared_provider_hold"
     }
   ],
   "source_sha256": {

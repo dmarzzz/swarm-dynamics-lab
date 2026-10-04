@@ -1,0 +1,11 @@
+# A2 owning-agent pre-run assessment
+
+Status: blocked
+
+Owner approved one acquisition continuation in the owning task on 2026-10-04. Approval is retained, not a new budget. [Plan](A2-PLAN.md), [selective-preservation development](SELECTIVE-PRESERVATION.md), [previous native post-mortem](RESULTS-A1.md). Same actor inputs and fixed cases; new attempt IDs; no execution-benchmark polishing. Thirty offline checks pass, including byte-equivalent actor inputs, retained unresolved costs, safe error codes, provider gate rejection, and selective retain/revise/quarantine/provisional fixtures. This is same-agent validation, not independent review.
+
+Native admission is HOLD. Read-only pinned-model metadata returned HTTP200; configured-rate-limit query returned400 with no usable limits. A newer direct-provider D6 attempt reportedly stopped on firstHTTP429 (source c0f3d096, run1004-180640-faf466), with no retry timing/usage. The category remains unknown. Metadata availability does not establish inference health. The approved-account idle host was claimed PR330, then released PR332 without deployment, credential transfer, generation requests or new infrastructure purchase. Original USD5 retains prior estimatedUSD0.8122310437 and A1 unresolvedUSD0.010452; no A2 reservation was dispatched.
+
+Resume only when recent pinned-model successful inference or authorized account evidence establishes that the restriction is resolved for this route after the latest rejection. Then refresh exclusive allocation, source/runtime, public immutable-plan registration and actual page, pricing and ledger before first call. The current blocked assessment must be prospectively refreshed to diagnostic-only; it cannot satisfy the public preflight. The existing approval covers unchanged A2 and will not be requested again.
+
+Scientific scope: six designed roots with nested learners/actions, exact enumerator baseline and true-policy F ceiling. These are inspected synthetic engineering cases, not independent population samples or native selective-preservation results. Original joint acquisition gate retained. Selective-preservation fixtures and comparator contract are development preparation only; no turnover successor is launched.

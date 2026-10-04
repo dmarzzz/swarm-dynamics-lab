@@ -11,3 +11,7 @@ Next action: stop this attempt. Resolve provider health and propose/test safe er
 ## Offline repair after closeout
 
 [Prospective repair plan](A1-DIAGNOSTICS-REPAIR-PLAN.md) was committed before implementation. New allowlisted failure telemetry and seven mocked transport/parser checks pass alongside sixteen prior checks ([receipt](a1-diagnostics-repair-checks.json)). Assignment digest remains unchanged. New source is preparation only; the frozen native source and A1 records are preserved. Provider cause/availability remain unresolved; no additional call, host claim or successor. Error token counts are diagnostic and do not settle the outstanding reservation.
+
+## Current continuation: A2, approved but provider HOLD
+
+This remains the authoritative setup record for the execution/acquisition lineage. [A2 plan](A2-PLAN.md) precedes implementation; [current assessment](A2-PRE.md) is blocked. [Status](A2-STATUS.md) and [validation](a2-validation.json) distinguish30offline checks from zero native calls. Exact A1 actor input parity retained; unique A2 identity, original cost carry-forward and fresh provider evidence gates added. General claim-scope guidance and selective-preservation/controller contracts are concrete. Approval is current; provider recovery is unresolved. Temporary claim330 released332 before deployment. No A2 model or infrastructure spend. Resume: resolve route rejection then fresh public/runtime/account/exclusive/budget admission, one A2 only.

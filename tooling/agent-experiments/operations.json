@@ -76,7 +76,7 @@
       "adapter": "theseus-v2",
       "checked_at": "2026-10-04T16:51:19.347559+00:00",
       "checked_commit": "dd09575d050e54fd8e4202d05cf1cc4aaa38033c",
-      "next_action": "A1 direct attempt stopped firstHTTP429:204assigned,1terminal failure,0valid,203unstarted. Read A1-SETUP/RESULTS-A1 and actual trace; preserve USD0.010452 unknown charge (prior+exposureUSD0.822683/5). No retry/successor. Resolve provider health and safe failure metadata before any separately approved request. Legacy USD15/v2 adapter is NOT the A1 launcher.",
+      "next_action": "A2 approved and offline prepared; zero native calls. Read A2-STATUS/A2-PRE and A1-SETUP. HOLD pending route-specific provider recovery after fresh429. Preserve originalUSD5 and A1 unresolvedUSD0.010452. Existing A2 approval retained; refresh all admission after recovery. Legacy v2 USD15 adapter is not A2.",
       "next_run_approval": "owner"
     },
     {
