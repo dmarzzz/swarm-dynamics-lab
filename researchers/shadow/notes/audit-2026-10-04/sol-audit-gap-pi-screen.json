@@ -1,0 +1,1301 @@
+{
+  "repository_commit": "7ba5b3de2fb7d3c7f578131768fa1073e8815814",
+  "source_guide": "researchers/vishesh/notes/pi-review-guide-2026-10-04/review-guide.json",
+  "guide_cutoff": "2026-10-04T02:30Z through 03:40Z; presentation excludes later results",
+  "hub_url": "https://swarm-live.pages.dev/api/state",
+  "hub_timestamp_utc": "2026-10-04T15:22:20.730679+00:00",
+  "hub_status": "HTTP 200",
+  "coordination_tasks": [
+    {
+      "id": "pi-cycle-2026-10-04",
+      "title": "Coordinate one evidence-led iteration across ten active studies",
+      "status": "claimed",
+      "owner": "vishesh/codex-pi-review",
+      "for": "vishesh",
+      "updated": "2026-10-04T15:18Z"
+    }
+  ],
+  "projects": [
+    {
+      "id": "quorum",
+      "name": "Quorum of Mirrors",
+      "guide_evidence_status": "gray",
+      "recommended_options": [
+        {
+          "label": "Small benchmark",
+          "detail": "Test one small team across overlap and lineage visibility before size sweeps.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "quorum-mirrors-d1-design",
+          "title": "Review Quorum Q1 failure and prepare a controlled D1 diagnostic",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:45Z"
+        },
+        {
+          "id": "quorum-mirrors-design-v2",
+          "title": "Refine Quorum of Mirrors design and offline contracts",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:45Z"
+        },
+        {
+          "id": "quorum-mirrors-iteration-3",
+          "title": "Clarify Quorum utility and prepare a controlled successor",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:28Z"
+        },
+        {
+          "id": "quorum-mirrors-q1-interface-repair",
+          "title": "Preserve rejected-response usage and reconcile Q1 output-token contract",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:03Z"
+        },
+        {
+          "id": "quorum-mirrors-q1-launch",
+          "title": "Launch bounded Quorum context qualification under owner no-review direction",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T06:59Z"
+        },
+        {
+          "id": "quorum-mirrors-research-gates",
+          "title": "Complete Quorum prior-art evidence and staged run roadmap",
+          "status": "open",
+          "owner": null,
+          "for": "vishesh",
+          "updated": "2026-10-04T05:52Z"
+        },
+        {
+          "id": "quorum-mirrors-s0",
+          "title": "Prepare and qualify Quorum of Mirrors S0",
+          "status": "done",
+          "owner": "vishesh/codex-quorum-mirrors",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:02Z"
+        },
+        {
+          "id": "review-quorum-mirrors-qm3",
+          "title": "Review Quorum of Mirrors practical value and S1 feasibility design",
+          "status": "done",
+          "owner": "dmarz/inbox-design-feedback",
+          "for": "dmarz",
+          "updated": "2026-10-04T04:42Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "quorum-of-mirrors",
+          "run_status_counts": {
+            "failed": 3,
+            "done": 1
+          },
+          "latest_runs": [
+            {
+              "run": "QM-Q1-02",
+              "status": "failed",
+              "updated": "2026-10-04T07:59:36.407506+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "QM-Q1-01",
+              "status": "failed",
+              "updated": "2026-10-04T06:56:24.235651+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "quorum-of-mirrors/qm-s0-01",
+              "status": "failed",
+              "updated": "2026-10-04T03:59:54.493853+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "phantom",
+      "name": "Phantom Coast",
+      "guide_evidence_status": "gray",
+      "recommended_options": [
+        {
+          "label": "Qualify PC-1",
+          "detail": "Start with a bounded complete-evidence screen, then the planned history contrast.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "phantom-coast-live",
+          "title": "Launch bounded Phantom Coast native pilot",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:31Z"
+        },
+        {
+          "id": "phantom-coast-pc1",
+          "title": "Develop Phantom Coast PC-1 plan and offline instrument",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:45Z"
+        },
+        {
+          "id": "phantom-coast-pc2-design",
+          "title": "Iterate Phantom Coast after the native ceiling result",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:49Z"
+        },
+        {
+          "id": "phantom-coast-pc2-live",
+          "title": "Run and reconcile Phantom Coast PC-2 qualification and pilot",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T07:55Z"
+        },
+        {
+          "id": "phantom-coast-pc2-runner",
+          "title": "Build the Phantom Coast PC-2 launch instrument",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T05:04Z"
+        },
+        {
+          "id": "phantom-coast-pc3-live",
+          "title": "Build and run Phantom Coast PC-3 coverage guard",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:22Z"
+        },
+        {
+          "id": "phantom-coast-pc4-live",
+          "title": "Run Phantom Coast PC-4 and PC-5 design-review cycles",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T09:07Z"
+        },
+        {
+          "id": "phantom-coast-review-process",
+          "title": "Remove mandatory researcher review from owner experiment process",
+          "status": "done",
+          "owner": "vishesh/codex-phantom-coast",
+          "for": "vishesh",
+          "updated": "2026-10-04T05:51Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "phantom-coast-pc5",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "phantom-coast-pc5/s1-a1",
+              "status": "done",
+              "updated": "2026-10-04T09:02:40.207584+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "phantom-coast-pc5/q0-a1",
+              "status": "done",
+              "updated": "2026-10-04T08:59:58.507381+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "phantom-coast-pc4",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "phantom-coast-pc4/s1-a1",
+              "status": "done",
+              "updated": "2026-10-04T08:52:20.489664+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "phantom-coast-pc4/q0-a1",
+              "status": "done",
+              "updated": "2026-10-04T08:44:51.650302+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "phantom-coast-pc3",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "phantom-coast-pc3/s1-a1",
+              "status": "done",
+              "updated": "2026-10-04T08:19:24.592399+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "phantom-coast-pc3/q0-a1",
+              "status": "done",
+              "updated": "2026-10-04T08:06:03.351377+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "phantom-coast-pc2",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "phantom-coast-pc2/s1-a1",
+              "status": "done",
+              "updated": "2026-10-04T07:46:18.240330+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "phantom-coast-pc2/q0-a1",
+              "status": "done",
+              "updated": "2026-10-04T06:40:03.294875+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "phantom-coast",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "phantom-coast/s0-a1",
+              "status": "done",
+              "updated": "2026-10-04T04:27:27.039029+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "phantom-coast/q0-a1",
+              "status": "done",
+              "updated": "2026-10-04T04:11:54.864922+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dissenter",
+      "name": "Right Dissenter",
+      "guide_evidence_status": "gray",
+      "recommended_options": [
+        {
+          "label": "Small semantic pilot",
+          "detail": "Qualify one build-verification task and compare bounded admission with always-check.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "review-right-dissenter-rd1",
+          "title": "Review Right Dissenter RD-1 design and offline prototype",
+          "status": "done",
+          "owner": "dmarz/inbox-design-feedback",
+          "for": "dmarz",
+          "updated": "2026-10-04T04:17Z"
+        },
+        {
+          "id": "right-dissenter-design-build",
+          "title": "Build the Right Dissenter exploratory design and scenario harness",
+          "status": "done",
+          "owner": "vishesh/codex-decision-models",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:13Z"
+        },
+        {
+          "id": "right-dissenter-live-study",
+          "title": "Deploy and assess the Right Dissenter exploratory live study",
+          "status": "done",
+          "owner": "vishesh/codex-decision-models",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:54Z"
+        },
+        {
+          "id": "right-dissenter-rd4",
+          "title": "Repair and evaluate the Right Dissenter recovery protocol",
+          "status": "done",
+          "owner": "vishesh/codex-decision-models",
+          "for": "vishesh",
+          "updated": "2026-10-04T06:28Z"
+        },
+        {
+          "id": "right-dissenter-rd5-build",
+          "title": "Build and prepare Right Dissenter RD5",
+          "status": "done",
+          "owner": "vishesh/codex-decision-models",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:16Z"
+        },
+        {
+          "id": "right-dissenter-rd5-design",
+          "title": "Plan Right Dissenter repairs and the right to reopen",
+          "status": "done",
+          "owner": "vishesh/codex-decision-models",
+          "for": "vishesh",
+          "updated": "2026-10-04T06:50Z"
+        },
+        {
+          "id": "right-dissenter-rd5-run",
+          "title": "Run approved Right Dissenter RD5 qualification and conditional pilot",
+          "status": "open",
+          "owner": null,
+          "for": "vishesh",
+          "updated": "2026-10-04T09:00Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "right-dissenter-rd5",
+          "run_status_counts": {},
+          "latest_runs": []
+        },
+        {
+          "id": "right-dissenter-rd4",
+          "run_status_counts": {
+            "done": 2,
+            "failed": 2
+          },
+          "latest_runs": [
+            {
+              "run": "right-dissenter-rd4/s4-c2",
+              "status": "done",
+              "updated": "2026-10-04T06:17:18.235134+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "right-dissenter-rd4/s4-c1",
+              "status": "failed",
+              "updated": "2026-10-04T06:11:54.750379+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "right-dissenter-rd4/s4-a1",
+              "status": "failed",
+              "updated": "2026-10-04T05:58:47.195120+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "right-dissenter",
+          "run_status_counts": {
+            "done": 4
+          },
+          "latest_runs": [
+            {
+              "run": "right-dissenter/d1-a1",
+              "status": "done",
+              "updated": "2026-10-04T04:44:44.887513+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "right-dissenter/s1-a1",
+              "status": "done",
+              "updated": "2026-10-04T04:38:51.008137+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "right-dissenter/q1-a1",
+              "status": "done",
+              "updated": "2026-10-04T04:35:09.711624+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "sizing",
+      "name": "Optimal Swarm Size",
+      "guide_evidence_status": "gray",
+      "recommended_options": [
+        {
+          "label": "Small interaction pilot",
+          "detail": "Compare a few roster sizes on parallel and linked tasks before fitting a selector.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "build-swarm-size-qualification",
+          "title": "Build and qualify optimal swarm-size generators and launch package",
+          "status": "done",
+          "owner": "vishesh/codex-idea-scores",
+          "for": "vishesh",
+          "updated": "2026-10-04T09:03Z"
+        },
+        {
+          "id": "conditional-swarm-size",
+          "title": "Add conditional optimal swarm-size research question",
+          "status": "done",
+          "owner": "vishesh/codex-idea-scores",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:19Z"
+        },
+        {
+          "id": "design-conditional-swarm-size",
+          "title": "Develop the conditional optimal swarm-size study design",
+          "status": "done",
+          "owner": "vishesh/codex-idea-scores",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:40Z"
+        },
+        {
+          "id": "refine-swarm-size-protocol",
+          "title": "Refine swarm-size coordination and policy evaluation design",
+          "status": "done",
+          "owner": "vishesh/codex-idea-scores",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:51Z"
+        },
+        {
+          "id": "review-swarm-size-qualification",
+          "title": "Independently review the optimal swarm-size qualification package",
+          "status": "done",
+          "owner": "dmarz/inbox-design-feedback",
+          "for": "dmarz",
+          "updated": "2026-10-04T04:17Z"
+        },
+        {
+          "id": "specify-swarm-size-task-contracts",
+          "title": "Specify swarm-size task contracts and qualification gates",
+          "status": "done",
+          "owner": "vishesh/codex-idea-scores",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:56Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "optimal-swarm-size-q1",
+          "run_status_counts": {
+            "done": 37,
+            "failed": 20
+          },
+          "latest_runs": [
+            {
+              "run": "optimal-swarm-size-q1/0ca4694cfc9ac4a4",
+              "status": "done",
+              "updated": "2026-10-04T08:58:03.346224+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "optimal-swarm-size-q1/7cdc83a1503e33b6",
+              "status": "done",
+              "updated": "2026-10-04T08:58:02.536818+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "optimal-swarm-size-q1/5d6d86912fc0ec4f",
+              "status": "done",
+              "updated": "2026-10-04T08:58:01.816539+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "optimal-swarm-size-reporting-q0",
+          "run_status_counts": {
+            "done": 1
+          },
+          "latest_runs": [
+            {
+              "run": "optimal-swarm-size-reporting-q0/92cb8f74bd7cffc1",
+              "status": "done",
+              "updated": "2026-10-04T04:11:01.472237+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "heterogeneous",
+      "name": "Heterogeneous Swarms",
+      "guide_evidence_status": "gray",
+      "recommended_options": [
+        {
+          "label": "Salvage pilot",
+          "detail": "Test failed-work transformation against direct reuse, donor continuation and equally funded fresh attempts.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "allocate-poietic-agents-s0",
+          "title": "Identify an idle approved-fleet allocation for Poietic Agents qualification",
+          "status": "open",
+          "owner": null,
+          "for": "dmarz",
+          "updated": null
+        },
+        {
+          "id": "build-poietic-agents-instrument",
+          "title": "Build the Poietic Agents offline instrument and qualification package",
+          "status": "done",
+          "owner": "vishesh/codex-heterogeneous",
+          "for": "vishesh",
+          "updated": "2026-10-04T06:38Z"
+        },
+        {
+          "id": "heterogeneous-agent-research",
+          "title": "Jev, Haiku and Qwen heterogeneous swarm research and prioritization",
+          "status": "done",
+          "owner": "vishesh/codex-heterogeneous",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:41Z"
+        },
+        {
+          "id": "heterogeneous-biological-frontiers",
+          "title": "Biological frontiers for heterogeneous swarms grounded in X discussions",
+          "status": "done",
+          "owner": "vishesh/codex-heterogeneous",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:22Z"
+        },
+        {
+          "id": "heterogeneous-methods-review",
+          "title": "Complete heterogeneous-swarm methods review before hypothesis promotion",
+          "status": "open",
+          "owner": null,
+          "for": null,
+          "updated": null
+        },
+        {
+          "id": "heterogeneous-priority-revision",
+          "title": "Revise heterogeneous-swarm priorities from owner feedback",
+          "status": "done",
+          "owner": "vishesh/codex-heterogeneous",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:53Z"
+        },
+        {
+          "id": "poietic-agents-design",
+          "title": "Design Poietic Agents from the self-differentiating swarm research",
+          "status": "done",
+          "owner": "vishesh/codex-heterogeneous",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:35Z"
+        },
+        {
+          "id": "qualify-poietic-agents-s0",
+          "title": "Admit and qualify Poietic Agents after explicit confirmation of its proposed USD 2 cap",
+          "status": "open",
+          "owner": null,
+          "for": "vishesh",
+          "updated": "2026-10-04T09:07Z"
+        },
+        {
+          "id": "review-poietic-agents-design",
+          "title": "Independently review the Poietic Agents prospective design",
+          "status": "done",
+          "owner": "dmarz/inbox-design-feedback",
+          "for": "dmarz",
+          "updated": "2026-10-04T04:43Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "poietic-agents",
+          "run_status_counts": {
+            "failed": 3
+          },
+          "latest_runs": [
+            {
+              "run": "poietic-S0-01-typed_choice",
+              "status": "failed",
+              "updated": "2026-10-04T08:46:31.457063+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "poietic-S0-01-cheap_generative",
+              "status": "failed",
+              "updated": "2026-10-04T08:46:31.113980+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "poietic-S0-01-generalist",
+              "status": "failed",
+              "updated": "2026-10-04T08:46:30.801986+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "theseus",
+      "name": "Swarm of Theseus",
+      "guide_evidence_status": "yellow",
+      "recommended_options": [
+        {
+          "label": "Specify selective continuity",
+          "detail": "Build one release task where copying, forgetting and selective updating produce different outcomes.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "review-theseus-execution-d1",
+          "title": "Independent review of Theseus execution diagnostic D1",
+          "status": "open",
+          "owner": null,
+          "for": "dmarz",
+          "updated": null
+        },
+        {
+          "id": "swarm-of-theseus",
+          "title": "Build and qualify Swarm of Theseus (SOC-24)",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:45Z"
+        },
+        {
+          "id": "theseus-critical-redesign",
+          "title": "Critically review SOC-24 and redesign beyond memory availability",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:53Z"
+        },
+        {
+          "id": "theseus-d1-launch",
+          "title": "Admit and run Theseus execution diagnostic D1",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T07:04Z"
+        },
+        {
+          "id": "theseus-d2-design",
+          "title": "Interpret Theseus D1 and plan a focused D2 confirmation",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:04Z"
+        },
+        {
+          "id": "theseus-d2-run",
+          "title": "Review, implement and execute the Theseus D2 diagnostic",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T09:29Z"
+        },
+        {
+          "id": "theseus-rule-diagnosis",
+          "title": "Diagnose Theseus rule application from saved evidence",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:39Z"
+        },
+        {
+          "id": "theseus-social-grounding",
+          "title": "Ground Theseus scenario selection in X discussions and practical failures",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:06Z"
+        },
+        {
+          "id": "theseus-targeted-repairs",
+          "title": "Build targeted Theseus execution diagnostic repairs",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:55Z"
+        },
+        {
+          "id": "theseus-v2-iteration",
+          "title": "Build and qualify a practical Theseus continuity iteration",
+          "status": "done",
+          "owner": "vishesh/codex-theseus",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:27Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "swarm-of-theseus-execution-r1",
+          "run_status_counts": {
+            "done": 200
+          },
+          "latest_runs": [
+            {
+              "run": "R1-7203-incident-r0-E-6",
+              "status": "done",
+              "updated": "2026-10-04T09:26:30.320411+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "R1-7203-incident-r1-E-6",
+              "status": "done",
+              "updated": "2026-10-04T09:21:29.862777+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "R1-7204-incident-r1-E-6",
+              "status": "done",
+              "updated": "2026-10-04T09:21:28.766737+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "swarm-of-theseus-execution-d2",
+          "run_status_counts": {
+            "done": 200
+          },
+          "latest_runs": [
+            {
+              "run": "D2-7104-incident-base-r1-E-7",
+              "status": "done",
+              "updated": "2026-10-04T09:15:16.565769+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "D2-7103-incident-base-r1-E-3",
+              "status": "done",
+              "updated": "2026-10-04T09:04:12.692644+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "D2-7101-release-reverse-r0-E-4",
+              "status": "done",
+              "updated": "2026-10-04T09:04:11.074683+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "swarm-of-theseus-execution-d1",
+          "run_status_counts": {
+            "done": 144
+          },
+          "latest_runs": [
+            {
+              "run": "D1-610-migration-old-E-7",
+              "status": "done",
+              "updated": "2026-10-04T06:58:17.635444+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "D1-612-migration-old-C-0",
+              "status": "done",
+              "updated": "2026-10-04T06:54:13.012165+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "D1-611-release-E-5",
+              "status": "done",
+              "updated": "2026-10-04T06:54:09.986299+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "swarm-of-theseus-v2",
+          "run_status_counts": {
+            "done": 25
+          },
+          "latest_runs": [
+            {
+              "run": "swarm-of-theseus-v2",
+              "status": "done",
+              "updated": "2026-10-04T04:27:32.020360+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "S0-repair-release-303-learner",
+              "status": "done",
+              "updated": "2026-10-04T04:25:14.076333+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "S0-repair-release-302-learner",
+              "status": "done",
+              "updated": "2026-10-04T04:16:14.087354+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "swarm-of-theseus",
+          "run_status_counts": {},
+          "latest_runs": []
+        }
+      ]
+    },
+    {
+      "id": "immune",
+      "name": "Immune Response",
+      "guide_evidence_status": "yellow",
+      "recommended_options": [
+        {
+          "label": "Repair competence gate",
+          "detail": "Validate clean damaged and healthy controls before another architecture comparison.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "allocate-immune-response-a3",
+          "title": "Provision dedicated Immune Response replacement through established Dmarz setup",
+          "status": "open",
+          "owner": null,
+          "for": "dmarz",
+          "updated": null
+        },
+        {
+          "id": "design-swarm-immune-response",
+          "title": "Develop an exploratory swarm immune-response design",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-03T22:28Z"
+        },
+        {
+          "id": "immune-response-evidence-receipts",
+          "title": "Diagnose recovery with checked evidence receipts",
+          "status": "claimed",
+          "owner": "vishesh/codex-immune",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:41Z"
+        },
+        {
+          "id": "immune-response-v2",
+          "title": "Refine and run the exploratory immune-response instrument",
+          "status": "done",
+          "owner": "vishesh/codex-immune",
+          "for": "vishesh",
+          "updated": "2026-10-04T01:57Z"
+        },
+        {
+          "id": "immune-response-v3-native-repair",
+          "title": "Qualify the repaired immune-response contract on a dedicated host",
+          "status": "done",
+          "owner": "vishesh/codex-immune",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:54Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "immune-response-v3",
+          "run_status_counts": {
+            "failed": 2
+          },
+          "latest_runs": [
+            {
+              "run": "immune-response-v3/1004-075718-66a098",
+              "status": "failed",
+              "updated": "2026-10-04T08:02:00.060223+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "immune-response-v3/1004-034657-73913b",
+              "status": "failed",
+              "updated": "2026-10-04T03:47:54.550106+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "immune-response",
+          "run_status_counts": {},
+          "latest_runs": []
+        }
+      ]
+    },
+    {
+      "id": "influence",
+      "name": "Influence Swarms",
+      "guide_evidence_status": "yellow",
+      "recommended_options": [
+        {
+          "label": "Qualify procurement",
+          "detail": "Test ordinary, genuine-value, missing-approval and migration cases before collecting the influence contrast.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "external-influence-v2",
+          "title": "Build expanded external-influence procurement pilot",
+          "status": "done",
+          "owner": "vishesh/codex-experiments",
+          "for": "vishesh",
+          "updated": "2026-10-04T00:54Z"
+        },
+        {
+          "id": "influence-native-rerun",
+          "title": "Run the revised procurement influence experiment",
+          "status": "claimed",
+          "owner": "vishesh/codex-experiments",
+          "for": "vishesh",
+          "updated": "2026-10-04T09:29Z"
+        },
+        {
+          "id": "influence-quality-review",
+          "title": "Audit and improve How to win agents and influence swarms",
+          "status": "done",
+          "owner": "vishesh/codex-experiments",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:24Z"
+        },
+        {
+          "id": "review-influence-q4-dossiers",
+          "title": "Independently review the four fresh influence qualification dossiers",
+          "status": "done",
+          "owner": "vishesh/codex-experiments",
+          "for": "dmarz",
+          "updated": "2026-10-04T04:16Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "influence-swarms",
+          "run_status_counts": {
+            "done": 3,
+            "failed": 1
+          },
+          "latest_runs": [
+            {
+              "run": "influence-swarms/1004-054904-3252ed",
+              "status": "done",
+              "updated": "2026-10-04T05:54:38.392526+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "influence-swarms/1004-044202-3747f4",
+              "status": "done",
+              "updated": "2026-10-04T04:50:56.658016+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "influence-swarms/1004-042333-dd1c1e",
+              "status": "done",
+              "updated": "2026-10-04T04:25:40.448456+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "external-influence-v2",
+          "run_status_counts": {
+            "done": 5
+          },
+          "latest_runs": [
+            {
+              "run": "external-influence-v2/local-s1-20261004",
+              "status": "done",
+              "updated": "2026-10-04T04:54:06.205103+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "external-influence-v2/local-q2-20261004",
+              "status": "done",
+              "updated": "2026-10-04T04:25:10.780269+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "external-influence-v2/local-d0-20261004",
+              "status": "done",
+              "updated": "2026-10-04T04:25:08.705764+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "external-influence",
+          "run_status_counts": {},
+          "latest_runs": []
+        }
+      ]
+    },
+    {
+      "id": "healing",
+      "name": "Healing Helping Hands",
+      "guide_evidence_status": "yellow",
+      "recommended_options": [
+        {
+          "label": "Constrained repair pilot",
+          "detail": "Reuse frozen extraction tapes to test withdrawals under equal communication budgets.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "allocate-healing-qwen-jev",
+          "title": "Provision dedicated Healing Qwen plus Jev worker in approved fleet",
+          "status": "done",
+          "owner": "vishesh/codex-regrowth-docs",
+          "for": "dmarz",
+          "updated": "2026-10-04T06:13Z"
+        },
+        {
+          "id": "healing-c4-selective",
+          "title": "Prepare and qualify C4 selective helping",
+          "status": "claimed",
+          "owner": "vishesh/codex-regrowth-docs",
+          "for": "vishesh",
+          "updated": "2026-10-04T15:19Z"
+        },
+        {
+          "id": "healing-helping-hands-v2",
+          "title": "Review and rebuild Healing Helping Hands as an evidence atlas",
+          "status": "done",
+          "owner": "vishesh/codex-regrowth-docs",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:52Z"
+        },
+        {
+          "id": "healing-practical-repair",
+          "title": "Compare Healing evidence repair with practical central baselines",
+          "status": "done",
+          "owner": "vishesh/codex-regrowth-docs",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:07Z"
+        },
+        {
+          "id": "healing-qwen-jev",
+          "title": "Qualify and run Healing Qwen plus Jev composite",
+          "status": "done",
+          "owner": "vishesh/codex-regrowth-docs",
+          "for": "vishesh",
+          "updated": "2026-10-04T08:38Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "healing-helping-hands",
+          "run_status_counts": {
+            "done": 197,
+            "failed": 3
+          },
+          "latest_runs": [
+            {
+              "run": "healing-helping-hands/C3-S1",
+              "status": "done",
+              "updated": "2026-10-04T08:35:45.266021+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "healing-helping-hands/C3-S0",
+              "status": "done",
+              "updated": "2026-10-04T08:07:18.418104+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "healing-helping-hands/C2-S0",
+              "status": "failed",
+              "updated": "2026-10-04T06:04:19.442766+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "antsy",
+      "name": "Antsy",
+      "guide_evidence_status": "green",
+      "recommended_options": [
+        {
+          "label": "Audit then simplify",
+          "detail": "Repair the estimator retrospectively, then test a simple verification policy on fresh receipts.",
+          "recommended": true
+        }
+      ],
+      "related_tasks": [
+        {
+          "id": "adaptive-quorum-api-v2",
+          "title": "Expand adaptive quorum into evidence-based API selection",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T00:40Z"
+        },
+        {
+          "id": "adaptive-quorum-pilot",
+          "title": "Build and launch adaptive-quorum exploratory qualification",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T00:28Z"
+        },
+        {
+          "id": "antsy-diversity-v7",
+          "title": "Measure worker diversity and correlated errors in Antsy",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T06:29Z"
+        },
+        {
+          "id": "antsy-quality-repair",
+          "title": "Audit and repair Antsy experiment quality and reproducibility",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T01:47Z"
+        },
+        {
+          "id": "antsy-receipt-v6",
+          "title": "Build and evaluate real receipt-total checking with fresh data",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T04:48Z"
+        },
+        {
+          "id": "antsy-targeted-v8",
+          "title": "Repair Antsy extraction and design targeted verification",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T07:03Z"
+        },
+        {
+          "id": "antsy-v8-native-qualification",
+          "title": "Prepare and launch fresh Antsy v8 OCR qualification",
+          "status": "claimed",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T09:29Z"
+        },
+        {
+          "id": "antsy-verification-v4",
+          "title": "Ground Antsy in measured OCR errors and budgeted verification",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T02:55Z"
+        },
+        {
+          "id": "antsy-verification-v5",
+          "title": "Repair Antsy verification semantics and qualify cost-aware stopping",
+          "status": "done",
+          "owner": "vishesh/codex-methods",
+          "for": "vishesh",
+          "updated": "2026-10-04T03:51Z"
+        }
+      ],
+      "hub_experiments": [
+        {
+          "id": "antsy-diversity-v7",
+          "run_status_counts": {
+            "failed": 2
+          },
+          "latest_runs": [
+            {
+              "run": "antsy-diversity-v7/S0-repair-1",
+              "status": "failed",
+              "updated": "2026-10-04T06:28:14.224457+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "antsy-diversity-v7/S0-attempt-1",
+              "status": "failed",
+              "updated": "2026-10-04T06:14:18.331404+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "antsy-receipt-v6",
+          "run_status_counts": {
+            "done": 2,
+            "failed": 3
+          },
+          "latest_runs": [
+            {
+              "run": "antsy-receipt-v6/S1-reparse-2",
+              "status": "done",
+              "updated": "2026-10-04T04:47:13.948240+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "antsy-receipt-v6/E0-reparse-3",
+              "status": "done",
+              "updated": "2026-10-04T04:47:13.891894+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "antsy-receipt-v6/S1-attempt-1",
+              "status": "failed",
+              "updated": "2026-10-04T04:43:35.703536+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "antsy-verification-v5",
+          "run_status_counts": {
+            "done": 2
+          },
+          "latest_runs": [
+            {
+              "run": "antsy-verification-v5/D1-attempt-1",
+              "status": "done",
+              "updated": "2026-10-04T03:50:19.029738+00:00",
+              "stale_by_600_second_rule": false
+            },
+            {
+              "run": "antsy-verification-v5/D0-attempt-1",
+              "status": "done",
+              "updated": "2026-10-04T03:50:18.662213+00:00",
+              "stale_by_600_second_rule": false
+            }
+          ]
+        },
+        {
+          "id": "antsy-verification-v4",
+          "run_status_counts": {},
+          "latest_runs": []
+        },
+        {
+          "id": "adaptive-quorum-api-v2",
+          "run_status_counts": {},
+          "latest_runs": []
+        },
+        {
+          "id": "adaptive-quorum",
+          "run_status_counts": {},
+          "latest_runs": []
+        }
+      ]
+    }
+  ]
+}
