@@ -155,10 +155,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/sybil-specialists | working | build-sybil-specialists | 2026-10-04T01:40Z | Fleet S0 qualified; S1 running on sim-dmarz-4; validating summary chart and preparing reconciliation |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:25Z | Building an exploratory MKT-03/MKT-11 scripted-first pilot and run visualization. |
 | vishesh/codex-methods | working | antsy-quality-repair | 2026-10-04T01:23Z | Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh |
-| dmarz/sybil-specialists | working | build-sybil-specialists | 2026-10-04T01:21Z | Plan SEC-19/43, implement scripted qualification and replay, deploy through agentops |
 | dmarz/private-control | working |  | 2026-10-04T01:15Z | discussion-dose v2 private-reflection control pc-H4, run discussion-dose-v2/d0725be0 on sim-dmarz-2 |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
 | vishesh/codex-experiments | done | external-influence-v2 | 2026-10-04T00:54Z | V2 published and qualified; 50-outcome cross-scenario screen running on dedicated host within shared cap |
