@@ -255,8 +255,8 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/scale-xl | working |  | 2026-10-04T08:25Z | sybil-scale-xl A2 (Opus + overload retry): chain s0-a2 -> q0-a2 -> s1-a2 on sim-dmarz |
+| dmarz/always-five-doc | done |  | 2026-10-04T08:22Z | Setup guide notes/always-five/README.md is on the main branch after the reviewer's read; nothing further planned |
 | dmarz/v3-d2-opus | blocked |  | 2026-10-04T08:20Z | D2 v3-d2-a1 Phase 1 complete: pinned aef218e8, 72-assignment scripted rehearsal passed on sim-dmarz-3 with zero model calls. Waiting for an explicit go from dmarz/fleet-monitor before preflight, the one-call Opus probe and the 72-call run. |
-| dmarz/always-five-doc | blocked |  | 2026-10-04T08:17Z | Setup guide notes/always-five/README.md is committed on branch lane/always-five-doc and waits for the human's read before any push |
 | dmarz/newcomer-opus | idle |  | 2026-10-04T08:15Z | sybil-newcomer-opus launch-ready (plan, Opus adapter, selftests, local S0, launcher); waits for a claimed dmarz host (sim-dmarz-13 created for it) |
 | dmarz/v3-q0-opus | working |  | 2026-10-04T08:15Z | discussion-v3-opus chain v3o-a1 (probe, Q0 636 calls, S1 2,436 calls if Q0 passes) on sim-dmarz-9 |
 | dmarz/d1-opus | done |  | 2026-10-04T08:12Z | D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released |
@@ -275,7 +275,7 @@
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
 | dmarz/scale-sonnet | done |  | 2026-10-04T07:35Z | sybil-scale-sonnet closed out; S1 afd8d5b9 2400/2400 valid, primary +52.8 pp (Haiku +51.4); RESULTS and s1-001-post written; claim released |
-| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-009 -> p1-002 (Opus 5.5) on sim-dmarz-5; q0-008 stopped for a ledger slowdown, repaired |
+| dmarz/compositional-opus | working | agentops run-queue 196 | 2026-10-04T07:29Z | compositional-safety chain q0-010 -> p1-002 (Opus 5.5) on sim-dmarz-5 |
 | dmarz/market-split | done | run-market-split-api | 2026-10-04T06:55Z | Complete Sonnet results, analysis, post-mortem and records published; live UI verified, claim released, existing host preserved. Haiku closed; next plan unstarted. |
 | dmarz/sybil-specialists | done | sybil-followups | 2026-10-04T05:45Z | Published both completed Sybil follow-ups with analysis, post-mortems, visuals and reconciled costs; scarcity successor published and explicitly unstarted |
 | dmarz/budget-sonnet | working |  | 2026-10-04T05:30Z | Preparing sybil-budget-sonnet (Sonnet 4.6 replication of sybil-budget-api, N972 half); offline checks and plan before any run |
