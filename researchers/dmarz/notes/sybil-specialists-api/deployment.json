@@ -13,7 +13,7 @@
   "workers": 1,
   "max_stage_seconds": 1800,
   "automatic_retries": 0,
-  "status": "analysis-publication",
+  "status": "complete-claim-released",
   "runs": [
     {
       "run": "sybil-specialists-api/62c03464",
@@ -100,5 +100,38 @@
     "pillow": "11.3.0",
     "pyyaml": "6.0.1"
   },
-  "worker_active": false
+  "worker_active": false,
+  "analysis": {
+    "run": "sybil-specialists-api/analysis-api-001",
+    "code": "7354b31d521e9229c06e2ccd3dcc10db278e7fc9",
+    "new_model_calls": 0,
+    "verified_artifacts": [
+      "final_frame.png",
+      "replay.gif",
+      "initial_frame.png",
+      "analysis.json",
+      "replay_source.jsonl"
+    ],
+    "verified_images": {
+      "initial_frame.png": {
+        "width": 1800,
+        "height": 1180,
+        "frames": 1
+      },
+      "final_frame.png": {
+        "width": 1800,
+        "height": 1180,
+        "frames": 1
+      },
+      "replay.gif": {
+        "width": 1800,
+        "height": 1180,
+        "frames": 25
+      }
+    }
+  },
+  "verified_artifacts_total": 26,
+  "claim_release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/51",
+  "claim_released_at": "2026-10-04T02:12:37Z",
+  "new_paid_jobs_queued": 0
 }

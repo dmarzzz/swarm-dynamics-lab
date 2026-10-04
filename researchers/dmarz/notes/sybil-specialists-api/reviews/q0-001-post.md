@@ -4,9 +4,9 @@ Experiment sybil-specialists-api / dmarz/sybil-specialists / Q0 / 2026-10-04 UTC
 
 ## What ran and what happened
 
-Run sybil-specialists-api/08338820; code 7257d107fda42a6860b8448f75df8d90908fcc01, unchanged runtime digest 12ff89f2f54322f07245640708a0c243ad09ab8d933163e71869c3ce08255f6a. All 24 planned → started → terminal → graded → analyzed, zero failures, duplicates or missing rows. Six clean independent worlds, four presentations each. Exact packet24/24; field144/144; missing-field abstention36/36. Each of the four presentation cells is6/6 exact.
+Run sybil-specialists-api/08338820; code 7257d107fda42a6860b8448f75df8d90908fcc01, unchanged runtime digest 12ff89f2f54322f07245640708a0c243ad09ab8d933163e71869c3ce08255f6a. All 24 planned → started → terminal → graded → analyzed, zero failures, duplicates or missing rows. Six clean independent worlds, four presentations each. Exact packet24/24; field144/144; missing-field abstention36/36. Each of the four presentation cells is 6/6 exact.
 
-24 native Haiku4.5 requests, 36,456 input tokens and972 output tokens. Computed cost from reported usage USD0.041316; nonrefundable reserved amount USD0.255660; all24 requests have usage. Remaining reserve USD4.744340, 276 calls below the aggregate300 ceiling. Execution loop30.43s; all observations retained. Zero automatic retries. API snapshot and structured-output contract were accepted as frozen.
+24 native Haiku4.5 requests, 36,456 input tokens and 972 output tokens. Computed cost from reported usage USD 0.041316; nonrefundable reserved amount USD 0.255660; all 24 requests have usage. Remaining reserve USD 4.744340, 276 calls below the aggregate300 ceiling. Execution loop30.43s; all observations retained. Zero automatic retries. API snapshot and structured-output contract were accepted as frozen.
 
 ## Visualization review
 
@@ -22,4 +22,4 @@ No material execution, design or competence failure detected. No repairs or addi
 
 ## Next run
 
-s1-001:192 calls on worlds4000–4011, four admission policies × attacker pass .10/.90 × badges masked/visible. Use the unchanged runtime digest and same aggregate ledger. No further clean qualification needed for documentation-only commits. One worker,30-minute deadline, no automatic retries. Stop on first execution failure, preserve the entire assigned denominator and diagnose within remaining reserve. Valid adverse/null scientific outcomes finish the study.
+s1-001:192 calls on worlds 4000–4011, four admission policies × attacker pass .10/.90 × badges masked/visible. Use the unchanged runtime digest and same aggregate ledger. No further clean qualification needed for documentation-only commits. One worker, 30-minute deadline, no automatic retries. Stop on first execution failure, preserve the entire assigned denominator and diagnose within remaining reserve. Valid adverse/null scientific outcomes finish the study.

@@ -1,0 +1,89 @@
+version: market-split-api-v1
+status: exploratory-hunch
+experiment: market-split-api
+model: claude-haiku-4-5-20251001
+arms:
+- neutral_dynamic
+- neutral_locked
+regulators:
+- none
+- firm
+- owner
+threshold: 0.38
+registration_fee: 20
+cfg:
+  rounds: 24
+  max_firms: 4
+  start_cash: 20000
+  fine_rate: 0.35
+  overhead: 3
+  registration_fee: 20
+  history_rounds: 6
+  split_round: 4
+stages:
+  S0:
+    backend: mock
+    tasks:
+    - 20
+    - 21
+    seeds:
+    - 31
+    rounds: 8
+    regulators:
+    - none
+    - firm
+    - owner
+  Q0:
+    backend: anthropic
+    tasks:
+    - 20
+    - 21
+    seeds:
+    - 31
+    rounds: 8
+    regulators:
+    - none
+  S1:
+    backend: anthropic
+    tasks:
+    - 30
+    - 31
+    - 32
+    - 33
+    - 34
+    - 35
+    seeds:
+    - 41
+    rounds: 24
+    regulators:
+    - none
+    - firm
+    - owner
+qualification:
+  valid_rate: 1.0
+  min_profit_ratio: 0.75
+  positive_profit_all: true
+budget:
+  authorization: 'researchers/dmarz/README.md: shared USD 500; no old per-experiment
+    cap'
+  owner_shared_usd: 500
+  max_attempted_calls: 1100
+  max_output_tokens: 800
+  max_input_bytes: 20000
+  request_timeout_seconds: 90
+  stage_timeout_seconds: 7200
+  retries: 0
+  workers: 1
+  input_usd_per_million: 1
+  output_usd_per_million: 5
+primary_contrast:
+  metric: strategic_fragmentation
+  arm: neutral_dynamic
+  compare:
+  - firm
+  - owner
+  status: exploratory
+S2_enabled: false
+holdout:
+- 1000
+- 1999

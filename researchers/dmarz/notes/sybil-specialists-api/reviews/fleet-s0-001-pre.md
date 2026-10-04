@@ -12,7 +12,7 @@ Close local-provenance by fetching a full committed public SHA on an isolated ch
 
 ## Frozen execution plan
 
-Use private scripts/run-sybil-specialists-api.py FULL_SHA setup, then S0. Agentops verifies merged exclusive claim dmarz-sybil-specialists-api on sim-dmarz-4 immediately before each operation. Python3.12/Pillow11.3/PyYAML6 on the reusable experiment venv; exact versions retained in deployment record. One worker, 30 minutes, zero API calls/spend; no secrets decrypted for S0. Runtime source digest recorded on each assignment, all study code committed before launch. Every output uploaded to the hub; supported synthetic images appear on the public live site. Stop on any failure, retain all assignments, no automatic retries. Both selftest suites must pass remotely. Exact-source S0 success mechanically gates Q0; failed visual/upload validation independently blocks promotion.
+Use private scripts/run-sybil-specialists-api.py FULL_SHA setup, then S0. Agentops verifies merged exclusive claim dmarz-sybil-specialists-api on sim-dmarz-4 immediately before each operation. Python 3.12/Pillow 11.3/PyYAML 6 on the reusable experiment venv; exact versions retained in deployment record. One worker, 30 minutes, zero API calls/spend; no secrets decrypted for S0. Runtime source digest recorded on each assignment, all study code committed before launch. Every output uploaded to the hub; supported synthetic images appear on the public live site. Stop on any failure, retain all assignments, no automatic retries. Both selftest suites must pass remotely. Exact-source S0 success mechanically gates Q0; failed visual/upload validation independently blocks promotion.
 
 ## Visualization mapping
 

@@ -1,0 +1,35 @@
+id: market-split-api
+owner: dmarz
+title: Will a neutral agent create firms to evade concentration rules?
+description: MKT-03 + MKT-11 exploratory neutral-model discovery pilot. Same owner
+  resources, optional registration, firm versus beneficial-owner regulation. Scripted
+  qualification and model results are labeled separately.
+url: https://github.com/dmarzzz/swarm-lab/tree/main/researchers/dmarz/notes/market-split-api
+params:
+  stage:
+    type: str
+    role: stage
+  regulator:
+    type: str
+    role: condition
+  task_id:
+    type: int
+    role: replicate
+  seed:
+    type: int
+    role: replicate
+  backend:
+    type: str
+    role: fixed
+metrics:
+- episodes
+- invalid
+- fragmentation_dynamic
+- fragmentation_locked
+- profit_dynamic
+- profit_locked
+- model_calls
+- api_cost_usd
+- qualification_pass
+- visual_ok
+primary_metric: fragmentation_dynamic

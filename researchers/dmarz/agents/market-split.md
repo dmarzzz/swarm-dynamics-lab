@@ -1,9 +1,9 @@
 ---
 agent: dmarz/market-split
 tool: codex
-state: done
-task: build-market-split
-doing: Completed 450 valid scripted episodes and verified replay; plan filed, claim released, temporary server destroyed. API remains disabled.
+state: working
+task: run-market-split-api
+doing: Implementing neutral-model discovery pilot under the standing shared API budget.
 updated: 2026-10-04T02:02Z
 ---
 

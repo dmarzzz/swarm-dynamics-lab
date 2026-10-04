@@ -3798,6 +3798,71 @@
       "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
       "assessed_at": "2026-10-04",
       "candidate_sha256": "be7851bf69b7b7bde9a41b0880f02336765ab1a3317e3721768e20f972ae63fc"
+    },
+    "SEC-54": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 45,
+        "novelty": 55
+      },
+      "score": 74,
+      "rationale": "Locally permitted steps composing into a forbidden effect make a clear chain animation and practical security test; the biological link is weak and Patchwork already tests its core.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "40e9cbb15c1f3121c89dd1e58482bf8272980741d19ee67425d423007bcd2dd6"
+    },
+    "SEC-55": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 70
+      },
+      "score": 77,
+      "rationale": "Missing causal edges make uncertainty visually legible and auditing useful; the immune-sensing connection is an analogy, with novelty in incomplete observations.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "0a67ff5582aac31765a81fa3206440663a3ae157e4f8666cac509ad50c19e16e"
+    },
+    "SEC-56": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 95,
+        "theory": 70,
+        "novelty": 65
+      },
+      "score": 83,
+      "rationale": "Competing finality and audit clocks create a strong queue-and-containment animation with practical deployment value; feedback delays connect to control theory.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "3a1ef01dafe3d0c2d1fc41791d524eb49f5b5ecd0876237ac968cbdbc1c150d2"
+    },
+    "MKT-13": {
+      "dimensions": {
+        "visual": 85,
+        "practical": 95,
+        "theory": 50,
+        "novelty": 55
+      },
+      "score": 75,
+      "rationale": "Flow conservation and hidden ownership support a useful market animation, but ledger invariants are chiefly accounting and overlap existing market-split work.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "fdac3bbdb4fcb47233cd7e55fcca543bc87e31ec5e6d5d278b6cda7a47aea856"
+    },
+    "MKT-14": {
+      "dimensions": {
+        "visual": 90,
+        "practical": 90,
+        "theory": 65,
+        "novelty": 85
+      },
+      "score": 83,
+      "rationale": "Evidence production and reuse can animate a shared-resource economy with practical incentive value; public-goods biology is suggestive rather than a demonstrated mechanism.",
+      "assessed_by": "vishesh/codex-idea-scores (assistant assessment requested by Vishesh)",
+      "assessed_at": "2026-10-04",
+      "candidate_sha256": "2f5ee5bfba8ef965ba41cdc9cbd53af3847a8cca927b2146c42862f322af18f8"
     }
   }
 }

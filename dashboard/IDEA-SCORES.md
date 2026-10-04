@@ -1,6 +1,6 @@
 # Researcher scores
 
-All 214 atlas questions and 78 contributed ideas received an individual initial assessment on 2026-10-04 UTC. Vishesh requested these ratings from Codex using the most recent conversation rubric. They are assistant assessments on his behalf, not 292 personal human reviews. Each record includes a short, idea-specific rationale. Scores cover started as well as unstarted ideas; research status is unchanged.
+All 219 atlas questions and 78 contributed ideas received an individual initial assessment on 2026-10-04 UTC. Vishesh requested these ratings from Codex using the most recent conversation rubric. They are assistant assessments on his behalf, not 297 personal human reviews. Each record includes a short, idea-specific rationale. Scores cover started as well as unstarted ideas; research status is unchanged.
 
 The rubric is visual potential 30%, practical usefulness 30%, physical/biological connection 25%, and novelty relative to the team's work 15%. Each dimension is 0–100. The overall score is the weighted sum rounded to the nearest integer, with half points rounded up. A direct physical model scores above a biological metaphor on the theory dimension. Novelty is relative to this team's work, not certified novelty in the literature. Existing implementations reduce novelty, not measured quality. These component-based ratings supersede the earlier conversational totals.
 

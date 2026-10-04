@@ -23,7 +23,7 @@ Continue the user-requested Sybil study with real API calls after scripted valid
 
 ## Done when
 
-- [ ] Freeze plan, budget, source and visual mapping.
-- [ ] Pass offline checks and exact-source scripted rehearsal.
-- [ ] Pass fresh model competence qualification and run the bounded pilot.
-- [ ] Reconcile all calls, publish visuals/results, release the claim and report limitations.
+- [x] Freeze plan, budget, source and visual mapping.
+- [x] Pass offline checks and exact-source scripted rehearsal.
+- [x] Pass fresh model competence qualification and run the bounded pilot.
+- [x] Reconcile all calls, publish visuals/results, release the claim and report limitations.

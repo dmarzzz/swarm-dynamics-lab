@@ -1,0 +1,5 @@
+# Post-mortem s0-local-001
+
+Twelve of twelve mocked episodes completed validly across six bundles; zero model calls and zero API spend. All six final PNGs and eight-frame GIFs were produced. Ten transport/accounting/isolation tests passed with socket connections blocked. Malformed actions, HTTP errors, truncated/missing usage, corrupt/duplicate/over-limit ledgers and oversize inputs were deliberately injected by tests and rejected. No real credential was loaded. The full rehearsal used the actual Messages request builder and response parser with a mock transport; it cannot establish provider compatibility or model competence.
+
+Mapping market-split-api-v1 passed dimensions and frame-count checks. Every arm and recorded round is included; no favorable selection. The dynamic mock uses programmed registration, labeled as a mock, and the locked arm stays at one firm. The matched shock hashes agree. No implementation changes are required by these results. Disposition: advance to identical fleet S0, then real-model Q0 only after upload and UI verification. Source/design hashes are retained in each local summary; the same hashes must qualify every later stage.

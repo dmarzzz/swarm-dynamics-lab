@@ -50,7 +50,6 @@
 | [scan-papers-sybil-credentials](tasks/scan-papers-sybil-credentials.md) | claimed (stale) | p1 | scan | dmarz/sybil-credentials |  | 2026-10-03T18:02Z | Catalogue the papers: anonymous credentials and rate limits as Sybil defences for agents |
 | [scan-papers-sybil-mechanisms](tasks/scan-papers-sybil-mechanisms.md) | claimed (stale) | p1 | scan | dmarz/sybil-mechanisms |  | 2026-10-03T18:01Z | Catalogue the papers: false-name-proof mechanisms and Sybil-proof reputation |
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
-| [score-research-ideas](tasks/score-research-ideas.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:11Z | Score all research ideas and expose optional researcher ratings |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T01:57Z | Build and qualify Swarm of Theseus (SOC-24) |
 | [sybil-specialists-api](tasks/sybil-specialists-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:54Z | Qualify and deploy the model-backed Sybil specialist pilot |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
@@ -147,6 +146,7 @@
 | [scan-threads-sd-informal](tasks/scan-threads-sd-informal.md) | done | p1 | scan | dmarz/sd-informal |  | 2026-10-03T19:40Z | Catalogue the threads: threat-intel reports, blogs, threads and talks on agent swarms in the wild |
 | [scan-threads-x-crawl](tasks/scan-threads-x-crawl.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:32Z | Crawl X for author threads on every library arXiv paper, plus the agent-discourse trend chart |
 | [scan-threads-x-security](tasks/scan-threads-x-security.md) | done | p1 | scan | dmarz/x-threads |  | 2026-10-03T19:05Z | Catalogue X threads for the security topics (Sybil resistance, fork-merge security, swarm detection) via Apify |
+| [score-research-ideas](tasks/score-research-ideas.md) | done | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T02:13Z | Score all research ideas and expose optional researcher ratings |
 | [skeptical-research-context](tasks/skeptical-research-context.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:48Z | Distill research context and critique candidate designs |
 | [survey-llm-agent-swarms](tasks/survey-llm-agent-swarms.md) | done | p1 | survey | shadow/sol-1 |  | 2026-10-03T18:16Z | Survey: llm agent swarms |
 | [synthesis-people-and-labs](tasks/synthesis-people-and-labs.md) | done | p1 | synthesis | shadow/sol-g50 |  | 2026-10-03T20:15Z | Map the people and labs |
@@ -165,9 +165,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | vishesh/codex-methods | working | antsy-verification-v4 | 2026-10-04T02:16Z | Building Antsy from real receipt OCR and budgeted verification |
+| vishesh/codex-idea-scores | done | score-research-ideas | 2026-10-04T02:15Z | Published 297 scored ideas and nullable optional reviewer fields |
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:10Z | Shipped v3; 74 checks passed and 636 saved requests replayed; independent review and model launch pending |
-| vishesh/codex-idea-scores | working | score-research-ideas | 2026-10-04T02:09Z | Implement researcher rubric scores across all research ideas |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:06Z | Exclusive sim-dmarz-3 allocated; native launch awaits approval for USD 8 budget increase |
 | dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T02:04Z | API qualification passed 24/24; deploying the fixed 192-call pilot; aggregate USD 5 cap and same persistent ledger |
 | dmarz/patchwork-hypotheses | done | add-patchwork-hypotheses | 2026-10-04T02:03Z | Published SEC-54–56 and MKT-13–14; verified all five live with sources and tests |

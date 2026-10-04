@@ -20,4 +20,4 @@ No worker, evaluator or upload defect. local-provenance closed; pending public e
 
 ## Next run
 
-Q0-001: 24 fresh paid clean-packet calls with pinned Haiku4.5 and the unchanged prompt/config/runtime. USD5 aggregate reserve cap, no retries, one finite worker on the same exclusive claim. Require every structural record valid, >=95% field accuracy, >=90% exact packets, 100% missing-evidence abstention. Only a passing screen permits the predeclared 192-call exploratory pilot.
+Q0-001: 24 fresh paid clean-packet calls with pinned Haiku4.5 and the unchanged prompt/config/runtime. USD 5 aggregate reserve cap, no retries, one finite worker on the same exclusive claim. Require every structural record valid, >=95% field accuracy, >=90% exact packets, 100% missing-evidence abstention. Only a passing screen permits the predeclared 192-call exploratory pilot.
