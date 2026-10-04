@@ -24,3 +24,7 @@ Implement and fault-check the PC-2 native runner under the published prospective
 - Native choices, maps, durable assignments and bounded budget carry-forward implemented.
 - Qualification, stage admission, analysis and replay validated on development fixtures.
 - Reviewable launch instructions and exact remaining gates published.
+
+## Coverage note
+
+Published the native readiness package with 42 offline checks, source/budget/admission guards, qualification/analysis, and inspected event rendering. No native PC-2 calls or spend. Required reviewer and operational admission evidence remain explicit in SETUP.md and RUNBOOK.md; readiness task completion is not run admission.
