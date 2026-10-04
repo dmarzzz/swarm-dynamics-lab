@@ -81,6 +81,14 @@ def stage_of(call_id):
 BILLING_WORDS = ('credit', 'balance', 'billing', 'usage limit', 'spend limit', 'limit exceeded', 'insufficient')
 
 
+def family_of(call_id):
+    """The batch a call belongs to, without a continuation suffix: 's1-001-r2:<id>' -> 's1-001'.
+    Per-stage call caps apply per family, so a repair attempt ('q0-002') has its own allowance while a
+    continuation after a billing stop shares the allowance of the batch it continues."""
+    import re
+    return re.sub(r'-r\d+$', '', call_id.split(':', 1)[0])
+
+
 def is_billing_error(status, body):
     """A provider-side billing or limit stop, never a model failure: HTTP 402 always, and an HTTP
     400, 403 or 429 whose body names credit, balance, billing, a usage or spend limit, an exceeded
@@ -95,7 +103,7 @@ class Ledger:
 
     An exclusive file lock spans each read, check, append and fsync; a line that does not parse makes
     every later transaction fail closed. Refuses: a call id seen before; a reservation beyond the
-    stage's `max_calls`, the study's `max_attempted_calls` or the dollar cap (settled actual cost of
+    stage's `max_calls` (counted per batch family, see `family_of`), the study's `max_attempted_calls` or the dollar cap (settled actual cost of
     answered calls plus the full reservation of every call without reported usage); an HTTP attempt
     without a reservation or beyond `max_transport_attempts`."""
 
@@ -116,20 +124,22 @@ class Ledger:
             reserved = {e['call_id']: e['micro_usd'] for e in events if e['type'] == 'reserve' and e['call_id'] not in voided}
             settled = {e['call_id']: e['actual_micro_usd'] for e in events if e['type'] == 'response'}
             attempts = sum(e['type'] == 'attempt' for e in events)
-            by_stage = {}
+            by_stage = {}; by_family = {}
             for call in reserved:
                 by_stage[stage_of(call)] = by_stage.get(stage_of(call), 0) + 1
+                by_family[family_of(call)] = by_family.get(family_of(call), 0) + 1
             committed = sum(settled.get(call, amount) for call, amount in reserved.items())
             if event:
                 kind = event['type']
                 if kind == 'reserve':
                     call = event['call_id']; stage = stage_of(call)
                     if call in seen: raise CallFailure('duplicate_call_refused')
-                    if by_stage.get(stage, 0) >= b['max_calls'].get(stage, 0): raise CallFailure('stage_call_cap_reached')
+                    if by_family.get(family_of(call), 0) >= b['max_calls'].get(stage, 0): raise CallFailure('stage_call_cap_reached')
                     if len(reserved) >= b['max_attempted_calls']: raise CallFailure('study_call_cap_reached')
                     if committed + event['micro_usd'] > int(b['aggregate_usd'] * 1_000_000):
                         raise CallFailure('aggregate_budget_exhausted')
                     reserved[call] = event['micro_usd']; by_stage[stage] = by_stage.get(stage, 0) + 1
+                    by_family[family_of(call)] = by_family.get(family_of(call), 0) + 1
                 elif kind == 'attempt':
                     if event['call_id'] not in reserved: raise CallFailure('attempt_without_reservation')
                     if attempts >= b['max_transport_attempts']: raise CallFailure('transport_attempt_cap_reached')
@@ -139,7 +149,7 @@ class Ledger:
                 elif kind == 'void':
                     # Only a reserved call that never reported usage can be voided (a billing stop: no model ran).
                     if event['call_id'] not in reserved or event['call_id'] in settled: raise CallFailure('void_refused')
-                    stage = stage_of(event['call_id']); by_stage[stage] -= 1
+                    stage = stage_of(event['call_id']); by_stage[stage] -= 1; by_family[family_of(event['call_id'])] -= 1
                     del reserved[event['call_id']]; voided.add(event['call_id'])
                 else:
                     raise CallFailure('unknown_ledger_event')
@@ -147,7 +157,7 @@ class Ledger:
                 events.append(event)
                 committed = sum(settled.get(call, amount) for call, amount in reserved.items())
             responses = [e for e in events if e['type'] == 'response']
-            return {'attempted_calls': len(reserved), 'calls_by_stage': by_stage, 'transport_attempts': attempts,
+            return {'attempted_calls': len(reserved), 'calls_by_stage': by_stage, 'calls_by_batch': by_family, 'transport_attempts': attempts,
                     'usage_reported_calls': len(settled), 'voided_calls': len(voided),
                     'reserved_usd': sum(reserved.values()) / 1e6, 'actual_usd': sum(settled.values()) / 1e6,
                     'committed_usd': committed / 1e6,
