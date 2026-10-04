@@ -1,0 +1,140 @@
+{
+  "assessor": "vishesh/codex-immune",
+  "attempt": "freshness-a4",
+  "date": "2026-10-04",
+  "independent_review": false,
+  "decision": "blocked",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Explicit freshness contrast and bounded claim; native question remains unanswered.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "unknown",
+      "finding": "Scripted feasibility only; native challenge unmeasured.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ],
+      "next_action": "Resolve provider/accounting evidence and evaluate an explicitly approved future plan; no automatic rerun.",
+      "acceptance_check": "Retained evidence supports this dimension without reclassifying missing A4 data as observations."
+    },
+    {
+      "dimension": "controls",
+      "status": "unknown",
+      "finding": "Paired controls prepared but never instantiated with model advice.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ],
+      "next_action": "Resolve provider/accounting evidence and evaluate an explicitly approved future plan; no automatic rerun.",
+      "acceptance_check": "Retained evidence supports this dimension without reclassifying missing A4 data as observations."
+    },
+    {
+      "dimension": "capability",
+      "status": "unknown",
+      "finding": "No model answer or controller episode; no competence inference.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ],
+      "next_action": "Resolve provider/accounting evidence and evaluate an explicitly approved future plan; no automatic rerun.",
+      "acceptance_check": "Retained evidence supports this dimension without reclassifying missing A4 data as observations."
+    },
+    {
+      "dimension": "measurement",
+      "status": "unknown",
+      "finding": "No health trajectory; no treatment estimate.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ],
+      "next_action": "Resolve provider/accounting evidence and evaluate an explicitly approved future plan; no automatic rerun.",
+      "acceptance_check": "Retained evidence supports this dimension without reclassifying missing A4 data as observations."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Six paired constructed worlds declared; all12 unstarted included.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Inspected retained first request matches frozen declared context/model.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One request/error/usage hash reconciles; all missing episodes retained.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "gap",
+      "finding": "Cap/reservations retained; actual request charge and allocated machine cost unresolved.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ],
+      "next_action": "Resolve provider/accounting evidence and evaluate an explicitly approved future plan; no automatic rerun.",
+      "acceptance_check": "Retained evidence supports this dimension without reclassifying missing A4 data as observations."
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source and immutable public plan retained; request and evidence hashes recorded.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "not_applicable",
+      "finding": "No native trajectory; do not fabricate frames from failed collection.",
+      "evidence": [
+        {
+          "path": "a4-reconciliation.json",
+          "sha256": "5e3ad70a4b257ab668949fb4f989a569e6379f47afffe2971de1e459c28fec28"
+        }
+      ]
+    }
+  ]
+}

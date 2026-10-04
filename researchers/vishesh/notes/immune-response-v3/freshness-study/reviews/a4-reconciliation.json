@@ -1,0 +1,32 @@
+{
+  "attempt": "freshness-a4",
+  "run": "immune-response-v3/1004-165632-84c97e",
+  "source": "396cc93c4631871d7260b5c53d8a0cc070056d8b",
+  "assigned_episodes": 12,
+  "started_controller_episodes": 0,
+  "completed_episodes": 0,
+  "advisory_requests": 1,
+  "responses": 0,
+  "transport_status": "http_429",
+  "request_usage_hashes_match": true,
+  "known_actual_usd": 0,
+  "actual_complete": false,
+  "new_reserved_usd": 0.006006,
+  "cumulative_reserved_usd": 3.1854950000000004,
+  "cumulative_calls": 388,
+  "cap_usd": 8.0,
+  "worker_stopped": true,
+  "claim_released": true,
+  "raw_hashes": {
+    "transport.jsonl": "02dc5a704b108882e14a614d2564773a8f4fd40795936ce9b01dfacf0e1ed801",
+    "summary.json": "9fe53f5eb59dbfcbc344332f6501de75d7d3728e7ddaff1766131c1f3db3f728",
+    "artifact-index.json": "fb7b0f258447591daa479ff02b958ae4fb91e2a4e271e6430cb9ea7559735a0e",
+    "events.jsonl": "d15fe51d74c59e331d4805ca50a7f931938f59fac577be98e2d64de7d36616ea",
+    "manifest.json": "e766a87630e7297c41f31e73054e054f39e069db43181414e7dd9209bd8203e5",
+    "allocation-receipt.json": "6aed91c2e2e7ee8f01e4623ef478fd208e2c963260f6b7a8e939af63e7b4aef0",
+    "usage.jsonl": "ea2d136647092aeadd05f5c1d052ef8f58a96e53d33ac83542eb13cbfbb29263",
+    "public-plan-receipt.json": "6dcdec4bb73463048567cf30e72f1186596245b4c48cf0da2f6bb42ac20937ab",
+    "episodes.jsonl": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "ledger_sha256": "b3acb4a1f0efc893abcba982110851e31cac41da58817bc741b62d21eb83c64e"
+}
