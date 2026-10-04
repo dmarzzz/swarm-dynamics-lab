@@ -3,7 +3,7 @@ id: incorporate-external-study-review
 type: task
 title: Incorporate external study review into experiment improvement proposals
 kind: review
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-pi-review
 for: vishesh
@@ -12,7 +12,11 @@ created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T19:51Z
-updated: 2026-10-04T19:51Z
+updated: 2026-10-04T20:01Z
+outputs:
+- researchers/vishesh/notes/external-study-review-2026-10-04/README.md
+- researchers/vishesh/notes/external-study-review-2026-10-04/recommendations.json
+- tooling/agent-experiments/RUN-QUALITY.md
 ---
 
 ## Goal
