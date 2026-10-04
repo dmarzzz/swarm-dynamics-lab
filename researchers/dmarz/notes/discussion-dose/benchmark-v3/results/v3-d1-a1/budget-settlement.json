@@ -1,0 +1,12 @@
+{
+  "attempt": "v3-d1-a1",
+  "historical_receipt": "../../launches/v3-d1-a1-budget.json",
+  "infrastructure_and_orchestration_not_invoice_reconciled": true,
+  "next_experiment_allocation_granted": false,
+  "observed_model_cost_usd": 0.75478,
+  "reservation_usd": 4.110168,
+  "shared_budget_not_reset": true,
+  "unresolved_calls": 0,
+  "unused_own_reservation_usd": 3.355388,
+  "usage_complete": true
+}

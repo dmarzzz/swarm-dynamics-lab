@@ -1,0 +1,300 @@
+{
+  "method": "Direct comparisons, no call to production feasible/reference_winner. Same owner audit, not independent researcher review.",
+  "scope": "Six open D1 worlds only; no new qualification or holdout IDs generated.",
+  "worlds": [
+    {
+      "family": "capacity",
+      "options": [
+        {
+          "checks": {
+            "sufficient_power": true,
+            "within_access_limit": true
+          },
+          "facts": {
+            "access": 6,
+            "power": 18
+          },
+          "feasible": true,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "sufficient_power": true,
+            "within_access_limit": false
+          },
+          "facts": {
+            "access": 8,
+            "power": 18
+          },
+          "feasible": false,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "sufficient_power": false,
+            "within_access_limit": true
+          },
+          "facts": {
+            "access": 7,
+            "power": 13
+          },
+          "feasible": false,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "access_max": 7,
+        "power_min": 16
+      },
+      "unique_feasible_winner": "A",
+      "world": 20001
+    },
+    {
+      "family": "total_cost",
+      "options": [
+        {
+          "checks": {
+            "within_budget": true,
+            "within_deadline": true
+          },
+          "facts": {
+            "base": 13,
+            "days": 7,
+            "freight": 66
+          },
+          "feasible": true,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "within_budget": false,
+            "within_deadline": true
+          },
+          "facts": {
+            "base": 16,
+            "days": 6,
+            "freight": 68
+          },
+          "feasible": false,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "within_budget": true,
+            "within_deadline": false
+          },
+          "facts": {
+            "base": 13,
+            "days": 8,
+            "freight": 5
+          },
+          "feasible": false,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "budget": 79,
+        "deadline": 7
+      },
+      "unique_feasible_winner": "A",
+      "world": 20002
+    },
+    {
+      "family": "dependency",
+      "options": [
+        {
+          "checks": {
+            "backup_and_transfer": false,
+            "sufficient_direct": false
+          },
+          "facts": {
+            "backup": 0,
+            "direct": 17,
+            "transfer": 1
+          },
+          "feasible": false,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "backup_and_transfer": false,
+            "sufficient_direct": false
+          },
+          "facts": {
+            "backup": 1,
+            "direct": 16,
+            "transfer": 5
+          },
+          "feasible": false,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "backup_and_transfer": false,
+            "sufficient_direct": true
+          },
+          "facts": {
+            "backup": 0,
+            "direct": 20,
+            "transfer": 4
+          },
+          "feasible": true,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "required": 18,
+        "transfer_max": 4
+      },
+      "unique_feasible_winner": "C",
+      "world": 20003
+    },
+    {
+      "family": "capacity",
+      "options": [
+        {
+          "checks": {
+            "sufficient_power": true,
+            "within_access_limit": false
+          },
+          "facts": {
+            "access": 4,
+            "power": 16
+          },
+          "feasible": false,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "sufficient_power": false,
+            "within_access_limit": true
+          },
+          "facts": {
+            "access": 3,
+            "power": 13
+          },
+          "feasible": false,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "sufficient_power": true,
+            "within_access_limit": true
+          },
+          "facts": {
+            "access": 2,
+            "power": 17
+          },
+          "feasible": true,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "access_max": 3,
+        "power_min": 14
+      },
+      "unique_feasible_winner": "C",
+      "world": 20004
+    },
+    {
+      "family": "total_cost",
+      "options": [
+        {
+          "checks": {
+            "within_budget": false,
+            "within_deadline": true
+          },
+          "facts": {
+            "base": 20,
+            "days": 5,
+            "freight": 46
+          },
+          "feasible": false,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "within_budget": true,
+            "within_deadline": false
+          },
+          "facts": {
+            "base": 17,
+            "days": 7,
+            "freight": 5
+          },
+          "feasible": false,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "within_budget": true,
+            "within_deadline": true
+          },
+          "facts": {
+            "base": 17,
+            "days": 6,
+            "freight": 43
+          },
+          "feasible": true,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "budget": 62,
+        "deadline": 6
+      },
+      "unique_feasible_winner": "C",
+      "world": 20005
+    },
+    {
+      "family": "dependency",
+      "options": [
+        {
+          "checks": {
+            "backup_and_transfer": false,
+            "sufficient_direct": false
+          },
+          "facts": {
+            "backup": 0,
+            "direct": 7,
+            "transfer": 1
+          },
+          "feasible": false,
+          "option": "A"
+        },
+        {
+          "checks": {
+            "backup_and_transfer": true,
+            "sufficient_direct": false
+          },
+          "facts": {
+            "backup": 1,
+            "direct": 7,
+            "transfer": 2
+          },
+          "feasible": true,
+          "option": "B"
+        },
+        {
+          "checks": {
+            "backup_and_transfer": false,
+            "sufficient_direct": false
+          },
+          "facts": {
+            "backup": 1,
+            "direct": 6,
+            "transfer": 4
+          },
+          "feasible": false,
+          "option": "C"
+        }
+      ],
+      "rules": {
+        "required": 8,
+        "transfer_max": 2
+      },
+      "unique_feasible_winner": "B",
+      "world": 20006
+    }
+  ]
+}
