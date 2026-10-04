@@ -26,5 +26,13 @@
     "market-split-haiku design.yaml",
     "discussion-dose/launch/resample-v3-a1.json",
     "merged SOC-07 fleet claim"
-  ]
+  ],
+  "paid_qualification_checkpoint": {
+    "observed_at_utc": "2026-10-04T03:53:42.232260+00:00",
+    "known_followup_actual_usd": 0.366548,
+    "settled_calls": 52,
+    "unsettled_reservations_usd": 0,
+    "both_model_qualification_gates_passed": true,
+    "remaining_within_unchanged_60_usd_guard": true
+  }
 }
