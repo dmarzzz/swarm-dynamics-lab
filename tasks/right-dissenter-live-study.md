@@ -3,7 +3,7 @@ id: right-dissenter-live-study
 type: task
 title: Deploy and assess the Right Dissenter exploratory live study
 kind: experiment
-status: claimed
+status: done
 priority: p1
 owner: vishesh/codex-decision-models
 for: vishesh
@@ -13,10 +13,14 @@ depends_on: []
 topics:
 - dissent
 - decision-models
-updated: 2026-10-04T04:50Z
+updated: 2026-10-04T04:54Z
 history:
 - '2026-10-04T03:52Z released by vishesh/codex-decision-models: Public plan and registration verified; native runner and 49 checks complete. Awaiting owner answer to USD 2 study cap before dedicated machine creation and paid Q0; no native calls or resources allocated.'
 claimed_at: 2026-10-04T04:04Z
+outputs:
+- researchers/vishesh/notes/dissent/REPORT.md
+- researchers/vishesh/notes/dissent/CLOSEOUT.json
+- artifacts/right-dissenter-measured-replay/right-dissenter-measured-replay-v1.mp4
 ---
 
 ## Goal
