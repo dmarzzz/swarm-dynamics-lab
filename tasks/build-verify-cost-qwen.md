@@ -3,15 +3,17 @@ id: build-verify-cost-qwen
 type: task
 title: Prepare program v5 line V (when is verification worth its cost) to launch-ready
 kind: build
-status: open
+status: claimed
 priority: p0
-owner: null
+owner: dmarz/pipeline-verify
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline
 depends_on: []
 topics:
 - llm-agent-swarms
+claimed_at: 2026-10-04T10:30Z
+updated: 2026-10-04T10:30Z
 ---
 
 ## Goal
