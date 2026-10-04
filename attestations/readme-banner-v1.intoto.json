@@ -1,0 +1,68 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:a3d8791c0cd5ce3233d9893f058f59ee632ce75a2c505d2bf3de71e915cbebff"
+   },
+   "internalParameters": {
+    "commit": "aed3e96a709df138d471276f4e365b83c4a8fbb7-dirty",
+    "session": "claude:9472e879-0b1b-4703-b326-f1e67622b112"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "86db2e27f958608e631f01cb6403dc5fd15d74a1f84a591a89ab1398f70680e5"
+     },
+     "uri": "src/readme-banner/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "d288d9c91f5531d63ce4727c751e031e78778523adfd4a249c146151c7d8d43f"
+     },
+     "uri": "1-library/topics.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "12fbebafc7e5d18efc66d18beac5e953f748c6bf901eba08d4643fcf3ccf27eb"
+     },
+     "uri": "5-experiments/evidence-metadata.json"
+    },
+    {
+     "digest": {
+      "sha256": "bbf17f06c68bdedd5fd06c7d35922b60073abf174128c2b0305183b95f4dfd34"
+     },
+     "uri": "1-library/INDEX.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "aed3e96a709df138d471276f4e365b83c4a8fbb7"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-04T23:51:46Z",
+    "invocationId": "claude:9472e879-0b1b-4703-b326-f1e67622b112",
+    "startedOn": "2026-10-04T23:51:46Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "f36ad34659d7368f2cc8fd267e2efb60007506955e6261e5f73cfe4f6b370d59"
+   },
+   "name": "artifacts/readme-banner/readme-banner-v1.svg"
+  }
+ ]
+}

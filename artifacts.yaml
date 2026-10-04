@@ -4996,4 +4996,45 @@ artifacts:
           - https://arxiv.org/abs/2609.04170
           - https://arxiv.org/abs/2410.08948
         commit: 8ab3e110433a2d53095b3efbe0ec0a82fdb2d366-dirty
+  - id: readme-banner
+    category: content
+    type: figure
+    title: 'README banner: the library swarm around the evidence core, with the cube mark'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/readme-banner/readme-banner-v1.svg
+        built_at: '2026-10-04T23:51:46Z'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:9472e879-0b1b-4703-b326-f1e67622b112
+        request: 7f1fb1d8-ff47-48d9-82b7-989418855c28
+        prompt: sha256:a3d8791c0cd5ce3233d9893f058f59ee632ce75a2c505d2bf3de71e915cbebff
+        ingredients:
+          - src/readme-banner/build.py
+          - 1-library/topics.yaml
+          - 5-experiments/evidence-metadata.json
+          - 1-library/INDEX.md
+        commit: aed3e96a709df138d471276f4e365b83c4a8fbb7-dirty
+  - id: readme-architecture
+    category: content
+    type: figure
+    title: 'Swarm Dynamics Lab: system architecture'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/readme-architecture/readme-architecture-v1.svg
+        built_at: '2026-10-04T23:51:47Z'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:9472e879-0b1b-4703-b326-f1e67622b112
+        request: 7f1fb1d8-ff47-48d9-82b7-989418855c28
+        prompt: sha256:3821150ee80f90ef3262741f84b63779fba7f8a4ab33163fedbae2c0b56e1771
+        ingredients:
+          - src/readme-architecture/build.py
+          - scripts/lab.py
+          - agentops/hub/hub.py
+          - 5-experiments/evidence-metadata.json
+          - 3-synthesis/research-question-atlas.md
+        commit: aed3e96a709df138d471276f4e365b83c4a8fbb7-dirty
 requires: '1.2'
