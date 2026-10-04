@@ -1,0 +1,30 @@
+{
+  "scope": "nine authored development cases from three templates; deterministic reference, not native-agent evidence",
+  "cases": 9,
+  "reference_executions": 18,
+  "correct": 18,
+  "tests_passed": 12,
+  "fault_acquisition_rounds": {
+    "independent": [
+      9,
+      3
+    ],
+    "serial": [
+      3,
+      3
+    ],
+    "mixed": [
+      4,
+      2
+    ]
+  },
+  "model_calls": 0,
+  "new_cost": 0,
+  "native_qualified": false,
+  "source_sha256": {
+    "PLAN.md": "0d6f02059696052ca40aea3fdb7cf280619a333928f47b68a108aad127131cf0",
+    "prototype.py": "25bb55488a7c2568a7187e3e988ab8d5cfa8d1cf8949552034553e9407e0993e",
+    "test_prototype.py": "75fb1ac53621576e9e7241a96d314fbc4ad16536ff953db15b6d6e897e32f87b",
+    "validate.py": "58e8ade57dcb78400f635d9aca24c9dbcd5a6876c5181dfe6267c39d5965e7b3"
+  }
+}

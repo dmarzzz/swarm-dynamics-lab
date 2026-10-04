@@ -39,3 +39,7 @@ Researched primary scaling/spawning/concurrency work and indexed X discussion. G
 ## Standard diagnosis before scaling
 
 Added DIAGNOSIS.md and an embedded worksheet, linked from agent instructions, iteration, setup, native review and pre/post planning templates. O2 supplies the worked example: ownership fixes a weak comparator, but equal recovery at higher cost does not justify simply increasing roster size. Added a prospective incident-investigation application, without changing historical runs or dispatching a new experiment. Documentation links and lab validation checked before publication.
+
+## Offline incident investigation prototype
+
+Built nine authored development cases spanning independent collection, serial trace discovery and mixed shared-pool remediation. All18 reference executions and12 semantic/fault tests pass. Validation separates acquisition capacity from agent-count effects, clean resolution from unsupported guesses, and correct escalation from physical recovery. Code, full reference receipts, source hashes and case-quality limits published; no model calls or infrastructure changes.

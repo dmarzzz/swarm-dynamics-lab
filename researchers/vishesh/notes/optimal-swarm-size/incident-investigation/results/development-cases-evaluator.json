@@ -1,0 +1,860 @@
+[
+  {
+    "id": "independent-fault",
+    "sha256": "9fbf5d266b1438c6b7b2971d255776560349b73087341040bf4711cd7b623e3f",
+    "case": {
+      "structure": "independent",
+      "condition": "fault",
+      "seed": 0,
+      "initial": [
+        "trace-63075",
+        "trace-73691",
+        "trace-56930",
+        "trace-49755",
+        "trace-65125",
+        "trace-15306",
+        "trace-72468",
+        "trace-43936",
+        "trace-77013"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 1,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-15306": {
+          "kind": "release",
+          "service": "service-964",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-43936": {
+          "kind": "handshake",
+          "service": "service-964",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-77013": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-73691": {
+          "kind": "release",
+          "service": "service-494",
+          "deployed": "r1",
+          "approved": "r2"
+        },
+        "trace-63075": {
+          "kind": "handshake",
+          "service": "service-494",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-49755": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-72468": {
+          "kind": "release",
+          "service": "service-876",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-56930": {
+          "kind": "handshake",
+          "service": "service-876",
+          "client": 1,
+          "accepted": 2
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 1
+        },
+        "service-494": {
+          "revision": "r1",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [
+        [
+          "service-964",
+          "capacity"
+        ],
+        [
+          "service-494",
+          "revision"
+        ],
+        [
+          "service-876",
+          "protocol"
+        ]
+      ],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "independent-clean",
+    "sha256": "5960844a4ca768c6b89871ef99793a2248da0f944b86fc2f239573c05340743a",
+    "case": {
+      "structure": "independent",
+      "condition": "clean",
+      "seed": 0,
+      "initial": [
+        "trace-63075",
+        "trace-73691",
+        "trace-56930",
+        "trace-49755",
+        "trace-65125",
+        "trace-15306",
+        "trace-72468",
+        "trace-43936",
+        "trace-77013"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-15306": {
+          "kind": "release",
+          "service": "service-964",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-43936": {
+          "kind": "handshake",
+          "service": "service-964",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-77013": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-73691": {
+          "kind": "release",
+          "service": "service-494",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-63075": {
+          "kind": "handshake",
+          "service": "service-494",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-49755": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-72468": {
+          "kind": "release",
+          "service": "service-876",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-56930": {
+          "kind": "handshake",
+          "service": "service-876",
+          "client": 2,
+          "accepted": 2
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "independent-insufficient",
+    "sha256": "6c15750c73be8cf4764ddc167d68bb43d0ab52fa377e9353ab34b3f3db8fc5ac",
+    "case": {
+      "structure": "independent",
+      "condition": "insufficient",
+      "seed": 0,
+      "initial": [
+        "trace-63075",
+        "trace-73691",
+        "trace-56930",
+        "trace-49755",
+        "trace-65125",
+        "trace-15306",
+        "trace-72468",
+        "trace-43936",
+        "trace-77013"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 1,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-15306": {
+          "kind": "release",
+          "service": "service-964",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-43936": {
+          "kind": "handshake",
+          "service": "service-964",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-77013": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-73691": {
+          "kind": "release",
+          "service": "service-494",
+          "deployed": "r1",
+          "approved": "r2"
+        },
+        "trace-63075": {
+          "kind": "handshake",
+          "service": "service-494",
+          "client": 2,
+          "accepted": 2
+        },
+        "trace-49755": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 3,
+          "warning": "CPU burst also seen during healthy traffic"
+        },
+        "trace-72468": {
+          "kind": "release",
+          "service": "service-876",
+          "deployed": "r2",
+          "approved": "r2"
+        },
+        "trace-56930": {
+          "kind": "unavailable",
+          "reason": "retention_gap"
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 1
+        },
+        "service-494": {
+          "revision": "r1",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [
+        [
+          "service-964",
+          "capacity"
+        ],
+        [
+          "service-494",
+          "revision"
+        ],
+        [
+          "service-876",
+          "protocol"
+        ]
+      ],
+      "expected_decision": "escalate"
+    }
+  },
+  {
+    "id": "serial-fault",
+    "sha256": "9ab1074b40429364e2b0e14f465890cf1c44b53680de08b58352ae2a48d3dbf3",
+    "case": {
+      "structure": "serial",
+      "condition": "fault",
+      "seed": 0,
+      "initial": [
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "span",
+          "service": "service-964",
+          "local_check": "pass",
+          "next": "trace-15306",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-15306": {
+          "kind": "span",
+          "service": "service-494",
+          "local_check": "pass",
+          "next": "trace-43936",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-43936": {
+          "kind": "handshake",
+          "service": "service-876",
+          "client": 1,
+          "accepted": 2
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [
+        [
+          "service-876",
+          "protocol"
+        ]
+      ],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "serial-clean",
+    "sha256": "05151c667beae6bd3b24b5d143f1203964a735551e4234a6710c1de75a7d4da8",
+    "case": {
+      "structure": "serial",
+      "condition": "clean",
+      "seed": 0,
+      "initial": [
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "span",
+          "service": "service-964",
+          "local_check": "pass",
+          "next": "trace-15306",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-15306": {
+          "kind": "span",
+          "service": "service-494",
+          "local_check": "pass",
+          "next": "trace-43936",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-43936": {
+          "kind": "handshake",
+          "service": "service-876",
+          "client": 2,
+          "accepted": 2
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "serial-insufficient",
+    "sha256": "62f33b8bd20466ca47c15bcf5ca111953a8a8799f6bed3d24a9373de68cd402c",
+    "case": {
+      "structure": "serial",
+      "condition": "insufficient",
+      "seed": 0,
+      "initial": [
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "span",
+          "service": "service-964",
+          "local_check": "pass",
+          "next": "trace-15306",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-15306": {
+          "kind": "span",
+          "service": "service-494",
+          "local_check": "pass",
+          "next": "trace-43936",
+          "warning": "Upstream timeout does not identify the root cause"
+        },
+        "trace-43936": {
+          "kind": "unavailable",
+          "reason": "retention_gap"
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 1,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": null,
+      "gold": [
+        [
+          "service-876",
+          "protocol"
+        ]
+      ],
+      "expected_decision": "escalate"
+    }
+  },
+  {
+    "id": "mixed-fault",
+    "sha256": "4d6cf6da1e716144b049c5e66cda37c5079e01a81b5fad4fe6e21e012ffd9c67",
+    "case": {
+      "structure": "mixed",
+      "condition": "fault",
+      "seed": 0,
+      "initial": [
+        "trace-15306",
+        "trace-43936",
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 2,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-15306": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 2,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-43936": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 5,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-77013": {
+          "kind": "pool",
+          "service": "shared-pool",
+          "capacity": 9,
+          "allocations": {
+            "service-964": 2,
+            "service-494": 2,
+            "service-876": 5
+          }
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 5
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": 9,
+      "gold": [
+        [
+          "shared-pool",
+          "allocation"
+        ]
+      ],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "mixed-clean",
+    "sha256": "79dba73853d9fd11a4c572de39fef58ba34d51e0541a7a679f41343fbb38d4d2",
+    "case": {
+      "structure": "mixed",
+      "condition": "clean",
+      "seed": 0,
+      "initial": [
+        "trace-15306",
+        "trace-43936",
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 3,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-15306": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 3,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-43936": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 3,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-77013": {
+          "kind": "pool",
+          "service": "shared-pool",
+          "capacity": 9,
+          "allocations": {
+            "service-964": 3,
+            "service-494": 3,
+            "service-876": 3
+          }
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 3
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": 9,
+      "gold": [],
+      "expected_decision": "resolve"
+    }
+  },
+  {
+    "id": "mixed-insufficient",
+    "sha256": "3c7afa30f23c4464064dcee1ccc7f455a8eab5282769e7c8e13bdbaf84aab0d5",
+    "case": {
+      "structure": "mixed",
+      "condition": "insufficient",
+      "seed": 0,
+      "initial": [
+        "trace-15306",
+        "trace-43936",
+        "trace-65125"
+      ],
+      "records": {
+        "trace-65125": {
+          "kind": "metrics",
+          "service": "service-964",
+          "demand": 3,
+          "allocated": 2,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-15306": {
+          "kind": "metrics",
+          "service": "service-494",
+          "demand": 3,
+          "allocated": 2,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-43936": {
+          "kind": "metrics",
+          "service": "service-876",
+          "demand": 3,
+          "allocated": 5,
+          "next": "trace-77013",
+          "warning": "Recent deployment timestamp is not proof of regression"
+        },
+        "trace-77013": {
+          "kind": "unavailable",
+          "reason": "retention_gap"
+        }
+      },
+      "states": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 2
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "pool": 5
+        }
+      },
+      "required": {
+        "service-964": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-494": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        },
+        "service-876": {
+          "revision": "r2",
+          "protocol": 2,
+          "demand": 3
+        }
+      },
+      "capacity": 9,
+      "gold": [
+        [
+          "shared-pool",
+          "allocation"
+        ]
+      ],
+      "expected_decision": "escalate"
+    }
+  }
+]
