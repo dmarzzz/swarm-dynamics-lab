@@ -265,7 +265,7 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-decision-models | working | right-dissenter-rd4 | 2026-10-04 04:59:02.303479+00:00 | Incorporating fresh RD-R1/R2/R3 review and designing symmetric recovery with persistent evidence closures. |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc2-design | 2026-10-04 04:47:41+00:00 | PC-2 prospective plan and 20-check development contract complete; full measured PC-1 replay verified |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc2-runner | 2026-10-04 04:47:41+00:00 | Implementing and fault-checking the PC-2 native runner; no paid run admitted |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
