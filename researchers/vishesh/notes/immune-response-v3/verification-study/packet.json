@@ -729,16 +729,16 @@
     "controller-study/worker.py": "ed3e2ca14fa7e3113bfaf52394344685a2ce13f7f24f74293e6a24e8ed83bc78",
     "verification-study/freeze.py": "4b926800055452a6ad3ec231bdd6af51f7545af857c32e26b9b736a3d22508fa",
     "verification-study/instrument.py": "e53154d23db4c33b8257fbb91cb8729268018a7bcc6c723ea95912e76d018b05",
-    "verification-study/launch.py": "e9953f1f7ef176520a68114e7d910714341589edf04fc636b3f5753715677a78",
+    "verification-study/launch.py": "9c5df5c439ce0a924ad5e3f72817c77db242fce83cf1d727135bf1a08a884f07",
     "verification-study/native.py": "d41cf2b4c825cbeaf178ae9947c1077e71c03222475cb51a8009f0357513bed4",
-    "verification-study/native_run.py": "19621cc9015ebcbb4208430efed6f4cea8847b101f7afe02913d979310087e0f",
-    "verification-study/relay.py": "420b494f65ef236b6d03a4fa7595c1142e62bce21a090b5597b355b1a542beec",
+    "verification-study/native_run.py": "4db71bf1e387e4a5492d16658fc5aaecb62a7288ca137c6aada91df88f73b8fa",
+    "verification-study/relay.py": "3617760b03951c27f20ebbe70aa7d80fa246141c5427f274a574eb7047b20454",
     "verification-study/render.py": "091bea1bbf7398818f14e93b33ba52a9df52039aa04ebdf99a001ed5cfdf02bd",
     "verification-study/test_instrument.py": "39aa65367809b2cdf0593e0b6303d4ffbc2a1bbde2f9af10d20e9cc1c786e8b7",
     "verification-study/test_verification_cases.py": "5748d5644596ff31d448547eef0e40e0c1942f119ea3b05e8f5d5aff9e4e86db",
     "verification-study/verification.py": "a66c046ff40bf2738fab860c9148ea0d1d5653c616f34279f5bb1202165a9336",
     "verification-study/worker.py": "da0a4aa515e8e9dc493668112e64ad360fc2039026f8cf631133c89330f73897",
     "verification-study/PLAN.md": "a483b11fa23fa3eb80d89eefbac3ef3b36136e1c7fea2c419c59c59e3434e0d3",
-    "verification-study/RUNBOOK.md": "32eae30d4c80c911c5c10f3430a262d4860ce1c4d14a5d92ca76b4840a1bd09f"
+    "verification-study/RUNBOOK.md": "eab5c5a057f7d4d3879c114d1e10c6de6f24b7e77b8078dc660c605288ec9b71"
   }
 }

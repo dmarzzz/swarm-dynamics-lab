@@ -14,7 +14,7 @@ def main():
  p=argparse.ArgumentParser();p.add_argument('--credential-file',required=True);p.add_argument('--journal',required=True);p.add_argument('--port-file',required=True);a=p.parse_args()
  resource.setrlimit(resource.RLIMIT_CORE,(0,0));path=Path(a.credential_file);assert not path.is_symlink() and path.stat().st_uid==os.getuid() and not path.stat().st_mode&0o077
  key=path.read_text().strip();assert key and '\n' not in key
- journal=Path(a.journal).open('x');os.chmod(a.journal,0o600);seen=set();counts={m:0 for m in MODELS};reserved=0.;failed=False;deadline=time.time()+3600;opener=urllib.request.build_opener(NoRedirect())
+ journal=Path(a.journal).open('x');os.chmod(a.journal,0o600);seen=set();counts={m:0 for m in MODELS};reserved=0.;failed=False;deadline=time.time()+3000;opener=urllib.request.build_opener(NoRedirect())
  def record(d):journal.write(json.dumps(d)+'\n');journal.flush();os.fsync(journal.fileno())
  class Handler(BaseHTTPRequestHandler):
   def log_message(self,*args):pass

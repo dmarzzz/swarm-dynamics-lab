@@ -9,7 +9,7 @@
   "predecessor_c1_tests_passed": 7,
   "lab_errors": 0,
   "lab_existing_warnings": 5,
-  "packet_sha256": "848adcd86744593f37d360961a5d35efb5f056e0426c13170b6c6ad45f8c3fb4",
+  "packet_sha256": "ba1bc794743e8e53ebe3e1df04f6b5982cd2c963f8a98837cc5422384ddcc970",
   "max_rule_wire_bytes": 6861,
   "runtime_wire_limit_bytes": 8000,
   "output_token_limit": 512,
@@ -899,5 +899,6 @@
     "max": 11.914607524871826,
     "sum": 175.2469892501831
   },
-  "sequential_collection_forecast_minutes": 17.52469892501831
+  "sequential_collection_forecast_minutes": 17.52469892501831,
+  "runtime_amendment": "55minute admission;50minute watchdog/relay within60minute funded claim"
 }

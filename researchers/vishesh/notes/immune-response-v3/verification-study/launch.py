@@ -10,7 +10,7 @@ if __name__=='__main__':
     with Path(str(out)+'.log').open('xb') as log:
         os.chmod(log.name,0o600)
         proc=subprocess.Popen([sys.executable,str(BASE/'worker.py'),'--out',str(out),'--admission',a.admission],env=env,stdout=log,stderr=log,start_new_session=True)
-        try:code=proc.wait(timeout=3600)
+        try:code=proc.wait(timeout=3000)
         except subprocess.TimeoutExpired:
             os.killpg(proc.pid,signal.SIGTERM)
             try:proc.wait(timeout=10)

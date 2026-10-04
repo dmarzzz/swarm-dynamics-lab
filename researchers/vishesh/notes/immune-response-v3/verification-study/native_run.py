@@ -21,7 +21,7 @@ def verify_admission(path):
     assert r['model']==i.MODEL and r['input_rate']==5 and r['output_rate']==25
     a=r['allocation'];assert a['host']==socket.gethostname() and a['exclusive'] and a['approved_account_verified'] and a['claim_reference']
     now=datetime.datetime.now(datetime.timezone.utc)
-    assert datetime.datetime.fromisoformat(a['expires'].replace('Z','+00:00'))-now>datetime.timedelta(minutes=65)
+    assert datetime.datetime.fromisoformat(a['expires'].replace('Z','+00:00'))-now>datetime.timedelta(minutes=55)
     assert sha(os.environ['SWARM_BUDGET_LEDGER'])==r['ledger_sha256']
     with closing(sqlite3.connect('file:'+os.environ['SWARM_BUDGET_LEDGER']+'?mode=ro',uri=True)) as db:
         cap,reserved,calls=db.execute('select cap,reserved,calls from budget where id=1').fetchone()
