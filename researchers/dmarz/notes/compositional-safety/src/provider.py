@@ -30,13 +30,17 @@ class Ledger:
             if event and event['type'] == 'reserve':
                 if any(e['call_id'] == event['call_id'] for e in reserves): raise CallFailure('duplicate_call_refused')
                 if len(reserves) >= budget['max_attempted_calls']: raise CallFailure('call_cap')
-                if sum(e['micro_usd'] for e in reserves)+event['micro_usd'] > budget['study_reserved_usd']*1e6: raise CallFailure('study_reservation_cap')
+                # Settled cost: reported actual plus the full reservation of every call without reported usage.
+                answered = {e['call_id'] for e in events if e['type']=='response'}
+                settled = sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response') + sum(e['micro_usd'] for e in reserves if e['call_id'] not in answered)
+                if settled+event['micro_usd'] > budget['study_settled_usd_cap']*1e6: raise CallFailure('study_settled_cost_cap')
             if event:
                 f.seek(0, 2); f.write(json.dumps(event, sort_keys=True)+'\n'); f.flush(); os.fsync(f.fileno()); events.append(event)
             return {'attempted_calls': sum(e['type']=='reserve' for e in events),
                     'reserved_usd': sum(e.get('micro_usd', 0) for e in events if e['type']=='reserve')/1e6,
                     'actual_usd': sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response')/1e6,
-                    'usage_reported_calls': sum(e['type']=='response' for e in events)}
+                    'usage_reported_calls': sum(e['type']=='response' for e in events),
+                    'settled_usd': (sum(e.get('actual_micro_usd', 0) for e in events if e['type']=='response') + sum(e['micro_usd'] for e in events if e['type']=='reserve' and e['call_id'] not in {r['call_id'] for r in events if r['type']=='response'}))/1e6}
 
 class Anthropic:
     def __init__(self, ledger, opener=None, key=None, workspace=None):
