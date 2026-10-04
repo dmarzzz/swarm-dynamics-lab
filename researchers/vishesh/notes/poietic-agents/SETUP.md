@@ -66,3 +66,7 @@ Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](rev
 ## Q30-02 reviewed / Q30-03 prospective repair
 
 [Closeout](reviews/Q30-02-post.md) and [scientific assessment](reviews/Q30-02-scientific.json):10native starts,96terminal, both roles fail schema. Alltraces replay;USD0.6071273403333334 cumulative,89calls retained; claim426released431. [Q30-03](Q30-03-PLAN.md) targets the repeated all-task output and wrong proposal wrapper, same models and gate, no main admission.
+
+## Q30-03 reviewed — one qualified executor, partner transport-blocked
+
+[Post-mortem](reviews/Q30-03-post.md) and [eleven-dimension assessment](reviews/Q30-03-scientific.json).120B48valid/47correct PASSED;20B6valid/correctthenDeepInfra429, incomplete.55starts96terminal; alltracesreplayed andsixartifacthashesmatch. Original144calls,USD0.621829245 conservative exposure including39unknowncharges. Claim433released436; noactiveworker/relay/claim. No30-member main result. Conditional paced20B-only48-call stage awaits PIprojectallocation; no duplicate dispatch or model lottery.

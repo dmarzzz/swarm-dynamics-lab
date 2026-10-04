@@ -1,0 +1,312 @@
+{
+  "attempt": "Q30-03",
+  "assessor": "vishesh/codex-heterogeneous",
+  "date": "2026-10-04",
+  "evidence_revision": "8a74c4ec3073268b6e1fed51c160f67b343fe4d5",
+  "decision": "blocked",
+  "overall_attempt_reviewed": true,
+  "execution": "reconciled; provider stop",
+  "qualification": "generalist passed; cheap_generative incomplete",
+  "scientific_result": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Exact same-model task-specific prompt readiness repair, protected references, fixedgate and claimboundary stated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Fresh900-series synthetic lifecycle roots exercise task values, refresh and executable structural payloads; main roots untouched.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Scripted public-data/shared-cache controls and exact lifecycle effects distinguish schema fromcorrectness; no causal prompt-effect orcollective comparison claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "120B48valid47correct passes;20B6correct/validthenHTTP429leaves its48-action qualification incomplete.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ],
+      "next_action": "PI allocation decision for a48-call same-model paced qualification, orpark; mainnotadmitted.",
+      "acceptance_check": "Complete20B48/48valid and>=44/48exactcorrect under an admitted fresh cohort; preserve all prior evidence."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "96assigned55started41unstarted; envelope validity, exactvalues, refresh/action miss and actualeffects separated.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "12dependent four-step cases permodel assigned; only120Bcomplete. This is readiness, not30independent agents or a precise population estimate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen task-specific rules and public proposal templates delivered;55requests/contexts replay with no expectedanswer leakage;120Bhas one stale-refresh miss.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All55effective requests reconstructed,54visible actions/usage replay and one429retained; all96outcomes reconcile.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "144original-ledger calls;USD0.621829245 total conservative exposure includes39uncertaincalls; no in-flight/undisbursed allowance; claimreleased andworkersstopped.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source,157passingruntime tests, pinnedroutes andprivate raw data preserved. Initial no-call stagingtimeout retained separately.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Final48-denominator figure inspected;41unstarted slots explicit; sixartifacthashes match. No synthetic topology presented asnative.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+          "sha256": "b9ab3b74ca630b716771212adc5f5282bcb2931afd34984c2ff7c6f4c6745502"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/summary.json",
+          "sha256": "9958ba9b66ee2ca39124f95ac51a63494ef7790692212e891feddb2241f9d87f"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/trace-review.json",
+          "sha256": "a96685d8dd8283fde2557738048b6840dc1c9ed4169348195138994096d014ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/cost-closeout.json",
+          "sha256": "68e46d88b2cf3e16930ff453641cdb27eb081ffc9e754195c361ab1ca9d30b19"
+        },
+        {
+          "path": "researchers/vishesh/notes/poietic-agents/results/Q30-03/artifact-readback.json",
+          "sha256": "0c20b80a440165825524010525d13952cf1391f66dfb9c93e201cc5127cb03ed"
+        }
+      ]
+    }
+  ]
+}

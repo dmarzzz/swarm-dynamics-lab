@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Q30-02 qualifies GPT-OSS 120B and 20B for the requested 30-member Poietic swarm. Each gets 12 fresh four-step lifecycle cases; compare exact actions and executed effects to protected references. Require 48/48 valid and at least 44/48 correct with zero protected access. No retries; transport/integrity stops all; this stage is not swarm efficacy.",
+  "description": "TLDR: Q30-03 tests task-specific instructions and explicit proposal wrappers for GPT-OSS 120B/20B, keeping models and scoring fixed. Each gets 12 fresh four-step lifecycle cases against protected exact references. Require 48/48 valid and at least 44/48 correct per model, zero protected access. No retries; first invalid stops a model, transport/integrity stops all. Qualification only, not a 30-member swarm result.",
   "params": {
     "stage": {
       "type": "str",
@@ -43,5 +43,5 @@
     "terminal_jobs"
   ],
   "primary_metric": "verified_success_rate",
-  "url": "https://github.com/dmarzzz/swarm-lab/blob/b63338cc7c1c6aed0b0bdb12c061800148792468/researchers/vishesh/notes/poietic-agents/Q30-02-PLAN.md"
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/8a74c4ec3073268b6e1fed51c160f67b343fe4d5/researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md"
 }

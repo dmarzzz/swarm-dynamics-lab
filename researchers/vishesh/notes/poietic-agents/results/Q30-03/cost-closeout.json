@@ -1,0 +1,23 @@
+{
+  "claim_lifetime_seconds": 571.0,
+  "allocated_usd_per_hour": 0.07143,
+  "new_infrastructure_usd": 0.011329591666666666,
+  "cumulative_infrastructure_usd": 0.11857380000000001,
+  "new_api_exposure_usd": 0.003372313,
+  "new_known_api_usd": 0.002983193,
+  "cumulative_api_exposure_usd": 0.503255445,
+  "cumulative_known_api_usd": 0.020785557,
+  "calls_total": 144,
+  "new_calls": 55,
+  "new_uncertain_calls": 1,
+  "unresolved_cumulative_calls": 39,
+  "undisbursed_attempt_reservation_usd": 0,
+  "inflight_api_reservation_usd": 0,
+  "owner_cumulative_study_cap_usd": 10,
+  "prior_history_preserved": true,
+  "claim_released": true,
+  "machine_destroyed": false,
+  "cumulative_total_exposure_usd": 0.621829245,
+  "known_api_plus_infrastructure_usd": 0.13935935700000002,
+  "uncertain_api_bound_usd": 0.48246988799999996
+}
