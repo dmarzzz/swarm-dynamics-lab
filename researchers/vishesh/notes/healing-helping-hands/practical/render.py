@@ -11,6 +11,7 @@ def load(results):
  if m['status']!='completed' or m['terminal_counts']!={'completed':180}:raise ValueError('incomplete_bundle')
  worlds={a['id']:json.loads((results/(a['id']+'.json')).read_text()) for a in m['assignments']}
  if any(len(w['frames'])!=30 for w in worlds.values()):raise ValueError('missing_history')
+ for w in worlds.values():w['packet_cap']=m.get('packet_cap',4)
  return m,worlds
 
 def effects(worlds):
@@ -27,7 +28,7 @@ def effects(worlds):
 
 def frame(worlds,t,seed=8701,layout=18701,scenario="combined"):
  fig=plt.figure(figsize=(16,10.5),dpi=100,facecolor='#f4f6f8');gs=fig.add_gridspec(3,5,height_ratios=[.18,1,1.12],hspace=.36,left=.045,right=.98,top=.96,bottom=.07)
- ax=fig.add_subplot(gs[0,:]);ax.axis('off');ax.text(0,1,'Healing Helping Hands | repair without trusting every notice',fontsize=20,weight='bold');ax.text(0,0,f'Recorded logical round {t:02d}/29 • seed {seed} • layout {layout} • {scenario} scenario • saved Jev tape, no new inference',fontsize=11)
+ ax=fig.add_subplot(gs[0,:]);ax.axis('off');ax.text(0,1,'Healing Helping Hands | repair without trusting every notice',fontsize=20,weight='bold');ax.text(0,0,f'Recorded logical round {t:02d}/29 • seed {seed} • layout {layout} • {scenario} scenario • cap {next(iter(worlds.values()))['packet_cap']} items/link/round • no new inference',fontsize=11)
  for j,arm in enumerate(ARMS):
   w=worlds[f'{seed}-{layout}-{scenario}-{arm}'];f=w['frames'][t];ax=fig.add_subplot(gs[1,j]);rgb=[]
   for i in range(200):rgb.append((.66,.69,.73) if f['missing'][i] else ((.12,.58,.44) if f['correct'][i] else (.78,.27,.31)))
@@ -64,7 +65,7 @@ def render(results,out):
  fig.suptitle('Healing Helping Hands: central baselines expose the tradeoff\nThree saved semantic corpora; two layouts averaged within each. Whiskers are corpus ranges, not confidence intervals.',fontsize=14);fig.tight_layout(rect=[0,0,1,.93]);fig.savefig(out/'outcomes.png');plt.close(fig)
  provenance={'executed_source':m['plan']['commit'],'renderer_sha256':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),'template_sha256':hashlib.sha256((Path(__file__).parent/'replay.html').read_bytes()).hexdigest(),'manifest_sha256':hashlib.sha256((results/'manifest.json').read_bytes()).hexdigest(),'default_selection':{'seed':8701,'layout':18701,'scenario':'combined'}}
  (out/'render-provenance.json').write_text(json.dumps(provenance,indent=2))
- data={'worlds':worlds,'effects':e,'plan':m['plan']['url']};(out/'data.js').write_text('window.DATA='+json.dumps(data,separators=(',',':'))+';')
+ data={'packet_cap':m.get('packet_cap',4),'attempt':m['attempt'],'worlds':worlds,'effects':e,'plan':m['plan']['url']};(out/'data.js').write_text('window.DATA='+json.dumps(data,separators=(',',':'))+';')
  (out/'index.html').write_text((Path(__file__).parent/'replay.html').read_text())
  print(json.dumps({'worlds':len(worlds),'animation_frames':30,'out':str(out)}))
 if __name__=='__main__':
