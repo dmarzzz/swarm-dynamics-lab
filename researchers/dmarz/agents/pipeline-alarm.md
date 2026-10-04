@@ -3,8 +3,8 @@ agent: dmarz/pipeline-alarm
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: build-false-alarm-cascade
-doing: "Preparing false-alarm-cascade (honeypot-vigilance hunch V4, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call"
-updated: 2026-10-04T08:06Z
+doing: "false-alarm-cascade: prospective plan, preregistration, frozen design and setup record pushed; implementing the instrument and offline tests next; no launch, no model call"
+updated: 2026-10-04T09:23Z
 ---
 
 ## Notes
