@@ -1,0 +1,62 @@
+{
+  "execution": "completed",
+  "qualification": "passed interface/rule contract; not zero-drift certification",
+  "scientific_review": "complete; decision continuity replicated, downstream reconstruction untested",
+  "reporting": "Core hub artifact hashes verified; complete authored closeout, full trace audit, annotations and replay included in the public artifact set.",
+  "cost": {
+    "claim_released": true,
+    "worker_stopped": true,
+    "credential_relay_stopped": true,
+    "B2_infrastructure_nano": 20575809,
+    "basis": "exclusive claim lifetime at verified hourly rate; allocation-cost estimate, not invoice",
+    "cumulative_nano": 450886510,
+    "model_nano": 376262000,
+    "B2_model_nano": 316566000,
+    "unknown_charges": 0,
+    "outstanding_reservations": 0
+  },
+  "sample_size_summary": "12 selected authored roots, shared author/format; 144/144 main calls and 2 qualifiers, 2 arms \u00d7 3 hops \u00d7 2 fresh blocks. No missing calls; repetitions are nested, not extra independent tasks.",
+  "evidence_confidence": {
+    "score": 2,
+    "claim": "On this selected benchmark both information policies preserve the original decision across two fresh three-hop blocks, while some source meaning is lost.",
+    "rationale": "Controlled complete narrow comparison with actual fresh executions, but copied prior answers, authored cases and same-operator semantic labels limit downstream and population inference."
+  },
+  "artifacts": [
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/RESULTS.json",
+      "sha256": "9a5f2e760e4b042adfdb39b6d3d84735bc1a3ccc219b3c68893100605028bf37"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/COST.json",
+      "sha256": "8541165db949f1383077499de5276c3a1861902037ec22146ca353b3ed9d8eb6"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/RUN-QUALITY.json",
+      "sha256": "cdb95e1e79bdb737f10adca235d9a4bf26ca5692f964c60c7b98dec0ce9d5702"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/AUTHORED-TRACE-AUDIT.json",
+      "sha256": "991ddb3663a079e6a0d59d42b86a4fc59032752385f6cd1b15bca95a7dc6acec"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/SEMANTIC-ANNOTATIONS.json",
+      "sha256": "b491e8c421c40ad689d68cee06585acb79d823885c93131a750e7360c1d54836"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/ASSERTIONS.json",
+      "sha256": "399e3e2a101b0b7436162b82f8e9513d9d8ccf94edc78b404e59d28e1d1ebdd4"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/PASS-1.json",
+      "sha256": "b4a1e2c44cb731cd8012c643465065979a034e6fc99bebc238fad44dbf4d1379"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/PASS-2.json",
+      "sha256": "5069368789243b5fc1d397439c59cb82e7c3d660be79a9ec081b3de19c963ffc"
+    },
+    {
+      "path": "researchers/vishesh/notes/telephone/native/b2/results/replay.py",
+      "sha256": "16d010b980f20503b9cb9f74e9626f4a55ff41e2b602ef8a10e88edd357b12e9"
+    }
+  ]
+}

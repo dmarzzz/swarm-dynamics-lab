@@ -1,0 +1,391 @@
+{
+  "execution": "completed",
+  "qualification": "passed prespecified interface/rule checks; contextual caveat disclosed",
+  "native_calls": 146,
+  "main_calls": 144,
+  "roots": 12,
+  "fresh_blocks": 2,
+  "terminal_correct_per_arm_block": 12,
+  "terminal_false_go": 0,
+  "terminal_false_hold": 0,
+  "terminal_unknown": 0,
+  "missing": 0,
+  "paired_primary_contrast_each_block": 0,
+  "repeat_decision_disagreement_per_arm": 0,
+  "semantic_passes": 2,
+  "independent_raters": 1,
+  "metrics": [
+    {
+      "block": 1,
+      "arm": "P",
+      "hop": 1,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "arm": "P",
+      "hop": 2,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 82,
+          "lost": 2,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9761904761904762,
+          0.9761904761904762
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 82,
+          "lost": 2,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9761904761904762,
+          0.9761904761904762
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "arm": "P",
+      "hop": 3,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 79,
+          "lost": 5,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9404761904761905,
+          0.9404761904761905
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 79,
+          "lost": 5,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9404761904761905,
+          0.9404761904761905
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "arm": "R",
+      "hop": 1,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 83,
+          "lost": 0,
+          "ambiguous": 1
+        },
+        "retention_bounds": [
+          0.9880952380952381,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "arm": "R",
+      "hop": 2,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 1,
+      "arm": "R",
+      "hop": 3,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "P",
+      "hop": 1,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 83,
+          "lost": 0,
+          "ambiguous": 1
+        },
+        "retention_bounds": [
+          0.9880952380952381,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 82,
+          "lost": 0,
+          "ambiguous": 2
+        },
+        "retention_bounds": [
+          0.9761904761904762,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "P",
+      "hop": 2,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 78,
+          "lost": 4,
+          "ambiguous": 2
+        },
+        "retention_bounds": [
+          0.9285714285714286,
+          0.9523809523809523
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 77,
+          "lost": 4,
+          "ambiguous": 3
+        },
+        "retention_bounds": [
+          0.9166666666666666,
+          0.9523809523809523
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "P",
+      "hop": 3,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 78,
+          "lost": 4,
+          "ambiguous": 2
+        },
+        "retention_bounds": [
+          0.9285714285714286,
+          0.9523809523809523
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 77,
+          "lost": 4,
+          "ambiguous": 3
+        },
+        "retention_bounds": [
+          0.9166666666666666,
+          0.9523809523809523
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "R",
+      "hop": 1,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 84,
+          "lost": 0,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          1.0,
+          1.0
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "R",
+      "hop": 2,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 81,
+          "lost": 3,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9642857142857143,
+          0.9642857142857143
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 81,
+          "lost": 3,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9642857142857143,
+          0.9642857142857143
+        ]
+      }
+    },
+    {
+      "block": 2,
+      "arm": "R",
+      "hop": 3,
+      "roots": 12,
+      "targets": 84,
+      "decisions_correct": 12,
+      "report_content": {
+        "counts": {
+          "retained": 82,
+          "lost": 2,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9761904761904762,
+          0.9761904761904762
+        ]
+      },
+      "strict_integrated": {
+        "counts": {
+          "retained": 82,
+          "lost": 2,
+          "ambiguous": 0
+        },
+        "retention_bounds": [
+          0.9761904761904762,
+          0.9761904761904762
+        ]
+      }
+    }
+  ],
+  "B2_model_cost_nano": 316566000,
+  "native_main_wall_seconds": 373.25847721099854,
+  "main_input_tokens": 50863,
+  "main_output_tokens": 21258,
+  "assertion_clauses": 1079,
+  "ambiguous_assertions": 9,
+  "critical_ambiguous_assertions": 4,
+  "definite_unsupported_assertions": 0,
+  "cost_by_arm": {
+    "P": 148188000,
+    "R": 166118000
+  }
+}

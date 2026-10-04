@@ -1,0 +1,135 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "date": "2026-10-04",
+  "attempt": "b2-gpt6sol-20261004",
+  "runtime_revision": "272c05441a4ba909841348fb3e3e41739eeed534",
+  "decision": "complete_valid_result",
+  "baseline": "GAP for practical downstream reconstruction; bounded continuity result reviewed",
+  "checks": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Frozen question distinguishes decision continuity and meaning retention under two information policies.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/PLAN.md",
+          "sha256": "c20560f2d9f9daa961f5937de1f509c8ef1adb0a33c8efb4b6b4d50214bde372"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Twelve labeled operational roots are answerable, but terminal decisions are at ceiling and packets fit lossless copy; practical downstream challenge remains untested.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/CASE-QUALITY.md",
+          "sha256": "3f8166b54dcfc208dfa15059743177819e567cfca80d3dfe876ffef6fdfca4c3"
+        }
+      ],
+      "next_action": "Prepare prospective new-root downstream-reader contrast before any funded successor.",
+      "acceptance_check": "Frozen follow-up questions are not answered by copying prior GO/HOLD; labels, full-copy and direct-source reader controls validated, with explicit repeat variability."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Source availability differs exactly as intended; copy and narrow source-rule controls pass. This is explicitly unequal information, not equal-information coordination.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/prepared/validation.json",
+          "sha256": "3f72f96a41440160c1fadd753892df4a741518473dd8bfc51354933b91ea9dc6"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Both interface qualifiers pass and every first-hop direct-source decision is correct in each arm/block.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/QUALIFICATION.json",
+          "sha256": "661429724577e8371e027cac19ced3cf9a3bb5fd17aac2145382bb241347efba"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "gap",
+      "finding": "Declared decision/meaning metrics replay, but carried prior answers permit copying; current endpoint cannot show independent reconstruction or new downstream usefulness.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/DECISION-ANALYSIS.json",
+          "sha256": "5db0013463e81af354bf1fb9dd19d54e4179bd67fbceff8dafa2f0f261b05403"
+        }
+      ],
+      "next_action": "Prepare prospective new-root downstream-reader contrast before any funded successor.",
+      "acceptance_check": "Frozen follow-up questions are not answered by copying prior GO/HOLD; labels, full-copy and direct-source reader controls validated, with explicit repeat variability."
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Twelve selected authored roots, two nested fresh blocks and full per-root tables support only the stated finite benchmark; no population precision claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/DECISION-ANALYSIS.json",
+          "sha256": "5db0013463e81af354bf1fb9dd19d54e4179bd67fbceff8dafa2f0f261b05403"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Exact GPT-6 Sol/OpenAI route, fresh contexts, original-source treatment and unchanged parent payloads verified in all main requests.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/AUTHORED-TRACE-AUDIT.json",
+          "sha256": "991ddb3663a079e6a0d59d42b86a4fc59032752385f6cd1b15bca95a7dc6acec"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "146 distinct responses; 144/144 main source/parent records replay; 1008 target cells and complete assertion clauses reviewed; no missing outputs.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/SEMANTIC-ANNOTATIONS.json",
+          "sha256": "b491e8c421c40ad689d68cee06585acb79d823885c93131a750e7360c1d54836"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original cumulative ledger settled; bounded API calls, verified existing allocation, stopped worker/relay, released claim, zero unknown or reserved exposure.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/COST.json",
+          "sha256": "8541165db949f1383077499de5276c3a1861902037ec22146ca353b3ed9d8eb6"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Two fresh API blocks reproduce decision continuity with reported differing semantic trajectories; saved replay independently recomputes decisions and annotated arithmetic.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/RESULTS.json",
+          "sha256": "9a5f2e760e4b042adfdb39b6d3d84735bc1a3ccc219b3c68893100605028bf37"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All-hop, both-block measured static trajectories with ambiguity shading and full trace/table replay fallback; no unreviewed live semantic scores claimed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/telephone/native/b2/results/trajectory.svg",
+          "sha256": "d5263de4dea3e1050f5be68a57461f35281201412a2639aac2ffa7a058d4f694"
+        }
+      ]
+    }
+  ]
+}

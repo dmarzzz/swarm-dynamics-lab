@@ -1,0 +1,360 @@
+{
+  "assessor": "vishesh/codex-village-fit",
+  "method": "Read each saved response and all seven frozen source targets; manual meaning review, no paid grader.",
+  "reviewed": [
+    "block-1:b2-01:P:1",
+    "block-1:b2-01:P:2",
+    "block-1:b2-01:P:3",
+    "block-1:b2-01:R:1",
+    "block-1:b2-01:R:2",
+    "block-1:b2-01:R:3",
+    "block-1:b2-02:P:1",
+    "block-1:b2-02:P:2",
+    "block-1:b2-02:P:3",
+    "block-1:b2-02:R:1",
+    "block-1:b2-02:R:2",
+    "block-1:b2-02:R:3",
+    "block-1:b2-03:P:1",
+    "block-1:b2-03:P:2",
+    "block-1:b2-03:P:3",
+    "block-1:b2-03:R:1",
+    "block-1:b2-03:R:2",
+    "block-1:b2-03:R:3",
+    "block-1:b2-04:P:1",
+    "block-1:b2-04:P:2",
+    "block-1:b2-04:P:3",
+    "block-1:b2-04:R:1",
+    "block-1:b2-04:R:2",
+    "block-1:b2-04:R:3",
+    "block-1:b2-05:P:1",
+    "block-1:b2-05:P:2",
+    "block-1:b2-05:P:3",
+    "block-1:b2-05:R:1",
+    "block-1:b2-05:R:2",
+    "block-1:b2-05:R:3",
+    "block-1:b2-06:P:1",
+    "block-1:b2-06:P:2",
+    "block-1:b2-06:P:3",
+    "block-1:b2-06:R:1",
+    "block-1:b2-06:R:2",
+    "block-1:b2-06:R:3",
+    "block-1:b2-07:P:1",
+    "block-1:b2-07:P:2",
+    "block-1:b2-07:P:3",
+    "block-1:b2-07:R:1",
+    "block-1:b2-07:R:2",
+    "block-1:b2-07:R:3",
+    "block-1:b2-08:P:1",
+    "block-1:b2-08:P:2",
+    "block-1:b2-08:P:3",
+    "block-1:b2-08:R:1",
+    "block-1:b2-08:R:2",
+    "block-1:b2-08:R:3",
+    "block-1:b2-09:P:1",
+    "block-1:b2-09:P:2",
+    "block-1:b2-09:P:3",
+    "block-1:b2-09:R:1",
+    "block-1:b2-09:R:2",
+    "block-1:b2-09:R:3",
+    "block-1:b2-10:R:1",
+    "block-1:b2-10:R:2",
+    "block-1:b2-10:R:3",
+    "block-1:b2-10:P:1",
+    "block-1:b2-10:P:2",
+    "block-1:b2-10:P:3",
+    "block-1:b2-11:P:1",
+    "block-1:b2-11:P:2",
+    "block-1:b2-11:P:3",
+    "block-1:b2-11:R:1",
+    "block-1:b2-11:R:2",
+    "block-1:b2-11:R:3",
+    "block-1:b2-12:P:1",
+    "block-1:b2-12:P:2",
+    "block-1:b2-12:P:3",
+    "block-1:b2-12:R:1",
+    "block-1:b2-12:R:2",
+    "block-1:b2-12:R:3",
+    "block-2:b2-12:P:1",
+    "block-2:b2-12:P:2",
+    "block-2:b2-12:P:3",
+    "block-2:b2-12:R:1",
+    "block-2:b2-12:R:2",
+    "block-2:b2-12:R:3",
+    "block-2:b2-10:P:1",
+    "block-2:b2-10:P:2",
+    "block-2:b2-10:P:3",
+    "block-2:b2-10:R:1",
+    "block-2:b2-10:R:2",
+    "block-2:b2-10:R:3",
+    "block-2:b2-11:P:1",
+    "block-2:b2-11:P:2",
+    "block-2:b2-11:P:3",
+    "block-2:b2-11:R:1",
+    "block-2:b2-11:R:2",
+    "block-2:b2-11:R:3",
+    "block-2:b2-07:P:1",
+    "block-2:b2-07:P:2",
+    "block-2:b2-07:P:3",
+    "block-2:b2-07:R:1",
+    "block-2:b2-07:R:2",
+    "block-2:b2-07:R:3",
+    "block-2:b2-08:P:1",
+    "block-2:b2-08:P:2",
+    "block-2:b2-08:P:3",
+    "block-2:b2-08:R:1",
+    "block-2:b2-08:R:2",
+    "block-2:b2-08:R:3",
+    "block-2:b2-09:P:1",
+    "block-2:b2-09:P:2",
+    "block-2:b2-09:P:3",
+    "block-2:b2-09:R:1",
+    "block-2:b2-09:R:2",
+    "block-2:b2-09:R:3",
+    "block-2:b2-04:P:1",
+    "block-2:b2-04:P:2",
+    "block-2:b2-04:P:3",
+    "block-2:b2-04:R:1",
+    "block-2:b2-04:R:2",
+    "block-2:b2-04:R:3",
+    "block-2:b2-05:P:1",
+    "block-2:b2-05:P:2",
+    "block-2:b2-05:P:3",
+    "block-2:b2-05:R:1",
+    "block-2:b2-05:R:2",
+    "block-2:b2-05:R:3",
+    "block-2:b2-06:P:1",
+    "block-2:b2-06:P:2",
+    "block-2:b2-06:P:3",
+    "block-2:b2-06:R:1",
+    "block-2:b2-06:R:2",
+    "block-2:b2-06:R:3",
+    "block-2:b2-03:P:1",
+    "block-2:b2-03:P:2",
+    "block-2:b2-03:P:3",
+    "block-2:b2-03:R:1",
+    "block-2:b2-03:R:2",
+    "block-2:b2-03:R:3",
+    "block-2:b2-01:P:1",
+    "block-2:b2-01:P:2",
+    "block-2:b2-01:P:3",
+    "block-2:b2-01:R:1",
+    "block-2:b2-01:R:2",
+    "block-2:b2-01:R:3",
+    "block-2:b2-02:P:1",
+    "block-2:b2-02:P:2",
+    "block-2:b2-02:P:3",
+    "block-2:b2-02:R:1",
+    "block-2:b2-02:R:2",
+    "block-2:b2-02:R:3"
+  ],
+  "overrides": {
+    "block-1:b2-03:P:3": {
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Source says no additional G8 restore result is available; output narrows this to no passed G8 result, losing absence of any result."
+      }
+    },
+    "block-1:b2-01:R:1": {
+      "e05": {
+        "report_content": "retained",
+        "strict_integrated": "ambiguous",
+        "rationale": "Explicit approval unknown is retained, but unknown\u2014not recorded can also imply a stronger absence-of-record status; strict interpretation remains ambiguous."
+      }
+    },
+    "block-1:b2-07:P:2": {
+      "e04": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded email adds no fields is preserved, but explicit same-receipt provenance is omitted; a different receipt with the same fields would also fit this weaker summary."
+      }
+    },
+    "block-1:b2-07:P:3": {
+      "e04": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded email adds no fields is preserved, but explicit same-receipt provenance is omitted; a different receipt with the same fields would also fit this weaker summary."
+      }
+    },
+    "block-1:b2-09:P:3": {
+      "e01": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "K7 is retained as an earlier acknowledged version, but its explicitly initial status is omitted."
+      }
+    },
+    "block-1:b2-10:P:2": {
+      "rule": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Rule now requires two current independent checks but omits that the checks must pass. Passing observations are retained separately and do not state the missing normative requirement."
+      }
+    },
+    "block-1:b2-10:P:3": {
+      "rule": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Rule now requires two current independent checks but omits that the checks must pass. Passing observations are retained separately and do not state the missing normative requirement."
+      }
+    },
+    "block-1:b2-11:P:3": {
+      "e03": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded same security receipt retained, but explicit fact that its author is not the data owner is omitted."
+      }
+    },
+    "block-2:b2-11:P:2": {
+      "e03": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded security receipt is retained, but the explicit author-not-data-owner fact is omitted."
+      }
+    },
+    "block-2:b2-10:P:2": {
+      "rule": {
+        "report_content": "ambiguous",
+        "strict_integrated": "ambiguous",
+        "rationale": "Passing checks and approval preserved; permits closure when/after can be read as the same checklist or as merely sufficient without the source only-if restriction. Preserve interpretive ambiguity."
+      }
+    },
+    "block-2:b2-11:P:3": {
+      "e03": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded security receipt is retained, but the explicit author-not-data-owner fact is omitted."
+      }
+    },
+    "block-2:b2-10:P:3": {
+      "rule": {
+        "report_content": "ambiguous",
+        "strict_integrated": "ambiguous",
+        "rationale": "Passing checks and approval preserved; permits closure when/after can be read as the same checklist or as merely sufficient without the source only-if restriction. Preserve interpretive ambiguity."
+      }
+    },
+    "block-2:b2-11:R:2": {
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "One approval conclusion retained, but shared receipt-identifier evidence omitted."
+      }
+    },
+    "block-2:b2-09:P:2": {
+      "e01": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "K7 earlier acknowledgements preserved, but explicitly initial version status omitted."
+      },
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "No K8 acknowledgements and old-version insufficiency retained, but forwarding provenance of the K7 receipts omitted."
+      }
+    },
+    "block-2:b2-09:P:3": {
+      "e01": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "K7 earlier acknowledgements preserved, but explicitly initial version status omitted."
+      },
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "No K8 acknowledgements and old-version insufficiency retained, but forwarding provenance of the K7 receipts omitted."
+      }
+    },
+    "block-2:b2-09:R:2": {
+      "e01": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "K7 earlier acknowledgements preserved, but explicitly initial version status omitted."
+      }
+    },
+    "block-2:b2-09:R:3": {
+      "e01": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "K7 earlier acknowledgements preserved, but explicitly initial version status omitted."
+      }
+    },
+    "block-2:b2-07:P:1": {
+      "e04": {
+        "report_content": "ambiguous",
+        "strict_integrated": "ambiguous",
+        "rationale": "Forwarded email adds no fields to the receipt can implicitly refer to the same current receipt, but does not explicitly establish shared origin. Preserve both readings."
+      }
+    },
+    "block-2:b2-07:P:2": {
+      "e04": {
+        "report_content": "ambiguous",
+        "strict_integrated": "ambiguous",
+        "rationale": "Forwarded email adds no fields to the receipt can implicitly refer to the same current receipt, but does not explicitly establish shared origin. Preserve both readings."
+      }
+    },
+    "block-2:b2-07:P:3": {
+      "e04": {
+        "report_content": "ambiguous",
+        "strict_integrated": "ambiguous",
+        "rationale": "Forwarded email adds no fields to the receipt can implicitly refer to the same current receipt, but does not explicitly establish shared origin. Preserve both readings."
+      }
+    },
+    "block-2:b2-07:R:2": {
+      "e04": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded consent email adds no fields; explicit same-receipt provenance omitted, as in block-1 P2/P3."
+      }
+    },
+    "block-2:b2-07:R:3": {
+      "e04": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "Forwarded consent email adds no fields; explicit same-receipt provenance omitted, as in block-1 P2/P3."
+      }
+    },
+    "block-2:b2-03:P:2": {
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "No additional G8 restore result is available is weakened to no passed G8 test established. Broader absence-of-any-result information lost, as in block-1 P3."
+      }
+    },
+    "block-2:b2-03:P:3": {
+      "e06": {
+        "report_content": "lost",
+        "strict_integrated": "lost",
+        "rationale": "No additional G8 restore result is available is weakened to no passed G8 test established. Broader absence-of-any-result information lost, as in block-1 P3."
+      }
+    },
+    "block-2:b2-01:P:1": {
+      "e05": {
+        "report_content": "retained",
+        "strict_integrated": "ambiguous",
+        "rationale": "Approval explicitly unknown is retained, but unknown\u2014not recorded also permits a stronger absence-of-record reading. Same sensitivity as block-1 R1."
+      }
+    },
+    "block-2:b2-01:P:2": {
+      "e05": {
+        "report_content": "retained",
+        "strict_integrated": "ambiguous",
+        "rationale": "Approval explicitly unknown is retained, but unknown\u2014not recorded also permits a stronger absence-of-record reading. Same sensitivity as block-1 R1."
+      }
+    },
+    "block-2:b2-01:P:3": {
+      "e05": {
+        "report_content": "retained",
+        "strict_integrated": "ambiguous",
+        "rationale": "Approval explicitly unknown is retained, but unknown\u2014not recorded also permits a stronger absence-of-record reading. Same sensitivity as block-1 R1."
+      }
+    }
+  },
+  "assertion_notes": {
+    "block-1:b2-02:P:2": "Underlying records not included is supported by the effective P context; do not score truthful context limitation as unsupported source-world status.",
+    "block-1:b2-02:P:3": "Same context limitation; rule and source claims remain explicit.",
+    "block-1:b2-11:P:3": "Calls the 09:06 provenance statement a correction; correction status is not explicit in source. Noncritical added framing; no changed approval or eligibility asserted.",
+    "block-2:b2-11:P:2": "09:06 statement called a correction although source describes shared provenance, without expressly marking a correction. Noncritical added framing.",
+    "block-2:b2-11:P:3": "09:06 statement called a correction although source describes shared provenance, without expressly marking a correction. Noncritical added framing.",
+    "block-2:b2-06:P:2": "Calls the 09:06 clarification a correction. Source specifies its substantive limits but not correction status. Noncritical added framing; lot eligibility unchanged.",
+    "block-2:b2-06:P:3": "Calls the 09:06 clarification a correction. Source specifies its substantive limits but not correction status. Noncritical added framing; lot eligibility unchanged."
+  }
+}

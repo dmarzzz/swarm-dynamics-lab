@@ -4238,6 +4238,33 @@
       "assessor": "vishesh/codex-decision-models",
       "assessed_at": "2026-10-04",
       "source_commit": "a97976aaca3f9a5281207352ff1e1dabb546f187"
+    },
+    {
+      "id": "telephone-b2",
+      "title": "Telephone B2: replicated decision continuity and meaning loss",
+      "documents": [
+        "researchers/vishesh/notes/telephone/native/b2/results/POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "telephone"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 2,
+        "claim": "On this selected benchmark both information policies preserve the original decision across two fresh three-hop blocks, while some source meaning is lost.",
+        "rationale": "Controlled complete narrow comparison with actual fresh executions, but copied prior answers, authored cases and same-operator semantic labels limit downstream and population inference."
+      },
+      "sample_size_summary": "12 selected authored roots, shared author/format; 144/144 main calls and 2 qualifiers, 2 arms \u00d7 3 hops \u00d7 2 fresh blocks. No missing calls; repetitions are nested, not extra independent tasks.",
+      "sources": [
+        "researchers/vishesh/notes/telephone/native/b2/results/RESULTS.json",
+        "researchers/vishesh/notes/telephone/native/b2/results/RUN-QUALITY.json",
+        "researchers/vishesh/notes/telephone/native/b2/results/AUTHORED-TRACE-AUDIT.json",
+        "researchers/vishesh/notes/telephone/native/b2/results/COST.json"
+      ],
+      "status_at_assessment": "reviewed_continuity_null_downstream_baseline_gap",
+      "assessor": "vishesh/codex-village-fit",
+      "assessed_at": "2026-10-04",
+      "source_commit": "272c05441a4ba909841348fb3e3e41739eeed534"
     }
   ],
   "source_sha256": {
