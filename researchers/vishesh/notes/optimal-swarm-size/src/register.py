@@ -15,7 +15,7 @@ if __name__=='__main__':
         import swarm_report as sr
         with quiet_client():
             sr.register('optimal-swarm-size-q1',title='Optimal swarm size: engineering qualification',owner='vishesh',
-                        description='TLDR: Qualify synthetic evidence and bounded code-repair tasks before a matched-size study. Treatment: N=1 screening then N=2,4,8,16 under calibrated caps. Comparator: N=1 calibration reference, not a matched size-effect comparison. Metrics: verified on-time success, quality, cost and latency. Limitations: synthetic fixtures, small root count, hosted compute and exploratory calibration.',
+                        description='TLDR: '+plan.split('\n## TLDR\n',1)[1].split('\n## ',1)[0].strip().removeprefix('TLDR: '),
                         url=a.plan_url,primary_metric='success',metrics=['success','quality','elapsed_s','cost_exposure_usd'],
                         params={k:{'type':t} for k,t in [('n','int'),('root','int'),('family','str'),('structure','str'),('stage','str')]})
         print('Registered plan metadata. Verify public-plan preflight before any execution.')
