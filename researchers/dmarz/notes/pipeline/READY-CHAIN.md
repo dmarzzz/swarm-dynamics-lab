@@ -163,6 +163,27 @@ category name.
    amendment. `python src/chain.py resume` does that (continuation batch `s1-001-r1`) and refuses after
    any other kind of stop; the launcher's `resume` action runs it.
 
+## Providers and models
+
+Added 2026-10-04. `READY.yaml` may carry `provider:` (`anthropic`, the default, or `openrouter`) and
+`model_ladder:`. The launcher accepts `claude-opus-5-5` and `claude-opus-5` on `anthropic`, and
+`qwen/qwen3.7-flash` on `openrouter` (research program v5: provider pinned to Alibaba, no fallback,
+reasoning disabled, JSON-object mode with local validation; the reference adapter is
+[reference/openrouter_provider.py](reference/openrouter_provider.py)).
+
+Model ladder (Anthropic lanes, fleet monitor's decision after dmarz reported his Opus 5.5 allowance might
+run out): a package pre-registers `model_ladder: [claude-opus-5-5, claude-opus-5]` with each model's
+prices in the hashed design. The model of an attempt comes from `STUDY_MODEL` (launcher `--model`),
+defaults to the first entry and must be in the ladder. Each model has its own batch names
+(`s1-001`, `s1-001-opus-5`), its own probe and qualification, its own ledger file and results
+directory; the scripted S0 serves all models; results are never pooled across models. The second model is
+used only after a stage was refused on a limit or credit error that did not clear in 20 minutes, as a
+dated amendment on the run request. sybil-scarcity-opus and sybil-split-opus predate the ladder.
+
+Program v5 studies map the program's 24 qualification calls onto the chain as P0 (the first fixture, one
+call) plus Q0 (the other 23), with the gate evaluated over all 24; the one bounded repair the program
+allows is a new attempt on a second, disjoint set of 24 fixtures frozen in advance.
+
 ## Opus 5.5 request rules
 
 The adapter sends `model`, `max_tokens`, `system`, `messages` and
