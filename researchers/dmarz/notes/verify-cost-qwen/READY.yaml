@@ -2,14 +2,14 @@ contract: ready-chain-v1
 study: verify-cost-qwen
 experiment: verify-cost-qwen
 stages: [S0, P0, Q0, S1]
-provider: openrouter
-model: qwen/qwen3.7-flash
+provider: openai
+model: gpt-6-luna
 effort: low
 max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
 max_calls_total: 600
-usd_cap: 2
+usd_cap: 5
 chain_timeout_seconds: 7200
-selftests: 87
-source_hash: ef40246d5f7790898ed120146d9c873c7af2fe70bd2aed4ad4c8e6eea0970fd1
-review: reviews/chain-002-pre.md
+selftests: 123
+source_hash: b1b15d2573d295ee5560bdfbd3b2661b90c5a6cd435dd3a694ec3a9695dd5d48
+review: reviews/chain-003-pre.md
 ledger: fresh
