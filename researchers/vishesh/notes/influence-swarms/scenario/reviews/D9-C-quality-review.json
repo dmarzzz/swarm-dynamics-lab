@@ -68,7 +68,7 @@
     },
     {
       "dimension": "capability",
-      "status": "fail",
+      "status": "gap",
       "finding": "Screen5/6contracts valid;180/180raw facts correct but98aligned and41/75checks correct on valid cases.",
       "evidence": [
         {

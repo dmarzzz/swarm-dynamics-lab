@@ -56,7 +56,7 @@
     },
     {
       "dimension": "capability",
-      "status": "fail",
+      "status": "gap",
       "finding": "HTTP400 prevents any typed response; acquisition not qualified.",
       "evidence": [
         {
@@ -73,7 +73,7 @@
     },
     {
       "dimension": "measurement",
-      "status": "fail",
+      "status": "gap",
       "finding": "Structured error parsed but narrow classifier returns unknown; usage missing.",
       "evidence": [
         {

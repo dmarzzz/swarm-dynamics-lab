@@ -1,0 +1,51 @@
+{
+  "runs": [
+    {
+      "stage": "D9-A",
+      "run": "influence-swarms/1004-193003-d28084",
+      "hub_status": "failed",
+      "artifact_count": 4
+    },
+    {
+      "stage": "D9-B",
+      "run": "influence-swarms/1004-193245-dbc4d6",
+      "hub_status": "done",
+      "artifact_count": 5
+    },
+    {
+      "stage": "D9-C",
+      "run": "influence-swarms/1004-193614-560959",
+      "hub_status": "failed",
+      "artifact_count": 13
+    },
+    {
+      "stage": "D9-D",
+      "run": "influence-swarms/1004-194048-12c6c8",
+      "hub_status": "failed",
+      "artifact_count": 4
+    },
+    {
+      "stage": "D9-E",
+      "run": "influence-swarms/1004-194411-dcd4c3",
+      "hub_status": "done",
+      "artifact_count": 5
+    }
+  ],
+  "remote_relay_forward_closed": true,
+  "blocking_processes": 0,
+  "local_relay_closed": true,
+  "exclusive_allocation_released": true,
+  "release_pr": 385,
+  "ledger": {
+    "cap": 8,
+    "reserved": 5.501152,
+    "calls": 259
+  },
+  "campaign": {
+    "calls": 9,
+    "new_reserved_usd": 0.43776,
+    "known_cost_usd": 0.08284,
+    "usage_missing": 2,
+    "actual_usd": null
+  }
+}

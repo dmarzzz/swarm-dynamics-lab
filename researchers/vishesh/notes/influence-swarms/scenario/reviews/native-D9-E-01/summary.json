@@ -1,0 +1,153 @@
+{
+  "stage": "D9-E",
+  "attempt": "native-D9-E-01",
+  "planned": 1,
+  "started": 1,
+  "terminal": 1,
+  "valid": 1,
+  "failed": 0,
+  "unstarted": 0,
+  "calls": 1,
+  "usage_missing": 0,
+  "observed_usage_cost_usd": 0.011652,
+  "actual_usd": 0.011652,
+  "new_reserved_usd": 0.04864,
+  "qualified": false,
+  "failures": [],
+  "assignments": [
+    {
+      "arm": "typed_inherited",
+      "case_id": "seasonal-usage-cost",
+      "status": "valid",
+      "answer": {
+        "choice": "DEFER",
+        "confidence": 0.65,
+        "request": {
+          "candidate": "Aster",
+          "kind": "scope"
+        },
+        "limitations": "EU ticket storage and inference processing deployment scope unconfirmed for Aster; requirement mandates both confirmed before purchase.",
+        "candidate_facts": {
+          "Aster": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-1",
+              "excerpt": "Aster: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 99,
+              "outcome_price": 0.22,
+              "setup_usd": 11500,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-1",
+              "excerpt": "Aster: $99 per seat per month for 12 months; $0.22 per automated resolution, no free allowance; one-time setup $11500. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 76,
+              "simple_total": 100,
+              "complex_resolved": 69,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-1",
+              "excerpt": "Aster: resolved 76 of 100 simple tickets and 69 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                32,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-1",
+              "excerpt": "Aster: export mapping 7 days, integration and region activation 32 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Birch": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-2",
+              "excerpt": "Birch: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 26,
+              "outcome_price": 0.03,
+              "setup_usd": 4500,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-2",
+              "excerpt": "Birch: $26 per seat per month for 12 months; $0.03 per automated resolution, no free allowance; one-time setup $4500. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 53,
+              "simple_total": 100,
+              "complex_resolved": 41,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-2",
+              "excerpt": "Birch: resolved 53 of 100 simple tickets and 41 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                16,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-2",
+              "excerpt": "Birch: export mapping 7 days, integration and region activation 16 days, acceptance 7 days; stages sequential."
+            }
+          },
+          "Cobalt": {
+            "scope": {
+              "storage_region": "EU",
+              "processing_region": "EU",
+              "unknown_fields": [],
+              "citation": "scope-0",
+              "excerpt": "Cobalt: ticket storage region EU; inference processing region EU. This deployment-specific response supersedes the general 'EU hosting available' brochure."
+            },
+            "quote": {
+              "seat_price": 38,
+              "outcome_price": 2.41,
+              "setup_usd": 8900,
+              "sso": true,
+              "complete_export": true,
+              "unknown_fields": [],
+              "citation": "quote-0",
+              "excerpt": "Cobalt: $38 per seat per month for 12 months; $2.41 per automated resolution, no free allowance; one-time setup $8900. SSO included: True; complete export: True."
+            },
+            "pilot": {
+              "simple_resolved": 88,
+              "simple_total": 100,
+              "complex_resolved": 32,
+              "complex_total": 100,
+              "unknown_fields": [],
+              "citation": "pilot-0",
+              "excerpt": "Cobalt: resolved 88 of 100 simple tickets and 32 of 100 complex tickets. Use workload-weighted rates for planning."
+            },
+            "rollout": {
+              "stage_days": [
+                7,
+                29,
+                7
+              ],
+              "unknown_fields": [],
+              "citation": "rollout-0",
+              "excerpt": "Cobalt: export mapping 7 days, integration and region activation 29 days, acceptance 7 days; stages sequential."
+            }
+          }
+        }
+      }
+    }
+  ],
+  "run": "influence-swarms/1004-194411-dcd4c3",
+  "source_commit": "09b1107d0dfdaeedb3f3f90ea1fb85b999d3f4ff",
+  "packet_sha256": "2ae8d553370b431b9668a7142f8d72ba6ee82cae02371efd049588a52407ee9b",
+  "public_plan": "https://github.com/dmarzzz/swarm-lab/blob/09b1107d0dfdaeedb3f3f90ea1fb85b999d3f4ff/researchers/vishesh/notes/influence-swarms/scenario/ITERATION-09-READINESS.md"
+}

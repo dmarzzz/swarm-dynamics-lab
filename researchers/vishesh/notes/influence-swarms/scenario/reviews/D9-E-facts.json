@@ -1,0 +1,11 @@
+{
+  "limitations_length": 135,
+  "raw_facts_correct": 36,
+  "raw_facts_total": 36,
+  "aligned_facts": 21,
+  "wrong_accepted_facts": 0,
+  "statuses_correct": 9,
+  "statuses_total": 15,
+  "raw_preference": "DEFER",
+  "original_first_attempt_screen_unchanged": true
+}

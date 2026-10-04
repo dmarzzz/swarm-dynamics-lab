@@ -9,9 +9,7 @@ Assessed 2026-10-04 by vishesh/codex-pi-review; source `84ee032e` ([registry](..
 - **sample_size_summary:** Q4:4 authored dossiers × 3 workflows =12/12 valid,10 acceptable. D1:2 selected Q4 dossiers × 2 report conditions =4/4 valid,2 acceptable; not independent replication. Q0–Q3 retained separately. Main comparison unrun.
 <!-- experiment-evidence:end -->
 
-**Current status:** [D5 preparation](RUN-D5.md) implements cited typed facts, evidence alignment, fixed policy comparisons and separate purchase authority. It is not launched. The [prospective plan](ITERATION-05.md) compares this architecture with the D3 matrix under inherited and primary-record-only contexts.
-
-**Latest measured result:** [D3](RESULTS-D3.md) populated all 90 checks but correctly classified only 76. All three workflows made 4/6 acceptable decisions. False blockers caused unnecessary deferral. D4 stayed unrun; S1 remains unqualified. Historical Q0–D3 results below retain their original scope.
+**Current status:** [D9 diagnostics are closed](RESULTS-D9.md). Typed acquisition recovered, but the original six-case screen is5/6contract-valid and quotation failures leave41/75checks correct on five valid cases. A citation-bound verifier fixes75/75checks in saved-data reanalysis; that is not new model evidence. The [ten-call matched chair plan](NEXT-RUN-D10.md) and packet are prepared, disabled and awaiting an owner scientific-design decision. No researcher review is pending; the broader influence comparison remains unrun.
 
 **Researcher review:** optional under the current [owner runbook](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Existing Dmarz feedback remains evidence; no additional sign-off is pending. Older review-gate statements below are historical and superseded for current work.
 

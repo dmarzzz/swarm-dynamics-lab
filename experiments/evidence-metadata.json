@@ -3741,6 +3741,31 @@
         "researchers/vishesh/notes/phantom-coast/pc10/results/development/audit.json": "f98d6a7493352f94595a56c1b210d3020cf62a015b7fbb6a4aeff0432d42f979",
         "researchers/vishesh/notes/phantom-coast/pc10/CASE-QUALITY.json": "c65b2ca496e11f74d6baecc5a41e0275b1a59c02215c9a75d29e10b69f6b4b8e"
       }
+    },
+    {
+      "id": "influence-readiness-d9",
+      "title": "Influence procurement: acquisition and evidence-provenance diagnostics",
+      "documents": [
+        "researchers/vishesh/notes/influence-swarms/scenario/RESULTS-D9.md"
+      ],
+      "experiment_ids": [
+        "influence-swarms"
+      ],
+      "registration_paths": [],
+      "assessor": "vishesh/codex-experiments",
+      "assessed_at": "2026-10-04",
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "On five contract-valid inspected development responses, exact-quote failures discarded correct facts and produced false uncertainty.",
+        "rationale": "Native screen5/6valid;180/180correct raw values but98aligned and41/75correct checks. Citation-bound saved-data analysis75/75is retrospective, not native behavior or general robustness. Provider recovery and format repair are separate acquisition evidence."
+      },
+      "sample_size_summary": "Six inspected case clusters in initial screen,5valid/1invalid; nine physical calls across acquisition/repair and qualification, not nine independent cases. No chair or broader influence contrast ran.",
+      "sources": [
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-qualification.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-provenance-counterfactual.json",
+        "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md"
+      ],
+      "status_at_assessment": "diagnostics_closed_changed_provenance_proposal_not_launched"
     }
   ],
   "source_sha256": {

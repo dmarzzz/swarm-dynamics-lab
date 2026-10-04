@@ -1,0 +1,224 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d9-e-01",
+  "native_attempt_id": "native-D9-E-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T19:47:03.243525+00:00",
+  "verdict": "complete_valid_result",
+  "outcome_interpretation": "Formatting-only acquisition succeeded once; original first-attempt screen and quotation failures remain. Campaign closed; no automatic successor.",
+  "parent_handoff_sha256": "62126cd06fec1ab1e41c9107f160716fe70bc6b2e564451d4fb9c8d806d3a12e",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "A shorter formatting instruction produced one locally valid response; quotation behavior was not the intervention.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "not_applicable",
+      "finding": "One inspected repair case, not a fresh behavioral sample.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Recovered shared schema and same facts/model/local validator; only format instruction changed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Contract acquired once, but21/36exactly aligned facts and9/15correct checks leave broader capability unqualified.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ],
+      "next_action": "Present prepared source-bound evidence comparison for owner scientific-design decision; no automatic rerun.",
+      "acceptance_check": "Changed provenance policy explicitly approved, offline-negative tests pass, immutable plan/packet and native acquisition admitted before calls."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "135-character limitations, response and full usage retained; original5/6screen unchanged.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "One repair acquisition, no reliability estimate; not pooled with first-attempt screen.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Formatting-only addition recorded in immutable wire; no evaluator facts or operator context.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "One assigned/started/valid, no hidden retry; preserved original failed case.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "One call/.048640reservation,.011652actual; campaign9calls,.437760reservation; cumulative5.501152/8and259calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Source09b1107d,111offline/deployed checks and exact wire/response retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Campaign report separates acquisition, first-attempt behavior and offline counterfactual.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-post.md",
+          "sha256": "15b28129ea3261177e7cc96cb2b0b8f8fae0a744658434df6184db518e0e0c3e"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D9-E-facts.json",
+          "sha256": "da66c2aa7c88f39a494592e31019de2cec9f4015767a3feb7e4587de2fdeff1b"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D9-E-01/summary.json",
+          "sha256": "5e7ba027d4563d57f359f080a30207375018054656c3a504834b9503fc29d21c"
+        }
+      ]
+    }
+  ]
+}

@@ -56,7 +56,7 @@
     },
     {
       "dimension": "capability",
-      "status": "fail",
+      "status": "gap",
       "finding": "HTTP400; regex-constrained contract not acquired.",
       "evidence": [
         {

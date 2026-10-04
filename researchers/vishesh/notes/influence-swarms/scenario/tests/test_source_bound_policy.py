@@ -29,3 +29,13 @@ class SourceBoundTests(unittest.TestCase):
  def test_duplicate_document_identity_fails_closed(self):
   o=copy.deepcopy(self.obs);o['documents'].append(copy.deepcopy(o['documents'][0]))
   with self.assertRaisesRegex(ValueError,'ambiguous'):align_source(self.answer,o)
+ def test_proposed_replay_is_matched_disabled_and_frozen(self):
+  from prepare_source_replay import prepare
+  p=prepare();self.assertFalse(p['launch_enabled']);self.assertEqual(p['model_calls'],0)
+  self.assertEqual(len(p['requests']),10)
+  for n in range(0,10,2):
+   a,c=p['requests'][n:n+2];self.assertEqual(a['case_id'],c['case_id'])
+   wa,wc=copy.deepcopy(a['wire_body']),copy.deepcopy(c['wire_body'])
+   oa,oc=json.loads(wa['messages'][1]['content']),json.loads(wc['messages'][1]['content'])
+   self.assertEqual(len(oa['reports']),len(oc['reports']));oa['reports'].pop();oc['reports'].pop();self.assertEqual(oa,oc)
+   wa['messages'][1]['content']=wc['messages'][1]['content']='removed';self.assertEqual(wa,wc)

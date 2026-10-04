@@ -68,7 +68,7 @@
     },
     {
       "dimension": "capability",
-      "status": "fail",
+      "status": "gap",
       "finding": "36/36raw facts but17/36aligned,8/15accurate checks. Raw blocked preference remains; guard defers.",
       "evidence": [
         {
