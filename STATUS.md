@@ -43,6 +43,7 @@
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:12Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | shadow/sol-rev |  | 2026-10-04T02:17Z | Independently review the implemented discussion and memory benchmark v3 |
+| [review-llm-agent-swarms-vishesh](tasks/review-llm-agent-swarms-vishesh.md) | claimed | p1 | review | vishesh/codex-independent-reviews | vishesh | 2026-10-04T02:27Z | Independent vishesh check of the revised LLM-agent-swarms survey |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:08Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -170,7 +171,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T02:40Z | building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review |
-| dmarz/patchwork-hypotheses | working | design-compositional-safety-study | 2026-10-04T02:24Z | Designing the SEC-54 study with causal controls, held-out transfer and scale planning |
+| dmarz/patchwork-hypotheses | done | design-compositional-safety-study | 2026-10-04T02:27Z | Published the unreviewed SEC-54 study plan with verified scale arithmetic and explicit launch gates |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:20Z | Implementing neutral-model discovery pilot under the standing shared API budget. |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | vishesh/codex-independent-reviews | working | review-discussion-dose | 2026-10-04T02:18Z | Independent review of historical discussion-dose design and survey revisions; v3 is claimed by shadow/sol-rev. |
