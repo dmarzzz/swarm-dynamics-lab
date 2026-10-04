@@ -28,6 +28,8 @@
 
 | task | status | pri | kind | owner | for | updated | title |
 |---|---|---|---|---|---|---|---|
+| [audit-gap-opportunities](tasks/audit-gap-opportunities.md) | claimed | p0 | synthesis | shadow/sol-audit-gap | shadow | 2026-10-04T15:00Z | Audit judging fit and run an unowned forensic evidence-coverage analysis |
+| [build-shadow-experiment-factory](tasks/build-shadow-experiment-factory.md) | claimed | p0 | build | shadow/sol-factory | shadow | 2026-10-04T15:00Z | Build and run a lean exploratory experiment factory for Shadow |
 | [build-sybil-rules-180](tasks/build-sybil-rules-180.md) | claimed (stale) | p0 | build | dmarz/flagship-market | dmarz | 2026-10-04T10:31Z | Prepare the 180-owner market experiment (program v5 flagship F) to launch-ready |
 | [build-sybil-scarcity-xmodel](tasks/build-sybil-scarcity-xmodel.md) | claimed | p0 | build | dmarz/pipeline-scarcity-qwen | dmarz | 2026-10-04T12:29Z | Prepare sybil-scarcity-xmodel (cross-model replication of sybil-scarcity-opus on identical packets) to launch-ready |
 | [scan-flashbots-sybil](tasks/scan-flashbots-sybil.md) | claimed (stale) | p0 | scan | dmarz/sybil-flashbots |  | 2026-10-03T18:01Z | Catalogue Flashbots work touching Sybil resistance |
@@ -56,6 +58,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [survey-agent-budgets](tasks/survey-agent-budgets.md) | claimed | p1 | survey | shadow/sol-budget |  | 2026-10-04T14:27Z | Survey: agent budgets, budget visibility and self-allocation among agents |
 | [wild-identity](tasks/wild-identity.md) | claimed | p1 | build | shadow/sol-identity | shadow | 2026-10-04T14:56Z | Identity churn and observable coordination across three swarms |
+| [wild-timeline](tasks/wild-timeline.md) | claimed | p1 | build | shadow/sol-timeline | shadow | 2026-10-04T15:00Z | Unified incident timeline across the Transluce, collusion.wiki and SwarmTraces datasets |
 | [allocate-immune-response-a3](tasks/allocate-immune-response-a3.md) | open | p0 | admin |  | dmarz |  | Provision dedicated Immune Response replacement through established Dmarz setup |
 | [repair-hypothesis-topic-navigation](tasks/repair-hypothesis-topic-navigation.md) | open | p0 | admin |  | shadow |  | Repair noncanonical hypothesis topics blocking dashboard export |
 | [allocate-poietic-agents-s0](tasks/allocate-poietic-agents-s0.md) | open | p1 | admin |  | dmarz |  | Identify an idle approved-fleet allocation for Poietic Agents qualification |
@@ -273,7 +276,10 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| shadow/sol-audit-gap | working | audit-gap-opportunities | 2026-10-04T15:02Z | Rank judging-fit gaps, then audit SwarmTraces parent-linked evidence coverage without model calls |
 | shadow/sol-askswarm | working | wild-askswarm | 2026-10-04T15:00Z | Build shared AskSwarm adapters and offline descriptive reports; no paid calls. |
+| shadow/sol-factory | working |  | 2026-10-04T14:58Z | Build five one-file exploratory split-policy replications and bounded pool runner |
+| shadow/sol-timeline | working |  | 2026-10-04T14:56Z | TODO one line |
 | shadow/sol-identity | working | wild-identity | 2026-10-04T14:54Z | Descriptive identity lifetime, participation and mention graph analysis; no model calls |
 | shadow/sol-atlas | done | synthesis-landscape-map | 2026-10-04T14:40Z | synthesis-landscape-map done; survey-agent-budgets and survey-fork-merge-security already held by sol-budget and sol-fm |
 | vishesh/fm-security-review | done | review-fork-merge-security | 2026-10-04T14:38Z | Review task complete; revise verdict published with source checks, three searches and correction groups R1-R4. |
