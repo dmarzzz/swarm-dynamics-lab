@@ -6,7 +6,7 @@
     "world": "W1_INSIDE",
     "dose": 0.5,
     "memory": "mix:1/full@0.75",
-    "tasks": "0-11",
+    "tasks": "0-23",
     "seeds": [
       1
     ],
@@ -32,51 +32,51 @@
     },
     "backend": "http"
   },
-  "episodes_per_arm": 12,
+  "episodes_per_arm": 24,
   "stats": {
     "A0_no_purge": {
-      "n": 12,
-      "captured": 12,
-      "frac_T": 1.125,
-      "delta": -0.375,
+      "n": 24,
+      "captured": 24,
+      "frac_T": 2.25,
+      "delta": -0.875,
       "invalid": 0,
-      "calls": 5680,
-      "usd": 0.083973
+      "calls": 11304,
+      "usd": 0.11008600000000002
     },
     "A1_purge": {
-      "n": 12,
-      "captured": 12,
-      "frac_T": 4.125,
-      "delta": 2.625,
+      "n": 24,
+      "captured": 24,
+      "frac_T": 8.125,
+      "delta": 5.0,
       "invalid": 0,
-      "calls": 7438,
-      "usd": 0.109682
+      "calls": 14844,
+      "usd": 0.144592
     },
     "A2_purge_wipe": {
-      "n": 12,
-      "captured": 12,
-      "frac_T": 0.125,
-      "delta": -1.375,
+      "n": 24,
+      "captured": 24,
+      "frac_T": 0.375,
+      "delta": -2.75,
       "invalid": 0,
-      "calls": 9196,
-      "usd": 0.133322
+      "calls": 18384,
+      "usd": 0.17640999999999998
     }
   },
   "metrics": {
     "captured": 1.0,
     "frac_T_A0_no_purge": 0.0938,
-    "delta_A0_no_purge": -0.0312,
-    "frac_T_A1_purge": 0.3438,
-    "delta_A1_purge": 0.2188,
-    "frac_T_A2_purge_wipe": 0.0104,
+    "delta_A0_no_purge": -0.0365,
+    "frac_T_A1_purge": 0.3385,
+    "delta_A1_purge": 0.2083,
+    "frac_T_A2_purge_wipe": 0.0156,
     "delta_A2_purge_wipe": -0.1146,
-    "wipe_minus_purge": -0.3334,
-    "episodes": 36,
+    "wipe_minus_purge": -0.3229,
+    "episodes": 72,
     "invalid": 0,
-    "model_calls": 22314,
-    "cost_usd": 0.327
+    "model_calls": 44532,
+    "cost_usd": 0.4311
   },
   "backend": "http:openai/gpt-4o-mini",
-  "code": "3ffb56b6",
+  "code": "016104d9",
   "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75.jsonl"
 }

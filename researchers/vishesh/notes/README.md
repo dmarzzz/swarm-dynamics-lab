@@ -6,6 +6,8 @@ This collection documents candidate work on swarm evidence, communication, share
 
 ## Start here
 
+[Run completion and improvement cycle](../../../tooling/agent-experiments/RUN-REVIEW.md): automatic operational post-mortem, scientific quality assessment, concrete next-run plan, owner approval, then allocation and launch. [Quality rubric](../../../tooling/agent-experiments/RUN-QUALITY.md).
+
 [PI review decision guide](pi-review-guide-2026-10-04/README.md): dark visual overview of all ten projects, explicit green/yellow/red judgments, concise limitations and three next-step options per project. Full scientific assessments remain available in the same page.
 
 [Experiment operations](../../../tooling/agent-experiments/OPERATIONS.md): one registry and command interface for finding study state, preparing iterations and operating supported adapters. Start with `python3 scripts/experiment.py list`; adapter coverage and current admission remain separate.

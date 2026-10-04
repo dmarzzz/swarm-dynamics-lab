@@ -1,0 +1,16 @@
+{
+  "study_tests_passed": 59,
+  "linux_transfer_tests_passed": 7,
+  "saved_data_audit": "pass",
+  "artifact_readback": "six_hash_matches",
+  "browser_case_rows": 16,
+  "public_prelaunch_registration": "verified",
+  "lab_check_errors": 0,
+  "lab_check_warnings": 5,
+  "global_evidence_check": "blocked_by_unrelated_missing_registry_entries",
+  "missing_registrations": [
+    "researchers/dmarz/notes/sybil-newcomer-opus/experiment.yaml",
+    "researchers/dmarz/notes/sybil-specialists-opus/experiment.yaml"
+  ],
+  "owned_metadata": "rendered using existing block/update_document/index_text helpers; other study rows preserved"
+}

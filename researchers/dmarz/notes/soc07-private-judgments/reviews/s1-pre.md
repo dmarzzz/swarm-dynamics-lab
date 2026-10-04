@@ -12,9 +12,10 @@ This section governs attempts s1q.2-a1, s1r-a1 and s1l-a1 under manifest m3. The
 - Expected spend (estimate, not a measurement): S1-Q.2 at most about USD 1.1 (12 calls at the worst case of input plus 4,224 output tokens). S1-R and S1-L are estimated from S1-Q.2's measured tokens per call and reported; cost is not a gate per dmarz. Every run reports `cost_usd` to the hub.
 - Chaining: per dmarz's goal of keeping runs going, S1-Q.2, S1-R and S1-L run back to back; each starts only when the launcher's software gate for the previous stage has passed at the same fingerprint, and the chain stops by itself at a failed gate.
 - Server and claim: sim-dmarz-8, exclusive claim `dmarz-soc07-private` (extended to cover the chain). Live ledger on sim-dmarz-8.
-- Runtime fingerprint: `f8c2c3d027a4244a1c331e07f1eccd9b9214353f4d67bdb22f685aa6534d451a`. Self-test 59 run, OK with 2 skipped, on orbital-one.
+- Instrument repair (A6): the decision rule now states that delivery at or before the deadline meets it, matching the generator and scorer. S0 s0-a4 ran at the superseded fingerprint `f8c2c3d0…` before this repair and is kept as run; s0-a5 is the S0 for this fingerprint.
+- Runtime fingerprint: `7237fa8a794d68304d4b98a948cc9ff6c857075e9a19a6a38ae436f502d2272e`. Self-test 59 run, OK with 2 skipped, on orbital-one.
 - Visualization mapping: v1, unchanged.
-- S0 under m3 (s0-a4): result recorded here after it runs and before the approval is written.
+- S0 under m3 (s0-a5): result recorded here after it runs and before the approval is written.
 
 ## Manifest m2 (written 2026-10-04 UTC by dmarz/orbital-orchestrator, before any m2 model output)
 

@@ -1,6 +1,6 @@
 # compositional-safety: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T07:58Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/compositional-opus (orbital-one), run-queue 196, server sim-dmarz-5. Not a review. Last updated 2026-10-04T08:04Z.
 
 ## 1. Results so far
 
@@ -13,30 +13,30 @@ q0-007 (Opus 5.5, adaptive thinking, effort high, 4,096 output cap) finished at 
 
 ## 2. Gate forecast
 
-Done. Passed. The lane is idle from 07:53Z.
+q0-007 is done and passed. The operator has since committed the route below (design v9 at 13ed6d5c, 08:00Z; plans `reviews/q0-008-pre.md` and `reviews/p1-002-pre.md`): settled-cost cap USD 75 in place of the reservation ceiling, P1 call cap 3,360, stage limit 14,400 s, fresh Q0 roots 257, 282, 293, and `src/chain.py` so a q0-008 pass starts P1 in the same process. Nothing from the chain is on the hub yet.
+
+- q0-008: about 13 minutes and USD 2 at q0-007's pace. Forecast: pass. q0-007 was 24 of 24 on the same configuration; the roots are new structures, so one or two incomplete episodes would not be surprising and the gate tolerates two.
+- P1 (p1-002): 168 episodes. At q0-007's 7.4 calls and 31 s per episode, about 1,250 calls, 90 minutes and USD 12. If the five untested arms take more turns, up to the 3,360-call cap: about 4 hours (3,360 x 4.25 s = 14,280 s, just inside the 14,400 s stage limit) and USD 32. Settled-cost room is USD 67 (75 minus 7.63 already spent).
 
 ## 3. Next run
 
-**If pass (this is the case): P1, but not from q0-007.** Three things block a P1 launched on the current design v8:
+**If q0-008 passes:** P1 starts automatically. Nothing else is needed.
 
-1. No Opus P1 plan exists. `reviews/p1-001-pre.md` is the blocked Haiku draft (350-token cap, temperature 0, Haiku prices, "Status: blocked").
-2. The study ledger cannot hold P1. `design.yaml` has `study_reserved_usd: 185` and reservations are nonrefundable (`src/provider.py` lines 29-33 and 60): each call reserves `(request bytes + 4096) x 4 + 4096 x 20` micro-dollars, USD 0.12 to 0.16 on Opus. Before q0-007 the ledger held 1,964 calls and USD 33.17 reserved; q0-007 added 178 calls, so about USD 55 to 62 is now reserved (exact figure is in the ledger on sim-dmarz-5; I have not read it). That leaves room for about 760 to 1,060 more calls. P1 is 168 episodes; at q0-007's 7.4 calls per episode that is about 1,250 calls if the five new arms behave like C and S, and the hard cap is 6,720. P1 would stop on `study_reservation_cap` somewhere around 60 to 85% of the way through and the paired arms would be incomplete.
-3. Raising the cap invalidates q0-007. `src/coordinator.py` line 45 admits P1 only when the Q0 manifest hashes equal the current hashes, and `src/common.py` line 13 hashes `design.yaml` whole. Any edit to the budget or the timeout changes `design_sha256`, so P1 refuses with `qualification_not_current`.
+**If q0-008 fails:** the chain stops and P1 does not run. Before another Q0, read the failing episodes' turns: with q0-007 at 24 of 24, a failure on roots 257, 282 or 293 points at a task structure, not the request shape. A third Q0 needs fresh roots again. Do not change effort or caps in response; that changes the design hash and the comparison with q0-007.
 
-Also tight: `stage_timeout_seconds: 7200`. P1 at q0-007's pace needs about 5,300 s before any extra turns in the F, R, P, G, H arms.
+**If P1 stops on the 3,360-call cap or the stage limit:** that would mean the fragmented arms run close to the 40-turn limit. Episodes not reached are recorded as assigned failures; check whether whole bundles are missing before reading any arm contrast.
 
-Smallest route to a complete P1 (for the operator to turn into an amendment):
+**After P1:** P1 is the last open stage (S1, S2, D3, W and held-out roots are closed). The written successor is proposal 4 in `notes/next-experiments-2026-10-04/README.md` (delayed and missing receipts). It has no study folder. P1 will run for 1.5 to 4 hours, which is the window to write it.
 
-- Design v9, one commit: `study_reserved_usd` about 600 (2,142 calls already reserved, plus 480 for a fresh Q0 and up to 3,000 P1 calls at USD 0.162), or change the cap to settled cost plus open reservations as sybil-scale-xl A1 and market-split-opus did; `stage_timeout_seconds: 14400`; an explicit P1 `max_calls` (for example 3,000). `max_attempted_calls: 9216` is enough as is. Expected real P1 cost at q0-007's per-call price: USD 12 to 20 for 1,250 to 2,000 calls.
-- q0-008 on three fresh Q0 roots (244, 253 and 256 are now used) with design v9. About 13 minutes and under USD 2.
-- `reviews/p1-002-pre.md` for the Opus cohort, written now, naming q0-008 as the qualification parent, so P1 can start from a software gate when q0-008 passes instead of waiting for a session.
-- The claim `dmarz-compositional-q0-opus` runs to about 12:30Z; q0-008 plus P1 (about 1.5 to 2.5 hours) fits if it starts before about 10:00Z, otherwise extend first.
+### What blocked P1 on q0-007 (kept for the record; found 07:55Z, fixed by design v9)
 
-**If q0-008 fails:** q0-007 gives the base rate (24 of 24). A failure on new roots at the same configuration would most likely be task-structure specific; read the failing episode's turns before changing anything. Do not change effort or the cap in response, because that would again change the design hash.
+1. The only P1 plan was the blocked Haiku draft `reviews/p1-001-pre.md`.
+2. Design v8 had `study_reserved_usd: 185` with nonrefundable reservations of USD 0.12 to 0.16 per Opus call (`src/provider.py` lines 29-33 and 60 at that revision). The ledger read 2,142 calls and USD 54.71 reserved after q0-007 (operator's figure), leaving room for about 800 to 1,070 calls against about 1,250 or more for P1.
+3. `src/coordinator.py` line 45 admits P1 only when the Q0 manifest hashes equal the current ones, and `src/common.py` line 13 hashes `design.yaml` whole, so raising the cap voided q0-007 as the parent.
 
 ## 4. Design notes for later runs
 
-- Q0 used 178 of 480 allowed calls and 12.6 minutes. Its setup (plan, registration, admission, checks on two machines) took longer than the run. Chain Q0 into P1 under the existing software gate.
+- Q0 used 178 of 480 allowed calls and 12.6 minutes. Its setup (plan, registration, admission, checks on two machines) took longer than the run. The q0-008 to p1-002 chain removes the wait between them.
 - P1 has seven arms (C, S, F, R, P, G, H) and 168 episodes. Q0 only exercises C and S, so the first evidence about turn counts in the fragmented arms arrives inside P1. Size the call cap and the timeout for the worst arm, not for C and S.
 - Arm order is seeded and every assigned episode stays in the denominator, so a budget stop partway produces unbalanced arms. A stop at a bundle boundary would be less damaging than a stop mid-bundle.
 

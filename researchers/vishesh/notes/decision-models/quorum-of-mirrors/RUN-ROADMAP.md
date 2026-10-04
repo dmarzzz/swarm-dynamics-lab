@@ -1,5 +1,11 @@
 # Quorum progression: earn the next run
 
+## Latest execution — QM-Q1-02
+
+2026-10-04: **interface repair completed: 16/16 valid responses; reasoning qualification failed at 0/8 full-lineage MAP correct (required >=7/8).** Each call reported 39 output tokens; the prior zero-token assertion was an operator implementation error. Actual repair cost $0.00068544. All six artifacts and billing records verified; memory-only credential closed and fresh exclusive allocation released. The original budget now retains 49 reservations totaling $0.065856; the parent's exact charge stays unknown under an explicit full-reservation conservative settlement. No approval wait, no favorable retry, no M1/C1 escalation. See [post-mortem](reviews/Q1-02-post.md) and [independent audit](results/QM-Q1-02/audit.json).
+
+Earlier preparation and attempt notes below are historical.
+
 ## Latest execution — QM-Q1-01
 
 2026-10-04: the operator directly allocated and ran the authorized screen. **One response failed the frozen zero-output-token contract; 15 assignments remain unstarted.** The run stopped automatically. No reasoning accuracy or swarm benefit can be inferred. All artifacts were read back and verified; the worker exited, the memory-only credential closed, and the exclusive host allocation was released. Cumulative budget retains 33 calls, $0.044352 reserved, and one unresolved actual charge. No further owner authorization or researcher review is required. The technical follow-up is receipt/accounting repair and verification of the output-token contract before a separately registered repair screen. See [post-mortem](reviews/Q1-01-post.md) and [results](results/QM-Q1-01/summary.json).

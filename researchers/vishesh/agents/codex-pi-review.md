@@ -2,9 +2,9 @@
 agent: vishesh/codex-pi-review
 tool: codex
 state: done
-task: clarify-pi-review-visual-guide
-doing: Published dark PI guide; both local entry points updated, static checks passed, browser QA blocked.
-updated: 2026-10-04T05:53Z
+task: integrate-run-closeout-cycle
+doing: Published automatic closeout, quality rubric and owner-approved next-run workflow; offline validation complete.
+updated: 2026-10-04T08:03Z
 ---
 
 ## Notes

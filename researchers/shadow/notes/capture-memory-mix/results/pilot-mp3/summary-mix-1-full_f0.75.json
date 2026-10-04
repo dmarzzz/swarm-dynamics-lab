@@ -1,0 +1,116 @@
+{
+  "stage": "MP",
+  "backend": "http:qwen/qwen3-235b-a22b-2507",
+  "seconds": 3624.31,
+  "ledger": {
+    "spent_usd": 3.89165288,
+    "calls": 176849,
+    "by_model": {
+      "meta-llama/llama-3.1-8b-instruct": {
+        "usd": 0.00246639,
+        "calls": 398
+      },
+      "openai/gpt-4o-mini": {
+        "usd": 2.66069189,
+        "calls": 104120
+      },
+      "google/gemma-3-27b-it": {
+        "usd": 0.13522427,
+        "calls": 8654
+      },
+      "qwen/qwen3-235b-a22b-2507": {
+        "usd": 1.09326931,
+        "calls": 63677
+      }
+    },
+    "synced_to_openrouter": {
+      "usage": 500.86380229,
+      "baseline": 499.244934,
+      "was_local": 1.57535628
+    }
+  },
+  "cells": [
+    {
+      "run": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75",
+      "params": {
+        "stage": "MP",
+        "split": "dev",
+        "world": "W1_INSIDE",
+        "dose": 0.5,
+        "memory": "mix:1/full@0.75",
+        "tasks": "0-11",
+        "seeds": [
+          1
+        ],
+        "arms": [
+          "A0_no_purge",
+          "A1_purge",
+          "A2_purge_wipe"
+        ],
+        "cfg": {
+          "n_agents": 16,
+          "beta": 2.5,
+          "h_inside": 0.1,
+          "h_outside": 0.5,
+          "entrench_rounds": 5,
+          "takeover_max_rounds": 60,
+          "clean_takeover_rounds": 20,
+          "recovery_rounds": 40,
+          "capture_frac": 0.75,
+          "capture_streak": 3,
+          "recover_frac": 0.75,
+          "recover_streak": 10,
+          "eval_round": 30
+        },
+        "backend": "http"
+      },
+      "episodes_per_arm": 12,
+      "stats": {
+        "A0_no_purge": {
+          "n": 11,
+          "captured": 11,
+          "frac_T": 1.0,
+          "delta": 0.0,
+          "invalid": 1,
+          "calls": 5336,
+          "usd": 0.087522
+        },
+        "A1_purge": {
+          "n": 12,
+          "captured": 12,
+          "frac_T": 1.875,
+          "delta": 0.625,
+          "invalid": 0,
+          "calls": 7068,
+          "usd": 0.114531
+        },
+        "A2_purge_wipe": {
+          "n": 12,
+          "captured": 12,
+          "frac_T": 2.0,
+          "delta": 0.75,
+          "invalid": 0,
+          "calls": 8800,
+          "usd": 0.13912900000000003
+        }
+      },
+      "metrics": {
+        "captured": 1.0606,
+        "frac_T_A0_no_purge": 0.0909,
+        "delta_A0_no_purge": 0.0,
+        "frac_T_A1_purge": 0.1562,
+        "delta_A1_purge": 0.0521,
+        "frac_T_A2_purge_wipe": 0.1667,
+        "delta_A2_purge_wipe": 0.0625,
+        "wipe_minus_purge": 0.0105,
+        "episodes": 35,
+        "invalid": 1,
+        "model_calls": 21204,
+        "cost_usd": 0.3412
+      },
+      "backend": "http:qwen/qwen3-235b-a22b-2507",
+      "code": "9d82e5ab",
+      "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.75.jsonl"
+    }
+  ]
+}

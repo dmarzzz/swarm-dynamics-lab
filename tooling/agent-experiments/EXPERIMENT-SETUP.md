@@ -48,7 +48,8 @@ The study owner prepares the evidence and remains responsible for admission. A r
 | G2 — instrument readiness | Frozen definitions, offline checks, evaluator controls, trace/replay checks | Bounded qualification preparation |
 | G3 — stage admission | Committed pre-run assessment, immutable public plan registration, verified page, current resource/budget/source checks | Only the named registered stage |
 | G4 — qualification | S0 outcomes reconciled, controls pass predeclared thresholds, qualified hashes match intended study | S1 preparation; repeat G3 for S1 |
-| G5 — review and closeout | All assignments accounted for, analysis/visual audit, post-mortem, durable artifacts and resource release | Finish, or a separately assessed next attempt |
+| G5 — review and closeout | Automatic operational closeout plus completed scientific post-mortem against [run quality](RUN-QUALITY.md), durable evidence and resource reconciliation | Finish a valid result, or propose a next-run update |
+| G6 — owner-approved update (Vishesh) | Concrete [next-run plan](templates/next-run-plan.md), completed offline changes/checks and owner approval of the proposed scope | Verify/obtain machines, repeat G3, then launch the approved attempt |
 
 S0 means a bounded competence/qualification screen; S1 means the exploratory comparison; S2 denotes a separately authorized confirmatory or replication stage if planned. Names do not determine evidential strength. Never advance automatically because a process exited successfully.
 
@@ -94,6 +95,9 @@ Define the [visualization mapping](RUN-VISUALIZATION.md) before collecting data.
 Offline unit fixtures are software checks. Scripted experimental sweeps and model/provider probes are runs and need the applicable admission gates; calling them “tests” does not exempt them.
 
 ## 5. Admit each attempt with current evidence
+
+For a successor run, follow [the completion and improvement cycle](RUN-REVIEW.md). Assess the preceding evidence using [RUN-QUALITY.md](RUN-QUALITY.md), prepare the concrete sample/scenario/data update and obtain owner approval of that scope before provisioning or dispatch. This owner decision is separate from the researcher-review waiver and existing budget authority. Complete reversible offline work first; do not ask the owner to approve an unspecified update.
+
 
 Read the previous post-mortem, then fill the existing [pre-run assessment](templates/pre-run.md). Use `ready`, `diagnostic-only` or `blocked`; name unresolved issues and acceptance checks. Commit the plan, amendments and assessment before execution. Do not hold an idle fleet claim while waiting for missing authority.
 

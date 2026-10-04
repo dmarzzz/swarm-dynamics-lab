@@ -1,28 +1,32 @@
 {
   "stage": "MP",
   "backend": "http:openai/gpt-4o-mini",
-  "seconds": 1285.86,
+  "seconds": 1936.45,
   "ledger": {
-    "spent_usd": 1.36166498,
-    "calls": 49668,
+    "spent_usd": 3.05023583,
+    "calls": 132202,
     "by_model": {
       "meta-llama/llama-3.1-8b-instruct": {
-        "usd": 0.0024001,
+        "usd": 0.00246639,
         "calls": 398
       },
       "openai/gpt-4o-mini": {
-        "usd": 1.22767493,
-        "calls": 40616
+        "usd": 2.48327159,
+        "calls": 97743
       },
       "google/gemma-3-27b-it": {
-        "usd": 0.13158973,
+        "usd": 0.13522427,
         "calls": 8654
+      },
+      "qwen/qwen3-235b-a22b-2507": {
+        "usd": 0.42927373,
+        "calls": 25407
       }
     },
     "synced_to_openrouter": {
-      "usage": 500.119377679,
+      "usage": 500.86380229,
       "baseline": 499.244934,
-      "was_local": 0.45874415
+      "was_local": 1.57535628
     }
   },
   "cells": [
@@ -34,7 +38,7 @@
         "world": "W1_INSIDE",
         "dose": 0.5,
         "memory": "mix:1/full@0.875",
-        "tasks": "0-11",
+        "tasks": "0-23",
         "seeds": [
           1
         ],
@@ -60,52 +64,52 @@
         },
         "backend": "http"
       },
-      "episodes_per_arm": 12,
+      "episodes_per_arm": 24,
       "stats": {
         "A0_no_purge": {
-          "n": 12,
-          "captured": 12,
-          "frac_T": 0.375,
-          "delta": -1.5,
+          "n": 24,
+          "captured": 24,
+          "frac_T": 1.25,
+          "delta": -2.25,
           "invalid": 0,
-          "calls": 5264,
-          "usd": 0.063668
+          "calls": 10608,
+          "usd": 0.09708
         },
         "A1_purge": {
-          "n": 12,
-          "captured": 12,
-          "frac_T": 4.625,
-          "delta": 2.75,
+          "n": 24,
+          "captured": 24,
+          "frac_T": 9.375,
+          "delta": 5.875,
           "invalid": 0,
-          "calls": 7042,
-          "usd": 0.08491500000000002
+          "calls": 14172,
+          "usd": 0.128997
         },
         "A2_purge_wipe": {
-          "n": 12,
-          "captured": 12,
-          "frac_T": 0.125,
-          "delta": -1.75,
+          "n": 24,
+          "captured": 24,
+          "frac_T": 0.375,
+          "delta": -3.125,
           "invalid": 0,
-          "calls": 8820,
-          "usd": 0.10551700000000001
+          "calls": 17736,
+          "usd": 0.15994
         }
       },
       "metrics": {
         "captured": 1.0,
-        "frac_T_A0_no_purge": 0.0312,
-        "delta_A0_no_purge": -0.125,
-        "frac_T_A1_purge": 0.3854,
-        "delta_A1_purge": 0.2292,
-        "frac_T_A2_purge_wipe": 0.0104,
-        "delta_A2_purge_wipe": -0.1458,
+        "frac_T_A0_no_purge": 0.0521,
+        "delta_A0_no_purge": -0.0938,
+        "frac_T_A1_purge": 0.3906,
+        "delta_A1_purge": 0.2448,
+        "frac_T_A2_purge_wipe": 0.0156,
+        "delta_A2_purge_wipe": -0.1302,
         "wipe_minus_purge": -0.375,
-        "episodes": 36,
+        "episodes": 72,
         "invalid": 0,
-        "model_calls": 21126,
-        "cost_usd": 0.2541
+        "model_calls": 42516,
+        "cost_usd": 0.386
       },
       "backend": "http:openai/gpt-4o-mini",
-      "code": "3ffb56b6",
+      "code": "016104d9",
       "file": "MP_W1_INSIDE_d0.5_mmix-1-full_f0.875.jsonl"
     }
   ]

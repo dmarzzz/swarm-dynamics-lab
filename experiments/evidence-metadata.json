@@ -17,17 +17,20 @@
       "evidence_confidence": {
         "score": 1,
         "claim": "A native reader can make the evidence-based MAP choice on the small S0 fixture screen; source-aware swarm efficacy is untested.",
-        "rationale": "The small predeclared competence screen passed; 14/16 repeated pairs agreed. Retrospective exact references score report counting 24/32 and root counting 32/32 on the same finite inputs. These are not native comparator arms or evidence of swarm efficacy."
+        "rationale": "S0 passed its narrow reader screen. The repaired Q1 produced 16 valid responses but 0/8 correct full-lineage choices; all choices aligned with report majority. Finite scripted fixtures do not establish causal peer influence or swarm efficacy."
       },
-      "sample_size_summary": "S0: 16 fixed configurations, 32/32 valid calls, 29 MAP-correct; not independent worlds. Q1: 16 constructed context fixtures, 1 contract-failed response, 15 unstarted, 0 valid. M1/C1 not run.",
+      "sample_size_summary": "S0: 16 fixed configurations, 32 valid calls, 29 MAP-correct. Q1-01: 1 contract-failed, 15 unstarted. Repaired Q1-02: 16/16 valid fixed-context fixtures, 0/8 graded MAP-correct; eight partial cases ungraded. No independent worlds or M1/C1.",
       "sources": [
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/RESULTS.md",
         "researchers/vishesh/notes/decision-models/quorum-of-mirrors/analysis/iteration-3/comparisons.json",
-        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md"
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-01-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
+        "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-Q1-02/audit.json"
       ],
-      "status_at_assessment": "s0_passed_q1_interface_failed_no_swarm_efficacy",
+      "status_at_assessment": "interface_repaired_q1_reasoning_failed_no_swarm_efficacy",
       "assessor": "vishesh/codex-quorum-mirrors",
-      "assessed_at": "2026-10-04"
+      "assessed_at": "2026-10-04",
+      "source_commit": "be37f8b40a5a07fba4f2b55c61766d441fba1cb8"
     },
     {
       "id": "phantom-coast",
@@ -1714,17 +1717,18 @@
         "researchers/dmarz/notes/discussion-dose/d1-opus/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested: whether Claude Opus 5.5 makes evidence-justified choices on clean full-evidence decisions where Haiku 4.5 and Sonnet 4.6 failed the D1 gates.",
-        "rationale": "Plan only; no model call has been made. Planned 12 fresh worlds are the gate units; the 60 reused requests are six development world clusters plus a fixed fixture grid. Model and request configuration both change versus D1."
+        "score": 2,
+        "claim": "Under adaptive thinking at effort high with no temperature, Claude Opus 5.5 makes evidence-justified choices on clean full-evidence D1-style decisions where Haiku 4.5 and Sonnet 4.6 failed.",
+        "rationale": "Measured: fresh gate 12/12 evidence-justified and 12/12 valid; 6/6 on the reused worlds versus Haiku 2/6 and Sonnet 3/6 on byte-identical requests; exact-source audit recomputed all 72 outcomes. Limits: model and request configuration changed together; 12 fresh clean worlds only; report packets remain Haiku-generated; all 6 inherited false memory facts were still accepted; no swarm stage."
       },
-      "sample_size_summary": "Observed: none. Planned: 72 calls to one model: 12 fresh clean worlds (gate units), 60 reused D1 requests (6 world clusters, 18 saved ballots, 36 memory fixtures); not 72 independent samples.",
+      "sample_size_summary": "Observed: 72/72 assigned calls valid and analyzed, 0 refusals, 0 missing usage: 12 fresh clean worlds (gate units), 6 reused development world clusters (6 full-evidence, 18 report ballots), 36 fixed memory fixtures; not 72 independent samples. One model, one attempt.",
       "sources": [
-        "researchers/dmarz/notes/discussion-dose/d1-opus/README.md",
-        "researchers/dmarz/notes/discussion-dose/d1-opus/SETUP.md",
-        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-pre.md"
+        "researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-post.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/summary.json",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/audit.json"
       ],
-      "status_at_assessment": "planned_not_run",
+      "status_at_assessment": "fresh_gate_passed_model_level_only",
       "assessor": "dmarz/d1-opus",
       "assessed_at": "2026-10-04"
     },
@@ -1762,6 +1766,32 @@
         "researchers/vishesh/notes/phantom-coast/pc2/reviews/S1-A1-POST.md": "1f81d0694bfd5c7e25bc1728a52b3879711e4a531b4d8b26ba34f58809d92aec",
         "researchers/vishesh/notes/phantom-coast/pc2/results/CLOSEOUT.json": "825aae99d4904774ed5dbaf06667d8c4dcd4e19658600b18fd7bf57f83a49bf7"
       }
+    },
+    {
+      "id": "sybil-scale-opus",
+      "title": "Sybil resistance as swarms grow (Opus 5.5 replication)",
+      "documents": [
+        "researchers/dmarz/notes/sybil-scale-opus/README.md"
+      ],
+      "experiment_ids": [
+        "sybil-scale-opus"
+      ],
+      "registration_paths": [
+        "researchers/dmarz/notes/sybil-scale-opus/experiment.yaml"
+      ],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Proposed: the Haiku/Sonnet N972 proportional-minus-fixed coverage contrast keeps its sign with Opus 5.5 (effort low, no temperature) on identical worlds.",
+        "rationale": "No Opus outcomes yet; plan, offline selftests and local scripted S0 only."
+      },
+      "sample_size_summary": "Observed: local scripted S0 264/264, 0 model calls. Planned: Q0 64 calls on 4 qualification worlds; S1 2,400 calls on 24 paired world roots (100 conditions each), paired with the Haiku and Sonnet cohorts, never pooled.",
+      "sources": [
+        "researchers/dmarz/notes/sybil-scale-opus/preregistration.md",
+        "researchers/dmarz/notes/sybil-scale-opus/reviews/local-s0-001-post.md"
+      ],
+      "status_at_assessment": "planned_s0_local_passed",
+      "assessor": "dmarz/scale-opus",
+      "assessed_at": "2026-10-04"
     }
   ],
   "source_sha256": {

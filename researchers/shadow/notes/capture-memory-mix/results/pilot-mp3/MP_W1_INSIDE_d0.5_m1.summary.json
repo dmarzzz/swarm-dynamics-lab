@@ -1,0 +1,82 @@
+{
+  "run": "MP_W1_INSIDE_d0.5_m1",
+  "params": {
+    "stage": "MP",
+    "split": "dev",
+    "world": "W1_INSIDE",
+    "dose": 0.5,
+    "memory": "1",
+    "tasks": "0-11",
+    "seeds": [
+      1
+    ],
+    "arms": [
+      "A0_no_purge",
+      "A1_purge",
+      "A2_purge_wipe"
+    ],
+    "cfg": {
+      "n_agents": 16,
+      "beta": 2.5,
+      "h_inside": 0.1,
+      "h_outside": 0.5,
+      "entrench_rounds": 5,
+      "takeover_max_rounds": 60,
+      "clean_takeover_rounds": 20,
+      "recovery_rounds": 40,
+      "capture_frac": 0.75,
+      "capture_streak": 3,
+      "recover_frac": 0.75,
+      "recover_streak": 10,
+      "eval_round": 30
+    },
+    "backend": "http"
+  },
+  "episodes_per_arm": 12,
+  "stats": {
+    "A0_no_purge": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 2.125,
+      "delta": 0.75,
+      "invalid": 0,
+      "calls": 5176,
+      "usd": 0.067561
+    },
+    "A1_purge": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 4.5,
+      "delta": 3.125,
+      "invalid": 0,
+      "calls": 6944,
+      "usd": 0.090033
+    },
+    "A2_purge_wipe": {
+      "n": 12,
+      "captured": 12,
+      "frac_T": 4.875,
+      "delta": 3.5,
+      "invalid": 0,
+      "calls": 8712,
+      "usd": 0.111626
+    }
+  },
+  "metrics": {
+    "captured": 1.0,
+    "frac_T_A0_no_purge": 0.1771,
+    "delta_A0_no_purge": 0.0625,
+    "frac_T_A1_purge": 0.375,
+    "delta_A1_purge": 0.2604,
+    "frac_T_A2_purge_wipe": 0.4062,
+    "delta_A2_purge_wipe": 0.2917,
+    "wipe_minus_purge": 0.0312,
+    "episodes": 36,
+    "invalid": 0,
+    "model_calls": 20832,
+    "cost_usd": 0.2692
+  },
+  "backend": "http:qwen/qwen3-235b-a22b-2507",
+  "code": "9d82e5ab",
+  "file": "MP_W1_INSIDE_d0.5_m1.jsonl"
+}

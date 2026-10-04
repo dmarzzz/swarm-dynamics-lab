@@ -1,0 +1,20 @@
+{
+  "worlds": 6,
+  "families": 2,
+  "orders": 2,
+  "repeats": 2,
+  "batch_calls": 48,
+  "atomic_calls": 384,
+  "assigned_decisions_per_arm": 384,
+  "conservative_model_reservation_usd": 3.821184,
+  "incremental_ceiling_usd": 4.25,
+  "remaining_before_reservation_usd": 4.814542956297525,
+  "thresholds": {
+    "overall": 377,
+    "family": 183,
+    "world": 61,
+    "release_positive": 46
+  },
+  "new_model_calls": 0,
+  "D2_implementation": "not built"
+}

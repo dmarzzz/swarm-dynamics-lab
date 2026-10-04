@@ -1,0 +1,9 @@
+# PC-3 Q0-A1 pre-run assessment
+
+2026-10-04 UTC. Operator: vishesh/codex-phantom-coast. Status: ready for bounded qualification only after current operational admission. Parent PC-2 S1-A1 post-mortem read; no PC-3 native calls yet. PLAN and RUNNER-PRE are prospective and published before implementation. Researcher review not required by owner.
+
+Question: can the revised native interface map direct evidence and honor the guard? Four fresh roots 700-703, 24 requests (12 maps, 8 unrestricted strategic choices, 4 guarded choices). Gate: all valid, map upper error <=10% overall and <=20% per terrain stratum, all four guarded choices correct. Unrestricted strategic success reported, not an admission criterion. Does not establish twelve-step competence. Two geometry families; roots independent, actor calls dependent.
+
+48 offline tests pass: guard legal masks and missing quorum, paired uniform path, round barrier, no truth leakage, source/admission faults, carried uncertainty, duplicate attempts, journal before dispatch and exact reconstruction, qualification anti-selection, hand-calculated loss and initial/failure/final PNG/GIF fixtures. Q0 preserves finite validation codes and reserve-before-dispatch. Source/runtime is checked again on Linux before launch. Run-level public TLDR binds these conditions.
+
+PC-V4 applies: live call/cost counts, retained Q0 map/choice records, no temporal world replay for atomic screen; S1 later supplies event frames/replay. No fabricated movement. One sequential worker, 60 minutes, five consecutive failures stop, no retries. At most 24 qualification calls within the 1816-call successor envelope, USD4 API cap carrying USD0.358051260 historical exposure; no top-up or new machine. Exact claim, source, model route, temporary-key permissions and public-plan/page receipts must be current. Direct launch by owner authorization; preserve all failures. S1 blocked until Q0 reconciles and qualifies.

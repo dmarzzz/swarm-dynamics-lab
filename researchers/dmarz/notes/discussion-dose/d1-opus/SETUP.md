@@ -28,9 +28,9 @@ receipts and attempts are preserved below.
 | G0 Question and applicable research gates | waived by owner | Exploratory model diagnostic in the dmarz discussion-dose line. 2026-10-04 ~07:55Z dmarz, first-hand in the operating session (dmarz/orchestrator-2): "Great messages starting [fleet-monitor] as my instructions including claims lUcnhes model switches And budget costs thanks And stop Asking for my permission", after relayed directions to test on Opus ("use opus for everything going forward please") and not to gate on cost. Recorded as an owner waiver of cross-researcher review and owner approval of the Opus configuration change (no temperature, adaptive thinking at effort high, max_tokens 16,000); no independent review was performed. | none |
 | G1 Plan written before implementation | pass | [README](README.md) TLDR/Question and prediction/Setup/Protocol/Metrics, committed before any server stage or model call; dmarz/d1-opus 2026-10-04 | none |
 | G2 Instrument and offline checks | pass | Offline: 72/72 scripted control rows valid, fresh 12/12 evidence-justified under the scripted reader, gate correctly unpassed for a non-scientific run; mocked Opus responses: thinking+text accepted, two texts / `max_tokens` / tool block / refusal all fail closed; request body has no temperature, adaptive thinking, effort high. `src/diagnostic_v3_opus_selftest.py` | none |
-| G3 Current attempt admission | pending (go-ahead) | [pre-run](reviews/d1o-a1-pre.md); claim `dmarz-d1-opus` on sim-dmarz-9; rehearsal 72/72 audited and uploaded; probe d1o-p1 passed ([DEPLOYMENT](DEPLOYMENT.md)) | dmarz first-hand go-ahead + G0 decision, then preflight (<30 min) and run |
-| G4 Qualification before scientific escalation | pending | Fresh gate is the qualification signal; no escalation is authorized by this study | n/a until results |
-| G5 Reconciliation and closeout | pending | | after the run |
+| G3 Current attempt admission | pass | [pre-run](reviews/d1o-a1-pre.md); exclusive claim `dmarz-d1-opus`; preflight `d1o-a1.preflight-075342.json` passed with 0 model calls; launched 07:54 UTC | none |
+| G4 Qualification before scientific escalation | pass | Fresh gate 12/12 evidence-justified, 12/12 valid ([results](RESULTS.md)); model-level only, `model_qualified_for_swarm` false by design | next: fresh swarm Q0 on Opus (separate study) |
+| G5 Reconciliation and closeout | pass | [post-mortem](reviews/d1o-a1-post.md); 72/72 reconciled, audit ok, $1.495 actual; claim released 08:05:21 UTC (agentops PR #221) | none |
 
 ## Design and instrument index
 

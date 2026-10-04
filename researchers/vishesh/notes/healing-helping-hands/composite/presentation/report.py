@@ -26,12 +26,12 @@ def run(root,out):
  for s in SCENARIOS:
   paired=[worlds[f'{seed}-qwen+jev-peer-verified-{s}']['metrics']['post_event_error']-worlds[f'{seed}-jev-peer-verified-{s}']['metrics']['post_event_error'] for seed in SEEDS]
   contrasts[s]={'composite_minus_jev':stats(paired)}
- data={'attempt':'C2-S1','packet_cap':16,'plan':manifest['plan']['url'],'completed_worlds':len(worlds),'worlds':worlds,'effects':effects,'contrasts':contrasts}
+ data={'attempt':manifest['attempt'],'packet_cap':16,'plan':manifest['plan']['url'],'completed_worlds':len(worlds),'worlds':worlds,'effects':effects,'contrasts':contrasts}
  (out/'data.js').write_text('const DATA='+json.dumps(data,separators=(',',':'))+';\n')
  shutil.copyfile(HERE/'replay.html',out/'index.html')
  (out/'effects.json').write_text(json.dumps({'effects':effects,'contrasts':contrasts,'unit':'three corpora; ranges not confidence intervals'},indent=2))
  semantic(json.loads((root/'observations.json').read_text()),out/'labels.png')
- temporal(worlds,out/'recovery.gif')
+ temporal(worlds,out/'recovery.gif',seed=SEEDS[0])
  fig,axes=plt.subplots(3,2,figsize=(18,13),dpi=110,sharey=True)
  colors=['#a87832','#245c9c','#916eab','#bc4b56','#19856f']
  for ax,s in zip(axes.flat,SCENARIOS):

@@ -15,6 +15,10 @@ The native runner, balanced case generator, five controlled request interfaces, 
 
 The completed screen used 144 calls / 480 assigned decisions / 3 independent worlds, maximum USD 5 and 2 hours, serial dispatch, no retries. Atomic and batched arms match cases, not compute. Each condition must be reported even if worse. No automatic culture-pilot launch or performance claim follows from unit tests. Researcher review is not required by owner direction. Public registration, dedicated-host, operator-assessment and budget checks passed before execution; [PRE-RUN.md](PRE-RUN.md) preserves the historical build-only assessment.
 
+## Follow-up analysis and next run
+
+The [deeper D1 interpretation](INTERPRETATION-D1.md) shows that D's seven errors are three distinct failures, with only four of six distinct valid releases accepted. The [D2 plan](D2-PLAN.md) tests batching, order sensitivity and native repeatability on six fresh worlds. It is planning only; [implementation acceptance checks](D2-SETUP.md) are specified and no new run has started.
+
 ## Local checks
 
 From the repository root:

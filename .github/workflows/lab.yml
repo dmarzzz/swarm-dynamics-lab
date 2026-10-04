@@ -30,6 +30,8 @@ jobs:
           python3 scripts/experiment.py list
           python3 -m unittest discover -s scripts -p 'test_experiment_operations.py'
           python3 -m unittest discover -s scripts -p 'test_experiment_theseus.py'
+          python3 -m unittest discover -s scripts -p 'test_experiment_closeout.py'
+          python3 -m unittest discover -s scripts -p 'test_experiment_iteration.py'
 
   verify:
     # Every paper added or changed in this push must resolve on Crossref/DataCite with a matching title.

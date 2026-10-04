@@ -6,7 +6,7 @@
     "world": "W1_INSIDE",
     "dose": 0.5,
     "memory": "1",
-    "tasks": "0-11",
+    "tasks": "0-23",
     "seeds": [
       1
     ],
@@ -32,51 +32,51 @@
     },
     "backend": "http"
   },
-  "episodes_per_arm": 12,
+  "episodes_per_arm": 24,
   "stats": {
     "A0_no_purge": {
-      "n": 11,
-      "captured": 11,
+      "n": 24,
+      "captured": 24,
       "frac_T": 0.0,
-      "delta": -0.375,
-      "invalid": 1,
-      "calls": 5040,
-      "usd": 0.063417
+      "delta": -1.125,
+      "invalid": 0,
+      "calls": 10320,
+      "usd": 0.09423500000000001
     },
     "A1_purge": {
-      "n": 12,
-      "captured": 12,
-      "frac_T": 0.375,
+      "n": 24,
+      "captured": 24,
+      "frac_T": 1.125,
       "delta": 0.0,
       "invalid": 0,
-      "calls": 6818,
-      "usd": 0.085901
+      "calls": 13896,
+      "usd": 0.126992
     },
     "A2_purge_wipe": {
-      "n": 12,
-      "captured": 12,
-      "frac_T": 0.375,
+      "n": 24,
+      "captured": 24,
+      "frac_T": 1.125,
       "delta": 0.0,
       "invalid": 0,
-      "calls": 8596,
-      "usd": 0.10838600000000001
+      "calls": 17472,
+      "usd": 0.15974899999999997
     }
   },
   "metrics": {
-    "captured": 1.0606,
+    "captured": 1.0,
     "frac_T_A0_no_purge": 0.0,
-    "delta_A0_no_purge": -0.0341,
-    "frac_T_A1_purge": 0.0312,
+    "delta_A0_no_purge": -0.0469,
+    "frac_T_A1_purge": 0.0469,
     "delta_A1_purge": 0.0,
-    "frac_T_A2_purge_wipe": 0.0312,
+    "frac_T_A2_purge_wipe": 0.0469,
     "delta_A2_purge_wipe": 0.0,
     "wipe_minus_purge": 0.0,
-    "episodes": 35,
-    "invalid": 1,
-    "model_calls": 20454,
-    "cost_usd": 0.2577
+    "episodes": 72,
+    "invalid": 0,
+    "model_calls": 41688,
+    "cost_usd": 0.381
   },
   "backend": "http:openai/gpt-4o-mini",
-  "code": "3ffb56b6",
+  "code": "016104d9",
   "file": "MP_W1_INSIDE_d0.5_m1.jsonl"
 }

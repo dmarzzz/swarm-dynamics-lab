@@ -1,12 +1,12 @@
 # soc07-private-judgments: decision package
 
-Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T08:00Z.
+Maintained by dmarz/results-analyst. Operator: dmarz/orbital-orchestrator (orbital-one), run-queue 141, server sim-dmarz-8, claim `dmarz-soc07-private` to 11:50Z. Not a review. Last updated 2026-10-04T08:05Z.
 
 ## 1. Results so far
 
 - Manifest m1, Haiku 4.5: S1-Q 7 of 12 correct (gate 10), 12 of 12 valid. Failed 05:03Z.
 - Manifest m2, Sonnet 4.6, thinking off, temperature 0.7: S0 `s0-a3` 69 of 69 checks; S1-Q.1 (run 5f681258) **9 of 12 correct, 12 of 12 valid, gate failed** at 07:36:22Z. USD 0.032. All three misses are cost worlds (cost 3 of 6, feasibility 6 of 6).
-- Manifest m3 (amendment A6, commit b2bc66a5, 07:55Z): Opus 5.5, adaptive thinking at effort medium, a 4,096-token reasoning allowance added on top of each phase cap (`src/protocol.py` line 85), no temperature, study cap USD 500 (375 public, 125 auxiliary), qualification set 2. No m3 run is on the hub yet.
+- Manifest m3 (amendment A6, commit b2bc66a5, 07:55Z): Opus 5.5, adaptive thinking at effort medium, a 4,096-token reasoning allowance added on top of each phase cap (`src/protocol.py` line 85), no temperature, study cap USD 500 (375 public, 125 auxiliary), qualification set 2. S0 `s0-a4` under m3 (run 83013f20) started 07:59:35Z and was at step 1 of 7 at 08:01:35Z.
 
 ### Why Sonnet missed (offline check, no model calls)
 
@@ -28,13 +28,13 @@ A sub-agent of this lane regenerated both qualification sets from the study's ge
 
 ## 2. Gate forecast
 
-Nothing is running. Next: S0 under m3 (about 7 minutes, no model calls), approval, then S1-Q.2 (12 calls, under a minute). Gate 10 of 12 correct, 11 of 12 valid.
+S0 `s0-a4` is running and should end about 08:07Z (the last two S0 runs took 7 minutes). Then approval, then S1-Q.2 (12 calls, under a minute). Gate 10 of 12 correct, 11 of 12 valid.
 
 Forecast: more likely to pass than m2, because two of the three Sonnet misses are single-call override slips that reasoning addresses. Not safe: under the strict deadline reading the answer flips in 1 of the 12 set-2 worlds, so the model starts with one world that can go either way and a margin of two.
 
 ## 3. Next run
 
-**Before S0 under m3 (now):** add one clause to the rule, for example "delivery at or before the deadline", and record it in amendment A6 as an instrument repair. It changes the prompts hash. m3 needs a fresh S0 and approval anyway, so the cost now is zero; after S1-Q.2 it would cost another S0, approval and S1-Q on a new world set, because `execution.json`, `design.json` and the prompt files are all in the fingerprint the approval is bound to (`src/config.py` lines 80-96, `src/launch.py` line 31) and a spent set's call ids cannot be reused (`src/budget.py` lines 69-70). Exposure if it is left: 1 of 12 worlds in set 2, 3 of 24 in S1-R, 4 of 24 in S1-L.
+**Before S1-Q.2:** S0 `s0-a4` started on the prompt without the clause (`src/prompts.py` line 6 is unchanged on main at 08:03Z). Adding it now means repeating S0 (7 minutes). Leaving it means one ambiguous world in S1-Q.2 and, even on a pass, 3 of 24 S1-R worlds and 4 of 24 S1-L worlds scored on an unstated rule. The fix: add one clause to the rule, for example "delivery at or before the deadline", and record it in amendment A6 as an instrument repair. It changes the prompts hash. After S1-Q.2 it would cost another S0, approval and S1-Q on a new world set, because `execution.json`, `design.json` and the prompt files are all in the fingerprint the approval is bound to (`src/config.py` lines 80-96, `src/launch.py` line 31) and a spent set's call ids cannot be reused (`src/budget.py` lines 69-70). Exposure if it is left: 1 of 12 worlds in set 2, 3 of 24 in S1-R, 4 of 24 in S1-L.
 
 **If S1-Q.2 passes (at least 10 of 12):** S1-R (up to 672 calls) then S1-L (up to 4,080) are authorized stages with software gates (clean competence 13 of 16, parse-valid 95%, truncation at most 5% per phase). The post-mortem promised dmarz a cost estimate from S1-Q.2's tokens before S1-R; with the cap at USD 500 that is a report and need not be a wait. Chain S1-Q.2 into S1-R under the gate.
 

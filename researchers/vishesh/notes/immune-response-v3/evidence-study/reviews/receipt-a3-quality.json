@@ -1,0 +1,179 @@
+{
+  "assessor": "vishesh/codex-immune",
+  "attempt": "receipt-native-a3",
+  "date": "2026-10-04",
+  "independent_review": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Predeclared paired visible-evidence checking comparison; no broad recovery claim.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Four constructed cases; three incident families reach ceiling or near ceiling. No realism or unseen-topology validation. Design a prospective challenge set before another run.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ],
+      "next_action": "Prepare a concrete prospective repair/interpretation plan; obtain owner approval before another native attempt.",
+      "acceptance_check": "Offline evidence resolves this dimension without changing the historical A3 thresholds or outcomes."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Identical reviewer proposals within each pair; clean traces contain no memory. Six false reviewer booleans exercise checking in healthy controls; no benefit observed.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "All four healthy controls redeploy an already current version. Health remains intact, but the zero-deployment gate fails. Assess abstention semantics before any new attempt.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ],
+      "next_action": "Prepare a concrete prospective repair/interpretation plan; obtain owner approval before another native attempt.",
+      "acceptance_check": "Offline evidence resolves this dimension without changing the historical A3 thresholds or outcomes."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Recomputed every health frame and paired assignment; all eight checked-minus-raw healthy-tick differences equal zero. No confidence interval or population inference.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Eight paired worlds over four fixed constructed cases and two memory conditions; sixteen trajectories, not sixteen independent replications. Diagnostic scope only.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Pinned model, seed9301 and declared clean/stale memory; identical proposals shared within pairs. Commander false booleans zero.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "16 assigned/recorded,24 reviewers,96 decisions,120 durable usage receipts; no invalid or missing usage. Previous interrupted A2 remains separate.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "120 calls,$0.311494 actual; cumulative ledger387 calls,$3.179489 reserved under original$8 cap. Prior unresolved usage remains unknown.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source a23f70ca37365fea2df5e688a95eacccdb7e8fb9, manifest, raw traces and audited frames retained; hosted outputs not claimed bitwise reproducible.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "All eight panels and seven GIF frames match events, but health lines alone conceal harmless unnecessary deployments. Add deployment/no-op indicators in a future renderer; use the trace and table to report this gate now.",
+      "evidence": [
+        {
+          "path": "receipt-native-a3/summary.json",
+          "sha256": "8c386d56c1f1bfe6be2ca109206fde4318994b47e5731b65bcd02f1f469ae00a"
+        },
+        {
+          "path": "receipt-native-a3/audit.json",
+          "sha256": "6b0c3704ab2c6d48b677e535a70e10799b580d33f28636dbdaa1afe9e8567eb3"
+        }
+      ],
+      "next_action": "Prepare a concrete prospective repair/interpretation plan; obtain owner approval before another native attempt.",
+      "acceptance_check": "Offline evidence resolves this dimension without changing the historical A3 thresholds or outcomes."
+    }
+  ]
+}
