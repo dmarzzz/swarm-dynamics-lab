@@ -1,0 +1,73 @@
+{
+  "native_calls": 0,
+  "worlds": 9,
+  "shared_scenario_recipes": 3,
+  "blocks": 2,
+  "assignments": 90,
+  "reader_endpoints": 36,
+  "checks": [
+    {
+      "id": "version_exception-release",
+      "family": "version_exception",
+      "label": "RELEASE",
+      "copy_json_bytes": 1321,
+      "max_input_bound": 5136
+    },
+    {
+      "id": "version_exception-hold",
+      "family": "version_exception",
+      "label": "HOLD",
+      "copy_json_bytes": 1325,
+      "max_input_bound": 5144
+    },
+    {
+      "id": "version_exception-insufficient",
+      "family": "version_exception",
+      "label": "INSUFFICIENT",
+      "copy_json_bytes": 1326,
+      "max_input_bound": 5146
+    },
+    {
+      "id": "independent_checks-release",
+      "family": "independent_checks",
+      "label": "RELEASE",
+      "copy_json_bytes": 1327,
+      "max_input_bound": 5149
+    },
+    {
+      "id": "independent_checks-hold",
+      "family": "independent_checks",
+      "label": "HOLD",
+      "copy_json_bytes": 1323,
+      "max_input_bound": 5141
+    },
+    {
+      "id": "independent_checks-insufficient",
+      "family": "independent_checks",
+      "label": "INSUFFICIENT",
+      "copy_json_bytes": 1331,
+      "max_input_bound": 5157
+    },
+    {
+      "id": "rollback_scope-release",
+      "family": "rollback_scope",
+      "label": "RELEASE",
+      "copy_json_bytes": 1324,
+      "max_input_bound": 5144
+    },
+    {
+      "id": "rollback_scope-hold",
+      "family": "rollback_scope",
+      "label": "HOLD",
+      "copy_json_bytes": 1327,
+      "max_input_bound": 5150
+    },
+    {
+      "id": "rollback_scope-insufficient",
+      "family": "rollback_scope",
+      "label": "INSUFFICIENT",
+      "copy_json_bytes": 1326,
+      "max_input_bound": 5148
+    }
+  ]
+}

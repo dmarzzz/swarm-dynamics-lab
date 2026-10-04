@@ -1,0 +1,398 @@
+{
+  "version_exception-release": {
+    "records": [
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: cache-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v3; site=West. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=West. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      }
+    ]
+  },
+  "version_exception-hold": {
+    "records": [
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is not ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: cache-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v2; site=West. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=West. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      }
+    ]
+  },
+  "version_exception-insufficient": {
+    "records": [
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: cache-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=unknown; site=West. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=West. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+      }
+    ]
+  },
+  "independent_checks-release": {
+    "records": [
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is not ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: index-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v5; site=North. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=North. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      }
+    ]
+  },
+  "independent_checks-hold": {
+    "records": [
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: index-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v5; site=North. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,A; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=North. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+      }
+    ]
+  },
+  "independent_checks-insufficient": {
+    "records": [
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v5; site=North. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=unknown; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=North. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is not ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: index-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      }
+    ]
+  },
+  "rollback_scope-release": {
+    "records": [
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: export-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v7; site=South. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=South. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+      }
+    ]
+  },
+  "rollback_scope-hold": {
+    "records": [
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v7; site=South. This is the entire permitted scope; unknown means scope evidence unavailable."
+      },
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=East. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is not ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: export-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      }
+    ]
+  },
+  "rollback_scope-insufficient": {
+    "records": [
+      {
+        "id": "r5",
+        "time": "13:00",
+        "text": "Passing checks: two reports; acquisition_ids=A,B; outcomes=passed,passed. Equal acquisition IDs mean reused evidence, not independent checks; unknown means independence unresolved."
+      },
+      {
+        "id": "r6",
+        "time": "14:00",
+        "text": "Rollback evidence: tested_site=unknown. This is the complete tested-site list; unknown means the coverage record is unavailable. A tested site does not establish coverage elsewhere."
+      },
+      {
+        "id": "r7",
+        "time": "15:00",
+        "text": "The latency limit was corrected from80 to120ms. A100ms read-only probe passed; no write-path result is recorded."
+      },
+      {
+        "id": "r8",
+        "time": "16:00",
+        "text": "A post-release monitor is proposed, not started. Preserve scoped permissions and evidence qualifications for the next colleague."
+      },
+      {
+        "id": "r1",
+        "time": "09:00",
+        "text": "Deployment policy: RELEASE only with a recorded exception covering the exact requested version and site, two independently acquired passing checks, and tested rollback at that site. HOLD if any known condition fails; otherwise INSUFFICIENT. Missing evidence does not grant permission."
+      },
+      {
+        "id": "r2",
+        "time": "10:00",
+        "text": "For the current staging handoff only: GO if the staging slot is ready, otherwise HOLD. Staging slot is ready."
+      },
+      {
+        "id": "r3",
+        "time": "11:00",
+        "text": "Patch: export-patch. Earlier development used v1 at East. Later signed scope below supersedes proposals; permission does not transfer across versions or sites."
+      },
+      {
+        "id": "r4",
+        "time": "12:00",
+        "text": "Signed exception: recorded; version=v7; site=South. This is the entire permitted scope; unknown means scope evidence unavailable."
+      }
+    ]
+  }
+}

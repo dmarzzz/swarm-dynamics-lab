@@ -1,0 +1,11 @@
+{
+  "version_exception-release": "Choose RELEASE, HOLD or INSUFFICIENT for deploying cache-patch at version v3 to West now under the recorded deployment policy.",
+  "version_exception-hold": "Choose RELEASE, HOLD or INSUFFICIENT for deploying cache-patch at version v3 to West now under the recorded deployment policy.",
+  "version_exception-insufficient": "Choose RELEASE, HOLD or INSUFFICIENT for deploying cache-patch at version v3 to West now under the recorded deployment policy.",
+  "independent_checks-release": "Choose RELEASE, HOLD or INSUFFICIENT for deploying index-patch at version v5 to North now under the recorded deployment policy.",
+  "independent_checks-hold": "Choose RELEASE, HOLD or INSUFFICIENT for deploying index-patch at version v5 to North now under the recorded deployment policy.",
+  "independent_checks-insufficient": "Choose RELEASE, HOLD or INSUFFICIENT for deploying index-patch at version v5 to North now under the recorded deployment policy.",
+  "rollback_scope-release": "Choose RELEASE, HOLD or INSUFFICIENT for deploying export-patch at version v7 to South now under the recorded deployment policy.",
+  "rollback_scope-hold": "Choose RELEASE, HOLD or INSUFFICIENT for deploying export-patch at version v7 to South now under the recorded deployment policy.",
+  "rollback_scope-insufficient": "Choose RELEASE, HOLD or INSUFFICIENT for deploying export-patch at version v7 to South now under the recorded deployment policy."
+}

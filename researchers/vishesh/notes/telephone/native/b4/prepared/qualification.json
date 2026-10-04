@@ -1,0 +1,26 @@
+{
+  "q01": {
+    "actor": {
+      "records": [
+        {
+          "id": "q1",
+          "time": "09:00",
+          "text": "RELEASE requires permission for v3 at West, two independent passed checks and West rollback tested. All four requirements are explicitly established. No other requirement applies."
+        }
+      ]
+    },
+    "question": "Choose RELEASE, HOLD or INSUFFICIENT for v3 at West under this policy."
+  },
+  "q02": {
+    "actor": {
+      "records": [
+        {
+          "id": "q1",
+          "time": "09:00",
+          "text": "RELEASE requires permission for v3 at West, two independent passed checks and West rollback tested. Checks and rollback are established, but permission scope evidence is unavailable. No known violation is established. Missing evidence cannot authorize release."
+        }
+      ]
+    },
+    "question": "Choose RELEASE, HOLD or INSUFFICIENT for v3 at West under this policy."
+  }
+}
