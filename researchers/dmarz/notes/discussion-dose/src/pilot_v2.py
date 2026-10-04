@@ -43,10 +43,22 @@ def select_level(calibration):
     best = min(eligible, key=lambda l: (abs(calibration[l]['attack_target_win'] - BAND[1]), LEVELS.index(l)))
     return {'decision': 'proceed', 'level': best}
 
+EXPERIMENT = 'discussion-dose-v2'
+SPEC = {'title': 'Discussion dose v2: contested evidence (exploratory)',
+        'description': 'Harder successor to discussion-dose: no verification turn, hidden profile with exposed/witness/swing roles, cue-removal levels H1-H4, predeclared level calibration. Exploratory; not an accepted hypothesis.',
+        'owner': 'dmarz', 'params': {'stage': {'type': 'str'}, 'level': {'type': 'str'}, 'backend': {'type': 'str'}, 'rounds': {'type': 'list'}},
+        'metrics': ['episodes', 'invalid_rate', 'scientific', 'clean_accuracy', 'attack_target_win', 'attack_false_memory', 'model_calls', 'model_cost_usd'],
+        'primary_metric': 'attack_target_win',
+        'url': 'https://github.com/dmarzzz/swarm-lab/blob/main/researchers/dmarz/notes/discussion-dose/V2-DESIGN.md'}
+
 def main():
     p = argparse.ArgumentParser(); p.add_argument('plan', nargs='?')
     p.add_argument('--scripted-out', help='run the plan locally with the scripted engineering policy')
-    p.add_argument('--select', help='JSON file of calibration summaries keyed by level'); a = p.parse_args()
+    p.add_argument('--select', help='JSON file of calibration summaries keyed by level')
+    p.add_argument('--register', action='store_true', help='register the separate v2 hub experiment'); a = p.parse_args()
+    if a.register:
+        import swarm_report as sr
+        sr.register(EXPERIMENT, **SPEC); print('Registered', EXPERIMENT); return
     if a.select: print(json.dumps(select_level(json.loads(Path(a.select).read_text())), indent=2)); return
     if not a.plan:
         print(json.dumps({f'{s}-{l}': {'batch': plan(f'{s}-{l}')['batch'], 'calls': plan(f'{s}-{l}')['model_config']['max_calls']}

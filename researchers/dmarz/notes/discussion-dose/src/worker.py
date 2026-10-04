@@ -68,13 +68,15 @@ def build_provider(backend,params):
 def main():
     p=argparse.ArgumentParser();p.add_argument('--hub',action='store_true');p.add_argument('--stage',choices=['S0','S1'],default='S0')
     p.add_argument('--backend',choices=['scripted','http','anthropic'],default='scripted');p.add_argument('--out')
-    p.add_argument('--task-limit',type=int);a=p.parse_args()
+    p.add_argument('--task-limit',type=int)
+    p.add_argument('--experiment',default=EXP,choices=[EXP,EXP+'-v2'],help='hub queue; v2 runs use their own so v1 and v2 workers never take each other\'s runs');a=p.parse_args()
     design=json.loads((ROOT/'design.yaml').read_text())
     if a.hub:
         import swarm_report as sr
         def work(run):
             params=run.params
             if params.get('stage') not in ('S0','S1'): raise ValueError('S2 disabled pending research review')
+            if (params.get('protocol','v1')=='v2')!=(a.experiment==EXP+'-v2'): raise ValueError('protocol does not match hub experiment')
             if params.get('backend')!=a.backend: raise ValueError('worker backend mismatch')
             provider=build_provider(a.backend,params)
             out=ROOT/'results'/'episodes'/run.id.replace('/','__')
@@ -97,7 +99,7 @@ def main():
                      clean_accuracy=rate(clean,'correct'),attack_target_win=rate(attack,'target_win'),
                      attack_false_memory=rate(attack,'false_memory_admitted'),
                      model_calls=summary['actual_http_calls'],model_cost_usd=getattr(provider,'actual_cost_usd',0))
-        sr.work(EXP,work,max_runs=1)
+        sr.work(a.experiment,work,max_runs=1)
     else:
         if not a.out: p.error('--out required for local execution')
         st=design['stages'][a.stage];tasks=st['tasks']
