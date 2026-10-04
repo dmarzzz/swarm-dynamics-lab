@@ -21,6 +21,6 @@ Human asks for online examples and a better v3 or v4 evaluation plan. Draft an e
 
 ## Done when
 
-- [ ] Inspect primary benchmark sources and record concrete design transfers and limits.
-- [ ] Write a staged lightweight evaluation plan, metrics, fixtures, controls, budget accounting and visualization mapping.
-- [ ] Record explicit launch hold and v2-dependent decisions; commit the plan.
+- [x] Inspect primary benchmark sources and record concrete design transfers and limits.
+- [x] Write a staged lightweight evaluation plan, metrics, fixtures, controls, budget accounting and visualization mapping.
+- [x] Record explicit launch hold and v2-dependent decisions; commit the plan.

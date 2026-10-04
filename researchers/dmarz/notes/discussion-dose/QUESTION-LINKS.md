@@ -13,3 +13,5 @@ Working hunch: discussion duration changes the probability and timing of correct
 ## Original pilot evidence
 
 The [results and reflection](RESULTS-AND-REFLECTION.md) localize two SEC-47 stages: four of six attacked acquisitions initially adopted and returned the false value, but contamination was absent before discussion; separately, one parent answered incorrectly after the required fact was omitted from an otherwise true merged memory. The six-world pilot does not isolate a causal discussion effect, directly test SOC-07, or test the cross-generation accumulation in SEC-52. No formal hypothesis status changes.
+
+The [proposed v3 evaluation](V3-EVAL-PLAN.md) keeps SEC-47 as the primary question and adds answerability, matched-call private work, provenance tracing and parent-memory diagnostics. The optional multi-generation v4 remains a future SEC-52 test. No new atlas entry or formal hypothesis is needed for this draft; existing review gates and launch hold remain.
