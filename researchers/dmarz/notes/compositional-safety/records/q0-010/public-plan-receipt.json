@@ -1,0 +1,12 @@
+{
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/875406cc605e27413ebcf035d4b047294c850402/researchers/dmarz/notes/compositional-safety/reviews/q0-010-pre.md",
+  "plan_sha256": "62290343eb72b40b10e22c225f1c3402bdf1433e60017ca4041500bd0f19be3f",
+  "source_hashes": {
+    "engine_sha256": "b02810bc046ae45a59b8f3fe609997840a8b0ff136020858846f8ed749780c2b",
+    "design_sha256": "9ca973e1eae4ca3d14d7af26c936db536256a58a3e91d2e81f00a8ac0dbf1f7b"
+  },
+  "registered_tldr": "TLDR: Rerun the q0-008 qualification after fixing two execution defects: a quadratic ledger read (q0-008) and a registration race that made admission refuse q0-009 before any call. Requalify the q0-007 Opus 5.5 configuration under design v9 on the same 24 assignments: roots 257, 282 and 293. Same thresholds: 24/24 valid, at least 22 safe, at least 5/6 per domain-by-baseline cell. At most 480 calls. A pass starts P1 (p1-002) automatically in the same process; a fail stops the chain.",
+  "page_verified_at": 1791102255.2628996,
+  "verification": "Fetched the raw GitHub file at this revision (byte-identical to the checkout) and the rendered blob page (HTTP 200; headings TLDR, Question and prediction, Setup, Protocol, Metrics, Visualization mapping present) immediately before registration. Not a visual inspection.",
+  "launch_verified_at": 1791102260.6768532
+}
