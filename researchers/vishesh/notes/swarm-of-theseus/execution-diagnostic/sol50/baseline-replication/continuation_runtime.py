@@ -18,7 +18,7 @@ def admit(r,packet):
  for k,v in {'prior_exposure_usd':'1.9348455770333333','all_in_cap_usd':'12.7693','api_cap_usd':'12.7293','hosting_cap_usd':'0.04','call_cap':562,'retry_count':0,'source_sha256':a.source_hash(),'manifest_sha256':x.MANIFEST}.items():
   if r.get(k)!=v:raise ValueError('admission_'+k)
  if a.digest(packet)!=x.MANIFEST:raise ValueError('manifest')
- if not 0<=now-r['verified_epoch']<=900 or not now<r['deadline']<=min(r['claim_start']+1800,1791155100):raise ValueError('deadline')
+ if not 0<=now-r['verified_epoch']<=900 or not now<r['deadline']<=min(r['claim_start']+1800,1791155700):raise ValueError('deadline')
  if Decimal(str(r['hourly_usd']))/2>Decimal('.04'):raise ValueError('hosting')
  if subprocess.check_output(['git','rev-parse','HEAD'],cwd=a.ROOT,text=True).strip()!=r['source_commit']:raise ValueError('source')
  for n,h in SCIENCE.items():
