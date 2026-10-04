@@ -63,7 +63,7 @@ def arms(w):
 def main_packet(w,false,copies,actor,phase,previous=None):
  t=w['target'];v=w['truth'][t]
  if false:v='WATER' if v=='LAND' else 'LAND'
- rs=[['o0','s0',t,v,.6 if delayed else .8,f'r{i}'] for i in range(copies)]
+ rs=[['o0','s0',t,v,w['accuracy'],f'r{i}'] for i in range(copies)]
  direct=[[w['sites'][1],w['truth'][w['sites'][1]]]] if w['delayed'] else []
  if phase=='after':direct.append([t,w['truth'][t]])
  return packet(str(actor),t,rs,direct,previous,sites=w['sites'])
