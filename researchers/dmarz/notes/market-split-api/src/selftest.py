@@ -61,6 +61,13 @@ class Checks(unittest.TestCase):
         rs=sim.run_episode(20,31,'none',0.38,['neutral_dynamic'],{**common.design()['cfg'],'rounds':3},pol)
         self.assertFalse(rs[0]['validity']['ok']);self.assertEqual(len(pol.calls),1)
         self.assertIn('999',json.loads((self.path/'calls.jsonl').read_text())['accounting']['response_text'])
+    def test_overlong_note_remains_invalid(self):
+        def longnote(req,timeout):
+            x=mock_opener(req,timeout).data;a=json.loads(x['content'][0]['text']);a['note']='x'*201
+            x['content'][0]['text']=json.dumps(a);return MockResponse(x)
+        with self.assertRaises(provider.CallFailure) as e:self.client(longnote).call(observation(),'longnote')
+        self.assertEqual(e.exception.category,'invalid_structured_answer')
+        self.assertEqual(len(json.loads(e.exception.accounting['response_text'])['note']),201)
     def test_input_size_before_reservation(self):
         obs=observation();obs['oversize']='x'*21000
         with self.assertRaises(provider.CallFailure):self.client().call(obs,'large')
