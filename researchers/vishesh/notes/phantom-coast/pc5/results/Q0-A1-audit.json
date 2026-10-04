@@ -1,0 +1,16 @@
+{
+  "operator_audit_passed": true,
+  "independent_review": false,
+  "stage": "Q0",
+  "assigned": 12,
+  "valid": 12,
+  "known_cost_usd": 0.001545768,
+  "failure_codes": {},
+  "hashes": {
+    "summary.json": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4",
+    "events.jsonl": "3c66c59628f8c9f3b2c850497c6bf96141f5d9fa9fdaa929a1a473aaef0a63f1",
+    "manifest.json": "fb06197855a8811e7ed4421d09e82e82d8d565f3f393671b9b44d5bd255202ff",
+    "records.json": "8a5dbab9304b6d928aadc3cdc3280124d278f1406071a63a5cab93d03d4626d1",
+    "worlds.json": "9fd3d04ffdb518fe3ebc199cb888a03ea11d1055f27570b650e2dc7168a38578"
+  }
+}

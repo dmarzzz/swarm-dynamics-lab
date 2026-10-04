@@ -1,3 +1,7 @@
-# PC-5 setup
+# PC-5 completed setup and closeout
 
-Manual native adapter; current owner request authorizes bounded second cycle. PLAN defines question, scenarios, native choices/scripted outcomes, 32 roots, 140-call cap, carried budget and exact qualification/public/source/allocation gates. Reviewer not required. Before implementation prospective plan published. Pending offline tests, immutable registration and fresh host admission. Use same direct operational runbook as PC-4 with new namespace and closed-predecessor binding; no resumption or retries.
+Executed source 61307ac19d9af2d8119736f9886e85683ce7e21d after prospective plan publication, nine local/Linux semantic tests and verified public registration. Q0: 12/12 valid legal choices on four roots. S1: 128/128 valid choices on 32 paired layouts. Same-operator trace audit passed; complete decision table and public figures verified.
+
+Primary expected-regret improvement 0.1578125 meets the 0.10 target, with a reliable-source regression retained. See README and reviews/S1-A1-POST.md. Scientific decision complete_valid_result; no native successor scheduled. Automatic offline finalize and explicit scientific review are separate artifacts.
+
+Closed cumulative known cost USD 0.845052138, conservative exposure USD 0.857148138, nine historical uncertain charges, no new VM/infrastructure cost. Worker stopped, temporary credential removed, claim PR244 released by PR247. Original USD5 authority retained; confirmation cohort sealed. Current owner instruction supplied this bounded second-cycle scope; researcher review waived and direct launch authorized, not independently approved.

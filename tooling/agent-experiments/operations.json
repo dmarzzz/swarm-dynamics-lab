@@ -19,12 +19,12 @@
       "title": "Phantom Coast",
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/phantom-coast",
-      "setup_path": "researchers/vishesh/notes/phantom-coast/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/phantom-coast/reviews/S0-A1-POST.md",
+      "setup_path": "researchers/vishesh/notes/phantom-coast/pc5/SETUP.md",
+      "postmortem_path": "researchers/vishesh/notes/phantom-coast/pc5/reviews/S1-A1-POST.md",
       "adapter": null,
       "checked_at": "2026-10-04T04:40:34Z",
       "checked_commit": "e353e0c71a3b2fecc9643fa58287f83a7e9d35e5",
-      "next_action": "Read the completed pilot post-mortem; any follow-up needs its own question, prospective plan and current admission.",
+      "next_action": "PC-4 and PC-5 complete; read the PC-5 scientific handoff and retained reliable-source regression. No new native run scheduled; any successor requires prospective plan and current admission within original cumulative cap.",
       "next_run_approval": "owner"
     },
     {

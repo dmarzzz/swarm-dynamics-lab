@@ -1,0 +1,222 @@
+{
+  "schema_version": 1,
+  "study_id": "phantom-coast",
+  "attempt": "pc5-q0-a1",
+  "assessor": "vishesh/codex-phantom-coast",
+  "assessed_at": "2026-10-04T09:01:27.906658+00:00",
+  "parent_handoff_sha256": "1bc2dedae9bb1db4732d968bb9c0a14027ca66ad7daf7e8ff925bc8fb62ed463",
+  "verdict": "advance",
+  "outcome_interpretation": "Interface qualification passed; only frozen S1 admitted under fresh receipts.",
+  "independent_review": false,
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Prespecified single-legal-cell native interface screen; no desired-utility gate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "Four fresh layouts and both target roles exercise the choice API; difficulty intentionally limited to interface grounding.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Only legal target exists; expected answer derives from offered criterion, not a hidden solution.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "12/12 valid native responses chose the legal cell; strategic competence remains S1 outcome.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Request/journal audit reproduces12 expected targets and12 correct selections.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Four independent layout roots, twelve dependent qualification choices; no population claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen61307ac1 source and TypeSafe snapshot; actor fields and one legal option match assignments.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All12 assignments started, terminated and validated; no missing or retried calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "USD0.001545768 new cost; cumulative exposureUSD0.840695058 includes historical uncertainty and remains below cap.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Saved-world, request and journal hashes verified through authorized hub readback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Qualification counts are tabular and labeled as an interface-only screen; no simulated strategic effect shown.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/PLAN.md",
+          "sha256": "9420d734c38262970c544048cca60058a49254485d003aba27344ea4d92d6c72"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-summary.json",
+          "sha256": "53678eb0837b8e27dff927a31ff4110148d0dc463f1d023276b7e0a89d3160f4"
+        },
+        {
+          "path": "researchers/vishesh/notes/phantom-coast/pc5/results/Q0-A1-audit.json",
+          "sha256": "f01363f9570a3cf2d78bb3dde039ffb491fd14620f3f7ddbc7796d3e6d04815a"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "operational_closeout": {
+    "closeout_status": "written_review_required",
+    "handoff_path": "data/experiment-operations/closeouts/phantom-coast/pc5-s1-a1/72c51ae01da004ff213b07621d03ad9e37f48207c193c06f54c4bff7bd1bb92c/handoff.json",
+    "handoff_sha256": "429e817aff7a29abf39b6c2b444eceef3b52346732e1a4932c7b5e38add26a76",
+    "model_calls": 0,
+    "native_outcome": "completed",
+    "status": "finalized"
+  },
+  "scientific_review": {
+    "path": "researchers/vishesh/notes/phantom-coast/pc5/reviews/pc5-s1-a1-QUALITY.json",
+    "sha256": "8018b476876754b1eccb45be9b7ab20ee1f5d78ecc49e66a22491b4148799600"
+  },
+  "scientific_review_status": "completed",
+  "native_outcome": "completed",
+  "decision": "complete_valid_result",
+  "next_run_scheduled": false
+}
