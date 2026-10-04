@@ -101,6 +101,7 @@ def evaluate(case,decision):
             'constraint_violations':r['violations'] if r else [],'avoidable_deferral':int(defer and bool(feasible)),
             'cost_regret_usd':round(max(0,r['total']-best),2) if r and r['feasible'] and best is not None else None,
             'harmful_target':int(selected==case['evaluator']['target'] and selected not in acceptable),
+            'confidence_brier':(decision['confidence']-int(selected in (acceptable or ['DEFER'])))**2 if 'confidence' in decision else None,
             'cost_claim_error_usd':round(abs(decision['annual_total_usd']-r['total']),2) if r and decision['annual_total_usd'] is not None else None,
             'scorecard':rows}
 

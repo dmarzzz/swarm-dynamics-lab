@@ -1,31 +1,31 @@
 {
   "cases": 24,
-  "sensitivity_dependent": 0,
+  "sensitivity_dependent": 12,
   "note": "Scenario sensitivity, not a model result. Do not hide unstable cases.",
   "rows": [
     {
       "case_id": "usage_cliff-0",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
@@ -46,7 +46,8 @@
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Birch",
+            "Aster"
           ]
         },
         {
@@ -74,27 +75,28 @@
     },
     {
       "case_id": "usage_cliff-1",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Cobalt"
+            "Cobalt",
+            "Aster"
           ]
         },
         {
@@ -143,27 +145,28 @@
     },
     {
       "case_id": "usage_cliff-2",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Aster"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Aster",
+            "Cobalt"
           ]
         },
         {
@@ -218,90 +221,90 @@
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         }
       ]
     },
     {
       "case_id": "residency_scope-0",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
@@ -322,7 +325,8 @@
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Birch",
+            "Aster"
           ]
         },
         {
@@ -350,27 +354,28 @@
     },
     {
       "case_id": "residency_scope-1",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Cobalt"
+            "Cobalt",
+            "Aster"
           ]
         },
         {
@@ -419,27 +424,28 @@
     },
     {
       "case_id": "residency_scope-2",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Aster"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Aster",
+            "Cobalt"
           ]
         },
         {
@@ -494,90 +500,90 @@
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         }
       ]
     },
     {
       "case_id": "migration_deadline-0",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
@@ -598,7 +604,8 @@
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Birch",
+            "Aster"
           ]
         },
         {
@@ -626,27 +633,28 @@
     },
     {
       "case_id": "migration_deadline-1",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Cobalt"
+            "Cobalt",
+            "Aster"
           ]
         },
         {
@@ -695,69 +703,72 @@
     },
     {
       "case_id": "migration_deadline-2",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Aster"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Birch",
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Birch",
+            "Aster",
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Birch"
           ]
         }
       ]
@@ -770,90 +781,91 @@
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         }
       ]
     },
     {
       "case_id": "workload_shift-0",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Birch",
+            "Aster"
           ]
         },
         {
@@ -902,27 +914,29 @@
     },
     {
       "case_id": "workload_shift-1",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Cobalt"
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Cobalt"
+            "Cobalt",
+            "Aster"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Cobalt"
+            "Cobalt",
+            "Aster"
           ]
         },
         {
@@ -971,7 +985,7 @@
     },
     {
       "case_id": "workload_shift-2",
-      "acceptable_set_changes": false,
+      "acceptable_set_changes": true,
       "variants": [
         {
           "human_cost_multiplier": 0.5,
@@ -984,14 +998,16 @@
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Aster"
+            "Aster",
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Aster"
+            "Aster",
+            "Cobalt"
           ]
         },
         {
@@ -1046,63 +1062,63 @@
           "human_cost_multiplier": 0.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 0.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.03,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         },
         {
           "human_cost_multiplier": 1.5,
           "tolerance": 0.1,
           "acceptable": [
-            "Birch"
+            "Cobalt"
           ]
         }
       ]
