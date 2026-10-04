@@ -39,11 +39,18 @@
         "J Adams"
       ],
       "year": 1994,
-      "url": "https://pubmed.ncbi.nlm.nih.gov/7982572/",
+      "url": "https://academic.oup.com/genetics/article-abstract/137/4/903/6012596",
       "doi": "10.1093/genetics/137.4.903",
-      "status": "indexed primary abstract only; direct reading failed; uncatalogued lead",
-      "read_scope": "Search-result abstract; PubMed returned empty content, PMC challenge, Europe PMC unavailable",
-      "use": "Required cross-feeding methods follow-up for HX-37"
+      "status": "Primary source opened 2026-10-04; catalogued at abstract depth; methods follow-up remains",
+      "read_scope": "Publisher abstract and metadata; Europe PMC API abstract also retrieved.",
+      "use": "Required cross-feeding methods follow-up for HX-37",
+      "prior_access_record": {
+        "status": "indexed primary abstract only; direct reading failed; uncatalogued lead",
+        "read_scope": "Search-result abstract; PubMed returned empty content, PMC challenge, Europe PMC unavailable",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/7982572/"
+      },
+      "library_id": "rosenzweig-1994-microbial",
+      "followup_by": "vishesh/fm-security-review"
     },
     {
       "title": "Endosymbiosis or Bust: Influence of Ectosymbiosis on Evolution of Obligate Endosymbiosis",
@@ -56,9 +63,16 @@
       "year": 2022,
       "url": "https://ecoevorxiv.org/repository/view/3803/",
       "doi": "10.32942/osf.io/yzce3",
-      "status": "indexed lead; direct source inaccessible; uncatalogued",
-      "read_scope": "No direct methods read",
-      "use": "Older digital-life overlap to resolve before HX-32 promotion"
+      "status": "Primary source opened 2026-10-04; catalogued at abstract depth; methods follow-up remains",
+      "read_scope": "Primary preprint landing-page abstract via direct HTTPS; PDF/methods not read.",
+      "use": "Older digital-life overlap to resolve before HX-32 promotion",
+      "prior_access_record": {
+        "status": "indexed lead; direct source inaccessible; uncatalogued",
+        "read_scope": "No direct methods read",
+        "url": "https://ecoevorxiv.org/repository/view/3803/"
+      },
+      "library_id": "johnson-2022-endosymbiosis",
+      "followup_by": "vishesh/fm-security-review"
     },
     {
       "title": "The Black Queen Hypothesis: Evolution of Dependencies through Adaptive Gene Loss",
@@ -68,11 +82,18 @@
         "Erik R Zinser"
       ],
       "year": 2012,
-      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3315703/",
+      "url": "https://journals.asm.org/doi/10.1128/mbio.00036-12",
       "doi": "10.1128/mbio.00036-12",
-      "status": "indexed primary abstract only; direct source challenge; uncatalogued lead",
-      "read_scope": "No direct methods read",
-      "use": "Foundational theory follow-up; accessible Morris 2014 experiment is canonical anchor"
+      "status": "Primary source opened 2026-10-04; catalogued at abstract depth; methods follow-up remains",
+      "read_scope": "Publisher abstract and selected introduction; conservatively abstract-depth.",
+      "use": "Foundational theory follow-up; accessible Morris 2014 experiment is canonical anchor",
+      "prior_access_record": {
+        "status": "indexed primary abstract only; direct source challenge; uncatalogued lead",
+        "read_scope": "No direct methods read",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC3315703/"
+      },
+      "library_id": "morris-2012-black",
+      "followup_by": "vishesh/fm-security-review"
     }
   ]
 }

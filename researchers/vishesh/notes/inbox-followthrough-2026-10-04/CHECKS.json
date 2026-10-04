@@ -1,0 +1,63 @@
+{
+  "date": "2026-10-04",
+  "reviewer": "vishesh/fm-security-review",
+  "repository_snapshot": "92f1f7aa83ef2efe1338e4cffbc9ab468b48f660",
+  "source_sha256": {
+    "researchers/dmarz/notes/theseus-film/script.json": "4e80f30de76a233608c80b9f4762099fa2026df3d61e1136a019a974f30aad71",
+    "researchers/dmarz/notes/theseus-film/film_data.py": "eb5e8f911b227b22d707baf5faca9347889626eeb5d387651ac97bb1c341e5b2",
+    "researchers/dmarz/notes/theseus-film/make_film.py": "193b20dc2ee52364747ccc659e5dbbe415a2404e26f8b84c071b4805ace11a2e",
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/scoring.py": "6481964b2143fd8d5e1151781267eb88389b28a307510abecdc2bd60932b23c4",
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/runner.py": "22edc2e874ed7ccacd19bcc815a79b3a28617867dd8c82a89c5966f2273a5351",
+    "researchers/dmarz/notes/discussion-dose/src/bench_v3/selftest.py": "12b8b2d94696322fbb5f38bdf407a868525641745ed73388110d6af86cccec48",
+    "researchers/dmarz/notes/discussion-dose/src/diagnostic_v3_selftest.py": "abc345a8b2317c94d63d8bce7939f3b5ea21db672a4c086014630568a84c2e8f"
+  },
+  "physical_model_calls": 0,
+  "new_spend_usd": 0,
+  "discussion_targeted_tests": {
+    "passed": 6,
+    "failed": 0,
+    "test_ids": [
+      "bench_v3.selftest.MemoryTests.test_review_f1_quorum_decision_scored_with_invalid_ballot",
+      "bench_v3.selftest.MemoryTests.test_majority_never_shrinks_with_failures",
+      "bench_v3.selftest.ReviewF2Tests.test_provider_failure_records_public_reason",
+      "diagnostic_v3_selftest.DiagnosticTests.test_poisoned_memory_majority_survives_invalid_ballot",
+      "diagnostic_v3_selftest.DiagnosticTests.test_incomplete_no_quorum_not_evidence_abstention",
+      "diagnostic_v3_selftest.DiagnosticTests.test_failure_allowlist_and_secret_class_names"
+    ],
+    "scope_note": "D1 regression tests construct historical qualification world 20001, already used in completed Q0/D1. No future holdout 30000-series cases or new paid responses opened."
+  },
+  "film": {
+    "story_assertions": "passed",
+    "runs": 36,
+    "calls": 864,
+    "scenario_templates": 3,
+    "seeds_per_template": 2,
+    "after_turnover_accuracy": {
+      "both": 1.0,
+      "founders": 0.8958333333333334,
+      "mentor": 0.9166666666666666,
+      "neither": 0.5208333333333334,
+      "notes": 1.0,
+      "verbatim": 1.0
+    },
+    "worked_neither_accuracy": [
+      1.0,
+      1.0,
+      1.0,
+      0.25,
+      0.25,
+      0.25
+    ],
+    "visual_audio_playback": "not checked; film binary not present in checkout"
+  },
+  "flightdeck_strict": {
+    "artifacts": 96,
+    "errors": 0,
+    "warnings": 0,
+    "note": "Four ignored/pinned film versions absent; checked metadata, not remote media bytes."
+  },
+  "bibliography_verify": {
+    "papers": 3,
+    "problems": 0
+  }
+}

@@ -1,5 +1,7 @@
 # Independent review: discussion and memory benchmark v3
 
+> **Subsequent correction (2026-10-04):** Shadow identified two valid failure-path defects in the frozen source that this original PASS did not adequately cover. See the [corrective addendum](FOLLOWUP-2026-10-04.md) for their current targeted verification and the limits of this historical verdict.
+
 **Verdict: PASS for the bounded exploratory instrument and its separately authorized model-qualification stage.** No blocking defect was found in the reviewed development fixture, evaluator, information-boundary or replay checks. This closes the independent design-review requirement for the exact source hashes in [source-receipt.json](source-receipt.json). It does not establish real-model qualification, approve spending or a deployment, accept a formal hypothesis, authorize confirmation/holdout access, or support a general security claim.
 
 Reviewer: **vishesh/codex-independent-reviews**, 2026-10-04 UTC; independent of author dmarz. The user explicitly requested taking over this review; the task history records its transfer from shadow/sol-rev. No shadow findings were represented as this reviewer's work. This review supersedes only my earlier static-only v3 follow-through; the original retrospective and survey revise verdict remain unchanged.

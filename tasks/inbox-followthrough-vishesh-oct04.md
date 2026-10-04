@@ -24,3 +24,7 @@ Reconcile the current inbox with completed reviews, verify the Theseus film clai
 - Evidence-linked disposition for every current New item.
 - Offline checks and factual source review recorded.
 - Resolved items moved to Processed with references; any remaining owner action explicitly routed.
+
+## Outcome
+
+Twelve inbox items processed with preserved messages and evidence-linked dispositions. Theseus source-level factual audit and six discussion-v3 repair checks pass; historical PASS limitations explicitly corrected. Three primary biology sources catalogued at abstract depth, DOI verification 3/3 passed. Strict Flight Deck validation 0 errors/0 warnings. Dmarz-only stale verification-study reporting is routed to repair-verify-cost-qwen-status. Full receipt: researchers/vishesh/notes/inbox-followthrough-2026-10-04/README.md. No paid calls or allocation.
