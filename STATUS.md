@@ -40,6 +40,7 @@
 | [scan-papers-sybil-foundations](tasks/scan-papers-sybil-foundations.md) | claimed (stale) | p0 | scan | dmarz/sybil-foundations |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil attacks and defences (foundations) |
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
+| [antsy-literal-v2](tasks/antsy-literal-v2.md) | claimed | p1 | experiment | vishesh/codex-methods | vishesh | 2026-10-04T20:37Z | Antsy literal extraction and deterministic normalization native iteration |
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T19:52Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -395,7 +396,7 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
-| vishesh/codex-decision-models | working | right-dissenter-freshness-diagnostic | 2026-10-04 20:35:06.469155+00:00 | Publishing the completed RD7 diagnostic, post-mortem, evidence and release accounting. |
+| vishesh/codex-decision-models | idle |  | 2026-10-04 20:37:00.921478+00:00 | RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun. |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 20:31:03.068871+00:00 | SP-02 quote-only repair reviewed and closed; no main evaluation |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc12-wide | 2026-10-04 20:20:22.452084+00:00 | Preparing eight-world sourced-evidence diagnostic with independent learning and correction controls |
 | vishesh/codex-methods | working | antsy-haiku-panel | 2026-10-04 20:08:58.754926+00:00 | Haiku Q0 and locale diagnostic closed;96 valid calls, qualification failed, USD0.182328 new charge; E0 blocked |
