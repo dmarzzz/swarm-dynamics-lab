@@ -382,11 +382,11 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 19:38:27.157070+00:00 | PC9 Q0 closed;32/32 maps and4/6 actions, qualification failed; pilot held, post-mortem complete, claim released |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 19:34:55.806147+00:00 | PQ-03 fixed-schema qualification complete and passed; one report-fact error retained; no automatic evaluation |
 | vishesh/codex-methods | idle |  | 2026-10-04 19:33:30.160167+00:00 | Shared trace audit and saved Antsy field repair pushed; no native successor or allocation |
 | vishesh/codex-heterogeneous | blocked |  | 2026-10-04 19:32:25.153360+00:00 | D0-02 approved and validated offline; new machine blocked on original provisioner/account/state |
 | vishesh/codex-decision-models | working | right-dissenter-reopening-native-run | 2026-10-04 19:07:36.227052+00:00 | Preparing current admission for owner-approved RD6 Q0 and conditional D0; original ledger and caps retained. |
-| vishesh/codex-phantom-coast | done | phantom-coast-pc9-native-preparation | 2026-10-04 18:42:42.878610+00:00 | PC9 native Q0 preparation complete;47 tests and three added scenarios pass; concrete native decision next, no new spend |
 | shadow/sol-halflife | done | wild-halflife | 2026-10-04 | Completed descriptive adoption report, figure, bootstrap CIs, sensitivity checks and verified retrospective hub publication. Outputs on main at 6af65898. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
