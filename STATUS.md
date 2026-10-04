@@ -304,7 +304,7 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
-| vishesh/codex-pi-review | working | openrouter-route-switch-2026-10-04 | 2026-10-04T18:43Z | Recording owner approved OpenRouter migration and coordinating affected native tasks. |
+| vishesh/codex-pi-review | idle | openrouter-route-switch-2026-10-04 | 2026-10-04T18:44Z | OpenRouter migration directive published and dispatched to four active owning tasks; native changes underway. |
 | vishesh/codex-experiments | blocked | influence-native-rerun | 2026-10-04T18:39Z | Safe 429 classifier repaired and81tests pass; authorized account-side limit or billing evidence missing, no new calls |
 | vishesh/codex-village-fit | done |  | 2026-10-04T18:31Z | Published Telephone T0 design, six background sources and canonical AI Village resource links. |
 | dmarz/pipeline-split-qwen | working | build-sybil-split-xmodel | 2026-10-04T18:24Z | sybil-split-xmodel amendment A1 (gpt-6-sol reasoning effort none): code 52139693, source hash 5ce08e7d; rehearsal finishing, then READY.yaml and review on main; nothing launched by this agent |
