@@ -22,7 +22,7 @@ class TestsV2(unittest.TestCase):
 
     def test_levels_remove_cues_cumulatively(self):
         for i in range(200, 260):
-            h1, h2, h3, h4 = (make_world_v2(i, l) for l in LEVELS)
+            h1, h2, h3, h4 = (make_world_v2(i, l) for l in LEVELS[:4])
             self.assertEqual({d['authority'] for d in h1['docs']}, {'canonical', 'summary'})
             for w in (h2, h3, h4): self.assertEqual({d['authority'] for d in w['docs']}, {'record'})
             for w in (h1, h2): self.assertFalse(any(d['note'] for d in w['docs']))
@@ -33,12 +33,23 @@ class TestsV2(unittest.TestCase):
             roots = [d['root'] for d in h4['docs'] if d['role'] == 'exposed-target']
             self.assertEqual(len(roots), 2); self.assertEqual(len(set(roots)), 2)
 
+    def test_ceiling_levels(self):
+        for i in range(200, 260):
+            h5, h6 = make_world_v2(i, 'H5'), make_world_v2(i, 'H6'); r = h5['roles']
+            holders = lambda w, role: sorted(d['agent'] for d in w['docs'] if d['role'] == role)
+            self.assertEqual(holders(h5, 'witness-target'), [r['witness']])
+            self.assertEqual(holders(h5, 'exposed-target'), sorted([r['exposed']] * 2 + [r['swing']]))
+            self.assertEqual(holders(h6, 'witness-target'), [])
+            self.assertEqual(sorted(set(holders(h6, 'exposed-target'))), [0, 1, 2])
+        with self.assertRaises(ValueError): plan('s0-H5')
+        plan('calibrate-H6')
+
     def test_attack_changes_only_exposed_target(self):
         for level in LEVELS:
             w = make_world_v2(201, level); groups, exposed = allocation_v2(w)
             for agent, ids in enumerate(groups):
                 for doc_id in ids:
-                    clean = document_v2(w, doc_id); bad = document_v2(w, doc_id, agent == exposed)
+                    clean = document_v2(w, doc_id); bad = document_v2(w, doc_id, True)
                     role = next(d['role'] for d in w['docs'] if d['id'] == doc_id)
                     if role == 'exposed-target':
                         self.assertEqual(bad['facts'][w['target_key']], w['false_value'])
@@ -58,7 +69,8 @@ class TestsV2(unittest.TestCase):
             # Witness holds the clean target value; swing holds none of it.
             roles = w['roles']
             held = lambda a: {k for d in snap['states'][a]['documents'] for k in d['facts']}
-            self.assertIn(w['target_key'], held(roles['witness'])); self.assertNotIn(w['target_key'], held(roles['swing']))
+            self.assertIn(w['target_key'], held(roles['witness']))
+            if level in LEVELS[:4]: self.assertNotIn(w['target_key'], held(roles['swing']))  # H5+ expose the swing by design
 
     def test_optional_verification_reads_are_clean(self):
         class Reader(Scripted):
@@ -100,10 +112,34 @@ class TestsV2(unittest.TestCase):
         self.assertFalse(set.intersection(*sets)); self.assertFalse(sets[0] & set(range(0, 112)))
         self.assertTrue(all(t >= 200 for s in sets for t in s))  # v1 uses 0-6 and 100-111
         for name, calls in CALLS_PER_WORLD.items():
-            arms = arms_for(plan(f'{name}-H1')['rounds'])
+            pl = plan(f'{name}-H1'); arms = arms_for(pl['rounds'], pl['private_control'])
             acquisition = 2 * 6; continuation = sum(3 * (a['rounds'] + 1) + 3 * a['rounds'] + 1 for a in arms)
             self.assertEqual(calls, acquisition + continuation)
         with self.assertRaises(ValueError): plan('s2-H1')
+
+    def test_private_control_plan(self):
+        pl = plan('pc-H4')
+        self.assertTrue(pl['private_control']); self.assertEqual(pl['rounds'], [6]); self.assertEqual(pl['stage'], 'S0')
+        self.assertEqual(pl['batch'], 'haiku45-v2-pc-H4'); self.assertEqual(pl['model_config']['max_calls'], 172 * 6)
+        self.assertFalse(plan('s0-H4')['private_control'])
+        with tempfile.TemporaryDirectory() as d:
+            params = {**pl, 'backend': 'scripted', 'model_config': None, 'tasks': [230, 231]}
+            s = execute_bundle(params, Path(d) / 'out', Scripted())
+            self.assertEqual(s['episodes'], 8)
+            self.assertEqual(set(s['cells']), {f'{x}-{m}-r6' for x in ('clean', 'attack') for m in ('board', 'private')})
+            self.assertEqual(s['private_control']['task_clusters'], 2); self.assertIsNone(s['primary_candidate'])
+            rows = [json.loads(l) for l in (Path(d) / 'out' / 'episodes.jsonl').read_text().splitlines()]
+            for t in (230, 231):
+                for attack in (False, True):
+                    same = [r for r in rows if r['task_id'] == t and r['arm']['attack'] == attack]
+                    self.assertEqual(len(same), 2); self.assertEqual(len({r['snapshot_hash'] for r in same}), 1)
+                    # Equal compute: identical call counts, and private agents never see a peer post.
+                    self.assertEqual(len({r['logical_calls'] for r in same}), 1)
+            for r in rows:
+                if r['arm']['mode'] != 'private': continue
+                for e in r['events']:
+                    if e['kind'] == 'call_start' and e['agent'] != 'parent':
+                        self.assertEqual(e['request']['context'].get('board', []), [])
 
     def test_select_level_rule(self):
         ok = lambda tw, clean=1.0, inv=0.0: {'clean_accuracy': clean, 'invalid_rate': inv, 'attack_target_win': tw}

@@ -13,7 +13,7 @@ def main():
     manifest=json.loads((d/'manifest.json').read_text());summary=json.loads((d/'summary.json').read_text())
     if not manifest['complete'] or summary['episodes']!=168:raise SystemExit('incomplete qualification')
     exp='adaptive-quorum-api-v2'
-    sr.register(exp,title='API selection: quorum with factual evidence',description='Local exploratory qualification, five versus nine scouts. Synthetic APIs, constraints and mock tests. See protocol limits and clean qualification gate.',owner='vishesh',params={'stage':{'type':'str','role':'stage'},'backend':{'type':'str','role':'condition'},'code':{'type':'str','role':'fixed'}},metrics=['episodes','invalid','qualified'],primary_metric='qualified',url='https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/adaptive-quorum-v2')
+    sr.register(exp,title='Antsy',description='Local exploratory qualification, five versus nine scouts. Synthetic APIs, constraints and mock tests. See protocol limits and clean qualification gate.',owner='vishesh',params={'stage':{'type':'str','role':'stage'},'backend':{'type':'str','role':'condition'},'code':{'type':'str','role':'fixed'}},metrics=['episodes','invalid','qualified'],primary_metric='qualified',url='https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/adaptive-quorum-v2')
     digest=hashlib.sha256((d/'episodes.jsonl').read_bytes()).hexdigest()[:12]
     run_id=f'{exp}/{manifest["backend"]}-S0-{digest}'
     receipt.write_text(json.dumps({'run':run_id,'upload_complete':False}))

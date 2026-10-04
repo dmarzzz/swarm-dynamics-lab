@@ -7,11 +7,14 @@ import platform
 from pathlib import Path
 import subprocess
 import time
-from analyze import summarize,contrast
+from analyze import summarize,contrast,private_contrast
 from artifacts import publish_artifacts
 from providers import Scripted,HTTP,Anthropic
 from sim import arms_for,run_episode
 from sim_v2 import run_episode_v2
+from tasks_v2 import make_world_v2
+from tasks import make_world,allocation
+from frames import FrameTracker
 from tasks import digest
 
 ROOT=Path(__file__).resolve().parent.parent
@@ -20,14 +23,18 @@ EXP='discussion-dose'
 def code_hash():
     return digest({p.name:p.read_text() for p in sorted((ROOT/'src').glob('*.py'))})
 
-def execute_bundle(params,out,provider,progress=lambda *a:None):
+def execute_bundle(params,out,provider,progress=lambda *a:None,upload_frame=None,upload_replay=None):
     out=Path(out);out.mkdir(parents=True,exist_ok=False)
     arms=arms_for(params['rounds'],params.get('private_control',False))
     tasks=params['tasks'];seeds=params['seeds'];cfg={'n_agents':params['n_agents']}
     # v1 params carry no protocol field; their path is unchanged.
     protocol=params.get('protocol','v1')
-    if protocol=='v2': cfg.update(level=params['level'],verification_reads=params.get('verification_reads',0));episode=run_episode_v2
-    elif protocol=='v1': episode=run_episode
+    if protocol=='v2':
+        cfg.update(level=params['level'],verification_reads=params.get('verification_reads',0));episode=run_episode_v2
+        world_for=lambda t:make_world_v2(t,params['level'])
+    elif protocol=='v1':
+        episode=run_episode
+        world_for=lambda t:(lambda w:{**w,'roles':{'exposed':allocation(w,params['n_agents'],seeds[0])[1]}})(make_world(t))
     else: raise ValueError('unknown protocol')
     manifest={'params':params,'arms':arms,'code_sha256':code_hash(),'python':platform.python_version(),
               'platform':platform.system(),'provider':provider.name,'scientific':provider.scientific,
@@ -38,17 +45,29 @@ def execute_bundle(params,out,provider,progress=lambda *a:None):
     rows=[];start=time.monotonic()
     # Write plan first; a hard worker death leaves visible missing outcomes for reconciliation.
     with (out/'episodes.jsonl').open('x') as f, (out/'events.jsonl').open('x') as journal:
+        # Host-side live view; never alters calls or records, and its failures are swallowed.
+        tracker=FrameTracker(world_for,out/'frame.json',upload_frame,protocol=protocol,level=params.get('level'))
         def emit(label,event):
             journal.write(json.dumps({'stream':label,'event':event},sort_keys=True)+'\n');journal.flush();os.fsync(journal.fileno())
+            try: tracker.event(label,event)
+            except Exception: pass
         for t in tasks:
             for s in seeds:
                 for row in episode(t,s,'controlled-tool-exposure',1,arms,cfg,provider,event_sink=emit):
                     row['provenance']={'code_sha256':manifest['code_sha256'],'git_commit':manifest['git_commit'],'stage':params['stage']}
                     f.write(json.dumps(row,sort_keys=True)+'\n');f.flush();os.fsync(f.fileno());rows.append(row)
+                    try: tracker.episode_done(row)
+                    except Exception: pass
                 progress(len(rows),len(manifest['planned_episodes']))
+    # Replay history for the site's player; written even for partial runs, never affects records.
+    try:
+        (out/'replay.json').write_text(json.dumps(tracker.replay(),separators=(',',':')))
+        if upload_replay: upload_replay(out/'replay.json')
+    except Exception: pass
     summary={'scientific':provider.scientific,'provider':provider.name,'episodes':len(rows),
              'seconds':round(time.monotonic()-start,3),'cells':summarize(rows),
              'primary_candidate':contrast(rows) if 0 in params['rounds'] and 6 in params['rounds'] else None,
+             'private_control':private_contrast(rows) if params.get('private_control') else None,
              'actual_http_calls':getattr(provider,'calls',0),'conservative_reserved_usd':getattr(provider,'reserved_usd',0),
              'provider_failures':sorted({e['provider_reason'] for row in rows for e in row.get('events',[])+row.get('acquisition_events',[]) if e.get('provider_reason')}),
              'validation_failures':sorted({e['validation_reason'] for row in rows for e in row.get('events',[])+row.get('acquisition_events',[]) if e.get('validation_reason')}),
@@ -81,7 +100,9 @@ def main():
             provider=build_provider(a.backend,params)
             out=ROOT/'results'/'episodes'/run.id.replace('/','__')
             try:
-                summary=execute_bundle(params,out,provider,lambda done,total:run.progress(done,total,episodes=done))
+                summary=execute_bundle(params,out,provider,lambda done,total:run.progress(done,total,episodes=done),
+                                       upload_frame=lambda path:run.artifact(path,'frame.json'),
+                                       upload_replay=lambda path:run.artifact(path,'replay.json'))
             finally:
                 if out.exists(): publish_artifacts(run,out)
             invalid=sum(c['invalid']*c['assigned'] for c in summary['cells'].values())
@@ -94,7 +115,14 @@ def main():
             elif not qualified and summary['validation_failures']: message='Qualification failed: '+', '.join(summary['validation_failures'])
             else: message='Exploratory LLM qualification '+('passed' if qualified else 'failed')
             finish=run.done if (not provider.scientific or qualified) else run.fail
-            finish(message=message,qualification_pass=int(qualified),
+            extra={}
+            if params.get('private_control'):
+                # Mode-split rates; the pooled attack_target_win below mixes board and private arms.
+                for mode in ('board','private'):
+                    extra[f'attack_target_win_{mode}']=rate([c for k,c in summary['cells'].items() if k.startswith(f'attack-{mode}-')],'target_win')
+                    extra[f'clean_accuracy_{mode}']=rate([c for k,c in summary['cells'].items() if k.startswith(f'clean-{mode}-')],'correct')
+                extra['private_control_estimate']=summary['private_control']['estimate']
+            finish(message=message,qualification_pass=int(qualified),**extra,
                      episodes=summary['episodes'],invalid_rate=invalid/summary['episodes'],scientific=int(provider.scientific),
                      clean_accuracy=rate(clean,'correct'),attack_target_win=rate(attack,'target_win'),
                      attack_false_memory=rate(attack,'false_memory_admitted'),
