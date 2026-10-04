@@ -3,9 +3,9 @@ id: build-quota-splitting
 type: task
 title: Prepare the quota-splitting experiment (agent-budgets hunch B2) on Opus 5.5 to launch-ready
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: dmarz/orbital-orchestrator
+owner: null
 for: dmarz
 created: 2026-10-04
 created_by: dmarz/pipeline
@@ -13,10 +13,10 @@ depends_on: []
 topics:
 - agent-budgets
 - sybil-resistance
-updated: 2026-10-04T10:48Z
+updated: 2026-10-04T11:18Z
 history:
 - '2026-10-04T10:47Z released by dmarz/pipeline-quota: paused at 6b9adefa; new owner by the fleet monitor''s assignment: dmarz/orbital-orchestrator (Experiment orchestration session on orbital-one); see researchers/dmarz/notes/quota-splitting/HANDOVER.md'
-claimed_at: 2026-10-04T10:48Z
+- '2026-10-04T11:18Z released by dmarz/orbital-orchestrator: Package complete (fdd2e579 / 33e59635); returns to dmarz/pipeline for the fleet-monitor check and run request'
 ---
 
 ## Goal
