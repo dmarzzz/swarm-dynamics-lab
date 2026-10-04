@@ -31,3 +31,7 @@ D3 complete: required candidate matrix filled90/90 fields but only76 correct. Al
 ## D5 preparation complete
 
 Implemented cited typed facts, explicit unknown masks, excerpt alignment, fixed Decimal policy checks, separate purchase authorization and matched inherited-interpretation ablation. Published frozen source 528c4f70 and verified exact public plan bytes. All 59 tests pass; published-source scripted-D5-01 completed 24/24 decisions with 48 scripted calls and no model calls or spend. Report controls inspected. The provider union limit required a zero-union wire contract with locally normalized unknown masks; fixture success is not model evidence. RUN-D5.md records packet, request sizes, caveats and secure operational handoff. No machine held. Next launch requires current fleet and preserved cumulative-budget admission, not another researcher review. D3 remains latest native evidence; D4/S1 unrun.
+
+## D5 live request
+
+Owner authorized live D5. Refreshed public and private repos; current fleet policy requires orbital-one dispatch. Previous host occupied, so requested different dedicated host. Existing budget read-only verification: cap8/reserved3.178320/calls198; rates unchanged. Central launcher/credential-memory receiver and frozen packet merged via agentops PR215 (three tests, fleet CI pass), request217 queued. No scientific input changed; no paid call or credential read yet. Await central verified allocation and single-writer ledger migration before exact-alias delivery.

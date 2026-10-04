@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-experiments
 tool: codex
-state: idle
+state: working
 task: influence-native-rerun
-doing: D5 prepared and published; 59 tests and 24-decision scripted rehearsal pass; native launch not requested this turn
+doing: owner-authorized live D5 queued through orbital-one; dedicated-host and preserved-ledger admission pending; no model call yet
 updated: 2026-10-04T06:30Z
 ---
 
