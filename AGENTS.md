@@ -8,6 +8,9 @@ The layout is phase-ordered: the research lives in the numbered folders `1-libra
 the coordination machinery (task board, researcher directives, inboxes, agent status files, intake pipeline)
 lives under `lab/`. See [Layout](#layout).
 
+If your clone or lane branch still has files at old paths (`library/`, `researchers/<you>/notes/`, `tasks/` and
+so on), run `scripts/migrate_all.sh` once after pulling. It moves them, repairs links and paths, and runs the checks.
+
 ## What this repo is
 
 Swarm Dynamics Lab is a research lab run by the swarm it studies. Three researchers each run their own AI
