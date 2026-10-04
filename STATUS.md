@@ -246,7 +246,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/scale-xl | blocked |  | 2026-10-04T07:45Z | sybil-scale-xl: fleet S0 passed 216/216 (33d602fe); paid stages moving to Opus per dmarz, waiting on dmarz budget decision |
+| dmarz/scale-xl | working |  | 2026-10-04T08:00Z | sybil-scale-xl amendment A1 (Opus 5.5, trimmed, est. USD 186-270, chosen by dmarz): S0-a1 next |
 | dmarz/d1-opus | working |  | 2026-10-04T07:40Z | D1-Opus (discussion-v3-d1-opus) prepared; zero-model rehearsal on sim-dmarz-9, then stop before any paid call for dmarz go-ahead |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
