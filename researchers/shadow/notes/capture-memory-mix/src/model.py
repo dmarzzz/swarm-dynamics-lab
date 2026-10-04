@@ -60,6 +60,10 @@ class Ledger:
             self.path.write_text(json.dumps({"spent_usd": 0.0, "calls": 0, "by_model": {}}))
 
     def add(self, model: str, usd: float, calls: int) -> float:
+        if isinstance(usd, bool) or not isinstance(usd, (int, float)) or not math.isfinite(usd) or usd < 0:
+            raise ModelFailure("ledger cost must be finite and nonnegative")
+        if isinstance(calls, bool) or not isinstance(calls, int) or calls < 0:
+            raise ModelFailure("ledger calls must be a nonnegative integer")
         with open(self.path, "r+") as f:
             fcntl.flock(f, fcntl.LOCK_EX)
             d = json.load(f)
@@ -83,8 +87,11 @@ class HTTPPolicy:
                  output_usd_per_million: float = 1.0, base_url: str = "https://openrouter.ai/api/v1",
                  provider_order=None, ledger: str | None = None, retries: int = 3, call_log: str | None = None,
                  logit_temperature: float = 1.0, mode: str = "logprobs"):
-        if not max_cost_usd > 0:
-            raise ModelFailure("positive dollar cap required")
+        if not math.isfinite(max_cost_usd) or not max_cost_usd > 0:
+            raise ModelFailure("finite positive dollar cap required")
+        for rate in (input_usd_per_million, output_usd_per_million):
+            if isinstance(rate, bool) or not math.isfinite(rate) or rate < 0:
+                raise ModelFailure("prices must be finite and nonnegative")
         if base_url.rstrip("/") != "https://openrouter.ai/api/v1":
             raise ModelFailure("this adapter only authorizes the OpenRouter API endpoint")
         self._opener = urllib.request.build_opener(NoCredentialRedirect())
@@ -175,7 +182,16 @@ class HTTPPolicy:
             self.reserved -= est
             self.ledger.add(self.model, est, 1)          # a failed request may still have cost; charge the estimate
             raise ModelFailure(last or "provider error")
-        cost = float((resp.get("usage") or {}).get("cost") or est)
+        reported_cost = (resp.get("usage") or {}).get("cost")
+        if reported_cost is None:
+            cost = est
+        elif (isinstance(reported_cost, bool) or not isinstance(reported_cost, (int, float))
+              or not math.isfinite(reported_cost) or reported_cost < 0):
+            self.ledger.add(self.model, est, 1)
+            self.reserved -= est
+            raise ModelFailure("invalid provider cost; estimate retained")
+        else:
+            cost = float(reported_cost)
         self.reserved -= est
         self.spent_session += cost
         self.ledger.add(self.model, cost, 1)
