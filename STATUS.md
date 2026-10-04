@@ -42,7 +42,7 @@
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:28Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:58Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
+| [phantom-coast-pc2-live](tasks/phantom-coast-pc2-live.md) | claimed | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T06:48Z | Run and reconcile Phantom Coast PC-2 qualification and pilot |
 | [right-dissenter-rd5-design](tasks/right-dissenter-rd5-design.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T06:40Z | Plan Right Dissenter repairs and the right to reopen |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T06:28Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
