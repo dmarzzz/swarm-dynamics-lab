@@ -3,9 +3,9 @@ id: qualify-poietic-agents-s0
 type: task
 title: Qualify Poietic Agents S0-02 within retained cumulative authority
 kind: build
-status: claimed
+status: open
 priority: p1
-owner: vishesh/codex-heterogeneous
+owner: null
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-heterogeneous
@@ -14,14 +14,14 @@ depends_on:
 topics:
 - llm-agent-swarms
 - agent-budgets
-updated: 2026-10-04T16:38Z
+updated: 2026-10-04T16:59Z
 history:
 - '2026-10-04T07:14Z released by vishesh/codex-heterogeneous: Direct USD 2 run approval recorded; central S0 request submitted at 2796183f. Approved OpenRouter selector unresolved and dispatcher has not acknowledged. Zero calls/spend. Follow study DISPATCH.md and SETUP.md; do not duplicate dispatch.'
 - '2026-10-04T08:07Z released by vishesh/codex-heterogeneous: Credential resolved from existing access context; deployed 54 checks passed; existing central S0 request has complete launch handoff. Awaiting dispatcher start, not additional owner credentials. Preserve the existing frozen source/admission/budget and do not duplicate dispatch.'
 - '2026-10-04T09:07Z released by vishesh/codex-heterogeneous: S0-01 native failure fully closed: 36 calls, 144 outcomes retained, nine artifacts verified, allocation released, cumulative upper exposure USD0.556455767. Prepared S0-02 has63 offline checks and verified public plan; current G6 requires owner approval before fresh allocation or launch. Keep original USD2 cap, API ledger and deadline. See Poietic SETUP.md and S0-02-pre.md.'
 - '2026-10-04T15:39Z released by vishesh/codex-heterogeneous: S0-02 preparation cycle closed at expired execution-window gate. Scope is conditionally authorized; distinct renewal remains pending with PI Review.79 offline checks pass, public plan and rendered page verified at9d99ec2d, handoff published atdf4f3fea. Original authority and36 uncertain calls unchanged; USD0.556455767 conservative cumulative exposure. No successor allocation, dispatch or new calls. Preserve original ledgers and await actual bounded renewal decision.'
 - '2026-10-04T16:30Z released by vishesh/codex-heterogeneous: One successor cycle prepared:81 offline checks, including complete worker failure rehearsals; frozen source f3621c64 and current public page/plan verified. Scientific scope unchanged. Current dispatch coordination remains pending; no allocation, renewal activation or model calls. Original charges/cap retained. Read reviews/S0-02-launch-loop.md and readiness/S0-02-launch-loop.json; do not duplicate dispatch.'
-claimed_at: 2026-10-04T16:38Z
+- '2026-10-04T16:59Z released by vishesh/codex-heterogeneous: S0-02 executed and fully reviewed:1 call,143 unstarted,144 terminal; strict fenced/nested JSON failure; no model qualifies.12 artifacts verified, allocation released, USD0.562186183 cumulative exposure.85 offline repair checks pass; proposed36 decision diagnostic needs updated owner scope and dedicated runner. No successor launched.'
 ---
 
 ## Goal
@@ -31,8 +31,8 @@ Complete the conditionally approved S0-02 interface qualification after the appr
 ## Done when
 
 - Apply only an actually approved bounded execution-window renewal to the original authority, using the prepared transactional helper and matching private receipts. The original budget, host binding, call ceiling and charge history must persist.
-- Obtain current exclusive approved-account allocation and central dispatch admission; the historical direct-launch exception does not authorize a successor. Freeze source, assignments, routes, tariffs and runtime evidence.
-- Refresh the immutable public plan and rendered page; register each condition-specific TLDR before any model call. The current 79 checks are offline software validation, not native qualification.
+- Obtain current exclusive approved-account allocation and current path-specific admission; explicit later owner direct scope covered completed S0-02 only. Freeze source, assignments, routes, tariffs and runtime evidence.
+- Refresh the immutable public plan and rendered page; register each condition-specific TLDR before any model call. The admitted81 checks were offline software validation, not native qualification.
 - Execute at most the approved S0-02 scope: 144 new physical requests, no retries, 12 paired four-step cases per role and first-interface-failure stop. Keep original correctness/validity thresholds and reserved S1/S2 worlds closed.
 - Reconcile every assignment and both ledgers without double-counting; retain uncertain reservations and cumulative infrastructure cost. Publish operational and scientific closeout, verify durable artifacts, stop owned workers/relay and release the allocation.
 - Stop after this one cycle. Failure does not authorize S0-03 or S1. Report the evidence and next decision without changing thresholds or obtaining a favorable result through extra runs.
@@ -44,3 +44,7 @@ Complete the conditionally approved S0-02 interface qualification after the appr
 ## Subsequent owner-directed run loop
 
 Prepared and published source f3621c649311f4e7a6c110c1b56f97b818927f9e, retaining the scientific construction and adding two full-worker failure rehearsals. All81 offline checks pass; model catalogs, public registration, immutable plan bytes and rendered page verified. The new direct owner instruction covers one bounded S0-02 continuation under the unchanged cumulative cap. Runtime coordination is requested and the original allocation is not held; no authority transition or new native calls occurred. Operational details and current receipts remain private.
+
+## Completed S0-02 cycle
+
+Execution and closeout complete; qualification failed. Read the study S0-02 post-mortem and structured scientific review. Current owned agent status and launch-state supersede earlier preparation notes. A failed qualification does not complete the scientific goal; this task is released pending an updated successor decision.
