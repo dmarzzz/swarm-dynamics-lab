@@ -155,7 +155,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/sybil-specialists | working | build-sybil-specialists | 2026-10-04T01:40Z | Fleet S0 qualified; S1 running on sim-dmarz-4; validating summary chart and preparing reconciliation |
+| dmarz/sybil-specialists | done | build-sybil-specialists | 2026-10-04T01:45Z | Scripted study complete: 34 deployed cells, 1120 valid outcomes, UI replay and analysis verified, claim released; API stage awaits a cap |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:25Z | Building an exploratory MKT-03/MKT-11 scripted-first pilot and run visualization. |
 | vishesh/codex-methods | working | antsy-quality-repair | 2026-10-04T01:23Z | Auditing Antsy and diagnosing failed competence on exclusive sim-vishesh |
