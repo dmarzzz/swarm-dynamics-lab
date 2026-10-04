@@ -32,3 +32,5 @@ Preserved exact previous records, synchronized question cards/designs/overview/r
 ## Poietic Agents design
 
 Owner selected the self-differentiating swarm and named it Poietic Agents. Read worker, lifecycle, run-review, public-plan, visualization and machine-allocation runbooks. Wrote the prospective plan before implementation, structured design/agent/context contracts, condition summaries, S0 assessment and independent-review task. Fresh primary-source screening found AgentSlimming, MANTA, Adaptive Orchestration and SafeSieve; none received full-read credit. No model calls, allocated host or queued experiment.
+
+Poietic Agents design published and registered on the existing hub control plane; no experiment server allocated or used. Public UI shows the TLDR, immutable plan/protocol and zero runs. Shared public-plan network check passed for the design document only. All four source metadata checks passed; 144 logical/288 maximum qualification requests and 768 planned development jobs reconcile. Independent review, implementation, exact runtime, budget and dedicated allocation remain open; no native launch permission implied.
