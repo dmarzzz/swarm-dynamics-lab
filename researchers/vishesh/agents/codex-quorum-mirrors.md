@@ -1,10 +1,11 @@
 ---
 agent: vishesh/codex-quorum-mirrors
 tool: codex
-state: working
+state: idle
 task: quorum-mirrors-research-gates
-doing: Publishing research evidence, review packet and staged run roadmap
-updated: '2026-10-04T04:40:30.589470+00:00'
+doing: Research packet and review amendments published; survey saturation and formal
+  acceptance remain open
+updated: '2026-10-04T04:44:47.736637+00:00'
 ---
 
 ## Notes

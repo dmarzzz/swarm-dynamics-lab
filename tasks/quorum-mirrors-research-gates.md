@@ -25,3 +25,7 @@ Complete truthful full-text readings and structured search evidence for the deci
 - Research evidence and actual gate output published; no manufactured saturation or review.
 - Missing researcher review requested in dmarz inbox with concrete review materials.
 - Next-run progression specifies why, comparisons, budgets, readiness and stop/advance decisions.
+
+## Published progress, 2026-10-04
+
+Research evidence, 12 counted search rounds and staged roadmap are in the Quorum RESEARCH-GATES.md and RUN-ROADMAP.md. Gate now fails saturation only mechanically (last rounds 6/6, 9/9 new). The requested different-researcher review arrived with REVISE; REVIEW-RESPONSE.md addresses Q1–Q3. Remaining work: complete closest-prior-art methods comparisons and genuine low-yield terminal searches, then formal survey/hypothesis review. No native launch. Keep this research-closure task open; publication is not gate completion.

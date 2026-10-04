@@ -56,7 +56,7 @@ Research closure requires:
 
 ## Review request already sent
 
-The owner-requested ping is in [dmarz's inbox](../../../../../researchers/dmarz/inbox.md), linked to [review-quorum-mirrors-qm3](../../../../../tasks/review-quorum-mirrors-qm3.md). One different-researcher design review is requested, not an additional dossier or second reviewer. Review can start now; formal survey/hypothesis acceptance remains separately explicit. No reviewer acceptance has arrived at this writing.
+The owner-requested ping is in [dmarz's inbox](../../../../../researchers/dmarz/inbox.md), linked to [review-quorum-mirrors-qm3](../../../../../tasks/review-quorum-mirrors-qm3.md). One different-researcher design review is requested, not an additional dossier or second reviewer. The requested design review is complete; formal survey/hypothesis acceptance remains separately explicit. The review arrived on the final refresh with verdict REVISE; [response](REVIEW-RESPONSE.md) resolves the design comments without changing the reviewer verdict. Formal survey/hypothesis acceptance is still absent.
 
 Requested decisions: Is the proposed narrow replication useful despite overlap? Does partial ancestry stay evaluator-only? Are the instruction, peer/self-review and pooled contrasts identifiable enough for a feasibility decision? Are the screen-to-pilot criteria and evidence-sensitivity checks sensible? What would justify another cohort after a null? Record a verdict and concrete fixes; operator resolves them without inventing a second routine approval cycle.
 
@@ -73,3 +73,5 @@ The [PI assessment](../../pi-review-2026-10-04/review-2026-10-04/scientific-phan
 | Buy a measurement versus another judgment | This allocation holds evidence fixed. It can reject unnecessary discussion; it cannot price the value of a new measurement. A later equal-total-cost acquisition experiment remains necessary. |
 | Copies versus paraphrases, correct versus incorrect fresh evidence | Deferred beyond the current synthetic exact-copy grammar; do not generalize to them. |
 | Source dependence and novelty | Conditional independence is constructed only within a world; distinct real source IDs are not proof of independence. New close antecedents narrow contribution and keep research gate open. |
+
+Final refresh correction: the reviewer proved that fixed multiplicity support reveals root MAP without IDs. The roadmap now explicitly treats partial ancestry as withheld-metadata use, includes the count-only shortcut and matches pooled instructions. This corrects our earlier information-boundary interpretation for this particular pilot; broader missing-ancestry impossibility is not its measured contrast.
