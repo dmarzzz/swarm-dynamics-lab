@@ -9,9 +9,9 @@ Assessed 2026-10-04 by dmarz/pipeline-verify; source `9781739c` ([registry](../.
 - **sample_size_summary:** Observed: none. Planned: 24 paired synthetic layouts × 12 authored risk and cost cases × 2 representations = 576 single stateless calls; separate qualification of 24 calls (12 clear-dominance fixtures × 2 representations, the first of them as a one-call probe). Layouts are the independent units, not calls or cases.
 <!-- experiment-evidence:end -->
 
-**Nothing has run.** This directory is a launch-ready package in preparation: plan, frozen design, code, offline tests and a pre-run review. No stage has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-verify on 2026-10-04.
+**Nothing has run.** This directory is a launch-ready package: plan, frozen design, code, offline tests and a pre-run review. No stage has been executed on a server, no model call has been made and no result exists. Exploratory; owner dmarz; built by dmarz/pipeline-verify on 2026-10-04.
 
-It implements line V of research program v5 ("When is verification worth its cost?") as a [ready-chain](../pipeline/READY-CHAIN.md) package. The program's files are `researchers/dmarz/notes/overnight-program-2026-10-04/` (`program.json`, `SETUP.md`, `selected-model.json`); they are being committed to main by another agent.
+It implements line V of research program v5 ("When is verification worth its cost?") as a [ready-chain](../pipeline/READY-CHAIN.md) package. The program's files are in [`../overnight-program-2026-10-04/`](../overnight-program-2026-10-04/) ([program.json](../overnight-program-2026-10-04/program.json), [SETUP.md](../overnight-program-2026-10-04/SETUP.md), [selected-model.json](../overnight-program-2026-10-04/selected-model.json)).
 
 Authority and review status, recorded 2026-10-04 as relayed to this builder by dmarz/pipeline: dmarz directed this program himself (research program v5, written with him by a Codex session on 2026-10-04; his instruction to ship it was relayed by dmarz/fleet-monitor). The design is the program's; this package implements line V as specified there. Cross-researcher review is waived by dmarz for these exploratory runs; dmarz/fleet-monitor's check is a same-researcher check and nothing more; the run is not independently reviewed. The run is launched only by the orchestrator from the private run queue. S2 is disabled. It is not an accepted hypothesis and makes no novelty claim.
 
@@ -40,7 +40,8 @@ Anchors from PC5, measured on a different model (`typesafe/jev-1.13`) with a pro
 - **Layouts.** A layout fixes the two cells, the report's label, the 34 measurements and the order in which the two legal cells are listed. Within a layout these are identical in all 24 requests; only e, U and the representation change. The order (report first or unexplored cell first) and the label are balanced over the 24 layouts by construction. Main layouts 3000 to 3023, qualification 2800 to 2811 (set a) and 2900 to 2911 (set b), engineering 2600 to 2603. Every seed stream carries the prefix `verify-cost-qwen`, so no layout repeats a phantom-coast root.
 - **Model.** `qwen/qwen3.7-flash` through OpenRouter, provider pinned to Alibaba, `allow_fallbacks: false`, `require_parameters: true`, reasoning disabled, JSON-object mode, `max_tokens` 1,000. The request body is the program's frozen template plus `messages` and nothing else. No other model and no fallback. Reasoning is disabled, so effort does not apply; `effort: low` appears in `READY.yaml` and `design.yaml` only because the launcher requires the field.
 - **Answer.** `{"inspect": "<row>,<column>"}`, one of the two legal cells. The provider gives no schema guarantee, so the answer is validated locally: exactly that key, a string, one of the two legal cells. Anything else is a failed call. No repair call and no answer retry.
-- **Frozen files.** [design.yaml](design.yaml), [preregistration.md](preregistration.md), `manifest.json`. The source hash covers `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
+- **Frozen files.** [design.yaml](design.yaml), [preregistration.md](preregistration.md), [manifest.json](manifest.json) (assignment ids and request hashes per stage). The source hash covers `design.yaml`, `experiment.yaml`, `requirements.txt` and `src/*.py`.
+- **Code.** `src/sim.py` is the parameterized copy of PC5's `contract.py` (layouts, facts, consequence records, scorer); `src/study.py` holds the two renderings, validation, assignments and gates (PC5's `design.py`); `src/worker.py` runs a stage (PC5's `engine.py`) on `src/provider.py`, the pipeline's reference OpenRouter adapter and ledger, copied unchanged from main `639e9501`; `src/analyze.py` is the scorer's analysis and failure report; `src/render.py` draws the regret and cost panel.
 
 ## Protocol
 
@@ -51,9 +52,9 @@ Four stages run as one chain on one server. Each stage is one hub run. A stage i
 3. **Q0, 23 calls.** The other 23 qualification fixtures. The gate is evaluated over all 24 rows (P0's saved row plus Q0's 23): 24 of 24 structurally valid and at least 11 of 12 optimal in each representation. These are twelve clear-dominance choices with both actions legal, which repairs PC5's screen (its qualification offered one legal cell). A failed qualification stops the chain.
 4. **S1, 576 calls.** 24 layouts × 12 cases × 2 representations, one stateless call each, four requests in flight, the 24 requests of a layout in a seeded order. Before S1 is queued the chain stops with reason `projection_exceeds_cap` if 576 × Q0's measured cost per call does not fit in the remaining dollar cap, and with reason `input_ceiling_projection` if P0's measured tokens per byte times the largest S1 request exceeds 8,000 tokens.
 
-Call caps in the ledger: P0 1, Q0 23, S1 576, 600 in total. Dollar cap USD 2 of settled cost plus open reservations. There is no token-counting endpoint on this route; each reservation is a byte-based upper bound (input tokens ≤ request bytes, plus the full output limit), so part 2 of the failure-handling rule (token counting) does not apply.
+Call caps in the ledger: P0 1, Q0 23, S1 576, 600 for this attempt; the ledger's study cap is 624 because the one permitted repair attempt would add 24 qualification calls to the same ledger. Dollar cap USD 2 of settled cost plus open reservations. There is no token-counting endpoint on this route; each reservation is 10 times a byte-based upper bound (input tokens ≤ request bytes, plus the full output limit, at the snapshot prices), about USD 0.002 per call, so part 2 of the failure-handling rule (token counting) does not apply. Expected spend is about USD 0.01 to 0.03; the arithmetic is in the [pre-run review](reviews/chain-001-pre.md).
 
-Failure handling (ready-chain rule of 2026-10-04): every failed request keeps its HTTP status, response body (2,000 characters) and request id; S1 continues past failed calls until more than 6 have failed (the larger of 3 and 1% of 576); integrity failures stop dispatch at once; a credit or balance error pauses the stage, re-sends the same call every 60 s for up to 20 minutes and then stops with `provider_credit_balance_low`, after which `chain.py resume` continues the not-started units at the same source hash. S0, P0 and Q0 stay strict.
+Failure handling (ready-chain rule of 2026-10-04): every failed request keeps its HTTP status, response body (2,000 characters) and request id; S1 continues past failed calls until more than 6 have failed (the larger of 3 and 1% of 576); integrity failures stop dispatch at once; a credit or balance error pauses the stage, re-sends the same call every 60 s for up to 20 minutes and then stops with `provider_credit_balance_low`, after which `chain.py resume` continues the not-started units at the same source hash inside the same S1 cap (the reservation of a call that no model answered is voided). S0, P0 and Q0 stay strict.
 
 The one permitted repair after a failed qualification is a new attempt (`attempt: '002'`, qualification set b, new source hash, its own pre-run review) after reading the failing answers. A failed repeat ends the line. Thresholds are never lowered.
 
@@ -73,6 +74,34 @@ Analysis: the independent randomized units are the 24 layouts within twelve auth
 | Qualification | Valid rows of 24; optimal of 12 per representation. |
 | Failure report | Every unit without a valid answer: category, HTTP status, response body, request id, returned text. |
 | Resources | Calls, transport attempts, input and output tokens, dollars from reported usage, billing pauses. |
+
+## Visualization
+
+[VISUALIZATION.md](VISUALIZATION.md): 1800×1200 frames with the regret and cost panel (mean expected regret per case for prose and table, the 24 layout-level contrasts with their mean and interval, each case against the offline comparators, calls, tokens, dollars and failures), an initial, progress and final frame, and a completion-progress GIF.
+
+## Offline evidence (no model call, no server)
+
+Run by the builder on 2026-10-04 at the code commit named in the [pre-run review](reviews/chain-001-pre.md): `python3 src/selftest.py` 84 tests OK; offline S0 144 of 144 rows valid, 0 invariant violations; `python3 src/manifest.py --check` current; the rehearsal against a throwaway local hub and a stubbed model endpoint passes all five scenarios. Operator steps: [RUN.md](RUN.md). Gate status: [SETUP.md](SETUP.md).
+
+Scripted reference values on the four engineering layouts (expected regret per decision; not model evidence; `python3 src/analyze.py calibration`):
+
+| e | U | Optimal action | Analytic policy | Always check | Always explore |
+|---|---|---|---|---|---|
+| 0.05 | 0.10 | explore | 0 | 0.05 | 0 |
+| 0.05 | 0.25 | explore | 0 | 0.20 | 0 |
+| 0.05 | 0.75 | explore | 0 | 0.70 | 0 |
+| 0.20 | 0.10 | check | 0 | 0 | 0.10 |
+| 0.20 | 0.25 | explore | 0 | 0.05 | 0 |
+| 0.20 | 0.75 | explore | 0 | 0.55 | 0 |
+| 0.50 | 0.10 | check | 0 | 0 | 0.40 |
+| 0.50 | 0.25 | check | 0 | 0 | 0.25 |
+| 0.50 | 0.75 | explore | 0 | 0.25 | 0 |
+| 0.80 | 0.10 | check | 0 | 0 | 0.70 |
+| 0.80 | 0.25 | check | 0 | 0 | 0.55 |
+| 0.80 | 0.75 | check | 0 | 0 | 0.05 |
+| mean | | | 0 | 0.1500 | 0.1708 |
+
+Always choosing the first-listed or the second-listed cell gives 0.1604 each (the listing order is balanced). The analytic policy has regret 0 in both representations by construction, so its table-minus-prose contrast is 0; a scripted pair that is analytic with the table and always-check with the prose gives −0.1500, and the reverse gives +0.1500. The model's cells are not at a floor or a ceiling by construction: any cell can land anywhere between 0 and the case's |e − U|.
 
 ## Limits
 

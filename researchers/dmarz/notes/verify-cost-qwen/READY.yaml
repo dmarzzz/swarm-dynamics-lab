@@ -1,0 +1,13 @@
+contract: ready-chain-v1
+study: verify-cost-qwen
+experiment: verify-cost-qwen
+stages: [S0, P0, Q0, S1]
+provider: openrouter
+model: qwen/qwen3.7-flash
+effort: low
+max_calls: {S0: 0, P0: 1, Q0: 23, S1: 576}
+max_calls_total: 600
+usd_cap: 2
+chain_timeout_seconds: 7200
+selftests: 84
+source_hash: 72895482b6765d17e60e17af80249c94ef70fca0f544f6f1c49d12c573d68b4f
