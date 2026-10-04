@@ -165,18 +165,22 @@ class Accounting(unittest.TestCase):
             request=json.loads(req.data)
             allowed=json.loads(request['messages'][0]['content'])['actions']
             self.assertEqual(request['output_config']['format']['schema']['properties']['action']['enum'],allowed)
+            if common.design()['model']=='claude-sonnet-5-5':
+                self.assertNotIn('temperature',request)
+                self.assertEqual(request['thinking'],{'type':'between_tools'})
+                self.assertEqual(request['output_config']['effort'],'high')
             return io.BytesIO(json.dumps(dict(model=common.design()['model'],stop_reason='end_turn',
                 content=[dict(type='text',text=json.dumps(dict(action='wait',message='')))],
                 usage=dict(input_tokens=100,output_tokens=10))).encode())
         with tempfile.TemporaryDirectory() as td:
             l=Ledger(Path(td)/'ledger.jsonl');adapter=Anthropic(l,opener=response,key='fake',workspace='fake')
             answer,usage=adapter.call({'actions':['wait']},'first')
-            self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],.00015)
+            self.assertEqual(answer['action'],'wait');self.assertAlmostEqual(usage['actual_usd'],.0003)
             with self.assertRaises(CallFailure) as caught:adapter.call({'actions':['inspect']},'second')
             self.assertEqual(caught.exception.category,'invalid_action')
             self.assertEqual(json.loads(caught.exception.accounting['response_text'])['action'],'wait')
             self.assertEqual(l.transact()['usage_reported_calls'],2)
-            self.assertAlmostEqual(l.transact()['actual_usd'],.0003)
+            self.assertAlmostEqual(l.transact()['actual_usd'],.0006)
 
     def test_transport_failure_consumes_reservation(self):
         def fail(*args,**kwargs): raise OSError('sensitive text must not leak')

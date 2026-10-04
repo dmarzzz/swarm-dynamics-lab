@@ -48,9 +48,13 @@ class Anthropic:
 
     def call(self, packet, call_id):
         schema = {**SCHEMA, 'properties': {**SCHEMA['properties'], 'action': {'type': 'string', 'enum': packet['actions']}}}
-        body = {'model': self.d['model'], 'max_tokens': self.b['max_output_tokens'], 'temperature': 0,
+        body = {'model': self.d['model'], 'max_tokens': self.b['max_output_tokens'],
                 'system': SYSTEM, 'messages': [{'role': 'user', 'content': json.dumps(packet, sort_keys=True)}],
                 'output_config': {'format': {'type': 'json_schema', 'schema': schema}}}
+        settings = self.d.get('inference', {'temperature': 0})
+        if settings.get('temperature') is not None: body['temperature'] = settings['temperature']
+        if 'thinking' in settings: body['thinking'] = settings['thinking']
+        if 'effort' in settings: body['output_config']['effort'] = settings['effort']
         encoded = json.dumps(body).encode()
         if len(encoded) > self.b['max_input_bytes']: raise CallFailure('input_size_limit')
         reserve = (len(encoded)+4096)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']

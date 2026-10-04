@@ -1,6 +1,6 @@
-version: compositional-safety-v2
+version: compositional-safety-v3
 status: exploratory-qualification
-model: claude-haiku-4-5-20251001
+model: claude-sonnet-5-5
 arms:
 - C
 - S
@@ -38,9 +38,9 @@ stages:
   Q0:
     backend: anthropic
     tasks:
-    - 210
-    - 211
-    - 212
+    - 220
+    - 221
+    - 222
     domains:
     - D1
     - D2
@@ -80,15 +80,19 @@ qualification:
 budget:
   owner_shared_usd: 500
   study_reserved_usd: 185
-  max_attempted_calls: 8192
+  max_attempted_calls: 9216
   max_input_bytes: 16000
   max_output_tokens: 350
   request_timeout_seconds: 90
   stage_timeout_seconds: 7200
-  input_usd_per_million: 1
-  output_usd_per_million: 5
+  input_usd_per_million: 2
+  output_usd_per_million: 10
   workers: 1
   retries: 0
 S1_enabled: false
 S2_enabled: false
 holdout_min_task_id: 10000
+inference:
+  thinking:
+    type: between_tools
+  effort: high

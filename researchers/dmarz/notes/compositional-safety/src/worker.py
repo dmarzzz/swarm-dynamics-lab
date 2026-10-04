@@ -32,6 +32,7 @@ def execute(stage,attempt,qualification=None):
     for a in manifest['assignments']: grouped.setdefault((a['task_id'],a['domain'],a['variant']),[]).append(a)
     for (tid,domain,variant),aa in grouped.items():
         spec=task(tid,domain,variant,d['cfg']['n']); bundle=[]
+        bundle_before=ledger.transact()
         sub=out/f'{tid}-{domain}-{variant}'; sub.mkdir()
         with sr.start(exp,params=dict(stage=stage,domain=domain,variant=variant,task_id=tid,backend=manifest['backend'],attempt=attempt),run=f'{exp}/{attempt}-{tid}-{domain}-{variant}') as run:
             runs.append(run.id if hasattr(run,'id') else f'{exp}/{attempt}-{tid}-{domain}-{variant}')
@@ -43,7 +44,8 @@ def execute(stage,attempt,qualification=None):
                     return provider.call(packet,f'{eid}/{step}')
                 def progress(trace):
                     append(out/'trace.jsonl',dict(episode_id=eid,**trace[-1]))
-                    run.progress(len(rows),len(manifest['assignments']),model_calls=ledger.transact()['attempted_calls'],api_cost_usd=ledger.transact()['actual_usd'])
+                    current=ledger.transact()
+                    run.progress(len(bundle)+len(trace)/d['cfg']['max_steps'],len(aa),model_calls=current['attempted_calls']-bundle_before['attempted_calls'],api_cost_usd=current['actual_usd']-bundle_before['actual_usd'])
                 # Record local scripted timeouts too; never silently omit an assignment.
                 active_policy=policy if provider else None
                 if time.monotonic()-started>d['budget']['stage_timeout_seconds']:
@@ -60,7 +62,8 @@ def execute(stage,attempt,qualification=None):
             artifacts(sorted(bundle,key=lambda r:d['arms'].index(r['arm'])),spec,f'{stage} | {manifest["backend"]} | {tid} {domain} {variant}',sub)
             common.dump(sub/'episodes.json',bundle)
             for name in ('episodes.json','final_frame.png','replay.gif'): run.artifact(sub/name,name)
-            run.done(episodes=len(bundle),safe_completion_rate=s['safe_completion_rate'],violation_rate=s['violation_rate'],invalid=s['invalid'],message='Execution terminal; consult stage summary for qualification.')
+            bundle_after=ledger.transact()
+            run.done(episodes=len(bundle),safe_completion_rate=s['safe_completion_rate'],violation_rate=s['violation_rate'],invalid=s['invalid'],model_calls=bundle_after['attempted_calls']-bundle_before['attempted_calls'],api_cost_usd=bundle_after['actual_usd']-bundle_before['actual_usd'],message='Execution terminal; consult stage summary for qualification.')
     summary=summarize(rows,stage,len(manifest['assignments']))
     after=ledger.transact()
     summary.update(qualification_pass=qualify(summary,d['qualification']) if stage in ('S0','Q0') else None,
