@@ -302,7 +302,13 @@ def probe_gate(rows):
     acc = (probes[0].get('accounting') or {}) if probes else {}
     tokens, size = acc.get('input_tokens'), probes[0].get('request_bytes') if probes else None
     return {'count': len(probes), 'passed': ok, 'input_tokens': tokens, 'output_tokens': acc.get('output_tokens'),
-            'request_bytes': size, 'tokens_per_byte': tokens / size if ok and tokens and size else None}
+            'request_bytes': size, 'tokens_per_byte': tokens / size if ok and tokens and size else None,
+            # the raw response metadata of the probe call, as the provider returned it
+            'response_model': acc.get('response_model'), 'response_provider': acc.get('response_provider'),
+            'response_id': acc.get('response_id'), 'finish_reason': acc.get('finish_reason'),
+            'reasoning_tokens': acc.get('reasoning_tokens'), 'latency_seconds': acc.get('latency_seconds'),
+            'provider_reported_usd': acc.get('provider_reported_usd'), 'computed_usd': acc.get('computed_usd'),
+            'error': probes[0].get('error') if probes else None, 'http_status': acc.get('http_status')}
 
 
 def degeneracy(rows):

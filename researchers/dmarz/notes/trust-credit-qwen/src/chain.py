@@ -304,8 +304,7 @@ def verify_run(sr, stage, entry, reference, prior_rows, earlier_rows):
     metrics = detail.get('metrics') or {}
     checks['hub_metrics_match'] = all(k in metrics and close(float(metrics[k]), float(t[k])) for k in t)
     checks['source_hash_current'] = summary['params']['source_hash'] == study.source_hash()
-    carried = (summary.get('continuation') or {}).get('carried_reservations', 0)
-    checks['call_cap_respected'] = t['model_calls'] <= budget['max_calls'][stage] + carried
+    checks['call_cap_respected'] = t['model_calls'] <= budget['max_calls'][stage]
     return {'run': entry['run'], 'batch': entry.get('batch'), 'status': entry['status'], 'ok': all(checks.values()), 'checks': checks,
             'assigned': len(assigned), 'completed': len(good), 'failed': t['failed'], 'model_calls': t['model_calls'], 'cost_usd': t['cost_usd']}, rows
 
@@ -314,7 +313,11 @@ def s1_whole(entry, reference):
     """S1 as a whole, from its original run and continuations: every unit exactly once."""
     rows = stage_rows(entry); listed = sorted(x.split(':')[0] for x in reference['stages']['S1']['ids'])
     a = analyze.analyze(rows) if rows else None
+    everything = [r for e in [entry] + list(entry.get('continuations') or []) if e.get('directory') and (Path(e['directory']) / 'episodes.jsonl.gz').exists()
+                  for r in read_jsonl(Path(e['directory']) / 'episodes.jsonl.gz')]
+    calls = sum(bool((r.get('accounting') or {}).get('attempted')) and not (r.get('accounting') or {}).get('voided') for r in everything)
     return {'every_unit_exactly_once': sorted(r['id'] for r in rows) == listed,
+            'model_calls_all_runs': calls, 'calls_within_cap': calls <= study.design()['budget']['max_calls']['S1'],
             'completed': sum(r['status'] == 'completed' for r in rows), 'failed': sum(r['status'] == 'failed' for r in rows),
             'not_started': sum(r['status'] == 'not_started' for r in rows),
             'primary': None if not a else {k: a['primary'][k] for k in ('estimate', 'interval', 'roots', 'positive_roots')},
@@ -343,7 +346,7 @@ def verify(sr=None):
         except Exception as exc:
             stages[stage] = {'run': entry.get('run'), 'ok': False, 'error': type(exc).__name__ + ': ' + str(exc)[:200]}
     whole = s1_whole(status['stages']['S1'], reference) if 'directory' in status['stages'].get('S1', {}) else None
-    ok = bool(stages) and all(s['ok'] for s in stages.values()) and (whole is None or whole['every_unit_exactly_once'])
+    ok = bool(stages) and all(s['ok'] for s in stages.values()) and (whole is None or (whole['every_unit_exactly_once'] and whole['calls_within_cap']))
     print(json.dumps({'ok': ok, 'state': status.get('state'), 'manifest_digest': reference['digest'], 'stages': stages, 'S1': whole}, sort_keys=True))
     return 0 if ok else 1
 

@@ -21,8 +21,9 @@ python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> status --ho
 python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> verify --host <server>
 ```
 
-- `setup` checks out the launch commit, installs the pinned requirements, runs `python3 src/selftest.py` (68 tests, about 40 seconds on a laptop) and compares the number of tests and `study.source_hash()` with `READY.yaml`.
+- `setup` checks out the launch commit, installs the pinned requirements, runs `python3 src/selftest.py` (73 tests, about 40 seconds on a laptop) and compares the number of tests and `study.source_hash()` with `READY.yaml`.
 - `chain` starts one detached process, `python src/chain.py run --stages S0,P0,Q0,S1`, with `SWARM_OPENROUTER_API_KEY`, `STUDY_BUDGET_LEDGER`, `STUDY_RESULTS_DIR` and `SWARM_SOURCE` in its environment and the hub client on `PYTHONPATH`. `--confirm-paid` is required because P0, Q0 and S1 make model calls: 1, 23 and 504.
+- P0's summary (`probe`), hub metrics (`probe_*`) and run message carry the probe call's raw response metadata: response model, provider, response id, finish reason, reasoning tokens, latency, provider-reported cost, input and output tokens, tokens per byte. Read them before anything else if P0 fails.
 - `status` prints `chain-status.json` and the ledger totals. `verify` checks artifact checksums against the hub, regrades every saved row and recomputes totals, gates, stage outcomes and the analysis; it exits non-zero when a check fails. `python src/chain.py summarize` prints the S1 headline (primary contrast, counts, model-outcome bounds). Each prints one JSON object on the last line; none needs the model credential.
 
 ## What the chain does by itself
@@ -30,7 +31,7 @@ python3 scripts/run-ready-chain.py trust-credit-qwen <launch commit> verify --ho
 | Stage | Calls | Passes when | If it does not |
 |---|---|---|---|
 | S0 | 0 | 216 scripted rows valid; invariants hold on the 8 engineering roots and all 48 fixtures; both fixture sets pass under the reference policy; the propagated rule reproduces the earlier direction | chain stops; nothing paid has happened |
-| P0 | 1 | the first qualification fixture: response parses, model slug and provider match, usage reported, finish reason `stop`, no reasoning tokens, valid structure | chain stops after one call |
+| P0 | 1 | the first qualification fixture: response parses, model slug matches, the provider is named and is Alibaba, usage reported, finish reason `stop`, no reasoning tokens, valid structure | chain stops after one call |
 | Q0 | 23 | before queueing: P0's measured tokens per byte × the largest Q0 request ≤ 8,000 tokens, and P0's saved row is found and agrees with the hub; then over all 24 fixtures: every structure valid, ≥ 7 of 8 exactly right in `full` and in `sparse`, null on the withheld fact in 8 of 8 `missing` | `input_ceiling_projection`, `p0_row_missing`, or `gate_failed`; S1 is never queued |
 | S1 | 504 | before queueing: largest measured tokens per byte × the largest S1 request ≤ 8,000 tokens (`input_ceiling_projection`), and 504 × Q0's cost per call fits under the cap (`projection_exceeds_cap`); then at most 6 failed calls and no integrity failure | S1 ends `failed` with the reason; rows preserved |
 
@@ -38,19 +39,19 @@ Exit code 0: all requested stages done. Exit code 3: stopped at a failed stage o
 
 Failure handling in S1: a failed call (transport failure after the retry rule, timeout, refusal, invalid JSON, invalid answer, missing usage) is recorded with its HTTP status, response body and request id, and dispatch continues; it stops when more than 6 calls have failed. A ledger refusal, a model or provider mismatch, a breached reservation or a deadline stops dispatch at once. S0, P0 and Q0 stop at the first failed call.
 
-Billing outage: on HTTP 402, or a 400/403 naming the credit balance, the stage pauses and the same call is re-sent every 60 s for up to 20 minutes. If the outage outlasts that, the stage stops with `provider_credit_balance_low`: nothing is counted as failed and the unfinished calls are recorded as not started. After credit is restored, and only then:
+Billing outage: on HTTP 402, or a 400/403/429 whose body names credit, balance, billing, a usage or spend limit, an exceeded limit or insufficient funds, the stage pauses and the same call is re-sent every 60 s for up to 20 minutes. If the outage outlasts that, the stage stops with `provider_credit_balance_low`: nothing is counted as failed and the unfinished calls are recorded as not started. After credit is restored, and only then:
 
 ```
 python src/chain.py resume
 ```
 
-(on the server, same environment; the launcher's `resume` action runs it). It queues batch `s1-001-r1` with exactly the calls not started, under the same ledger. Record the resume as a dated amendment in this folder. `verify` and `summarize` read the original run and its continuations together.
+(on the server, same environment; the launcher's `resume` action runs it). It queues batch `s1-001-r1` with exactly the calls not started, under the same ledger and the unchanged S1 cap of 504 (the reservations of the unanswered calls were voided). Record the resume as a dated amendment in this folder. `verify` and `summarize` read the original run and its continuations together.
 
-Limits in the hashed design: 4 requests in flight; 120 s per request; 3,600 s per stage; 7,200 s for the chain; 528 calls; 640 transport attempts; USD 2 of settled cost plus open reservations; every request at most 7,600 bytes. Expected: about USD 0.05 and 5 to 15 minutes for S1.
+Limits in the hashed design: 4 requests in flight; 120 s per request; 3,600 s per stage; 7,200 s for the chain; 528 calls in this attempt (the ledger's study cap of 552 includes the 24 of the one repair attempt); 640 transport attempts; USD 2 of settled cost plus open reservations, each reservation 10 times the snapshot-price bound (about USD 0.003); every request at most 7,600 bytes. Expected: about USD 0.05 and 5 to 15 minutes for S1.
 
 ## If qualification fails
 
-Read every failing answer first (the rows keep `answer` or `accounting.answer_text`). The program allows one bounded repair: a new attempt with `attempt: '002'` in `design.yaml` (new source hash, batches `…-002`, the second fixture set on roots 4650-4657, which is frozen in the manifest as `qualification_b`), and its own pre-run review. The ledger counts calls per stage, so that attempt either uses a fresh ledger file or raises `max_calls` for P0 and Q0 to 2 and 46 in its design; its pre-run review says which. Thresholds are not lowered. A failed repeat ends the line.
+Read every failing answer first (the rows keep `answer` or `accounting.answer_text`). The program allows one bounded repair: a new attempt with `attempt: '002'` in `design.yaml` (new source hash, batches `…-002`, the second fixture set on roots 4650-4657, which is frozen in the manifest as `qualification_b`), and its own pre-run review. Per-stage call caps are counted per batch family, so `p0-002` and `q0-002` have their own allowance in the same ledger file; `max_attempted_calls` (552) already includes those 24 calls. Thresholds are not lowered. A failed repeat ends the line.
 
 ## After the chain
 

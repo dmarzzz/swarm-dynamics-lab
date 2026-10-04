@@ -55,7 +55,8 @@ stages:
   S2: {enabled: false}
 budget:
   max_calls: {S0: 0, P0: 1, Q0: 23, S1: 504}
-  max_attempted_calls: 528
+  max_attempted_calls: 552
+  reservation_margin: 10
   max_failed: 6
   aggregate_usd: 2
   max_output_tokens: 1000

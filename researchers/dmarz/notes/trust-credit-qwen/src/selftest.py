@@ -27,13 +27,13 @@ import render       # noqa: E402
 import sim          # noqa: E402
 import study        # noqa: E402
 import worker       # noqa: E402
-from test_provider import Request, Answers, Transport, Billing, LedgerRules  # noqa: E402,F401  (the adapter's 28 tests)
+from test_provider import Request, Answers, Transport, Billing, LedgerRules  # noqa: E402,F401  (the adapter's 32 tests)
 
 FROZEN = {'world_4481': '079b32e669f71bb78927dfbde4142d59f11211ef6c9a0049ad1a254f7e1fb6bc',
           'audit_4481': '20268380ea35369b5c49192714657a6593c2617d488fd80dbc9c06329743bd91',
           'admitted_4481': '10eef2c47925c1650572ae877d9a6db9b648635098062daa4bc337355a99d95a',
           'request_template': '9cbd8bc28ae39aafc5dd86a1627bfd54677052367b4b2aa5811dbb1dae558dbe',
-          'reference_adapter': '86d0739e9bf83fcb12c382b5d1844ed7011b56a2bb77baebdcf7ad275b58d789',
+          'reference_adapter': '2e98d517bad4cf8d2d9383f3126040e576bd4aa5528e4546639f5aeff03fa982',
           'instruction': 'bddb189fed7f59bd89880a81e46f531a7664919114ca3aed8f14319d666caf04'}
 D = study.design(); CFG = study.cfg(); B = D['budget']
 ENG = D['roots']['engineering']; KEY = 'sk-or-test-SECRET-0123456789'
@@ -88,8 +88,8 @@ class FakeRun:
         return False
     def progress(self, *a, **k): return True
     def artifact(self, path, name=None): self.uploads.append(name or Path(path).name); return {'name': name}
-    def done(self, message=None, **metrics): self.final = ('done', metrics)
-    def fail(self, message=None, **metrics): self.final = ('fail', metrics)
+    def done(self, message=None, **metrics): self.final = ('done', metrics); self.message = message
+    def fail(self, message=None, **metrics): self.final = ('fail', metrics); self.message = message
 
 
 class FakeHub:
@@ -268,9 +268,9 @@ class Instrument(unittest.TestCase):
         self.assertTrue(study.gate('P0', base[:1])); self.assertFalse(study.gate('P0', [dict(base[0], status='failed')])); self.assertIsNone(study.gate('S1', []))
 
     def test_stage_counts_caps_and_splits(self):
-        self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 504}); self.assertEqual(B['max_attempted_calls'], 528)
+        self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 504}); self.assertEqual(B['max_attempted_calls'], sum(B['max_calls'].values()) + D['qualification']['fixtures']); self.assertEqual((B['max_attempted_calls'], B['reservation_margin']), (552, 10))
         self.assertEqual(24 * (3 * 3 * 2 + 3), 504); self.assertEqual(B['max_failed'], max(3, -(-504 // 100)))
-        self.assertGreaterEqual(B['max_transport_attempts'], 528 + 40); self.assertEqual(B['aggregate_usd'], 2)
+        self.assertGreaterEqual(B['max_transport_attempts'], 552 + 40); self.assertEqual(B['aggregate_usd'], 2)
         groups = [set(D['roots'][k]) for k in ('engineering', 'qualification', 'qualification_b', 'comparison')]
         self.assertEqual([len(g) for g in groups], [8, 8, 8, 24]); self.assertTrue(all(not a & b for i, a in enumerate(groups) for b in groups[i + 1:]))
         self.assertLess(max(set.union(*groups)), 10000)
@@ -283,7 +283,7 @@ class Instrument(unittest.TestCase):
         c = study.adapter_config(); self.assertEqual(set(c), {'model', 'canonical_model', 'provider', 'request_template', 'budget'})
         from test_provider import CONFIG
         self.assertEqual(c['request_template'], CONFIG['request_template']); self.assertLessEqual(set(CONFIG['budget']), set(c['budget']))
-        for key in ('max_calls', 'max_attempted_calls', 'aggregate_usd', 'max_output_tokens', 'max_input_tokens', 'request_timeout_seconds', 'retry',
+        for key in ('max_calls', 'aggregate_usd', 'max_output_tokens', 'max_input_tokens', 'request_timeout_seconds', 'retry',
                     'billing_outage', 'max_transport_attempts', 'input_usd_per_million', 'output_usd_per_million'):
             self.assertEqual(c['budget'][key], CONFIG['budget'][key])
         with tempfile.TemporaryDirectory() as td, paid_env(td):
@@ -293,7 +293,9 @@ class Instrument(unittest.TestCase):
             a = study.assignments('P0')[0]; answer, acct = api.call(study.SYSTEM, study.user_text(a['packet']), 'p0-001:x', study.validate)
             self.assertEqual(list(sent[0]), list(provider.BODY_KEYS)); self.assertEqual({k: v for k, v in sent[0].items() if k != 'messages'}, D['request_template'])
             self.assertEqual(acct['request_bytes'], a['request_bytes']); self.assertEqual(answer, study.scripted(a['packet']))
-            self.assertLessEqual(acct['reserved_usd'], (B['max_input_bytes'] * 0.03 + 1000 * 0.13 + 1) / 1e6)
+            self.assertEqual(acct['reserved_usd'], int((a['request_bytes'] * 0.03 + 1000 * 0.13) * 10 + 0.999999) / 1e6)
+            # even if every call of the study and of the one repair attempt stayed unsettled, the reservations fit under the cap
+            self.assertLess(B['max_attempted_calls'] * (B['max_input_bytes'] * 0.03 + 1000 * 0.13) * B['reservation_margin'] / 1e6, B['aggregate_usd'])
 
     def test_engineering_grid_reproduces_the_parent_direction_and_is_not_degenerate(self):
         rows = scripted_rows('S0'); self.assertEqual(len(rows), 216); self.assertEqual(study.degeneracy(rows), [])
@@ -323,9 +325,10 @@ class Instrument(unittest.TestCase):
 
 
 class WorkerRules(unittest.TestCase):
-    def run_s1(self, model, n=24, clock=None, expect_fail=None, units=None, prior=None, params=None):
+    def run_s1(self, model, n=24, clock=None, expect_fail=None, units=None, prior=None, params=None, ledger_dir=None, config=None):
         run = FakeRun('x/s1', params or study.params('S1'))
-        with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(study, 'assignments', return_value=s1_slice(n)), \
+        with tempfile.TemporaryDirectory() as td, paid_env(ledger_dir or td), patch.object(study, 'assignments', return_value=s1_slice(n)), \
+                patch.object(study, 'adapter_config', return_value=config or study.adapter_config()), \
                 patch.object(study, 'check_invariants', return_value=[]), patch.object(render, 'replay', lambda *a, **k: 0):
             kw = dict(clock=clock.now, sleep=clock.sleep) if clock else {}
             try:
@@ -395,18 +398,52 @@ class WorkerRules(unittest.TestCase):
                 with self.lock:
                     if self.n >= 10: self.credit_forever = True
                 return super().__call__(request, timeout)
-        run, summary, rows, analysis, leaked = self.run_s1(Dry(), clock=clock, expect_fail=provider.BILLING_STOP)
-        self.assertEqual((summary['failed'], summary['resumable'], summary['stop_reason']), (0, 1, provider.BILLING_STOP))
-        self.assertEqual(sum(r['status'] == 'completed' for r in rows), 10); self.assertEqual(sum(r['status'] == 'not_started' for r in rows), 14)
-        self.assertEqual((run.final[0], run.final[1]['resumable'], run.final[1]['failed']), ('fail', 1, 0))
-        units = [r['id'] for r in rows if r['status'] == 'not_started']; carried = worker.carried_reservations(rows, set(units))
-        self.assertGreaterEqual(carried, 1); self.assertLessEqual(carried, B['workers'])
-        p = dict(study.params('S1'), batch='s1-001-r1', continuation=1)
-        run2, summary2, rows2, analysis2, _ = self.run_s1(Model(), units=units, prior=rows, params=p)
-        self.assertEqual((summary2['planned'], summary2['graded'], summary2['passed'], summary2['continuation']['carried_reservations']), (14, 14, True, carried))
+        # the S1 cap is set to exactly the 24 units of this slice: the continuation must fit inside it
+        config = study.adapter_config(); config = dict(config, budget=dict(config['budget'], max_calls=dict(config['budget']['max_calls'], S1=24), max_attempted_calls=24))
+        with tempfile.TemporaryDirectory() as shared:
+            run, summary, rows, analysis, leaked = self.run_s1(Dry(), clock=clock, expect_fail=provider.BILLING_STOP, ledger_dir=shared, config=config)
+            self.assertEqual((summary['failed'], summary['resumable'], summary['stop_reason'], summary['model_calls']), (0, 1, provider.BILLING_STOP, 10))
+            self.assertEqual(sum(r['status'] == 'completed' for r in rows), 10); self.assertEqual(sum(r['status'] == 'not_started' for r in rows), 14)
+            self.assertEqual((run.final[0], run.final[1]['resumable'], run.final[1]['failed']), ('fail', 1, 0))
+            self.assertTrue(1 <= summary['voided_calls'] <= B['workers'])
+            self.assertTrue(all(r['accounting'].get('voided') for r in rows if r['status'] == 'not_started' and r['accounting'].get('attempted')))
+            ledger = provider.Ledger(Path(shared) / 'ledger.jsonl', config['budget']); mid = ledger.transact()
+            self.assertEqual((mid['calls_by_batch']['s1-001'], mid['attempted_calls'], mid['voided_calls']), (10, 10, summary['voided_calls']))
+            units = [r['id'] for r in rows if r['status'] == 'not_started']
+            p = dict(study.params('S1'), batch='s1-001-r1', continuation=1)
+            run2, summary2, rows2, analysis2, _ = self.run_s1(Model(), units=units, prior=rows, params=p, ledger_dir=shared, config=config)
+            self.assertEqual((summary2['planned'], summary2['graded'], summary2['passed'], summary2['model_calls']), (14, 14, True, 14))
+            end = ledger.transact()
+            self.assertEqual((end['calls_by_batch']['s1-001'], end['attempted_calls'], end['usage_reported_calls']), (24, 24, 24))    # answered plus open never above the cap
+            with self.assertRaises(provider.CallFailure) as ctx: ledger.transact({'type': 'reserve', 'call_id': 's1-001-r2:extra', 'micro_usd': 1})
+            self.assertEqual(ctx.exception.category, 'stage_call_cap_reached')
         whole = worker.merge(rows, rows2); self.assertEqual(len(whole), 24); self.assertTrue(all(r['status'] == 'completed' for r in whole))
         self.assertEqual(analysis2['denominators']['completed'], 24)
         with self.assertRaises(AssertionError): worker.merge(whole, rows2)                                # a unit is never counted twice
+
+    def test_probe_stage_reports_the_raw_response_metadata_and_needs_the_provider_named(self):
+        run = FakeRun('x/p0', study.params('P0'))
+        with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(render, 'replay', lambda *a, **k: 0):
+            worker.execute(run.params, Path(td) / 'out', run, opener=Model())
+            summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
+        probe = summary['probe']; size = study.assignments('P0')[0]['request_bytes']
+        self.assertEqual((probe['response_model'], probe['response_provider'], probe['response_id'], probe['finish_reason'], probe['reasoning_tokens']),
+                         (D['canonical_model'], 'Alibaba', 'g', 'stop', None))
+        self.assertEqual((probe['input_tokens'], probe['output_tokens'], probe['request_bytes'], probe['provider_reported_usd']), (2600, 40, size, None))
+        self.assertAlmostEqual(probe['tokens_per_byte'], 2600 / size); self.assertIsNotNone(probe['latency_seconds'])
+        kind, metrics = run.final; self.assertEqual((kind, metrics['qualification_passed'], metrics['probe_input_tokens'], metrics['probe_output_tokens']), ('done', 1, 2600, 40))
+        self.assertAlmostEqual(metrics['probe_tokens_per_byte'], 2600 / size); self.assertIn('probe_latency_seconds', metrics); self.assertIn('fixture_exact', metrics)
+        for piece in ('model=' + D['canonical_model'], 'provider=Alibaba', 'id=g', 'finish=stop'): self.assertIn(piece, run.message)
+        self.assertTrue(all(isinstance(v, (int, float)) for v in metrics.values()))
+        class Unnamed(Model):
+            def __call__(self, request, timeout=None):
+                data = json.loads(super().__call__(request).read()); del data['provider']; return Resp(json.dumps(data).encode())
+        run = FakeRun('x/p0', study.params('P0'))
+        with tempfile.TemporaryDirectory() as td, paid_env(td), patch.object(render, 'replay', lambda *a, **k: 0):
+            with self.assertRaises(worker.StageFailed): worker.execute(run.params, Path(td) / 'out', run, opener=Unnamed())
+            summary = json.loads((Path(td) / 'out' / 'summary.json').read_text())
+        self.assertEqual((run.final[0], summary['errors'], summary['probe']['error'], summary['qualification_passed']), ('fail', ['provider_missing'], 'provider_missing', 0))
+        self.assertIn('error=provider_missing', run.message)
 
     def test_structural_violation_blocks_every_call(self):
         run = FakeRun('x/s1', study.params('S1')); model = Model()

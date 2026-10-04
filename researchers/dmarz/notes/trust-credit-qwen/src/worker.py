@@ -48,7 +48,8 @@ def totals(rows, planned):
     acct = [r.get('accounting') or {} for r in rows]
     return {'episodes': planned, 'invalid': planned - sum(r['status'] == 'completed' for r in rows),
             'failed': sum(r['status'] == 'failed' for r in rows),
-            'model_calls': sum(bool(a.get('attempted')) for a in acct),
+            # a call whose reservation was voided by a billing stop never reached the model
+            'model_calls': sum(bool(a.get('attempted')) and not a.get('voided') for a in acct),
             'transport_attempts': sum(a.get('attempts', 0) for a in acct),
             'input_tokens': sum(a.get('input_tokens', 0) for a in acct),
             'output_tokens': sum(a.get('output_tokens', 0) for a in acct),
@@ -66,14 +67,6 @@ def row_base(a, p, run_name):
     r.update(run=run_name, stage=p['stage'], batch=p['batch'], backend=p['backend'], code=p['code'], source_hash=p['source_hash'],
              admission=a['admission'], withheld=a['withheld'], status='failed')
     return r
-
-
-def carried_reservations(prior_rows, units):
-    """Calls of earlier runs that a billing stop ended after their reservation and before any model
-    answer. A continuation re-dispatches those units under new call ids, so the ledger's S1 cap is
-    raised by exactly this number; the number of calls the model answers stays within the cap."""
-    return sum(1 for r in prior_rows or [] if r['id'] in units and r['status'] == 'not_started'
-               and (r.get('accounting') or {}).get('attempted') and not (r.get('accounting') or {}).get('usage_reported'))
 
 
 def merge(prior_rows, rows):
@@ -105,11 +98,9 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
     ledger = None
     if p['backend'] == 'openrouter':
         path = os.environ.get(provider.LEDGER_ENV); assert path, 'persistent_budget_required'
+        # A continuation runs under the unchanged caps: the ledger voided the reservations of the calls
+        # a billing stop left unanswered, and a continuation batch shares its original batch's allowance.
         config = study.adapter_config()
-        if units is not None:
-            carried = carried_reservations(prior_rows, set(units)); b = dict(config['budget'])
-            b['max_calls'] = dict(b['max_calls'], S1=b['max_calls']['S1'] + carried)
-            b['max_attempted_calls'] += carried; config = dict(config, budget=b)
         assert total <= config['budget']['max_calls'][stage], 'assignments_exceed_stage_call_cap'
         ledger = provider.Ledger(path, config['budget'])
         backend = backend or provider.OpenRouter(ledger, config, opener, clock or time.monotonic, sleep or time.sleep)
@@ -222,8 +213,8 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
                'primary_contrast': analysis.get('primary', {}).get('estimate') if grid else None,
                'rare_correct': analyze.mean(r['evaluation']['rare_correct'] for r in whole if r['kind'] == 'pilot' and r['status'] == 'completed'),
                'rare_wrong': analyze.mean(r['evaluation']['rare_wrong'] for r in whole if r['kind'] == 'pilot' and r['status'] == 'completed'),
-               'continuation': None if units is None else {'units': total, 'earlier_rows': len(prior_rows or []),
-                                                           'carried_reservations': carried_reservations(prior_rows, set(units))},
+               'continuation': None if units is None else {'units': total, 'earlier_rows': len(prior_rows or [])},
+               'voided_calls': sum(bool((r.get('accounting') or {}).get('voided')) for r in rows),
                'study_accounting': ledger.transact() if ledger else {}, 'initial_study_accounting': initial,
                'reporting_errors': reporting_errors, 'visualization': {'mapping': 'v1', 'frames': frames}}
     write_json(out / 'summary.json', summary); write_json(out / 'analysis.json', analysis)
@@ -235,6 +226,8 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, earlier_rows=(
 
 def hub_metrics(summary):
     m = {k: summary[k] for k in HUB_KEYS}
+    for k in ('input_tokens', 'output_tokens', 'reasoning_tokens', 'latency_seconds', 'provider_reported_usd', 'tokens_per_byte'):
+        if isinstance((summary.get('probe') or {}).get(k), (int, float)): m['probe_' + k] = summary['probe'][k]
     for k in ('qualification_passed', 'primary_contrast', 'rare_correct', 'rare_wrong', 'max_tokens_per_byte', 'fixture_exact', 'resumable'):
         if summary.get(k) is not None: m[k] = summary[k]
     return m
@@ -257,6 +250,12 @@ def execute(p, out, run=None, backend=None, deadline=None, opener=None, earlier_
                + (f' (limit {summary["max_failed"]})' if summary['max_failed'] is not None else '')
                + f', {summary["model_calls"]} calls, ${summary["cost_usd"]:.4f}'
                + (f', {summary["billing_pauses"]} billing pause(s) of {summary["billing_pause_seconds"]:.0f} s' if summary['billing_pauses'] else ''))
+    probe = summary.get('probe')
+    if probe:       # the probe's raw response metadata, in words because hub metrics are numbers
+        message += (f'; probe response model={probe["response_model"]} provider={probe["response_provider"]} id={probe["response_id"]} '
+                    f'finish={probe["finish_reason"]} reasoning_tokens={probe["reasoning_tokens"]} input_tokens={probe["input_tokens"]} '
+                    f'output_tokens={probe["output_tokens"]} provider_reported_usd={probe["provider_reported_usd"]} '
+                    f'request_bytes={probe["request_bytes"]} error={probe["error"]} http_status={probe["http_status"]}')
     if not summary['passed']:
         if run: run.fail(message + f'; {summary["reason"]}; rows preserved', **hub_metrics(summary))
         raise StageFailed(summary['reason'])

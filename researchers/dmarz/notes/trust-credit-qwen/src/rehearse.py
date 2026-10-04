@@ -143,7 +143,6 @@ def chain_once(label, stub, hub_dir, base, sr, then_resume=False):
         result['exit'] = chain.run_chain(list(study.STAGES), sr=sr, opener=stub, clock=clock.now, sleep=clock.sleep)
         result.update(snapshot(sr, stub))
         if then_resume:
-            result['refused_resume_exit'] = None
             stub.restore()
             result['resume_exit'] = chain.resume(sr=sr, opener=stub, clock=clock.now, sleep=clock.sleep)
             result['after_resume'] = snapshot(sr, stub)
@@ -170,7 +169,7 @@ def main():
     sys.path.insert(0, str(hub_dir))
     import swarm_report as sr
     base = tempfile.mkdtemp(prefix='trust-credit-rehearsal-', dir=a.tmp); started = time.monotonic()
-    b = study.design()['budget']; total = b['max_attempted_calls']; q = b['max_calls']['P0'] + b['max_calls']['Q0']; cut = q + 150
+    b = study.design()['budget']; total = sum(b['max_calls'].values()); q = b['max_calls']['P0'] + b['max_calls']['Q0']; cut = q + 150
     try:
         full = chain_once('a-full-chain', Stub('reference'), hub_dir, base, sr)
         gate = chain_once('b-failed-qualification', Stub('never_abstain'), hub_dir, base, sr)
@@ -197,6 +196,9 @@ def main():
         'c_continuation_holds_the_rest': [(c['batch'], c['status'], c['units'], c['valid']) for c in after.get('continuations', [])]
                                          == [(study.batch('S1') + '-r1', 'done', 504 - 150, 504 - 150)],
         'c_every_unit_answered_once': after.get('stub_answered') == total,
+        'c_s1_calls_inside_the_exact_cap': (after.get('ledger') or {}).get('calls_by_batch', {}).get(study.batch('S1')) == b['max_calls']['S1']
+                                           and (after.get('ledger') or {}).get('voided_calls', 0) >= 1
+                                           and (after.get('ledger') or {}).get('attempted_calls') == total,
         'c_verify_exit_0': bill.get('verify_exit') == 0,
     }
     ok = all(checks.values())
