@@ -1,6 +1,6 @@
 # Swarm of Theseus: targeted execution diagnostic D1
 
-Status: prospective design for a new diagnostic; BUILD ONLY, not run authorization. Original v2 gates, failures and outcomes remain unchanged. Owner requested targeted repairs built, committed and pushed before the next useful run.
+Status: prospective diagnostic; owner has now authorized admission work and D1 execution after its gates pass. Original v2 gates, failures and outcomes remain unchanged. Owner requested targeted repairs built, committed and pushed before the next useful run.
 
 ## TLDR
 
@@ -36,8 +36,12 @@ No arm is automatically promoted to the culture pilot. A candidate for separatel
 
 ## Launch gates
 
-No live dispatch during this build. Before D1: resolve applicable research/design review, publish immutable plan and current diagnostic-only pre-review; register exact URL and readable experiment/condition TLDRs; verify hash AND actual public page; obtain fresh exclusive fleet allocation and verify live workload; bind source/instrument/assignment hashes and fresh dependency/credential status; reserve non-overlapping approved USD5/144-call authority with current pricing and two-hour deadline. Native runner must reject blocked/stale/mismatched admissions, changed source, missing registration, duplicate output namespace and exhausted quotas. A local receipt or copied ledger cannot create spending authority. Review independence must be stated honestly.
+Owner authorization update 2026-10-04T05:00Z: the owner explicitly verified the USD5 allocation and instructed independent review, a fresh host, plan update and then execution. No extra budget confirmation is required. The allocation must still be reserved once and verified operationally. Before D1: resolve applicable research/design review, publish immutable plan and current diagnostic-only pre-review; register exact URL and readable experiment/condition TLDRs; verify hash AND actual public page; obtain fresh exclusive fleet allocation and verify live workload; bind source/instrument/assignment hashes and fresh dependency/credential status; reserve non-overlapping approved USD5/144-call authority with current pricing and two-hour deadline. Native runner must reject blocked/stale/mismatched admissions, changed source, missing registration, duplicate output namespace and exhausted quotas. A local receipt or copied ledger cannot create spending authority. Review independence must be stated honestly.
 
 ## Visualization mapping
 
 Live measured progress shows completed/assigned calls and cases, errors and conservative spend. Final report shows all five arms, paired world/context accuracy, coverage matrices and cost per assigned case. Saved calls support replay in dispatch order with arm, world, visible evidence, emitted action and viewer-only truth; atomic call order is not a cultural timeline. Missing/invalid rows remain visible. Offline examples say SCRIPTED SOFTWARE FIXTURE, NOT MODEL EVIDENCE. Full decision records are durable before reporting; reporting failures cannot trigger a model retry.
+
+## Operational authorization update
+
+The owner authorized D1 at USD5/144 calls/two hours, with one worker and no retries. This supersedes the build-only status but does not waive review or runtime gates. Since the fleet now routes new launches through orbital-one, dispatch will use the private agentops run queue, not a laptop launch. A fresh exclusive existing idle fleet allocation is sufficient; no new infrastructure purchase is included. Original scientific contrasts, seeds, assignments, metrics and stop rules are unchanged.
