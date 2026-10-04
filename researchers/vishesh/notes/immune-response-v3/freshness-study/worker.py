@@ -5,11 +5,12 @@ import qualification_render as render
 sys.path.insert(0,str(freshness.ROOT.parent.parent/'experiment-documentation'));from public_plan import check
 spec=importlib.util.spec_from_file_location('receipt_worker',freshness.ROOT.parent/'evidence-study/worker.py');old=importlib.util.module_from_spec(spec);spec.loader.exec_module(old)
 def main():
- p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);p.add_argument('--attempt',choices=['freshness-a6'],required=True);p.add_argument('--seed',type=int,required=True);a=p.parse_args();out=Path(a.out);assert not out.exists()
+ p=argparse.ArgumentParser();p.add_argument('--out',required=True);p.add_argument('--receipt',required=True);p.add_argument('--attempt',choices=['freshness-a8'],required=True);p.add_argument('--seed',type=int,required=True);a=p.parse_args();out=Path(a.out);assert not out.exists()
  allocation=json.loads(Path(a.receipt).read_text());assert allocation.get('cloud_account_verified') is True and allocation['host']==socket.gethostname() and allocation['experiment']=='immune-response-v3' and allocation['api_quota_usd']==8 and allocation.get('exclusive_claim_id')
  assert datetime.datetime.fromisoformat(allocation['expires'].replace('Z','+00:00'))>datetime.datetime.now(datetime.timezone.utc)
  commit=subprocess.check_output(['git','rev-parse','HEAD'],cwd=freshness.ROOT,text=True).strip();tldr='TLDR: Evidence-freshness diagnostic; three development cases paired raw/checked,6 episodes18 calls; distinguish stale alarms, runtime restarts and configuration repair; primary healthy ticks and unnecessary mutation, capability qualification only; no treatment-effect claim.'
- public=check('immune-response-v3',tldr);assert public['commit']==commit and public['plan_sha256']==hashlib.sha256((freshness.ROOT/'QUALIFICATION-A6.md').read_bytes()).hexdigest()
+ public=check('immune-response-v3',tldr);assert public['commit']==commit and public['plan_sha256']==hashlib.sha256((freshness.ROOT/'QUALIFICATION-A8.md').read_bytes()).hexdigest()
+ admission=out.parent/'a8-admission.json';admission.write_text(json.dumps({'attempt':'freshness-a8','commit':commit}));os.environ['SWARM_A8_ADMISSION']=str(admission)
  import swarm_report as sr
  job=sr.start('immune-response-v3',params={'stage':a.attempt,'runtime_commit':commit,'max_calls':18,'seed':a.seed,'episodes':6},message=tldr);print(json.dumps({'run':job.id}),flush=True)
  try:

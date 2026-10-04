@@ -11,7 +11,7 @@ def validate(value):
  return value
 
 def main():
- p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a6'],required=True);a=p.parse_args()
+ p=argparse.ArgumentParser();p.add_argument('--commit',required=True);p.add_argument('--ledger-sha',required=True);p.add_argument('--attempt',choices=['freshness-a8'],required=True);a=p.parse_args()
  root=Path(subprocess.check_output(['git','rev-parse','--show-toplevel'],cwd=BASE,text=True).strip());resource.setrlimit(resource.RLIMIT_CORE,(0,0))
  assert re.fullmatch(r'[0-9a-f]{40}',a.commit) and subprocess.check_output(['git','rev-parse','HEAD'],cwd=root,text=True).strip()==a.commit
  assert not subprocess.check_output(['git','diff','--name-only','HEAD'],cwd=root).strip()
@@ -21,8 +21,8 @@ def main():
  allocation=json.loads((root/'receipt-allocation.json').read_text());assert allocation['host']==socket.gethostname() and allocation['experiment']=='immune-response-v3' and allocation['cloud_account_verified'] is True and allocation['api_quota_usd']==8
  assert datetime.datetime.fromisoformat(allocation['expires'].replace('Z','+00:00'))-datetime.datetime.now(datetime.timezone.utc)>datetime.timedelta(minutes=70)
  sys.path.insert(0,str(BASE.parent.parent/'experiment-documentation'));from public_plan import check
- receipt=check('immune-response-v3','A6 capability qualification, three inspected development worlds,raw/checked,6 episodes18calls; corrected schema, restart and healthy restraint; no treatment-effect inference.')
- assert receipt['commit']==a.commit and receipt['plan_sha256']==hashlib.sha256((BASE/'QUALIFICATION-A6.md').read_bytes()).hexdigest()
+ receipt=check('immune-response-v3','A8 capability qualification, three inspected development worlds,raw/checked,6 episodes18calls; corrected schema, restart and healthy restraint; no treatment-effect inference.')
+ assert receipt['commit']==a.commit and receipt['plan_sha256']==hashlib.sha256((BASE/'QUALIFICATION-A8.md').read_bytes()).hexdigest()
  out=root/a.attempt;assert not out.exists();fd=os.open(str(out)+'.dispatch',os.O_WRONLY|os.O_CREAT|os.O_EXCL,0o600);os.close(fd)
  env={k:os.environ[k] for k in ['PATH','HOME','USER','LANG'] if k in os.environ};env.update(PYTHONPATH='/usr/local/lib/swarm',SWARM_SOURCE='vishesh/codex-immune',SWARM_MODEL_BASE_URL='http://127.0.0.1:18765',SWARM_MODEL_CONFIG_FILE=str(BASE/'model-config.json'),SWARM_BUDGET_LEDGER=str(ledger))
  with (root/(a.attempt+'.log')).open('xb') as log:

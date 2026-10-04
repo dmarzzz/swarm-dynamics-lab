@@ -1,9 +1,9 @@
-"""Offline action-ID contract qualification; historical A6 remains source-pinned."""
+"""A8 action-ID native qualification; historical A6 remains source-pinned."""
 import argparse,copy,hashlib,json,os,subprocess,time
 from pathlib import Path
 import freshness as f
 CASES=['healthy_fresh','fresh_crash','stale_false_alarm']
-ATTEMPT='controller-id-offline'
+ATTEMPT='freshness-a8'
 def gate(row):
  t=row['trace']
  if row['case']=='fresh_crash':return bool(t[-1]['healthy'] and sum(x['healthy'] for x in t)>=1 and sum(x['useful_restart'] for x in t)>=1 and not any(x['configuration_change'] or x['rejected'] for x in t))
@@ -11,10 +11,12 @@ def gate(row):
 def summary(out,rows,p,complete):
  d={'assigned':6,'recorded':len(rows),'assigned_calls':18,'execution_qualified':complete and len(rows)==6 and (not p or p.usage_missing==0),'qualification_passed':complete and len(rows)==6 and all(gate(r) for r in rows),'api_calls':p.calls if p else 0,'actual_usd':p.actual_usd if p else 0,'usage_missing':p.usage_missing if p else 0,'cells':[{k:v for k,v in r.items() if k not in ['trace','advice','initial']}|{'capability_pass':gate(r)} for r in rows]};(out/'summary.json').write_text(json.dumps(d,indent=2));return d
 def execute(out,backend):
- if backend!='scripted':raise ValueError('new_controller_contract_requires_native_admission')
+ if backend not in ('scripted','openrouter'):raise ValueError('unsupported_backend')
+ if backend=='openrouter':
+  receipt=json.loads(Path(os.environ['SWARM_A8_ADMISSION']).read_text());assert receipt['attempt']=='freshness-a8' and receipt['commit']==subprocess.check_output(['git','rev-parse','HEAD'],cwd=f.ROOT,text=True).strip()
  out=Path(out);out.mkdir(exist_ok=False,parents=True);os.environ.update(SWARM_ATTEMPT_ID=ATTEMPT,SWARM_USAGE_LOG=str(out/'usage.jsonl'));rows=[];p=None
  assigned=[{'case':c,'arm':arm,'seed':9401} for i,c in enumerate(CASES) for arm in (['raw','checked'] if i%2==0 else ['checked','raw'])]
- files=['qualification.py','QUALIFICATION-A6.md','controller_contract.py','CONTROLLER-SCHEMA-REPAIR.md','freshness.py','openrouter_provider.py','openrouter_relay.py','launch.py','worker.py','model-config.json','qualification_render.py']
+ files=['qualification.py','QUALIFICATION-A8.md','controller_contract.py','CONTROLLER-SCHEMA-REPAIR.md','freshness.py','openrouter_provider.py','openrouter_relay.py','diagnostic_errors.py','launch.py','worker.py','model-config.json','qualification_render.py']
  m={'attempt':ATTEMPT,'controller_contract':f.controller.VERSION,'backend':backend,'assigned':assigned,'max_calls':18,'ticks':2,'model':'anthropic/claude-haiku-4.5' if backend=='openrouter' else 'visible-reference','provider':'Anthropic' if backend=='openrouter' else None,'commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=f.ROOT,text=True).strip(),'file_hashes':{n:hashlib.sha256((f.ROOT/n).read_bytes()).hexdigest() for n in files}};(out/'manifest.json').write_text(json.dumps(m,indent=2))
  with (out/'events.jsonl').open('x') as ef,(out/'episodes.jsonl').open('x') as rf:
   def emit(x):ef.write(json.dumps(x)+'\n');ef.flush();os.fsync(ef.fileno())

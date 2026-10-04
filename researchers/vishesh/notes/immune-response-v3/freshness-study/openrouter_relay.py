@@ -3,6 +3,7 @@ import argparse,json,os,time,resource,urllib.request,urllib.error
 from pathlib import Path
 from http.server import HTTPServer,BaseHTTPRequestHandler
 import freshness
+from diagnostic_errors import safe_error
 from openrouter_provider import validate_wire
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*a,**k):return None
@@ -27,12 +28,12 @@ def main():
     assert len(raw)<=1_000_000 and key.encode() not in raw;value=json.loads(raw);result={k:value[k] for k in ['id','model','provider','choices','usage'] if k in value};status=200
     record({'request_id':rid,'state':'response','body':result})
    except urllib.error.HTTPError as e:
-    failed=True;status=e.code;result={'error':'provider_http','http_status':e.code};record(result)
+    failed=True;status=e.code;result={'error':'provider_http','http_status':e.code,**safe_error(e)};record({'request_id':rid,**result})
    except Exception as e:
     failed=True;status=502;result={'error':type(e).__name__};record(result)
    wire=json.dumps(result).encode();self.send_response(status);self.send_header('Content-Length',str(len(wire)));self.end_headers();self.wfile.write(wire)
  server=HTTPServer(('127.0.0.1',0),Handler);server.timeout=1;Path(a.port_file).write_text(str(server.server_port));print('relay_ready',flush=True)
  try:
-  while time.time()<deadline and not failed:server.handle_request()
+  while time.time()<deadline and not failed and len(seen)<18:server.handle_request()
  finally:server.server_close();journal.close();key=''
 if __name__=='__main__':main()

@@ -1,4 +1,5 @@
 """A5 credential-free remote client; local relay owns OpenRouter authentication."""
+from diagnostic_errors import safe_error
 import json,os,sqlite3,urllib.request,urllib.error,math
 from pathlib import Path
 from trace_provider import TracePolicy
@@ -17,7 +18,7 @@ class OpenRouterPolicy(TracePolicy):
  def __init__(self):
   assert Path(os.environ['SWARM_BUDGET_LEDGER']).is_file()
   HTTPPolicy.__init__(self);assert self.base=='http://127.0.0.1:18765' and not self.key
-  self.run_id=os.environ['SWARM_ATTEMPT_ID'];assert self.run_id=='freshness-a6'
+  self.run_id=os.environ['SWARM_ATTEMPT_ID'];assert self.run_id=='freshness-a8'
   self.usage_path=Path(os.environ['SWARM_USAGE_LOG']);self.actual_usd=0.;self.usage_missing=0
   with sqlite3.connect(self.ledger) as db:assert not db.execute('select count(*) from immune_requests where run_id=?',(self.run_id,)).fetchone()[0]
  def reserve(self,encoded):
@@ -32,7 +33,8 @@ class OpenRouterPolicy(TracePolicy):
    with urllib.request.urlopen(req,timeout=60) as r:raw=r.read(1_000_001)
    assert len(raw)<=1_000_000;result=json.loads(raw)
   except Exception as e:
-   state='http_'+str(e.code) if isinstance(e,urllib.error.HTTPError) else 'transport_'+type(e).__name__;self.finish(rid,state);self.record({'kind':'transport_error','request_id':rid,'state':state});raise ValueError(state) from None
+   diagnostics=safe_error(e) if isinstance(e,urllib.error.HTTPError) else {}
+   state='http_'+str(e.code) if isinstance(e,urllib.error.HTTPError) else 'transport_'+type(e).__name__;self.finish(rid,state);self.record({'kind':'transport_error','request_id':rid,'state':state,**diagnostics});raise ValueError(state) from None
   self.record({'kind':'response','request_id':rid,'body':result,'at':time.time()})
   u=result.get('usage') or {};normalized={'input_tokens':u.get('prompt_tokens'),'output_tokens':u.get('completion_tokens')};cost=u.get('cost')
   known=all(type(normalized[k]) is int and normalized[k]>=0 for k in normalized) and type(cost) in (int,float) and math.isfinite(cost) and cost>=0

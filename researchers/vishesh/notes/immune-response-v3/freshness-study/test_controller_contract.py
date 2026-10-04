@@ -34,7 +34,8 @@ class ControllerContract(unittest.TestCase):
  def test_historical_live_entrypoints_cannot_spend_with_changed_contract(self):
   with tempfile.TemporaryDirectory() as td:
    out=Path(td)/'out'
-   with self.assertRaisesRegex(ValueError,'requires_native_admission'):q.execute(out,'openrouter')
+   from unittest.mock import patch
+   with patch.dict('os.environ',{},clear=True),self.assertRaises(KeyError):q.execute(out,'openrouter')
    with self.assertRaisesRegex(ValueError,'requires_native_admission'):f.execute(out,'openrouter',9401,'freshness-a5')
    self.assertFalse(out.exists())
 if __name__=='__main__':unittest.main()
