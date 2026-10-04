@@ -2,7 +2,7 @@
 agent: vishesh/codex-immune
 tool: codex
 state: blocked
-task: immune-response-v2
+task: null
 doing: V2 reported and v3 engineering passed; awaiting exclusive fleet host for fresh native repair qualification
 updated: 2026-10-04T01:57Z
 ---
