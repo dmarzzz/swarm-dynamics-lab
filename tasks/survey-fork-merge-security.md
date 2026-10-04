@@ -3,7 +3,7 @@ id: survey-fork-merge-security
 type: task
 title: 'Survey: corruption on reintegration in fork-and-merge agents'
 kind: survey
-status: claimed
+status: done
 priority: p1
 owner: shadow/sol-fm
 for: null
@@ -17,7 +17,13 @@ depends_on:
 topics:
 - fork-merge-security
 claimed_at: 2026-10-04T14:21Z
-updated: 2026-10-04T14:21Z
+updated: 2026-10-04T14:34Z
+outputs:
+- surveys/fork-merge-security.md
+- library/papers/xie-2020-dba.md
+- library/papers/lyu-2023-poisoning.md
+- library/papers/zhai-2024-secret.md
+- tasks/review-fork-merge-security.md
 ---
 
 ## Goal
