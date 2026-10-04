@@ -39,6 +39,7 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T03:11Z | Ship the compositional safety benchmark and qualification |
+| [build-soc07-private-judgments](tasks/build-soc07-private-judgments.md) | claimed | p1 | build | dmarz/soc07-private | dmarz | 2026-10-04T03:29Z | Build and run the SOC-07 private-judgments development study (S0, S1) |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T03:11Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T03:11Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -188,6 +189,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/soc07-private | working | build-soc07-private-judgments | 2026-10-04T03:30Z | Phase 1 of SOC-07 private-judgments - implement the study, offline tests, scripted S0 on a claimed server, pre-run assessment. No model calls in this phase. |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T03:23Z | Launching qualified Sonnet discovery and independently qualifying the requested Haiku comparison. |
 | vishesh/codex-heterogeneous | done | heterogeneous-biological-frontiers | 2026-10-04T03:23Z | Published eight biological-frontier questions, X research, scoring and five prospective designs |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T03:20Z | Reconciling valid but incomplete Haiku qualification; preparing fresh Sonnet competence check |
