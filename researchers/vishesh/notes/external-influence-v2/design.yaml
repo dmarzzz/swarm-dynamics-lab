@@ -1,0 +1,197 @@
+{
+  "version": 2,
+  "status": "exploratory; no accepted hypothesis or S2",
+  "primary_candidate": {
+    "domain": "procurement",
+    "world": "misleading",
+    "dose": 8,
+    "n_agents": 9,
+    "verification": "fresh",
+    "contrast": [
+      "targeted_check",
+      "random_check"
+    ],
+    "metric": "harmful_target"
+  },
+  "holdout_reserved": "9000-9999; never generated",
+  "stages": {
+    "S0": [
+      {
+        "domains": [
+          "procurement"
+        ],
+        "tasks": [
+          7000
+        ],
+        "worlds": [
+          "clean",
+          "superior"
+        ],
+        "arms": [
+          "random_check",
+          "targeted_check"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          17
+        ]
+      }
+    ],
+    "S1": [
+      {
+        "domains": [
+          "procurement",
+          "dependency",
+          "travel"
+        ],
+        "tasks": [
+          7100
+        ],
+        "worlds": [
+          "clean",
+          "misleading",
+          "syndication"
+        ],
+        "arms": [
+          "private_review",
+          "discussion",
+          "random_check",
+          "targeted_check",
+          "targeted_provenance"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          17
+        ]
+      },
+      {
+        "domains": [
+          "procurement"
+        ],
+        "tasks": [
+          7100
+        ],
+        "worlds": [
+          "instruction"
+        ],
+        "arms": [
+          "private_review",
+          "discussion",
+          "random_check",
+          "targeted_check",
+          "targeted_provenance"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          17
+        ]
+      }
+    ],
+    "engineering": [
+      {
+        "domains": [
+          "procurement",
+          "dependency",
+          "travel"
+        ],
+        "tasks": [
+          0,
+          1,
+          2,
+          3,
+          4,
+          5,
+          6,
+          7
+        ],
+        "worlds": [
+          "clean",
+          "promotion",
+          "misleading",
+          "syndication",
+          "instruction",
+          "superior"
+        ],
+        "arms": [
+          "private_review",
+          "discussion",
+          "random_check",
+          "targeted_check",
+          "targeted_provenance"
+        ],
+        "n_agents": [
+          5,
+          9
+        ],
+        "doses": [
+          4,
+          8
+        ],
+        "verification": [
+          "fresh"
+        ],
+        "seeds": [
+          17
+        ]
+      },
+      {
+        "domains": [
+          "procurement",
+          "dependency",
+          "travel"
+        ],
+        "tasks": [
+          20,
+          21
+        ],
+        "worlds": [
+          "misleading"
+        ],
+        "arms": [
+          "private_review",
+          "discussion",
+          "random_check",
+          "targeted_check",
+          "targeted_provenance"
+        ],
+        "n_agents": [
+          9
+        ],
+        "doses": [
+          8
+        ],
+        "verification": [
+          "stale",
+          "unavailable"
+        ],
+        "seeds": [
+          17
+        ]
+      }
+    ]
+  }
+}

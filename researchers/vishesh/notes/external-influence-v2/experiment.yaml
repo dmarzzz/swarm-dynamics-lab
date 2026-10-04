@@ -1,0 +1,25 @@
+{
+  "id": "external-influence-v2",
+  "title": "External influence v2: nine-agent procurement, dependencies and travel",
+  "description": "Exploratory synthetic application pilot. Fixed exposure; matched call slots; targeted vs random verification, discussion and source lineage. Separate from preserved v1.",
+  "owner": "vishesh",
+  "params": {
+    "stage": {
+      "type": "str"
+    },
+    "backend": {
+      "type": "str"
+    },
+    "design_hash": {
+      "type": "str"
+    }
+  },
+  "metrics": [
+    "episodes",
+    "invalid",
+    "estimated_actual_usd",
+    "model_backed"
+  ],
+  "primary_metric": "invalid",
+  "url": "https://github.com/dmarzzz/swarm-lab/tree/main/researchers/vishesh/notes/external-influence-v2"
+}

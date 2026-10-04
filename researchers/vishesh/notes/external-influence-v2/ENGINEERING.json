@@ -1,0 +1,11 @@
+{
+  "kind": "scripted engineering validation; not LLM findings",
+  "episodes": 2700,
+  "invalid": 0,
+  "source_hash": "f7e7e94876a417f6ce696ff6c0fa1e2c65d8b13752b9e4efea8a3a5eb141c86b",
+  "design_hash": "4392c6beda4664bc89312ebbbe32c1393b12a07cc2e01e8d29a3e9351500489e",
+  "tests_passed": 11,
+  "cell_count": 360,
+  "coverage": "3 domains; 6 worlds; 5/9 agents; doses4/8; stale/unavailable controls",
+  "actual_api_usd": 0
+}

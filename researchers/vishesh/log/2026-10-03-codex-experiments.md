@@ -11,3 +11,7 @@ Original broad plans require further contrasts beyond these qualified instrument
 ## Dedicated-machine follow-up
 
 Owner explicitly requested separate machines. Released sim-test-01 claim and left dmarz jobs untouched. Located unclaimed research-01 with no running hub experiments, claimed it exclusively, deployed revision e65f8de89d611bfeade1c6452a380ee86ca4f65b and passed all 13 tests. The owner saved the Anthropic credential in macOS Keychain; a read-only access check now requires the nonsecret workspace ID. No paid requests or live assignments created.
+
+## External influence v2 expansion
+
+User requested a stronger application and more agents, then chose procurement plus dependency and travel transfer probes. Created a separate nine-agent instrument with five matched-call protocols, varied truth, citations and peer-conversion traces. Read five primary sources at the depths recorded in RESEARCH.md. Eleven tests and 2,700 scripted outcomes pass; no v2 model results yet. V1 clean model qualification had seven correct/valid outcomes, 67 calls, USD 0.1649 reported usage. Shared cap remains USD 45 API / USD 50 overall. Immune-response is handled in another user session.
