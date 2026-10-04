@@ -3,7 +3,7 @@ id: build-v3-resample-control
 type: task
 title: Sidecar repeat-vote (resample-only) control for discussion benchmark v3
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/private-control
 for: dmarz
@@ -13,7 +13,9 @@ depends_on:
 - build-discussion-benchmark-v3
 topics: []
 claimed_at: 2026-10-04T02:26Z
-updated: 2026-10-04T03:53Z
+updated: 2026-10-04T03:58Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/reviews/resample-v3-a1-post.md
 ---
 
 ## Goal
