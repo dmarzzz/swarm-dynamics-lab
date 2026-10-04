@@ -39,6 +39,8 @@
 | [scan-papers-sybil-llm-agents](tasks/scan-papers-sybil-llm-agents.md) | claimed (stale) | p0 | scan | dmarz/sybil-llm-agents |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil, collusion and identity in LLM agent collectives |
 | [scan-papers-sybil-robotics](tasks/scan-papers-sybil-robotics.md) | claimed (stale) | p0 | scan | dmarz/sybil-robotics |  | 2026-10-03T18:01Z | Catalogue the papers: Sybil and Byzantine agents in robot swarms and networked consensus |
 | [build-swarm-size-qualification](tasks/build-swarm-size-qualification.md) | claimed (stale) | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T03:32Z | Build and qualify optimal swarm-size generators and launch package |
+| [build-sybil-scarcity-opus](tasks/build-sybil-scarcity-opus.md) | claimed | p1 | build | dmarz/pipeline-scarcity | dmarz | 2026-10-04T07:52Z | Prepare the Sybil scarcity experiment on Opus 5.5 to launch-ready |
+| [build-sybil-split-opus](tasks/build-sybil-split-opus.md) | claimed | p1 | build | dmarz/pipeline-split | dmarz | 2026-10-04T07:52Z | Prepare the identity-splitting experiment with fixed attacker resources on Opus 5.5 to launch-ready |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T06:51Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
@@ -249,6 +251,9 @@
 |---|---|---|---|---|
 | dmarz/market-split-opus | working |  | 2026-10-04T08:20Z | Phase 1 of market-split-opus (Opus replication of the Sonnet market-splitting pilot on fresh markets); plan, offline checks and scripted rehearsal only, no model call before the reviewer's go |
 | dmarz/d1-opus | blocked |  | 2026-10-04T08:00Z | D1-Opus ready on sim-dmarz-9: rehearsal 72/72 audited, probe d1o-p1 passed ($0.022); 72-call run waits for dmarz go-ahead + G0 decision |
+| dmarz/pipeline-scarcity | working | build-sybil-scarcity-opus | 2026-10-04T07:51Z | Preparing sybil-scarcity-opus (the sybil-scarcity-plan on Opus 5.5) to launch-ready: code, offline tests, scripted stage, pre-run review; no launch, no model call |
+| dmarz/pipeline-split | working | build-sybil-split-opus | 2026-10-04T07:51Z | Preparing sybil-split-opus (identity splitting with fixed attacker resources, Opus 5.5) to launch-ready: plan, code, offline tests, scripted stage, pre-run review; no launch, no model call |
+| dmarz/pipeline | working |  | 2026-10-04T07:51Z | Pipeline lead: keeps at least three launch-ready run requests prepared for dmarz's experiments (plan, code, offline tests, scripted stage, pre-run review, chained launcher); launches nothing and makes no model calls |
 | dmarz/scale-xl | working |  | 2026-10-04T07:50Z | sybil-scale-xl A1 (Opus): S0-a1 running on sim-dmarz; tmux chain scale-xl-chain launches Q0 then S1 at passed software gates |
 | dmarz/orbital-orchestrator | working |  | 2026-10-04T07:39Z | sybil-specialists-opus (Opus 5.5 replication of sybil-specialists-api) on sim-dmarz-4; Sonnet version superseded before paid calls |
 | dmarz/newcomer-sonnet | done |  | 2026-10-04T07:35Z | S1 closed out (1944/1944, $9.17 total); results, Sonnet-minus-Haiku comparison and post-mortem published; claim released |
@@ -282,10 +287,10 @@
 | dmarz/pi-next-experiments | done |  | 2026-10-04T03:04Z | Finalized scaling-aware experiment plan and approved provenance repair; checks pass |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 07:51:01.469582+00:00 | Native PC-2 complete and audited; allocation released; publishing results and evidence metadata |
 | vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
 | vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 06:59:50.549036+00:00 | Q1 launch closed; contract failure preserved and allocation released; accounting/interface repair tracked |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
-| vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 06:42:12.981971+00:00 | Q0 passed; executing admitted S1 pilot and reconciling artifacts within original budget |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
