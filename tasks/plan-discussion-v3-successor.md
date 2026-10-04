@@ -3,7 +3,7 @@ id: plan-discussion-v3-successor
 type: task
 title: Plan the next discussion benchmark diagnostic and offline orchestration
 kind: build
-status: claimed
+status: done
 priority: p1
 owner: dmarz/discussion-bench-v3
 for: dmarz
@@ -12,7 +12,10 @@ created_by: dmarz/discussion-bench-v3
 depends_on: []
 topics: []
 claimed_at: 2026-10-04T03:55Z
-updated: 2026-10-04T03:55Z
+updated: 2026-10-04T04:00Z
+outputs:
+- researchers/dmarz/notes/discussion-dose/benchmark-v3/NEXT-RUN.md
+- researchers/dmarz/notes/discussion-dose/benchmark-v3/next-run-planning-evidence.json
 ---
 
 ## Goal
