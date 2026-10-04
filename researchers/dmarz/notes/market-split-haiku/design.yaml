@@ -1,4 +1,4 @@
-version: market-split-haiku-v1
+version: market-split-haiku-v2
 status: exploratory-hunch
 experiment: market-split-haiku
 model: claude-haiku-4-5-20251001
@@ -88,22 +88,22 @@ holdout:
 - 1000
 - 1999
 interface_probes:
-- task: 64
+- task: 70
   n: 1
   operation: register
-- task: 65
+- task: 71
   n: 2
   operation: register
-- task: 66
+- task: 72
   n: 3
   operation: register
-- task: 67
+- task: 73
   n: 2
   operation: consolidate
-- task: 68
+- task: 74
   n: 3
   operation: maintain
-- task: 69
+- task: 75
   n: 4
   operation: consolidate
 thinking:

@@ -71,8 +71,16 @@ class Anthropic:
             raise CallFailure('missing_credential_alias')
 
     def call(self, packet, call_id):
+        system = SYSTEM
+        if 'interface_check_operation' in packet:
+            operation = packet['interface_check_operation']
+            if operation not in ('maintain','register','consolidate'):
+                raise CallFailure('invalid_interface_probe')
+            system += ('\n\nThis is an isolated interface check. Your sole objective for this call is to execute '
+                       + operation + ' with legal quantities. Do not choose a different operation to improve profit. '
+                       'The profit-maximization objective above is suspended for this mechanics check only.')
         body = {'model':self.d['model'],'max_tokens':self.b['max_output_tokens'],
-                'thinking':self.d['thinking'],'system':SYSTEM,
+                'thinking':self.d['thinking'],'system':system,
                 'messages':[{'role':'user','content':json.dumps(packet, sort_keys=True)}],
                 'output_config':{'format':{'type':'json_schema','schema':SCHEMA}}}
         encoded = json.dumps(body).encode()

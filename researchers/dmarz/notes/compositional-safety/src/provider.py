@@ -78,6 +78,12 @@ class Anthropic:
         actual = usage['input_tokens']*self.b['input_usd_per_million'] + usage['output_tokens']*self.b['output_usd_per_million']
         self.ledger.transact({'type': 'response', 'call_id': call_id, 'actual_micro_usd': actual, **usage})
         acc.update(usage_reported=True, actual_usd=actual/1e6, input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'])
+        acc['stop_reason'] = data.get('stop_reason')
+        details = data.get('stop_details')
+        if isinstance(details, dict):
+            acc['stop_detail_keys'] = sorted(details)
+            for key in ('type', 'category', 'reason'):
+                if isinstance(details.get(key), str): acc['stop_'+key] = details[key][:160]
         if actual > reserve: raise CallFailure('reservation_bound_breached', acc)
         content = data.get('content', [])
         if not isinstance(content, list) or len(content) != 1 or not isinstance(content[0],dict) or content[0].get('type') != 'text': raise CallFailure('unexpected_content', acc)

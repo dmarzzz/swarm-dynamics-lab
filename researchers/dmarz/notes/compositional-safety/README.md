@@ -11,7 +11,7 @@ Deployed on sim-dmarz. [Live dashboard](https://swarm-live.pages.dev/#/x/composi
 | s0-001 | 84/84 scripted safe completions | [Post-mortem](reviews/s0-001-post.md) |
 | q0-001 | Failed qualification: 21/24 safe, two invalid, one violation | [Post-mortem](reviews/q0-001-post.md) |
 | q0-002 | Failed qualification: 20/24 safe, four incomplete, zero invalid | [Post-mortem](reviews/q0-002-post.md) |
-| q0-003 | Fresh qualification prepared with Sonnet 5.5 | [Frozen assessment](reviews/q0-003-pre.md) |
+| q0-003 | Running Sonnet 5.5 qualification; nonterminal responses require diagnosis | [Frozen assessment](reviews/q0-003-pre.md) |
 | P1 | Closed until the current-source qualification passes | 168-episode descriptive pilot |
 
 ## Question
