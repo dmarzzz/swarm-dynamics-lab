@@ -1,0 +1,65 @@
+{
+  "assigned": 24,
+  "valid": 24,
+  "correct_targets": 12,
+  "guard_correct": 4,
+  "strategic_correct": 8,
+  "errors": {
+    "all": {
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 432,
+      "upper": 0.0
+    },
+    "LAND": {
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 144,
+      "upper": 0.0
+    },
+    "WATER": {
+      "wrong": 0,
+      "missing": 0,
+      "denominator": 288,
+      "upper": 0.0
+    }
+  },
+  "qualification_passed": true,
+  "stage": "Q0",
+  "attempt": "q0-a1",
+  "started": 24,
+  "terminal": 24,
+  "stop_reason": null,
+  "budget": {
+    "calls": 24,
+    "prior_usd": 0.35805126,
+    "new_known_usd": 0.00531825,
+    "cumulative_exposure_usd": 0.36336951,
+    "api_cap_usd": 4,
+    "max_calls": 1816
+  },
+  "usage_by_policy": {
+    "qualification": {
+      "calls": 24,
+      "valid": 24,
+      "known_cost_usd": 0.00531825,
+      "input_tokens": 126625
+    }
+  },
+  "wall_seconds": 6.589810743999919,
+  "instrument": {
+    "src/admission.py": "897979222d1aed19472ebf954fb4420363ae01959831e13c52e95d2e015092ef",
+    "src/contract.py": "5f7c6978ae58a2a18f970aca06423345fc3fad0d35e8a5939fbbf9f7af171c93",
+    "src/design.py": "8e9c3376ad4171e3332a45179869a90f05d50e997f4e9c70ea4aa0eff10c6d8a",
+    "src/engine.py": "58a538fa5ec3fe4dd85270cd846c68b398cbdce4362b4201a831fde7dca9cd7f",
+    "src/ledger.py": "b38275a98e743d39e0ab3f76cb4cca66a5acb40f0c16902fb77882de435e24db",
+    "src/replay.py": "3bb61eb2e296f4c8937d966bf7a85c71905c3105731109da51d67061f3039faf",
+    "src/run.py": "d777bdfa6a12f4269ed0600497a43f754c6790305c008bd84c3facfe70aedd57",
+    "src/wire.py": "79573093ccc235762191bf3cda44d16379565eee43192d1f271e1ea99a1dfde1",
+    "PLAN.md": "d79aef0a9c82f054b9a63d8004c9e6342578557889feddb2b2289faa92ce656f",
+    "reviews/RUNNER-PRE.md": "793fbb0744ad0f2c07bf4d238495cf19eea5ce95dde90d1174e7851dcd1c1bc8",
+    "reviews/REVIEW-POLICY-AMENDMENT.md": "412409c1f2198b3e7dd31e88a7ef2e7ab062902ee258cc8a8c554ed9ecd623a8"
+  },
+  "model": "typesafe/jev-1.13-20260917",
+  "source_commit": "06ac568a23ae9212372b8e0156715a71adc5b598"
+}

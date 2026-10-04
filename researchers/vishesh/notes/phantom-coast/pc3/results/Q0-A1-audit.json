@@ -1,0 +1,15 @@
+{
+  "passed": true,
+  "requests_verified": 24,
+  "journal_matches_final_records": true,
+  "scope": "operator audit",
+  "source_sha256": {
+    "summary.json": "7b180ec83c09e05ec2a29a2a7ef66a6eb791035090a8e3fb7867b82d21451958",
+    "public-plan.json": "e789c017887f821c89142639f8a6a4acbec3e329a3d37bc7444ef384beecb69a",
+    "events.jsonl": "9989cf61759b6e52b5f8a08e15ea52c846f09604910ad6e13c6ac0a587f77401",
+    "route.json": "de458b0508ef9deab84011f4c98c9a3b4a9117c51a5d39507adaa1ca7cf7c8d1",
+    "manifest.json": "6ca2fd8b91058eac39206e371dcb67c077592c9ac5e4ea2c923804e3c5ae851c",
+    "records.json": "7e3749459ec4ab82adc7adab4edb305d87140052ec4b0863a28d692e3d92142f",
+    "worlds.json": "eeacad7ebb224e68b2d66a98291ee5cfd009324da884131e7f50f0f9c830fa47"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "url": "https://swarm-live.pages.dev/#/x/phantom-coast-pc3",
+  "registered_plan": "https://github.com/dmarzzz/swarm-lab/blob/06ac568a23ae9212372b8e0156715a71adc5b598/researchers/vishesh/notes/phantom-coast/pc3/PLAN.md",
+  "plan_sha256": "d79aef0a9c82f054b9a63d8004c9e6342578557889feddb2b2289faa92ce656f",
+  "rendered_verified": true,
+  "method": "Browser verified unmodified public page through public-only localhost proxy: LIVE, PC3 TLDR, immutable source link, question/setup/protocol/metrics and zero runs.",
+  "checked_utc": "2026-10-04T08:05:48.675923+00:00"
+}
