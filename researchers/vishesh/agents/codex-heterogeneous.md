@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-heterogeneous
 tool: codex
-state: blocked
-task: null
-doing: Central S0 run request submitted; awaiting approved OpenRouter selector and dispatcher admission; zero calls/spend
-updated: 2026-10-04T07:14Z
+state: working
+task: qualify-poietic-agents-s0
+doing: Existing credential resolved; 54 deployed checks pass; awaiting central S0 worker start
+updated: 2026-10-04T08:01Z
 ---
 
 ## Handoff

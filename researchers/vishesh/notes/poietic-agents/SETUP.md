@@ -51,3 +51,7 @@ The historical independent review and its useful corrections remain in place; no
 The scoped local selector search found no usable approved OpenRouter entry. The matching configuration directory is empty and the exact `swarm-lab-openrouter` Keychain metadata lookup found no entry; no secret value was requested or printed. The owner has been asked for a selector only. The central dispatcher may instead identify an already authorized Swarm Lab OpenRouter entry on its own runtime, recording its provenance. Do not invent an alias or borrow an unrelated credential. See [DISPATCH.md](DISPATCH.md).
 
 Central S0-01 request submitted with source `2796183fe3ed42dc3aa2559e2d2750d87ee14044` and approved cumulative cap. Credential admission remains the first gate; no dispatch success or paid call is inferred. Private queue receipt stays outside this public repository.
+
+## Credential discovery correction
+
+2026-10-04 UTC: the established project credential selector was already documented locally. The previous scan missed that document; the missing-selector report was an operator discovery error. Credential availability and required file protections are now verified. The frozen S0 instrument passed all 54 checks in its deployment environment. Runtime admission evidence and operational details remain in private records. The existing central dispatch request has been updated; no model-call start has yet been observed. No further owner credential input is needed.
