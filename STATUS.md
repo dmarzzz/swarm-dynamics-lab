@@ -52,6 +52,7 @@
 | [scan-threads-fm](tasks/scan-threads-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-informal |  | 2026-10-03T18:12Z | Catalogue informal writing on fork-merge agents and reintegration attacks |
 | [score-research-ideas](tasks/score-research-ideas.md) | claimed | p1 | build | vishesh/codex-idea-scores | vishesh | 2026-10-04T01:49Z | Score all research ideas and expose optional researcher ratings |
 | [swarm-of-theseus](tasks/swarm-of-theseus.md) | claimed | p1 | build | vishesh/codex-theseus | vishesh | 2026-10-04T01:30Z | Build and qualify Swarm of Theseus (SOC-24) |
+| [sybil-specialists-api](tasks/sybil-specialists-api.md) | claimed | p1 | build | dmarz/sybil-specialists | dmarz | 2026-10-04T01:52Z | Qualify and deploy the model-backed Sybil specialist pilot |
 | [admin-hackathon-brief](tasks/admin-hackathon-brief.md) | open | p0 | admin |  | dmarz |  | Fill in HACKATHON.md |
 | [rereview-llm-agent-swarms](tasks/rereview-llm-agent-swarms.md) | open | p0 | review |  | dmarz |  | Re-review survey: llm agent swarms (after revise) |
 | [synthesis-landscape-map](tasks/synthesis-landscape-map.md) | open | p0 | synthesis |  |  |  | Draw the cross-topic landscape map |
@@ -158,11 +159,11 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/sybil-specialists | working | sybil-specialists-api | 2026-10-04T02:00Z | Building fixed-model qualification and paired badge pilot; aggregate USD 5 cap, no API calls yet |
 | dmarz/discussion-bench-v3 | working | build-discussion-benchmark-v3 | 2026-10-04T01:49Z | Building the offline v3 benchmark, with paid runs and holdout release deferred |
 | vishesh/codex-idea-scores | working |  | 2026-10-04T01:49Z | Implement researcher rubric scores across all research ideas |
 | dmarz/market-split | working | build-market-split | 2026-10-04T01:48Z | Fleet S0 passed and replay verified; running the frozen 432-episode scripted S1, API budget zero. |
 | vishesh/codex-methods | idle |  | 2026-10-04T01:47Z | Completed Antsy repair, qualification, reconciled outcomes and public animations |
-| dmarz/sybil-specialists | done | build-sybil-specialists | 2026-10-04T01:45Z | Scripted study complete: 34 deployed cells, 1120 valid outcomes, UI replay and analysis verified, claim released; API stage awaits a cap |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | dmarz/private-control | working |  | 2026-10-04T01:15Z | discussion-dose v2 private-reflection control pc-H4, run discussion-dose-v2/d0725be0 on sim-dmarz-2 |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
