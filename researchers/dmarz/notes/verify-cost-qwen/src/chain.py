@@ -2,14 +2,18 @@
 
   python src/chain.py run --stages S0,P0,Q0,S1   exit 0 all requested stages done, 3 stopped at a
                                                  failed stage or gate, other non-zero internal error
-  python src/chain.py resume                     only after S1 stopped with provider_credit_balance_low at
-                                                 this source hash: queues a continuation batch s1-001-r<n>
+  python src/chain.py resume                     only after S1 stopped on a billing outage at this source
+                                                 hash (provider_credit_balance_low on OpenRouter,
+                                                 provider_billing_stopped on OpenAI, each for its own
+                                                 model's chain): queues a continuation batch <s1 batch>-r<n>
                                                  with exactly the units left not started; same ledger
   python src/chain.py status                     chain-status.json plus ledger totals, one JSON line
   python src/chain.py verify                     artifact checksums against the hub, every request
                                                  regenerated, every saved answer regraded, the gates and
                                                  the analysis recomputed; one JSON line
 
+The model of the chain is STUDY_MODEL (default: the first model of the frozen ladder). Each model is its own
+chain with its own batch names, ledger file and results directory; nothing is pooled across models.
 Outputs go under STUDY_RESULTS_DIR (default <study>/results). Nothing here retries a stage or queues
 anything after a failed gate. status and verify need no model credential.
 """
@@ -29,7 +33,6 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))
 import analyze      # noqa: E402
 import coordinator  # noqa: E402
 import manifest     # noqa: E402
-import provider     # noqa: E402
 import study        # noqa: E402
 import worker       # noqa: E402
 
@@ -69,9 +72,9 @@ def parse_stages(text):
 
 
 def ledger_totals():
-    path = os.environ.get(provider.LEDGER_ENV)
+    path = os.environ.get(worker.adapter().LEDGER_ENV)
     if not path or not Path(path).exists(): return None
-    return provider.Ledger(path, study.design()['budget']).transact()
+    return worker.adapter().Ledger(path, study.budget()).transact()
 
 
 def read_jsonl(path):
@@ -100,7 +103,7 @@ def projection(sr, q0_run):
     Cost: Q0's measured mean cost per call x the S1 call cap must fit in what is left under the dollar cap.
     Input ceiling: P0's measured input tokens per byte of message content x the largest S1 request must not
     exceed the input ceiling."""
-    b = study.design()['budget']; metrics = q0_run.get('metrics') or {}
+    b = study.budget(); metrics = q0_run.get('metrics') or {}
     calls = metrics.get('model_calls') or 0
     if not calls or metrics.get('cost_usd') is None:
         return {'reason': 'q0_usage_missing', 'within_cap': False, 'input_ceiling_ok': False}
@@ -161,14 +164,14 @@ def resume(sr=None, opener=None):
 
     def refuse(reason):
         print(json.dumps({'state': 'resume_refused', 'reason': reason})); return EXIT_STOPPED
-    if not status or status.get('source_hash') != study.source_hash(): return refuse('no_chain_at_this_source_hash')
-    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != provider.BILLING_STOP:
+    if not status or status.get('source_hash') != study.source_hash() or status.get('model') != study.model(): return refuse('no_chain_at_this_source_hash')
+    if status.get('state') != 'stopped_at_gate' or status.get('stopped_stage') != 'S1' or status.get('reason') != worker.adapter().BILLING_STOP:
         return refuse('last_stop_was_not_a_billing_stop_of_S1')
     prior = stage_rows(entry); final = study.combine(prior)
     units = [a['id'] for a in study.assignments('S1') if any(r['id'] == a['id'] and r['status'] == 'not_started' for r in final)]
     if not units or len(final) != len(study.assignments('S1')): return refuse('no_unfinished_units')
     n = len(entry.get('continuations') or []) + 1
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     cont = {'status': 'gating', 'batch': f'{study.batch("S1")}-r{n}', 'units': len(units)}
     entry.setdefault('continuations', []).append(cont)
     status.update(state='running', stopped_stage=None, reason=None); write_status(status)
@@ -197,13 +200,14 @@ def resume(sr=None, opener=None):
 def run_chain(stages, sr=None, opener=None):
     if sr is None:
         import swarm_report as sr
-    budget = study.design()['budget']; deadline = time.monotonic() + budget['chain_timeout_seconds']
+    budget = study.budget(); deadline = time.monotonic() + budget['chain_timeout_seconds']
     status = read_status()
-    if status and status.get('source_hash') != study.source_hash():
-        # records of another source version are kept beside the new status, never mixed into it
-        os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}.json'))
+    if status and (status.get('source_hash') != study.source_hash() or status.get('model', study.model()) != study.model()):
+        # records of another source version or another model are kept beside the new status, never mixed into it
+        os.replace(status_path(), status_path().with_name(f'chain-status-{str(status.get("source_hash"))[:12]}-{study.batch("S1", status.get("model"))}.json'))
         status = None
     status = status or {'experiment': study.EXPERIMENT, 'contract': 'ready-chain-v1', 'stages': {}}
+    status.update(model=study.model(), provider=study.provider_name(), answer_schema=study.schema())
     status.update(state='running', source_hash=study.source_hash(), code=study.code_revision(), requested=stages,
                   started=status.get('started') or now(), stopped_stage=None, reason=None)
     write_status(status)
@@ -256,7 +260,7 @@ def run_chain(stages, sr=None, opener=None):
 def show_status():
     status = read_status()
     print(json.dumps({'chain': status, 'ledger': ledger_totals(), 'results_dir': str(study.results_dir()),
-                      'source_hash': study.source_hash()}, sort_keys=True))
+                      'source_hash': study.source_hash(), 'model': study.model()}, sort_keys=True))
     return 0
 
 
@@ -307,7 +311,7 @@ def verify_stage(sr, stage, entry, reference, prior_rows=None, original=True, pr
     checks['totals_recomputed'] = all(close(float(summary[k]), float(v)) for k, v in t.items())
     gate = study.gate(stage, rows, summary.get('invariant_violations') or [], probe)
     checks['gate_recomputed'] = (None if gate is None else int(gate)) == summary['qualification_passed']
-    budget = study.design()['budget']; failed = sum(r['status'] == 'failed' for r in everyone)
+    budget = study.budget(); failed = sum(r['status'] == 'failed' for r in everyone)
     stopped = any(r['status'] == 'not_started' for r in rows)
     want = (t['invalid'] == 0 and gate is True) if stage in worker.STRICT else (not stopped and failed <= budget['max_failed'])
     checks['passed_recomputed'] = summary['passed'] == (bool(want) and not summary.get('invariant_violations'))
@@ -332,7 +336,7 @@ def units(rows, reference):
     return {'assigned': len(final), 'completed': count('completed'), 'failed': count('failed'), 'not_started': count('not_started'),
             'every_unit_exactly_once': sorted(r['id'] for r in final) == sorted(x.split(':')[0] for x in reference['stages']['S1']['ids']),
             'answered_calls': answered, 'standing_reservations': standing,
-            'answered_calls_within_cap': answered <= standing <= study.design()['budget']['max_calls']['S1'],
+            'answered_calls_within_cap': answered <= standing <= study.budget()['max_calls']['S1'],
             'no_unit_answered_twice': max([sum(bool((r.get('accounting') or {}).get('usage_reported')) for r in rows if r['id'] == i)
                                            for i in {r['id'] for r in rows}] or [0]) <= 1,
             'primary_estimate': p['estimate'], 'primary_layouts': p['layouts'], 'primary_assigned_layouts': p['assigned_layouts'],
@@ -349,7 +353,9 @@ def verify(sr=None):
     status = read_status()
     if not status:
         print(json.dumps({'ok': False, 'reason': 'no chain-status.json under ' + str(study.results_dir())})); return 1
-    reference = manifest.load(); stages = {}; probe = None
+    reference = manifest.reference(); stages = {}; probe = None
+    if status.get('model', study.model()) != study.model():
+        print(json.dumps({'ok': False, 'reason': 'chain_status_is_for_another_model'})); return 1
     for stage in study.STAGES:
         entry = status['stages'].get(stage)
         if not entry or 'run' not in entry or 'directory' not in entry: continue
@@ -364,7 +370,7 @@ def verify(sr=None):
                 stages[stage]['ok'] = stages[stage]['ok'] and u['every_unit_exactly_once'] and u['answered_calls_within_cap'] and u['no_unit_answered_twice']
         except Exception as exc: stages[stage] = {'run': entry.get('run'), 'ok': False, 'error': type(exc).__name__ + ': ' + str(exc)[:200]}
     ok = bool(stages) and all(s['ok'] for s in stages.values())
-    print(json.dumps({'ok': ok, 'state': status.get('state'), 'manifest_digest': reference['digest'], 'stages': stages}, sort_keys=True))
+    print(json.dumps({'ok': ok, 'state': status.get('state'), 'model': study.model(), 'manifest_digest': reference['digest'], 'stages': stages}, sort_keys=True))
     return 0 if ok else 1
 
 

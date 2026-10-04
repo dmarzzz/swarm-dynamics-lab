@@ -26,6 +26,7 @@ from concurrent.futures import FIRST_COMPLETED, ThreadPoolExecutor, wait
 from pathlib import Path
 
 import analyze
+import openai_provider
 import provider
 import render
 import study
@@ -35,8 +36,20 @@ ARTIFACTS = ('final_frame.png', 'initial_frame.png', 'replay.gif', 'assignments.
 HUB_KEYS = ('episodes', 'invalid', 'failed', 'model_calls', 'transport_attempts', 'input_tokens', 'output_tokens', 'cost_usd',
             'billing_pauses', 'billing_pause_seconds', 'billing_affected_calls')
 STRICT = ('S0', 'P0', 'Q0')
-# Failures that stop a stage at once, whatever the number of failed units.
-STOP_NOW = tuple(provider.INTEGRITY) + ('stage_deadline', 'input_size_limit')
+ADAPTERS = {'openrouter': (provider, 'OpenRouter'), 'openai': (openai_provider, 'OpenAI')}
+
+
+def adapter(name=None):
+    """The reference adapter module of the chain's model. Each module has its own CallFailure, Ledger,
+    BILLING_STOP and INTEGRITY; a chain uses exactly one of them."""
+    return ADAPTERS[study.provider_name(name)][0]
+
+
+def stop_now(api):
+    """Failures that stop a stage at once, whatever the number of failed units."""
+    return tuple(api.INTEGRITY) + ('stage_deadline', 'input_size_limit', 'json_mode_prompt_lacks_json')
+
+
 CLOCK, SLEEP = time.monotonic, time.sleep       # the adapter's clock and sleep; the rehearsal replaces both so no wait is real
 NO_BILLING = {'billing_pauses': 0, 'billing_pause_seconds': 0.0, 'billing_affected_calls': 0}
 
@@ -76,7 +89,7 @@ def voided_reservations(rows):
 
 def row_base(a, p, run_name):
     r = {key: a[key] for key in study.ROW_FIELDS}
-    r.update(run=run_name, stage=p['stage'], batch=p['batch'], backend=p['backend'], code=p['code'], source_hash=p['source_hash'],
+    r.update(run=run_name, stage=p['stage'], batch=p['batch'], backend=p['backend'], model=p['model'], code=p['code'], source_hash=p['source_hash'],
              status='not_started')
     return r
 
@@ -85,9 +98,11 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     """`units` (ids) and `prior_rows` are given only for a continuation of S1 after a billing stop: the run then
     holds exactly those units and reports the earlier runs' rows and its own together. `probe_rows` is P0's
     saved row, given to Q0, whose gate is evaluated over all 24 qualification rows."""
-    stage = p['stage']; d = study.design(); budget = d['budget']; strict = stage in STRICT
+    stage = p['stage']; budget = study.budget(); strict = stage in STRICT; api = adapter()
     assert p['source_hash'] == study.source_hash(), 'runtime_source_mismatch'
-    assert stage in study.STAGES and p['backend'] == d['stages'][stage]['backend'], 'stage_backend_mismatch'
+    assert stage in study.STAGES and p['backend'] == study.params(stage)['backend'], 'stage_backend_mismatch'
+    assert p.get('model') == study.model(), 'run_is_for_another_model'
+    assert os.environ.get('STUDY_PROVIDER') in (None, '', study.provider_name()), 'provider_differs_from_the_design'
     assert (units is None) == (p['batch'] == study.batch(stage)), 'batch_mismatch'
     assert units is None or stage == 'S1', 'only_the_main_stage_continues'
     scripted = p['backend'] == 'scripted'
@@ -104,14 +119,14 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
     with gzip.open(out / 'assignments.jsonl.gz', 'wt') as f:
         for a in assigned: f.write(json.dumps(a, sort_keys=True) + '\n')
     with gzip.open(out / 'requests.jsonl.gz', 'wt') as f:
-        for a in assigned: f.write(json.dumps({'id': a['id'], 'input_hash': a['input_hash'], 'system': study.SYSTEM, 'user': study.user_for(a)}, sort_keys=True) + '\n')
+        for a in assigned: f.write(json.dumps({'id': a['id'], 'input_hash': a['input_hash'], 'system': study.system(), 'user': study.user_for(a)}, sort_keys=True) + '\n')
     violations = study.check_invariants(stage)
     ledger = None
     if not scripted:
-        path = os.environ.get(provider.LEDGER_ENV); assert path, 'persistent_budget_required'
+        path = os.environ.get(api.LEDGER_ENV); assert path, 'persistent_budget_required'
         assert total + (0 if units is None else sum(r['status'] != 'not_started' for r in prior)) <= budget['max_calls'][stage], 'units_exceed_stage_call_cap'
-        ledger = provider.Ledger(path, budget)
-        backend = backend or provider.OpenRouter(ledger, study.provider_config(), opener, CLOCK, SLEEP)
+        ledger = api.Ledger(path, budget)
+        backend = backend or getattr(api, ADAPTERS[study.provider_name()][1])(ledger, study.provider_config(), opener, CLOCK, SLEEP)
     billing = lambda: dict(getattr(backend, 'billing', None) or NO_BILLING)
     initial = ledger.transact() if ledger else {}
     rows = state['rows']; reporting_errors = []
@@ -132,22 +147,22 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
         if stop.is_set():
             r['stop'] = control['reason']; return r
         try:
-            if time.monotonic() > stop_at: raise provider.CallFailure('stage_deadline', {'attempted': False})
+            if time.monotonic() > stop_at: raise api.CallFailure('stage_deadline', {'attempted': False})
             if scripted:
                 answer = study.validate(study.scripted_answer('optimal', a), a['legal_cells'])
                 accounting = {'attempted': False, 'usage_reported': False, 'attempts': 0, 'actual_usd': 0, 'reserved_usd': 0}
             else:
-                answer, accounting = backend.call(study.SYSTEM, study.user_for(a), f'{p["batch"]}:{a["id"]}',
+                answer, accounting = backend.call(study.system(), study.user_for(a), f'{p["batch"]}:{a["id"]}',
                                                   lambda obj: study.validate(obj, a['legal_cells']))
             r.update(status='completed', answer=answer, accounting=accounting, evaluation=study.evaluate(a, answer['inspect'], answer))
-        except provider.CallFailure as exc:
-            if exc.category == provider.BILLING_STOP:
+        except api.CallFailure as exc:
+            if exc.category == api.BILLING_STOP:
                 # a billing outage that outlasted its limit: not an outcome, nothing is failed
-                halt(provider.BILLING_STOP); r.update(stop=provider.BILLING_STOP, accounting=exc.accounting)
+                halt(api.BILLING_STOP); r.update(stop=api.BILLING_STOP, accounting=exc.accounting)
             else:
                 r.update(status='failed', failure=exc.category, accounting=exc.accounting)
                 with control_lock: control['failed'] += 1; failed = control['failed']
-                if exc.category in STOP_NOW: halt('integrity_failure')
+                if exc.category in stop_now(api): halt('integrity_failure')
                 elif strict: halt('invalid_rows')
                 elif failed > budget['max_failed']: halt('failed_units_over_limit')
         except Exception as exc:
@@ -213,7 +228,7 @@ def run_stage(p, out, run, backend, deadline, state, opener=None, units=None, pr
 
 def summarize(p, rows, total, violations, control, prior, probe_rows, continuation):
     """The part of the summary that `chain.py verify` recomputes from the saved rows. Returns (summary, analysis)."""
-    stage = p['stage']; budget = study.design()['budget']; strict = stage in STRICT
+    stage = p['stage']; budget = study.budget(); strict = stage in STRICT; api = adapter()
     t = totals(rows, total); everyone = study.combine(list(prior) + rows) if prior else rows
     violations = list(violations)
     calibration = analyze.calibration() if stage == 'S0' else None
@@ -223,7 +238,7 @@ def summarize(p, rows, total, violations, control, prior, probe_rows, continuati
     count = lambda rr, s: sum(r['status'] == s for r in rr)
     if strict:
         passed = t['invalid'] == 0 and passed_gate is True and not violations
-        reason = None if passed else 'invariant_violations' if violations else control['reason'] if control['reason'] in (provider.BILLING_STOP, 'integrity_failure') \
+        reason = None if passed else 'invariant_violations' if violations else control['reason'] if control['reason'] in (api.BILLING_STOP, 'integrity_failure') \
             else 'invalid_rows' if t['invalid'] else 'probe_row_unavailable' if stage == 'Q0' and study.qualification_rows(rows, probe_rows) is None \
             else 'gate_failed'
     else:       # S1: failed units within the limit do not fail the stage; a stop does
@@ -231,12 +246,13 @@ def summarize(p, rows, total, violations, control, prior, probe_rows, continuati
         reason = None if passed else 'invariant_violations' if violations else control['reason'] or 'failed_units_over_limit'
     both = study.qualification_rows(rows, probe_rows) if stage == 'Q0' else None
     primary = analysis.get('primary') or {}; reps = analysis.get('representations') or {}
-    summary = {'params': p, 'experiment': study.EXPERIMENT, 'planned': total,
+    summary = {'params': p, 'experiment': study.EXPERIMENT, 'model': study.model(), 'provider': study.provider_name(),
+               'answer_schema': study.schema(), 'planned': total,
                'started': sum(bool((r.get('accounting') or {}).get('attempted')) or r['status'] != 'not_started' for r in rows),
                'terminal': len(rows), 'graded': count(rows, 'completed'), 'analyzed': count(rows, 'completed'),
                'not_started': count(rows, 'not_started'), 'errors': sorted({r['failure'] for r in rows if r.get('failure')}), **t,
                'max_failed': None if strict else budget['max_failed'], 'failed_in_stage': control['failed'], 'stop_reason': control['reason'],
-               'resumable': bool(not strict and control['reason'] == provider.BILLING_STOP and not violations),
+               'resumable': bool(not strict and control['reason'] == api.BILLING_STOP and not violations),
                'voided_reservations': voided_reservations(rows),
                'qualification': study.scripted_qualification(rows) if stage == 'S0' else study.qualification(both) if both else None,
                'probe': study.probe_gate(rows) if stage == 'P0' else None, 'calibration': calibration,
@@ -262,7 +278,7 @@ def failures(rows, probe_rows, summary):
             if r['status'] == 'completed' and not r['evaluation']['optimal']:
                 misses.append({'id': r['id'], 'answer': r['answer'], 'work': r['evaluation'].get('work'), 'optimal_cell': r['evaluation']['optimal_cell'],
                                'optimal_action': r['evaluation']['optimal_action'], 'margin': r['evaluation']['margin'],
-                               'system': study.SYSTEM, 'user': study.user_for(r)})
+                               'system': study.system(), 'user': study.user_for(r)})
     report['qualification_misses'] = misses
     return report
 

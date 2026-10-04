@@ -3,6 +3,10 @@
 queued twice. Documents and reviews are outside the source hash, so a post-mortem-only commit does not
 invalidate a qualification.
 
+Model ladder: batch names and the `model` parameter carry the model of a chain. S0, P0, Q0 and S1 are all
+gated per model. The two chains must not run at the same time against the same hub experiment: the hub
+hands out queued runs per experiment, and a stage is refused while any run of the experiment is active.
+
 One exception to "a stage is never queued twice": after S1 stopped on a billing outage
 (`provider_credit_balance_low`), a continuation batch `s1-001-r<n>` may be queued for exactly the units
 that stop left not started. It needs the same qualification as S1 and the stopped S1 run."""
@@ -23,8 +27,11 @@ def _params(r):
 
 
 def passed_runs(runs, stage, source_hash):
-    """Runs of `stage` at this source hash that are done with no invalid row and a passed gate."""
+    """Runs of `stage` for this chain's model at this source hash that are done with no invalid row and a
+    passed gate. Runs of another model of the ladder never count: a qualification on one model does not
+    qualify another, and each model's chain has its own scripted S0."""
     return [r for r in runs if _params(r).get('stage') == stage and _params(r).get('source_hash') == source_hash
+            and _params(r).get('model') == study.model()
             and r.get('status') == 'done' and (r.get('metrics') or {}).get('invalid') == 0
             and (r.get('metrics') or {}).get('qualification_passed') == 1]
 
@@ -64,7 +71,8 @@ def check_continuation(sr, n):
     if any(_params(r).get('batch') == p['batch'] for r in runs): raise GateRefused('batch_exists_no_replay')
     if any(r.get('status') in ACTIVE for r in runs): raise GateRefused('queue_not_empty')
     if len(passed_runs(runs, PREREQUISITE['S1'], p['source_hash'])) != 1: raise GateRefused('exact_runtime_qualification_required')
-    earlier = [r for r in runs if _params(r).get('stage') == 'S1' and _params(r).get('source_hash') == p['source_hash']]
+    earlier = [r for r in runs if _params(r).get('stage') == 'S1' and _params(r).get('source_hash') == p['source_hash']
+               and _params(r).get('model') == p['model']]
     names = sorted(_params(r).get('batch') for r in earlier)
     if names != sorted([original] + [f'{original}-r{i}' for i in range(1, n)]) or any(r.get('status') != 'failed' for r in earlier):
         raise GateRefused('stopped_main_stage_required')

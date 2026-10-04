@@ -158,8 +158,8 @@ def frame(rows, total, stage, elapsed=0, accounting=None):
     im = Image.new('RGB', SIZE, BG); d = ImageDraw.Draw(im)
     d.text((40, 24), f'verify-cost-qwen  {stage}: when is verification worth its cost? One-step choice, prose against table',
            font=font(28), fill=INK)
-    d.text((40, 62), 'check = inspect the reported cell (loss U); explore = inspect the cell without evidence (expected loss e). '
-                     'Scripted consequences; exploratory.', font=font(17), fill=MUTED)
+    d.text((40, 62), f'model {study.model()} (answer: {study.schema().replace("_", " ")}). check = inspect the reported cell (loss U); '
+                     'explore = inspect the cell without evidence (expected loss e). Scripted consequences; exploratory.', font=font(17), fill=MUTED)
     heatmaps(d, a, 40, 110)
     layout_panel(d, a, 960, 110, 800, 500)
     strata_panel(d, a, 40, 640, 860, 380)
