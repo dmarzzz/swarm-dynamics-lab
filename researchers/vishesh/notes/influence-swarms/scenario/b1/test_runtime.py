@@ -31,6 +31,17 @@ class RuntimeTests(unittest.TestCase):
   with patch.object(worker.subprocess,'check_output',return_value=b'{}') as call:
    self.assertEqual(worker.get('https://swarm-live.pages.dev/api/runs/fixture'),b'{}')
    self.assertEqual(call.call_args[0][0][0],'curl')
+   args=call.call_args[0][0]
+   self.assertEqual(args[args.index('--user-agent')+1],worker.PUBLIC_USER_AGENT)
+   self.assertIn('--fail',args)
+   self.assertNotIn('--location',args)
+   self.assertNotIn('--retry',args)
+ def test_public_read_failure_never_falls_back_or_retries(self):
+  from unittest.mock import patch
+  import worker,subprocess
+  with patch.object(worker.subprocess,'check_output',side_effect=subprocess.CalledProcessError(22,['curl'])) as call,patch.object(worker.urllib.request,'build_opener') as fallback:
+   with self.assertRaises(subprocess.CalledProcessError):worker.get('https://swarm-live.pages.dev/api/runs/fixture')
+   self.assertEqual(call.call_count,1);fallback.assert_not_called()
  def test_reservation_precedes_transport(self):
   def fail(raw):self.assertEqual(self.budget()[2],531);raise TimeoutError('secret-like text must not be logged')
   s=self.collect(fail);self.assertEqual(s['calls'],1);self.assertEqual(s['unstarted_calls'],239);self.assertEqual(s['usage_missing'],1);self.assertIsNone(s['actual_usd']);self.assertNotIn('secret-like',(self.dir/'attempt/events.jsonl').read_text())

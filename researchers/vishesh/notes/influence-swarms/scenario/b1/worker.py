@@ -7,12 +7,15 @@ import cases as c,instrument as i,runtime as r
 H=Path(__file__).resolve().parent;ROOT=c.ROOT
 LEDGER=Path('/srv/swarm/influence-d5-private/budget.sqlite')
 PLAN=H.parent/'scale-up/B1-SCIENTIFIC-BASELINE-PLAN.md'
+PUBLIC_USER_AGENT='SwarmLab-PublicVerification/1.0'
 class NoRedirect(urllib.request.HTTPRedirectHandler):
  def redirect_request(self,*args,**kwargs):raise r.Stop('redirect_refused')
 def read(path):return json.loads(Path(path).read_text())
 def get(url):
  if url.startswith('https://swarm-live.pages.dev/api/'):
-  return subprocess.check_output(['curl','--proto','=https','--fail','--silent','--show-error','--max-time','25',url])
+  # The public edge rejects Python-urllib's default UA. Identify this client
+  # explicitly; keep HTTP failures fatal and do not add retries or redirects.
+  return subprocess.check_output(['curl','--proto','=https','--fail','--silent','--show-error','--max-time','25','--user-agent',PUBLIC_USER_AGENT,url])
  opener=urllib.request.build_opener(NoRedirect())
  with opener.open(url,timeout=25) as response:return response.read(2000000)
 def preflight(a,funding,observed,out,d0_path=None):

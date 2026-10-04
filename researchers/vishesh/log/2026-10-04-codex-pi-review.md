@@ -179,3 +179,7 @@ The supplied HTML changed from2a059924 to530258ee: same229ranked items,10edited 
 Both supplied HTML source hashes unchanged. Checked current evidence at 3a7895ff; refreshed eleven of fifteen study entries and Telephone navigation. New closeouts supersede pending R1/PC10/T1/A8/Antsy-panel/V0 guidance; C6 and Sol/Luna conditional next stages remain subject to their existing admission. Retained all 229 source dispositions and historical scopes; no model calls or allocations. Freshness manifest records source/evidence hashes and concrete next actions.
 
 Final freshness fetch included the completed RD7 diagnostic and newly approved PC12/A10 plans; current guidance now reflects those, preserving prior failures and conditional launch gates.
+
+## Influence public HTTP403 repair
+
+Controlled public GETs isolate the default Python-urllib User-Agent as the403 trigger: changing only UA flips the result in both urllib and curl. Retained the owning task's curl repair, added explicit truthful client identity and failure/no-retry regression, refreshed runtime manifest, and documented limits of the diagnosis.23tests and exact live worker read pass. Current admitted attempt remains frozen; no scientific inputs or budgets changed.
