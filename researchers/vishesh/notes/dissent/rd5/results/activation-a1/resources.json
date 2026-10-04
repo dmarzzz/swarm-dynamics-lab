@@ -1,0 +1,37 @@
+{
+  "rate_usd_per_hour": 0.07143,
+  "rate_source": "RD5 account/resource verification before the first activation",
+  "windows": [
+    {
+      "allocation": "vishesh-right-dissenter-replacement",
+      "start_utc": "2026-10-04T04:30:08+00:00",
+      "conservative_end_utc": "2026-10-04T05:30:08+00:00",
+      "hours": 1.0,
+      "estimated_upper_usd_at_recorded_rate": 0.07143,
+      "status": "done"
+    },
+    {
+      "allocation": "vishesh-right-dissenter-rd4",
+      "start_utc": "2026-10-04T05:03:39+00:00",
+      "conservative_end_utc": "2026-10-04T06:54:40+00:00",
+      "hours": 1.8502777777777777,
+      "estimated_upper_usd_at_recorded_rate": 0.13216534166666666,
+      "status": "done"
+    },
+    {
+      "allocation": "vishesh-right-dissenter-rd5",
+      "start_utc": "2026-10-04T08:40:36+00:00",
+      "conservative_end_utc": "2026-10-04T15:20:03+00:00",
+      "hours": 6.6575,
+      "estimated_upper_usd_at_recorded_rate": 0.47554522499999996,
+      "status": "done"
+    }
+  ],
+  "historical_wrong_account_compute_usd": 0.011643,
+  "conservative_compute_envelope_usd": 0.6907835666666665,
+  "invoice_status": "unavailable; estimate not a reconciled bill",
+  "future_90_minute_reservation_usd": 0.10714499999999999,
+  "compute_envelope_with_future_usd": 0.7979285666666665,
+  "infrastructure_cap_usd": 1,
+  "fresh_allocation_started": false
+}
