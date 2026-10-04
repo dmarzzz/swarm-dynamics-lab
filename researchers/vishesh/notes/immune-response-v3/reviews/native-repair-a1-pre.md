@@ -4,7 +4,7 @@ Run plan: frozen native-repair, task 6700, shared_evidence, arms Q10F/Q11/CLEAN.
 
 ## Allocation
 
-Owner clarification supersedes the original allocation: sim-dmarz-3 was released unused in agentops PR 50. A new vishesh-owned sim-immune-response was created with 2 vCPU, 4 GB RAM, standard sim blueprint, SSH-only cloud firewall and expiry 2026-10-05. Fleet registration PR 52 and exclusive claim PR 53 merged. Claim ID vishesh-immune-dedicated-v3; no other host was changed or used for experiment execution. Standard provisioning and exact-runtime checks must pass before launch.
+Owner clarification supersedes the original allocation: sim-dmarz-3 was released unused in agentops PR 50. A new vishesh-owned sim-immune-response was created with 2 vCPU, 4 GB RAM, standard sim blueprint, SSH-only cloud firewall and expiry 2026-10-05. Fleet registration PR 52 and exclusive claim PR 53 merged. Claim ID vishesh-immune-dedicated-v3; no other host was changed or used for experiment execution. Standard provisioning completed successfully. Exact runtime 3db6f443621066c369a40108a564544529493c10 passed all 13 tests on Python 3.12.3; immutable public-plan preflight passed. Matplotlib 3.11.2 and Pillow 12.3.0 are installed in the isolated runtime. Firewall is active, password authentication and root SSH are disabled, and the reporting heartbeat timer is active. Both old release and new claim are mirrored to the hub. No model calls were made. Cloud-init recorded a recoverable schema warning for the shared template’s string-valued no_user_group field; boot completed with no errors and the standard Ansible access/security roles passed. No experiment outcome exists yet.
 
 ## Budget blocker
 

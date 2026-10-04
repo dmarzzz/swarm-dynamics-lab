@@ -29,3 +29,5 @@ Refreshed fleet and claimed sim-dmarz-3 exclusively through merged agentops PR 4
 ## New purpose-specific machine
 
 Owner clarified not to borrow dmarz-owned machines. Released the unused sim-dmarz-3 claim in agentops PR 50. Created new vishesh-owned sim-immune-response with a verified create-only OpenTofu plan, 2 vCPU / 4 GB, expiry October 5; fleet PR 52 and exclusive-claim PR 53 merged. Provisioning state is preserved in owner-only durable local storage. No old machine was modified, no model API calls started, and the additional model-budget question remains pending.
+
+Dedicated host readiness verified: standard Ansible provision exited zero, exact runtime 3db6f44 passed 13 tests, immutable public-plan check passed, rendering dependencies installed, firewall/SSH checks passed and reporting heartbeat is active. Mirrored old release and new claim to hub. Model credential not installed and model calls remain zero pending the separate budget decision.
