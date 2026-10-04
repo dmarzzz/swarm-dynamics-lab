@@ -1,1 +1,3 @@
 Completed deployed S0/S1: 450 valid scripted episodes, zero model calls, 90 verified uploads. Neutral discovery plan and visual filed; temporary host released and destroyed. High fees reduce short-horizon search splitting but do not eliminate forced splitting’s 24-round mean payoff. Next: separately budgeted neutral-model competence checks, then discovery S1.
+
+Closeout: task build-market-split marked done; agentops cleanup PR 45 merged. The shared Flight Deck catalog required a small schema repair for newly merged influence artifacts (harness labels and source link). Preserved original session IDs, files and input digests; notified the owner in their inbox. Strict project validation is clean.
