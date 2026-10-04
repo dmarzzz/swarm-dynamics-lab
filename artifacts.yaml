@@ -850,4 +850,62 @@ artifacts:
           - https://swarm-live.pages.dev/api/state
           - https://lamport.azurewebsites.net/pubs/byz.pdf
         commit: 96d3f96cb5d91d4b6ab204dbfa18b0996d68bb15-dirty
+  - id: sybil-scale-api-visible
+    category: content
+    type: figure
+    title: 'Sybil resistance across swarm sizes: visible badges'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-scale-api-visible/sybil-scale-api-visible-v1.png
+        built_at: '2026-10-04T03:13:49Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously
+          and show me the results when youre done
+        ingredients:
+          - researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py
+          - researchers/dmarz/notes/sybil-scale-api/src/render.py
+          - researchers/dmarz/notes/sybil-scale-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-scale-api/src/study.py
+          - researchers/dmarz/notes/sybil-scale-api/src/sim.py
+          - researchers/dmarz/notes/sybil-scale-api/design.yaml
+          - researchers/dmarz/notes/sybil-scale-api/experiment.yaml
+          - researchers/dmarz/notes/sybil-scale-api/requirements.txt
+          - data/sybil-scale-api/s1-001/summary.json
+          - data/sybil-scale-api/s1-001/episodes.jsonl.gz
+          - data/sybil-scale-api/s1-001/assignments.jsonl.gz
+          - data/sybil-scale-api/s1-001/worlds.jsonl.gz
+          - data/sybil-scale-api/s1-001/analysis.json
+        commit: 1560dbfdc3fb7f21ef1772ff23fcfd07ef21a907-dirty
+  - id: sybil-scale-api-hidden
+    category: content
+    type: figure
+    title: 'Sybil resistance across swarm sizes: hidden badges'
+    versions:
+      - v: 1
+        date: 2026-10-03
+        path: artifacts/sybil-scale-api-hidden/sybil-scale-api-hidden-v1.png
+        built_at: '2026-10-04T03:13:51Z'
+        by: codex
+        model: gpt-6-astra
+        session: codex:01a10476-dbdf-7a10-829c-804fe9b3a8f5
+        prompt: great, lets create a follow up experiment plan to the last one to test all of this, then please ship it autonomously
+          and show me the results when youre done
+        ingredients:
+          - researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py
+          - researchers/dmarz/notes/sybil-scale-api/src/render.py
+          - researchers/dmarz/notes/sybil-scale-api/src/analyze.py
+          - researchers/dmarz/notes/sybil-scale-api/src/study.py
+          - researchers/dmarz/notes/sybil-scale-api/src/sim.py
+          - researchers/dmarz/notes/sybil-scale-api/design.yaml
+          - researchers/dmarz/notes/sybil-scale-api/experiment.yaml
+          - researchers/dmarz/notes/sybil-scale-api/requirements.txt
+          - data/sybil-scale-api/s1-001/summary.json
+          - data/sybil-scale-api/s1-001/episodes.jsonl.gz
+          - data/sybil-scale-api/s1-001/assignments.jsonl.gz
+          - data/sybil-scale-api/s1-001/worlds.jsonl.gz
+          - data/sybil-scale-api/s1-001/analysis.json
+        commit: 1560dbfdc3fb7f21ef1772ff23fcfd07ef21a907-dirty
 requires: '1.2'

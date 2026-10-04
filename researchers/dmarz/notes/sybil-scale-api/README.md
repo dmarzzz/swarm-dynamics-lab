@@ -39,4 +39,10 @@ The prior 12-world API pilot demonstrated the strong-check utility / weak-check 
 
 ## Results
 
-Pending execution. Initial and progress frames, final scaling curves and a measured completion replay will appear on [the live experiment](https://swarm-live.pages.dev/#/x/sybil-scale-api). No favorable outcome is required for completion.
+Completed: 2,400/2,400 valid comparison answers, 24 paired worlds and 100 conditions; no failed or retried calls. All 264 scripted cases and 64 clean API qualifications passed first. Total model usage including qualification was USD 19.453925.
+
+At 972 identities with informative checks and visible badges, proportional coverage checking (108 checks) achieved 98.6% specialist accuracy versus 47.2% with four checks: +51.4 percentage points, descriptive paired-world 95% interval +38.9 to +62.5. Attacker seat share fell from 11.5% to 3.6%. Random checking at the same 108-check budget also achieved 98.6%; this is not evidence that coverage is uniquely superior. With weak checks, coverage accuracy was 52.8% versus 45.8%, while attacker seat share rose from 11.5% to 21.5%.
+
+The check-history audit explains a scaling failure: four coverage checks all targeted outside identities at N=36, but all targeted core identities at each larger size. High answer accuracy also did not mean broad inclusion: the strong/proportional coverage condition still rejected 62.8% of honest specialists at N=972.
+
+Read the [results and limitations](RESULTS.md), [all 100 cells](results-cells.csv), [complete aggregate analysis](results-summary.json), [post-mortem](reviews/s1-001-post.md) and [deployment record](DEPLOYMENT.md). The [live experiment](https://swarm-live.pages.dev/#/x/sybil-scale-api) includes final scaling curves and a measured completion replay. These remain exploratory results from simulated reporters and checks with API report synthesis; S2 stays disabled.

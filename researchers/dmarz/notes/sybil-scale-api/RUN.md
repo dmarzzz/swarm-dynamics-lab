@@ -9,3 +9,5 @@ One exclusive claim on sim-dmarz-4, dmarz-sybil-scale-api; one worker process, u
 5. Commit S1 pre-review; run bounded S1. Status and measured frames show progress. No automatic retries or restart. Preserve all unsuccessful attempts before repair.
 6. Fetch sanitized summary/analysis and raw compressed outputs; independently recompute evaluator and all aggregates; inspect UI and artifact hashes. File final figures with Flight Deck provenance; write post-mortem, results and actual spend.
 7. Verify worker exit, release claim; do not destroy an existing shared fleet machine. Final repository check and Flight Deck strict check, then sync.
+
+Completed attempt: S1-001, run sybil-scale-api/56defc84, 2,400/2,400 valid; see RESULTS.md and DEPLOYMENT.md. Post-collection reproduction requires Python 3.12 and the pinned requirements for exact floating-point agreement with the server. Earlier local Python 3.9 arithmetic differed only at the last bit; the matching environment reproduced the full saved analysis exactly. No additional model invocation is needed for reproduction of the saved records.

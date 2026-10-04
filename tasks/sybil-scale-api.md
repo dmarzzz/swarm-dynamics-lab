@@ -26,5 +26,9 @@ Follow the user-requested identity-size sweep through a frozen plan, scripted re
 
 - [x] Freeze matched 36/108/324/972 identity worlds, fixed and proportional checking, and visual mapping.
 - [x] Validate the generalized graph and clean model competence at every size.
-- [ ] Deploy and run the authorized API comparison; preserve every assigned outcome.
-- [ ] Publish reconciled results and replay, verify artifacts, stop workers and release the host.
+- [x] Deploy and run the authorized API comparison; preserve every assigned outcome.
+- [x] Publish reconciled results and replay, verify artifacts, stop workers and release the host.
+
+## Coverage note
+
+Completed 2,400/2,400 S1 answers after 264 scripted cases and 64/64 exact clean API qualification. Full evaluator/analysis reconciliation, public final image/replay, 30 artifact hashes and all 99 GIF frames verified. Total model usage USD 19.453925. Worker exited and exclusive host claim released. Strong proportional checking helps at larger sizes, but random matches coverage at the largest equal budget; weak checks admit more attackers. Exploratory only; formal holdout unopened.

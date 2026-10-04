@@ -1,0 +1,609 @@
+{
+  "status": "post-collection descriptive diagnostic",
+  "cells": [
+    {
+      "n": 36,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 1.1666666666666667,
+        "attackers": 2.8333333333333335
+      }
+    },
+    {
+      "n": 36,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.16666666666666666,
+        "specialists": 1.8333333333333333,
+        "attackers": 2.0
+      }
+    },
+    {
+      "n": 36,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 36,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 36,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 36,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 36,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.75,
+        "specialists": 1.2083333333333333,
+        "attackers": 1.0416666666666667
+      }
+    },
+    {
+      "n": 36,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.75,
+        "specialists": 1.2083333333333333,
+        "attackers": 1.0416666666666667
+      }
+    },
+    {
+      "n": 108,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "coverage",
+      "checks": 12,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.916666666666667,
+        "specialists": 2.375,
+        "attackers": 4.708333333333333
+      }
+    },
+    {
+      "n": 108,
+      "arm": "coverage",
+      "checks": 12,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 5.041666666666667,
+        "specialists": 3.5833333333333335,
+        "attackers": 3.375
+      }
+    },
+    {
+      "n": 108,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "degree",
+      "checks": 12,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 12.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "degree",
+      "checks": 12,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 12.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 108,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.8333333333333333,
+        "specialists": 1.125,
+        "attackers": 1.0416666666666667
+      }
+    },
+    {
+      "n": 108,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.8333333333333333,
+        "specialists": 1.125,
+        "attackers": 1.0416666666666667
+      }
+    },
+    {
+      "n": 108,
+      "arm": "random",
+      "checks": 12,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 5.833333333333333,
+        "specialists": 2.9583333333333335,
+        "attackers": 3.2083333333333335
+      }
+    },
+    {
+      "n": 108,
+      "arm": "random",
+      "checks": 12,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 5.833333333333333,
+        "specialists": 2.9583333333333335,
+        "attackers": 3.2083333333333335
+      }
+    },
+    {
+      "n": 324,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "coverage",
+      "checks": 36,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 19.333333333333332,
+        "specialists": 6.833333333333333,
+        "attackers": 9.833333333333334
+      }
+    },
+    {
+      "n": 324,
+      "arm": "coverage",
+      "checks": 36,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 19.291666666666668,
+        "specialists": 8.625,
+        "attackers": 8.083333333333334
+      }
+    },
+    {
+      "n": 324,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "degree",
+      "checks": 36,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 36.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "degree",
+      "checks": 36,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 36.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 2.1666666666666665,
+        "specialists": 0.8333333333333334,
+        "attackers": 1.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 2.1666666666666665,
+        "specialists": 0.8333333333333334,
+        "attackers": 1.0
+      }
+    },
+    {
+      "n": 324,
+      "arm": "random",
+      "checks": 36,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 18.708333333333332,
+        "specialists": 9.041666666666666,
+        "attackers": 8.25
+      }
+    },
+    {
+      "n": 324,
+      "arm": "random",
+      "checks": 36,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 18.708333333333332,
+        "specialists": 9.041666666666666,
+        "attackers": 8.25
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 60.791666666666664,
+        "specialists": 19.041666666666668,
+        "attackers": 28.166666666666668
+      }
+    },
+    {
+      "n": 972,
+      "arm": "coverage",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 61.333333333333336,
+        "specialists": 23.333333333333332,
+        "attackers": 23.333333333333332
+      }
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 4.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 108.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "degree",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 108.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "no_verification",
+      "checks": 0,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 0.0,
+        "specialists": 0.0,
+        "attackers": 0.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.9583333333333333,
+        "specialists": 1.0416666666666667,
+        "attackers": 1.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 4,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 1.9583333333333333,
+        "specialists": 1.0416666666666667,
+        "attackers": 1.0
+      }
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.1,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 53.625,
+        "specialists": 26.75,
+        "attackers": 27.625
+      }
+    },
+    {
+      "n": 972,
+      "arm": "random",
+      "checks": 108,
+      "attacker_pass": 0.9,
+      "worlds": 24,
+      "mean_checked": {
+        "core": 53.625,
+        "specialists": 26.75,
+        "attackers": 27.625
+      }
+    }
+  ],
+  "inputs": {
+    "worlds.jsonl.gz": "e58cb103ab3b1ce26dcaba4263553708e34ac1d10dbc9f75993549b12cae2bfd",
+    "assignments.jsonl.gz": "f7ad6319cbc9f438abf42712201acad83521bd5d3ca768bd22e41204c7dac8d3"
+  }
+}

@@ -1,2849 +1,3027 @@
 {
- "entries": {
-  "agent-discourse-x-page@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791070706,
-     "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
-     "size": 3063,
-     "uri": "src/x-trend/trend.py"
+  "entries": {
+    "agent-discourse-x-page@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791070706,
+          "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
+          "size": 3063,
+          "uri": "src/x-trend/trend.py"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
+          "size": 269631,
+          "uri": "src/x-trend/trend_data.json"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791070706,
+      "path": "artifacts/agent-discourse-x-page/agent-discourse-x-page-v1.html",
+      "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
+      "sha256": "394ee28af098013059287132505593b37e7a24d763533a92df2f563ccd60972d",
+      "size_bytes": 276376
     },
-    {
-     "mtime": 1791070706,
-     "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
-     "size": 269631,
-     "uri": "src/x-trend/trend_data.json"
+    "agent-discourse-x@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791070706,
+          "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
+          "size": 3063,
+          "uri": "src/x-trend/trend.py"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
+          "size": 269631,
+          "uri": "src/x-trend/trend_data.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791070706,
+      "path": "artifacts/agent-discourse-x/agent-discourse-x-v1.png",
+      "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
+      "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59",
+      "size_bytes": 456862
+    },
+    "fork-merge-setups@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791070706,
+          "sha256": "1a6485bc63ea58bda401fabf1772faeb29f6af8724770e118f1301dd131da923",
+          "size": 18811,
+          "uri": "src/fork-merge-setups/build.py"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "8740480f7bd92f5f261b9b4a4dfa691cbce7f49919773b04104d26fbd8658d9e",
+          "size": 12612,
+          "uri": "src/fork-merge-setups/prose.html"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "a13b4624072fe57861f2d05d4b36f2600bba9160ee14bcd520f55406b84d04b9",
+          "size": 14178,
+          "uri": "src/fork-merge-setups/rigs.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "0a5183145dc82d5954777e78a62b5cb737c61fdb27a63ddef4f0a90c3da8de9c",
+          "size": 94429,
+          "uri": "src/fork-merge-setups/cards/A.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "5653b34f92076eebe5b4cbdebc6483b8fa1523df2ba97f212b0e8069e50f3512",
+          "size": 66938,
+          "uri": "src/fork-merge-setups/cards/B.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "016515ab6bb5291e67b3630207f46c030a6641b659a600bad25bdf0f5dcb7ec4",
+          "size": 77247,
+          "uri": "src/fork-merge-setups/cards/C.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "559a2e9c196058b42e34814710f5bbbf2d6010c34f5fcdb0acc3a651014f2c5d",
+          "size": 92242,
+          "uri": "src/fork-merge-setups/cards/D.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "a4e0bed925a52f9abd07b788147da46df24bb2a1e5271fd5b89779bdf18e5ec6",
+          "size": 106840,
+          "uri": "src/fork-merge-setups/cards/E.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "ef84f81b1457c4dd75059352b7c3e2123f0576dd07b2395adbb32043f5d80f97",
+          "size": 70721,
+          "uri": "src/fork-merge-setups/cards/F.json"
+        },
+        {
+          "mtime": 1791070706,
+          "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
+          "size": 44661,
+          "uri": "synthesis/fork-merge-questions.md"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791070706,
+      "path": "artifacts/fork-merge-setups/fork-merge-setups-v1.html",
+      "prompt_sha256": "98715429608ca1c386834a4450950dcdfa6a35d69a1d50a4c1bc88b68fff3b73",
+      "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210",
+      "size_bytes": 531379
+    },
+    "healing-helping-hands-outcomes@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081783,
+          "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
+          "size": 8087,
+          "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+        },
+        {
+          "mtime": 1791081878,
+          "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
+          "size": 904346,
+          "uri": "data/healing-helping-hands/render-inputs.tar.gz"
+        },
+        {
+          "mtime": 1791081783,
+          "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
+          "size": 7415,
+          "uri": "researchers/vishesh/notes/healing-helping-hands/results-summary.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791081640,
+      "path": "artifacts/healing-helping-hands-outcomes/healing-helping-hands-outcomes-v1.png",
+      "prompt_sha256": "070a708fe088e26dd4bf78e1eb91b63d93a510353a0b1c95c9033960b67e5e0c",
+      "sha256": "1f26170b0be62beff88944dd2aa0b4f3e097c09aeb36bea330d8d0eecd03e21a",
+      "size_bytes": 135398
+    },
+    "healing-helping-hands-recovery@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081642,
+          "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d",
+          "size": 501634,
+          "uri": "data/healing-helping-hands/recovery.gif"
+        },
+        {
+          "mtime": 1791081783,
+          "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
+          "size": 8087,
+          "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
+        },
+        {
+          "mtime": 1791081878,
+          "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
+          "size": 904346,
+          "uri": "data/healing-helping-hands/render-inputs.tar.gz"
+        }
+      ],
+      "media": {
+        "duration_s": 16.2,
+        "height": 980,
+        "width": 1600
+      },
+      "mime": "video/mp4",
+      "mtime": 1791081642,
+      "path": "artifacts/healing-helping-hands-recovery/healing-helping-hands-recovery-v1.mp4",
+      "prompt_sha256": "85924dac8fe4b2ad18088ca381845a2b0b074d5090134fdacf51c3e4757c08e6",
+      "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7",
+      "size_bytes": 364541
+    },
+    "influence-native-q2-film@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791082116,
+          "sha256": "2758a03e4983864d266998c8bddd1d396683e543ea0034b38f84220163166782",
+          "size": 3194,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/animate_native.py"
+        },
+        {
+          "mtime": 1791081725,
+          "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151",
+          "size": 20994,
+          "uri": "data/influence-native/native-Q2-01/case-2.json"
+        },
+        {
+          "mtime": 1791081728,
+          "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460",
+          "size": 97782,
+          "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
+        }
+      ],
+      "media": {
+        "duration_s": 20.99,
+        "height": 800,
+        "width": 1280
+      },
+      "mime": "video/mp4",
+      "mtime": 1791082119,
+      "path": "artifacts/influence-native-q2-film/influence-native-q2-film-v1.mp4",
+      "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
+      "sha256": "a83654e4c1c19ec9f7921c0b3ebae50808ff5feed09e5bd3e56f519cbc96f085",
+      "size_bytes": 102166
+    },
+    "influence-native-q2-replay@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081635,
+          "sha256": "43a84d4716843bc700c867dd118860b6f8fa07ca4d458b1f421782a996a4bf4a",
+          "size": 6213,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
+        },
+        {
+          "mtime": 1791081728,
+          "sha256": "1be7fce34eabce70fa9b6dfcaf0e7da3baae1a0d2e33771833e2cfeba83d1ae4",
+          "size": 1025,
+          "uri": "data/influence-native/native-Q2-01/manifest.json"
+        },
+        {
+          "mtime": 1791081727,
+          "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf",
+          "size": 468,
+          "uri": "data/influence-native/native-Q2-01/summary.json"
+        },
+        {
+          "mtime": 1791081727,
+          "sha256": "e09336dfbd4b7a8fb6a8694a3b49720572803f879cf9cf3771020d64274cb064",
+          "size": 20911,
+          "uri": "data/influence-native/native-Q2-01/case-0.json"
+        },
+        {
+          "mtime": 1791081727,
+          "sha256": "cf441d16ae2e0c84e4b3afe9f7c8e250bc5a33f4cad713b75eda3eea646e7874",
+          "size": 21070,
+          "uri": "data/influence-native/native-Q2-01/case-1.json"
+        },
+        {
+          "mtime": 1791081725,
+          "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151",
+          "size": 20994,
+          "uri": "data/influence-native/native-Q2-01/case-2.json"
+        },
+        {
+          "mtime": 1791081726,
+          "sha256": "3a4c12af6fd845c3837e024934825c5600b013f72a5cb0bab354295fdb3858a2",
+          "size": 96393,
+          "uri": "data/influence-native/native-Q2-01/events-0.jsonl"
+        },
+        {
+          "mtime": 1791081726,
+          "sha256": "70e786d0480b6f1878dbbab02a98dffbf13a80d66b665a7b1cbc1a4ca3243c3c",
+          "size": 98108,
+          "uri": "data/influence-native/native-Q2-01/events-1.jsonl"
+        },
+        {
+          "mtime": 1791081728,
+          "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460",
+          "size": 97782,
+          "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
+        },
+        {
+          "mtime": 1791081729,
+          "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970",
+          "size": 19452,
+          "uri": "data/influence-native/native-Q2-01/outcomes.json"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791082003,
+      "path": "artifacts/influence-native-q2-replay/influence-native-q2-replay-v1.html",
+      "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
+      "sha256": "d6b2ca7bcd9e1d29132c2353f88863fce44ed68744c6df471de61ebe7162fc52",
+      "size_bytes": 301604
+    },
+    "influence-native-q2-results@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081031,
+          "sha256": "22ca86c45911a82a36e79ba13da7da06170a9e9b617333c1c6af269c1767144a",
+          "size": 1772,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py"
+        },
+        {
+          "mtime": 1791081729,
+          "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970",
+          "size": 19452,
+          "uri": "data/influence-native/native-Q2-01/outcomes.json"
+        },
+        {
+          "mtime": 1791081727,
+          "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf",
+          "size": 468,
+          "uri": "data/influence-native/native-Q2-01/summary.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791081726,
+      "path": "artifacts/influence-native-q2-results/influence-native-q2-results-v1.png",
+      "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
+      "sha256": "117e8a2e1a857ad84846034dfb2dae8c9a68b9f1a2b6c1cfe5c5d6b5183f7af4",
+      "size_bytes": 96484
+    },
+    "influence-swarms-decision-design@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791080536,
+          "sha256": "5b4977f63aabec350cf4b96f34bc03c54858177fdfd960164819fd755583789d",
+          "size": 664,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py"
+        },
+        {
+          "mtime": 1791080537,
+          "sha256": "892004b0068dedc926558846933826e5d6534b0617bad10e4faff0c36c6ce135",
+          "size": 8633,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html"
+        },
+        {
+          "mtime": 1791081809,
+          "sha256": "8915a12b21e346e0e0d0da1d2ccc545971f652459cd514a3a12cc1626847ba80",
+          "size": 10358,
+          "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791080537,
+      "path": "artifacts/influence-swarms-decision-design/influence-swarms-decision-design-v1.html",
+      "prompt_sha256": "08bc5202ebae86ba517fdda748f524c6de895ce7f85b1ddbd4c5824f26e7b3aa",
+      "sha256": "6272adebf96524823f188cd91ff91ba5752527e3b6b44328df827679acbd505c",
+      "size_bytes": 299683
+    },
+    "influence-swarms-replay-film@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791077904,
+          "sha256": "b0378c14e9acc952a60af44a08088c82c59da2713d877db4b172a29c8a77ecb8",
+          "size": 8350,
+          "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
+        },
+        {
+          "mtime": 1791077381,
+          "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
+          "size": 1348306,
+          "uri": "data/external-influence-v2/audit.json"
+        }
+      ],
+      "media": {
+        "duration_s": 23.99,
+        "height": 768,
+        "width": 1280
+      },
+      "mime": "video/mp4",
+      "mtime": 1791078414,
+      "path": "artifacts/influence-swarms-replay-film/influence-swarms-replay-film-v1.mp4",
+      "prompt_sha256": "9fc835c9903a52f9a06b1a4670fcd0cd58646a52f8e20b1ece2557adf0ff0782",
+      "sha256": "1c2e0074bfddc07a48481dedce0c0413534fc95f5d7a09842ae44f9c133d9a16",
+      "size_bytes": 96120
+    },
+    "influence-swarms-replay@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791077904,
+          "sha256": "486ca56d36027bd727100ce1caf3bfc89c11c98072c59c96decfd90a6a11ec75",
+          "size": 379,
+          "uri": "researchers/vishesh/notes/external-influence-v2/analysis/build_replay.py"
+        },
+        {
+          "mtime": 1791077904,
+          "sha256": "6d8d0375d0074ba9b98bd4c628dc2d1f4fd8d3fedc2a5c6248135e93bcf53a33",
+          "size": 11446,
+          "uri": "researchers/vishesh/notes/external-influence-v2/analysis/replay_template.html"
+        },
+        {
+          "mtime": 1791077381,
+          "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
+          "size": 1348306,
+          "uri": "data/external-influence-v2/audit.json"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791077904,
+      "path": "artifacts/influence-swarms-replay/influence-swarms-replay-v1.html",
+      "prompt_sha256": "2a270433ee417d039d9cf642f47bc5aae421f7f489483937817b4c0b2358a7c9",
+      "sha256": "542a74084f87c39e3c3d4afff994bc89974be14bc7046cb634e3dd5a255aa6c0",
+      "size_bytes": 660074
+    },
+    "influence-swarms-results@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791077904,
+          "sha256": "b0378c14e9acc952a60af44a08088c82c59da2713d877db4b172a29c8a77ecb8",
+          "size": 8350,
+          "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
+        },
+        {
+          "mtime": 1791077381,
+          "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
+          "size": 1348306,
+          "uri": "data/external-influence-v2/audit.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791077912,
+      "path": "artifacts/influence-swarms-results/influence-swarms-results-v1.png",
+      "prompt_sha256": "c13baf33f3f4ad7dbc949a0a4dbea5673f382feb2cd2fb1603eb6cf8eeb3f39d",
+      "sha256": "42ed38cbdb659e3009802f0eef8d6d7b5bbf8b9632345ad3069c7feed00558e6",
+      "size_bytes": 193345
+    },
+    "market-split-experiment-plan@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791079348,
+          "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
+          "size": 11521,
+          "uri": "researchers/dmarz/notes/market-split/README.md"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
+          "size": 884,
+          "uri": "researchers/dmarz/notes/market-split/design.yaml"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "1cf1743d53db84fe3d0e063539c10e51c18c232b39cf331c893ed28a4ebcf861",
+          "size": 1382,
+          "uri": "researchers/dmarz/notes/market-split/src/prompt.txt"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
+          "size": 14042,
+          "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "4eecbfe40359c77a27ca108a381e2fbf3af199f3ab363a8fc18edb67de45373e",
+          "size": 3729,
+          "uri": "researchers/dmarz/notes/market-split/src/analyze.py"
+        },
+        {
+          "mtime": 1791079348,
+          "sha256": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786",
+          "size": 28109,
+          "uri": "researchers/dmarz/notes/market-split/analysis/s1-summary.json"
+        },
+        {
+          "mtime": 1791079348,
+          "sha256": "3a6643417417b833bbcf8fb6b4da995a136403aadf3bf07593f142e9a8528dfc",
+          "size": 28532,
+          "uri": "researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json"
+        },
+        {
+          "mtime": 1791079348,
+          "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
+          "size": 4042,
+          "uri": "researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+        }
+      ],
+      "mime": "text/markdown",
+      "mtime": 1791079348,
+      "path": "artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md",
+      "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
+      "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
+      "size_bytes": 11521
+    },
+    "market-split-scripted-frame@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791078526,
+          "sha256": "ce550b18a33c382e7cbfdf4d84137e36150af0ee30b109b0df6754d4f739f795",
+          "size": 5290,
+          "uri": "researchers/dmarz/notes/market-split/src/render.py"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
+          "size": 14042,
+          "uri": "researchers/dmarz/notes/market-split/src/sim.py"
+        },
+        {
+          "mtime": 1791078526,
+          "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
+          "size": 884,
+          "uri": "researchers/dmarz/notes/market-split/design.yaml"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791078526,
+      "path": "artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png",
+      "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
+      "sha256": "606fd3f5088ed2844801e37c30b9b101338f4668ee47ae0b8c04cf99afae9b3b",
+      "size_bytes": 137073
+    },
+    "pi-next-experiments-2026-10-04@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/1810.08240"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/2403.08882"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/2410.08948"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+          "size": 35915,
+          "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
+        },
+        {
+          "mtime": 1791082355,
+          "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
+          "size": 5327,
+          "uri": "researchers/dmarz/notes/compositional-safety/README.md"
+        },
+        {
+          "mtime": 1791082355,
+          "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+          "size": 4338,
+          "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+          "size": 10921,
+          "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
+          "size": 12673,
+          "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+        },
+        {
+          "mtime": 1791082273,
+          "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
+          "size": 222249,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
+        },
+        {
+          "mtime": 1791082843,
+          "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
+          "size": 40804,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
+        },
+        {
+          "mtime": 1791082744,
+          "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
+          "size": 6151,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
+          "size": 5880,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
+          "size": 4212,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+          "size": 7182,
+          "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+        },
+        {
+          "mtime": 1791082434,
+          "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
+          "size": 8340,
+          "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+          "size": 2269,
+          "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+          "size": 10309,
+          "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+          "size": 5861,
+          "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+          "size": 7582,
+          "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
+          "size": 11632,
+          "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+          "size": 11353,
+          "uri": "templates/experiment-worker/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
+          "size": 27215,
+          "uri": "tooling/agent-experiments/GUIDE.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
+          "size": 6579,
+          "uri": "tooling/agent-experiments/RUN-REVIEW.md"
+        }
+      ],
+      "mime": "application/octet-stream",
+      "mtime": 1791082843,
+      "path": "artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md",
+      "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
+      "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
+      "size_bytes": 42700
+    },
+    "pi-next-experiments-view-2026-10-04@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/1810.08240"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/2403.08882"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://arxiv.org/abs/2410.08948"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
+          "size": 35915,
+          "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
+        },
+        {
+          "mtime": 1791082355,
+          "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
+          "size": 5327,
+          "uri": "researchers/dmarz/notes/compositional-safety/README.md"
+        },
+        {
+          "mtime": 1791082355,
+          "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
+          "size": 4338,
+          "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+          "size": 10921,
+          "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
+          "size": 12673,
+          "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
+        },
+        {
+          "mtime": 1791082273,
+          "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
+          "size": 222249,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
+        },
+        {
+          "mtime": 1791082843,
+          "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
+          "size": 40804,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
+        },
+        {
+          "mtime": 1791082744,
+          "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
+          "size": 6151,
+          "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
+          "size": 5880,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
+          "size": 4212,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+          "size": 7182,
+          "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+        },
+        {
+          "mtime": 1791082434,
+          "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
+          "size": 8340,
+          "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+          "size": 2269,
+          "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
+          "size": 10309,
+          "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
+          "size": 5861,
+          "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+          "size": 7582,
+          "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+        },
+        {
+          "mtime": 1791082754,
+          "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
+          "size": 11632,
+          "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+          "size": 11353,
+          "uri": "templates/experiment-worker/README.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
+          "size": 27215,
+          "uri": "tooling/agent-experiments/GUIDE.md"
+        },
+        {
+          "mtime": 1791082034,
+          "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
+          "size": 6579,
+          "uri": "tooling/agent-experiments/RUN-REVIEW.md"
+        }
+      ],
+      "mime": "application/octet-stream",
+      "mtime": 1791082843,
+      "path": "artifacts/pi-next-experiments-view-2026-10-04/pi-next-experiments-view-2026-10-04-v1.tsx",
+      "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
+      "sha256": "8514b19761773cf41e838a5cc46f4760bc66b8f11e5edbbb46519852df8365da",
+      "size_bytes": 43665
+    },
+    "pi-research-program-review-2026-10-04@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791081518,
+          "sha256": "df39289b7f883dca477fa6699dc1b9ea189c1c36e21e3233a92f6fa70ad918eb",
+          "size": 22966,
+          "uri": "/Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py"
+        },
+        {
+          "mtime": 1791081237,
+          "sha256": "6de42d704faf7b2165a9b2087a1f4397596177fbca3277eab647cd0377bb1843",
+          "size": 691960,
+          "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json"
+        },
+        {
+          "mtime": 1791077441,
+          "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
+          "size": 10921,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
+        },
+        {
+          "mtime": 1791079026,
+          "sha256": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6",
+          "size": 7118,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
+        },
+        {
+          "mtime": 1791078631,
+          "sha256": "a5254c25675c6fabca7fa4b37f1c9fa114050d66161451fa9acb754263163aee",
+          "size": 4032,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md"
+        },
+        {
+          "mtime": 1791080931,
+          "sha256": "2ef57d2c9af140fccf6db4f01a4aae7de03e8cf8fdd07ebeed666e268a97b778",
+          "size": 2927,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md"
+        },
+        {
+          "mtime": 1791079350,
+          "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
+          "size": 4042,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
+        },
+        {
+          "mtime": 1791080162,
+          "sha256": "bf6af2a573ea07688051101ea6f3a2a5e07731bac6747e4e8861aadce428c0d2",
+          "size": 5724,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md"
+        },
+        {
+          "mtime": 1791080162,
+          "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
+          "size": 7182,
+          "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
+        },
+        {
+          "mtime": 1791078567,
+          "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957",
+          "size": 7016,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
+        },
+        {
+          "mtime": 1791078567,
+          "sha256": "df44be98bee1912b8218c0e69572acc96ddb184c8c206282eb761599fc85062b",
+          "size": 7756,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
+        },
+        {
+          "mtime": 1791080865,
+          "sha256": "f240103197139813f43a428382825ae1e1c39223a7e9a0b304553677261084b0",
+          "size": 7987,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md"
+        },
+        {
+          "mtime": 1791080865,
+          "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
+          "size": 2269,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
+        },
+        {
+          "mtime": 1791079026,
+          "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39",
+          "size": 8673,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md"
+        },
+        {
+          "mtime": 1791080865,
+          "sha256": "05dbd1c4c6987ccfc55dfa160e110c5e2abb500e23f833f1f60a4bfa00b910a0",
+          "size": 14142,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md"
+        },
+        {
+          "mtime": 1791080865,
+          "sha256": "503a2c615a98005c6e485950a70d35aa43bee336dd2fab129fb7ab7b4ccb8c24",
+          "size": 5217,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md"
+        },
+        {
+          "mtime": 1791077934,
+          "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
+          "size": 7582,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md"
+        },
+        {
+          "mtime": 1791080865,
+          "sha256": "8ded6af440a991e800a4cb53923891083891ee4ff373fc567191a94394f28200",
+          "size": 3221,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md"
+        },
+        {
+          "mtime": 1791076689,
+          "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881",
+          "size": 6123,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md"
+        },
+        {
+          "mtime": 1791079757,
+          "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
+          "size": 4967,
+          "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md"
+        },
+        {
+          "mtime": 1791075872,
+          "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
+          "size": 11353,
+          "uri": "/Users/halcyon/swarm-lab/templates/experiment-worker/README.md"
+        },
+        {
+          "mtime": 1791060759,
+          "sha256": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b",
+          "size": 2550,
+          "uri": "/Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
+        },
+        {
+          "mtime": 1791071339,
+          "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
+          "size": 5131,
+          "uri": "/Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/capture-memory"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/healing-helping-hands"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/influence-swarms"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/market-split-api"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/regrowth-200"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/swarm-of-theseus"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/#/x/template-quorum"
+        },
+        {
+          "mtime": 1791059935,
+          "sha256": "fcfad69ebea756f86e45b02146fbf02b08e7dc0aa24f65448da1f36a5b8909fb",
+          "size": 12935,
+          "uri": "/Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md"
+        },
+        {
+          "mtime": 1791058402,
+          "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
+          "size": 44661,
+          "uri": "/Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md"
+        },
+        {
+          "mtime": 1791079350,
+          "sha256": "00935a22fd8da7a0236fecb15fdb33a7f1d8c4b77fe76eb5e2411afad9f220de",
+          "size": 709965,
+          "uri": "/Users/halcyon/swarm-lab/library/INDEX.md"
+        },
+        {
+          "mtime": 1791063229,
+          "sha256": "ea874f679c6f7450a25c7f17d14804569a3c17254da6a0870f7bc424afe5efcc",
+          "size": 52858,
+          "uri": "/Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md"
+        },
+        {
+          "mtime": 1791081533,
+          "sha256": "f3421eb8b92a8c5cdb5e8146ed67534b091dd91334d42fa5b3abbd9b08ca65d6",
+          "size": 519,
+          "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://swarm-live.pages.dev/api/state"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "https://lamport.azurewebsites.net/pubs/byz.pdf"
+        }
+      ],
+      "mime": "application/octet-stream",
+      "mtime": 1791081518,
+      "path": "artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx",
+      "prompt_sha256": "66b8d6efba8b84eb868a9d97094e974d59a7ee1c07a8456a5efc389cf0c8a027",
+      "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
+      "size_bytes": 21631
+    },
+    "sybil-scale-api-hidden@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791082608,
+          "sha256": "f0c24fba1c8333a4e4fc2675f77ed967f214eb3997e43d7f4ec0f2062106c0f0",
+          "size": 5907,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "3b632443aab8b281166bd6d40a9ae55d2887044fd658c71587334d0792c539a1",
+          "size": 5878,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/render.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "7823428b71de267740d4f21d08bc80f80d89d6f43d90aec0c268f71fd3ffcf80",
+          "size": 2630,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/analyze.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "e0897afec8025248d5653c28d92b0ca331957a53aca95e215d97d6f63a8c079e",
+          "size": 6507,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/study.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398",
+          "size": 8891,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/sim.py"
+        },
+        {
+          "mtime": 1791081086,
+          "sha256": "57b267b0e22a5829e5c6b80c922723ad6e140f91d272d3ac0f0286159c396262",
+          "size": 1610,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/design.yaml"
+        },
+        {
+          "mtime": 1791081086,
+          "sha256": "cc23f511068ce97a3308f04ab600ca47201c211c5bd1282bc580d87bbbcf3804",
+          "size": 646,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/experiment.yaml"
+        },
+        {
+          "mtime": 1791080996,
+          "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce",
+          "size": 42,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/requirements.txt"
+        },
+        {
+          "mtime": 1791083484,
+          "sha256": "607b96bfff25b436756f8e1d6cdce5b7d9d352327e51c23d3839ad59730124b1",
+          "size": 927,
+          "uri": "data/sybil-scale-api/s1-001/summary.json"
+        },
+        {
+          "mtime": 1791083491,
+          "sha256": "2f6cc9de130c503da025d1edb63cad1b1da789afa2051c19ebfc706d8b67a23e",
+          "size": 390393,
+          "uri": "data/sybil-scale-api/s1-001/episodes.jsonl.gz"
+        },
+        {
+          "mtime": 1791083489,
+          "sha256": "f7ad6319cbc9f438abf42712201acad83521bd5d3ca768bd22e41204c7dac8d3",
+          "size": 4158544,
+          "uri": "data/sybil-scale-api/s1-001/assignments.jsonl.gz"
+        },
+        {
+          "mtime": 1791083494,
+          "sha256": "e58cb103ab3b1ce26dcaba4263553708e34ac1d10dbc9f75993549b12cae2bfd",
+          "size": 2835369,
+          "uri": "data/sybil-scale-api/s1-001/worlds.jsonl.gz"
+        },
+        {
+          "mtime": 1791083486,
+          "sha256": "60034b763362845b5c947b26df61ee9a5e5af81e436fb613e8861065627cb396",
+          "size": 221925,
+          "uri": "data/sybil-scale-api/s1-001/analysis.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791083571,
+      "path": "artifacts/sybil-scale-api-hidden/sybil-scale-api-hidden-v1.png",
+      "prompt_sha256": "a916489c968cee240a8962f491d93791a328105d68cccb6bcf758643ded116a3",
+      "sha256": "f5161c6613f5cd949116e099c7a7f001c58ad30e5d0ad3e8c81e6dd88d468d00",
+      "size_bytes": 120982
+    },
+    "sybil-scale-api-visible@1": {
+      "host": "halcyons-macbook-pro-4",
+      "ingredients": [
+        {
+          "mtime": 1791082608,
+          "sha256": "f0c24fba1c8333a4e4fc2675f77ed967f214eb3997e43d7f4ec0f2062106c0f0",
+          "size": 5907,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/reporting/build_report.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "3b632443aab8b281166bd6d40a9ae55d2887044fd658c71587334d0792c539a1",
+          "size": 5878,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/render.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "7823428b71de267740d4f21d08bc80f80d89d6f43d90aec0c268f71fd3ffcf80",
+          "size": 2630,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/analyze.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "e0897afec8025248d5653c28d92b0ca331957a53aca95e215d97d6f63a8c079e",
+          "size": 6507,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/study.py"
+        },
+        {
+          "mtime": 1791081619,
+          "sha256": "f9222f8d5f9e56a48ba4fb96664e76b5e3012b283c9c13a27ce95a863b296398",
+          "size": 8891,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/src/sim.py"
+        },
+        {
+          "mtime": 1791081086,
+          "sha256": "57b267b0e22a5829e5c6b80c922723ad6e140f91d272d3ac0f0286159c396262",
+          "size": 1610,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/design.yaml"
+        },
+        {
+          "mtime": 1791081086,
+          "sha256": "cc23f511068ce97a3308f04ab600ca47201c211c5bd1282bc580d87bbbcf3804",
+          "size": 646,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/experiment.yaml"
+        },
+        {
+          "mtime": 1791080996,
+          "sha256": "a9a8538e6cf3103128e66e399310c8242e714de4d1e3f1b59e82ffd0460c54ce",
+          "size": 42,
+          "uri": "researchers/dmarz/notes/sybil-scale-api/requirements.txt"
+        },
+        {
+          "mtime": 1791083484,
+          "sha256": "607b96bfff25b436756f8e1d6cdce5b7d9d352327e51c23d3839ad59730124b1",
+          "size": 927,
+          "uri": "data/sybil-scale-api/s1-001/summary.json"
+        },
+        {
+          "mtime": 1791083491,
+          "sha256": "2f6cc9de130c503da025d1edb63cad1b1da789afa2051c19ebfc706d8b67a23e",
+          "size": 390393,
+          "uri": "data/sybil-scale-api/s1-001/episodes.jsonl.gz"
+        },
+        {
+          "mtime": 1791083489,
+          "sha256": "f7ad6319cbc9f438abf42712201acad83521bd5d3ca768bd22e41204c7dac8d3",
+          "size": 4158544,
+          "uri": "data/sybil-scale-api/s1-001/assignments.jsonl.gz"
+        },
+        {
+          "mtime": 1791083494,
+          "sha256": "e58cb103ab3b1ce26dcaba4263553708e34ac1d10dbc9f75993549b12cae2bfd",
+          "size": 2835369,
+          "uri": "data/sybil-scale-api/s1-001/worlds.jsonl.gz"
+        },
+        {
+          "mtime": 1791083486,
+          "sha256": "60034b763362845b5c947b26df61ee9a5e5af81e436fb613e8861065627cb396",
+          "size": 221925,
+          "uri": "data/sybil-scale-api/s1-001/analysis.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791083571,
+      "path": "artifacts/sybil-scale-api-visible/sybil-scale-api-visible-v1.png",
+      "prompt_sha256": "a916489c968cee240a8962f491d93791a328105d68cccb6bcf758643ded116a3",
+      "sha256": "d079adb417eb5f0a62388d17ee056b00c54c6e0ee3f9cb173c557f6cbfb8247b",
+      "size_bytes": 121202
+    },
+    "theseus-pilot-evidence@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081456,
+          "sha256": "ef2bb29867c2bcf9a0e6b71158cbd7c1ccdbaabb489e7ef4691b376098ffce61",
+          "size": 1522,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/src/package_evidence.py"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a1-setup.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/audit.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/manifest.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/rows.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a2/summary.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/audit.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/manifest.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/rows.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a3/summary.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/audit.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/manifest.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/rows.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S0-a4/summary.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/audit.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/manifest.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-both-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/rows.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/events.jsonl"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/history.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/outcome.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/public-plan-receipt.json"
+        },
+        {
+          "sha256": null,
+          "size": null,
+          "uri": "data/theseus-inputs/S1-a1/summary.json"
+        }
+      ],
+      "mime": "application/octet-stream",
+      "mtime": 1791081822,
+      "path": "artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
+      "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
+      "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+      "size_bytes": 372168
+    },
+    "theseus-pilot-figure@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791079917,
+          "sha256": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3",
+          "size": 2420,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/src/summary_figure.py"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
+          "size": 3296,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
+        }
+      ],
+      "mime": "image/png",
+      "mtime": 1791081822,
+      "path": "artifacts/theseus-pilot-figure/theseus-pilot-figure-v1.png",
+      "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
+      "sha256": "3b4baf6bd78dbf393e4c61ebd54ffe408f29eb48ef4d1ef13959a3a891453f4e",
+      "size_bytes": 91746
+    },
+    "theseus-pilot-replay@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791079348,
+          "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976",
+          "size": 3731,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/src/render.py"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5",
+          "size": 175934,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json"
+        }
+      ],
+      "mime": "text/html",
+      "mtime": 1791081822,
+      "path": "artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html",
+      "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
+      "sha256": "2505413a08c286f0669d520f938b234a97f8bbf0baeede5a7b70dcbc4290037a",
+      "size_bytes": 110920
+    },
+    "theseus-pilot-report@1": {
+      "host": "ultrons-macbook-pro",
+      "ingredients": [
+        {
+          "mtime": 1791081456,
+          "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
+          "size": 7951,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "2a6e8ee9cd29e0c237aeba01f7878db62fd84f6a6a7dd2f9661209dd32b0c95a",
+          "size": 1173,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a2/summary.json"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "aec58b7f1a2b15e7ea38a9c9ec5f1e944013a9090ab723f9745b47d0939dbba5",
+          "size": 1149,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a3/summary.json"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "dad078d3f41d0352949f9f5e0ba66e30449de7edcfd6a6599e2212d4009ed7f0",
+          "size": 1147,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a4/summary.json"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
+          "size": 3296,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
+        },
+        {
+          "mtime": 1791081456,
+          "sha256": "2e4902eeab7c490c0b0d42e161c15c514a601f5675748044e391c9d1d2197a23",
+          "size": 88,
+          "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/audit.json"
+        }
+      ],
+      "mime": "text/markdown",
+      "mtime": 1791081822,
+      "path": "artifacts/theseus-pilot-report/theseus-pilot-report-v1.md",
+      "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
+      "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
+      "size_bytes": 7951
     }
-   ],
-   "mime": "text/html",
-   "mtime": 1791070706,
-   "path": "artifacts/agent-discourse-x-page/agent-discourse-x-page-v1.html",
-   "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
-   "sha256": "394ee28af098013059287132505593b37e7a24d763533a92df2f563ccd60972d",
-   "size_bytes": 276376
   },
-  "agent-discourse-x@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791070706,
-     "sha256": "bd1750f92b931ba7e3f6079e3983a6fb1664268c833ffa2adad83686db9fdcfd",
-     "size": 3063,
-     "uri": "src/x-trend/trend.py"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "60a271ffbb7f9c8f571ad028b901584cc8752f190f3be8c049eb559d7ed0bc63",
-     "size": 269631,
-     "uri": "src/x-trend/trend_data.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791070706,
-   "path": "artifacts/agent-discourse-x/agent-discourse-x-v1.png",
-   "prompt_sha256": "785e041b68ace9486c6633ffdf260ae189d2443cdc86797f1abd557b2f928570",
-   "sha256": "29daf755d1a7b85663bc3a4fea0330f10d0af831340b06d9d0c8b5d2f4373e59",
-   "size_bytes": 456862
-  },
-  "fork-merge-setups@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791070706,
-     "sha256": "1a6485bc63ea58bda401fabf1772faeb29f6af8724770e118f1301dd131da923",
-     "size": 18811,
-     "uri": "src/fork-merge-setups/build.py"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "8740480f7bd92f5f261b9b4a4dfa691cbce7f49919773b04104d26fbd8658d9e",
-     "size": 12612,
-     "uri": "src/fork-merge-setups/prose.html"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "a13b4624072fe57861f2d05d4b36f2600bba9160ee14bcd520f55406b84d04b9",
-     "size": 14178,
-     "uri": "src/fork-merge-setups/rigs.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "0a5183145dc82d5954777e78a62b5cb737c61fdb27a63ddef4f0a90c3da8de9c",
-     "size": 94429,
-     "uri": "src/fork-merge-setups/cards/A.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "5653b34f92076eebe5b4cbdebc6483b8fa1523df2ba97f212b0e8069e50f3512",
-     "size": 66938,
-     "uri": "src/fork-merge-setups/cards/B.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "016515ab6bb5291e67b3630207f46c030a6641b659a600bad25bdf0f5dcb7ec4",
-     "size": 77247,
-     "uri": "src/fork-merge-setups/cards/C.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "559a2e9c196058b42e34814710f5bbbf2d6010c34f5fcdb0acc3a651014f2c5d",
-     "size": 92242,
-     "uri": "src/fork-merge-setups/cards/D.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "a4e0bed925a52f9abd07b788147da46df24bb2a1e5271fd5b89779bdf18e5ec6",
-     "size": 106840,
-     "uri": "src/fork-merge-setups/cards/E.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "ef84f81b1457c4dd75059352b7c3e2123f0576dd07b2395adbb32043f5d80f97",
-     "size": 70721,
-     "uri": "src/fork-merge-setups/cards/F.json"
-    },
-    {
-     "mtime": 1791070706,
-     "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
-     "size": 44661,
-     "uri": "synthesis/fork-merge-questions.md"
-    }
-   ],
-   "mime": "text/html",
-   "mtime": 1791070706,
-   "path": "artifacts/fork-merge-setups/fork-merge-setups-v1.html",
-   "prompt_sha256": "98715429608ca1c386834a4450950dcdfa6a35d69a1d50a4c1bc88b68fff3b73",
-   "sha256": "b6434d725dcaeb3b1cab20f338262fba2ab362746d4fb6804e5ba241b3831210",
-   "size_bytes": 531379
-  },
-  "healing-helping-hands-outcomes@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081783,
-     "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
-     "size": 8087,
-     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
-    },
-    {
-     "mtime": 1791081878,
-     "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
-     "size": 904346,
-     "uri": "data/healing-helping-hands/render-inputs.tar.gz"
-    },
-    {
-     "mtime": 1791081783,
-     "sha256": "1b8e0bda1ade6c15ebf7913964f488a9ed70ce45e06e22d0b029c70c224b8b3c",
-     "size": 7415,
-     "uri": "researchers/vishesh/notes/healing-helping-hands/results-summary.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791081640,
-   "path": "artifacts/healing-helping-hands-outcomes/healing-helping-hands-outcomes-v1.png",
-   "prompt_sha256": "070a708fe088e26dd4bf78e1eb91b63d93a510353a0b1c95c9033960b67e5e0c",
-   "sha256": "1f26170b0be62beff88944dd2aa0b4f3e097c09aeb36bea330d8d0eecd03e21a",
-   "size_bytes": 135398
-  },
-  "healing-helping-hands-recovery@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081642,
-     "sha256": "5b12c7c12ca428d4d1f28015eaed859826ff0c4d6e5f803c874d11adcea3323d",
-     "size": 501634,
-     "uri": "data/healing-helping-hands/recovery.gif"
-    },
-    {
-     "mtime": 1791081783,
-     "sha256": "e85d3e5c8f953b7a860f8e0fe9cb982539b86e2b27ae65a3e00097926d341612",
-     "size": 8087,
-     "uri": "researchers/vishesh/notes/healing-helping-hands/visualization/render.py"
-    },
-    {
-     "mtime": 1791081878,
-     "sha256": "a755592b0439024222c2c010f7eeddc11da5c8904581f2a1e8a816fdb646df76",
-     "size": 904346,
-     "uri": "data/healing-helping-hands/render-inputs.tar.gz"
-    }
-   ],
-   "media": {
-    "duration_s": 16.2,
-    "height": 980,
-    "width": 1600
-   },
-   "mime": "video/mp4",
-   "mtime": 1791081642,
-   "path": "artifacts/healing-helping-hands-recovery/healing-helping-hands-recovery-v1.mp4",
-   "prompt_sha256": "85924dac8fe4b2ad18088ca381845a2b0b074d5090134fdacf51c3e4757c08e6",
-   "sha256": "b40219f9e07f34f7bab852f4d11cb7cb258c8a89b662e1f550f2d8fba560bad7",
-   "size_bytes": 364541
-  },
-  "influence-native-q2-film@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791082116,
-     "sha256": "2758a03e4983864d266998c8bddd1d396683e543ea0034b38f84220163166782",
-     "size": 3194,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/animate_native.py"
-    },
-    {
-     "mtime": 1791081725,
-     "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151",
-     "size": 20994,
-     "uri": "data/influence-native/native-Q2-01/case-2.json"
-    },
-    {
-     "mtime": 1791081728,
-     "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460",
-     "size": 97782,
-     "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
-    }
-   ],
-   "media": {
-    "duration_s": 20.99,
-    "height": 800,
-    "width": 1280
-   },
-   "mime": "video/mp4",
-   "mtime": 1791082119,
-   "path": "artifacts/influence-native-q2-film/influence-native-q2-film-v1.mp4",
-   "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
-   "sha256": "a83654e4c1c19ec9f7921c0b3ebae50808ff5feed09e5bd3e56f519cbc96f085",
-   "size_bytes": 102166
-  },
-  "influence-native-q2-replay@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081635,
-     "sha256": "43a84d4716843bc700c867dd118860b6f8fa07ca4d458b1f421782a996a4bf4a",
-     "size": 6213,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/analysis/replay.py"
-    },
-    {
-     "mtime": 1791081728,
-     "sha256": "1be7fce34eabce70fa9b6dfcaf0e7da3baae1a0d2e33771833e2cfeba83d1ae4",
-     "size": 1025,
-     "uri": "data/influence-native/native-Q2-01/manifest.json"
-    },
-    {
-     "mtime": 1791081727,
-     "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf",
-     "size": 468,
-     "uri": "data/influence-native/native-Q2-01/summary.json"
-    },
-    {
-     "mtime": 1791081727,
-     "sha256": "e09336dfbd4b7a8fb6a8694a3b49720572803f879cf9cf3771020d64274cb064",
-     "size": 20911,
-     "uri": "data/influence-native/native-Q2-01/case-0.json"
-    },
-    {
-     "mtime": 1791081727,
-     "sha256": "cf441d16ae2e0c84e4b3afe9f7c8e250bc5a33f4cad713b75eda3eea646e7874",
-     "size": 21070,
-     "uri": "data/influence-native/native-Q2-01/case-1.json"
-    },
-    {
-     "mtime": 1791081725,
-     "sha256": "da6cbfad8245ee54564b578756fbc8b8c7013a798441ddf890574148ca232151",
-     "size": 20994,
-     "uri": "data/influence-native/native-Q2-01/case-2.json"
-    },
-    {
-     "mtime": 1791081726,
-     "sha256": "3a4c12af6fd845c3837e024934825c5600b013f72a5cb0bab354295fdb3858a2",
-     "size": 96393,
-     "uri": "data/influence-native/native-Q2-01/events-0.jsonl"
-    },
-    {
-     "mtime": 1791081726,
-     "sha256": "70e786d0480b6f1878dbbab02a98dffbf13a80d66b665a7b1cbc1a4ca3243c3c",
-     "size": 98108,
-     "uri": "data/influence-native/native-Q2-01/events-1.jsonl"
-    },
-    {
-     "mtime": 1791081728,
-     "sha256": "67ab6cadd74bd70390bb484bfef8a34993f612af51a0d52b0ba2a5bb28d1c460",
-     "size": 97782,
-     "uri": "data/influence-native/native-Q2-01/events-2.jsonl"
-    },
-    {
-     "mtime": 1791081729,
-     "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970",
-     "size": 19452,
-     "uri": "data/influence-native/native-Q2-01/outcomes.json"
-    }
-   ],
-   "mime": "text/html",
-   "mtime": 1791082003,
-   "path": "artifacts/influence-native-q2-replay/influence-native-q2-replay-v1.html",
-   "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
-   "sha256": "d6b2ca7bcd9e1d29132c2353f88863fce44ed68744c6df471de61ebe7162fc52",
-   "size_bytes": 301604
-  },
-  "influence-native-q2-results@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081031,
-     "sha256": "22ca86c45911a82a36e79ba13da7da06170a9e9b617333c1c6af269c1767144a",
-     "size": 1772,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/render_native.py"
-    },
-    {
-     "mtime": 1791081729,
-     "sha256": "511c07b18399a2e57fcef7b844dd84243e09e6c0c3885213327971dd8317f970",
-     "size": 19452,
-     "uri": "data/influence-native/native-Q2-01/outcomes.json"
-    },
-    {
-     "mtime": 1791081727,
-     "sha256": "00ad10c5743d5a2bf4d5fd0eaa839ce9f4d7e76c5767edab6935bc5743b51dbf",
-     "size": 468,
-     "uri": "data/influence-native/native-Q2-01/summary.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791081726,
-   "path": "artifacts/influence-native-q2-results/influence-native-q2-results-v1.png",
-   "prompt_sha256": "21db2699807356dc640c730d7963de9a1fb2bf042e702e431befac599ae960f9",
-   "sha256": "117e8a2e1a857ad84846034dfb2dae8c9a68b9f1a2b6c1cfe5c5d6b5183f7af4",
-   "size_bytes": 96484
-  },
-  "influence-swarms-decision-design@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791080536,
-     "sha256": "5b4977f63aabec350cf4b96f34bc03c54858177fdfd960164819fd755583789d",
-     "size": 664,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/build_explorer.py"
-    },
-    {
-     "mtime": 1791080537,
-     "sha256": "892004b0068dedc926558846933826e5d6534b0617bad10e4faff0c36c6ce135",
-     "size": 8633,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/explorer.html"
-    },
-    {
-     "mtime": 1791081809,
-     "sha256": "8915a12b21e346e0e0d0da1d2ccc545971f652459cd514a3a12cc1626847ba80",
-     "size": 10358,
-     "uri": "researchers/vishesh/notes/influence-swarms/scenario/src/dossier.py"
-    }
-   ],
-   "mime": "text/html",
-   "mtime": 1791080537,
-   "path": "artifacts/influence-swarms-decision-design/influence-swarms-decision-design-v1.html",
-   "prompt_sha256": "08bc5202ebae86ba517fdda748f524c6de895ce7f85b1ddbd4c5824f26e7b3aa",
-   "sha256": "6272adebf96524823f188cd91ff91ba5752527e3b6b44328df827679acbd505c",
-   "size_bytes": 299683
-  },
-  "influence-swarms-replay-film@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791077904,
-     "sha256": "b0378c14e9acc952a60af44a08088c82c59da2713d877db4b172a29c8a77ecb8",
-     "size": 8350,
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
-    },
-    {
-     "mtime": 1791077381,
-     "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
-     "size": 1348306,
-     "uri": "data/external-influence-v2/audit.json"
-    }
-   ],
-   "media": {
-    "duration_s": 23.99,
-    "height": 768,
-    "width": 1280
-   },
-   "mime": "video/mp4",
-   "mtime": 1791078414,
-   "path": "artifacts/influence-swarms-replay-film/influence-swarms-replay-film-v1.mp4",
-   "prompt_sha256": "9fc835c9903a52f9a06b1a4670fcd0cd58646a52f8e20b1ece2557adf0ff0782",
-   "sha256": "1c2e0074bfddc07a48481dedce0c0413534fc95f5d7a09842ae44f9c133d9a16",
-   "size_bytes": 96120
-  },
-  "influence-swarms-replay@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791077904,
-     "sha256": "486ca56d36027bd727100ce1caf3bfc89c11c98072c59c96decfd90a6a11ec75",
-     "size": 379,
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/build_replay.py"
-    },
-    {
-     "mtime": 1791077904,
-     "sha256": "6d8d0375d0074ba9b98bd4c628dc2d1f4fd8d3fedc2a5c6248135e93bcf53a33",
-     "size": 11446,
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/replay_template.html"
-    },
-    {
-     "mtime": 1791077381,
-     "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
-     "size": 1348306,
-     "uri": "data/external-influence-v2/audit.json"
-    }
-   ],
-   "mime": "text/html",
-   "mtime": 1791077904,
-   "path": "artifacts/influence-swarms-replay/influence-swarms-replay-v1.html",
-   "prompt_sha256": "2a270433ee417d039d9cf642f47bc5aae421f7f489483937817b4c0b2358a7c9",
-   "sha256": "542a74084f87c39e3c3d4afff994bc89974be14bc7046cb634e3dd5a255aa6c0",
-   "size_bytes": 660074
-  },
-  "influence-swarms-results@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791077904,
-     "sha256": "b0378c14e9acc952a60af44a08088c82c59da2713d877db4b172a29c8a77ecb8",
-     "size": 8350,
-     "uri": "researchers/vishesh/notes/external-influence-v2/analysis/render.py"
-    },
-    {
-     "mtime": 1791077381,
-     "sha256": "a1308ad290d42788769ce93ddfef0e94c72b3368a96cac02960c6fdc62782fc9",
-     "size": 1348306,
-     "uri": "data/external-influence-v2/audit.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791077912,
-   "path": "artifacts/influence-swarms-results/influence-swarms-results-v1.png",
-   "prompt_sha256": "c13baf33f3f4ad7dbc949a0a4dbea5673f382feb2cd2fb1603eb6cf8eeb3f39d",
-   "sha256": "42ed38cbdb659e3009802f0eef8d6d7b5bbf8b9632345ad3069c7feed00558e6",
-   "size_bytes": 193345
-  },
-  "market-split-experiment-plan@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791079348,
-     "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
-     "size": 11521,
-     "uri": "researchers/dmarz/notes/market-split/README.md"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
-     "size": 884,
-     "uri": "researchers/dmarz/notes/market-split/design.yaml"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "1cf1743d53db84fe3d0e063539c10e51c18c232b39cf331c893ed28a4ebcf861",
-     "size": 1382,
-     "uri": "researchers/dmarz/notes/market-split/src/prompt.txt"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
-     "size": 14042,
-     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "4eecbfe40359c77a27ca108a381e2fbf3af199f3ab363a8fc18edb67de45373e",
-     "size": 3729,
-     "uri": "researchers/dmarz/notes/market-split/src/analyze.py"
-    },
-    {
-     "mtime": 1791079348,
-     "sha256": "ab3fca119d5aea55fd9040f2b315012bf94d137eeb567d93e5ac838f0113f786",
-     "size": 28109,
-     "uri": "researchers/dmarz/notes/market-split/analysis/s1-summary.json"
-    },
-    {
-     "mtime": 1791079348,
-     "sha256": "3a6643417417b833bbcf8fb6b4da995a136403aadf3bf07593f142e9a8528dfc",
-     "size": 28532,
-     "uri": "researchers/dmarz/notes/market-split/analysis/s1-reconciliation.json"
-    },
-    {
-     "mtime": 1791079348,
-     "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
-     "size": 4042,
-     "uri": "researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
-    }
-   ],
-   "mime": "text/markdown",
-   "mtime": 1791079348,
-   "path": "artifacts/market-split-experiment-plan/market-split-experiment-plan-v1.md",
-   "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
-   "sha256": "262ffa494a9fd97b61f148bfa909e261aea2dc01c6acb4510456267785667cab",
-   "size_bytes": 11521
-  },
-  "market-split-scripted-frame@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791078526,
-     "sha256": "ce550b18a33c382e7cbfdf4d84137e36150af0ee30b109b0df6754d4f739f795",
-     "size": 5290,
-     "uri": "researchers/dmarz/notes/market-split/src/render.py"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "469b3270eb3cb67cdbbc6fef6a0dd1a0af34b233caa00ed162c31a610116222d",
-     "size": 14042,
-     "uri": "researchers/dmarz/notes/market-split/src/sim.py"
-    },
-    {
-     "mtime": 1791078526,
-     "sha256": "fd5aac6f164ec61a0145245a1277ffc025670de250aebcc4a9eed1d447a29263",
-     "size": 884,
-     "uri": "researchers/dmarz/notes/market-split/design.yaml"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "researchers/dmarz/notes/market-split/results/s0-local-002/cell-01/episodes.jsonl"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791078526,
-   "path": "artifacts/market-split-scripted-frame/market-split-scripted-frame-v1.png",
-   "prompt_sha256": "d0fd797b2ddd3fa7f96fa0db70f1205d2f836341cb53c0c557a2d1f948ce6bef",
-   "sha256": "606fd3f5088ed2844801e37c30b9b101338f4668ee47ae0b8c04cf99afae9b3b",
-   "size_bytes": 137073
-  },
-  "pi-next-experiments-2026-10-04@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/1810.08240"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/2403.08882"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/2410.08948"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
-     "size": 35915,
-     "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
-    },
-    {
-     "mtime": 1791082355,
-     "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
-     "size": 5327,
-     "uri": "researchers/dmarz/notes/compositional-safety/README.md"
-    },
-    {
-     "mtime": 1791082355,
-     "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
-     "size": 4338,
-     "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
-     "size": 10921,
-     "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
-     "size": 12673,
-     "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
-    },
-    {
-     "mtime": 1791082273,
-     "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
-     "size": 222249,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
-    },
-    {
-     "mtime": 1791082843,
-     "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
-     "size": 40804,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
-    },
-    {
-     "mtime": 1791082744,
-     "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
-     "size": 6151,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
-     "size": 5880,
-     "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
-     "size": 4212,
-     "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
-     "size": 7182,
-     "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
-    },
-    {
-     "mtime": 1791082434,
-     "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
-     "size": 8340,
-     "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
-     "size": 2269,
-     "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
-     "size": 10309,
-     "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
-     "size": 5861,
-     "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
-     "size": 7582,
-     "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
-     "size": 11632,
-     "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
-     "size": 11353,
-     "uri": "templates/experiment-worker/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
-     "size": 27215,
-     "uri": "tooling/agent-experiments/GUIDE.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
-     "size": 6579,
-     "uri": "tooling/agent-experiments/RUN-REVIEW.md"
-    }
-   ],
-   "mime": "application/octet-stream",
-   "mtime": 1791082843,
-   "path": "artifacts/pi-next-experiments-2026-10-04/pi-next-experiments-2026-10-04-v1.md",
-   "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
-   "sha256": "07c7158ff730086aa14e271f7019fb02344be3509bf663fc03b55499e1d92343",
-   "size_bytes": 42700
-  },
-  "pi-next-experiments-view-2026-10-04@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/1810.08240"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/2403.08882"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://arxiv.org/abs/2410.08948"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/DESIGN.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/438ff98/researchers/vishesh/notes/swarm-of-theseus/redesign/REVIEW.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/ASSESSMENT.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/NATIVE-A2-RESULTS.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0/researchers/vishesh/notes/immune-response-v3/scenario-study/SOLO-A1-RESULTS.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/README.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/benchmark-v3/DEPLOYMENT.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/discussion-dose/launch/resample-v3-review-waiver.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/market-split-api/reviews/q0-003-post.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/dmarz/notes/sybil-scale-api/reviews/q0-001-post.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/afad8f0829b3ac550036061b7cb10da3c3f3e02b/researchers/vishesh/notes/discussion-benchmark-v3-review/REVIEW.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/influence-swarms/scenario/RESULTS.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/fa802d4/researchers/vishesh/notes/optimal-swarm-size/PROTOCOL.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://lakens.github.io/statistical_inferences/08-samplesizejustification"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "43e9a27db419e9b771067c4df243936ee36a88a3b78f44953f93ffccc93b8ef3",
-     "size": 35915,
-     "uri": "researchers/dmarz/notes/compositional-safety-plan/README.md"
-    },
-    {
-     "mtime": 1791082355,
-     "sha256": "fc71a3aefea944577844ebc22f81e583d18a3963c865be5eb8f45c7ff776fe05",
-     "size": 5327,
-     "uri": "researchers/dmarz/notes/compositional-safety/README.md"
-    },
-    {
-     "mtime": 1791082355,
-     "sha256": "45af515af28d5fdabf01c95ba300aab5af9e504680bd5960730d589ba5c85267",
-     "size": 4338,
-     "uri": "researchers/dmarz/notes/discussion-dose/RESAMPLE-CONTROL.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
-     "size": 10921,
-     "uri": "researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "57fed5a45f7b259b141c4c2ff7a1544fff82a225e73152a5c864474b32ff972e",
-     "size": 12673,
-     "uri": "researchers/dmarz/notes/discussion-dose/benchmark-v3/README.md"
-    },
-    {
-     "mtime": 1791082273,
-     "sha256": "dfe26dea2656fb34fcd05c8453b2d9f9c82de2cba796357919c62a0c2282d1c4",
-     "size": 222249,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/live-evidence.json"
-    },
-    {
-     "mtime": 1791082843,
-     "sha256": "f1fbeba37a5c756ff84d506aa3344bea8b85708d85a93f7fb4938da219d6f45b",
-     "size": 40804,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/plan.json"
-    },
-    {
-     "mtime": 1791082744,
-     "sha256": "27cb96bc6ef9bf90774c84fcb69e32da86caf562ba05c5df884b681283265e1b",
-     "size": 6151,
-     "uri": "researchers/dmarz/notes/next-experiments-2026-10-04/src/build.py"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "ba7fa42746856647db6e9f4424a5aeb848947c2a41b0273a0cfd0f7037b5dd97",
-     "size": 5880,
-     "uri": "researchers/dmarz/notes/sybil-scale-api/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "27f1bf7ec2f15cd1a4e2d6049571590c039831c34180d9ca1c8d18e2f4373b10",
-     "size": 4212,
-     "uri": "researchers/dmarz/notes/sybil-scale-api/preregistration.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
-     "size": 7182,
-     "uri": "researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
-    },
-    {
-     "mtime": 1791082434,
-     "sha256": "53110c0c2d016c8ac5f8f15a5103ed1d309acb3d60e7507621cfa8ec7f4b957b",
-     "size": 8340,
-     "uri": "researchers/vishesh/notes/antsy-verification-v4/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
-     "size": 2269,
-     "uri": "researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "79dac58f7ade7eac07333b566885a862d91d334f317ceaff9ba83864cca29082",
-     "size": 10309,
-     "uri": "researchers/vishesh/notes/healing-helping-hands/README.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "5a60ace07d622e6bb1a0c3e188216678ae2b645f723c74e727b865b01889ab07",
-     "size": 5861,
-     "uri": "researchers/vishesh/notes/immune-response-v3/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
-     "size": 7582,
-     "uri": "researchers/vishesh/notes/immune-response-v3/REVIEW.md"
-    },
-    {
-     "mtime": 1791082754,
-     "sha256": "7bbbc862f951be925fd9277eda1fecfc638014eead237ace48b831a5abacebda",
-     "size": 11632,
-     "uri": "researchers/vishesh/notes/immune-response-v3/scenario-study/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
-     "size": 11353,
-     "uri": "templates/experiment-worker/README.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "5ae221ff50424d6ceb528e74d099933363426a8c15a42f4be69c5c56e822debc",
-     "size": 27215,
-     "uri": "tooling/agent-experiments/GUIDE.md"
-    },
-    {
-     "mtime": 1791082034,
-     "sha256": "d952129ff67a98b9b6bfb2a12e03061cbc19f0429f50886d4f068d7473603dfd",
-     "size": 6579,
-     "uri": "tooling/agent-experiments/RUN-REVIEW.md"
-    }
-   ],
-   "mime": "application/octet-stream",
-   "mtime": 1791082843,
-   "path": "artifacts/pi-next-experiments-view-2026-10-04/pi-next-experiments-view-2026-10-04-v1.tsx",
-   "prompt_sha256": "a7af32341ae1c7b043b9f55d48cd992bbc54f3c3ed3bef1903e6fdb91f21da3d",
-   "sha256": "8514b19761773cf41e838a5cc46f4760bc66b8f11e5edbbb46519852df8365da",
-   "size_bytes": 43665
-  },
-  "pi-research-program-review-2026-10-04@1": {
-   "host": "halcyons-macbook-pro-4",
-   "ingredients": [
-    {
-     "mtime": 1791081518,
-     "sha256": "df39289b7f883dca477fa6699dc1b9ea189c1c36e21e3233a92f6fa70ad918eb",
-     "size": 22966,
-     "uri": "/Users/halcyon/swarm-lab/src/pi-review-2026-10-04.py"
-    },
-    {
-     "mtime": 1791081237,
-     "sha256": "6de42d704faf7b2165a9b2087a1f4397596177fbca3277eab647cd0377bb1843",
-     "size": 691960,
-     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/live-state.json"
-    },
-    {
-     "mtime": 1791077441,
-     "sha256": "3feda52ca8a9e33bcfd3ccbfe8aacf79e7c59506310e7251f9601dca70168b4d",
-     "size": 10921,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/V2-ISSUE-REVIEW.md"
-    },
-    {
-     "mtime": 1791079026,
-     "sha256": "fb83c64fc54d9585b5374ee322db5343cde21dd4a5af156761e5058d68af92c6",
-     "size": 7118,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/pc-H4-a1-post.md"
-    },
-    {
-     "mtime": 1791078631,
-     "sha256": "a5254c25675c6fabca7fa4b37f1c9fa114050d66161451fa9acb754263163aee",
-     "size": 4032,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/discussion-dose/reviews/v2-s0-H4-post.md"
-    },
-    {
-     "mtime": 1791080931,
-     "sha256": "2ef57d2c9af140fccf6db4f01a4aae7de03e8cf8fdd07ebeed666e268a97b778",
-     "size": 2927,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split-api/reviews/q0-002-post.md"
-    },
-    {
-     "mtime": 1791079350,
-     "sha256": "ebb509919a6254ff1af5e3311ec8d1452b488455f04f5151c28844df6523a1a1",
-     "size": 4042,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/market-split/reviews/s1-fleet-001-post.md"
-    },
-    {
-     "mtime": 1791080162,
-     "sha256": "bf6af2a573ea07688051101ea6f3a2a5e07731bac6747e4e8861aadce428c0d2",
-     "size": 5724,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/README.md"
-    },
-    {
-     "mtime": 1791080162,
-     "sha256": "f13e82c9923d7581bd3ef9bbfd5d3c0a62e552f3dffd2e0ce5f34b57038c16b2",
-     "size": 7182,
-     "uri": "/Users/halcyon/swarm-lab/researchers/dmarz/notes/sybil-specialists-api/reviews/s1-001-post.md"
-    },
-    {
-     "mtime": 1791078567,
-     "sha256": "ddd77a9e1cb41b3d0e89072b3d83c3e5c84f4e41ff4574ffe24e7636a2002957",
-     "size": 7016,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/README.md"
-    },
-    {
-     "mtime": 1791078567,
-     "sha256": "df44be98bee1912b8218c0e69572acc96ddb184c8c206282eb761599fc85062b",
-     "size": 7756,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/adaptive-quorum-v2/repair-v3/reviews/S1-attempt-2-post.md"
-    },
-    {
-     "mtime": 1791080865,
-     "sha256": "f240103197139813f43a428382825ae1e1c39223a7e9a0b304553677261084b0",
-     "size": 7987,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/README.md"
-    },
-    {
-     "mtime": 1791080865,
-     "sha256": "a7173f3b5c5f20a14be3729aded712adb6810ac7ba2aebccbc707f235afcc78c",
-     "size": 2269,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/antsy-verification-v4/reviews/S0-post.md"
-    },
-    {
-     "mtime": 1791079026,
-     "sha256": "93d6b2f0bc833e79dd66876f1a5339a8b793cd5462c3c1a1792de53661d4bc39",
-     "size": 8673,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/external-influence-v2/reviews/quality-post.md"
-    },
-    {
-     "mtime": 1791080865,
-     "sha256": "05dbd1c4c6987ccfc55dfa160e110c5e2abb500e23f833f1f60a4bfa00b910a0",
-     "size": 14142,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/healing-helping-hands/README.md"
-    },
-    {
-     "mtime": 1791080865,
-     "sha256": "503a2c615a98005c6e485950a70d35aa43bee336dd2fab129fb7ab7b4ccb8c24",
-     "size": 5217,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/README.md"
-    },
-    {
-     "mtime": 1791077934,
-     "sha256": "36822379f0cd9cc2fb9591f37c562d042287add0cef4839bd73a1bb066f4dda4",
-     "size": 7582,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/immune-response-v3/REVIEW.md"
-    },
-    {
-     "mtime": 1791080865,
-     "sha256": "8ded6af440a991e800a4cb53923891083891ee4ff373fc567191a94394f28200",
-     "size": 3221,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/influence-swarms/README.md"
-    },
-    {
-     "mtime": 1791076689,
-     "sha256": "2a5f8488d0abd7cc557a48f1fbd9695e6251c56ba41f413bae525eae0bb9c881",
-     "size": 6123,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/regrowth-200/README.md"
-    },
-    {
-     "mtime": 1791079757,
-     "sha256": "7020cb8863383c9974a95f2c55e54be3bc691f63e75c306ea3dd3514584af83c",
-     "size": 4967,
-     "uri": "/Users/halcyon/swarm-lab/researchers/vishesh/notes/swarm-of-theseus/reviews/S1-a1-pre.md"
-    },
-    {
-     "mtime": 1791075872,
-     "sha256": "86c8af6878cbdedbb39233d18351f25f0e974683bb15ec17cadca8e17de91872",
-     "size": 11353,
-     "uri": "/Users/halcyon/swarm-lab/templates/experiment-worker/README.md"
-    },
-    {
-     "mtime": 1791060759,
-     "sha256": "e20de7f889b69bebb36c4d712a940785aa8c18d78bc7412c943cce120b8a0e2b",
-     "size": 2550,
-     "uri": "/Users/halcyon/swarm-lab/tooling/agent-experiments/examples/collective-sensing/RESULTS.md"
-    },
-    {
-     "mtime": 1791071339,
-     "sha256": "112f9aa132a92db61a72c77f57d9bb7229d8f068476295545f91a104a6ca2ae9",
-     "size": 5131,
-     "uri": "/Users/halcyon/swarm-lab/tooling/avalon-swarm/RESULTS.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/65f23b8/researchers/shadow/notes/capture-memory/README.md"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/src/study.py"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/r/immune-response%2F4deeb0f2"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/capture-memory"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/healing-helping-hands"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/influence-swarms"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/market-split-api"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/regrowth-200"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/swarm-of-theseus"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/#/x/template-quorum"
-    },
-    {
-     "mtime": 1791059935,
-     "sha256": "fcfad69ebea756f86e45b02146fbf02b08e7dc0aa24f65448da1f36a5b8909fb",
-     "size": 12935,
-     "uri": "/Users/halcyon/swarm-lab/synthesis/pre-experiment-research.md"
-    },
-    {
-     "mtime": 1791058402,
-     "sha256": "bb01370d14df3855b38c2b1abbbb0bcaee4a5b9114f9496f23ee1c0c53664ddd",
-     "size": 44661,
-     "uri": "/Users/halcyon/swarm-lab/synthesis/fork-merge-questions.md"
-    },
-    {
-     "mtime": 1791079350,
-     "sha256": "00935a22fd8da7a0236fecb15fdb33a7f1d8c4b77fe76eb5e2411afad9f220de",
-     "size": 709965,
-     "uri": "/Users/halcyon/swarm-lab/library/INDEX.md"
-    },
-    {
-     "mtime": 1791063229,
-     "sha256": "ea874f679c6f7450a25c7f17d14804569a3c17254da6a0870f7bc424afe5efcc",
-     "size": 52858,
-     "uri": "/Users/halcyon/swarm-lab/surveys/llm-agent-swarms.md"
-    },
-    {
-     "mtime": 1791081533,
-     "sha256": "f3421eb8b92a8c5cdb5e8146ed67534b091dd91334d42fa5b3abbd9b08ca65d6",
-     "size": 519,
-     "uri": "/Users/halcyon/swarm-lab/data/pi-review-2026-10-04/status-followup.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://swarm-live.pages.dev/api/state"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "https://lamport.azurewebsites.net/pubs/byz.pdf"
-    }
-   ],
-   "mime": "application/octet-stream",
-   "mtime": 1791081518,
-   "path": "artifacts/pi-research-program-review-2026-10-04/pi-research-program-review-2026-10-04-v1.tsx",
-   "prompt_sha256": "66b8d6efba8b84eb868a9d97094e974d59a7ee1c07a8456a5efc389cf0c8a027",
-   "sha256": "8ec434cd24c31f4f5d9a01303e209afea7537994be85bd3ee64f3d51ffbb4ccc",
-   "size_bytes": 21631
-  },
-  "theseus-pilot-evidence@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081456,
-     "sha256": "ef2bb29867c2bcf9a0e6b71158cbd7c1ccdbaabb489e7ef4691b376098ffce61",
-     "size": 1522,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/src/package_evidence.py"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a1-setup.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/audit.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/manifest.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-founders-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/observatory-verbatim-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-founders-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/repair-dock-verbatim-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/rows.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-founders-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-102/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/seed-bank-verbatim-103/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a2/summary.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/audit.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/manifest.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-founders-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/observatory-verbatim-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-founders-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/repair-dock-verbatim-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/rows.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-founders-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-104/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/seed-bank-verbatim-105/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a3/summary.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/audit.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/manifest.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-founders-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/observatory-verbatim-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-founders-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/repair-dock-verbatim-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/rows.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-founders-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-106/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/seed-bank-verbatim-107/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S0-a4/summary.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/audit.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/manifest.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-both-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-founders-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-mentor-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-neither-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-notes-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/observatory-verbatim-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-both-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-founders-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-mentor-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-neither-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-notes-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/repair-dock-verbatim-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/rows.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-both-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-founders-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-mentor-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-neither-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-notes-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-200/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/events.jsonl"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/history.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/outcome.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/seed-bank-verbatim-201/public-plan-receipt.json"
-    },
-    {
-     "sha256": null,
-     "size": null,
-     "uri": "data/theseus-inputs/S1-a1/summary.json"
-    }
-   ],
-   "mime": "application/octet-stream",
-   "mtime": 1791081822,
-   "path": "artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz",
-   "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
-   "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
-   "size_bytes": 372168
-  },
-  "theseus-pilot-figure@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791079917,
-     "sha256": "c5fc78ca6b31432761f93ad01cbb50560a65d1760810274e7ec35fcbfa2d29a3",
-     "size": 2420,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/src/summary_figure.py"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
-     "size": 3296,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
-    }
-   ],
-   "mime": "image/png",
-   "mtime": 1791081822,
-   "path": "artifacts/theseus-pilot-figure/theseus-pilot-figure-v1.png",
-   "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
-   "sha256": "3b4baf6bd78dbf393e4c61ebd54ffe408f29eb48ef4d1ef13959a3a891453f4e",
-   "size_bytes": 91746
-  },
-  "theseus-pilot-replay@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791079348,
-     "sha256": "9e0b3f42c93bdbcd0b3f1d1f9c36eddb7ebed5120007bdc50f50b8c2c2acd976",
-     "size": 3731,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/src/render.py"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5",
-     "size": 175934,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/rows.json"
-    }
-   ],
-   "mime": "text/html",
-   "mtime": 1791081822,
-   "path": "artifacts/theseus-pilot-replay/theseus-pilot-replay-v1.html",
-   "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
-   "sha256": "2505413a08c286f0669d520f938b234a97f8bbf0baeede5a7b70dcbc4290037a",
-   "size_bytes": 110920
-  },
-  "theseus-pilot-report@1": {
-   "host": "ultrons-macbook-pro",
-   "ingredients": [
-    {
-     "mtime": 1791081456,
-     "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
-     "size": 7951,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/RESULTS.md"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "2a6e8ee9cd29e0c237aeba01f7878db62fd84f6a6a7dd2f9661209dd32b0c95a",
-     "size": 1173,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a2/summary.json"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "aec58b7f1a2b15e7ea38a9c9ec5f1e944013a9090ab723f9745b47d0939dbba5",
-     "size": 1149,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a3/summary.json"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "dad078d3f41d0352949f9f5e0ba66e30449de7edcfd6a6599e2212d4009ed7f0",
-     "size": 1147,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S0-a4/summary.json"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
-     "size": 3296,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/summary.json"
-    },
-    {
-     "mtime": 1791081456,
-     "sha256": "2e4902eeab7c490c0b0d42e161c15c514a601f5675748044e391c9d1d2197a23",
-     "size": 88,
-     "uri": "researchers/vishesh/notes/swarm-of-theseus/results/S1-a1/audit.json"
-    }
-   ],
-   "mime": "text/markdown",
-   "mtime": 1791081822,
-   "path": "artifacts/theseus-pilot-report/theseus-pilot-report-v1.md",
-   "prompt_sha256": "d0f17ea79a3a98ab28ddac12332940d1bf832bfb2ee5598a9fbd43784ea14fac",
-   "sha256": "649aa09c2a608ac84a4ba24c9084af0acb5d16aea7827344ec21054ebddedfcc",
-   "size_bytes": 7951
-  }
- },
- "generated": "2026-10-03T20:03:19-0700",
- "lock": 1,
- "project": "Swarm Lab"
+  "generated": "2026-10-03T20:13:51-0700",
+  "lock": 1,
+  "project": "Swarm Lab"
 }
