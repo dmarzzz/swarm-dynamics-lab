@@ -1,0 +1,24 @@
+---
+id: phantom-coast-pc9-instrument
+type: task
+title: Build Phantom population exploration instrument
+kind: build
+status: open
+priority: p1
+owner: null
+for: vishesh
+created: 2026-10-04
+created_by: vishesh/codex-phantom-coast
+depends_on: []
+topics: []
+---
+
+## Goal
+
+Build the approved offline population exploration instrument, preserving PC8 closure and original budget.
+
+## Done when
+
+- Prospective protocol, exact/simple controls and actor/evaluator isolation implemented.
+- Semantic, fault, replay and case-quality validation published.
+- Clearly labeled scripted replay and authoritative setup delivered; no native outcome invented.
