@@ -21,7 +21,7 @@ class RunnerV2(Runner):
         for agent, ids in enumerate(assignments):
             docs = []
             for doc_id in ids:
-                d = document_v2(world, doc_id, attack and agent == exposed)
+                d = document_v2(world, doc_id, attack)  # only exposed-target records change; H1-H4 give them to the exposed agent alone
                 docs.append(d); self.emit('tool_result', agent=agent, tool='read_document', document=d, initial=True)
             states.append({'task': task_view_v2(world), 'documents': docs, 'reports': [], 'board': [], 'private_history': []})
         for agent, state in enumerate(states):

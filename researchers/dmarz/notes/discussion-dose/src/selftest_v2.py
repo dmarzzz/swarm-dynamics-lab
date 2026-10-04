@@ -22,7 +22,7 @@ class TestsV2(unittest.TestCase):
 
     def test_levels_remove_cues_cumulatively(self):
         for i in range(200, 260):
-            h1, h2, h3, h4 = (make_world_v2(i, l) for l in LEVELS)
+            h1, h2, h3, h4 = (make_world_v2(i, l) for l in LEVELS[:4])
             self.assertEqual({d['authority'] for d in h1['docs']}, {'canonical', 'summary'})
             for w in (h2, h3, h4): self.assertEqual({d['authority'] for d in w['docs']}, {'record'})
             for w in (h1, h2): self.assertFalse(any(d['note'] for d in w['docs']))
@@ -33,12 +33,23 @@ class TestsV2(unittest.TestCase):
             roots = [d['root'] for d in h4['docs'] if d['role'] == 'exposed-target']
             self.assertEqual(len(roots), 2); self.assertEqual(len(set(roots)), 2)
 
+    def test_ceiling_levels(self):
+        for i in range(200, 260):
+            h5, h6 = make_world_v2(i, 'H5'), make_world_v2(i, 'H6'); r = h5['roles']
+            holders = lambda w, role: sorted(d['agent'] for d in w['docs'] if d['role'] == role)
+            self.assertEqual(holders(h5, 'witness-target'), [r['witness']])
+            self.assertEqual(holders(h5, 'exposed-target'), sorted([r['exposed']] * 2 + [r['swing']]))
+            self.assertEqual(holders(h6, 'witness-target'), [])
+            self.assertEqual(sorted(set(holders(h6, 'exposed-target'))), [0, 1, 2])
+        with self.assertRaises(ValueError): plan('s0-H5')
+        plan('calibrate-H6')
+
     def test_attack_changes_only_exposed_target(self):
         for level in LEVELS:
             w = make_world_v2(201, level); groups, exposed = allocation_v2(w)
             for agent, ids in enumerate(groups):
                 for doc_id in ids:
-                    clean = document_v2(w, doc_id); bad = document_v2(w, doc_id, agent == exposed)
+                    clean = document_v2(w, doc_id); bad = document_v2(w, doc_id, True)
                     role = next(d['role'] for d in w['docs'] if d['id'] == doc_id)
                     if role == 'exposed-target':
                         self.assertEqual(bad['facts'][w['target_key']], w['false_value'])
@@ -58,7 +69,8 @@ class TestsV2(unittest.TestCase):
             # Witness holds the clean target value; swing holds none of it.
             roles = w['roles']
             held = lambda a: {k for d in snap['states'][a]['documents'] for k in d['facts']}
-            self.assertIn(w['target_key'], held(roles['witness'])); self.assertNotIn(w['target_key'], held(roles['swing']))
+            self.assertIn(w['target_key'], held(roles['witness']))
+            if level in LEVELS[:4]: self.assertNotIn(w['target_key'], held(roles['swing']))  # H5+ expose the swing by design
 
     def test_optional_verification_reads_are_clean(self):
         class Reader(Scripted):
