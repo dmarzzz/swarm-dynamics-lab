@@ -8,7 +8,7 @@ EXPERIMENT='swarm-of-theseus-execution-r1'
 def request(c,rule,context,arm):
  body=d1.request([c],rule,context,'E')
  if arm=='F':
-  decision=body['output_config']['format']['schema']['properties']['decisions'];decision.update(minItems=1,maxItems=1);decision['items']['properties']['id']['enum']=[c['id']]
+  decision=body['output_config']['format']['schema']['properties']['decisions'];decision.update(minItems=1);decision['items']['properties']['id']['enum']=[c['id']]
   if context=='incident':
    body['system']+=' Apply this conditional table exactly: first select the source from the supplied mapping for this case class. Read ONLY that selected source signal. If selected signal is false, command is console1/none. If selected signal is true, command is console1/ followed by the selected source name. Selecting a source does not itself activate it. Freshness, other sources, summary and queue are not predicates.'
  return body

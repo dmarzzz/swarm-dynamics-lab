@@ -6,8 +6,8 @@
     "ledger": 2,
     "canary": 1
   },
-  "max_request_bytes": 2135,
-  "assignments_sha256": "569643bc644087420dc3973cb5d418003f1ee38738a83c422278cda369b0233e",
+  "max_request_bytes": 2120,
+  "assignments_sha256": "d229c34f1148bcd384698173af39d8f7978a89a84d140dd4f5187c5267a91026",
   "offline_tests": 8,
   "model_calls": 0,
   "evidence_type": "SCRIPTED \u2014 NOT MODEL EVIDENCE"

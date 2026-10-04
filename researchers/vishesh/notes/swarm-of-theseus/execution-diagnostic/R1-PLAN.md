@@ -12,7 +12,7 @@ Prediction: requiring exactly one supplied ID will remove ID-copy failures; spel
 
 ## Setup
 
-Pinned model claude-haiku-4-5-20251001, temperature zero, max_tokens 1200, no notebook/history/feedback and one case per call. E uses the exact D2 atomic request constructor. F keeps the same observations, mappings, commands and release instructions, but tightens the output schema to one decision whose ID enum contains only the supplied ID. For incident only, append: select the source from the supplied class mapping, read that source's signal, and use the explicit conditional table (false => console1/none; true => console1/<selected source>). Freshness, other sources, summary and queue do not enter the predicate. No per-case truth is calculated or inserted into actor context. This changes instruction salience and schema constraints, not evidence.
+Pinned model claude-haiku-4-5-20251001, temperature zero, max_tokens 1200, no notebook/history/feedback and one case per call. E uses the exact D2 atomic request constructor. F keeps the same observations, mappings, commands and release instructions, but tightens the output schema to require at least one decision whose ID enum contains only the supplied ID; the unchanged strict scorer still requires exactly one. For incident only, append: select the source from the supplied class mapping, read that source's signal, and use the explicit conditional table (false => console1/none; true => console1/<selected source>). Freshness, other sources, summary and queue do not enter the predicate. No per-case truth is calculated or inserted into actor context. This changes instruction salience and schema constraints, not evidence.
 
 Use D2's generator with fresh seeds 7200–7205 and all six ordered mappings in the same order as D2. The inherited named RNG streams use those new seeds. Eight cases per world cover all four signal/freshness pairs per class, independently permuted irrelevant columns. Require challenge coverage for all governing sources before calls; if it fails, amend prospectively rather than silently resample. Development seeds 7000–7005 and D2 failures are offline regressions only. No D2 response is reused as a fresh sample.
 
@@ -39,3 +39,7 @@ Retain the same experiment's current exclusive sim-dmarz-3 allocation only while
 ## Closeout
 
 Reconcile every assigned call, full scorer agreement, model route, hashes, usage and charge. Upload and read back raw evidence, CSV, summary and figure. Stop only this experiment's worker; release the existing fleet allocation after transport. Write the postmortem whether qualification passes or fails. Any later change of model, learning or culture design needs its own prospective scope and remaining-budget assessment.
+
+## Prospective API compatibility clarification
+
+Before any R1 model call, official Anthropic documentation confirmed that minItems 0/1 and string enums are supported, but maxItems is not. Remove maxItems from the submitted schema, retain minItems=1 and the exact supplied-ID enum, and retain the unchanged exactly-one-decision strict scoring contract. This prevents a transport rejection without relaxing qualification. Earlier prepared receipts were never dispatched and are superseded by the new public source revision. Source: https://platform.claude.com/docs/en/build-with-claude/structured-outputs.
