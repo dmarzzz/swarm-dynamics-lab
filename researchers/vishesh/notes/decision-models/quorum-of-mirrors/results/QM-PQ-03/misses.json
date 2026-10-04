@@ -1,0 +1,403 @@
+[
+  {
+    "assignment": {
+      "id": "QM-PQ-03-020",
+      "case_id": "d35d13cf0b7b-1",
+      "root": "d35d13cf0b7b",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "e7e8ea166e6fa428f92919edbe3ddac91c2527599690e1acaa58089174d97361",
+      "input_token_upper_bound": 4493,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; modality, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    "case": {
+      "id": "d35d13cf0b7b-1",
+      "root": "d35d13cf0b7b",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "actor": {
+        "contract": "Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.",
+        "query": {
+          "entity": "device-41501",
+          "time": "14:00",
+          "property": "running",
+          "threshold": 1
+        },
+        "sources": [
+          {
+            "id": "s0",
+            "independent_group": "s0",
+            "text": "Plan: at 14:00, device-41501 will be stopped.\nObservation: At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "s1",
+            "independent_group": "s1",
+            "text": "Plan: at 14:00, device-41501 will be stopped.\nObservation: At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "s2",
+            "independent_group": "s2",
+            "text": "Plan: at 14:00, device-41501 will be running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rbb6daf",
+            "source_id": "s2",
+            "text": "At 14:00, device-41501 was stopped."
+          },
+          {
+            "id": "rdd52e2",
+            "source_id": "s0",
+            "text": "At 14:00, device-41501 was stopped."
+          },
+          {
+            "id": "rc84d4e",
+            "source_id": "s0",
+            "text": "At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "rd364e0",
+            "source_id": "s0",
+            "text": "At 14:00, device-41501 was running."
+          }
+        ]
+      },
+      "gold": {
+        "sources": {
+          "s0": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          "s1": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          "s2": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 14:00, device-41501 will be running."
+          }
+        },
+        "reports": {
+          "rd364e0": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was running."
+          },
+          "rc84d4e": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          "rdd52e2": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was stopped."
+          },
+          "rbb6daf": {
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was stopped."
+          }
+        },
+        "labels": {
+          "rd364e0": "SUPPORTED",
+          "rc84d4e": "SUPPORTED",
+          "rdd52e2": "CONTRADICTED",
+          "rbb6daf": "NOT_ESTABLISHED"
+        },
+        "decision": "ONE"
+      }
+    },
+    "receipt": {
+      "id": "QM-PQ-03-020",
+      "case_id": "d35d13cf0b7b-1",
+      "condition": {
+        "copies": 1
+      },
+      "valid": true,
+      "model": "anthropic/claude-sonnet-4.6",
+      "provider": "Anthropic",
+      "finish_reason": "stop",
+      "content": "{\"sources\":[{\"id\":\"s0\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 14:00, device-41501 was operating.\"},{\"id\":\"s1\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 14:00, device-41501 was operating.\"},{\"id\":\"s2\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":null,\"status\":\"unknown\",\"quote\":\"Plan: at 14:00, device-41501 will be running.\"}],\"reports\":[{\"id\":\"rbb6daf\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":null,\"status\":\"unknown\",\"quote\":\"At 14:00, device-41501 was stopped.\"},{\"id\":\"rdd52e2\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":0,\"status\":\"observed\",\"quote\":\"At 14:00, device-41501 was stopped.\"},{\"id\":\"rc84d4e\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 14:00, device-41501 was operating.\"},{\"id\":\"rd364e0\",\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"value\":1,\"status\":\"observed\",\"quote\":\"At 14:00, device-41501 was running.\"}]}",
+      "usage": {
+        "prompt_tokens": 1215,
+        "completion_tokens": 363,
+        "total_tokens": 1578,
+        "cost": 0.00909
+      },
+      "generation_id": "gen-1791142336-ua2FTLrWMcrIIeB3JpxH",
+      "parsed": {
+        "sources": [
+          {
+            "id": "s0",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "s1",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "s2",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "Plan: at 14:00, device-41501 will be running."
+          }
+        ],
+        "reports": [
+          {
+            "id": "rbb6daf",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": null,
+            "status": "unknown",
+            "quote": "At 14:00, device-41501 was stopped."
+          },
+          {
+            "id": "rdd52e2",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 0,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was stopped."
+          },
+          {
+            "id": "rc84d4e",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was operating."
+          },
+          {
+            "id": "rd364e0",
+            "entity": "device-41501",
+            "time": "14:00",
+            "property": "running",
+            "value": 1,
+            "status": "observed",
+            "quote": "At 14:00, device-41501 was running."
+          }
+        ]
+      },
+      "score": {
+        "source_facts_correct": 3,
+        "report_facts_correct": 3,
+        "reports_total": 4,
+        "labels": {
+          "rbb6daf": "NOT_ESTABLISHED",
+          "rdd52e2": "CONTRADICTED",
+          "rc84d4e": "SUPPORTED",
+          "rd364e0": "SUPPORTED"
+        },
+        "labels_correct": true,
+        "quotes_valid": true,
+        "decision": "ONE",
+        "decision_correct": true,
+        "source_votes_correct": 3,
+        "false_contradictions": 0,
+        "missed_contradictions": 0,
+        "unknown_errors": 0,
+        "confusion": {
+          "SUPPORTED->SUPPORTED": 2,
+          "CONTRADICTED->CONTRADICTED": 1,
+          "NOT_ESTABLISHED->NOT_ESTABLISHED": 1
+        }
+      },
+      "wall_s": 4.177283048629761
+    },
+    "request": {
+      "id": "QM-PQ-03-020",
+      "case_id": "d35d13cf0b7b-1",
+      "dispatch_intent_at": 1791142336.8768399,
+      "request": {
+        "model": "anthropic/claude-sonnet-4.6",
+        "provider": {
+          "only": [
+            "Anthropic"
+          ],
+          "allow_fallbacks": false,
+          "require_parameters": true
+        },
+        "temperature": 0,
+        "max_tokens": 1600,
+        "messages": [
+          {
+            "role": "system",
+            "content": "Extract facts from authenticated source receipts and bound reports independently. Resolve source facts for the query entity, time and property; ignore plans, old times and other entities, and use explicit corrections over initial entries. Preserve the actual report entity and time, even when different from the query. Normalize mass to grams and running/stopped to 1/0. Negated running means stopped. Unknown observation has value null and status unknown; never guess from a plan. Each report here states one observation. Return the fact and a literal quotation containing the full selected proposition, not irrelevant context. Equivalent wording or units and omitted irrelevant context do not change a fact. Return sources and reports as arrays, each fact carrying its exact input id exactly once. Return only JSON; no explanations or hidden reasoning. Code will compare exact facts, not just threshold votes; missing evidence is not contradiction."
+          },
+          {
+            "role": "user",
+            "content": "{\"contract\":\"Receipts are authenticated and independent across supplied groups. Resolve query observations; explicit corrections supersede initial entries. Operating=running; not running=stopped. Plans are not observations. Reports claim one observation and are bound to source_id. Missing evidence is not contradiction.\",\"query\":{\"entity\":\"device-41501\",\"time\":\"14:00\",\"property\":\"running\",\"threshold\":1},\"sources\":[{\"id\":\"s0\",\"independent_group\":\"s0\",\"text\":\"Plan: at 14:00, device-41501 will be stopped.\\nObservation: At 14:00, device-41501 was operating.\"},{\"id\":\"s1\",\"independent_group\":\"s1\",\"text\":\"Plan: at 14:00, device-41501 will be stopped.\\nObservation: At 14:00, device-41501 was operating.\"},{\"id\":\"s2\",\"independent_group\":\"s2\",\"text\":\"Plan: at 14:00, device-41501 will be running.\"}],\"reports\":[{\"id\":\"rbb6daf\",\"source_id\":\"s2\",\"text\":\"At 14:00, device-41501 was stopped.\"},{\"id\":\"rdd52e2\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-41501 was stopped.\"},{\"id\":\"rc84d4e\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-41501 was operating.\"},{\"id\":\"rd364e0\",\"source_id\":\"s0\",\"text\":\"At 14:00, device-41501 was running.\"}]}"
+          }
+        ],
+        "response_format": {
+          "type": "json_schema",
+          "json_schema": {
+            "name": "facts",
+            "strict": true,
+            "schema": {
+              "type": "object",
+              "properties": {
+                "sources": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                },
+                "reports": {
+                  "type": "array",
+                  "items": {
+                    "type": "object",
+                    "properties": {
+                      "id": {
+                        "type": "string"
+                      },
+                      "entity": {
+                        "type": "string"
+                      },
+                      "time": {
+                        "type": "string"
+                      },
+                      "property": {
+                        "type": "string",
+                        "enum": [
+                          "mass_g",
+                          "running"
+                        ]
+                      },
+                      "value": {
+                        "type": [
+                          "integer",
+                          "null"
+                        ]
+                      },
+                      "status": {
+                        "type": "string",
+                        "enum": [
+                          "observed",
+                          "unknown"
+                        ]
+                      },
+                      "quote": {
+                        "type": "string"
+                      }
+                    },
+                    "required": [
+                      "id",
+                      "entity",
+                      "time",
+                      "property",
+                      "value",
+                      "status",
+                      "quote"
+                    ],
+                    "additionalProperties": false
+                  }
+                }
+              },
+              "required": [
+                "sources",
+                "reports"
+              ],
+              "additionalProperties": false
+            }
+          }
+        },
+        "usage": {
+          "include": true
+        }
+      },
+      "sha256": "e7e8ea166e6fa428f92919edbe3ddac91c2527599690e1acaa58089174d97361"
+    }
+  }
+]

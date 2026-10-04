@@ -1,0 +1,44 @@
+{
+  "source_sha256": {
+    "PLAN.md": "0e5f62bb15c582297aa26c3921c956dc7e741fc8453a9807929b6b50b7f16c8e",
+    "contract.py": "dcac40e90570f065506f0482d9f8462df8a766b8e1e5be45e78ba5087ceeeec5",
+    "runtime.py": "32b940a81a81b56b5439b66204e42ef44465e9a877b0665362500fd9cce3c6ac",
+    "manifest.json": "b3ae3908d49fe1c95d5b9e141c653b930a7e48470803d85d2446120c48a960ad",
+    "cases.py": "33c8884144569bad9623dc756fd1fb2db1a95bc7d59394a29164f263d9163547",
+    "baseline.py": "91656c55a86d42ee5065eac847ee79906d5c8644d0f84c774695d4255e92183a",
+    "qualification-seal.json": "9621643fed08577efae00b5786c97dfd16b2e79c402dee9ef7b021ab02aab686",
+    "AUTHORIZATION.json": "d63d4c467a4d581ad91685ea95d03dcd3cd5ad0486ceb6828c4d65c5775d4f5b",
+    "diagnostics.py": "e713622bdeb520a6066df567189cf9e34e4b289bfab867e5438eadd26179c74d",
+    "../native-v2/AUTHORIZATION.json": "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d",
+    "../../next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "../../qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "../../next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "../../reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "../../public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "3728c9fe18a9c9da12d429e26fcd7b38726e24dd020e923f09fc24ce4378a237",
+  "public_plan": {
+    "experiment": "quorum-of-mirrors",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/ba2a74afaf34a36b39474d1062ab6fea14b28077/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/native-v3/PLAN.md",
+    "commit": "ba2a74afaf34a36b39474d1062ab6fea14b28077",
+    "plan_sha256": "0e5f62bb15c582297aa26c3921c956dc7e741fc8453a9807929b6b50b7f16c8e",
+    "registered_tldr": "TLDR: QM-PQ-03 qualifies fixed-array source/report fact extraction with deterministic supported/contradicted/not-established comparison on24 synthetic packets:12 roots, one/three contradiction copies. Compare to typed truth and strong parser; exact fidelity, facts, quotes, decision and cost. No swarm-efficacy claim or evaluation.",
+    "run_tldr": "TLDR: QM-PQ-03 qualifies fixed-array source/report fact extraction with deterministic supported/contradicted/not-established comparison on24 synthetic packets:12 roots, one/three contradiction copies. Compare to typed truth and strong parser; exact fidelity, facts, quotes, decision and cost. No swarm-efficacy claim or evaluation.",
+    "checked_utc": "2026-10-04T19:30:33.478818+00:00"
+  },
+  "route": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": "Anthropic",
+    "snapshot": "20260217",
+    "pricing_verified": true,
+    "checked_at": 1791142233.536015
+  },
+  "budget": {
+    "calls": 75,
+    "reserved_usd": 0.905856,
+    "uncertain": 1
+  },
+  "checked_at": 1791142232.9909573,
+  "host": "sim-dmarz-2",
+  "claim_id": "vishesh-quorum-pq-03"
+}

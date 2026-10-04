@@ -1,0 +1,23 @@
+{
+  "attempt": "QM-PQ-03",
+  "execution": "complete_24_of_24",
+  "qualification": "passed_predeclared_conjunction",
+  "scientific_interpretation": "Controlled grammar qualification only; all derived decisions/labels correct with one report-fact error; not causal proof of original400 cause or swarm efficacy.",
+  "reporting": "All24 replayed,7 remote artifacts hash verified, hub done verified; static explorer counts checked",
+  "cost": "newactual0.243624; original cumulative ledger/extensions retained",
+  "reviewer": "owning agent; independent researcher review waived",
+  "dimensions": {
+    "question": "pass scoped",
+    "scenarios": "limited authored grammar",
+    "controls": "pass fixed schema and source evidence; length remains changed",
+    "capability": "pass declared gate;119/120 report facts",
+    "measurement": "pass replay; component error disclosed",
+    "sample_size": "limited12 authored paired roots",
+    "agent_context": "pass actor-only stateless contract",
+    "data_integrity": "pass24/24 retained and reconciled",
+    "resources": "pass original ledger and one extension",
+    "reproducibility": "pass artifacts; hosted nondeterminism remains",
+    "visualization": "all-case HTML structurally verified"
+  },
+  "decision": "FINISH bounded repair qualification; no automatic evaluation"
+}

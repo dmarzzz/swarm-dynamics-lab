@@ -1,0 +1,29 @@
+{
+  "calls": 99,
+  "reserved_usd": 2.345856,
+  "known_actual_usd": 0.39973896,
+  "prior_unknown_upper_bound_usd": 0.061344,
+  "new_known_actual_usd": 0.243624,
+  "execution_ledger_status": "complete",
+  "worker_processes": 0,
+  "reconciled": true,
+  "new_unknown_upper_bound_usd": 0,
+  "api_cap_usd": 3,
+  "total_cap_usd": 4,
+  "extension_rows": [
+    [
+      "PQ-02-owner-2026-10-04",
+      2.0,
+      "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d"
+    ]
+  ],
+  "artifacts_sha256": {
+    "summary.json": "211d8439ac04e3348625a7f7054f495aa539179e1e16ede999729605d28d756f",
+    "accounting.jsonl": "de2f0302623cba3204bd1353a80d34e5ca41bdc0c0206ad3d4ffea03b2092137",
+    "manifest.json": "2a1939d4c8a13250bcfd5872f8d0a41d4b3dda1ead491b2b22981800b87dd0e6",
+    "preflight.json": "3eb7d29318dd70d29cd61efd0b178cd4da5a008c01f761b1c0292759b779be4d",
+    "responses.jsonl": "830fb8d272056402783785f8aaad3c27815dc228630314616778253b3e02f6aa",
+    "requests.jsonl": "114ebb29d9914ea7bad8004042b3828c9739040cb01d6616655280c15eff9a9f",
+    "receipts.jsonl": "527d00b3d67ccfbd08f79860e74113e38214cd25ee531dbc26f253d04b5c7cea"
+  }
+}

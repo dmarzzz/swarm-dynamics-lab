@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-02-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/PQ-03-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T19:22:58.628207+00:00",
-      "checked_commit": "f091bc486efea93f8a7c43340181ee82f77cde1c",
-      "next_action": "HOLD native: PQ-02 stopped HTTP400 on2nd call;1 correct valid,22 unstarted. Read PQ-02-post.md. Safe telemetry patch prepared; constant-size fact schema needs new frozen admission. No auto retry or evaluation. Original75call ledger andUSD2 owner extension retained; worker exited and claim released.",
+      "checked_at": "2026-10-04T19:34:55.805887+00:00",
+      "checked_commit": "ba2a74afaf34a36b39474d1062ab6fea14b28077",
+      "next_action": "FINISH PQ-03 repair qualification:24/24 valid, all decisions/labels correct,119/120 reportfacts; noHTTPerrors. Read PQ-03-post.md. No automatic evaluation; old holdout unchanged. Preserve one component error and all prior failures/reservations. Future evaluation needs compatible concrete design.",
       "next_run_approval": "owner"
     },
     {

@@ -1,0 +1,322 @@
+{
+  "attempt": "QM-PQ-03",
+  "stage": "qualification_only",
+  "corpus_sha256": "e35f2502746442bf995719977e6cc8e594e461b25440f53315b1f5eab537d481",
+  "assignments": [
+    {
+      "id": "QM-PQ-03-000",
+      "case_id": "1b041a221f12-3",
+      "root": "1b041a221f12",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "65c0188aeaae68a9b44c2a3d63fbac8df13a52166cf4759002c6453ecf7ceeff",
+      "input_token_upper_bound": 4622,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; units, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-001",
+      "case_id": "3daf9b088f0a-1",
+      "root": "3daf9b088f0a",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "e8e2ed32f31f030da9b49a60d2421292e93c04e5170d5043e1cdf96f2bcd4f1f",
+      "input_token_upper_bound": 4486,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; time, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-002",
+      "case_id": "2cd13146540b-3",
+      "root": "2cd13146540b",
+      "family": "units",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "acac4c99e88f88c2e4698d569ab848cbea8295d9358d94dd5d9b8b9387e21c28",
+      "input_token_upper_bound": 4622,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; units, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-003",
+      "case_id": "83806c24f27f-3",
+      "root": "83806c24f27f",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "2cf2fbce612b46d96e322956d083d425005d286f71417e2449165ce7321a372e",
+      "input_token_upper_bound": 4672,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; time, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-004",
+      "case_id": "386c8347c277-3",
+      "root": "386c8347c277",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "27104f44786dc21f852d47fa8af4f043f6fbb29270a468df20b90e99235c704c",
+      "input_token_upper_bound": 4690,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; entity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-005",
+      "case_id": "3d88267cfd31-3",
+      "root": "3d88267cfd31",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "180a576c878bd64f9c4c05908a3e04907b3be7d1cc1eff95c349269a13da36e1",
+      "input_token_upper_bound": 4731,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; correction, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-006",
+      "case_id": "7ac8086e389c-1",
+      "root": "7ac8086e389c",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "4749cc95e4338469239f157c57d3ac7d0b4ba589bb0584f476a8726c37f606c1",
+      "input_token_upper_bound": 4553,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; correction, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-007",
+      "case_id": "c0e626e2a507-3",
+      "root": "c0e626e2a507",
+      "family": "entity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "3b09f42ca9e8c4f0526bb29f042fbe28bd88a73df297a897b9741c50949737dc",
+      "input_token_upper_bound": 4686,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; entity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-008",
+      "case_id": "c2309d22be3f-3",
+      "root": "c2309d22be3f",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "4322180391d87de4ba83d952ca1068df842b3a5777ccaa4d3fef51091be3ad2f",
+      "input_token_upper_bound": 4558,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; polarity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-009",
+      "case_id": "9c7fca227174-3",
+      "root": "9c7fca227174",
+      "family": "polarity",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "5adcb50c546312efaac0a8978763ebeb61e29c8f6b49aebebc71a468db97fa67",
+      "input_token_upper_bound": 4554,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; polarity, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-010",
+      "case_id": "7ac8086e389c-3",
+      "root": "7ac8086e389c",
+      "family": "correction",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "10087c3adface1bb3205897b47ec48298267d612b68a92b4562e558c6e775f4a",
+      "input_token_upper_bound": 4735,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; correction, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-011",
+      "case_id": "9c7fca227174-1",
+      "root": "9c7fca227174",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "3395ff756826bc7409db787656922cafc8059faeab97cf6288dcf6296362f9a3",
+      "input_token_upper_bound": 4372,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; polarity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-012",
+      "case_id": "c2309d22be3f-1",
+      "root": "c2309d22be3f",
+      "family": "polarity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "1f8447c22dd146c9d99cd4289acb9e9603922e9876f14814799207c52835e28f",
+      "input_token_upper_bound": 4376,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; polarity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-013",
+      "case_id": "2cd13146540b-1",
+      "root": "2cd13146540b",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "1b753f526dc61548233d13555c88a0558301b1c59c8d1e89f9c932d6160aeb34",
+      "input_token_upper_bound": 4424,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; units, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-014",
+      "case_id": "4f095c60286d-1",
+      "root": "4f095c60286d",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "e237d4b427019946184340952f0299bd914cc03f4ad840c8df6ff38f5f8d0c23",
+      "input_token_upper_bound": 4559,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; modality, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-015",
+      "case_id": "386c8347c277-1",
+      "root": "386c8347c277",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "5deaa22fa450039b2d116851577827dcafbe0072d3e549364594eee92c864293",
+      "input_token_upper_bound": 4508,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; entity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-016",
+      "case_id": "d35d13cf0b7b-3",
+      "root": "d35d13cf0b7b",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "675c8b6d22eacadc12675877597304f413a5c43ff45ea22c3cd3615ea9dd9bdb",
+      "input_token_upper_bound": 4675,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; modality, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-017",
+      "case_id": "1b041a221f12-1",
+      "root": "1b041a221f12",
+      "family": "units",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "4b23e9f1d6be77b9f4a9c5e66705be3351ca8d66ce3525786b588e1e2dde2677",
+      "input_token_upper_bound": 4424,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; units, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-018",
+      "case_id": "83806c24f27f-1",
+      "root": "83806c24f27f",
+      "family": "time",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "c6c45b5bbebc80a55a8566fd570ef3998fb3303eba1383e034dc67956a849a22",
+      "input_token_upper_bound": 4490,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; time, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-019",
+      "case_id": "3daf9b088f0a-3",
+      "root": "3daf9b088f0a",
+      "family": "time",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "a42897eb4a314970cc68cc8f17dfe2fd4d9f568c8f2bb6d5c422ec0f5ccda73e",
+      "input_token_upper_bound": 4668,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; time, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-020",
+      "case_id": "d35d13cf0b7b-1",
+      "root": "d35d13cf0b7b",
+      "family": "modality",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "e7e8ea166e6fa428f92919edbe3ddac91c2527599690e1acaa58089174d97361",
+      "input_token_upper_bound": 4493,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; modality, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-021",
+      "case_id": "c0e626e2a507-1",
+      "root": "c0e626e2a507",
+      "family": "entity",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "206f1ba31c6876bbdad5b33327b9321288f9776346fd7e789ca3940ff35cd8ce",
+      "input_token_upper_bound": 4504,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; entity, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-022",
+      "case_id": "3d88267cfd31-1",
+      "root": "3d88267cfd31",
+      "family": "correction",
+      "condition": {
+        "copies": 1
+      },
+      "request_sha256": "266d0ecf077b76f0e1ab0ae74faada310a3f51ed85c06c3ac0bbe25088a41fa8",
+      "input_token_upper_bound": 4549,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; correction, contradiction copies=1; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    },
+    {
+      "id": "QM-PQ-03-023",
+      "case_id": "4f095c60286d-3",
+      "root": "4f095c60286d",
+      "family": "modality",
+      "condition": {
+        "copies": 3
+      },
+      "request_sha256": "2e901589f06641da7d187676fd9a444a281b813b9ca1f7e0080c8c27c7b0a223",
+      "input_token_upper_bound": 4741,
+      "reserve_usd": 0.06,
+      "tldr": "PQ-03 explicit fact extraction; modality, contradiction copies=3; deterministic fidelity versus typed truth and parser, synthetic paired qualification only."
+    }
+  ],
+  "max_calls": 24,
+  "max_reserved_usd": 1.44,
+  "evaluation_dispatch": false
+}
