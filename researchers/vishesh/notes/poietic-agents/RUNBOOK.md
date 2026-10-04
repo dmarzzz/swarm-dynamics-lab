@@ -49,3 +49,5 @@ After execution, verify durable artifact readback, preserve failure/usage record
 ## Local credential relay command
 
 After both local and remote admission receipts are real, start the bounded relay locally with `src/relay.py --config <admission.json> --credential-file <approved-selector> --ledger <persistent-poietic-ledger> --port-file <local-port-file>`. Values in angle brackets are paths/selectors, never credentials. Use verified SSH to forward a remote loopback port to the reported local port; write that exact `http://127.0.0.1:<port>/invoke` URL into the admission credential record. Stop the relay/tunnel after receipt reconciliation. This command makes no new permission or host claim.
+
+A non-billable relay health request binds attempt, source, assignment, credential availability, remaining lifetime and unused attempt ledger before any hub start/reservation. An unavailable or mismatched SSH tunnel blocks admission instead of consuming a qualification case. This incorporates the publicly recorded sibling-study tunnel failure without running a provider probe.

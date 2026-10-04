@@ -67,3 +67,13 @@ def verify_public(config, checker):
     if receipt['url']!=config['public_plan']['url'] or receipt['plan_sha256']!=config['public_plan']['sha256']:
         raise ValueError('public_plan_binding')
     return receipt
+
+
+def verify_relay_health(data, config, now=None):
+    now=time.time() if now is None else now
+    if (data.get('experiment')!='poietic-agents' or data.get('attempt')!=config['attempt'] or
+        data.get('source_commit')!=config['source_commit'] or data.get('assignment_sha256')!=config['assignment_sha256'] or
+        data.get('credential_ready') is not True or data.get('deadline',0)<=now+45 or
+        data.get('api_cap_usd')!=1.5 or data.get('physical_calls')!=0):
+        raise ValueError('relay_health_or_attempt_binding')
+    return True

@@ -8,7 +8,7 @@ Owner: vishesh. Operator/author: vishesh/codex-heterogeneous. Independent design
 
 Question: does reversible, locally proposed specialization lower complete deployment cost per assigned, fresh, correct and on-time job beyond competent caching/static specialization? Research status: exploratory instrument. [Prior art](PRIOR-ART.md) leaves formal research gates open. No previous Poietic attempt or post-mortem exists.
 
-Current gate: G3 for S0-01. G2 offline preparation passed 52 checks. Next action: resolve explicit confirmation of the proposed $2 cumulative cap, verify credential provenance, then resolve the dedicated allocation task and deployment evidence. G3 awaits explicit confirmation of the proposed $2 cumulative budget and still needs the approved credential selector plus a fresh exclusive approved-fleet allocation. The reduced $2 proposal is sufficient for initial S0; explicit confirmation is pending and the earlier $7 increase is not presumed approved.
+Current gate: G3 for S0-01. G2 offline preparation passed 54 checks. Next action: resolve explicit confirmation of the proposed $2 cumulative cap, verify credential provenance, then resolve the dedicated allocation task and deployment evidence. G3 awaits explicit confirmation of the proposed $2 cumulative budget and still needs the approved credential selector plus a fresh exclusive approved-fleet allocation. The reduced $2 proposal is sufficient for initial S0; explicit confirmation is pending and the earlier $7 increase is not presumed approved.
 
 ## Gate evidence
 
@@ -16,7 +16,7 @@ Current gate: G3 for S0-01. G2 offline preparation passed 52 checks. Next action
 |---|---|---|---|
 | G0 question / research gates | partial | [PRIOR-ART.md](PRIOR-ART.md), author; independent focused overlap review linked above | Full survey/hypothesis acceptance before formal research |
 | G1 prospective design | pass for offline implementation | Published v0.1 at `4a373dad56aab6a7129f16748a2edf312ce6d048`; [v0.2 amendment](AMENDMENTS.md) resolves P1–P3 before code | Bind executable definitions |
-| G2 instrument | pass for S0 preparation | [VALIDATION.json](VALIDATION.json), author; 52 checks; [review resolution](REVIEW-RESOLUTION.md) | Native interface behavior remains unobserved |
+| G2 instrument | pass for S0 preparation | [VALIDATION.json](VALIDATION.json), author; 54 checks; [review resolution](REVIEW-RESOLUTION.md) | Native interface behavior remains unobserved |
 | G3 S0 admission | blocked | [S0 pre-assessment](reviews/S0-01-pre.md) | Budget, exclusive allocation, source/plan freeze, public verification |
 | G4 qualification | not run | 0 native responses | Only after G3 |
 | G5 closeout | not applicable yet | No experimental assignments started | Reconcile and post-mortem every future attempt |

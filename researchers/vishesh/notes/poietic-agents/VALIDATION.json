@@ -1,9 +1,9 @@
 {
   "schema": "poietic-validation-v0.2",
-  "checked_utc": "2026-10-04T06:35:49.240717+00:00",
+  "checked_utc": "2026-10-04T06:41:40.696466+00:00",
   "assessor": "vishesh/codex-heterogeneous",
   "scope": "same-author offline software validation, not independent code review or model evidence",
-  "tests_passed": 52,
+  "tests_passed": 54,
   "tests_failed": 0,
   "python": "3.13.13",
   "pillow": "11.3.0",
@@ -18,21 +18,21 @@
     "design.yaml": "7c215680536728f0bb973be7b1de63a16475444dd0493069c4f98a37358887d7",
     "models.json": "0b3068d418b7bbf04281a7d10b66061ecc277cf8df5c95d857d2442eee1bab4b",
     "requirements.txt": "15f202acecff97bf2bd3cb126d800638771db9c20484c5d7a441e4098a82832c",
-    "src/admission.py": "b83a80f829962ce0adcc8f4d98d2d0dcb26d86476bbc56b09b9989ad005615aa",
+    "src/admission.py": "f451c1885607862d86780052cf2e0fcd0c41c2a22fafead7da786175188d98e8",
     "src/budget.py": "bde3cfd6270cfbd8392383316c48a8eb84431d345518502ddcb5fb8d7d1d339b",
     "src/common.py": "e3f39d17d06f89c93b78edcb1c0ca12c1ab6be5601d49f312d1a4e7cb6a71027",
     "src/engine.py": "c64062fd141d01351f336efdd92eac45a3c44e407350e74bcadc1773bd7503e5",
     "src/evaluator.py": "a05ecdf438322ddf2325e590c583e9631e3b271c12dad0dc0ae8226a93093a44",
-    "src/launch.py": "647faa6d712cea1d04df3bba418337dc7fbe75e77130ad1677a674844f8f8c6e",
+    "src/launch.py": "6a34456a96541861eaf77b0e8a12ff16e210efa99d46f35ca487ac9972e06b39",
     "src/lineage.py": "3ffeb15a3c708ae63cc2b7951b5b4a3b1ac6748bcf0b975aeda639d61e277ce6",
     "src/native.py": "07b2b6b08e8e0ad2d2eb4ee832befc2be6d2b4a6dc06c8591889209535e8987a",
     "src/operators.py": "e728ceb4820564ae8eac1335237b03bd641628e0b50ab8391dbc1ed38a136fe5",
     "src/prepare.py": "2b37b54e791406763bbe6eca5e0ba764361afa9b07b45e9239c4c194984267a7",
     "src/qualification.py": "73a76f62f4733ff8c3dd968aa62be218ea57696a9e3a03fa2914d6626561f3fe",
-    "src/relay.py": "041fe0c4bfb68f2eec564e8b6d507cfd1231e874a1cb85cb50ec4f92043b003a",
+    "src/relay.py": "f8a8006649afe3446508316c86afc39ebe589e9191569ed9fb3c9e1fae312f94",
     "src/render.py": "c420fbe18ba8b029797974bfceff8cc5db849060f68b901ec7803f3954cef8cb",
     "src/world.py": "f8be5acb5260f5edb0bda93a354facde9d89a3fa340ec75f1bb217c90c26e1bb",
-    "tests/test_instrument.py": "b47d54b78c12fdc98c8d91682db264411dc8c78e68c42213a8b91e008147e785"
+    "tests/test_instrument.py": "6957e169d0642f34a2cdade41f96c911cd6526d450c8f5b5f6372e803a4e8fca"
   },
   "assignment_count": 144,
   "assignment_sha256": "e960ce96ad56e31c488de181f857b6dc334e3922ed252312407024e3f73fb6c7",
@@ -59,5 +59,6 @@
   ],
   "authorized_total_cumulative_usd": 0,
   "launch_smoke": "Candidate refuses dispatch without explicit authorization; no native calls",
-  "credential_boundary": "local-only relay; worker contains no provider key or Authorization header"
+  "credential_boundary": "local-only relay; worker contains no provider key or Authorization header",
+  "relay_health": "attempt/source/assignment/credential/deadline/unused-ledger binding precedes hub start; two tests pass"
 }

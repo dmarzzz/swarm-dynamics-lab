@@ -306,3 +306,17 @@ class RelayTests(unittest.TestCase):
     def test_review_resolution_evidence_is_required(self):
         case=AdmissionTests();case.setUp();case.c.pop('review_resolution',None)
         with self.assertRaisesRegex(ValueError,'review_resolution_missing'):verify(case.c,case.now,actual_host='fixture')
+
+class RelayHealthTests(unittest.TestCase):
+    def test_mismatched_or_used_relay_blocks_before_dispatch(self):
+        from admission import verify_relay_health
+        now=time.time();c={'attempt':'S0-01','source_commit':'a'*40,'assignment_sha256':'b'*64}
+        health=dict(c,experiment='poietic-agents',credential_ready=True,deadline=now+600,api_cap_usd=1.5,physical_calls=0)
+        self.assertTrue(verify_relay_health(health,c,now))
+        for k,v in [('source_commit','old'),('physical_calls',1),('credential_ready',False),('deadline',now)]:
+            h=dict(health);h[k]=v
+            with self.assertRaises(ValueError):verify_relay_health(h,c,now)
+    def test_health_precedes_hub_start(self):
+        import inspect,launch
+        source=inspect.getsource(launch.run)
+        self.assertLess(source.index('verify_relay_health('),source.index("quiet(sr.report,'start'"))
