@@ -13,9 +13,10 @@ def canonical(obj):
 def digest(obj):
     return hashlib.sha256(canonical(obj).encode()).hexdigest()
 
-def world(seed):
-    if seed not in range(100, 104):
-        raise ValueError('Offline generator is restricted to development seeds 100-103')
+def world(seed, stage='development'):
+    allowed={'development':range(100,104),'Q0':range(200,206),'S0':range(206,212)}
+    if seed not in allowed.get(stage,()):
+        raise ValueError('seed outside explicit stage')
     rng = random.Random(seed)
     row, col = rng.randrange(5), rng.randrange(5)
     exposed = {f'{r},{c}' for r in (row, row+1) for c in (col, col+1)}
@@ -28,7 +29,7 @@ def world(seed):
                               label=label, epoch=0, source=batch, reliability=0.8))
     fresh = [dict(id=f'n{i}', acquisition_id=f'n{i}', cell=c, label=truth[c], epoch=2,
                   source='sensor', reliability=1.0) for i, c in enumerate(CELLS)]
-    return dict(world_id=f'dev-{seed}', truth=truth, exposed=sorted(exposed),
+    return dict(world_id=f'{stage}-{seed}', truth=truth, exposed=sorted(exposed),
                 early=early, fresh=fresh, withdrawn=[r['id'] for r in early if r['source']=='b'])
 
 def ledger(w, history, step):
@@ -114,9 +115,10 @@ def disagreement(a,b):
     unequal=sum(a.get(c,'UNKNOWN')!='UNKNOWN' and b.get(c,'UNKNOWN')!='UNKNOWN' and a[c]!=b[c] for c in CELLS)
     return dict(lower=unequal/36,upper=(unequal+missing)/36,missing=missing,denominator=36)
 
-def assignments(seed):
-    if seed not in range(100,104):
-        raise ValueError('development only')
+def assignments(seed, stage='development'):
+    allowed={'development':range(100,104),'S0':range(206,212)}
+    if seed not in allowed.get(stage,()):
+        raise ValueError('seed outside explicit stage')
     out=[]
     for history in ('A','B'):
         for communication in ('private','social'):

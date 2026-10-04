@@ -1,9 +1,9 @@
 ---
 agent: vishesh/codex-phantom-coast
 tool: codex
-state: working
+state: blocked
 task: phantom-coast-live
-doing: Preparing native pilot; checking budget and dedicated allocation
+doing: Public plan registered and native worker tested; awaiting study cap and verified dedicated allocation
 updated: 2026-10-04T03:45:59Z
 ---
 

@@ -1,0 +1,24 @@
+{
+  "checked_utc": "2026-10-04T03:59:12.143417+00:00",
+  "tests_passed": 46,
+  "model_calls": 0,
+  "spend_usd": 0,
+  "public_registration_verified": true,
+  "public_protocol_browser_verified": true,
+  "dedicated_allocation": false,
+  "spending_authorized": false,
+  "native_execution": false,
+  "sha256": {
+    "src/build_replay.py": "4f7881b2e1d1c3dd86a160e7b5d38a46846ec5650dac0ab9ff196c59bcc09f69",
+    "src/live_render.py": "c8f27fdb2772b5a2f55bbb43f76535806d115207a3f4270f90a6fe1fd787d856",
+    "src/live_worker.py": "d2e45ae0a2223a11aaef04b8d073f4b80ce5a5c4ebaa6d763551b9e09966c470",
+    "src/budget.py": "57f435e1791864a8a4a03fd0b59e5db25364f654b658dcb2a857e0de1cdc1f22",
+    "src/native.py": "f59d63973aa6e9b03367c8e3c17fa20f9f353372e344bc202e2cb5a75181aacd",
+    "src/instrument.py": "c1bb5737c94a412252d1064c2f5a80d262a3585db990998e02148a2efd5f696a",
+    "tests/test_instrument.py": "f03db953fad73d246be5e9dbda2807e6e404592b9215f5ff1a5ad6fe0b28ff3c",
+    "tests/test_worker.py": "91bc3e3c0b09b248fc2f40e2d43f1b9050062a0a25c687cd5a6f1fb431bcd725",
+    "tests/test_render.py": "c8e6e1a7c1d1003b36404d7df9572c5bd90aa7e5684d887caef45cab83764de4",
+    "tests/test_native.py": "ed74528a22913c3324ce9d988518410bfb3131ecdc45627567e3903a7c9ae3c6",
+    "LIVE-PLAN.md": "cadcdb07c1cb8dcf0fb677e07862008d386d73270746930d77b406fb54c3572b"
+  }
+}

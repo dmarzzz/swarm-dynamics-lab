@@ -1,0 +1,15 @@
+# Pre-run assessment: PC-1L Q0-A1
+
+Owner vishesh/codex-phantom-coast. Status **blocked pending budget and exclusive allocation**. Parent OFFLINE-01 validates software only; no prior native attempt exists. This pre-assessment does not register an execution start.
+
+Question: can the pinned Jev route classify a complete synthetic 36-cell map reliably enough to interpret later history effects? The strongest comparator is the deterministic mapper using identical observations. Expected clean success is falsifiable; UNKNOWN, missing maps and wrong labels remain in the denominator. The first native cohort is six independent worlds, not 648 independent samples.
+
+Protocol is LIVE-PLAN.md at fa967eefe4476997ee17bae004d0f3dc959d3950. Q0 world seeds 200-205, three private reset observers per world, 18 map requests and 648 cell choices. Qualification requires all 18 terminal, at least 95% valid maps, whole-map upper error <=10%, and upper error <=20% separately on 216 land and 432 water opportunities. No social history or false reports in qualification. This stage cannot establish the Phantom Coast mechanism.
+
+PC-V2 mapping: Q0-A1/seed/observer to actual saved 36-cell map, side-by-side evaluator truth, per-map status and whole-map error bounds; PNG updates every six completed map requests; final PNG and sampled GIF from actual records. Missing responses stay gray/question-marked. Complete records remain in JSON even when rendering fails. No scout paths. Public supported-image hosting is through the hub; no Cloudflare deployment.
+
+Native adapter replaces the prototype's generative response with 36 explicit typed cell questions and no model-generated citations. Snapshot typesafe/jev-1.13-20260917, TypeSafe only; current metadata verified without paid calls. Input rate currently 0.000000042 USD/token; output price zero. Conservative reserve is 0.048384 USD/map; Q0 maximum 0.870912 USD. These are verified rate/derived bounds, not approved spending. One worker, 60 minutes, no retries, stop after five consecutive failures or before budget overflow. Uncertain calls retain reservations and cannot be redispatched under the same assignment.
+
+Offline checks: 46 pass including mocked full execution, failure stopping, truth/input separation, exact resets, ledger atomicity, schema checks and saved-frame rendering. Source and assignment hashes are in LIVE-VALIDATION.json and Q0-A1-MANIFEST.json. Qualification worlds were generated only for source/analysis/manifest software checks; no provider outcome exists and no prompt tuning on native qualification has occurred. Confirmation seeds remain untouched.
+
+Required before changing this status to diagnostic-ready: authorized study cap, verified owner/account if provisioning, dedicated host and merged exclusive claim, deployed source/runtime checks, protected credential consumption, exact launch configuration and refreshed public preflight. Exact operator command, host, claim, authorized remaining dollars and execution source commit belong in the deployment receipt once real values exist. They are intentionally not fabricated here.
