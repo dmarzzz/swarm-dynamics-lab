@@ -1,0 +1,110 @@
+{
+  "files": [
+    "d1o-a1",
+    "d1o-a1-rehearsal",
+    "d1o-a1-worker-pid.json",
+    "d1o-a1-worker.log",
+    "d1o-a1.frozen.json",
+    "d1o-a1.preflight-075342.json",
+    "d1o-p1.json"
+  ],
+  "ledger": [
+    "d1o-a1-zero-model-rehearsal.lock",
+    "d1o-a1-zero-model-rehearsal.started.json",
+    "d1o-a1.lock",
+    "d1o-a1.started.json",
+    "d1o-p1.started.json"
+  ],
+  "d1o-p1.json": {
+    "attempt": "d1o-p1",
+    "cost_usd": 0.022468,
+    "latency_seconds": 5.362,
+    "model": "claude-opus-5-5",
+    "model_calls": 1,
+    "parsed_answer_valid": true,
+    "reason": null,
+    "request_sha256": "4f706011292422b11a3c9463b0760f0a2bea1a2bef1d0a93e5cdf91ad5cc901a",
+    "returned_model": "claude-opus-5-5",
+    "status": "valid",
+    "stop_reason": "end_turn",
+    "usage": {
+      "cache_creation_input_tokens": 0,
+      "cache_read_input_tokens": 0,
+      "input_tokens": 4052,
+      "output_tokens": 313
+    },
+    "world": 10002
+  },
+  "d1o-a1-rehearsal": {
+    "terminal": 72,
+    "valid": 72,
+    "failures": {},
+    "refusals": 0,
+    "input_tokens": 0,
+    "output_tokens": 0,
+    "observed_usage_cost_microusd": 0,
+    "development_comparison": {
+      "assigned_each": 6,
+      "d1_haiku": {
+        "full_evidence_correct": 2,
+        "saved_report_quorum_correct": 1
+      },
+      "d1_sonnet": {
+        "full_evidence_correct": 3,
+        "saved_report_quorum_correct": 3
+      },
+      "full_evidence_correct": 6,
+      "saved_report_quorum_correct": 6
+    },
+    "fresh_gate": {
+      "evidence_justified": 12,
+      "fresh_assigned": 12,
+      "fresh_clean_full_evidence_justified_required": 10,
+      "fresh_valid_required": 12,
+      "passed": false,
+      "valid": 12
+    },
+    "audit": {
+      "complete_journal": true,
+      "ok": true,
+      "outcomes_recomputed": 72,
+      "requests_verified": 72
+    }
+  },
+  "d1o-a1": {
+    "terminal": 72,
+    "valid": 72,
+    "failures": {},
+    "refusals": 0,
+    "input_tokens": 259135,
+    "output_tokens": 21803,
+    "observed_usage_cost_microusd": 1472600,
+    "development_comparison": {
+      "assigned_each": 6,
+      "d1_haiku": {
+        "full_evidence_correct": 2,
+        "saved_report_quorum_correct": 1
+      },
+      "d1_sonnet": {
+        "full_evidence_correct": 3,
+        "saved_report_quorum_correct": 3
+      },
+      "full_evidence_correct": 6,
+      "saved_report_quorum_correct": 4
+    },
+    "fresh_gate": {
+      "evidence_justified": 12,
+      "fresh_assigned": 12,
+      "fresh_clean_full_evidence_justified_required": 10,
+      "fresh_valid_required": 12,
+      "passed": true,
+      "valid": 12
+    },
+    "audit": {
+      "complete_journal": true,
+      "ok": true,
+      "outcomes_recomputed": 72,
+      "requests_verified": 72
+    }
+  }
+}

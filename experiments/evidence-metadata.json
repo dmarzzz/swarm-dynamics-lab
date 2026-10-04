@@ -1717,17 +1717,18 @@
         "researchers/dmarz/notes/discussion-dose/d1-opus/experiment.yaml"
       ],
       "evidence_confidence": {
-        "score": 0,
-        "claim": "Untested: whether Claude Opus 5.5 makes evidence-justified choices on clean full-evidence decisions where Haiku 4.5 and Sonnet 4.6 failed the D1 gates.",
-        "rationale": "Plan only; no model call has been made. Planned 12 fresh worlds are the gate units; the 60 reused requests are six development world clusters plus a fixed fixture grid. Model and request configuration both change versus D1."
+        "score": 2,
+        "claim": "Under adaptive thinking at effort high with no temperature, Claude Opus 5.5 makes evidence-justified choices on clean full-evidence D1-style decisions where Haiku 4.5 and Sonnet 4.6 failed.",
+        "rationale": "Measured: fresh gate 12/12 evidence-justified and 12/12 valid; 6/6 on the reused worlds versus Haiku 2/6 and Sonnet 3/6 on byte-identical requests; exact-source audit recomputed all 72 outcomes. Limits: model and request configuration changed together; 12 fresh clean worlds only; report packets remain Haiku-generated; all 6 inherited false memory facts were still accepted; no swarm stage."
       },
-      "sample_size_summary": "Observed: none. Planned: 72 calls to one model: 12 fresh clean worlds (gate units), 60 reused D1 requests (6 world clusters, 18 saved ballots, 36 memory fixtures); not 72 independent samples.",
+      "sample_size_summary": "Observed: 72/72 assigned calls valid and analyzed, 0 refusals, 0 missing usage: 12 fresh clean worlds (gate units), 6 reused development world clusters (6 full-evidence, 18 report ballots), 36 fixed memory fixtures; not 72 independent samples. One model, one attempt.",
       "sources": [
-        "researchers/dmarz/notes/discussion-dose/d1-opus/README.md",
-        "researchers/dmarz/notes/discussion-dose/d1-opus/SETUP.md",
-        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-pre.md"
+        "researchers/dmarz/notes/discussion-dose/d1-opus/RESULTS.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/reviews/d1o-a1-post.md",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/summary.json",
+        "researchers/dmarz/notes/discussion-dose/d1-opus/records/d1o-a1/audit.json"
       ],
-      "status_at_assessment": "planned_not_run",
+      "status_at_assessment": "fresh_gate_passed_model_level_only",
       "assessor": "dmarz/d1-opus",
       "assessed_at": "2026-10-04"
     },

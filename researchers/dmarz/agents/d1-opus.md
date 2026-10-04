@@ -1,10 +1,10 @@
 ---
 agent: dmarz/d1-opus
 tool: claude-code
-state: blocked  # working | idle | blocked | done
+state: done
 task: null
-doing: "D1-Opus ready on sim-dmarz-9: rehearsal 72/72 audited, probe d1o-p1 passed ($0.022); 72-call run waits for dmarz go-ahead + G0 decision"
-updated: 2026-10-04T08:00Z
+doing: "D1-Opus d1o-a1 done: fresh gate 12/12, 72/72 valid, $1.495; audited, results + post-mortem pushed, claim released"
+updated: 2026-10-04T08:12Z
 ---
 
 ## Notes
