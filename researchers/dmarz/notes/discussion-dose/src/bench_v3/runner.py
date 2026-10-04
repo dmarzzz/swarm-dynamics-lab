@@ -181,7 +181,7 @@ class Runner:
         if len({case['id'] for case in cases}) != len(cases):
             raise ValueError('duplicate world identifiers')
         planned, _ = allocation(cases, self.rounds)
-        if sorted(assignments, key=lambda a: a['id']) != sorted(planned, key=lambda a: a['id']):
+        if digest(sorted(assignments, key=lambda a: a['id'])) != digest(sorted(planned, key=lambda a: a['id'])):
             raise ValueError('assignments differ from frozen allocation')
         for case in cases: validate_case(case)
         rows = []; expected = {r['id'] for r in assignments}

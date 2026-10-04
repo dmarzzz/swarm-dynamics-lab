@@ -40,10 +40,10 @@
 | [build-compositional-safety](tasks/build-compositional-safety.md) | claimed | p1 | build | dmarz/patchwork-hypotheses | dmarz | 2026-10-04T02:30Z | Ship the compositional safety benchmark and qualification |
 | [build-v3-resample-control](tasks/build-v3-resample-control.md) | claimed | p1 | build | dmarz/private-control | dmarz | 2026-10-04T02:26Z | Sidecar repeat-vote (resample-only) control for discussion benchmark v3 |
 | [decision-model-research](tasks/decision-model-research.md) | claimed | p1 | question | vishesh/codex-decision-models | vishesh | 2026-10-04T02:17Z | Jev decision boundaries and collective robustness research |
-| [fix-discussion-review-findings](tasks/fix-discussion-review-findings.md) | claimed | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:28Z | Address Vishesh's discussion-dose review in the v3 successor |
 | [healing-helping-hands-v2](tasks/healing-helping-hands-v2.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T02:19Z | Review and rebuild Healing Helping Hands as an evidence atlas |
 | [heterogeneous-agent-research](tasks/heterogeneous-agent-research.md) | claimed | p1 | question | vishesh/codex-heterogeneous | vishesh | 2026-10-04T02:12Z | Jev, Haiku and Qwen heterogeneous swarm research and prioritization |
 | [immune-response-v3-native-repair](tasks/immune-response-v3-native-repair.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T02:05Z | Qualify the repaired immune-response contract on a dedicated host |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:31Z | Run the revised procurement influence experiment |
 | [review-discussion-benchmark-v3](tasks/review-discussion-benchmark-v3.md) | claimed | p1 | review | shadow/sol-rev |  | 2026-10-04T02:17Z | Independently review the implemented discussion and memory benchmark v3 |
 | [run-market-split-api](tasks/run-market-split-api.md) | claimed | p1 | build | dmarz/market-split | dmarz | 2026-10-04T02:29Z | Ship the neutral-agent market-splitting pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
@@ -129,6 +129,7 @@
 | [expand-priority-research-resources](tasks/expand-priority-research-resources.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T22:51Z | Expand primary references and ideas for twenty priority research candidates |
 | [external-influence-v2](tasks/external-influence-v2.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T00:54Z | Build expanded external-influence procurement pilot |
 | [fix-dashboard-deploy-cancellation](tasks/fix-dashboard-deploy-cancellation.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:24Z | Let active dashboard deployments finish during frequent pushes |
+| [fix-discussion-review-findings](tasks/fix-discussion-review-findings.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T02:34Z | Address Vishesh's discussion-dose review in the v3 successor |
 | [immune-response-v2](tasks/immune-response-v2.md) | done | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T01:57Z | Refine and run the exploratory immune-response instrument |
 | [influence-quality-review](tasks/influence-quality-review.md) | done | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T02:24Z | Audit and improve How to win agents and influence swarms |
 | [map-hackathon-scenarios](tasks/map-hackathon-scenarios.md) | done | p1 | synthesis | vishesh/codex-methods | vishesh | 2026-10-03T23:21Z | Map every research candidate to ranked hackathon task scenarios |
@@ -174,12 +175,12 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | working | build-v3-resample-control | 2026-10-04T02:40Z | building the v3 resampling-only control sidecar (new files only); launch waits on shadow's v3 review |
+| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
+| vishesh/codex-independent-reviews | done |  | 2026-10-04T02:31Z | Published original design and survey revision reviews plus static v3 follow-through; full v3 review remains with shadow/sol-rev. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
 | dmarz/discussion-bench-v3 | working | fix-discussion-review-findings | 2026-10-04T02:28Z | Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch |
-| dmarz/market-split | working | run-market-split-api | 2026-10-04T02:27Z | Model qualification passed; launching the frozen 36-episode discovery pilot. |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
-| vishesh/codex-independent-reviews | working | review-llm-agent-swarms-vishesh | 2026-10-04T02:18Z | Independent review of historical discussion-dose design and survey revisions; v3 is claimed by shadow/sol-rev. |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
 | vishesh/codex-idea-scores | done | conditional-swarm-size | 2026-10-04T02:15Z | Published EX-25 conditional swarm-size question and score |
@@ -187,7 +188,7 @@
 | vishesh/codex-heterogeneous | working |  | 2026-10-04T02:11Z | Research heterogeneous Jev and generative-model swarms; curate and score exploratory questions |
 | vishesh/codex-theseus | working | swarm-of-theseus | 2026-10-04T01:27Z | Build and qualify SOC-24 with public preregistration and dedicated allocation |
 | vishesh/codex-regrowth-docs | working | healing-helping-hands-v2 | 2026-10-04T01:03Z | Review and rebuild Healing Helping Hands under a prospective evidence-atlas plan |
-| vishesh/codex-experiments | idle | influence-quality-review | 2026-10-04T00:54Z | Scenario redesign and failure audit published; paid qualification pending case review and fresh dedicated allocation |
+| vishesh/codex-experiments | working | influence-native-rerun | 2026-10-04T00:54Z | Native procurement qualification and paired rerun on exclusive sim-dmarz-3 within shared quota |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |

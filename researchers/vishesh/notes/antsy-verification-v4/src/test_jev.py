@@ -31,6 +31,12 @@ class JevTests(unittest.TestCase):
             rt=jev.Runtime('http://127.0.0.1:1',previous=[p],journal=journal)
             self.assertEqual(rt.choose(state,'pick',q['criteria'],context),'B')
             self.assertTrue(rt.receipts[0]['reused_from']);self.assertEqual(len(journal.read_text().splitlines()),1)
+    def test_rounded_vector_is_retained_not_normalized(self):
+        probs={'A':.17,'B':.55,'C':.04,'STOP':.23}
+        d={'model':jev.SNAPSHOT,'provider':jev.PROVIDER,'usage':{'cost':.00001,'input_tokens':100,'output_tokens':45},'answers':{'decision':{'choice':'B','probabilities':probs}}}
+        self.assertEqual(jev.validate_response(d,probs)['answers']['decision']['probabilities'],probs)
+        d['answers']['decision']['probabilities']['STOP']=.20
+        with self.assertRaises(ValueError):jev.validate_response(d,probs)
     def test_probe_balance(self):
         p=jev.probes();self.assertEqual(len(p),16);self.assertEqual(sum(x['kind']=='option' for x in p),4)
 if __name__=='__main__':unittest.main()

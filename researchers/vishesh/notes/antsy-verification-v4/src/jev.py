@@ -18,7 +18,11 @@ def validate_response(data,criteria):
     u=data['usage'];cost=u['cost'];nt=u['input_tokens']
     if not isinstance(nt,int) or not 0<nt<=32000 or not math.isfinite(cost) or not 0<=cost<=RESERVE+1e-10:raise ValueError('usage_invalid')
     ans=data['answers']['decision'];p=ans['probabilities'];c=ans['choice']
-    if set(p)!=set(criteria) or c not in criteria or any(not math.isfinite(v) or not 0<=v<=1 for v in p.values()) or abs(sum(p.values())-1)>.001 or p[c]<max(p.values())-1e-5:raise ValueError('choice_invalid')
+    if set(p)!=set(criteria) or c not in criteria or any(not isinstance(v,(int,float)) or isinstance(v,bool) or not math.isfinite(v) or not 0<=v<=1 for v in p.values()):raise ValueError('choice_invalid')
+    # Preserve the returned numbers. Two-decimal serialization can sum to 0.99/1.01.
+    on_grid=all(abs(v*100-round(v*100))<1e-8 for v in p.values())
+    tolerance=.005*len(p)+1e-9 if on_grid else .001
+    if abs(sum(p.values())-1)>tolerance or p[c]<max(p.values())-1e-5:raise ValueError('choice_invalid')
     return {'model':data['model'],'provider':data['provider'],'usage':{k:u[k] for k in ('cost','input_tokens','output_tokens')},'answers':{'decision':{'choice':c,'probabilities':p}}}
 
 def safe_diagnostic(data,criteria):
@@ -33,9 +37,15 @@ class Runtime:
         self.relay=relay;self.attempt=attempt;self.receipts=[];self.journal=journal;self.cache={}
         for path in previous:
             data=json.loads(Path(path).read_text());rows=data if isinstance(data,list) else [data['response']]
-            for r in rows:
+            for old in rows:
+                r=copy.deepcopy(old)
+                diag=r.get('diagnostic')
+                if not r['valid'] and r.get('reason')=='choice_invalid' and diag and diag['model_matches'] and diag['provider_matches'] and diag['labels_match']:
+                    data={'model':SNAPSHOT,'provider':PROVIDER,'usage':diag['usage'],'answers':{'decision':{'choice':diag['selected'],'probabilities':diag['probabilities']}}}
+                    checked=validate_response(data,r['question']['criteria'])
+                    r.update(valid=True,choice=diag['selected'],probabilities=diag['probabilities'],usage=diag['usage'],encoded_tokens=diag['usage']['input_tokens'],served_model=SNAPSHOT,provider=PROVIDER,schema_recovered='two-decimal probability sum; original action unchanged')
                 if r['valid']:self.cache.setdefault(json.dumps([r['context'],r['input_hash']],sort_keys=True),(r,Path(path).parent.name))
-        self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
+        self.metadata={'model':MODEL,'checkpoint':SNAPSHOT,'provider':PROVIDER,'endpoint':'OpenRouter Decisions API','route_fallbacks':False,'probability_sum_rule':'half a 0.01 rounding unit per component when all values lie on that grid; otherwise 0.001; no normalization','input_usd_per_token':RATE,'device':'hosted; worker on exclusive fleet allocation'}
     def choose(self,state,instructions,criteria,context):
         q={'type':'choice','instructions':instructions,'criteria':criteria};h=digest(state,q);rid=hashlib.sha256(json.dumps([context,h,self.attempt],sort_keys=True).encode()).hexdigest()
         key=json.dumps([context,h],sort_keys=True)

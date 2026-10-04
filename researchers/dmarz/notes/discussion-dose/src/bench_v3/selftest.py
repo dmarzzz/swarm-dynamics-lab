@@ -16,7 +16,7 @@ from .scoring import reference_winner, brute_force_outcomes, majority, merge, pa
 from .runner import Runner, allocation
 from .journal import Journal, Replay, read_events
 from .policies import Scripted, anthropic
-from .analysis import reconcile, contrast
+from .analysis import reconcile, contrast, summarize
 from .cli import manifest, run, audit, approved_model_config, source_hashes
 
 
@@ -44,6 +44,20 @@ class WorldTests(unittest.TestCase):
     def test_mutated_allocation_rejected(self):
         c = cases()[0]; c['allocation'][0] = [d['id'] for d in c['documents']]
         with self.assertRaises(ValueError): validate_case(c)
+
+    def test_answerability_preserving_partition_change_rejected(self):
+        c = cases()[0]
+        c['allocation'] = c['allocation'][1:] + c['allocation'][:1]
+        # The original answerability/coverage checks still pass this mutation.
+        for ids in c['allocation']:
+            self.assertGreater(len(possible_decisions(c['task'], [d for d in documents(c) if d['id'] in ids])), 1)
+        with self.assertRaisesRegex(ValueError, 'frozen world version'): validate_case(c)
+
+    def test_acquisition_rejects_invalid_partition_before_provider_call(self):
+        c = cases()[0]; c['allocation'] = [[d['id'] for d in c['documents']], [], []]
+        provider = Scripted(); journal = Journal()
+        with self.assertRaises(ValueError): Runner(provider, journal).acquire(c, True)
+        self.assertEqual(provider.calls, 0); self.assertEqual(journal.events, [])
 
     def test_mutated_attack_rejected(self):
         c = cases()[0]; c['false_value'] = c['truth'][c['target_key']]
@@ -123,6 +137,38 @@ class ContractTests(unittest.TestCase):
 
 
 class MemoryTests(unittest.TestCase):
+    def test_parent_support_outcomes_are_separate_from_truth(self):
+        fixtures = {f['state']: f for f in memory_fixtures() if f['family'] == 'capacity' and f['variant'] == 0}
+        omitted = fixtures['omitted']; source = omitted['context']['memory'][0]['sources']
+        # Both guesses are structurally valid, but cite the wrong entity.
+        for offset in (0, 3):
+            answer = {'value': omitted['truth_answer'] + offset, 'sources': source}
+            validate(answer, 'parent', omitted['context'])
+            score = parent_score(omitted['context'], answer, omitted['truth_answer'])
+            self.assertEqual(score['parent_required_coverage'], 0)
+            self.assertEqual(score['parent_supported'], 0)
+            self.assertEqual(score['parent_unsupported_correct'], int(offset == 0))
+            self.assertEqual(score['parent_unsupported_wrong'], int(offset != 0))
+        for state in ('complete', 'inherited_false', 'conflict', 'omitted'):
+            f = fixtures[state]; score = parent_score(f['context'], supported_parent(f['context']), f['truth_answer'])
+            self.assertEqual(score['parent_required_coverage'], int(state != 'omitted'))
+            self.assertEqual(score['parent_supported'], int(state in ('complete', 'inherited_false')))
+            self.assertEqual(score['parent_inherited_error'], int(state == 'inherited_false'))
+            self.assertEqual(score['parent_correct_abstain'], int(state in ('conflict', 'omitted')))
+            self.assertEqual(score['parent_unsupported_correct'] + score['parent_unsupported_wrong'], 0)
+
+    def test_empty_memory_correct_guess_never_counts_as_supported(self):
+        f = memory_fixtures()[0]; context = copy.deepcopy(f['context']); context['memory'] = []
+        guess = {'value': f['truth_answer'], 'sources': []}
+        # The scorer distinguishes numerical accuracy even if used directly;
+        # the runtime grammar rejects a numerical answer with no citation.
+        score = parent_score(context, guess, f['truth_answer'])
+        self.assertEqual((score['parent_correct'], score['parent_unsupported_correct'], score['parent_required_coverage']), (1, 1, 0))
+        with self.assertRaises(ValueError): validate(guess, 'parent', context)
+        invalid = parent_score(context, None, f['truth_answer'])
+        self.assertIsNone(invalid['parent_supported']); self.assertIsNone(invalid['parent_unsupported_correct'])
+        self.assertIsNone(invalid['parent_unsupported_wrong']); self.assertEqual(invalid['parent_abstain'], 0)
+
     def test_all_36_hand_defined_fixture_keys(self):
         fixtures = memory_fixtures(); self.assertEqual(len(fixtures), 36)
         for f in fixtures:
@@ -243,6 +289,81 @@ class RunnerTests(unittest.TestCase):
         result = contrast(self.frozen['assignments'], rows, 'parent_groundtruth_wrong', 'resolvable')
         self.assertIsNone(result['mean']); self.assertEqual(result['missing_outcome_lower'], 0)
         self.assertAlmostEqual(result['missing_outcome_upper'], 1 / 3)
+
+    def test_wholly_missing_world_keeps_assigned_denominator_and_bounds(self):
+        rows = [r for r in self.rows if r.get('world') != self.worlds[0]['id']]
+        result = summarize(self.frozen, rows, self.journal.events)
+        self.assertEqual((result['reconciliation']['assigned'], result['reconciliation']['terminal']), (96, 86))
+        self.assertEqual(len(result['reconciliation']['missing']), 10)
+        self.assertEqual(result['primary']['worlds'], 3)
+        self.assertIsNone(result['primary']['mean'])
+        self.assertAlmostEqual(result['primary']['missing_outcome_lower'], -2 / 3)
+        self.assertAlmostEqual(result['primary']['missing_outcome_upper'], 2 / 3)
+        self.assertFalse(result['qualification']['execution_complete'])
+        cell = result['cells']['swarm:resolvable:True:board:']
+        self.assertEqual((cell['assigned'], cell['terminal'], cell['missing']), (3, 2, 1))
+
+    def test_all_missing_worlds_are_unknown_not_zero_effect(self):
+        result = summarize(self.frozen, [], [])
+        self.assertEqual(result['reconciliation']['assigned'], 96)
+        for name in ('primary', 'safety'):
+            c = result[name]; self.assertEqual(c['worlds'], 3); self.assertIsNone(c['mean'])
+            self.assertEqual((c['missing_outcome_lower'], c['missing_outcome_upper']), (-2, 2))
+        self.assertFalse(result['qualification']['model_qualified'])
+
+    def test_analysis_rejects_duplicate_unassigned_or_relabeled_rows(self):
+        for mutation in ('duplicate', 'unassigned', 'arm', 'world', 'stratum', 'extra-axis', 'attack-type'):
+            rows = copy.deepcopy(self.rows)
+            row = next(r for r in rows if r['kind'] == 'swarm')
+            if mutation == 'duplicate': rows.append(copy.deepcopy(row))
+            elif mutation == 'unassigned': row['id'] = 'unassigned'
+            elif mutation == 'arm': row['arm'] = 'reports' if row['arm'] != 'reports' else 'board'
+            elif mutation == 'world': row['world'] += 1
+            elif mutation == 'stratum': row['stratum'] = 'changed'
+            elif mutation == 'extra-axis': row['state'] = 'changed'
+            else: row['attack'] = int(row['attack'])
+            with self.subTest(mutation=mutation):
+                with self.assertRaises(ValueError): summarize(self.frozen, rows, self.journal.events)
+                with self.assertRaises(ValueError): contrast(self.frozen['assignments'], rows, 'parent_groundtruth_wrong', 'resolvable')
+
+    def test_contrast_rejects_incomplete_plan_and_nonbinary_outcome(self):
+        assigned = [a for a in self.frozen['assignments'] if a['id'] != '10002:1:board']
+        with self.assertRaisesRegex(ValueError, 'incomplete planned contrast'):
+            contrast(assigned, [], 'parent_groundtruth_wrong', 'resolvable')
+        with self.assertRaisesRegex(ValueError, 'duplicate episode'):
+            contrast(assigned + assigned, [], 'parent_groundtruth_wrong', 'resolvable')
+        rows = copy.deepcopy(self.rows)
+        next(r for r in rows if r['id'] == '10002:1:board')['evaluation']['parent_groundtruth_wrong'] = 2
+        with self.assertRaisesRegex(ValueError, 'binary outcome'):
+            contrast(self.frozen['assignments'], rows, 'parent_groundtruth_wrong', 'resolvable')
+
+    def test_runner_preflights_entire_assignment_before_dispatch(self):
+        for mutation in ('late-world', 'missing', 'duplicate', 'metadata', 'boolean-type', 'duplicate-world'):
+            worlds = copy.deepcopy(self.worlds); assigned = copy.deepcopy(self.frozen['assignments'])
+            if mutation == 'late-world': worlds[-1]['allocation'] = [[d['id'] for d in worlds[-1]['documents']], [], []]
+            elif mutation == 'missing': assigned.pop()
+            elif mutation == 'duplicate': assigned.append(copy.deepcopy(assigned[0]))
+            elif mutation == 'metadata': assigned[-1]['family'] = 'changed'
+            elif mutation == 'boolean-type': assigned[0]['attack'] = int(assigned[0]['attack'])
+            else: worlds.append(copy.deepcopy(worlds[0]))
+            provider = Scripted(); journal = Journal()
+            with self.subTest(mutation=mutation):
+                with self.assertRaises(ValueError): Runner(provider, journal).execute(worlds, assigned)
+                self.assertEqual(provider.calls, 0); self.assertEqual(journal.events, [])
+
+    def test_private_work_matches_board_budget_and_initial_measurement(self):
+        for case in self.worlds:
+            for attack in (False, True):
+                prefix = f'{case["id"]}:{int(attack)}:'
+                calls = [e for e in self.journal.events if e['kind'] == 'call_start']
+                arms = [[(e['request']['phase'], e['agent'], e['turn']) for e in calls if e['label'] == prefix + arm]
+                        for arm in ('private', 'board')]
+                self.assertEqual(arms[0], arms[1]); self.assertEqual(len(arms[0]), 19)
+                checkpoints = [e for e in self.journal.events if e['kind'] == 'checkpoint' and e['label'] == prefix + 'acquisition']
+                self.assertEqual(len(checkpoints), 1); self.assertEqual(checkpoints[0]['stage'], 'private_initial')
+                for row in [r for r in self.rows if r.get('world') == case['id'] and r.get('attack') == attack and r['kind'] == 'swarm']:
+                    self.assertEqual(row['evaluation']['initial_false_endorsements'], checkpoints[0]['state']['false_endorsements'])
+        self.assertEqual(sum(r['kind'] == 'diagnostic' and not r['attack'] for r in self.rows), 6)
 
     def test_failed_agent_does_not_abort_denominator(self):
         class FailOnce(Scripted):
