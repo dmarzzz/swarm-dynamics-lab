@@ -1,0 +1,34 @@
+{
+  "attempt": "C6R2-S0",
+  "stage": "S0",
+  "status": "completed",
+  "calls": 180,
+  "source_commit": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+  "source_hashes": {
+    "researchers/vishesh/notes/healing-helping-hands/c6/test_design.py": "8c149fd151aa577c3e4488b241c098138afbb042291b2a50ccf11643fe320948",
+    "researchers/vishesh/notes/healing-helping-hands/c6/native.py": "a60469f1c0abc20c8dfe93d6b498af4197fb6dd355813aa5cb3fae13dd6125fd",
+    "researchers/vishesh/notes/healing-helping-hands/c6/design.py": "d7507214eec1057a4aa572371796f6e78b388a3291c9314a4cf63fa43d0c8ecb",
+    "researchers/vishesh/notes/healing-helping-hands/c6/parser_reference.py": "d431861e700548c0b6d37641cd0243dd050ef99ef49f3cfebc9244a9a3952d47",
+    "researchers/vishesh/notes/healing-helping-hands/c6/report.py": "79d3aa9b1e2cb45c7206f2d2b374886d762f664c7c77532a74bb19d8d6ca0a7a",
+    "researchers/vishesh/notes/healing-helping-hands/c6/test_native.py": "91cfb873f875e9a197d958e846984a599f44244766654607b6981a6bd5d1bce3",
+    "researchers/vishesh/notes/healing-helping-hands/c6/saved_diagnosis.py": "71c0bf9529d6503889d0f289892ba8dd83317be864ad568d184b0677058686cf",
+    "researchers/vishesh/notes/healing-helping-hands/c5/scenarios.py": "c693d7984aac28eaf8a860c90dfffc44f2018dbd9c6066f926e3ffbd5551664d",
+    "researchers/vishesh/notes/healing-helping-hands/c5/contract.py": "6e70020c1d81ac640a2024fadf37df8e91cb4189961a68350eb125b94975d7ec",
+    "researchers/vishesh/notes/healing-helping-hands/c4/scenarios.py": "788366224377a75a5a94f055a1aa44e947ef0c8cab77b11c17b7839db808f341",
+    "researchers/vishesh/notes/healing-helping-hands/src/jev.py": "e18030f9a73b409e0b7b2c1c5b5d4e4907b71aa3aaea72cc5ef0ab2cf5298ede",
+    "researchers/vishesh/notes/healing-helping-hands/src/providers.py": "1d020c4509904760a765ed2928ff6965a43b89781ef7a960b02624ccafe8bdee"
+  },
+  "plan": {
+    "experiment": "healing-helping-hands",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb/researchers/vishesh/notes/healing-helping-hands/c6/PLAN.md",
+    "commit": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+    "plan_sha256": "1fadf965f6e8928f88a9e0ba78c9a073f12aa54ae1cab9b24938f87d6b96ed54",
+    "registered_tldr": "TLDR: C6R2 uses strict structured outputs after preserving two interface failures; tests Haiku 4.5 + Jev on evidence classification. Qualify all three passes on 60 balanced cases, then automatically evaluate 432 cases in 12 authored families. Compare Haiku-only, always-Jev and same-count random referrals; measure class accuracy, wrong agreement, referral recall and total API cost. No Qwen calls. Synthetic configuration test, not real-world reliability or 200-agent cooperation. Owner-approved cumulative USD50 ceiling; this attempt capped at USD3. Plan published before calls; requalification pending; both prior failures and all costs retained.",
+    "run_tldr": "TLDR: C6R2-S0 bounded label-collapse diagnosis or Jev\u2013Haiku agreement comparison; class accuracy, wrong agreement and actual cost on authored synthetic fixtures.",
+    "checked_utc": "2026-10-04T20:20:58.486043+00:00"
+  },
+  "host": "sim-dmarz-8",
+  "claim": "vishesh-healing-c6",
+  "started_epoch": 1791145258.6039534,
+  "ended_epoch": 1791145382.1153657
+}

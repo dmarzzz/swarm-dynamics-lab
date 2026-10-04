@@ -1,0 +1,21 @@
+{
+  "qualified": true,
+  "complete": true,
+  "correct": {
+    "a": {
+      "SUPPORT": 20,
+      "REFUTE": 20,
+      "UNCERTAIN": 20
+    },
+    "b": {
+      "SUPPORT": 20,
+      "REFUTE": 20,
+      "UNCERTAIN": 17
+    },
+    "jev": {
+      "SUPPORT": 20,
+      "REFUTE": 20,
+      "UNCERTAIN": 20
+    }
+  }
+}

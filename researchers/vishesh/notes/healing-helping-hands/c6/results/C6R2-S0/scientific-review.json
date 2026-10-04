@@ -1,0 +1,10 @@
+{
+  "qualified": true,
+  "all_payloads_reconstructed": true,
+  "all_misses_reviewed": true,
+  "source": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+  "manual_review": "All 3 misses and 9 matched successful actor answers inspected; all180 payloads/raw labels/scores reconstructed automatically.",
+  "finding": "Haiku A60/60, B57/60, Jev60/60. B mistakes are absent-measurement reports labeled REFUTE. No SUPPORT collapse, no invalid or truncated response. Mandatory per-class floors met; this is qualification, not routing efficacy.",
+  "limitations": "Authored synthetic wording, no population inference; alias and advertised snapshot separately recorded.",
+  "disposition": "RUN predeclared S1 after current admission; no new decision required."
+}

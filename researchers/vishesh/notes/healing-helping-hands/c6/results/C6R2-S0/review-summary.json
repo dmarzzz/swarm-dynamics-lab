@@ -1,0 +1,1490 @@
+{
+  "stage": "S0",
+  "assigned": 60,
+  "completed_cases": 60,
+  "assigned_calls": 180,
+  "started_calls": 180,
+  "completed_calls": 180,
+  "actual_cost_usd": 0.04158227,
+  "independence": "12 authored wording/family blocks; nested cells; finite synthetic evidence",
+  "qualification": {
+    "qualified": true,
+    "complete": true,
+    "correct": {
+      "a": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 20
+      },
+      "b": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 17
+      },
+      "jev": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 20
+      }
+    }
+  },
+  "policies": {
+    "confusion": {
+      "qwen": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "jev": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "cascade": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      },
+      "matched": {
+        "SUPPORT": {
+          "SUPPORT": 20,
+          "REFUTE": 0,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "REFUTE": {
+          "SUPPORT": 0,
+          "REFUTE": 20,
+          "UNCERTAIN": 0,
+          "MISSING": 0
+        },
+        "UNCERTAIN": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 20,
+          "MISSING": 0
+        }
+      }
+    },
+    "assigned": 60,
+    "completed": 60,
+    "missing": 0,
+    "families": {
+      "qualification-0": {
+        "assigned": 15,
+        "completed": 15,
+        "error": {
+          "qwen": 0.0,
+          "jev": 0.0,
+          "cascade": 0.0,
+          "matched": 0.0
+        },
+        "referrals": 3,
+        "avoided": 12,
+        "accepted_wrong": 0,
+        "accepted_wrong_rate": 0.0,
+        "error_detection_recall": null,
+        "uniform_random_expected_error": 0.0,
+        "safety_delta": 0.0,
+        "matched_delta": 0.0,
+        "expected_random_delta": 0.0
+      },
+      "qualification-1": {
+        "assigned": 15,
+        "completed": 15,
+        "error": {
+          "qwen": 0.0,
+          "jev": 0.0,
+          "cascade": 0.0,
+          "matched": 0.0
+        },
+        "referrals": 0,
+        "avoided": 15,
+        "accepted_wrong": 0,
+        "accepted_wrong_rate": 0.0,
+        "error_detection_recall": null,
+        "uniform_random_expected_error": 0.0,
+        "safety_delta": 0.0,
+        "matched_delta": 0.0,
+        "expected_random_delta": 0.0
+      },
+      "qualification-2": {
+        "assigned": 15,
+        "completed": 15,
+        "error": {
+          "qwen": 0.0,
+          "jev": 0.0,
+          "cascade": 0.0,
+          "matched": 0.0
+        },
+        "referrals": 0,
+        "avoided": 15,
+        "accepted_wrong": 0,
+        "accepted_wrong_rate": 0.0,
+        "error_detection_recall": null,
+        "uniform_random_expected_error": 0.0,
+        "safety_delta": 0.0,
+        "matched_delta": 0.0,
+        "expected_random_delta": 0.0
+      },
+      "qualification-3": {
+        "assigned": 15,
+        "completed": 15,
+        "error": {
+          "qwen": 0.0,
+          "jev": 0.0,
+          "cascade": 0.0,
+          "matched": 0.0
+        },
+        "referrals": 0,
+        "avoided": 15,
+        "accepted_wrong": 0,
+        "accepted_wrong_rate": 0.0,
+        "error_detection_recall": null,
+        "uniform_random_expected_error": 0.0,
+        "safety_delta": 0.0,
+        "matched_delta": 0.0,
+        "expected_random_delta": 0.0
+      }
+    },
+    "macro_safety_delta": 0.0,
+    "macro_matched_delta": 0.0,
+    "macro_expected_random_delta": 0.0,
+    "jev_calls_avoided_fraction": 0.95,
+    "actual_collection_jev_calls_expected": 60,
+    "counterfactual_cascade_jev_calls": 3,
+    "leave_one_family_out_matched_delta": {
+      "qualification-0": 0.0,
+      "qualification-1": 0.0,
+      "qualification-2": 0.0,
+      "qualification-3": 0.0
+    },
+    "complete_evidence": true,
+    "criteria": {
+      "save_at_least_25_percent": true,
+      "safety_within_2_points": true,
+      "beat_matched_control": false
+    },
+    "useful_descriptive_result": false,
+    "missingness_note": "Missing scores incorrect; safety/matched paired contrasts involving missing outcomes remain unidentified, not observed zero effects.",
+    "paired_delta_missing_bounds": {
+      "lower": 0.0,
+      "upper": 0.0
+    },
+    "details": [
+      {
+        "id": "C6R2-S0-42",
+        "family": "qualification-0",
+        "curator": 17,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-58",
+        "family": "qualification-0",
+        "curator": 155,
+        "complete": true,
+        "referred": true,
+        "matched_referred": true,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-14",
+        "family": "qualification-0",
+        "curator": 88,
+        "complete": true,
+        "referred": true,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-23",
+        "family": "qualification-0",
+        "curator": 38,
+        "complete": true,
+        "referred": true,
+        "matched_referred": true,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-15",
+        "family": "qualification-0",
+        "curator": 163,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-11",
+        "family": "qualification-0",
+        "curator": 138,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-31",
+        "family": "qualification-0",
+        "curator": 162,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-22",
+        "family": "qualification-0",
+        "curator": 50,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-18",
+        "family": "qualification-0",
+        "curator": 191,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-56",
+        "family": "qualification-0",
+        "curator": 167,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-12",
+        "family": "qualification-0",
+        "curator": 33,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-13",
+        "family": "qualification-0",
+        "curator": 151,
+        "complete": true,
+        "referred": false,
+        "matched_referred": true,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-50",
+        "family": "qualification-0",
+        "curator": 85,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-24",
+        "family": "qualification-0",
+        "curator": 101,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-38",
+        "family": "qualification-0",
+        "curator": 45,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-10",
+        "family": "qualification-1",
+        "curator": 20,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-51",
+        "family": "qualification-1",
+        "curator": 169,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-44",
+        "family": "qualification-1",
+        "curator": 42,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-36",
+        "family": "qualification-1",
+        "curator": 69,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-48",
+        "family": "qualification-1",
+        "curator": 142,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-20",
+        "family": "qualification-1",
+        "curator": 174,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-52",
+        "family": "qualification-1",
+        "curator": 56,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-16",
+        "family": "qualification-1",
+        "curator": 63,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-34",
+        "family": "qualification-1",
+        "curator": 103,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-6",
+        "family": "qualification-1",
+        "curator": 141,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-17",
+        "family": "qualification-1",
+        "curator": 34,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-59",
+        "family": "qualification-1",
+        "curator": 35,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-53",
+        "family": "qualification-1",
+        "curator": 4,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-2",
+        "family": "qualification-1",
+        "curator": 174,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-32",
+        "family": "qualification-1",
+        "curator": 167,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-0",
+        "family": "qualification-2",
+        "curator": 44,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-43",
+        "family": "qualification-2",
+        "curator": 29,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-9",
+        "family": "qualification-2",
+        "curator": 158,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-3",
+        "family": "qualification-2",
+        "curator": 191,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-1",
+        "family": "qualification-2",
+        "curator": 179,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-46",
+        "family": "qualification-2",
+        "curator": 150,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-54",
+        "family": "qualification-2",
+        "curator": 61,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-33",
+        "family": "qualification-2",
+        "curator": 166,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-26",
+        "family": "qualification-2",
+        "curator": 103,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-29",
+        "family": "qualification-2",
+        "curator": 150,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-25",
+        "family": "qualification-2",
+        "curator": 165,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-57",
+        "family": "qualification-2",
+        "curator": 1,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-37",
+        "family": "qualification-2",
+        "curator": 172,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-40",
+        "family": "qualification-2",
+        "curator": 181,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-21",
+        "family": "qualification-2",
+        "curator": 119,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-8",
+        "family": "qualification-3",
+        "curator": 94,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-7",
+        "family": "qualification-3",
+        "curator": 103,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-41",
+        "family": "qualification-3",
+        "curator": 36,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-28",
+        "family": "qualification-3",
+        "curator": 56,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-39",
+        "family": "qualification-3",
+        "curator": 6,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-27",
+        "family": "qualification-3",
+        "curator": 84,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-19",
+        "family": "qualification-3",
+        "curator": 112,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-30",
+        "family": "qualification-3",
+        "curator": 65,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-55",
+        "family": "qualification-3",
+        "curator": 94,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-4",
+        "family": "qualification-3",
+        "curator": 174,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-35",
+        "family": "qualification-3",
+        "curator": 0,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-5",
+        "family": "qualification-3",
+        "curator": 74,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      },
+      {
+        "id": "C6R2-S0-45",
+        "family": "qualification-3",
+        "curator": 45,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "REFUTE",
+          "jev": "REFUTE",
+          "cascade": "REFUTE",
+          "matched": "REFUTE"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "REFUTE"
+      },
+      {
+        "id": "C6R2-S0-47",
+        "family": "qualification-3",
+        "curator": 185,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "UNCERTAIN",
+          "jev": "UNCERTAIN",
+          "cascade": "UNCERTAIN",
+          "matched": "UNCERTAIN"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "UNCERTAIN"
+      },
+      {
+        "id": "C6R2-S0-49",
+        "family": "qualification-3",
+        "curator": 48,
+        "complete": true,
+        "referred": false,
+        "matched_referred": false,
+        "predictions": {
+          "qwen": "SUPPORT",
+          "jev": "SUPPORT",
+          "cascade": "SUPPORT",
+          "matched": "SUPPORT"
+        },
+        "correct": {
+          "qwen": true,
+          "jev": true,
+          "cascade": true,
+          "matched": true
+        },
+        "expected": "SUPPORT"
+      }
+    ],
+    "model_role_note": "The historical qwen score key denotes Haiku A in C6; no Qwen call is part of S0/S1."
+  },
+  "derived_policy_cost_usd": {
+    "haiku_a": 0.020218,
+    "always_jev": 0.00113127,
+    "agreement_routing": 0.040507364
+  },
+  "cost_advantage": false,
+  "useful_descriptive_result": false
+}

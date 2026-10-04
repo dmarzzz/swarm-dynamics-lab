@@ -1,0 +1,15 @@
+# C6R2 qualification: competent labels and valid interface
+
+Execution completed60/60 cases and180/180 calls without transport/schema/truncation failures. Haiku A60/60, Haiku B57/60, Jev60/60. All scored20/20 SUPPORT and20/20 REFUTE; B scored17/20 UNCERTAIN, A/Jev20/20. All predeclared overall51/60 and per-class14/20 floors pass. This permits the fixed432-case main stage after fresh operational admission, without a new owner/researcher decision.
+
+Every actual request was reconstructed from the frozen actor contract, and every raw label and score reconstructed. The assessor manually read all3misses and9matched successful actor answers covering every class/model role. The three misses were Haiku B interpreting “never tested for accuracy” as REFUTE. Their evidence is explicit and the independent grammar target is UNCERTAIN. A/Jev answered those correctly. This is semantic error, not parsing; there is no SUPPORT collapse in this stronger-agent configuration. Do not infer hidden reasoning or a model-only causal improvement over C5.
+
+The strict schema produced complete valid output. Actual Haiku responses name the requested alias and Anthropic; the admitted route advertises the dated snapshot, which is recorded as advertised rather than independent backend proof. Jev served its fixed TypeSafe snapshot. Both passes receive the same evidence and are dependent; order differences are the declared intervention.
+
+Recorded charges USD0.04158227: HaikuUSD0.040451, JevUSD0.00113127. Prior failed-attempt chargesUSD0.007352206 remain included, as do the original ledger and historicalUSD0.001344 uncertainty. Summed serial call times: Haiku106.335s, Jev12.741s; this is not a randomized production latency estimate. The full main-stage conservative boundUSD2.16888 fits the USD3 C6 envelope and owner-approved USD50 cumulative ceiling.
+
+All60report-level outputs support descriptive replay. Qualification cascade and matched control have zero error because Haiku A and Jev both have a ceiling; there is no routing efficacy claim from this screen. Two-pass cascade API cost is about35.8times always-Jev on these fixtures. The main outcome and cost criteria remain fixed; qualification is not used to retune the policy or select cases.
+
+Case/claim quality remains limited to four authored forms/class,60nested instances. The deterministic same-input grammar parser succeeds, making a general need-for-model claim unsupported. The12main semantic families contain controlled complications but are inspected synthetic grammar, not a natural-document holdout. Figures and the recorded-response inspector are derived from saved timestamps/labels; no200-agent visualization is implied. Same-author audits and the reviewer waiver are disclosed.
+
+Decision: **RUN the predeclared main stage** after fresh source/claim/public-plan/budget admission. S0 execution, competence, scientific review and billing are complete. Preserve both earlier interface failures and their separate post-mortems. No Qwen or additional machine creation.

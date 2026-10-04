@@ -1,0 +1,183 @@
+{
+  "all_payloads_reconstructed": true,
+  "all_raw_labels_reconstructed": true,
+  "all_scores_reconstructed": true,
+  "assigned_cases": 60,
+  "completed_cases": 60,
+  "completed_calls": 180,
+  "cost_usd": 0.04158226999999998,
+  "component_cost_usd": {
+    "haiku": 0.04045099999999998,
+    "jev": 0.0011312700000000002
+  },
+  "component_total_tokens": {
+    "haiku": 35479,
+    "jev": 29535
+  },
+  "component_seconds": {
+    "haiku": 106.33535552024841,
+    "jev": 12.740516901016235
+  },
+  "source": "204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb",
+  "miss_count": 3,
+  "misses": [
+    {
+      "case": "C6R2-S0-58",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method 31bded35591a improves accuracy over baseline.",
+      "report": "Method 31bded35591a was never tested for accuracy.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S0-14",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method 4d20e250f41f improves accuracy over baseline.",
+      "report": "Method 4d20e250f41f was never tested for accuracy.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S0-23",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "REFUTE",
+      "claim": "Method ef67f70c0940 improves accuracy over baseline.",
+      "report": "Method ef67f70c0940 was never tested for accuracy.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    }
+  ],
+  "qualification": {
+    "qualified": true,
+    "complete": true,
+    "correct": {
+      "a": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 20
+      },
+      "b": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 17
+      },
+      "jev": {
+        "SUPPORT": 20,
+        "REFUTE": 20,
+        "UNCERTAIN": 20
+      }
+    }
+  },
+  "matched_successes": [
+    {
+      "case": "C6R2-S0-0",
+      "variant": "a",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method f62681f2ba25 improves accuracy over baseline.",
+      "report": "Method f62681f2ba25 gave more correct answers than the baseline on the same questions.",
+      "raw_answer": "{\"label\": \"SUPPORT\"}"
+    },
+    {
+      "case": "C6R2-S0-0",
+      "variant": "b",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method f62681f2ba25 improves accuracy over baseline.",
+      "report": "Method f62681f2ba25 gave more correct answers than the baseline on the same questions.",
+      "raw_answer": "{\"label\": \"SUPPORT\"}"
+    },
+    {
+      "case": "C6R2-S0-0",
+      "variant": "jev",
+      "truth": "SUPPORT",
+      "actual": "SUPPORT",
+      "claim": "Method f62681f2ba25 improves accuracy over baseline.",
+      "report": "Method f62681f2ba25 gave more correct answers than the baseline on the same questions.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "SUPPORT",
+        "probabilities": {
+          "SUPPORT": 0.99,
+          "REFUTE": 0,
+          "UNCERTAIN": 0.01
+        },
+        "confidence": 0.98
+      }
+    },
+    {
+      "case": "C6R2-S0-10",
+      "variant": "a",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method b5313465640e improves accuracy over baseline.",
+      "report": "Method b5313465640e did not improve measured accuracy over the baseline.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S0-10",
+      "variant": "b",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method b5313465640e improves accuracy over baseline.",
+      "report": "Method b5313465640e did not improve measured accuracy over the baseline.",
+      "raw_answer": "{\"label\": \"REFUTE\"}"
+    },
+    {
+      "case": "C6R2-S0-10",
+      "variant": "jev",
+      "truth": "REFUTE",
+      "actual": "REFUTE",
+      "claim": "Method b5313465640e improves accuracy over baseline.",
+      "report": "Method b5313465640e did not improve measured accuracy over the baseline.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "REFUTE",
+        "probabilities": {
+          "REFUTE": 1,
+          "UNCERTAIN": 0,
+          "SUPPORT": 0
+        },
+        "confidence": 1
+      }
+    },
+    {
+      "case": "C6R2-S0-42",
+      "variant": "a",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 1c4da55cc4a0 improves accuracy over baseline.",
+      "report": "Method 1c4da55cc4a0 was never tested for accuracy.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S0-42",
+      "variant": "b",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 1c4da55cc4a0 improves accuracy over baseline.",
+      "report": "Method 1c4da55cc4a0 was never tested for accuracy.",
+      "raw_answer": "{\"label\": \"UNCERTAIN\"}"
+    },
+    {
+      "case": "C6R2-S0-42",
+      "variant": "jev",
+      "truth": "UNCERTAIN",
+      "actual": "UNCERTAIN",
+      "claim": "Method 1c4da55cc4a0 improves accuracy over baseline.",
+      "report": "Method 1c4da55cc4a0 was never tested for accuracy.",
+      "raw_answer": {
+        "type": "choice",
+        "choice": "UNCERTAIN",
+        "probabilities": {
+          "SUPPORT": 0,
+          "REFUTE": 0,
+          "UNCERTAIN": 1
+        },
+        "confidence": 1
+      }
+    }
+  ]
+}
