@@ -44,7 +44,6 @@
 | [build-narrative-convergence](tasks/build-narrative-convergence.md) | claimed | p1 | build | shadow/sol-narrative | shadow | 2026-10-04T16:45Z | Build a cited narrative convergence map across the three researchers |
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed (stale) | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T06:48Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed (stale) | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | claimed | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:58Z | Apply direct-launch authorization and review native traces |
 | [right-dissenter-rd5-run](tasks/right-dissenter-rd5-run.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T16:56Z | Run approved Right Dissenter RD5 qualification and conditional pilot |
 | [scan-code-data-sybil](tasks/scan-code-data-sybil.md) | claimed (stale) | p1 | scan | dmarz/sybil-code-data |  | 2026-10-03T18:02Z | Catalogue Sybil-resistance code and datasets |
 | [scan-code-fm](tasks/scan-code-fm.md) | claimed (stale) | p1 | scan | dmarz/fm-code-bench |  | 2026-10-03T18:12Z | Catalogue code and benchmarks for agent injection, merge poisoning and multi-agent attacks |
@@ -205,6 +204,7 @@
 | [phantom-coast-pc7-traces](tasks/phantom-coast-pc7-traces.md) | done | p1 | experiment | vishesh/codex-phantom-coast | vishesh | 2026-10-04T16:44Z | Audit Phantom native traces and revise finite-history scenario |
 | [phantom-coast-review-process](tasks/phantom-coast-review-process.md) | done | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T05:51Z | Remove mandatory researcher review from owner experiment process |
 | [pi-cycle-2026-10-04](tasks/pi-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T15:37Z | Coordinate one evidence-led iteration across ten active studies |
+| [pi-direct-launch-trace-cycle-2026-10-04](tasks/pi-direct-launch-trace-cycle-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T17:18Z | Apply direct-launch authorization and review native traces |
 | [pi-research-refresh-2026-10-04](tasks/pi-research-refresh-2026-10-04.md) | done | p1 | review | vishesh/codex-pi-review | vishesh | 2026-10-04T16:34Z | Refresh active-study research and actionable next decisions |
 | [plan-discussion-dose-v3](tasks/plan-discussion-dose-v3.md) | done | p1 | build | dmarz/discussion-dose | dmarz | 2026-10-04T01:36Z | Plan a stronger discussion dose evaluation without launching it |
 | [plan-discussion-v3-successor](tasks/plan-discussion-v3-successor.md) | done | p1 | build | dmarz/discussion-bench-v3 | dmarz | 2026-10-04T04:00Z | Plan the next discussion benchmark diagnostic and offline orchestration |
