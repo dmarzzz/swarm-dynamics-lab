@@ -35,3 +35,5 @@ Implemented cited typed facts, explicit unknown masks, excerpt alignment, fixed 
 ## D5 live request
 
 Owner authorized live D5. Refreshed public and private repos; current fleet policy requires orbital-one dispatch. Previous host occupied, so requested different dedicated host. Existing budget read-only verification: cap8/reserved3.178320/calls198; rates unchanged. Central launcher/credential-memory receiver and frozen packet merged via agentops PR215 (three tests, fleet CI pass), request217 queued. No scientific input changed; no paid call or credential read yet. Await central verified allocation and single-writer ledger migration before exact-alias delivery.
+
+D5 dispatch wait: central queue217 has not yet been claimed. A one-shot local handoff worker is active for at most40minutes from about08:05UTC; it selects no credential until the admitted central receiver passes all checks, sends once, and stops on ambiguous delivery. It does not launch a model process from the laptop. No model calls yet; central operator owns allocation, migration, start and closeout. The local non-secret delivery-status record is available to the originating session.
