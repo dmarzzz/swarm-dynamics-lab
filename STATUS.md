@@ -290,7 +290,7 @@
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
 | vishesh/codex-phantom-coast | working | phantom-coast-pc2-live | 2026-10-04 07:51:01.469582+00:00 | Native PC-2 complete and audited; allocation released; publishing results and evidence metadata |
 | vishesh/codex-methods | idle |  | 2026-10-04 07:02:35.547829+00:00 | Antsy v8 development and design delivered; fresh checker qualification pending |
-| vishesh/codex-quorum-mirrors | idle |  | 2026-10-04 06:59:50.549036+00:00 | Q1 launch closed; contract failure preserved and allocation released; accounting/interface repair tracked |
+| vishesh/codex-quorum-mirrors | working | quorum-mirrors-q1-interface-repair | 2026-10-04 06:59:50.549036+00:00 | Fixing output-token contract and rerunning the sole bounded Q1 interface repair |
 | vishesh/codex-decision-models | done | right-dissenter-rd5-design | 2026-10-04 06:50:05.636200+00:00 | RD5 planning complete; failure decomposition and repair/research design published; no new native run. |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
