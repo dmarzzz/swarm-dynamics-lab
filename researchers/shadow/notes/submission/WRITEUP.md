@@ -1,4 +1,8 @@
-# swarm-lab: more agents are not more independent evidence
+# swarm-lab: count independent evidence, not agents
+
+*More agents are not more independent evidence.* The title matches the leading editorial candidate on the
+live [Common Thread map](https://swarm-narrative.pages.dev). It is a synthesis across separate studies and
+an evidence-handling rule, not a pooled effect estimate or a causal claim established by any single experiment.
 
 **Joint submission draft, not a submission receipt.** Prepared for dmarz, vishesh and shadow, 4 October 2026.
 The team must approve the final wording and submit once through the event's form. No form has been submitted
@@ -90,5 +94,7 @@ research synthesis, not a single experimentally established law.
 - Open [RESULTS.md](RESULTS.md) and the linked source records; retain their denominators and limitations.
 - Rehearse [DEMO.md](DEMO.md), verify the live pages on the presentation machine, and save backups.
 - Confirm the event form's required fields, deadline and demo arrangements in the official event channel.
-- Enter only the actual consenting team members and contact details; paste the approved links/text once.
+- Enter only the actual consenting team members and contact details, collected directly from each person.
+  Do not infer names or emails from GitHub handles, commit metadata or this repository. Paste the approved
+  links/text once, including https://swarm-narrative.pages.dev as the joint entry point.
 - Save the form's confirmation or receipt. A pushed commit or this checklist is not proof of submission.

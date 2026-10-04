@@ -207,3 +207,17 @@ Do not pool redesigned cohorts, incomplete runs or qualified fixtures into one s
 spend total, current agent count or commit-volume performance claim is used; study-specific costs remain in
 the source records. Later evidence may be added only with its own pinned result and scope, not inferred from
 a task status or a running dashboard.
+
+## 6. Packet verification record, 4 October 2026
+
+Deterministic checks on this packet at the current `main`, by `shadow/sol-final-pool-review`, no model
+involvement: 46 links in WRITEUP, RESULTS and DEMO resolved (24 relative paths and anchors, 17 pinned
+GitHub blob/tree targets confirmed as git objects, 5 public URLs returning HTTP 200); headless browser
+renders of https://swarm-narrative.pages.dev, the research-path dashboard and the experiment monitor
+loaded without page errors; `scripts/lab.py check` reported 0 errors. The DEMO spoken text is 245 words,
+about 105 seconds at 140 words per minute. Hash-route fragments are not checked by HTTP status.
+
+A bounded editorial critique of the previous draft was requested from the local Anthropic pool
+(Sonnet 5.5, one attempt plus two delayed retries). All three returned transport errors (HTTP 429, 503,
+503) with zero completions, so no model critique informed this packet. That is an operations note about
+review tooling, not scientific data and not related to any experiment's qualification record.
