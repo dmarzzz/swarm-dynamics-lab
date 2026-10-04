@@ -1,0 +1,576 @@
+{
+  "stage": "A0",
+  "scope": "original authored development cases",
+  "cases": [
+    {
+      "id": "dev-00",
+      "records": [
+        {
+          "id": "r00-0",
+          "text": "A prototype may work; no test has been performed."
+        },
+        {
+          "id": "r00-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r00-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-01",
+      "records": [
+        {
+          "id": "r01-0",
+          "text": "Sensor A measured the temperature; sensor B did not measure it."
+        },
+        {
+          "id": "r01-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r01-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-02",
+      "records": [
+        {
+          "id": "r02-0",
+          "text": "Two checked records passed, with no claim about other records."
+        },
+        {
+          "id": "r02-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r02-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-03",
+      "records": [
+        {
+          "id": "r03-0",
+          "text": "The gate was open at 14:00; later state is not reported."
+        },
+        {
+          "id": "r03-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r03-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-04",
+      "records": [
+        {
+          "id": "r04-0",
+          "text": "The count of 12 was corrected to 9; the current count is 9."
+        },
+        {
+          "id": "r04-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r04-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-05",
+      "records": [
+        {
+          "id": "r05-0",
+          "text": "Two reports reference one acquisition, so they are one evidence source."
+        },
+        {
+          "id": "r05-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r05-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-06",
+      "records": [
+        {
+          "id": "r06-0",
+          "text": "The linked receipt is unavailable, so approval is unverified."
+        },
+        {
+          "id": "r06-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r06-2",
+          "text": "Review is still pending."
+        }
+      ]
+    },
+    {
+      "id": "dev-07",
+      "records": [
+        {
+          "id": "r07-0",
+          "text": "The recorded deployment failed; the report link resolves to that failure."
+        },
+        {
+          "id": "r07-1",
+          "text": "The archive contains three records."
+        },
+        {
+          "id": "r07-2",
+          "text": "Review is still pending."
+        }
+      ]
+    }
+  ],
+  "assignments": [
+    {
+      "component": "dev-00",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "5fb81ab0c3ffd054b2172e55be424debb6cbbf3649aa8f7fe3225b4045ab1908"
+    },
+    {
+      "component": "dev-00",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "cc940d5acab904656c23551292da528372f080924c68a4519f30ada1433a378d"
+    },
+    {
+      "component": "dev-00",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "fac992d5ba9430c9abe572b9cf9136f90d763c5d15c68d9e6e750a664aa3614a"
+    },
+    {
+      "component": "dev-00",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "15c28e43252df722994c331d060125abba03606df6b77eebbd8ce5c1bb9ad3f5"
+    },
+    {
+      "component": "dev-00",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "397dfc7c3a239ce538ffba253c0fccd3ddbf8697e8abdc602c34b6c641977579"
+    },
+    {
+      "component": "dev-00",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "2ab0dde0f52c8defc181a3ee638804af66cea5204110d2501ede3abb77207f2a"
+    },
+    {
+      "component": "dev-00",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "013b66444d92d2075cc07e2d04f0484af3a6325ccc35a7e3c642be6f93de9d70"
+    },
+    {
+      "component": "dev-00",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "ba8e32d00d0f2c5ee9f2e96b101f875d6cfa1a07a01ab83ad1e14f0afc3b7a8b"
+    },
+    {
+      "component": "dev-00",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "d60f551c946d539722d3247cfbc243ae7335ae6ed36895f9f946342ad974b1f0"
+    },
+    {
+      "component": "dev-01",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "c760c733dd043ba10e4e1a5c665ee040fb9f809fd127ce46dede19847ef2e470"
+    },
+    {
+      "component": "dev-01",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "4d4532f582e311148d6363d69cb0abbab3a1e0955d1e0ec90f528d5530dd1bd2"
+    },
+    {
+      "component": "dev-01",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "f3291fafe843b6afb0c6f001dc12d024db1c1493d37cec2bed129957b9751784"
+    },
+    {
+      "component": "dev-01",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "3bc46f0f2bd7f17ebca1b7ad86288738539baff538fee84eca6dd6fd47272823"
+    },
+    {
+      "component": "dev-01",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "38846d5d650036b1c3aca20c2312b7d9b37ae9637d99c67b13ca6618f17ce855"
+    },
+    {
+      "component": "dev-01",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "81a2fecf1d4bd5fc009885c26f79a9cdf1d93565e453fe0b68e07740d216a993"
+    },
+    {
+      "component": "dev-01",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "07793b3918bb706ce793cae4f640a09b16bd9ae93edcc6226f6594fc20494904"
+    },
+    {
+      "component": "dev-01",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "4a96cdcbb4d9d3d0ce39f0556202b6835b7d086b3c39481e1a330a452025cd06"
+    },
+    {
+      "component": "dev-01",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "d7c3688071c886d262ac99b1f0720660cf4d5addb624293c0f4b31ced8d12ab6"
+    },
+    {
+      "component": "dev-02",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "b467b9b315f2eb8c38202e1a16b95ec257b9f3c3ff476eb6ea3a83b64bf71e48"
+    },
+    {
+      "component": "dev-02",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "7f3d656136590b0afc88f6a9fb21563d80b7b11173d30d11f8cf5dd59d277fe0"
+    },
+    {
+      "component": "dev-02",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "ba61a2915c2aa7f156ee03897c4ff75584e98c39e9f75e2700540494bbaaee58"
+    },
+    {
+      "component": "dev-02",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "c3eb2841f726850479ee6109ac6cc7c7dc1d52b6c6d73aebf0a7217a89f3efa9"
+    },
+    {
+      "component": "dev-02",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "87dba4c6ca2a380250dd1310d1f8a7c556ec0515f2ad739a58f99d8fa1be74b1"
+    },
+    {
+      "component": "dev-02",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "b7243e313716fb117a4720b2be354a61efac55d8de31cda967d7e2941bd0e3d9"
+    },
+    {
+      "component": "dev-02",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "dde33e330b19fb0c82fdcaa70461cbf4ca7f697aa1cddada0535557938118830"
+    },
+    {
+      "component": "dev-02",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "da060dbea2ca5c8057731095aab366db9f90f833b8de788c6be8355098fb8622"
+    },
+    {
+      "component": "dev-02",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "5a8398a4237a3adfce6fee75150834dde9c1ec68a77c423d838610e7312391c0"
+    },
+    {
+      "component": "dev-03",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "839a6fe83e3689d286ffb149be5dd757fbdb31328f5dabeb0fe94d58925d476c"
+    },
+    {
+      "component": "dev-03",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "a41db241287745f34ae335c8524057c51eb4d696cb7fa81248130799032e0894"
+    },
+    {
+      "component": "dev-03",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "a39572c7d8167ce5749744bcb0ef55b79f033fc3f2e63aac5d226516786bc8bb"
+    },
+    {
+      "component": "dev-03",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "5efc2f2d50079f687acf7543805ea144f2336fd579d928c119d0918914af2337"
+    },
+    {
+      "component": "dev-03",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "48ef493ae4622b93ca9effdb56bca57cffcd0ce4beb260f14a723b6a22275446"
+    },
+    {
+      "component": "dev-03",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "160dc0f30236d78ca19cf48615fcdef315cc91584e57a2e993cebaa7f5e927d1"
+    },
+    {
+      "component": "dev-03",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "1147183526207782c44b4ef943113605da1ca668c4d056a5d52e9baa819ae59a"
+    },
+    {
+      "component": "dev-03",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "9ef78875f5c201f770b639ef7fb8bf55ae79c4b1c30276d788a55623739adf5f"
+    },
+    {
+      "component": "dev-03",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "5122cb0db0417deb9ccfc00e69de8ab9dae9bb908b931d5b7fada306be8c534a"
+    },
+    {
+      "component": "dev-04",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "8d1c1b76845a14e65854f141bac964adb566d28fe75380f6705e8aded0c46e05"
+    },
+    {
+      "component": "dev-04",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "3589bda06382a47d2769c7a79da7657abcbb906aaabee999aaccce66648e049d"
+    },
+    {
+      "component": "dev-04",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "82c9f4525ddee7b2f9d031ac92b0be49bde596f4bf31a9928a3029c46b4b21f2"
+    },
+    {
+      "component": "dev-04",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "328dcee5474f31d7f14db88bc31d15c4529d52db723228c7876e9a2274a696b3"
+    },
+    {
+      "component": "dev-04",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "5ad1555547d8fe44f07e37d37a89066e9516b2cb8649a11dffde506e9bd59467"
+    },
+    {
+      "component": "dev-04",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "cc09b82006ed1db700518a46bbc9c01ae577a5bdc36394ee97f9eaff3361fc4b"
+    },
+    {
+      "component": "dev-04",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "7ba433e4a1b686867cf6ac9ac3d3b4eb5580c6223c126894de1ba6b638018031"
+    },
+    {
+      "component": "dev-04",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "1e81fccafe8fed4b3419627fece67704347bccac9c9cfee1f4df0b7dd45867d9"
+    },
+    {
+      "component": "dev-04",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "9b538b59c68d13616b938920edb55f0684733cd0ac0acf00d5010f813ee68be8"
+    },
+    {
+      "component": "dev-05",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "c823adf2c7949404fcdf29297c212afd047611b78334e693d72a3dbad47aad97"
+    },
+    {
+      "component": "dev-05",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "6282029379d9617cf6edc40823d61391b44b93f2eef52ff25265597efada8373"
+    },
+    {
+      "component": "dev-05",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "949e04fee23aa564982afa3bf2859926aab8c08872b00cc5ab51a6823e0fb49a"
+    },
+    {
+      "component": "dev-05",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "d671b10b17c4eafe843c53ea4984051abf8fb15dac5edb5a01d1b499375b43bf"
+    },
+    {
+      "component": "dev-05",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "791201766f411bec0fe931c75c099fe39577b33fcdea90217b37dd3abed75086"
+    },
+    {
+      "component": "dev-05",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "9749f89924059e90ff3eea6234bb505ec3d17a3a4e80c0dd6369c7055573c48a"
+    },
+    {
+      "component": "dev-05",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "d215b9e0532a3f405b93a0d0dbedd47173dbfb3aec12683670b059d30214a998"
+    },
+    {
+      "component": "dev-05",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "fffc36478469280cee539dff822e86a39ef7924edce633909d7703ccd0f4f778"
+    },
+    {
+      "component": "dev-05",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "6e9cff1c3cb0b01fbf754cbb5dc0dccbd8f22ae590ec5801f2e5016dc9fd02a1"
+    },
+    {
+      "component": "dev-06",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "943845f372d3bf2c1aaf8e95bc6b948e4cd0f5495099d79b5212d421a54b76b5"
+    },
+    {
+      "component": "dev-06",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "90ef26884b8e73711f1ef6cd367741027b67072845ac9da92e8287986f6f5c98"
+    },
+    {
+      "component": "dev-06",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "b75dcbfcacef37c7851f279782889a52905caddddc6cd114ca8c44d45e3c03cd"
+    },
+    {
+      "component": "dev-06",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "309ab6c80f2758e68441cffde1a9492a10357e4a725695490d0ecd03367f2d8a"
+    },
+    {
+      "component": "dev-06",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "65f0953ddc47c8fcb5eb2d9374ee14fa7fe55afbc9d102c42325d011d63f34c9"
+    },
+    {
+      "component": "dev-06",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "3c155ba65972acbbd83583aaf734d5c3221f7c02dde21d8ee5b5f79cfa05211f"
+    },
+    {
+      "component": "dev-06",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "56dab6155ee6645bb1119b5c35f8604682386b4ef1541ae534e1655dec127c17"
+    },
+    {
+      "component": "dev-06",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "e9f16691aee2a1c228d4908aae5206d0c8c856c33ca55931561b6931bc7d8e6a"
+    },
+    {
+      "component": "dev-06",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "e5adf7421414628e403f454547bc6b67050f7c74bce7e0d26dcf4a802147fcd6"
+    },
+    {
+      "component": "dev-07",
+      "arm": "S",
+      "hop": 1,
+      "call_id": "d9fc3288106364056d19fae936ca0a64049c78c984ffd3ba3bdf075953a9f798"
+    },
+    {
+      "component": "dev-07",
+      "arm": "S",
+      "hop": 2,
+      "call_id": "e773bb49b42c70698205d7adbdafd5c39cd5f501c807ac1aab19aa6b92006db9"
+    },
+    {
+      "component": "dev-07",
+      "arm": "S",
+      "hop": 3,
+      "call_id": "a126209b6c268e6595f075b754887be106aa3b7a60dd5df0d135aed313d08fce"
+    },
+    {
+      "component": "dev-07",
+      "arm": "R",
+      "hop": 1,
+      "call_id": "e9fb0de096e4b64dc5dea7f168e87e8c7e2288fdb0cf6ff57a4e457d0084f10c"
+    },
+    {
+      "component": "dev-07",
+      "arm": "R",
+      "hop": 2,
+      "call_id": "287b2af3e7b351ea93d24c4372ae1efd3d5bbbcbd9e71833912140c9a2d0698e"
+    },
+    {
+      "component": "dev-07",
+      "arm": "R",
+      "hop": 3,
+      "call_id": "8314c92c1030fef6ea1f25b25b46d4c8848f2cbdd192f652e4d9ae55c2b53d4b"
+    },
+    {
+      "component": "dev-07",
+      "arm": "P",
+      "hop": 1,
+      "call_id": "84f442e8cecfbe2b97898c9e20beeaaab8531a9160f27f7ffd39b739555f32ad"
+    },
+    {
+      "component": "dev-07",
+      "arm": "P",
+      "hop": 2,
+      "call_id": "c0498697439588b079c184c487d88eb24ac224e68d7e9d92f195c25bbd841aa8"
+    },
+    {
+      "component": "dev-07",
+      "arm": "P",
+      "hop": 3,
+      "call_id": "3349138de89bbce126141f1a19da7f1ecb6ea1301f8ae5f0047cd0a4f6f65f8a"
+    }
+  ]
+}

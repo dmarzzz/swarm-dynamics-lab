@@ -13,3 +13,7 @@ Two annotation passes freeze source meaning, critical obligations, support and a
 Keep raw records, source-bearing gold and review previews private. Screen locally before any model-visible excerpt or hosted inference. The public research terms permit research/analysis and prohibit training without permission; review the exact pinned terms and the chosen provider's commercial no-training/retention policy. No full raw corpus is redistributed or uploaded. Attribution remains AI Digest / AI Village. Record actual transfer scope and residual terms uncertainty before real dispatch.
 
 No provider call, new allocation or increased budget is required for this acquisition. The exact budget increase is pending owner selection; preserve Telephone's cumulative ledger. Freeze a real native packet only after eligibility, annotation and cost/admission checks pass.
+
+## Acquisition-bound amendment before retry
+
+The complete chat projection matches 183,485 manifest rows. Events stopped after 156,096 projected rows versus 381,610 in the pinned manifest. Preserve that incomplete projection. Because event projections retain metadata only while the source includes bulky excluded output fields, increase only the streaming event-source limits to 512 MiB compressed / 4 GiB decoded; retained metadata stays private. This is an offline acquisition amendment, not an enlarged model cohort or spending allowance. Retry events alone and verify gzip completion and manifest row count before accepting completeness.

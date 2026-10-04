@@ -1,0 +1,24 @@
+{
+  "revision": "838b4150303ca8228e8edb432d8b8ccae353d258",
+  "tables": [
+    {
+      "table": "chat_messages",
+      "rows": 183485,
+      "compressed_bytes": 52543996,
+      "decoded_bytes": 150976967,
+      "source_sha256": "f5d12bfdaa80fcf7d3bcf0cca18b46f13a41acbee2d95968462aaa7b0a9496ae",
+      "projection_sha256": "e7802040d2ffe307164a64c84d524f00fed2bf60921ac6aabb364af7c0faaa5d",
+      "complete": true
+    },
+    {
+      "table": "events",
+      "rows": 381610,
+      "compressed_bytes": 328621853,
+      "decoded_bytes": 1007756037,
+      "source_sha256": "808824a7013ba28db3bbce0896d0491bffb922c44ca6c3b0ac0544c057252585",
+      "projection_sha256": "2d92b272329057b87f4c02c7ef8d9ac57335e33f96bb800c0afc50d8bf421da8",
+      "complete": true
+    }
+  ],
+  "model_calls": 0
+}
