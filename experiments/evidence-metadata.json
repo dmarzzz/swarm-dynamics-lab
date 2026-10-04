@@ -4198,6 +4198,45 @@
         "researchers/vishesh/notes/influence-swarms/scenario/b1/SOURCE-FIT.md"
       ],
       "status_at_assessment": "offline_prepared_not_funded_not_launched"
+    },
+    {
+      "id": "right-dissenter-acquisition-dev",
+      "title": "Right Dissenter acquisition development and disabled framing candidate",
+      "documents": [
+        "researchers/vishesh/notes/dissent/acquisition-dev/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Whether native challenge framing improves evidence acquisition or recovery over neutral verification remains untested.",
+        "rationale": "Six public development episodes and18counterfactual labels pass20offline checks. The actor-only coverage reference reaches6/6attainable actions versus routine5/6; these are scripted controller outcomes, not native comparative evidence. The270-call candidate is disabled and unfunded."
+      },
+      "sample_size_summary": "Observed native:0. Offline:6authored episodes in3shared core-rule clusters;18counterfactual choices. Proposed:6episodes \u00d73incumbents \u00d73policies \u00d73fresh repeats =162dependent trajectories,270maximum calls. No24-family corpus or independent replication.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/acquisition-dev/PLAN.md",
+        "researchers/vishesh/notes/dissent/acquisition-dev/PACKET-PROPOSAL.md",
+        "researchers/vishesh/notes/dissent/acquisition-dev/episodes.py",
+        "researchers/vishesh/notes/dissent/acquisition-dev/engine.py",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/summary.json",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/family-audit.json",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/validation.json",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/counterfactuals.json"
+      ],
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/acquisition-dev/PLAN.md": "c31391f3f4fc5e835bb95daf2962369f906e0c4a4e248d5a10c7a2634379ca54",
+        "researchers/vishesh/notes/dissent/acquisition-dev/PACKET-PROPOSAL.md": "5bf1b37ada343d79df27400562652cb5d8f99764c4b586154b06bfcd7da17b18",
+        "researchers/vishesh/notes/dissent/acquisition-dev/episodes.py": "17e4dd388355a27bb3e66115c04dc4ca0b4144ef7f2a45e4498e54b7f7f0453b",
+        "researchers/vishesh/notes/dissent/acquisition-dev/engine.py": "c158442edb0b3bccb0ca41f386cc99dab3499c3d74b65bff67ef0745dc10f6e8",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/summary.json": "f8b9d594ecbfc235a14371fd0ef79b5bf3d273c7fbd6d0a8c5e3545f8d529079",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/family-audit.json": "cf8d0a1bfe65ae41d53420b2ef646f70d3561ba3e5081084664afa4a99759cee",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/validation.json": "7b581a00d03f4aa5920703f368909273e3bc30ff3a8d433eb2b634ee096d5e2d",
+        "researchers/vishesh/notes/dissent/acquisition-dev/offline/counterfactuals.json": "7030709c11b6930ed9e64fa3a722dbad4f02ca2412534fdcb8c6475c71fcff72"
+      },
+      "status_at_assessment": "offline_built_native_unrun_unfunded",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "a97976aaca3f9a5281207352ff1e1dabb546f187"
     }
   ],
   "source_sha256": {

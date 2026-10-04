@@ -1,5 +1,14 @@
 # Acquisition development: six cases, three shared rule structures
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `a97976aa` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Whether native challenge framing improves evidence acquisition or recovery over neutral verification remains untested. Basis: Six public development episodes and18counterfactual labels pass20offline checks. The actor-only coverage reference reaches6/6attainable actions versus routine5/6; these are scripted controller outcomes, not native comparative evidence. The270-call candidate is disabled and unfunded.
+- **sample_size_summary:** Observed native:0. Offline:6authored episodes in3shared core-rule clusters;18counterfactual choices. Proposed:6episodes ×3incumbents ×3policies ×3fresh repeats =162dependent trajectories,270maximum calls. No24-family corpus or independent replication.
+<!-- experiment-evidence:end -->
+
 **Built and checked offline; no native calls, spend or reserve access.** Right Dissenter remains first alternate and scientifically incomplete. The proposed24-family evaluation corpus does not exist. These six public development episodes share three conservative core-rule structures: a single required predicate, conjunctive requirements, and authority ordering. State variants and domain names do not create independent families.
 
 [Construction plan](PLAN.md) · [Public cases and all source responses](offline/cases.json) · [All18counterfactual choices](offline/counterfactuals.json) · [Executable comparators](engine.py) · [Family audit](offline/family-audit.json) · [Validation](offline/validation.json) · [Candidate discriminating packet](PACKET-PROPOSAL.md).

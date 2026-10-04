@@ -35,9 +35,9 @@
       "setup_path": "researchers/vishesh/notes/dissent/rd5/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/dissent/freshness/reviews/F0-A1-POST.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:35:06.468836+00:00",
-      "checked_commit": "01cd198442d0750aecd57a4b3ca06785001b3e92",
-      "next_action": "FINISH / PARK completed RD7 F0-A1: 48/48 valid, explicit eligibility24/24 versus raw12/24; all expired errors corrected, fresh decisions preserved. Operational and scientific closeout complete; workers/relay stopped and allocation released. Original ledger554calls, split cap preserved. Separate54-case sealed qualification and main dissent comparison remain unrun. Read freshness/REPORT.md and post-mortem before a distinct readiness plan; no automatic successor.",
+      "checked_at": "2026-10-04T21:39:57.050443+00:00",
+      "checked_commit": "a97976aaca3f9a5281207352ff1e1dabb546f187",
+      "next_action": "First alternate, baseline GAP. RD7 native diagnostic completed/reviewed/released. Acquisition development now built:6episodes/3shared core-rule clusters,18counterfactual labels,20offline checks; coverage-neutral reference6/6 vs routine5/6. ACQ-D1 candidate270calls disabled/unfunded; native adapter and funded PI decision/call-limit amendment required. No reserve opened; original554-call ledger/caps preserved. See dissent/acquisition-dev/README.md.",
       "next_run_approval": "owner"
     },
     {
