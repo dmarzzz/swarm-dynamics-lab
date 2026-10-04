@@ -2,129 +2,93 @@
 """Repair relative markdown links after scripts/migrate_layout.sh.
 
 For every broken relative link, work out what it pointed at in the old layout, map that target to its new
-path, and rewrite the link if the new target exists. Files whose sha256 is recorded anywhere in the repo
-(pre-registrations, evidence metadata, the artifact lock) are left byte-identical and only reported.
+path, and rewrite the link if the new target exists. Idempotent: a repaired link resolves, so it is skipped.
 
-    python3 scripts/migrate_links.py            # dry run
-    python3 scripts/migrate_links.py --write
+Files whose sha256 is recorded somewhere in the repo are handled by the policy in scripts/migrate_common.py:
+class (a) (recorded only in rewritable registries) is rewritten with --include-recorded and the registries
+are updated to the new digest; class (b) (recorded in the research record) always stays byte-identical.
+
+    python3 scripts/migrate_links.py                                # dry run
+    python3 scripts/migrate_links.py --write                        # rewrite files nobody records
+    python3 scripts/migrate_links.py --write --include-recorded     # also class (a), registries updated
+    python3 scripts/migrate_links.py --list-held                    # print held files and what records them
+    python3 scripts/migrate_links.py --only <path-prefix> ...       # restrict to files under a prefix
 """
-import hashlib, os, re, subprocess, sys
+import os, re, sys
 from collections import Counter
 
-ROOT = subprocess.run(["git", "rev-parse", "--show-toplevel"], capture_output=True, text=True).stdout.strip()
-os.chdir(ROOT)
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+import migrate_common as mc
 
-# new prefix -> old prefix, most specific first
-INVERSE = [
-    (r"^5-experiments/studies/shadow/(factory|qa)(/|$)", r"researchers/shadow/\1\2"),
-    (r"^5-experiments/studies/([^/]+)(/|$)", r"researchers/\1/notes\2"),
-    (r"^5-experiments/toolkit(/|$)", r"tooling\1"),
-    (r"^5-experiments(/|$)", r"experiments\1"),
-    (r"^2-surveys/reviews(/|$)", r"reviews\1"),
-    (r"^1-library(/|$)", r"library\1"),
-    (r"^2-surveys(/|$)", r"surveys\1"),
-    (r"^3-synthesis(/|$)", r"synthesis\1"),
-    (r"^4-hypotheses(/|$)", r"hypotheses\1"),
-    (r"^lab/(researchers|tasks|candidates|templates|STATUS\.md|PIPELINE\.md)(/|$)", r"\1\2"),
-]
-# old prefix -> new prefix, most specific first
-FORWARD = [
-    (r"^researchers/shadow/(factory|qa)(/|$)", r"5-experiments/studies/shadow/\1\2"),
-    (r"^researchers/([^/]+)/notes(/|$)", r"5-experiments/studies/\1\2"),
-    (r"^researchers(/|$)", r"lab/researchers\1"),
-    (r"^tooling(/|$)", r"5-experiments/toolkit\1"),
-    (r"^experiments(/|$)", r"5-experiments\1"),
-    (r"^reviews(/|$)", r"2-surveys/reviews\1"),
-    (r"^library(/|$)", r"1-library\1"),
-    (r"^surveys(/|$)", r"2-surveys\1"),
-    (r"^synthesis(/|$)", r"3-synthesis\1"),
-    (r"^hypotheses(/|$)", r"4-hypotheses\1"),
-    (r"^(tasks|candidates|templates|STATUS\.md|PIPELINE\.md)(/|$)", r"lab/\1\2"),
-]
+os.chdir(mc.ROOT)
 SKIP_DIRS = ("artifacts/", "attestations/", "dashboard/", "agentops/")
 LINK = re.compile(r'(\]\()([^)\s]+?)((?:\s+"[^"]*")?\))')
 
 
-def remap(path, table):
-    for pat, rep in table:
-        new, n = re.subn(pat, rep, path)
-        if n:
-            return new
-    return path
+def relink(f, text, left=None):
+    """-> (new_text, links_fixed)."""
+    old_self = mc.remap(f, mc.INVERSE)
+    here, old_here = os.path.dirname(f), os.path.dirname(old_self)
+    n_fix = 0
 
+    def sub(m):
+        nonlocal n_fix
+        target = m.group(2)
+        path, sep, frag = target.partition("#")
+        if not path or re.match(r"^[a-z][a-z0-9+.-]*:", path) or path.startswith(("<", "/")):
+            return m.group(0)
+        if os.path.exists(os.path.normpath(os.path.join(here, path))):
+            return m.group(0)
+        old_target = os.path.normpath(os.path.join(old_here, path))
+        if old_target.startswith(".."):
+            return m.group(0)
+        new_target = mc.remap(old_target, mc.FORWARD)
+        if not os.path.exists(new_target):
+            if left is not None:
+                left[f] += 1
+            return m.group(0)
+        rel = os.path.relpath(new_target, here or ".")
+        if path.endswith("/"):
+            rel += "/"
+        n_fix += 1
+        return m.group(1) + rel + sep + frag + m.group(3)
 
-def tracked(*globs):
-    out = subprocess.run(["git", "ls-files", "-co", "--exclude-standard", *globs], capture_output=True, text=True).stdout
-    return [f for f in out.split("\n") if f and os.path.isfile(f)]
-
-
-def recorded_digests():
-    hexes = set()
-    pat = re.compile(rb"\b[0-9a-f]{64}\b")
-    for f in tracked():
-        if f.endswith((".png", ".jpg", ".jpeg", ".webp", ".mp4", ".gif", ".pdf", ".npz", ".npy", ".woff2", ".zip", ".gz")):
-            continue
-        try:
-            with open(f, "rb") as fh:
-                hexes.update(m.decode() for m in pat.findall(fh.read()))
-        except OSError:
-            pass
-    return hexes
+    return LINK.sub(sub, text), n_fix
 
 
 def main():
-    write = "--write" in sys.argv
-    pinned = recorded_digests()
-    fixed, held, left = Counter(), Counter(), Counter()
-    for f in tracked("*.md"):
-        if f.startswith(SKIP_DIRS):
+    argv = sys.argv[1:]
+    write, include = "--write" in argv, "--include-recorded" in argv
+    only = mc.only_args(argv)
+    left, counts, candidates = Counter(), {}, {}
+    for f in mc.tracked("*.md"):
+        if f.startswith(SKIP_DIRS) or not mc.under(f, only):
             continue
         raw = open(f, "rb").read()
         try:
             text = raw.decode("utf-8")
         except UnicodeDecodeError:
             continue
-        old_self = remap(f, INVERSE)
-        here, old_here = os.path.dirname(f), os.path.dirname(old_self)
-        n_fix = 0
-
-        def sub(m):
-            nonlocal n_fix
-            target = m.group(2)
-            path, sep, frag = target.partition("#")
-            if not path or re.match(r"^[a-z][a-z0-9+.-]*:", path) or path.startswith(("<", "/")):
-                return m.group(0)
-            if os.path.exists(os.path.normpath(os.path.join(here, path))):
-                return m.group(0)
-            old_target = os.path.normpath(os.path.join(old_here, path))
-            if old_target.startswith(".."):
-                return m.group(0)
-            new_target = remap(old_target, FORWARD)
-            if not os.path.exists(new_target):
-                left[f] += 1
-                return m.group(0)
-            rel = os.path.relpath(new_target, here or ".")
-            if path.endswith("/"):
-                rel += "/"
-            n_fix += 1
-            return m.group(1) + rel + sep + frag + m.group(3)
-
-        new_text = LINK.sub(sub, text)
-        if not n_fix:
-            continue
-        if hashlib.sha256(raw).hexdigest() in pinned:
-            held[f] = n_fix
-            continue
-        fixed[f] = n_fix
-        if write:
-            with open(f, "w", encoding="utf-8", newline="") as fh:
-                fh.write(new_text)
-    print(f"{'rewrote' if write else 'would rewrite'} {sum(fixed.values())} links in {len(fixed)} files")
-    print(f"held back {sum(held.values())} links in {len(held)} hash-recorded files (left byte-identical)")
+        new_text, n = relink(f, text, left)
+        if n:
+            counts[f] = n
+            candidates[f] = (raw, new_text.encode("utf-8"))
+    recorded = mc.Recorded()
+    written, held_a, held_b, touched = mc.settle(recorded, candidates, include, write)
+    n_links = lambda files: sum(counts[f] for f in files)
+    n_a_written = sum(1 for f in written if recorded.classify(f, mc.sha256_bytes(candidates[f][0]))[0] == "a") if not write else None
+    print(f"{'rewrote' if write else 'would rewrite'} {n_links(written)} links in {len(written)} files"
+          + (f" ({n_a_written} of them class (a), registries updated)" if n_a_written else ""))
+    if touched:
+        print(f"{'updated' if write else 'would update'} {sum(touched.values())} recorded digests in {len(touched)} registry files")
+    print(f"held, class (a) registry-recorded (rewritten with --include-recorded): {n_links(held_a)} links in {len(held_a)} files")
+    print(f"held, class (b) recorded in the research record (always byte-identical): {n_links(held_b)} links in {len(held_b)} files")
     print(f"{sum(left.values())} links in {len(left)} files were already broken before the move")
-    if "--list-held" in sys.argv:
-        for f, n in sorted(held.items()):
-            print(f"  held {n:4d}  {f}")
+    if "--list-held" in argv:
+        for f in sorted(held_a):
+            print(f"  held (a) {counts[f]:4d}  {f}  <- {held_a[f][0]}" + (f" (+{len(held_a[f]) - 1})" if len(held_a[f]) > 1 else ""))
+        for f in sorted(held_b):
+            print(f"  held (b) {counts[f]:4d}  {f}  <- {held_b[f][0]}" + (f" (+{len(held_b[f]) - 1})" if len(held_b[f]) > 1 else ""))
 
 
 if __name__ == "__main__":
