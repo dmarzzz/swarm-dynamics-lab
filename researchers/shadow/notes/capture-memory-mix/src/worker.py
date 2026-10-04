@@ -56,10 +56,27 @@ def execute(p: dict, out: Path, policy, backend_name: str, progress=lambda *a, *
     out.parent.mkdir(parents=True, exist_ok=True)
     code = code_commit()
     stats = {a: {"n": 0, "captured": 0, "frac_T": 0.0, "delta": 0.0, "invalid": 0, "calls": 0, "usd": 0.0} for a in arms}
-    total, done = len(tasks) * len(seeds), 0
+    # Resume: an episode already present in the file with every arm valid is not rerun (the file is append-only,
+    # a killed run leaves complete arms behind; incomplete episodes, i.e. fewer than len(arms) records, are redone).
+    have = {}
+    if out.exists():
+        for l in out.read_text().splitlines():
+            if l.strip():
+                r = json.loads(l)
+                have.setdefault((r["task_id"], r["seed"]), []).append(r)
+    skip = {k for k, v in have.items() if len(v) >= len(arms) and all(x["validity"]["ok"] for x in v)}
+    for k in skip:
+        for rec in have[k]:
+            a = stats[rec["arm"]]
+            e = rec["evaluation"]
+            a["n"] += 1; a["captured"] += e["captured"]; a["frac_T"] += e["frac_original_T"]; a["delta"] += e["delta_original"]
+            a["calls"] += rec["cost_actual"]["model_calls"]
+    total, done = len(tasks) * len(seeds), len(skip)
     with out.open("a") as f:
         for t in tasks:
             for s in seeds:
+                if (t, s) in skip:
+                    continue
                 for rec in sim.run_episode(t, s, p["world"], p["dose"], arms, p["cfg"], memory=memory,
                                            policy=policy, backend=backend_name):
                     rec.update({"run": run_id, "attempt": attempt, "stage": p["stage"], "split": p["split"],
@@ -121,7 +138,7 @@ def main():
             p = {"stage": "MP", "split": "dev", "world": c["world"], "dose": c["dose"], "memory": c["memory"],
                  "tasks": c["tasks"], "seeds": c.get("seeds", [1]), "arms": c.get("arms", d["arms"]),
                  "cfg": {**cfg, **c.get("cfg_overrides", {})}, "backend": "http"}
-            name = f"MP_{p['world']}_d{p['dose']}_m{p['memory']}_{p['tasks']}".replace("/", "-").replace("@", "_f").replace(":", "-")
+            name = f"MP_{p['world']}_d{p['dose']}_m{p['memory']}".replace("/", "-").replace("@", "_f").replace(":", "-")
             try:
                 sums.append(execute(p, outdir / (name + ".jsonl"), policy, backend_name, run_id=name,
                                     progress=lambda done, total, **m: print(f"    {name} {done}/{total} {m}", flush=True)))

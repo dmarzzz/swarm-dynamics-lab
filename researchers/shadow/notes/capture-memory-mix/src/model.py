@@ -77,7 +77,7 @@ class HTTPPolicy:
                  concurrency: int = 24, min_mass: float = 0.5, input_usd_per_million: float = 0.5,
                  output_usd_per_million: float = 1.0, base_url: str = "https://openrouter.ai/api/v1",
                  provider_order=None, ledger: str | None = None, retries: int = 3, call_log: str | None = None,
-                 logit_temperature: float = 1.0):
+                 logit_temperature: float = 1.0, mode: str = "logprobs"):
         if not max_cost_usd > 0:
             raise ModelFailure("positive dollar cap required")
         if not base_url.startswith("https://"):
@@ -97,6 +97,12 @@ class HTTPPolicy:
         # Restricted to the two allowed words this is exactly sampling at temperature T; de-nobili-2026-microscopic
         # uses decoding temperature as the control parameter of an LLM naming game. Recorded in every episode.
         self.T = float(logit_temperature)
+        # mode "logprobs": P(original) from first-token mass (default). mode "sample": no logprobs requested, the
+        # sampled completion IS the agent's word (P = 1 or 0), for models whose providers return no logprobs. In sample
+        # mode the recovery-phase randomness comes from the provider, so arms are paired only through the shared prefix.
+        if mode not in ("logprobs", "sample"):
+            raise ModelFailure("mode must be logprobs or sample")
+        self.mode = mode
         self.ledger = Ledger(Path(ledger) if ledger else ROOT / "results" / "spend-ledger.json")
         self.reserved = 0.0
         self.spent_session = 0.0
@@ -118,9 +124,12 @@ class HTTPPolicy:
 
     # ---- one request
     def _request(self, user: str) -> dict:
-        body = {"model": self.model, "temperature": 1.0, "max_tokens": 4, "logprobs": True, "top_logprobs": 20,
-                "usage": {"include": True}, "provider": {"require_parameters": True},
+        body = {"model": self.model, "temperature": self.T if self.mode == "sample" else 1.0, "max_tokens": 6,
+                "usage": {"include": True}, "provider": {},
                 "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
+        if self.mode == "logprobs":
+            body.update({"logprobs": True, "top_logprobs": 20})
+            body["provider"]["require_parameters"] = True
         if self.provider_order:
             body["provider"]["order"] = self.provider_order
         raw = json.dumps(body).encode()
@@ -186,7 +195,16 @@ class HTTPPolicy:
         mass, content = self._mass(resp, words)
         tot = mass[sim.ORIG] + mass[sim.ATK]
         p = None
-        if tot >= self.min_mass:
+        if self.mode == "sample":
+            c = content.strip('*` ').lower()
+            for code, w in words.items():
+                if c.startswith(w):
+                    p = 1.0 if code == sim.ORIG else 0.0
+            if p is None:
+                ctx["low_mass"] = ctx.get("low_mass", 0) + 1
+                raise ModelFailure(f"unparseable reply {content!r}")
+            tot = 1.0
+        elif tot >= self.min_mass:
             if self.T == 1.0:
                 p = mass[sim.ORIG] / tot
             else:
@@ -228,9 +246,10 @@ def build(backend: str):
     cfg = json.loads(os.environ.get("SWARM_MODEL_CONFIG", "{}"))
     allowed = {"model", "max_cost_usd", "max_calls", "timeout", "concurrency", "min_mass",
                "input_usd_per_million", "output_usd_per_million", "base_url", "provider_order", "ledger", "retries", "call_log",
-               "logit_temperature"}
+               "logit_temperature", "mode"}
     if set(cfg) - allowed:
         raise ModelFailure("unknown model config fields")
     if "model" not in cfg or "max_cost_usd" not in cfg:
         raise ModelFailure("model and max_cost_usd required")
-    return HTTPPolicy(**cfg), "http:" + cfg["model"] + (f"@T{cfg['logit_temperature']}" if cfg.get("logit_temperature", 1.0) != 1.0 else "")
+    return HTTPPolicy(**cfg), ("http:" + cfg["model"] + (f"@T{cfg['logit_temperature']}" if cfg.get("logit_temperature", 1.0) != 1.0 else "")
+                               + (":sample" if cfg.get("mode") == "sample" else ""))
