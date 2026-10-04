@@ -2,7 +2,7 @@
 id: theseus-d2-run
 type: task
 title: Review, implement and execute the Theseus D2 diagnostic
-kind: Review D2, implement validated instrumentation, publish admission, execute within existing budget, reconcile evidence and write the postmortem. scan | survey | synthesis | review | build | experiment | admin | question
+kind: build
 status: claimed
 priority: p1
 owner: vishesh/codex-theseus
