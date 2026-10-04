@@ -46,7 +46,6 @@
 | [diagnose-discussion-v3-q0](tasks/diagnose-discussion-v3-q0.md) | claimed | p1 | experiment | dmarz/cloud-discussion-d1 | dmarz | 2026-10-04T04:29Z | Diagnose v3 Q0 constraint failures before fresh model qualification |
 | [healing-qwen-jev](tasks/healing-qwen-jev.md) | claimed | p1 | build | vishesh/codex-regrowth-docs | vishesh | 2026-10-04T04:17Z | Qualify and run Healing Qwen plus Jev composite |
 | [immune-response-evidence-receipts](tasks/immune-response-evidence-receipts.md) | claimed | p1 | build | vishesh/codex-immune | vishesh | 2026-10-04T03:41Z | Diagnose recovery with checked evidence receipts |
-| [influence-native-rerun](tasks/influence-native-rerun.md) | claimed | p1 | build | vishesh/codex-experiments | vishesh | 2026-10-04T04:17Z | Run the revised procurement influence experiment |
 | [phantom-coast-live](tasks/phantom-coast-live.md) | claimed | p1 | build | vishesh/codex-phantom-coast | vishesh | 2026-10-04T04:27Z | Launch bounded Phantom Coast native pilot |
 | [poietic-agents-design](tasks/poietic-agents-design.md) | claimed | p1 | build | vishesh/codex-heterogeneous | vishesh | 2026-10-04T04:29Z | Design Poietic Agents from the self-differentiating swarm research |
 | [right-dissenter-live-study](tasks/right-dissenter-live-study.md) | claimed | p1 | experiment | vishesh/codex-decision-models | vishesh | 2026-10-04T04:27Z | Deploy and assess the Right Dissenter exploratory live study |
@@ -69,6 +68,7 @@
 | [deploy-hub-replay-json](tasks/deploy-hub-replay-json.md) | open | p1 | admin |  | dmarz |  | Deploy hub change so the public site can serve replay.json (agentops PR |
 | [fix-bench-v3-review-f1-f2](tasks/fix-bench-v3-review-f1-f2.md) | open | p1 | build |  | dmarz | 2026-10-04T03:59Z | Fix shadow's v3 review findings F1 and F2 before the next v3 run; re-score current runs |
 | [heterogeneous-methods-review](tasks/heterogeneous-methods-review.md) | open | p1 | survey |  |  |  | Complete heterogeneous-swarm methods review before hypothesis promotion |
+| [influence-native-rerun](tasks/influence-native-rerun.md) | open | p1 | build |  | vishesh | 2026-10-04T04:31Z | Run the revised procurement influence experiment |
 | [review-poietic-agents-design](tasks/review-poietic-agents-design.md) | open | p1 | review |  | dmarz |  | Independently review the Poietic Agents prospective design |
 | [review-quorum-mirrors-qm3](tasks/review-quorum-mirrors-qm3.md) | open | p1 | review |  | dmarz |  | Review Quorum of Mirrors practical value and S1 feasibility design |
 | [scan-blogs](tasks/scan-blogs.md) | open | p1 | scan |  |  | 2026-10-03T18:30Z | Catalogue the blogs and long-form web writing |
@@ -247,9 +247,9 @@
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:57Z | Published full v3 independent PASS with evidence; review task closed. |
 | shadow/sol-capture | idle |  | 2026-10-04T01:35Z | capture-memory hunch: scripted S0/S1 built and run under researchers/shadow/notes/capture-memory; fleet run on sim-shadow; PR open, not merged |
 | dmarz/discussion-dose | working | run-discussion-dose-s0 | 2026-10-04T00:14Z | Funded preflight passed 8 episodes for 0.615 USD; S0 qualification 3e4b084a is running with encrypted-secret launcher |
+| vishesh/codex-phantom-coast | done | phantom-coast-live | 2026-10-04 04:29:32+00:00 | Q0 and S0 complete; valid null, USD0.162723246; results published and host released |
 | vishesh/codex-quorum-mirrors | done |  | 2026-10-04 04:28:00.449691+00:00 | Iteration 3 published; S1 pending research gates and review-quorum-mirrors-qm3 |
 | vishesh/codex-decision-models | blocked | right-dissenter-live-study | 2026-10-04 04:27:46.239298+00:00 | Q0 failed 12/18; Q1 ready in software but blocked on verified Dmarz-account allocation. Wrong-account host deleted; cap remains approved. |
-| vishesh/codex-phantom-coast | working | phantom-coast-live | 2026-10-04 04:19:00+00:00 | Q0 passed; S0 pilot running on exclusive sim-dmarz-5; auditing saved outcomes |
 | dmarz/budget-a | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-b | done |  | 2026-10-03T23:59Z | TODO one line |
 | dmarz/budget-c | done |  | 2026-10-03T23:59Z | TODO one line |
