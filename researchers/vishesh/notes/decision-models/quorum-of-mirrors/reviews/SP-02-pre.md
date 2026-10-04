@@ -1,0 +1,11 @@
+# SP-02 pre-run assessment
+
+**Ready after current operational admission.** This is the necessary quote-only follow-up in the owner-authorized repair/native-qualification loop. [SP-01 post-mortem](SP-01-post.md) is complete: execution40/40; strict qualification failed15 null-selection expectations, while all source/report facts, classifications and decisions decoded correctly. All15 divergent source inputs/quotations/derived states were inspected. The old gate and outcomes remain immutable.
+
+The [prospective plan](../packet-study/span-v2/PLAN.md) preceded implementation. Both source and report fields now require a literal clause string. Sources prefer observations/corrections; when only a plan exists they quote the plan, and code produces unknown/null. This is a prospective contract change, not a retrospective pass for SP-01. Selected plans cannot vote; selecting a plan despite an available observation still fails the exact grounding gate. Unknown/unparsable real-world source formats remain outside the declared grammar.
+
+22 offline checks pass, including1,000 packets across ten seeds; plan-only abstention; plan chosen despite observation; null rejection; wrong time/entity/initial clause; cropped uncertainty/negation; schema/IDs; source/manifest/scope/allocation admission; budget bounds. Fresh frozen40-case qualification passes automated oracle/parser checks without individual operator inspection. Maximum input bound4,919 under7,000 ceiling. The strong exact parser remains a disclosed perfect comparator.
+
+Five families each cover observed-positive/negative and missing-evidence positive/negative claims, with one/three-copy pairing:20 roots,40 calls. Require all120 source selections/facts,280 report selections/facts/modes,40 decisions/label sets and20 exact pairs. All-assignment denominators, wrong/invalid distinction and stop rules remain. No broad evaluation or retry.
+
+Preserve the182-call original ledger,USD1.30347096 effective API exposure and both historical unknown holds. ExistingUSD8 API/USD1 infrastructure authority; maximum new reservationUSD1.92, no extension. Verify fresh exclusive approved-account claim/workload, runtime and public plan hashes, provider prices and ledger custody before dispatch. Close out scientifically and operationally even if this contract also fails; no blind iteration to manufacture a pass.

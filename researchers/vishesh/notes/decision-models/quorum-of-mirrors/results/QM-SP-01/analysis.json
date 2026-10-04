@@ -1,0 +1,402 @@
+{
+  "summary": {
+    "assigned": 40,
+    "started": 40,
+    "valid": 40,
+    "unstarted": 0,
+    "source_facts_correct": 120,
+    "report_facts_correct": 280,
+    "reports_total": 280,
+    "labels_correct": 40,
+    "quotes_valid": 40,
+    "grounded_quotes_valid": 25,
+    "decision_correct": 40,
+    "source_votes_correct": 120,
+    "false_contradictions": 0,
+    "missed_contradictions": 0,
+    "unknown_errors": 0,
+    "confusion": {
+      "SUPPORTED->SUPPORTED": 40,
+      "CONTRADICTED->CONTRADICTED": 40,
+      "NOT_ESTABLISHED->NOT_ESTABLISHED": 200
+    },
+    "roots": 20,
+    "roots_exact": 11,
+    "paired_reports_invariant": 20,
+    "paired_decision_delta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "paired_extraction_delta": [
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0,
+      -1,
+      0,
+      -1
+    ],
+    "all_exact": false,
+    "source_selections_correct": 105,
+    "report_selections_correct": 280,
+    "known_actual_usd": 0.310122,
+    "qualified": false
+  },
+  "pairs": [
+    {
+      "root": "026a7454736d1489",
+      "family": "corrections",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "expected_decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "24f39f5197bf190e",
+      "family": "corrections",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "expected_decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "287408767912fe2b",
+      "family": "plans",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "2a38abf41abbb6a9",
+      "family": "entities",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "expected_decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "2e8d9e2af59bd26a",
+      "family": "entities",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "369c2fb241d646d7",
+      "family": "timelines",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "3f06a23fe2bfffa5",
+      "family": "entities",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "42bcdea94ece8b71",
+      "family": "timelines",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "expected_decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "45ea62e16f979564",
+      "family": "entities",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "expected_decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "4a2f11337404dd6e",
+      "family": "decimal_units",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "expected_decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "5a0d35103ecf506c",
+      "family": "corrections",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "7b0e93593b4cf67c",
+      "family": "decimal_units",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "7cefb1c65da85002",
+      "family": "decimal_units",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "88616607c8ba6e80",
+      "family": "decimal_units",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "expected_decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "a2e14aea7936be37",
+      "family": "plans",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "expected_decisions": [
+        "ONE",
+        "ONE"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "b53057a6db032c5a",
+      "family": "timelines",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "bdc6fa91051bfd75",
+      "family": "plans",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "expected_decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "ca22d036d345e0cc",
+      "family": "corrections",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    },
+    {
+      "root": "e633f60a9ed6ee05",
+      "family": "timelines",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "expected_decisions": [
+        "ZERO",
+        "ZERO"
+      ],
+      "exact_both": true
+    },
+    {
+      "root": "ea7446224b8137a4",
+      "family": "plans",
+      "both_valid": true,
+      "source_evidence_identical": true,
+      "common_claims_invariant": true,
+      "decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "expected_decisions": [
+        "DEFER",
+        "DEFER"
+      ],
+      "exact_both": false
+    }
+  ],
+  "all_assignment_statuses_checked": 40,
+  "native_responses_replayed": 40,
+  "component_miss_packets": 15,
+  "raw_vs_derived": "parsed is native literal selection; decoded is deterministic software output; neither contains model-generated numeric facts"
+}

@@ -73,3 +73,8 @@ PQ-04: analyzed fullPQ-03 traces; separated report assertions from source eviden
 ## R1 larger robustness screen
 
 R1 passed all ten qualification calls, then stopped after 25 of 40 evaluation calls: 24 valid, one unknown/value contract failure, 15 unstarted. All 24 scored decisions were correct, but one concealed a source-value error; 23/24 scored packets were fully exact. New API cost USD0.458142. The larger test did not establish robustness; original failures and missing cases remain intact. All35 native responses replayed, all50 assignment statuses retained, both failures inspected, worker stopped and claim released. Actor-input guard catches both failures on saved data; three tests pass. Next: repaired native design and balanced fresh qualification, no automatic retry.
+
+
+## SP-01 evidence-selection repair
+
+SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 source selections, 280/280 report selections, 40/40 decisions and 11/20 exact paired roots. New API cost USD0.310122. Values/status/modes are derived by code from native selected clauses, not predicted by the model. Controlled authored grammar only; no field or swarm efficacy claim. Traces replayed, costs and original ledger reconciled, worker stopped and exclusive claim released. No evaluation or retry.

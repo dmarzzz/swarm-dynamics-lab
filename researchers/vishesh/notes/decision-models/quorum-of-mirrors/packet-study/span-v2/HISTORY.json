@@ -1,0 +1,8 @@
+{
+  "calls": 182,
+  "calls_sha256": "637fa0df690c0b2b72d8ef8b8f4f824c13a414c7f9cba9b8aa54ead580981ca1",
+  "historical_reserved_usd": 6.425856,
+  "known_actual_usd": 1.24212696,
+  "unresolved_reserved_usd": 0.061344,
+  "effective_exposure_usd": 1.30347096
+}

@@ -1,0 +1,142 @@
+{
+  "attempt": "QM-SP-01",
+  "assessor": "vishesh/codex-quorum-mirrors",
+  "assessed_at": "2026-10-04T20:23:16.961256+00:00",
+  "evidence_revision": "1f793568b4ae69d439793bd1ac2a8e9acdd9fea0",
+  "execution": "complete",
+  "qualification": "failed",
+  "scientific_interpretation": "SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 source selections, 280/280 report selections, 40/40 decisions and 11/20 exact paired roots. New API cost USD0.310122. Values/status/modes are derived by code from native selected clauses, not predicted by the model. Controlled authored grammar only; no field or swarm efficacy claim.",
+  "reporting": "full saved replay, disclosed manual coverage, remote hashes and hub status verified",
+  "cost_status": "reconciled, historical unknowns retained",
+  "reviewer_policy": "not required by owner direction",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Does literal selection plus code normalization qualify on balanced authored contexts?",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/span-v1/PLAN.md",
+          "sha256": "46b80dbf3f128151fb205036633896cf4a5dc150a03866eea7c1abafcb298d12"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Five reused authored grammar families, not natural independently annotated incidents.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/span-v1/cases.py",
+          "sha256": "034e8a934befa2968ed58548337d1a09aadad8292b51dd1ea2fa8bce549695d2"
+        }
+      ],
+      "next_action": "Prepare independent naturalistic annotations and appropriately scoped qualification before broader native work.",
+      "acceptance_check": "Document ambiguity, source independence, baseline adequacy, distinct sample units and native selection performance without discarded failures."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Fixed paired source evidence and strongest same-input parser; no randomized causal old/new claim.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/analysis.json",
+          "sha256": "cb403a5fff500c5796a65dc36faf74a974c33fb21ec5b900247978cca31aeb9e"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "All decoded facts/decisions correct, but15 plan-only sources quoted instead of null; strict gate failed.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/summary.json",
+          "sha256": "8b0b8ea75a301af0292b6675afd46f6a9cfdd272482e982817f978c2bbb9b0ae"
+        }
+      ],
+      "next_action": "Test prospectively defined quote-only source representation on fresh qualification.",
+      "acceptance_check": "Every required selected clause, derived fact/mode and decision correct; preserve SP-01 as failed."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Raw clauses, derived values and selection errors are distinct; all assigned statuses retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/audit.json",
+          "sha256": "4af6d6ada235aac3b30d6bd6ddc8480e5a78ba4a0a2fe093fe6b217190045d9e"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Twenty authored paired roots/five mechanisms; finite engineering screen, no population precision.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/summary.json",
+          "sha256": "8b0b8ea75a301af0292b6675afd46f6a9cfdd272482e982817f978c2bbb9b0ae"
+        }
+      ],
+      "next_action": "Prepare independent naturalistic annotations and appropriately scoped qualification before broader native work.",
+      "acceptance_check": "Document ambiguity, source independence, baseline adequacy, distinct sample units and native selection performance without discarded failures."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen stateless requests, no gold/operator memory or inter-call feedback.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/requests.jsonl",
+          "sha256": "a910994dc74c839c75bae5dd541ac678ffebabe444170523cdac57fa61e15979"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "All actual responses replayed and remote native artifacts hash-verified; unknown costs retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/closeout.json",
+          "sha256": "b64c754921ab3d8d3391ea5347c940e85dcdea5769e53bf185fe7d7d9130ef98"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original ledger custody and cumulative caps preserved; no new extension or machine creation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/closeout.json",
+          "sha256": "b64c754921ab3d8d3391ea5347c940e85dcdea5769e53bf185fe7d7d9130ef98"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned source/request/corpus and deterministic sorted-pair replay.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/preflight.json",
+          "sha256": "156a6d08de479237f32d210d82fb8198ec1d75c7e9e99640221e8b7e883b4db5"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "All40 assignments and20 paired roots, native/derived distinction and missing outcomes explicit.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/results/QM-SP-01/traces.html",
+          "sha256": "668ca8338a705c8d456a153eb3e1b1f82c65d67ed95ffa3544ffd82bfaa3ff80"
+        }
+      ]
+    }
+  ],
+  "decision": "FINISH failed SP-01 null-selection gate; separately plan/admit SP-02 quote-only diagnostic"
+}

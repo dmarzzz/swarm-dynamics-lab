@@ -1,6 +1,10 @@
-## Current: SP-01 evidence-selection repair prepared
+## Current: SP-02 quote-only diagnostic prepared
 
-**RUN after admission.** Owner approved native repair qualification. [Plan](packet-study/span-v1/PLAN.md), [pre-run assessment](reviews/SP-01-pre.md), [saved trace diagnosis](packet-study/span-v1/saved-trace-diagnosis.json). Model selects literal clauses; code normalizes values and status, preserving wrong selections as failures. Forty fresh balanced qualification calls, USD1.92 ceiling, no evaluation.21 offline checks pass. Original142-call ledger and cumulativeUSD9 authority retained; no new addition.
+**RUN after fresh admission.** SP-01 remains failed at its null-selection gate despite40 correct decoded outcomes. [SP-02 plan](packet-study/span-v2/PLAN.md), [pre-assessment](reviews/SP-02-pre.md): require literal source clauses, with plans decoded as unknown; preserve exact grounding. Forty fresh balanced qualification calls, maximumUSD1.92, no evaluation.22 offline checks pass. Existing ledger andUSD9 cumulative cap retained.
+
+## Latest: SP-01 repair qualification closed
+
+**FINISH bounded qualification.** SP-01 span-selection qualification did not pass: 40/40 valid calls, 105/120 source selections, 280/280 report selections, 40/40 decisions and 11/20 exact paired roots. New API cost USD0.310122. Values/status/modes are derived by code from native selected clauses, not predicted by the model. Controlled authored grammar only; no field or swarm efficacy claim. [Post-mortem](reviews/SP-01-post.md), [scientific review](results/QM-SP-01/scientific-review.json). Original ledger preserved with prior path fenced; worker stopped and claim released. No evaluation or automatic retry. Next: offline naturalistic annotation/design before broadening the claim.
 
 ## Latest: R1 stopped and reviewed
 

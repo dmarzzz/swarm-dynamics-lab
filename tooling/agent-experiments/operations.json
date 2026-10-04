@@ -7,11 +7,11 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors",
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/R1-01-post.md",
+      "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/SP-01-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T20:06:15.346659+00:00",
-      "checked_commit": "29bddcb26f8d8dcb6ec7870db989b24b372459a2",
-      "next_action": "FINISH stopped R1; HOLD native expansion. Read R1-01-post.md and offline r1-repair guard. Design fresh balanced extraction/normalization qualification; no automatic retry. Preserve cumulative ledger and uncertain holds.",
+      "checked_at": "2026-10-04T20:23:16.963514+00:00",
+      "checked_commit": "1f793568b4ae69d439793bd1ac2a8e9acdd9fea0",
+      "next_action": "FINISH SP-01 repair qualification. Read SP-01-post.md. No evaluation dispatched; retain original ledger/costs. Prepare naturalistic annotation design offline before broader claims.",
       "next_run_approval": "owner"
     },
     {

@@ -1,0 +1,7 @@
+{
+  "canonical_host": "sim-dmarz-3",
+  "previous_host": "sim-dmarz-5",
+  "previous_canonical_path_fenced_as_directory": true,
+  "original_142_call_ledger_transferred_byte_identically": true,
+  "sha256": "2fbb703726b35cf74145b8b8a034f147b8fcfb881935bc9a30590c7fd3bc75aa"
+}

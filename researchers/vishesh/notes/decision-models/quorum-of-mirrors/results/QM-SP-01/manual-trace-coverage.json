@@ -1,0 +1,31 @@
+{
+  "actual_response_ids": [
+    "QM-SP-01-001",
+    "QM-SP-01-002",
+    "QM-SP-01-005",
+    "QM-SP-01-009",
+    "QM-SP-01-011",
+    "QM-SP-01-013",
+    "QM-SP-01-014",
+    "QM-SP-01-017",
+    "QM-SP-01-018",
+    "QM-SP-01-020",
+    "QM-SP-01-026",
+    "QM-SP-01-027",
+    "QM-SP-01-028",
+    "QM-SP-01-029",
+    "QM-SP-01-032",
+    "QM-SP-01-033",
+    "QM-SP-01-034",
+    "QM-SP-01-035",
+    "QM-SP-01-036",
+    "QM-SP-01-037",
+    "QM-SP-01-038"
+  ],
+  "selection": "both variants of lexicographically first root per family, plus all observed misses/invalids",
+  "manual_response_count": 21,
+  "all_assignment_statuses_checked": 40,
+  "native_responses_replayed": 40,
+  "hidden_reasoning_available": false,
+  "native_vs_derived": "Literal quotations/null are native; values/status/modes are code output."
+}

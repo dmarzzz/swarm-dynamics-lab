@@ -1,0 +1,49 @@
+{
+  "source_sha256": {
+    "PLAN.md": "46b80dbf3f128151fb205036633896cf4a5dc150a03866eea7c1abafcb298d12",
+    "contract.py": "9903a3ce1eec343b64d1abb0b58650f3f6c46d09462485ed387e54a3c0a56496",
+    "runtime.py": "0bb9e1a19ed7d093f6928baf7c7a3a303d4b4070f09a863e21feb6f73f5e4861",
+    "manifest.json": "0bade804031bd067043e6f3a6c3873098ca6decc36f9ae789bbce71b045006d7",
+    "cases.py": "034e8a934befa2968ed58548337d1a09aadad8292b51dd1ea2fa8bce549695d2",
+    "baseline.py": "dd83f2e7b7ac6d7e85abd5e9fe16696c90c06b51d165dc8c686bf4ea3b752062",
+    "grammar.py": "a3e7b6e84677771d81199f50ffa2e9d969c4e03d7744d23508601c21563cd54a",
+    "qualification-seal.json": "60f85bc97e4a65bca70da5246301628aa1d3dbc9b16ce67e7ff330d5f1ac5473",
+    "AUTHORIZATION.json": "9b682cd2e581f5fae1dd739ca96eb432460d934d2c744234467d980e33f050e3",
+    "HISTORY.json": "30af3aed0e3e6234b1f0502ce7d253d0b4773841eb1488ab1a6a7b76a7fd2cc2",
+    "diagnostics.py": "e713622bdeb520a6066df567189cf9e34e4b289bfab867e5438eadd26179c74d",
+    "budget.py": "2247ac9c5d3de7894a53649cd5190d0dd99dfc458c07b17020aa32f292666e40",
+    "../native-v2/AUTHORIZATION.json": "1634718e5111d8e8cafc14fad673f712790e58787579e924f93ed43addac7d0d",
+    "../robustness-v1/AUTHORIZATION.json": "2ec11da60347bfb8fca9413a6c6db82f6353953f3a78e3633de495cdd4ff407a",
+    "../../next_runtime.py": "b68a30faac82dbae25237aa15119fb2764a6481a889d9e9068d566d7f33f8180",
+    "../../qualification.py": "a32e1acf0f06439992be58205700a6451f89be3fa0c917f914ade4a6b7d54d8f",
+    "../../next_stage.py": "c1958b62d28175288fdc684f1747d788467071268c0505a8ac7ae1378cb1279b",
+    "../../reference.py": "6e0e7cd4f24251401f4ba9a22b53e6f736543de8c9df0e8e016ed161220f54c9",
+    "../../public_plan.py": "9659f96660334d773c28886e314ea31cc9b76171ec51825ba4564523f0aa9166"
+  },
+  "manifest_sha256": "94b4efe360f4eae73dcb611f464977010eaad70b472fd788a6b4e3b6b9b52813",
+  "public_plan": {
+    "experiment": "quorum-of-mirrors",
+    "url": "https://github.com/dmarzzz/swarm-lab/blob/1f793568b4ae69d439793bd1ac2a8e9acdd9fea0/researchers/vishesh/notes/decision-models/quorum-of-mirrors/packet-study/span-v1/PLAN.md",
+    "commit": "1f793568b4ae69d439793bd1ac2a8e9acdd9fea0",
+    "plan_sha256": "46b80dbf3f128151fb205036633896cf4a5dc150a03866eea7c1abafcb298d12",
+    "registered_tldr": "TLDR: QM-SP-01 tests literal evidence selection with deterministic normalization on40 fresh qualification calls,20 paired roots/five authored families. Compare one versus three changed-claim copies against typed truth and a same-input parser; require exact selections, derived facts, labels and decisions. Controlled grammar, no field or swarm efficacy claim; no evaluation.",
+    "run_tldr": "TLDR: QM-SP-01 tests literal evidence selection with deterministic normalization on40 fresh qualification calls,20 paired roots/five authored families. Compare one versus three changed-claim copies against typed truth and a same-input parser; require exact selections, derived facts, labels and decisions. Controlled grammar, no field or swarm efficacy claim; no evaluation.",
+    "checked_utc": "2026-10-04T20:17:51.647737+00:00"
+  },
+  "route": {
+    "model": "anthropic/claude-sonnet-4.6",
+    "provider": "Anthropic",
+    "snapshot": "20260217",
+    "pricing_verified": true,
+    "checked_at": 1791145071.7000103
+  },
+  "budget": {
+    "calls": 142,
+    "reserved_usd": 4.505856,
+    "effective_exposure_usd": 0.9933489599999998,
+    "prior_unknown_bound_usd": 0.061344
+  },
+  "checked_at": 1791145070.3784463,
+  "host": "sim-dmarz-3",
+  "claim_id": "vishesh-quorum-sp-01"
+}

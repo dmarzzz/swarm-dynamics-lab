@@ -1,0 +1,17 @@
+{
+  "experiment": "quorum-of-mirrors",
+  "attempt": "QM-SP-02",
+  "authority": "Owner requested repair, trace analysis and native qualification; standing necessary post-mortem diagnostic authority covers this quote-only repair after SP-01. No new budget.",
+  "additional_usd": 0,
+  "prior_additions_usd": [
+    2,
+    5
+  ],
+  "cumulative_api_cap_usd": 8,
+  "cumulative_infrastructure_cap_usd": 1,
+  "cumulative_total_cap_usd": 9,
+  "max_new_calls": 40,
+  "max_new_reserved_usd": 1.92,
+  "retains_original_calls_and_uncertainty": true,
+  "automatic_retry_or_evaluation": false
+}
