@@ -193,7 +193,7 @@ def provider_config():
 
 
 def scripted_model():
-    """The model whose system message hashes the scripted stage's packets: the first of the ladder."""
+    """The model whose system message and answer format the scripted stage uses: the first of the ladder."""
     return model_ladder()[0]
 
 
@@ -341,9 +341,13 @@ def evaluate(a, answer):
     return sim.score(a['packet'], answer, e['truth_answer'], e['false_answer'])
 
 
-def scripted(a, behavior='reference'):
-    """A scripted actor's answer, validated in the first model's format (the scripted stage is model-free)."""
-    return validator(scripted_model())(sim.control(a['packet'], behavior))
+def scripted(a, behavior='reference', name=None):
+    """A scripted actor's answer in the answer format of `name` (default: the scripted stage's model),
+    validated by that format's rules."""
+    name = name or scripted_model(); answer = sim.control(a['packet'], behavior)
+    if spec(name)['answer_format'] == 1:
+        answer = {'value': answer['value'], 'sources': answer['sources']}
+    return validator(name)(answer)
 
 
 def qualification(rows):

@@ -9,7 +9,7 @@ choices, usage; OpenAI: model, choices with a refusal field, usage with reasonin
 provider) and reject any request body that is not that model's frozen template plus messages. A
 rehearsal answer is never a sample. Backoff and billing waits use an injected clock, so nothing
 sleeps. Each scenario has its own hub and fresh temporary result and ledger directories:
-  (a) the Qwen chain, all four stages, with a stub that answers by the scripted reference actor in a
+  (a) the Qwen chain (the configuration of attempt 002, kept as a regression), all four stages, with a stub that answers by the scripted reference actor in a
       rotating mix of the tolerated answer variants; `chain verify`; queueing S0 again is refused.
       Then, on the same hub, the gpt-6-luna chain with its own results directory and ledger: the
       passed S0 serves it, its batches carry the model tag, its requests carry the attempt-001
@@ -59,7 +59,7 @@ CREDIT_BODY = json.dumps({'error': {'code': 402, 'message': 'Insufficient credit
 ERROR_BODY = json.dumps({'error': {'code': 500, 'message': 'rehearsal injected failure'}}).encode()
 QUOTA_BODY = json.dumps({'error': {'code': 'insufficient_quota', 'type': 'insufficient_quota',
                                    'message': 'You exceeded your current quota, please check your plan and billing details. (rehearsal)'}}).encode()
-GPT = 'gpt-6-luna'
+GPT = 'gpt-6-luna'; QWEN = 'qwen/qwen3.7-flash'
 
 
 def require_local(url):
@@ -112,7 +112,7 @@ class Stub:
     def __init__(self, mode='reference', credit_at=None, fail_messages=(), fail_from=None, credit_from=None, variants=False, model=None):
         assert mode in ('reference', 'trust_memory')
         self.mode = mode; self.variants = variants; self.lock = threading.Lock(); self.requests = 0; self.answered = 0
-        self.model = model or study.model_ladder()[0]; self.openai = study.provider_name(self.model) == 'openai'
+        self.model = model or study.model(); self.openai = study.provider_name(self.model) == 'openai'
         self.credit_at = list(credit_at) if credit_at else None
         self.fail_messages = set(fail_messages); self.fail_from = fail_from; self.credit_from = credit_from
 
@@ -208,8 +208,7 @@ def set_chain_env(work, name, model):
     STUDY_MODEL and STUDY_PROVIDER, and only that provider's credential alias."""
     for key in (provider.KEY_ENV, openai_provider.KEY_ENV, 'STUDY_MODEL', 'STUDY_PROVIDER'): os.environ.pop(key, None)
     os.environ.update(STUDY_RESULTS_DIR=str(work / f'results{name}'), STUDY_BUDGET_LEDGER=str(work / 'accounting' / f'ledger{name}.jsonl'))
-    if model is not None:
-        os.environ.update(STUDY_MODEL=model, STUDY_PROVIDER=study.provider_name(model))
+    os.environ.update(STUDY_MODEL=model, STUDY_PROVIDER=study.provider_name(model))
     os.environ[study.adapter(model)[0].KEY_ENV] = 'rehearsal-stub-not-a-credential'
 
 
@@ -286,27 +285,27 @@ def main():
     base = tempfile.mkdtemp(prefix='memory-handoff-rehearsal-', dir=a.tmp)
     if study.ROOT in Path(base).resolve().parents: raise SystemExit('the temporary directory is inside the study tree')
     started = time.monotonic()
-    budget = study.budget(study.model_ladder()[0]); total = sum(budget['max_calls'].values()); limit = budget['max_failed']
+    budget = study.budget(QWEN); total = sum(budget['max_calls'].values()); limit = budget['max_failed']
     n_s1 = budget['max_calls']['S1']; first_s1 = 2 + budget['max_calls']['Q0']       # request ordinal of the first S1 call
     outage = budget['billing_outage']; near = lambda x, y: x is not None and abs(x - y) < 1.0
-    tag = study.spec(GPT)['tag']; qwen = dict(name='', model=None); gpt = dict(name=tag, model=GPT)
+    qwen = dict(name='-qwen', model=QWEN); gpt = dict(name='', model=GPT)       # each chain: its own results directory and ledger file
     try:
-        full = scenario('a-both-chains', hub_dir, base, sr, dict(qwen, stub=Stub('reference', variants=True), verify=True, replay_check=True),
+        full = scenario('a-both-chains', hub_dir, base, sr, dict(qwen, stub=Stub('reference', variants=True, model=QWEN), verify=True, replay_check=True),
                         dict(gpt, stub=Stub('reference', variants=True, model=GPT), verify=True))
-        gate = scenario('b-failed-qualification', hub_dir, base, sr, dict(qwen, stub=Stub('trust_memory')), dict(gpt, stub=Stub('reference', model=GPT)))
+        gate = scenario('b-failed-qualification', hub_dir, base, sr, dict(qwen, stub=Stub('trust_memory', model=QWEN)), dict(gpt, stub=Stub('reference', model=GPT)))
         one = scenario('c-billing-pause-and-one-failed-call', hub_dir, base, sr,
-                       dict(qwen, stub=Stub('reference', credit_at=(1, 2), fail_messages={first_s1 + 2 + 60}), verify=True))
-        many = scenario('d-failed-calls-over-the-limit', hub_dir, base, sr, dict(qwen, stub=Stub('reference', fail_from=first_s1)))
+                       dict(qwen, stub=Stub('reference', credit_at=(1, 2), fail_messages={first_s1 + 2 + 60}, model=QWEN), verify=True))
+        many = scenario('d-failed-calls-over-the-limit', hub_dir, base, sr, dict(qwen, stub=Stub('reference', fail_from=first_s1, model=QWEN)))
         bill = scenario('e-billing-stop-and-resume', hub_dir, base, sr,
-                        dict(qwen, stub=Stub('reference', credit_from=first_s1 + 40), resume_with=Stub('reference'), verify=True))
+                        dict(qwen, stub=Stub('reference', credit_from=first_s1 + 40, model=QWEN), resume_with=Stub('reference', model=QWEN), verify=True))
         quota = scenario('f-openai-quota-stop-and-resume', hub_dir, base, sr,
                          dict(gpt, stub=Stub('reference', credit_from=first_s1 + 40, model=GPT), resume_with=Stub('reference', model=GPT), verify=True))
     finally:
         if not a.keep: shutil.rmtree(base, ignore_errors=True)
     os.environ.pop('STUDY_MODEL', None); os.environ.pop('STUDY_PROVIDER', None)
     calls = full.get('stages', {})
-    qb = {s_: study.batch(s_) for s_ in study.STAGES}                                   # Qwen's batch names
-    gm = study.spec(GPT); gb = {s_: (qb['S0'] if s_ == 'S0' else f'{s_.lower()}-{gm["attempt"]}{gm["tag"]}') for s_ in study.STAGES}
+    names = lambda name: {s_: (study.design()['scripted_batch'] if s_ == 'S0' else f'{s_.lower()}-{study.spec(name)["attempt"]}{study.spec(name)["tag"]}') for s_ in study.STAGES}
+    qb, gb = names(QWEN), names(GPT)                                                     # each model's batch names
     gbudget = study.budget(GPT)
     done4 = sorted([qb[s_], 'done'] for s_ in study.STAGES)
     c, d, e = one.get('stages', {}), many.get('stages', {}), bill.get('stages', {})

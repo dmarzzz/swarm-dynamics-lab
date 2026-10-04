@@ -1,8 +1,14 @@
 """Offline checks. No network, no model call, no hub. `python3 src/selftest.py` prints the
 standard unittest summary ("Ran N tests ... OK") on stderr.
 
-The 32 tests of the reference adapter (test_openrouter_provider.py, an unmodified copy) run
-against this study's provider.py as part of the same suite.
+The tests of both reference adapters (test_openrouter_provider.py, 32 tests, and
+test_openai_provider.py, 28 tests, unmodified copies) run against this study's copies as part of
+the same suite.
+
+The package holds two model configurations. The classes Instrument, Adapter, Worker, Chain, Gates
+and Analysis run with STUDY_MODEL set to the Qwen configuration (attempt 002, kept as the record of
+that attempt); the classes SecondModel and SecondChain run the gpt-6-luna configuration (chain 003,
+the default of this revision). The launcher's STUDY_MODEL and STUDY_PROVIDER are ignored here.
 """
 import collections
 import copy
@@ -28,6 +34,7 @@ import chain        # noqa: E402
 import coordinator  # noqa: E402
 import journal      # noqa: E402
 import manifest     # noqa: E402
+import openai_provider  # noqa: E402
 import provider     # noqa: E402
 import rehearse     # noqa: E402
 import render       # noqa: E402
@@ -37,8 +44,17 @@ import worker       # noqa: E402
 
 sys.modules.setdefault('openrouter_provider', provider)        # the reference tests import the adapter by its reference name
 import test_openrouter_provider as reference_tests  # noqa: E402
+import test_openai_provider as openai_reference_tests  # noqa: E402
 
-D = study.design(); C = study.cfg(); B = D['budget']; QSET = D['qualification']['set']; batch = study.batch
+GPT, QWEN = 'gpt-6-luna', 'qwen/qwen3.7-flash'
+os.environ.pop('STUDY_PROVIDER', None)
+os.environ['STUDY_MODEL'] = QWEN        # the default for the classes written for the Qwen configuration; see the module docstring
+D = study.design(); C = study.cfg(); B = study.budget(QWEN); QSET = study.spec(QWEN)['qualification_set']; batch = study.batch
+
+
+def as_model(name):
+    """Environment of one model's chain, as the launcher sets it."""
+    return patch.dict(os.environ, {'STUDY_MODEL': name, 'STUDY_PROVIDER': study.provider_name(name)})
 KEY = 'selftest-key-not-a-credential-0123456789'
 REPO = study.ROOT.parents[3]
 TRUTH_FREE = lambda state, policy: (policy == 'reset' or state in ('copies', 'false_original')
@@ -109,7 +125,7 @@ class Env:
     """A temporary results directory, ledger and credential alias for one test."""
     def __enter__(self):
         self.td = tempfile.TemporaryDirectory(); self.path = Path(self.td.name)
-        self.patch = patch.dict(os.environ, {provider.KEY_ENV: KEY, provider.LEDGER_ENV: str(self.path / 'ledger' / 'ledger.jsonl'),
+        self.patch = patch.dict(os.environ, {provider.KEY_ENV: KEY, openai_provider.KEY_ENV: KEY, provider.LEDGER_ENV: str(self.path / 'ledger' / 'ledger.jsonl'),
                                              'STUDY_RESULTS_DIR': str(self.path / 'results')})
         self.patch.start(); return self
     def __exit__(self, *a):
@@ -152,8 +168,8 @@ def adapter(env, script):
         sent.append(json.loads(request.data)); item = script.pop(0)
         if isinstance(item, BaseException): raise item
         return rehearse.Response(json.dumps(item).encode())
-    clock = Clock(); ledger = provider.Ledger(os.environ[provider.LEDGER_ENV], B)
-    return provider.OpenRouter(ledger, study.provider_config(), opener, clock.now, clock.sleep), sent, clock, ledger
+    clock = Clock(); module, adapter_class = study.adapter(); ledger = module.Ledger(os.environ[module.LEDGER_ENV], study.budget())
+    return adapter_class(ledger, study.provider_config(), opener, clock.now, clock.sleep), sent, clock, ledger
 
 
 def synthetic(outcome, roots=None, missing=()):
@@ -161,7 +177,7 @@ def synthetic(outcome, roots=None, missing=()):
     rows = []
     for a in study.assignments('S1'):
         if roots is not None and a['root'] not in roots: continue
-        r = {k: a[k] for k in study.ROW_KEYS}
+        r = {k: a[k] for k in study.ROW_KEYS}; r['model'] = study.model()
         key = (a['root'], a['state'], a['policy'])
         if key in missing:
             r['status'] = 'not_started'
@@ -300,7 +316,7 @@ class Instrument(unittest.TestCase):
             got = study.decode(rehearse.tolerated_text(ref, n))
             self.assertEqual({k: got[k] for k in want}, want, kind); self.assertEqual(study.evaluate(a, got)['supported'], 1, kind)
             for flag, value in flags[kind].items(): self.assertEqual(got['tolerated'][flag], value, (kind, flag))
-            self.assertEqual({k: study.revalidate(study.stored(got))[k] for k in ('value', 'sources', 'tolerated', 'key_order')},
+            self.assertEqual({k: study.revalidate(dict(study.stored(got), model=QWEN))[k] for k in ('value', 'sources', 'tolerated', 'key_order')},
                              {k: got[k] for k in ('value', 'sources', 'tolerated', 'key_order')}, kind)      # a saved row validates again identically
         null = sim.reference_answer(next(x for x in study.assignments('S1') if x['id'] == 'r5401-copies-content')['packet'])
         got = study.decode(rehearse.tolerated_text(null, 9)); self.assertEqual((got['value'], got['sources'], got['tolerated']['sources_null']), (None, [], 1))
@@ -360,9 +376,18 @@ class Instrument(unittest.TestCase):
         self.assertEqual([line(a) for a in study.assignments('S0')], frozen['stages']['S0']['assignments'])
         self.assertEqual([line(a) for a in study.qualification_fixtures('a')], frozen['stages']['P0']['assignments'] + frozen['stages']['Q0']['assignments'])
         self.assertEqual(len(frozen['stages']['S1']['assignments']), 576)
-        now = manifest.load()                                               # and today's hashes use today's system message
-        self.assertNotEqual(now['system_sha256'], old['system_sha256']); self.assertEqual(now['qualification_sets']['b']['assignments'],
-                                                                                              now['stages']['P0']['assignments'] + now['stages']['Q0']['assignments'])
+        # and the Qwen chain's own packet hashes (attempt-002 system message) equal the manifest pinned for attempt 002
+        pinned_path = study.ROOT / 'records' / 'attempt-002-qwen-manifest.json'; pin = D['attempt_002_qwen']
+        self.assertEqual(hashlib.sha256(pinned_path.read_bytes()).hexdigest(), pin['manifest_sha256'])
+        pinned = json.loads(pinned_path.read_text()); now = manifest.load(); mine = now['models'][QWEN]
+        self.assertEqual((pinned['source_hash'], pinned['digest']), (pin['source_hash'], pin['manifest_digest']))
+        self.assertEqual(mine['system_sha256'], pinned['system_sha256']); self.assertNotEqual(mine['system_sha256'], old['system_sha256'])
+        for stage_name in ('P0', 'Q0', 'S1'):
+            self.assertEqual(mine['stages'][stage_name]['assignments'], pinned['stages'][stage_name]['assignments'], stage_name)
+            self.assertEqual([f'{a["id"]} {a["packet_hash"]}' for a in study.assignments(stage_name, QWEN)], pinned['stages'][stage_name]['assignments'])
+        self.assertEqual(mine['batches'], {'S0': 's0-003', 'P0': 'p0-002', 'Q0': 'q0-002', 'S1': 's1-002'})
+        body = study.request_body(study.assignments('P0', QWEN)[0]['packet'], QWEN)        # and the request template is the frozen Qwen one
+        self.assertEqual({k: v for k, v in body.items() if k != 'messages'}, D['request_template']); self.assertEqual(body['messages'][0]['content'], study.SYSTEM)
 
     def test_longest_plausible_answer_stays_well_under_the_output_limit(self):
         """max_tokens stays 1,000. Attempt 001 measured 44 output tokens for a 75-character answer with three IDs
@@ -423,7 +448,7 @@ class Instrument(unittest.TestCase):
         self.assertEqual({s: len(study.assignments(s)) for s in study.STAGES}, {'S0': 192, 'P0': 1, 'Q0': 23, 'S1': 576})
         self.assertEqual(B['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576}); self.assertEqual(sum(B['max_calls'].values()), 600)
         self.assertEqual((B['max_attempted_calls'], B['reservation_margin'], B['max_visible_chars']), (600, 10, 4000))   # attempt 002: fresh ledger, no further repair
-        self.assertEqual((D['attempt'], QSET, [batch(s) for s in study.STAGES]), ('002', 'b', ['s0-002', 'p0-002', 'q0-002', 's1-002']))
+        self.assertEqual((study.spec(QWEN)['attempt'], QSET, [batch(s) for s in study.STAGES]), ('002', 'b', ['s0-003', 'p0-002', 'q0-002', 's1-002']))
         self.assertEqual((B['max_failed'], B['aggregate_usd'], B['workers'], B['request_timeout_seconds']), (6, 2, 4, 120))
         self.assertEqual(B['max_failed'], max(3, -(-576 // 100)))
         self.assertGreaterEqual(B['max_transport_attempts'] - B['max_attempted_calls'], 40)
@@ -475,7 +500,8 @@ class Instrument(unittest.TestCase):
         self.assertLess(manifest.PATH.stat().st_size, 300_000)
         m = manifest.load(); self.assertEqual(m['source_hash'], study.source_hash())
         self.assertEqual({s: m['stages'][s]['count'] for s in study.STAGES}, dict(B['max_calls'], S0=192))
-        self.assertEqual((m['qualification_sets']['a']['count'], m['qualification_sets']['b']['count'], m['attempt']), (24, 24, '002'))
+        self.assertEqual((m['qualification_sets']['a']['count'], m['qualification_sets']['b']['count'], m['model_ladder']), (24, 24, [GPT, QWEN]))
+        self.assertEqual({s: manifest.entry(m, s, QWEN)['count'] for s in study.STAGES}, dict(B['max_calls'], S0=192))
         hashed = sorted(p.name for p in [study.ROOT / 'design.yaml', study.ROOT / 'experiment.yaml', study.ROOT / 'requirements.txt'] + list((study.ROOT / 'src').glob('*.py')))
         self.assertIn('provider.py', hashed); self.assertIn('test_openrouter_provider.py', hashed)
         for outside in ('README.md', 'READY.yaml', 'manifest.json', 'preregistration.md', 'SETUP.md', 'RUN.md'): self.assertNotIn(outside, hashed)
@@ -483,13 +509,16 @@ class Instrument(unittest.TestCase):
     def test_ready_file_matches_the_design_and_the_source(self):
         import yaml
         path = study.ROOT / 'READY.yaml'
-        if not path.exists(): self.skipTest('READY.yaml is written after the code is pinned')
-        r = yaml.safe_load(path.read_text())
+        r = yaml.safe_load(path.read_text()); g = study.budget(GPT)
+        if r['source_hash'] != study.source_hash(): self.skipTest('READY.yaml is rewritten when the code is pinned')
         self.assertEqual((r['contract'], r['study'], r['experiment'], r['stages']), ('ready-chain-v1', study.EXPERIMENT, study.EXPERIMENT, list(study.STAGES)))
-        self.assertEqual((r['provider'], r['model'], r['max_calls'], r['max_calls_total'], r['usd_cap'], r['chain_timeout_seconds']),
-                         ('openrouter', D['model'], B['max_calls'], sum(B['max_calls'].values()), B['aggregate_usd'], B['chain_timeout_seconds']))
-        self.assertEqual(r['source_hash'], study.source_hash()); self.assertEqual(r['selftests'], TOTAL['tests'])
-        self.assertEqual(r['review'], 'reviews/chain-002-pre.md'); self.assertIn(study.source_hash(), (study.ROOT / r['review']).read_text())
+        self.assertEqual((r['provider'], r['model'], r['effort']), ('openai', GPT, study.spec(GPT)['request_template']['reasoning_effort']))
+        self.assertEqual(r['model'], study.model_ladder()[0]); self.assertNotIn('model_ladder', r)      # this revision launches the gpt-6-luna chain only
+        self.assertEqual((r['max_calls'], r['max_calls_total'], r['usd_cap'], r['chain_timeout_seconds']),
+                         (g['max_calls'], sum(g['max_calls'].values()), g['aggregate_usd'], g['chain_timeout_seconds']))
+        self.assertEqual(r['selftests'], TOTAL['tests'])
+        self.assertEqual((r['review'], r['ledger']), ('reviews/chain-003-pre.md', 'fresh'))
+        review = (study.ROOT / r['review']).read_text(); self.assertIn(study.source_hash(), review); self.assertIn('fresh ledger', review.lower())
 
     def test_no_secret_address_or_token_in_the_package(self):
         import re
@@ -1014,14 +1043,239 @@ class Analysis(unittest.TestCase):
         self.assertFalse(journal.call_ledger_complete(j.events[:1]))
 
 
+class SecondModel(unittest.TestCase):
+    """The gpt-6-luna chain (chain 003): attempt 001's instrument on another model, as its own chain."""
+    def setUp(self):
+        self.env = as_model(GPT); self.env.start()
+
+    def tearDown(self):
+        self.env.stop()
+
+    def test_model_comes_from_the_environment_and_must_be_in_the_ladder(self):
+        self.assertEqual((study.model_ladder(), D['providers']), ([GPT, QWEN], {GPT: 'openai', QWEN: 'openrouter'}))
+        self.assertEqual((study.model(), study.provider_name(), study.params('P0')['backend'], study.params('P0')['model']), (GPT, 'openai', 'openai', GPT))
+        with patch.dict(os.environ): 
+            os.environ.pop('STUDY_MODEL'); os.environ.pop('STUDY_PROVIDER')
+            self.assertEqual(study.model(), GPT)                                   # the default of this revision
+        with patch.dict(os.environ, {'STUDY_MODEL': 'gpt-6-sol'}):
+            with self.assertRaises(ValueError): study.model()
+        with patch.dict(os.environ, {'STUDY_PROVIDER': 'openrouter'}):
+            with self.assertRaises(ValueError): study.provider_name()
+        with as_model(QWEN):
+            self.assertEqual((study.model(), study.provider_name(), study.params('Q0')['backend']), (QWEN, 'openrouter', 'openrouter'))
+        self.assertEqual((study.params('S0')['model'], study.params('S0')['backend'], study.params('S0')['batch']), ('none', 'scripted', 's0-003'))
+        self.assertIs(study.adapter(GPT)[1], openai_provider.OpenAI); self.assertIs(study.adapter(QWEN)[1], provider.OpenRouter)
+        self.assertEqual((study.billing_stop(GPT), study.billing_stop(QWEN)), ('provider_billing_stopped', 'provider_credit_balance_low'))
+
+    def test_batches_caps_and_prices_are_per_model(self):
+        names = lambda: [study.batch(s) for s in study.STAGES]
+        self.assertEqual(names(), ['s0-003', 'p0-003-gpt-6-luna', 'q0-003-gpt-6-luna', 's1-003-gpt-6-luna'])
+        with as_model(QWEN): self.assertEqual(names(), ['s0-003', 'p0-002', 'q0-002', 's1-002'])
+        g, q = study.budget(GPT), study.budget(QWEN)
+        self.assertEqual((g['aggregate_usd'], q['aggregate_usd']), (5, 2)); self.assertEqual(g['max_calls'], q['max_calls']); self.assertEqual(g['max_calls'], {'S0': 0, 'P0': 1, 'Q0': 23, 'S1': 576})
+        self.assertEqual((g['max_attempted_calls'], g['max_failed'], g['workers'], g['max_output_tokens'], q['max_output_tokens']), (600, 6, 4, 1500, 1000))
+        self.assertEqual(g['prices'], {'input': 0.10, 'cached_input': 0.01, 'cache_write': 0.125, 'output': 0.50}); self.assertEqual(g['prices'], openai_provider.PRICES[GPT])
+        self.assertNotIn('prices', q); self.assertEqual((q['input_usd_per_million'], q['output_usd_per_million']), (0.03, 0.13))
+        self.assertEqual((g['retry']['retryable_http_status'], q['retry']['retryable_http_status']), ([429, 500, 502, 503, 504], [429, 502, 503, 529]))
+        self.assertEqual(study.spec(GPT)['request_template'], {'model': GPT, 'reasoning_effort': 'low', 'max_completion_tokens': 1500, 'response_format': {'type': 'json_object'}})
+        self.assertEqual(openai_provider.check_config(study.provider_config())['model'], GPT)
+        worst = study.largest_request_bytes('S1', GPT)                                   # reservation and cap arithmetic for the gpt chain
+        one = 10 * (worst * 0.125 + 1500 * 0.50) / 1e6
+        self.assertLess(4 * one, 0.06); self.assertLess(600 * (worst * 0.125 + 1500 * 0.50) / 1e6, 1.0)
+        self.assertEqual((study.spec(GPT)['qualification_set'], study.spec(QWEN)['qualification_set'], study.spec(GPT)['answer_format'], study.spec(QWEN)['answer_format']), ('a', 'b', 1, 2))
+
+    def test_the_gpt_chain_is_attempt_001s_instrument_byte_for_byte(self):
+        """Same system message, same user messages, same qualification fixtures as the 24 requests Qwen answered
+        in attempt 001: every packet hash of S0, P0, Q0 and S1 equals the frozen attempt-001 manifest."""
+        frozen = json.loads((study.ROOT / 'records' / 'attempt-001-manifest.json').read_text()); now = manifest.load()
+        self.assertEqual(study.system(GPT), study.SYSTEM_ATTEMPT_001); self.assertEqual(hashlib.sha256(study.system().encode()).hexdigest(), frozen['system_sha256'])
+        self.assertIn('json', study.system().lower())                                      # JSON-object mode needs the word in the prompt
+        for stage_name in study.STAGES:
+            lines = [f'{a["id"]} {a["packet_hash"]}' for a in study.assignments(stage_name)]
+            self.assertEqual(lines, frozen['stages'][stage_name]['assignments'], stage_name)
+            self.assertEqual(now['stages'][stage_name]['assignments'], frozen['stages'][stage_name]['assignments'], stage_name)
+        self.assertEqual({s: now['stages'][s]['digest'] for s in study.STAGES}, {s: frozen['stages'][s]['digest'] for s in study.STAGES})
+        # the messages of a gpt-6-luna request equal the messages of attempt 001's request for the same packet
+        rows = [json.loads(l) for l in gzip.open(study.ROOT / 'records' / 'q0-assignments.jsonl.gz', 'rt')] + \
+               [json.loads(l) for l in gzip.open(study.ROOT / 'records' / 'p0-assignments.jsonl.gz', 'rt')]
+        mine = {a['id']: a for a in study.assignments('P0') + study.assignments('Q0')}
+        self.assertEqual(sorted(mine), sorted(r['id'] for r in rows)); self.assertEqual(len(rows), 24)
+        for r in rows:
+            a = mine[r['id']]; self.assertEqual(a['packet'], r['packet']); self.assertEqual(a['packet_hash'], r['packet_hash'])
+            body = study.request_body(a['packet'])
+            self.assertEqual(body['messages'], [{'role': 'system', 'content': study.SYSTEM_ATTEMPT_001}, {'role': 'user', 'content': study.user_text(a['packet'])}])
+            self.assertEqual(hashlib.sha256((body['messages'][0]['content'] + '\n' + body['messages'][1]['content']).encode()).hexdigest(), r['packet_hash'])
+            self.assertEqual(tuple(body), openai_provider.BODY_KEYS)
+        self.assertEqual(study.assignments('P0')[0]['id'], 'qa00-r5501-clean-content')
+
+    def test_attempt_001_answers_regrade_identically_under_the_tolerant_rules(self):
+        """The tolerant validation is the one difference from attempt 001's handling. It changes no grade:
+        the 24 saved attempt-001 answers validate and score to the same 19 of 24 with the same five misses."""
+        rows = [json.loads(l) for l in gzip.open(study.ROOT / 'records' / 'p0-episodes.jsonl.gz', 'rt')] + \
+               [json.loads(l) for l in gzip.open(study.ROOT / 'records' / 'q0-episodes.jsonl.gz', 'rt')]
+        fixtures = {a['id']: a for a in study.qualification_fixtures('a')}
+        self.assertEqual(len(rows), 24); supported = []; regraded = []
+        for r in rows:
+            full = study.validate(r['answer']); a = fixtures[r['id']]
+            self.assertEqual({k: full[k] for k in ('value', 'sources')}, r['answer'])
+            self.assertEqual(full['tolerated'], {'value_as_float': 0, 'value_as_string': 0, 'duplicate_sources': 0, 'sources_null': 0, 'extra_keys': [],
+                                                 'work_missing': [], 'work_malformed': 0, 'work_before_value': 0, 'current_as_string': 0})
+            self.assertEqual(study.evaluate(a, full), r['evaluation'], r['id'])
+            new = dict(r, **study.stored(full), evaluation=study.evaluate(a, full)); regraded.append(new)
+            if r['evaluation']['supported']: supported.append(r['id'])
+        self.assertEqual(len(supported), 19)
+        q = study.qualification(regraded); self.assertEqual((q['fixtures'], q['valid'], q['supported'], q['passed']), (24, 24, 19, False))
+        self.assertEqual(q['misses'], sorted(['qa02-r5503-stale-content', 'qa03-r5504-copies-content', 'qa04-r5505-contradiction-content',
+                                              'qa10-r5505-contradiction-metadata', 'qa13-r5502-misquote-raw']))
+
+    def test_original_answer_format_is_validated_by_the_same_tolerant_rules(self):
+        good = {'{"value": 43, "sources": ["rec-a"]}': (43, ['rec-a']), '{"sources": ["rec-a"], "value": "43"}': (43, ['rec-a']), '{"value": 43.0, "sources": ["a", "a"]}': (43, ['a']),
+                '{"value": null, "sources": null}': (None, []), '{"value": null, "sources": []}': (None, []), '{"value": 7, "sources": [], "note": "x"}': (7, []),
+                '\n{\n  "value": 43,\n  "sources": ["rec-a"]\n}\n': (43, ['rec-a'])}
+        for text, (value, sources) in good.items():
+            full = study.decode(text); self.assertEqual((full['value'], full['sources']), (value, sources), text)
+            self.assertEqual((full['tolerated']['work_malformed'], full['tolerated']['work_missing']), (0, []))       # working fields are not asked of this model
+        self.assertEqual(study.decode('{"value": 7, "sources": [], "note": "x"}')['tolerated']['extra_keys'], ['note'])
+        volunteered = study.decode(json.dumps(sim.reference_answer(study.assignments('P0')[0]['packet'])))
+        self.assertEqual(volunteered['tolerated']['extra_keys'], sorted(sim.WORK_KEYS))        # volunteered working fields are extra keys, not scored
+        for text in ('{"value": 43}', '{"sources": []}', '{"value": true, "sources": []}', '{"value": 4.5, "sources": []}', '{"value": 43, "sources": "rec-a"}',
+                     '{"value": 43, "value": 43, "sources": []}', '[]', 'The value is 43.', '```json\n{"value": 43, "sources": []}\n```'):
+            with self.assertRaises(Exception, msg=text): study.decode(text)
+        a = study.assignments('P0')[0]; s0 = study.scripted(a)                                 # the scripted stage answers in this format
+        self.assertEqual(list(s0['raw']), ['value', 'sources']); self.assertEqual(study.evaluate(a, s0)['supported'], 1)
+        with as_model(QWEN): self.assertEqual(study.decode('{"value": 43, "sources": ["rec-a"]}')['tolerated']['work_malformed'], 1)
+
+    def test_probe_gate_for_a_reasoning_model_without_a_provider_field(self):
+        f = study.assignments('P0')[0]; base = {k: f[k] for k in study.ROW_KEYS}; answer = study.scripted(f)
+        acc = {'usage_reported': True, 'input_tokens': 1200, 'response_model': GPT, 'finish_reason': 'stop', 'reasoning_tokens': 192, 'request_bytes': 4951}
+        row = dict(base, status='completed', answer={'value': answer['value'], 'sources': answer['sources']}, evaluation=study.evaluate(f, answer), accounting=acc)
+        g = study.probe_gate([row]); self.assertTrue(g['passed']); self.assertNotIn('no_reasoning_tokens', g['checks']); self.assertNotIn('provider_named_and_matches', g['checks'])
+        self.assertTrue(study.probe_gate([dict(row, accounting=dict(acc, response_model='gpt-6-luna-2026-09-01'))])['passed'])
+        for change in ({'response_model': 'gpt-6-sol'}, {'finish_reason': 'length'}, {'usage_reported': False}):
+            self.assertFalse(study.probe_gate([dict(row, accounting=dict(acc, **change))])['passed'], change)
+        with as_model(QWEN):                                                                   # the Qwen configuration keeps its stricter probe
+            self.assertFalse(study.probe_gate([dict(row, accounting=dict(acc, response_model=QWEN, response_provider='Alibaba'))])['passed'])
+
+    def test_gates_never_cross_models(self):
+        hub = FakeHub(); hub.add('S0')                                                     # one scripted stage serves both models
+        self.assertIsNotNone(coordinator.scripted_passed(hub))
+        with as_model(QWEN): hub.add('P0'); hub.add('Q0')                                   # a passed Qwen probe and qualification
+        with self.assertRaises(coordinator.GateRefused) as cm: coordinator.enqueue(hub, 'Q0')
+        self.assertEqual(str(cm.exception), 'exact_runtime_qualification_required:P0')       # they admit nothing on gpt-6-luna
+        with self.assertRaises(coordinator.GateRefused): coordinator.enqueue(hub, 'S1')
+        ids = coordinator.enqueue(hub, 'P0'); row = next(r for r in hub.rows if r['run'] == ids[0])
+        self.assertEqual((row['params']['batch'], row['params']['model'], row['params']['backend']), ('p0-003-gpt-6-luna', GPT, 'openai'))
+        hub.queue.clear(); row.update(status='done', metrics={'invalid': 0, 'qualification_passed': 1})
+        hub.add('Q0'); self.assertEqual(len(coordinator.enqueue(hub, 'S1')), 1)
+        with as_model(QWEN):                                                                # and the gpt qualification admits nothing on Qwen beyond its own
+            other = FakeHub(); other.add('S0')
+            with as_model(GPT): other.add('P0'); other.add('Q0')
+            with self.assertRaises(coordinator.GateRefused): coordinator.enqueue(other, 'S1')
+        twice = FakeHub(); twice.add('S0'); twice.add('S0', batch='s0-other'); self.assertIsNone(coordinator.scripted_passed(twice))
+
+    def test_resume_accepts_only_the_billing_stop_of_the_chains_own_provider(self):
+        def attempt(reason, model=None):
+            with Env():
+                chain.write_status({'source_hash': study.source_hash(), 'model': model or study.model(), 'state': 'stopped_at_gate', 'stopped_stage': 'S1',
+                                    'reason': reason, 'stages': {'S1': {}}})
+                out = io.StringIO()
+                with patch('sys.stdout', out): code = chain.resume(FakeHub(), opener=rehearse.Stub('reference'))
+                return code, json.loads(out.getvalue().strip().splitlines()[-1])['reason']
+        self.assertEqual(attempt('provider_billing_stopped'), (3, 'no_unfinished_units'))            # accepted as a billing stop; nothing saved to continue here
+        self.assertEqual(attempt('provider_credit_balance_low'), (3, 'last_stop_was_not_a_billing_stop_of_S1'))
+        self.assertEqual(attempt('failed_units_over_limit'), (3, 'last_stop_was_not_a_billing_stop_of_S1'))
+        self.assertEqual(attempt('provider_billing_stopped', model=QWEN), (3, 'no_chain_at_this_source_hash'))   # another model's chain status
+        with as_model(QWEN):
+            self.assertEqual(attempt('provider_credit_balance_low'), (3, 'no_unfinished_units'))
+            self.assertEqual(attempt('provider_billing_stopped'), (3, 'last_stop_was_not_a_billing_stop_of_S1'))
+
+    def test_openai_quota_error_is_a_pause_then_a_resumable_stop_with_nothing_failed(self):
+        with Env() as env:
+            run = FakeRun('s1', study.params('S1'))
+            summary, rows, reason, _ = stage('S1', env, rehearse.Stub('reference', credit_from=30), run=run)
+            self.assertEqual(reason, 'provider_billing_stopped'); self.assertEqual((summary['failed'], summary['resumable'], summary['graded']), (0, True, 29))
+            voided = [r for r in rows if r['status'] == 'not_started' and (r.get('accounting') or {}).get('voided')]
+            self.assertTrue(0 < len(voided) <= B['workers']); self.assertTrue(any(r['accounting'].get('http_status') == 429 and 'quota' in r['accounting']['error_body'] for r in voided))
+            ledger = openai_provider.Ledger(os.environ[openai_provider.LEDGER_ENV], study.budget()).transact()
+            self.assertEqual((ledger['calls_by_batch'], ledger['cap_usd']), ({'s1-003-gpt-6-luna': 29}, 5))
+            self.assertTrue(all(r['model'] == GPT and r['backend'] == 'openai' for r in rows))
+            cost = sum(r['accounting']['actual_usd'] for r in rows if r['status'] == 'completed'); self.assertGreater(cost, 0)
+            self.assertTrue(all(r['accounting']['cost_source'] == 'computed_from_pinned_prices' and r['accounting']['reasoning_tokens'] == 64 for r in rows if r['status'] == 'completed'))
+
+    def test_stage_refuses_a_run_queued_for_another_model(self):
+        with Env() as env:
+            with as_model(QWEN): params = study.params('P0')
+            with self.assertRaises(worker.StageFailed) as cm: worker.execute(params, env.path / 'x', None, opener=rehearse.Stub('reference'))
+            self.assertIn(str(cm.exception), ('stage_backend_mismatch', 'model_differs_from_environment', 'batch_mismatch'))
+
+
+class SecondChain(unittest.TestCase):
+    """One full gpt-6-luna chain on an in-memory hub that already holds the passed scripted stage."""
+    @classmethod
+    def setUpClass(cls):
+        cls.model_env = as_model(GPT); cls.model_env.start()
+        cls.env = Env().__enter__(); cls.hub = FakeHub(); cls.hub.add('S0'); cls.stub = Capture('reference', variants=True); clock = Clock()
+        out = io.StringIO()
+        with patch('sys.stdout', out):
+            cls.code = chain.run_chain(list(study.STAGES), sr=cls.hub, opener=cls.stub, clock=clock.now, sleep=clock.sleep)
+        cls.status = chain.read_status()
+
+    @classmethod
+    def tearDownClass(cls):
+        cls.env.__exit__(None, None, None); cls.model_env.stop()
+
+    def test_chain_completes_with_its_own_batches_cap_and_the_shared_scripted_stage(self):
+        self.assertEqual((self.code, self.status['state'], self.status['model'], self.status['provider']), (0, 'completed', GPT, 'openai'))
+        self.assertTrue(self.status['stages']['S0']['reused']); self.assertEqual(sum(1 for r in self.hub.rows if r['params']['stage'] == 'S0'), 1)
+        self.assertEqual({s: self.status['stages'][s]['batch'] for s in ('P0', 'Q0', 'S1')}, {'P0': 'p0-003-gpt-6-luna', 'Q0': 'q0-003-gpt-6-luna', 'S1': 's1-003-gpt-6-luna'})
+        self.assertEqual({s: self.status['stages'][s]['calls'] for s in ('P0', 'Q0', 'S1')}, {'P0': 1, 'Q0': 23, 'S1': 576})
+        self.assertEqual((self.status['ledger']['cap_usd'], self.status['ledger']['attempted_calls'], len(self.stub.bodies)), (5, 600, 600))
+        self.assertLess(self.status['ledger']['committed_usd'], 0.5)
+        self.assertEqual(self.status['stages']['S1']['headline']['inherited_error_content_minus_metadata'], -0.5)
+        p = self.status['stages']['S1']['projection']; self.assertTrue(p['within_cap'] and p['input_ceiling_ok'])
+        w = self.status['stages']['S1']['work']                       # tolerant rules on the original format: all valid, working fields never counted as missing
+        self.assertEqual((w['answers'], w['work_malformed'], w['work_missing']), (576, 0, 0)); self.assertTrue(all(w[k] > 0 for k in ('value_as_float', 'value_as_string', 'duplicate_sources', 'sources_null', 'extra_keys')))
+
+    def test_wire_level_requests_are_attempt_001s_messages_in_the_openai_template_and_carry_no_truth(self):
+        sent = collections.Counter(self.stub.bodies)
+        fixtures = study.qualification_fixtures('a') + study.assignments('S1')
+        want = collections.Counter(json.dumps(study.request_body(a['packet'])).encode() for a in fixtures)
+        self.assertEqual(sent, want); self.assertEqual(sum(sent.values()), 600)
+        for raw in sent:
+            body = json.loads(raw); text = raw.decode().lower()
+            self.assertEqual(tuple(body), openai_provider.BODY_KEYS); self.assertEqual(body['messages'][0]['content'], study.SYSTEM_ATTEMPT_001)
+            self.assertEqual({k: v for k, v in body.items() if k != 'messages'}, study.spec(GPT)['request_template'])
+            for word in ('truth', 'expected', 'evaluator', 'false_answer', 'packet_hash', 'qualification', 'r54', 'r55', 'provider', 'counting_values'):
+                self.assertNotIn(word, text)
+            self.assertEqual(set(json.loads(body['messages'][1]['content'])), set(sim.PACKET_KEYS))
+        for a in fixtures:
+            if TRUTH_FREE(a['state'], a['policy']):
+                w = sim.world(a['root'], C); message = json.loads(study.request_body(a['packet'])['messages'][1]['content'])
+                self.assertFalse({w['truth'], w['truth'] + w['delta']} & set(sim.numbers(message)), a['id'])
+        for headers in self.stub.headers:
+            self.assertEqual(sorted(k.lower() for k in headers), ['authorization', 'content-type'])
+
+    def test_verify_passes_for_this_model_and_fails_under_the_other_models_environment(self):
+        def run_verify():
+            out = io.StringIO()
+            with patch('sys.stdout', out): code = chain.verify(self.hub)
+            return code, json.loads(out.getvalue().strip().splitlines()[-1])
+        code, report = run_verify()
+        self.assertEqual(code, 0, {s: [k for k, v in x.get('checks', {}).items() if not v] or x.get('error') for s, x in report['stages'].items()})
+        self.assertEqual((report['model'], report['stages']['S1']['units']['completed'], report['stages']['S1']['units']['primary_estimate']), (GPT, 576, -0.5))
+        with as_model(QWEN):
+            code, report = run_verify(); self.assertEqual(code, 1); self.assertFalse(report['checks']['status_model_current'])
+
+
 TOTAL = {'tests': 0}
 
 
 def load_tests(loader, tests, pattern):
     suite = unittest.TestSuite()
-    for case in (Instrument, Adapter, Worker, Chain, Gates, Analysis):
+    for case in (Instrument, Adapter, Worker, Chain, Gates, Analysis, SecondModel, SecondChain):
         suite.addTests(loader.loadTestsFromTestCase(case))
-    suite.addTests(loader.loadTestsFromModule(reference_tests))      # the reference adapter's own tests, against this study's copy
+    suite.addTests(loader.loadTestsFromModule(reference_tests))          # the reference adapters' own tests, against this study's copies
+    suite.addTests(loader.loadTestsFromModule(openai_reference_tests))
     TOTAL['tests'] = suite.countTestCases()
     return suite
 

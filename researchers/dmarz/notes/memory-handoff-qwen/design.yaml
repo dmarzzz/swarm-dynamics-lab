@@ -3,13 +3,15 @@ version: 1
 experiment: memory-handoff-qwen
 status: exploratory
 program: researchers/dmarz/notes/overnight-program-2026-10-04 (research program v5, line M)
-attempt: '002'       # the one permitted repair; attempt 001 stopped at the qualification gate (reviews/chain-001-post.md)
+# History: attempt 001 (Qwen, answer only) stopped at the qualification gate; attempt 002 (Qwen, working fields) completed
+# (RESULTS.md). This revision is chain 003: the gpt-6-luna chain. The Qwen entry is kept as the record of attempt 002's
+# configuration (its requests are unchanged, selftest); its batch names exist on the hub and cannot be queued again.
 
 # Two pre-registered models, each its own complete chain (own batches, probe, qualification, ledger, results;
 # never pooled). The model of a chain is STUDY_MODEL (launcher --model), default the first entry.
-model_ladder: [qwen/qwen3.7-flash, gpt-6-luna]
+model_ladder: [gpt-6-luna, qwen/qwen3.7-flash]
 providers: {qwen/qwen3.7-flash: openrouter, gpt-6-luna: openai}
-scripted_batch: s0-003            # the scripted stage of this code revision; it is model-free and serves both chains
+scripted_batch: s0-003            # the scripted stage of this code revision; model-free, answered in the first model's answer format
 models:
   qwen/qwen3.7-flash:             # attempt 002 of the Qwen chain, unchanged: the fields below this block are its route and budget
     provider: openrouter
@@ -103,7 +105,8 @@ engineering_roots: [5301, 5302, 5303, 5304, 5305, 5306]
 dispatch_seed: memory-handoff-dispatch-v1
 
 qualification:
-  set: b                         # attempt 001 used set a; attempt 002, the one permitted repair, uses set b
+  # which set a chain uses is models.<model>.qualification_set: Qwen attempt 001 and gpt-6-luna chain 003 use set a,
+  # Qwen attempt 002 used set b
   roots_a: [5501, 5502, 5503, 5504, 5505, 5506]
   roots_b: [5601, 5602, 5603, 5604, 5605, 5606]
   # One root per memory state (index = position in the root list), four policies each: 24 fixtures.
