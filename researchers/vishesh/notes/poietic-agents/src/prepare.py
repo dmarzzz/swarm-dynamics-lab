@@ -19,7 +19,7 @@ def candidate():
                   'require 44/48 correct, 48/48 valid and zero protected access. Fresh repair, no retries, first interface error stops. No swarm efficacy conclusion.' for r in ROLES}
     return dict(experiment='poietic-agents',stage='S0',attempt='S0-02',source_commit=subprocess.check_output(
         ['git','rev-parse','HEAD'],cwd=BASE,text=True).strip(),file_hashes=inventory(),assignment_sha256=digest(assignments()),
-        review_resolution='P1-P3-v0.2-tested',worker_count=1,concurrency=1,prior_budget={'physical_calls':36,'exposure_nano':479232000},
+        review_resolution='P1-P3-v0.2-tested',worker_count=1,concurrency=1,prior_budget={'physical_calls':36,'exposure_nano':479232000,'infrastructure_nano':77223767},
         owner_update_approval=dict(approved=False,attempt='S0-02',decision_reference=None,assignment_sha256=digest(assignments()),instrument_sha256=digest(inventory())),
         authorization=dict(study='poietic-agents',stage='S0',owner_approved=False,reference=None,api_cap_usd=1.5,
                            infrastructure_cap_usd=0.5,total_cumulative_cap_usd=2,physical_call_cap=288,deadline=0),

@@ -164,6 +164,25 @@ class BudgetTests(unittest.TestCase):
     def test_authority_cannot_increase_or_copy_host(self):
         with self.assertRaises(ValueError):Budget(self.path,'authority','host',200,2,self.deadline)
         with self.assertRaises(ValueError):Budget(self.path,'authority','other-host',100,2,self.deadline)
+    def test_expired_authority_rejects_new_charge_without_mutation(self):
+        from unittest.mock import patch
+        self.b.reserve('prior','request',60);self.b.settle('prior')
+        before=self.b.db.execute('SELECT * FROM charges').fetchall()
+        with patch('budget.time.time',return_value=self.deadline+1):
+            with self.assertRaisesRegex(ValueError,'budget_or_deadline'):
+                self.b.reserve('new','request-new',1)
+        self.assertEqual(before,self.b.db.execute('SELECT * FROM charges').fetchall())
+        self.assertEqual(self.b.summary()['physical_calls'],1)
+    def test_expired_authority_cannot_be_reopened_with_new_deadline(self):
+        from unittest.mock import patch
+        self.b.reserve('prior','request',60);self.b.settle('prior')
+        authority=self.b.db.execute('SELECT * FROM authority').fetchall()
+        charges=self.b.db.execute('SELECT * FROM charges').fetchall()
+        with patch('budget.time.time',return_value=self.deadline+1):
+            with self.assertRaisesRegex(ValueError,'authority_cannot_reset'):
+                Budget(self.path,'authority','host',100,2,self.deadline+3600)
+        self.assertEqual(authority,self.b.db.execute('SELECT * FROM authority').fetchall())
+        self.assertEqual(charges,self.b.db.execute('SELECT * FROM charges').fetchall())
     def test_rejected_settlement_preserves_reserve(self):
         self.b.reserve('1','a',60)
         with self.assertRaises(ValueError):self.b.settle('1',61)
@@ -212,7 +231,7 @@ class NativeAndQualificationTests(unittest.TestCase):
 class AdmissionTests(unittest.TestCase):
     def setUp(self):
         self.now=time.time();self.c={'experiment':'poietic-agents','stage':'S0','attempt':'S0-02','file_hashes':inventory(),
-          'assignment_sha256':digest(assignments()),'prior_budget':{'physical_calls':36,'exposure_nano':479232000},'review_resolution':'P1-P3-v0.2-tested','source_commit':'a'*40,
+          'assignment_sha256':digest(assignments()),'prior_budget':{'physical_calls':36,'exposure_nano':479232000,'infrastructure_nano':77223767},'review_resolution':'P1-P3-v0.2-tested','source_commit':'a'*40,
           'authorization':{'study':'poietic-agents','stage':'S0','owner_approved':True,'reference':'unit-fixture-only','api_cap_usd':1.5,'infrastructure_cap_usd':0.5,'total_cumulative_cap_usd':2,'physical_call_cap':288,'deadline':self.now+3600},
           'allocation':{'experiment':'poietic-agents','operator':'vishesh/codex-heterogeneous','host':'fixture','claim_id':'fixture','merged_claim_revision':'a'*40,'exclusive':True,'registered_fleet_destination':True,'workload_idle':True,'approved_account_verified':True,'checked_at':self.now,'expires_at':self.now+4000,'allocated_usd_per_hour':.1,'charge_started_at':self.now},
           'credential':{'alias':'swarm-lab-openrouter','study_authorized':True},'worker_count':1,'concurrency':1,
@@ -230,6 +249,15 @@ class AdmissionTests(unittest.TestCase):
     def test_owner_update_cannot_approve_different_instrument(self):
         self.c['owner_update_approval']['instrument_sha256']='b'*64
         with self.assertRaisesRegex(ValueError,'owner_update_approval'):verify(self.c,self.now,actual_host='fixture')
+    def test_prior_infrastructure_counts_against_fresh_allocation(self):
+        self.c['allocation']['allocated_usd_per_hour']=0.4
+        # New allocation alone costs0.4333<0.5; with prior0.0772 it exceeds the cap.
+        with self.assertRaisesRegex(ValueError,'infrastructure_lifetime_budget'):
+            verify(self.c,self.now,actual_host='fixture')
+    def test_prior_infrastructure_evidence_cannot_be_zeroed(self):
+        self.c['prior_budget']['infrastructure_nano']=0
+        with self.assertRaisesRegex(ValueError,'prior_budget_evidence'):
+            verify(self.c,self.now,actual_host='fixture')
     def test_fault_admission_matrix(self):
         for section,key,value in [('allocation','checked_at',self.now-301),('allocation','exclusive',False),('allocation','workload_idle',False),('allocation','approved_account_verified',False),('allocation','expires_at',self.now+100),('credential','study_authorized',False),('page_verification','rendered',False)]:
             c=copy.deepcopy(self.c);c[section][key]=value
@@ -321,7 +349,7 @@ class RelayTests(unittest.TestCase):
 class RelayHealthTests(unittest.TestCase):
     def test_mismatched_or_used_relay_blocks_before_dispatch(self):
         from admission import verify_relay_health
-        now=time.time();c={'attempt':'S0-02','source_commit':'a'*40,'assignment_sha256':'b'*64,'prior_budget':{'physical_calls':36,'exposure_nano':479232000}}
+        now=time.time();c={'attempt':'S0-02','source_commit':'a'*40,'assignment_sha256':'b'*64,'prior_budget':{'physical_calls':36,'exposure_nano':479232000,'infrastructure_nano':77223767}}
         health=dict(c,experiment='poietic-agents',credential_ready=True,deadline=now+600,api_cap_usd=1.5,physical_calls=36,api_exposure_usd=.479232)
         self.assertTrue(verify_relay_health(health,c,now))
         for k,v in [('source_commit','old'),('physical_calls',1),('credential_ready',False),('deadline',now)]:

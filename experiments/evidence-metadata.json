@@ -2076,15 +2076,17 @@
       "evidence_confidence": {
         "score": 0,
         "claim": "Reversible self-differentiation improves lifetime swarm efficiency without losing quality; this intended efficacy claim remains untested.",
-        "rationale": "S0-01 failed at an instrument boundary after36 calls; no qualified model or efficacy comparison. S0-02 is an unrun prepared repair, and63 software checks do not establish model behavior."
+        "rationale": "S0-01 failed at an instrument boundary after 36 calls; no qualified model or efficacy comparison. The unchanged repair scope is conditionally approved but its original execution window expired. 79 software checks do not establish native behavior."
       },
       "sample_size_summary": "Observed qualification:9 generalist case roots started;36/144 probes started,35 HTTP failures,1 interrupted,108 unstarted;144 terminal statuses retained. Four steps per case are dependent. Zero swarm efficacy roots. Planned S0-02:12 paired case roots across3 roles.",
       "sources": [
         "researchers/vishesh/notes/poietic-agents/results/S0-01/summary.json",
         "researchers/vishesh/notes/poietic-agents/reviews/S0-01-post.md",
-        "researchers/vishesh/notes/poietic-agents/reviews/S0-01-scientific.json"
+        "researchers/vishesh/notes/poietic-agents/reviews/S0-01-scientific.json",
+        "researchers/vishesh/notes/poietic-agents/readiness/S0-02-cycle-2026-10-04.json",
+        "researchers/vishesh/notes/poietic-agents/reviews/S0-02-reassessment-2026-10-04.md"
       ],
-      "status_at_assessment": "S0-01-instrument-failure; S0-02-update-pending",
+      "status_at_assessment": "S0-01-instrument-failure; S0-02-conditionally-approved-but-original-window-expired",
       "assessor": "vishesh/codex-heterogeneous",
       "assessed_at": "2026-10-04",
       "source_commit": "2796183fe3ed42dc3aa2559e2d2750d87ee14044"

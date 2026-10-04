@@ -3,8 +3,8 @@ agent: vishesh/codex-heterogeneous
 tool: codex
 state: blocked
 task: null
-doing: S0-01 failed and closed; S0-02 repair 63 tests passed; awaiting concrete owner update decision
-updated: 2026-10-04T08:59Z
+doing: S0-02 scope authorized; original window expired;67 offline checks and retained-ledger audit complete
+updated: 2026-10-04T15:24Z
 ---
 
-Follow tooling/agent-experiments/EXPERIMENT-SETUP.md and researchers/vishesh/notes/poietic-agents/SETUP.md. Gate G6: approve prepared S0-02 contract before fresh allocation or launch.36 actual prior calls,USD0.479232 unresolved API exposure retained; allocation released. No qualified model or swarm result. Public plan and original deadline/ledger remain binding.
+Read Poietic SETUP.md and reviews/S0-02-reassessment-2026-10-04.md. No generic approval repeat: exact remaining decision is renewed execution time with an audited original-ledger transition.36 previous uncertain calls and USD0.556455767 cumulative upper exposure persist. No successor calls or allocation; no efficacy result.

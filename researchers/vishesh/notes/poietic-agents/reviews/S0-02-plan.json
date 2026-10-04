@@ -17,7 +17,7 @@
     "Fresh S0-02 namespace; previous cases not reused."
   ],
   "acceptance_checks": [
-    "63 offline tests pass, including actual local HTTP relay faults and approval binding.",
+    "79 offline checks pass, including actual loopback HTTP faults, approval binding, immutable expiry and prior infrastructure accounting.",
     "Public immutable condition plan verified before dispatch.",
     "Original cumulative authority/ledger/deadline and prior36 calls/USD0.479232 bind admission.",
     "Every role44/48 correct,48/48 valid,zero protected access; every assignment reconciled."
@@ -59,16 +59,45 @@
     "privacy": "Credential consumed locally; never retained or sent to worker; no private runtime identifiers in public artifacts."
   },
   "implementation": {
-    "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding.",
-    "offline_validation": "VALIDATION.json;63 author-run tests, no S0-02 native calls or reserved fixtures."
+    "change_summary": "Repair relay/worker error boundary, single-attempt guard, interruption accounting and successor approval binding. Current cycle adds no new agent behavior; tests expiry invariants and enforces prior infrastructure cost in admission. A generic, receipt-gated renewal helper is prepared and tested on synthetic ledgers only; no real transition applied.",
+    "offline_validation": "VALIDATION.json and readiness/S0-02-cycle-2026-10-04.json; 67 author-run offline tests; no successor calls or reserved fixtures."
   },
   "resources": {
     "maximum_calls": 144,
     "maximum_cost_usd": 0.723861504,
     "machine_count": 1,
     "cumulative_budget_ref": "AUTHORIZATION.json and original persistent private authority; previous exposure carries forward.",
-    "machine_requirements": "Fresh exclusive approved-account allocation after owner decision; original API deadline unchanged; no provisioning is authorized by this proposal.",
-    "allocation_required": true
+    "machine_requirements": "Current exclusive approved-account allocation after explicit time renewal and normal admission; operational details remain private. No allocation held.",
+    "allocation_required": true,
+    "total_cap_usd": 2,
+    "api_cap_usd": 1.5,
+    "infrastructure_cap_usd": 0.5
   },
-  "status": "prepared-awaiting-owner-approval"
+  "status": "conditionally-approved-scope; blocked-expired-original-window",
+  "research_value": {
+    "empirically_unknown": "Whether each unchanged native route can execute the clean lifecycle contracts once provider receipts survive validation.",
+    "decision_by_outcome": {
+      "support": "All three roles qualify: prepare only a separately admitted S1 comparison; do not automatically launch it.",
+      "null": "Valid actions miss competence thresholds: retain failure and block S1; a qualification failure is not a null swarm effect.",
+      "adverse": "Protected access or other invalid behavior: stop and preserve all outcomes without weakening gates.",
+      "inconclusive": "First interface failure: retain diagnostic receipt and stop this one cycle; no automatic S0-03."
+    },
+    "why_existing_data_or_simpler_method_is_insufficient": "S0-01 retained no usable provider response, so saved data cannot establish native competence. Mock software checks do not establish provider behavior.",
+    "collective_contribution": "Not tested by S0. Later compare useful shared services and reversible capability changes against coherent cache/static roles with conserved compute/access/storage and lifecycle delays."
+  },
+  "effort_estimate_hours": {
+    "preparation": 0.5,
+    "analysis_reporting": 0.5,
+    "operator": 0.25,
+    "assumptions": "Planning upper estimates; one operator/worker, existing verified fleet path, 144 serial calls maximum; first interface error stops. Not measured agent-hours."
+  },
+  "reassessment": {
+    "path": "researchers/vishesh/notes/poietic-agents/reviews/S0-02-reassessment-2026-10-04.md",
+    "sha256": "fa099ebedb47d1373267618105a3c55cd1a482966af5b2c7bab6795de272a06b"
+  },
+  "readiness_audit": {
+    "path": "researchers/vishesh/notes/poietic-agents/readiness/S0-02-cycle-2026-10-04.json",
+    "sha256": "5e81c4a249828cfdddac41d0e90f7f2ec100853fd894d4f2d66cac426e0e7117"
+  },
+  "runtime_status": "Original execution window expired; precise renewal proposal retained privately; no renewal applied or successor started."
 }

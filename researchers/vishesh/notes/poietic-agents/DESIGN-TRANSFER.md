@@ -26,3 +26,7 @@ Source evidence: [M1](https://github.com/dmarzzz/swarm-lab/blob/1d15f2a057a9e9c4
 | Why simpler/existing evidence is not enough | Generalists, caching, static specialists and later central adaptation, with conserved compute/access/storage and migration delay. |
 | What the collective contributes | Shared services must produce useful interdependent work, not merely move labels or cache already identical answers. Restored capacity must validate, not just respawn. |
 | Boundaries and stopping | S0-02 approval remains pending under original USD2 authority and unresolved exposure. A paid attempt count alone is not the criterion for abandoning a question; require a distinct justified repair and stopping limit. |
+
+## Current cycle reconciliation — 2026-10-04
+
+The owner conditionally authorized one ready S0-02 continuation within existing boundaries; the historical generic approval status above is superseded. Read-only native/ledger audit found the original execution window expired, with all 36 unresolved calls and USD 0.556455767 conservative cumulative exposure preserved. S0-02 remains unrun. The prepared repair passes 79 checks; two verify immutable expiry and two verify prior infrastructure in cumulative admission. See [reassessment](reviews/S0-02-reassessment-2026-10-04.md) for accepted PI lessons, planned sample/controls and the exact time-renewal proposal. Efficacy expansion remains parked.
