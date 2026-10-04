@@ -3,14 +3,16 @@ id: ai-village-dataset-design-2026-10-04
 type: task
 title: Assess AI Village data and draft a bounded replay study
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-pi-review
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-pi-review
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T17:57Z
+updated: 2026-10-04T17:57Z
 ---
 
 ## Goal
