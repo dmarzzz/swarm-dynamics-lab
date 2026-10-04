@@ -1,0 +1,7 @@
+{
+  "tests_passed": 20,
+  "native_calls": 0,
+  "scope": "offline post-A5 visible action contract repair",
+  "source_sha256": "e0bbcf6c232c086d1adac9445e8a823cf7e08119e5208220742d57743b1ce19e",
+  "tests_sha256": "7f4a4e5543a079fc911f776f269fc9912052fcf7fa01f9fd1ec2d6d3b011dd1e"
+}

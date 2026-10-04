@@ -85,13 +85,13 @@
       "owner": "vishesh",
       "study_path": "researchers/vishesh/notes/immune-response-v3",
       "setup_path": "researchers/vishesh/notes/immune-response-v3/SETUP.md",
-      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a4-post.md",
+      "postmortem_path": "researchers/vishesh/notes/immune-response-v3/freshness-study/reviews/a5-post.md",
       "adapter": null,
       "checked_at": "2026-10-04T14:31:29.036365+00:00",
       "checked_commit": "22834c8452473eef61dc16c3b03574ed9d3c103a",
-      "next_action": "A4 closed after first directAnthropic HTTP429; one uncertain reservation,no completed episode. Resolve provider readiness before a separately approved successor. Offline safe HTTP diagnostics pass13 tests.",
+      "next_action": "A5 closed:17native responses,3complete/1invalid/8unstarted. Visible schema omitted engine constraint; offline repair passes20tests. Prepare bounded corrected-contract qualification; preserve405calls/USD3.309095reserved of8.",
       "next_run_approval": "owner",
-      "operational_state": "A4 failed execution; scientific effect unmeasured; provider blocked; allocation released"
+      "operational_state": "A5 failed execution; partial adverse native evidence; offline contract repaired; allocation released"
     },
     {
       "id": "influence-swarms",

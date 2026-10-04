@@ -4,6 +4,8 @@ import matplotlib
 matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 from PIL import Image
+import sys
+sys.path.insert(0,str(Path(__file__).resolve().parent.parent))
 from freshness import CASES
 
 def plot(rows,path,tick=4,backend="native"):

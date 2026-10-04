@@ -24,7 +24,7 @@ def receipt(record,current):
 def observe(f,s,t,history,advice,checked):
  o=prior.observe(f,s['deployed'],t,[],'retain',[])
  for k in ['health_probe','observed_control_revision','memory','last_actions']:o.pop(k)
- o.update(ticks_remaining=5-t,current_epoch=s['epoch'],cached_probe=copy.deepcopy(s['probe']),last_actions=history[-2:],team_advice=copy.deepcopy(advice),tools={'inspect':'Refresh liveness and customer probes for current epoch; costs one tick.','deploy':'Set one binary version and restart that component, including same-version restarts; advances epoch but cached telemetry stays unchanged.','refresh':'Read registry availability; no new runtime health.','wait':'No mutation.'})
+ o.update(ticks_remaining=5-t,current_epoch=s['epoch'],cached_probe=copy.deepcopy(s['probe']),last_actions=history[-2:],team_advice=copy.deepcopy(advice),tools={'inspect':'Refresh liveness and customer probes for current epoch; costs one tick. Required arguments: service=none, version=0.','deploy':'Set one binary version and restart that component, including same-version restarts; advances epoch but cached telemetry stays unchanged.','refresh':'Read registry availability; no new runtime health. Required arguments: service=none, version=0.','wait':'No mutation. Required arguments: service=none, version=0.'})
  if checked:
   o['probe_receipt']=receipt(o['cached_probe'],o['current_epoch'])
   for a in o['team_advice']:a['freshness_receipt']=receipt({'epoch':a['observed_epoch']},o['current_epoch'])
@@ -38,7 +38,9 @@ def reference(o):
   if not live:return action('deploy',aliases[role],o['deployed'][aliases[role]],'Restart the observed failed process without changing configuration')
  return prior.scripted(dict(o,health_probe=o['cached_probe']['checks']))
 def schema(f):
- s=prior.action_schema(f);s['properties']['action']['enum']=['deploy','inspect','refresh','wait'];return s
+ s=prior.action_schema(f);s['properties']['action']['enum']=['deploy','inspect','refresh','wait']
+ s['anyOf']=[{'properties':{'action':{'enum':['inspect','refresh','wait']},'service':{'enum':['none']},'version':{'enum':[0]}}}]+[{'properties':{'action':{'enum':['deploy']},'service':{'enum':[alias]},'version':{'enum':[int(v) for v in f['catalog'][role]]}}} for role,alias in f['alias'].items()]
+ return s
 
 def step(f,s,a):
  before=health(f,s);d0=copy.deepcopy(s['deployed']);l0=copy.deepcopy(s['live']);redundant=restart=config=rejected=0

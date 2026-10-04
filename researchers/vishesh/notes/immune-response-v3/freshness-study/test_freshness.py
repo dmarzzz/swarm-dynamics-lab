@@ -33,3 +33,21 @@ class Admission(unittest.TestCase):
   from launch import validate
   for p in [{},{'key':'invalid','workspace':'invalid'},{'key':'invalid','workspace':'invalid','extra':True}]:
    with self.assertRaises(ValueError):validate(p)
+
+class ActionContract(unittest.TestCase):
+ def allowed(self,schema,a):
+  return any(all(a[k] in rule['enum'] for k,rule in branch['properties'].items()) for branch in schema['anyOf'])
+ def test_every_schema_combination_has_defined_engine_result(self):
+  import itertools
+  for case in s.CASES:
+   f,w=s.fixture(case,9401);sc=s.schema(f)
+   for kind,service,version in itertools.product(['deploy','inspect','refresh','wait'],list(f['alias'].values())+['none'],range(4)):
+    a=s.action(kind,service,version)
+    if self.allowed(sc,a):s.step(f,copy.deepcopy(w),a)
+ def test_retained_a5_invalid_inspect_is_rejected_by_visible_schema(self):
+  f,w=s.fixture('stale_false_alarm',9401)
+  self.assertFalse(self.allowed(s.schema(f),s.action('inspect',f['alias']['worker'],0)))
+  self.assertTrue(self.allowed(s.schema(f),s.action('inspect')))
+ def test_no_nonexistent_service_version_in_schema(self):
+  f,w=s.fixture('healthy_fresh',9401)
+  self.assertFalse(self.allowed(s.schema(f),s.action('deploy',f['alias']['gateway'],3)))
