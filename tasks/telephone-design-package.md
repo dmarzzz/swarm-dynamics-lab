@@ -3,14 +3,16 @@ id: telephone-design-package
 type: task
 title: Develop Telephone exploratory design and resource guide
 kind: question
-status: open
+status: claimed
 priority: p1
-owner: null
+owner: vishesh/codex-village-fit
 for: vishesh
 created: 2026-10-04
 created_by: vishesh/codex-village-fit
 depends_on: []
 topics: []
+claimed_at: 2026-10-04T18:25Z
+updated: 2026-10-04T18:25Z
 ---
 
 ## Goal
