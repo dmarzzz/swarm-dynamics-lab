@@ -1,0 +1,29 @@
+{
+  "all_assigned_bounds": [
+    -2.0,
+    2.0
+  ],
+  "attempted": 4,
+  "ci95": null,
+  "exploratory": true,
+  "failed": 4,
+  "family_means": {
+    "community": null,
+    "ring": null
+  },
+  "generated_at": "2026-10-04T15:05:51.942911+00:00",
+  "input_tokens": 0,
+  "main_planned": 192,
+  "main_valid": 0,
+  "output_tokens": 0,
+  "paid_usd": 0,
+  "paired_roots": 0,
+  "planned": 204,
+  "primary": null,
+  "qualification_passed": false,
+  "roots_planned": 48,
+  "spec": "split-sonnet-linked-weak",
+  "status": "lead",
+  "unstarted": 200,
+  "valid": 0
+}
