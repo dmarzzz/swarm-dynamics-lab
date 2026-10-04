@@ -29,4 +29,4 @@ python3 scripts/run-ready-chain.py sybil-rules-180 <launch commit> status --host
 ## Pins
 
 - Code commit `16b6c82ec03e14ae9d261d5b4bba686d8887f574`, source hash `a1371e7c2df0f3ff171726a6da121b03df86e76b7ec8dc320cb8b820a567729e` (READY.yaml names this file and this hash).
-- At this source hash, 2026-10-04, macOS, Python 3.9.6, no network, no model call: selftests 90 of 90; offline S0 for R1 and for R2 passed; rehearsal scenarios i and j 19 of 19. The full rehearsal a to j was still running when this review was pushed; its result is added below when it ends.
+- At this source hash, 2026-10-04, macOS, Python 3.9.6, no network, no model call: selftests 90 of 90; offline S0 for R1 and for R2 passed; rehearsal scenarios i and j 19 of 19. Full rehearsal a to j: passed, 75 of 75 checks (a first attempt ran out of disk on this Mac, caused by other processes, and was rerun after freeing space).
