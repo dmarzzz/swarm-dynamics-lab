@@ -1,0 +1,44 @@
+{
+  "development_episodes": 6,
+  "coverage_mechanisms": 6,
+  "conservative_core_rule_clusters": 3,
+  "clusters": [
+    {
+      "core_rule": {
+        "authority_levels": 1,
+        "combination": "mandatory_false_else_all_true_else_defer",
+        "metadata_gate": "scope_revision_inclusive_ttl",
+        "required_predicates": 1
+      },
+      "episodes": [
+        "dev-expiry",
+        "dev-unchanged"
+      ]
+    },
+    {
+      "core_rule": {
+        "authority_levels": 1,
+        "combination": "mandatory_false_else_all_true_else_defer",
+        "metadata_gate": "scope_revision_inclusive_ttl",
+        "required_predicates": 2
+      },
+      "episodes": [
+        "dev-coverage",
+        "dev-unresolved"
+      ]
+    },
+    {
+      "core_rule": {
+        "authority_levels": 2,
+        "combination": "mandatory_false_else_all_true_else_defer",
+        "metadata_gate": "scope_revision_inclusive_ttl",
+        "required_predicates": 1
+      },
+      "episodes": [
+        "dev-authority",
+        "dev-conflict"
+      ]
+    }
+  ],
+  "independence": "Same author and simulator; three core-rule clusters, not six independent semantic families or a24family corpus. Authority-threshold and tie-conflict states differ but share the authority resolver."
+}

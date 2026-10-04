@@ -1,0 +1,1298 @@
+{
+  "candidate-ed7f8917c7e7c6c84302": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-42505e77e3921811be0e": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-1765cf1179acc0e6ae06": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-f5c6009ab875acd322df": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-552377bcafb8af49906c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-742a917415d42acb69a8": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-3f81e5e3f3329f6fa3b7": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-7b44b5329783e2be3f1f": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-d3daacde187ef185e990": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-9c25cc1163aab93dd351": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-11fbec46753ec46228b6": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-e9d55f45f2005548e5e4": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-0d45a53fb61894c7a030": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-87dfd9acbab57f6abc9c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-bb8c9316f556ece6980c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-06076031314160a4a68d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-44c39c0f4a597f376a30": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-da1252b8b2c1cf39a010": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-79ac38c33facab16a3e0": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-b7da9edd08266796aea1": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-00845a67c25faf241e57": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-93c56fffec969ad15c15": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-5156ba52e8197aba0322": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-7270fc135853c2785989": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-63b5774581d70f0d5af5": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-80785b322e06812eb105": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-9e9857d5ceb8afffcae6": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-8be64e41b9b65b2493e8": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-08035891e74860fcf744": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-aa5bd002d56428311503": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-2c188eab517a869caa00": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-47387c6cf91538a642d5": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-18edea43bd7961403ccb": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-7e7533150df28d01fbe6": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-72ee97b23a16dc0e6d3c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-1b6c560dc8ef5180b0ba": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-7b60bd5f5724e507842b": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-02040dac8b234b6cbf42": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-19637374f4a99c6ca008": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-134506db3bc4354e0afa": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-3f5a0cc37dc38e75040f": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-fcd7ce56f44abb3ff926": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-96d53cc916340c005b72": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-54705d9fa6ced15da75f": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-8a75f53abcd264fbcdfa": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-fcfc7fe10f834df20856": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-09133856c3936f58288d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-e52fe0c002b1250a528d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-d7f7e050df854df941f5": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-78a3bfb46a87c63a8067": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-dcd557f1f5d9abf76eb0": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-bd3f38bacda80f41fb7b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-e5e87cb0a1ae5d98fd0b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-066377160bbc17cd9023": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-655e362771a6264deecc": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-a6ca188564c5af832e5d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-03c31c7794266ec78203": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-e93513cc80ddace117dc": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-e685d2d58806b8329096": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-806eadbbfd8ee95c5b99": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-b1f0c8b3e674e94e75cb": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-048d69762fa935ece748": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-a0d60f1f526820dca980": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-c25094dbc36a6c64447d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-e6e3aa819a05ab9052bb": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-4a10a0c931cb8f3b4674": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-3c5e3db132316eedab0d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-fd617456cba6375ce24f": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-afda35167ca82867b79b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-f9657669fd696cecf1d4": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-dafd887d6f78ca8f38ef": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-fcaa1582017cb7e9e916": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-f5d1bfe509bfbe4606fd": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-32ceb26fd83bfbd6a359": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-b28cbbd0438e1b8c28d2": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-7601ca9c9006819ce9aa": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-d618e02a1c76ffc3c6db": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-75ee3ff1e83c3e357667": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-60b20aa2dd1bca72a873": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-92c8a9a405609e77f08b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-56ff30aff6730dc8a175": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-3ba68895ec4e249ace9c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-598ebf24f272f70c34d4": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-a0a86cb7bb5e6de82c06": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-d9523aa741ef7f1a98fc": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-ea4a34b83cb6cc06a493": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-6e9470087c50af7d7609": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-8733004b7d530ead3e39": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-f10732d2b8609296dedc": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-7bcb671ab1de30fd4ab8": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-70b81704b4567bacd37f": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-2199304a913bcf5178fc": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-dfd3a9d57bb568ecee57": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-2e5c1cf5396ed99e5103": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-eaffd1dd56b2e9147148": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-6059de95e527beb9e1ba": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-b6f35651ae486a02de9c": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-7d6e7c8845cfb4b9bb22": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-0e72947e68f883b8725e": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-10c79c713b32a35a6e10": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-060404e288869a803c62": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-26715b3b999084646b3f": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-70b4ebd9d54913258705": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-e13d8c2133b5b892ccb0": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-b501471fe56a4bacc686": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-21c19b89074a2592ca0b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-ca39f2c8c2146c238def": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-55709e73138d06705aba": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-349c6daf883f0e3a3034": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-56d73df4efc4444f116e": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-f8668de85c36eb93eead": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-ffcb49ca1310d48312d5": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-98e510b2b65cfd5d289e": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-620b1c5c81d5183a3d9c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-c694cd42a8c2670d6c5c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-c3b512eee75b028709ce": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-f3b9a4bf78963df192ab": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-db0d4280da9b02b2212b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-c418259c267c5239c7ca": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-14b757dfc40f42091569": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-0e147cfd8bd532b396a0": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-f5959b256355603c97fd": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-a7e39ac891bb633d0b5a": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-3fdcdea41dee08dcbd64": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-decd7c90e52111bd94c2": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-9ed18db507bcff670d1b": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-3b2608afef1ab45475bc": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-06dea3750200c5e1dac2": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-5bba83e8ec68852b398e": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-be630b7f63c284741e6e": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-bff65fabb5f9735c2eb4": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-fd77b9b9315b7160a37c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-abc2cac14203441e3e6d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-0e37802bd05d79f16c70": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-0e1950b8c9324e0e711f": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD"
+  },
+  "candidate-415203ca6c265f56a9c3": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-2fe0ba672148ad603f7a": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-c6155db1b230bbc8123d": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-0a8fb5a01013b81a9737": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-795f73955225517d5b55": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-a6aae2d09c38d792cf65": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-8825194f21882f2d84fb": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-c66a828fa6dee1b35158": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-86d966005587c4eefd1c": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-598d4995d3716438a423": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-e9923484add23ad3d093": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-8dc016e6fe2504236590": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-1889fc02e5795639c16e": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-eec2083e8b4694142051": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-8bc5605c67b81795e67f": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-30edda3eb7fd08619023": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-4851aeca9462e94dfdb1": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-f123e3431e9df3a25409": {
+    "conditional_action_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED"
+  },
+  "candidate-3d699554545b161c9110": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-98c9d018e6f5c8da613a": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-45e433234c8e62dd5847": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-05f9b27907c126782512": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-72f7b13ab26cf90ff025": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-c54dcc0141a62fe742c5": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-7cd482e753e587ed28e3": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-252273171dd96fdc545f": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  },
+  "candidate-74be47e4e5e62d000341": {
+    "conditional_action_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER"
+  }
+}

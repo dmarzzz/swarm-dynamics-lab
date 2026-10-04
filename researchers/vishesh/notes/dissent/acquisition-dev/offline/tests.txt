@@ -1,0 +1,25 @@
+test_all_hand_authored_counterfactual_labels (test_offline.AcquisitionTests.test_all_hand_authored_counterfactual_labels) ... ok
+test_authority_and_conflict_controls (test_offline.AcquisitionTests.test_authority_and_conflict_controls) ... ok
+test_catalog_order_invariance (test_offline.AcquisitionTests.test_catalog_order_invariance) ... ok
+test_deadline_and_credit_limit (test_offline.AcquisitionTests.test_deadline_and_credit_limit) ... ok
+test_fault_actions_do_not_pass_all_cases (test_offline.AcquisitionTests.test_fault_actions_do_not_pass_all_cases) ... ok
+test_final_gate_receipt_and_common_resolver (test_offline.AcquisitionTests.test_final_gate_receipt_and_common_resolver) ... ok
+test_identifier_renaming_not_family_diversity (test_offline.AcquisitionTests.test_identifier_renaming_not_family_diversity) ... ok
+test_negative_cost_and_latency_rejected (test_offline.AcquisitionTests.test_negative_cost_and_latency_rejected) ... ok
+test_neutral_uses_unresolved_coverage (test_offline.AcquisitionTests.test_neutral_uses_unresolved_coverage) ... ok
+test_no_private_evaluator_or_counterfactual_fields_in_selection (test_offline.AcquisitionTests.test_no_private_evaluator_or_counterfactual_fields_in_selection) ... ok
+test_one_check_unresolved_but_illegal_two_checks_would_change_answer (test_offline.AcquisitionTests.test_one_check_unresolved_but_illegal_two_checks_would_change_answer) ... ok
+test_only_selected_source_is_delivered (test_offline.AcquisitionTests.test_only_selected_source_is_delivered) ... ok
+test_optional_expiry_does_not_stop_legitimate_service (test_offline.AcquisitionTests.test_optional_expiry_does_not_stop_legitimate_service) ... ok
+test_recorder_deterministic_replay (test_offline.AcquisitionTests.test_recorder_deterministic_replay) ... ok
+test_roles_differ_only_in_selection_instruction (test_offline.AcquisitionTests.test_roles_differ_only_in_selection_instruction) ... ok
+test_routine_is_authority_aware_and_preserves_its_coverage_miss (test_offline.AcquisitionTests.test_routine_is_authority_aware_and_preserves_its_coverage_miss) ... ok
+test_second_check_and_none_then_check_rejected (test_offline.AcquisitionTests.test_second_check_and_none_then_check_rejected) ... ok
+test_selector_cannot_observe_counterfactual_mutation (test_offline.AcquisitionTests.test_selector_cannot_observe_counterfactual_mutation) ... ok
+test_source_spoof_or_undeclared_fact_rejected_without_spending (test_offline.AcquisitionTests.test_source_spoof_or_undeclared_fact_rejected_without_spending) ... ok
+test_ttl_inclusive_future_scope_revision (test_offline.AcquisitionTests.test_ttl_inclusive_future_scope_revision) ... ok
+
+----------------------------------------------------------------------
+Ran 20 tests in 0.009s
+
+OK

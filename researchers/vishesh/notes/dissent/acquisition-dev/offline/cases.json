@@ -1,0 +1,629 @@
+[
+  {
+    "id": "dev-expiry",
+    "mechanism": "metadata_expired",
+    "structural_family": "single_predicate",
+    "rationale": "A formerly passing integration receipt is too old; refresh can justify reopening.",
+    "task": {
+      "domain": "software release",
+      "scope": "scope-12af21e3554e",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "integration_pass"
+      ],
+      "minimum_authority": {
+        "integration_pass": 1
+      },
+      "source_authorities": {
+        "build_registry": 2,
+        "A": 1,
+        "B": 2
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "HOLD",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [
+      {
+        "id": "evidence-248e57dd5cd7c6e8",
+        "origin": "build_registry",
+        "scope": "scope-12af21e3554e",
+        "revision": "r1",
+        "observed_at": 91,
+        "text": "integration pass = true",
+        "facts": {
+          "integration_pass": true
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Read the deployment audit receipt",
+        "covers": [
+          "audit_recorded"
+        ],
+        "authority": 1,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-a22b217dc2cec6d7",
+            "origin": "A",
+            "scope": "scope-12af21e3554e",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "audit recorded = true",
+            "facts": {
+              "audit_recorded": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Read the integration test registry",
+        "covers": [
+          "integration_pass"
+        ],
+        "authority": 2,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-3a984c94da0bd5af",
+            "origin": "B",
+            "scope": "scope-12af21e3554e",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "integration pass = true",
+            "facts": {
+              "integration_pass": true
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    }
+  },
+  {
+    "id": "dev-coverage",
+    "mechanism": "missing_conjunct",
+    "structural_family": "conjunctive_requirements",
+    "rationale": "The registered release certificate covers integration but not the required migration.",
+    "task": {
+      "domain": "software release",
+      "scope": "scope-25a35de52dc2",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "integration_pass",
+        "migration_pass"
+      ],
+      "minimum_authority": {
+        "integration_pass": 1,
+        "migration_pass": 1
+      },
+      "source_authorities": {
+        "release_certificate": 2,
+        "A": 2,
+        "B": 2
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "PROCEED",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [
+      {
+        "id": "evidence-caeb820d63207d38",
+        "origin": "release_certificate",
+        "scope": "scope-25a35de52dc2",
+        "revision": "r1",
+        "observed_at": 99,
+        "text": "integration pass = true",
+        "facts": {
+          "integration_pass": true
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Refresh the integration release certificate",
+        "covers": [
+          "integration_pass"
+        ],
+        "authority": 2,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-69f091b9482c7292",
+            "origin": "A",
+            "scope": "scope-25a35de52dc2",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "integration pass = true",
+            "facts": {
+              "integration_pass": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Read the migration test record",
+        "covers": [
+          "migration_pass"
+        ],
+        "authority": 2,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-56705cae76952169",
+            "origin": "B",
+            "scope": "scope-25a35de52dc2",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "migration pass = false",
+            "facts": {
+              "migration_pass": false
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    }
+  },
+  {
+    "id": "dev-authority",
+    "mechanism": "authority_supersession",
+    "structural_family": "authority_order",
+    "rationale": "The current cached review lacks the authority required for publication; the authoritative source contains a restriction.",
+    "task": {
+      "domain": "data publication",
+      "scope": "scope-bdc724348fa9",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "publication_allowed"
+      ],
+      "minimum_authority": {
+        "publication_allowed": 3
+      },
+      "source_authorities": {
+        "department_review": 1,
+        "A": 3,
+        "B": 1
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "PROCEED",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [
+      {
+        "id": "evidence-d895650da479cddd",
+        "origin": "department_review",
+        "scope": "scope-bdc724348fa9",
+        "revision": "r1",
+        "observed_at": 99,
+        "text": "publication allowed = true",
+        "facts": {
+          "publication_allowed": true
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Read the authoritative publication register",
+        "covers": [
+          "publication_allowed"
+        ],
+        "authority": 3,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-e1564860a57af532",
+            "origin": "A",
+            "scope": "scope-bdc724348fa9",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "publication allowed = false",
+            "facts": {
+              "publication_allowed": false
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Refresh the departmental review",
+        "covers": [
+          "publication_allowed"
+        ],
+        "authority": 1,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-a1ad586b020d3a1a",
+            "origin": "B",
+            "scope": "scope-bdc724348fa9",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "publication allowed = true",
+            "facts": {
+              "publication_allowed": true
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    }
+  },
+  {
+    "id": "dev-conflict",
+    "mechanism": "current_conflict",
+    "structural_family": "authority_order",
+    "rationale": "Equally ranked current inspections conflict; the designated higher authority can resolve them.",
+    "task": {
+      "domain": "equipment return-to-service",
+      "scope": "scope-408401c9dffa",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "inspection_clear"
+      ],
+      "minimum_authority": {
+        "inspection_clear": 1
+      },
+      "source_authorities": {
+        "inspector_left": 2,
+        "inspector_right": 2,
+        "A": 3,
+        "B": 2
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "HOLD",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [
+      {
+        "id": "evidence-33f08912e041c721",
+        "origin": "inspector_left",
+        "scope": "scope-408401c9dffa",
+        "revision": "r1",
+        "observed_at": 99,
+        "text": "inspection clear = true",
+        "facts": {
+          "inspection_clear": true
+        }
+      },
+      {
+        "id": "evidence-437127e728424950",
+        "origin": "inspector_right",
+        "scope": "scope-408401c9dffa",
+        "revision": "r1",
+        "observed_at": 99,
+        "text": "inspection clear = false",
+        "facts": {
+          "inspection_clear": false
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Read the final inspection register",
+        "covers": [
+          "inspection_clear"
+        ],
+        "authority": 3,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-2eec3f80c9c71658",
+            "origin": "A",
+            "scope": "scope-408401c9dffa",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "inspection clear = true",
+            "facts": {
+              "inspection_clear": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Read the unchanged right-side inspection",
+        "covers": [
+          "inspection_clear"
+        ],
+        "authority": 2,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-00e572d82d043428",
+            "origin": "B",
+            "scope": "scope-408401c9dffa",
+            "revision": "r1",
+            "observed_at": 99,
+            "text": "inspection clear = false",
+            "facts": {
+              "inspection_clear": false
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    }
+  },
+  {
+    "id": "dev-unchanged",
+    "mechanism": "benign_unchanged",
+    "structural_family": "single_predicate",
+    "rationale": "Load clearance is current. An expired cosmetic receipt is irrelevant; needless challenge cannot improve the action.",
+    "task": {
+      "domain": "inventory dispatch",
+      "scope": "scope-4e134c121f56",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "load_clear"
+      ],
+      "minimum_authority": {
+        "load_clear": 1
+      },
+      "source_authorities": {
+        "load_register": 2,
+        "cosmetic_register": 1,
+        "A": 2,
+        "B": 1
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "PROCEED",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [
+      {
+        "id": "evidence-9feda232640b05d2",
+        "origin": "load_register",
+        "scope": "scope-4e134c121f56",
+        "revision": "r1",
+        "observed_at": 99,
+        "text": "load clear = true",
+        "facts": {
+          "load_clear": true
+        }
+      },
+      {
+        "id": "evidence-f31cd94c2ea89b2e",
+        "origin": "cosmetic_register",
+        "scope": "scope-4e134c121f56",
+        "revision": "r1",
+        "observed_at": 91,
+        "text": "cosmetic clear = false",
+        "facts": {
+          "cosmetic_clear": false
+        }
+      }
+    ],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Refresh load clearance",
+        "covers": [
+          "load_clear"
+        ],
+        "authority": 2,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-4866fd7d155682cc",
+            "origin": "A",
+            "scope": "scope-4e134c121f56",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "load clear = true",
+            "facts": {
+              "load_clear": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Read the cosmetic inspection",
+        "covers": [
+          "cosmetic_clear"
+        ],
+        "authority": 1,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-074628b9bc28a5b8",
+            "origin": "B",
+            "scope": "scope-4e134c121f56",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "cosmetic clear = false",
+            "facts": {
+              "cosmetic_clear": false
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    }
+  },
+  {
+    "id": "dev-unresolved",
+    "mechanism": "one_check_insufficient",
+    "structural_family": "conjunctive_requirements",
+    "rationale": "Two independently required clearances are absent and each source covers only one; one check cannot justify dispatch.",
+    "task": {
+      "domain": "inventory dispatch",
+      "scope": "scope-0c8249649013",
+      "revision": "r1",
+      "now": 100,
+      "deadline": 102,
+      "ttl": 7,
+      "requirements": [
+        "supply_clear",
+        "transport_clear"
+      ],
+      "minimum_authority": {
+        "supply_clear": 1,
+        "transport_clear": 1
+      },
+      "source_authorities": {
+        "A": 2,
+        "B": 2
+      },
+      "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+    },
+    "incumbent": {
+      "action": "PROCEED",
+      "origin": "scripted"
+    },
+    "budget": {
+      "checks": 1,
+      "credits": 1
+    },
+    "initial": [],
+    "sources": [
+      {
+        "id": "A",
+        "description": "Read supply clearance",
+        "covers": [
+          "supply_clear"
+        ],
+        "authority": 2,
+        "priority": 1,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-681c0de5b047a45f",
+            "origin": "A",
+            "scope": "scope-0c8249649013",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "supply clear = true",
+            "facts": {
+              "supply_clear": true
+            }
+          }
+        ]
+      },
+      {
+        "id": "B",
+        "description": "Read transport clearance",
+        "covers": [
+          "transport_clear"
+        ],
+        "authority": 2,
+        "priority": 2,
+        "latency": 1,
+        "cost": 1,
+        "response": [
+          {
+            "id": "evidence-0ae76c02df3aaccd",
+            "origin": "B",
+            "scope": "scope-0c8249649013",
+            "revision": "r1",
+            "observed_at": 100,
+            "text": "transport clear = true",
+            "facts": {
+              "transport_clear": true
+            }
+          }
+        ]
+      }
+    ],
+    "gold_by_choice": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    }
+  }
+]

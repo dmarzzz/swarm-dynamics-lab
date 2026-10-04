@@ -18,3 +18,5 @@ Current disposition: **FINISH / PARK this diagnostic**. All 48 requests and cost
 [Prospective 54-assignment qualification plan](QUALIFICATION-PLAN.md): explicit source-only interface, nine coverage strata, strict54/54semantic and interface gate; no reserve opened or new run launched.
 
 [Scientific-baseline reassessment and finite successor plan](SCIENTIFIC-BASELINE-PLAN.md): baseline remains a gap. Fresh execution variability and useful evidence acquisition against a neutral checker are unmeasured. The proposal has separately fundable repeatability and acquisition stages; it does not launch either or change current caps. [Checked envelope](BASELINE-ENVELOPE.json).
+
+[Acquisition development is now built](../acquisition-dev/README.md): six public episodes, three shared core-rule structures,20passing checks and a strong coverage-aware controller ceiling. [ACQ-D1](../acquisition-dev/PACKET-PROPOSAL.md) is a disabled/unfunded discriminating alternative; no new model calls or reserve access.

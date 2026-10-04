@@ -107,3 +107,9 @@ Accepted preregistered coverage/interface/semantic gates and no tuning/replaceme
 ## Scientific baseline clarification
 
 Reclassified the line as baseline GAP: the completed finite repair diagnostic has no fresh-run variability evidence and no demonstrated acquisition utility. Published a two-stage prospective plan with repeated reserved qualification and a resource-matched dissenter-versus-neutral-checker primary comparison, plus routine refresh. Explicit24family/48episode dependence, three fresh repetitions, label reachability, strong controls, uncertainty limits, missingness and exact prospective budget distinguish scientific readiness from replayability. No corpus opening, calls, new allocation or funding inferred. Arithmetic checked; additional ceilingUSD1.408908, requiring a funded stage decision and amendment to existing API/call limits before use.
+
+## Six acquisition episodes and strong comparator audit
+
+Built public development worlds and18hand-labeled counterfactual choices;20offline checks pass for parity/leakage, source provenance, single-check limits, eligibility/authority/conflicts, replay and faults. Routine refresh5/6attainable outcomes; coverage-aware neutral reference6/6, both using five synthetic checks and conditionally correct6/6. Retained the routine missing-conjunct failure and the strong reference ceiling. Six mechanism labels reduce to three core-rule clusters; no24-family claim.
+
+Prepared disabled ACQ-D1 packet crossing three incumbents/three policies/three fresh executions on the six episodes,270maximum native calls/162trajectories. Additional proposed maximumUSD0.434310; no grant, reservation, native calls or reserve opening. Native acquisition/final schema integration and a named PI decision/call-limit amendment remain required. Line remains first alternate with baseline GAP.

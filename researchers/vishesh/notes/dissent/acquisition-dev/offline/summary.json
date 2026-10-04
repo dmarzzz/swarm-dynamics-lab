@@ -1,0 +1,33 @@
+{
+  "mode": "offline_rule_replay",
+  "native_calls": 0,
+  "new_spend": 0,
+  "reserved_cases_read": 0,
+  "development_episodes": 6,
+  "conservative_core_rule_clusters": 3,
+  "counterfactual_choices": 18,
+  "conditional_label_agreement": "18/18 hand-authored rows agree with rule interpreter",
+  "comparators": {
+    "routine": {
+      "assigned": 6,
+      "attainable_action_reached": 5,
+      "conditional_interpreter_correct": 6,
+      "synthetic_checks_used": 5
+    },
+    "neutral_reference": {
+      "assigned": 6,
+      "attainable_action_reached": 6,
+      "conditional_interpreter_correct": 6,
+      "synthetic_checks_used": 5
+    }
+  },
+  "native_neutral_competence": "unmeasured",
+  "native_challenge_competence": "unmeasured",
+  "native_fresh_repeatability": "unmeasured",
+  "candidate_calls": 270,
+  "candidate_api_ceiling_nano": 362880000,
+  "candidate_infrastructure_ceiling_nano": 71430000,
+  "candidate_additional_ceiling_nano": 434310000,
+  "required_lifetime_call_ceiling": 824,
+  "scientific_limit": "The simple coverage controller reaches all six attainable actions. These fixtures do not demonstrate a residual benefit from dissent."
+}

@@ -1,0 +1,24 @@
+{
+  "test_command": "python3 -m unittest discover -s researchers/vishesh/notes/dissent/acquisition-dev -p test_offline.py -v",
+  "tests_passed": 20,
+  "counterfactual_rows_checked": 18,
+  "packet_balance_and_repeated_input_hashes": "passed",
+  "source_sha256": {
+    "episodes.py": "17e4dd388355a27bb3e66115c04dc4ca0b4144ef7f2a45e4498e54b7f7f0453b",
+    "engine.py": "c158442edb0b3bccb0ca41f386cc99dab3499c3d74b65bff67ef0745dc10f6e8",
+    "test_offline.py": "56773bd1d8ecdbc2a021037428029d2d53c0cfc3632c6e2b2ae5ffa72074a3b4",
+    "prepare_offline.py": "3379bbce91aaada87761f81fa0a6729e05fc73425c06560b523a225fff46b008",
+    "PLAN.md": "c31391f3f4fc5e835bb95daf2962369f906e0c4a4e248d5a10c7a2634379ca54"
+  },
+  "artifacts": {
+    "summary.json": "f8b9d594ecbfc235a14371fd0ef79b5bf3d273c7fbd6d0a8c5e3545f8d529079",
+    "comparators.json": "54005f3a1aaabdda08edfb73fe2735fc699e7f5146f19719022e7d38ff2da0d1",
+    "tests.txt": "5021efc64d05ada3fb51d0602e27d429dbb1434409d207ae1ba499fa8cb72788",
+    "counterfactuals.json": "7030709c11b6930ed9e64fa3a722dbad4f02ca2412534fdcb8c6475c71fcff72",
+    "family-audit.json": "cf8d0a1bfe65ae41d53420b2ef646f70d3561ba3e5081084664afa4a99759cee",
+    "cases.json": "3b8f7681e74271ecb1a27ad9f8e3521320b54b53823d92f2c6ae6ad27ccfbde8",
+    "candidate-gold.json": "f03d5a35f9ca32f6cec68f1f911ef79aabf1e6f8192362f9a164781e8aa9497f",
+    "candidate-packet.json": "401b0df6b828076cdb915514f16e3f175d8ef49a0fed261a2ac0dca0e8c20fa3"
+  },
+  "native_calls": 0
+}

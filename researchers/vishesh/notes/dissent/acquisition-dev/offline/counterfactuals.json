@@ -1,0 +1,2973 @@
+[
+  {
+    "episode": "dev-expiry",
+    "actor_initial": {
+      "task": {
+        "domain": "software release",
+        "scope": "scope-12af21e3554e",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "integration_pass"
+        ],
+        "minimum_authority": {
+          "integration_pass": 1
+        },
+        "source_authorities": {
+          "build_registry": 2,
+          "A": 1,
+          "B": 2
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [
+        {
+          "id": "evidence-248e57dd5cd7c6e8",
+          "origin": "build_registry",
+          "scope": "scope-12af21e3554e",
+          "revision": "r1",
+          "observed_at": 91,
+          "text": "integration pass = true",
+          "facts": {
+            "integration_pass": true
+          }
+        }
+      ],
+      "incumbent": {
+        "action": "HOLD",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Read the deployment audit receipt",
+          "covers": [
+            "audit_recorded"
+          ],
+          "authority": 1,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Read the integration test registry",
+          "covers": [
+            "integration_pass"
+          ],
+          "authority": 2,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "7347a45f67b1e6397753ad8950f95c60064342551ba2d0ec60a8696aac8052fd",
+          "delivered_documents": [],
+          "after_actor_sha256": "7347a45f67b1e6397753ad8950f95c60064342551ba2d0ec60a8696aac8052fd",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "integration_pass": "missing"
+            },
+            "support": {
+              "integration_pass": []
+            },
+            "rejected_observation_ids": [
+              "evidence-248e57dd5cd7c6e8"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-12af21e3554e",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1
+              },
+              "source_authorities": {
+                "build_registry": 2,
+                "A": 1,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the deployment audit receipt",
+                "covers": [
+                  "audit_recorded"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the integration test registry",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-248e57dd5cd7c6e8",
+                  "age": 9,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                }
+              ],
+              "eligible_count": 0
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "7347a45f67b1e6397753ad8950f95c60064342551ba2d0ec60a8696aac8052fd",
+          "delivered_documents": [
+            {
+              "id": "evidence-a22b217dc2cec6d7",
+              "origin": "A",
+              "scope": "scope-12af21e3554e",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "audit recorded = true",
+              "facts": {
+                "audit_recorded": true
+              }
+            }
+          ],
+          "after_actor_sha256": "ee24d04339cfb9283f70ce28b9938ae0c6fc352d5d129d890b400f2c37449bc5",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "integration_pass": "missing"
+            },
+            "support": {
+              "integration_pass": []
+            },
+            "rejected_observation_ids": [
+              "evidence-248e57dd5cd7c6e8"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-12af21e3554e",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1
+              },
+              "source_authorities": {
+                "build_registry": 2,
+                "A": 1,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-a22b217dc2cec6d7",
+                "origin": "A",
+                "scope": "scope-12af21e3554e",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "audit recorded = true",
+                "facts": {
+                  "audit_recorded": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the deployment audit receipt",
+                "covers": [
+                  "audit_recorded"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the integration test registry",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-248e57dd5cd7c6e8",
+                  "age": 10,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                },
+                {
+                  "id": "evidence-a22b217dc2cec6d7",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "7347a45f67b1e6397753ad8950f95c60064342551ba2d0ec60a8696aac8052fd",
+          "delivered_documents": [
+            {
+              "id": "evidence-3a984c94da0bd5af",
+              "origin": "B",
+              "scope": "scope-12af21e3554e",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "integration pass = true",
+              "facts": {
+                "integration_pass": true
+              }
+            }
+          ],
+          "after_actor_sha256": "ff7929b70470e6e4304707ae8d4c1e99961bda1c366902b415d9b149ee80c59d",
+          "resolution": {
+            "action": "PROCEED",
+            "predicate_states": {
+              "integration_pass": "true"
+            },
+            "support": {
+              "integration_pass": [
+                "evidence-3a984c94da0bd5af"
+              ]
+            },
+            "rejected_observation_ids": [
+              "evidence-248e57dd5cd7c6e8"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-12af21e3554e",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1
+              },
+              "source_authorities": {
+                "build_registry": 2,
+                "A": 1,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-3a984c94da0bd5af",
+                "origin": "B",
+                "scope": "scope-12af21e3554e",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "integration pass = true",
+                "facts": {
+                  "integration_pass": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the deployment audit receipt",
+                "covers": [
+                  "audit_recorded"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the integration test registry",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-248e57dd5cd7c6e8",
+                  "age": 10,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                },
+                {
+                  "id": "evidence-3a984c94da0bd5af",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  },
+  {
+    "episode": "dev-coverage",
+    "actor_initial": {
+      "task": {
+        "domain": "software release",
+        "scope": "scope-25a35de52dc2",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "integration_pass",
+          "migration_pass"
+        ],
+        "minimum_authority": {
+          "integration_pass": 1,
+          "migration_pass": 1
+        },
+        "source_authorities": {
+          "release_certificate": 2,
+          "A": 2,
+          "B": 2
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [
+        {
+          "id": "evidence-caeb820d63207d38",
+          "origin": "release_certificate",
+          "scope": "scope-25a35de52dc2",
+          "revision": "r1",
+          "observed_at": 99,
+          "text": "integration pass = true",
+          "facts": {
+            "integration_pass": true
+          }
+        }
+      ],
+      "incumbent": {
+        "action": "PROCEED",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Refresh the integration release certificate",
+          "covers": [
+            "integration_pass"
+          ],
+          "authority": 2,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Read the migration test record",
+          "covers": [
+            "migration_pass"
+          ],
+          "authority": 2,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "HOLD"
+    },
+    "attainable_action": "HOLD",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "304940e7958a0feb992aaf8735e04acbb1178162945d222957afdaee9a7bb9af",
+          "delivered_documents": [],
+          "after_actor_sha256": "304940e7958a0feb992aaf8735e04acbb1178162945d222957afdaee9a7bb9af",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "integration_pass": "true",
+              "migration_pass": "missing"
+            },
+            "support": {
+              "integration_pass": [
+                "evidence-caeb820d63207d38"
+              ],
+              "migration_pass": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-25a35de52dc2",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass",
+                "migration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1,
+                "migration_pass": 1
+              },
+              "source_authorities": {
+                "release_certificate": 2,
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-caeb820d63207d38",
+                "origin": "release_certificate",
+                "scope": "scope-25a35de52dc2",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "integration pass = true",
+                "facts": {
+                  "integration_pass": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh the integration release certificate",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the migration test record",
+                "covers": [
+                  "migration_pass"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-caeb820d63207d38",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "304940e7958a0feb992aaf8735e04acbb1178162945d222957afdaee9a7bb9af",
+          "delivered_documents": [
+            {
+              "id": "evidence-69f091b9482c7292",
+              "origin": "A",
+              "scope": "scope-25a35de52dc2",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "integration pass = true",
+              "facts": {
+                "integration_pass": true
+              }
+            }
+          ],
+          "after_actor_sha256": "f71d875d92f62a4f59cabd2ae00d763642bacf6ee1b730e0e10fd8fa0c4592d3",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "integration_pass": "true",
+              "migration_pass": "missing"
+            },
+            "support": {
+              "integration_pass": [
+                "evidence-69f091b9482c7292"
+              ],
+              "migration_pass": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-25a35de52dc2",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass",
+                "migration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1,
+                "migration_pass": 1
+              },
+              "source_authorities": {
+                "release_certificate": 2,
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-caeb820d63207d38",
+                "origin": "release_certificate",
+                "scope": "scope-25a35de52dc2",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "integration pass = true",
+                "facts": {
+                  "integration_pass": true
+                }
+              },
+              {
+                "id": "evidence-69f091b9482c7292",
+                "origin": "A",
+                "scope": "scope-25a35de52dc2",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "integration pass = true",
+                "facts": {
+                  "integration_pass": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh the integration release certificate",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the migration test record",
+                "covers": [
+                  "migration_pass"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-caeb820d63207d38",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-69f091b9482c7292",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "304940e7958a0feb992aaf8735e04acbb1178162945d222957afdaee9a7bb9af",
+          "delivered_documents": [
+            {
+              "id": "evidence-56705cae76952169",
+              "origin": "B",
+              "scope": "scope-25a35de52dc2",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "migration pass = false",
+              "facts": {
+                "migration_pass": false
+              }
+            }
+          ],
+          "after_actor_sha256": "ab4f8534d5f60a24ac0207fc5117d4867d7fdf03d1139d170ae018670798ec5e",
+          "resolution": {
+            "action": "HOLD",
+            "predicate_states": {
+              "integration_pass": "true",
+              "migration_pass": "false"
+            },
+            "support": {
+              "integration_pass": [
+                "evidence-caeb820d63207d38"
+              ],
+              "migration_pass": [
+                "evidence-56705cae76952169"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "software release",
+              "scope": "scope-25a35de52dc2",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "integration_pass",
+                "migration_pass"
+              ],
+              "minimum_authority": {
+                "integration_pass": 1,
+                "migration_pass": 1
+              },
+              "source_authorities": {
+                "release_certificate": 2,
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-caeb820d63207d38",
+                "origin": "release_certificate",
+                "scope": "scope-25a35de52dc2",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "integration pass = true",
+                "facts": {
+                  "integration_pass": true
+                }
+              },
+              {
+                "id": "evidence-56705cae76952169",
+                "origin": "B",
+                "scope": "scope-25a35de52dc2",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "migration pass = false",
+                "facts": {
+                  "migration_pass": false
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh the integration release certificate",
+                "covers": [
+                  "integration_pass"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the migration test record",
+                "covers": [
+                  "migration_pass"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-caeb820d63207d38",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-56705cae76952169",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  },
+  {
+    "episode": "dev-authority",
+    "actor_initial": {
+      "task": {
+        "domain": "data publication",
+        "scope": "scope-bdc724348fa9",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "publication_allowed"
+        ],
+        "minimum_authority": {
+          "publication_allowed": 3
+        },
+        "source_authorities": {
+          "department_review": 1,
+          "A": 3,
+          "B": 1
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [
+        {
+          "id": "evidence-d895650da479cddd",
+          "origin": "department_review",
+          "scope": "scope-bdc724348fa9",
+          "revision": "r1",
+          "observed_at": 99,
+          "text": "publication allowed = true",
+          "facts": {
+            "publication_allowed": true
+          }
+        }
+      ],
+      "incumbent": {
+        "action": "PROCEED",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Read the authoritative publication register",
+          "covers": [
+            "publication_allowed"
+          ],
+          "authority": 3,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Refresh the departmental review",
+          "covers": [
+            "publication_allowed"
+          ],
+          "authority": 1,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "DEFER",
+      "A": "HOLD",
+      "B": "DEFER"
+    },
+    "attainable_action": "HOLD",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "e4e37c3ade8f5e45d8eaabfee4bbdb5474483d6befaadcce13685c9e34eebf5d",
+          "delivered_documents": [],
+          "after_actor_sha256": "e4e37c3ade8f5e45d8eaabfee4bbdb5474483d6befaadcce13685c9e34eebf5d",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "publication_allowed": "missing"
+            },
+            "support": {
+              "publication_allowed": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "data publication",
+              "scope": "scope-bdc724348fa9",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "publication_allowed"
+              ],
+              "minimum_authority": {
+                "publication_allowed": 3
+              },
+              "source_authorities": {
+                "department_review": 1,
+                "A": 3,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-d895650da479cddd",
+                "origin": "department_review",
+                "scope": "scope-bdc724348fa9",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "publication allowed = true",
+                "facts": {
+                  "publication_allowed": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the authoritative publication register",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 3,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Refresh the departmental review",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 1,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-d895650da479cddd",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "e4e37c3ade8f5e45d8eaabfee4bbdb5474483d6befaadcce13685c9e34eebf5d",
+          "delivered_documents": [
+            {
+              "id": "evidence-e1564860a57af532",
+              "origin": "A",
+              "scope": "scope-bdc724348fa9",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "publication allowed = false",
+              "facts": {
+                "publication_allowed": false
+              }
+            }
+          ],
+          "after_actor_sha256": "bb1d36e47083bce23d94548513dcde0f3a1d3c02f803190b025356b24deee9dd",
+          "resolution": {
+            "action": "HOLD",
+            "predicate_states": {
+              "publication_allowed": "false"
+            },
+            "support": {
+              "publication_allowed": [
+                "evidence-e1564860a57af532"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "data publication",
+              "scope": "scope-bdc724348fa9",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "publication_allowed"
+              ],
+              "minimum_authority": {
+                "publication_allowed": 3
+              },
+              "source_authorities": {
+                "department_review": 1,
+                "A": 3,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-d895650da479cddd",
+                "origin": "department_review",
+                "scope": "scope-bdc724348fa9",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "publication allowed = true",
+                "facts": {
+                  "publication_allowed": true
+                }
+              },
+              {
+                "id": "evidence-e1564860a57af532",
+                "origin": "A",
+                "scope": "scope-bdc724348fa9",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "publication allowed = false",
+                "facts": {
+                  "publication_allowed": false
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the authoritative publication register",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 3,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Refresh the departmental review",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 1,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-d895650da479cddd",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-e1564860a57af532",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "e4e37c3ade8f5e45d8eaabfee4bbdb5474483d6befaadcce13685c9e34eebf5d",
+          "delivered_documents": [
+            {
+              "id": "evidence-a1ad586b020d3a1a",
+              "origin": "B",
+              "scope": "scope-bdc724348fa9",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "publication allowed = true",
+              "facts": {
+                "publication_allowed": true
+              }
+            }
+          ],
+          "after_actor_sha256": "924f9032ff0a171618b6921bfd36e3ccf03fd338d91a2cd65679072322104d08",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "publication_allowed": "missing"
+            },
+            "support": {
+              "publication_allowed": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "data publication",
+              "scope": "scope-bdc724348fa9",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "publication_allowed"
+              ],
+              "minimum_authority": {
+                "publication_allowed": 3
+              },
+              "source_authorities": {
+                "department_review": 1,
+                "A": 3,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-d895650da479cddd",
+                "origin": "department_review",
+                "scope": "scope-bdc724348fa9",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "publication allowed = true",
+                "facts": {
+                  "publication_allowed": true
+                }
+              },
+              {
+                "id": "evidence-a1ad586b020d3a1a",
+                "origin": "B",
+                "scope": "scope-bdc724348fa9",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "publication allowed = true",
+                "facts": {
+                  "publication_allowed": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the authoritative publication register",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 3,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Refresh the departmental review",
+                "covers": [
+                  "publication_allowed"
+                ],
+                "authority": 1,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-d895650da479cddd",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-a1ad586b020d3a1a",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  },
+  {
+    "episode": "dev-conflict",
+    "actor_initial": {
+      "task": {
+        "domain": "equipment return-to-service",
+        "scope": "scope-408401c9dffa",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "inspection_clear"
+        ],
+        "minimum_authority": {
+          "inspection_clear": 1
+        },
+        "source_authorities": {
+          "inspector_left": 2,
+          "inspector_right": 2,
+          "A": 3,
+          "B": 2
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [
+        {
+          "id": "evidence-33f08912e041c721",
+          "origin": "inspector_left",
+          "scope": "scope-408401c9dffa",
+          "revision": "r1",
+          "observed_at": 99,
+          "text": "inspection clear = true",
+          "facts": {
+            "inspection_clear": true
+          }
+        },
+        {
+          "id": "evidence-437127e728424950",
+          "origin": "inspector_right",
+          "scope": "scope-408401c9dffa",
+          "revision": "r1",
+          "observed_at": 99,
+          "text": "inspection clear = false",
+          "facts": {
+            "inspection_clear": false
+          }
+        }
+      ],
+      "incumbent": {
+        "action": "HOLD",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Read the final inspection register",
+          "covers": [
+            "inspection_clear"
+          ],
+          "authority": 3,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Read the unchanged right-side inspection",
+          "covers": [
+            "inspection_clear"
+          ],
+          "authority": 2,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "DEFER",
+      "A": "PROCEED",
+      "B": "DEFER"
+    },
+    "attainable_action": "PROCEED",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "d2aac908dd4735a432fee83daa1a800ddeddd13c70429a77906f7ccdad2fcd4a",
+          "delivered_documents": [],
+          "after_actor_sha256": "d2aac908dd4735a432fee83daa1a800ddeddd13c70429a77906f7ccdad2fcd4a",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "inspection_clear": "conflict"
+            },
+            "support": {
+              "inspection_clear": [
+                "evidence-33f08912e041c721",
+                "evidence-437127e728424950"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "equipment return-to-service",
+              "scope": "scope-408401c9dffa",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "inspection_clear"
+              ],
+              "minimum_authority": {
+                "inspection_clear": 1
+              },
+              "source_authorities": {
+                "inspector_left": 2,
+                "inspector_right": 2,
+                "A": 3,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-33f08912e041c721",
+                "origin": "inspector_left",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = true",
+                "facts": {
+                  "inspection_clear": true
+                }
+              },
+              {
+                "id": "evidence-437127e728424950",
+                "origin": "inspector_right",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = false",
+                "facts": {
+                  "inspection_clear": false
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the final inspection register",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 3,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the unchanged right-side inspection",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-33f08912e041c721",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-437127e728424950",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "d2aac908dd4735a432fee83daa1a800ddeddd13c70429a77906f7ccdad2fcd4a",
+          "delivered_documents": [
+            {
+              "id": "evidence-2eec3f80c9c71658",
+              "origin": "A",
+              "scope": "scope-408401c9dffa",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "inspection clear = true",
+              "facts": {
+                "inspection_clear": true
+              }
+            }
+          ],
+          "after_actor_sha256": "32aa5395ad40235a2cf9acbfacac208b7bf77030c15c5fb68c1d0fe6a7ac1d70",
+          "resolution": {
+            "action": "PROCEED",
+            "predicate_states": {
+              "inspection_clear": "true"
+            },
+            "support": {
+              "inspection_clear": [
+                "evidence-2eec3f80c9c71658"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "equipment return-to-service",
+              "scope": "scope-408401c9dffa",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "inspection_clear"
+              ],
+              "minimum_authority": {
+                "inspection_clear": 1
+              },
+              "source_authorities": {
+                "inspector_left": 2,
+                "inspector_right": 2,
+                "A": 3,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-33f08912e041c721",
+                "origin": "inspector_left",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = true",
+                "facts": {
+                  "inspection_clear": true
+                }
+              },
+              {
+                "id": "evidence-437127e728424950",
+                "origin": "inspector_right",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = false",
+                "facts": {
+                  "inspection_clear": false
+                }
+              },
+              {
+                "id": "evidence-2eec3f80c9c71658",
+                "origin": "A",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "inspection clear = true",
+                "facts": {
+                  "inspection_clear": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the final inspection register",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 3,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the unchanged right-side inspection",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-33f08912e041c721",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-437127e728424950",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-2eec3f80c9c71658",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 3
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "d2aac908dd4735a432fee83daa1a800ddeddd13c70429a77906f7ccdad2fcd4a",
+          "delivered_documents": [
+            {
+              "id": "evidence-00e572d82d043428",
+              "origin": "B",
+              "scope": "scope-408401c9dffa",
+              "revision": "r1",
+              "observed_at": 99,
+              "text": "inspection clear = false",
+              "facts": {
+                "inspection_clear": false
+              }
+            }
+          ],
+          "after_actor_sha256": "d6f1daa99ebf973d53b1c2e0789e50dfa6999ebf7ba8ed873856df470eabc6c7",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "inspection_clear": "conflict"
+            },
+            "support": {
+              "inspection_clear": [
+                "evidence-33f08912e041c721",
+                "evidence-437127e728424950",
+                "evidence-00e572d82d043428"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "equipment return-to-service",
+              "scope": "scope-408401c9dffa",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "inspection_clear"
+              ],
+              "minimum_authority": {
+                "inspection_clear": 1
+              },
+              "source_authorities": {
+                "inspector_left": 2,
+                "inspector_right": 2,
+                "A": 3,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-33f08912e041c721",
+                "origin": "inspector_left",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = true",
+                "facts": {
+                  "inspection_clear": true
+                }
+              },
+              {
+                "id": "evidence-437127e728424950",
+                "origin": "inspector_right",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = false",
+                "facts": {
+                  "inspection_clear": false
+                }
+              },
+              {
+                "id": "evidence-00e572d82d043428",
+                "origin": "B",
+                "scope": "scope-408401c9dffa",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "inspection clear = false",
+                "facts": {
+                  "inspection_clear": false
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "HOLD",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read the final inspection register",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 3,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the unchanged right-side inspection",
+                "covers": [
+                  "inspection_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-33f08912e041c721",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-437127e728424950",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-00e572d82d043428",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 3
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  },
+  {
+    "episode": "dev-unchanged",
+    "actor_initial": {
+      "task": {
+        "domain": "inventory dispatch",
+        "scope": "scope-4e134c121f56",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "load_clear"
+        ],
+        "minimum_authority": {
+          "load_clear": 1
+        },
+        "source_authorities": {
+          "load_register": 2,
+          "cosmetic_register": 1,
+          "A": 2,
+          "B": 1
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [
+        {
+          "id": "evidence-9feda232640b05d2",
+          "origin": "load_register",
+          "scope": "scope-4e134c121f56",
+          "revision": "r1",
+          "observed_at": 99,
+          "text": "load clear = true",
+          "facts": {
+            "load_clear": true
+          }
+        },
+        {
+          "id": "evidence-f31cd94c2ea89b2e",
+          "origin": "cosmetic_register",
+          "scope": "scope-4e134c121f56",
+          "revision": "r1",
+          "observed_at": 91,
+          "text": "cosmetic clear = false",
+          "facts": {
+            "cosmetic_clear": false
+          }
+        }
+      ],
+      "incumbent": {
+        "action": "PROCEED",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Refresh load clearance",
+          "covers": [
+            "load_clear"
+          ],
+          "authority": 2,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Read the cosmetic inspection",
+          "covers": [
+            "cosmetic_clear"
+          ],
+          "authority": 1,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "PROCEED",
+      "A": "PROCEED",
+      "B": "PROCEED"
+    },
+    "attainable_action": "PROCEED",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "418fd7ae6b477055095abe99c12775e4781bfe0228d718f0f8fa1fed794ae570",
+          "delivered_documents": [],
+          "after_actor_sha256": "418fd7ae6b477055095abe99c12775e4781bfe0228d718f0f8fa1fed794ae570",
+          "resolution": {
+            "action": "PROCEED",
+            "predicate_states": {
+              "load_clear": "true"
+            },
+            "support": {
+              "load_clear": [
+                "evidence-9feda232640b05d2"
+              ]
+            },
+            "rejected_observation_ids": [
+              "evidence-f31cd94c2ea89b2e"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-4e134c121f56",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "load_clear"
+              ],
+              "minimum_authority": {
+                "load_clear": 1
+              },
+              "source_authorities": {
+                "load_register": 2,
+                "cosmetic_register": 1,
+                "A": 2,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-9feda232640b05d2",
+                "origin": "load_register",
+                "scope": "scope-4e134c121f56",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "load clear = true",
+                "facts": {
+                  "load_clear": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh load clearance",
+                "covers": [
+                  "load_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the cosmetic inspection",
+                "covers": [
+                  "cosmetic_clear"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-9feda232640b05d2",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-f31cd94c2ea89b2e",
+                  "age": 9,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "418fd7ae6b477055095abe99c12775e4781bfe0228d718f0f8fa1fed794ae570",
+          "delivered_documents": [
+            {
+              "id": "evidence-4866fd7d155682cc",
+              "origin": "A",
+              "scope": "scope-4e134c121f56",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "load clear = true",
+              "facts": {
+                "load_clear": true
+              }
+            }
+          ],
+          "after_actor_sha256": "fa7fdd0f25e25fa87934950c92a87b2fd9c311643e8ca875e4b62815dde99ec7",
+          "resolution": {
+            "action": "PROCEED",
+            "predicate_states": {
+              "load_clear": "true"
+            },
+            "support": {
+              "load_clear": [
+                "evidence-4866fd7d155682cc"
+              ]
+            },
+            "rejected_observation_ids": [
+              "evidence-f31cd94c2ea89b2e"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-4e134c121f56",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "load_clear"
+              ],
+              "minimum_authority": {
+                "load_clear": 1
+              },
+              "source_authorities": {
+                "load_register": 2,
+                "cosmetic_register": 1,
+                "A": 2,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-9feda232640b05d2",
+                "origin": "load_register",
+                "scope": "scope-4e134c121f56",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "load clear = true",
+                "facts": {
+                  "load_clear": true
+                }
+              },
+              {
+                "id": "evidence-4866fd7d155682cc",
+                "origin": "A",
+                "scope": "scope-4e134c121f56",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "load clear = true",
+                "facts": {
+                  "load_clear": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh load clearance",
+                "covers": [
+                  "load_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the cosmetic inspection",
+                "covers": [
+                  "cosmetic_clear"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-9feda232640b05d2",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-f31cd94c2ea89b2e",
+                  "age": 10,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                },
+                {
+                  "id": "evidence-4866fd7d155682cc",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "418fd7ae6b477055095abe99c12775e4781bfe0228d718f0f8fa1fed794ae570",
+          "delivered_documents": [
+            {
+              "id": "evidence-074628b9bc28a5b8",
+              "origin": "B",
+              "scope": "scope-4e134c121f56",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "cosmetic clear = false",
+              "facts": {
+                "cosmetic_clear": false
+              }
+            }
+          ],
+          "after_actor_sha256": "d55f5bac3536e9139df0919264aeaf1efa75b9b60a2c0c37bf63c09101e20285",
+          "resolution": {
+            "action": "PROCEED",
+            "predicate_states": {
+              "load_clear": "true"
+            },
+            "support": {
+              "load_clear": [
+                "evidence-9feda232640b05d2"
+              ]
+            },
+            "rejected_observation_ids": [
+              "evidence-f31cd94c2ea89b2e"
+            ]
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-4e134c121f56",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "load_clear"
+              ],
+              "minimum_authority": {
+                "load_clear": 1
+              },
+              "source_authorities": {
+                "load_register": 2,
+                "cosmetic_register": 1,
+                "A": 2,
+                "B": 1
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-9feda232640b05d2",
+                "origin": "load_register",
+                "scope": "scope-4e134c121f56",
+                "revision": "r1",
+                "observed_at": 99,
+                "text": "load clear = true",
+                "facts": {
+                  "load_clear": true
+                }
+              },
+              {
+                "id": "evidence-074628b9bc28a5b8",
+                "origin": "B",
+                "scope": "scope-4e134c121f56",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "cosmetic clear = false",
+                "facts": {
+                  "cosmetic_clear": false
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Refresh load clearance",
+                "covers": [
+                  "load_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read the cosmetic inspection",
+                "covers": [
+                  "cosmetic_clear"
+                ],
+                "authority": 1,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-9feda232640b05d2",
+                  "age": 2,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                },
+                {
+                  "id": "evidence-f31cd94c2ea89b2e",
+                  "age": 10,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": false
+                },
+                {
+                  "id": "evidence-074628b9bc28a5b8",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 2
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  },
+  {
+    "episode": "dev-unresolved",
+    "actor_initial": {
+      "task": {
+        "domain": "inventory dispatch",
+        "scope": "scope-0c8249649013",
+        "revision": "r1",
+        "now": 100,
+        "deadline": 102,
+        "ttl": 7,
+        "requirements": [
+          "supply_clear",
+          "transport_clear"
+        ],
+        "minimum_authority": {
+          "supply_clear": 1,
+          "transport_clear": 1
+        },
+        "source_authorities": {
+          "A": 2,
+          "B": 2
+        },
+        "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+      },
+      "observations": [],
+      "incumbent": {
+        "action": "PROCEED",
+        "origin": "scripted"
+      },
+      "budget": {
+        "checks": 1,
+        "credits": 1
+      },
+      "catalog": [
+        {
+          "id": "A",
+          "description": "Read supply clearance",
+          "covers": [
+            "supply_clear"
+          ],
+          "authority": 2,
+          "priority": 1,
+          "latency": 1,
+          "cost": 1
+        },
+        {
+          "id": "B",
+          "description": "Read transport clearance",
+          "covers": [
+            "transport_clear"
+          ],
+          "authority": 2,
+          "priority": 2,
+          "latency": 1,
+          "cost": 1
+        }
+      ]
+    },
+    "hand_authored_labels": {
+      "NONE": "DEFER",
+      "A": "DEFER",
+      "B": "DEFER"
+    },
+    "attainable_action": "DEFER",
+    "choice_outcomes": [
+      {
+        "choice": "NONE",
+        "event": {
+          "choice": "NONE",
+          "checks_used": 0,
+          "credits_used": 0,
+          "latency": 0,
+          "before_actor_sha256": "d8e24fa676c8edaa779946d5d83424c4df35e4d33e64e5eb8cd7380fbc594b70",
+          "delivered_documents": [],
+          "after_actor_sha256": "d8e24fa676c8edaa779946d5d83424c4df35e4d33e64e5eb8cd7380fbc594b70",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "supply_clear": "missing",
+              "transport_clear": "missing"
+            },
+            "support": {
+              "supply_clear": [],
+              "transport_clear": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-0c8249649013",
+              "revision": "r1",
+              "now": 100,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "supply_clear",
+                "transport_clear"
+              ],
+              "minimum_authority": {
+                "supply_clear": 1,
+                "transport_clear": 1
+              },
+              "source_authorities": {
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 1,
+              "credits": 1
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read supply clearance",
+                "covers": [
+                  "supply_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read transport clearance",
+                "covers": [
+                  "transport_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [],
+              "eligible_count": 0
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "A",
+        "event": {
+          "choice": "A",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "d8e24fa676c8edaa779946d5d83424c4df35e4d33e64e5eb8cd7380fbc594b70",
+          "delivered_documents": [
+            {
+              "id": "evidence-681c0de5b047a45f",
+              "origin": "A",
+              "scope": "scope-0c8249649013",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "supply clear = true",
+              "facts": {
+                "supply_clear": true
+              }
+            }
+          ],
+          "after_actor_sha256": "1f1a57f5be303d8f077b827991d3dcb7e713bd6090f3efc1b73aefc30d5166c3",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "supply_clear": "true",
+              "transport_clear": "missing"
+            },
+            "support": {
+              "supply_clear": [
+                "evidence-681c0de5b047a45f"
+              ],
+              "transport_clear": []
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-0c8249649013",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "supply_clear",
+                "transport_clear"
+              ],
+              "minimum_authority": {
+                "supply_clear": 1,
+                "transport_clear": 1
+              },
+              "source_authorities": {
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-681c0de5b047a45f",
+                "origin": "A",
+                "scope": "scope-0c8249649013",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "supply clear = true",
+                "facts": {
+                  "supply_clear": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read supply clearance",
+                "covers": [
+                  "supply_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read transport clearance",
+                "covers": [
+                  "transport_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-681c0de5b047a45f",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      },
+      {
+        "choice": "B",
+        "event": {
+          "choice": "B",
+          "checks_used": 1,
+          "credits_used": 1,
+          "latency": 1,
+          "before_actor_sha256": "d8e24fa676c8edaa779946d5d83424c4df35e4d33e64e5eb8cd7380fbc594b70",
+          "delivered_documents": [
+            {
+              "id": "evidence-0ae76c02df3aaccd",
+              "origin": "B",
+              "scope": "scope-0c8249649013",
+              "revision": "r1",
+              "observed_at": 100,
+              "text": "transport clear = true",
+              "facts": {
+                "transport_clear": true
+              }
+            }
+          ],
+          "after_actor_sha256": "a74a94af24dfd8a40e2e656ab19957aa50aac081b6edde7dcb41c16883178ad1",
+          "resolution": {
+            "action": "DEFER",
+            "predicate_states": {
+              "supply_clear": "missing",
+              "transport_clear": "true"
+            },
+            "support": {
+              "supply_clear": [],
+              "transport_clear": [
+                "evidence-0ae76c02df3aaccd"
+              ]
+            },
+            "rejected_observation_ids": []
+          }
+        },
+        "final_request": {
+          "instructions": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action.",
+          "state": {
+            "task": {
+              "domain": "inventory dispatch",
+              "scope": "scope-0c8249649013",
+              "revision": "r1",
+              "now": 101,
+              "deadline": 102,
+              "ttl": 7,
+              "requirements": [
+                "supply_clear",
+                "transport_clear"
+              ],
+              "minimum_authority": {
+                "supply_clear": 1,
+                "transport_clear": 1
+              },
+              "source_authorities": {
+                "A": 2,
+                "B": 2
+              },
+              "rule": "PROCEED only when all required predicates have current authoritative true evidence. HOLD when any required predicate has authoritative false evidence. Otherwise DEFER. For each predicate use the highest acquired eligible authority, then latest observed_at; tied contradiction is unresolved. Optional predicates do not govern action."
+            },
+            "observations": [
+              {
+                "id": "evidence-0ae76c02df3aaccd",
+                "origin": "B",
+                "scope": "scope-0c8249649013",
+                "revision": "r1",
+                "observed_at": 100,
+                "text": "transport clear = true",
+                "facts": {
+                  "transport_clear": true
+                }
+              }
+            ],
+            "incumbent": {
+              "action": "PROCEED",
+              "origin": "scripted"
+            },
+            "budget": {
+              "checks": 0,
+              "credits": 0
+            },
+            "catalog": [
+              {
+                "id": "A",
+                "description": "Read supply clearance",
+                "covers": [
+                  "supply_clear"
+                ],
+                "authority": 2,
+                "priority": 1,
+                "latency": 1,
+                "cost": 1
+              },
+              {
+                "id": "B",
+                "description": "Read transport clearance",
+                "covers": [
+                  "transport_clear"
+                ],
+                "authority": 2,
+                "priority": 2,
+                "latency": 1,
+                "cost": 1
+              }
+            ],
+            "eligibility": {
+              "observations": [
+                {
+                  "id": "evidence-0ae76c02df3aaccd",
+                  "age": 1,
+                  "ttl": 7,
+                  "scope_matches": true,
+                  "revision_matches": true,
+                  "eligible": true
+                }
+              ],
+              "eligible_count": 1
+            }
+          },
+          "questions": {
+            "action": {
+              "criteria": {
+                "PROCEED": "All required evidence supports proceeding.",
+                "HOLD": "A required predicate is authoritatively false.",
+                "DEFER": "Evidence is missing, ineligible or unresolved."
+              }
+            }
+          }
+        }
+      }
+    ],
+    "scope": "Every source response is authored simulation data, not a native tool execution."
+  }
+]

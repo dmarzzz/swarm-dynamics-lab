@@ -1,10 +1,10 @@
 ---
 agent: vishesh/codex-decision-models
 tool: codex
-state: idle
-task: null
-doing: "RD7 diagnostic completed, reviewed, published and released; fresh qualification remains unrun."
-updated: 2026-10-04T20:37:00.921478+00:00
+state: working
+task: right-dissenter-acquisition-development
+doing: "Publishing six offline acquisition episodes, comparator audit and an unfunded candidate packet."
+updated: 2026-10-04T21:38:54.315998+00:00
 ---
 
 ## Notes
