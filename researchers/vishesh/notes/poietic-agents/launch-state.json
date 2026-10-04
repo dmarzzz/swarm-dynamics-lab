@@ -1,9 +1,9 @@
 {
   "schema": "poietic-launch-state-v0.2",
-  "updated_utc": "2026-10-04T21:00:31.626761+00:00",
+  "updated_utc": "2026-10-04T21:08:56.132022+00:00",
   "study": "poietic-agents",
-  "design_status": "D0-02 closed; requested 30-member cheap-model feasibility plan in preparation",
-  "implementation_status": "131 runtime checks; original history retained",
+  "design_status": "Q30-04 final paced cheap-role qualification; P30 main conditional only",
+  "implementation_status": "163 offline checks; Q30-03 actor contract reused exactly",
   "execution_status": "Q30-03 closed and reviewed; provider429stop",
   "qualification_status": "120B passed;20B incomplete after provider429",
   "scientific_conclusion": "No30-member swarm comparison;120B readiness passed,20Bqualification transport-blocked.",
@@ -25,13 +25,13 @@
     "question_specific_survey": "incomplete",
     "accepted_hypothesis": "absent",
     "exact_runtime_and_assignments": "D0-01 source38544138 passed106checks",
-    "offline_instrument_checks": "121 passed locally; frozenD0 used106",
-    "model_qualification": "D0-02 failed",
+    "offline_instrument_checks": "163 passed",
+    "model_qualification": "120B qualified at Q30-03;20B incomplete",
     "budget_authorization": "Owner cumulative USD10; current ledger retains tighter original caps until explicit audited amendment",
-    "dedicated_machine_allocation": "released after D0-02",
+    "dedicated_machine_allocation": "none held",
     "public_plan_and_run_tldr_preflight": "passed beforeD0calls",
     "approved_credential": "resolved from established project access context; value never disclosed",
-    "execution_window": "one D0-02 renewal applied; no duplicate renewal"
+    "execution_window": "Q30-04 one-use amendment prepared, not applied"
   },
   "review_task": "review-poietic-agents-design",
   "prior_art_task": "heterogeneous-methods-review",
@@ -39,23 +39,23 @@
   "authorized_infrastructure_usd": 0.5,
   "planned_run_count": 3,
   "started_run_count": 9,
-  "next_action": "PIbudgetallocation decision for fresh48-call paced20Bqualification orpark; mainnotadmitted.",
+  "next_action": "Admit and execute only PI-allocated Q30-04; park on repeated provider refusal; no main allocation",
   "evidence": {
     "confidence": 0,
     "scale_max": 4,
     "observed_jobs": 0,
-    "planned_S1_jobs": 768,
-    "qualification_calls": 37,
-    "note": "Efficacy0/4;54cumulative physicalcalls;30-member swarm not run",
+    "planned_S1_jobs": 1440,
+    "qualification_calls": 127,
+    "note": "144 cumulative physical calls; no native collective comparison",
     "diagnostic_calls": 17
   },
   "scientific_outcomes": 0,
   "launchable": false,
   "remaining_gates": [
-    "PIprojectallocation for nextnamedstage",
-    "completecheap20Bqualification",
-    "finalmaininstrument and6545-or-current-history callenvelope",
-    "freshpublic/runtime/allocation admission"
+    "Q30-04 immutable publication and rendered verification",
+    "Q30-04 runtime and current exclusive approved-account allocation",
+    "Q30-04 original ledger amendment and admission",
+    "main separate PI allocation and instrument completion"
   ],
   "s1_not_yet_admitted": [
     "qualified hash match",
@@ -86,5 +86,5 @@
   "scientific_review_complete": true,
   "D0_deadline_renewal_applied": false,
   "operational_finalize": "completed offline; immutable handoff retained privately; separate owning scientific review complete",
-  "latest_preparation": "Q30-03-PLAN.md"
+  "latest_preparation": "Q30-04-PLAN.md"
 }

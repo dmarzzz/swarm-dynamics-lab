@@ -1,0 +1,14 @@
+{
+  "registered": true,
+  "experiment": "poietic-agents",
+  "field_checks": {
+    "title": true,
+    "owner": true,
+    "description": true,
+    "url": true
+  },
+  "url": "https://github.com/dmarzzz/swarm-lab/blob/8a74c4ec3073268b6e1fed51c160f67b343fe4d5/researchers/vishesh/notes/poietic-agents/Q30-03-PLAN.md",
+  "enqueued_by_this_operation": 0,
+  "started_by_this_operation": 0,
+  "checked_utc": "2026-10-04T21:07:54.105797+00:00"
+}

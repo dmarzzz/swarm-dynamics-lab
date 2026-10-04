@@ -70,3 +70,7 @@ Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](rev
 ## Q30-03 reviewed — one qualified executor, partner transport-blocked
 
 [Post-mortem](reviews/Q30-03-post.md) and [eleven-dimension assessment](reviews/Q30-03-scientific.json).120B48valid/47correct PASSED;20B6valid/correctthenDeepInfra429, incomplete.55starts96terminal; alltracesreplayed andsixartifacthashesmatch. Original144calls,USD0.621829245 conservative exposure including39unknowncharges. Claim433released436; noactiveworker/relay/claim. No30-member main result. Conditional paced20B-only48-call stage awaits PIprojectallocation; no duplicate dispatch or model lottery.
+
+## Q30-04 final baseline diagnostic — prospective
+
+[Plan](Q30-04-PLAN.md) and [owning assessment](reviews/Q30-04-pre.md). Delegated PI allocation PI-FUND-20261004-01 covers only 48 fresh GPT-OSS 20B actions with at least five seconds between physical request starts, no retry/fallback and park on another refusal. USD0.055 maximum additional all-in; original ledger and 120B qualification preserved. 163 offline checks pass. Source/runtime, public registration, current exclusive approved-account allocation and one source-bound execution window remain admission checks. The 30-member main is not funded or launched.

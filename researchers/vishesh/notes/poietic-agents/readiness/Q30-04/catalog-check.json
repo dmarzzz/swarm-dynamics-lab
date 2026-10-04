@@ -1,0 +1,37 @@
+{
+  "checked_utc": "2026-10-04T21:08:32.047091+00:00",
+  "model_calls": 0,
+  "catalogs": {
+    "cheap_generative": {
+      "verified": true,
+      "catalog_name": "DeepInfra | openai/gpt-oss-20b",
+      "pricing": {
+        "prompt": "0.00000003",
+        "completion": "0.00000014",
+        "discount": 0
+      },
+      "url": "https://openrouter.ai/api/v1/models/openai/gpt-oss-20b/endpoints",
+      "status": 0,
+      "supported_parameters": [
+        "reasoning",
+        "include_reasoning",
+        "max_tokens",
+        "temperature",
+        "top_p",
+        "stop",
+        "frequency_penalty",
+        "presence_penalty",
+        "repetition_penalty",
+        "top_k",
+        "seed",
+        "min_p",
+        "tools",
+        "tool_choice",
+        "structured_outputs",
+        "logit_bias",
+        "response_format",
+        "reasoning_effort"
+      ]
+    }
+  }
+}

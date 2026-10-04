@@ -2,7 +2,7 @@
   "id": "poietic-agents",
   "title": "Poietic Agents",
   "owner": "vishesh",
-  "description": "TLDR: Q30-03 tests task-specific instructions and explicit proposal wrappers for GPT-OSS 120B/20B, keeping models and scoring fixed. Each gets 12 fresh four-step lifecycle cases against protected exact references. Require 48/48 valid and at least 44/48 correct per model, zero protected access. No retries; first invalid stops a model, transport/integrity stops all. Qualification only, not a 30-member swarm result.",
+  "description": "TLDR: Q30-03 completed. Task-specific instructions and explicit proposal wrappers qualified GPT-OSS 120B with 48/48 valid and 47/48 correct actions. GPT-OSS 20B returned six valid, correct actions before DeepInfra HTTP 429 stopped collection: 55 starts, 96 terminal assignments, 41 unstarted. Protected exact references, unchanged gates, no retries. The 30-member swarm comparison has not started. All traces and charges reviewed; conservative cumulative exposure USD0.621829245. A final, separately admitted paced 20B screen is prospectively allocated.",
   "params": {
     "stage": {
       "type": "str",
