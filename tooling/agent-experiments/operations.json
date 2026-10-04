@@ -9,9 +9,9 @@
       "setup_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/SETUP.md",
       "postmortem_path": "researchers/vishesh/notes/decision-models/quorum-of-mirrors/reviews/Q1-02-post.md",
       "adapter": null,
-      "checked_at": "2026-10-04T16:45:28.133996+00:00",
-      "checked_commit": "36aa5db93817fd6870868eaa83e6405c550cb910",
-      "next_action": "Trace review complete; see trace-review/RESULTS.md and PROPOSAL.md. Conditional semantic task requires independent corpus and meaningful headroom against frozen hybrid before native adapter/qualification. D1 remains parked; no allocation or admission asserted.",
+      "checked_at": "2026-10-04T17:59:06.603387+00:00",
+      "checked_commit": "ec1e4bdc23d52693d65a1c44626a3b2064599644",
+      "next_action": "FINISH / PARK: case-design/RESULTS.md documents 24 paired cases, nine checks and an exact graph baseline solving the revised origin contract. Further native work needs a useful separately prepared question, not a retry of solved lookup or unidentifiable text matching. No allocation/admission.",
       "next_run_approval": "owner"
     },
     {

@@ -1,0 +1,1208 @@
+[
+  {
+    "id": "CD-00-A",
+    "pair": "CD-00",
+    "family": "paraphrase",
+    "scenario": "Loading bay",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-00",
+        "text": "The vehicle entrance was clear at first light."
+      },
+      "receipts": [
+        {
+          "id": "r-4",
+          "event": "event-00",
+          "text": "At sunrise the loading-bay barrier was unobstructed.",
+          "capture": "capture-b",
+          "acquisition": "event-00-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-3",
+          "event": "event-00",
+          "text": "At sunrise the loading-bay barrier was unobstructed.",
+          "capture": "capture-a",
+          "acquisition": "event-00-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-3"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-3",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "A verified link establishes origin despite different wording; without a link, similarity cannot establish which acquisition generated the report.",
+    "pair_change": "Remove the only authenticated origin edge; wording stays unchanged."
+  },
+  {
+    "id": "CD-00-B",
+    "pair": "CD-00",
+    "family": "paraphrase",
+    "scenario": "Loading bay",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-00",
+        "text": "The vehicle entrance was clear at first light."
+      },
+      "receipts": [
+        {
+          "id": "r-4",
+          "event": "event-00",
+          "text": "At sunrise the loading-bay barrier was unobstructed.",
+          "capture": "capture-b",
+          "acquisition": "event-00-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-3",
+          "event": "event-00",
+          "text": "At sunrise the loading-bay barrier was unobstructed.",
+          "capture": "capture-a",
+          "acquisition": "event-00-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "A verified link establishes origin despite different wording; without a link, similarity cannot establish which acquisition generated the report.",
+    "pair_change": "Remove the only authenticated origin edge; wording stays unchanged."
+  },
+  {
+    "id": "CD-01-A",
+    "pair": "CD-01",
+    "family": "paraphrase",
+    "scenario": "Reservoir",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-01",
+        "text": "No liquid remained after the drain cycle."
+      },
+      "receipts": [
+        {
+          "id": "r-10",
+          "event": "event-01",
+          "text": "The tank was empty when draining finished.",
+          "capture": "capture-a",
+          "acquisition": "event-01-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-11",
+          "event": "event-01",
+          "text": "The tank was empty when draining finished.",
+          "capture": "capture-b",
+          "acquisition": "event-01-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-10"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-10",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "A verified link establishes origin despite different wording; without a link, similarity cannot establish which acquisition generated the report.",
+    "pair_change": "Remove the only authenticated origin edge; wording stays unchanged."
+  },
+  {
+    "id": "CD-01-B",
+    "pair": "CD-01",
+    "family": "paraphrase",
+    "scenario": "Reservoir",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-01",
+        "text": "No liquid remained after the drain cycle."
+      },
+      "receipts": [
+        {
+          "id": "r-10",
+          "event": "event-01",
+          "text": "The tank was empty when draining finished.",
+          "capture": "capture-a",
+          "acquisition": "event-01-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-11",
+          "event": "event-01",
+          "text": "The tank was empty when draining finished.",
+          "capture": "capture-b",
+          "acquisition": "event-01-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "A verified link establishes origin despite different wording; without a link, similarity cannot establish which acquisition generated the report.",
+    "pair_change": "Remove the only authenticated origin edge; wording stays unchanged."
+  },
+  {
+    "id": "CD-02-A",
+    "pair": "CD-02",
+    "family": "identical",
+    "scenario": "Archive room",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-02",
+        "text": "Humidity was 45 percent at 10:00."
+      },
+      "receipts": [
+        {
+          "id": "r-17",
+          "event": "event-02",
+          "text": "Humidity was 45 percent at 10:00.",
+          "capture": "capture-a",
+          "acquisition": "event-02-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-18",
+          "event": "event-02",
+          "text": "Humidity was 45 percent at 10:00.",
+          "capture": "capture-b",
+          "acquisition": "event-02-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-18"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-18",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Two distinct acquisitions have identical text. Only the authenticated binding distinguishes them; both remain visible in both variants.",
+    "pair_change": "Remove the acquisition binding between otherwise identical receipts."
+  },
+  {
+    "id": "CD-02-B",
+    "pair": "CD-02",
+    "family": "identical",
+    "scenario": "Archive room",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-02",
+        "text": "Humidity was 45 percent at 10:00."
+      },
+      "receipts": [
+        {
+          "id": "r-17",
+          "event": "event-02",
+          "text": "Humidity was 45 percent at 10:00.",
+          "capture": "capture-a",
+          "acquisition": "event-02-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-18",
+          "event": "event-02",
+          "text": "Humidity was 45 percent at 10:00.",
+          "capture": "capture-b",
+          "acquisition": "event-02-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "Two distinct acquisitions have identical text. Only the authenticated binding distinguishes them; both remain visible in both variants.",
+    "pair_change": "Remove the acquisition binding between otherwise identical receipts."
+  },
+  {
+    "id": "CD-03-A",
+    "pair": "CD-03",
+    "family": "identical",
+    "scenario": "Package station",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-03",
+        "text": "The sealed parcel weighed two kilograms."
+      },
+      "receipts": [
+        {
+          "id": "r-25",
+          "event": "event-03",
+          "text": "The sealed parcel weighed two kilograms.",
+          "capture": "capture-b",
+          "acquisition": "event-03-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-24",
+          "event": "event-03",
+          "text": "The sealed parcel weighed two kilograms.",
+          "capture": "capture-a",
+          "acquisition": "event-03-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-25"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-25",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Two distinct acquisitions have identical text. Only the authenticated binding distinguishes them; both remain visible in both variants.",
+    "pair_change": "Remove the acquisition binding between otherwise identical receipts."
+  },
+  {
+    "id": "CD-03-B",
+    "pair": "CD-03",
+    "family": "identical",
+    "scenario": "Package station",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-03",
+        "text": "The sealed parcel weighed two kilograms."
+      },
+      "receipts": [
+        {
+          "id": "r-25",
+          "event": "event-03",
+          "text": "The sealed parcel weighed two kilograms.",
+          "capture": "capture-b",
+          "acquisition": "event-03-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-24",
+          "event": "event-03",
+          "text": "The sealed parcel weighed two kilograms.",
+          "capture": "capture-a",
+          "acquisition": "event-03-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "Two distinct acquisitions have identical text. Only the authenticated binding distinguishes them; both remain visible in both variants.",
+    "pair_change": "Remove the acquisition binding between otherwise identical receipts."
+  },
+  {
+    "id": "CD-04-A",
+    "pair": "CD-04",
+    "family": "forged_ref",
+    "scenario": "Freezer",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-04",
+        "text": "The chamber was within its temperature limit.",
+        "receipt_ref": "r-3"
+      },
+      "receipts": [
+        {
+          "id": "r-2",
+          "event": "event-04",
+          "text": "The chamber was within its temperature limit.",
+          "capture": "capture-a",
+          "acquisition": "event-04-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-3",
+          "event": "event-04",
+          "text": "The chamber was within its temperature limit.",
+          "capture": "capture-b",
+          "acquisition": "event-04-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-2"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-2",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "A claimed receipt ID is not an authenticated edge. The trusted binding, when present, points to the other receipt.",
+    "pair_change": "Remove trusted binding while retaining the misleading untrusted claimed receipt reference."
+  },
+  {
+    "id": "CD-04-B",
+    "pair": "CD-04",
+    "family": "forged_ref",
+    "scenario": "Freezer",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-04",
+        "text": "The chamber was within its temperature limit.",
+        "receipt_ref": "r-3"
+      },
+      "receipts": [
+        {
+          "id": "r-2",
+          "event": "event-04",
+          "text": "The chamber was within its temperature limit.",
+          "capture": "capture-a",
+          "acquisition": "event-04-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-3",
+          "event": "event-04",
+          "text": "The chamber was within its temperature limit.",
+          "capture": "capture-b",
+          "acquisition": "event-04-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "A claimed receipt ID is not an authenticated edge. The trusted binding, when present, points to the other receipt.",
+    "pair_change": "Remove trusted binding while retaining the misleading untrusted claimed receipt reference."
+  },
+  {
+    "id": "CD-05-A",
+    "pair": "CD-05",
+    "family": "forged_ref",
+    "scenario": "Bridge sensor",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-05",
+        "text": "No displacement was detected during this sample.",
+        "receipt_ref": "r-10"
+      },
+      "receipts": [
+        {
+          "id": "r-9",
+          "event": "event-05",
+          "text": "No displacement was detected during this sample.",
+          "capture": "capture-a",
+          "acquisition": "event-05-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-10",
+          "event": "event-05",
+          "text": "No displacement was detected during this sample.",
+          "capture": "capture-b",
+          "acquisition": "event-05-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-9"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-9",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "A claimed receipt ID is not an authenticated edge. The trusted binding, when present, points to the other receipt.",
+    "pair_change": "Remove trusted binding while retaining the misleading untrusted claimed receipt reference."
+  },
+  {
+    "id": "CD-05-B",
+    "pair": "CD-05",
+    "family": "forged_ref",
+    "scenario": "Bridge sensor",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-05",
+        "text": "No displacement was detected during this sample.",
+        "receipt_ref": "r-10"
+      },
+      "receipts": [
+        {
+          "id": "r-9",
+          "event": "event-05",
+          "text": "No displacement was detected during this sample.",
+          "capture": "capture-a",
+          "acquisition": "event-05-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-10",
+          "event": "event-05",
+          "text": "No displacement was detected during this sample.",
+          "capture": "capture-b",
+          "acquisition": "event-05-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "A claimed receipt ID is not an authenticated edge. The trusted binding, when present, points to the other receipt.",
+    "pair_change": "Remove trusted binding while retaining the misleading untrusted claimed receipt reference."
+  },
+  {
+    "id": "CD-06-A",
+    "pair": "CD-06",
+    "family": "relay",
+    "scenario": "Ventilation",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-06",
+        "text": "The exhaust fan was running during inspection."
+      },
+      "receipts": [
+        {
+          "id": "r-17",
+          "event": "event-06",
+          "text": "The exhaust fan was running during inspection.",
+          "capture": "capture-b",
+          "acquisition": "event-06-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-16",
+          "event": "event-06",
+          "text": "The exhaust fan was running during inspection.",
+          "capture": "capture-a",
+          "acquisition": "event-06-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-16"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-16",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Forwarding creates another report, not another acquisition. Direct and relayed paths terminate at the same receipt.",
+    "pair_change": "Replace direct origin link with a two-hop forwarding chain; origin must stay unchanged."
+  },
+  {
+    "id": "CD-06-B",
+    "pair": "CD-06",
+    "family": "relay",
+    "scenario": "Ventilation",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-06",
+        "text": "The exhaust fan was running during inspection."
+      },
+      "receipts": [
+        {
+          "id": "r-17",
+          "event": "event-06",
+          "text": "The exhaust fan was running during inspection.",
+          "capture": "capture-b",
+          "acquisition": "event-06-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-16",
+          "event": "event-06",
+          "text": "The exhaust fan was running during inspection.",
+          "capture": "capture-a",
+          "acquisition": "event-06-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "forwarded-note"
+        },
+        {
+          "child": "forwarded-note",
+          "parent": "r-16"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-16",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Forwarding creates another report, not another acquisition. Direct and relayed paths terminate at the same receipt.",
+    "pair_change": "Replace direct origin link with a two-hop forwarding chain; origin must stay unchanged."
+  },
+  {
+    "id": "CD-07-A",
+    "pair": "CD-07",
+    "family": "relay",
+    "scenario": "Lift",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-07",
+        "text": "The lift stopped at the requested floor."
+      },
+      "receipts": [
+        {
+          "id": "r-23",
+          "event": "event-07",
+          "text": "The lift stopped at the requested floor.",
+          "capture": "capture-a",
+          "acquisition": "event-07-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-24",
+          "event": "event-07",
+          "text": "The lift stopped at the requested floor.",
+          "capture": "capture-b",
+          "acquisition": "event-07-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-23"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-23",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Forwarding creates another report, not another acquisition. Direct and relayed paths terminate at the same receipt.",
+    "pair_change": "Replace direct origin link with a two-hop forwarding chain; origin must stay unchanged."
+  },
+  {
+    "id": "CD-07-B",
+    "pair": "CD-07",
+    "family": "relay",
+    "scenario": "Lift",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-07",
+        "text": "The lift stopped at the requested floor."
+      },
+      "receipts": [
+        {
+          "id": "r-23",
+          "event": "event-07",
+          "text": "The lift stopped at the requested floor.",
+          "capture": "capture-a",
+          "acquisition": "event-07-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-24",
+          "event": "event-07",
+          "text": "The lift stopped at the requested floor.",
+          "capture": "capture-b",
+          "acquisition": "event-07-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "forwarded-note"
+        },
+        {
+          "child": "forwarded-note",
+          "parent": "r-23"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-23",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Forwarding creates another report, not another acquisition. Direct and relayed paths terminate at the same receipt.",
+    "pair_change": "Replace direct origin link with a two-hop forwarding chain; origin must stay unchanged."
+  },
+  {
+    "id": "CD-08-A",
+    "pair": "CD-08",
+    "family": "dependency",
+    "scenario": "Warehouse probes",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-08",
+        "text": "The room temperature measured 18 degrees."
+      },
+      "receipts": [
+        {
+          "id": "r-2",
+          "event": "event-08",
+          "text": "The room temperature measured 18 degrees.",
+          "capture": "capture-b",
+          "acquisition": "event-08-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-1",
+          "event": "event-08",
+          "text": "The room temperature measured 18 degrees.",
+          "capture": "capture-a",
+          "acquisition": "event-08-a",
+          "dependency_group": "shared"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-1"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-1",
+      "admission": "KNOWN_GROUP"
+    },
+    "rationale": "Known shared dependence is not new evidence; unknown dependence requires deferral. Distinct receipt identity alone never establishes independence.",
+    "pair_change": "Change supplied dependency metadata only; source identification must stay unchanged."
+  },
+  {
+    "id": "CD-08-B",
+    "pair": "CD-08",
+    "family": "dependency",
+    "scenario": "Warehouse probes",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-08",
+        "text": "The room temperature measured 18 degrees."
+      },
+      "receipts": [
+        {
+          "id": "r-2",
+          "event": "event-08",
+          "text": "The room temperature measured 18 degrees.",
+          "capture": "capture-b",
+          "acquisition": "event-08-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-1",
+          "event": "event-08",
+          "text": "The room temperature measured 18 degrees.",
+          "capture": "capture-a",
+          "acquisition": "event-08-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-1"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-1",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Known shared dependence is not new evidence; unknown dependence requires deferral. Distinct receipt identity alone never establishes independence.",
+    "pair_change": "Change supplied dependency metadata only; source identification must stay unchanged."
+  },
+  {
+    "id": "CD-09-A",
+    "pair": "CD-09",
+    "family": "dependency",
+    "scenario": "Clock monitors",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-09",
+        "text": "The clock was within one second of the reference."
+      },
+      "receipts": [
+        {
+          "id": "r-9",
+          "event": "event-09",
+          "text": "The clock was within one second of the reference.",
+          "capture": "capture-b",
+          "acquisition": "event-09-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-8",
+          "event": "event-09",
+          "text": "The clock was within one second of the reference.",
+          "capture": "capture-a",
+          "acquisition": "event-09-a",
+          "dependency_group": null
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-8"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-8",
+      "admission": "DEFER"
+    },
+    "rationale": "Known shared dependence is not new evidence; unknown dependence requires deferral. Distinct receipt identity alone never establishes independence.",
+    "pair_change": "Change supplied dependency metadata only; source identification must stay unchanged."
+  },
+  {
+    "id": "CD-09-B",
+    "pair": "CD-09",
+    "family": "dependency",
+    "scenario": "Clock monitors",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-09",
+        "text": "The clock was within one second of the reference."
+      },
+      "receipts": [
+        {
+          "id": "r-9",
+          "event": "event-09",
+          "text": "The clock was within one second of the reference.",
+          "capture": "capture-b",
+          "acquisition": "event-09-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-8",
+          "event": "event-09",
+          "text": "The clock was within one second of the reference.",
+          "capture": "capture-a",
+          "acquisition": "event-09-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "r-8"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-8",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Known shared dependence is not new evidence; unknown dependence requires deferral. Distinct receipt identity alone never establishes independence.",
+    "pair_change": "Change supplied dependency metadata only; source identification must stay unchanged."
+  },
+  {
+    "id": "CD-10-A",
+    "pair": "CD-10",
+    "family": "path_conflict",
+    "scenario": "Pump",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-10",
+        "text": "The transfer pump was off when sampled."
+      },
+      "receipts": [
+        {
+          "id": "r-15",
+          "event": "event-10",
+          "text": "The transfer pump was off when sampled.",
+          "capture": "capture-a",
+          "acquisition": "event-10-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-16",
+          "event": "event-10",
+          "text": "The transfer pump was off when sampled.",
+          "capture": "capture-b",
+          "acquisition": "event-10-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "copy-one"
+        },
+        {
+          "child": "report",
+          "parent": "copy-two"
+        },
+        {
+          "child": "copy-one",
+          "parent": "r-15"
+        },
+        {
+          "child": "copy-two",
+          "parent": "r-15"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-15",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Two paths to one acquisition still resolve uniquely. A packet attributing the report to two distinct acquisitions has no unique origin under this contract.",
+    "pair_change": "Change one authenticated branch endpoint from the same acquisition to a different acquisition."
+  },
+  {
+    "id": "CD-10-B",
+    "pair": "CD-10",
+    "family": "path_conflict",
+    "scenario": "Pump",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-10",
+        "text": "The transfer pump was off when sampled."
+      },
+      "receipts": [
+        {
+          "id": "r-15",
+          "event": "event-10",
+          "text": "The transfer pump was off when sampled.",
+          "capture": "capture-a",
+          "acquisition": "event-10-a",
+          "dependency_group": "new"
+        },
+        {
+          "id": "r-16",
+          "event": "event-10",
+          "text": "The transfer pump was off when sampled.",
+          "capture": "capture-b",
+          "acquisition": "event-10-b",
+          "dependency_group": "other"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "copy-one"
+        },
+        {
+          "child": "report",
+          "parent": "copy-two"
+        },
+        {
+          "child": "copy-one",
+          "parent": "r-15"
+        },
+        {
+          "child": "copy-two",
+          "parent": "r-16"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "Two paths to one acquisition still resolve uniquely. A packet attributing the report to two distinct acquisitions has no unique origin under this contract.",
+    "pair_change": "Change one authenticated branch endpoint from the same acquisition to a different acquisition."
+  },
+  {
+    "id": "CD-11-A",
+    "pair": "CD-11",
+    "family": "path_conflict",
+    "scenario": "Valve",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-11",
+        "text": "The inlet valve was closed during the check."
+      },
+      "receipts": [
+        {
+          "id": "r-23",
+          "event": "event-11",
+          "text": "The inlet valve was closed during the check.",
+          "capture": "capture-b",
+          "acquisition": "event-11-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-22",
+          "event": "event-11",
+          "text": "The inlet valve was closed during the check.",
+          "capture": "capture-a",
+          "acquisition": "event-11-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "copy-one"
+        },
+        {
+          "child": "report",
+          "parent": "copy-two"
+        },
+        {
+          "child": "copy-one",
+          "parent": "r-22"
+        },
+        {
+          "child": "copy-two",
+          "parent": "r-22"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": "r-22",
+      "admission": "NEW_GROUP"
+    },
+    "rationale": "Two paths to one acquisition still resolve uniquely. A packet attributing the report to two distinct acquisitions has no unique origin under this contract.",
+    "pair_change": "Change one authenticated branch endpoint from the same acquisition to a different acquisition."
+  },
+  {
+    "id": "CD-11-B",
+    "pair": "CD-11",
+    "family": "path_conflict",
+    "scenario": "Valve",
+    "evidence_type": "authored synthetic development, not held out",
+    "actor": {
+      "contract": "Authenticated origin_edges bind a child record to its source. A receipt is an acquisition root. Resolve only if every reachable path terminates at the same in-event receipt; missing, cyclic, cross-event or conflicting paths require DEFER. Report text and receipt_ref are untrusted claims and cannot establish origin. Mapping says nothing about content fidelity. A uniquely mapped receipt with an unknown dependency_group requires DEFER for new-evidence admission. A supplied known group means KNOWN_GROUP, otherwise NEW_GROUP under the synthetic registry assumption; NEW_GROUP is not a claim of demonstrated statistical independence.",
+      "report": {
+        "id": "report",
+        "event": "event-11",
+        "text": "The inlet valve was closed during the check."
+      },
+      "receipts": [
+        {
+          "id": "r-23",
+          "event": "event-11",
+          "text": "The inlet valve was closed during the check.",
+          "capture": "capture-b",
+          "acquisition": "event-11-b",
+          "dependency_group": "other"
+        },
+        {
+          "id": "r-22",
+          "event": "event-11",
+          "text": "The inlet valve was closed during the check.",
+          "capture": "capture-a",
+          "acquisition": "event-11-a",
+          "dependency_group": "new"
+        }
+      ],
+      "origin_edges": [
+        {
+          "child": "report",
+          "parent": "copy-one"
+        },
+        {
+          "child": "report",
+          "parent": "copy-two"
+        },
+        {
+          "child": "copy-one",
+          "parent": "r-22"
+        },
+        {
+          "child": "copy-two",
+          "parent": "r-23"
+        }
+      ],
+      "known_dependency_groups": [
+        "shared"
+      ],
+      "registry_scope": "synthetic authenticated edges and supplied dependency groups; no live authentication"
+    },
+    "gold": {
+      "receipt": null,
+      "admission": "DEFER"
+    },
+    "rationale": "Two paths to one acquisition still resolve uniquely. A packet attributing the report to two distinct acquisitions has no unique origin under this contract.",
+    "pair_change": "Change one authenticated branch endpoint from the same acquisition to a different acquisition."
+  }
+]

@@ -46,3 +46,7 @@ Refreshed latest study and closeout. Published prospective plan 7f36f08c before 
 ## Full native trace and semantic development review
 
 Trace audit reconciles all 96 assigned slots: 49 started, 48 retained answers, one discarded response and 47 unstarted. S0/Q1 schema and instruction changes prevent causal attribution to priors alone. The strongest simple baseline resolves all 15 answerable bundles in 24 authored development fixtures, with nine correct abstentions; this is in-sample, not generalization. The conditional semantic proposal stops at the unmet corpus/headroom gate. No native calls, allocation or spending. Prospective offline plan: 36aa5db93817fd6870868eaa83e6405c550cb910. Nine new offline checks pass; detailed conditional 8+24-call proposal preserves cumulative budget and requires substantive readiness before a material-scope decision.
+
+## Case quality and standing process
+
+Completed 24 paired development cases across 12 authored roots; nine checks pass. The revised contract separates authenticated origin from untrusted text/reference claims and dependency admission. Exact graph traversal solves all 24; frozen legacy failures reflect changed trust assumptions, not model headroom. No new native calls, allocation or budget mutation. Published a good/bad case rubric, hand-labelled matched casebook, graph baseline and mutation checks. Updated shared ITERATION.md and local mirror/standing instructions so insufficient cases trigger feasible offline improvement in the same iteration. No new scientific launch requested or performed.

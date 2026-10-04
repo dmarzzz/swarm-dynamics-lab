@@ -1,0 +1,1481 @@
+{
+  "development_only": true,
+  "assigned": 24,
+  "authored_scenario_roots": 12,
+  "legacy_source_sha256": "0b6cb9d36c12a75878558691974687a306cb82bca49eca18ce5c6a505e733d96",
+  "comparison_limit": "Legacy controllers ignore authenticated origin edges and assume claimed refs are authoritative. These are contract-shift diagnostics, not a fair effectiveness comparison or evidence of semantic/model headroom.",
+  "summary": {
+    "exact_ref": {
+      "origin_correct": 6,
+      "joint_correct": 6,
+      "incorrect_origin_admission": 4,
+      "unsafe_new_group": 4
+    },
+    "normalized_text": {
+      "origin_correct": 8,
+      "joint_correct": 8,
+      "incorrect_origin_admission": 0,
+      "unsafe_new_group": 0
+    },
+    "lexical": {
+      "origin_correct": 8,
+      "joint_correct": 8,
+      "incorrect_origin_admission": 0,
+      "unsafe_new_group": 0
+    },
+    "hybrid": {
+      "origin_correct": 6,
+      "joint_correct": 6,
+      "incorrect_origin_admission": 4,
+      "unsafe_new_group": 4
+    },
+    "authenticated_graph": {
+      "origin_correct": 24,
+      "joint_correct": 24,
+      "incorrect_origin_admission": 0,
+      "unsafe_new_group": 0
+    }
+  },
+  "outcomes": [
+    {
+      "id": "CD-00-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": "r-3",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-04-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": "r-3",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-05-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": "r-10",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-05-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": "r-10",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-06-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-A",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-B",
+      "policy": "exact_ref",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-A",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-B",
+      "policy": "normalized_text",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-A",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-B",
+      "policy": "lexical",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": "r-3",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-04-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": "r-3",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-05-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": "r-10",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-05-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": "r-10",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": true,
+      "unsafe_new_group": true
+    },
+    {
+      "id": "CD-06-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-A",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": false,
+      "joint_correct": false,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-B",
+      "policy": "hybrid",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-3",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-00-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-10",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-01-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-18",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-02-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-25",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-03-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-2",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-04-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-9",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-05-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-16",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-06-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-16",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-23",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-07-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-23",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-1",
+        "admission": "KNOWN_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-08-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-1",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-8",
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-09-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-8",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-15",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-10-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-A",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": "r-22",
+        "admission": "NEW_GROUP"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    },
+    {
+      "id": "CD-11-B",
+      "policy": "authenticated_graph",
+      "decision": {
+        "receipt": null,
+        "admission": "DEFER"
+      },
+      "origin_correct": true,
+      "joint_correct": true,
+      "incorrect_origin_admission": false,
+      "unsafe_new_group": false
+    }
+  ]
+}

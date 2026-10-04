@@ -1,0 +1,17 @@
+{
+  "scope": "offline authored development only",
+  "tests_passed": 9,
+  "cases": 24,
+  "authored_roots": 12,
+  "model_calls": 0,
+  "native_run_ready": false,
+  "source_sha256": {
+    "CASEBOOK.md": "a0060a2d9f32c530c6a5872f3bc9a4f32521319d53c62bdf496760597e56d520",
+    "PLAN.md": "5d0d08169ce94fa80aafd25379d1130b98f647697c1a232c736616e3eae15252",
+    "RESULTS.md": "f13b55a9942f06f4a16f16ddece360eccb80497663f3fa3b675bc8f6a284b416",
+    "cases.json": "d76bd99be509f15207f672472c67eb6e3e149eda1e497a7315eef1b27bfc3422",
+    "cases.py": "759b06a43608c469d7b3e7c77f60af4439770aae92633052983ecfba2c6eddf1",
+    "outcomes.json": "44664559b8b6bb80b192d109c6acd121c7eccaaafeb607b1a34d90a04767109e",
+    "test_cases.py": "e019991970607536c61972b17ebd677aee12fa1f2a0a0fd0447e61b0498ad251"
+  }
+}
