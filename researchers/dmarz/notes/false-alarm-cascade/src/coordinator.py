@@ -17,8 +17,11 @@ def gate(runs, stage, p):
         raise ValueError('batch_exists_no_replay')
     previous = PREREQUISITE.get(stage)
     if previous:
+        # S0 is model-free; a paid prerequisite must be on the same model (one ladder rung never
+        # qualifies another).
         same = [r for r in runs if (r.get('params') or {}).get('stage') == previous
-                and (r.get('params') or {}).get('source_hash') == p['source_hash']]
+                and (r.get('params') or {}).get('source_hash') == p['source_hash']
+                and (previous == 'S0' or (r.get('params') or {}).get('model') == p['model'])]
         passed = [r for r in same if r.get('status') == 'done'
                   and (r.get('metrics') or {}).get('invalid') == 0
                   and (r.get('metrics') or {}).get('qualification_passed') == 1]
@@ -40,6 +43,7 @@ def resume_gate(runs, p, continuation):
             raise ValueError('resume_requires_credit_stop')
     later = [r for r in runs if (r.get('params') or {}).get('stage') == 'S1'
              and (r.get('params') or {}).get('source_hash') == p['source_hash']
+             and (r.get('params') or {}).get('model') == p['model']
              and (r.get('params') or {}).get('batch') not in family]
     if later:
         raise ValueError('resume_out_of_order')

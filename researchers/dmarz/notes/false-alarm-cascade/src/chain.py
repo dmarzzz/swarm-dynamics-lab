@@ -85,7 +85,7 @@ def projection(sr, ledger_path):
     p = study.params('Q0')
     runs = [r for r in sr.runs(study.EXPERIMENT, limit=5000)
             if (r.get('params') or {}).get('stage') == 'Q0' and (r.get('params') or {}).get('source_hash') == p['source_hash']
-            and r.get('status') == 'done']
+            and (r.get('params') or {}).get('model') == p['model'] and r.get('status') == 'done']
     if len(runs) != 1:
         raise ValueError('projection_needs_exactly_one_passed_q0')
     metrics = runs[0].get('metrics') or {}
@@ -116,7 +116,7 @@ def _run_chain(stages, sr, root, ledger_path, opener, sleep=None):
     ledger_path = ledger_path or os.environ.get(provider.LEDGER_ENV)
     previous = read_status(root) or {}
     status = {'experiment': study.EXPERIMENT, 'state': 'running', 'requested': stages, 'started': now(),
-              'source_hash': study.source_hash(), 'code': study.code_revision(),
+              'source_hash': study.source_hash(), 'code': study.code_revision(), 'model': study.model(),
               'stages': dict(previous.get('stages') or {}),
               'budget': {'max_calls': budget['max_calls'], 'max_calls_total': budget['max_attempted_calls'],
                          'usd_cap': budget['aggregate_usd']}}

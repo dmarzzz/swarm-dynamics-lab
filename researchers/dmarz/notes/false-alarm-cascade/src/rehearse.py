@@ -80,6 +80,7 @@ class Stub:
         self.lock = threading.Lock()
         self.count_calls = self.message_calls = self.in_flight = self.max_in_flight = 0
         self.credit_errors = self.answered = 0
+        self.models = set()                         # model ids seen in messages requests
 
     def __call__(self, request, timeout=None):
         url = request.full_url
@@ -102,6 +103,7 @@ class Stub:
             raise AssertionError('stub_prompt_or_schema')
         packet = json.loads(body['messages'][0]['content'])
         with self.lock:
+            self.models.add(body['model'])
             self.message_calls += 1
             n = self.message_calls
             self.in_flight += 1
@@ -236,6 +238,52 @@ def scenario(sr, hub_dir, tmp, name, stub, stages, verify=False, resume_with=Non
                     out['replay_refused'] = str(exc) == 'batch_exists_no_replay'
                 out['resume_refused'] = chain.resume_chain(sr, base / 'results', ledger_path, opener=stub, sleep=no_wait) == chain.EXIT_STOPPED
             return out
+        finally:
+            proc.terminate()
+            try:
+                proc.wait(timeout=10)
+            except subprocess.TimeoutExpired:
+                proc.kill()
+
+
+def ladder_scenario(sr, hub_dir, tmp, stages, credit_from):
+    """The model ladder on one hub and source hash: the first rung's chain stops on a billing
+    outage that does not end; then P0, Q0 and S1 run on the second rung with its own results
+    directory and ledger, as the launcher's --model does. S0 is not repeated."""
+    base = tmp / 'g'
+    base.mkdir()
+    ladder = study.design()['model_ladder']
+    with (base / 'hub.log').open('w') as log:
+        proc = start_hub(hub_dir, base / 'hubdata', log)
+        try:
+            require_local(sr)
+            wait_for_hub(sr, proc)
+            first_stub = Stub('private', credit=lambda n: n >= credit_from)
+            first = chain.run_chain(stages, sr, base / 'results', base / 'accounting' / 'ledger.jsonl',
+                                    opener=first_stub, sleep=no_wait)
+            os.environ['STUDY_MODEL'] = ladder[1]
+            try:
+                # Before P0 on the second rung exists, its Q0 must be refused even though the first
+                # rung's Q0 passed at this source hash.
+                try:
+                    coordinator.enqueue(sr, 'Q0')
+                    cross_refused = False
+                except ValueError as exc:
+                    cross_refused = str(exc).startswith('exact_runtime_qualification_required')
+                second_stub = Stub('private')
+                second = chain.run_chain(stages[1:], sr, base / 'results-opus-5',
+                                         base / 'accounting' / 'ledger-opus-5.jsonl', opener=second_stub, sleep=no_wait)
+                status = chain.read_status(base / 'results-opus-5')
+                entries = chain.stage_entries(status or {}, 'S1')
+                rows = analyze.read_rows(Path(entries[0]['results_dir']) / 'episodes.jsonl.gz') if entries else []
+                ledger2 = provider.Ledger(base / 'accounting' / 'ledger-opus-5.jsonl').transact()
+            finally:
+                os.environ.pop('STUDY_MODEL', None)
+            ledger1 = provider.Ledger(base / 'accounting' / 'ledger.jsonl').transact()
+            return {'first_exit': first, 'second_exit': second, 'cross_refused': cross_refused,
+                    'runs': sr.runs(study.EXPERIMENT, limit=5000), 'rows': rows, 'status': status,
+                    'first_models': first_stub.models, 'second_models': second_stub.models,
+                    'second_messages': second_stub.message_calls, 'ledger1': ledger1, 'ledger2': ledger2}
         finally:
             proc.terminate()
             try:
@@ -408,6 +456,28 @@ def main(argv=None):
         checks['f_verify_ok_with_continuation'] = bool(f_run['verify'] and f_run['verify']['ok']
                                                        and set(f_run['verify']['stages']) == {'S0', 'P0', 'Q0', 'S1', 'S1-r1'})
 
+        # (g) The model ladder: a billing stop on the first rung, then P0 -> Q0 -> S1 on the second.
+        ladder = d['model_ladder']
+        g_run = ladder_scenario(sr, hub_dir, tmp, stages, paid_before_s1 + 200)
+        by_batch = {(r.get('params') or {}).get('batch'): r for r in g_run['runs']}
+        tag = study.model_tag(ladder[1])
+        second = [by_batch.get(f'{s.lower()}-{d["attempt"]}{tag}', {}) for s in stages[1:]]
+        checks['g_first_rung_stopped_for_credit'] = (g_run['first_exit'] == chain.EXIT_STOPPED
+                                                     and (by_batch.get('s1-001', {}).get('metrics') or {}).get('billing_stop') == 1
+                                                     and g_run['first_models'] == {ladder[0]})
+        checks['g_cross_model_qualification_refused'] = g_run['cross_refused'] is True
+        checks['g_second_rung_completes'] = (g_run['second_exit'] == 0 and all(r.get('status') == 'done' for r in second)
+                                             and all((r.get('params') or {}).get('model') == ladder[1] for r in second))
+        checks['g_second_rung_own_batches_and_ledger'] = (tag == '-opus-5' and g_run['ledger2']['attempted_calls'] == budget['max_attempted_calls']
+                                                          and g_run['second_messages'] == budget['max_attempted_calls']
+                                                          and g_run['second_models'] == {ladder[1]})
+        checks['g_rows_name_their_model'] = (len(g_run['rows']) == s1_rows and all(r.get('model') == ladder[1] for r in g_run['rows']))
+        prices = d['models'][ladder[1]]
+        expected = g_run['second_messages'] and g_run['ledger2']['actual_usd'] > 0 and abs(
+            g_run['ledger2']['actual_usd'] - (g_run['ledger2']['input_tokens'] * prices['input_usd_per_million']
+                                             + g_run['ledger2']['output_tokens'] * prices['output_usd_per_million']) / 1e6) < 1e-6
+        checks['g_second_rung_priced_at_its_own_rates'] = bool(expected)
+
         checks['nothing_spooled'] = not list((tmp / 'spool').glob('*.json')) if (tmp / 'spool').exists() else True
         checks['committed_tree_untouched'] = not (study.ROOT / 'results').exists() or not any((study.ROOT / 'results').iterdir())
 
@@ -429,6 +499,9 @@ def main(argv=None):
                   'verify_stages': {s: v.get('ok') for s, v in (a_run['verify'] or {}).get('stages', {}).items()},
                   'failed_qualification_chain': brief(b_run), 'one_failed_call_chain': brief(c_run),
                   'over_the_failure_limit_chain': brief(d_run), 'billing_pause_chain': brief(e_run),
+                  'model_ladder_chain': {'first_exit': g_run['first_exit'], 'second_exit': g_run['second_exit'],
+                                         'second_rung': ladder[1], 'second_calls': g_run['second_messages'],
+                                         'second_stub_cost_usd_not_real': g_run['ledger2']['actual_usd']},
                   'billing_stop_and_resume_chain': dict(brief(f_run), first_exit=f_run['exit'], resume_exit=f_run['resume']['exit'],
                                                         resume_seconds=round(f_run['resume']['seconds'], 1),
                                                         interrupted_rows=len(interrupted), resumed_rows=len(f_run['resume']['rows'] or []))}

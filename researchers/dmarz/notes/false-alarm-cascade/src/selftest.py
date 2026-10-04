@@ -575,8 +575,14 @@ class Tests(unittest.TestCase):
         self.assertEqual(b['max_attempted_calls'], 3625)
         self.assertEqual(sum(b['max_calls'].values()), b['max_attempted_calls'])
         self.assertEqual({s: D['stages'][s]['rows'] for s in ('P0', 'Q0', 'S1')}, {'P0': 1, 'Q0': 24, 'S1': 3600})
-        self.assertEqual((D['model'], D['effort'], b['max_output_tokens'], b['input_usd_per_million'], b['output_usd_per_million']),
+        price = D['models'][D['model']]
+        self.assertEqual((D['model'], D['effort'], b['max_output_tokens'], price['input_usd_per_million'], price['output_usd_per_million']),
                          ('claude-opus-5-5', 'medium', 8000, 4, 20))
+        self.assertEqual(D['model_ladder'], ['claude-opus-5-5', 'claude-opus-5'])
+        self.assertEqual(D['models']['claude-opus-5'], {'input_usd_per_million': 5, 'output_usd_per_million': 25})
+        self.assertEqual(D['model'], D['model_ladder'][0])
+        self.assertNotIn('input_usd_per_million', b)        # prices live per model, never in the shared budget
+        self.assertEqual(b['aggregate_usd'], 450)           # sized for the dearer rung
         self.assertEqual(b['retries'], 0)
         self.assertEqual((b['episode_workers'], b['fixture_workers'], b['workers']), (2, 5, 10))
         self.assertLessEqual(b['episode_workers'] * W['model_agents'], b['workers'])     # at most 10 requests in flight
@@ -605,6 +611,63 @@ class Tests(unittest.TestCase):
 
     # ---------------------------------------------------------------- provider and ledger
 
+    def test_model_ladder_default_override_and_refusal(self):
+        with patch.dict(os.environ, {'STUDY_MODEL': ''}):
+            self.assertEqual(study.model(), 'claude-opus-5-5')
+            self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001', 'q0-001', 's1-001'])
+            self.assertEqual([study.params(s)['model'] for s in study.STAGES], ['scripted'] + ['claude-opus-5-5'] * 3)
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            self.assertEqual(study.model(), 'claude-opus-5')
+            self.assertEqual([study.params(s)['batch'] for s in study.STAGES], ['s0-001', 'p0-001-opus-5', 'q0-001-opus-5', 's1-001-opus-5'])
+            self.assertEqual(study.params('S1', 1)['batch'], 's1-001-opus-5-r1')
+            self.assertEqual(study.continuation_index('S1', 's1-001-opus-5-r2'), 2)
+            self.assertEqual(provider.request_body(study.probe_fixture()['packet'])['model'], 'claude-opus-5')
+            self.assertEqual(study.prices(), {'input_usd_per_million': 5, 'output_usd_per_million': 25})
+        for outside in ('claude-sonnet-5-5', 'claude-opus-5-5-20260101', 'qwen/qwen3.7-flash'):
+            with patch.dict(os.environ, {'STUDY_MODEL': outside}):
+                with self.assertRaises(ValueError):
+                    study.model()
+                with self.assertRaises(ValueError):
+                    study.params('P0')
+
+    def test_a_qualification_never_crosses_models(self):
+        def run(stage, model, status='done', batch=None):
+            with patch.dict(os.environ, {'STUDY_MODEL': model if model != 'scripted' else ''}):
+                p = dict(study.params(stage))
+            if model == 'scripted':
+                p['model'] = 'scripted'
+            return {'params': dict(p, batch=batch or p['batch']), 'status': status,
+                    'metrics': {'invalid': 0, 'qualification_passed': 1}}
+        first = [run('S0', 'scripted'), run('P0', 'claude-opus-5-5'), run('Q0', 'claude-opus-5-5')]
+        with patch.dict(os.environ, {'STUDY_MODEL': 'claude-opus-5'}):
+            # The second rung's Q0 and S1 are refused behind the first rung's P0 and Q0.
+            for stage in ('Q0', 'S1'):
+                with self.assertRaises(ValueError):
+                    coordinator.gate(first, stage, study.params(stage))
+            coordinator.gate(first, 'P0', study.params('P0'))          # S0 serves every model
+            second = first + [run('P0', 'claude-opus-5')]
+            coordinator.gate(second, 'Q0', study.params('Q0'))
+            with self.assertRaises(ValueError):
+                coordinator.gate(second, 'S1', study.params('S1'))
+        with patch.dict(os.environ, {'STUDY_MODEL': ''}):
+            coordinator.gate(first, 'S1', study.params('S1'))           # the first rung is unaffected
+
+    def test_prices_follow_the_attempt_model(self):
+        packet = study.probe_fixture()['packet']
+        for model, (inp, out) in (('claude-opus-5-5', (4, 20)), ('claude-opus-5', (5, 25))):
+            with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, dict(ENV, STUDY_MODEL=model)):
+                client, opener, _, _ = api(td, [message(model=model)])
+                _, account = client.call(packet, 'p0-001:a')
+                self.assertEqual(opener.sent[-1][1]['model'], model)
+                self.assertEqual(account['actual_usd'], (1000 * inp + 300 * out) / 1e6)
+                self.assertEqual(account['reserved_usd'], ((int(1000 * 1.02) + 64) * inp + 8000 * out) / 1e6)
+        # A response naming the other rung is an integrity failure, not an answer.
+        with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, dict(ENV, STUDY_MODEL='claude-opus-5')):
+            client, _, _, _ = api(td, [message(model='claude-opus-5-5')])
+            with self.assertRaises(provider.CallFailure) as caught:
+                client.call(packet, 'p0-001:a')
+            self.assertEqual(caught.exception.category, 'model_mismatch')
+
     def test_request_body_has_exactly_the_contract_keys(self):
         packet = study.probe_fixture()['packet']
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
@@ -629,8 +692,8 @@ class Tests(unittest.TestCase):
         self.assertEqual(list(count_body), ['model', 'system', 'messages', 'output_config'])
         self.assertEqual((count_url, url), (provider.COUNT_URL, provider.MESSAGES_URL))
         self.assertEqual({k.lower() for k in headers}, {'content-type', 'x-api-key', 'anthropic-version', 'anthropic-workspace-id'})
-        b = D['budget']
-        self.assertEqual(account['actual_usd'], (1000 * b['input_usd_per_million'] + 300 * b['output_usd_per_million']) / 1e6)
+        price, b = D['models'][D['model']], D['budget']
+        self.assertEqual(account['actual_usd'], (1000 * price['input_usd_per_million'] + 300 * price['output_usd_per_million']) / 1e6)
         self.assertEqual(account['reserved_usd'], ((int(1000 * 1.02) + 64) * 4 + 8000 * 20) / 1e6)
         self.assertEqual((account['attempts'], account['count_attempts'], account['usage_reported']), (1, 1, True))
         # The schema uses only what structured outputs support: closed objects, enums, required keys.
@@ -1246,9 +1309,9 @@ class Tests(unittest.TestCase):
         self.assertTrue(ok['passed'])
         self.assertAlmostEqual(ok['projected_s1_usd'], 3600 * 0.033 * 1.25)
         self.assertEqual(ok['growth_factor'], 1.25)
-        self.assertTrue(chain.projection_check(0.0797, 1.0)['passed'])          # 358.65 <= 359.00
-        self.assertFalse(chain.projection_check(0.08, 1.0)['passed'])           # 360.00 > 359.00
-        self.assertFalse(chain.projection_check(0.033, 250)['passed'])          # 148.50 > 110 left
+        self.assertTrue(chain.projection_check(0.0997, 1.0)['passed'])          # 448.65 <= 449.00
+        self.assertFalse(chain.projection_check(0.1, 1.0)['passed'])            # 450.00 > 449.00
+        self.assertFalse(chain.projection_check(0.033, 340)['passed'])          # 148.50 > 110 left
 
     def test_chain_runs_gates_stops_on_projection_and_verify_detects_tampering(self):
         with tempfile.TemporaryDirectory() as td, patch.dict(os.environ, ENV):
@@ -1581,8 +1644,9 @@ class Tests(unittest.TestCase):
     def test_ready_file_matches_design_and_source(self):
         ready = yaml.safe_load((study.ROOT / 'READY.yaml').read_text())
         b = D['budget']
-        self.assertEqual(set(ready), {'contract', 'study', 'experiment', 'stages', 'model', 'effort', 'max_calls', 'max_calls_total',
-                                      'usd_cap', 'chain_timeout_seconds', 'selftests', 'source_hash'})
+        self.assertEqual(set(ready), {'contract', 'study', 'experiment', 'stages', 'model', 'model_ladder', 'effort', 'max_calls',
+                                      'max_calls_total', 'usd_cap', 'chain_timeout_seconds', 'selftests', 'source_hash'})
+        self.assertEqual(ready['model_ladder'], D['model_ladder'])
         self.assertEqual((ready['contract'], ready['study'], ready['experiment']), ('ready-chain-v1', study.EXPERIMENT, study.EXPERIMENT))
         self.assertEqual(ready['stages'], list(study.STAGES))
         self.assertEqual((ready['model'], ready['effort']), (D['model'], D['effort']))

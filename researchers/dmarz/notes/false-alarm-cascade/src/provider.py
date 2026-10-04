@@ -188,7 +188,7 @@ class Ledger:
 def request_body(packet):
     """The complete request. Nothing else is ever added to it."""
     d = study.design()
-    body = {'model': d['model'], 'max_tokens': d['budget']['max_output_tokens'], 'system': study.SYSTEM,
+    body = {'model': study.model(), 'max_tokens': d['budget']['max_output_tokens'], 'system': study.SYSTEM,
             'messages': [{'role': 'user', 'content': study.actor_text(packet)}],
             'output_config': {'effort': d['effort'], 'format': {'type': 'json_schema', 'schema': study.schema()}}}
     assert tuple(body) == REQUEST_KEYS
@@ -209,6 +209,7 @@ class Anthropic:
         self.paused = False          # a call is re-sending on the slow schedule; nothing new starts
         self.gave_up = False         # the outage outlasted the wait; nothing new starts again
         self.d = study.design(); self.b = self.d['budget']
+        self.model = study.model(); self.price = study.prices(self.model)
         self.key = os.environ.get('SWARM_MODEL_API_KEY')
         self.workspace = os.environ.get('SWARM_MODEL_WORKSPACE_ID')
         if not self.key or not self.workspace:
@@ -303,7 +304,7 @@ class Anthropic:
 
     def reservation(self, counted):
         """Micro-dollars: counted input plus 2% and 64 tokens, and the full output limit."""
-        return (int(counted*1.02)+64)*self.b['input_usd_per_million'] + self.b['max_output_tokens']*self.b['output_usd_per_million']
+        return (int(counted*1.02)+64)*self.price['input_usd_per_million'] + self.b['max_output_tokens']*self.price['output_usd_per_million']
 
     def end_pause(self, leading, gave_up=False):
         """The leading call ends its pause, or any call records that the outage outlasted the wait."""
@@ -388,14 +389,14 @@ class Anthropic:
             raise CallFailure('missing_usage', account)
         if usage.get('cache_creation_input_tokens',0) or usage.get('cache_read_input_tokens',0):
             raise CallFailure('unexpected_cache_usage', account)
-        actual = usage['input_tokens']*self.b['input_usd_per_million']+usage['output_tokens']*self.b['output_usd_per_million']
+        actual = usage['input_tokens']*self.price['input_usd_per_million']+usage['output_tokens']*self.price['output_usd_per_million']
         self.ledger.transact({'type':'response','call_id':call_id,'actual_micro_usd':actual,
                               'input_tokens':usage['input_tokens'],'output_tokens':usage['output_tokens']})
         account.update(usage_reported=True, actual_usd=actual/1e6,
                        input_tokens=usage['input_tokens'], output_tokens=usage['output_tokens'])
         if actual>reserve:
             raise CallFailure('reservation_bound_breached', account)
-        if data.get('model') != self.d['model']:
+        if data.get('model') != self.model:
             raise CallFailure('model_mismatch', account)
         if data.get('stop_reason') != 'end_turn':
             # Keep what the provider said about why it stopped; a refusal is its own category.
