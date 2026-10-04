@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "study_id": "influence-swarms",
+  "attempt": "native-d10-01",
+  "native_attempt_id": "native-D10-01",
+  "assessor": "vishesh/codex-experiments",
+  "assessed_at": "2026-10-04T20:07:13.870781+00:00",
+  "verdict": "complete_valid_negative",
+  "outcome_interpretation": "Improved guard service retention; no raw accuracy improvement. New models require role qualification before scale.",
+  "assessments": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Tests whether corrected checks change frozen-context decisions; negative result retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Five inspected authored procurement cases; no independent holdout or realistic-document validation.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ],
+      "next_action": "Qualify new models on declared development cases before a separately frozen paired scale pilot.",
+      "acceptance_check": "Complete contracts and accurate source-backed checks; blocker recognition and guarded action scored independently; no population claim."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same saved facts, original chair and team context; balanced interface ordering.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "Raw accuracy remains2/5 in both arms; missing approval acknowledged but violated, and software budget confused with total cost.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ],
+      "next_action": "Qualify new models on declared development cases before a separately frozen paired scale pilot.",
+      "acceptance_check": "Complete contracts and accurate source-backed checks; blocker recognition and guarded action scored independently; no population claim."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Raw decisions, guard actions, acceptable decisions and rationales retained separately.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Five paired cases described without effect-generalization or reliability claims.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "No operator context or evaluator gold enters wires; source verifier examines selected citation only.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Ten assigned/started/valid; zero retries, missing responses or missing usage.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "0.090581reported,0.486400reserved; cumulative5.987552/8,269calls.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Published frozen packet, source5cf2dee3,115offline checks, raw requests/responses and usage retained.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Paired raw/guard table makes source-repair benefit and behavioral failure separate.",
+      "evidence": [
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-post.md",
+          "sha256": "c94e62ba338f7ab63ad844d504c69db028150c9da8dcb65a95fb5fc2384649ee"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/D10-score.json",
+          "sha256": "c30036d14407194bbe6d0695982281f96d00a02ec6b814668dc1a8ec0ff40bdd"
+        },
+        {
+          "path": "researchers/vishesh/notes/influence-swarms/scenario/reviews/native-D10-01/summary.json",
+          "sha256": "4dda4a52b12da66739ff1d977b1426e9594b95b1634b268cdbed07298ed7ecd8"
+        }
+      ]
+    }
+  ]
+}
