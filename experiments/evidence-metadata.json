@@ -3610,6 +3610,39 @@
       "source_commit": "6a997edfddab83a669de126629d0e802e70c1c30",
       "assessed_at": "2026-10-04",
       "assessor": "vishesh/codex-methods"
+    },
+    {
+      "id": "right-dissenter-rd6",
+      "title": "Right Dissenter RD6 reliable reopening diagnostic draft",
+      "documents": [
+        "researchers/vishesh/notes/dissent/reopening/README.md"
+      ],
+      "experiment_ids": [],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 0,
+        "claim": "Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix.",
+        "rationale": "Prospective plan and offline case/scorer checks exist, but no native outcomes, model qualification, runtime integration or untouched evaluation set. All inspected fixtures are development material. The completed RD5 adverse result is retained as a separate cohort."
+      },
+      "sample_size_summary": "Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.",
+      "sources": [
+        "researchers/vishesh/notes/dissent/reopening/PLAN.md",
+        "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md",
+        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md",
+        "researchers/vishesh/notes/dissent/reopening/offline/validation.json",
+        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json"
+      ],
+      "source_sha256": {
+        "researchers/vishesh/notes/dissent/reopening/PLAN.md": "b2e5e5305fa41b7841bfb22781383d53a3add98fbad8a0ff4b42edc977c96582",
+        "researchers/vishesh/notes/dissent/reopening/DRAFT-REVIEW.md": "45cc73ed633eab403da3b2f607aa29b685e14b5ed36eda20cbc24a8b3a1d18bb",
+        "researchers/vishesh/notes/dissent/reopening/IMPLEMENTATION.md": "295f33db383f08b2db2413f7b54aefbdc639ff0b3fe3fce3acfe3d8063849448",
+        "researchers/vishesh/notes/dissent/reopening/offline/validation.json": "7c22aa2048e1fffc28c68a739254b6221d7da99f4e9ec74c4660ef409f1112a2",
+        "researchers/vishesh/notes/dissent/reopening/next-run-plan.json": "6987bffc95528104c2ce9b9aa129d7784a2159c9de150ec2b34a3d6425354c19"
+      },
+      "status_at_assessment": "offline_draft_validated_scope_and_call_ceiling_decision_pending",
+      "assessor": "vishesh/codex-decision-models",
+      "assessed_at": "2026-10-04",
+      "source_commit": "79ad490b78ab30f0749222d4dd8553264b745048"
     }
   ],
   "source_sha256": {

@@ -1,5 +1,14 @@
 # Reliable reopening diagnostic draft
 
+<!-- experiment-evidence:start -->
+## Evidence metadata
+
+Assessed 2026-10-04 by vishesh/codex-decision-models; source `79ad490b` ([registry](../../../../../experiments/evidence-metadata.json), [rubric](../../../../../experiments/EVIDENCE-METADATA.md)). Scores describe evidence for the stated claim, not a probability of truth.
+
+- **evidence_confidence:** **0/4** — Effects of history, opposing ballots, clock translation and evidence age on Jev interpretation remain untested in this new controlled matrix. Basis: Prospective plan and offline case/scorer checks exist, but no native outcomes, model qualification, runtime integration or untouched evaluation set. All inspected fixtures are development material. The completed RD5 adverse result is retained as a separate cohort.
+- **sample_size_summary:** Observed native: none. Planned D0: 12 authored cases in six shared families/three grammars x six conditions x two repeats = 144 dependent requests; separate Q0 has 18 requests. No independent field sample or held-out generalization evaluation.
+<!-- experiment-evidence:end -->
+
 **The design revision is implemented and checked offline. No new native run has started.** RD5's adverse fixed-reserve result remains complete. The proposed next study asks whether history, opposing ballots, clock or evidence age can disrupt otherwise correct use of fresh evidence.
 
 [Prospective plan](PLAN.md) · [Structured proposal](next-run-plan.json) · [Concrete case preview](offline/preview.html) · [Validation](offline/validation.json) · [Draft quality review](DRAFT-REVIEW.md) · [Remaining implementation](IMPLEMENTATION.md) · [Parent result](../rd5/REPORT.md) · [Authoritative study setup](../rd5/SETUP.md).
