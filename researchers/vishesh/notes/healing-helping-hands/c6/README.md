@@ -9,7 +9,7 @@ Assessed 2026-10-04 by vishesh/codex-regrowth-docs; source `204cfc5e` ([registry
 - **sample_size_summary:** 12 authored family blocks,432/432 nested main cases and1,296calls;60qualificationcases separate. Two earlier interface failures preserved. No independent real-document sample.
 <!-- experiment-evidence:end -->
 
-**FINISH / PARK.** Stronger classifiers completed the test, but agreement routing delivered no benefit. No further Qwen calls were made.
+**FINISH / PARK.** Agreement detected 0/13 first-pass errors and cost 35.95× always-Jev. Stronger classifiers completed the test, but agreement routing delivered no benefit. No further Qwen calls were made.
 
 [Main post-mortem](C6R2-S1-POST.md) · [Qualification](C6R2-S0-POST.md) · [Immutable prospective plan](https://github.com/dmarzzz/swarm-lab/blob/204cfc5ebeafbc2d8c3ce5be9d169d3577b2fadb/researchers/vishesh/notes/healing-helping-hands/c6/PLAN.md) · [Public Swarm Lab page](https://swarm-live.pages.dev/#/x/healing-helping-hands)
 
@@ -47,3 +47,5 @@ All C6 attempts cost **$0.376066420**. [Reconciliation](results/C6-RECONCILIATIO
 The operational finalize hook ran, and the owning scientific review completes all eleven rubric dimensions. Handoff SHA256: `c3da0244ee87fbf39c1193d397a404f1e3e9f8174d794f08cc990195fd8c051b`.
 
 [Saved Qwen diagnosis](SAVED-DIAGNOSIS.json) localizes C5 failure to raw classification; prompt-versus-decoder-versus-model causation remains unresolved. [Case quality](CASE-QUALITY.md) now acknowledges ambiguity, with [six offline development replacements](CASE-REVISION.md). These examples have no native calls and are not held-out evaluation. A successor needs an explicit concrete plan decision, stronger task realism and adjudicated labels; the current policy is parked.
+
+[Successor feasibility](SUCCESSOR-FEASIBILITY.md): no launch recommended; natural reports and adjudication remain unavailable, and the observed two-pass cost floor already exceeds always-Jev.

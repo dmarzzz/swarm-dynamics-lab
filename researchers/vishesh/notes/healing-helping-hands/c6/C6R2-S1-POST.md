@@ -1,6 +1,6 @@
 # C6R2 main: better classifiers, no benefit from agreement routing
 
-TLDR: Haiku 4.5 and Jev completed all 432 synthetic evidence cases and 1,296 calls without an execution failure. Against frozen authored labels, Haiku A scored 419/432 (96.99%), Haiku B 416/432 (96.30%), and Jev 432/432. Agreement routing scored 419/432, equal to the fixed matched-random control. It referred only 3 cases and caught none of A's 13 errors. Its derived API cost was 35.95 times always-Jev. The predeclared utility conjunction fails. This is evidence about a narrow configuration and authored grammar, not general model superiority or a 200-agent swarm.
+TLDR: Agreement detected none of the first pass’s 13 frozen-label errors and cost 35.95 times always-Jev. Haiku 4.5 and Jev completed all 432 synthetic evidence cases and 1,296 calls without an execution failure. Against frozen authored labels, Haiku A scored 419/432 (96.99%), Haiku B 416/432 (96.30%), and Jev 432/432. Agreement routing scored 419/432, equal to the fixed matched-random control. It referred only 3 cases and caught none of A's 13 errors. Its derived API cost was 35.95 times always-Jev. The predeclared utility conjunction fails. This is evidence about a narrow configuration and authored grammar, not general model superiority or a 200-agent swarm.
 
 ## Execution, qualification and scientific interpretation
 

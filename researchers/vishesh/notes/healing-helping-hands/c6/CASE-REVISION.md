@@ -7,3 +7,5 @@ Before implementing examples, specify the repair: claims name one task AND one t
 Acceptance: six development cases, two per label; three paired contrasts; no unstated test identity, no implicit priority between contradictions, and no target measurement in absent-evidence cases. Replace ambiguous “different test” with an explicit distinct task. The fact-ledger baseline must match all six labels. Independent adjudication and unseen natural-document evaluation remain missing for any generalization claim.
 
 Run `python3 reporting/case_revision.py` to regenerate `CASE-REVISION.json`. These inspected examples are development cases forever; they are not a holdout. The native source remains frozen at204cfc5e. Current disposition stays FINISH / PARK.
+
+Completion: all six development rows were generated and manually inspected; fact-ledger checks match all six labels. Two contrasts intentionally share one positive control, so these are **five distinct inputs**, not six independent samples. These examples repair scope wording only; they do not solve independent adjudication, task realism or holdout coverage.
