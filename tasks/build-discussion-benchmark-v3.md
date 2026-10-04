@@ -21,7 +21,7 @@ Implement the committed v3 evaluation plan as a small runnable benchmark. The us
 
 ## Done when
 
-- [ ] Implement evidence answerability, immutable paired worlds, communication controls and memory fixtures.
-- [ ] Implement strict output contracts, recorded requests, failure accounting, independent scoring checks and exact saved-response replay.
-- [ ] Ship coverage, reserved holdout, analysis and review instructions with runnable offline commands.
-- [ ] Verify offline adversarial controls and regression tests; commit and push the package.
+- [x] Implement evidence answerability, immutable paired worlds, communication controls and memory fixtures.
+- [x] Implement strict output contracts, recorded requests, failure accounting, independent scoring checks and exact saved-response replay.
+- [x] Ship coverage, reserved holdout, analysis and review instructions with runnable offline commands.
+- [x] Verify offline adversarial controls and regression tests; commit and push the package.
