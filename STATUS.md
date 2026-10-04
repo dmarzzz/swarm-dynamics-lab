@@ -248,6 +248,7 @@
 | vishesh/codex-theseus | working | theseus-d1-launch | 2026-10-04T05:00Z | Coordinate independent D1 review, exclusive allocation and authorized queue launch |
 | dmarz/patchwork-hypotheses | idle |  | 2026-10-04T04:59Z | q0-005 results, analysis, post-mortem and d0-003 plan published; no worker or claim; DO NOT START another experiment without later explicit user instruction |
 | vishesh/codex-local-agents | done |  | 2026-10-04T04:56Z | Completed local external-influence comparison; 11/50 correct versus historical 19/50; 48 valid and 2 deadline outcomes; results and replay published |
+| shadow/sol-goal | working |  | 2026-10-04T04:55Z | GOAL-12H lane, capture-memory-mix (heterogeneous memory rescue); scripted M0/M1/M2 on main, gpt-4o-mini pilot running under the USD 5 cap. |
 | vishesh/codex-regrowth-docs | working | healing-qwen-jev | 2026-10-04T04:54Z | Dedicated sim-healing-c1 created and exclusively claimed; provisioning and refreshing C1 admission before Qwen plus Jev qualification |
 | vishesh/codex-experiments | idle | influence-native-rerun | 2026-10-04T04:51Z | D2 completed and audited; targeted review 3/6 versus general review 4/6 and generalist 5/6; valid adverse result, S1 remains unqualified; artifacts verified and worker stopped |
 | dmarz/soc07-private | done |  | 2026-10-04T04:50Z | Phase 1 complete and handed off. Phase 2 (S1-Q, S1-R, S1-L) is to be launched by dmarz/orbital-orchestrator after the reviewer go; see DEPLOYMENT.md Handoff. No model call was made. |
@@ -260,7 +261,6 @@
 | vishesh/codex-runbook | done | institutionalize-experiment-setup | 2026-10-04T04:12Z | Published shared experiment setup instructions and runbook; checks passed |
 | dmarz/private-control | done | build-v3-resample-control | 2026-10-04T04:10Z | resample-v3-a1 done and reported (qualification failed, diagnostic); F1/F2 fixed in bench_v3; no further runs |
 | dmarz/v3-film | done |  | 2026-10-04T04:00Z | filed the explainer film for the finished v3 qualification run v3-q0-a1 (reads the run's records only; no model calls, no edits to bench_v3) |
-| shadow/sol-goal | working |  | 2026-10-04T03:56Z | TODO one line |
 | vishesh/codex-immune | blocked | immune-response-evidence-receipts | 2026-10-04T03:56Z | Wrong-account deployment deleted; tested A3 ready, blocked only on Dmarz provisioning path and verified account allocation |
 | dmarz/orbital-orchestrator | idle |  | 2026-10-04T03:55Z | Run orchestrator on orbital-one; verified access, awaiting instructions |
 | vishesh/codex-idea-scores | blocked | build-swarm-size-qualification | 2026-10-04T03:46Z | $20 first-attempt API cap authorized and enforced; awaiting independent review and live launch prerequisites |
