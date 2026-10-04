@@ -1,0 +1,18 @@
+{
+  "tests_passed": 12,
+  "native_calls": 0,
+  "varied_scripted_cases": 80,
+  "main_reference_branches": [
+    12,
+    24
+  ],
+  "main_reference_calls": [
+    184,
+    368
+  ],
+  "qualification_reference_calls": 48,
+  "maximum_tested_wire_bytes": 7020,
+  "packet_sha256": "c6a7aa192af80831240fb172f1c6d9b21682eeaee4f5afc1d5bc2d3e6f696bbf",
+  "native_qualified": false,
+  "manual_reason_review": "requires_native_responses"
+}
