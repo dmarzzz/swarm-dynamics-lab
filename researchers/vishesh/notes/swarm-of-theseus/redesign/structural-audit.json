@@ -1,0 +1,20 @@
+{
+  "type": "retrospective structural audit, not a new experiment",
+  "outcomes": 36,
+  "mean_accuracy": {
+    "both": 1.0,
+    "founders": 0.8958333333333334,
+    "mentor": 0.9166666666666666,
+    "neither": 0.5208333333333334,
+    "notes": 1.0,
+    "verbatim": 1.0
+  },
+  "mentor_parent_edges": 36,
+  "mentor_edges_from_original_founders": 36,
+  "mentor_edges_from_descendants": 0,
+  "distinct_binary_feature_vectors": 4,
+  "binary_vectors_per_solve": 4,
+  "repair_post_change_solve_requests": 72,
+  "repair_post_change_requests_with_explicit_bulletin": 72,
+  "interpretation": "Task accuracy does not identify emergent culture. Mentoring has one founder-to-newcomer hop; binary test cases recycle the full four-vector domain; repair actors receive the updated rule."
+}

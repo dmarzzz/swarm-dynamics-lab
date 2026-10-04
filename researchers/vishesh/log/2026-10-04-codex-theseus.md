@@ -9,3 +9,9 @@ S1-a1 completed 36/36 trajectories; all 216 frames independently recomputed by a
 All executed stages total 1,697 calls and estimated model usage USD 3.432958; conservative reservation USD 12.965656 under the allocated USD 15, itself within the original shared USD 45 cap. Unit checks: 11 passed; lab check: zero errors, five existing warnings. Artifact packaging, public reporting and exclusive-claim release finish the handoff. No further model calls are planned.
 
 Final artifacts published at `bcf2980f020033da9b9606b504c6d55389e1806a`. Hub visually verified at 68 done / 4 failed; pilot 36/36. All original plan receipts retained, including the S1 receipt pointing to the v3 plan (distinct from executed source). Repository artifact registry supplies non-image downloads rejected by the public hub proxy. Dedicated fleet claim released with PR 59; zero active workers.
+
+## User-requested critical review
+
+Verdict: revise before scaling. The v1 instrument is valid as a supplied-procedure transmission baseline but underidentifies culture. Structural audit of existing records: 36/36 mentoring edges originate from founders; zero descendant mentors; binary cases repeat the four-vector domain; all 72 post-change repair actor requests supply the updated mapping. Closest primary literature already covers emergent conventions and intergenerational strategy transmission; targeted review is not an exhaustive novelty gate.
+
+Published a retrospective review and a prospective, unrun selective-continuity design. Candidate scenarios are harbor coordination, causal recipe learning and rare-hazard precautions. Frozen/rolling archives, transplantation, retained members and matched-resource single-controller baselines make alternative explanations explicit. No new model calls, hidden holdout access or spending. Preserve v1 plans/results; revise current interpretation with links. Numeric launch specifications and independent review must precede any new execution.
