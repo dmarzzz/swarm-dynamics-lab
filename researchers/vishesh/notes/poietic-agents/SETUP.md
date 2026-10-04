@@ -58,3 +58,7 @@ The owner approved reuse of sim-vishesh, increased the cumulative study ceiling 
 ## Q30-01 necessary qualification preparation
 
 [P30 prospective design](P30-PLAN.md), [Q30 assessment](reviews/Q30-01-pre.md), [138-check validation](readiness/Q30-01/validation.json). Thirty initially identical members; Luna initial executor and Nemo cheaper candidate; fresh96-decision qualification is implemented but unexecuted. Main paired30-member comparison still needs its runner/offline acceptance and qualification. USD10 total owner ceiling; original54-charge ledger retained; Q30 fits its tighter existing subcaps. Current admission pending, no allocation held.
+
+## Q30-01 closeout and Q30-02 preparation —2026-10-04
+
+Q30-01 reviewed:25native starts,96terminal, both roles failed. [Post-mortem](reviews/Q30-01-post.md), [eleven-dimension assessment](reviews/Q30-01-scientific.json), [cost](results/Q30-01/cost-closeout.json). Original79calls preserved; conservative cumulativeUSD0.6002055543333333/10. Claim released, noworker. Necessary next diagnostic [Q30-02](Q30-02-PLAN.md) tests a different cheap reasoning family; no threshold relaxation and no swarm result.

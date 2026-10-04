@@ -1,0 +1,188 @@
+{
+  "attempt": "Q30-01",
+  "assigned": 96,
+  "started": 25,
+  "terminal": 96,
+  "unstarted": 71,
+  "reviewed_started": 25,
+  "complete_saved_trace_replay": true,
+  "summary_recomputed": true,
+  "checks": [
+    {
+      "id": "Q30-01:generalist:0:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:0:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:0:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:0:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:1:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:1:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:1:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:1:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:2:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:2:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:2:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:2:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:3:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:3:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:3:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:3:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:4:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:4:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:generalist:4:2",
+      "request_context_expected_match": true,
+      "action_replayed": false,
+      "parse_failure_reproduced": true,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:0:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:0:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:0:2",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:0:3",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:1:0",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    },
+    {
+      "id": "Q30-01:cheap_generative:1:1",
+      "request_context_expected_match": true,
+      "action_replayed": true,
+      "parse_failure_reproduced": false,
+      "billing_replayed": true
+    }
+  ],
+  "review_scope": "All25 visible native outputs and effective request contexts; no hidden reasoning claim; same-author audit."
+}
