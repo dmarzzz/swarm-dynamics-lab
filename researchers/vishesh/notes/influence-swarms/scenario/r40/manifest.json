@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "study": "influence-swarms",
+  "scope": "R40-3744",
+  "source_hashes": {
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/PLAN.md": "1b4f883174994586efa35cbc9415a031932d16a6c4ab2e21099fc602307e118a",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/README.md": "336a1fe2887b98323c2c295d6ca8b56acf75f259348b318f7af41e513d360905",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/analysis.py": "e7681864c07a8b876012e46fb4b63132bb4316c61d52e266b9db36a84d6cc8d5",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/cases.py": "9b91d2077e9ea592ae95e49fce9591ac8ce4925e9303408b04a8cde18e7cdc84",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/dossiers.json": "642abe6192236360456002e9bb44d1606dcb007cf30145659f45a8f0ead67068",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/instrument.py": "94b7a56a5c4d96db69bac6c54795ad1f5b17cade19a3d19945904d085be24233",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/runtime.py": "0a02056f968e1477ea84a1d2b1dba8db69f049e10c092e6f712653a54a7c0a80",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/test_analysis.py": "a72e4425b35d17d7595f2fcc8eb881c5ca2e4947c814431348f2e07af506080b",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/test_cases.py": "7c5ff535d8c7c610b64efa108af427dbb3a7bdc8b7aa1aa3c1d3f1d45c8f7bdc",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/test_instrument.py": "02f069f2154138363079d2cdfc7f9583ef6adb9fe0b810abcc58c53f37205afc",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/test_runtime.py": "0e9a60bbdd1e22759797b29a246c3bb77aa97cbe8065c8d7f533cbb94154bc9c",
+    "researchers/vishesh/notes/influence-swarms/scenario/r40/worker.py": "df97ac98300020b44c37f7538bc0c2b2eeda81788a4394401b36d09ffa162990"
+  },
+  "corpus_sha256": "642abe6192236360456002e9bb44d1606dcb007cf30145659f45a8f0ead67068",
+  "stages": {
+    "R40-Q0": {
+      "calls": 756,
+      "finals": 27,
+      "maximum_model_usd": 4.306176
+    },
+    "R40-E0": {
+      "calls": 2988,
+      "finals": 108,
+      "maximum_model_usd": 17.020672
+    }
+  },
+  "maximum_model_usd": 21.326848,
+  "prior_reservation_usd": 19.630432,
+  "cumulative_reservation_ceiling_usd": 40.95728,
+  "existing_hosting_ceiling_usd": 0.5,
+  "hosting_extension": false,
+  "maximum_wire_bytes": 32768,
+  "maximal_fixture_wire_bytes": 31807,
+  "reservation_per_call_usd": 0.005696,
+  "neutral_panel": "deferred",
+  "native_qualification": "not_started",
+  "funding": "pending_named_finite_grant",
+  "assignments_sha256": {
+    "R40-Q0": "004c3095debe1d28e1f29d784451a8748adbeb7aad369fbb114d239b2a702eaa",
+    "R40-E0": "8b613c8ec52f7e3e9c33d3ef84131b61f9e3d2f9583e6c9890526111ac45e2af"
+  }
+}
