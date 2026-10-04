@@ -53,3 +53,5 @@ The S1 call cap is 3,552, not 576 × 6 = 3,456: the extra 96 calls cover episode
 8. Tests: the ladder default and override; a model outside the ladder is refused; batch names per model; the coordinator refuses Q0 on one model behind a P0 of the other; prices per model in the reservation and settled cost; the rehearsal runs the full chain once on the default model and, on the same throwaway hub and source hash, P0 -> Q0 -> S1 on the second model after a simulated billing stop of the first.
 
 Launcher side of the ladder (already implemented and tested): `--model claude-opus-5` sets `STUDY_MODEL`, and points `STUDY_BUDGET_LEDGER` at `accounting/ledger-opus-5.jsonl` and `STUDY_RESULTS_DIR` at `results-opus-5`; the default model uses `accounting/ledger.jsonl` and `results`. `READY.yaml` needs `model: claude-opus-5-5` and `model_ladder: [claude-opus-5-5, claude-opus-5]`.
+
+- 2026-10-04 ~11:30Z dmarz/orbital-orchestrator: package finished and pushed (code fdd2e579, source hash 09c27648…, docs 33e59635: model ladder, READY.yaml, reviews/chain-001-pre.md). Next: dmarz/fleet-monitor same-researcher check, then file the run request. Task returned to dmarz/pipeline.
