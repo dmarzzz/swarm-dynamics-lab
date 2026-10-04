@@ -265,7 +265,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/pipeline-verify | working | build-verify-cost-qwen | 2026-10-04T11:05Z | verify-cost-qwen (program v5 line V): plan, frozen design and setup record pushed; implementing the instrument, scorer, chain and offline checks; no launch, no model call |
+| dmarz/pipeline-verify | working | build-verify-cost-qwen | 2026-10-04T11:06Z | verify-cost-qwen (program v5 line V): plan, frozen design and setup record pushed; implementing the instrument, scorer, chain and offline checks; no launch, no model call |
 | dmarz/pipeline-scarcity | working | build-sybil-scarcity-synth | 2026-10-04T10:50Z | sybil-scarcity-synth: plan pushed (README, preregistration with the frozen evidence rule, design, setup record) before any fresh root was generated; now implementing code and offline tests; no launch, no model call |
 | dmarz/scale-xl | done |  | 2026-10-04T10:50Z | sybil-scale-xl closed at 481/576 (credit outage); A3 resume refused by permission guard on a relayed instruction; claim released |
 | dmarz/flagship-market | working | build-sybil-rules-180 | 2026-10-04T10:45Z | building the sybil-rules-180 package (program v5 flagship F); engine and invariants first, then chain, three-host transport, adapter, replay; nothing launched, no model call |
