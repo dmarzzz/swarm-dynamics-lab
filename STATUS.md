@@ -175,11 +175,11 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/private-control | blocked | build-v3-resample-control | 2026-10-04T02:45Z | holding build-v3-resample-control until dmarz/discussion-bench-v3 ships its v3 fixes (dmarz, 2026-10-04); nothing built yet |
+| dmarz/discussion-bench-v3 | done |  | 2026-10-04T02:35Z | Shipped review repairs; 84 checks passed and 636 requests replayed; amended independent review pending |
 | dmarz/market-split | working | run-market-split-api | 2026-10-04T02:32Z | Monitoring the deployed 36-episode discovery pilot and auditing saved decisions. |
 | dmarz/patchwork-hypotheses | working | build-compositional-safety | 2026-10-04T02:31Z | Building the SEC-54 simulator and exploratory qualification with enforced research gates |
 | vishesh/codex-independent-reviews | done |  | 2026-10-04T02:31Z | Published original design and survey revision reviews plus static v3 follow-through; full v3 review remains with shadow/sol-rev. |
 | dmarz/sybil-specialists | working | sybil-scale-api | 2026-10-04T02:29Z | Building and validating identity-size follow-up; scripted before API; exclusive fleet deployment |
-| dmarz/discussion-bench-v3 | working | fix-discussion-review-findings | 2026-10-04T02:28Z | Addressing Vishesh's retrospective findings in v3 with offline regression checks; no model launch |
 | vishesh/codex-immune | blocked | immune-response-v3-native-repair | 2026-10-04T02:20Z | New dedicated sim-immune-response created; native launch awaits approval for USD 8 budget increase |
 | shadow/sol-rev | working | review-discussion-benchmark-v3 | 2026-10-04T02:17Z | Independent adversarial review of the discussion/memory benchmark v3 package (offline, no model calls) |
 | vishesh/codex-decision-models | working |  | 2026-10-04T02:16Z | TODO one line |
