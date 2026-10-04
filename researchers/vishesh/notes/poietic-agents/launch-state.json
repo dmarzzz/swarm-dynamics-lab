@@ -1,0 +1,34 @@
+{
+  "schema": "poietic-launch-state-v0.1",
+  "updated_utc": "2026-10-04T04:21:17.041764+00:00",
+  "study": "poietic-agents",
+  "design_status": "written-awaiting-review",
+  "implementation_status": "not-started",
+  "execution_status": "not-launched",
+  "qualification_status": "not-run",
+  "scientific_conclusion": "none",
+  "process_compliance": "no-run-to-assess",
+  "publication": {
+    "immutable_url": null,
+    "public_registration": "pending",
+    "preflight": "not-run"
+  },
+  "gates": {
+    "independent_design_review": "pending",
+    "question_specific_survey": "incomplete",
+    "accepted_hypothesis": "absent",
+    "exact_runtime_and_assignments": "unresolved",
+    "offline_instrument_checks": "not-implemented",
+    "model_qualification": "not-run",
+    "budget_authorization": "not-recorded",
+    "dedicated_machine_allocation": "not-requested-before-readiness",
+    "public_plan_and_run_tldr_preflight": "pending"
+  },
+  "review_task": "review-poietic-agents-design",
+  "prior_art_task": "heterogeneous-methods-review",
+  "authorized_api_usd": 0,
+  "authorized_infrastructure_usd": 0,
+  "planned_run_count": 0,
+  "started_run_count": 0,
+  "next_action": "independent design critique and offline instrument build; resolve exact S0 contract before native launch"
+}

@@ -21,6 +21,8 @@ topics:
 
 Complete the formal prior-art gate for the HX shortlist. This is follow-up research, not authorization to launch model calls. Start from researchers/vishesh/notes/heterogeneous-swarms/README.md and preserve its known-result exclusions.
 
+**Owner-selected priority, 2026-10-04 UTC:** do HX-31 / **Poietic Agents** first, including HX-37's consolidated workflow-hardening interpretation and HX-33's supporting workspace question. Start at `researchers/vishesh/notes/poietic-agents/PRIOR-ART.md`. AgentSlimming, MANTA, Adaptive Orchestration and SafeSieve are freshly screened close neighbors; inspect full methods/code and challenge the remaining data-service/capability-restoration claim. Earlier shortlist bullets below are secondary. Design review is separately tracked in `review-poietic-agents-design` and does not satisfy this survey gate.
+
 ## Done when
 
 - Read the closest methods and appendices for HX-02, HX-01, HX-03, HX-05 and HX-09; record actual read depth.

@@ -28,3 +28,7 @@ Published revision d903d00; dashboard workflow 37173891058 succeeded. Rebased co
 Updated the five discussed frontier ideas under unchanged weights: HX-31 94 (lead), HX-32 34 (deprioritized), HX-33 82 (support), HX-35 60 (parked), HX-37 66 (consolidated). HX-31 now starts with identical generalists, discovers shared services and capability/model reductions, and includes temporal workflow hardening with re-escalation after change. The first recommended comparison is frozen generalists versus shared caching versus fixed specialists versus adaptive differentiation. Other 33 HX records and other scores remain unchanged.
 
 Preserved exact previous records, synchronized question cards/designs/overview/reviews, and refreshed score fingerprints. Contribution and score checks pass. Full dashboard export fails on noncanonical topics in three upstream Shadow hypotheses; opened a p0 metadata-repair task and inbox notice for the owner rather than editing their scientific records. No experiment started.
+
+## Poietic Agents design
+
+Owner selected the self-differentiating swarm and named it Poietic Agents. Read worker, lifecycle, run-review, public-plan, visualization and machine-allocation runbooks. Wrote the prospective plan before implementation, structured design/agent/context contracts, condition summaries, S0 assessment and independent-review task. Fresh primary-source screening found AgentSlimming, MANTA, Adaptive Orchestration and SafeSieve; none received full-read credit. No model calls, allocated host or queued experiment.

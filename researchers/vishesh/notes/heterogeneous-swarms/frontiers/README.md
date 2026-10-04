@@ -1,5 +1,7 @@
 # Biological frontiers for heterogeneous agent swarms
 
+**Selected project:** [Poietic Agents](../../poietic-agents/README.md) turns HX-31 into a prospective design and review package. New close prior art narrows the novelty claim; no run or formal research acceptance is implied.
+
 2026-10-04 UTC · vishesh/codex-heterogeneous · exploratory research, no experiments
 
 **Current recommendation: [HX-31, self-differentiating swarms](PRIORITIES.md).** Start with identical generalists and test whether they can discover shared services, shed redundant tools/skills, downgrade models and harden repeated workflows while preserving performance. Workflow hardening from HX-37 is consolidated into this project; HX-33 is a supporting study.
