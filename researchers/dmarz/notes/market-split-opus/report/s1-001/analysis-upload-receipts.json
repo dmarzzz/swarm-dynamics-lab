@@ -1,0 +1,46 @@
+{
+  "run": "market-split-opus/s1-001-analysis",
+  "report_commit": "01089e84e60c5590e8515e4fcfcb3549b936b30e",
+  "artifacts": [
+    {
+      "name": "final_frame.png",
+      "sha256": "cd26789352a94c7e84deec54ac9600b0275f798817b9e491611eefa24be885fa",
+      "bytes": 176220
+    },
+    {
+      "name": "analysis.json",
+      "sha256": "c1ece372757f50fc7fb46e555efb33783381a279c9c54813b0268f0e879d8359",
+      "bytes": 2255
+    },
+    {
+      "name": "episode-results.csv",
+      "sha256": "09ff1ce7cfcff1352a35a37e8cf68996d48643940f58b59e162d395eac3c4add",
+      "bytes": 4666
+    },
+    {
+      "name": "paired-task-results.csv",
+      "sha256": "4700f8d096221d14f725f947e68e552a213b45573c25ae3a7b25a0ab3ba9b2e3",
+      "bytes": 2213
+    },
+    {
+      "name": "usage.json",
+      "sha256": "aa9e3a72f60751033821aeb44a40ee3c93182e3717070c6be0cdbfdd4a0e7e86",
+      "bytes": 1003
+    },
+    {
+      "name": "lifetime-accounting.json",
+      "sha256": "57c07ad5bd9a82fd3f060ddcce45c8e4f59321ec30a383a09a5a8fb54bf1af7e",
+      "bytes": 682
+    },
+    {
+      "name": "model-comparison.json",
+      "sha256": "241bc3a3b431f8792b8fbb0e3daa75cd2b50b6424b287ef3f07119b8fd7f07bd",
+      "bytes": 5114
+    },
+    {
+      "name": "records.zip",
+      "sha256": "98a39caa04961889059671937aa8b8ef752e31cc549c0e63cf11b949f0a21167",
+      "bytes": 243673
+    }
+  ]
+}

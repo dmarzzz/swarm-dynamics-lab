@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split-opus
 tool: claude-code
-state: working
+state: done
 task: null
-doing: market-split-opus I0 passed 6/6 and Q0 passed 4/4; S1 (18 bundles, 864 calls) running on sim-test-01 with one worker
-updated: 2026-10-04T08:10Z
+doing: market-split-opus complete; Opus 5.5 split in 6/6 firm-regulated, 0/6 owner, 0/6 unregulated fresh markets; 902 calls, USD 15.34; results and post-run review pushed; claim on sim-test-01 released
+updated: 2026-10-04T10:20Z
 ---
 
 ## Notes

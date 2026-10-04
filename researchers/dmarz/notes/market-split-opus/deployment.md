@@ -31,3 +31,15 @@ The paid stages are pinned to the commit that adds the pre-run review [phase2-pr
 2026-10-04 08:02-08:05 UTC: `q0-001` passed 4/4 at 100% of the reference; 32 calls, USD 0.333348; exact replay 32/32; 14 artifacts verified ([post](reviews/q0-001-post.md)). Ledger 38 calls, USD 0.394340, all priced. Projection for S1 inside all three limits (study about USD 11.5).
 
 2026-10-04 08:05 UTC: `s1-001` enqueued (18 bundles) and the first finite worker of nine bundles started. One worker; the remaining bundles follow in further finite workers, one at a time.
+
+## Closeout, 2026-10-04 10:19 UTC
+
+`s1-001` is complete: 18/18 bundles done, 36/36 episodes valid, 864 priced calls, USD 14.950184. Two finite workers ran in sequence (08:05-09:01 and 09:01-09:53 UTC); both logs end "completed 9 finite runs"; no stop marker. Study ledger: 902 attempted calls, 902 priced, USD 15.344524, 2,034,536 input and 360,319 output tokens, every stop reason `end_turn`; SHA-256 `62e6919ee2841957a7d1159b9014a801bdd9fb18d666d4037e89681b313abaef`. A private copy of the ledger is kept outside git.
+
+Verification: the launcher's `verify` matched all 126 S1 run artifacts on the server to the hub's hashes and checked image sizes and 24 decoded frames per replay; `verify_hub.py` downloaded all 126 from the hub and matched them again; `audit_saved.py` reproduced 864 of 864 saved observations and actions and all 36 traces in the pinned runtime. Raw call and episode records were recovered to the operator's machine and 72 files matched the hub's hashes.
+
+Reporting: results, post-run review, figure and records pushed at `01089e84e60c5590e8515e4fcfcb3549b936b30e`. Artifacts `market-split-opus-s1-001` (figure) and `market-split-opus-s1-001-records` (dataset) filed through Flight Deck. Hub analysis run `market-split-opus/s1-001-analysis` uploaded eight files with confirmed hashes and reports `model_calls` 0 and `api_cost_usd` 0, with the stage totals under `observed_` keys; the hub's summed `api_cost_usd` over the study's 34 runs is USD 15.344524, equal to the ledger. The hub registration now carries the completed description and links to the README at `01089e84`. The public site shows the analysis run as done with its image.
+
+Release: no worker process remained on the server. Exclusive claim `dmarz-market-split-opus` released at 10:18:28 UTC (private agentops PR 257 merged); agentops `main` shows no active claim on `sim-test-01`. The server is an existing shared test box and is preserved. This study's directory on it (checkout, virtual environment, worker logs, ledger, run outputs) is left in place and other studies' directories were not touched.
+
+No further stage, repair or successor is started.
