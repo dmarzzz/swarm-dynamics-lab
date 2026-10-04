@@ -1,5 +1,9 @@
 # Setup: shadow-factory-provenance-v1
 
+## Current closeout snapshot
+
+The pending checklist below records preparation history. G2 passed18 offline tests in normal/-O modes. G3 passed with [published admission](results/admission.json) at implementation76f42cdd, then immutable assignments/admission were pushed in72af5629 before calls. At17:29Z the first pool qualification request returnedHTTP400 and the single paid fallback returnedHTTP403. G4 is **unqualified**:0 answers, no competence claim. All300 conditional route assignments are terminal (2 failed attempts,298 not-run); no main observations. G5 same-author numerical recomputation passes2,026 checks; independent review is pending and no scaling is allowed. Current next action is [POSTMORTEM](POSTMORTEM.md): independent saved-data check, then a prospective same-question wire-schema repair, not another research scope. Original runtime/source pins remain unchanged.
+
 Owner/operator: shadow/sol-factory. Explicit Shadow priority instruction: provenance/duplication invariance FIRST, one bounded pilot, no other factory expansion. This is a new exploratory instrument, not a formal accepted hypothesis or Vishesh's Quorum successor.
 
 Runbook: [EXPERIMENT-SETUP](../../../../../tooling/agent-experiments/EXPERIMENT-SETUP.md). Operations are manual in this new directory; no shared experiment dispatcher claim. Study plan: [SPEC.md](SPEC.md). Historical factory failures and budget remain in [HANDOFF](../HANDOFF.md) and [CORRECTIONS](../CORRECTIONS.md). [PI containment PR #102](https://github.com/dmarzzz/swarm-lab/pull/102) blocks the legacy runners pending a new compliant boundary; this study will use its own tested boundary rather than overriding that hold.

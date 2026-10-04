@@ -246,3 +246,4 @@
 {"call": "Q-ring-5140-common_only", "kind": "reserve", "spec": "split-sonnet-linked-weak-or-json", "time": "2026-10-04T15:18:10.578146+00:00", "usd": 0.068214}
 {"call": "Q-ring-5140-sparse", "kind": "reserve", "spec": "split-sonnet-linked-weak-or-json", "time": "2026-10-04T15:18:10.782590+00:00", "usd": 0.068214}
 {"call": "Q-ring-5140-multirow1", "kind": "reserve", "spec": "split-sonnet-linked-weak-or-json", "time": "2026-10-04T15:18:10.785102+00:00", "usd": 0.085998}
+{"call": "openrouter/Q-00-ancestry-01", "kind": "reserve", "spec": "shadow-factory-provenance-v1", "time": "2026-10-04T17:29:51.640861+00:00", "usd": 0.044376}

@@ -1,5 +1,7 @@
 # First-priority factory pilot: duplication invariance
 
+**First attempt closed, unqualified.** Two requests, zero model answers: pool HTTP400, paid fallback HTTP403. The pool request included unsupported numeric schema bounds; this is a concrete builder defect, not evidence that the model fails the task. [Post-mortem](POSTMORTEM.md), [terminal report](results/FINDING.md), [2,026-check same-author recomputation](results/recomputation.json). Independent agent review and any prospective repair admission remain pending; no process is still dispatching.
+
 This is the **only active new factory scope**, explicitly directed by Shadow. Legacy factory queues stay held. [One-file prospective specification](SPEC.md), [setup](SETUP.md), [pre-run assessment](PRE-RUN.md). This fresh runner does not disable the legacy hold or edit Quorum's runs.
 
 Question: with fixed independent evidence, do 1/4/16 copies change raw synthesis, supplied-ancestry synthesis, or upstream deterministic dedup? A separate irrelevant-padding arm controls changed irrelevant text. Twelve paired synthetic numeric roots, six disjoint no-copy competence cases. Exact cl100k proxy-token matching, not a false claim of exact Anthropic token equality. Strong limits are in the spec.

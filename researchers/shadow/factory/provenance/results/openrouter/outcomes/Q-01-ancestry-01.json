@@ -1,0 +1,14 @@
+{
+  "arm": "ancestry",
+  "cohort": "openrouter",
+  "copies": 1,
+  "ended": "2026-10-04T17:29:51.911355+00:00",
+  "id": "Q-01-ancestry-01",
+  "network_attempted": false,
+  "reason": "http_403",
+  "root": 1,
+  "served_model": null,
+  "stage": "Q",
+  "status": "not_run",
+  "study": "shadow-factory-provenance-v1"
+}

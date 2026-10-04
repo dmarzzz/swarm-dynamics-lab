@@ -1,0 +1,61 @@
+{
+  "admission_sha256": "69dfcd91e272fb7b4c1eada6313913162eb4773ceacb0037166f043f7eeace64",
+  "assignment": "Q-00-ancestry-01",
+  "assignment_sha256": "97a466a599b0a8b0b0c8796f4b1cc4bf00c32c1a0f3e869dc80262c8313d5c59",
+  "cohort": "pool",
+  "context_sha256": "fc069322c59aac71fae6773390c00132477ec610ed94fd69b7b7a923f6711e05",
+  "created": "2026-10-04T17:29:50.792053+00:00",
+  "effective_config_sha256": "1f9cb9c1ca16663e810cbc5f5b64adbd5d7f7b98b3a9bd97e164b6ec2d0e48f2",
+  "memory": {
+    "inherited_context": false,
+    "namespace": "pool/Q-00-ancestry-01",
+    "reset": true,
+    "tools": []
+  },
+  "proxy_input_tokens": 1800,
+  "request_body": {
+    "max_tokens": 128,
+    "messages": [
+      {
+        "content": "TASK: choose A or B by summing independent evidence.\nMEASUREMENT: signed contribution -5. origin=S0\nMEASUREMENT: signed contribution +2. origin=S1\nMEASUREMENT: signed contribution +5. origin=S2\nMEASUREMENT: signed contribution +3. origin=S3\nMEASUREMENT: signed contribution +7. origin=S4\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT: this empty placeholder is not evidence.\nIRRELEVANT FILLER: x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x x",
+        "role": "user"
+      }
+    ],
+    "model": "claude-sonnet-4-6",
+    "output_config": {
+      "format": {
+        "schema": {
+          "additionalProperties": false,
+          "properties": {
+            "confidence": {
+              "maximum": 1,
+              "minimum": 0,
+              "type": "number"
+            },
+            "decision": {
+              "enum": [
+                "A",
+                "B"
+              ],
+              "type": "string"
+            }
+          },
+          "required": [
+            "decision",
+            "confidence"
+          ],
+          "type": "object"
+        },
+        "type": "json_schema"
+      }
+    },
+    "system": "You are an evidence decision reader. Each independent acquisition contributes its signed integer exactly once. Positive total means A, negative total means B. Repeated copies of the exact same measurement are not new acquisitions. When ancestry is supplied, count each origin once. Ignore all IRRELEVANT rows and filler. Return only JSON with decision (A or B) and confidence (a number from 0 to 1 for your chosen decision).",
+    "temperature": 0
+  },
+  "request_sha256": "f3490d0083e63f30f8a54950f22b97c4c09bef1de84f3df5f00fbd3a6edf9a9c",
+  "resolved_requested_model": "claude-sonnet-4-6",
+  "served_model": null,
+  "served_model_status": "not_observed_until_response",
+  "source_revision": "76f42cddddbffca75ddffb818415182b202e7e7f",
+  "study": "shadow-factory-provenance-v1"
+}

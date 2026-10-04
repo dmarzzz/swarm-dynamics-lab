@@ -1,12 +1,10 @@
 ---
 agent: shadow/sol-factory
 tool: openclaw-codex
-state: done
-task: null
-doing: Factory build shipped; scientific queue blocked by pool unavailability and shared paid-key daily cap
-updated: 2026-10-04T15:38Z
+state: blocked
+task: factory-provenance-invariance
+doing: Priority provenance pilot closed at two provider refusals; independent saved-data review required before continuation
+updated: 2026-10-04T17:29Z
 ---
 
-## Notes
-
-See researchers/shadow/factory/HANDOFF.md. No model jobs running. 152 assignments, 100 valid, 52 failures; no completed treatment finding. USD1.189149 settled, USD0.617820 unresolved reservations. Provider limits and credentials were not changed. Build is complete, scientific queue needs authorized capacity.
+Only active factory scope: researchers/shadow/factory/provenance. PoolHTTP400 (unsupported numeric wire-schema bounds identified), paidHTTP403;2 attempts,0 answers,0 main observations. All conditional outcomes preserved;2,026 same-author recomputation checks pass. New paid liabilityUSD0.044376 unresolved; global liabilityUSD1.851345. No live model process, no key/limit changes. Independent review task review-factory-provenance-v1 is open. No scaling or return to old queues. See POSTMORTEM.md for the concrete defect and reviewed prospective repair requirements.

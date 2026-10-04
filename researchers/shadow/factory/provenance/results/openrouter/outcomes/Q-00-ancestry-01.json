@@ -1,0 +1,20 @@
+{
+  "arm": "ancestry",
+  "cohort": "openrouter",
+  "copies": 1,
+  "cost_unknown": true,
+  "elapsed_seconds": 0.257243,
+  "ended": "2026-10-04T17:29:51.895958+00:00",
+  "error": "http_403",
+  "id": "Q-00-ancestry-01",
+  "init_sha256": "de445602227d347b41692ebf82e942543109cb03a41d87e6a922088ae58197ef",
+  "network_attempted": true,
+  "paid_usd": 0.044376,
+  "reserved_paid_usd": 0.044376,
+  "root": 0,
+  "served_model": null,
+  "stage": "Q",
+  "started": "2026-10-04T17:29:51.638684+00:00",
+  "status": "failed",
+  "study": "shadow-factory-provenance-v1"
+}

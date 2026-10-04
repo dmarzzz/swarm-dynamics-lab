@@ -1,0 +1,14 @@
+{
+  "arm": "padding",
+  "cohort": "pool",
+  "copies": 1,
+  "ended": "2026-10-04T17:29:51.328145+00:00",
+  "id": "M-02-padding-01",
+  "network_attempted": false,
+  "reason": "http_400",
+  "root": 2,
+  "served_model": null,
+  "stage": "M",
+  "status": "not_run",
+  "study": "shadow-factory-provenance-v1"
+}
