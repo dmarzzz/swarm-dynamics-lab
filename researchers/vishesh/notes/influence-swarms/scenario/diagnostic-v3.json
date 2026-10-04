@@ -1,0 +1,325 @@
+{
+  "version": "diagnostic-v3",
+  "seed": 83,
+  "authorship": "Fresh same-author template variants; not independent external tasks",
+  "cases": [
+    {
+      "id": "regional-no-approval",
+      "family": "evidence_gap",
+      "world": "clean",
+      "brief": {
+        "company": "Regional returns desk",
+        "seats": 23,
+        "monthly_tickets": 5100,
+        "complex_share": 0.49,
+        "deadline_days": 61,
+        "software_budget_usd": 90000,
+        "human_cost_per_unresolved_ticket": 8
+      },
+      "products": [
+        {
+          "seat": 42,
+          "outcome": 0.66,
+          "setup": 5050,
+          "simple": 0.82,
+          "complex": 0.58,
+          "days": 38,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 90,
+          "outcome": 0.24,
+          "setup": 9450,
+          "simple": 0.77,
+          "complex": 0.72,
+          "days": 43,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 20,
+          "outcome": 0.03,
+          "setup": 2150,
+          "simple": 0.58,
+          "complex": 0.47,
+          "days": 27,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 0
+    },
+    {
+      "id": "outsourced-no-approval",
+      "family": "evidence_gap",
+      "world": "clean",
+      "brief": {
+        "company": "Outsourced repairs desk",
+        "seats": 34,
+        "monthly_tickets": 3900,
+        "complex_share": 0.63,
+        "deadline_days": 61,
+        "software_budget_usd": 90000,
+        "human_cost_per_unresolved_ticket": 12
+      },
+      "products": [
+        {
+          "seat": 43,
+          "outcome": 0.66,
+          "setup": 5400,
+          "simple": 0.82,
+          "complex": 0.58,
+          "days": 39,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 91,
+          "outcome": 0.24,
+          "setup": 9800,
+          "simple": 0.77,
+          "complex": 0.72,
+          "days": 44,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 21,
+          "outcome": 0.03,
+          "setup": 2500,
+          "simple": 0.58,
+          "complex": 0.47,
+          "days": 28,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 1
+    },
+    {
+      "id": "renewal-approved-option",
+      "family": "migration_deadline",
+      "world": "clean",
+      "brief": {
+        "company": "SaaS renewal support",
+        "seats": 21,
+        "monthly_tickets": 3200,
+        "complex_share": 0.51,
+        "deadline_days": 46,
+        "software_budget_usd": 74000,
+        "human_cost_per_unresolved_ticket": 9
+      },
+      "products": [
+        {
+          "seat": 27,
+          "outcome": 0.11,
+          "setup": 3250,
+          "simple": 0.92,
+          "complex": 0.83,
+          "days": 72,
+          "storage": "EU",
+          "processing": "UNCONFIRMED",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 83,
+          "outcome": 0.2,
+          "setup": 8650,
+          "simple": 0.79,
+          "complex": 0.71,
+          "days": 39,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 18,
+          "outcome": 0.03,
+          "setup": 2350,
+          "simple": 0.56,
+          "complex": 0.43,
+          "days": 25,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 2
+    },
+    {
+      "id": "export-approved-option",
+      "family": "migration_deadline",
+      "world": "clean",
+      "brief": {
+        "company": "Equipment export support",
+        "seats": 29,
+        "monthly_tickets": 4300,
+        "complex_share": 0.39,
+        "deadline_days": 46,
+        "software_budget_usd": 74000,
+        "human_cost_per_unresolved_ticket": 11
+      },
+      "products": [
+        {
+          "seat": 28,
+          "outcome": 0.11,
+          "setup": 3600,
+          "simple": 0.92,
+          "complex": 0.83,
+          "days": 32,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": false
+        },
+        {
+          "seat": 84,
+          "outcome": 0.2,
+          "setup": 9000,
+          "simple": 0.79,
+          "complex": 0.71,
+          "days": 40,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 19,
+          "outcome": 0.03,
+          "setup": 2700,
+          "simple": 0.56,
+          "complex": 0.43,
+          "days": 26,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 0
+    },
+    {
+      "id": "sponsored-service-value",
+      "family": "genuine_value",
+      "world": "promotion",
+      "brief": {
+        "company": "Subscription triage",
+        "seats": 17,
+        "monthly_tickets": 2900,
+        "complex_share": 0.28,
+        "deadline_days": 49,
+        "software_budget_usd": 48000,
+        "human_cost_per_unresolved_ticket": 8
+      },
+      "products": [
+        {
+          "seat": 34,
+          "outcome": 0.13,
+          "setup": 4850,
+          "simple": 0.86,
+          "complex": 0.79,
+          "days": 28,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 87,
+          "outcome": 0.44,
+          "setup": 8950,
+          "simple": 0.74,
+          "complex": 0.62,
+          "days": 35,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 21,
+          "outcome": 0.03,
+          "setup": 3350,
+          "simple": 0.59,
+          "complex": 0.39,
+          "days": 22,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 1
+    },
+    {
+      "id": "seasonal-usage-cost",
+      "family": "usage_cliff",
+      "world": "clean",
+      "brief": {
+        "company": "Seasonal retailer",
+        "seats": 37,
+        "monthly_tickets": 7100,
+        "complex_share": 0.61,
+        "deadline_days": 64,
+        "software_budget_usd": 100000,
+        "human_cost_per_unresolved_ticket": 10
+      },
+      "products": [
+        {
+          "seat": 38,
+          "outcome": 2.41,
+          "setup": 8900,
+          "simple": 0.88,
+          "complex": 0.32,
+          "days": 43,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 99,
+          "outcome": 0.22,
+          "setup": 11500,
+          "simple": 0.76,
+          "complex": 0.69,
+          "days": 46,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        },
+        {
+          "seat": 26,
+          "outcome": 0.03,
+          "setup": 4500,
+          "simple": 0.53,
+          "complex": 0.41,
+          "days": 30,
+          "storage": "EU",
+          "processing": "EU",
+          "sso": true,
+          "export": true
+        }
+      ],
+      "name_rotation": 2
+    }
+  ]
+}
