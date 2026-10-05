@@ -1,0 +1,143 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:40a2af3ae48c6451f144af4decd8e74e9a5e486ceca52fb1b252c10bb9e52aa6"
+   },
+   "internalParameters": {
+    "commit": "8e6d99e3e1b6984c25f723294ed686818d0a359d",
+    "session": "claude:a63ed523-b704-4988-9f63-94663d57821a"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "10ebe2b3912e46959f0bc020bc4bc71ef05e2dca8ce1da737adb1f8696925bad"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/index.html"
+    },
+    {
+     "digest": {
+      "sha256": "7fe50580bec615e631a2429e4033056090be99a703ef60500ef5d11f98c2fac5"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/record.mjs"
+    },
+    {
+     "digest": {
+      "sha256": "63d5be6381e594db8a39f4ab98b909d95c3c4d36261132607078a5e8c5d4e1db"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narrate.py"
+    },
+    {
+     "digest": {
+      "sha256": "5ac498e17c371e9ec3da197674211be62d3bcc37811b8d588333a3d5ae6ca5d0"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/vo.py"
+    },
+    {
+     "digest": {
+      "sha256": "19ffa2eba6b5582c90a313f469ce4cd1475a37db44b13b04c8b3b0f9dffeeb27"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narration-two.json"
+    },
+    {
+     "digest": {
+      "sha256": "3b02450c6f2d052587ecd3f3b6ebc775ee6c4074f2c256a8b4823305be5516a2"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twoopen.js"
+    },
+    {
+     "digest": {
+      "sha256": "3feb4446d5b7d43cb63625cfbfdf643f0bbc5745fd57f91b3c2ba63bd434be48"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twosybil.js"
+    },
+    {
+     "digest": {
+      "sha256": "2f41bd4c3545403d470fc24077bacf04ce49192278c75566a098556ca13489d3"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twotheseus.js"
+    },
+    {
+     "digest": {
+      "sha256": "3f4f8c9f2da51b0dba43e91882e09aa9418cc2f6ca039435e00029d1ac903667"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twoclose.js"
+    },
+    {
+     "digest": {
+      "sha256": "54706eb9c9da54217a926b45c14f28fe79030545c179646b380259986a237159"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "41d473390cec768d95761184aafd08cfee60fc335d4cc2eac1abf6c0661d1523"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "8024e982fa3c98230825960347bcfa68f9190c0c448a7a26f856d3a482387597"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/next.js"
+    },
+    {
+     "digest": {
+      "sha256": "d232d3967d083b34fcf34c0d10239c42241d11b81fd054e5c7329b6f209deada"
+     },
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md"
+    },
+    {
+     "digest": {
+      "sha256": "d5c6e199d7ab02bed8d4f934a008295ecaf0f370336eb187e0ab949746fbb881"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md"
+    },
+    {
+     "digest": {
+      "sha256": "311fe5701524c07874064c1e65fa47496c7e1a4fdbe602445cea8181c3a7d22b"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/PLAN.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "8e6d99e3e1b6984c25f723294ed686818d0a359d"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "5430740d88cab8de5ed79ce77624ae2ee45c7171a03392030ca5653703c3385f"
+     },
+     "uri": "artifacts/two-experiments-film/two-experiments-film-v1.mp4"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T04:59:09Z",
+    "invocationId": "claude:a63ed523-b704-4988-9f63-94663d57821a",
+    "startedOn": "2026-10-05T04:59:09Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "9d9f163ea756aeea872228dc633126278e134e5cdbd9043e07c3d485c2b7224e"
+   },
+   "name": "artifacts/two-experiments-film/two-experiments-film-v2.mp4"
+  }
+ ]
+}

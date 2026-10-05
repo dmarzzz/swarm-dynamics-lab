@@ -5258,6 +5258,38 @@ artifacts:
     type: film
     title: 'Two swarm experiments: the Sybil market experiment and Swarm of Theseus'
     versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/two-experiments-film/two-experiments-film-v2.mp4
+        built_at: '2026-10-05T04:59:09Z'
+        note: 'Rewritten after review (3 min 12 s). The opening states what the lab set out to study: properties of swarms,
+          against single-agent safety. Each experiment is told as a study: question, design, every condition with its control
+          or repeat, limits. Experiment 1 (sybil-rules-180): 55 of 180 owners sustained a split under the rule alone, all
+          of them dominant owners, repeat 57; 0 of 180 with one added sentence, dominant owners produced 21% less instead;
+          second economy 59 then 0. Experiment 2 (Swarm of Theseus S50): correct decisions of 300 after full turnover, written
+          note 297, conversation 295, nothing inherited 166, founders never replaced 298. Narration is Kokoro af_heart, checked
+          by transcription only.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:a63ed523-b704-4988-9f63-94663d57821a
+        prompt: sha256:40a2af3ae48c6451f144af4decd8e74e9a5e486ceca52fb1b252c10bb9e52aa6
+        ingredients:
+          - 5-experiments/studies/dmarz/hackathon-demo/index.html
+          - 5-experiments/studies/dmarz/hackathon-demo/record.mjs
+          - 5-experiments/studies/dmarz/hackathon-demo/narrate.py
+          - 5-experiments/studies/dmarz/hackathon-demo/vo.py
+          - 5-experiments/studies/dmarz/hackathon-demo/narration-two.json
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twoopen.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twosybil.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twotheseus.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twoclose.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/next.js
+          - 5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/PLAN.md
+        commit: 8e6d99e3e1b6984c25f723294ed686818d0a359d
       - v: 1
         date: 2026-10-04
         path: artifacts/two-experiments-film/two-experiments-film-v1.mp4
