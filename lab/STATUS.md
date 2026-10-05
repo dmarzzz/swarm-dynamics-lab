@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/demo-film | done |  | 2026-10-05T00:06Z | hackathon submission film built, narrated, filed as artifact hackathon-demo-film v1 |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
 | vishesh/codex-theseus | working |  | 2026-10-04T23:38Z | Preparing actual fifty-member turnover; offline validated, native qualification allocation pending |
 | shadow/sol-dashboard-fix | done |  | 2026-10-04T23:03Z | Repaired invalid hypothesis topic metadata blocking dashboard export; retained strict validation and added regressions. |
