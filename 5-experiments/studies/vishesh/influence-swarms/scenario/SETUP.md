@@ -209,3 +209,8 @@ Read E1's [scientific closeout](reviews/E1-E0-01-post.md): the five unsafe purch
 ## R42 bounded continuation preparation — 2026-10-05
 
 Owner requested repair and continuation after R41 closeout. [Prospective plan](r42/PLAN.md):one same-wire retry of the known returned length failure, then five blocked descendants; six calls maximumUSD.034176. Preserve750valid imported reports and failed first-pass qualification. Eleven offline recovery/budget/duplicate/failure tests plus exact saved native-wire reconstruction pass. Scientific prompts/schema/model/scoring unchanged. Fresh30minute claim/hostingmaximum.04 and namedPIallocation pending. Main requires a separate amended admission decision; no calls dispatched.
+
+
+## R42 native closeout — 2026-10-05
+
+[Authored post-mortem](reviews/R42-C0-01-post.md), [quality review](reviews/R42-C0-01-quality-review.json):sixcalls/sixvalid, allnewfacts/checks/costs correct; missinglargeDeciderBUYBirchacceptable.750oldvalidreports unchanged; composite756logicalvalid/27acceptablefinals from757physicalcalls. Originalfirstpassqualification failed. Exactnativeauditpasses; explanationsfragmentary exceptfinal. ActualAPI.00361706, originalreserved27.382688/4290;worker/relaystopped,grantclosed. Mainunfunded; prospectiveamendedadmission stillneeded.

@@ -1,0 +1,227 @@
+{
+  "assessor": "owning session; same-author audit",
+  "date": "2026-10-05T00:58:36.451964+00:00",
+  "attempt": "native-R42-C0-01",
+  "evidence_revision": "e82977e83b38df0d6a165f45df226a1bf68ef4db",
+  "decision": "complete_valid_result",
+  "qualification": "recovery-assisted competence passes; original first-pass fails",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Single bounded operational recovery, not proof of provider repair or persuasion.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "One selected unit-price development branch; original nine-root realism limits remain.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ],
+      "next_action": "Retain limitation in reporting and any prospective main amendment.",
+      "acceptance_check": "Never present recovery as first-pass success, new independent sample or demonstrated provider cure."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Identical failed request retained as comparator; second stochastic draw cannot isolate cause of failure.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ],
+      "next_action": "Retain limitation in reporting and any prospective main amendment.",
+      "acceptance_check": "Never present recovery as first-pass success, new independent sample or demonstrated provider cure."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Six valid calls and correct final; composite27/27acceptable decisions explicitly recovery-assisted.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All six wires/parents/contexts/outputs/scores/costs replayed; all new rationales inspected.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "One recovery opportunity, zero fresh independent roots; no rare-failure or treatment-effect estimate.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ],
+      "next_action": "Retain limitation in reporting and any prospective main amendment.",
+      "acceptance_check": "Never present recovery as first-pass success, new independent sample or demonstrated provider cure."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Original R41 scientific sources, model, schema and prompts unchanged;750prior valid reports unmodified.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "Six physical calls, one retry and five unstarted descendants; original failure retained; no unknown usage.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "ActualAPI.00361706, sixcalls/retained.034176;original27.382688/4290; grantclosed, worker/relaystopped.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/manifest and immutableinput hashes; exact recorded reconstruction passed.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Numerical native/composite tables supported; public presentation must distinguish imported and recovered outcomes.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/summary.json",
+          "sha256": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/saved-audit.json",
+          "sha256": "39e7260f2800889f55bd2aeccb0f95827f25efa566160b1ad85bd12d93ade91a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R42-C0-01/assessment.json",
+          "sha256": "ca9a163089e11909711247b677b77049c62f95e1e81bfedc61728d3fad29c063"
+        }
+      ],
+      "next_action": "Retain limitation in reporting and any prospective main amendment.",
+      "acceptance_check": "Never present recovery as first-pass success, new independent sample or demonstrated provider cure."
+    }
+  ]
+}
