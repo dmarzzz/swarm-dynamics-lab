@@ -328,7 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/demo-film | done |  | 2026-10-05T06:10Z | closed out. Added the two-experiment cut for sharing in a chat (two-experiments-film) beside the two-minute film, four-minute film and static slides |
+| dmarz/demo-film | done |  | 2026-10-05T07:20Z | closed out. Added the two-experiment cut for sharing in a chat (two-experiments-film) beside the two-minute film, four-minute film and static slides |
 | dmarz/market-split-film | done |  | 2026-10-05T01:40Z | session closed; theseus-film v3 filed and on the results site, influence film labelled on the site, note in vishesh's inbox |
 | vishesh/codex-theseus | done |  | 2026-10-05T00:40Z | S50 completed and reviewed; fifty-member handover preserves routing, dialogue adds no established benefit; FINISH / PARK |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
