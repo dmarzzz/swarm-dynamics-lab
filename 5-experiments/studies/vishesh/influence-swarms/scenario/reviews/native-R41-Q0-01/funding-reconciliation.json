@@ -1,0 +1,60 @@
+{
+  "budget": [
+    50.0,
+    27.34851200000068,
+    4284
+  ],
+  "scope_before_close": [
+    4.306176,
+    4.27769599999998,
+    756,
+    751,
+    "funded"
+  ],
+  "scope_status": "closed_failed_q",
+  "all_stage_authority_disabled": true,
+  "all_study_status_totals": [
+    [
+      "known_format_failure",
+      94,
+      0.053401660000000004,
+      0.530432
+    ],
+    [
+      "reserved_unknown",
+      2,
+      null,
+      0.009728
+    ],
+    [
+      "usage_observed",
+      1,
+      0.001894425,
+      0.004864
+    ],
+    [
+      "validated",
+      3657,
+      1.97941116,
+      18.841792
+    ]
+  ],
+  "ledger_sha256": "bb7cfeba544564bf8762913a998f7d7e4099b14c06edf004858f52b923d2b372",
+  "grant27": {
+    "allocated_model": 3.827712,
+    "physical_calls": 667,
+    "actual_model": 0.31244975,
+    "retained_reservations": 3.799232,
+    "undispatched_maximum": 0.02848,
+    "unused_allocation_after_known_cost": 3.51526225,
+    "unknown_usage": 0
+  },
+  "r41_cycle": {
+    "calls": 751,
+    "actual_model": 0.351336575,
+    "retained_reservations": 4.277696
+  },
+  "hosting": "Original USD0.50 bound counted once; no new machine or extension.",
+  "main_funded": false,
+  "new_model_calls": 0
+}

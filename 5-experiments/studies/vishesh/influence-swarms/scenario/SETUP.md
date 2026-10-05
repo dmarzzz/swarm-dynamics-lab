@@ -199,3 +199,8 @@ Read E1's [scientific closeout](reviews/E1-E0-01-post.md): the five unsafe purch
 ## R41-D1 closeout — 2026-10-05
 
 [Authored post-mortem](reviews/R41-D1-01-post.md) and [quality review](reviews/R41-D1-01-quality-review.json):84/84valid,3/3acceptablefinals and correct/reconciled finalcosts/sourcecoverage. Exactwire/record/scoring/ledger auditpassed,0unknownusage;worker/relaystopped. UNKNOWN→FAIL persisted through7deploymentrevisions,lead andlargeDecider butdidnotchangecorrectchoice; all16wrongfieldreportsreviewed. Fullninefamilyqualificationnotyetmet. Source262af6f1/manifest1a270ff9;actualpartial84-call/.478464ledgerallocationenforced,original23.549280/3617retained. Remaining672Q+conditional2988main requirepreciseallocation andfreshadmission, noautomatic successor.
+
+
+## R41-Q0 closeout — 2026-10-05
+
+[Authored post-mortem](reviews/R41-Q0-01-post.md) and [quality review](reviews/R41-Q0-01-quality-review.json): Q667physical/666valid/1lengthfailure/5blocked; full D1+Q750/756valid and26/27finals, all observed acceptable. Strict qualification failed. All667 exact wire/context/parent/score/cost records replayed. Original ledger27.348512/4284; Qactual.31244975, cumulative R41actual.351336575. Worker/relay stopped; grant closed and all stage authorities disabled. Main unfunded and not launched. FINISH / PARK; no automatic repair or successor.

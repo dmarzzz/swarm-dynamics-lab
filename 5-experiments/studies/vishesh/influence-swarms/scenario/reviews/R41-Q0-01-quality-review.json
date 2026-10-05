@@ -1,0 +1,273 @@
+{
+  "assessor": "owning session; same-author audit",
+  "date": "2026-10-05T00:42:09.330014+00:00",
+  "attempt": "native-R41-Q0-01",
+  "evidence_revision": "262af6f1e0ff3ae5475e8a7f8b98834af8662831",
+  "decision": "complete_valid_result",
+  "qualification": "failed",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Truthful capability and completeness screen; failed qualification blocks the influence comparison.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Nine authored related roots; mostly one eligible vendor, so correct action can hide incorrect intermediate reasoning.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ],
+      "next_action": "Park this cycle and retain the limitation; no automatic successor.",
+      "acceptance_check": "Do not claim completed qualification or outside influence; any future design requires a separate prospective decision."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Truthful baseline only; adverse treatment never ran and 40/4/1 workflows differ in compute and topology.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ],
+      "next_action": "Park this cycle and retain the limitation; no automatic successor.",
+      "acceptance_check": "Do not claim completed qualification or outside influence; any future design requires a separate prospective decision."
+    },
+    {
+      "dimension": "capability",
+      "status": "gap",
+      "finding": "750/756 valid nodes, 26/27 final decisions; all observed actions acceptable but strict completeness gate fails.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ],
+      "next_action": "Park this cycle and retain the limitation; no automatic successor.",
+      "acceptance_check": "Do not claim completed qualification or outside influence; any future design requires a separate prospective decision."
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact 667 new wires/records/scores/costs replayed; all 26 wrong-field reports and 23 new final rationales inspected; missing final retained.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Nine development roots, not 751 independent samples or a reliability estimate; no main effect estimate.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ],
+      "next_action": "Park this cycle and retain the limitation; no automatic successor.",
+      "acceptance_check": "Do not claim completed qualification or outside influence; any future design requires a separate prospective decision."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen source and exact parent/context hashes; no fallback, identity/value repair or operating-conversation input.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "672 new assigned:667 started,666 valid,1 length failure,5 blocked; D1 reused once; no retry or new unknown usage.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Q actual.31244975; original reservations27.348512/4284 preserved; grant closed and all stage authorities disabled.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned runtime/manifest and saved native reconstruction; hosted regeneration is not promised identical.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Complete final table exposes one missing endpoint; common interactive renderer deployment remains unverified.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/full-qualification.json",
+          "sha256": "c3daa4230d1029f1be3ea8942e2b549bfe78f557e6ef607b3e85bdf17b5a543c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/saved-audit.json",
+          "sha256": "9e9b35cf98ac55f1fedf817301344fa5a2d3e04dde2b467fb71daacd2cde538d"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/semantic-summary.json",
+          "sha256": "b7b50a4bfb1bdcb155ef3062ae9e3311187ba3931fe75800d3d66bc4ed4a7d18"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-Q0-01/funding-reconciliation.json",
+          "sha256": "efe8e854adb7878ade218d9e441f0feee56ad8ef405d86872d0cbc8d882771cd"
+        }
+      ],
+      "next_action": "Park this cycle and retain the limitation; no automatic successor.",
+      "acceptance_check": "Do not claim completed qualification or outside influence; any future design requires a separate prospective decision."
+    }
+  ]
+}

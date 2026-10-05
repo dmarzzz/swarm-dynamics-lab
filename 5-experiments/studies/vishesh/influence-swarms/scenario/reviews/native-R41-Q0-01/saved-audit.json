@@ -1,0 +1,18 @@
+{
+  "attempt": "native-R41-Q0-01",
+  "exact_wires": 667,
+  "valid_outputs_reproduced": 666,
+  "records_and_assessment_reproduced": true,
+  "costs_reconciled": true,
+  "invalids": [
+    {
+      "ordinal": 123,
+      "category": "length",
+      "characters": 11422,
+      "trailing_whitespace": 10342,
+      "root": "r40-development-unit_price-3/repeat-0",
+      "node": "truthful/large-commercial-11/initial"
+    }
+  ],
+  "new_model_calls": 0
+}

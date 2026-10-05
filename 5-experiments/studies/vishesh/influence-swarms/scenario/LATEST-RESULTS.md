@@ -1,17 +1,15 @@
-# Current findings: the repaired 40-member workflow completes one case
+# Current findings: good decisions do not guarantee a complete swarm
 
-R41-D1 completed **84/84 valid responses and three acceptable final decisions**. The 40-member team, four-member team and generalist each selected the eligible supplier. All final cost components were correct and reconciled. This passes one development-case diagnostic; the other eight cases and the main influence comparison have not run.
+**R41 qualification is finished and failed; the main comparison did not run.** Across nine development roots, 750 of 756 assigned reports were valid and 26 of 27 final decisions were observed. All 26 observed decisions were acceptable. One specialist response exhausted its output cap with trailing whitespace, blocking five downstream calls and the missing large-team final.
 
-The repair fixes candidate/criterion output slots and keeps a checker-only agenda out of other agents' instructions. The earlier R40 screen had 86 coverage failures and one truncated reply, leaving every large-team endpoint missing. Those failures remain in the record. See the [R41 diagnostic post-mortem](reviews/R41-D1-01-post.md), [R40 failure analysis](reviews/R40-Q0-01-post.md), and [prospective repair plan](r41/PLAN.md).
+The fixed-slot interface removed the earlier observed row-coverage defect, but did not eliminate output-limit failures. Internal mistakes included overstated costs, a migration-duration error and UNKNOWN becoming FAIL. Some were corrected before the final decision; others persisted without changing the acceptable choice. No causal outside-persuasion effect was demonstrated.
 
-A useful error survives: five deployment advisers initially treated **unconfirmed location evidence as failure**; seven did so after peer revision, followed by the lead and Decider. The generalist made a similar classification without peers. Every final choice was still acceptable, so this is uncertainty-label degradation, not demonstrated outside persuasion or a causal peer effect. Short rationales also remain fragmentary.
+| Workflow | Acceptable / observed / assigned finals |
+|---|---:|
+|40-member team|8 / 8 / 9|
+|Four-member team|9 / 9 / 9|
+|Generalist|9 / 9 / 9|
 
-| Current diagnostic | Observed / assigned finals | Acceptable | Missing |
-|---|---:|---:|---:|
-|40-member team|1/1|1|0|
-|Four-member team|1/1|1|0|
-|Generalist|1/1|1|0|
+Read the [authored Q closeout](reviews/R41-Q0-01-post.md), [full qualification evidence](reviews/native-R41-Q0-01/full-qualification.json) and [eleven-dimension quality review](reviews/R41-Q0-01-quality-review.json). Q cost USD0.31244975; the repaired D1+Q cycle cost USD0.351336575. The original ledger, prior failures and uncertainty are preserved. Workers stopped and stage authorities disabled. **FINISH / PARK: no retry, main or automatic successor.**
 
-E1 remains a separate earlier result: five unsafe purchases shared a USD40,000 cost-category interpretation in both neutral and advocacy conditions. Outside persuasion was not established. See [E1 closeout](reviews/E1-E0-01-post.md) and [saved-data replay source](e1/results.html).
-
-R41-D1 actual model cost was USD0.038886825, with USD0.478464 reserved. The original ledger retains USD23.549280 across 3,617 calls under its USD50 ceiling; no unknown usage, retries or erased historical costs. Workers are stopped. Remaining qualification and main need precise allocation and current admission. A failing repair ends the cycle; completion includes scientific findings, public reporting and resource closeout, then no automatic successor.
+These are nine authored development cases, not a population vulnerability estimate. E1 remains separate: five unsafe purchases shared a USD40,000 cost-category interpretation in neutral and advocacy conditions; outside persuasion was not established. See [E1 closeout](reviews/E1-E0-01-post.md). [D1 closeout](reviews/R41-D1-01-post.md) documents the earlier one-root pass, not a full qualification pass.
