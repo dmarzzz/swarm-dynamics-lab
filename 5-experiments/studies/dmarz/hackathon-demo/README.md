@@ -61,32 +61,43 @@ so their text is not editable in the deck; change the scene and rebuild.
 
 ## The two-experiment cut
 
-`index.html?film=two` plays a third cut of about a minute and a half (88.9 s), made on 2026-10-05 (UTC) to be sent as a file
-in a chat. It explains two of the experiments to someone who has not seen the hackathon film: the Sybil market
-experiment (`sybil`) and the fifty-member Swarm of Theseus run (`theseus50`). Both scenes and their narration are the
-ones the four-minute cut uses, word for word; their kickers read "experiment 1" and "experiment 2" in this cut
-(`FILM.kickers` in `index.html`).
+`index.html?film=two` plays a third cut of 3 min 12 s (192.4 s), made on 2026-10-05 (UTC) to be sent as a file in a
+chat. It explains two of the experiments to someone who has not seen the hackathon film: the Sybil market experiment
+(`sybil-rules-180`) and the fifty-member Swarm of Theseus run (S50). It has its own four scenes; the scenes of the
+other two cuts are untouched.
 
 | Scene | Seconds | Content |
 |---|---|---|
-| `twoopen` | 18.5 | What the lab is and the two questions, each with its agents drawn as dots (180 and 50). The title is on screen from the first frame, because a chat app shows that frame as the preview (`FILM.coldOpen`) |
-| `sybil` | 24.8 | Experiment 1, Thou shalt not split |
-| `theseus50` | 25.8 | Experiment 2, Swarm of Theseus, the fifty-member run |
-| `twoclose` | 19.7 | How far the two results go (both exploratory, one model; 2 economies of 180 agents; 1 world of 50 agents, 1 generation), then the site, the repository and its QR code |
+| `twoopen` | 28.5 | What we set out to study (single-agent safety against properties of swarms, the frame of the four-minute cut), then the two questions with each run's agents drawn as dots (180 and 50). The title is on screen from the first frame, because a chat app shows that frame as the preview (`FILM.coldOpen`) |
+| `twosybil` | 66.4 | Experiment 1 as a study: the question, the economy (60 markets of one dominant owner and two rivals), the rule and how it counts, the design (every condition restarts from one checkpoint), the result under the rule alone (55 of 180, all of them dominant owners; the repeat gave 57), the added sentence (0 of 180; dominant owners produced 21% less instead), the second economy, the limits |
+| `twotheseus` | 70.7 | Experiment 2 as a study: the question, the institution and the job, how the founders learned their two sources, the four arms as bars of correct decisions out of 300 (written note 297, conversation 295, nothing inherited 166, founders never replaced 298, with the 150 that deferring every case scores as a tick), what follows, the limits |
+| `twoclose` | 26.7 | What each experiment measured on the group and how far it goes (2 economies of 180 agents; 1 world of 50 agents, 1 replacement wave; both exploratory, one model), then the site, the repository and its QR code |
+
+The first version (v1 of the artifact, 88.9 s) reused the `sybil` and `theseus50` scenes with the four-minute cut's
+narration. Dan's note on it: "the explanation kind of sucks, we should mention that we were trying to study properties
+of swarms and then explain the result more academically". The current version is the answer to that note.
+
+Where each number comes from is in the `COPY` block of each scene. Two figures are computed here and not quoted from a
+write-up: "21% less" is 513 against 652 mean output per dominant owner-round (`sybil-rules-180/RESULTS.md`, "B and C"),
+and "1 decision behind" is 297 against 298 of 300 (`S50-POST-MORTEM.md`, "Observed comparison").
+
+The pictures of these four scenes are timed in seconds against the narration clips, not in fractions of the scene: each
+scene has a `CUE` block holding the second at which each phrase starts (word timings from transcribing the clip). A
+re-voiced clip needs its `CUE` block re-timed.
 
 The closing card shows `www.swarmsafety.org` because the bare domain did not resolve on 2026-10-05 (UTC) and `www` did.
 In the narration "AI agents" is written as `AI`: Kokoro reads `A I` as "eye" (checked by transcription), which also
-affects the `define` clip of the two-minute cut. The two new clips were checked by transcription only, like the rest.
-The three QR codes were decoded from the encoded file.
+affects the `define` clip of the two-minute cut. The clips were checked by transcription only, like the rest. The three
+QR codes were decoded from the encoded file.
 
 ```
-python3 vo.py --script narration-two.json --out _out/vo-two --speed 1.17 --only twoopen,twoclose   # sybil.wav and theseus50.wav are copied from _out/vo-long
+python3 vo.py --script narration-two.json --out _out/vo-two --speed 1.17
 python3 narrate.py time --film two
 node record.mjs _out/two-picture.mp4 --film two
 python3 narrate.py mix _out/two-picture.mp4 _out/swarm-two-experiments.mp4 --film two
 ```
 
-The filed film is the artifact `two-experiments-film`.
+The filed film is the artifact `two-experiments-film` (v2).
 
 ## The three results and where they come from
 

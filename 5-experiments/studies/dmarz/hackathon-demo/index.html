@@ -61,7 +61,7 @@ const RECORD = Q.has('record');
 window.FILM = {
   // [scene id, seconds]. Change a number to retime, reorder lines to reorder, set 0 to drop a scene.
   // Two cuts share the scenes: ?film=short (the 2-minute submission, default) and ?film=long (the 4-minute version).
-  // ?film=two is the two-experiment cut for sharing in a chat: twoopen, sybil, theseus50, twoclose.
+  // ?film=two is the two-experiment cut for sharing in a chat: twoopen, twosybil, twotheseus, twoclose.
   // [scene id, seconds]. `python3 narrate.py time --film <name>` rewrites a cut's seconds from its narration clips.
   films: {
     short: [
@@ -94,15 +94,12 @@ window.FILM = {
       ['next', 14.3000],
     ],
     two: [
-      ['twoopen', 18.5333],
-      ['sybil', 24.8333],
-      ['theseus50', 25.8000],
-      ['twoclose', 19.7333],
+      ['twoopen', 28.5333],
+      ['twosybil', 66.4000],
+      ['twotheseus', 70.7333],
+      ['twoclose', 26.7333],
     ],
   },
-  // per-cut kicker of a shared scene (a scene asks FILM.kicker(id, its default))
-  kickers: { two: { sybil: 'experiment 1', theseus50: 'experiment 2' } },
-  kicker(id, fallback) { return ((this.kickers[Q.get('film')] || {})[id]) || fallback; },
   coldOpen: { two: true },   // these cuts start on a full first frame instead of fading in from black
   fps: 30,
   fade: 0.35,
@@ -123,7 +120,7 @@ window.FILM = {
 <script src="scenes/why.js" onerror="0"></script><script src="scenes/frame.js" onerror="0"></script><script src="scenes/roadmap.data.js" onerror="0"></script><script src="scenes/roadmap.js" onerror="0"></script><script src="scenes/stack.js" onerror="0"></script><script src="scenes/more.data.js" onerror="0"></script><script src="scenes/more.js" onerror="0"></script>
 <script src="scenes/theseus50.js" onerror="0"></script><script src="scenes/links.data.js" onerror="0"></script><script src="scenes/highlights.js" onerror="0"></script>
 <script src="scenes/next.data.js" onerror="0"></script><script src="scenes/next.js" onerror="0"></script>
-<script src="scenes/twoopen.js" onerror="0"></script><script src="scenes/twoclose.js" onerror="0"></script>
+<script src="scenes/twoopen.js" onerror="0"></script><script src="scenes/twosybil.js" onerror="0"></script><script src="scenes/twotheseus.js" onerror="0"></script><script src="scenes/twoclose.js" onerror="0"></script>
 <script>
 (() => {
   const film = document.getElementById('film');
