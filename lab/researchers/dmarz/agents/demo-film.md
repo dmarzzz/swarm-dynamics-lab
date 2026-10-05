@@ -4,7 +4,7 @@ tool: claude-code
 state: done
 task: null
 doing: closed out. Added the two-experiment cut for sharing in a chat (two-experiments-film) beside the two-minute film, four-minute film and static slides
-updated: 2026-10-05T06:10Z
+updated: 2026-10-05T07:20Z
 ---
 
 ## Notes
@@ -22,4 +22,5 @@ write-up; "8 of 12 documents" in result 2 is from the narration draft and was no
 Added 2026-10-05: `index.html?film=two`, a cut that explains two experiments to someone who has not seen the hackathon film
 (the Sybil market experiment and the fifty-member Swarm of Theseus run), filed as `two-experiments-film`. v1 (89 s) reused
 the four-minute cut's two result scenes. v2 (3 min 12 s) has its own four scenes and tells each experiment as a study:
-question, design, every condition with its control, limits.
+question, design, every condition with its control, limits. v3 keeps that narration and shows both experiments as
+replays of their recorded runs (`scenes/twosybil.build.py`, `scenes/twotheseus.build.py`).

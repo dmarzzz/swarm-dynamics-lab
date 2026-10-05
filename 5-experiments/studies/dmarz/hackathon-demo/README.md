@@ -69,13 +69,22 @@ other two cuts are untouched.
 | Scene | Seconds | Content |
 |---|---|---|
 | `twoopen` | 28.5 | What we set out to study (single-agent safety against properties of swarms, the frame of the four-minute cut), then the two questions with each run's agents drawn as dots (180 and 50). The title is on screen from the first frame, because a chat app shows that frame as the preview (`FILM.coldOpen`) |
-| `twosybil` | 66.4 | Experiment 1 as a study: the question, the economy (60 markets of one dominant owner and two rivals), the rule and how it counts, the design (every condition restarts from one checkpoint), the result under the rule alone (55 of 180, all of them dominant owners; the repeat gave 57), the added sentence (0 of 180; dominant owners produced 21% less instead), the second economy, the limits |
-| `twotheseus` | 70.7 | Experiment 2 as a study: the question, the institution and the job, how the founders learned their two sources, the four arms as bars of correct decisions out of 300 (written note 297, conversation 295, nothing inherited 166, founders never replaced 298, with the 150 that deferring every case scores as a tick), what follows, the limits |
+| `twosybil` | 66.4 | Experiment 1 as a study, shown as a replay of the run's saved records. Left: all 60 markets, each as two bars of who produces how much (product A, product B), stepping through rounds 1 to 12 under the rule alone, its repeat, and the rule plus the sentence, each time from the round 2 checkpoint. Right: market 318001 close up, with both concentration figures (over firms, over owners) and its dominant owner's command and memo of each round, word for word. Below: 55 of 180 (all dominant owners; the repeat gave 57), 0 of 180 with the sentence (dominant owners produced 21% less instead), the second economy, the design, the limits |
+| `twotheseus` | 70.7 | Experiment 2 as a study, shown as a replay of the run's public event log (700 events over 1,118 model calls). Five rings of 50 positions: the founders, then the four arms. The events play in recorded order with the call number on screen: each founder infers its sources, the initial checkpoint (299 of 300), the replacements in three arms, then each arm's source selections and its 300 decisions as six marks per position (written note 297, conversation 295, nothing inherited 166, founders kept 298; 150 for deferring every case), what follows, the limits |
 | `twoclose` | 26.7 | What each experiment measured on the group and how far it goes (2 economies of 180 agents; 1 world of 50 agents, 1 replacement wave; both exploratory, one model), then the site, the repository and its QR code |
 
 The first version (v1 of the artifact, 88.9 s) reused the `sybil` and `theseus50` scenes with the four-minute cut's
 narration. Dan's note on it: "the explanation kind of sucks, we should mention that we were trying to study properties
-of swarms and then explain the result more academically". The current version is the answer to that note.
+of swarms and then explain the result more academically". v2 answered that with new narration and diagram scenes. His
+note on v2: "can we make the experiment visuals make it look more like an actual simulation". v3, the current version,
+keeps v2's narration to the sample and replaces the two experiment pictures with replays of the recorded runs.
+
+The replay data is reduced from the studies' own records by two scripts, which also check the reduced data against the
+numbers the film states: `python3 scenes/twosybil.build.py` (from `sybil-rules-180/records/gpt-6-sol/s1-002-gpt-6-sol`)
+and `python3 scenes/twotheseus.build.py` (from `S50-EVENTS.json`). What the replays do not show: the Sybil replay moves
+each firm's output evenly between two recorded rounds, and the ten rounds of a condition pass in about three seconds; the
+Theseus rings show positions, not who asked whom (the public log has no edges), and which of a position's six cases was
+wrong is not in the log, so the wrong marks are drawn last.
 
 Where each number comes from is in the `COPY` block of each scene. Two figures are computed here and not quoted from a
 write-up: "21% less" is 513 against 652 mean output per dominant owner-round (`sybil-rules-180/RESULTS.md`, "B and C"),
@@ -97,7 +106,7 @@ node record.mjs _out/two-picture.mp4 --film two
 python3 narrate.py mix _out/two-picture.mp4 _out/swarm-two-experiments.mp4 --film two
 ```
 
-The filed film is the artifact `two-experiments-film` (v2).
+The filed film is the artifact `two-experiments-film` (v3).
 
 ## The three results and where they come from
 
