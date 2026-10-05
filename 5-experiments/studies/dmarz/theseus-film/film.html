@@ -3,9 +3,10 @@
 <head>
 <meta charset="utf-8">
 <!--
-  film: swarm of theseus, narrated run. vishesh's pilot swarm-of-theseus/S1-a1
-  source: researchers/vishesh/notes/swarm-of-theseus/results/S1-a1 and artifacts/theseus-pilot-evidence, reduced by theseus-film/film_data.py; narration in theseus-film/script.json
-  generated_by: researchers/dmarz/notes/theseus-film/make_film.py
+  film: swarm of theseus, narrated run. vishesh's historical pilot swarm-of-theseus/S1-a1
+  source: 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1 and artifacts/theseus-pilot-evidence, reduced by theseus-film/film_data.py; narration in theseus-film/script.json
+  generated_by: 5-experiments/studies/dmarz/theseus-film/make_film.py
+  revision: v2, 2026-10-05, after the study author's accuracy review (REVISIONS.md). The scope line stays on screen for the whole film; the closing status is dated.
   visual_claim: "Across a wall of 36 crews whose members are swapped one at a time, the wrong answers pile up in the row where newcomers are handed nothing, right after the last founder leaves; inside one crew, the handover itself can be read."
   form: data-driven
   omitted on purpose: the qualification attempts S0-a1 to S0-a4, token and cost accounting, the bootstrap interval, the v2 and diagnostic runs beyond one closing line
@@ -30,6 +31,7 @@ html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden;
   line-height: 1; letter-spacing: -0.01em; white-space: nowrap; }
 .inst { font-size: 14px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
 #inst { left: 100px; top: 112px; }
+#scope { left: 100px; top: 134px; color: var(--ink); }
 #clock { left: 1420px; top: 112px; width: 400px; text-align: right; color: var(--amber); }
 #cap { left: 100px; top: 936px; width: 1590px; height: 100px; }
 #cap p { position: absolute; left: 0; bottom: 0; margin: 0; font-size: 28px; line-height: 1.42; opacity: 0; white-space: nowrap; }
@@ -60,7 +62,7 @@ html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden;
 /* end card */
 #end .by { left: 100px; top: 392px; }
 #end .who { left: 96px; top: 424px; font-family: var(--display); font-weight: var(--text-display-weight); font-size: 132px; line-height: 1; }
-#end .how { left: 100px; top: 632px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
+#end .how { left: 100px; top: 616px; font-size: 20px; line-height: 1.6; color: var(--dim); white-space: nowrap; }
 #end .qr { left: 1290px; top: 330px; width: 330px; height: 330px; background: var(--bone); padding: 18px; }
 #end .qr svg { position: static; width: 100%; height: 100%; display: block; }
 #end .url { left: 1290px; top: 676px; width: 330px; text-align: center; font-size: 16px; color: var(--dim); white-space: nowrap; }
@@ -77,6 +79,7 @@ body.record #mark, body.record #mark2, body.record #bar { display: none; }
   <div id="zip"></div>
   <div id="title">swarm of theseus</div>
   <div id="inst" class="inst"></div>
+  <div id="scope" class="inst"></div>
   <div id="clock" class="inst"></div>
   <div id="wallclip"><div id="wall" class="g"></div></div>
   <div id="stage" class="g"></div>
@@ -148,9 +151,11 @@ on(t => { const f = t * 30, a = Math.sin(f / 150), b = Math.cos(f / 190), seam =
   fGrid.style.backgroundPosition = `${(f * .16) % 48}px 0px`; });
 
 /* ------------------------------------------------------------------ title, instrument line, step clock */
-const title = document.getElementById('title'), inst = document.getElementById('inst'), clock = document.getElementById('clock');
-inst.textContent = `swarm lab // a study by vishesh // ${D.run.runs} runs // claude haiku 4.5 // pilot ${D.run.attempt} // 2026-10-04`;
-on(t => { show(title, vis(t, .8, T.E - .2), 14); show(inst, vis(t, 1.3, T.E - .2), 10);
+const title = document.getElementById('title'), inst = document.getElementById('inst'), scope = document.getElementById('scope'), clock = document.getElementById('clock');
+inst.textContent = `swarm lab // a study by vishesh // claude haiku 4.5 // pilot ${D.run.attempt}, run 2026-10-04 // film revised ${D.revised}`;
+// what the pilot is, on screen for the whole film: the numbers below are about this and nothing larger
+scope.textContent = `historical pilot // rule supplied to the founders // crews of three // ${D.seeds.length * D.scenarios.length} paired synthetic worlds x ${D.arms.length} conditions = ${D.run.runs} dependent runs`;
+on(t => { show(title, vis(t, .8, T.E - .2), 14); show(inst, vis(t, 1.3, T.E - .2), 10); show(scope, vis(t, 1.5, T.E - .2), 10);
   const onWall = t < T.Z1 + 1, s = stepAt(onWall ? WHEN.wall : WHEN.both, t);
   text(clock, s < 0 ? '' : `${onWall ? '' : words(D.worked.scenario) + ' // '}step ${s} of ${NS - 1}`);
   show(clock, onWall ? vis(t, WHEN.wall[0], T.Z1 + .3) : vis(t, WHEN.both[0], T.S3 - .3)); });
@@ -176,22 +181,23 @@ const tiles = D.wall.map(run => { const i = D.arms.indexOf(run.arm), j = WORLDS.
   return { run, i, j, frame, cols }; });
 const target = tiles.find(tl => tl.run.arm === 'both' && tl.run.scenario === D.worked.scenario && tl.run.seed === D.worked.seed);
 const legend = at(el('small', wall, 'each tile: one run, steps 0 to 5 // top: three crew slots, white = founder, teal = replacement // middle: four cases, red = wrong // bottom: receipt phrase kept'), GX0, 874);
-const verdict = at(el('small t-ink', wall, `the study rates its own evidence ${D.evidence_confidence} // exploratory pilot // audited by the study's own author`), GX0, 874);
+const verdict = at(el('small t-ink', wall, `the study rates its own evidence ${D.evidence_confidence} // exploratory pilot // audited by the study's own author // scores are steps 4-5 only`), GX0, 874);
+const status = at(el('small t-zip', wall, D.status), GX0, 896);                        // the later work, dated: this film does not report its outcome
 const RES_T = { notes: T.R2 + 1.0, both: T.R2 + 1.6, mentor: T.R2 + DUR.R2 * .5, neither: T.R2 + DUR.R2 * .68, founders: T.R3 + .8, verbatim: T.R3 + 1.2 };
 on(t => { const u = zoomU(t), o = clamp(1 - (u - .45) / .4) * (1 - io((t - (T.E - .3)) / .4));
   wall.style.opacity = o; wall.style.visibility = o > 0 ? 'visible' : 'hidden'; if (o <= 0) return;
   // the camera moves toward the worked run's tile
   const Z = 2.27, cx = colX(target.j) + TW / 2, cy = rowY(target.i) + TILE_H / 2;
   wall.style.transform = `translate(${lerp(0, 960 - Z * cx, u)}px, ${lerp(0, 440 - Z * cy, u)}px) scale(${lerp(1, Z, u)})`;
-  const test = vis(t, T.R1 + 1.4, 1e9, .6), obs = vis(t, T.R4 + DUR.R4 * .35, T.C1 - .2, .5, .4);     // the last two steps are the test; then the observatory columns
+  const test = vis(t, T.R1 + 1.4, 1e9, .6), obs = vis(t, T.R4 + DUR.R4 * .35, T.C1 - .2, .5, .4);     // the last two steps are the test; then the observatory columns, still on those two steps
   for (const tl of tiles) { const tin = vis(t, 1.2 + tl.i * .1 + tl.j * .05, 1e9, .5) * (1 - .68 * obs * (tl.run.scenario === 'observatory' ? 0 : 1));
     tl.frame.style.opacity = tin; tl.frame.style.borderColor = tl === target && vis(t, T.Z1 + .1, T.Z1 + 2.2, .3, .3) > .5 ? 'var(--ink)' : '';
-    tl.cols.forEach((c, s) => c.style.opacity = tin * vis(t, WHEN.wall[s] + tl.j * .03, 1e9, .4) * (s < 4 ? 1 - .62 * test * (1 - obs) : 1)); }
+    tl.cols.forEach((c, s) => c.style.opacity = tin * vis(t, WHEN.wall[s] + tl.j * .03, 1e9, .4) * (s < 4 ? 1 - .62 * test : 1)); }
   colHeads.forEach((n, j) => { show(n, vis(t, 1.4 + j * .05)); n.style.color = obs > .5 && WORLDS[j][0] === 'observatory' ? 'var(--ink)' : ''; });
   rowLabels.forEach(rl => { const tIn = rl.i < 4 ? T.W5 + .4 + rl.i * (DUR.W5 - 2) / 4 : T.W6 + .4 + (rl.i - 4) * DUR.W6 * .4;
     show(rl.nm, vis(t, tIn)); show(rl.sub, vis(t, tIn + .2));
     text(rl.res, `${pct(D.after[rl.arm])} right, steps 4-5`); rl.res.style.color = D.after[rl.arm] < .75 ? 'var(--no)' : 'var(--ink)'; show(rl.res, vis(t, RES_T[rl.arm])); });
-  show(legend, vis(t, T.W1 + 2.0, T.C1 - .2)); show(verdict, vis(t, T.C1 + .5)); });
+  show(legend, vis(t, T.W1 + 2.0, T.C1 - .2)); show(verdict, vis(t, T.C1 + .5)); show(status, vis(t, T.C4 + .6)); });
 
 /* ------------------------------------------------------------------ inside one run: the crew as three planks, step by step */
 const stage = document.getElementById('stage'), SX0 = 300, SCW = 250;
@@ -249,7 +255,7 @@ on(t => { const o = clamp((zoomU(t) - .55) / .4); stage.style.opacity = o; stage
 /* ------------------------------------------------------------------ end card */
 const end = document.getElementById('end');
 const eBy = el('by inst', end, 'made by'), eName = el('who', end, 'dmarz');
-const eHow = el('how', end, `the study, Swarm of Theseus, is by vishesh<br>film built by an AI agent from the study's saved records: ${D.run.calls} model calls, ${D.run.runs} runs<br>the narration is a synthetic voice // exploratory pilot; no independent review`);
+const eHow = el('how', end, `the study, Swarm of Theseus, is by vishesh<br>film built by an AI agent from the study's saved records: ${D.run.calls} model calls, ${D.run.runs} runs<br>the narration is a synthetic voice // exploratory pilot; no independent review<br>version 2, ${D.revised}: scope and closing status corrected after the study author's review`);
 const eQr = el('qr', end, QR), eUrl = el('url', end, 'github.com/dmarzzz/swarm-lab');
 const mark = document.getElementById('mark'), mark2 = document.getElementById('mark2');
 on(t => { [eBy, eName, eHow, eQr, eUrl].forEach((n, i) => show(n, vis(t, T.E + .4 + i * .12), 10));

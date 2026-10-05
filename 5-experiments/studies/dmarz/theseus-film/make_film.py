@@ -6,13 +6,13 @@
 The timeline, the audio mix, the fonts and the mark come from the market-split film's tools (../market-split-film);
 the look itself is read at build time from a checkout of the brand kit and is not copied into this repo.
 
-    D=data/theseus-film; M=researchers/dmarz/notes/market-split-film; F=researchers/dmarz/notes/theseus-film
-    python3 $F/film_data.py --results researchers/vishesh/notes/swarm-of-theseus/results/S1-a1 \
+    D=data/theseus-film; M=5-experiments/studies/dmarz/market-split-film; F=5-experiments/studies/dmarz/theseus-film
+    python3 $F/film_data.py --results 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1 \
       --evidence artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz --out $D/film-data.json
     <venv>/bin/python $M/narrated/vo.py --script $F/script.json --out $D/vo
-    python3 $F/make_film.py page --data $D/film-data.json --vo $D/vo --study researchers/vishesh/notes/swarm-of-theseus \
+    python3 $F/make_film.py page --data $D/film-data.json --vo $D/vo --study 5-experiments/studies/vishesh/swarm-of-theseus \
       --kit ~/dmarz-brand-and-content-kit/brand --out $D/theseus.html
-    node researchers/dmarz/notes/discussion-dose/src/film_v3/record.mjs $D/theseus.html $D/picture.mp4 --kit ~/dmarz-brand-and-content-kit/brand
+    node 5-experiments/studies/dmarz/discussion-dose/src/film_v3/record.mjs $D/theseus.html $D/picture.mp4 --kit ~/dmarz-brand-and-content-kit/brand
     python3 $F/make_film.py mix --vo $D/vo --picture $D/picture.mp4 --out $D/theseus.mp4
 """
 import argparse
@@ -23,6 +23,10 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 SCRIPT = HERE / 'script.json'
+# v2 (REVISIONS.md). The closing status is a dated statement about work this film does not show; recheck the study's
+# records and the hub before changing either line, and never narrate the later study's outcome from here.
+REVISED = '2026-10-05'
+STATUS = 'status checked 2026-10-05 00:23 utc // fifty-seat qualification (gpt-6 sol) passed // full fifty-member turnover run in progress, no result yet'
 MARKET = HERE.parent / 'market-split-film'
 
 
@@ -43,7 +47,9 @@ def check_story(d, study):
     new = lambda run, s, name: next(m for m in run[s]['members'] if m['id'] == name)
     n1, n3, h1, h3 = new(both, 1, 'new-1'), new(both, 3, 'new-3'), both[1]['handover'], both[3]['handover']
     obs = d['by_scenario']['observatory']
-    readme, v2, d2 = ((study / p).read_text() for p in ('README.md', 'v2/RESULTS.md', 'execution-diagnostic/RESULTS-D2.md'))
+    readme, v2, d2, q50 = ((study / p).read_text() for p in ('README.md', 'v2/RESULTS.md', 'execution-diagnostic/RESULTS-D2.md',
+                                                              'execution-diagnostic/sol50/scale50/Q50-POST-MORTEM.md'))
+    after = lambda run: run['steps'][4:]                                    # steps 4 and 5: every founder is gone
     claims = {
         'W1: 36 complete runs, 864 calls': d['run']['runs'] == 36 and len(wall) == 36 and d['run']['calls'] == d['run']['calls_reported'] == 864,
         'W2: three members and four cases at every step': all(len(s['founder']) == 3 and len(s['right']) == 4 for r in wall for s in r['steps']),
@@ -71,11 +77,15 @@ def check_story(d, study):
         'R2: notes and both 100%, question 92%, nothing 52%': d['after']['notes'] == d['after']['both'] == 1 and round(d['after']['mentor'] * 100) == 92 and round(d['after']['neither'] * 100) == 52,
         'R3: never replaced 90%, all misses at the repair dock': round(d['after']['founders'] * 100) == 90 and d['by_scenario']['seed-bank']['founders']['accuracy'] == 1
             and obs['founders']['accuracy'] == 1 and d['by_scenario']['repair-dock']['founders']['accuracy'] < 1,
-        'R4: observatory crews with notes right on every case, phrase kept by nobody': all(obs[a]['accuracy'] == 1 and obs[a]['convention'] == 0 for a in ('notes', 'both')),
+        'R4: observatory crews with notes right on every case in the last two steps, phrase kept by nobody there': all(obs[a]['accuracy'] == 1 and obs[a]['convention'] == 0 for a in ('notes', 'both'))
+            and all(all(s['right']) and s['receipt'] == 0 for r in wall if r['scenario'] == 'observatory' and r['arm'] in ('notes', 'both') for s in after(r)),
+        'C2: crews of three, six worlds, and the question no better than notes on the last two steps': len(d['seeds']) * len(d['scenarios']) == 6
+            and d['after']['both'] == d['after']['notes'],
         'the tiles agree with the run the film enters': all(next(r for r in wall if (r['scenario'], r['seed'], r['arm']) == (d['worked']['scenario'], d['worked']['seed'], arm))['steps'][s]['receipt']
             == sum(m['convention'] == phrase for m in run[s]['members']) / 3 for arm, run in d['inside'].items() for s in range(6)),
         'C1: the study rates its evidence 1 of 4 and its review says the rule was supplied': '**evidence_confidence:** **1/4**' in readme and 'largely explained by preserving a supplied rule' in readme,
         'C4: the follow-up failed qualification and its diagnostics have not qualified': 'joint competence gate failed' in v2 and 'both predeclared executor gates fail' in d2,
+        'C4: a later fifty-seat GPT-6 Sol qualification passed': 'native GPT-6 Sol' in q50 and 'This passes the declared qualification, not a fifty-member survival experiment' in q50,
     }
     failed = [k for k, ok in claims.items() if not ok]
     if failed: raise SystemExit('the records no longer support: ' + '; '.join(failed))
@@ -87,6 +97,7 @@ def page(args):
     check_story(data, study)
     data['timeline'] = narrated.timeline(args.vo, SCRIPT)
     data['evidence_confidence'] = '1 of 4'
+    data['revised'], data['status'] = REVISED, STATUS
     root = re.search(r':root\s*\{.*?\n\}', (kit / 'dist' / 'tokens.css').read_text(), re.S).group(0)
     html = (HERE / 'film.html').read_text()
     for slot, value in (('/*__TOKENS__*/', root), ('/*__FONTS__*/', first.font_css(kit)), ('/*__DATA__*/null', json.dumps(data, sort_keys=True)),

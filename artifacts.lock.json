@@ -15360,6 +15360,100 @@
    "sha256": "cad999fced48f99b6c33c4d2c900a896266ab85b13a594ab91c8ed6b5498bce7",
    "size_bytes": 45865466
   },
+  "theseus-film@2": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791160774,
+     "sha256": "9100ff36c589f12f096aa46a24b0165208d675e7d268c2aa367cf9df977885fb",
+     "size": 3925,
+     "uri": "5-experiments/studies/dmarz/theseus-film/REVISIONS.md"
+    },
+    {
+     "mtime": 1791159793,
+     "sha256": "7de15acd26a4f0ed075b128bcc4ff1c2511f865f1176f1f86fdfe16034788c9f",
+     "size": 2665,
+     "uri": "5-experiments/studies/dmarz/theseus-film/_decision.md"
+    },
+    {
+     "mtime": 1791159883,
+     "sha256": "c59484a0d65d7105184e5b06c82d15b03de89ceb7724ba7e1f045a5cfc95d80b",
+     "size": 8282,
+     "uri": "5-experiments/studies/dmarz/theseus-film/script.json"
+    },
+    {
+     "mtime": 1791159793,
+     "sha256": "eb5e8f911b227b22d707baf5faca9347889626eeb5d387651ac97bb1c341e5b2",
+     "size": 5408,
+     "uri": "5-experiments/studies/dmarz/theseus-film/film_data.py"
+    },
+    {
+     "mtime": 1791159959,
+     "sha256": "28ca25a3d72294a2c3fb52d15dbef7b59c4b425164d3422aaf6b1c96ec91e7b1",
+     "size": 9952,
+     "uri": "5-experiments/studies/dmarz/theseus-film/make_film.py"
+    },
+    {
+     "mtime": 1791159959,
+     "sha256": "46e02c14050da342fd42353841ed46d7f98f0636ec21b594e31abd96b4ee1291",
+     "size": 25581,
+     "uri": "5-experiments/studies/dmarz/theseus-film/film.html"
+    },
+    {
+     "mtime": 1791160096,
+     "sha256": "5a2eda8b40a36360b6b27ee6256146e10ef5d1e80ec614d6b2be4b9a49724a90",
+     "size": 4447,
+     "uri": "5-experiments/studies/dmarz/theseus-film/record_stream.mjs"
+    },
+    {
+     "mtime": 1791159793,
+     "sha256": "142bf28cc701ca295f353385800b1f7da74261edddc55d045bf91f5934c2b8aa",
+     "size": 2533,
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/vo.py"
+    },
+    {
+     "mtime": 1791159793,
+     "sha256": "7e981c0985fc85f830aa52fb94779fbea0cc5d8bf9d877b9efc291f5366a16aa",
+     "size": 8519,
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/build.py"
+    },
+    {
+     "mtime": 1791159795,
+     "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5",
+     "size": 175934,
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/rows.json"
+    },
+    {
+     "mtime": 1791159795,
+     "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad",
+     "size": 3296,
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/summary.json"
+    },
+    {
+     "mtime": 1791159795,
+     "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc",
+     "size": 4402,
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/Q50-POST-MORTEM.md"
+    },
+    {
+     "mtime": 1791102040,
+     "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc",
+     "size": 372168,
+     "uri": "artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz"
+    }
+   ],
+   "media": {
+    "duration_s": 237.33,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791160693,
+   "path": "artifacts/theseus-film/theseus-film-v2.mp4",
+   "prompt_sha256": "a375c8003eb798a5c2524c5deff530a5e15e2faecaa00b60cff2583c51553803",
+   "sha256": "4702fd98d7f0ca0b0fdeb90b4adfc979d1b8cc952b4f9cc51a00c6279366dbeb",
+   "size_bytes": 47996710
+  },
   "theseus-pilot-evidence@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

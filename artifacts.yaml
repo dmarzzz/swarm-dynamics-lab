@@ -2324,6 +2324,38 @@ artifacts:
     type: film
     title: 'Swarm of Theseus: a crew replaced one member at a time'
     versions:
+      - v: 2
+        date: 2026-10-04
+        path: artifacts/theseus-film/theseus-film-v2.mp4
+        built_at: '2026-10-05T00:39:34Z'
+        note: 'Revision after the study author''s accuracy review of 2026-10-05 (REVISIONS.md). 3 min 57 s. A scope line stays
+          on screen for the whole film (historical pilot, rule supplied to the founders, crews of three, 6 paired synthetic
+          worlds x 6 conditions = 36 dependent runs). The closing no longer says the follow-up has not run: it says the earlier
+          follow-up failed its qualification, a later GPT-6 Sol qualification with a fifty-seat roster passed, and the fifty-member
+          turnover study is separate, with a dated on-screen status (checked 2026-10-05 00:23 UTC, run in progress, no result).
+          The observatory sentence and picture are limited to steps 4 and 5; the mentoring sentence is limited to the measured
+          endpoint. Five narration clips re-spoken, picture re-recorded; whole audio track transcribed by machine and compared
+          with the script. Nobody has listened to it by ear. v1 is kept.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:469b8663-0e80-47e6-9e2e-68a31863b934
+        prompt: vishesh gave us some feedback on the videos on the swarm labs results /Users/halcyon/Desktop/SWARM-LIVE-VIDEO-NOTES-2026-10-05.txt
+          can u fix them
+        ingredients:
+          - 5-experiments/studies/dmarz/theseus-film/REVISIONS.md
+          - 5-experiments/studies/dmarz/theseus-film/_decision.md
+          - 5-experiments/studies/dmarz/theseus-film/script.json
+          - 5-experiments/studies/dmarz/theseus-film/film_data.py
+          - 5-experiments/studies/dmarz/theseus-film/make_film.py
+          - 5-experiments/studies/dmarz/theseus-film/film.html
+          - 5-experiments/studies/dmarz/theseus-film/record_stream.mjs
+          - 5-experiments/studies/dmarz/market-split-film/narrated/vo.py
+          - 5-experiments/studies/dmarz/market-split-film/narrated/build.py
+          - 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/rows.json
+          - 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/summary.json
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/Q50-POST-MORTEM.md
+          - artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
+        commit: 262af6f1e0ff3ae5475e8a7f8b98834af8662831-dirty
       - v: 1
         date: 2026-10-04
         path: artifacts/theseus-film/theseus-film-v1.mp4

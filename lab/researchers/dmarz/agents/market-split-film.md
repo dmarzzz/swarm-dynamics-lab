@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split-film
 tool: claude-code
-state: done  # working | idle | blocked | done
+state: working  # working | idle | blocked | done
 task: null
-doing: session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress
-updated: 2026-10-04T19:40Z
+doing: theseus-film v2 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next
+updated: 2026-10-05T00:55Z
 ---
 
 ## Notes
@@ -36,3 +36,10 @@ halcyon. The built pages, narration clips and reduced data (git-ignored `data/`)
 `~/backups/swarm-lab-films/2026-10-04/` with a MANIFEST.txt. Open items are on dmarz's backlog under the tag
 `swarm-lab`: review of the two narrated films (nobody has listened to them), and a market-split version with the Opus
 replication once that study publishes results.
+
+Revision, 2026-10-05. vishesh reviewed the films on the results site and sent notes. `theseus-film` v2 answers them:
+a scope line on screen throughout, the observatory and mentoring sentences limited to steps 4 and 5, and a dated
+closing that no longer says the follow-up has not run. What changed, what was checked and what was not is in
+`5-experiments/studies/dmarz/theseus-film/REVISIONS.md`. `record_stream.mjs` there records without writing frames to
+disk. The closing status line is dated 2026-10-05 00:23 UTC; when `swarm-of-theseus-s50-main` finishes, edit `STATUS`
+and `REVISED` in `make_film.py` and file v3.
