@@ -1,0 +1,109 @@
+#!/usr/bin/env python3
+"""Regenerates scenes/lab.data.js from the repo and the agentops working copies. Read-only on every source.
+
+  python3 scenes/lab.build.py
+
+Sources (how each number is counted):
+  sources      library/<type>/*.md in this repo, README.md and INDEX.md excluded, one file = one source
+  hypotheses   5-experiments/studies/dmarz/question-atlas/candidates.json: len(candidates), len(topics)
+  tested       swarm-labs-agentops-lanes/showcase/site/public/hypotheses.json: candidates with tested=true
+  experiments  showcase/showcase/src/hub-snapshot.json: len(experiments) (hub registry at snapshot time)
+  runs         same file: every run under every experiment, with status and created time
+  servers      union of server names in fleet.yml `servers:` and claims/*.yml `servers:` over every local
+               swarm-labs-agentops working copy (main checkout, lanes, codex worktrees). No IPs are read out.
+  run -> server  a run is placed on the server of the claim for its experiment whose time window is nearest
+               the run's created time. Runs whose experiment has no claim go to `unclaimed`.
+"""
+import datetime, glob, json, os, zoneinfo
+import yaml
+
+HERE = os.path.dirname(os.path.abspath(__file__))
+REPO = os.path.abspath(os.path.join(HERE, "../../../../.."))
+HOME = os.path.expanduser("~")
+SHOW = f"{HOME}/swarm-labs-agentops-lanes/showcase"
+SNAP = f"{SHOW}/showcase/src/hub-snapshot.json"
+HYP = f"{SHOW}/site/public/hypotheses.json"
+OPS = [f"{HOME}/swarm-labs-agentops"] + sorted(glob.glob(f"{HOME}/swarm-labs-agentops-lanes/*")) + sorted(
+    glob.glob(f"{HOME}/.codex/worktrees/*/swarm-labs-agentops"))
+
+# 1. library
+TYPES = ["papers", "threads", "code", "blogs", "talks", "datasets"]
+lib = []
+for t in TYPES:
+    n = len([f for f in glob.glob(f"{REPO}/library/{t}/*.md") if os.path.basename(f) not in ("README.md", "INDEX.md")])
+    lib.append({"type": t, "n": n})
+
+# 2. hypotheses
+atlas = json.load(open(f"{REPO}/5-experiments/studies/dmarz/question-atlas/candidates.json"))
+cands = atlas["candidates"]
+topics = atlas["topics"]
+tested = {c["id"] for c in json.load(open(HYP))["candidates"] if c.get("tested")}
+areas = []
+for aid, name in topics.items():
+    mine = [c for c in cands if c.get("area") == aid]
+    areas.append({"id": aid, "name": name, "n": len(mine), "tested": sum(1 for c in mine if c["id"] in tested)})
+
+# 3. fleet
+servers, claims = {}, {}
+for r in OPS:
+    p = f"{r}/fleet.yml"
+    if os.path.exists(p):
+        for k in (yaml.safe_load(open(p)).get("servers") or {}):
+            servers.setdefault(k, 0)
+    for c in glob.glob(f"{r}/claims/*.yml"):
+        y = yaml.safe_load(open(c))
+        if isinstance(y, dict):
+            claims[os.path.basename(c)] = y
+            for s in y.get("servers") or []:
+                servers.setdefault(s, 0)
+
+def ts(s):
+    if not s: return None
+    if isinstance(s, datetime.datetime): return s.timestamp()
+    return datetime.datetime.fromisoformat(str(s).replace("Z", "+00:00")).timestamp()
+
+byexp = {}
+for y in claims.values():
+    if y.get("experiment") and y.get("servers"):
+        a, b = ts(y.get("since")), ts(y.get("ended") or y.get("until"))
+        byexp.setdefault(y["experiment"], []).append((a or 0, b or a or 0, y["servers"]))
+
+snap = json.load(open(SNAP))
+runs = [(e["id"], r) for e in snap["experiments"] for r in e["runs"]]
+t0 = min(r["created"] for _, r in runs); t1 = max(r["created"] for _, r in runs)
+CODE = {"done": "d", "failed": "f", "cancelled": "c", "running": "r"}
+per = {k: [] for k in servers}; unclaimed = []; unclaimed_exps = set()
+for eid, r in sorted(runs, key=lambda x: x[1]["created"]):
+    rec = [round((r["created"] - t0) / (t1 - t0) * 1000), CODE.get(r["status"], "c")]
+    cl = byexp.get(eid)
+    if not cl:
+        unclaimed.append(rec); unclaimed_exps.add(eid); continue
+    c = r["created"]
+    a, b, ss = min(cl, key=lambda w: 0 if w[0] <= c <= w[1] else min(abs(c - w[0]), abs(c - w[1])))
+    per[ss[len(per[ss[0]]) % len(ss)]].append(rec)
+
+tz = zoneinfo.ZoneInfo("America/Los_Angeles")
+f = lambda t: datetime.datetime.fromtimestamp(t, tz).strftime("%b %-d %H:%M")
+st = {}
+for _, r in runs: st[r["status"]] = st.get(r["status"], 0) + 1
+out = {
+    "lib": lib, "libTotal": sum(x["n"] for x in lib),
+    "hyp": {"total": len(cands), "areas": areas, "nAreas": len(topics), "tested": len(tested)},
+    "fleet": {
+        "servers": [{"name": k, "t": [x[0] for x in v], "s": "".join(x[1] for x in v)} for k, v in per.items()],
+        "unclaimed": {"t": [x[0] for x in unclaimed], "s": "".join(x[1] for x in unclaimed), "exps": len(unclaimed_exps)},
+        "nServers": len(servers), "nExperiments": len(snap["experiments"]),
+        "nExperimentsWithRuns": sum(1 for e in snap["experiments"] if e["runs"]),
+        "nRuns": len(runs), "status": st, "t0": round(t0), "t1": round(t1), "from": f(t0), "to": f(t1),
+        "agents": len({r.get("source") for _, r in runs if r.get("source")}),
+    },
+}
+js = "/* generated by scenes/lab.build.py; do not edit by hand */\nFILM.data = FILM.data || {};\nFILM.data.lab = " + json.dumps(out, separators=(",", ":")) + ";\n"
+open(os.path.join(HERE, "lab.data.js"), "w").write(js)
+print(len(js), "bytes")
+print("sources", out["libTotal"], lib)
+print("hypotheses", len(cands), "areas", len(topics), "tested", len(tested), [(a["name"], a["n"], a["tested"]) for a in areas])
+print("servers", len(servers), "experiments", out["fleet"]["nExperiments"], "with runs",
+      out["fleet"]["nExperimentsWithRuns"], "runs", len(runs), st, out["fleet"]["from"], out["fleet"]["to"], "agents", out["fleet"]["agents"])
+print("per server", sorted(((len(v), k) for k, v in per.items()), reverse=True))
+print("unclaimed runs", len(unclaimed), "in", len(unclaimed_exps), "experiments", sorted(unclaimed_exps))

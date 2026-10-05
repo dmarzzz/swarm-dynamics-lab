@@ -5037,4 +5037,42 @@ artifacts:
           - 5-experiments/evidence-metadata.json
           - 3-synthesis/research-question-atlas.md
         commit: aed3e96a709df138d471276f4e365b83c4a8fbb7-dirty
+  - id: hackathon-demo-film
+    category: content
+    type: film
+    title: 'Swarm of Theseus: hackathon submission film'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/hackathon-demo-film/hackathon-demo-film-v1.mp4
+        built_at: '2026-10-05T00:03:57Z'
+        note: 'Two-minute narrated submission film: definition, three questions, method, the lab, three results (Thou shalt
+          not split, How to win agents and influence swarms, Swarm of Theseus), next steps. Narration is Kokoro af_heart,
+          checked by transcription only.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:d027de87-6730-45a9-9f59-5438b15b60b1
+        request: 5eaf2866-e14f-4211-8643-9d719e49baa4
+        prompt: sha256:401bdd528910904bb3365dce70cff7dabd3b0c717d8ebd2ace468af85048cbc8
+        ingredients:
+          - 5-experiments/studies/dmarz/hackathon-demo/index.html
+          - 5-experiments/studies/dmarz/hackathon-demo/record.mjs
+          - 5-experiments/studies/dmarz/hackathon-demo/narrate.py
+          - 5-experiments/studies/dmarz/hackathon-demo/vo.py
+          - 5-experiments/studies/dmarz/hackathon-demo/narration.json
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/define.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/lab.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/lab.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/method.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/next.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/questions.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/result3.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/result3.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/team.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/team.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.js
+        commit: 8b4b029d003e5049f8b1ac2c40c8b88f4a9098d5-dirty
 requires: '1.2'

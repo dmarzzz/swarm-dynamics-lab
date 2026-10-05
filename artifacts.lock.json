@@ -5877,6 +5877,136 @@
    "sha256": "155afc5aec76ae663fc9482f98b17c1ad9c3b9e74511f9dea57b6824d9830c3d",
    "size_bytes": 37463
   },
+  "hackathon-demo-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791158616,
+     "sha256": "580e2d15aa2c82f7ff3b95f3e23e636b0ea8dde935664f2afceec6f4b2279cef",
+     "size": 10548,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/index.html"
+    },
+    {
+     "mtime": 1791158579,
+     "sha256": "d77494d73a0f3e55d38aabb5c13cbd8b274344a2d71c99501f5c970b000bb057",
+     "size": 4146,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/record.mjs"
+    },
+    {
+     "mtime": 1791157829,
+     "sha256": "858c2e8ac80418deb2fd40cce729a24f2a6d92975854f33b7eac27422edc393a",
+     "size": 3451,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narrate.py"
+    },
+    {
+     "mtime": 1791157844,
+     "sha256": "a2eb3a1055d5b52f2ba783d94d8f554de5ba87e2be94b236021240ebaef841d3",
+     "size": 3187,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/vo.py"
+    },
+    {
+     "mtime": 1791157962,
+     "sha256": "60bea7b4f796e07a9ccd1d79bf4b014fdd062097891458eaffdb95d413332b5a",
+     "size": 2409,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narration.json"
+    },
+    {
+     "mtime": 1791155964,
+     "sha256": "268c80d923a0ec624f298575e89872a2bbcedb0edd80d07fe236f986b82c2a33",
+     "size": 4076,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/define.js"
+    },
+    {
+     "mtime": 1791154458,
+     "sha256": "ac98d610a29729eeb45af9d81f92d0fe86cdebb3dc222afd123460852eeb8cd2",
+     "size": 10396,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/lab.data.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "4f50fb3dae1707e6fb9235788468fa720f9392d934e17cb5a5d628693519e98d",
+     "size": 10770,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/lab.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "2e8cae78b320dbf5b2cbe4a3634b38e4140b49ea75d5048f58e84ce50eb5fc0d",
+     "size": 3672,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/method.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "12cb6b7bf1cb60470b7dba4a706b61b56a2355ebb30304386515d414656bd10d",
+     "size": 22900,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/next.js"
+    },
+    {
+     "mtime": 1791155747,
+     "sha256": "344d5a9e97d5801713e84f7b4440fb4477629a91a4dab60a832ef399dd8c0bca",
+     "size": 10041,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/questions.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "7ccd40e8b5b847e9bbb4b74d4c526c65f3755ae3a47bc4001fbebda8283dd0ed",
+     "size": 1700,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/result3.data.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "d91308a75120174ae220e525d489a66109b21c54fd3546268017c3573293742d",
+     "size": 24259,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/result3.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "41d473390cec768d95761184aafd08cfee60fc335d4cc2eac1abf6c0661d1523",
+     "size": 9407,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "b814e3ff4a606bf126ef19367636539cfcc6328309542220e880645462f69df9",
+     "size": 6396,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js"
+    },
+    {
+     "mtime": 1791155244,
+     "sha256": "cc10c5cb36f0ea28a63bed41fd946e060641a736253ae3a404a1fc6a89e0aaea",
+     "size": 14236,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/team.data.js"
+    },
+    {
+     "mtime": 1791157763,
+     "sha256": "3ad1c3677b6f9cdfe99ee2cb4a21edb0d254e5e05a50a2523cc9e213d77f2e67",
+     "size": 6266,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/team.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "e0002fb756acc8c811cf905191e4f2cf586b8b8edeed1777baa7c61a89af7886",
+     "size": 1623,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.data.js"
+    },
+    {
+     "mtime": 1791158616,
+     "sha256": "760ada01410b03f82e093026da5bad1801cc2ebb273acc2e009a25e265170a56",
+     "size": 12001,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.js"
+    }
+   ],
+   "media": {
+    "duration_s": 120.9,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791158035,
+   "path": "artifacts/hackathon-demo-film/hackathon-demo-film-v1.mp4",
+   "prompt_sha256": "401bdd528910904bb3365dce70cff7dabd3b0c717d8ebd2ace468af85048cbc8",
+   "sha256": "23b0acc5659028eea340bc0114ee1655ceb6a68ceced0454c6b4634c74c1509d",
+   "size_bytes": 12072114
+  },
   "healing-helping-hands-outcomes@1": {
    "host": "ultrons-macbook-pro",
    "ingredients": [

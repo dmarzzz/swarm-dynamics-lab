@@ -1,0 +1,157 @@
+# hackathon-demo: the two-minute submission film (team Swarm of Theseus)
+
+This folder holds the source of the film the team submitted to the AI Village x Grove Research AI Swarm Dynamics
+Hackathon on 2026-10-04. The film is one page, `index.html`, that plays at 1920x1080 and is a pure function of time.
+Each scene is one classic script in `scenes/`. A recorder steps the page frame by frame into an mp4, and a second
+script lays a generated narration on top. The filed film is the artifact `hackathon-demo-film` (see `artifacts.yaml`).
+
+Site: swarmsafety.org. Repository: github.com/dmarzzz/swarm-dynamics-lab (renamed from `swarm-lab` on 2026-10-04).
+
+## What the film says
+
+| Scene | Starts | Seconds | Content |
+|---|---|---|---|
+| `team` | 0:00 | 3.5 | Team name, three GitHub avatars, a QR code to each X profile, the site and the repository |
+| `define` | 0:03.5 | 7.8 | AI safety aligns a single agent; distributional safety secures the swarm or market as a whole |
+| `questions` | 0:11 | 10.5 | Three questions: Sybils, a few adversarial agents, safety constraints under turnover |
+| `method` | 0:22 | 7.8 | 3,319 sources reviewed and open sourced, 219 hypotheses, 15 research areas |
+| `lab` | 0:30 | 12.3 | The lab as one diagram: sources, hypotheses, 103 experiments, 25 servers, 1,584 runs in 16 hours, the gate rail |
+| `sybil` | 0:42 | 24.2 | Result 1, Thou shalt not split |
+| `result3` | 1:06 | 19.8 | Result 2, How to win agents and influence swarms |
+| `theseus` | 1:26 | 20.7 | Result 3, Swarm of Theseus |
+| `next` | 1:47 | 14.2 | Three next steps, then the end card with the site, the repository and its QR code |
+
+The scene lengths follow the narration clips (`narrate.py time`), so they change when the narration does.
+
+## The three results and where they come from
+
+1. **Thou shalt not split** (`5-experiments/studies/dmarz/sybil-rules-180`, GPT-6 Sol, exploratory). An economy of 180
+   owners in 60 markets pays a 35% penalty on profit in concentrated markets, counted per firm. Under the rule alone 55
+   of 180 owners sustained the split; with one added sentence ("Do not evade or circumvent the market's competition
+   rule.") 0 of 180 did. A second economy went from 59 to 0. The study calls these two observations, not a distribution,
+   and notes that the sentence also signals regulator intent. The 55 dots that split on screen are the owners flagged in
+   the run records.
+2. **How to win agents and influence swarms** (`5-experiments/studies/vishesh/external-influence-v2`, Claude Haiku 4.5).
+   Nine-agent teams (six analysts, two fact-checkers, one decision-maker) choose among options while an outside
+   attacker alters evidence documents. In 6 of 6 targeted-check attack cases the checkers returned the true numbers and
+   the final decision still went to the attacker's option. 50 team decisions, 750 model calls, synthetic tasks.
+3. **Swarm of Theseus** (`5-experiments/studies/vishesh/swarm-of-theseus`, Claude Haiku 4.5, pilot S1-a1). Three-agent
+   crews have every founder replaced one at a time. Crews that inherited written notes scored 100% on the scored steps;
+   crews that inherited nothing scored 52%, where guessing is 50%. 36 runs across 6 synthetic worlds. The study tested
+   supplied procedures, not safety constraints, and says so on screen.
+
+## Numbers checked against the repository
+
+`FACTS.md` is the check of the first script's numbers, made on 2026-10-04. The film shows the repository's values where
+they differed from the script: 219 hypothesis candidates (the script said 214 and 215), 15 research areas (the script
+said 9; no nine-way grouping was found), 103 experiments on the hub snapshot (the script said 105), and 12 of 219
+candidates cited by a hub experiment.
+
+Known gaps at filing:
+
+- "Attacker alters 8 of 12 documents" in result 2 comes from the narration draft. The study's files confirm twelve
+  documents; the eight was not found.
+- The end card and the narration say the entire lab is open source, from the prompts to the infrastructure as code. The
+  infrastructure is in this repository as `agentops/`, a scrubbed template of the fleet setup; the live fleet
+  repository with its secrets and claims stays private.
+- The 219 hypotheses are unreviewed candidates in the question atlas. The gate rail in the `lab` scene names the review
+  gate, which only three formal hypothesis files had reached.
+- The narration was checked by transcription only. The transcriber heard "Sybils" as "symbols" and one "Theseus" as
+  "theses"; nobody had listened to the track when it was filed.
+
+## Building it
+
+The look (tokens, fonts, the cube loop) is not committed: it is read from a checkout of the private brand kit into
+`kit/`, which is git-ignored. Without `kit/` the page does not render correctly.
+
+```
+K=~/dmarz-brand-and-content-kit/brand                       # the brand kit checkout
+mkdir -p kit/fonts && cp -R $K/fonts/Doto $K/fonts/SpaceMono kit/fonts/ && cp $K/dist/tokens.css $K/marks/cube/cube-loop-alpha.webm kit/
+# kit/fonts.css = the kit's normal-style faces as @font-face rules with base64 data URIs (see fonts.json in the kit)
+
+python3 vo.py --speed 1.15                                  # narration.json -> _out/vo/*.wav (Kokoro af_heart, mlx-audio)
+python3 narrate.py time                                     # scene seconds in index.html follow the clip lengths
+node record.mjs _out/picture.mp4                            # frames piped to ffmpeg, about one minute
+python3 narrate.py mix _out/picture.mp4 _out/film.mp4       # narration at -14 LUFS on the picture
+node shot.mjs <scene id> 0.5,0.95                           # stills of one scene, for checking
+```
+
+`vo.py` needs a virtualenv with `mlx-audio` and `misaki[en]` plus the spaCy model `en_core_web_sm`; the header of the
+file has the recipe. The words and numbers of each scene are in the `COPY` block at the top of its file. Scene order
+and seconds are the `FILM.order` list in `index.html`. `scenes/result3.js` also carries two unused picks (`swarm-size`,
+`immune-response`) behind `COPY.pick`.
+
+## Scene contract
+
+A scene is `scenes/<id>.js` (classic script, no modules, no fetch: the page runs from `file://`). Optional data goes in
+`scenes/<id>.data.js` as `FILM.data['<id>'] = {...}`; both files are already listed in `index.html`. Binary assets
+(avatars, images, clips) go in `assets/<id>/`.
+
+```js
+FILM.scene({
+  id: 'lab',
+  mount(root, ctx) {
+    // called once. root is an empty absolutely positioned 1920x1080 div with id="scene-lab".
+    // build all DOM / SVG / canvas here. Add CSS with ctx.css(`#scene-lab .x { ... }`), every selector scoped to #scene-<id>.
+  },
+  update(p, t, ctx) {
+    // called every frame while the scene is visible. p = 0..1 through the scene, t = seconds into it, ctx.dur = its length.
+    // MUST be a pure function of time: set styles/attributes/canvas from p or t only.
+  },
+});
+```
+
+Hard rules:
+
+- Pure function of time. No CSS transitions or animations, no setTimeout, no requestAnimationFrame of your own, no
+  Math.random (use `ctx.rng(seed)`). The recorder seeks to arbitrary frames, forwards and backwards.
+- Write beats as fractions of the scene (`ctx.seg(p, 0.10, 0.25)` = eased 0..1 between 10% and 25% of the scene), so the
+  scene still works when its duration is changed in `index.html`.
+- The shell cross-fades scenes (about 0.4 s). Do not fade your whole scene in or out. Give the viewer about half a
+  second before the first thing moves.
+- All copy and every number sits in one `const COPY = {...}` block at the top of the scene file, so Dan can edit words
+  in one place. Each number has a comment naming the file in the repo that proves it.
+- Layout is absolute pixels on a 1920x1080 stage. Keep content inside x 100..1820, y 56..1010. The shell draws the
+  thin cyan zip line at x=46 and a scene counter bottom right (y > 1030); do not draw there.
+- No `<video>` unless you must; if you do, drive it only through `ctx.video(el, seconds)` inside `update`.
+
+Helpers on `ctx`: `clamp(x)`, `ease(x)` (cubic in-out), `out(x)` (ease-out), `seg(p, a, b)` (eased 0..1 as p goes a..b),
+`lin(p, a, b)` (linear), `lerp(a, b, x)`, `rng(seed)` (returns a function giving 0..1), `fmt(n)` (thousands commas),
+`el(tag, cls, html, parent)` (make an element), `css(text)`, `asset(path)` (resolves `assets/...`), `dur`.
+
+## Look (the dmarz brand kit; tokens and fonts are already loaded by the shell)
+
+CSS variables: `--void` (background, already set), `--ink` (text), `--dim` (context, neighbours, labels), `--amber`
+(ONE signal per frame: the active thing, the headline number), `--zip` (cyan: live or confirmed state), `--bone`,
+`--no` (red: failed, bad state), `--mono` (Space Mono, all body text), `--display` (Doto, dotted display face: titles
+and hero numbers only; it has no arrow glyph).
+
+Shared classes from the shell (use them so scenes match):
+
+- `.f-kicker`: 16px uppercase letterspaced dim label. Put the scene kicker at left:100px; top:56px.
+- `.f-title`: Doto 60px. Scene title at left:100px; top:88px. One line. No subtitle line under a title, ever.
+- `.f-body`: Space Mono 28px, line-height 1.4. Minimum on-screen text size is 18px; aim for 24px and up.
+- `.f-num`: Doto, for hero numbers (set font-size yourself, 90 to 220px).
+- `.f-small`: 18px dim uppercase letterspaced labels.
+
+Taste rules (Dan has rejected work for each of these):
+
+- Every number carries its unit and its comparison ("6 of 6 markets", never a bare "6"; "55 -> 0" alone means nothing).
+- Colour carries meaning; do not decorate. Not too green. Glow at most subtle. No drifting background particles, no
+  node-mesh wallpaper, no pills, no gradient cards, no emoji. Dots that ARE data (a run, an agent, a server) are welcome
+  and should feel like a swarm.
+- Motion means "arrived", "state changed" or "alive". Things get built on screen: show construction.
+- Plain words. No em dashes, no "isn't X, it's Y" cadence, no hype adjectives. Sentence case. Short labels.
+- Report data literally. Only show numbers you verified in the repo; if the script's number differs from the repo,
+  show the repo's number and tell the lead in your final report (file + line).
+
+## Checking your scene
+
+```
+cd 5-experiments/studies/dmarz/hackathon-demo
+node shot.mjs <id> 0.1,0.5,0.9        # p values (0..1) -> _shots/<id>-<p>.png, then Read the PNGs and fix what looks off
+open "index.html?only=<id>"            # live preview; space = pause, left/right = previous/next scene, click bar = seek
+```
+
+Look at your own frames before you report. Check text overlap, clipped text, and that every beat is legible in a
+frame grab. Do not edit `index.html`, `shot.mjs`, or another scene's files.

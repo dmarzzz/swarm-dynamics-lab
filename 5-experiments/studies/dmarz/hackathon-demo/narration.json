@@ -1,0 +1,41 @@
+{
+  "voice": "af_heart",
+  "segments": [
+    {
+      "scene": "team",
+      "text": "We are team Swarm of Theseus."
+    },
+    {
+      "scene": "define",
+      "text": "A I safety usually aligns one agent. Distributional safety secures the swarm, or the market, as a whole."
+    },
+    {
+      "scene": "questions",
+      "text": "We asked three questions. When do agents create Sybils? Can a few adversaries push a swarm into unsafe behavior? And do its safety constraints survive turnover?"
+    },
+    {
+      "scene": "method",
+      "text": "To answer them, we reviewed over three thousand sources, open sourced them, and wrote two hundred nineteen hypotheses."
+    },
+    {
+      "scene": "lab",
+      "text": "Then we built an autonomous research lab. Agents ran one hundred three experiments across twenty five remote servers: nearly sixteen hundred runs in sixteen hours, every step gated in C I."
+    },
+    {
+      "scene": "sybil",
+      "text": "First, we built an economy of one hundred eighty G P T six Sol agents across sixty markets. Concentrated markets paid a thirty five percent penalty, but it was counted per company, so owners could dodge it by splitting their firm. Fifty five did. Then we added one sentence: do not evade or circumvent the market's competition rule. Zero did. A second economy went from fifty nine to zero."
+    },
+    {
+      "scene": "result3",
+      "text": "Second, can outsiders steer a swarm? Nine Haiku agents decide together: six analysts, two fact checkers, one decision maker. An attacker can alter eight of the twelve documents they read. In six targeted attacks, the fact checkers returned the correct numbers, and the final decision still went to the attacker's worse option."
+    },
+    {
+      "scene": "theseus",
+      "text": "Third, Swarm of Theseus. Three agent Haiku teams learn a procedure, then we replace one agent at a time until no founder is left. Teams that inherited written notes kept one hundred percent accuracy. Teams that inherited nothing fell to fifty two percent, which is guessing. A swarm's rules can outlive its members when they are written down."
+    },
+    {
+      "scene": "next",
+      "text": "Next, we mine our own traces, test the remaining hypotheses, and scale from two hundred agents to two thousand. The entire lab is open source, from the prompts to the infrastructure as code, at swarm safety dot org."
+    }
+  ]
+}

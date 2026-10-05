@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<!--
+  film: Swarm of Theseus, hackathon submission (2 minutes). Silent picture; Dan narrates over it.
+  One scene per script beat, each a classic script in scenes/. The page is a pure function of time (window.__seek).
+  Contract: README.md. Order and durations: FILM.order below.
+  ?only=<id> one scene   ?t=<seconds> start there   ?record no UI, no autoplay (shot.mjs, record.mjs)
+-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Swarm of Theseus</title>
+<link rel="stylesheet" href="kit/tokens.css">
+<link rel="stylesheet" href="kit/fonts.css">
+<style>
+:root { --void: var(--color-void); --ink: var(--color-ink); --dim: var(--color-dim); --amber: var(--color-amber);
+  --zip: var(--color-zip); --bone: var(--color-bone); --no: var(--color-state-no);
+  --mono: var(--text-mono-family); --display: var(--text-display-family); }
+html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden; }
+#film { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; transform-origin: 0 0;
+  background: var(--void); color: var(--ink); font-family: var(--mono); font-size: 24px; }
+#film * { box-sizing: border-box; }
+.scene { position: absolute; left: 0; top: 0; width: 1920px; height: 1080px; overflow: hidden; display: none; }
+.scene > *, .scene .abs { position: absolute; }
+#zip { position: absolute; left: 46px; top: 0; bottom: 0; width: 2px; opacity: .5;
+  background: linear-gradient(180deg, transparent, var(--zip) 18%, var(--zip) 82%, transparent);
+  box-shadow: 0 0 8px var(--zip), 0 0 20px rgba(60,255,230,.25); }
+.f-kicker { font-size: 16px; letter-spacing: .16em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+.f-title { font-family: var(--display); font-weight: var(--text-display-weight); font-size: 60px; line-height: 1;
+  letter-spacing: -0.01em; white-space: nowrap; }
+.f-body { font-size: 28px; line-height: 1.4; }
+.f-num { font-family: var(--display); font-weight: var(--text-display-weight); line-height: 1; white-space: nowrap; }
+.f-small { font-size: 18px; letter-spacing: .12em; text-transform: uppercase; color: var(--dim); white-space: nowrap; }
+/* the mark: the kit's cube loop, bottom right. The recorder hides this and lays the same loop on with ffmpeg (FILM.mark). */
+#mark { position: absolute; z-index: 5; overflow: hidden; pointer-events: none; }
+#mark video { position: absolute; left: 0; top: 0; }
+body.record #mark { display: none; }
+.missing { left: 100px; top: 500px; color: var(--dim); font-size: 28px; }
+/* player chrome: outside the film, never recorded */
+#ui { position: fixed; left: 0; right: 0; bottom: 0; height: 34px; font: 12px/34px var(--mono); color: var(--dim);
+  background: rgba(3,5,10,.85); user-select: none; cursor: pointer; }
+#ui .tick { position: absolute; top: 0; bottom: 0; border-left: 1px solid rgba(127,136,150,.45); padding-left: 6px;
+  white-space: nowrap; overflow: hidden; }
+#ui #head { position: absolute; top: 0; bottom: 0; width: 2px; background: var(--amber); }
+#ui #time { position: absolute; right: 10px; top: 0; color: var(--ink); background: rgba(3,5,10,.85); padding-left: 8px; }
+body.record #ui { display: none; }
+</style>
+</head>
+<body>
+<div id="film"><div id="zip"></div><div id="mark"><video src="kit/cube-loop-alpha.webm" muted loop autoplay playsinline></video></div></div>
+<div id="ui"><div id="head"></div><div id="time"></div></div>
+<script>
+const Q = new URLSearchParams(location.search);
+const RECORD = Q.has('record');
+window.FILM = {
+  // [scene id, seconds]. Change a number to retime, reorder lines to reorder, set 0 to drop a scene.
+  order: [
+    ['team', 3.5000],
+    ['define', 7.8000],
+    ['questions', 10.5333],
+    ['method', 7.8333],
+    ['lab', 12.3333],
+    ['sybil', 24.1667],
+    ['result3', 19.8333],
+    ['theseus', 20.7000],
+    ['next', 14.1667],
+  ],
+  fps: 30,
+  fade: 0.35,
+  mark: { x: 1782, y: 944, size: 120 },   // the rotating cube; the loop keeps the cube in the top-left 380 px of a 720 px frame
+  data: {},
+  defs: {},
+  scene(def) { this.defs[def.id] = def; },
+};
+</script>
+<script src="scenes/team.data.js" onerror="0"></script><script src="scenes/team.js" onerror="0"></script>
+<script src="scenes/define.js" onerror="0"></script>
+<script src="scenes/questions.data.js" onerror="0"></script><script src="scenes/questions.js" onerror="0"></script>
+<script src="scenes/method.js" onerror="0"></script>
+<script src="scenes/lab.data.js" onerror="0"></script><script src="scenes/lab.js" onerror="0"></script>
+<script src="scenes/sybil.data.js" onerror="0"></script><script src="scenes/sybil.js" onerror="0"></script>
+<script src="scenes/theseus.data.js" onerror="0"></script><script src="scenes/theseus.js" onerror="0"></script>
+<script src="scenes/result3.data.js" onerror="0"></script><script src="scenes/result3.js" onerror="0"></script>
+<script src="scenes/next.data.js" onerror="0"></script><script src="scenes/next.js" onerror="0"></script>
+<script>
+(() => {
+  const film = document.getElementById('film');
+  if (RECORD) document.body.classList.add('record');
+  const clamp = x => Math.max(0, Math.min(1, x));
+  const ease = x => { x = clamp(x); return x < .5 ? 4 * x * x * x : 1 - Math.pow(-2 * x + 2, 3) / 2; };
+  const out = x => 1 - Math.pow(1 - clamp(x), 3);
+  const lin = (p, a, b) => clamp((p - a) / (b - a));
+  const pending = [];
+  let playing = false;
+  const base = {
+    clamp, ease, out, lin,
+    seg: (p, a, b) => ease(lin(p, a, b)),
+    lerp: (a, b, x) => a + (b - a) * x,
+    rng(seed) { let s = (seed >>> 0) || 1; return () => { s |= 0; s = s + 0x6D2B79F5 | 0; let t = Math.imul(s ^ s >>> 15, 1 | s);
+      t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; },
+    fmt: n => Number(n).toLocaleString('en-US'),
+    el(tag, cls, html, parent) { const e = document.createElement(tag); if (cls) e.className = cls; if (html != null) e.innerHTML = html;
+      if (parent) parent.appendChild(e); return e; },
+    css(text) { const s = document.createElement('style'); s.textContent = text; document.head.appendChild(s); },
+    asset: path => 'assets/' + path,
+    // the only way to drive a <video>: exact seek when recording, drift-corrected playback otherwise
+    video(el, sec) {
+      if (RECORD || !playing) { if (Math.abs(el.currentTime - sec) > 0.02) { el.pause();
+          pending.push(new Promise(r => { el.addEventListener('seeked', r, { once: true }); setTimeout(r, 1500); })); el.currentTime = sec; } }
+      else { if (Math.abs(el.currentTime - sec) > 0.3) el.currentTime = sec; if (el.paused) el.play().catch(() => {}); }
+    },
+  };
+
+  const only = Q.get('only');
+  let order = FILM.order.filter(([id, d]) => only ? id === only : d > 0);
+  if (only && !order.length) order = [[only, 10]];
+  if (only && order[0][1] <= 0) order[0][1] = 25;
+  let T0 = 0;
+  const scenes = order.map(([id, dur]) => { const s = { id, dur, start: T0 }; T0 += dur; return s; });
+  const duration = T0;
+
+  for (const s of scenes) {
+    s.root = base.el('div', 'scene', null, film); s.root.id = 'scene-' + s.id;
+    s.ctx = Object.assign({ dur: s.dur, id: s.id }, base);
+    s.def = FILM.defs[s.id];
+    try { if (s.def) s.def.mount(s.root, s.ctx); else base.el('div', 'missing', 'scene "' + s.id + '" is not built yet', s.root); }
+    catch (e) { console.error(s.id, e); s.def = null; base.el('div', 'missing', s.id + ': ' + e.message, s.root); }
+  }
+
+  let now = 0;
+  function render(T) {
+    now = T = Math.max(0, Math.min(duration - 1e-4, T));
+    for (const s of scenes) {
+      const t = T - s.start, on = t >= 0 && t < s.dur;
+      s.root.style.display = on ? 'block' : 'none';
+      if (!on) { if (s.wasOn) s.root.querySelectorAll('video').forEach(v => v.pause()); s.wasOn = false; continue; }
+      s.wasOn = true;
+      const f = only ? 1 : Math.min(ease(t / FILM.fade), ease((s.dur - t) / FILM.fade));
+      s.root.style.opacity = f;
+      if (s.def) try { s.def.update(t / s.dur, t, s.ctx); } catch (e) { if (!s.err) console.error(s.id, e); s.err = e; }
+    }
+    head.style.left = (T / duration * 100) + '%';
+    time.textContent = T.toFixed(1) + ' / ' + duration.toFixed(1) + ' s';
+  }
+  window.__seek = async T => { render(T); if (pending.length) { await Promise.all(pending.splice(0)); } };
+  { const m = FILM.mark, box = document.getElementById('mark'), k = m.size / 380;
+    box.style.cssText = `left:${m.x}px;top:${m.y}px;width:${m.size}px;height:${m.size}px`;
+    box.firstChild.style.width = box.firstChild.style.height = (720 * k) + 'px'; }
+  window.__meta = { duration, fps: FILM.fps, mark: FILM.mark, scenes: scenes.map(s => ({ id: s.id, start: s.start, dur: s.dur })) };
+
+  // player
+  const ui = document.getElementById('ui'), head = document.getElementById('head'), time = document.getElementById('time');
+  for (const s of scenes) { const k = base.el('div', 'tick', s.id + ' ' + s.dur + 's', ui); k.style.left = (s.start / duration * 100) + '%';
+    k.style.width = (s.dur / duration * 100) + '%'; }
+  function fit() { if (RECORD) return; const k = Math.min(innerWidth / 1920, (innerHeight - 34) / 1080);
+    film.style.transform = `scale(${k})`; film.style.left = ((innerWidth - 1920 * k) / 2) + 'px'; }
+  addEventListener('resize', fit); fit();
+  let last = 0;
+  function frame(ts) { if (playing) { const T = now + (ts - last) / 1000; if (T >= duration) { playing = false; render(duration); } else render(T); }
+    last = ts; requestAnimationFrame(frame); }
+  ui.addEventListener('click', e => { render(e.clientX / innerWidth * duration); });
+  addEventListener('keydown', e => {
+    const i = scenes.findIndex(s => now >= s.start && now < s.start + s.dur);
+    if (e.key === ' ') { e.preventDefault(); if (now >= duration - 0.05) render(0); playing = !playing; if (!playing) render(now); }
+    else if (e.key === 'ArrowRight') render(scenes[Math.min(scenes.length - 1, i + 1)].start + (e.shiftKey ? 0 : 0.001));
+    else if (e.key === 'ArrowLeft') render(now - scenes[i].start > 1 ? scenes[i].start : scenes[Math.max(0, i - 1)].start);
+    else if (e.key === 'r' || e.key === '0') render(0);
+    else if (e.key === 'f') document.documentElement.requestFullscreen && document.documentElement.requestFullscreen();
+    else if (e.key === 'h') ui.style.display = ui.style.display === 'none' ? '' : 'none';
+  });
+  document.fonts.ready.then(() => { render(parseFloat(Q.get('t') || '0')); if (!RECORD && !Q.has('paused')) playing = true; requestAnimationFrame(frame); });
+})();
+</script>
+</body>
+</html>
