@@ -53,6 +53,12 @@ node record.mjs _out/picture-long.mp4 --film long
 python3 narrate.py mix _out/picture-long.mp4 _out/film-long.mp4 --film long
 ```
 
+### Static slides
+
+`python3 slides.py` renders one still per scene state of the four-minute cut (19 slides) into a 16:9 `.pptx` that
+Google Slides imports, with each scene's narration in the speaker notes. The slides are pictures of the film's frames,
+so their text is not editable in the deck; change the scene and rebuild.
+
 ## The three results and where they come from
 
 1. **Thou shalt not split** (`5-experiments/studies/dmarz/sybil-rules-180`, GPT-6 Sol, exploratory). An economy of 180
