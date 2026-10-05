@@ -204,3 +204,8 @@ Read E1's [scientific closeout](reviews/E1-E0-01-post.md): the five unsafe purch
 ## R41-Q0 closeout — 2026-10-05
 
 [Authored post-mortem](reviews/R41-Q0-01-post.md) and [quality review](reviews/R41-Q0-01-quality-review.json): Q667physical/666valid/1lengthfailure/5blocked; full D1+Q750/756valid and26/27finals, all observed acceptable. Strict qualification failed. All667 exact wire/context/parent/score/cost records replayed. Original ledger27.348512/4284; Qactual.31244975, cumulative R41actual.351336575. Worker/relay stopped; grant closed and all stage authorities disabled. Main unfunded and not launched. FINISH / PARK; no automatic repair or successor.
+
+
+## R42 bounded continuation preparation — 2026-10-05
+
+Owner requested repair and continuation after R41 closeout. [Prospective plan](r42/PLAN.md):one same-wire retry of the known returned length failure, then five blocked descendants; six calls maximumUSD.034176. Preserve750valid imported reports and failed first-pass qualification. Eleven offline recovery/budget/duplicate/failure tests plus exact saved native-wire reconstruction pass. Scientific prompts/schema/model/scoring unchanged. Fresh30minute claim/hostingmaximum.04 and namedPIallocation pending. Main requires a separate amended admission decision; no calls dispatched.
