@@ -8,7 +8,7 @@ import { homedir } from 'node:os';
 import { fileURLToPath, pathToFileURL } from 'node:url';
 
 const here = dirname(fileURLToPath(import.meta.url));
-const [id, list = '0.1,0.5,0.9'] = process.argv.slice(2);
+const [id, list = '0.1,0.5,0.9', extra = ''] = process.argv.slice(2);   // extra: e.g. film=long or dur=24
 if (!id) { console.error('usage: node shot.mjs <scene id | film> <p or seconds, comma separated>'); process.exit(2); }
 const require = createRequire(resolve(process.env.PLAYWRIGHT_MODULES || join(homedir(), 'dmarz-brand-and-content-kit', 'node_modules'), 'x.js'));
 const { chromium } = require('playwright');
@@ -16,7 +16,7 @@ const browser = await chromium.launch({ headless: true, args: ['--use-angle=meta
 const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });
 page.on('console', m => { if (m.type() === 'error') console.log('page error:', m.text()); });
 page.on('pageerror', e => console.log('page exception:', e.message));
-await page.goto(pathToFileURL(join(here, 'index.html')).href + '?record' + (id === 'film' ? '' : '&only=' + id));
+await page.goto(pathToFileURL(join(here, 'index.html')).href + '?record' + (id === 'film' ? '' : '&only=' + id) + (extra ? '&' + extra : ''));
 await page.evaluate(() => document.fonts.ready);
 await page.evaluate(() => Promise.all([...document.fonts].map(f => f.load().catch(() => {}))));
 const meta = await page.evaluate(() => window.__meta);

@@ -22,9 +22,10 @@ def seconds(path):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument('--out', default=str(HERE / '_out' / 'vo')); ap.add_argument('--only', default='')
+    ap.add_argument('--script', default=str(HERE / 'narration.json'))
     ap.add_argument('--speed', type=float, default=None); ap.add_argument('--budget', type=float, default=114.0)
     args = ap.parse_args()
-    script = json.loads((HERE / 'narration.json').read_text())
+    script = json.loads(Path(args.script).read_text())
     voice, segs = script['voice'], script['segments']
     out = Path(args.out); out.mkdir(parents=True, exist_ok=True)
     only = set(filter(None, args.only.split(',')))

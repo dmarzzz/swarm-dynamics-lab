@@ -1,6 +1,6 @@
 """Fit the film to its narration, then lay the narration on the recorded picture.
 
-    python3 narrate.py time                       # scene seconds in index.html <- clip lengths in _out/vo/durations.json
+    python3 narrate.py time [--film long]         # scene seconds in index.html <- clip lengths in _out/vo/durations.json
     node record.mjs _out/picture.mp4              # silent picture at those timings
     python3 narrate.py mix _out/picture.mp4 _out/swarm-of-theseus-demo.mp4
 
@@ -13,17 +13,20 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).parent
-VO = HERE / '_out' / 'vo'
-LEAD, TAIL = 0.35, 0.45                       # silence before the voice starts in a scene, and after it ends
-FLOOR = {'team': 3.5, 'define': 5, 'questions': 7, 'method': 5, 'lab': 9, 'sybil': 18, 'result3': 18, 'theseus': 18, 'next': 12}
+FILM = sys.argv[sys.argv.index('--film') + 1] if '--film' in sys.argv else 'short'
+VO = HERE / '_out' / ('vo' if FILM == 'short' else 'vo-' + FILM)
+NARRATION = HERE / ('narration.json' if FILM == 'short' else f'narration-{FILM}.json')
+LEAD, TAIL = 0.25, 0.20                       # silence before the voice starts in a scene, and after it ends
+HOLD = {'sybil': 0.3}                         # extra seconds after the voice, where the last beat needs time on screen
+FLOOR = {'highlights': 5, 'why': 10, 'frame': 16, 'tracks': 9, 'stack': 12, 'roadmap1': 8, 'roadmap2': 8, 'roadmap3': 8, 'more': 8.0, 'team': 3.5, 'define': 5, 'questions': 7, 'method': 5, 'lab': 9, 'sybil': 18, 'result3': 18, 'theseus': 18, 'next': 12}
 
 
 def plan():
     d = json.loads((VO / 'durations.json').read_text())
-    order = [s['scene'] for s in json.loads((HERE / 'narration.json').read_text())['segments']]
+    order = [s['scene'] for s in json.loads(NARRATION.read_text())['segments']]
     out, t = [], 0.0
     for scene in order:
-        dur = round(max(FLOOR.get(scene, 4), d[scene] + LEAD + TAIL) * 30) / 30      # whole frames
+        dur = round(max(FLOOR.get(scene, 4), d[scene] + LEAD + TAIL + HOLD.get(scene, 0)) * 30) / 30      # whole frames
         out.append({'scene': scene, 'start': round(t, 4), 'dur': round(dur, 4), 'clip': d[scene]})
         t += dur
     return out, t
@@ -33,9 +36,9 @@ def time():
     scenes, total = plan()
     page = HERE / 'index.html'
     s = page.read_text()
-    a, b = s.index('  order: ['), s.index('  ],\n  fps:')
-    lines = ''.join(f"    ['{x['scene']}', {x['dur']:.4f}],\n" for x in scenes)
-    page.write_text(s[:a] + '  order: [\n' + lines + s[b:])
+    a = s.index(f'    {FILM}: ['); b = s.index('    ],\n', a)
+    lines = ''.join(f"      ['{x['scene']}', {x['dur']:.4f}],\n" for x in scenes)
+    page.write_text(s[:a] + f'    {FILM}: [\n' + lines + s[b:])
     for x in scenes: print(f"{x['scene']:10s} start {x['start']:7.2f}  scene {x['dur']:6.2f}  voice {x['clip']:6.2f}")
     print(f'total {total:.2f} s')
 

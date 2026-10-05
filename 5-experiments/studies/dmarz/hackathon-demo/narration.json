@@ -19,7 +19,7 @@
     },
     {
       "scene": "lab",
-      "text": "Then we built an autonomous research lab. Agents ran one hundred three experiments across twenty five remote servers: nearly sixteen hundred runs in sixteen hours, every step gated in C I."
+      "text": "Then we built an open source, mostly autonomous swarm research lab. Agents ran one hundred three experiments across twenty five remote servers: nearly sixteen hundred runs in sixteen hours, every step gated in C I."
     },
     {
       "scene": "sybil",

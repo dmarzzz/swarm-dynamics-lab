@@ -10,7 +10,11 @@
     founder: 'founder',
     newcomer: ['new-1', 'new-2', 'new-3'],
     left: (n) => n + ' of 3 founders left',
-    handed: 'newcomers inherit notes, mentoring, both, or neither',
+    handed: "newcomers get the team's notes, or nothing",
+    // the task: swarm-of-theseus RESULTS.md / scenes/theseus.data.js header (4 cases per step, majority answer scored);
+    // bin names are the study's own labels (notebook rule: XOR of two assay bits, 0 -> "dax", 1 -> "wug")
+    job: 'the job: sort 4 new cases at every step',
+    bins: ['dax', 'wug'],
     // chart
     yTitle: 'crew accuracy by step',
     stepWord: 'step',
@@ -29,17 +33,24 @@
     claim: 'A written note carried the job across a full turnover. Without it, the new crew guessed.',
     // limit: RESULTS.md intro + redesign/REVIEW.md ("supplied-procedure transmission baseline"), experiments/evidence-metadata.json rationale
     limit: 'Tested supplied procedures, not safety constraints. 36 runs, 6 synthetic worlds, one model.',
-    footer: 'swarm-of-theseus / vishesh / Claude Haiku 4.5, 36 runs',
+    footer: '3 agents per team / Claude Haiku 4.5 / swarm-of-theseus, 36 runs / vishesh',
   };
 
   // Beats, as fractions of the scene.
-  const SWAP = [[0.035, 0.085], [0.085, 0.135], [0.135, 0.185]];   // A: the three replacements
-  const AXES = [0.06, 0.20];                                       // chart frame is built while the crew turns over
-  const DRAW = [0.26, 0.56];                                       // B: the lines advance step 0 -> 5
-  const LABELS = [0.56, 0.63];
-  const HERO = [0.65, 0.73];                                       // C
-  const CLAIM = [0.74, 0.80];
-  const LIMIT = [0.82, 0.88];
+  const JOB = [0.03, 0.07];                                        // the job line, then the bins
+  const FLOW0 = [0.10, 0.27];                                      // first 4 cases go through the founders
+  const SWAP = [[0.30, 0.35], [0.35, 0.40], [0.40, 0.45]];         // A: the three replacements
+  const AXES = [0.15, 0.29];                                       // chart frame is built before the crew turns over
+  const DRAW = [0.40, 0.72];                                       // B: the lines advance step 0 -> 5
+  const BAND = [0.59, 0.65];
+  const LABELS = [0.69, 0.735];
+  const HERO = [0.72, 0.78];                                       // C
+  const VS = [0.79, 0.85];
+  const CLAIM = [0.86, 0.90];
+  const LIMIT = [0.91, 0.95];
+  // one flow of 4 cases per chart step, landing as the lines reach that step
+  const STEP_W = (DRAW[1] - DRAW[0]) / 5;
+  const FLOWS = [FLOW0].concat([0, 1, 2, 3, 4, 5].map((k) => [DRAW[0] + (k - 1) * STEP_W, DRAW[0] + k * STEP_W]));
 
   const NS = 'http://www.w3.org/2000/svg';
   function svg(tag, attrs, parent, text) {
@@ -53,7 +64,12 @@
   // chart geometry
   const X = (s) => 900 + s * 150;
   const Y = (v) => 780 - v * 5.0;
-  const SLOT_X = [200, 400, 600], SLOT_Y = 300, R = 44;
+  const SLOT_X = [310, 425, 540], SLOT_Y = 314, R = 32;
+  // the job: 4 cases wait left of the crew, pass through it, and land in two bins on the right
+  const CASE_IN = [201, 171, 141, 111];                            // inbox centres; the right-most case goes first
+  const CASE_ENTER = 250, CASE_EXIT = 604;                         // a case goes into the crew at one side and comes out the other
+  const BIN_Y = [SLOT_Y - 26, SLOT_Y + 26];
+  const CASE_BIN = [[683, 0], [683, 1], [653, 1], [653, 0]];       // landing slot x, bin index
   const ARMS = [
     { key: 'neither', color: 'var(--no)', w: 5 },
     { key: 'notes', color: 'var(--zip)', w: 5 },
@@ -69,8 +85,9 @@
         #scene-theseus .abs { position:absolute; white-space:nowrap; }
         #scene-theseus .t-kicker { left:100px; top:56px; }
         #scene-theseus .t-title { left:100px; top:88px; }
-        #scene-theseus .t-left { left:100px; top:410px; font-size:30px; color:var(--ink); }
-        #scene-theseus .t-slot { top:358px; width:160px; text-align:center; font-size:22px; color:var(--dim); }
+        #scene-theseus .t-job { left:100px; top:184px; font-size:28px; color:var(--ink); }
+        #scene-theseus .t-left { left:100px; top:408px; font-size:30px; color:var(--ink); }
+        #scene-theseus .t-slot { top:360px; width:110px; text-align:center; font-size:22px; color:var(--dim); }
         #scene-theseus .t-handed { left:100px; top:476px; width:640px; white-space:normal; font-size:24px; line-height:1.4; color:var(--dim); }
         #scene-theseus .t-hero { left:100px; top:455px; font-size:170px; color:var(--amber); }
         #scene-theseus .t-herolabel { left:104px; top:618px; font-size:28px; color:var(--ink); }
@@ -85,8 +102,9 @@
       const add = (cls, html) => ctx.el('div', 'abs ' + cls, html, root);
       add('f-kicker t-kicker', COPY.kicker);
       add('f-title t-title', COPY.title);
+      R_.job = add('t-job', COPY.job);
       R_.left = add('t-left', '');
-      R_.slotLabel = SLOT_X.map((x) => { const e = add('t-slot', COPY.founder); e.style.left = (x - 80) + 'px'; return e; });
+      R_.slotLabel = SLOT_X.map((x) => { const e = add('t-slot', COPY.founder); e.style.left = (x - 55) + 'px'; return e; });
       R_.handed = add('t-handed', COPY.handed);
       R_.hero = add('f-num t-hero', COPY.hero);
       R_.heroLabel = add('t-herolabel', COPY.heroLabel);
@@ -99,15 +117,28 @@
       const s = svg('svg', { width: 1920, height: 1080, viewBox: '0 0 1920 1080' }, root);
       R_.svg = s;
 
+      // the job: two bins right of the crew, and 4 cases that travel under the crew dots into them
+      R_.bins = svg('g', { opacity: 0 }, s);
+      BIN_Y.forEach((yb, i) => {
+        svg('path', { d: 'M636,' + (yb - 16) + ' H700 V' + (yb + 16) + ' H636', fill: 'none', stroke: 'var(--dim)', 'stroke-width': 1.5 }, R_.bins);
+        svg('text', { x: 712, y: yb + 8, 'font-size': 22, fill: 'var(--dim)' }, R_.bins, COPY.bins[i]);
+      });
+      R_.cases = CASE_IN.map(() => {
+        const cg = svg('g', { opacity: 0 }, s);
+        svg('rect', { x: -11, y: -11, width: 22, height: 22, fill: 'var(--void)', stroke: 'var(--bone)', 'stroke-width': 2 }, cg);
+        const check = svg('polyline', { points: '-6,0 -2,5 6,-5', fill: 'none', stroke: 'var(--zip)', 'stroke-width': 3, 'stroke-linecap': 'round', 'stroke-linejoin': 'round', opacity: 0 }, cg);
+        return { g: cg, check };
+      });
+
       // crew: three slots. Founder dot, replacement dot and the note that travels between them.
       R_.crew = SLOT_X.map((x) => {
-        svg('circle', { cx: x, cy: SLOT_Y, r: R + 8, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 1, opacity: 0.35 }, s);
+        const ring = svg('circle', { cx: x, cy: SLOT_Y, r: R + 8, fill: 'none', stroke: 'var(--dim)', 'stroke-width': 1, opacity: 0.35 }, s);
         const old = svg('circle', { cx: x, cy: SLOT_Y, r: R, fill: 'var(--bone)' }, s);
         const neu = svg('circle', { cx: x, cy: SLOT_Y, r: R, fill: 'var(--zip)', opacity: 0 }, s);
         const note = svg('g', { opacity: 0 }, s);
         svg('rect', { x: -15, y: -19, width: 30, height: 38, fill: 'var(--void)', stroke: 'var(--amber)', 'stroke-width': 2.5 }, note);
         for (let i = 0; i < 3; i++) svg('line', { x1: -8, x2: 8, y1: -9 + i * 9, y2: -9 + i * 9, stroke: 'var(--amber)', 'stroke-width': 2 }, note);
-        return { x, old, neu, note };
+        return { x, old, neu, note, ring };
       });
 
       // chart frame
@@ -159,15 +190,15 @@
         const arrive = ctx.out(ctx.clamp((u - 0.35) / 0.65));
         c.old.setAttribute('cy', SLOT_Y + 0 * leave);
         c.old.setAttribute('cx', c.x);
-        c.old.setAttribute('r', ctx.lerp(R, 14, leave));
-        c.old.setAttribute('transform', 'translate(' + (-86 * leave) + ',' + (26 * leave) + ')');
+        c.old.setAttribute('r', ctx.lerp(R, 9, leave));
+        c.old.setAttribute('transform', 'translate(' + (-57 * leave) + ',' + (30 * leave) + ')');
         c.old.setAttribute('opacity', ctx.lerp(1, 0.22, leave));
-        c.neu.setAttribute('cy', ctx.lerp(SLOT_Y - 90, SLOT_Y, arrive));
+        c.neu.setAttribute('cy', ctx.lerp(SLOT_Y - 50, SLOT_Y, arrive));
         c.neu.setAttribute('opacity', arrive);
         // note: appears on the leaver, travels up to the newcomer, settles beside it
         const n = ctx.ease(ctx.clamp((u - 0.2) / 0.6));
-        const nx = ctx.lerp(c.x - 86, c.x + 64, n), ny = ctx.lerp(SLOT_Y + 26, SLOT_Y - 36, n);
-        c.note.setAttribute('transform', 'translate(' + nx + ',' + ny + ') scale(' + ctx.lerp(1.2, 0.9, n) + ')');
+        const nx = ctx.lerp(c.x - 57, c.x + 44, n), ny = ctx.lerp(SLOT_Y + 22, SLOT_Y - 40, n);
+        c.note.setAttribute('transform', 'translate(' + nx + ',' + ny + ') scale(' + ctx.lerp(1.1, 0.9, n) + ')');
         c.note.setAttribute('opacity', u <= 0 ? 0 : ctx.clamp(u / 0.15) * ctx.lerp(1, 0.55, ctx.clamp((u - 0.85) / 0.15)));
         R_.slotLabel[i].textContent = u > 0.5 ? COPY.newcomer[i] : COPY.founder;
         R_.slotLabel[i].style.color = u > 0.5 ? 'var(--zip)' : 'var(--dim)';
@@ -175,13 +206,44 @@
       });
       R_.left.textContent = COPY.left(founders);
 
+      // the job: the line, the bins, then 4 cases per flow. Each flow clears the bins, refills the inbox and sorts.
+      R_.job.style.opacity = ctx.seg(p, JOB[0], JOB[1]);
+      R_.bins.setAttribute('opacity', ctx.seg(p, JOB[1] - 0.01, JOB[1] + 0.03));
+      let fi = -1;
+      FLOWS.forEach((f, i) => { if (p >= f[0]) fi = i; });
+      const fu = fi < 0 ? 0 : ctx.lin(p, FLOWS[fi][0], FLOWS[fi][1]);
+      let busy = 0;                                                  // a case is inside the crew: the rings light up
+      R_.cases.forEach((c, k) => {
+        const bx = CASE_BIN[k][0], by = BIN_Y[CASE_BIN[k][1]];
+        let x = bx, y = by, op = 0, chk = 0;
+        if (fi >= 0 && fu < 0.12) {                                  // last flow's cases leave the bins
+          op = fi === 0 ? 0 : 1 - fu / 0.12; chk = 1;
+        } else if (fi >= 0) {
+          const v = ctx.clamp((fu - 0.20 - k * 0.11) / 0.45);
+          if (v < 0.46) {                                            // inbox -> into the crew
+            x = ctx.lerp(CASE_IN[k], CASE_ENTER, ctx.ease(ctx.clamp(v / 0.30))); y = SLOT_Y;
+            op = ctx.clamp((fu - 0.12) / 0.08) * (1 - ctx.clamp((v - 0.22) / 0.08));
+          } else {                                                   // out of the crew -> its bin
+            const w = ctx.out((v - 0.46) / 0.49 > 1 ? 1 : (v - 0.46) / 0.49);
+            x = ctx.lerp(CASE_EXIT, bx, w); y = ctx.lerp(SLOT_Y, by, ctx.clamp(w / 0.35));
+            op = ctx.clamp((v - 0.46) / 0.05);
+          }
+          busy = Math.max(busy, ctx.clamp((v - 0.22) / 0.08) * (1 - ctx.clamp((v - 0.46) / 0.06)));
+          chk = ctx.clamp((v - 0.93) / 0.07);
+        }
+        c.g.setAttribute('transform', 'translate(' + x + ',' + y + ')');
+        c.g.setAttribute('opacity', op);
+        c.check.setAttribute('opacity', 0);   // no per-case checks: accuracy was not 4 of 4 at every step, the chart carries it
+      });
+      R_.crew.forEach((c) => c.ring.setAttribute('opacity', ctx.lerp(0.35, 1, busy)));
+
       // the one-line label arrives with the first swap and steps back for the takeaway
       const toHero = ctx.seg(p, HERO[0] - 0.03, HERO[0]);
-      R_.handed.style.opacity = ctx.seg(p, 0.03, 0.07) * (1 - toHero);
-      const calm = ctx.seg(p, 0.22, 0.27);
+      R_.handed.style.opacity = ctx.seg(p, SWAP[0][0], SWAP[0][0] + 0.04) * (1 - toHero);
+      const calm = ctx.seg(p, 0.46, 0.50);
       R_.crew.forEach((c) => { c.note.style.filter = calm > 0.5 ? 'grayscale(1)' : 'none'; });
 
-      // chart frame builds during A
+      // chart frame builds before A
       const ax = ctx.seg(p, AXES[0], AXES[1]);
       R_.frame.setAttribute('opacity', ax);
       R_.yAxis.setAttribute('y2', ctx.lerp(Y(0), Y(100), ax));
@@ -192,7 +254,7 @@
       const r = ctx.lin(p, DRAW[0], DRAW[1]) * 5;                    // 0..5, current step position
       const started = ctx.seg(p, DRAW[0] - 0.02, DRAW[0]);
       R_.clip.setAttribute('width', started ? (X(r) - 860 + 6) : 0);
-      const band = ctx.seg(p, 0.44, 0.50);
+      const band = ctx.seg(p, BAND[0], BAND[1]);
       R_.band.setAttribute('opacity', 0.06 * band);
       R_.bandLabel.setAttribute('opacity', band);
       R_.lines.forEach((l, i) => l.label.setAttribute('opacity', ctx.seg(p, LABELS[0] + 0.012 * i, LABELS[1] + 0.012 * i)));
@@ -201,7 +263,7 @@
       const hero = ctx.seg(p, HERO[0], HERO[1]);
       R_.hero.style.opacity = hero;
       R_.heroLabel.style.opacity = ctx.seg(p, HERO[0] + 0.02, HERO[1] + 0.02);
-      const vs = ctx.seg(p, HERO[0] + 0.04, HERO[1] + 0.04);
+      const vs = ctx.seg(p, VS[0], VS[1]);
       R_.vs.style.opacity = vs; R_.vsLabel.style.opacity = vs;
       R_.claim.style.opacity = ctx.seg(p, CLAIM[0], CLAIM[1]);
       R_.limit.style.opacity = ctx.seg(p, LIMIT[0], LIMIT[1]);

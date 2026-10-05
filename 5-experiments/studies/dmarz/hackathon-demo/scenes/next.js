@@ -20,7 +20,7 @@
       // The script's 214 / 215 is the older atlas count (synthesis/research-question-atlas.md line 5 still says 214).
       tested: 12,
       total: 219,
-      unit: 'hypotheses tested so far',
+      unit: 'candidates cited by an experiment so far',
       // Position in the atlas (0-based, candidates.json order) of each tested candidate:
       // PHY-09 SOC-02 SOC-07 SOC-08 SOC-24 SEC-19 SEC-43 SEC-47 SEC-52 SEC-54 MKT-03 MKT-11 (hypotheses.json "tested": true).
       // If this list does not have exactly `tested` entries, the first `tested` squares are filled instead.
@@ -28,7 +28,7 @@
     },
 
     step3: {
-      label: 'Scale from ~200 agents to 2,000 across a wider network',
+      label: 'Scale from ~200 agents to 2,000, enough to recreate the Hugging Face scenario',
       // now = 200. Largest swarm actually run: 5-experiments/studies/vishesh/regrowth-200/README.md
       // ("200 cell identities, 80 rounds", 6 of 6 worlds; exploratory, one map). Largest with a full-size API model:
       // 5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md (180 gpt-6-sol owners, two economies).
@@ -39,7 +39,7 @@
       // target = 2000 is a plan, not a result (the script's own number).
       target: 2000,
       targetUnit: 'agents',
-      targetNote: 'next',
+      targetNote: 'the incident: about 1,200',   // METR's count for the Hugging Face incident (INTRO-FACTS.md)
     },
 
     card: {

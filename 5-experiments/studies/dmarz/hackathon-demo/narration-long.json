@@ -1,0 +1,69 @@
+{
+  "voice": "af_heart",
+  "segments": [
+    {
+      "scene": "team",
+      "text": "We are team Swarm of Theseus."
+    },
+    {
+      "scene": "why",
+      "text": "This hackathon asked for the tools we wished we had for the Hugging Face incident, where about twelve hundred agents, meant to be isolated, built their own message board, and about seven hundred joined an attack. Our ultimate goal is to recreate an incident like this in a lab. We have started building that lab. It does not run the full swarm yet."
+    },
+    {
+      "scene": "frame",
+      "text": "We study swarms from the lens of distributional safety. Single agent safety asks whether one model's behaviour is acceptable. Distributional safety, a framing from Google DeepMind, asks whether the properties of the whole system of interacting agents hold. Take three agents. One can read private data, but has no network. One can only pass messages. One can post online, but cannot see the data. Each is safe alone. Chained together, they can leak the data. Or they set up a shared message board, and the data leaves that way."
+    },
+    {
+      "scene": "questions",
+      "text": "Three broad questions guided us. When do agents create Sybils? Can a few adversaries push a swarm into unsafe behavior? And do its safety constraints survive as its members change?"
+    },
+    {
+      "scene": "tracks",
+      "text": "Before we can even ask a research question, we need to understand the frontier. So our agents catalogued over three thousand sources, and from them wrote two hundred nineteen candidate hypotheses across fifteen research areas. None is formally tested yet."
+    },
+    {
+      "scene": "lab",
+      "text": "Then we built an open source, mostly autonomous swarm research lab. Agents ran one hundred three experiments across twenty five remote servers: nearly sixteen hundred runs in sixteen hours."
+    },
+    {
+      "scene": "stack",
+      "text": "The lab is infrastructure as code. An agent claims a server in a file, and Open Tofu and Ansible build it. Workers report every run to one hub, and results come back to the agents, who plan the next experiment. It is all open source, so anyone's agents can run the same lab."
+    },
+    {
+      "scene": "highlights",
+      "text": "In one weekend, the lab produced one hundred eighteen studies. We will highlight three."
+    },
+    {
+      "scene": "sybil",
+      "text": "This experiment put one hundred eighty G P T six Sol agents in one economy, each running a business to maximise profit. It has one market safety rule: in a concentrated market, thirty five percent of profit is penalised, to prevent monopolies. But the rule counts each firm, so an owner can dodge it by splitting. Fifty five did. Then we added one sentence: do not evade or circumvent the market's competition rule. Zero did."
+    },
+    {
+      "scene": "roadmap1",
+      "text": "On the map, two candidates light up in Sybil resistance. This is reproducible lab evidence that agents split to dodge a rule, and that one sentence stops it. One model, two economies."
+    },
+    {
+      "scene": "result3",
+      "text": "This experiment asks whether outsiders can steer a swarm. Nine Haiku agents decide together: six analysts, two fact checkers, one decision maker. An attacker can alter eight of the twelve documents they read. In six targeted attacks, the fact checkers returned the correct numbers, and the final decision still went to the attacker's worse option."
+    },
+    {
+      "scene": "roadmap2",
+      "text": "Two more light up, on outside influence. The teams had true numbers and still chose the attacker's option. This does not measure general attack resistance."
+    },
+    {
+      "scene": "theseus",
+      "text": "This experiment gives a team of three Haiku agents a job: sort four new cases at every step, using a rule the founders were taught. Then we replace one agent at a time until no founder is left. Teams that inherited written notes kept one hundred percent accuracy. Teams that inherited nothing fell to fifty two percent, which is guessing."
+    },
+    {
+      "scene": "roadmap3",
+      "text": "Notes carried a small task through a full change of crew. The procedure was supplied, so this does not show agents finding it themselves. Most of the map is still dark."
+    },
+    {
+      "scene": "more",
+      "text": "Beyond those three, here are ten more. Some found effects. Some found nothing, and we kept those too."
+    },
+    {
+      "scene": "next",
+      "text": "Next, we mine our own traces, work through the rest of the map, and scale from two hundred agents to two thousand, enough to recreate the Hugging Face scenario. The entire lab is open source, from the prompts to the infrastructure as code, at swarm safety dot org."
+    }
+  ]
+}

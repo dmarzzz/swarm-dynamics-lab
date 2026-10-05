@@ -17,7 +17,7 @@ const COPY = {
     hero: '6 of 6',                                          // quality-post.md: "All six targeted-check misleading/syndication cases show this discrepancy."
     heroLabel: 'targeted attacks won, even after the checkers were right',
     foot: '50 team decisions, 750 model calls, Claude Haiku 4.5, synthetic tasks', // quality-post.md S1: 50 outcomes, 750 calls; model-config.json
-    footer: 'external-influence-v2 / vishesh',
+    footer: '9 agents per team / Claude Haiku 4.5 / external-influence-v2, 50 team decisions / vishesh',
   },
   picks: {
     // Research question 3 (swarm size). Source: 5-experiments/studies/vishesh/optimal-swarm-size/reviews/q-a6-post.md

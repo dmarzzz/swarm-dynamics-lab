@@ -3,7 +3,7 @@
 (() => {
   const COPY = {
     kicker: 'how we worked',
-    title: 'An autonomous swarm research lab',
+    title: 'An open source, mostly-autonomous swarm research lab',
     // every count below is read from FILM.data.lab; the comment names the file that proves it
     sourcesUnit: 'sources',                       // library/<type>/*.md, one file per source (3,319); one dot = 5 sources
     sourcesLine: ['papers, X threads, code,', 'blogs, talks, datasets'],
@@ -39,7 +39,7 @@
       this.C = { ink: v('--ink'), dim: v('--dim'), amber: v('--amber'), zip: v('--zip'), no: v('--no') };
       const cv = ctx.el('canvas', '', null, root); cv.width = 1920; cv.height = 1080; this.g = cv.getContext('2d');
       const A = (cls, html, x, y) => { const e = ctx.el('div', 'abs ' + cls, html, root); e.style.left = x + 'px'; e.style.top = y + 'px'; return e; };
-      A('f-kicker', COPY.kicker, 100, 56); A('f-title', COPY.title, 100, 88);
+      A('f-kicker', COPY.kicker, 100, 56); A('f-title', COPY.title, 100, 92).style.fontSize = '50px';   // the long title fits at 50px
 
       // hero numbers, one short label each
       const F = D.fleet, U = (txt, x) => A('f-small unit', txt, x, 276);

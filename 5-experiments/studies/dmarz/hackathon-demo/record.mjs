@@ -1,6 +1,6 @@
 // Record the film frame by frame (the page is a pure function of time) and encode h264 + silent aac, faststart.
 // Frames are piped straight into ffmpeg in order, so nothing but the mp4 touches the disk.
-//   node record.mjs [out.mp4] [--jobs 6] [--only <scene id>]
+//   node record.mjs [out.mp4] [--jobs 6] [--only <scene id>] [--film long]
 import { createRequire } from 'node:module';
 import { spawn } from 'node:child_process';
 import { mkdirSync } from 'node:fs';
@@ -12,11 +12,11 @@ const here = dirname(fileURLToPath(import.meta.url));
 const args = process.argv.slice(2);
 const flag = (name, fallback) => { const i = args.indexOf('--' + name); return i < 0 ? fallback : args[i + 1]; };
 const outPath = resolve(args[0] && !args[0].startsWith('--') ? args[0] : join(here, '_out', 'swarm-of-theseus-demo.mp4'));
-const jobs = parseInt(flag('jobs', '6'), 10), only = flag('only', '');
+const jobs = parseInt(flag('jobs', '6'), 10), only = flag('only', ''), film = flag('film', '');
 const require = createRequire(resolve(process.env.PLAYWRIGHT_MODULES || join(homedir(), 'dmarz-brand-and-content-kit', 'node_modules'), 'x.js'));
 const { chromium } = require('playwright');
 
-const url = pathToFileURL(join(here, 'index.html')).href + '?record' + (only ? '&only=' + only : '');
+const url = pathToFileURL(join(here, 'index.html')).href + '?record' + (film ? '&film=' + film : '') + (only ? '&only=' + only : '');
 const browser = await chromium.launch({ headless: true, args: ['--use-angle=metal', '--enable-gpu', '--ignore-gpu-blocklist', '--allow-file-access-from-files'] });
 const open = async () => {
   const page = await browser.newPage({ viewport: { width: 1920, height: 1080 }, deviceScaleFactor: 1 });

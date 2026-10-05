@@ -6,7 +6,7 @@
   film: Swarm of Theseus, hackathon submission (2 minutes). Silent picture; Dan narrates over it.
   One scene per script beat, each a classic script in scenes/. The page is a pure function of time (window.__seek).
   Contract: README.md. Order and durations: FILM.order below.
-  ?only=<id> one scene   ?t=<seconds> start there   ?record no UI, no autoplay (shot.mjs, record.mjs)
+  ?film=long the 4-minute cut   ?only=<id> one scene (&dur=<seconds>)   ?t=<seconds> start there   ?record no UI, no autoplay
 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Swarm of Theseus</title>
@@ -35,6 +35,12 @@ html, body { margin: 0; height: 100%; background: var(--void); overflow: hidden;
 #mark { position: absolute; z-index: 5; overflow: hidden; pointer-events: none; }
 #mark video { position: absolute; left: 0; top: 0; }
 body.record #mark { display: none; }
+/* link chip: a result scene's page on the site, as text and a QR, top right (data in scenes/links.data.js) */
+.linkchip { position: absolute; left: 0; top: 0; width: 1920px; height: 0; opacity: 0; }
+.linkchip .qr { position: absolute; left: 1670px; top: 56px; width: 150px; height: 150px; background: var(--bone); padding: 12px; }
+.linkchip .qr svg { display: block; width: 126px; height: 126px; }
+.linkchip .t { position: absolute; right: 270px; top: 58px; font-size: 20px; line-height: 1.2; color: var(--ink); white-space: nowrap; text-align: right; }
+.linkchip .t i { font-style: normal; color: var(--dim); }
 .missing { left: 100px; top: 500px; color: var(--dim); font-size: 28px; }
 /* player chrome: outside the film, never recorded */
 #ui { position: fixed; left: 0; right: 0; bottom: 0; height: 34px; font: 12px/34px var(--mono); color: var(--dim);
@@ -54,17 +60,39 @@ const Q = new URLSearchParams(location.search);
 const RECORD = Q.has('record');
 window.FILM = {
   // [scene id, seconds]. Change a number to retime, reorder lines to reorder, set 0 to drop a scene.
-  order: [
-    ['team', 3.5000],
-    ['define', 7.8000],
-    ['questions', 10.5333],
-    ['method', 7.8333],
-    ['lab', 12.3333],
-    ['sybil', 24.1667],
-    ['result3', 19.8333],
-    ['theseus', 20.7000],
-    ['next', 14.1667],
-  ],
+  // Two cuts share the scenes: ?film=short (the 2-minute submission, default) and ?film=long (the 4-minute version).
+  // [scene id, seconds]. `python3 narrate.py time --film <name>` rewrites a cut's seconds from its narration clips.
+  films: {
+    short: [
+      ['team', 3.5000],
+      ['define', 7.8000],
+      ['questions', 10.5333],
+      ['method', 7.8333],
+      ['lab', 12.3333],
+      ['sybil', 24.1667],
+      ['result3', 19.8333],
+      ['theseus', 20.7000],
+      ['next', 14.1667],
+    ],
+    long: [
+      ['team', 3.5000],
+      ['why', 19.3000],
+      ['frame', 29.9333],
+      ['questions', 11.2333],
+      ['tracks', 15.8667],
+      ['lab', 12.2667],
+      ['stack', 17.6667],
+      ['highlights', 5.2333],
+      ['sybil', 24.8333],
+      ['roadmap1', 11.7333],
+      ['result3', 20.3333],
+      ['roadmap2', 9.6333],
+      ['theseus', 20.2000],
+      ['roadmap3', 10.1333],
+      ['more', 8.0000],
+      ['next', 15.7000],
+    ],
+  },
   fps: 30,
   fade: 0.35,
   mark: { x: 1782, y: 944, size: 120 },   // the rotating cube; the loop keeps the cube in the top-left 380 px of a 720 px frame
@@ -81,6 +109,8 @@ window.FILM = {
 <script src="scenes/sybil.data.js" onerror="0"></script><script src="scenes/sybil.js" onerror="0"></script>
 <script src="scenes/theseus.data.js" onerror="0"></script><script src="scenes/theseus.js" onerror="0"></script>
 <script src="scenes/result3.data.js" onerror="0"></script><script src="scenes/result3.js" onerror="0"></script>
+<script src="scenes/why.js" onerror="0"></script><script src="scenes/frame.js" onerror="0"></script><script src="scenes/roadmap.data.js" onerror="0"></script><script src="scenes/roadmap.js" onerror="0"></script><script src="scenes/stack.js" onerror="0"></script><script src="scenes/more.data.js" onerror="0"></script><script src="scenes/more.js" onerror="0"></script>
+<script src="scenes/links.data.js" onerror="0"></script><script src="scenes/highlights.js" onerror="0"></script>
 <script src="scenes/next.data.js" onerror="0"></script><script src="scenes/next.js" onerror="0"></script>
 <script>
 (() => {
@@ -112,8 +142,10 @@ window.FILM = {
   };
 
   const only = Q.get('only');
+  FILM.order = FILM.films[Q.get('film') || 'short'] || FILM.films.short;
   let order = FILM.order.filter(([id, d]) => only ? id === only : d > 0);
-  if (only && !order.length) order = [[only, 10]];
+  if (only && !order.length) order = [[only, parseFloat(Q.get('dur') || '10')]];
+  if (only && Q.get('dur')) order[0] = [only, parseFloat(Q.get('dur'))];
   if (only && order[0][1] <= 0) order[0][1] = 25;
   let T0 = 0;
   const scenes = order.map(([id, dur]) => { const s = { id, dur, start: T0 }; T0 += dur; return s; });
@@ -125,6 +157,12 @@ window.FILM = {
     s.def = FILM.defs[s.id];
     try { if (s.def) s.def.mount(s.root, s.ctx); else base.el('div', 'missing', 'scene "' + s.id + '" is not built yet', s.root); }
     catch (e) { console.error(s.id, e); s.def = null; base.el('div', 'missing', s.id + ': ' + e.message, s.root); }
+    const link = (FILM.data.links || {})[s.id];
+    // inline styles: a scene's own `svg` / `div` rules must not restyle the chip
+    if (link) s.chip = base.el('div', 'linkchip', `<div class="t" style="position:absolute;left:auto;right:270px;top:58px;width:auto;height:auto;font:20px/1.2 var(--mono);opacity:1">` +
+      `<i>result page&nbsp; </i>${link.text}</div><div class="qr" style="position:absolute;left:1670px;top:56px;width:150px;height:150px;opacity:1">` +
+      `<svg viewBox="0 0 ${link.n} ${link.n}" shape-rendering="crispEdges" style="position:static;display:block;width:126px;height:126px;left:auto;top:auto;opacity:1;overflow:hidden">` +
+      `<path stroke="#03050a" stroke-width="1" fill="none" d="${link.d}" style="opacity:1"/></svg></div>`, s.root);
   }
 
   let now = 0;
@@ -137,6 +175,7 @@ window.FILM = {
       s.wasOn = true;
       const f = only ? 1 : Math.min(ease(t / FILM.fade), ease((s.dur - t) / FILM.fade));
       s.root.style.opacity = f;
+      if (s.chip) s.chip.style.opacity = ease((t - 1.2) / 0.6);
       if (s.def) try { s.def.update(t / s.dur, t, s.ctx); } catch (e) { if (!s.err) console.error(s.id, e); s.err = e; }
     }
     head.style.left = (T / duration * 100) + '%';
