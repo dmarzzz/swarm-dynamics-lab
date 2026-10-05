@@ -52,6 +52,12 @@ class RuntimeTest(unittest.TestCase):
    with self.assertRaisesRegex(r.Stop,'relay_wire'):
     relay.send(c.encoded(item['wire'])+b' ',r.key(root),item['node']['id'],lambda raw:calls.append(raw))
    self.assertEqual(calls,[]);self.assertTrue(relay.stopped)
+ def test_actual_diagnostic_only_grant(self):
+  with tempfile.TemporaryDirectory()as tmp:
+   base=Path(tmp);one=self.setup_session(base)
+   with r.database(base/'original.sqlite')as db:db.execute('UPDATE r41_scope SET maximum_model=?,max_calls=?',(.478464,84))
+   two=r.Session(c.corpus(),base/'diagnostic',base/'original.sqlite','actual-D1','R41-D1','fixture-source','fixture-manifest',{'reserved':23.070816,'calls':3533},one.until,interval=0)
+   records,summary=two.run(self.transport(two));self.assertEqual(summary['calls'],84);self.assertTrue(i.partial_qualification(c.corpus(),records,'R41-D1')['qualified']);self.assertAlmostEqual(summary['new_reserved_usd'],.478464)
  def test_route_failure_stops_and_keeps_cost(self):
   with tempfile.TemporaryDirectory()as tmp:
    s=self.setup_session(Path(tmp));ordinary=self.transport(s)

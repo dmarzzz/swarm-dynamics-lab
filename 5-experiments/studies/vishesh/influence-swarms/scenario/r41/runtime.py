@@ -43,7 +43,7 @@ class Session:
   self.roots=i.schedule(cases,stage);self.lookup={key(x):x for x in self.roots};self.out=Path(out);self.out.mkdir(mode=0o700);self.ledger=str(ledger);self.attempt=attempt;self.stage=stage;self.source=source;self.manifest=manifest;self.until=until;self.maximum={'R41-D1':84,'R41-Q0':672,'R41-E0':2988}[stage];self.count=0;self.stopped=False;self.failure=None;self.lock=threading.RLock();self.next_start=0.;self.interval=interval
   with database(ledger) as db:
    row=db.execute('SELECT cap,reserved,calls FROM budget WHERE id=1').fetchone();require(row and row[0]==50 and abs(row[1]-expected['reserved'])<1e-8 and row[2]==expected['calls'],'original_budget_drift')
-   grant=db.execute('SELECT source,manifest,maximum_model,model_debited,max_calls,calls,status FROM r41_scope WHERE grant_id=?',(GRANT,)).fetchone();require(grant and grant[0]==source and grant[1]==manifest and grant[2]==MAXIMUM_MODEL and grant[4]==MAX_CALLS and grant[6]=='funded','source_bound_finite_grant')
+   grant=db.execute('SELECT source,manifest,maximum_model,model_debited,max_calls,calls,status FROM r41_scope WHERE grant_id=?',(GRANT,)).fetchone();require(grant and grant[0]==source and grant[1]==manifest and 0<grant[2]<=MAXIMUM_MODEL and 0<grant[4]<=MAX_CALLS and grant[6]=='funded','source_bound_finite_grant')
    require(db.execute('SELECT count(*) FROM b1_dispatch WHERE attempt=?',(attempt,)).fetchone()[0]==0,'attempt_reuse')
   save(self.out/'start.json',{'attempt':attempt,'stage':stage,'source':source,'manifest':manifest,'maximum':self.maximum,'expected_budget':expected,'until':until,'retries':0})
   save(self.out/'assignments.json',[{'root':key(r),'case_id':r.case['id'],'repetition':r.repetition,'nodes':r.nodes} for r in self.roots])

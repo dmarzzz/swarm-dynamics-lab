@@ -35,3 +35,8 @@ Diagnostic: structural coverage, row identity, final eligibility/avoidance of un
 ## Resource envelope and unresolved gates
 
 At the existing conservativeUSD.005696perrequest, D1≤USD.478464; remaining Q≤USD3.827712; conditional main≤USD17.020672. Total prospective repaired cycle3744calls/≤USD21.326848, not automatically available from the failed grant. Original exposure after failedQ isUSD23.070816/3533calls; worst-case combined model exposure44.397664 under50, plus the one existing finite hosting ceilingUSD.50 counted once. Exact wire bounds must pass; revise downward if possible, never silently exceed a cap. No new machine or hosting extension. Request a named finite reassignment/allocation from the PI after freeze. Current admission and original ledger remain binding; zero new calls are authorized by this document.
+
+
+### Operational funding amendment — 2026-10-05
+
+Only the84-call D1 diagnostic is allocated (maximumUSD.478464model); later stages remain unfunded. The runtime now accepts the actual partial grant rather than requiring a funded full-cycle row. An original-ledger stage trigger also denies an85th D1 call, unfunded Q0/E0, wrong source/manifest and excess cost with atomic rollback. Prompts, schema, dossiers, scoring and request bytes remain unchanged fromc8e4e6e2. This integration-only correction is within the delivered D1 funding authority; no paid attempt has run under the superseded preflight. All previous costs and the failed R40grant remain recorded.

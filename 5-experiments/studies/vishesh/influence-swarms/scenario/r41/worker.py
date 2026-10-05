@@ -7,7 +7,7 @@ def read(path):return json.loads(Path(path).read_text())
 def sha(path):return hashlib.sha256(Path(path).read_bytes()).hexdigest()
 def main():
  os.umask(0o077);parser=argparse.ArgumentParser();parser.add_argument('--admission',required=True);parser.add_argument('--out',required=True);parser.add_argument('--execute',action='store_true');args=parser.parse_args();a=read(args.admission)
- r.require(a['stage']in('R41-D1','R41-Q0','R41-E0') and a['authority'].startswith('PI-FUND-') and a['maximum_model_usd']==r.MAXIMUM_MODEL,'named_finite_scope')
+ r.require(a['stage']in('R41-D1','R41-Q0','R41-E0') and a['authority'].startswith('PI-FUND-') and 0<a['maximum_model_usd']<=r.MAXIMUM_MODEL,'named_finite_scope')
  r.require(a['manifest_sha256']==sha(H/'manifest.json'),'manifest');manifest=read(H/'manifest.json')
  for name,digest in manifest['source_hashes'].items():r.require(sha(ROOT/name)==digest,'runtime_hash')
  r.require(a['source']==subprocess.check_output(['git','rev-parse','HEAD'],cwd=ROOT,text=True).strip() and not subprocess.check_output(['git','status','--porcelain','--untracked-files=no'],cwd=ROOT,text=True).strip(),'source')
@@ -16,7 +16,7 @@ def main():
  rows=subprocess.check_output(['ps','-eo','pid=,comm='],text=True).splitlines();r.require(not[x for x in rows if len(x.split())==2 and x.split()[1].startswith(('python','node','uvicorn','gunicorn')) and int(x.split()[0])!=os.getpid()],'worker_idle');r.require(not subprocess.check_output(['docker','ps','-q'],text=True).strip(),'containers_idle')
  with r.database(LEDGER)as db:
   budget=db.execute('SELECT cap,reserved,calls FROM budget WHERE id=1').fetchone();scope=db.execute('SELECT source,manifest,maximum_model,model_debited,max_calls,calls,status FROM r41_scope WHERE grant_id=?',(r.GRANT,)).fetchone()
- r.require(budget[0]==50 and abs(budget[1]-a['budget'][1])<1e-8 and budget[2]==a['budget'][2] and scope and scope[0]==a['source'] and scope[1]==a['manifest_sha256'] and scope[2]==r.MAXIMUM_MODEL and scope[4]==r.MAX_CALLS and scope[6]=='funded','ledger')
+ r.require(budget[0]==50 and abs(budget[1]-a['budget'][1])<1e-8 and budget[2]==a['budget'][2] and scope and scope[0]==a['source'] and scope[1]==a['manifest_sha256'] and scope[2]==a['maximum_model_usd'] and scope[4]==a['allocated_calls'] and 0<scope[4]<=r.MAX_CALLS and scope[6]=='funded','ledger')
  plan='https://github.com/dmarzzz/swarm-lab/blob/'+a['source']+'/'+str((H/'PLAN.md').relative_to(ROOT));r.require(a['public_plan']==plan,'plan_url')
  with urllib.request.urlopen(plan.replace('github.com/dmarzzz/swarm-lab/blob/','raw.githubusercontent.com/dmarzzz/swarm-lab/'),timeout=25)as response:r.require(response.read()==(H/'PLAN.md').read_bytes(),'public_plan_bytes')
  for heading in ('## TLDR','## Question and prediction','## Setup','## Protocol','## Metrics'):r.require(heading in (H/'PLAN.md').read_text(),'plan_sections')

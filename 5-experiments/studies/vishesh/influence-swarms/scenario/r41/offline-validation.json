@@ -1,12 +1,12 @@
 {
   "kind": "OFFLINE SOFTWARE FIXTURES \u2014 NOT MODEL EVIDENCE",
-  "checked_utc": "2026-10-05T00:03:47.651400+00:00",
-  "tests": 21,
+  "checked_utc": "2026-10-05T00:14:35.312607+00:00",
+  "tests": 24,
   "passed": true,
-  "elapsed_seconds": 9.916,
+  "elapsed_seconds": 10.518,
   "maximal_nested_wire_bytes": 32108,
   "ceiling_bytes": 32768,
-  "manifest_sha256": "b2690d412650cc56c0ef79ba5c093f730bdbe9ec12de0d217694ef8de3545e4d",
+  "manifest_sha256": "1a270ff92a67bbf09031c2c37a6e3afc7128d96f60694871182ff838b2a1173f",
   "native_calls": 0,
   "checks": [
     "fixed slots reject omitted/extra/wrong identities",
@@ -17,7 +17,9 @@
     "one-root pass alone cannot pass full qualification",
     "40identities/ring/12report contexts and lossless encoding",
     "atomic funding, duplicate-work denial, route/globalstop, branch missingness",
-    "source-bound native main gate and exact relay-wire rejection"
+    "source-bound native main gate and exact relay-wire rejection",
+    "actual diagnostic-only84call/.478464grant accepted",
+    "stageSQLdeniesQ0/E0/85thD1/wrongsource/wrongmanifest/excesscost withrollback"
   ],
   "limitations": [
     "one observed whitespace/length failure remains unresolved",
