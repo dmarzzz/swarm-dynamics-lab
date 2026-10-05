@@ -17807,6 +17807,106 @@
    "sha256": "55d7a22d73b9429903636bacd37052b87ad3fdf53871d48c1a96f5f05c955564",
    "size_bytes": 74734
   },
+  "two-experiments-film@1": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791175055,
+     "sha256": "87c8d2d6ebe673997efb46795103518710381350761aa81fb9f13c96bb63a7b5",
+     "size": 14256,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/index.html"
+    },
+    {
+     "mtime": 1791161840,
+     "sha256": "7fe50580bec615e631a2429e4033056090be99a703ef60500ef5d11f98c2fac5",
+     "size": 4217,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/record.mjs"
+    },
+    {
+     "mtime": 1791175055,
+     "sha256": "63d5be6381e594db8a39f4ab98b909d95c3c4d36261132607078a5e8c5d4e1db",
+     "size": 3954,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narrate.py"
+    },
+    {
+     "mtime": 1791161840,
+     "sha256": "5ac498e17c371e9ec3da197674211be62d3bcc37811b8d588333a3d5ae6ca5d0",
+     "size": 3249,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/vo.py"
+    },
+    {
+     "mtime": 1791175025,
+     "sha256": "d5512b5c014901424530f63df6782fc9c3d4c62703eac2cb22a7c8a6b05f93f9",
+     "size": 1704,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narration-two.json"
+    },
+    {
+     "mtime": 1791175055,
+     "sha256": "74aed7abbeb9a30d540ac5803657e3f316063c7c05d5a36ef1234983fabad6fe",
+     "size": 4908,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twoopen.js"
+    },
+    {
+     "mtime": 1791175229,
+     "sha256": "5569d2c5d190fa73271a21a353a2de050fada9e2f8b669da343dd3f92d2ed2d5",
+     "size": 5550,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/twoclose.js"
+    },
+    {
+     "mtime": 1791162474,
+     "sha256": "54706eb9c9da54217a926b45c14f28fe79030545c179646b380259986a237159",
+     "size": 11511,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js"
+    },
+    {
+     "mtime": 1791174853,
+     "sha256": "7ad5628307440c8c7230879f101185a74269b35c9879f185c9389b9c654cd25e",
+     "size": 6942,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js"
+    },
+    {
+     "mtime": 1791158708,
+     "sha256": "41d473390cec768d95761184aafd08cfee60fc335d4cc2eac1abf6c0661d1523",
+     "size": 9407,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js"
+    },
+    {
+     "mtime": 1791174853,
+     "sha256": "d4e7f40eece1289a5a6bb159cc5083de46e460a7804f4c6f43f384dc72dc6ae3",
+     "size": 7465,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/theseus50.js"
+    },
+    {
+     "mtime": 1791174853,
+     "sha256": "8024e982fa3c98230825960347bcfa68f9190c0c448a7a26f856d3a482387597",
+     "size": 23099,
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/next.js"
+    },
+    {
+     "mtime": 1791158582,
+     "sha256": "d232d3967d083b34fcf34c0d10239c42241d11b81fd054e5c7329b6f209deada",
+     "size": 15842,
+     "uri": "5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md"
+    },
+    {
+     "mtime": 1791161840,
+     "sha256": "d5c6e199d7ab02bed8d4f934a008295ecaf0f370336eb187e0ab949746fbb881",
+     "size": 12228,
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md"
+    }
+   ],
+   "media": {
+    "duration_s": 88.9,
+    "height": 1080,
+    "width": 1920
+   },
+   "mime": "video/mp4",
+   "mtime": 1791175104,
+   "path": "artifacts/two-experiments-film/two-experiments-film-v1.mp4",
+   "prompt_sha256": "3a438816be09d362037d9d4923eab3a58e7a56639fa5111cdc31880e884aca0e",
+   "sha256": "5430740d88cab8de5ed79ce77624ae2ee45c7171a03392030ca5653703c3385f",
+   "size_bytes": 7495515
+  },
   "vishesh-healing-c3-evidence@1": {
    "host": "mac",
    "ingredients": [

@@ -5253,4 +5253,38 @@ artifacts:
           - 5-experiments/studies/dmarz/hackathon-demo/index.html
           - 5-experiments/studies/dmarz/hackathon-demo/narration-long.json
         commit: 416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e-dirty
+  - id: two-experiments-film
+    category: content
+    type: film
+    title: 'Two swarm experiments: the Sybil market experiment and Swarm of Theseus'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/two-experiments-film/two-experiments-film-v1.mp4
+        built_at: '2026-10-05T04:40:50Z'
+        note: 'Narrated 89-second cut for sharing as a file in a chat. Opening card (what the lab is, the two questions),
+          experiment 1 (sybil-rules-180: 55 of 180 owners split their firm to dodge a per-firm rule, 0 of 180 after one added
+          sentence), experiment 2 (the fifty-member Swarm of Theseus run S50: 297 of 300 decisions right with a written note,
+          166 of 300 with nothing inherited), closing card (both exploratory, one model). The two experiment scenes and their
+          narration are unchanged from hackathon-demo-film-long. Narration is Kokoro af_heart, checked by transcription only.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:a63ed523-b704-4988-9f63-94663d57821a
+        prompt: sha256:3a438816be09d362037d9d4923eab3a58e7a56639fa5111cdc31880e884aca0e
+        ingredients:
+          - 5-experiments/studies/dmarz/hackathon-demo/index.html
+          - 5-experiments/studies/dmarz/hackathon-demo/record.mjs
+          - 5-experiments/studies/dmarz/hackathon-demo/narrate.py
+          - 5-experiments/studies/dmarz/hackathon-demo/vo.py
+          - 5-experiments/studies/dmarz/hackathon-demo/narration-two.json
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twoopen.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/twoclose.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus50.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/next.js
+          - 5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md
+        commit: 455ef32ebdaef18dd2eabd00e6ece38f70c17446-dirty
 requires: '1.2'
