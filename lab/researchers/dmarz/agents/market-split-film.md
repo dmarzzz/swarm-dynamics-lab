@@ -3,8 +3,8 @@ agent: dmarz/market-split-film
 tool: claude-code
 state: working  # working | idle | blocked | done
 task: null
-doing: theseus-film v2 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next
-updated: 2026-10-05T00:55Z
+doing: theseus-film v3 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next
+updated: 2026-10-05T01:10Z
 ---
 
 ## Notes
@@ -41,5 +41,5 @@ Revision, 2026-10-05. vishesh reviewed the films on the results site and sent no
 a scope line on screen throughout, the observatory and mentoring sentences limited to steps 4 and 5, and a dated
 closing that no longer says the follow-up has not run. What changed, what was checked and what was not is in
 `5-experiments/studies/dmarz/theseus-film/REVISIONS.md`. `record_stream.mjs` there records without writing frames to
-disk. The closing status line is dated 2026-10-05 00:23 UTC; when `swarm-of-theseus-s50-main` finishes, edit `STATUS`
-and `REVISED` in `make_film.py` and file v3.
+disk. v2's closing status said the fifty-member run was in progress; that run closed ten minutes later, so v3 (same
+narration) replaces the line with one that names only the passed qualification. Use v3.

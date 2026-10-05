@@ -23,10 +23,11 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 SCRIPT = HERE / 'script.json'
-# v2 (REVISIONS.md). The closing status is a dated statement about work this film does not show; recheck the study's
-# records and the hub before changing either line, and never narrate the later study's outcome from here.
+# v3 (REVISIONS.md). The closing status names only what is settled and dated: the qualification that passed. It says
+# nothing about where the fifty-member study stands, because v2's "run in progress" was overtaken ten minutes after it
+# was written. Never narrate the later study's outcome from here; it reports in its own records.
 REVISED = '2026-10-05'
-STATUS = 'status checked 2026-10-05 00:23 utc // fifty-seat qualification (gpt-6 sol) passed // full fifty-member turnover run in progress, no result yet'
+STATUS = 'fifty-seat qualification (gpt-6 sol) passed 2026-10-04 // the fifty-member turnover study reports separately // its outcome is not shown here'
 MARKET = HERE.parent / 'market-split-film'
 
 

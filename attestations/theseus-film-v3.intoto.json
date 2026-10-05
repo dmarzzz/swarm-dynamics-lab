@@ -1,0 +1,131 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "vishesh gave us some feedback on the videos on the swarm labs results /Users/halcyon/Desktop/SWARM-LIVE-VIDEO-NOTES-2026-10-05.txt can u fix them"
+   },
+   "internalParameters": {
+    "commit": "41423573744e1a8ca89cd8f6edd9867049d10ca3-dirty",
+    "session": "claude:469b8663-0e80-47e6-9e2e-68a31863b934"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "0e674fd464f70a6eb50df04b28c8fa8ff64f4c400750826580b2d29134ea45df"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/REVISIONS.md"
+    },
+    {
+     "digest": {
+      "sha256": "7de15acd26a4f0ed075b128bcc4ff1c2511f865f1176f1f86fdfe16034788c9f"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/_decision.md"
+    },
+    {
+     "digest": {
+      "sha256": "c59484a0d65d7105184e5b06c82d15b03de89ceb7724ba7e1f045a5cfc95d80b"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/script.json"
+    },
+    {
+     "digest": {
+      "sha256": "eb5e8f911b227b22d707baf5faca9347889626eeb5d387651ac97bb1c341e5b2"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/film_data.py"
+    },
+    {
+     "digest": {
+      "sha256": "139c0c4d04529ba4aa5629587bafef75c050344ba0f2f7642127e7de2e0fa05a"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/make_film.py"
+    },
+    {
+     "digest": {
+      "sha256": "46e02c14050da342fd42353841ed46d7f98f0636ec21b594e31abd96b4ee1291"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/film.html"
+    },
+    {
+     "digest": {
+      "sha256": "5a2eda8b40a36360b6b27ee6256146e10ef5d1e80ec614d6b2be4b9a49724a90"
+     },
+     "uri": "5-experiments/studies/dmarz/theseus-film/record_stream.mjs"
+    },
+    {
+     "digest": {
+      "sha256": "142bf28cc701ca295f353385800b1f7da74261edddc55d045bf91f5934c2b8aa"
+     },
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/vo.py"
+    },
+    {
+     "digest": {
+      "sha256": "7e981c0985fc85f830aa52fb94779fbea0cc5d8bf9d877b9efc291f5366a16aa"
+     },
+     "uri": "5-experiments/studies/dmarz/market-split-film/narrated/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "432fc6742b7e632d669e2c46507e010762a2ce6b953ff7f52c6d6cb14d4111e5"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/rows.json"
+    },
+    {
+     "digest": {
+      "sha256": "1bd8d6388504fdb3a090f35c68d4944dc654aabc9b16516f2cfbf14c4013d4ad"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/summary.json"
+    },
+    {
+     "digest": {
+      "sha256": "0f280e1f5868631e77cdca74ac7e8911783ee585a1b4556c9292f946796746dc"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/Q50-POST-MORTEM.md"
+    },
+    {
+     "digest": {
+      "sha256": "be53597095953fdf3ad717df93d1e3d4b9d6a22399b6a815c80d1571ebc0eafc"
+     },
+     "uri": "artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz"
+    },
+    {
+     "digest": {
+      "gitCommit": "41423573744e1a8ca89cd8f6edd9867049d10ca3"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "4702fd98d7f0ca0b0fdeb90b4adfc979d1b8cc952b4f9cc51a00c6279366dbeb"
+     },
+     "uri": "artifacts/theseus-film/theseus-film-v2.mp4"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T00:45:26Z",
+    "invocationId": "claude:469b8663-0e80-47e6-9e2e-68a31863b934",
+    "startedOn": "2026-10-05T00:45:26Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "c97bf189ca1efd6aacbb905a4002310305127d48da4a0d01bfeece9d4b0c5d17"
+   },
+   "name": "artifacts/theseus-film/theseus-film-v3.mp4"
+  }
+ ]
+}

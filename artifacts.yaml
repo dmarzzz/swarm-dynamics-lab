@@ -2324,6 +2324,36 @@ artifacts:
     type: film
     title: 'Swarm of Theseus: a crew replaced one member at a time'
     versions:
+      - v: 3
+        date: 2026-10-04
+        path: artifacts/theseus-film/theseus-film-v3.mp4
+        built_at: '2026-10-05T00:45:26Z'
+        note: 'Same narration as v2, sample for sample; one on-screen line changed. v2''s closing status said the fifty-member
+          turnover run was in progress (checked 00:23 UTC); the hub recorded that run closed at 00:33 UTC. v3''s line names
+          only what is settled, the fifty-seat GPT-6 Sol qualification that passed on 2026-10-04, and says the fifty-member
+          study reports separately and its outcome is not shown. Everything else is as in v2: scope line on screen throughout,
+          observatory and mentoring sentences limited to steps 4 and 5 (REVISIONS.md). Nobody has listened to the narration
+          by ear.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:469b8663-0e80-47e6-9e2e-68a31863b934
+        prompt: vishesh gave us some feedback on the videos on the swarm labs results /Users/halcyon/Desktop/SWARM-LIVE-VIDEO-NOTES-2026-10-05.txt
+          can u fix them
+        ingredients:
+          - 5-experiments/studies/dmarz/theseus-film/REVISIONS.md
+          - 5-experiments/studies/dmarz/theseus-film/_decision.md
+          - 5-experiments/studies/dmarz/theseus-film/script.json
+          - 5-experiments/studies/dmarz/theseus-film/film_data.py
+          - 5-experiments/studies/dmarz/theseus-film/make_film.py
+          - 5-experiments/studies/dmarz/theseus-film/film.html
+          - 5-experiments/studies/dmarz/theseus-film/record_stream.mjs
+          - 5-experiments/studies/dmarz/market-split-film/narrated/vo.py
+          - 5-experiments/studies/dmarz/market-split-film/narrated/build.py
+          - 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/rows.json
+          - 5-experiments/studies/vishesh/swarm-of-theseus/results/S1-a1/summary.json
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/Q50-POST-MORTEM.md
+          - artifacts/theseus-pilot-evidence/theseus-pilot-evidence-v1.gz
+        commit: 41423573744e1a8ca89cd8f6edd9867049d10ca3-dirty
       - v: 2
         date: 2026-10-04
         path: artifacts/theseus-film/theseus-film-v2.mp4

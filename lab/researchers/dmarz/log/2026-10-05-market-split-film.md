@@ -15,4 +15,7 @@
   about 5 GB of frame files. `record_stream.mjs` pipes frames to the encoder instead.
 - Not done: no telephone or immune film was made (there were none on the site, and dmarz did not want new ones yet).
   Nobody has listened to either version of the Theseus narration by ear.
-- Next: when the fifty-member run publishes results, update the closing status and file v3.
+- The fifty-member run closed at 00:33 UTC, ten minutes after v2's status line said it was in progress. Filed v3 with
+  the same narration and a status line that names only the passed qualification, so it does not go stale again.
+- Next: nothing owed on this film. If a film of the fifty-member study is wanted, it is a new film from that study's
+  own reviewed results.

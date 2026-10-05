@@ -1,5 +1,21 @@
 # Revisions to the Swarm of Theseus film
 
+## v3, 2026-10-05
+
+Same narration as v2, to the sample. One line of the picture changed: the status under the wall during the closing.
+
+v2's line read "status checked 2026-10-05 00:23 utc // fifty-seat qualification (gpt-6 sol) passed // full fifty-member
+turnover run in progress, no result yet". The hub recorded that run's execution as closed at 00:33 UTC, ten minutes
+later, with its scientific review still to come. The line was dated and true when written, and out of date before the
+film reached the site.
+
+v3's line names only what is settled: "fifty-seat qualification (gpt-6 sol) passed 2026-10-04 // the fifty-member
+turnover study reports separately // its outcome is not shown here". It does not need to change when that study
+publishes. The film still gives no outcome for it.
+
+Checked: the audio track of v3 is identical to v2's (decoded and compared sample for sample), and the status line was
+read back from the encoded file at 226 s. Use v3; v2 is kept as filed.
+
 ## v2, 2026-10-05
 
 vishesh reviewed the films on the results site for accuracy on 2026-10-05 at 00:03 UTC and sent notes. v1 stays filed as
@@ -33,7 +49,8 @@ The results at 02:36 to 02:50 (100%, 100%, 92%, 52%, 90%) matched the study's re
 - The picture and the narration were not compared frame by frame outside the five changed segments. The other 24
   narration clips are the v1 recordings, unchanged.
 - The status line will go out of date when the fifty-member run finishes. It carries its own date for that reason.
-  To change it, edit `STATUS` and `REVISED` in `make_film.py` after rereading the study's records.
+  To change it, edit `STATUS` and `REVISED` in `make_film.py` after rereading the study's records. (It did, the same
+  hour: see v3 above.)
 
 ### How it was rebuilt
 
