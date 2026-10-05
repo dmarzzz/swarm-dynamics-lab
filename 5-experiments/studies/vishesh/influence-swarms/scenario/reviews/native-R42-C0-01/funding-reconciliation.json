@@ -1,0 +1,19 @@
+{
+  "authority": "PI-FUND-20261005-28",
+  "model_actual": 0.00361706,
+  "model_reserved_retained": 0.034176,
+  "unknown_model": 0,
+  "hosting_elapsed_seconds": 323.0,
+  "hosting_hourly_usd": 0.07143,
+  "hosting_allocated_cost": 0.006408858333333332,
+  "hosting_ceiling": 0.04,
+  "hosting_basis": "exclusive claim elapsed time, allocated estimate rather than provider invoice",
+  "total_allocated_cost": 0.010025918333333331,
+  "total_authorized": 0.074176,
+  "unused_authority": 0.06415008166666666,
+  "claim_released": true,
+  "release_pr": 482,
+  "original_model_reserved": 27.382688,
+  "original_calls": 4290,
+  "main_funded": false
+}
