@@ -28,6 +28,7 @@ score per claim. The findings below are what it produced in one weekend, failure
 [![library][library-badge]][library-index]
 [![evidence][evidence-badge]][evidence]
 [![artifacts][artifacts-badge]](artifacts.yaml)
+[![MIT][license-badge]](LICENSE)
 
 [Write-up][writeup] · [Evidence registry][evidence] · [Question atlas][atlas] · [Library index][library-index] ·
 [Surveys](2-surveys/) · [Protocol](AGENTS.md) · [Agent ops](agentops/README.md) · [Live runs][live]
@@ -245,7 +246,13 @@ The Opus 5.5 results need a second model that passes qualification. The
 [next experiment for growth-pressure-200][f-next] is written: a first stage of about 1,300 calls that measures
 how to deliver the cheating treatment, then the comparison the stopped run was built for.
 
+## License
+
+[MIT](LICENSE). It covers the code, the tooling, the protocol and the lab's own writing. Catalogued third-party
+material, such as quoted thread text and paper metadata in `1-library/`, stays with its authors.
+
 [lab-badge]: https://github.com/dmarzzz/swarm-dynamics-lab/actions/workflows/lab.yml/badge.svg
+[license-badge]: https://img.shields.io/badge/license-MIT-7c2eb8.svg
 [lab-url]: https://github.com/dmarzzz/swarm-dynamics-lab/actions/workflows/lab.yml
 [library-badge]: https://img.shields.io/badge/library-3%2C319_sources-7c2eb8.svg
 [evidence-badge]: https://img.shields.io/badge/evidence-153_cohorts-7c2eb8.svg
