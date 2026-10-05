@@ -12,8 +12,14 @@ on:
 jobs:
   check:
     runs-on: ubuntu-latest
+    # The Flight Deck project id is still `swarm-lab`. The repository is now named swarm-dynamics-lab, so check
+    # out into a folder named after the id: the strict gate requires the id to match the folder name.
+    defaults:
+      run:
+        working-directory: swarm-lab
     steps:
       - uses: actions/checkout@v4
+        with: { path: swarm-lab }
       - uses: actions/setup-python@v5
         with: { python-version: "3.12" }
       - run: pip install -q pyyaml jsonschema
