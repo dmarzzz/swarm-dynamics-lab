@@ -1,0 +1,200 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:9494d19a01f47f317a0e7cbf45771e8112a15510c4eab50ea7b37767565dc1bc"
+   },
+   "internalParameters": {
+    "commit": "416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e-dirty",
+    "session": "claude:d027de87-6730-45a9-9f59-5438b15b60b1"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "632d38197fedc59cc897dbcf64a1ebaf95622a2caa9f402591cee9c069e6444c"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/index.html"
+    },
+    {
+     "digest": {
+      "sha256": "7fe50580bec615e631a2429e4033056090be99a703ef60500ef5d11f98c2fac5"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/record.mjs"
+    },
+    {
+     "digest": {
+      "sha256": "b6acf788b9a87386e8ab8bacc303575ebc62de49a0c187ec6e20cb671c805dc0"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narrate.py"
+    },
+    {
+     "digest": {
+      "sha256": "5ac498e17c371e9ec3da197674211be62d3bcc37811b8d588333a3d5ae6ca5d0"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/vo.py"
+    },
+    {
+     "digest": {
+      "sha256": "12557a5ab5bf602824f2765bbe91d9eab9f6efb98803a90996a9fd93ad999536"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narration-long.json"
+    },
+    {
+     "digest": {
+      "sha256": "54706eb9c9da54217a926b45c14f28fe79030545c179646b380259986a237159"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "3ad1c3677b6f9cdfe99ee2cb4a21edb0d254e5e05a50a2523cc9e213d77f2e67"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/team.js"
+    },
+    {
+     "digest": {
+      "sha256": "cc10c5cb36f0ea28a63bed41fd946e060641a736253ae3a404a1fc6a89e0aaea"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/team.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "dce07dfa5a65f0e39fff0838227bbd288cbffd31f362fa9d35a2caf483f0bcbc"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/why.js"
+    },
+    {
+     "digest": {
+      "sha256": "9fef5fbc56552fcfb2d5258841d69cd94bfc07d79d4b8e89e26b05f15a672edf"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/frame.js"
+    },
+    {
+     "digest": {
+      "sha256": "344d5a9e97d5801713e84f7b4440fb4477629a91a4dab60a832ef399dd8c0bca"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/questions.js"
+    },
+    {
+     "digest": {
+      "sha256": "9be336453fb49efc3ddc3e4f030e325ab56b6892419f3e0dd7608f5115f795a5"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/roadmap.js"
+    },
+    {
+     "digest": {
+      "sha256": "77cef6dc48988615edda17952a5a9a9a56f42e9899b0cae9dadf5742035a1f97"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/roadmap.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "c3f5d38b94a73678fc86440561b9e3273d23441cabeedf3b10e1bebe993cc78e"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/lab.js"
+    },
+    {
+     "digest": {
+      "sha256": "ac98d610a29729eeb45af9d81f92d0fe86cdebb3dc222afd123460852eeb8cd2"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/lab.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "7317932467a16936a464c9285a12a03cbc66f71d64e8af28d2dce26c9501f081"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/stack.js"
+    },
+    {
+     "digest": {
+      "sha256": "6b50408afe184e0f134bd5c8cef456e3d6e6032aa59ed82af8ec4253e3d021a2"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/highlights.js"
+    },
+    {
+     "digest": {
+      "sha256": "adbb23aaaadd0d5b9cf5a69b9cc99c1226d1b5cb83ff9e7c8f2945c7ee1592d3"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js"
+    },
+    {
+     "digest": {
+      "sha256": "41d473390cec768d95761184aafd08cfee60fc335d4cc2eac1abf6c0661d1523"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "a520f14919f62b6fbd33e7ac52bdebe558f5fbea60e2069723ccca2a81c982f0"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/result3.js"
+    },
+    {
+     "digest": {
+      "sha256": "7ccd40e8b5b847e9bbb4b74d4c526c65f3755ae3a47bc4001fbebda8283dd0ed"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/result3.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "096921fb62d5f2ad0df8d594893917b215e05e0b3b8523c644f0378bc06366ab"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/theseus50.js"
+    },
+    {
+     "digest": {
+      "sha256": "1da9cc27536ac4c7b89b4636211f556952d0afe7cfa06a5b24b2c6a04b64c7ec"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/more.js"
+    },
+    {
+     "digest": {
+      "sha256": "d0d6e292483d02e167a5ffe83e7bf98f91ec7ebf7af1ce5f133b4d41654a61f2"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/more.data.js"
+    },
+    {
+     "digest": {
+      "sha256": "1b5e42249955960e1a8ef6ecfd3a27796352044d92138df673300f9c1c572a45"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/scenes/next.js"
+    },
+    {
+     "digest": {
+      "sha256": "d5c6e199d7ab02bed8d4f934a008295ecaf0f370336eb187e0ab949746fbb881"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T01:51:21Z",
+    "invocationId": "claude:d027de87-6730-45a9-9f59-5438b15b60b1",
+    "startedOn": "2026-10-05T01:51:21Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "0c1867419f2eaa48372f5337563a8cda65ffac1edc9ced7c98f02a536d17c504"
+   },
+   "name": "artifacts/hackathon-demo-film-long/hackathon-demo-film-long-v1.mp4"
+  }
+ ]
+}

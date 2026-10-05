@@ -1,0 +1,62 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:12a6b82a98f5edac5bd8edc1a3fbc1ddbbae90baae096839c706162feb000056"
+   },
+   "internalParameters": {
+    "commit": "416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e-dirty",
+    "session": "claude:d027de87-6730-45a9-9f59-5438b15b60b1"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "ee8f1178d46a3ed1ff87b23de6f7d755b293bc58ed664c50ec643ffcbaf29cef"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/slides.py"
+    },
+    {
+     "digest": {
+      "sha256": "632d38197fedc59cc897dbcf64a1ebaf95622a2caa9f402591cee9c069e6444c"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/index.html"
+    },
+    {
+     "digest": {
+      "sha256": "12557a5ab5bf602824f2765bbe91d9eab9f6efb98803a90996a9fd93ad999536"
+     },
+     "uri": "5-experiments/studies/dmarz/hackathon-demo/narration-long.json"
+    },
+    {
+     "digest": {
+      "gitCommit": "416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T01:51:22Z",
+    "invocationId": "claude:d027de87-6730-45a9-9f59-5438b15b60b1",
+    "startedOn": "2026-10-05T01:51:22Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "a5a08565f136ac5d6ab6a0cd894bf3361c9675635f0d1d33a53f42e017bd6fa7"
+   },
+   "name": "artifacts/hackathon-demo-slides/hackathon-demo-slides-v1.pdf"
+  }
+ ]
+}

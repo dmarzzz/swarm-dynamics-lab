@@ -5186,4 +5186,71 @@ artifacts:
           - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-AUDIT.json
           - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/reporting/render_plot.py
         commit: 262af6f1e0ff3ae5475e8a7f8b98834af8662831-dirty
+  - id: hackathon-demo-film-long
+    category: content
+    type: film
+    title: 'Swarm of Theseus: four-minute film'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/hackathon-demo-film-long/hackathon-demo-film-long-v1.mp4
+        built_at: '2026-10-05T01:51:21Z'
+        note: 'Four-minute narrated cut (3:54.5): the Hugging Face incident and the stated goal, distributional safety with
+          a three-agent illustration, the candidate map of 219 hypotheses, the lab and its infrastructure as code, three results
+          each followed by what it changes on the map (sybil-rules-180, external-influence-v2, the fifty-member Swarm of Theseus
+          run), ten more experiments, next steps. Narration is Kokoro af_heart, checked by transcription only.'
+        by: claude
+        model: claude-fable-5-1
+        session: claude:d027de87-6730-45a9-9f59-5438b15b60b1
+        request: 5cbb5c6c-0772-4aa2-b220-fb663117b89d
+        prompt: sha256:9494d19a01f47f317a0e7cbf45771e8112a15510c4eab50ea7b37767565dc1bc
+        ingredients:
+          - 5-experiments/studies/dmarz/hackathon-demo/index.html
+          - 5-experiments/studies/dmarz/hackathon-demo/record.mjs
+          - 5-experiments/studies/dmarz/hackathon-demo/narrate.py
+          - 5-experiments/studies/dmarz/hackathon-demo/vo.py
+          - 5-experiments/studies/dmarz/hackathon-demo/narration-long.json
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/links.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/team.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/team.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/why.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/frame.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/questions.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/roadmap.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/roadmap.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/lab.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/lab.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/stack.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/highlights.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/sybil.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/result3.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/result3.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus50.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/more.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/more.data.js
+          - 5-experiments/studies/dmarz/hackathon-demo/scenes/next.js
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md
+        commit: 416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e-dirty
+  - id: hackathon-demo-slides
+    category: content
+    type: deck
+    title: 'Swarm of Theseus: static slides of the four-minute film'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/hackathon-demo-slides/hackathon-demo-slides-v1.pdf
+        built_at: '2026-10-05T01:51:22Z'
+        note: 19 static slides, one per scene state of the four-minute cut, exported to PDF from the .pptx that slides.py
+          builds for Google Slides. Each slide is a still of the film frame.
+        by: claude
+        model: claude-fable-5-1
+        session: claude:d027de87-6730-45a9-9f59-5438b15b60b1
+        request: 5cbb5c6c-0772-4aa2-b220-fb663117b89d
+        prompt: sha256:12a6b82a98f5edac5bd8edc1a3fbc1ddbbae90baae096839c706162feb000056
+        ingredients:
+          - 5-experiments/studies/dmarz/hackathon-demo/slides.py
+          - 5-experiments/studies/dmarz/hackathon-demo/index.html
+          - 5-experiments/studies/dmarz/hackathon-demo/narration-long.json
+        commit: 416dc8abf6da966e2d4d1de1e0d2e50fb2973b0e-dirty
 requires: '1.2'
