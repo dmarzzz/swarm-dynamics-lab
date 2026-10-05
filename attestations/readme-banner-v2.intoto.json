@@ -1,0 +1,77 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:11d056b83e0bbbcbcc86abbea0b6bf13b8041fd34cfbbb73f5d8d3d9969ccb37"
+   },
+   "internalParameters": {
+    "commit": "08c46c932f2b52e502b48308f6a940809c94b0d8-dirty",
+    "session": "claude:9472e879-0b1b-4703-b326-f1e67622b112"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "86db2e27f958608e631f01cb6403dc5fd15d74a1f84a591a89ab1398f70680e5"
+     },
+     "uri": "src/readme-banner/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "d288d9c91f5531d63ce4727c751e031e78778523adfd4a249c146151c7d8d43f"
+     },
+     "uri": "1-library/topics.yaml"
+    },
+    {
+     "digest": {
+      "sha256": "19684240aa347f71f2d1a57e69f45461eb38ecf6ecb71d0b43090985ee785e0d"
+     },
+     "uri": "5-experiments/evidence-metadata.json"
+    },
+    {
+     "digest": {
+      "sha256": "bbf17f06c68bdedd5fd06c7d35922b60073abf174128c2b0305183b95f4dfd34"
+     },
+     "uri": "1-library/INDEX.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "08c46c932f2b52e502b48308f6a940809c94b0d8"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "f36ad34659d7368f2cc8fd267e2efb60007506955e6261e5f73cfe4f6b370d59"
+     },
+     "uri": "artifacts/readme-banner/readme-banner-v1.svg"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T00:28:07Z",
+    "invocationId": "claude:9472e879-0b1b-4703-b326-f1e67622b112",
+    "startedOn": "2026-10-05T00:28:07Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "acfea0452dde33f1e8780947f9fdde84d60a6c2048858f2289303df991bf7876"
+   },
+   "name": "artifacts/readme-banner/readme-banner-v2.svg"
+  }
+ ]
+}

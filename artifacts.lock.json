@@ -13462,6 +13462,47 @@
    "sha256": "a9fd7e7f33ecdbe149f8838aaa532e00454bed0e4412cf11ee9c8c0c491763e8",
    "size_bytes": 26083
   },
+  "readme-architecture@2": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791159939,
+     "sha256": "e628eda5e179d3b11e61863636a2ca7c4212aece1dff37f7e233610f51fcf540",
+     "size": 28341,
+     "uri": "src/readme-architecture/build.py"
+    },
+    {
+     "mtime": 1791159939,
+     "sha256": "e844fec193c39baa6038d2777092e071dc7c9388dae4d3a68cd97011b2fac068",
+     "size": 56137,
+     "uri": "scripts/lab.py"
+    },
+    {
+     "mtime": 1791159939,
+     "sha256": "b743b96ba3db72358449df2ce978697f8466ffe43abc0c9c18d5184723e7fff4",
+     "size": 48556,
+     "uri": "agentops/hub/hub.py"
+    },
+    {
+     "mtime": 1791159934,
+     "sha256": "19684240aa347f71f2d1a57e69f45461eb38ecf6ecb71d0b43090985ee785e0d",
+     "size": 300941,
+     "uri": "5-experiments/evidence-metadata.json"
+    },
+    {
+     "mtime": 1791159934,
+     "sha256": "e4280cc2c70993d1bd5d8cb62574c12b637f377297ba116526e20427c1929518",
+     "size": 13034,
+     "uri": "3-synthesis/research-question-atlas.md"
+    }
+   ],
+   "mime": "image/svg+xml",
+   "mtime": 1791159996,
+   "path": "artifacts/readme-architecture/readme-architecture-v2.svg",
+   "prompt_sha256": "11d056b83e0bbbcbcc86abbea0b6bf13b8041fd34cfbbb73f5d8d3d9969ccb37",
+   "sha256": "e75bf93a013a88a22f0ca69bc34e611d3b21182d95fa0b00528fee10da4f631a",
+   "size_bytes": 26083
+  },
   "readme-banner@1": {
    "host": "halcyons-macbook-pro-4",
    "ingredients": [
@@ -13496,6 +13537,41 @@
    "prompt_sha256": "a3d8791c0cd5ce3233d9893f058f59ee632ce75a2c505d2bf3de71e915cbebff",
    "sha256": "f36ad34659d7368f2cc8fd267e2efb60007506955e6261e5f73cfe4f6b370d59",
    "size_bytes": 100985
+  },
+  "readme-banner@2": {
+   "host": "halcyons-macbook-pro-4",
+   "ingredients": [
+    {
+     "mtime": 1791159939,
+     "sha256": "86db2e27f958608e631f01cb6403dc5fd15d74a1f84a591a89ab1398f70680e5",
+     "size": 13380,
+     "uri": "src/readme-banner/build.py"
+    },
+    {
+     "mtime": 1791159934,
+     "sha256": "d288d9c91f5531d63ce4727c751e031e78778523adfd4a249c146151c7d8d43f",
+     "size": 4658,
+     "uri": "1-library/topics.yaml"
+    },
+    {
+     "mtime": 1791159934,
+     "sha256": "19684240aa347f71f2d1a57e69f45461eb38ecf6ecb71d0b43090985ee785e0d",
+     "size": 300941,
+     "uri": "5-experiments/evidence-metadata.json"
+    },
+    {
+     "mtime": 1791159934,
+     "sha256": "bbf17f06c68bdedd5fd06c7d35922b60073abf174128c2b0305183b95f4dfd34",
+     "size": 727449,
+     "uri": "1-library/INDEX.md"
+    }
+   ],
+   "mime": "image/svg+xml",
+   "mtime": 1791159996,
+   "path": "artifacts/readme-banner/readme-banner-v2.svg",
+   "prompt_sha256": "11d056b83e0bbbcbcc86abbea0b6bf13b8041fd34cfbbb73f5d8d3d9969ccb37",
+   "sha256": "acfea0452dde33f1e8780947f9fdde84d60a6c2048858f2289303df991bf7876",
+   "size_bytes": 101024
   },
   "right-dissenter-d1@1": {
    "host": "ultrons-macbook-pro",

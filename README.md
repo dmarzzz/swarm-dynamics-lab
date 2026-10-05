@@ -1,4 +1,4 @@
-![A swarm of 3,319 dots, one per catalogued source, around a core of 153 experiment cohorts, with an amber path from the edge to the core through the five phases and a rotating wireframe cube in the corner](assets/banner.svg)
+![A swarm of 3,319 dots, one per catalogued source, around a core of 154 experiment cohorts, with an amber path from the edge to the core through the five phases and a rotating wireframe cube in the corner](assets/banner.svg)
 
 # Swarm Dynamics Lab
 
@@ -6,7 +6,7 @@ An open source environment for studying swarm dynamics.
 
 Everything needed to study how swarms of LLM agents get attacked, captured and repaired is in this repo, in the
 open: a library of 3,319 catalogued sources, the surveys and question atlas built from it, an experiment toolkit
-with a worker template, 118 studies with their plans, code, records and post-mortems, the protocol that lets
+with a worker template, 119 studies with their plans, code, records and post-mortems, the protocol that lets
 many agents share one repo, and a template of the server fleet that ran them. Clone it, point your own agents
 at it, and run your own studies.
 
@@ -36,8 +36,8 @@ score per claim. The findings below are what it produced in one weekend, failure
 > [!NOTE]
 > Hackathon research, about 30 hours of it. Every study here is exploratory, samples are small, and most
 > checks were made by an agent of the same researcher who ran the study. "Evidence" means a 0 to 4 editorial
-> score for one stated claim, defined in the [rubric][rubric]. Of the 153 cohorts in the [registry][evidence],
-> 47 score 0/4 (untested), 80 score 1/4 (exploratory), 25 score 2/4 (limited), one is unassessed and none
+> score for one stated claim, defined in the [rubric][rubric]. Of the 154 cohorts in the [registry][evidence],
+> 47 score 0/4 (untested), 80 score 1/4 (exploratory), 26 score 2/4 (limited), one is unassessed and none
 > scores higher. No survey has passed cross-researcher review yet, so no hypothesis is accepted and nothing
 > below is a test of one. Caveats sit next to each result, in the study's own results file.
 
@@ -50,12 +50,12 @@ Every piece is in this repo and can be used on its own.
 | Prior-art library | [`1-library/`](1-library/) | 3,319 sources on swarms, Sybil resistance, multi-agent LLM systems and agent security, one file each with a summary, topics and a stated read depth. `lab.py find` searches it. |
 | Surveys and question atlas | [`2-surveys/`](2-surveys/), [`3-synthesis/`](3-synthesis/) | 5 prior-art surveys with their search logs, and 214 candidate research questions across 15 areas. |
 | Experiment toolkit | [`5-experiments/toolkit/`](5-experiments/toolkit/README.md), [`lab/templates/experiment-worker/`](lab/templates/experiment-worker/) | The setup runbook, pre-run and post-mortem templates, claim-scope and run-quality rubrics, and a worker template for a distributed, pre-registered experiment. |
-| Studies | [`5-experiments/studies/`](5-experiments/studies/README.md) | 118 study folders with plans, code, saved records, results and post-mortems. Rerun one or start from the closest. |
-| Evidence registry | [`5-experiments/EVIDENCE.md`](5-experiments/EVIDENCE.md) | 153 cohorts, each with a stated claim, sample sizes and a 0 to 4 evidence score. |
+| Studies | [`5-experiments/studies/`](5-experiments/studies/README.md) | 119 study folders with plans, code, saved records, results and post-mortems. Rerun one or start from the closest. |
+| Evidence registry | [`5-experiments/EVIDENCE.md`](5-experiments/EVIDENCE.md) | 154 cohorts, each with a stated claim, sample sizes and a 0 to 4 evidence score. |
 | Agent protocol and coordination | [`AGENTS.md`](AGENTS.md), [`lab/`](lab/README.md) | The rules, task board, claims and sync loop that let many agents from several people work in one repo. |
 | Fleet template | [`agentops/`](agentops/README.md) | OpenTofu, Ansible roles and a run hub for short-lived experiment servers, scrubbed for reuse. |
 | Dashboard | [`dashboard/`](dashboard/) | The research-question dashboard, built from the repo's own files. |
-| Provenance | [`artifacts/`](artifacts/), [`artifacts.yaml`](artifacts.yaml) | 115 shipped figures, films, docs and datasets, each filed with its inputs and the script that made it. |
+| Provenance | [`artifacts/`](artifacts/), [`artifacts.yaml`](artifacts.yaml) | 116 shipped figures, films, docs and datasets, each filed with its inputs and the script that made it. |
 
 ## What the swarm found
 
@@ -106,11 +106,11 @@ another researcher's agent. The folders are numbered in the order the research i
 orchestrator and no agent-to-agent messaging. Agents coordinate only by reading and writing shared state in
 this repository, and a rejected `git push` settles every race between them.
 
-[![System architecture in three parts. Top left: three researchers start and steer 160 agents, which run a session loop of sync, orient, pick, claim, work, heartbeat, finish and log. Centre: one git repository holds all shared state, with the directives, the task board, the inboxes and the agent status files above the research record of five numbered folders, and amber gate marks on the path between surveys, hypotheses and experiments. Top right: a CI verifier with check, verify and index jobs runs on every push. Bottom: the experiment plane, with pre-run admission, a server claim, workers on short-lived servers, a run hub, model APIs and a public live run site. A legend gives the box styles and the three arrow kinds.](assets/architecture.svg)](assets/architecture.svg)
+[![System architecture in three parts. Top left: three researchers start and steer 161 agents, which run a session loop of sync, orient, pick, claim, work, heartbeat, finish and log. Centre: one git repository holds all shared state, with the directives, the task board, the inboxes and the agent status files above the research record of five numbered folders, and amber gate marks on the path between surveys, hypotheses and experiments. Top right: a CI verifier with check, verify and index jobs runs on every push. Bottom: the experiment plane, with pre-run admission, a server claim, workers on short-lived servers, a run hub, model APIs and a public live run site. A legend gives the box styles and the three arrow kinds.](assets/architecture.svg)](assets/architecture.svg)
 
 *Figure 1. System architecture. Violet marks agents and control flow, ink marks data flow, and amber marks a
 gate or verifier. **(1) Principals.** Three researchers each write a directives file that overrides the task
-board, and authorize budgets and scope. They are not in the per-task loop. **(2) Agents.** 160 agents on
+board, and authorize budgets and scope. They are not in the per-task loop. **(2) Agents.** 161 agents on
 several harnesses (Claude Code, Codex and others), each with the id `<researcher>/<agent-name>`, run one session
 loop: sync, orient, pick, claim, work, heartbeat, finish, log. A sync timer pushes every 10 minutes, and only
 the files that pass `lab.py check`, re-checked on a clean checkout of the commit. **(3) Shared state.** The
@@ -143,8 +143,8 @@ the counts and thresholds from the repo.*
 | 2. Survey | [`2-surveys/`](2-surveys/) | Prior-art surveys, and reviews in `2-surveys/reviews/` | The gate, then a review by a different researcher | 5 surveys: 2 pass the gate, 3 in progress. 4 reviews, all returned "revise" |
 | 3. Synthesis | [`3-synthesis/`](3-synthesis/) | Landscape, people and labs, the question atlas | No gate; the atlas labels every item an unreviewed hunch | 214 candidate questions from 319 source records across 15 areas |
 | 4. Hypothesise | [`4-hypotheses/`](4-hypotheses/) | Hypotheses that cite a complete survey and three closest prior works | Acceptance needs a reviewed survey and a review of the hypothesis | 3 proposed, 0 accepted |
-| 5. Experiment | [`5-experiments/`](5-experiments/) | Plans, code, records, results and post-mortems per study | Plan committed before the first run; a pre-run assessment and a post-mortem per attempt | 118 study folders, 153 cohorts in the registry |
-| 6. Ship | [`artifacts/`](artifacts/) | Figures, films, docs and datasets | Filed with their inputs and the script that made them | 115 artifacts: 47 figures, 38 docs, 12 datasets, 9 films, 9 other |
+| 5. Experiment | [`5-experiments/`](5-experiments/) | Plans, code, records, results and post-mortems per study | Plan committed before the first run; a pre-run assessment and a post-mortem per attempt | 119 study folders, 154 cohorts in the registry |
+| 6. Ship | [`artifacts/`](artifacts/) | Figures, films, docs and datasets | Filed with their inputs and the script that made them | 116 artifacts: 47 figures, 38 docs, 12 datasets, 10 films, 9 other |
 
 The gate is mechanical and CI runs it. A survey passes with at least 20 cited library entries (10 papers, 3 code
 repos, 2 informal sources), 5 papers read in full, 3 seminal works with their forward citations followed, and 8
@@ -174,7 +174,7 @@ Each row is a failure that many agents sharing one repo run into, and the mechan
 The banner at the top of this page is drawn from these records by
 [`src/readme-banner/build.py`](src/readme-banner/build.py). Each outer dot is one library source: its direction
 is its topics, it sits nearer the centre the more relevant it was rated, and it is brighter the deeper it was
-read. The core is the 153 cohorts: white for evidence 2/4, violet for 1/4, hollow for 0/4. The amber path is
+read. The core is the 154 cohorts: white for evidence 2/4, violet for 1/4, hollow for 0/4. The amber path is
 the five phases in order. The rotating cube in the corner is the maker's mark and encodes nothing.
 
 ## Run it yourself
@@ -230,7 +230,7 @@ prototype for trust, deceptive claims and recovery in populations of 100 to 2,00
 from a board of 290 tasks in `lab/tasks/`, and each writes only to files it owns plus new files. Each of the
 three researchers (dmarz, shadow, vishesh) steers their agents through `lab/researchers/<name>/README.md` and
 drops links into `inbox.md`. Collectors feed source candidates in small batches through
-[`lab/PIPELINE.md`](lab/PIPELINE.md). CI regenerates [`lab/STATUS.md`](lab/STATUS.md) on every push. 160
+[`lab/PIPELINE.md`](lab/PIPELINE.md). CI regenerates [`lab/STATUS.md`](lab/STATUS.md) on every push. 161
 agents registered a status file over the weekend.
 
 ## Agent ops
@@ -255,8 +255,8 @@ material, such as quoted thread text and paper metadata in `1-library/`, stays w
 [license-badge]: https://img.shields.io/badge/license-MIT-7c2eb8.svg
 [lab-url]: https://github.com/dmarzzz/swarm-dynamics-lab/actions/workflows/lab.yml
 [library-badge]: https://img.shields.io/badge/library-3%2C319_sources-7c2eb8.svg
-[evidence-badge]: https://img.shields.io/badge/evidence-153_cohorts-7c2eb8.svg
-[artifacts-badge]: https://img.shields.io/badge/artifacts-115-7c2eb8.svg
+[evidence-badge]: https://img.shields.io/badge/evidence-154_cohorts-7c2eb8.svg
+[artifacts-badge]: https://img.shields.io/badge/artifacts-116-7c2eb8.svg
 [evidence]: 5-experiments/EVIDENCE.md
 [rubric]: 5-experiments/EVIDENCE-METADATA.md
 [atlas]: 3-synthesis/research-question-atlas.md

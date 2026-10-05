@@ -23,7 +23,7 @@ ROOT = HERE.parent
 try:
     import swarm_report as sr
 except ImportError:
-    sys.exit("swarm_report not found: run on a fleet server, or copy hub/swarm_report.py from swarm-labs-agentops")
+    sys.exit("swarm_report not found: run on a fleet server, or copy agentops/hub/swarm_report.py from this repo")
 import yaml
 
 

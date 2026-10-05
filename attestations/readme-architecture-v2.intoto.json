@@ -1,0 +1,83 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "claude",
+    "model": "claude-fable-5-1",
+    "prompt": "sha256:11d056b83e0bbbcbcc86abbea0b6bf13b8041fd34cfbbb73f5d8d3d9969ccb37"
+   },
+   "internalParameters": {
+    "commit": "08c46c932f2b52e502b48308f6a940809c94b0d8-dirty",
+    "session": "claude:9472e879-0b1b-4703-b326-f1e67622b112"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "e628eda5e179d3b11e61863636a2ca7c4212aece1dff37f7e233610f51fcf540"
+     },
+     "uri": "src/readme-architecture/build.py"
+    },
+    {
+     "digest": {
+      "sha256": "e844fec193c39baa6038d2777092e071dc7c9388dae4d3a68cd97011b2fac068"
+     },
+     "uri": "scripts/lab.py"
+    },
+    {
+     "digest": {
+      "sha256": "b743b96ba3db72358449df2ce978697f8466ffe43abc0c9c18d5184723e7fff4"
+     },
+     "uri": "agentops/hub/hub.py"
+    },
+    {
+     "digest": {
+      "sha256": "19684240aa347f71f2d1a57e69f45461eb38ecf6ecb71d0b43090985ee785e0d"
+     },
+     "uri": "5-experiments/evidence-metadata.json"
+    },
+    {
+     "digest": {
+      "sha256": "e4280cc2c70993d1bd5d8cb62574c12b637f377297ba116526e20427c1929518"
+     },
+     "uri": "3-synthesis/research-question-atlas.md"
+    },
+    {
+     "digest": {
+      "gitCommit": "08c46c932f2b52e502b48308f6a940809c94b0d8"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-dynamics-lab"
+    },
+    {
+     "annotations": {
+      "supersedes": true
+     },
+     "digest": {
+      "sha256": "a9fd7e7f33ecdbe149f8838aaa532e00454bed0e4412cf11ee9c8c0c491763e8"
+     },
+     "uri": "artifacts/readme-architecture/readme-architecture-v1.svg"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/halcyons-macbook-pro-4/claude"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T00:28:09Z",
+    "invocationId": "claude:9472e879-0b1b-4703-b326-f1e67622b112",
+    "startedOn": "2026-10-05T00:28:09Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "e75bf93a013a88a22f0ca69bc34e611d3b21182d95fa0b00528fee10da4f631a"
+   },
+   "name": "artifacts/readme-architecture/readme-architecture-v2.svg"
+  }
+ ]
+}

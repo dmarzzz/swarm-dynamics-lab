@@ -26,7 +26,7 @@ import sim  # noqa: E402
 try:
     import swarm_report as sr  # preinstalled on every fleet server
 except ImportError:
-    sys.exit("swarm_report not found: run on a fleet server, or copy hub/swarm_report.py from swarm-labs-agentops")
+    sys.exit("swarm_report not found: run on a fleet server, or copy agentops/hub/swarm_report.py from this repo")
 
 ROOT = HERE.parent
 EXP = None

@@ -2,7 +2,7 @@
 
 This is a distributed **scripted toy**, useful for learning the hub registration, queue, worker and analysis interfaces. Copying it does not satisfy the lab's research gates or make a production launcher. Start a new question or material revision with [the setup runbook](../../../5-experiments/toolkit/agent-experiments/EXPERIMENT-SETUP.md), write the prospective plan before experimental implementation, and maintain the linked setup record in the owned study directory.
 
-For discovery and supported study adapters, use [experiment operations](../../../5-experiments/toolkit/agent-experiments/OPERATIONS.md). This template is not a registered native adapter. The private `swarm-labs-agentops` repository defines infrastructure ownership, claims and the reporting contract; access to the template is not authority to provision or spend.
+For discovery and supported study adapters, use [experiment operations](../../../5-experiments/toolkit/agent-experiments/OPERATIONS.md). This template is not a registered native adapter. The private fleet repo defines infrastructure ownership and claims, and a scrubbed template of it with the reporting contract is in [`agentops/`](../../../agentops/README.md); access to the template is not authority to provision or spend.
 
 The toy compares plurality quorum, which counts votes, with provenance-aware quorum, which counts distinct evidence roots. Agents select among K options while some copy one upstream source. Its outcomes demonstrate the programmed mechanism, not an LLM result or general swarm advantage.
 
