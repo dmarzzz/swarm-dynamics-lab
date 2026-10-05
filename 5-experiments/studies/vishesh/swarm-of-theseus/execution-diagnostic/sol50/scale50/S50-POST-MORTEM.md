@@ -70,3 +70,9 @@ The original local and remote ledger rows reconcile exactly; prior records and t
 The replay uses 700 retained founder, selection, replacement and decision events; the GIF samples 46 display frames. Nodes represent positions, not measured communication edges. Missing observations stay gray; no intermediate behavioral checkpoint is invented. The PNG, animation endpoint and HTML initial/final/playback states were checked against the data.
 
 **Decision: complete_valid_result; FINISH / PARK.** The requested larger comparison is complete. Preserve the narrow institutional-memory finding and negative dialogue-benefit result; no automatic iteration, extra sampling or new allocation follows.
+
+## Retrospective relation to the three-member pilot — 2026-10-05 UTC
+
+The [original S1 pilot](../../../RESULTS.md) found 100% post-turnover collective accuracy with notes or notes plus mentoring, versus 52.08% without either channel. S50 reproduces that qualitative pattern: 99.0% static, 98.3% interactive and 55.3% broken inheritance. This is consistency of the main conclusion, not an exact replication or evidence of a population-size effect. S1 used supplied procedures, Claude Haiku 4.5, team notebooks and majority scoring across six paired worlds; S50 uses learned source pairs, GPT-6 Sol, private predecessor transfer and individual decisions in one connected world. Fifty positions increase institutional size, not independent replication.
+
+S50 adds complete fifty-member turnover with correctly preserved learned routes, and demonstrates that correct memory can coexist with unsafe actions. It does not establish richer culture or an advantage for dialogue. The [study overview](../../../README.md#what-changed-from-three-to-fifty-members) compares the cohorts without pooling them. This interpretation update changes no frozen plan, native result, denominator or evidence rating. FINISH / PARK remains the disposition.

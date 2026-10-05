@@ -6,6 +6,10 @@ Interpretation update, 2026-10-04: [critical review](redesign/REVIEW.md) recomme
 
 Main source: `a773ff5410442fcf351cfc817550b3fc92a88994`. Candidate SOC-24 remains an unreviewed hunch; formal survey/hypothesis gates and S2 remain closed. [Prospective plan](https://github.com/dmarzzz/swarm-lab/blob/a773ff5410442fcf351cfc817550b3fc92a88994/researchers/vishesh/notes/swarm-of-theseus/README.md) · [Live experiment](https://swarm-live.pages.dev/#/x/swarm-of-theseus).
 
+## Retrospective comparison with S50 — 2026-10-05 UTC
+
+The later [fifty-member run](execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md) is consistent with this pilot's central finding: written inheritance works well and dialogue adds no established benefit. S50 obtained 99.0% static, 98.3% interactive and 55.3% broken-inheritance terminal accuracy; both inheritance arms preserved all 50 learned route notes. It extends transmission to privately learned consultation routes and a larger connected institution, rather than establishing richer culture. Different models, tasks, channels and scoring prevent a causal comparison of three versus fifty members. The original six paired worlds and S50's single world remain separate evidence cohorts. See the [cross-run comparison](README.md#what-changed-from-three-to-fifty-members).
+
 ## The comparison
 
 Three members per world, replaced one at a time at steps 1–3, followed through steps 4–5. Three scenarios, two counterbalanced world seeds per scenario, six conditions: 36 complete world-arm trajectories. Generations and members are dependent, not independent replicates. Cases have new IDs but recurring simple binary features. Model: `claude-haiku-4-5-20251001`, structured source-ID work output, bounded notebooks, stateless API calls with explicit private memory. No deterministic actor solver.

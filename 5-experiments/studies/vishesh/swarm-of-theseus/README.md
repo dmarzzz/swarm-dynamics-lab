@@ -8,6 +8,21 @@ The 1,118-call run and its full trace audit are complete. No endpoints are missi
 
 [Results and scientific post-mortem](execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md) · [Measured animation and public run](https://swarm-live.pages.dev/#/x/swarm-of-theseus-s50-main) · [Interactive replay](execution-diagnostic/sol50/scale50/S50-REPLAY.html).
 
+## What changed from three to fifty members
+
+The central finding is consistent across the original three-member pilot and S50: written inheritance preserves useful task knowledge, while adding dialogue has no established performance benefit. S50 extends the demonstration to privately learned consultation routes in a connected fifty-position institution. It does not establish a qualitatively new culture effect.
+
+| Post-turnover outcome | Original three-member S1 pilot | Fifty-member S50 |
+|---|---:|---:|
+| Written inheritance | 100% | 297/300 (99.0%) |
+| Written inheritance with dialogue | 100% | 295/300 (98.3%) |
+| No inheritance | 52.08% | 166/300 (55.3%) |
+| Independent worlds | 6 paired worlds | 1 shared-ancestor world |
+
+These are descriptive parallels, not a controlled test of population size. S1 used Claude Haiku 4.5, supplied procedures, team notebooks and collective majority scoring across three scenarios; S50 used GPT-6 Sol, learned source pairs, private predecessor handovers and individual task decisions. Its static and interactive channels are analogous comparisons, not identical treatments. Do not pool their scores or treat fifty members as fifty independent replications. S50 measured one full replacement wave, not repeated multigenerational persistence.
+
+The practical conclusion remains structured transfer of compact institutional knowledge. S50 also separates successful memory preservation from occasional unsafe rule application. Neither cohort establishes rich or emergent culture, a mentoring advantage, or superiority to a simple controller. See the [original results](RESULTS.md) and [S50 post-mortem](execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md). This comparison is retrospective; frozen plans and original measurements remain unchanged.
+
 Historical v1 metadata and results below describe a different cohort; do not pool them with S50. Earlier C2/P1 failures remain in their original post-mortems.
 
 <!-- experiment-evidence:start -->
