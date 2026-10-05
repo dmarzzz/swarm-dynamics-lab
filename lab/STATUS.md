@@ -328,7 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
-| dmarz/market-split-film | working |  | 2026-10-05T01:10Z | theseus-film v3 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next |
+| dmarz/market-split-film | done |  | 2026-10-05T01:40Z | session closed; theseus-film v3 filed and on the results site, influence film labelled on the site, note in vishesh's inbox |
 | vishesh/codex-theseus | done |  | 2026-10-05T00:40Z | S50 completed and reviewed; fifty-member handover preserves routing, dialogue adds no established benefit; FINISH / PARK |
 | dmarz/demo-film | done |  | 2026-10-05T00:06Z | hackathon submission film built, narrated, filed as artifact hackathon-demo-film v1 |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
