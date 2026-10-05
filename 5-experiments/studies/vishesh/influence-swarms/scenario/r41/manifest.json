@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "study": "influence-swarms",
+  "scope": "R41-3744",
+  "source_hashes": {
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/PLAN.md": "a515bb87d8642782a1e697e445f1faa9b9622a85efc64aea2f891beb2dc12650",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/README.md": "97606033df7dbb66844d2c70603528c398a0e1cc3f517c3722393793e021187a",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/analysis.py": "e7681864c07a8b876012e46fb4b63132bb4316c61d52e266b9db36a84d6cc8d5",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/cases.py": "9b91d2077e9ea592ae95e49fce9591ac8ce4925e9303408b04a8cde18e7cdc84",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/dossiers.json": "642abe6192236360456002e9bb44d1606dcb007cf30145659f45a8f0ead67068",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/instrument.py": "c68e6484adce731e505709bd5f5e82a0fdfa47753e0201fb5b75d880048a1ce6",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/runtime.py": "471df6b2e4769db76c7570574324639dd79fa788a7ba274b3255724cce6b227f",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_analysis.py": "ca0010257719455abdbf7c3df310d76637aff43ba4a3d06d2131696710f6782a",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_cases.py": "7c5ff535d8c7c610b64efa108af427dbb3a7bdc8b7aa1aa3c1d3f1d45c8f7bdc",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_instrument.py": "61c008732ae1cd4cb434688af52e37e7323c0e6760546ef120ec798a781afbda",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_runtime.py": "26fe39e330f523500c20a7b653e1207c06e95cac354bb8b4fc5cf5ca2e80ee5b",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/worker.py": "66cd16e2a90d20faf061ecd3190016b9809904b3d904fb61941f829cca277929"
+  },
+  "corpus_sha256": "642abe6192236360456002e9bb44d1606dcb007cf30145659f45a8f0ead67068",
+  "stages": {
+    "R41-D1": {
+      "calls": 84,
+      "finals": 3,
+      "maximum_model_usd": 0.478464
+    },
+    "R41-Q0": {
+      "calls": 672,
+      "finals": 24,
+      "maximum_model_usd": 3.827712
+    },
+    "R41-E0": {
+      "calls": 2988,
+      "finals": 108,
+      "maximum_model_usd": 17.020672
+    }
+  },
+  "maximum_model_usd": 21.326848,
+  "prior_reservation_usd": 23.070816,
+  "cumulative_model_reservation_ceiling_usd": 44.397664,
+  "existing_hosting_ceiling_usd": 0.5,
+  "hosting_extension": false,
+  "maximum_wire_bytes": 32768,
+  "maximal_fixture_wire_bytes": 32108,
+  "reservation_per_call_usd": 0.005696,
+  "funding": "pending_named_finite_reassignment",
+  "main_gate": "source-identical D1 plus Q0 records;27acceptable finals and complete756valid nodes",
+  "assignments_sha256": {
+    "R41-D1": "703c5a331b2187ae8aa9189c96b62739f10bad9a0f05f54b3f71df2fff9d2fdb",
+    "R41-Q0": "94d0f5275d563fe31e470795425db9a7def72f6637848a9b917f6aff475b3a84",
+    "R41-E0": "8b613c8ec52f7e3e9c33d3ef84131b61f9e3d2f9583e6c9890526111ac45e2af"
+  }
+}

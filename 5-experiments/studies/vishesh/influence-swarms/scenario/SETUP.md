@@ -189,3 +189,8 @@ Read E1's [scientific closeout](reviews/E1-E0-01-post.md): the five unsafe purch
 ## R40-Q0 closeout — 2026-10-05 UTC
 
 [Authored post-mortem](reviews/R40-Q0-01-post.md) and [scientific review](reviews/R40-Q0-01-quality-review.json):604calls/517valid/87format failures/152blocked. Fifteen acceptable observed finals among27assigned; large0/9missing, small6/9, generalist9/9. Exact native replay and original ledger reconciliation complete;0unknown usage;worker/relay stopped. Originalreservation23.070816/3533calls retained. Shared-check agenda competed with role scope;86coverage faults plus1length fault. Main blocked. One bounded prospective interface repair is permitted for preparation, not yet funded for native calls; no open-ended successor.
+
+
+## R41 single interface repair prepared
+
+[Plan](r41/PLAN.md), [manifest](r41/manifest.json) and [offline validation](r41/offline-validation.json):21tests pass,32,108-byte maximal nested request under32,768. Fixed required fact keys preserve wrong values; checker agenda excluded from other roles. D1 proposes84calls on one full truthful root, then672additional calls only after passing D1; exact D1 prefix reused once for full756-node qualification. Conditional2988main remains gated by27/27final competence. Originalledger23.070816/3533calls retained; requested repaired-cycle maximum21.326848API, existinghosting.50counted once; no new machine/extension. Named finite PI funding and current admission pending; zero R41native calls. A failed repair closes the reliability shortfall without another loop.
