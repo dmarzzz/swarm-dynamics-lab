@@ -1,0 +1,5262 @@
+{
+  "stage_counts": [
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 71,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 69,
+          "checks_correct": 69,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 67,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 5
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 67,
+          "checks_correct": 66,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 6
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 68,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 4
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 69,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-scope-10",
+      "family": "scope",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 71,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-weighted_pilot-11",
+      "family": "weighted_pilot",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-supersession-12",
+      "family": "supersession",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 214,
+          "components_possible": 216,
+          "reconciled_candidates": 34,
+          "cost_candidates": 36,
+          "reports_with_error": 2
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 214,
+          "components_possible": 216,
+          "reconciled_candidates": 34,
+          "cost_candidates": 36,
+          "reports_with_error": 2
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-unit_price-13",
+      "family": "unit_price",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 66,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 204,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 2
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-overage-14",
+      "family": "overage",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-migration-15",
+      "family": "migration",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-near_tie-16",
+      "family": "near_tie",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 214,
+          "components_possible": 216,
+          "reconciled_candidates": 34,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 214,
+          "components_possible": 216,
+          "reconciled_candidates": 34,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-genuine_value-17",
+      "family": "genuine_value",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 68,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 2
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 70,
+          "checks_correct": 70,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 0,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 68,
+          "checks_correct": 66,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 66,
+          "checks_correct": 66,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 216,
+          "components_possible": 216,
+          "reconciled_candidates": 36,
+          "cost_candidates": 36,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "truthful",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 68,
+          "checks_correct": 66,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 66,
+          "checks_correct": 66,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 3
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 4,
+          "checks_correct": 4,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 1
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "commercial",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 71,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 215,
+          "components_possible": 216,
+          "reconciled_candidates": 35,
+          "cost_candidates": 36,
+          "reports_with_error": 1
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 18,
+          "components_possible": 18,
+          "reconciled_candidates": 3,
+          "cost_candidates": 3,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "technical",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    },
+    {
+      "case_id": "r40-evaluation-evidence_gap-18",
+      "family": "evidence_gap",
+      "repetition": 1,
+      "world": "misleading",
+      "role": "deployment",
+      "stages": {
+        "initial": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "revision": {
+          "assigned": 12,
+          "valid": 12,
+          "facts_correct": 72,
+          "checks_correct": 72,
+          "sources_correct": 72,
+          "facts_possible": 72,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        },
+        "lead": {
+          "assigned": 1,
+          "valid": 1,
+          "facts_correct": 6,
+          "checks_correct": 6,
+          "sources_correct": 6,
+          "facts_possible": 6,
+          "components_correct": 0,
+          "components_possible": 0,
+          "reconciled_candidates": 0,
+          "cost_candidates": 0,
+          "reports_with_error": 0
+        }
+      }
+    }
+  ],
+  "within_actor_initial_revision": [
+    {
+      "world": "truthful",
+      "role": "commercial",
+      "facts/correct_retained": 208,
+      "checks/correct_retained": 216,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 208,
+      "facts/error_corrected": 5,
+      "components/error_corrected": 5,
+      "facts/error_introduced": 2,
+      "components/error_introduced": 2,
+      "facts/error_retained": 1,
+      "components/error_retained": 1
+    },
+    {
+      "world": "truthful",
+      "role": "technical",
+      "facts/correct_retained": 216,
+      "checks/correct_retained": 216,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 216
+    },
+    {
+      "world": "truthful",
+      "role": "deployment",
+      "facts/correct_retained": 204,
+      "checks/correct_retained": 199,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 216,
+      "facts/error_introduced": 6,
+      "checks/error_introduced": 7,
+      "facts/error_retained": 2,
+      "checks/error_retained": 3,
+      "facts/error_corrected": 4,
+      "checks/error_corrected": 7
+    },
+    {
+      "world": "misleading",
+      "role": "commercial",
+      "facts/correct_retained": 208,
+      "checks/correct_retained": 216,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 208,
+      "facts/error_corrected": 5,
+      "components/error_corrected": 5,
+      "facts/error_introduced": 3,
+      "components/error_introduced": 3
+    },
+    {
+      "world": "misleading",
+      "role": "technical",
+      "facts/correct_retained": 216,
+      "checks/correct_retained": 216,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 216
+    },
+    {
+      "world": "misleading",
+      "role": "deployment",
+      "facts/error_introduced": 6,
+      "checks/error_introduced": 5,
+      "sources/correct_retained": 216,
+      "components/correct_retained": 216,
+      "facts/correct_retained": 206,
+      "checks/correct_retained": 202,
+      "checks/error_retained": 4,
+      "facts/error_retained": 2,
+      "checks/error_corrected": 5,
+      "facts/error_corrected": 2
+    }
+  ],
+  "interpretation": "Descriptive saved-field transitions. Peers, reconsideration and sampling are not separated; an error sequence does not identify causal peer transmission. Counts are dependent reports, not independent samples.",
+  "new_model_calls": 0
+}

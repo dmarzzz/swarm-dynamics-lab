@@ -1,15 +1,13 @@
-# Current findings: bounded recovery completed
+# Current findings: the main completed, with no observed large-team amplification
 
-**One identical-request retry plus five previously blocked steps succeeded.** All six new reports were valid and the missing large-team Decider selected the acceptable vendor with correct facts and costs. [Read the R42 closeout](reviews/R42-C0-01-post.md).
+**107 of 108 decisions were acceptable. No unsafe purchase occurred.** The 40-member team and generalist each achieved 36/36 acceptable decisions; the four-member team achieved 35/36, with one unnecessary deferral despite correct recorded facts. The primary misleading-versus-truthful harm contrast was zero on these nine authored configurations.
 
-The nine-root development record now contains756valid logical reports and27acceptable final decisions, using750unchanged prior reports. This required757physical calls, including the original failure. **Original first-pass qualification remains failed; completion is recovery-assisted.** One successful retry does not prove the formatting defect is cured. Main comparison has not launched and remains unfunded.
+[Read the full authored assessment](reviews/R43-E0-01-post.md) and [interactive recorded-report comparison](reporting/r43-main.html).
 
-| Workflow | Original observed / assigned finals | Recovery-assisted acceptable / assigned |
-|---|---:|---:|
-|40-member team|8 / 9|9 / 9|
-|Four-member team|9 / 9|9 / 9|
-|Generalist|9 / 9|9 / 9|
+Correct choices concealed mistakes. Thirteen final reports had field errors. A shared checker miscalculated 97.6% as 97.4%, and four team Deciders repeated it despite correct specialist inputs; the generalists retained the correct value. Other errors changed UNKNOWN into FAIL or invented incorrect costs. These observations do not establish a causal peer or checker-authority effect.
 
-Recovery costUSD0.00361706; repaired D1+Q+recovery costUSD0.354953635. All historical errors, cost reservations and older uncertainty are retained. [R41 failed-first-pass closeout](reviews/R41-Q0-01-post.md) and [R42 exact audit](reviews/native-R42-C0-01/saved-audit.json).
+All 2,988 logical reports completed through 2,998 physical calls, including ten known output-limit failures and ten successful identical-request retries. The original first-pass dependency view retains only 98/108 final decisions. The provider defect remains; bounded recovery worked in this run. [Exact audit](reviews/native-R43-E0-01/saved-audit.json) and [first-pass analysis](reviews/native-R43-E0-01/first-pass-assessment.json).
 
-No causal outside-persuasion effect is established. Internal mistakes sometimes persist and sometimes are corrected. These nine authored development roots are not a population vulnerability estimate. Earlier E1 unsafe purchases shared aUSD40,000cost interpretation in both neutral and advocacy conditions; [E1 closeout](reviews/E1-E0-01-post.md) remains separate.
+API cost: USD 1.360775125, zero unknown usage. Original model reservations and historical failures remain. Allocated hosting is USD0.0558741333; total API plus allocated hosting is USD1.4166492583. Collection, owning scientific review, numerical reconstruction and resource release are complete. No successor is queued.
+
+The task set is synthetic, mostly offers clear eligibility, and uses strong policy instructions. This result does not establish real-world immunity or justify the extra compute of a large workflow. It is a useful finite negative result, with better evidence of reliability recovery and internal error transmission than of outside persuasion. Earlier development and E1 findings remain separate historical cohorts.

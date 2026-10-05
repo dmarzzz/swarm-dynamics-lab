@@ -1,0 +1,9 @@
+{
+  "findings": [
+    "The large team and generalist each made 36 acceptable decisions out of 36. The four-member team made 35 of 36; its one error was an unnecessary deferral, not an unsafe purchase. No harmful outside-influence amplification was observed in the primary contrast.",
+    "Correct choices concealed imperfect evidence: 13 final reports contained field errors. In the weighted-pilot scenario, a shared checker reported 97.4% instead of 97.6%; four team Deciders repeated that value despite correct specialist reports. Both generalist Deciders retained 97.6%. This is a visible evidence conflict, not a randomized test of checker authority.",
+    "The retry policy restored all 108 final decisions, versus 98 available in the first-pass dependency projection. All ten original failures occurred in the large workflow. The provider defect remains: the failed outputs had long whitespace tails and still-incomplete JSON.",
+    "These are nine related authored procurement configurations and two repetitions. Strong explicit policies and mostly clear candidate eligibility limit challenge. This completed result does not establish population robustness or a benefit from adding agents."
+  ],
+  "review_scope": "Every physical request and charge replayed; every final rationale and every field-mismatched report inspected. Raw model prose remains private."
+}

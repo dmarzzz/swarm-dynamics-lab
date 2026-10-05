@@ -1,0 +1,317 @@
+{
+  "assessor": "owning session; same-author native audit",
+  "date": "2026-10-05T02:11:48.198047+00:00",
+  "attempt": "native-R43-E0-01",
+  "evidence_revision": "9c625dc8979ebf293a2e98db1dbfb7a5979fbfde",
+  "decision": "complete_valid_result",
+  "qualification": "recovery-assisted; original first-pass qualification failure preserved",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "The fixed-clause endorsement interaction was estimated over every assigned endpoint; the observed primary contrast is zero.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Mostly clear eligibility, strong policy prompts and related synthetic templates produce a decision ceiling; deployment realism and adaptive influence are untested.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ],
+      "next_action": "Finish this finite result; retain the stated claim boundary in every report. A materially different successor requires a prospective decision.",
+      "acceptance_check": "No population, equivalence, pure-agent-count or causal peer-influence claim based on this cohort."
+    },
+    {
+      "dimension": "controls",
+      "status": "gap",
+      "finding": "Matched primary evidence and endorsement clauses plus strong generalist/control cases support the finite comparison; compute/topology/raw-evidence differences and absent ablations prevent pure size or peer-causal claims.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ],
+      "next_action": "Finish this finite result; retain the stated claim boundary in every report. A materially different successor requires a prospective decision.",
+      "acceptance_check": "No population, equivalence, pure-agent-count or causal peer-influence claim based on this cohort."
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Recovery-assisted admission and clean final-choice criteria were met; all 2988 logical reports validated. This does not imply semantic or prose perfection: 78 reports and 13 finals have field errors.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All 108 assigned outcomes, field differences, both missingness views, repeat disagreement and leave-one-family-out results are retained and replayed.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "Nine related authored configuration units with two nested repetitions provide finite-cohort descriptive evidence, not population precision or equivalence.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ],
+      "next_action": "Finish this finite result; retain the stated claim boundary in every report. A materially different successor requires a prospective decision.",
+      "acceptance_check": "No population, equivalence, pure-agent-count or causal peer-influence claim based on this cohort."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "All 2998 exact request/context/parent hashes reconstruct against frozen scientific inputs and OpenAI-only Luna route; no hidden model fallback or semantic retry.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "2988 logical nodes and 2998 physical calls reconcile; all ten first failures and ten retries retained; zero unknown usage.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Grant29 closed: API1.360775125, allocated hosting0.0558741333, total1.4166492583; zero unknown usage, original44.459296 reservation/7288 calls retained. Worker/relay stopped, exclusive claim484 released; no successor.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/funding-reconciliation.json",
+          "sha256": "7599416a336ccb9e058eb69bb3378f320e90be264348210cd6b8a458895b9b72"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Frozen source/manifest and retained private native evidence reconstruct requests, outputs, scores and costs. Hosted draws are not guaranteed reproducible.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Saved-data projection matches both analyses; browser verified 108 recovery finals versus98 first-pass, real checker/Decider mismatches, and responsive layout. Public shared renderer deployment is not claimed.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/summary.json",
+          "sha256": "04fff091e8aad8f665aecba420972ab407ff50a8a8a5bc66fde8800fed75133a"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/saved-audit.json",
+          "sha256": "3bad5c79940695a74785ec57d4a19a770063ca500bb60478c3ef828257bf7dce"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/assessment.json",
+          "sha256": "d80aeca1afc68c5149010a6591bb0de963bbdd7d9fa27a9ff66e7d2865436f3c"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/semantic-differences.json",
+          "sha256": "d7f7541adc37ae27b73533ec3b5517617199211422fea1417bb1ac66b47b101e"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R43-E0-01/fault-audit.json",
+          "sha256": "d8d282e1a15e8197d311de976c0f848db3b03e4d5be89fc12b7758530a43d531"
+        }
+      ]
+    }
+  ]
+}

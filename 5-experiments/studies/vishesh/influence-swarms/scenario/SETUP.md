@@ -219,3 +219,10 @@ Owner requested repair and continuation after R41 closeout. [Prospective plan](r
 ## R43 main amendment preparation — 2026-10-05
 
 Owner directs main continuation. [Prospective plan](r43/PLAN.md) retains R41scientificbytes but admits explicitly recovery-assisted27/27developmentcompetence and boundedknown-length-only retries.2988logicalcalls/108finals over9evaluationroots×2repetitions; atmost1retry/node, global30pool,3018calls/API17.191552. Fixed-wave retrypriority prevents latency-driven allocation. Original ledger27.382688/4290 retained; no mainfundingyet. Requestone3hour existinghostclaim/hostingmaximum.23. Twelveoffline tests include complete2988scriptedacquisition, concurrentpool/exhaustion, immutableparents/duplicate/restart/globalstop andfirstpassdependencyprojection. Nativefunding andfreshadmissionpending; no callsdispatched.
+
+
+## R43 main closeout — 2026-10-05
+
+[Authored post-mortem](reviews/R43-E0-01-post.md), [eleven-dimension assessment](reviews/R43-E0-01-quality-review.json), and [saved-data replay](reporting/r43-main.html). All 2988 logical reports /108 assigned finals completed through2998 physical calls with10 recorded retries; no unknown usage.107 acceptable decisions, one small-team unnecessary deferral, zero unsafe purchases; primary large-vs-generalist contrast0.13 finals have field errors; original first-pass projection98/108. Exact all-call/parent/context/scoring/cost audit passed; all final rationales and mismatched reports inspected. API1.360775125; original44.459296 reserved/7288 calls retained. Worker/relay stopped, scope closed; finish exact claim/publication settlement, then FINISH/PARK. No successor follows.
+
+R43 resource settlement: merged release484; allocated hosting0.0558741333, API plus hosting1.4166492583, unused finite grant authority16.0049027417 returned to PI. Original reservations unchanged. Private backup12,192files verified. FINISH/PARK.

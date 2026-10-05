@@ -1,0 +1,19 @@
+{
+  "authority": "PI-FUND-20261005-29",
+  "api_actual_usd": 1.360775125,
+  "unknown_usage": 0,
+  "allocated_hosting_usd": 0.05587413333333333,
+  "hosting_is_invoice_charge": false,
+  "claim_seconds": 2816,
+  "verified_hourly_rate_usd": 0.07143,
+  "total_actual_plus_allocated_usd": 1.4166492583333334,
+  "grant_maximum_usd": 17.421552,
+  "unused_authority_returned_usd": 16.004902741666665,
+  "original_model_reservation_usd": 44.459296,
+  "original_physical_calls": 7288,
+  "attempt_reserved_usd": 17.076608,
+  "release_pr": "https://github.com/dmarzzz/swarm-labs-agentops/pull/484",
+  "claim_status": "done",
+  "worker_and_relay_stopped": true,
+  "successor_authorized": false
+}
