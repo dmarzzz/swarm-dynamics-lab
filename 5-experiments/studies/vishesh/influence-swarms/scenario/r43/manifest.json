@@ -20,11 +20,13 @@
     "5-experiments/studies/vishesh/influence-swarms/scenario/r43/engine.py": "b74950f2ca2ba087929de455615b75ed07b38bfa2a96256aa68b88ec277b3eb6",
     "5-experiments/studies/vishesh/influence-swarms/scenario/r43/worker.py": "ea01dad1b8be9b8719533231ccf17dcd5be3d2ea003e1bbad6c2cfa169822d52",
     "5-experiments/studies/vishesh/influence-swarms/scenario/r43/test_engine.py": "7d82841e8f147cea363eaf5c309c8a87fd9ae21847ad7de622e72c5aecbce4b5",
-    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/PLAN.md": "1a5d7359995e5ec97598dc9a9f8a8f931b36b8b623fff61237f71180f6be32e6"
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/PLAN.md": "9d1f31a67651e8168815e6bb6c152dd990539d211d589fe663681759f6367a0c"
   },
   "private_evidence_hashes": {
     "native-R42-C0-01/composite-records.json": "b74af1fdc50c7192f636ec5a44465016591461a713b78ded0221811f7e8ddcff",
     "native-R42-C0-01/summary.json": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f",
     "native-R42-C0-01/run-receipt.json": "c23ce8fef01953fcaf417ff2fd8610c458f354709397ee86809a9bb6f73fac71"
-  }
+  },
+  "maximum_per_call_reservations": 17.190528,
+  "conservative_model_buffer": 0.001024
 }
