@@ -6,7 +6,7 @@
   film: Swarm of Theseus, hackathon submission (2 minutes). Silent picture; Dan narrates over it.
   One scene per script beat, each a classic script in scenes/. The page is a pure function of time (window.__seek).
   Contract: README.md. Order and durations: FILM.order below.
-  ?film=long the 4-minute cut   ?only=<id> one scene (&dur=<seconds>)   ?t=<seconds> start there   ?record no UI, no autoplay
+  ?film=long the 4-minute cut   ?film=two the two-experiment cut   ?only=<id> one scene (&dur=<seconds>)   ?t=<seconds> start there   ?record no UI, no autoplay
 -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Swarm of Theseus</title>
@@ -61,6 +61,7 @@ const RECORD = Q.has('record');
 window.FILM = {
   // [scene id, seconds]. Change a number to retime, reorder lines to reorder, set 0 to drop a scene.
   // Two cuts share the scenes: ?film=short (the 2-minute submission, default) and ?film=long (the 4-minute version).
+  // ?film=two is the two-experiment cut for sharing in a chat: twoopen, sybil, theseus50, twoclose.
   // [scene id, seconds]. `python3 narrate.py time --film <name>` rewrites a cut's seconds from its narration clips.
   films: {
     short: [
@@ -92,7 +93,17 @@ window.FILM = {
       ['more', 7.0000],
       ['next', 14.3000],
     ],
+    two: [
+      ['twoopen', 18.5333],
+      ['sybil', 24.8333],
+      ['theseus50', 25.8000],
+      ['twoclose', 19.7333],
+    ],
   },
+  // per-cut kicker of a shared scene (a scene asks FILM.kicker(id, its default))
+  kickers: { two: { sybil: 'experiment 1', theseus50: 'experiment 2' } },
+  kicker(id, fallback) { return ((this.kickers[Q.get('film')] || {})[id]) || fallback; },
+  coldOpen: { two: true },   // these cuts start on a full first frame instead of fading in from black
   fps: 30,
   fade: 0.35,
   mark: { x: 1782, y: 944, size: 120 },   // the rotating cube; the loop keeps the cube in the top-left 380 px of a 720 px frame
@@ -112,6 +123,7 @@ window.FILM = {
 <script src="scenes/why.js" onerror="0"></script><script src="scenes/frame.js" onerror="0"></script><script src="scenes/roadmap.data.js" onerror="0"></script><script src="scenes/roadmap.js" onerror="0"></script><script src="scenes/stack.js" onerror="0"></script><script src="scenes/more.data.js" onerror="0"></script><script src="scenes/more.js" onerror="0"></script>
 <script src="scenes/theseus50.js" onerror="0"></script><script src="scenes/links.data.js" onerror="0"></script><script src="scenes/highlights.js" onerror="0"></script>
 <script src="scenes/next.data.js" onerror="0"></script><script src="scenes/next.js" onerror="0"></script>
+<script src="scenes/twoopen.js" onerror="0"></script><script src="scenes/twoclose.js" onerror="0"></script>
 <script>
 (() => {
   const film = document.getElementById('film');
@@ -173,7 +185,8 @@ window.FILM = {
       s.root.style.display = on ? 'block' : 'none';
       if (!on) { if (s.wasOn) s.root.querySelectorAll('video').forEach(v => v.pause()); s.wasOn = false; continue; }
       s.wasOn = true;
-      const f = only ? 1 : Math.min(ease(t / FILM.fade), ease((s.dur - t) / FILM.fade));
+      const cold = s === scenes[0] && FILM.coldOpen[Q.get('film')];
+      const f = only ? 1 : Math.min(cold ? 1 : ease(t / FILM.fade), ease((s.dur - t) / FILM.fade));
       s.root.style.opacity = f;
       if (s.chip) s.chip.style.opacity = ease((t - 1.2) / 0.6);
       if (s.def) try { s.def.update(t / s.dur, t, s.ctx); } catch (e) { if (!s.err) console.error(s.id, e); s.err = e; }

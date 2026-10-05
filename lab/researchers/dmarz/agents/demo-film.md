@@ -3,8 +3,8 @@ agent: dmarz/demo-film
 tool: claude-code
 state: done
 task: null
-doing: closed out. Two-minute film, four-minute film and static slides filed (hackathon-demo-film, hackathon-demo-film-long, hackathon-demo-slides)
-updated: 2026-10-05T01:40Z
+doing: closed out. Added the two-experiment cut for sharing in a chat (two-experiments-film) beside the two-minute film, four-minute film and static slides
+updated: 2026-10-05T04:45Z
 ---
 
 ## Notes
@@ -18,3 +18,7 @@ transcription only; nobody had listened to them at close.
 Open at close: the links from results 1 and 2 to atlas candidates in `scenes/roadmap.build.py` were chosen by lineage and by
 content, since neither study cites an atlas id; the "next" lines under result 3 on the map come from the three-member pilot's
 write-up; "8 of 12 documents" in result 2 is from the narration draft and was not found in the study files.
+
+Added 2026-10-05: `index.html?film=two`, an 89-second cut that explains two experiments to someone who has not seen the
+hackathon film (the Sybil market experiment and the fifty-member Swarm of Theseus run), filed as `two-experiments-film`.
+The two experiment scenes and their narration are unchanged from the four-minute cut; the opening and closing cards are new.

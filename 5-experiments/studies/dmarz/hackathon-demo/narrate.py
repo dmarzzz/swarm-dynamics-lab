@@ -17,7 +17,7 @@ FILM = sys.argv[sys.argv.index('--film') + 1] if '--film' in sys.argv else 'shor
 VO = HERE / '_out' / ('vo' if FILM == 'short' else 'vo-' + FILM)
 NARRATION = HERE / ('narration.json' if FILM == 'short' else f'narration-{FILM}.json')
 LEAD, TAIL = 0.25, 0.20                       # silence before the voice starts in a scene, and after it ends
-HOLD = {'sybil': 0.3}                         # extra seconds after the voice, where the last beat needs time on screen
+HOLD = {'sybil': 0.3, 'twoclose': 3.0}                         # extra seconds after the voice, where the last beat needs time on screen
 FLOOR = {'theseus50': 18, 'highlights': 5, 'why': 10, 'frame': 16, 'tracks': 9, 'stack': 12, 'roadmap1': 8, 'roadmap2': 8, 'roadmap3': 8, 'more': 7.0, 'team': 3.5, 'define': 5, 'questions': 7, 'method': 5, 'lab': 9, 'sybil': 18, 'result3': 18, 'theseus': 18, 'next': 12}
 
 

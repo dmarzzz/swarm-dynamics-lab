@@ -2,7 +2,7 @@
 // Data: scenes/sybil.data.js, FILM.data.sybil.rules180 (built from saved records; see its header).
 (function () {
   const COPY = {
-    kicker: 'result 1',
+    kicker: FILM.kicker('sybil', 'result 1'),
     title: 'Thou shalt not split',
 
     // Beat A: the economy. 5-experiments/studies/dmarz/sybil-rules-180/RESULTS.md ("What was run": 180 owners, 60 markets, 3 per market)

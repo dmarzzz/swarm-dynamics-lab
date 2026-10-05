@@ -3,7 +3,7 @@
 // ("Observed comparison"), its PLAN.md (the task), and the study README ("What changed from three to fifty members").
 (function () {
   const COPY = {
-    kicker: 'result 3',
+    kicker: FILM.kicker('theseus50', 'result 3'),
     title: 'Swarm of Theseus',
     // PLAN.md: fifty positions; "every owner consults two witnesses"; "six cases per owner"
     job: 'the job: each of 50 agents decides 6 cases, after checking its 2 sources',

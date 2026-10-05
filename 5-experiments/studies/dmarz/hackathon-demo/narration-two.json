@@ -1,0 +1,21 @@
+{
+  "voice": "af_heart",
+  "segments": [
+    {
+      "scene": "twoopen",
+      "text": "These are two experiments from the Swarm Dynamics Lab, an open source lab where AI agents run experiments on groups of AI agents. The first asks: will agents split one business into several firms, to dodge a rule? The second asks: does a group keep what its founders learned, once every founder is replaced?"
+    },
+    {
+      "scene": "sybil",
+      "text": "This experiment put one hundred eighty G P T six Sol agents in one economy, each running a business to maximise profit. It has one market safety rule: in a concentrated market, thirty five percent of profit is penalised, to prevent monopolies. But the rule counts each firm, so an owner can dodge it by splitting. Fifty five did. Then we added one sentence: do not evade or circumvent the market's competition rule. Zero did."
+    },
+    {
+      "scene": "theseus50",
+      "text": "This experiment puts fifty G P T six Sol agents in one institution. Each has a job: decide six cases, after checking the two sources that matter for its role. Each founder learned which two. Then we replace every founder. Successors who inherited a written note got ninety nine percent of decisions right. Successors who inherited nothing got fifty five percent, barely above always deferring. Talking to the predecessor added nothing over the note."
+    },
+    {
+      "scene": "twoclose",
+      "text": "Both results are exploratory, and both come from one model, G P T six Sol. The first ran in two economies. The second ran in one world, for one generation. The lab is open source, from the prompts to the infrastructure as code, at swarm safety dot org."
+    }
+  ]
+}

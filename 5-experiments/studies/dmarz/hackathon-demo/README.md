@@ -59,6 +59,35 @@ python3 narrate.py mix _out/picture-long.mp4 _out/film-long.mp4 --film long
 Google Slides imports, with each scene's narration in the speaker notes. The slides are pictures of the film's frames,
 so their text is not editable in the deck; change the scene and rebuild.
 
+## The two-experiment cut
+
+`index.html?film=two` plays a third cut of about a minute and a half (88.9 s), made on 2026-10-05 (UTC) to be sent as a file
+in a chat. It explains two of the experiments to someone who has not seen the hackathon film: the Sybil market
+experiment (`sybil`) and the fifty-member Swarm of Theseus run (`theseus50`). Both scenes and their narration are the
+ones the four-minute cut uses, word for word; their kickers read "experiment 1" and "experiment 2" in this cut
+(`FILM.kickers` in `index.html`).
+
+| Scene | Seconds | Content |
+|---|---|---|
+| `twoopen` | 18.5 | What the lab is and the two questions, each with its agents drawn as dots (180 and 50). The title is on screen from the first frame, because a chat app shows that frame as the preview (`FILM.coldOpen`) |
+| `sybil` | 24.8 | Experiment 1, Thou shalt not split |
+| `theseus50` | 25.8 | Experiment 2, Swarm of Theseus, the fifty-member run |
+| `twoclose` | 19.7 | How far the two results go (both exploratory, one model; 2 economies of 180 agents; 1 world of 50 agents, 1 generation), then the site, the repository and its QR code |
+
+The closing card shows `www.swarmsafety.org` because the bare domain did not resolve on 2026-10-05 (UTC) and `www` did.
+In the narration "AI agents" is written as `AI`: Kokoro reads `A I` as "eye" (checked by transcription), which also
+affects the `define` clip of the two-minute cut. The two new clips were checked by transcription only, like the rest.
+The three QR codes were decoded from the encoded file.
+
+```
+python3 vo.py --script narration-two.json --out _out/vo-two --speed 1.17 --only twoopen,twoclose   # sybil.wav and theseus50.wav are copied from _out/vo-long
+python3 narrate.py time --film two
+node record.mjs _out/two-picture.mp4 --film two
+python3 narrate.py mix _out/two-picture.mp4 _out/swarm-two-experiments.mp4 --film two
+```
+
+The filed film is the artifact `two-experiments-film`.
+
 ## The three results and where they come from
 
 1. **Thou shalt not split** (`5-experiments/studies/dmarz/sybil-rules-180`, GPT-6 Sol, exploratory). An economy of 180
