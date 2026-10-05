@@ -1,0 +1,222 @@
+{
+  "assessor": "owning session; same-author audit",
+  "date": "2026-10-05T00:22:18.047671+00:00",
+  "attempt": "native-R41-D1-01",
+  "evidence_revision": "262af6f1e0ff3ae5475e8a7f8b98834af8662831",
+  "decision": "advance_remaining_qualification_only_when_allocated",
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "One complete-root interface diagnostic, not nine-family competence or an influence effect.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "pass",
+      "finding": "One inspected scope-family development case, selected for competing agenda failure; explicit retrospective diagnosis.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Same source union/actual checks across40/4/1workflow; truthful-only repair screen, no adverse-treatment inference.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "84/84valid,3/3acceptablefinals,correctfinalcostcomponents/sourcecoverage; diagnostic gate only.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "Exact84wire/parent/output/score replay; all16wrong-fieldreports and3finalrationales reviewed. UNKNOWN\u2192FAIL retained.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "gap",
+      "finding": "One authored root cannot qualify eight unobserved families or rare-failure reliability.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ],
+      "next_action": "Retainexplicitlimitation; qualifyremainingeightrootswithseparateallocation, useverifiedvisualfallbackuntilCDdeployment.",
+      "acceptance_check": "Full756validnodes/27acceptablefinalsandcost/sourcegates beforemain; anyactivatedreplaymustmatchactualhistory."
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Checker agenda isolated; fixedidentityslotsderiveonlyfromassignedschema; no hidden gold/operator context or repaired values.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "84assigned/started/valid,3finalsobserved;0missing/retry/unknownusage; priorR40failurespreserved.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Actual.038886825,reserved.478464,original23.549280/3617; actual84-callgrant andnegativeSQLlimits enforced; worker/relay stopped.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Pinned262af6f1source/manifest;24offline/deployedtests; nativeexactaudit; unchangedscientificbytesfromc8.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "gap",
+      "finding": "Finaltable matches3assigned outcomes and separatefacts/costs; nativeinteractive renderer notdeployed, numericalprogress/tablefallbackprovided.",
+      "evidence": [
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/summary.json",
+          "sha256": "20baf110d881d92568053137e201f95fedc02a48c16d2ba0b55c87507b0d7518"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/semantic-summary.json",
+          "sha256": "ac20716705cc0a765807cb7e89b64dc5461ebc33ccb840a93b0f86793fbdf39f"
+        },
+        {
+          "path": "5-experiments/studies/vishesh/influence-swarms/scenario/reviews/native-R41-D1-01/saved-audit.json",
+          "sha256": "bd7c6eb16ecfc42d53e4586b4be500f0358cb5e29c1787cfdff2b9d2207fa97f"
+        }
+      ],
+      "next_action": "Retainexplicitlimitation; qualifyremainingeightrootswithseparateallocation, useverifiedvisualfallbackuntilCDdeployment.",
+      "acceptance_check": "Full756validnodes/27acceptablefinalsandcost/sourcegates beforemain; anyactivatedreplaymustmatchactualhistory."
+    }
+  ]
+}

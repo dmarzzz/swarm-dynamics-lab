@@ -194,3 +194,8 @@ Read E1's [scientific closeout](reviews/E1-E0-01-post.md): the five unsafe purch
 ## R41 single interface repair prepared
 
 [Plan](r41/PLAN.md), [manifest](r41/manifest.json) and [offline validation](r41/offline-validation.json):21tests pass,32,108-byte maximal nested request under32,768. Fixed required fact keys preserve wrong values; checker agenda excluded from other roles. D1 proposes84calls on one full truthful root, then672additional calls only after passing D1; exact D1 prefix reused once for full756-node qualification. Conditional2988main remains gated by27/27final competence. Originalledger23.070816/3533calls retained; requested repaired-cycle maximum21.326848API, existinghosting.50counted once; no new machine/extension. Named finite PI funding and current admission pending; zero R41native calls. A failed repair closes the reliability shortfall without another loop.
+
+
+## R41-D1 closeout — 2026-10-05
+
+[Authored post-mortem](reviews/R41-D1-01-post.md) and [quality review](reviews/R41-D1-01-quality-review.json):84/84valid,3/3acceptablefinals and correct/reconciled finalcosts/sourcecoverage. Exactwire/record/scoring/ledger auditpassed,0unknownusage;worker/relaystopped. UNKNOWN→FAIL persisted through7deploymentrevisions,lead andlargeDecider butdidnotchangecorrectchoice; all16wrongfieldreportsreviewed. Fullninefamilyqualificationnotyetmet. Source262af6f1/manifest1a270ff9;actualpartial84-call/.478464ledgerallocationenforced,original23.549280/3617retained. Remaining672Q+conditional2988main requirepreciseallocation andfreshadmission, noautomatic successor.

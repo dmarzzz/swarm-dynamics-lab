@@ -1,0 +1,44 @@
+{
+  "original_study_ledger": {
+    "cap": 50.0,
+    "reserved": 23.549280000000437,
+    "calls": 3617
+  },
+  "grant24": {
+    "maximum_model": 21.326848,
+    "retained_debit": 3.4403839999999697,
+    "physical_calls": 604,
+    "status": "closed_failed_q",
+    "unspent_closed_not_refunded": 17.886464
+  },
+  "grant26": {
+    "maximum_model": 0.478464,
+    "retained_debit": 0.47846399999999933,
+    "maximum_calls": 84,
+    "physical_calls": 84,
+    "status": "funded"
+  },
+  "only_allocated_stage": [
+    [
+      "R41-D1",
+      "PI-FUND-20261005-26",
+      84,
+      0.478464,
+      1
+    ]
+  ],
+  "superseded_zero_call_preflight_metadata": [
+    [
+      "c8e4e6e25a19b97a928ab1df90a064e191fe88b9",
+      "b2690d412650cc56c0ef79ba5c093f730bdbe9ec12de0d217694ef8de3545e4d",
+      21.326848,
+      3744,
+      0,
+      "unlaunched broad preparation envelope replaced by actualD1-onlyfunding; never model-dispatched"
+    ]
+  ],
+  "Q0_allocated": false,
+  "E0_allocated": false,
+  "hosting": "existing0.50ceiling countedonce; noextension",
+  "model_calls_from_this_reconciliation": 0
+}

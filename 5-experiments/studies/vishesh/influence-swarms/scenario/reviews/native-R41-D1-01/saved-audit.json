@@ -1,0 +1,9 @@
+{
+  "attempt": "native-R41-D1-01",
+  "exact_wires": 84,
+  "valid_outputs_reproduced": 84,
+  "records_and_assessment_reproduced": true,
+  "costs_reconciled": true,
+  "invalids": [],
+  "new_model_calls": 0
+}
