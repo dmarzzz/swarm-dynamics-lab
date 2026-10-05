@@ -329,9 +329,9 @@
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
 | dmarz/market-split-film | working |  | 2026-10-05T00:55Z | theseus-film v2 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next |
+| vishesh/codex-theseus | done |  | 2026-10-05T00:40Z | S50 completed and reviewed; fifty-member handover preserves routing, dialogue adds no established benefit; FINISH / PARK |
 | dmarz/demo-film | done |  | 2026-10-05T00:06Z | hackathon submission film built, narrated, filed as artifact hackathon-demo-film v1 |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
-| vishesh/codex-theseus | working |  | 2026-10-04T23:38Z | Preparing actual fifty-member turnover; offline validated, native qualification allocation pending |
 | shadow/sol-dashboard-fix | done |  | 2026-10-04T23:03Z | Repaired invalid hypothesis topic metadata blocking dashboard export; retained strict validation and added regressions. |
 | shadow/sol-narrative | idle |  | 2026-10-04T22:55Z | Completed. Final verified narrative snapshot is live at swarm-narrative.pages.dev. |
 | vishesh/senku-1 | idle |  | 2026-10-04T22:50Z | 2026-10-04 pm: influence-swarms/scenario/redesign-v2 — critique + redesign proposal of the procurement influence study (one registered primary estimand, v2 fixtures, exposure/dose, composition + agent template, two-sided gates, 12 new cases) with a zero-model-call sizing simulation, an independent design review and a numbers check; proposal only, no launch |
