@@ -214,3 +214,8 @@ Owner requested repair and continuation after R41 closeout. [Prospective plan](r
 ## R42 native closeout — 2026-10-05
 
 [Authored post-mortem](reviews/R42-C0-01-post.md), [quality review](reviews/R42-C0-01-quality-review.json):sixcalls/sixvalid, allnewfacts/checks/costs correct; missinglargeDeciderBUYBirchacceptable.750oldvalidreports unchanged; composite756logicalvalid/27acceptablefinals from757physicalcalls. Originalfirstpassqualification failed. Exactnativeauditpasses; explanationsfragmentary exceptfinal. ActualAPI.00361706, originalreserved27.382688/4290;worker/relaystopped,grantclosed. Mainunfunded; prospectiveamendedadmission stillneeded.
+
+
+## R43 main amendment preparation — 2026-10-05
+
+Owner directs main continuation. [Prospective plan](r43/PLAN.md) retains R41scientificbytes but admits explicitly recovery-assisted27/27developmentcompetence and boundedknown-length-only retries.2988logicalcalls/108finals over9evaluationroots×2repetitions; atmost1retry/node, global30pool,3018calls/API17.191552. Fixed-wave retrypriority prevents latency-driven allocation. Original ledger27.382688/4290 retained; no mainfundingyet. Requestone3hour existinghostclaim/hostingmaximum.23. Twelveoffline tests include complete2988scriptedacquisition, concurrentpool/exhaustion, immutableparents/duplicate/restart/globalstop andfirstpassdependencyprojection. Nativefunding andfreshadmissionpending; no callsdispatched.

@@ -1,0 +1,30 @@
+{
+  "protocol": "R43-E0",
+  "frozen_scientific_source": "262af6f1e0ff3ae5475e8a7f8b98834af8662831",
+  "maximum_logical_calls": 2988,
+  "maximum_retry_calls": 30,
+  "maximum_physical_calls": 3018,
+  "maximum_model": 17.191552,
+  "source_hashes": {
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/analysis.py": "e7681864c07a8b876012e46fb4b63132bb4316c61d52e266b9db36a84d6cc8d5",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/cases.py": "9b91d2077e9ea592ae95e49fce9591ac8ce4925e9303408b04a8cde18e7cdc84",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/instrument.py": "c68e6484adce731e505709bd5f5e82a0fdfa47753e0201fb5b75d880048a1ce6",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/runtime.py": "f978e0f8568b6de4894fab7145315bec2dd68f901061b5deb045e92286b1abf6",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_analysis.py": "ca0010257719455abdbf7c3df310d76637aff43ba4a3d06d2131696710f6782a",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_cases.py": "7c5ff535d8c7c610b64efa108af427dbb3a7bdc8b7aa1aa3c1d3f1d45c8f7bdc",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_instrument.py": "61c008732ae1cd4cb434688af52e37e7323c0e6760546ef120ec798a781afbda",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_runtime.py": "86f142785d90f9e90a6c82241a66b36e5731c44110a3002ed87212bff4db20ef",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/test_stage_guard.py": "9554bf5eabfaed4f5d155fabaed38c097b7b721dc7763293df45e04eb4bab5b7",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/worker.py": "5614d1c4839b3d6235f194443c5578c5e834ba21a4602e6c47f56a5d4d817526",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r41/dossiers.json": "642abe6192236360456002e9bb44d1606dcb007cf30145659f45a8f0ead67068",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/engine.py": "b74950f2ca2ba087929de455615b75ed07b38bfa2a96256aa68b88ec277b3eb6",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/worker.py": "ea01dad1b8be9b8719533231ccf17dcd5be3d2ea003e1bbad6c2cfa169822d52",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/test_engine.py": "7d82841e8f147cea363eaf5c309c8a87fd9ae21847ad7de622e72c5aecbce4b5",
+    "5-experiments/studies/vishesh/influence-swarms/scenario/r43/PLAN.md": "1a5d7359995e5ec97598dc9a9f8a8f931b36b8b623fff61237f71180f6be32e6"
+  },
+  "private_evidence_hashes": {
+    "native-R42-C0-01/composite-records.json": "b74af1fdc50c7192f636ec5a44465016591461a713b78ded0221811f7e8ddcff",
+    "native-R42-C0-01/summary.json": "c5fd59754dd16de2712d8fe23c8cdefc577688f70bd5459b983d7ba223aca20f",
+    "native-R42-C0-01/run-receipt.json": "c23ce8fef01953fcaf417ff2fd8610c458f354709397ee86809a9bb6f73fac71"
+  }
+}
