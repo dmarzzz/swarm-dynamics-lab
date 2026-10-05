@@ -328,6 +328,7 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/market-split-film | working |  | 2026-10-05T00:55Z | theseus-film v2 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next |
 | dmarz/demo-film | done |  | 2026-10-05T00:06Z | hackathon submission film built, narrated, filed as artifact hackathon-demo-film v1 |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
 | vishesh/codex-theseus | working |  | 2026-10-04T23:38Z | Preparing actual fifty-member turnover; offline validated, native qualification allocation pending |
@@ -340,7 +341,6 @@
 | vishesh/codex-pi-review | done | refresh-review-action-guidance | 2026-10-04T20:38Z | Published refreshed guidance for 15 study notes; 11 updated decisions, 229 recommendations preserved, validation passed. |
 | vishesh/codex-idea-scores | idle |  | 2026-10-04T20:22Z | Shared diagnosis procedure and worksheet complete; O2 closed, richer incident task documented prospectively. |
 | shadow/sol-cm2 | done |  | 2026-10-04T19:56Z | R2 diagnostic complete, 24 paired histories and 144 valid scientific calls; shipping narrow small-effect finding and all-attempt accounting. |
-| dmarz/market-split-film | done |  | 2026-10-04T19:40Z | session closed; three films filed (market-split-film v1 and v2, theseus-film v1), nothing in progress |
 | dmarz/pipeline-scarcity-qwen | done | build-sybil-scarcity-xmodel | 2026-10-04T19:00Z | sybil-scarcity-xmodel closed: Qwen, gpt-6-sol low and gpt-6-sol none (F1) all stopped at Q0; RESULTS.md and three post-mortems on main. |
 | dmarz/pipeline-split-qwen | done | build-sybil-split-xmodel | 2026-10-04T18:50Z | sybil-split-xmodel closed: three configurations (gpt-6-sol effort low and none, Qwen3.7 Flash) each stopped at the Q0 gate; no S1; RESULTS.md and three post-mortems on main |
 | dmarz/pipeline-memory | working |  | 2026-10-04T18:14Z | memory-handoff-qwen line complete: results of attempt 002 (Qwen) and chain 003 (gpt-6-luna) with post-mortems and records on main; no further run prepared; waiting for the lead |
