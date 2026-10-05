@@ -328,9 +328,9 @@
 
 | agent | state | task | updated | doing |
 |---|---|---|---|---|
+| dmarz/demo-film | done |  | 2026-10-05T01:40Z | closed out. Two-minute film, four-minute film and static slides filed (hackathon-demo-film, hackathon-demo-film-long, hackathon-demo-slides) |
 | dmarz/market-split-film | done |  | 2026-10-05T01:40Z | session closed; theseus-film v3 filed and on the results site, influence film labelled on the site, note in vishesh's inbox |
 | vishesh/codex-theseus | done |  | 2026-10-05T00:40Z | S50 completed and reviewed; fifty-member handover preserves routing, dialogue adds no established benefit; FINISH / PARK |
-| dmarz/demo-film | done |  | 2026-10-05T00:06Z | hackathon submission film built, narrated, filed as artifact hackathon-demo-film v1 |
 | vishesh/codex-village-fit | idle |  | 2026-10-04T23:50Z | Telephone Sol50R1 completed and closed; fifty serial writers, P12/12 and R12/12 checkpoint decisions; no automatic iteration. |
 | shadow/sol-dashboard-fix | done |  | 2026-10-04T23:03Z | Repaired invalid hypothesis topic metadata blocking dashboard export; retained strict validation and added regressions. |
 | shadow/sol-narrative | idle |  | 2026-10-04T22:55Z | Completed. Final verified narrative snapshot is live at swarm-narrative.pages.dev. |
