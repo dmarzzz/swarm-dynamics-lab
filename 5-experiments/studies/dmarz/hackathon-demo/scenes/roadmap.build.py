@@ -79,8 +79,8 @@ RESULTS = [
         # SOC-24 is cited by the study (README.md:1, experiment.yaml:2). SOC-25 by content: README.md:40 predicts that an
         # old procedure may become harmful after the environment changes.
         'lights': [('SOC-24', 'cited', 'what survives full turnover'), ('SOC-25', 'content', 'retiring an obsolete convention')],
-        'sentence': 'Written notes carried a small task through full turnover. The procedure was supplied, not discovered.',
-        'open': 'six paired worlds, at ceiling',
+        'sentence': 'A written note carried the job through all 50 replacements. Dialogue added nothing.',
+        'open': 'one synthetic world, one generation',
         # RESULTS.md "What this warrants next" (line 71)
         'next': ['more task worlds, tighter memory', 'agents that find the practice themselves'],
         'next_src': ['5-experiments/studies/vishesh/swarm-of-theseus/RESULTS.md'],

@@ -27,7 +27,7 @@
     },
     {
       "scene": "stack",
-      "text": "The lab is infrastructure as code. An agent claims a server in a file, and Open Tofu and Ansible build it. Workers report every run to one hub, and results come back to the agents, who plan the next experiment. It is all open source, so anyone's agents can run the same lab."
+      "text": "An agent claims a server in a file, and Open Tofu and Ansible build it. Workers report every run to one hub, and results come back to the agents, who plan the next experiment. It is all open source, so anyone's agents can run the same lab."
     },
     {
       "scene": "highlights",
@@ -50,12 +50,12 @@
       "text": "Two more light up, on outside influence. The teams had true numbers and still chose the attacker's option. This does not measure general attack resistance."
     },
     {
-      "scene": "theseus",
-      "text": "This experiment gives a team of three Haiku agents a job: sort four new cases at every step, using a rule the founders were taught. Then we replace one agent at a time until no founder is left. Teams that inherited written notes kept one hundred percent accuracy. Teams that inherited nothing fell to fifty two percent, which is guessing."
+      "scene": "theseus50",
+      "text": "This experiment puts fifty G P T six Sol agents in one institution. Each has a job: decide six cases, after checking the two sources that matter for its role. Each founder learned which two. Then we replace every founder. Successors who inherited a written note got ninety nine percent of decisions right. Successors who inherited nothing got fifty five percent, barely above always deferring. Talking to the predecessor added nothing over the note."
     },
     {
       "scene": "roadmap3",
-      "text": "Notes carried a small task through a full change of crew. The procedure was supplied, so this does not show agents finding it themselves. Most of the map is still dark."
+      "text": "A written note carried the job through all fifty replacements. That is one world and one generation. Most of the map is still dark."
     },
     {
       "scene": "more",
@@ -63,7 +63,7 @@
     },
     {
       "scene": "next",
-      "text": "Next, we mine our own traces, work through the rest of the map, and scale from two hundred agents to two thousand, enough to recreate the Hugging Face scenario. The entire lab is open source, from the prompts to the infrastructure as code, at swarm safety dot org."
+      "text": "Next, we mine our own traces, and scale from two hundred agents to two thousand, enough to recreate the Hugging Face scenario. The entire lab is open source, from the prompts to the infrastructure as code, at swarm safety dot org."
     }
   ]
 }

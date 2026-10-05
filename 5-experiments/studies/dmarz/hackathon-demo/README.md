@@ -35,12 +35,13 @@ draft: it had not been reviewed or filed as an artifact when this was written.
 | `tracks` | 16 | The research map: 219 candidate hypotheses in 15 areas as a radial, the 7 experiment tracks by name |
 | `stack` | 18 | The control path as infrastructure as code: agents, git, OpenTofu and Ansible, short-lived servers, the run hub, the dashboard, and results returning to the agents |
 | `highlights` | 5 | 118 studies, three highlighted |
+| `theseus50` | 26 | Result 3 in this cut: the fifty-member Swarm of Theseus run (S50, GPT-6 Sol). 297 of 300 decisions right with a written note, 166 of 300 with nothing inherited, 295 with dialogue, 298 with founders kept. It replaces the three-member pilot scene, which the two-minute cut still uses |
 | `roadmap1`, `roadmap2`, `roadmap3` | 10 to 12 each | The same map after each result: the candidates it bears on, what it changes, the next experiments |
 | `more` | 8 | Ten more experiments as cards, nulls and failures included |
 
 Each result scene carries a link chip top right (`scenes/links.data.js`): its page on swarmsafety.org as text and a QR code.
 
-Order: team, why, frame, questions, tracks, lab, stack, highlights, sybil, roadmap1, result3, roadmap2, theseus, roadmap3, more, next.
+Order: team, why, frame, questions, tracks, lab, stack, highlights, sybil, roadmap1, result3, roadmap2, theseus50, roadmap3, more, next.
 `INTRO-FACTS.md` holds the quotes and sources behind `why` and `frame`, where the wording is the paper's and where it is
 ours, and what a specialist could challenge. `scenes/roadmap.build.py` regenerates the map data; the links from results 1
 and 2 to atlas candidates were chosen by lineage and by content, since neither study cites an atlas id.
