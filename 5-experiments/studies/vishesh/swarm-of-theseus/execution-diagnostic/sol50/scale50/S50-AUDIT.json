@@ -1,0 +1,196 @@
+{
+  "stage": "S50",
+  "calls": 1118,
+  "exact_request_replay": true,
+  "replayed": 1118,
+  "known_usage": 1118,
+  "api_usd": "3.0545377",
+  "witness_envelope_counts": {
+    "2": 206,
+    "1": 12
+  },
+  "technical_error": null,
+  "complete": true,
+  "mismatch_counts": {
+    "decision": 145
+  },
+  "source_sha256": "8354c82184d91abba03ce520810c81783870f8db9070ab11b605877cc3a9440d",
+  "packet_sha256": "f06af92bb7f1767ffbe09d76a038153da299f27a4c691fe2d8c8aca3d376be9d",
+  "observed_initial": {
+    "assigned": 300,
+    "correct": 299,
+    "harmful": 1,
+    "useful": 100
+  },
+  "assigned_initial_decisions": 300,
+  "assigned_terminal_decisions_per_arm": 300,
+  "observed_arms": {
+    "interactive": {
+      "replacement_responses": 50,
+      "valid_replacement_notes": 50,
+      "correct_route_notes": 50,
+      "observed_decisions": {
+        "assigned": 300,
+        "correct": 295,
+        "harmful": 2,
+        "useful": 98
+      },
+      "missing_or_ungraded_decisions": 0,
+      "correct_fraction_bounds": [
+        0.9833333333333333,
+        0.9833333333333333
+      ]
+    },
+    "static": {
+      "replacement_responses": 50,
+      "valid_replacement_notes": 50,
+      "correct_route_notes": 50,
+      "observed_decisions": {
+        "assigned": 300,
+        "correct": 297,
+        "harmful": 3,
+        "useful": 100
+      },
+      "missing_or_ungraded_decisions": 0,
+      "correct_fraction_bounds": [
+        0.99,
+        0.99
+      ]
+    },
+    "broken": {
+      "replacement_responses": 50,
+      "valid_replacement_notes": 50,
+      "correct_route_notes": 0,
+      "observed_decisions": {
+        "assigned": 300,
+        "correct": 166,
+        "harmful": 14,
+        "useful": 19
+      },
+      "missing_or_ungraded_decisions": 0,
+      "correct_fraction_bounds": [
+        0.5533333333333333,
+        0.5533333333333333
+      ]
+    },
+    "retained": {
+      "replacement_responses": 0,
+      "valid_replacement_notes": 0,
+      "correct_route_notes": 0,
+      "observed_decisions": {
+        "assigned": 300,
+        "correct": 298,
+        "harmful": 2,
+        "useful": 100
+      },
+      "missing_or_ungraded_decisions": 0,
+      "correct_fraction_bounds": [
+        0.9933333333333333,
+        0.9933333333333333
+      ]
+    }
+  },
+  "founders_correct": 50,
+  "initial": {
+    "assigned": 300,
+    "correct": 299,
+    "harmful": 1,
+    "useful": 100
+  },
+  "arms": {
+    "interactive": {
+      "replacements": 50,
+      "correct_inherited_notes": 50,
+      "terminal": {
+        "assigned": 300,
+        "correct": 295,
+        "harmful": 2,
+        "useful": 98
+      },
+      "overflow": 0,
+      "routes_correct": 50,
+      "generations": {
+        "1": 50
+      }
+    },
+    "static": {
+      "replacements": 50,
+      "correct_inherited_notes": 50,
+      "terminal": {
+        "assigned": 300,
+        "correct": 297,
+        "harmful": 3,
+        "useful": 100
+      },
+      "overflow": 0,
+      "routes_correct": 50,
+      "generations": {
+        "1": 50
+      }
+    },
+    "broken": {
+      "replacements": 50,
+      "correct_inherited_notes": 0,
+      "terminal": {
+        "assigned": 300,
+        "correct": 166,
+        "harmful": 14,
+        "useful": 19
+      },
+      "overflow": 76,
+      "routes_correct": 6,
+      "generations": {
+        "1": 50
+      }
+    },
+    "retained": {
+      "replacements": 0,
+      "correct_inherited_notes": 0,
+      "terminal": {
+        "assigned": 300,
+        "correct": 298,
+        "harmful": 2,
+        "useful": 100
+      },
+      "overflow": 0,
+      "routes_correct": 50,
+      "generations": {
+        "0": 50
+      }
+    }
+  },
+  "source_commit": "9bd914def1c0830023db9342c10627a788abfdbc",
+  "independent_worlds": 1,
+  "initial_ancestor_shared": true,
+  "review_status": "reviewed",
+  "execution_status": "completed",
+  "process_admitted": true,
+  "actual_api_usd": 3.0545377,
+  "new_unknown_api_usd": 0.0,
+  "hosting_usd": 0.049862108333333335,
+  "all_in_usd": 3.1043998083333335,
+  "cumulative_exposure_usd": 5.2567445853666666,
+  "prior_unknown_usd": 0.033102,
+  "unused_released_usd": 39.03560019166667,
+  "allocation_seconds": 2513.0,
+  "hosting_basis": "Claim start through merged release at verified hourly rate; conservative allocation estimate, not invoice",
+  "original_historical_rows_unchanged": true,
+  "local_remote_ledger_match": true,
+  "q50_calls_preserved": 60,
+  "worker_transport_stopped": true,
+  "claim_released": true,
+  "automatic_successor": false,
+  "result_sha256": "109bf8d2834fc2504ac29b50e97bbdce5eb15687100152f3a1c3d60dd87fc909",
+  "archive_sha256": "2ae731973dec3eb6a77637129e92e719bf2d30bb3cd5258e76e0fd07667affc4",
+  "all_served_model_provider_checks_pass": true,
+  "scientific_decision": "complete_valid_result",
+  "next_action": "FINISH / PARK; no automatic successor",
+  "operational_handoff_sha256": "b95208743e551e343746743b98b8836dda0e4189cfc21aa977fe802cc9680f30",
+  "manual_error_cases_reviewed": 11,
+  "nonbroken_error_cases": 11,
+  "manual_success_case_sample": 12,
+  "manual_broken_case_sample": 5,
+  "all_visible_responses_manually_reviewed": false,
+  "researcher_review": "not required by owner direction",
+  "independent_scientific_audit": false
+}

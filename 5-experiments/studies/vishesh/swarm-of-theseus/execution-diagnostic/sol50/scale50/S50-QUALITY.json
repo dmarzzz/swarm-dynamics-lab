@@ -1,0 +1,266 @@
+{
+  "assessor": "vishesh/codex-theseus",
+  "date": "2026-10-05",
+  "attempt": "S50",
+  "source_revision": "9bd914def1c0830023db9342c10627a788abfdbc",
+  "decision": "complete_valid_result",
+  "next_action": "FINISH / PARK; no automatic successor",
+  "independent_review": false,
+  "dimensions": [
+    {
+      "dimension": "question",
+      "status": "pass",
+      "finding": "Prospective primary inheritance contrast is answered within one synthetic 50-position institution; general culture and dialogue superiority remain unsupported.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "scenarios",
+      "status": "gap",
+      "finding": "Six synthetic templates and two-identifier learned state provide a usable routing-memory test but little challenge for a broad or tacit-culture claim.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ],
+      "next_action": "Park the broad culture claim. A future separately scoped study would need knowledge not exhaustively encoded in two IDs and independent task roots; no such run is queued.",
+      "acceptance_check": "Do not label this single template world as general, emergent or tacit cultural survival; preserve the completed narrow result."
+    },
+    {
+      "dimension": "controls",
+      "status": "pass",
+      "finding": "Full retirement, broken inheritance, capacity-matched static handover, retained founders and legal-evidence exact controller discriminate the narrow mechanism. Broken is deliberately information-deprived; static shows no added dialogue benefit.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "capability",
+      "status": "pass",
+      "finding": "Actual-roster Q50 passed; main acquired all 50 routes and used valid strict contracts throughout. Qualification does not imply perfect rule application: informed conditions retain 11 errors including initial.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "measurement",
+      "status": "pass",
+      "finding": "All 1500 assigned decisions scored with absolute harm/service, updated/preserved strata and 0 missing endpoints; 1118 requests replay exactly. No population interval.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "sample_size",
+      "status": "pass",
+      "finding": "Prespecified finite feasibility scope: one world, four dependent paired branches and one turnover wave; no agent/call pseudo-replication. General reliability is unmeasured.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "agent_context",
+      "status": "pass",
+      "finding": "Frozen GPT-6 Sol/OpenAI, isolated notes and addressed evidence, retired identities inaccessible, 512-output-token cap, no fallback or operator context. All served-route checks passed.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "data_integrity",
+      "status": "pass",
+      "finding": "1118 started/terminal/known-usage calls; exact replay, native result match, original local/remote ledgers retained. Manual review scope explicitly 11 error cases, 12 successes and 5 broken samples.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "resources",
+      "status": "pass",
+      "finding": "Original USD60 ledger retained; main USD3.104399808, cumulative USD5.256744585; zero new uncertainty, unused allocation released and own worker/transport/claim stopped.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility",
+      "status": "pass",
+      "finding": "Immutable plan/source/packet, native result/archive hashes, complete retained traces and recorded exact replay. Hosted stochastic answers are not promised reproducible.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "visualization",
+      "status": "pass",
+      "finding": "Measured PNG, 700-event HTML replay and 46-frame GIF reconcile to all arms; initial/final/playback inspected. Geometry is display only; no fabricated midpoint score.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    }
+  ]
+}

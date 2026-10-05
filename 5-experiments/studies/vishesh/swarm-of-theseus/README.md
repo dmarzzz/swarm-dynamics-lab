@@ -1,14 +1,14 @@
 # Swarm of Theseus — SOC-24
 
-## Latest iteration — 2026-10-04 UTC
+## Latest completed iteration — 2026-10-05 UTC
 
-- Repaired qualification passed all three domains: 103 calls, 144/144 decisions.
-- Fresh baselines scored 215/216; one harmful approval accepted future-dated evidence.
-- C2 reused 128 calls and made eight new calls: four correct notes, three valid commits.
-- No full-turnover trajectory completed; cultural survival remains unestablished.
-- Native scaling is on hold. A phase-specific commit repair is built and tested offline.
+All fifty founders were replaced in each inheritance arm. Interactive and static handover each preserved 50/50 learned route notes. Terminal decisions were **295/300 interactive, 297/300 static, 166/300 broken inheritance and 298/300 retained founders**. Useful approvals were 98, 100, 19 and 100; harmful approvals were 2, 3, 14 and 2. Dialogue has no established benefit. This is one synthetic institutional-memory demonstration (independent n=1), not rich or emergent culture.
 
-See the [latest C2 post-mortem](execution-diagnostic/sol50/baseline-replication/C2-POST-MORTEM.md), [earlier initial failure](execution-diagnostic/sol50/baseline-replication/Q3-A3-P1-POST-MORTEM.md), and [unused offline repair](execution-diagnostic/sol50/baseline-replication/COMMIT-REPAIR-PLAN.md). Historical cohort results below remain separate.
+The 1,118-call run and its full trace audit are complete. No endpoints are missing. The worker and exclusive allocation are released; cumulative exposure is USD5.256744585/60. **FINISH / PARK: no automatic successor.**
+
+[Results and scientific post-mortem](execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md) · [Measured animation and public run](https://swarm-live.pages.dev/#/x/swarm-of-theseus-s50-main) · [Interactive replay](execution-diagnostic/sol50/scale50/S50-REPLAY.html).
+
+Historical v1 metadata and results below describe a different cohort; do not pool them with S50. Earlier C2/P1 failures remain in their original post-mortems.
 
 <!-- experiment-evidence:start -->
 ## Evidence metadata
@@ -23,7 +23,7 @@ Status: completed exploratory S0/S1 pilot, not an accepted hypothesis or confirm
 
 ## Critical review and next design
 
-The user-requested retrospective review concludes that v1 is a useful transmission baseline, but its headline is largely explained by preserving a supplied rule. It should not be scaled as a novel culture result. All mentoring comes directly from founders; two scenarios reuse the same four binary inputs; repair actors receive the new rule explicitly. Read the [critical review](redesign/REVIEW.md), [structural audit](redesign/structural-audit.json), and [unrun selective-continuity design](redesign/DESIGN.md). The new question is whether descendants can preserve acquired useful practices while selectively revising obsolete ones. No v2 result is claimed.
+The user-requested retrospective review concludes that v1 is a useful transmission baseline, but its headline is largely explained by preserving a supplied rule. It should not be scaled as a novel culture result. All mentoring comes directly from founders; two scenarios reuse the same four binary inputs; repair actors receive the new rule explicitly. Read the [critical review](redesign/REVIEW.md), [structural audit](redesign/structural-audit.json), and [unrun selective-continuity design](redesign/DESIGN.md). The new question is whether descendants can preserve acquired useful practices while selectively revising obsolete ones. That retrospective review predates the later diagnostic and S50 cohorts summarized above.
 
 The [X-source grounding update](redesign/SOCIAL-GROUNDING.md) changes the next priority to repeated software-team handoffs and rare-hazard institutional memory, with model/runtime migration tested separately. It records live versus cached source access and does not claim that social attention establishes novelty.
 

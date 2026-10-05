@@ -1,0 +1,71 @@
+{
+  "scope": "Retrospective visible effective-request and response review; not hidden reasoning.",
+  "reviewed_error_sequences": [
+    193,
+    450,
+    471,
+    484,
+    750,
+    767,
+    792,
+    1068,
+    1082
+  ],
+  "findings": [
+    {
+      "sequences": [
+        193,
+        450,
+        484,
+        750,
+        767,
+        792,
+        1068,
+        1082
+      ],
+      "verified": "Private route equals required pair. Required source has observed_at=11 at now=10, other required record valid. Model allows instead of deferring. Public false source is outside pair.",
+      "classification": "Temporal eligibility rule application",
+      "not_established": "Internal cognitive cause; no evidence of note loss."
+    },
+    {
+      "sequences": [
+        471
+      ],
+      "verified": "Correct private pair and complete matching current records. Model explicitly defers all six cases; three are correct deferrals, two require allow, one requires hold. System supplies correct decision rule.",
+      "classification": "Over-deferral despite sufficient evidence",
+      "not_established": "Why the model declined; neither route loss nor missing evidence explains these three misses."
+    }
+  ],
+  "success_sample": {
+    "sequences": [
+      451,
+      457
+    ],
+    "cases": 12,
+    "selection": "First ordinary preserved owner after position00, and first updated owner in fixed member order. Declared retrospective convenience sample, not random validation.",
+    "finding": "All six semantic kinds manually checked in each: both-current allow, required veto hold, missing defer, future defer, conflict defer, irrelevant-source veto ignored. Full matching record metadata and note available in retained cards."
+  },
+  "broken_review": {
+    "automated_cases": 300,
+    "manual_case_cards": 5,
+    "finding": "All 300 actions agree with the declared rule under the supplied note and delivered records. 36/36 updated-route cases correct after fresh history; 134 wrong-world answers under wrong notes. Three first-per-class cards and one first wrong-route allow-case deferral checked manually. This is sampled raw-case review plus full automated classification, not manual reading of every broken response. One further first no-private-records service-loss case checked."
+  },
+  "reviewed_nonbroken_error_cases": 11,
+  "total_nonbroken_error_cases": 11,
+  "automated_exact_replay_calls": 1118,
+  "all_visible_responses_manually_reviewed": false,
+  "reviewed_success_cases": 12,
+  "reviewed_broken_cases": 5,
+  "case_error_counts": {
+    "wrong_route_with_locally_consistent_actions": 134,
+    "future_timestamp_allow_despite_correct_route": 8,
+    "over_defer_despite_correct_route_and_complete_evidence": 3
+  },
+  "visual_check": {
+    "png_values_and_layout": "pass",
+    "gif_final_values_and_layout": "pass",
+    "html_final_initial_and_playback": "pass",
+    "events": 700,
+    "gif_frames": 46
+  }
+}

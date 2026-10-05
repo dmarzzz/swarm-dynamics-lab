@@ -1,0 +1,289 @@
+{
+  "attempt": "S50",
+  "assessor": "vishesh/codex-theseus",
+  "date": "2026-10-05",
+  "case_readiness": "ready for bounded synthetic routing-memory demonstration only",
+  "native_qualification": "Q50 pass, separately recorded; main errors retained",
+  "run_admission": "passed prospectively",
+  "independent_worlds": 1,
+  "decision_cases": 1500,
+  "automatic_successor": false,
+  "dimensions": [
+    {
+      "dimension": "decision_relevance",
+      "status": "pass",
+      "finding": "Distinguishes whether to preserve structured handover, add dialogue, or rely on generic execution; static and controller constrain architectural claims.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "answerability",
+      "status": "pass",
+      "finding": "Inherited/current-learning conditions determine the pair and action; broken inheritance intentionally lacks identifying history for unchanged roles and must not be called a clean reasoning test.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "target_scorer_validity",
+      "status": "pass",
+      "finding": "Exact learned-evidence controller is perfect, strict action/schema checks and temporal/conflict variants distinguish errors. Same-author validation, no independent audit.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "actor_isolation",
+      "status": "pass",
+      "finding": "No operator/gold context; bounded private notes, local episodes and addressed records only. Source authenticity assumed, not adversarially tested.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "mechanism_isolation",
+      "status": "limited",
+      "finding": "Static matches handover call/message capacities and hides the question from teacher; no exact token matching. Wrong routes create capacity congestion, an observed mediator.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "challenge_coverage",
+      "status": "limited",
+      "finding": "Six semantic kinds and 50 relabelings; formal task has a sufficient two-identifier state and no richer tacit knowledge.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "strong_comparisons",
+      "status": "pass",
+      "finding": "Legal-evidence deterministic controller scores 300/300; static and retained controls included. No swarm-superiority claim.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "realism_scope",
+      "status": "limited",
+      "finding": "Synthetic failover readiness with truthful addressed transport, no deployment incidents or adversarial source forgery.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "independence_precision",
+      "status": "limited",
+      "finding": "One world/root and one generation; all member/case/arm outcomes dependent. No population precision.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "holdout_integrity",
+      "status": "pass",
+      "finding": "Development, Q50 and main seeds disjoint; source and main seed frozen before calls. No rerolls, success filtering or post-outcome repair.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "robustness_failure_handling",
+      "status": "pass",
+      "finding": "Initial error retained, no schema stripping/retry/fallback; all assignments reconciled, harmful and lost-useful work separate.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    },
+    {
+      "dimension": "reproducibility_costs",
+      "status": "pass",
+      "finding": "1118-call full replay and original-ledger accounting; source/packet/raw-result and archive hashes retained.",
+      "evidence": [
+        {
+          "path": "S50-AUDIT.json",
+          "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+        },
+        {
+          "path": "S50-ANALYSIS.json",
+          "sha256": "ae6b00f95255ae9d590bb76d32c31bab7651e1e037ed4a2bcf0de42553cc37b6"
+        },
+        {
+          "path": "S50-POST-MORTEM.md",
+          "sha256": "c0e890a90162e115c42e17fb1c5aefe7ce3d66177628771b5e93d2d5fca0b76d"
+        },
+        {
+          "path": "S50-TRACE-REVIEW.json",
+          "sha256": "07579f7996c54720f50950107f90074b5f0ad0e39989a99d6f3ebcfbb5bdb5b3"
+        }
+      ]
+    }
+  ]
+}

@@ -4414,6 +4414,33 @@
       "assessor": "vishesh/codex-village-fit",
       "assessed_at": "2026-10-04",
       "source_commit": "f0b5ab98d06e21a291d6448482b7728810ee3d7a"
+    },
+    {
+      "id": "theseus-s50",
+      "title": "Theseus S50: learned routing survives fifty replacements",
+      "documents": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-POST-MORTEM.md"
+      ],
+      "experiment_ids": [
+        "swarm-of-theseus-s50-main"
+      ],
+      "registration_paths": [],
+      "evidence_confidence": {
+        "score": 1,
+        "claim": "Both handover channels preserved learned routing through complete 50-member turnover in one synthetic world; dialogue added no established benefit and action errors remained.",
+        "rationale": "One dependent paired world, one generation, six templates and a two-identifier sufficient memory state. Exact controller solves the task; no broad culture or population claim."
+      },
+      "sample_size_summary": "1 synthetic world; 4 paired branches share 50 founders. 1200/1200 terminal decisions plus 300 shared initial; 1118 calls, 0 missing endpoints. Three arms each replace all 50 founders; one retains them. Q50 is separate.",
+      "sources": [
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-AUDIT.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-ANALYSIS.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-QUALITY.json",
+        "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-TRACE-REVIEW.json"
+      ],
+      "status_at_assessment": "completed_reviewed_finish_park",
+      "assessor": "vishesh/codex-theseus",
+      "assessed_at": "2026-10-05",
+      "source_commit": "9bd914def1c0830023db9342c10627a788abfdbc"
     }
   ],
   "source_sha256": {

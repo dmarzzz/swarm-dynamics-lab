@@ -1,0 +1,55 @@
+{
+ "_type": "https://in-toto.io/Statement/v1",
+ "predicate": {
+  "buildDefinition": {
+   "buildType": "https://flightdeck.dmarz.xyz/buildtype/agent-session/v1",
+   "externalParameters": {
+    "harness": "codex",
+    "prompt": "sha256:ff17f71c1bfa7fe43ea27cfe728bc021d3137e5353ec953b7919d2f305c4e8b4"
+   },
+   "internalParameters": {
+    "commit": "262af6f1e0ff3ae5475e8a7f8b98834af8662831-dirty",
+    "session": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8"
+   },
+   "resolvedDependencies": [
+    {
+     "digest": {
+      "sha256": "f632d3e193868d80e3808e0d477da2bbb6f20d69e025e437594fadd85496a7cc"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-AUDIT.json"
+    },
+    {
+     "digest": {
+      "sha256": "0fbbb2b7778fef16ff5c4b1ab54e1bf60e8ff27ae17d38b0aaa8db15e48dc0c3"
+     },
+     "uri": "5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/reporting/render_plot.py"
+    },
+    {
+     "digest": {
+      "gitCommit": "262af6f1e0ff3ae5475e8a7f8b98834af8662831"
+     },
+     "uri": "git+https://github.com/dmarzzz/swarm-lab"
+    }
+   ]
+  },
+  "runDetails": {
+   "builder": {
+    "id": "https://flightdeck.dmarz.xyz/builder/mac/codex"
+   },
+   "metadata": {
+    "finishedOn": "2026-10-05T00:39:20Z",
+    "invocationId": "codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8",
+    "startedOn": "2026-10-05T00:39:20Z"
+   }
+  }
+ },
+ "predicateType": "https://slsa.dev/provenance/v1",
+ "subject": [
+  {
+   "digest": {
+    "sha256": "dab47f7e862fbf27d177f86cfe27c4a52ad29158b4c009be6380d7ec499392af"
+   },
+   "name": "artifacts/theseus-s50-outcomes/theseus-s50-outcomes-v1.png"
+  }
+ ]
+}

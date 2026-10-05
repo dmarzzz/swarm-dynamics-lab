@@ -5140,4 +5140,20 @@ artifacts:
           - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.data.js
           - 5-experiments/studies/dmarz/hackathon-demo/scenes/theseus.js
         commit: 8b4b029d003e5049f8b1ac2c40c8b88f4a9098d5-dirty
+  - id: theseus-s50-outcomes
+    category: content
+    type: figure
+    title: 'Theseus S50: handover preserves routing, execution still errs'
+    versions:
+      - v: 1
+        date: 2026-10-04
+        path: artifacts/theseus-s50-outcomes/theseus-s50-outcomes-v1.png
+        built_at: '2026-10-05T00:39:20Z'
+        by: codex
+        session: codex:01a10483-6195-7410-a4dc-0ad13fc6e2c8
+        prompt: sha256:ff17f71c1bfa7fe43ea27cfe728bc021d3137e5353ec953b7919d2f305c4e8b4
+        ingredients:
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/S50-AUDIT.json
+          - 5-experiments/studies/vishesh/swarm-of-theseus/execution-diagnostic/sol50/scale50/reporting/render_plot.py
+        commit: 262af6f1e0ff3ae5475e8a7f8b98834af8662831-dirty
 requires: '1.2'
