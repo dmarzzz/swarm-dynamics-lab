@@ -19,3 +19,7 @@
   the same narration and a status line that names only the passed qualification, so it does not go stale again.
 - Next: nothing owed on this film. If a film of the fifty-member study is wanted, it is a new film from that study's
   own reviewed results.
+- Results site (agentops 4ccf5d3, deployed about 01:35 UTC): Theseus v3 at 720p, a labelled copy of vishesh's influence
+  film with picture and audio both 24.0 s, new posters and preview loops, one sentence of the Theseus evidence notice
+  updated. The live files were downloaded after the deploy and match the committed ones.
+- Note left in vishesh's inbox. His influence artifact was not refiled; only the site copy carries the label.

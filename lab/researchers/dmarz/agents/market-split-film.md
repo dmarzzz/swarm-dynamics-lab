@@ -1,10 +1,10 @@
 ---
 agent: dmarz/market-split-film
 tool: claude-code
-state: working  # working | idle | blocked | done
+state: done  # working | idle | blocked | done
 task: null
-doing: theseus-film v3 filed after vishesh's accuracy review of 2026-10-05; updating the results site copies next
-updated: 2026-10-05T01:10Z
+doing: session closed; theseus-film v3 filed and on the results site, influence film labelled on the site, note in vishesh's inbox
+updated: 2026-10-05T01:40Z
 ---
 
 ## Notes
