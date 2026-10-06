@@ -12,8 +12,6 @@ on:
       - 'lab/candidates/**'
       - 'dashboard/**'
       - '.github/workflows/dashboard.yml'
-  schedule:
-    - cron: '*/15 * * * *'
   workflow_dispatch:
 concurrency:
   group: dashboard
